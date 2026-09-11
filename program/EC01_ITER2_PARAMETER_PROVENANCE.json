@@ -1,0 +1,42 @@
+{
+  "artifact": "EC01_ITER2_PARAMETER_PROVENANCE",
+  "scope": "Parameters appearing in the three pilot chains, re-audited under the repaired schema.",
+  "parameters": [
+    {"id": "P_hbar", "name": "hbar", "chains": ["A","B","C"],
+     "status": "PRIMITIVE (irreducible input)", "evidence": "REALITY_CHECK_03 / corpus: emergence attempts failed",
+     "derived": false, "note": "irreducible on the current record"},
+    {"id": "P_partition", "name": "system/environment partition (A03)", "chains": ["A"],
+     "status": "EMPIRICAL_INPUT / STRUCTURAL_SELECTION", "evidence": "Experiment P: not derived; choice-dependent",
+     "derived": false, "note": "decoherence and pointer structure are conditional on it"},
+    {"id": "P_pointer", "name": "pointer observable", "chains": ["A"],
+     "status": "ENVIRONMENT_DEPENDENT (dynamically selected given partition+coupling)",
+     "evidence": "einselection (Zurek)", "derived": false,
+     "note": "conditional derivation; partition itself imported"},
+    {"id": "P_measure", "name": "statistical measure / typicality postulate (B02)", "chains": ["B"],
+     "status": "ASSUMED (statistical postulate)", "evidence": "FB1v2; ergodic theorems conditional and non-universal",
+     "derived": false, "note": "the imported premise of chain B; the hostile audit's FB1 finding"},
+    {"id": "P_past", "name": "Past Hypothesis / low-entropy initial condition (B06)", "chains": ["B"],
+     "status": "BOUNDARY_CONDITION (external import)", "evidence": "FB3v2; cosmological accounts unresolved",
+     "derived": false, "note": "first backward stop of chain B"},
+    {"id": "P_lec", "name": "EFT low-energy constants / Wilson coefficients (C03)", "chains": ["C"],
+     "status": "EMPIRICAL_INPUT / FITTED (within chain C)", "evidence": "FC1v2: symmetry fixes form, not values",
+     "derived": false, "note": "may carry UV information but not determined by the chain"},
+    {"id": "P_cutoff", "name": "EFT cutoff / expansion order", "chains": ["C"],
+     "status": "CONVENTION_DEPENDENT + REGIME_LIMITED", "evidence": "FC1v2 premises",
+     "derived": false, "note": "scheme dependence recorded"},
+    {"id": "P_tc", "name": "thermodynamic-limit regime condition", "chains": ["B"],
+     "status": "REGIME premise", "evidence": "FB2v2", "derived": false,
+     "note": "N->infty; not derivable within chain B for finite systems"},
+    {"id": "P_interact", "name": "entangling interaction (FA1)", "chains": ["A"],
+     "status": "PREMISE (state- and interaction-dependent)", "evidence": "FA1v2 imported_premises",
+     "derived": false, "note": "not all interactions entangle; scoped"}
+  ],
+  "summary": {
+    "total": 9,
+    "derived_within_chains": 0,
+    "empirical_or_assumed": 6,
+    "regime_or_convention": 2,
+    "state_or_premise_conditional": 1,
+    "conclusion": "No parameter in the pilot chains is genuinely derived from an earlier node without an explicit import; every transition either preserves or introduces independent inputs."
+  }
+}

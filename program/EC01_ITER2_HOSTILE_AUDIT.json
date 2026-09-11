@@ -1,0 +1,84 @@
+{
+  "artifact": "EC01_ITER2_HOSTILE_AUDIT",
+  "auditor_role": "independent hostile review of Iteration 2 (instrument repair)",
+  "integrity": {
+    "protocol_sha256": "6b012117ab91c67d1b2810e6c78b4d4809299810add23896a6f8245ae27a00a8",
+    "protocol_unchanged": true,
+    "historical_baselines": ["5ab36d6", "ccda3be", "290ad5d"],
+    "baselines_verified_untouched": true,
+    "commit_or_push_during_audit": "NONE (per dispatch)"
+  },
+  "repair_audit": {
+    "R1_gates": {"status": "REPAIRED_AND_CONFIRMED", "note": "14/14 edges carry independent M->P and P->O gates; field content inspected, not just presence. Minor: CT edges use m_to_p=EFFECTIVE where NOT_APPLICABLE would be cleaner vocabulary; not substantive."},
+    "R2_imported_premises": {"status": "REPAIRED_AND_CONFIRMED", "note": "statistical postulate (FB1v2), Past Hypothesis (FB3v2), separability+entangling-H (FA1v2), records+tracing (FA2v2), matching inputs (FC1v2) all first-class with NOT_DERIVED_FROM_SOURCE flags."},
+    "R3_mechanism_scope": {"status": "REPAIRED_AND_CONFIRMED", "note": "present on all 14 edges; scopes verified as narrowest justified; no UNKNOWN used as hiding place (2 UNKNOWN uses, both genuinely unresolved)."},
+    "R4_A06_split": {"status": "REPAIRED_AND_CONFIRMED", "note": "A06a supported phenomena verified item-by-item (interference suppression, pointer stability, records, classical statistics); A06b UNRESOLVED survives attack — no semiclassical/trajectory mechanism exists in chain evidence; Bohm/semiclassical correctly recorded as alternatives."},
+    "R5_RC3_fresh_evidence": {"status": "REPAIRED_WITH_RESIDUAL_DEPENDENCY", "note": "SEE FINDING H2 — one citation overstates its scope; conclusion survives via independent lines."},
+    "R6_RA1_qualifier": {"status": "REPAIRED_AND_CONFIRMED", "note": "WITHIN_FRAMEWORK structural on RA1v2; QUALIFIER_LEAK search across package: NONE FOUND."},
+    "R7_statistical_boundary_matching_inputs": {"status": "REPAIRED_AND_CONFIRMED"}
+  },
+  "key_findings": [
+    {"id": "H1", "severity": "RECLASSIFICATION", "edge": "FB1v2",
+     "finding": "NO_DEMONSTRATED_MECHANISM is TOO STRONG as a global label. Sinai mixing/ergodic theorems (e.g., Sinai billiards) ARE demonstrated mechanisms by which dynamics determines the equilibrium measure for specific system classes. The postulate is imported only for the GENERIC claim.",
+     "independent_label": "CONDITIONAL_DERIVATION_WITH_IMPORTED_POSTULATE",
+     "detail": "Generation/derivation holds under stated extra premises (mixing/ergodicity) for specific systems; the equal-a-priori measure over the full state space requires the imported postulate. The ITER2 text already recorded the partial ergodic support but kept the stronger label. Downgrade the label, retain the imported-postulate fact.",
+     "recommended": "FB1v2 -> CONDITIONAL_DERIVATION_WITH_IMPORTED_POSTULATE, mechanism_scope stays GENERIC_UNDER_STATED_PREMISES with mixing-condition premises listed"},
+    {"id": "H2", "severity": "SOURCE_SCOPE_DOWNGRADE", "edge": "RC3v2",
+     "finding": "The phi^4_4 triviality citation overstates: rigorous triviality is PROVEN for d>4 (Aizenman 1982; Frohlich); for d=4 the result is widely accepted but rests on strong partial results and nonperturbative lattice evidence, NOT a fully proven continuum theorem in the cited form.",
+     "independent_label": "CONSTRAINT_NOT_DETERMINATION (retained, with source narrowed)",
+     "detail": "The CONCLUSION survives independently: (i) the order-counting/matching argument is direct — EFT data at order N cannot distinguish UV contributions first appearing at order N+1 (mathematical, framework-independent); (ii) RG information loss is a framework-level feature of Wilsonian effective descriptions; (iii) landscape multiplicity (Bousso-Polchinski; Douglas-Kachru review) supplies explicit multiplicity examples. phi^4 triviality should be demoted from an establishing citation to SUPPORTING/partial-status.",
+     "recommended": "narrow RC3v2 source ledger; relation_scope FRAMEWORK_INDEPENDENT remains justified via (i)+(ii)"}
+  ],
+  "gate_audit_summary": {
+    "m_to_p": {"DEMONSTRATED": 4, "EFFECTIVE": 3, "UNRESOLVED": 2, "UNDERDETERMINED": 1, "EMPIRICAL_INPUT": 1, "NOT_APPLICABLE": 3,
+      "attack_result": "All 4 DEMONSTRATED claims survive (entangling interactions, decoherence experiments, EFT limits, equilibrium realization). No gate status asserted without mechanism."},
+    "p_to_o": {"DEMONSTRATED": 4, "NO_DISTINCTIVE_OBSERVABLE": 2, "NOT_APPLICABLE": 8,
+      "attack_result": "Survives. Decoherence->fringe-loss and EFT->scattering mappings are regime-limited and stated. UV and partition/selector observables correctly flagged NO_DISTINCTIVE_OBSERVABLE."}
+  },
+  "blind_reclassification": [
+    {"edge": "FA1v2", "iter2": "GENERATION_WITH_EXPLICIT_PREMISES", "independent": "AGREE", "note": "premises verified: separability + entangling H + unitary; non-entangling counterexamples recorded"},
+    {"edge": "FA2v2", "iter2": "GENERATION_WITH_EXPLICIT_PREMISES", "independent": "AGREE", "note": "entanglement-alone counterexample preserved; tracing import explicit"},
+    {"edge": "FA3av2", "iter2": "EFFECTIVE_STRUCTURE_ESTABLISHED (COARSE_GRAINING)", "independent": "AGREE", "note": "ontology claim absent; recoherence failure condition retained"},
+    {"edge": "FA3bv2", "iter2": "UNRESOLVED_RELATION", "independent": "AGREE", "note": "no trajectory mechanism in chain evidence; not upgraded on familiarity"},
+    {"edge": "FB1v2", "iter2": "NO_DEMONSTRATED_MECHANISM", "independent": "DOWNGRADE-DISAGREE", "note": "see H1"},
+    {"edge": "FB2v2", "iter2": "DERIVATION_WITHIN_REGIME", "independent": "AGREE", "note": "thermodynamic limit + short-range + equilibrium premises explicit"},
+    {"edge": "FB3v2", "iter2": "CONSTRAINT_TRANSMISSION_WITH_IMPORT", "independent": "AGREE", "note": "Past Hypothesis external; not claimed as explanation of its own origin; stopping point valid"},
+    {"edge": "FC1v2", "iter2": "DERIVATION_OF_FORM_LECs_IMPORTED", "independent": "AGREE", "note": "symmetry fixes operator basis/FORM; values from matching+experiment; constraint-vs-determination distinction correct"},
+    {"edge": "FC2v2", "iter2": "UNRESOLVED_RELATION", "independent": "AGREE", "note": "constrains-not-determines; no observable at accessible scales"},
+    {"edge": "RC3v2", "iter2": "CONSTRAINT_NOT_DETERMINATION", "independent": "AGREE (with H2 source narrowing)", "note": "genuinely independent of RC-02 after repair"},
+    {"edge": "RA1v2", "iter2": "CONSTRAINT_WITHIN_FRAMEWORK", "independent": "AGREE", "note": "definitional constraint; no ontology promotion"},
+    {"edge": "RA3v2", "iter2": "PARTIALLY_DEPENDENT", "independent": "AGREE", "note": "definition-relative; correctly not called circular"},
+    {"edge": "CT1v2", "iter2": "CONSTRAINT_ESTABLISHED", "independent": "AGREE", "note": "GKLS form constraint, Markovian scope"},
+    {"edge": "CT2v2", "iter2": "CONSTRAINT_ESTABLISHED", "independent": "AGREE", "note": "conservation->form; measure separate (FB1v2)"},
+    {"edge": "CT3v2", "iter2": "CONSTRAINT_ESTABLISHED", "independent": "AGREE", "note": "B(A) subseteq B symmetry transmission"}
+  ],
+  "parameter_provenance_audit": {
+    "claim_checked": "9 parameters, zero derived without explicit import",
+    "result": "CONFIRMED",
+    "detail": "hbar (primitive), statistical measure (imported postulate), Past Hypothesis (imported IC), partition (chosen/UNRESOLVED selector), EFT LECs (matching+empirical), cutoff (effective/regime), pointer basis (dynamical given partition), Lambda (external in chain B context), expansion orders (convention). No false DERIVED labels found."
+  },
+  "traceability_audit": {
+    "claim": "11/11 findings addressed",
+    "result": "CONFIRMED — each traceability row maps to an actual visible repair; no 'addressed' without artifact evidence."
+  },
+  "decoherence_outcome_firewall": {
+    "result": "INTACT",
+    "search": "full Iter2 package scanned; no language collapsing decoherence->outcome, decoherence->Born derivation, or effective classicality->ontology. A07 isolated; FA3bv2 split actively protects the distinction."
+  },
+  "new_error_search": {
+    "found": [
+      "H1 (FB1 label strength)",
+      "H2 (RC3 phi^4 citation scope)",
+      "MINOR: CT edges use EFFECTIVE m_to_p status where NOT_APPLICABLE is the cleaner value (vocabulary, not substance)",
+      "MINOR: RA3v2 pairs edge_type CONSTRAINT_TRANSMISSION with status PARTIALLY_DEPENDENT — mixing structural type with dependency status; acceptable but should be noted in schema v3"
+    ],
+    "over_splitting_or_false_precision": "none found; split A06a/A06b is genuinely distinct",
+    "scope_laundering": "none found"
+  },
+  "verdict": {
+    "per_repair": ["REPAIRED_AND_CONFIRMED x6", "REPAIRED_WITH_RESIDUAL_DEPENDENCY x1 (R5/RC3, source-scope only)"],
+    "overall": "PASS_WITH_REVISIONS",
+    "final_answer": "Iteration 2 GENUINELY REPAIRED the instrument — evidenced structurally by FB1's actual downgrade and A06b's exposure of a real boundary, not merely field addition. Two revisions required (H1, H2); neither overturns a repair, both narrow precision.",
+    "classifications_surviving_hostile_reclassification": "13/14 edges agree with Iteration-2 labels; 1 (FB1v2) revised per H1"
+  }
+}
