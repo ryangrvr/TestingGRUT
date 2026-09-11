@@ -1,0 +1,69 @@
+{
+  "artifact": "REALITY_CHECK_05_PARAMETER_SPACE",
+  "type": "reality audit of the surviving Diósi-Penrose parameter territory; no rescoring, no viability declaration",
+  "canonical_repo_modified": false,
+  "inputs": [
+    "REALITY_CHECK_05_DP_AUDIT.json (frozen provenance layer)",
+    "DP_AUDIT_STATE.json",
+    "primary experimental literature (sources below)"
+  ],
+  "sources": [
+    {"id": "S1", "ref": "Donadi, Piscicchia, Curceanu, Diósi, Laubenstein, Bassi, Nat. Phys. 17, 74 (2021), arXiv:2111.13490", "claim": "Gran Sasso underground radiation test: lower bound on effective size of nucleon mass density ~3 orders above previous bounds; 'rules out the natural parameter-free version of the Diósi-Penrose model'", "status": "PRIMARY / VERIFIED (abstract inspected)"},
+    {"id": "S2", "ref": "Carlesso, Diósi, Bassi et al., 'On the effectiveness of the collapse in the Diósi-Penrose model', New J. Phys. 26, 113004 (2024), arXiv:2406.18494", "claim": "Search for an upper bound from the requirement that collapse guarantees classicality at macroscopic scale: 'not all macroscopic systems collapse effectively'; a reasonable (to some degree arbitrary) bound is R0 <~ 10^6 Angstrom (= 0.1 mm)", "status": "PRIMARY / VERIFIED (abstract and equation inspected)"},
+    {"id": "S3", "ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)", "claim": "Review: strongest indirect bounds come from Brownian-like diffusion induced by collapse; prior bounds from gravitational-wave detectors, neutron-star heating, cryogenics heat leakage", "status": "REVIEW CORROBORATION"},
+    {"id": "S4", "ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)", "claim": "Heuristic collapse time tau ~ hbar/E_G from gravitational self-energy difference", "status": "PRIMARY (heuristic, never derived from a gravitational field equation)"}
+  ],
+  "model_setup": {
+    "dp_master_equation_nonunitary_term": "D[rho] = -(4 pi G / hbar) * integral d r d r' (1/|r-r'|) [mu(r'), [mu(r), rho(t)]]  [S2, Eq. (2)]",
+    "mass_density_operator": "Gaussian-smeared mass density with effective radius Reff = sqrt(R0^2 + R_i^2); R0 is the ONLY free parameter of the model [S2, Eq. (3)]",
+    "collapse_time": "tau ~ hbar / E_G, E_G = gravitational self-energy of the difference between the two superposed mass distributions [S4]"
+  },
+  "parameter_space": {
+    "lower_bound": {
+      "value": "R0 >~ 4e-10 m (4 Angstrom)",
+      "type": "EMPIRICAL_EXCLUSION",
+      "source": "S1 (Donadi et al. 2021 underground radiation)",
+      "applies_to": "nucleon mass-density effective size; excludes natural parameter-free DP (R0 ~ nuclear size ~ 1e-15 m) by ~5 orders of magnitude"
+    },
+    "upper_bound": {
+      "value": "R0 <~ 1e6 Angstrom (0.1 mm)",
+      "type": "THEORETICAL_EFFECTIVENESS_REQUIREMENT",
+      "source": "S2 (NJP 2024)",
+      "caveat": "NOT an empirical bound; derived from the demand that collapse be effective enough to suppress macroscopic superpositions. Explicitly flagged 'to some degree arbitrary'. If relaxed, this bound weakens. Classification: CONSISTENCY_CONSTRAINT, not data-driven exclusion.",
+      "applies_to": "all DP variants that claim to solve the measurement problem for ordinary macroscopic objects"
+    },
+    "prior_indirect_bounds": {
+      "description": "earlier, weaker lower bounds on R0 from gravitational-wave-detector data, neutron-star heating, cryostat heat leakage — all indirect Brownian-diffusion effects",
+      "source": "S3",
+      "status": "SUPERSEDED by S1 for nucleons (~3 orders stronger)"
+    },
+    "surviving_window": "R0 in [4e-10 m, 1e-4 m] — roughly 6 orders of magnitude of experimentally non-excluded territory, IF the effectiveness upper bound is accepted",
+    "window_class": "PARTIALLY_CONSTRAINED — the lower edge is data-driven; the upper edge is a theoretical demand, not data"
+  },
+  "gates": {
+    "parameter_viability": "OPEN — 6-order window survives; natural value dead",
+    "internal_consistency": "CONDITIONAL — finite-R0 mass-density resolution remains CONJECTURE (2013); R0 is an added free parameter; tau ~ hbar/E_G heuristic never derived from a field equation; the stochastic law itself is postulated, so 'why this law' is relocated not answered",
+    "experimental_distinguishability": "PARTIAL — DP predicts spontaneous radiation from charged macroscopic bodies and loss of interferometric visibility with characteristic E_G scaling distinguishable from Gamma_env (environmental decoherence) in principle; degeneracy with thermal/environmental noise is the dominant practical confound at current sensitivities. Distinguishing observables: (a) spontaneous X/photon emission rate scaling with mass distribution; (b) interferometer visibility loss vs superposition separation with collapse time tau_C saturating at E_G saturation (e.g. osmium-crystal Talbot-Lau proposal, tau_C ~ 1334 s at M = 5.6e-18 kg); (c) radiation vs temperature-independence signature",
+    "explanatory_accounting": "UNCHANGED from frozen audit — DP buys outcome definiteness + Born-weight operational measure + gravitational linkage; costs: postulated stochastic dynamics, R0 free parameter, undischarged 'why this law', natural version excluded. Postulated collapse != derived outcome selection. Parameterized falsifiability != parameter-free prediction."
+  },
+  "predictions_discriminator": {
+    "parameter_free_prediction": "NONE REMAINING — the only parameter-free instantiation (R0 = nuclear size) is empirically excluded [S1]",
+    "parameterized_prediction": "For each R0 in the surviving window: definite collapse timescale tau(R0, E_G), spontaneous radiation rate, interferometric visibility curve. These are quantitative and falsifiable per-R0 but do not constitute a single parameter-free discriminating prediction.",
+    "compression_score_effect": "NOT RESCORED per authorization. Note only: compression advantage depends on treating DP's falsifiable structure as evidence of explanatory content, which now applies only to the 6-order window, not the natural theory."
+  },
+  "verdict_scope": {
+    "dp_viable_globally": "NOT DECLARED (out of scope per dispatch)",
+    "surviving_territory": "YES — a finite, two-sided window [4 A, 1e6 A] with concrete experimental signatures exists",
+    "territory_quality": "MIXED — lower edge solid (data), upper edge soft (effectiveness demand); natural theory dead; finite-R0 repair conjectural; distinctness from environmental decoherence is the critical open requirement for every surviving variant"
+  },
+  "next_exp_tests_ranked": [
+    {"rank": 1, "test": "Improved underground spontaneous-radiation searches extending the Donadi et al. method", "information_gain": "high", "feasibility": "high", "reason": "direct extension of the existing exclusion technology; pushes lower bound further and could exclude more of the window"},
+    {"rank": 2, "test": "Macroscopic matter-wave interferometry (Talbot-Lau with dense microcrystals)", "information_gain": "high", "feasibility": "medium", "reason": "direct superposition-lifetime measurement, E_G scaling distinguishable from decoherence if thermal control adequate"},
+    {"rank": 3, "test": "Levitated optomechanics mass-superposition tests", "information_gain": "medium-high", "feasibility": "medium-high", "reason": "increasingly sensitive but confounded by environmental decoherence; distinguishing power depends on control of Gamma_env"}
+  ],
+  "firewall": {
+    "boundary_theorem": "used ONLY to classify DP as outside C_bp (Door 1); not as disconfirmation evidence",
+    "no_rescoring": "comparative matrix and compression scores untouched",
+    "no_repair": "2013 mass-density resolution remains CONJECTURE; no mathematical repair attempted"
+  }
+}
