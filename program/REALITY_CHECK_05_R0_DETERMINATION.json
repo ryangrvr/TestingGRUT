@@ -1,0 +1,30 @@
+{
+  "artifact": "REALITY_CHECK_05_R0_DETERMINATION",
+  "question": "Can the DP mass-density resolution scale R0 be physically determined rather than merely chosen?",
+  "verdict": "FREE_PHENOMENOLOGICAL",
+  "canonical_repo_modified": false,
+  "routes": [
+    {"route": "derivation_from_gravitational_field_equation", "status": "ABSENT", "evidence": "tau ~ hbar/E_G remains heuristic; DP master equation takes R0 as input smoothing scale, never an output of a consistency condition"},
+    {"route": "derivation_from_QFT_or_UV_structure", "status": "ABSENT", "evidence": "no source derives R0 from renormalization or cutoff structure"},
+    {"route": "consistency_requirement", "status": "ABSENT", "evidence": "finite-R0 is itself the conjectural 2013 repair; the resolution is the free ingredient of that repair"},
+    {"route": "symmetry_or_dimensional_argument", "status": "ABSENT", "evidence": "dimensional analysis bounds ranges, not values within them"},
+    {"route": "independent_experimental_constraint", "status": "PARTIAL", "evidence": "4 Angstrom <= R0 <= 1e6 Angstrom: lower bound from Donadi et al. 2021 underground radiation test; upper bound from 2024 effectiveness/self-decoherence criterion - an empirical-distinctiveness requirement, not a law of physics"}
+  ],
+  "firewall": "A formula merely containing R0 does not determine R0; no candidate formula in the searched literature passed this test - parametrized collapse-rate expressions reparametrize the free choice rather than fix it.",
+  "burden_ledger": [
+    "conjectural finite-R0 repair (2013, CONJECTURE)",
+    "free R0 (this audit)",
+    "environmental-decoherence discrimination unresolved within much of the window",
+    "no principled determination of R0 (this audit)"
+  ],
+  "interpretive_rules": [
+    "surviving_window != physically_grounded_candidate",
+    "falsifiable != derived"
+  ],
+  "window": {"lower_bound_A": 4, "upper_bound_A": 1e6, "lower_bound_status": "EXPERIMENTAL", "upper_bound_status": "EFFECTIVENESS_CRITERION_NOT_DATA"},
+  "sources": [
+    {"ref": "L. Diosi, J. Phys. Conf. Ser. 442, 012001 (2013)", "claim": "mass-density resolution conjecture; R0 a free parameter"},
+    {"ref": "S. Donadi et al., Nat. Phys. 17, 74-78 (2021), arXiv:2111.13490", "claim": "parameter-free DP excluded"},
+    {"ref": "arXiv:2502.19278 (2025 review)", "claim": "Diosi and Penrose lines are independent; neither derives a resolution scale"}
+  ]
+}
