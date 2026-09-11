@@ -1,0 +1,53 @@
+{
+  "artifact": "REALITY_CHECK_05_DP_AUDIT",
+  "type": "Diósi-Penrose gravitational-collapse audit; reality-first, no rescue",
+  "canonical_repo_modified": false,
+  "phase": "audit DP obstruction + model reconstruction + scope of escape from C_bp + empirical constraints",
+  "sources": [
+    {"id": "S1", "cite": "Diósi, Phys. Lett. A 105, 199-202 (1984)", "kind": "PRIMARY"},
+    {"id": "S2", "cite": "Diósi, Phys. Lett. A 120, 377-381 (1987)", "kind": "PRIMARY"},
+    {"id": "S3", "cite": "Diósi, Phys. Rev. A 40, 1165-1174 (1989)", "kind": "PRIMARY"},
+    {"id": "S4", "cite": "Penrose, Gen. Rel. Grav. 28, 581-600 (1996)", "kind": "PRIMARY-HEURISTIC"},
+    {"id": "S5", "cite": "Ghirardi, Grassi & Rimini, Phys. Rev. A 42, 1057-1064 (1990)", "kind": "PRIMARY-CONTEXT"},
+    {"id": "S6", "cite": "Bassi, Lochan, Satin, Singh & Ulbricht, Rev. Mod. Phys. 85, 471-527 (2013)", "kind": "REVIEW-CORROBORATION"},
+    {"id": "S7", "cite": "Diósi, J. Phys. Conf. Ser. 442, 012001 (2013)", "kind": "PRIMARY (resolution conjecture)"},
+    {"id": "S8", "cite": "Donadi et al., Nat. Phys. 17, 74-78 (2021), arXiv:2111.13490", "kind": "PRIMARY-EMPIRICAL"},
+    {"id": "S9", "cite": "Donadi et al., Nat. Phys. 21 (2021) 'Present status and future challenges of non-interferometric tests of collapse models'", "kind": "REVIEW-EMPIRICAL-FRONTIER"},
+    {"id": "S10", "cite": "Diósi, 'How to teach and think about spontaneous wave function collapsing theories', arXiv:1505.01329", "kind": "PRIMARY-REFLECTION"},
+    {"id": "S11", "cite": "Bassi & Großardt & Ulbricht, 'Gravitational collapse: pro and contra', Class. Quantum Grav. 34, 193002 (2017)", "kind": "REVIEW"}
+  ],
+  "arrows": [
+    {"id": "DP_LINEAGE", "type": "HISTORICAL_DERIVATION_LINE", "path": "1984/1987/1989 -> 1996 heuristic -> 2007 Markovianization -> 2013 resolution conjecture -> 2021 constraint", "status": "EVIDENCED", "note": "Each arrow is a modification with a stated mathematical purpose, not an improvement in derived-explanatory status"}
+  ],
+  "components": [
+    {"id": "dp_ontology", "name": "primitive mass-density ontology", "status": "POSTULATE"},
+    {"id": "dp_dynamics", "name": "Markovian stochastic collapse dynamics (2007 form)", "status": "POSTULATE (model-modification of unitary QM)"},
+    {"id": "dp_coupling", "name": "collapse timescale from gravitational self-energy difference E_G", "status": "POSTULATE (heuristic; not derived from any gravitational equation)"},
+    {"id": "dp_outcomes", "name": "definite outcomes via stochastic localization", "status": "PROVIDED-BY-MODEL-STRUCTURE"},
+    {"id": "dp_probabilities", "name": "Born-weight operational measure from linear/QND noise structure", "status": "MODEL-INTERNAL (supplied by the same postulate that supplies outcomes)"},
+    {"id": "dp_energy", "name": "systematic energy non-conservation in original DP", "status": "KNOWN-DEFECT (bypassed in 2007 form at the cost of added structure)"},
+    {"id": "dp_resolution", "name": "mass-density resolution R_0 (2013)", "status": "CONJECTURE; R_0 is an added free parameter, not derived"},
+    {"id": "dp_empirical", "name": "Gran Sasso underground bound on R_0 (nucleon effective size)", "status": "EMPIRICAL CONSTRAINT — natural parameter-free DP EXCLUDED"},
+    {"id": "dp_escape_class", "name": "relation to C_bp branch-preserving unitary class", "status": "OUTSIDE-THE-CLASS via Door 1 (dynamics altered) — structural classification only"}
+  ],
+  "edges": [
+    {"from": "DP", "to": "standard QM", "type": "MODIFIES_DYNAMICS", "evidence": "S3,S6", "status": "EVIDENCED"},
+    {"from": "DP", "to": "C_bp class", "type": "INCOMPATIBLE_WITH (escapes)", "evidence": "boundary theorem + S3/S6 dynamics", "status": "STRUCTURAL"},
+    {"from": "DP", "to": "CSL/GRW", "type": "RELATED (Markovian white-noise framework)", "evidence": "S5,S6", "status": "EVIDENCED"},
+    {"from": "DP-2013-resolution", "to": "energy-conservation defect", "type": "CONSTRAINS", "evidence": "S7", "status": "CONJECTURAL"},
+    {"from": "Gran Sasso test", "to": "DP parameter-free variant", "type": "CONSTRAINS/EXCLUDES", "evidence": "S8", "status": "EVIDENCED"}
+  ],
+  "unresolved": [
+    "whether a surviving (large-R_0) DP variant is empirically distinguishable from ordinary environmental decoherence at feasible parameter values",
+    "whether Penrose's heuristic collapse formula admits any derivation from a gravitational equation (GR, semiclassical, or otherwise)",
+    "whether the DP probability structure has any non-postulated foundation",
+    "relativistic formulation of DP (known open problem for all collapse models)"
+  ],
+  "verdict": {
+    "is_dp_derived": false,
+    "is_dp_predictive": "YES — falsifiable parameter space (R_0, noise strength); already exercised once (natural version excluded)",
+    "is_dp_a_solution_of_outcome_selection": "NO — postulates the selection mechanism; relocates rather than derives",
+    "empirical_status": "Natural DP excluded by underground radiation bounds; modified variants constrained but open",
+    "comparative_position": "Best-ranked Door-1 candidate in the comparative matrix; retains that status only for modified-parameter variants"
+  }
+}
