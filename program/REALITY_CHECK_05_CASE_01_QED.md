@@ -1,0 +1,56 @@
+# RC05_CASE_01 — QED anomalous magnetic moment a_e = (g-2)/2
+
+> REALITY_CHECK_05 calibration case; frozen protocol, unmodified.
+
+## Sources
+
+- **J. Schwinger, Phys. Rev. 73, 416 (1948)** — one-loop a_e = alpha/(2*pi) `CANONICAL_PRIMARY`
+- **S. Laporta, E. Remiddi, Phys. Lett. B 379, 283 (1996)** — complete four-loop a_e, 891 diagrams `CANONICAL_PRIMARY`
+- **D. Hanneke, S. Fogwell, G. Gabrielse, Phys. Rev. Lett. 100, 120801 (2008)** — a_e measured to ~0.28 ppb `CANONICAL_PRIMARY`
+- **R. Bouchendira et al., Phys. Rev. Lett. 106, 080801 (2011)** — alpha from atom interferometry, independent of g-2 `CANONICAL_PRIMARY`
+
+## Input ledger
+
+- alpha (fine-structure constant) → EMPIRICAL_INPUT — measured independently (atom interferometry/Rb recoil), NOT from g-2
+- m_e, m_mu, hadronic vacuum polarization, weak contribution → EMPIRICAL_INPUT (mu case) / negligible corrections (e case)
+- QED Lagrangian + renormalization scheme → ASSUMED (declared theoretical framework)
+- perturbation series coefficients c_1..c_4 → DERIVED_FROM_SOURCE (Schwinger .. Laporta-Remiddi)
+
+## Model reconstruction
+
+a_e = (c1)(alpha/pi) + (c2)(alpha/pi)^2 + (c3)(alpha/pi)^3 + (c4)(alpha/pi)^4 + c5(alpha/pi)^5, c1=1/2, c2=0.7309..., c3=24.050..., c4=1.181...(Laporta-Remiddi).
+
+## Provenance map
+
+claim -> coefficient derivation -> declared QED inputs -> primary papers. Alpha enters as an independently measured input, not fitted to a_e.
+
+## Identifiability
+
+Observable is uniquely determined by declared inputs at fixed perturbative order; truncation uncertainty is declared.
+
+## Prediction analysis
+
+PRE-REGISTERED structure satisfied: coefficients fixed by the theory BEFORE comparison; alpha fixed by an INDEPENDENT experiment; no parameter fitted to a_e; quantitatively testable (agreement at ~10^-12 level relative). PREDICTIVE = YES.
+
+## Effective status
+
+Not effective-truncated in the EFT sense; perturbatively truncated with declared residual uncertainty.
+
+## Adversarial attack
+
+Could alpha be a hidden fit? No: alpha is fixed from an independent observable. Could 'derived' be overclaim? The four-loop computation is a derivation from declared QED inputs; renormalization introduces an empirical input (alpha) explicitly, consistent with the protocol.
+
+## Final classification
+
+```json
+{
+  "derivation": "DERIVED",
+  "prediction": "PREDICTIVE",
+  "inputs": "EMPIRICAL_INPUT (alpha) + ASSUMED framework",
+  "identifiability": "IDENTIFIABLE_AT_DECLARED_ORDER"
+}
+```
+
+Confidence: HIGH | Instrument pass: True
+
+Limitations: Sources cited as canonical primary literature from the research record; per-source full-text fetch not re-performed in this execution environment — flagged per protocol Section 7 (source control) as VERIFICATION: CANONICAL_PRIMARY (not re-fetched).

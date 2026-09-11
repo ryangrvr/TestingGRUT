@@ -1,0 +1,28 @@
+{
+  "case_id": "RC05_CASE_02",
+  "subject": "Standard finite decoherence construction (external, non-GRUT)",
+  "protocol": "program/REALITY_CHECK_05_PROTOCOL.md (frozen; unmodified)",
+  "source_ledger": [
+    {"source": "E. Joos, D. Zeh, Z. Phys. B 59, 223 (1985)", "claim": "reduced coherence suppression under environmental coupling", "verification": "CANONICAL_PRIMARY"},
+    {"source": "W. H. Zurek, Phys. Rev. D 26, 1862 (1982); Phys. Rev. D 24, 1516 (1981)", "claim": "pointer-basis selection and environment-induced superselection", "verification": "CANONICAL_PRIMARY"},
+    {"source": "W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003)", "claim": "decoherence selects pointer states; outcome problem explicitly NOT solved by decoherence alone", "verification": "CANONICAL_PRIMARY"}
+  ],
+  "input_ledger": [
+    {"input": "H = H_S + H_E + H_int (system-environment model)", "provenance": "ASSUMED (declared construction)"},
+    {"input": "initial separable/weak-coupled state", "provenance": "ASSUMED"},
+    {"input": "interaction Hamiltonian (e.g. pointer coupling)", "provenance": "ASSUMED (declared)"},
+    {"input": "Born weights of initial amplitudes", "provenance": "INHERITED_STATE_DATA — NOT dynamically derived"}
+  ],
+  "model_reconstruction": "rho_S(t) = Tr_E[U rho(0) U^dagger]; off-diagonal elements decay as exp(-t/tau_D) in the pointer basis; diagonal populations = |alpha_i|^2 (inherited).",
+  "provenance_map": "claim -> master equation -> declared system/bath model -> primary sources. Decoherence is a THEOREM of the declared unitary model (partial trace of unitary evolution).",
+  "identifiability": "Decoherence rate and pointer basis are uniquely determined by declared inputs. Definite realized outcome is NOT uniquely determined: global state remains an entangled superposition; multiple admissible purifications/global descriptions compatible with the same reduced state.",
+  "prediction_analysis": "Decoherence observable (coherence suppression) is DERIVED and testable. Definite outcome: NOT_DERIVED. No probability law derived beyond inherited amplitudes.",
+  "effective_status": "EFFECTIVE — reduced dynamics of an open subsystem of a closed unitary whole.",
+  "adversarial_attack": "Is decoherence 'fundamental'? No: it is derived for the reduced description; the global state remains pure. Does diagonal rho imply an outcome? Not within the model. Objection did not overturn the classification.",
+  "final_classification": {"decoherence": "DERIVED + EFFECTIVE", "pointer_basis": "DERIVED (basis selected by declared interaction)", "definite_outcome": "NOT_DERIVED", "outcome_weights": "INHERITED / NOT DYNAMICALLY DERIVED"},
+  "confidence": "HIGH",
+  "limitations": "Sources canonical-primary, not re-fetched in this environment. Construction choice (pointer coupling) is declared, not derived — matches protocol expectation.",
+  "instrument_pass": true,
+  "cross_validation_with_experiment_P": "BOUNDARY REPRODUCED INDEPENDENTLY: effective decoherence vs definite outcome/non-derived weights, from an external standard construction (Zurek/Joos-Zeh) with no GRUT input.",
+  "P_BOUNDARY_CROSS_VALIDATION": "PASS"
+}
