@@ -1,0 +1,91 @@
+{
+  "artifact": "EC01_ITER3_SOURCE_AUDIT",
+  "purpose": "Source-by-source scope audit for H1 (FB1) and H2 (RC3 phi4_4), per Iteration-3 mandate.",
+  "evidence_levels": ["PROVEN_THEOREM","RIGOROUS_PARTIAL_RESULT","NUMERICAL_LATTICE_EVIDENCE","CONCEPTUAL_RG_ARGUMENT","MODEL_CLASS_RESULT","HEURISTIC_ARGUMENT","SUPPORTING_CONTEXT"],
+
+  "H1_FB1_sources": [
+    {
+      "source_id": "S-SINAI",
+      "citation": "Ya. G. Sinai, 'On the foundations of the ergodic hypothesis for a dynamical system of statistical mechanics', Dokl. Akad. Nauk SSSR 153, 1261 (1963); later rigorous hard-sphere gas results (e.g. Chernov, Ann. Math. 149, 645 (1999) family).",
+      "establishes": "Rigorous ergodic/mixing results for specific mechanical system classes (Sinai billiards, hard-sphere gas under stated conditions).",
+      "scope": "MODEL_CLASS_RESULT + PROVEN_THEOREM within those classes",
+      "exact_relevance": "Provides a demonstrated mechanism (chaotic mixing) by which microcanonical-type statistical behavior emerges for RESTRICTED systems.",
+      "limitation": "No universal theorem over generic many-body systems; conditions (finite N, hard-core/short-range, no integrals besides energy, etc.) are explicit; does not produce the equal-a-priori MEASURE itself in general -- measure justification still relies on typicality/equal-prior inputs or finite-time mixing approximations."
+    },
+    {
+      "source_id": "S-KSLZ",
+      "citation": "Goldstein, Lebowitz, Tumulka, Zanghi, Phys. Rev. Lett. 96, 050403 (2006) (and related typicality literature).",
+      "establishes": "Concentration of microcanonical expectation values on the typicality sphere for large systems.",
+      "scope": "MODEL_CLASS_RESULT (large systems, microcanonical shell)",
+      "exact_relevance": "Shows typicality can justify equal weights over the microcanonical shell.",
+      "limitation": "Typicality is itself a postulate over the shell (uniform measure); it re-locates rather than derives the statistical input. Does not apply away from microcanonical structure."
+    },
+    {
+      "source_id": "S-GENERIC-CLAIM",
+      "citation": "Generic statistical mechanics as claimed by edge FB1v2 (pilot/iter2).",
+      "establishes": "NOTHING without an imported statistical postulate outside the demonstrated mixing classes.",
+      "scope": "UNRESOLVED",
+      "exact_relevance": "Confirms the imported-postulate dependency survives for the GENERIC claim.",
+      "limitation": "—"
+    }
+  ],
+
+  "H2_RC3_phi4_sources": [
+    {
+      "source_id": "S-AIZENMAN",
+      "citation": "M. Aizenman, Commun. Math. Phys. 86, 1 (1982).",
+      "establishes": "Rigorous triviality of the continuum phi^4 theory for d > 4 (five or more dimensions).",
+      "scope": "PROVEN_THEOREM for d>4",
+      "exact_relevance": "Demonstrates a UV-candidate class can be rendered trivial in some dimensions -- concept relevant to UV non-uniqueness/indeterminacy.",
+      "limitation": "Does NOT constitute the same theorem at d=4."
+    },
+    {
+      "source_id": "S-FROHLICH",
+      "citation": "J. Frohlich, Helv. Phys. Acta 56, 705 (1983) (and related).",
+      "establishes": "Rigorous triviality results for phi^4 in d > 4 (with refinements).",
+      "scope": "PROVEN_THEOREM for d>4",
+      "exact_relevance": "Same as Aizenman.",
+      "limitation": "d=4 remains outside the rigorous theorem."
+    },
+    {
+      "source_id": "S-LATTICE-TRIVIALITY",
+      "citation": "Lattice phi^4 studies (e.g. Luscher & Weisz, Nucl. Phys. B 290 [FS20], 25 (1987); subsequent lattice analyses).",
+      "establishes": "Strong NUMERICAL/LATTICE_EVIDENCE that phi^4_4 is trivial (no nontrivial continuum fixed point at d=4).",
+      "scope": "NUMERICAL_LATTICE_EVIDENCE at d=4",
+      "exact_relevance": "Supporting context that the classical perturbative phi^4_4 UV candidate is likely trivial.",
+      "limitation": "Not a rigorous continuum theorem at d=4."
+    },
+    {
+      "source_id": "S-WILSON",
+      "citation": "K. G. Wilson, Rev. Mod. Phys. 47, 773 (1975).",
+      "establishes": "The Wilsonian RG framework; the RG coarse-grains and discards information about couplings irrelevant at low energy.",
+      "scope": "CONCEPTUAL_RG_ARGUMENT / established framework",
+      "exact_relevance": "Directly supports line B of RC3: EFT data constrain but do not determine the UV theory (multiple UV theories can share the same IR EFT).",
+      "limitation": "Framework-level argument; non-uniqueness shown by construction/multiplicity, not a single exhaustive theorem over ALL UV completions."
+    },
+    {
+      "source_id": "S-BOUSSO-POLCHINSKI",
+      "citation": "R. Bousso, J. Polchinski, JHEP 0006, 006 (2000) (hep-th/0007135).",
+      "establishes": "Enormous multiplicity of (metastable) vacua in flux compactifications -- many vacua over a low-energy EFT region.",
+      "scope": "MODEL_CLASS_RESULT (string-theory compactifications)",
+      "exact_relevance": "Concrete demonstration that a given low-energy effective structure is compatible with vastly many distinct UV completions.",
+      "limitation": "Framework-relative (string landscape); not a theorem about all possible UV physics."
+    },
+    {
+      "source_id": "S-DOUGLAS-KACHRU",
+      "citation": "M. R. Douglas, S. Kachru, Rev. Mod. Phys. 79, 733 (2007).",
+      "establishes": "Review of flux compactification vacuum multiplicity.",
+      "scope": "MODEL_CLASS_RESULT / review corroboration",
+      "exact_relevance": "Corroborates Bousso-Polchinski multiplicity.",
+      "limitation": "Review, not primary result."
+    },
+    {
+      "source_id": "S-MATCHING",
+      "citation": "Standard EFT matching/order-counting (Wilson; Weinberg, Physica A 96, 327 (1979)).",
+      "establishes": "An EFT at order N cannot distinguish UV structures differing only in contributions first appearing at order N+1 and beyond.",
+      "scope": "CONCEPTUAL_RG_ARGUMENT / structural (follows from the EFT construction)",
+      "exact_relevance": "Directly supports line A: finite-order EFT data is finite-dimensional information and cannot pin a unique UV completion.",
+      "limitation": "In-principle argument; does not by itself quantify how much UV freedom is retained at each order."
+    }
+  ]
+}

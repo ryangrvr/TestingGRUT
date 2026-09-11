@@ -1,0 +1,55 @@
+{
+  "artifact": "EC01_ITER3_TRACEABILITY",
+  "principle": "A correction enters the next version; it does not rewrite the evidence that revealed it.",
+  "immutable_history": {
+    "protocol_freeze": "5ab36d6",
+    "pilot": "ccda3be",
+    "first_hostile_audit": "290ad5d",
+    "iter2_plus_audit": "03a18e9"
+  },
+  "verification": {
+    "protocol_sha256": "6b012117ab91c67d1b2810e6c78b4d4809299810add23896a6f8245ae27a00a8",
+    "historical_artifacts_modified": false
+  },
+  "correction_chains": [
+    {
+      "id": "H1",
+      "chain": [
+        "290ad5d hostile audit: FB1 GENERATION flagged (imported statistical postulate)",
+        "03a18e9 iter2 execution: FB1 reclassified NO_DEMONSTRATED_MECHANISM",
+        "03a18e9 iter2 hostile audit: H1 -- NO_DEMONSTRATED_MECHANISM too strong; Sinai-type mixing provides restricted-class mechanisms",
+        "EC01_ITER3: independent reclassification -> CONDITIONAL_DERIVATION_WITH_IMPORTED_POSTULATE",
+        "EC01_ITER3 targeted re-audit: CONFIRMED (firewall preserved; imported postulate remains necessary for generic claim)"
+      ],
+      "final_status": "CONDITIONAL_DERIVATION_WITH_IMPORTED_POSTULATE",
+      "gate_preservation": {"m_to_p": "CONDITIONAL (restricted classes)", "p_to_o": "NOT_APPLICABLE (measure provenance unresolved)", "mechanism_scope": "REGIME_LIMITED", "relation_scope": "WITHIN_FRAMEWORK", "imported_premises": "statistical postulate visible"}
+    },
+    {
+      "id": "H2",
+      "chain": [
+        "03a18e9 iter2 hostile audit: H2 -- phi4_4 citation overstated (d>4 theorem presented as d=4)",
+        "EC01_ITER3: source-by-source audit -> phi4_4 demoted to SUPPORTING_CONTEXT",
+        "EC01_ITER3: lines A/B/C independently audited -> RC3 retained as CONSTRAINT_NOT_DETERMINATION on non-phi4_4 grounds",
+        "EC01_ITER3 targeted re-audit: CONFIRMED independent of overstated citation"
+      ],
+      "final_status": "CONSTRAINT_NOT_DETERMINATION",
+      "evidence_restructure": {
+        "load_bearing": ["line A: order-counting/matching (structural)", "line B: Wilsonian information loss (framework-level)", "line C: landscape multiplicity (FRAMEWORK_RELATIVE)"],
+        "supporting_context": ["phi4_4 triviality (d>4 rigorous theorem; d=4 partial+lattice)"],
+        "removed_from_load_bearing": "phi4_4 d=4 overstatement"
+      },
+      "gate_preservation": {"m_to_p": "UNRESOLVED", "p_to_o": "NO_DISTINCTIVE_OBSERVABLE", "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES", "relation_scope": "FRAMEWORK_INDEPENDENT (structural) / FRAMEWORK_RELATIVE (line C)", "imported_premises": "none beyond structural premises"}
+    }
+  ],
+  "gates_preserved_all_affected_edges": true,
+  "unrelated_edges_changed": 0,
+  "out_of_scope_findings": [],
+  "newly_discovered_issues": [],
+  "proposed_commit_contents": [
+    "program/EC01_ITER3_CORRECTIONS.md",
+    "program/EC01_ITER3_EDGE_RECLASSIFICATION.json",
+    "program/EC01_ITER3_SOURCE_AUDIT.json",
+    "program/EC01_ITER3_TRACEABILITY.json",
+    "program/EC01_ITER3_REPORT.md"
+  ]
+}
