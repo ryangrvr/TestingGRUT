@@ -1,0 +1,52 @@
+{
+  "case_id": "CASE_02",
+  "subject": "Everettian quantum mechanics (relative-state / many-worlds)",
+  "protocol": "REALITY_COMPARATIVE_FOUNDATIONS_01_PROTOCOL.md (frozen)",
+  "twelve_questions": {
+    "1_physically_real": "The universal wavefunction. All branches exist; 'worlds' are emergent decohered structures, not fundamental objects. [Everett 1957 Rev Mod Phys 29, 454]",
+    "2_primitive_variables": "Universal state vector on Hilbert space; nothing else ontologically required in pure form.",
+    "3_fundamental_dynamics": "Unitary Schrodinger evolution only. No collapse. Same as baseline.",
+    "4_probabilities_from": "CONTESTED. Wallace (2012, The Emergent Multiverse, OUP) derives Born weights from rational-agent decision theory within branch ontology [SOURCE-STATED as derivation]; Vaidman (Oxford argument via self-location) [SOURCE-STATED]; critics (e.g. Maudlin 2010 'Can the world be only wavefunction?'; Albert) dispute that probability over existing branches is meaningful. RECORD: DERIVATION_CONTESTED; assumptions differ across derivations (decision-theoretic vs self-location vs typicality).",
+    "5_definite_outcomes": "REFRAMED rather than supplied. Every branch has a definite outcome relative to that branch; no single outcome is dynamically selected. Door D3 semantics, not dynamical collapse.",
+    "6_recovers_unitary_sector": "TRIVIAL - identical to unitary QM.",
+    "7_recovers_classicality": "YES (via decoherence, effective) - branch structure emerges from decoherence. No additional machinery beyond standard QM.",
+    "8_additional_inputs_beyond_Cbp": "ZERO dynamical addition. Semantic/interpretive addition only. Boundary case of the frozen protocol: same class Cbp, different outcome semantics.",
+    "9_empirical_inputs": "Same as baseline.",
+    "10_novel_predictions": "None distinct from standard QM. Empirically equivalent to unitary QM with Born postulate (postulate replaced by derivation-claim, still CONTESTED).",
+    "11_falsification": "No known experimental discriminator from standard QM. Some claim constraints from branching-rate/decoherence-rate models but none is established.",
+    "12_unexplained_remainder": "Born-rule status CONTESTED (derivation claimed, validity disputed). Branch-counting vs measure problem UNRESOLVED. Ontology of probability over all-existing branches CONTESTED."
+  },
+  "scoring": {
+    "explanatory_gain_itemized": {
+      "outcome_definiteness_supplied": "REFRAMED (D3) - each branch definite, no selection; not equal to dynamical selection",
+      "outcome_probability_weights_supplied": "CONTESTED - derivation claimed (Wallace, Vaidman), validity disputed",
+      "classicality_recovered": "YES via standard decoherence (effective, no extra cost)",
+      "measurement_record_explained": "YES - records are branch states; observer + apparatus + environment all in superposition, each component carries definite record",
+      "novel_empirical_prediction": 0
+    },
+    "structure_cost_itemized": {
+      "altered_dynamics": 0,
+      "added_ontology": 0 (pure form) / possibly 1 (if 'worlds' counted as real emergent structures),
+      "new_state_or_probability_postulate": 0 in pure form; 1 effective (Born-rule derivation requires decision-theoretic axioms or typicality measure, each itself an additional assumption),
+      "free_parameters": 0,
+      "preferred_basis_foliation_collapse_noise": 0 (basis from decoherence, effective not fundamental),
+      "observer_relative_or_revised_semantics": 1 (D3 door: outcome meaning revised),
+      "additional_axioms_beyond_Cbp": 0 (dynamically) + 1 (probability/decision axioms, CONTESTED)
+    },
+    "compression": "Calculated: gain = reframed-outcome(0.5) + contested-weights(0.5) + classicality(1) + record(1) + prediction(0) = 3.0; cost = dynamics(0) + ontology(0-1) + postulate(0-1) + params(0) + basis(0) + semantics(1) + axioms(1) = 2-4. Range 0.75-1.5. Recorded as H3/H4 boundary case: outcome via semantics, not dynamics.",
+    "compression_caveat": "Compression score is a preregistered comparative HEURISTIC, not a theorem. Range reflects genuine indeterminacy in counting 'worlds' as ontology and derivation-axioms as cost."
+  },
+  "hypothesis_test": "H3 CONFIRMED (semantics reframed, not dynamical collapse); H4 PARTIALLY CONFIRMED (Born derivation claimed under nontrivial axioms, validity CONTESTED). No novel empirical prediction (H2 FAILS for Everett).",
+  "status_lexicon": {
+    "definite_outcome": "REFRAMED (per-branch definiteness, no dynamical selection) - Door D3",
+    "born_weights": "CONTESTED (Wallace/Vaidman derivation vs Maudlin/Albert-type criticism)",
+    "classicality": "DERIVED via standard decoherence (effective)"
+  },
+  "sources": [
+    {"ref": "Everett, Rev. Mod. Phys. 29, 454 (1957)", "claim": "relative-state formulation; universal wavefunction; no collapse", "status": "SOURCE-STATED"},
+    {"ref": "Wallace, The Emergent Multiverse (OUP, 2012)", "claim": "Born weights from decision theory in branch ontology", "status": "SOURCE-STATED as derivation"},
+    {"ref": "Vaidman (2012, various)", "claim": "Born rule from self-location / symmetry in multiverse", "status": "SOURCE-STATED as derivation"},
+    {"ref": "Maudlin (2010) and critics", "claim": "probability over existing branches is not genuine probability; decision-theoretic derivation does not solve the ontology problem", "status": "SOURCE-STATED as criticism"},
+    {"ref": "Deutsch, Proc. R. Soc. A 455, 3129 (1999)", "claim": "decision-theoretic Born rule", "status": "SOURCE-STATED as derivation"}
+  ]
+}

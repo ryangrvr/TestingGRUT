@@ -1,0 +1,49 @@
+{
+  "case_id": "CASE_01",
+  "subject": "Standard QM/QFT + decoherence (baseline)",
+  "protocol": "REALITY_COMPARATIVE_FOUNDATIONS_01_PROTOCOL.md (frozen)",
+  "twelve_questions": {
+    "1_physically_real": "Quantum states of fields/particles + their unitary evolution + observed measurement statistics. No extra ontology beyond the standard formalism.",
+    "2_primitive_variables": "State vector / density operator on Hilbert space; observables as operators; unitary dynamics.",
+    "3_fundamental_dynamics": "Unitary Schrodinger evolution (operator evolution in QFT). No collapse dynamics.",
+    "4_probabilities_from": "Born postulate: p_i = <psi|P_i|psi>. POSTULATE, not derived within this framework. [von Neumann 1932; Dirac 1930]",
+    "5_definite_outcomes": "NOT supplied. Decoherence suppresses interference (DERIVED: Zurek 1981/2003; Joos-Zeh 1985; Zurek Rev Mod Phys 75, 715 (2003)) but the global state remains an entangled superposition. Matches the Experiment P / RC-04 scoped result, independently reproducible from standard EID theory.",
+    "6_recovers_unitary_sector": "TRIVIAL - it is the unitary sector.",
+    "7_recovers_classicality": "PARTIAL - decoherence explains apparent classicality of records (EFFECTIVE), but not the selection of a realized outcome.",
+    "8_additional_inputs_beyond_Cbp": "ZERO dynamical addition; the Born postulate is standard QM, not an addition to Cbp.",
+    "9_empirical_inputs": "State preparation, Hamiltonians, observable choice.",
+    "10_novel_predictions": "None for outcome selection. The cross-term formula rho_01 ~ alpha beta* <E1|E0> is standard EID [Zurek 2003], not a novel prediction of an outcome ontology.",
+    "11_falsification": "No outcome-selection mechanism exists to falsify; framework is silent on definite outcomes.",
+    "12_unexplained_remainder": "Definite outcome: UNRESOLVED. Origin of Born weights: POSTULATE. Measurement record: explained only as decohered entanglement, not as a realized event."
+  },
+  "scoring": {
+    "explanatory_gain_itemized": {
+      "outcome_definiteness_supplied": 0,
+      "outcome_probability_weights_supplied": 0,
+      "classicality_recovered": "PARTIAL (decoherence-derived, effective)",
+      "measurement_record_explained": "PARTIAL (records as entangled/decohered branches, not realized events)",
+      "novel_empirical_prediction": 0
+    },
+    "structure_cost_itemized": {
+      "altered_dynamics": 0,
+      "added_ontology": 0,
+      "new_state_or_probability_postulate": 1,
+      "free_parameters": 0,
+      "preferred_basis_foliation_collapse_noise": 0,
+      "observer_relative_or_revised_semantics": 0,
+      "additional_axioms_beyond_Cbp": 1
+    },
+    "compression": "0/2 = 0 (no gain over the door problem; the Born postulate is cost without outcome-selection gain)"
+  },
+  "hypothesis_test": "H5 CONFIRMED: zero structure cost (beyond standard QM), zero outcome gain. This is the baseline against which all compression is measured.",
+  "status_lexicon": {
+    "decoherence": "DERIVED + EFFECTIVE",
+    "definite_outcome": "UNRESOLVED",
+    "born_weights": "POSTULATE (empirically validated)"
+  },
+  "sources": [
+    {"ref": "Zurek, Rev. Mod. Phys. 75, 715 (2003)", "claim": "environment-induced decoherence; pointer basis; cross-term suppression", "status": "SOURCE-STATED"},
+    {"ref": "Joos & Zeh, Z. Phys. B 59, 223 (1985)", "claim": "decoherence from unitary dynamics + environment", "status": "SOURCE-STATED"},
+    {"ref": "REALITY_CHECK_04 + hostile replication (commit 8ebac8b lineage)", "claim": "scoped Cbp result: decoherence yes, outcome no, weights inherited", "status": "DERIVED-FROM-SOURCE"}
+  ]
+}

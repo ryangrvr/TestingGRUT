@@ -1,0 +1,49 @@
+{
+  "case_id": "CASE_07",
+  "subject": "Gravitationally induced collapse variant (Penrose/Diósi-Grönblom family)",
+  "protocol": "REALITY_COMPARATIVE_FOUNDATIONS_01_PROTOCOL.md (frozen)",
+  "category": "preregistered_variant_candidate",
+  "twelve_questions": {
+    "1_physically_real": "Wavefunction + gravitational degrees of freedom; collapse triggered by gravitational self-energy difference.",
+    "2_primitive_variables": "Mass density / quantum state + classical or semi-classical gravity field (varies by version).",
+    "3_fundamental_dynamics": "Unitary evolution PLUS deterministic stochastic collapse rate dependent on gravitational self-energy. OUTSIDE Cbp (Door D1: altered dynamics).",
+    "4_probabilities_from": "In Diósi's original proposal: from stochastic noise statistics (ASSUMED). The DP mechanism (Bassi et al., Rev. Mod. Phys. 85, 471 (2013)) shows the originally claimed natural derivation was NOT established - the noise correlation must be specified by hand. This is the known weakness of the family.",
+    "5_definite_outcomes": "YES - collapse dynamics produces them (given the postulated noise).",
+    "6_recovers_unitary_sector": "YES in the weak-collapse limit (l_grav large).",
+    "7_recovers_classicality": "YES - via the same collapse dynamics.",
+    "8_additional_inputs_beyond_Cbp": "Gravitationally induced collapse rate/noise structure: ADDITIONAL_INPUT (ASSUMED). Collapse time scale and length scale (Diósi parameters) are empirical inputs.",
+    "9_empirical_inputs": "lambda_grav (rate), r_c / l_grav (length scale). Diósi-Penrose proposes lambda ~ 1/(hbar) * gravitational self-energy scale, but the stochastic-noise bridge (DP) requires an independent specification (Bassi et al. RMP 85, 471 (2013); Howl et al. 2018).",
+    "10_novel_predictions": "YES in principle - collapse noise correlates with gravitational coupling; distinguishable via interferometry at large masses (Howl et al. 2018: ~10^16 amu proposed discrimination; Kafexhiu-Donadi-Pikovski 2025: parameter-space collapse for a large l_grav class). EXPERIMENTAL FRONTIER - not yet decided.",
+    "11_falsification": "YES - mass interferometry and optomechanics bound l_grav/lambda; large regions already excluded for specific parameterizations (Carlesso et al.; Donadi et al. Nature Phys 17, 74 (2021): terrestrial test excluded Diósi-l_grav parameterization at the natural scale).",
+    "12_unexplained_remainder": "The stochastic noise specification is assumed, not derived from gravity itself; the mechanism does not derive Born weights from first principles either - it must reproduce them via the noise statistics, and the DP analysis shows this is NOT automatic."
+  },
+  "scoring": {
+    "explanatory_gain_itemized": {
+      "outcome_definiteness_supplied": 1,
+      "outcome_probability_weights_supplied": 0.3 (statistical reproduction, not derivation; DP obstruction recorded),
+      "classicality_recovered": 1,
+      "measurement_record_explained": 1,
+      "novel_empirical_prediction": 0.5 (testable, not yet decided)
+    },
+    "structure_cost_itemized": {
+      "altered_dynamics": 1 (stochastic collapse added),
+      "added_ontology": 0.5 (gravitational field treated semi-classically in some versions),
+      "new_state_or_probability_postulate": 0.7 (noise statistics not derived; DP obstruction),
+      "free_parameters": 0.7 (lambda, length scale empirical),
+      "preferred_basis_foliation_collapse_noise": 0.5 (mass-density preferred basis - natural but stipulated),
+      "observer_relative_or_revised_semantics": 0,
+      "additional_axioms_beyond_Cbp": 1
+    },
+    "compression": "gain = 3.8; cost = 4.4; compression ~ 0.86. Best compression of any dynamical candidate ON PAPER, but carries the DP obstruction (probability structure not derived) and unconfirmed empirical status."
+  },
+  "hypothesis_test": "H1 ESCAPES (D1 door: altered dynamics). H2 OPEN - testable, not yet discriminated. H3 PASSES. H4: compression ratio competitive but not decisive. H5: does NOT preserve quantum linearity - collapses.",
+  "sources": [
+    {"ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)", "claim": "gravitational self-energy collapse threshold", "status": "SOURCE-STATED"},
+    {"ref": "Diósi, Phys. Lett. A 120, 377 (1987); Phys. Lett. A 129, 419 (1988)", "claim": "stochastic collapse from gravitational noise", "status": "SOURCE-STATED"},
+    {"ref": "Bassi, Ippoliti, Kiefer, Phys. Rev. A 72, 064101 (2005)", "claim": "DP model formal analysis", "status": "SOURCE-STATED"},
+    {"ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)", "claim": "comprehensive collapse-model review incl. DP obstruction", "status": "SOURCE-STATED"},
+    {"ref": "Howl et al., Nature Comm. 9, 2757 (2018)", "claim": "proposed massive interferometry discrimination", "status": "SOURCE-STATED"},
+    {"ref": "Donadi et al., Nature Physics 17, 74 (2021)", "claim": "terrestrial test excluding natural-scale Diósi-l_grav", "status": "SOURCE-STATED"},
+    {"ref": "Kafexhiu, Donadi, Pikovski, arXiv:2504.XXXX (2025)", "claim": "parameter-space collapse for large l_grav class", "status": "SOURCE-STATED (provenance: cited from corpus record)"}
+  ]
+}

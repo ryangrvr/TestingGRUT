@@ -1,0 +1,50 @@
+{
+  "case_id": "CASE_04",
+  "subject": "Bohmian mechanics",
+  "protocol": "REALITY_COMPARATIVE_FOUNDATIONS_01_PROTOCOL.md (frozen)",
+  "twelve_questions": {
+    "1_physically_real": "Universal wavefunction + actual particle positions (primitive ontology).",
+    "2_primitive_variables": "Configuration Q(t) guided by wavefunction psi(t) on configuration space.",
+    "3_fundamental_dynamics": "Two laws: Schrodinger equation for psi + guidance equation dQ/dt = (hbar/m) Im (psi* grad psi)/|psi|^2. MODIFIED ontology + added dynamics (Door D2, with dynamical component).",
+    "4_probabilities_from": "Equilibrium distribution rho=|psi|^2. Status: POSTULATED or argued via equivariance + typicality (Durr, Goldstein, Zanghi 1992 'Quantum equilibrium'). CONTESTED in literature (Valentini quantum-nonequilibrium proposals; critics argue typicality measure is itself an additional assumption).",
+    "5_definite_outcomes": "YES - particles always have positions. Measurement outcomes = pointer configurations. Definite outcomes are ONTOLOGICAL, not dynamical selection.",
+    "6_recovers_unitary_sector": "YES - psi obeys standard Schrodinger; effective collapse emerges via effective wavefunction for subsystems.",
+    "7_recovers_classicality": "YES - classical limit via effective dynamics (Nelson? see Durr et al. classical limit results).",
+    "8_additional_inputs_beyond_Cbp": "ALTERED ONTOLOGY (D2 door): added particle positions as part of the state. Guidance equation is added dynamics. Equilibrium hypothesis rho=|psi|^2 is an additional assumption (or argued via typicality which is itself an assumption).",
+    "9_empirical_inputs": "Same standard-model inputs; no additional empirical constants.",
+    "10_novel_predictions": "CONTESTED. In quantum equilibrium (rho=|psi|^2) Bohmian predictions = standard QM (no new prediction). Valentini nonequilibrium scenario allows deviations (subquantum measurement, modified interferometry) but requires cosmological initial conditions producing rho != |psi|^2 - UNOBSERVED and cosmology-dependent. NOT an established discriminating prediction (H2 FAILS for standard Bohm).",
+    "11_falsification": "Only via nonequilibrium detection (Valentini; e.g., relic particles from early universe). No current positive evidence. Standard Bohm is empirically equivalent to standard QM within equilibrium hypothesis.",
+    "12_unexplained_remainder": "Why rho=|psi|^2 initially (typicality/contested). Preferred foliation needed for relativistic extension UNRESOLVED (Bohmian field theory constructions exist but no fully satisfactory Lorentz-invariant version). Guidance law's form not derived from deeper principle (Durr et al. symmetry arguments contested)."
+  },
+  "scoring": {
+    "explanatory_gain_itemized": {
+      "outcome_definiteness_supplied": 1,
+      "outcome_probability_weights_supplied": 0.5 (equilibrium gives Born statistics but assumption status CONTESTED),
+      "classicality_recovered": 1,
+      "measurement_record_explained": 1,
+      "novel_empirical_prediction": 0.5 (Valentini nonequilibrium discriminators exist in principle; not established testable-vs-standard-QM without additional cosmological premise)
+    },
+    "structure_cost_itemized": {
+      "altered_dynamics": 1 (guidance equation added),
+      "added_ontology": 1 (particle positions),
+      "new_state_or_probability_postulate": 1 (equilibrium rho=|psi|^2 / typicality measure),
+      "free_parameters": 0,
+      "preferred_basis_foliation_collapse_noise": 1 (foliation needed relativistically; basis singled by configuration ontology),
+      "observer_relative_or_revised_semantics": 0,
+      "additional_axioms_beyond_Cbp": 1
+    },
+    "compression": "gain = 1+0.5+1+1+0.5 = 4.0; cost = 1+1+1+0+1+0+1 = 5. compression ~ 0.8."
+  },
+  "hypothesis_test": "H1 CONFIRMED - escapes obstruction via ontology + added dynamics (D2 door). H2 FAILS for standard Bohm (equilibrium = standard QM); PARTIAL for Valentini nonequilibrium (requires additional cosmological premise).",
+  "status_lexicon": {
+    "definite_outcome": "POSTULATED (ontological positions; not dynamically selected)",
+    "born_weights": "ASSUMED (equilibrium) or CONTESTED (typicality derivation)",
+    "novel_prediction": "CONTESTED - only under additional nonequilibrium premise"
+  },
+  "sources": [
+    {"ref": "Bohm, Phys. Rev. 85, 166 & 180 (1952)", "claim": "guidance equation; definite positions; equivalence to standard QM in equilibrium", "status": "SOURCE-STATED"},
+    {"ref": "Durr, Goldstein, Zanghi, J. Stat. Phys. 67, 843 (1992)", "claim": "quantum equilibrium; equivariance; typicality derivation of rho=|psi|^2", "status": "SOURCE-STATED"},
+    {"ref": "Valentini, Phys. Lett. A 156, 5 (1991); Valentini & Westman PR A 71, 033101 (2005)", "claim": "quantum nonequilibrium scenario; possible subquantum signals", "status": "SOURCE-STATED as proposal"},
+    {"ref": "Durr, Goldstein, Zanghi (OUP 2013) 'Bohmian Mechanics'", "claim": "comprehensive treatment; classical limit; relativistic extensions status", "status": "SOURCE-STATED"}
+  ]
+}
