@@ -16,13 +16,13 @@ Primary lineage (each arrow a model modification, not a status upgrade):
 
 | Year | Source | What it does |
 |---|---|---|
-| 1984 | [Diósi, Phys. Lett. A 105, 199 (1984)](https://www.nature.com/articles/s41567-020-1008-4) | First gravitational localization model |
+| 1984 | Diósi, Phys. Lett. A 105, 199 (1984) | First gravitational localization model |
 | 1987 | Diósi, Phys. Lett. A 120, 377 (1987) | Universal master equation with gravity-violated unitarity |
 | 1989 | Diósi, Phys. Rev. A 40, 1165 (1989) | Dynamical collapse model, gravity-set timescale |
 | 1996 | Penrose, Gen. Rel. Grav. 28, 581 (1996) | Heuristic collapse formula `τ ~ ħ/E_G` |
 | 1990 | Ghirardi, Grassi & Rimini, Phys. Rev. A 42, 1057 (1990) | Alternative gravitational collapse (CSR) |
 | 2007 | Markovian white-noise form | Bypasses the original energy non-conservation defect, at the cost of added structure |
-| 2013 | [Diósi, J. Phys. Conf. Ser. 442, 012001 (2013)](https://www.nature.com/articles/s41567-020-1008-4) | Mass-density resolution: finite `R_0` cutoff conjectured to cure the residual defect — **CONJECTURE**, `R_0` is a free parameter |
+| 2013 | [Diósi, J. Phys. Conf. Ser. 442, 012001 (2013)](https://iopscience.iop.org/article/10.1088/1742-6596/442/1/012001) | Mass-density resolution: finite `R_0` cutoff conjectured to cure the residual defect — **CONJECTURE**, `R_0` is a free parameter |
 | 2021 | [Donadi et al., Nat. Phys. 17, 74–78 (2021), arXiv:2111.13490](https://arxiv.org/abs/2111.13490) | Gran Sasso underground radiation test: lower bound on the effective size of the nucleon mass density ~3 orders above previous bounds; "rules out the natural parameter-free version of the Diósi-Penrose model" |
 
 ## 2. Model reconstruction
@@ -71,8 +71,6 @@ measure — is relocated, not answered.
 
 ## 6. Provenance
 
-Primary sources inspected/cited above ([S1–S11] in the JSON companion). Review
-corroboration from [Bassi et al., Rev. Mod. Phys. 85, 471 (2013)](https://www.nature.com/articles/s41567-021-01489-5)
-and the empirical frontier review [Donadi et al., Nat. Phys. 21 (2021)](https://www.nature.com/articles/s41567-021-01489-5).
+Primary sources inspected/cited above ([S1–S11] in the JSON companion). Review corroboration from [Bassi, Donadi, Vinante et al., "Models of wave-function collapse, underlying theories, and experimental tests", Rev. Mod. Phys. 85, 471 (2013)](https://link.aps.org/doi/10.1103/RevModPhys.85.471) and the empirical-frontier review Donadi, Vinante, Ulbricht & Bassi, ["Present status and future challenges of non-interferometric tests of collapse models", Nat. Phys. 18, 243 (2022)](https://www.nature.com/articles/s41567-021-01489-5).
 
 Canonical GRUT-RAI: UNMODIFIED. All artifacts: TestingGRUT laboratory record.
