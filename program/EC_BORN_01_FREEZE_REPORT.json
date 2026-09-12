@@ -1,0 +1,53 @@
+{
+  "artifact": "EC_BORN_01_FREEZE_REPORT",
+  "type": "freeze integrity report — E&C-BORN-01 protocol freeze",
+  "phase": "FREEZE ONLY (execution not yet authorized)",
+  "date": "2026-09-12",
+  "artifacts_created": {
+    "program/EC_BORN_01_PROTOCOL.md": {
+      "sha256": "55022b33c79e3f5a41048cdf83da17470e1f1a1d069c2f50b09294a5e0360857",
+      "contains": "governing rule; five frozen targets; four non-implications; eight frozen route families; frozen vocabularies (CIRCULARITY_STATUS, final dispositions); frozen execution phases 1-7; hostile-audit specification; epistemic firewall; out-of-scope list; git discipline; stop condition"
+    },
+    "program/EC_BORN_01_SCHEMA.json": {
+      "sha256": "fd2639404ddbf7cfa424653871cedd693daa5e1cd97e1043919af6351be247dd",
+      "contains": "mandatory route-record fields; frozen vocabularies; hard firewalls; frozen execution order; inherited-artifact role restrictions"
+    },
+    "program/EC_BORN_01_ROUTE_REGISTRY.json": {
+      "sha256": "6dc9cce6731c5715fb39615f78dc6e8b9207e3c4773d7254f53cf93e594078b4",
+      "contains": "the eight frozen route families R1-R8 with key audit questions; registry rules; immutable input references"
+    }
+  },
+  "internal_validation_checks": [
+    {"check": "no case evidence collected", "status": "PASS"},
+    {"check": "no route scored or ranked", "status": "PASS"},
+    {"check": "no GRUT-specific Born rule constructed or proposed", "status": "PASS"},
+    {"check": "Cbp boundary recorded as scope information only, not disconfirmation", "status": "PASS"},
+    {"check": "five targets frozen with independent assessment", "status": "PASS"},
+    {"check": "four non-implications frozen verbatim", "status": "PASS"},
+    {"check": "CIRCULARITY_STATUS vocabulary present in schema", "status": "PASS"},
+    {"check": "two-directional attack requirement recorded per route", "status": "PASS"},
+    {"check": "negative-route admission rule present in protocol §13", "status": "PASS"},
+    {"check": "R7 nonequilibrium counterexample class included", "status": "PASS"},
+    {"check": "R8 collapse routes admitted with DP as context-only", "status": "PASS"},
+    {"check": "positive dispositions permitted (e.g. DERIVED_WITH_INDEPENDENT_PREMISES)", "status": "PASS"},
+    {"check": "execution phases ordered and frozen in both protocol and schema", "status": "PASS"},
+    {"check": "no populated judgments anywhere in artifacts", "status": "PASS"},
+    {"check": "existing artifacts unmodified; canonical GRUT-RAI untouched", "status": "PASS"},
+    {"check": "quarantined rewrite set and malformed comparative-foundations JSONs untouched", "status": "PASS"}
+  ],
+  "git_state": {
+    "staged": "NOTHING",
+    "committed": "NOTHING",
+    "pushed": "NOTHING",
+    "artifacts_left_untracked_pending_inspection": true,
+    "authorized_next_action": "human/second-agent review of the four freeze artifacts; commit and push to testinggrut master only after explicit authorization"
+  },
+  "explicit_prohibitions_in_force": [
+    "no Born-rule analysis until execution phase is separately authorized",
+    "no escape-door map or compression-score modification",
+    "no E&C chain expansion",
+    "no new physics",
+    "no canonical GRUT-RAI modification",
+    "no commit or push without separate authorization"
+  ]
+}
