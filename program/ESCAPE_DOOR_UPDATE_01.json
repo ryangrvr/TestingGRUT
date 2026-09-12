@@ -1,0 +1,131 @@
+{
+  "artifact": "ESCAPE_DOOR_UPDATE_01",
+  "protocol": "program/ESCAPE_DOOR_UPDATE_01_PROTOCOL.md (frozen, unmodified)",
+  "frozen_inputs": [
+    "program/REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json (committed RC-05 comparative matrix)",
+    "program/DP_RESCORE_01.json (commit DP_RESCORE_01)",
+    "program/DP_R0_01_EXECUTION.json + DP_R0_01_HOSTILE_AUDIT (verdict CONFIRMED_WITH_MINOR_SCOPE_NOTES)"
+  ],
+  "immutability_compliance": {
+    "score_changes_made": [],
+    "note": "No candidate score was altered. DP 0.63 already existed as the committed audited rescore; it is simply inherited per protocol Sec. 2.5. Everett 0.82 inherited with mandatory Sec. 2.4 qualifier. All other scores inherited unchanged.",
+    "baseline_status": "UNRANKED_REFERENCE (never ranked; comparison floor)"
+  },
+  "candidates": [
+    {
+      "id": "BASELINE",
+      "name": "Standard QM/QFT + decoherence",
+      "compression_score": "baseline (unranked reference)",
+      "D1": "NOT_APPLICABLE (reference row; itself the standard against which discriminability is measured)",
+      "D2": "NOT_APPLICABLE",
+      "D3": "NOT_APPLICABLE",
+      "D4": "NOT_APPLICABLE",
+      "axis2_level": "UNRANKED_REFERENCE",
+      "quadrant": "UNRANKED_REFERENCE",
+      "evidence": "REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json: gain 3.0, cost 0.0, compression 'baseline', h1=NO_ESCAPE",
+      "wording_guard": "reference floor; never a 'winner'"
+    },
+    {
+      "id": "GRW_CSL",
+      "name": "GRW/CSL objective collapse",
+      "compression_score": 0.79,
+      "D1": {"value": "YES", "evidence": "spontaneous radiation/heating and matter-wave interferometry channels are quantitatively defined collapse observables (Bassi et al RMP 85, 471 (2013) experimental-limits program)"},
+      "D2": {"value": "YES", "evidence": "committed matrix h2=YES_TESTABLE_PENDING; published experimental bounds act on GRW/CSL parameter space (x-rate/length bounds from radiation and interferometry data)"},
+      "D3": {"value": "NO", "evidence": "no published experiment demonstrates separation of a collapse-induced signal from environmental/systematic confounds for a currently accessible parameter region; bounds are exclusions, not demonstrated positive discrimination"},
+      "D4": {"value": "NO", "evidence": "no quantitative collapse prediction fixed before comparison and confirmed; committed record records CONTESTED_LOSING_EMPIRICALLY (parameters being squeezed out, no confirmed novel prediction)"},
+      "axis2_level": "MEDIUM",
+      "axis2_level_rule_application": "D1=YES and D2=YES, D3=NO -> MEDIUM per frozen table",
+      "quadrant": "LOW/LOW",
+      "quadrant_rule_application": "compression unfavorable (ranked below baseline in committed matrix) AND MEDIUM is not HIGH -> falls in LOW-or-NONE group per frozen quadrant rules",
+      "evidence": "REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json (compression 0.79, h1=ESCAPES, h2=YES_TESTABLE_PENDING)"
+    },
+    {
+      "id": "BOHM",
+      "name": "Bohmian mechanics",
+      "compression_score": 0.81,
+      "D1": {"value": "NO", "evidence": "committed matrix h2=NO_EMPIRICALLY_INDISTINGUISHABLE; no quantitatively defined observable distinguishing Bohmian ontology from standard QM in accessible regime (quantum-equilibrium theorems)"},
+      "D2": {"value": "NO", "evidence": "no experimental bounds act on Bohmian parameters in accessible regime; committed matrix records empirical indistinguishability"},
+      "D3": {"value": "NO", "evidence": "follows from D1/D2"},
+      "D4": {"value": "NO", "evidence": "committed record: no novel confirmed prediction"},
+      "axis2_level": "NONE",
+      "axis2_level_rule_application": "D1=NO -> NONE per frozen table",
+      "quadrant": "LOW/LOW",
+      "evidence": "REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json (compression 0.81, door D2, h2=NO)"
+    },
+    {
+      "id": "EVERETT",
+      "name": "Everett + decision-theoretic Born",
+      "compression_score": 0.82,
+      "compression_wording_guard": "MANDATORY (protocol Sec. 2.4): highest frozen-heuristic compression score among compared alternatives — NOT empirical support. The score reflects low added dynamical structure via semantic/ontological reframing (Door D3_D4), not a new discriminating mechanism.",
+      "D1": {"value": "NO", "evidence": "committed matrix h2=NO; Everett is unitary QM — no observable distinguishing it from standard quantum predictions exists on the committed record"},
+      "D2": {"value": "NO", "evidence": "no bound acts specifically on the Everett interpretation as distinct from unitary QM itself"},
+      "D3": {"value": "NO", "evidence": "follows"},
+      "D4": {"value": "NO", "evidence": "committed record: derivation of Born weights CONTESTED_DERIVATION_DISPUTED; no novel confirmed prediction"},
+      "axis2_level": "NONE",
+      "quadrant": "LOW/LOW",
+      "evidence": "REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json (compression 0.82, door D3_D4, h2=NO, status CONTESTED_DERIVATION_DISPUTED)"
+    },
+    {
+      "id": "RELATIONAL_QBIST",
+      "name": "Relational/QBist/operational",
+      "compression_score": 0.5,
+      "D1": {"value": "NO", "evidence": "committed matrix h1=REFRAME_NOT_MECHANISM, h2=NO; reframing approaches do not supply a quantitative collapse/discrimination observable"},
+      "D2": {"value": "NO", "evidence": "no bounds act on these interpretations as distinct from standard QM predictions"},
+      "D3": {"value": "NO", "evidence": "follows"},
+      "D4": {"value": "NO", "evidence": "committed record: no novel confirmed prediction"},
+      "axis2_level": "NONE",
+      "quadrant": "LOW/LOW",
+      "evidence": "REALITY_COMPARATIVE_FOUNDATIONS_01_MATRIX.json (compression 0.5, door D3_D4)"
+    },
+    {
+      "id": "GRAV_COLLAPSE",
+      "name": "Penrose/Diosi gravitationally induced collapse (DP family)",
+      "compression_score": 0.63,
+      "compression_wording_guard": "MANDATORY (protocol Sec. 6): 0.63 is the audited frozen-rubric rescored value (DP_RESCORE_01); a future reversion is possible only via a new evidence-driven rescoring under the same rubric. Radiation channel = test vehicle, not a verified prediction; confound separation not yet demonstrated across the surviving window.",
+      "D1": {"value": "YES", "evidence": "collapse-induced radiation channel quantitatively defined (Donadi et al, Nat Phys 17, 74 (2021), arXiv:2111.13490); heating/optomechanical channels defined in Bassi et al RMP 85, 471 (2013)"},
+      "D2": {"value": "YES", "evidence": "HARD_EMPIRICAL_BOUND R0 >~ 4e-10 m from Gran Sasso radiation search (Donadi 2021) acts directly on the surviving DP family; parameter-free DP excluded (DP_R0_01_EXECUTION.json, bound B4-GRAN-SASSO-2021)"},
+      "D3": {"value": "NO", "evidence": "no experiment demonstrates separation of a DP-collapse signal from environmental/systematic confounds for a currently accessible region of the surviving window (4e-10..1e-4 m); DP_R0_01_EXECUTION.json environmental_confound_firewall: 'unresolved for much of the surviving window at current experimental sensitivity'; hostile audit confirmed D3=NO classification"},
+      "D4": {"value": "NO", "evidence": "DP_R0_01 hostile audit: prediction firewall held — the surviving window is surviving territory, not a prediction; radiation channel is a test vehicle. No quantitative DP prediction fixed before comparison and confirmed."},
+      "axis2_level": "MEDIUM",
+      "axis2_level_rule_application": "D1=YES and D2=YES, D3=NO -> MEDIUM per frozen table",
+      "quadrant": "LOW/LOW",
+      "quadrant_rule_application": "compression unfavorable (0.63; ranked below baseline) AND MEDIUM is not HIGH -> LOW/LOW group per frozen quadrant rules",
+      "evidence": "DP_R0_01_EXECUTION.json; DP_R0_01_HOSTILE_AUDIT (CONFIRMED_WITH_MINOR_SCOPE_NOTES); DP_RESCORE_01.json"
+    }
+  ],
+  "H1_headline": {
+    "pre_registered_claim": "No audited candidate simultaneously exceeds baseline and possesses a demonstrated clean empirical discriminator (D3 = YES with accessible region).",
+    "mechanical_evaluation": "D3 = YES for no candidate (GRW_CSL: NO; BOHM: NO; EVERETT: NO; RELATIONAL_QBIST: NO; GRAV_COLLAPSE: NO). The conjunction 'exceeds baseline AND D3=YES' is therefore false for every candidate regardless of the compression axis.",
+    "verdict": "CONFIRMED",
+    "wording": "CONFIRMED strictly by the computed table; no wording softening or strengthening permitted"
+  },
+  "quadrant_summary": {
+    "HIGH/HIGH": [],
+    "HIGH/LOW": [],
+    "LOW/HIGH": [],
+    "LOW/LOW": ["GRW_CSL (MEDIUM -> LOW-or-NONE group)", "BOHM (NONE)", "EVERETT (NONE)", "RELATIONAL_QBIST (NONE)", "GRAV_COLLAPSE (MEDIUM -> LOW-or-NONE group)"],
+    "UNRESOLVED": [],
+    "UNRANKED_REFERENCE": ["BASELINE"],
+    "key_result": "No audited candidate occupies HIGH on either axis. The empty HIGH/HIGH and LOW/HIGH quadrants are the substantive result: within the tested alternatives, the region of (compression-favorable AND empirically discriminating) is unoccupied, as is (compression-unfavorable AND cleanly discriminating)."
+  },
+  "quadrant_rule_note": "FROZEN-PROTOCOL LIMITATION RECORDED: the frozen quadrant table enumerates only HIGH/HIGH, HIGH/LOW, LOW/HIGH, LOW/LOW, UNRESOLVED and its HIGH/LOW vs LOW/LOW definitions reference 'LEVEL = LOW or NONE'. AXIS2=MEDIUM (D1+D2 yes, D3 no) is not explicitly assigned a quadrant by the frozen table. Mechanical resolution used here: MEDIUM is not HIGH, therefore falls into the LOW/NONE branch -> LOW/LOW. This is a protocol gap in the frozen document (MEDIUM not enumerated), recorded as a PROTOCOL_LIMITATION, not silently patched. A future protocol version may add a dedicated quadrant for MEDIUM.",
+  "discrepancies_vs_prior_map": [
+    "Prior matrix ranked GRAV_COLLAPSE 2nd with compression 0.86 and 'YES_TESTABLE_PENDING'; updated record: compression 0.63 (audited rescore), D3 explicitly NO, quadrant LOW/LOW. Cause: DP_R0_01 parameter-free exclusion + free R0 + conjectural repair, per DP_RESCORE_01.",
+    "Prior matrix h2=YES_TESTABLE_PENDING for GRW_CSL and GRAV_COLLAPSE is now decomposed: YES at D1/D2 (test channel + constraints exist) but NO at D3/D4 (no demonstrated clean discriminator, no confirmed prediction). The old 'testable_pending' label was coarser than the frozen D1-D4 fields.",
+    "No other candidate's score or classification changed."
+  ],
+  "limitations": [
+    "D-subfield assignments inherit the committed evidence base; no new literature search was performed under this frozen protocol (inputs restricted per Sec. 1).",
+    "The MEDIUM-quadrant mapping is a mechanical resolution of a frozen-protocol gap (see quadrant_rule_note).",
+    "Environmental-confound separation may become demonstrated by future experiments, which would move DP/GRW to LEVEL=HIGH and LOW/HIGH via the same frozen rules.",
+    "The five malformed comparative-foundations JSON cases were not repaired and were not used beyond their committed content."
+  ],
+  "prohibitions_honored": {
+    "born_rule_analysis": "NONE PERFORMED (E&C-BORN-01 remains unauthorized)",
+    "malformed_case_repair": "NONE PERFORMED",
+    "cosmetic_rewrite_cleanup": "NONE PERFORMED",
+    "canonical_repo_modification": "NONE",
+    "new_candidates": "NONE",
+    "rescoring_of_other_candidates": "NONE"
+  }
+}
