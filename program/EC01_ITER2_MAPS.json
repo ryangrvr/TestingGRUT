@@ -5,15 +5,26 @@
   "note": "Same edge set as pilot, rebuilt under repaired schema. Gates filled independently; missing gates are results.",
   "forward_edges": [
     {
-      "edge_id": "FA1v2", "prior_edge_id": "FA1", "chain": "A",
-      "source": "A01v2", "target": "A02v2", "edge_type": "GENERATION",
-      "mechanism_scope": "MODEL_SPECIFIC", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["separable initial factorization with respect to the chosen partition",
-                   "non-separable (entangling) interaction Hamiltonian acting across the partition",
-                   "unitary evolution within quantum framework"],
+      "edge_id": "FA1v2",
+      "prior_edge_id": "FA1",
+      "chain": "A",
+      "source": "A01v2",
+      "target": "A02v2",
+      "edge_type": "GENERATION",
+      "mechanism_scope": "MODEL_SPECIFIC",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "separable initial factorization with respect to the chosen partition",
+        "non-separable (entangling) interaction Hamiltonian acting across the partition",
+        "unitary evolution within quantum framework"
+      ],
       "imported_premises": {
-        "state_assumptions": ["initial separability of the relevant factors (NOT_DERIVED_FROM_SOURCE; state-dependent: some initial states entangled already)"],
-        "interaction_assumptions": ["H_int must couple the factors; commuting/local interactions preserve separability for restricted state classes"],
+        "state_assumptions": [
+          "initial separability of the relevant factors (NOT_DERIVED_FROM_SOURCE; state-dependent: some initial states entangled already)"
+        ],
+        "interaction_assumptions": [
+          "H_int must couple the factors; commuting/local interactions preserve separability for restricted state classes"
+        ],
         "environment_assumptions": [],
         "coarse_graining_assumptions": [],
         "boundary_conditions": [],
@@ -24,24 +35,71 @@
       },
       "mechanism": "unitary propagation of a separable initial state under an entangling Hamiltonian produces a non-separable joint state",
       "parameter_inputs": [],
-      "m_to_p": {"status": "DEMONSTRATED", "mechanism": "laboratory entangling interactions realize the construction", "selector": "DYNAMICAL_SELECTION", "premises": ["controllable entangling interactions"], "evidence": "Bell/violation experiments; quantum-optics entanglement generation", "scope": "lab-realizable systems", "unresolved": "whether interaction+factorization are physically primitive or themselves effective descriptions"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "Bell-inequality violations; entanglement witnesses", "mapping": "correlations vs local-HV bounds (Bell; Aspect 1982; loophole-free 2015)", "measurement_conditions": [" loophole closure (detection, locality)"], "alternatives": ["superdeterminism (no observed counterexample; unfalsified class)"], "evidence": "well established", "scope": "quantum correlations", "unresolved": "none at observable level"},
-      "alternatives": ["initial entanglement without interaction (COMPATIBILITY, not GENERATION)"],
-      "evidence": ["EPR/Schrodinger formalism", "Bell-test literature"],
+      "m_to_p": {
+        "status": "DEMONSTRATED",
+        "mechanism": "laboratory entangling interactions realize the construction",
+        "selector": "DYNAMICAL_SELECTION",
+        "premises": [
+          "controllable entangling interactions"
+        ],
+        "evidence": "Bell/violation experiments; quantum-optics entanglement generation",
+        "scope": "lab-realizable systems",
+        "unresolved": "whether interaction+factorization are physically primitive or themselves effective descriptions"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "Bell-inequality violations; entanglement witnesses",
+        "mapping": "correlations vs local-HV bounds (Bell; Aspect 1982; loophole-free 2015)",
+        "measurement_conditions": [
+          " loophole closure (detection, locality)"
+        ],
+        "alternatives": [
+          "superdeterminism (no observed counterexample; unfalsified class)"
+        ],
+        "evidence": "well established",
+        "scope": "quantum correlations",
+        "unresolved": "none at observable level"
+      },
+      "alternatives": [
+        "initial entanglement without interaction (COMPATIBILITY, not GENERATION)"
+      ],
+      "evidence": [
+        "EPR/Schrodinger formalism",
+        "Bell-test literature"
+      ],
       "failure_condition": "if no entangling interaction exists for a claimed system or separability is preserved under the claimed dynamics",
-      "status": "GENERATION_WITH_EXPLICIT_PREMISES", "confidence": "HIGH",
-      "scope": "given separable initial state + entangling interaction", "note": "carried over pilot FA1; scope fields added"
+      "status": "GENERATION_WITH_EXPLICIT_PREMISES",
+      "confidence": "HIGH",
+      "scope": "given separable initial state + entangling interaction",
+      "note": "carried over pilot FA1; scope fields added"
     },
     {
-      "edge_id": "FA2v2", "prior_edge_id": "FA2", "chain": "A",
-      "source": "A02v2", "target": "A04v2", "edge_type": "GENERATION",
-      "mechanism_scope": "MODEL_SPECIFIC", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["system/environment partition (A03v2)", "system-environment interaction generating branch-dependent environmental records", "reduction by partial trace over environment"],
+      "edge_id": "FA2v2",
+      "prior_edge_id": "FA2",
+      "chain": "A",
+      "source": "A02v2",
+      "target": "A04v2",
+      "edge_type": "GENERATION",
+      "mechanism_scope": "MODEL_SPECIFIC",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "system/environment partition (A03v2)",
+        "system-environment interaction generating branch-dependent environmental records",
+        "reduction by partial trace over environment"
+      ],
       "imported_premises": {
-        "state_assumptions": ["entanglement capable of encoding branch-correlated environmental records"],
-        "interaction_assumptions": ["H_int producing branch-record correlation"],
-        "environment_assumptions": ["environmental record states with (ideally orthogonal or fast-decaying) mutual overlap <E1|E0>"],
-        "coarse_graining_assumptions": ["reduced description rho_S = Tr_E rho (the tracing operation itself)"],
+        "state_assumptions": [
+          "entanglement capable of encoding branch-correlated environmental records"
+        ],
+        "interaction_assumptions": [
+          "H_int producing branch-record correlation"
+        ],
+        "environment_assumptions": [
+          "environmental record states with (ideally orthogonal or fast-decaying) mutual overlap <E1|E0>"
+        ],
+        "coarse_graining_assumptions": [
+          "reduced description rho_S = Tr_E rho (the tracing operation itself)"
+        ],
         "boundary_conditions": [],
         "initial_conditions": [],
         "statistical_postulates": [],
@@ -50,24 +108,63 @@
       },
       "mechanism": "entanglement with environmental records makes reduced-state coherence proportional to record overlap; orthogonal records -> vanishing cross term",
       "parameter_inputs": [],
-      "m_to_p": {"status": "DEMONSTRATED", "mechanism": "controlled decoherence experiments; environment as physical bath", "selector": "DYNAMICAL_SELECTION", "premises": ["realizable system-environment coupling"], "evidence": "Tegmark quantitative macroscopic decoherence estimates; interference-loss experiments", "scope": "systems with realizable environments", "unresolved": "whether the chosen partition is physically selected"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "loss of interference fringes in presence of which-path/environment coupling", "mapping": "off-diagonal suppression -> fringe visibility loss", "measurement_conditions": ["controlled which-path marking"], "alternatives": [], "evidence": "Walls/Milburn; Buks et al. (CPB dephasing); hornberger reviews", "scope": "interferometric observables", "unresolved": "none at this layer"},
-      "alternatives": ["dephasing noise (Markov) yields same reduced behavior (OBSERVATIONAL_DEGENERACY at reduced level; distinguishable via recoherence/purity tests)"],
-      "evidence": ["repaired Experiment P controls A/B (commit 10681b0)", "P hostile replication 8ebac8b: 11 model classes, population identity p_i=|alpha_i|^2 invariant"],
+      "m_to_p": {
+        "status": "DEMONSTRATED",
+        "mechanism": "controlled decoherence experiments; environment as physical bath",
+        "selector": "DYNAMICAL_SELECTION",
+        "premises": [
+          "realizable system-environment coupling"
+        ],
+        "evidence": "Tegmark quantitative macroscopic decoherence estimates; interference-loss experiments",
+        "scope": "systems with realizable environments",
+        "unresolved": "whether the chosen partition is physically selected"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "loss of interference fringes in presence of which-path/environment coupling",
+        "mapping": "off-diagonal suppression -> fringe visibility loss",
+        "measurement_conditions": [
+          "controlled which-path marking"
+        ],
+        "alternatives": [],
+        "evidence": "Walls/Milburn; Buks et al. (CPB dephasing); hornberger reviews",
+        "scope": "interferometric observables",
+        "unresolved": "none at this layer"
+      },
+      "alternatives": [
+        "dephasing noise (Markov) yields same reduced behavior (OBSERVATIONAL_DEGENERACY at reduced level; distinguishable via recoherence/purity tests)"
+      ],
+      "evidence": [
+        "repaired Experiment P controls A/B (commit 10681b0)",
+        "P hostile replication 8ebac8b: 11 model classes, population identity p_i=|alpha_i|^2 invariant"
+      ],
       "failure_condition": "if record overlap remains non-zero the reduced coherence does not vanish (cross term ~ alpha beta* <E1|E0>)",
-      "status": "GENERATION_WITH_EXPLICIT_PREMISES", "confidence": "HIGH",
-      "scope": "unitary closed model + defined reduction", "note": "pilot FA2 scope retained; entanglement ALONE does not imply decoherence (FA2 finding preserved)"
+      "status": "GENERATION_WITH_EXPLICIT_PREMISES",
+      "confidence": "HIGH",
+      "scope": "unitary closed model + defined reduction",
+      "note": "pilot FA2 scope retained; entanglement ALONE does not imply decoherence (FA2 finding preserved)"
     },
     {
-      "edge_id": "FA3av2", "prior_edge_id": "FA3 (split)", "chain": "A",
-      "source": "A04v2", "target": "A06a", "edge_type": "COARSE_GRAINING",
-      "mechanism_scope": "MODEL_SPECIFIC", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["pointer basis selected by environmental monitoring (A05v2)", "approximately diagonal reduced state", "record robustness against monitoring"],
+      "edge_id": "FA3av2",
+      "prior_edge_id": "FA3 (split)",
+      "chain": "A",
+      "source": "A04v2",
+      "target": "A06a",
+      "edge_type": "COARSE_GRAINING",
+      "mechanism_scope": "MODEL_SPECIFIC",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "pointer basis selected by environmental monitoring (A05v2)",
+        "approximately diagonal reduced state",
+        "record robustness against monitoring"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
         "environment_assumptions": [],
-        "coarse_graining_assumptions": ["operational reading of reduced-state diagonalization as classical statistics (EFFECTIVE reading, NOT an ontology claim)"],
+        "coarse_graining_assumptions": [
+          "operational reading of reduced-state diagonalization as classical statistics (EFFECTIVE reading, NOT an ontology claim)"
+        ],
         "boundary_conditions": [],
         "initial_conditions": [],
         "statistical_postulates": [],
@@ -76,44 +173,114 @@
       },
       "mechanism": "persistent pointer-state correlations constitute effective classical statistics/records under the reduced description",
       "parameter_inputs": [],
-      "m_to_p": {"status": "EFFECTIVE", "mechanism": "no selector beyond the adopted reduced description; no collapse occurs", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "P: global state remains pure entangled superposition", "scope": "reduced description", "unresolved": "physical status of records beyond effective description"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "absence of macroscopic interference; reproducible statistics", "mapping": "reduced diagonal statistics -> classical probabilistic records", "measurement_conditions": ["macroscopic pointer observables"], "alternatives": [], "evidence": "decoherence program; P", "scope": "effective classical observables", "unresolved": "none at this layer"},
-      "alternatives": ["quantum-to-classical accounts via hydrodynamic/stochastic variables"],
-      "evidence": ["pilot chain A", "P repaired controls"],
+      "m_to_p": {
+        "status": "EFFECTIVE",
+        "mechanism": "no selector beyond the adopted reduced description; no collapse occurs",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "P: global state remains pure entangled superposition",
+        "scope": "reduced description",
+        "unresolved": "physical status of records beyond effective description"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "absence of macroscopic interference; reproducible statistics",
+        "mapping": "reduced diagonal statistics -> classical probabilistic records",
+        "measurement_conditions": [
+          "macroscopic pointer observables"
+        ],
+        "alternatives": [],
+        "evidence": "decoherence program; P",
+        "scope": "effective classical observables",
+        "unresolved": "none at this layer"
+      },
+      "alternatives": [
+        "quantum-to-classical accounts via hydrodynamic/stochastic variables"
+      ],
+      "evidence": [
+        "pilot chain A",
+        "P repaired controls"
+      ],
       "failure_condition": "macroscopic recoherence would undermine record robustness (P hostile replication: finite-environment recoherence demonstrated)",
-      "status": "EFFECTIVE_STRUCTURE_ESTABLISHED", "confidence": "HIGH",
-      "scope": "effective classical statistics only", "note": "SPLIT from over-compressed A06 per FA3; ontology claim removed"
+      "status": "EFFECTIVE_STRUCTURE_ESTABLISHED",
+      "confidence": "HIGH",
+      "scope": "effective classical statistics only",
+      "note": "SPLIT from over-compressed A06 per FA3; ontology claim removed"
     },
     {
-      "edge_id": "FA3bv2", "prior_edge_id": null, "chain": "A",
-      "source": "A04v2", "target": "A06b", "edge_type": "UNRESOLVED_RELATION",
-      "mechanism_scope": "UNKNOWN", "relation_scope": "WITHIN_FRAMEWORK",
+      "edge_id": "FA3bv2",
+      "prior_edge_id": null,
+      "chain": "A",
+      "source": "A04v2",
+      "target": "A06b",
+      "edge_type": "UNRESOLVED_RELATION",
+      "mechanism_scope": "UNKNOWN",
+      "relation_scope": "WITHIN_FRAMEWORK",
       "premises": [],
       "imported_premises": {
-        "state_assumptions": ["sufficiently localized wave packets (NOT_DERIVED_FROM_SOURCE)"],
-        "interaction_assumptions": ["Hamiltonian structure admitting semiclassical regime (NOT_DERIVED_FROM_SOURCE)"],
+        "state_assumptions": [
+          "sufficiently localized wave packets (NOT_DERIVED_FROM_SOURCE)"
+        ],
+        "interaction_assumptions": [
+          "Hamiltonian structure admitting semiclassical regime (NOT_DERIVED_FROM_SOURCE)"
+        ],
         "environment_assumptions": [],
         "coarse_graining_assumptions": [],
         "boundary_conditions": [],
         "initial_conditions": [],
         "statistical_postulates": [],
         "matching_inputs": [],
-        "parameter_inputs": ["scale separation hbar << action scale"]
+        "parameter_inputs": [
+          "scale separation hbar << action scale"
+        ]
       },
       "mechanism": "NOT SPECIFIED — decoherence supplies statistics (A06a) but NOT trajectories; trajectory recovery requires separate semiclassical machinery not present in the chain evidence",
-      "parameter_inputs": ["hbar scale separation"],
-      "m_to_p": {"status": "UNDERDETERMINED", "mechanism": "none demonstrated within chain A evidence", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "hostile audit FA3", "scope": "", "unresolved": "derivation of classical trajectory limit from decoherence + stated conditions"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "classical tracks (empirically familiar)", "mapping": "none established within this chain", "measurement_conditions": [], "alternatives": ["Bohmian ontology supplies trajectories by postulate"], "evidence": "", "scope": "", "unresolved": "whether unitary+decoherence reproduces individual tracks"},
-      "alternatives": ["Bohmian mechanics (additional ontology)", "semiclassical dynamics (additional premises)"],
-      "evidence": ["hostile audit FA3 finding"],
+      "parameter_inputs": [
+        "hbar scale separation"
+      ],
+      "m_to_p": {
+        "status": "UNDERDETERMINED",
+        "mechanism": "none demonstrated within chain A evidence",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "hostile audit FA3",
+        "scope": "",
+        "unresolved": "derivation of classical trajectory limit from decoherence + stated conditions"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "classical tracks (empirically familiar)",
+        "mapping": "none established within this chain",
+        "measurement_conditions": [],
+        "alternatives": [
+          "Bohmian ontology supplies trajectories by postulate"
+        ],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "whether unitary+decoherence reproduces individual tracks"
+      },
+      "alternatives": [
+        "Bohmian mechanics (additional ontology)",
+        "semiclassical dynamics (additional premises)"
+      ],
+      "evidence": [
+        "hostile audit FA3 finding"
+      ],
       "failure_condition": "—",
-      "status": "UNRESOLVED_RELATION", "confidence": "HIGH that it is unresolved",
-      "scope": "", "note": "NEW edge created by A06 split; marks exactly what the split exposed"
+      "status": "UNRESOLVED_RELATION",
+      "confidence": "HIGH that it is unresolved",
+      "scope": "",
+      "note": "NEW edge created by A06 split; marks exactly what the split exposed"
     },
     {
-      "edge_id": "FB1v2", "prior_edge_id": "FB1", "chain": "B",
-      "source": "B01v2", "target": "B02v2", "edge_type": "NO_DEMONSTRATED_MECHANISM",
-      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES", "relation_scope": "WITHIN_FRAMEWORK",
+      "edge_id": "FB1v2",
+      "prior_edge_id": "FB1",
+      "chain": "B",
+      "source": "B01v2",
+      "target": "B02v2",
+      "edge_type": "NO_DEMONSTRATED_MECHANISM",
+      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES",
+      "relation_scope": "WITHIN_FRAMEWORK",
       "premises": [],
       "imported_premises": {
         "state_assumptions": [],
@@ -122,102 +289,261 @@
         "coarse_graining_assumptions": [],
         "boundary_conditions": [],
         "initial_conditions": [],
-        "statistical_postulates": ["equal a-priori probability / typicality postulate (NOT_DERIVED_FROM_SOURCE)"],
+        "statistical_postulates": [
+          "equal a-priori probability / typicality postulate (NOT_DERIVED_FROM_SOURCE)"
+        ],
         "matching_inputs": [],
         "parameter_inputs": []
       },
       "mechanism": "dynamics ALONE does not produce the microcanonical/equal-probability measure; the statistical postulate is imported. Partial support exists only via ergodic/mixing theorems under EXTRA conditions (not universal).",
       "parameter_inputs": [],
-      "m_to_p": {"status": "UNRESOLVED", "mechanism": "no mechanism derives the measure from dynamics alone", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "ergodicity failures; mixing conditions", "scope": "", "unresolved": "origin of the statistical postulate"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "equilibrium distributions", "mapping": "via the postulated measure", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "measure provenance"},
-      "alternatives": ["typicality (Schroedinger-Heisenberg-Goldstein-Lebowitz-Tumulka-Zanghi) — still postulates measure over typicality sphere", "ergodic theorems (conditional)"],
-      "evidence": ["hostile audit FB1 finding"],
+      "m_to_p": {
+        "status": "UNRESOLVED",
+        "mechanism": "no mechanism derives the measure from dynamics alone",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "ergodicity failures; mixing conditions",
+        "scope": "",
+        "unresolved": "origin of the statistical postulate"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "equilibrium distributions",
+        "mapping": "via the postulated measure",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "measure provenance"
+      },
+      "alternatives": [
+        "typicality (Schroedinger-Heisenberg-Goldstein-Lebowitz-Tumulka-Zanghi) — still postulates measure over typicality sphere",
+        "ergodic theorems (conditional)"
+      ],
+      "evidence": [
+        "hostile audit FB1 finding"
+      ],
       "failure_condition": "—",
-      "status": "NO_DEMONSTRATED_MECHANISM", "confidence": "HIGH",
-      "scope": "large systems", "note": "pilot's COMPATIBILITY/GENERATION ambiguity resolved to NO_DEMONSTRATED_MECHANISM per FB1"
+      "status": "NO_DEMONSTRATED_MECHANISM",
+      "confidence": "HIGH",
+      "scope": "large systems",
+      "note": "pilot's COMPATIBILITY/GENERATION ambiguity resolved to NO_DEMONSTRATED_MECHANISM per FB1"
     },
     {
-      "edge_id": "FB2v2", "prior_edge_id": "FB2", "chain": "B",
-      "source": "B02v2", "target": "B03v2", "edge_type": "DERIVATION",
-      "mechanism_scope": "REGIME_LIMITED", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["statistical postulate (B02v2)", "short-range interactions", "thermodynamic limit", "equilibrium", "coarse-graining by macroscopic variables"],
+      "edge_id": "FB2v2",
+      "prior_edge_id": "FB2",
+      "chain": "B",
+      "source": "B02v2",
+      "target": "B03v2",
+      "edge_type": "DERIVATION",
+      "mechanism_scope": "REGIME_LIMITED",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "statistical postulate (B02v2)",
+        "short-range interactions",
+        "thermodynamic limit",
+        "equilibrium",
+        "coarse-graining by macroscopic variables"
+      ],
       "imported_premises": {
         "state_assumptions": [],
-        "interaction_assumptions": ["short-range interactions (NOT_DERIVED_FROM_SOURCE within chain B)"],
+        "interaction_assumptions": [
+          "short-range interactions (NOT_DERIVED_FROM_SOURCE within chain B)"
+        ],
         "environment_assumptions": [],
-        "coarse_graining_assumptions": ["macroscopic variables (U,S,T,p) as coarse observables"],
+        "coarse_graining_assumptions": [
+          "macroscopic variables (U,S,T,p) as coarse observables"
+        ],
         "boundary_conditions": [],
         "initial_conditions": [],
-        "statistical_postulates": ["carried from B02v2"],
+        "statistical_postulates": [
+          "carried from B02v2"
+        ],
         "matching_inputs": [],
         "parameter_inputs": []
       },
       "mechanism": "Gibbs ensembles derive equilibrium thermodynamics (state functions, Maxwell relations, fluctuation structure) in the stated regime",
       "parameter_inputs": [],
-      "m_to_p": {"status": "DEMONSTRATED", "mechanism": "real materials realize the equilibrium regime", "selector": "COMPATIBILITY_SELECTION", "premises": ["stated regime physically realized"], "evidence": "agreement of stat-mech with calorimetry/equation-of-state data", "scope": "equilibrium systems", "unresolved": "non-equilibrium physics outside regime"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "heat, work, temperature, entropy (calorimetric)", "mapping": "state functions -> direct measurement", "measurement_conditions": ["equilibrium", "thermodynamic limit"], "alternatives": [], "evidence": "classical + modern", "scope": "equilibrium", "unresolved": "none"},
+      "m_to_p": {
+        "status": "DEMONSTRATED",
+        "mechanism": "real materials realize the equilibrium regime",
+        "selector": "COMPATIBILITY_SELECTION",
+        "premises": [
+          "stated regime physically realized"
+        ],
+        "evidence": "agreement of stat-mech with calorimetry/equation-of-state data",
+        "scope": "equilibrium systems",
+        "unresolved": "non-equilibrium physics outside regime"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "heat, work, temperature, entropy (calorimetric)",
+        "mapping": "state functions -> direct measurement",
+        "measurement_conditions": [
+          "equilibrium",
+          "thermodynamic limit"
+        ],
+        "alternatives": [],
+        "evidence": "classical + modern",
+        "scope": "equilibrium",
+        "unresolved": "none"
+      },
       "alternatives": [],
-      "evidence": ["Boltzmann/Gibbs; Callen; rigorous statistical mechanics for lattice gases"],
+      "evidence": [
+        "Boltzmann/Gibbs; Callen; rigorous statistical mechanics for lattice gases"
+      ],
       "failure_condition": "long-range interactions, small N, strong non-equilibrium",
-      "status": "DERIVATION_WITHIN_REGIME", "confidence": "HIGH",
-      "scope": "thermodynamic limit, equilibrium", "note": "this edge is genuine: given the postulate, thermodynamics is derived"
+      "status": "DERIVATION_WITHIN_REGIME",
+      "confidence": "HIGH",
+      "scope": "thermodynamic limit, equilibrium",
+      "note": "this edge is genuine: given the postulate, thermodynamics is derived"
     },
     {
-      "edge_id": "FB3v2", "prior_edge_id": "FB3", "chain": "B",
-      "source": "B03v2", "target": "B05v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "REGIME_LIMITED", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["Boltzmann entropy counts multiplicity", "second-law tendency under the postulated measure", "low-entropy initial condition (B06v2)"],
+      "edge_id": "FB3v2",
+      "prior_edge_id": "FB3",
+      "chain": "B",
+      "source": "B03v2",
+      "target": "B05v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "REGIME_LIMITED",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "Boltzmann entropy counts multiplicity",
+        "second-law tendency under the postulated measure",
+        "low-entropy initial condition (B06v2)"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
         "environment_assumptions": [],
         "coarse_graining_assumptions": [],
         "boundary_conditions": [],
-        "initial_conditions": ["PAST HYPOTHESIS — low-entropy initial condition (NOT_DERIVED_FROM_SOURCE; external condition)"],
-        "statistical_postulates": ["carried from B02v2"],
+        "initial_conditions": [
+          "PAST HYPOTHESIS — low-entropy initial condition (NOT_DERIVED_FROM_SOURCE; external condition)"
+        ],
+        "statistical_postulates": [
+          "carried from B02v2"
+        ],
         "matching_inputs": [],
         "parameter_inputs": []
       },
       "mechanism": "under the measure, entropy increases toward larger phase-space volumes; the low-entropy condition (imported) orients the gradient — dynamics alone does NOT produce the arrow",
       "parameter_inputs": [],
-      "m_to_p": {"status": "EMPIRICAL_INPUT", "mechanism": "the condition is external; cosmological accounts unresolved", "selector": "INITIAL_OR_BOUNDARY_CONDITION", "premises": [], "evidence": "observed entropy gradient", "scope": "cosmology-adjacent", "unresolved": "origin of the Past Hypothesis — first backward stop of chain B"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "macroscopic irreversibility, second law", "mapping": "entropy gradient -> experienced asymmetry", "measurement_conditions": [], "alternatives": ["cosmological accounts"], "evidence": "standard thermodynamics", "scope": "macroscopic", "unresolved": "condition origin"},
-      "alternatives": ["inflationary accounts of low-entropy start", "bounce models", "anthropic/typicality arguments — all unresolved"],
-      "evidence": ["Boltzmann; Penrose Past Hypothesis; Albert"],
+      "m_to_p": {
+        "status": "EMPIRICAL_INPUT",
+        "mechanism": "the condition is external; cosmological accounts unresolved",
+        "selector": "INITIAL_OR_BOUNDARY_CONDITION",
+        "premises": [],
+        "evidence": "observed entropy gradient",
+        "scope": "cosmology-adjacent",
+        "unresolved": "origin of the Past Hypothesis — first backward stop of chain B"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "macroscopic irreversibility, second law",
+        "mapping": "entropy gradient -> experienced asymmetry",
+        "measurement_conditions": [],
+        "alternatives": [
+          "cosmological accounts"
+        ],
+        "evidence": "standard thermodynamics",
+        "scope": "macroscopic",
+        "unresolved": "condition origin"
+      },
+      "alternatives": [
+        "inflationary accounts of low-entropy start",
+        "bounce models",
+        "anthropic/typicality arguments — all unresolved"
+      ],
+      "evidence": [
+        "Boltzmann; Penrose Past Hypothesis; Albert"
+      ],
       "failure_condition": "if entropy fails to increase in claimed regime or condition were dynamical",
-      "status": "CONSTRAINT_TRANSMISSION_WITH_IMPORT", "confidence": "HIGH",
-      "scope": "macroscopic regime", "note": "dynamical arrow requires imported condition; carried explicitly per hostile audit"
+      "status": "CONSTRAINT_TRANSMISSION_WITH_IMPORT",
+      "confidence": "HIGH",
+      "scope": "macroscopic regime",
+      "note": "dynamical arrow requires imported condition; carried explicitly per hostile audit"
     },
     {
-      "edge_id": "FC1v2", "prior_edge_id": "FC1", "chain": "C",
-      "source": "C01v2", "target": "C02v2", "edge_type": "DERIVATION",
-      "mechanism_scope": "REGIME_LIMITED", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["symmetry structure", "declared expansion parameter", "operator basis consistent with symmetries", "Wilsonian RG or matching"],
+      "edge_id": "FC1v2",
+      "prior_edge_id": "FC1",
+      "chain": "C",
+      "source": "C01v2",
+      "target": "C02v2",
+      "edge_type": "DERIVATION",
+      "mechanism_scope": "REGIME_LIMITED",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "symmetry structure",
+        "declared expansion parameter",
+        "operator basis consistent with symmetries",
+        "Wilsonian RG or matching"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
         "environment_assumptions": [],
-        "coarse_graining_assumptions": ["integrating out heavy modes / modes above cutoff"],
+        "coarse_graining_assumptions": [
+          "integrating out heavy modes / modes above cutoff"
+        ],
         "boundary_conditions": [],
         "initial_conditions": [],
         "statistical_postulates": [],
-        "matching_inputs": ["LECs carry information from the UV theory and from experiment — NOT determined by symmetry alone (hostile audit FC1)"],
-        "parameter_inputs": ["Wilson coefficients C03v2"]
+        "matching_inputs": [
+          "LECs carry information from the UV theory and from experiment — NOT determined by symmetry alone (hostile audit FC1)"
+        ],
+        "parameter_inputs": [
+          "Wilson coefficients C03v2"
+        ]
       },
       "mechanism": "integrating out modes / matching gives a systematic low-energy expansion with symmetric operator basis; symmetry fixes FORM, not VALUES",
-      "parameter_inputs": ["Wilson coefficients"],
-      "m_to_p": {"status": "DEMONSTRATED", "mechanism": "real field theories possess well-defined effective limits", "selector": "COMPATIBILITY_SELECTION", "premises": ["regime below heavy scales realized"], "evidence": "chi-PT, Fermi theory, SCET etc.", "scope": "stated regimes", "unresolved": "—"},
-      "p_to_o": {"status": "DEMONSTRATED", "observable": "low-energy observables at declared order", "mapping": "EFT amplitudes -> scattering/decay observables", "measurement_conditions": ["regime below integration scale"], "alternatives": [], "evidence": "chi-PT success (RC-05 case 06)", "scope": "declared order", "unresolved": "none"},
-      "alternatives": ["—"],
-      "evidence": ["Wilson 1975; Weinberg 1979; chi-PT literature"],
+      "parameter_inputs": [
+        "Wilson coefficients"
+      ],
+      "m_to_p": {
+        "status": "DEMONSTRATED",
+        "mechanism": "real field theories possess well-defined effective limits",
+        "selector": "COMPATIBILITY_SELECTION",
+        "premises": [
+          "regime below heavy scales realized"
+        ],
+        "evidence": "chi-PT, Fermi theory, SCET etc.",
+        "scope": "stated regimes",
+        "unresolved": "—"
+      },
+      "p_to_o": {
+        "status": "DEMONSTRATED",
+        "observable": "low-energy observables at declared order",
+        "mapping": "EFT amplitudes -> scattering/decay observables",
+        "measurement_conditions": [
+          "regime below integration scale"
+        ],
+        "alternatives": [],
+        "evidence": "chi-PT success (RC-05 case 06)",
+        "scope": "declared order",
+        "unresolved": "none"
+      },
+      "alternatives": [
+        "—"
+      ],
+      "evidence": [
+        "Wilson 1975; Weinberg 1979; chi-PT literature"
+      ],
       "failure_condition": "outside expansion regime or wrong symmetry assumptions",
-      "status": "DERIVATION_OF_FORM_LECs_IMPORTED", "confidence": "HIGH",
-      "scope": "declared regime/order", "note": "fixes FC1: form derived, coefficients imported"
+      "status": "DERIVATION_OF_FORM_LECs_IMPORTED",
+      "confidence": "HIGH",
+      "scope": "declared regime/order",
+      "note": "fixes FC1: form derived, coefficients imported"
     },
     {
-      "edge_id": "FC2v2", "prior_edge_id": "FC2", "chain": "C",
-      "source": "C02v2", "target": "C04v2", "edge_type": "UNRESOLVED_RELATION",
-      "mechanism_scope": "UNKNOWN", "relation_scope": "WITHIN_FRAMEWORK",
+      "edge_id": "FC2v2",
+      "prior_edge_id": "FC2",
+      "chain": "C",
+      "source": "C02v2",
+      "target": "C04v2",
+      "edge_type": "UNRESOLVED_RELATION",
+      "mechanism_scope": "UNKNOWN",
+      "relation_scope": "WITHIN_FRAMEWORK",
       "premises": [],
       "imported_premises": {
         "state_assumptions": [],
@@ -232,21 +558,56 @@
       },
       "mechanism": "EFT data (Wilson coefficients at all orders + spectra) constrain but do not determine the UV completion; non-uniqueness re-anchored by fresh sources (see RC3v2)",
       "parameter_inputs": [],
-      "m_to_p": {"status": "UNRESOLVED", "mechanism": "which UV completion is realized is undetermined by accessible observables", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "RC3v2 sources", "scope": "", "unresolved": "UV non-uniqueness vs uniqueness arguments"},
-      "p_to_o": {"status": "NO_DISTINCTIVE_OBSERVABLE", "observable": "UV physics beyond accessible scales", "mapping": "none within accessible observables", "measurement_conditions": [], "alternatives": ["multiple inequivalent UV completions share EFT"], "evidence": "", "scope": "", "unresolved": "UV discriminator"},
-      "alternatives": ["string landscape (multiple vacua per EFT)", "asymptotic safety", "lattice triviality constraints on phi^4"],
-      "evidence": ["RC3v2 fresh sources"],
+      "m_to_p": {
+        "status": "UNRESOLVED",
+        "mechanism": "which UV completion is realized is undetermined by accessible observables",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "RC3v2 sources",
+        "scope": "",
+        "unresolved": "UV non-uniqueness vs uniqueness arguments"
+      },
+      "p_to_o": {
+        "status": "NO_DISTINCTIVE_OBSERVABLE",
+        "observable": "UV physics beyond accessible scales",
+        "mapping": "none within accessible observables",
+        "measurement_conditions": [],
+        "alternatives": [
+          "multiple inequivalent UV completions share EFT"
+        ],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "UV discriminator"
+      },
+      "alternatives": [
+        "string landscape (multiple vacua per EFT)",
+        "asymptotic safety",
+        "lattice triviality constraints on phi^4"
+      ],
+      "evidence": [
+        "RC3v2 fresh sources"
+      ],
       "failure_condition": "if a uniqueness theorem for a given EFT class is proven",
-      "status": "UNRESOLVED_RELATION", "confidence": "HIGH",
-      "scope": "beyond accessible scales", "note": "reverse gap retained; re-anchored"
+      "status": "UNRESOLVED_RELATION",
+      "confidence": "HIGH",
+      "scope": "beyond accessible scales",
+      "note": "reverse gap retained; re-anchored"
     }
   ],
   "reverse_edges": [
     {
-      "edge_id": "RA1v2", "prior_edge_id": "RA1", "chain": "A", "reverse": true,
-      "source": "A06a", "target": "A01v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "FRAMEWORK_RELATIVE", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["decoherence is defined within a unitary closed-system framework"],
+      "edge_id": "RA1v2",
+      "prior_edge_id": "RA1",
+      "chain": "A",
+      "reverse": true,
+      "source": "A06a",
+      "target": "A01v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "FRAMEWORK_RELATIVE",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "decoherence is defined within a unitary closed-system framework"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
@@ -260,19 +621,50 @@
       },
       "mechanism": "the construction of the decoherence concept presupposes the unitary framework; the constraint is definitional, not a derivation of unitarity from observed classicality",
       "parameter_inputs": [],
-      "m_to_p": {"status": "NOT_APPLICABLE", "mechanism": "—", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "", "scope": "", "unresolved": "whether unitarity is physically primitive"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "—", "mapping": "—", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "—"},
-      "alternatives": ["open-dynamics frameworks (GKLS) without closed substrate"],
-      "evidence": ["hostile audit RA1 finding"],
+      "m_to_p": {
+        "status": "NOT_APPLICABLE",
+        "mechanism": "—",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "whether unitarity is physically primitive"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "—",
+        "mapping": "—",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
+      "alternatives": [
+        "open-dynamics frameworks (GKLS) without closed substrate"
+      ],
+      "evidence": [
+        "hostile audit RA1 finding"
+      ],
       "failure_condition": "if decoherence derivable without unitary structure",
-      "status": "CONSTRAINT_WITHIN_FRAMEWORK", "confidence": "HIGH",
-      "scope": "framework-relative", "note": "WITHIN_FRAMEWORK made explicit; must not propagate to ontology"
+      "status": "CONSTRAINT_WITHIN_FRAMEWORK",
+      "confidence": "HIGH",
+      "scope": "framework-relative",
+      "note": "WITHIN_FRAMEWORK made explicit; must not propagate to ontology"
     },
     {
-      "edge_id": "RA3v2", "prior_edge_id": "RA3", "chain": "A", "reverse": true,
-      "source": "A06a", "target": "A02v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "MODEL_SPECIFIC", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["decoherence operationally defined via system-environment entanglement + reduction"],
+      "edge_id": "RA3v2",
+      "prior_edge_id": "RA3",
+      "chain": "A",
+      "reverse": true,
+      "source": "A06a",
+      "target": "A02v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "MODEL_SPECIFIC",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "decoherence operationally defined via system-environment entanglement + reduction"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
@@ -286,19 +678,49 @@
       },
       "mechanism": "the definition of decoherence presupposes entanglement structure; the reverse inference is PARTIALLY_DEPENDENT on the framework definition rather than an independent derivation",
       "parameter_inputs": [],
-      "m_to_p": {"status": "NOT_APPLICABLE", "mechanism": "—", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "", "scope": "", "unresolved": "—"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "—", "mapping": "—", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "—"},
+      "m_to_p": {
+        "status": "NOT_APPLICABLE",
+        "mechanism": "—",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "—",
+        "mapping": "—",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
       "alternatives": [],
-      "evidence": ["hostile audit RA3 finding (PARTIALLY_DEPENDENT retained)"],
+      "evidence": [
+        "hostile audit RA3 finding (PARTIALLY_DEPENDENT retained)"
+      ],
       "failure_condition": "—",
-      "status": "PARTIALLY_DEPENDENT", "confidence": "HIGH",
-      "scope": "definition-relative", "note": "not called circular; weaker independent status recorded"
+      "status": "PARTIALLY_DEPENDENT",
+      "confidence": "HIGH",
+      "scope": "definition-relative",
+      "note": "not called circular; weaker independent status recorded"
     },
     {
-      "edge_id": "RC3v2", "prior_edge_id": "RC3", "chain": "C", "reverse": true,
-      "source": "C02v2", "target": "C04v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES", "relation_scope": "FRAMEWORK_INDEPENDENT",
-      "premises": ["EFT low-energy data at finite order is finite-dimensional information", "UV completion requires structure at scales beyond that data"],
+      "edge_id": "RC3v2",
+      "prior_edge_id": "RC3",
+      "chain": "C",
+      "reverse": true,
+      "source": "C02v2",
+      "target": "C04v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES",
+      "relation_scope": "FRAMEWORK_INDEPENDENT",
+      "premises": [
+        "EFT low-energy data at finite order is finite-dimensional information",
+        "UV completion requires structure at scales beyond that data"
+      ],
       "imported_premises": {
         "state_assumptions": [],
         "interaction_assumptions": [],
@@ -312,60 +734,168 @@
       },
       "mechanism": "FRESH ANCHORING (no RC-02 citation as evidence): (i) 4D phi^4 quantum triviality — Aizenman 1981; Frohlich 1982: continuum limit of interacting 4D phi^4 is trivial, so the classical perturbative UV candidate is not a generic nontrivial completion; (ii) Wilsonian non-invertibility: the RG loses information about UV couplings irrelevant at low energy, multiple UV theories flow to the same IR EFT (Wilson 1975 framework); (iii) string landscape multiplicity: Bousso-Polchinski 2000 / Arkani-Hamed et al. show enormously many vacua compatible with a given low-energy EFT; (iv) matching indeterminacy: an EFT at order N+ cannot distinguish UV structures differing only in contributions first appearing at order N+1. Together these establish that the EFT constrains (subset of admissible UV candidates) without determining one — a CONSTRAINT_TRANSMISSION, not a uniqueness derivation.",
       "parameter_inputs": [],
-      "m_to_p": {"status": "UNRESOLVED", "mechanism": "which UV completion is physically realized is not selected by any demonstrated mechanism", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "see above", "scope": "beyond accessible scales", "unresolved": "uniqueness arguments in special classes (e.g., by uniqueness theorems for CFTs via modular bootstrap — partial)"},
-      "p_to_o": {"status": "NO_DISTINCTIVE_OBSERVABLE", "observable": "UV discriminators above accessible scales", "mapping": "none available at present energies", "measurement_conditions": [], "alternatives": ["Planck-scale/cosmological discriminators (speculative)"], "evidence": "", "scope": "", "unresolved": "empirical route to UV discrimination"},
-      "alternatives": ["uniqueness arguments (modular bootstrap constraints; anomaly constraints) narrow but do not determine the completion"],
-      "evidence": ["Aizenman, Commun. Math. Phys. 86, 1 (1982); Frohlich, Helv. Phys. Acta 56, 705 (1983)", "Wilson, Rev. Mod. Phys. 47, 773 (1975)", "Bousso & Polchinski, Sci. Am. 290(6), 60 (2004) / hep-th/0007135", "Douglas & Kachru, Rev. Mod. Phys. 79, 733 (2007)"],
+      "m_to_p": {
+        "status": "UNRESOLVED",
+        "mechanism": "which UV completion is physically realized is not selected by any demonstrated mechanism",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "see above",
+        "scope": "beyond accessible scales",
+        "unresolved": "uniqueness arguments in special classes (e.g., by uniqueness theorems for CFTs via modular bootstrap — partial)"
+      },
+      "p_to_o": {
+        "status": "NO_DISTINCTIVE_OBSERVABLE",
+        "observable": "UV discriminators above accessible scales",
+        "mapping": "none available at present energies",
+        "measurement_conditions": [],
+        "alternatives": [
+          "Planck-scale/cosmological discriminators (speculative)"
+        ],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "empirical route to UV discrimination"
+      },
+      "alternatives": [
+        "uniqueness arguments (modular bootstrap constraints; anomaly constraints) narrow but do not determine the completion"
+      ],
+      "evidence": [
+        "Aizenman, Commun. Math. Phys. 86, 1 (1982); Frohlich, Helv. Phys. Acta 56, 705 (1983)",
+        "Wilson, Rev. Mod. Phys. 47, 773 (1975)",
+        "Bousso & Polchinski, Sci. Am. 290(6), 60 (2004) / hep-th/0007135",
+        "Douglas & Kachru, Rev. Mod. Phys. 79, 733 (2007)"
+      ],
       "failure_condition": "if a uniqueness theorem for the relevant EFT class were established",
-      "status": "CONSTRAINT_NOT_DETERMINATION", "confidence": "HIGH",
+      "status": "CONSTRAINT_NOT_DETERMINATION",
+      "confidence": "HIGH",
       "scope": "generic under stated premises",
       "note": "INHERITED_BOUNDARY REMOVED — re-anchored from fresh primary sources; RC-02 now corroboration only"
     }
   ],
   "constraint_edges": [
     {
-      "edge_id": "CT1v2", "prior_edge_id": "CT1", "chain": "A",
-      "source": "A01v2", "target": "A04v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "FRAMEWORK_RELATIVE", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["reduced description must be derivable from full state via trace"],
+      "edge_id": "CT1v2",
+      "prior_edge_id": "CT1",
+      "chain": "A",
+      "source": "A01v2",
+      "target": "A04v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "FRAMEWORK_RELATIVE",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "reduced description must be derivable from full state via trace"
+      ],
       "mechanism": "unitary+trace structure constrains the FORM of the reduced dynamics (Lindblad/quantum-Langevin structure), eliminating e.g. arbitrary superoperator classes",
       "parameter_inputs": [],
-      "m_to_p": {"status": "EFFECTIVE", "mechanism": "formal, not a realization claim", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "GKLS derivation", "scope": "Markovian regime", "unresolved": "—"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "—", "mapping": "—", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "—"},
+      "m_to_p": {
+        "status": "EFFECTIVE",
+        "mechanism": "formal, not a realization claim",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "GKLS derivation",
+        "scope": "Markovian regime",
+        "unresolved": "—"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "—",
+        "mapping": "—",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
       "alternatives": [],
-      "evidence": ["Lindblad 1976; Gorini-Kossakowski-Sudarshan 1976"],
+      "evidence": [
+        "Lindblad 1976; Gorini-Kossakowski-Sudarshan 1976"
+      ],
       "failure_condition": "—",
-      "status": "CONSTRAINT_ESTABLISHED", "confidence": "HIGH",
+      "status": "CONSTRAINT_ESTABLISHED",
+      "confidence": "HIGH",
       "scope": "Markovian regime"
     },
     {
-      "edge_id": "CT2v2", "prior_edge_id": "CT2", "chain": "B",
-      "source": "B01v2", "target": "B03v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["conservation laws of the microscopic dynamics constrain the EQUATION FORM of thermodynamics (first law structure)"],
+      "edge_id": "CT2v2",
+      "prior_edge_id": "CT2",
+      "chain": "B",
+      "source": "B01v2",
+      "target": "B03v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "conservation laws of the microscopic dynamics constrain the EQUATION FORM of thermodynamics (first law structure)"
+      ],
       "mechanism": "conservation laws transmitted as constraints on state functions; the PROBABILITIES require the imported statistical postulate (FB1v2), so the constraint is on form, not on measure",
       "parameter_inputs": [],
-      "m_to_p": {"status": "EFFECTIVE", "mechanism": "formal", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "Noether/energy conservation", "scope": "", "unresolved": "—"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "—", "mapping": "—", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "—"},
+      "m_to_p": {
+        "status": "EFFECTIVE",
+        "mechanism": "formal",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "Noether/energy conservation",
+        "scope": "",
+        "unresolved": "—"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "—",
+        "mapping": "—",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
       "alternatives": [],
-      "evidence": ["standard thermodynamic structure"],
+      "evidence": [
+        "standard thermodynamic structure"
+      ],
       "failure_condition": "—",
-      "status": "CONSTRAINT_ESTABLISHED", "confidence": "HIGH",
+      "status": "CONSTRAINT_ESTABLISHED",
+      "confidence": "HIGH",
       "scope": "equilibrium"
     },
     {
-      "edge_id": "CT3v2", "prior_edge_id": "CT3", "chain": "C",
-      "source": "C01v2", "target": "C02v2", "edge_type": "CONSTRAINT_TRANSMISSION",
-      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES", "relation_scope": "WITHIN_FRAMEWORK",
-      "premises": ["UV symmetries constrain the EFT operator basis (subset B(A) of B)"],
+      "edge_id": "CT3v2",
+      "prior_edge_id": "CT3",
+      "chain": "C",
+      "source": "C01v2",
+      "target": "C02v2",
+      "edge_type": "CONSTRAINT_TRANSMISSION",
+      "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES",
+      "relation_scope": "WITHIN_FRAMEWORK",
+      "premises": [
+        "UV symmetries constrain the EFT operator basis (subset B(A) of B)"
+      ],
       "mechanism": "symmetry transmission: UV symmetries restrict which operators may appear; precise subset relation B(A) subseteq B",
       "parameter_inputs": [],
-      "m_to_p": {"status": "EFFECTIVE", "mechanism": "formal", "selector": "NO_DEMONSTRATED_SELECTOR", "premises": [], "evidence": "EFT construction", "scope": "", "unresolved": "—"},
-      "p_to_o": {"status": "NOT_APPLICABLE", "observable": "—", "mapping": "—", "measurement_conditions": [], "alternatives": [], "evidence": "", "scope": "", "unresolved": "—"},
+      "m_to_p": {
+        "status": "EFFECTIVE",
+        "mechanism": "formal",
+        "selector": "NO_DEMONSTRATED_SELECTOR",
+        "premises": [],
+        "evidence": "EFT construction",
+        "scope": "",
+        "unresolved": "—"
+      },
+      "p_to_o": {
+        "status": "NOT_APPLICABLE",
+        "observable": "—",
+        "mapping": "—",
+        "measurement_conditions": [],
+        "alternatives": [],
+        "evidence": "",
+        "scope": "",
+        "unresolved": "—"
+      },
       "alternatives": [],
-      "evidence": ["standard EFT construction"],
+      "evidence": [
+        "standard EFT construction"
+      ],
       "failure_condition": "—",
-      "status": "CONSTRAINT_ESTABLISHED", "confidence": "HIGH",
+      "status": "CONSTRAINT_ESTABLISHED",
+      "confidence": "HIGH",
       "scope": "EFT construction"
     }
   ]

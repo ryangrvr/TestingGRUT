@@ -19,20 +19,20 @@
   "scoring": {
     "explanatory_gain_itemized": {
       "outcome_definiteness_supplied": 1,
-      "outcome_probability_weights_supplied": 0.5 (statistical emergence for apparatus; fundamental probability still postulated in stochastic law),
+      "outcome_probability_weights_supplied": {"value": 0.5, "note": "(statistical emergence for apparatus; fundamental probability still postulated in stochastic law)"},
       "classicality_recovered": 1,
       "measurement_record_explained": 1,
-      "novel_empirical_prediction": 1 (heating/X-ray/interferometry discriminators - testable vs standard QM)
+      "novel_empirical_prediction": {"value": 1, "note": "(heating/X-ray/interferometry discriminators - testable vs standard QM)"}
     },
     "structure_cost_itemized": {
       "altered_dynamics": 1,
-      "added_ontology": 0-1 (mass-density/flash variants differ),
-      "new_state_or_probability_postulate": 1 (stochastic law itself),
-      "free_parameters": 2 (lambda, sigma / CSL equivalents),
-      "preferred_basis_foliation_collapse_noise": 1 (collapse noise; mass-density operator singles basis),
+      "added_ontology": {"value": 1, "note": "(0 or 1: mass-density/flash variants differ)"},
+      "new_state_or_probability_postulate": {"value": 1, "note": "(stochastic law itself)"},
+      "free_parameters": {"value": 2, "note": "(lambda, sigma / CSL equivalents)"},
+      "preferred_basis_foliation_collapse_noise": {"value": 1, "note": "(collapse noise; mass-density operator singles basis)"},
       "observer_relative_or_revised_semantics": 0,
-      "additional_axioms_beyond_Cbp": 1 (nonlinear stochastic dynamics),
-      "relativity_compatibility_defect": 1 (nonrelativistic versions established; relativistic QFT version incomplete - Bassi & Ghirardi 2003; Tumulka 2006 flash model partial)
+      "additional_axioms_beyond_Cbp": {"value": 1, "note": "(nonlinear stochastic dynamics)"},
+      "relativity_compatibility_defect": {"value": 1, "note": "(nonrelativistic versions established; relativistic QFT version incomplete - Bassi & Ghirardi 2003; Tumulka 2006 flash model partial)"}
     },
     "compression": "gain = 1 + 0.5 + 1 + 1 + 1 = 4.5; cost = 1 + (0 or 1) + 1 + 2 + 1 + 0 + 1 + 1 = 7-8. compression ~ 0.56-0.64. Lower than Everett but GAIN IS GENUINE DYNAMICAL SELECTION (not reframed)."
   },
@@ -43,11 +43,35 @@
     "novel_prediction": "PREDICTIVE - constrained parameter space; partially excluded regions"
   },
   "sources": [
-    {"ref": "GRW, J. Stat. Phys. 42, 1133 (1986)", "claim": "spontaneous localization; definite outcomes from modified stochastic dynamics", "status": "SOURCE-STATED"},
-    {"ref": "Bassi & Ghirardi, Phys. Rep. 379, 257 (2003)", "claim": "comprehensive review of GRW/CSL; parameters; empirical constraints", "status": "SOURCE-STATED"},
-    {"ref": "Bassi et al. Rev. Mod. Phys. 85, 471 (2013)", "claim": "collapse models review; phenomenological constraints; CSL parameter exclusion", "status": "SOURCE-STATED"},
-    {"ref": "Collett et al., Nature Phys. 15, 370 (2019)", "claim": "X-ray heating constraints rule out ranges of CSL parameter space", "status": "SOURCE-STATED"},
-    {"ref": "Carlesso et al., PRL 119, 231101 (2017)", "claim": "LISA Pathfinder bounds on CSL", "status": "SOURCE-STATED"},
-    {"ref": "Tilloy & Derakhshani or equivalent gravitational-collapse variant", "claim": "gravitational variant with collapse coupled to mass density", "status": "SOURCE-STATED as proposal"}
+    {
+      "ref": "GRW, J. Stat. Phys. 42, 1133 (1986)",
+      "claim": "spontaneous localization; definite outcomes from modified stochastic dynamics",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Bassi & Ghirardi, Phys. Rep. 379, 257 (2003)",
+      "claim": "comprehensive review of GRW/CSL; parameters; empirical constraints",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Bassi et al. Rev. Mod. Phys. 85, 471 (2013)",
+      "claim": "collapse models review; phenomenological constraints; CSL parameter exclusion",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Collett et al., Nature Phys. 15, 370 (2019)",
+      "claim": "X-ray heating constraints rule out ranges of CSL parameter space",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Carlesso et al., PRL 119, 231101 (2017)",
+      "claim": "LISA Pathfinder bounds on CSL",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Tilloy & Derakhshani or equivalent gravitational-collapse variant",
+      "claim": "gravitational variant with collapse coupled to mass density",
+      "status": "SOURCE-STATED as proposal"
+    }
   ]
 }

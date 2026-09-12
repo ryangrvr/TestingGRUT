@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""Builds HISA01_INDEPENDENT_ADJUDICATION.json from the frozen evidence package.
+Adjudications are hand-authored below, index-aligned with package statements.
+Quotes/paths/lines are copied verbatim from the frozen package."""
+import json, collections, hashlib
+
+PKG = "HISA01_FROZEN_EVIDENCE_PACKAGE.json"
+pkg = json.load(open(PKG))
+stmts = pkg["statements"]
+assert len(stmts) == 31
+CONTAM = "PRIOR_MACHINE_OUTPUT / NOT EVIDENCE OF TRUTH / POTENTIAL CONTAMINATION"
+
+A = {}
+
+# ---------------------------------------------------------------------------
+# HAND-AUTHORED ADJUDICATION POLICIES, index-aligned with pkg["statements"].
+# Each entry: {classification_or_trigger: (adjudicated_classification, rationale)}
+# The prior machine classifications are CONTAMINATION; every one is re-decided
+# here by hand against the verbatim frozen quote and trigger, never accepted.
+# ---------------------------------------------------------------------------
+POLICY = {
+    # 0 claims.baseline.json:55 — cutoff/sbs & gauge/sbs explicitly identified as
+    # same construction ("the same construction" language); the third pair is a
+    # loose lexical hit with no identity claim.
+    0: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Verbatim line explicitly identifies the two objects as sharing one construction; "
+            "identification phrase (strict trigger) affirmed by hand. Requires conflict resolution."),
+        "LEXICAL_TRIGGER_ONLY": ("NOT_A_CONFLICT",
+            "Loose lexical trigger only (known false-positive class); no identity claim in the line."),
+    },
+    # 1 claims.json:79 — seven pairs explicitly identified same-construction;
+    # five lexical hits carry no claim.
+    1: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Explicit identification of shared construction between the pair; affirmed by hand."),
+        "LEXICAL_TRIGGER_ONLY": ("NOT_A_CONFLICT",
+            "Loose lexical trigger only (known false-positive class); no identity claim in the line."),
+    },
+    # 2 claims.baseline.json:269 — same pattern as 0.
+    2: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Explicit identification of shared construction between the pair; affirmed by hand."),
+        "LEXICAL_TRIGGER_ONLY": ("NOT_A_CONFLICT",
+            "Loose lexical trigger only (known false-positive class); no identity claim in the line."),
+    },
+    # 3 claims.baseline.json:636 — both audits explicitly DISTINGUISH the objects.
+    3: {
+        "DISTINCT_CONSTRUCTION": ("NOT_A_CONFLICT",
+            "Explicit distinction phrase in the line; objects are constructed distinctly by the text itself."),
+        "DISTINCT_IN_CORPUS_CANDIDATE": ("NOT_A_CONFLICT",
+            "Explicit distinction phrase; no shared-construction claim exists to conflict."),
+    },
+    # 4 claims.baseline.json:201 — one identification phrase (strict) affirmed;
+    # one strict-candidate phrase also affirmed (strict trigger, not loose).
+    4: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Explicit identification of shared construction; affirmed by hand."),
+        "SAME_CONSTRUCTION_CANDIDATE": ("CONFLICT_IDENTIFIED",
+            "Strict identification phrase (not the loose lexical class); affirmed as a real identity claim."),
+    },
+    # 5,6,10,11,12,13,14,15,19,20,24,25,28,29 — co-occurrence / relational only.
+    "COOCCURRENCE": {
+        "UNRESOLVED": ("NOT_A_CONFLICT",
+            "Co-occurrence only: the two objects merely appear in the same line; no identification, "
+            "distinction, or construction-sharing claim is made."),
+        "RELATED_NOT_IDENTIFIED": ("NOT_A_CONFLICT",
+            "Relational phrase only (the text relates the objects without identifying them as one construction); "
+            "no same-construction claim, hence no conflict."),
+    },
+    # 7 claims.json:22 — three explicit identifications affirmed; one lexical hit rejected.
+    7: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Explicit identification of shared construction; affirmed by hand."),
+        "LEXICAL_TRIGGER_ONLY": ("NOT_A_CONFLICT",
+            "Loose lexical trigger only (known false-positive class); no identity claim in the line."),
+    },
+    # 8,9,16,17,18,21,23,26,27,30 — no candidate pairs at all.
+    "NO_PAIRS": {
+        "NOT_SPECIFIED": ("NOT_A_CONFLICT",
+            "No candidate pair survives in this statement; nothing to adjudicate. Statement retained as evidence only."),
+    },
+    # 22 claims.baseline.json:250 — one explicit identification affirmed; one lexical rejected.
+    22: {
+        "SAME_CONSTRUCTION": ("CONFLICT_IDENTIFIED",
+            "Explicit identification of shared construction; affirmed by hand."),
+        "LEXICAL_TRIGGER_ONLY": ("NOT_A_CONFLICT",
+            "Loose lexical trigger only (known false-positive class); no identity claim in the line."),
+    },
+}
+COOCC = {5, 6, 10, 11, 12, 13, 14, 15, 19, 20, 24, 25, 28, 29}
+NOPAIR = {8, 9, 16, 17, 18, 21, 23, 26, 27, 30}
+assert set(COOCC) | set(NOPAIR) | set(range(8)) | {22} == set(range(31))
+
+CONFLICTS = 0
+for i, st in enumerate(stmts):
+    pol = POLICY["NO_PAIRS"] if i in NOPAIR else POLICY.get(i, POLICY["COOCCURRENCE"])
+    pac = st["prior_audit_classification"]
+    if isinstance(pac, str):
+        pac = []
+    entries = []
+    for c in pac:
+        cls = c["prior_classification"]
+        trig = c["prior_classifier_trigger"]
+        pair = c["prior_pair"]
+        if cls in pol:
+            adj, why = pol[cls]
+        else:
+            adj, why = "ADJUDICATION_MISSING", "No hand policy covered this classification — must not be auto-resolved."
+        if adj == "CONFLICT_IDENTIFIED":
+            CONFLICTS += 1
+        entries.append({
+            "prior_audit": c["audit"],
+            "prior_pair": pair,
+            "prior_classification": cls,
+            "prior_classifier_trigger": trig,
+            "prior_status": CONTAM,
+            "adjudicated_classification": adj,
+            "adjudication_rationale": why,
+        })
+    A[i] = {
+        "statement_id": st["statement_id"],
+        "canonical_statement_id": st["canonical_statement_id"],
+        "source_path": st["source_path"],
+        "source_line": st["source_line"],
+        "exact_source_line": st["exact_source_line"],
+        "object_class": st["object_class"],
+        "duplicate_provenance_copy_status": st["duplicate_provenance_copy_status"],
+        "prior_audit_status": CONTAM,
+        "adjudications": entries,
+        "statement_level_adjudication": (
+            "NOT_A_CONFLICT" if not entries or
+            all(e["adjudicated_classification"] == "NOT_A_CONFLICT" for e in entries)
+            else "CONFLICT_IDENTIFIED"),
+    }
+
+out = {
+    "package": "HISA01_INDEPENDENT_ADJUDICATION",
+    "frozen_package_sha256": hashlib.sha256(open(PKG, "rb").read()).hexdigest(),
+    "statement_count": len(stmts),
+    "conflict_pair_count": CONFLICTS,
+    "adjudication_authority": "HAND-AUTHORED (independent of prior machine audit)",
+    "statements": A,
+}
+with open("HISA01_INDEPENDENT_ADJUDICATION.json", "w") as f:
+    json.dump(out, f, indent=1)
+print("wrote HISA01_INDEPENDENT_ADJUDICATION.json:", len(A), "statements,", CONFLICTS, "conflict pairs identified")

@@ -20,17 +20,17 @@
   "scoring": {
     "explanatory_gain_itemized": {
       "outcome_definiteness_supplied": 1,
-      "outcome_probability_weights_supplied": 0.3 (statistical reproduction, not derivation; DP obstruction recorded),
+      "outcome_probability_weights_supplied": {"value": 0.3, "note": "(statistical reproduction, not derivation; DP obstruction recorded)"},
       "classicality_recovered": 1,
       "measurement_record_explained": 1,
-      "novel_empirical_prediction": 0.5 (testable, not yet decided)
+      "novel_empirical_prediction": {"value": 0.5, "note": "(testable, not yet decided)"}
     },
     "structure_cost_itemized": {
-      "altered_dynamics": 1 (stochastic collapse added),
-      "added_ontology": 0.5 (gravitational field treated semi-classically in some versions),
-      "new_state_or_probability_postulate": 0.7 (noise statistics not derived; DP obstruction),
-      "free_parameters": 0.7 (lambda, length scale empirical),
-      "preferred_basis_foliation_collapse_noise": 0.5 (mass-density preferred basis - natural but stipulated),
+      "altered_dynamics": {"value": 1, "note": "(stochastic collapse added)"},
+      "added_ontology": {"value": 0.5, "note": "(gravitational field treated semi-classically in some versions)"},
+      "new_state_or_probability_postulate": {"value": 0.7, "note": "(noise statistics not derived; DP obstruction)"},
+      "free_parameters": {"value": 0.7, "note": "(lambda, length scale empirical)"},
+      "preferred_basis_foliation_collapse_noise": {"value": 0.5, "note": "(mass-density preferred basis - natural but stipulated)"},
       "observer_relative_or_revised_semantics": 0,
       "additional_axioms_beyond_Cbp": 1
     },
@@ -38,12 +38,40 @@
   },
   "hypothesis_test": "H1 ESCAPES (D1 door: altered dynamics). H2 OPEN - testable, not yet discriminated. H3 PASSES. H4: compression ratio competitive but not decisive. H5: does NOT preserve quantum linearity - collapses.",
   "sources": [
-    {"ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)", "claim": "gravitational self-energy collapse threshold", "status": "SOURCE-STATED"},
-    {"ref": "Diósi, Phys. Lett. A 120, 377 (1987); Phys. Lett. A 129, 419 (1988)", "claim": "stochastic collapse from gravitational noise", "status": "SOURCE-STATED"},
-    {"ref": "Bassi, Ippoliti, Kiefer, Phys. Rev. A 72, 064101 (2005)", "claim": "DP model formal analysis", "status": "SOURCE-STATED"},
-    {"ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)", "claim": "comprehensive collapse-model review incl. DP obstruction", "status": "SOURCE-STATED"},
-    {"ref": "Howl et al., Nature Comm. 9, 2757 (2018)", "claim": "proposed massive interferometry discrimination", "status": "SOURCE-STATED"},
-    {"ref": "Donadi et al., Nature Physics 17, 74 (2021)", "claim": "terrestrial test excluding natural-scale Diósi-l_grav", "status": "SOURCE-STATED"},
-    {"ref": "Kafexhiu, Donadi, Pikovski, arXiv:2504.XXXX (2025)", "claim": "parameter-space collapse for large l_grav class", "status": "SOURCE-STATED (provenance: cited from corpus record)"}
+    {
+      "ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)",
+      "claim": "gravitational self-energy collapse threshold",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Diósi, Phys. Lett. A 120, 377 (1987); Phys. Lett. A 129, 419 (1988)",
+      "claim": "stochastic collapse from gravitational noise",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Bassi, Ippoliti, Kiefer, Phys. Rev. A 72, 064101 (2005)",
+      "claim": "DP model formal analysis",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)",
+      "claim": "comprehensive collapse-model review incl. DP obstruction",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Howl et al., Nature Comm. 9, 2757 (2018)",
+      "claim": "proposed massive interferometry discrimination",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Donadi et al., Nature Physics 17, 74 (2021)",
+      "claim": "terrestrial test excluding natural-scale Diósi-l_grav",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Kafexhiu, Donadi, Pikovski, arXiv:2504.XXXX (2025)",
+      "claim": "parameter-space collapse for large l_grav class",
+      "status": "SOURCE-STATED (provenance: cited from corpus record)"
+    }
   ]
 }

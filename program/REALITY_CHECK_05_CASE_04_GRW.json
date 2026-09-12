@@ -3,15 +3,39 @@
   "subject": "GRW / objective collapse (additional-input recognition calibration)",
   "protocol": "program/REALITY_CHECK_05_PROTOCOL.md (frozen; unmodified)",
   "source_ledger": [
-    {"source": "G. Ghirardi, A. Rimini, T. Weber, Phys. Rev. D 34, 470 (1986)", "claim": "spontaneous localization process with hit rate lambda and localization width a", "verification": "CANONICAL_PRIMARY"},
-    {"source": "G. Ghirardi, P. Pearle, A. Rimini, Phys. Rev. A 42, 78 (1990)", "claim": "continuous spontaneous localization (CSL), relativistic-consistent stochastic master equation", "verification": "CANONICAL_PRIMARY"},
-    {"source": "P. Pearle, Phys. Rev. A 39, 2277 (1989)", "claim": "parameterized stochastic collapse dynamics", "verification": "CANONICAL_PRIMARY"}
+    {
+      "source": "G. Ghirardi, A. Rimini, T. Weber, Phys. Rev. D 34, 470 (1986)",
+      "claim": "spontaneous localization process with hit rate lambda and localization width a",
+      "verification": "CANONICAL_PRIMARY"
+    },
+    {
+      "source": "G. Ghirardi, P. Pearle, A. Rimini, Phys. Rev. A 42, 78 (1990)",
+      "claim": "continuous spontaneous localization (CSL), relativistic-consistent stochastic master equation",
+      "verification": "CANONICAL_PRIMARY"
+    },
+    {
+      "source": "P. Pearle, Phys. Rev. A 39, 2277 (1989)",
+      "claim": "parameterized stochastic collapse dynamics",
+      "verification": "CANONICAL_PRIMARY"
+    }
   ],
   "input_ledger": [
-    {"input": "hit rate lambda (~10^-16 s^-1 per nucleon)", "provenance": "ASSUMED — phenomenological parameter, postulated, not derived from unitary QM"},
-    {"input": "localization width a (~10^-7 m)", "provenance": "ASSUMED — phenomenological parameter"},
-    {"input": "stochastic (Poisson) collapse law", "provenance": "ASSUMED — POSTULATED DYNAMICS (the model's defining additional input)"},
-    {"input": "probability measure over collapse trajectories", "provenance": "POSTULATED — the GRW stochastic law explicitly introduces it; not derived from unitary evolution"}
+    {
+      "input": "hit rate lambda (~10^-16 s^-1 per nucleon)",
+      "provenance": "ASSUMED — phenomenological parameter, postulated, not derived from unitary QM"
+    },
+    {
+      "input": "localization width a (~10^-7 m)",
+      "provenance": "ASSUMED — phenomenological parameter"
+    },
+    {
+      "input": "stochastic (Poisson) collapse law",
+      "provenance": "ASSUMED — POSTULATED DYNAMICS (the model's defining additional input)"
+    },
+    {
+      "input": "probability measure over collapse trajectories",
+      "provenance": "POSTULATED — the GRW stochastic law explicitly introduces it; not derived from unitary evolution"
+    }
   ],
   "model_reconstruction": "Between hits: standard Schrodinger evolution. Hits: localization operator L_i(x) applied with Poisson-distributed rate. Master equation (CSL form) with Lindblad-type decoherence-plus-collapse term.",
   "provenance_map": "outcome selection -> stochastic collapse law -> GRW postulates. The collapse term is the model's DEFINING ASSUMPTION, declared in the primary source.",
@@ -19,7 +43,12 @@
   "prediction_analysis": "GRW/CSL produces testable deviations from unitary QM (spontaneous heating, macroscopic superposition bounds) — PREDICTIVE but with fitted/postulated parameters; experimental windows constrain lambda, a. Prediction status: PREDICTIVE_WITH_POSTULATED_PARAMETERS.",
   "effective_status": "NOT an effective description of unitary QM; a rival fundamental stochastic dynamics.",
   "adversarial_attack": "Would the instrument call GRW 'derived from QM' because its equations generate outcomes? No: the equations differ from unitary QM by postulated stochastic terms. Confirmed: classification survives attack.",
-  "final_classification": {"collapse_dynamics": "ASSUMED / ADDITIONAL_INPUT", "outcome_selection": "PROVIDED_BY_ADDITIONAL_MODEL_STRUCTURE", "probability_law": "POSTULATED (explicit stochastic measure)", "prediction": "PREDICTIVE_WITH_POSTULATED_PARAMETERS"},
+  "final_classification": {
+    "collapse_dynamics": "ASSUMED / ADDITIONAL_INPUT",
+    "outcome_selection": "PROVIDED_BY_ADDITIONAL_MODEL_STRUCTURE",
+    "probability_law": "POSTULATED (explicit stochastic measure)",
+    "prediction": "PREDICTIVE_WITH_POSTULATED_PARAMETERS"
+  },
   "confidence": "HIGH",
   "limitations": "Sources canonical-primary, not re-fetched.",
   "instrument_pass": true

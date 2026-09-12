@@ -26,12 +26,12 @@
     },
     "structure_cost_itemized": {
       "altered_dynamics": 0,
-      "added_ontology": 0 (pure form) / possibly 1 (if 'worlds' counted as real emergent structures),
-      "new_state_or_probability_postulate": 0 in pure form; 1 effective (Born-rule derivation requires decision-theoretic axioms or typicality measure, each itself an additional assumption),
+      "added_ontology": {"value": 0, "note": "pure form; possibly 1 if 'worlds' counted as real emergent structures"},
+      "new_state_or_probability_postulate": {"value": 0, "note": "in pure form; 1 effective (Born-rule derivation requires decision-theoretic axioms or typicality measure, each itself an additional assumption)"},
       "free_parameters": 0,
-      "preferred_basis_foliation_collapse_noise": 0 (basis from decoherence, effective not fundamental),
-      "observer_relative_or_revised_semantics": 1 (D3 door: outcome meaning revised),
-      "additional_axioms_beyond_Cbp": 0 (dynamically) + 1 (probability/decision axioms, CONTESTED)
+      "preferred_basis_foliation_collapse_noise": {"value": 0, "note": "basis from decoherence, effective not fundamental"},
+      "observer_relative_or_revised_semantics": {"value": 1, "note": "D3 door: outcome meaning revised"},
+      "additional_axioms_beyond_Cbp": {"value": 1, "note": "0 (dynamically) + 1 (probability/decision axioms, CONTESTED)"}
     },
     "compression": "Calculated: gain = reframed-outcome(0.5) + contested-weights(0.5) + classicality(1) + record(1) + prediction(0) = 3.0; cost = dynamics(0) + ontology(0-1) + postulate(0-1) + params(0) + basis(0) + semantics(1) + axioms(1) = 2-4. Range 0.75-1.5. Recorded as H3/H4 boundary case: outcome via semantics, not dynamics.",
     "compression_caveat": "Compression score is a preregistered comparative HEURISTIC, not a theorem. Range reflects genuine indeterminacy in counting 'worlds' as ontology and derivation-axioms as cost."
@@ -43,10 +43,30 @@
     "classicality": "DERIVED via standard decoherence (effective)"
   },
   "sources": [
-    {"ref": "Everett, Rev. Mod. Phys. 29, 454 (1957)", "claim": "relative-state formulation; universal wavefunction; no collapse", "status": "SOURCE-STATED"},
-    {"ref": "Wallace, The Emergent Multiverse (OUP, 2012)", "claim": "Born weights from decision theory in branch ontology", "status": "SOURCE-STATED as derivation"},
-    {"ref": "Vaidman (2012, various)", "claim": "Born rule from self-location / symmetry in multiverse", "status": "SOURCE-STATED as derivation"},
-    {"ref": "Maudlin (2010) and critics", "claim": "probability over existing branches is not genuine probability; decision-theoretic derivation does not solve the ontology problem", "status": "SOURCE-STATED as criticism"},
-    {"ref": "Deutsch, Proc. R. Soc. A 455, 3129 (1999)", "claim": "decision-theoretic Born rule", "status": "SOURCE-STATED as derivation"}
+    {
+      "ref": "Everett, Rev. Mod. Phys. 29, 454 (1957)",
+      "claim": "relative-state formulation; universal wavefunction; no collapse",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Wallace, The Emergent Multiverse (OUP, 2012)",
+      "claim": "Born weights from decision theory in branch ontology",
+      "status": "SOURCE-STATED as derivation"
+    },
+    {
+      "ref": "Vaidman (2012, various)",
+      "claim": "Born rule from self-location / symmetry in multiverse",
+      "status": "SOURCE-STATED as derivation"
+    },
+    {
+      "ref": "Maudlin (2010) and critics",
+      "claim": "probability over existing branches is not genuine probability; decision-theoretic derivation does not solve the ontology problem",
+      "status": "SOURCE-STATED as criticism"
+    },
+    {
+      "ref": "Deutsch, Proc. R. Soc. A 455, 3129 (1999)",
+      "claim": "decision-theoretic Born rule",
+      "status": "SOURCE-STATED as derivation"
+    }
   ]
 }

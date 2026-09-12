@@ -24,11 +24,11 @@ The story begins with a boundary condition, not a mechanism: the universe starts
 
 The constitutive posit: the gravitational vacuum is an open medium that responds and relaxes. This is the program's entry price (+4 at the founding node: the system/bath split, the Gaussian truncation, the causal background, and the 4d-covariant availability of the Ward-sourced gauge-orbit zero), plus a fifth input booked 2026-08-18 as its own node -- the background's TIME-TRANSLATION FLOW, the presupposition that lets a kernel be written at a single frequency at all, found by running the charter's omission-versus-compound tell to its second clause), booked openly as a stance, with the standard open-system toolkit borrowed as scaffolding.
 
-**Link status (generated):** original-result + priced-import + open + borrowed
+**Link status (generated):** derived-pending + priced-import + open + borrowed
 
 | register claim | status (generated) |
 |---|---|
-| `rung1_inin_formalism` | shown +4 |
+| `rung1_inin_formalism` | derived-pending +4 |
 | `rung1_ontology_finite_memory` | assumed +1 |
 | `background_time_translation_flow` | assumed +1 |
 | `u3_split_origin` | to-derive |
@@ -43,12 +43,12 @@ The constitutive posit: the gravitational vacuum is an open medium that responds
 
 The memory kernel -- what persists is what the kernel carries. The single-pole (finite-memory) form is the framework's load-bearing structural conjecture, and it is DERIVED-PENDING on the bath: the one decisive external question (pole vs cut) lives here -- DRAFTED AS AN ASK, HELD, NEVER SENT (corrected 2026-08-12; it read "dispatched, unanswered", which asserts a transmission that never occurred).
 
-**Link status (generated):** original-result + derived-pending + open
+**Link status (generated):** derived-pending + open
 
 | register claim | status (generated) |
 |---|---|
 | `rung3_single_pole` | derived-pending |
-| `rung4_love_kk` | shown |
+| `rung4_love_kk` | derived-pending |
 | `eft_operator_basis` | to-derive |
 | `u2_kernel_universality` | to-derive |
 | `u4_constitutive_origin` | to-derive |
@@ -60,12 +60,12 @@ The memory kernel -- what persists is what the kernel carries. The single-pole (
 
 The register's strongest original result: an open medium HAS an arrow (existence is intrinsic to dissipation), but WHICH direction is state-dependent and rides the origin link's boundary condition. The decomposition clarifies the old question rather than dissolving it.
 
-**Link status (generated):** original-result + priced-import + borrowed
+**Link status (generated):** derived-pending + priced-import + borrowed
 
 | register claim | status (generated) |
 |---|---|
 | `arrow_of_time` | assumed +1 |
-| `rung2_kms_gate` | shown -1 |
+| `rung2_kms_gate` | derived-pending -1 |
 | `fluctuation_theorems` | assumed (borrowed) |
 
 **Ordering note:** SHARED NODE: rung2_kms_gate also carries the thermality link -- the KMS condition is one fact doing two jobs (locking noise to dissipation, and tying equilibrium to temperature). The arrow and thermality links are CONCURRENT, not sequential; the chain forces no order between them.
@@ -77,11 +77,11 @@ The register's strongest original result: an open medium HAS an arrow (existence
 
 In equilibrium the fluctuation-dissipation/KMS structure forces the thermal form; the horizon temperature T = H/2pi enters as an IMPORT (Unruh), not a derivation -- the register prices it and refuses to let the recovery be sold as a prediction.
 
-**Link status (generated):** original-result + borrowed
+**Link status (generated):** original-result + derived-pending + borrowed
 
 | register claim | status (generated) |
 |---|---|
-| `rung2_kms_gate` | shown -1 |
+| `rung2_kms_gate` | derived-pending -1 |
 | `entropy_area_unruh` | assumed (borrowed) |
 | `founding_h1_zeta_casimir` | shown |
 
@@ -155,12 +155,12 @@ At linear order the framework's cosmology is LCDM-shaped by a no-go export, not 
 
 Out of equilibrium the medium's slow relaxation is the candidate dark-energy story (+3: the amplitude, the two-scale commitment, the single-departure shape -- all priced). The value of Lambda is UNDETERMINED by every framework in the program, booked as such; DESI's w(z) is the live kill-channel.
 
-**Link status (generated):** original-result + open
+**Link status (generated):** derived-pending + open
 
 | register claim | status (generated) |
 |---|---|
 | `rung7_wz` | to-derive +3 |
-| `rung7_w1_wz_map` | shown |
+| `rung7_w1_wz_map` | derived-pending |
 | `rung7_w2_wa_sign` | to-derive |
 | `rung7_w3_nocrossing_export` | to-derive |
 | `lambda_undetermined` | to-derive |

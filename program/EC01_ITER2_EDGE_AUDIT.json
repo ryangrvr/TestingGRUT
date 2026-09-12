@@ -3,36 +3,91 @@
   "purpose": "Original-vs-repaired classification comparison; verifies repairs address every hostile-audit finding.",
   "coverage": {
     "edges_total_v2": 14,
-    "edges_forward": 8, "edges_reverse": 3, "edges_constraint": 3,
-    "mp_gates_filled": 14, "po_gates_filled": 14,
+    "edges_forward": 8,
+    "edges_reverse": 3,
+    "edges_constraint": 3,
+    "mp_gates_filled": 14,
+    "po_gates_filled": 14,
     "imported_premises_fields_present": 14,
     "mechanism_scope_present": 14,
     "relation_scope_present": 14
   },
   "classification_changes": [
-    {"edge": "FB1v2", "prior": "COMPATIBILITY/GENERATION (ambiguous per pilot)", "revised": "NO_DEMONSTRATED_MECHANISM",
-     "reason": "statistical postulate imported; dynamics alone does not produce the measure (audit FB1)"},
-    {"edge": "FA3v2", "prior": "COARSE_GRAINING to single A06 node", "revised": "split: FA3av2 COARSE_GRAINING -> A06a (established); FA3bv2 UNRESOLVED_RELATION -> A06b (new)",
-     "reason": "classicality over-compression (audit FA3); trajectory claim never established in chain evidence"},
-    {"edge": "FC1v2", "prior": "DERIVATION (pilot, overstated)", "revised": "DERIVATION_OF_FORM_LECs_IMPORTED",
-     "reason": "Wilson coefficients not determined by symmetry alone (audit FC1); mechanism field now states scope"},
-    {"edge": "RA1v2", "prior": "PARTIALLY_DEPENDENT (audit)", "revised": "CONSTRAINT_WITHIN_FRAMEWORK with explicit relation_scope=WITHIN_FRAMEWORK",
-     "reason": "audit RA1: qualifier must travel with the claim"},
-    {"edge": "RC3v2", "prior": "INHERITED_BOUNDARY (audit)", "revised": "CONSTRAINT_NOT_DETERMINATION",
-     "reason": "fresh primary sources (Aizenman 1982; Frohlich 1983; Wilson 1975; Bousso-Polchinski 2000; Douglas-Kachru 2007) independently establish constraint-without-determination; RC-02 demoted to corroboration"}
+    {
+      "edge": "FB1v2",
+      "prior": "COMPATIBILITY/GENERATION (ambiguous per pilot)",
+      "revised": "NO_DEMONSTRATED_MECHANISM",
+      "reason": "statistical postulate imported; dynamics alone does not produce the measure (audit FB1)"
+    },
+    {
+      "edge": "FA3v2",
+      "prior": "COARSE_GRAINING to single A06 node",
+      "revised": "split: FA3av2 COARSE_GRAINING -> A06a (established); FA3bv2 UNRESOLVED_RELATION -> A06b (new)",
+      "reason": "classicality over-compression (audit FA3); trajectory claim never established in chain evidence"
+    },
+    {
+      "edge": "FC1v2",
+      "prior": "DERIVATION (pilot, overstated)",
+      "revised": "DERIVATION_OF_FORM_LECs_IMPORTED",
+      "reason": "Wilson coefficients not determined by symmetry alone (audit FC1); mechanism field now states scope"
+    },
+    {
+      "edge": "RA1v2",
+      "prior": "PARTIALLY_DEPENDENT (audit)",
+      "revised": "CONSTRAINT_WITHIN_FRAMEWORK with explicit relation_scope=WITHIN_FRAMEWORK",
+      "reason": "audit RA1: qualifier must travel with the claim"
+    },
+    {
+      "edge": "RC3v2",
+      "prior": "INHERITED_BOUNDARY (audit)",
+      "revised": "CONSTRAINT_NOT_DETERMINATION",
+      "reason": "fresh primary sources (Aizenman 1982; Frohlich 1983; Wilson 1975; Bousso-Polchinski 2000; Douglas-Kachru 2007) independently establish constraint-without-determination; RC-02 demoted to corroboration"
+    }
   ],
   "classification_unchanged": [
-    {"edge": "FA1v2", "status": "GENERATION_WITH_EXPLICIT_PREMISES (unchanged, now fully scoped)"},
-    {"edge": "FA2v2", "status": "GENERATION_WITH_EXPLICIT_PREMISES (unchanged, now fully scoped)"},
-    {"edge": "FB2v2", "status": "DERIVATION_WITHIN_REGIME (unchanged; premises now explicit)"},
-    {"edge": "FB3v2", "status": "CONSTRAINT_TRANSMISSION_WITH_IMPORT (unchanged; Past Hypothesis now first-class)"},
-    {"edge": "FC2v2", "status": "UNRESOLVED_RELATION (unchanged; now cross-referenced to RC3v2)"},
-    {"edge": "RA3v2", "status": "PARTIALLY_DEPENDENT (unchanged, now with definition-relative scope)"},
-    {"edge": "CT1v2/CT2v2/CT3v2", "status": "CONSTRAINT_ESTABLISHED (unchanged; gates added)"}
+    {
+      "edge": "FA1v2",
+      "status": "GENERATION_WITH_EXPLICIT_PREMISES (unchanged, now fully scoped)"
+    },
+    {
+      "edge": "FA2v2",
+      "status": "GENERATION_WITH_EXPLICIT_PREMISES (unchanged, now fully scoped)"
+    },
+    {
+      "edge": "FB2v2",
+      "status": "DERIVATION_WITHIN_REGIME (unchanged; premises now explicit)"
+    },
+    {
+      "edge": "FB3v2",
+      "status": "CONSTRAINT_TRANSMISSION_WITH_IMPORT (unchanged; Past Hypothesis now first-class)"
+    },
+    {
+      "edge": "FC2v2",
+      "status": "UNRESOLVED_RELATION (unchanged; now cross-referenced to RC3v2)"
+    },
+    {
+      "edge": "RA3v2",
+      "status": "PARTIALLY_DEPENDENT (unchanged, now with definition-relative scope)"
+    },
+    {
+      "edge": "CT1v2/CT2v2/CT3v2",
+      "status": "CONSTRAINT_ESTABLISHED (unchanged; gates added)"
+    }
   ],
   "gate_summary": {
-    "m_to_p": {"DEMONSTRATED": 4, "EFFECTIVE": 3, "UNRESOLVED": 2, "UNDERDETERMINED": 1, "EMPIRICAL_INPUT": 1, "NOT_APPLICABLE": 3},
-    "p_to_o": {"DEMONSTRATED": 4, "NOT_APPLICABLE": 8, "NO_DISTINCTIVE_OBSERVABLE": 2}
+    "m_to_p": {
+      "DEMONSTRATED": 4,
+      "EFFECTIVE": 3,
+      "UNRESOLVED": 2,
+      "UNDERDETERMINED": 1,
+      "EMPIRICAL_INPUT": 1,
+      "NOT_APPLICABLE": 3
+    },
+    "p_to_o": {
+      "DEMONSTRATED": 4,
+      "NOT_APPLICABLE": 8,
+      "NO_DISTINCTIVE_OBSERVABLE": 2
+    }
   },
   "key_results": [
     "No demonstration anywhere in the three chains that any gate supplies OUTCOME SELECTION (A07 remains isolated; decoherence != outcome preserved).",

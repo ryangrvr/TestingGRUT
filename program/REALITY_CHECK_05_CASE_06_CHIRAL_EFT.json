@@ -3,15 +3,39 @@
   "subject": "Chiral perturbation theory (ChPT) quantitative prediction — positive effective calibration",
   "protocol": "program/REALITY_CHECK_05_PROTOCOL.md (frozen; unmodified)",
   "source_ledger": [
-    {"source": "J. Gasser, H. Leutwyler, Ann. Phys. 158, 142 (1984); Nucl. Phys. B 250, 465 (1985)", "claim": "one-loop ChPT: pion mass relation m_pi^2 = M^2[1 - (M^2/F^2)(L-bar log M^2 + k_pi)] with L-bar = ln(mu^2/M^2)", "verification": "CANONICAL_PRIMARY"},
-    {"source": "G. Colangelo, J. Gasser, H. Leutwyler, Nucl. Phys. B 603, 125 (2001)", "claim": "pi-pi scattering lengths predicted at two loops with error estimate; later confirmed by experiment", "verification": "CANONICAL_PRIMARY"},
-    {"source": "S. R. Beane et al. (NPLQCD), Phys. Rev. D 77, 014505 (2008) / DIRAC experiment (Phys. Lett. B 619, 70, 2005)", "claim": "lattice/experimental determination consistent with ChPT pi-pi scattering prediction", "verification": "CANONICAL_PRIMARY"}
+    {
+      "source": "J. Gasser, H. Leutwyler, Ann. Phys. 158, 142 (1984); Nucl. Phys. B 250, 465 (1985)",
+      "claim": "one-loop ChPT: pion mass relation m_pi^2 = M^2[1 - (M^2/F^2)(L-bar log M^2 + k_pi)] with L-bar = ln(mu^2/M^2)",
+      "verification": "CANONICAL_PRIMARY"
+    },
+    {
+      "source": "G. Colangelo, J. Gasser, H. Leutwyler, Nucl. Phys. B 603, 125 (2001)",
+      "claim": "pi-pi scattering lengths predicted at two loops with error estimate; later confirmed by experiment",
+      "verification": "CANONICAL_PRIMARY"
+    },
+    {
+      "source": "S. R. Beane et al. (NPLQCD), Phys. Rev. D 77, 014505 (2008) / DIRAC experiment (Phys. Lett. B 619, 70, 2005)",
+      "claim": "lattice/experimental determination consistent with ChPT pi-pi scattering prediction",
+      "verification": "CANONICAL_PRIMARY"
+    }
   ],
   "input_ledger": [
-    {"input": "low-energy constants: F_pi, Sigma", "provenance": "EMPIRICAL_INPUT — fixed from OTHER observables (pi-pi scattering / lattice), not from the predicted observable"},
-    {"input": "chiral symmetry group SU(2)_L x SU(2)_R", "provenance": "ASSUMED (QCD symmetry, empirically grounded)"},
-    {"input": "expansion parameter (M^2/F^2), loop order", "provenance": "ASSUMED/DECLARED truncation with error estimate"},
-    {"input": "renormalization scale mu", "provenance": "DECLARED convention; physical result scale-independent at fixed order"}
+    {
+      "input": "low-energy constants: F_pi, Sigma",
+      "provenance": "EMPIRICAL_INPUT — fixed from OTHER observables (pi-pi scattering / lattice), not from the predicted observable"
+    },
+    {
+      "input": "chiral symmetry group SU(2)_L x SU(2)_R",
+      "provenance": "ASSUMED (QCD symmetry, empirically grounded)"
+    },
+    {
+      "input": "expansion parameter (M^2/F^2), loop order",
+      "provenance": "ASSUMED/DECLARED truncation with error estimate"
+    },
+    {
+      "input": "renormalization scale mu",
+      "provenance": "DECLARED convention; physical result scale-independent at fixed order"
+    }
   ],
   "model_reconstruction": "Effective Lagrangian built from Goldstone fields with chiral symmetry; perturbative expansion in M^2/(4 pi F)^2; observables computed as loops + counterterms with LECs fixed independently.",
   "provenance_map": "prediction -> loop+counterterm computation -> LECs fixed from independent observables -> chiral symmetry (from QCD).",
@@ -19,7 +43,12 @@
   "prediction_analysis": "Satisfies all seven protocol prediction criteria: coefficients/structure fixed before comparison; inputs independently declared (LECs from other observables); no fitting to the target; observable specified; quantitatively testable; derivation traceable. PREDICTIVE_WITHIN_SCOPE = YES. pi-pi scattering lengths (Colangelo-Gasser-Leutwyler 2001) subsequently confirmed — a genuine effective-theory prediction.",
   "effective_status": "EFFECTIVE — with declared regime (M^2/(4 pi F)^2 << 1) and systematic truncation uncertainty.",
   "adversarial_attack": "Would the instrument call ChPT 'not predictive' because it is effective? No: effectiveness does not preclude prediction where the seven criteria are met — this is exactly the calibrated distinction. Would it reject because LECs are empirical? No: the LECs are fixed from observables OTHER than the predicted one. Both attack vectors failed.",
-  "final_classification": {"effectiveness": "EFFECTIVE", "derivation": "DERIVED (within declared order and declared inputs)", "prediction": "PREDICTIVE_WITHIN_SCOPE", "inputs": "EMPIRICAL_INPUT (LECs) + ASSUMED (symmetry, order)"},
+  "final_classification": {
+    "effectiveness": "EFFECTIVE",
+    "derivation": "DERIVED (within declared order and declared inputs)",
+    "prediction": "PREDICTIVE_WITHIN_SCOPE",
+    "inputs": "EMPIRICAL_INPUT (LECs) + ASSUMED (symmetry, order)"
+  },
   "confidence": "HIGH",
   "limitations": "Sources canonical-primary, not re-fetched.",
   "instrument_pass": true

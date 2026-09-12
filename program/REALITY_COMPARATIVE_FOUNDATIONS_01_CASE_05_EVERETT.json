@@ -42,8 +42,8 @@
   },
   "scoring": {
     "explanatory_gain_itemized": {
-      "outcome_definiteness_supplied": 0 (all outcomes occur; definiteness reframed, not supplied),
-      "outcome_probability_weights_supplied": 0.5 (Born statistics reproduced under each candidate assumption, each CONTESTED),
+      "outcome_definiteness_supplied": {"value": 0, "note": "(all outcomes occur; definiteness reframed, not supplied)"},
+      "outcome_probability_weights_supplied": {"value": 0.5, "note": "(Born statistics reproduced under each candidate assumption, each CONTESTED)"},
       "classicality_recovered": 1,
       "measurement_record_explained": 1,
       "novel_empirical_prediction": 0
@@ -51,22 +51,50 @@
     "structure_cost_itemized": {
       "altered_dynamics": 0,
       "added_ontology": 0,
-      "new_state_or_probability_postulate": 1 (probability measure content somewhere in every account),
+      "new_state_or_probability_postulate": {"value": 1, "note": "(probability measure content somewhere in every account)"},
       "free_parameters": 0,
-      "preferred_basis_foliation_collapse_noise": 0.5 (decoherence-preferred basis considered sufficient; contested),
-      "observer_relative_or_revised_semantics": 1 (D3 door: 'outcome' redefined),
+      "preferred_basis_foliation_collapse_noise": {"value": 0.5, "note": "(decoherence-preferred basis considered sufficient; contested)"},
+      "observer_relative_or_revised_semantics": {"value": 1, "note": "(D3 door: 'outcome' redefined)"},
       "additional_axioms_beyond_Cbp": 1
     },
     "compression": "gain = 2.5; cost = 3.5; compression ~ 0.71. Range: 0.6-0.83 depending on how the semantic cost is weighted. Recorded as CONTESTED."
   },
   "hypothesis_test": "H1 N/A - does not escape obstruction (stays inside Cbp); dissolves the question instead (D3 door). H2 FAILS (no novel prediction).",
   "sources": [
-    {"ref": "Everett III, Rev. Mod. Phys. 29, 454 (1957)", "claim": "relative-state formulation", "status": "SOURCE-STATED"},
-    {"ref": "Deutsch, Proc. R. Soc. A 455, 3129 (1999)", "claim": "decision-theoretic Born derivation", "status": "SOURCE-STATED"},
-    {"ref": "Wallace, The Emergent Multiverse (OUP 2012)", "claim": "full decision-theoretic account", "status": "SOURCE-STATED"},
-    {"ref": "Zurek, PRL 90, 120404 (2003)", "claim": "envariance derivation", "status": "SOURCE-STATED"},
-    {"ref": "Albert, arXiv:1103.3945 (2011)", "claim": "criticism of decision-theoretic derivations", "status": "SOURCE-STATED"},
-    {"ref": "Maudlin, in 'The Wave Function' (OUP 2013)", "claim": "criticism of probability meaning in Everett", "status": "SOURCE-STATED"},
-    {"ref": "Saunders et al., Many Worlds? (OUP 2010)", "claim": "self-location approach + criticisms", "status": "SOURCE-STATED"}
+    {
+      "ref": "Everett III, Rev. Mod. Phys. 29, 454 (1957)",
+      "claim": "relative-state formulation",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Deutsch, Proc. R. Soc. A 455, 3129 (1999)",
+      "claim": "decision-theoretic Born derivation",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Wallace, The Emergent Multiverse (OUP 2012)",
+      "claim": "full decision-theoretic account",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Zurek, PRL 90, 120404 (2003)",
+      "claim": "envariance derivation",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Albert, arXiv:1103.3945 (2011)",
+      "claim": "criticism of decision-theoretic derivations",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Maudlin, in 'The Wave Function' (OUP 2013)",
+      "claim": "criticism of probability meaning in Everett",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Saunders et al., Many Worlds? (OUP 2010)",
+      "claim": "self-location approach + criticisms",
+      "status": "SOURCE-STATED"
+    }
   ]
 }

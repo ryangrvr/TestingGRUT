@@ -1,7 +1,6 @@
 {
   "artifact": "EC01_ITER3_EDGE_RECLASSIFICATION",
   "scope": "Targeted correction of H1 (FB1) and H2 (RC3 phi4_4 scope) only. Blind reclassification performed before consulting Iteration-2 proposed labels; comparison recorded.",
-
   "H1_FB1": {
     "prior_edge": "FB1v2",
     "iteration2_status": "NO_DEMONSTRATED_MECHANISM",
@@ -18,15 +17,31 @@
         "NOT_DERIVED_FROM_SOURCE (dynamics alone does not fix the measure in general)"
       ],
       "state_assumptions": [],
-      "interaction_assumptions": ["short-range / hard-core interactions for the demonstrated classes"],
+      "interaction_assumptions": [
+        "short-range / hard-core interactions for the demonstrated classes"
+      ],
       "coarse_graining_assumptions": [],
       "boundary_conditions": [],
       "initial_conditions": []
     },
     "mechanism_scope": "REGIME_LIMITED",
     "relation_scope": "WITHIN_FRAMEWORK",
-    "m_to_p": {"status": "CONDITIONAL", "mechanism": "chaotic many-body systems are physically realizable (billiards, hard-sphere gases); GENERIC selection remains undemonstrated", "selector": "DYNAMICAL_SELECTION (restricted classes) / NO_DEMONSTRATED_SELECTOR (generic)", "evidence": "mixing theorems; KSLZ", "scope": "restricted classes", "unresolved": "whether generic systems satisfy the mixing/typicality conditions"},
-    "p_to_o": {"status": "NOT_APPLICABLE", "observable": "equilibrium distributions (via postulated measure)", "mapping": "via measure + mixing", "alternatives": [], "scope": "equilibrium", "unresolved": "measure provenance (unchanged)"},
+    "m_to_p": {
+      "status": "CONDITIONAL",
+      "mechanism": "chaotic many-body systems are physically realizable (billiards, hard-sphere gases); GENERIC selection remains undemonstrated",
+      "selector": "DYNAMICAL_SELECTION (restricted classes) / NO_DEMONSTRATED_SELECTOR (generic)",
+      "evidence": "mixing theorems; KSLZ",
+      "scope": "restricted classes",
+      "unresolved": "whether generic systems satisfy the mixing/typicality conditions"
+    },
+    "p_to_o": {
+      "status": "NOT_APPLICABLE",
+      "observable": "equilibrium distributions (via postulated measure)",
+      "mapping": "via measure + mixing",
+      "alternatives": [],
+      "scope": "equilibrium",
+      "unresolved": "measure provenance (unchanged)"
+    },
     "firewall_preserved": [
       "specific ergodic theorem NOT promoted to generic thermodynamics",
       "mixing NOT promoted to universal equilibration",
@@ -38,7 +53,6 @@
     "confidence": "HIGH",
     "scope": "restricted mixing/typicality classes; generic claim remains imported-postulate-dependent"
   },
-
   "H2_RC3": {
     "prior_edge": "RC3v2",
     "iteration2_status": "CONSTRAINT_NOT_DETERMINATION",
@@ -74,14 +88,29 @@
     "verdict": "CONFIRMED_INDEPENDENT_OF_OVERSTATED_CITATION",
     "mechanism_scope": "GENERIC_UNDER_STATED_PREMISES",
     "relation_scope": "FRAMEWORK_INDEPENDENT (structural argument); landscape line FRAMEWORK_RELATIVE",
-    "m_to_p": {"status": "UNRESOLVED", "mechanism": "no demonstrated selector of UV realization", "selector": "NO_DEMONSTRATED_SELECTOR", "evidence": "lines A-C", "scope": "beyond accessible scales", "unresolved": "UV discriminator"},
-    "p_to_o": {"status": "NO_DISTINCTIVE_OBSERVABLE", "observable": "UV physics beyond accessible scales", "mapping": "none available at present energies", "alternatives": ["Planck-scale/cosmological discriminators (speculative)"], "scope": "", "unresolved": "empirical route to UV discrimination"},
+    "m_to_p": {
+      "status": "UNRESOLVED",
+      "mechanism": "no demonstrated selector of UV realization",
+      "selector": "NO_DEMONSTRATED_SELECTOR",
+      "evidence": "lines A-C",
+      "scope": "beyond accessible scales",
+      "unresolved": "UV discriminator"
+    },
+    "p_to_o": {
+      "status": "NO_DISTINCTIVE_OBSERVABLE",
+      "observable": "UV physics beyond accessible scales",
+      "mapping": "none available at present energies",
+      "alternatives": [
+        "Planck-scale/cosmological discriminators (speculative)"
+      ],
+      "scope": "",
+      "unresolved": "empirical route to UV discrimination"
+    },
     "failure_condition": "if a uniqueness theorem for a relevant EFT class is established",
     "status": "CONSTRAINT_NOT_DETERMINATION",
     "confidence": "HIGH",
     "scope": "generic under stated premises"
   },
-
   "dependency_propagation": [
     {
       "edge": "FB2v2",
@@ -105,11 +134,13 @@
       "reason": "H2 narrows the phi4_4 citation but preserves the RC3 overall classification, which FC2v2 depends on. No downstream change."
     }
   ],
-
   "locality_test": {
     "correction_propagation_required": false,
     "out_of_scope_changes_made": 0,
-    "edges_changed": ["FB1v2 (label + qualification)", "RC3v2 (source-level scope only; classification retained)"],
+    "edges_changed": [
+      "FB1v2 (label + qualification)",
+      "RC3v2 (source-level scope only; classification retained)"
+    ],
     "edges_downstream_changed": 0,
     "conclusion": "LOCAL_REPAIR -- corrections are locally contained; no unrelated edges altered."
   }

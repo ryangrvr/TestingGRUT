@@ -19,17 +19,17 @@
   "scoring": {
     "explanatory_gain_itemized": {
       "outcome_definiteness_supplied": 1,
-      "outcome_probability_weights_supplied": 0.5 (equilibrium gives Born statistics but assumption status CONTESTED),
+      "outcome_probability_weights_supplied": {"value": 0.5, "note": "(equilibrium gives Born statistics but assumption status CONTESTED)"},
       "classicality_recovered": 1,
       "measurement_record_explained": 1,
-      "novel_empirical_prediction": 0.5 (Valentini nonequilibrium discriminators exist in principle; not established testable-vs-standard-QM without additional cosmological premise)
+      "novel_empirical_prediction": {"value": 0.5, "note": "(Valentini nonequilibrium discriminators exist in principle; not established testable-vs-standard-QM without additional cosmological premise)"}
     },
     "structure_cost_itemized": {
-      "altered_dynamics": 1 (guidance equation added),
-      "added_ontology": 1 (particle positions),
-      "new_state_or_probability_postulate": 1 (equilibrium rho=|psi|^2 / typicality measure),
+      "altered_dynamics": {"value": 1, "note": "(guidance equation added)"},
+      "added_ontology": {"value": 1, "note": "(particle positions)"},
+      "new_state_or_probability_postulate": {"value": 1, "note": "(equilibrium rho=|psi|^2 / typicality measure)"},
       "free_parameters": 0,
-      "preferred_basis_foliation_collapse_noise": 1 (foliation needed relativistically; basis singled by configuration ontology),
+      "preferred_basis_foliation_collapse_noise": {"value": 1, "note": "(foliation needed relativistically; basis singled by configuration ontology)"},
       "observer_relative_or_revised_semantics": 0,
       "additional_axioms_beyond_Cbp": 1
     },
@@ -42,9 +42,25 @@
     "novel_prediction": "CONTESTED - only under additional nonequilibrium premise"
   },
   "sources": [
-    {"ref": "Bohm, Phys. Rev. 85, 166 & 180 (1952)", "claim": "guidance equation; definite positions; equivalence to standard QM in equilibrium", "status": "SOURCE-STATED"},
-    {"ref": "Durr, Goldstein, Zanghi, J. Stat. Phys. 67, 843 (1992)", "claim": "quantum equilibrium; equivariance; typicality derivation of rho=|psi|^2", "status": "SOURCE-STATED"},
-    {"ref": "Valentini, Phys. Lett. A 156, 5 (1991); Valentini & Westman PR A 71, 033101 (2005)", "claim": "quantum nonequilibrium scenario; possible subquantum signals", "status": "SOURCE-STATED as proposal"},
-    {"ref": "Durr, Goldstein, Zanghi (OUP 2013) 'Bohmian Mechanics'", "claim": "comprehensive treatment; classical limit; relativistic extensions status", "status": "SOURCE-STATED"}
+    {
+      "ref": "Bohm, Phys. Rev. 85, 166 & 180 (1952)",
+      "claim": "guidance equation; definite positions; equivalence to standard QM in equilibrium",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Durr, Goldstein, Zanghi, J. Stat. Phys. 67, 843 (1992)",
+      "claim": "quantum equilibrium; equivariance; typicality derivation of rho=|psi|^2",
+      "status": "SOURCE-STATED"
+    },
+    {
+      "ref": "Valentini, Phys. Lett. A 156, 5 (1991); Valentini & Westman PR A 71, 033101 (2005)",
+      "claim": "quantum nonequilibrium scenario; possible subquantum signals",
+      "status": "SOURCE-STATED as proposal"
+    },
+    {
+      "ref": "Durr, Goldstein, Zanghi (OUP 2013) 'Bohmian Mechanics'",
+      "claim": "comprehensive treatment; classical limit; relativistic extensions status",
+      "status": "SOURCE-STATED"
+    }
   ]
 }

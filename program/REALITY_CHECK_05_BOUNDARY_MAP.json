@@ -9,30 +9,35 @@
     "program/REALITY_STATUS_01.md (203a9f4)"
   ],
   "canonical_repo_modified": false,
-
   "tested_class": {
     "name": "C_bp — branch-preserving closed-unitary measurement dynamics",
     "definition": "Standard Hilbert-space states + unitary evolution U = sum_i |i><i|_S ⊗ W_i with W_i unitary on A⊗E",
-    "premises": ["Hilbert-space state ontology", "unitarity", "branch preservation"],
+    "premises": [
+      "Hilbert-space state ontology",
+      "unitarity",
+      "branch preservation"
+    ],
     "theorem": "p_i = <Psi_f|Pi_i|Psi_f> = |alpha_i|^2 exactly; weights are structural invariants of the class",
     "evidence": "Algebraic proof (record-subspace argument generalized to full class) + numerical verification in 11 model families (hostile replication)",
     "status": "DERIVED — scoped to C_bp"
   },
-
   "core_boundary": {
     "decoherence": "DERIVED within class: cross term = alpha*beta*<E1|E0>; orthogonal records -> exact decoherence; partial overlap -> cross = |alpha*beta|*sqrt(delta)",
     "outcome_selection": "NOT_DERIVED within class: global state remains pure entangled superposition in every model incl. recohering non-Markovian case",
     "born_weights": "INHERITED, NOT DYNAMICALLY GENERATED within class: p_i = |alpha_i|^2 for all 11 model families; algebraic theorem makes alternative weight laws impossible without breaking a class premise",
     "recoherence": "decoherence is dynamical and reversible; decoherence != irreversible collapse"
   },
-
   "escape_map": {
     "rule": "To obtain genuine dynamical outcome selection, a theory must alter at least one premise of C_bp, or alter the meaning of the quantity called an outcome/weight. No 'bigger environment' fix exists.",
     "doors": [
       {
         "door": "MODIFY DYNAMICS",
         "violation": "unitarity",
-        "examples": ["GRW", "CSL", "DP-type collapse models"],
+        "examples": [
+          "GRW",
+          "CSL",
+          "DP-type collapse models"
+        ],
         "what_they_add": "stochastic, non-unitary collapse dynamics with new parameters (lambda, r0, collapse noise)",
         "status": "POSTULATED_DYNAMICS — supplies outcome selection by construction, not derived from standard QM",
         "empirical_status": "active experimental constraints (interferometry, optomechanics, heating bounds); parameter space partially open — see REALITY_CHECK_05 Case 04"
@@ -40,7 +45,10 @@
       {
         "door": "MODIFY STATE ONTOLOGY",
         "violation": "Hilbert-space-only ontology",
-        "examples": ["Bohmian mechanics", "hidden-variable theories"],
+        "examples": [
+          "Bohmian mechanics",
+          "hidden-variable theories"
+        ],
         "what_they_add": "additional beables (particle positions); wavefunction guides but does not exhaust reality",
         "status": "ADDITIONAL_ONTOLOGY — definite outcomes live in the hidden variables; weights require |psi|^2 measure postulate or equivariant assumption",
         "empirical_status": "empirically equivalent to standard QM (non-relativistic); relativistic extensions contested"
@@ -48,7 +56,11 @@
       {
         "door": "MODIFY OUTCOME MEANING",
         "violation": "the requirement that 'outcome' = one dynamically realized result",
-        "examples": ["Everett / many-worlds", "decoherent histories", "consistent histories"],
+        "examples": [
+          "Everett / many-worlds",
+          "decoherent histories",
+          "consistent histories"
+        ],
         "what_they_add": "redefinition: all branches exist; 'outcome' is indexical/relative (self-locating uncertainty or Everettian observer)",
         "status": "REDEFINITION — Born-weight question becomes derivation-contested (REALITY_CHECK_05 Case 03: CONTESTED, decision-theoretic/envariance/typicality derivations disputed)",
         "empirical_status": "no experimental difference from standard QM by construction"
@@ -56,7 +68,11 @@
       {
         "door": "MODIFY PROBABILITY CONCEPT",
         "violation": "probabilities as physical frequencies",
-        "examples": ["relational QM", "QBism", "operational/epistemic reconstructions"],
+        "examples": [
+          "relational QM",
+          "QBism",
+          "operational/epistemic reconstructions"
+        ],
         "what_they_add": "probabilities as observer-relative degrees of belief; state as informational, not ontic",
         "status": "REFRAME — moves rather than solves the ontological question",
         "empirical_status": "no experimental difference by construction"
@@ -74,32 +90,63 @@
     ],
     "excluded_routes_evidence": "Hostile replication: all 11 families in these directions preserve p_i = |alpha_i|^2 exactly (algebraic theorem)."
   },
-
   "competitor_table": [
-    {"framework": "Standard decoherence / closed-unitary measurement models", "relation": "INSIDE C_bp", "changes": "nothing", "outcome_status": "NOT_DERIVED"},
-    {"framework": "GRW / CSL / DP", "relation": "OUTSIDE (dynamics)", "changes": "unitarity", "outcome_status": "PROVIDED_BY_ADDITIONAL_POSTULATED_DYNAMICS"},
-    {"framework": "Bohmian mechanics", "relation": "OUTSIDE (ontology)", "changes": "state ontology", "outcome_status": "PROVIDED_BY_ADDITIONAL_BEABLES + measure postulate"},
-    {"framework": "Everett / decoherent histories", "relation": "BOUNDARY CASE (outcome semantics)", "changes": "meaning of outcome", "outcome_status": "CONTESTED — no unique dynamical selection; all branches real"},
-    {"framework": "Relational / QBist / operational", "relation": "OUTSIDE TARGET QUESTION (probability concept)", "changes": "status of state/outcome", "outcome_status": "REFRAMED, not dynamically selected"}
+    {
+      "framework": "Standard decoherence / closed-unitary measurement models",
+      "relation": "INSIDE C_bp",
+      "changes": "nothing",
+      "outcome_status": "NOT_DERIVED"
+    },
+    {
+      "framework": "GRW / CSL / DP",
+      "relation": "OUTSIDE (dynamics)",
+      "changes": "unitarity",
+      "outcome_status": "PROVIDED_BY_ADDITIONAL_POSTULATED_DYNAMICS"
+    },
+    {
+      "framework": "Bohmian mechanics",
+      "relation": "OUTSIDE (ontology)",
+      "changes": "state ontology",
+      "outcome_status": "PROVIDED_BY_ADDITIONAL_BEABLES + measure postulate"
+    },
+    {
+      "framework": "Everett / decoherent histories",
+      "relation": "BOUNDARY CASE (outcome semantics)",
+      "changes": "meaning of outcome",
+      "outcome_status": "CONTESTED — no unique dynamical selection; all branches real"
+    },
+    {
+      "framework": "Relational / QBist / operational",
+      "relation": "OUTSIDE TARGET QUESTION (probability concept)",
+      "changes": "status of state/outcome",
+      "outcome_status": "REFRAMED, not dynamically selected"
+    }
   ],
-
   "classification_discipline": {
     "note": "Per REALITY_CHECK_05: 'provides an outcome interpretation' must not be promoted to 'derives outcomes'. Each competitor is classified with the RC-05 vocabulary.",
-    "statuses_used": ["DERIVED", "POSTULATED", "ADDITIONAL_INPUT", "CONTESTED", "REFRAMED", "NOT_DERIVED"]
+    "statuses_used": [
+      "DERIVED",
+      "POSTULATED",
+      "ADDITIONAL_INPUT",
+      "CONTESTED",
+      "REFRAMED",
+      "NOT_DERIVED"
+    ]
   },
-
   "reality_question": {
     "formulation": "What, if anything, physically distinguishes a realized outcome from the other components of the quantum state?",
     "if_world_selects_outcomes": "Then ordinary branch-preserving closed-unitary measurement dynamics are insufficient; something must break or augment {unitarity | branch preservation | state ontology}. Which break is empirically decidable (collapse-model experiments; gravity-entanglement tests) or empirically empty (Everett/reframings).",
     "empirically_decidable_next": "Objective-collapse parameter space (which door, at what scale); gravitationally mediated entanglement (whether gravity is a quantum channel).",
     "empirically_undecidable_next": "Doors 3 and 4 (outcome semantics) reproduce all standard predictions by construction."
   },
-
   "instrument_consistency": {
-    "real_check_05_cases_used": ["CASE_02 decoherence boundary", "CASE_03 Everett contestation", "CASE_04 GRW additional-input"],
+    "real_check_05_cases_used": [
+      "CASE_02 decoherence boundary",
+      "CASE_03 Everett contestation",
+      "CASE_04 GRW additional-input"
+    ],
     "consistency": "The map's classifications reproduce the RC-05-validated distinctions without importing GRUT conclusions: decoherence DERIVED/EFFECTIVE, GRW = additional postulated dynamics, Everett = CONTESTED, no promotion of interpretation to derivation."
   },
-
   "scope_limitations": [
     "The theorem covers C_bp only. A theory that abandons Hilbert-space states, branch preservation, or unitarity is outside the theorem, not a counterexample to it.",
     "No claim that outcome selection is impossible in any theory — only that it cannot arise from dynamics internal to C_bp.",

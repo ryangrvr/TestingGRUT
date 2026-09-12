@@ -8,10 +8,30 @@
     "primary experimental literature (sources below)"
   ],
   "sources": [
-    {"id": "S1", "ref": "Donadi, Piscicchia, Curceanu, Diósi, Laubenstein, Bassi, Nat. Phys. 17, 74 (2021), arXiv:2111.13490", "claim": "Gran Sasso underground radiation test: lower bound on effective size of nucleon mass density ~3 orders above previous bounds; 'rules out the natural parameter-free version of the Diósi-Penrose model'", "status": "PRIMARY / VERIFIED (abstract inspected)"},
-    {"id": "S2", "ref": "Carlesso, Diósi, Bassi et al., 'On the effectiveness of the collapse in the Diósi-Penrose model', New J. Phys. 26, 113004 (2024), arXiv:2406.18494", "claim": "Search for an upper bound from the requirement that collapse guarantees classicality at macroscopic scale: 'not all macroscopic systems collapse effectively'; a reasonable (to some degree arbitrary) bound is R0 <~ 10^6 Angstrom (= 0.1 mm)", "status": "PRIMARY / VERIFIED (abstract and equation inspected)"},
-    {"id": "S3", "ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)", "claim": "Review: strongest indirect bounds come from Brownian-like diffusion induced by collapse; prior bounds from gravitational-wave detectors, neutron-star heating, cryogenics heat leakage", "status": "REVIEW CORROBORATION"},
-    {"id": "S4", "ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)", "claim": "Heuristic collapse time tau ~ hbar/E_G from gravitational self-energy difference", "status": "PRIMARY (heuristic, never derived from a gravitational field equation)"}
+    {
+      "id": "S1",
+      "ref": "Donadi, Piscicchia, Curceanu, Diósi, Laubenstein, Bassi, Nat. Phys. 17, 74 (2021), arXiv:2111.13490",
+      "claim": "Gran Sasso underground radiation test: lower bound on effective size of nucleon mass density ~3 orders above previous bounds; 'rules out the natural parameter-free version of the Diósi-Penrose model'",
+      "status": "PRIMARY / VERIFIED (abstract inspected)"
+    },
+    {
+      "id": "S2",
+      "ref": "Carlesso, Diósi, Bassi et al., 'On the effectiveness of the collapse in the Diósi-Penrose model', New J. Phys. 26, 113004 (2024), arXiv:2406.18494",
+      "claim": "Search for an upper bound from the requirement that collapse guarantees classicality at macroscopic scale: 'not all macroscopic systems collapse effectively'; a reasonable (to some degree arbitrary) bound is R0 <~ 10^6 Angstrom (= 0.1 mm)",
+      "status": "PRIMARY / VERIFIED (abstract and equation inspected)"
+    },
+    {
+      "id": "S3",
+      "ref": "Bassi et al., Rev. Mod. Phys. 85, 471 (2013)",
+      "claim": "Review: strongest indirect bounds come from Brownian-like diffusion induced by collapse; prior bounds from gravitational-wave detectors, neutron-star heating, cryogenics heat leakage",
+      "status": "REVIEW CORROBORATION"
+    },
+    {
+      "id": "S4",
+      "ref": "Penrose, Gen. Rel. Grav. 28, 581 (1996)",
+      "claim": "Heuristic collapse time tau ~ hbar/E_G from gravitational self-energy difference",
+      "status": "PRIMARY (heuristic, never derived from a gravitational field equation)"
+    }
   ],
   "model_setup": {
     "dp_master_equation_nonunitary_term": "D[rho] = -(4 pi G / hbar) * integral d r d r' (1/|r-r'|) [mu(r'), [mu(r), rho(t)]]  [S2, Eq. (2)]",
@@ -57,9 +77,27 @@
     "territory_quality": "MIXED — lower edge solid (data), upper edge soft (effectiveness demand); natural theory dead; finite-R0 repair conjectural; distinctness from environmental decoherence is the critical open requirement for every surviving variant"
   },
   "next_exp_tests_ranked": [
-    {"rank": 1, "test": "Improved underground spontaneous-radiation searches extending the Donadi et al. method", "information_gain": "high", "feasibility": "high", "reason": "direct extension of the existing exclusion technology; pushes lower bound further and could exclude more of the window"},
-    {"rank": 2, "test": "Macroscopic matter-wave interferometry (Talbot-Lau with dense microcrystals)", "information_gain": "high", "feasibility": "medium", "reason": "direct superposition-lifetime measurement, E_G scaling distinguishable from decoherence if thermal control adequate"},
-    {"rank": 3, "test": "Levitated optomechanics mass-superposition tests", "information_gain": "medium-high", "feasibility": "medium-high", "reason": "increasingly sensitive but confounded by environmental decoherence; distinguishing power depends on control of Gamma_env"}
+    {
+      "rank": 1,
+      "test": "Improved underground spontaneous-radiation searches extending the Donadi et al. method",
+      "information_gain": "high",
+      "feasibility": "high",
+      "reason": "direct extension of the existing exclusion technology; pushes lower bound further and could exclude more of the window"
+    },
+    {
+      "rank": 2,
+      "test": "Macroscopic matter-wave interferometry (Talbot-Lau with dense microcrystals)",
+      "information_gain": "high",
+      "feasibility": "medium",
+      "reason": "direct superposition-lifetime measurement, E_G scaling distinguishable from decoherence if thermal control adequate"
+    },
+    {
+      "rank": 3,
+      "test": "Levitated optomechanics mass-superposition tests",
+      "information_gain": "medium-high",
+      "feasibility": "medium-high",
+      "reason": "increasingly sensitive but confounded by environmental decoherence; distinguishing power depends on control of Gamma_env"
+    }
   ],
   "firewall": {
     "boundary_theorem": "used ONLY to classify DP as outside C_bp (Door 1); not as disconfirmation evidence",

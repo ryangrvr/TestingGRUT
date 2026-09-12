@@ -2,77 +2,383 @@
   "artifact": "EC01_PILOT_ANALYSIS",
   "protocol_sha256": "6b012117ab91c67d1b2810e6c78b4d4809299810add23896a6f8245ae27a00a8",
   "edge_matrix": {
-    "columns": ["historical","representational","equivalent","compatible","constraint","coarse_graining","generation","derivation","ontological","no_mechanism","unresolved"],
-    "edges": [
-      {"id":"FA1","chain":"A","arrow":"quantum dynamics → entanglement","type":"GENERATION","mechanism":"interacting Hamiltonian","premises_derived":"product initial state + interaction; entanglement may also be initial data","observable":"Bell violations","status":"DERIVED within QM","gap":"none (given premises)","confidence":"HIGH"},
-      {"id":"FA2","chain":"A","arrow":"entanglement+coupling → decoherence","type":"GENERATION","mechanism":"branch-orthogonal environmental records + trace","premises_derived":"S|E partition CHOSEN; environment state; coupling","observable":"suppressed interference","status":"DERIVED within unitary class","gap":"partition not derived (RA2)","confidence":"HIGH"},
-      {"id":"FA3","chain":"A","arrow":"decoherence → effective classicality","type":"COARSE_GRAINING","mechanism":"einselection + practical irreversibility","premises_derived":"pointer stability","observable":"classical statistics","status":"EFFECTIVE_DERIVED operational; ontology UNRESOLVED","gap":"definite outcome NOT_DERIVED (P); weights inherited (P theorem)","confidence":"HIGH (operational) / UNRESOLVED (ontology)"},
-      {"id":"FB1","chain":"B","arrow":"microscopic dynamics → statistical mechanics","type":"GENERATION","mechanism":"microcanonical measure / typicality","premises_derived":"STATISTICAL POSTULATE (not derived from dynamics); energy shell","observable":"equilibrium distributions","status":"CONDITIONAL on postulate","gap":"postulate itself unexplained; ergodicity partial","confidence":"MEDIUM"},
-      {"id":"FB2","chain":"B","arrow":"statistical mechanics → thermodynamics","type":"DERIVATION","mechanism":"ensemble theory in thermodynamic limit","premises_derived":"short-range interactions, equilibrium","observable":"all thermo laws + Maxwell relations","status":"DERIVED within regime","gap":"fails outside regime","confidence":"HIGH"},
-      {"id":"FB3","chain":"B","arrow":"microscopic dynamics → irreversibility","type":"NO_DEMONSTRATED_MECHANISM","mechanism":"NONE from time-symmetric dynamics alone","premises_derived":"REQUIRES Past Hypothesis (B06) — IMPORTED CONDITION","observable":"second law","status":"CONDITIONAL","gap":"origin of low-entropy initial condition = FIRST STOP of chain B","confidence":"HIGH that condition required"},
-      {"id":"FC1","chain":"C","arrow":"QFT → EFT","type":"COARSE_GRAINING","mechanism":"Wilsonian integration / matching","premises_derived":"scale separation; regulator","observable":"EFT predictions","status":"DERIVED as procedure","gap":"—","confidence":"HIGH"},
-      {"id":"FC2","chain":"C","arrow":"EFT → UV completion (reverse)","type":"NO_DEMONSTRATED_MECHANISM","mechanism":"NONE — underdetermined","premises_derived":"local symmetries constrain (CONSTRAINT_TRANSMISSION) but do not select","observable":"—","status":"MULTIPLE_DEEPER_REALIZATIONS","gap":"FIRST STOP of chain C","confidence":"HIGH"}
+    "columns": [
+      "historical",
+      "representational",
+      "equivalent",
+      "compatible",
+      "constraint",
+      "coarse_graining",
+      "generation",
+      "derivation",
+      "ontological",
+      "no_mechanism",
+      "unresolved"
     ],
-    "edge_type_counts": {"generation":3,"derivation":1,"coarse_graining":2,"no_demonstrated_mechanism":2,"constraint_transmission":0,"historical_only":0,"unresolved_relation":0}
+    "edges": [
+      {
+        "id": "FA1",
+        "chain": "A",
+        "arrow": "quantum dynamics → entanglement",
+        "type": "GENERATION",
+        "mechanism": "interacting Hamiltonian",
+        "premises_derived": "product initial state + interaction; entanglement may also be initial data",
+        "observable": "Bell violations",
+        "status": "DERIVED within QM",
+        "gap": "none (given premises)",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "FA2",
+        "chain": "A",
+        "arrow": "entanglement+coupling → decoherence",
+        "type": "GENERATION",
+        "mechanism": "branch-orthogonal environmental records + trace",
+        "premises_derived": "S|E partition CHOSEN; environment state; coupling",
+        "observable": "suppressed interference",
+        "status": "DERIVED within unitary class",
+        "gap": "partition not derived (RA2)",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "FA3",
+        "chain": "A",
+        "arrow": "decoherence → effective classicality",
+        "type": "COARSE_GRAINING",
+        "mechanism": "einselection + practical irreversibility",
+        "premises_derived": "pointer stability",
+        "observable": "classical statistics",
+        "status": "EFFECTIVE_DERIVED operational; ontology UNRESOLVED",
+        "gap": "definite outcome NOT_DERIVED (P); weights inherited (P theorem)",
+        "confidence": "HIGH (operational) / UNRESOLVED (ontology)"
+      },
+      {
+        "id": "FB1",
+        "chain": "B",
+        "arrow": "microscopic dynamics → statistical mechanics",
+        "type": "GENERATION",
+        "mechanism": "microcanonical measure / typicality",
+        "premises_derived": "STATISTICAL POSTULATE (not derived from dynamics); energy shell",
+        "observable": "equilibrium distributions",
+        "status": "CONDITIONAL on postulate",
+        "gap": "postulate itself unexplained; ergodicity partial",
+        "confidence": "MEDIUM"
+      },
+      {
+        "id": "FB2",
+        "chain": "B",
+        "arrow": "statistical mechanics → thermodynamics",
+        "type": "DERIVATION",
+        "mechanism": "ensemble theory in thermodynamic limit",
+        "premises_derived": "short-range interactions, equilibrium",
+        "observable": "all thermo laws + Maxwell relations",
+        "status": "DERIVED within regime",
+        "gap": "fails outside regime",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "FB3",
+        "chain": "B",
+        "arrow": "microscopic dynamics → irreversibility",
+        "type": "NO_DEMONSTRATED_MECHANISM",
+        "mechanism": "NONE from time-symmetric dynamics alone",
+        "premises_derived": "REQUIRES Past Hypothesis (B06) — IMPORTED CONDITION",
+        "observable": "second law",
+        "status": "CONDITIONAL",
+        "gap": "origin of low-entropy initial condition = FIRST STOP of chain B",
+        "confidence": "HIGH that condition required"
+      },
+      {
+        "id": "FC1",
+        "chain": "C",
+        "arrow": "QFT → EFT",
+        "type": "COARSE_GRAINING",
+        "mechanism": "Wilsonian integration / matching",
+        "premises_derived": "scale separation; regulator",
+        "observable": "EFT predictions",
+        "status": "DERIVED as procedure",
+        "gap": "—",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "FC2",
+        "chain": "C",
+        "arrow": "EFT → UV completion (reverse)",
+        "type": "NO_DEMONSTRATED_MECHANISM",
+        "mechanism": "NONE — underdetermined",
+        "premises_derived": "local symmetries constrain (CONSTRAINT_TRANSMISSION) but do not select",
+        "observable": "—",
+        "status": "MULTIPLE_DEEPER_REALIZATIONS",
+        "gap": "FIRST STOP of chain C",
+        "confidence": "HIGH"
+      }
+    ],
+    "edge_type_counts": {
+      "generation": 3,
+      "derivation": 1,
+      "coarse_graining": 2,
+      "no_demonstrated_mechanism": 2,
+      "constraint_transmission": 0,
+      "historical_only": 0,
+      "unresolved_relation": 0
+    }
   },
   "constraints_analysis": {
     "B(A)_subseteq_B_examples": [
-      {"id":"CT1","chain":"C","relation":"QFT local Lorentz/gauge symmetries → EFT operator space","type":"CONSTRAINT_TRANSMISSION","status":"DEMONSTRATED: symmetry admissibility restricts the EFT operator basis","confidence":"HIGH"},
-      {"id":"CT2","chain":"A","relation":"unitarity → branch populations","type":"CONSTRAINT_TRANSMISSION","status":"DEMONSTRATED (P structural theorem): p_i=|alpha_i|^2 fixed within C_bp","confidence":"HIGH"},
-      {"id":"CT3","chain":"B","relation":"energy conservation → microcanonical measure restriction","type":"CONSTRAINT_TRANSMISSION","status":"DEMONSTRATED: dynamics restricts admissible ensembles","confidence":"HIGH"}
+      {
+        "id": "CT1",
+        "chain": "C",
+        "relation": "QFT local Lorentz/gauge symmetries → EFT operator space",
+        "type": "CONSTRAINT_TRANSMISSION",
+        "status": "DEMONSTRATED: symmetry admissibility restricts the EFT operator basis",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "CT2",
+        "chain": "A",
+        "relation": "unitarity → branch populations",
+        "type": "CONSTRAINT_TRANSMISSION",
+        "status": "DEMONSTRATED (P structural theorem): p_i=|alpha_i|^2 fixed within C_bp",
+        "confidence": "HIGH"
+      },
+      {
+        "id": "CT3",
+        "chain": "B",
+        "relation": "energy conservation → microcanonical measure restriction",
+        "type": "CONSTRAINT_TRANSMISSION",
+        "status": "DEMONSTRATED: dynamics restricts admissible ensembles",
+        "confidence": "HIGH"
+      }
     ],
-    "note":"constraint transmission edges exist but were separately classified — never merged with generation"
+    "note": "constraint transmission edges exist but were separately classified — never merged with generation"
   },
   "parameter_provenance": [
-    {"id":"P1","param":"H_int (system-environment coupling)","chain":"A","classification":"STRUCTURAL_SELECTION / EMPIRICAL","note":"declared input; not derived"},
-    {"id":"P2","param":"partition H = H_S x H_E","chain":"A","classification":"STRUCTURAL_SELECTION","note":"chosen, not derived (Experiment P)"},
-    {"id":"P3","param":"pointer observable","chain":"A","classification":"STRUCTURAL_SELECTION","note":"stability-selected GIVEN coupling, not absolutely"},
-    {"id":"P4","param":"statistical postulate","chain":"B","classification":"ASSUMPTION","note":"not derived from dynamics"},
-    {"id":"P5","param":"low-entropy initial condition","chain":"B","classification":"BOUNDARY_CONDITION / EMPIRICAL_INPUT","note":"IMPORTED — the arrow-of-time input"},
-    {"id":"P6","param":"EFT cutoff / regulator","chain":"C","classification":"CONVENTION_DEPENDENT","note":"removed from physics, enters procedure"},
-    {"id":"P7","param":"Wilson coefficients / LECs","chain":"C","classification":"EMPIRICAL_INPUT / FITTED (or DERIVED if UV theory supplied)","note":"independent inputs at EFT level"},
-    {"id":"P8","param":"UV completion choice","chain":"C","classification":"UNRESOLVED","note":"not determined by low-energy data"}
+    {
+      "id": "P1",
+      "param": "H_int (system-environment coupling)",
+      "chain": "A",
+      "classification": "STRUCTURAL_SELECTION / EMPIRICAL",
+      "note": "declared input; not derived"
+    },
+    {
+      "id": "P2",
+      "param": "partition H = H_S x H_E",
+      "chain": "A",
+      "classification": "STRUCTURAL_SELECTION",
+      "note": "chosen, not derived (Experiment P)"
+    },
+    {
+      "id": "P3",
+      "param": "pointer observable",
+      "chain": "A",
+      "classification": "STRUCTURAL_SELECTION",
+      "note": "stability-selected GIVEN coupling, not absolutely"
+    },
+    {
+      "id": "P4",
+      "param": "statistical postulate",
+      "chain": "B",
+      "classification": "ASSUMPTION",
+      "note": "not derived from dynamics"
+    },
+    {
+      "id": "P5",
+      "param": "low-entropy initial condition",
+      "chain": "B",
+      "classification": "BOUNDARY_CONDITION / EMPIRICAL_INPUT",
+      "note": "IMPORTED — the arrow-of-time input"
+    },
+    {
+      "id": "P6",
+      "param": "EFT cutoff / regulator",
+      "chain": "C",
+      "classification": "CONVENTION_DEPENDENT",
+      "note": "removed from physics, enters procedure"
+    },
+    {
+      "id": "P7",
+      "param": "Wilson coefficients / LECs",
+      "chain": "C",
+      "classification": "EMPIRICAL_INPUT / FITTED (or DERIVED if UV theory supplied)",
+      "note": "independent inputs at EFT level"
+    },
+    {
+      "id": "P8",
+      "param": "UV completion choice",
+      "chain": "C",
+      "classification": "UNRESOLVED",
+      "note": "not determined by low-energy data"
+    }
   ],
   "alternative_mechanisms": [
-    {"for":"FA3 (classicality)","alternatives":["objective collapse dynamics (testable difference)","Bohmian trajectories (different ontology)","stochastic mechanics","hydrodynamic coarse-graining"],"degeneracy":"observably equivalent at current precision for operational classicality; NOT degenerate at all scales (collapse models falsifiable)","status":"OBSERVATIONAL_DEGENERACY partial"},
-    {"for":"FB1 (statistical postulate)","alternatives":["typicality","ergodic theorems (partial)","quantum ergodicity results"],"degeneracy":"all add a measure/typicality assumption","status":"OBSERVATIONAL_DEGENERACY"},
-    {"for":"FB3 (arrow of time)","alternatives":["Past Hypothesis","inflationary initial conditions","bounce models","agential/cosmological accounts"],"degeneracy":"all import an initial condition from cosmology","status":"OBSERVATIONAL_DEGENERACY — none derives the condition within chain B"},
-    {"for":"FC2 (UV completion)","alternatives":["string/M theory","asymptotic safety","triviality/fixed-point options"],"degeneracy":"low-energy data underdetermines all","status":"MULTIPLE_DEEPER_REALIZATIONS"}
+    {
+      "for": "FA3 (classicality)",
+      "alternatives": [
+        "objective collapse dynamics (testable difference)",
+        "Bohmian trajectories (different ontology)",
+        "stochastic mechanics",
+        "hydrodynamic coarse-graining"
+      ],
+      "degeneracy": "observably equivalent at current precision for operational classicality; NOT degenerate at all scales (collapse models falsifiable)",
+      "status": "OBSERVATIONAL_DEGENERACY partial"
+    },
+    {
+      "for": "FB1 (statistical postulate)",
+      "alternatives": [
+        "typicality",
+        "ergodic theorems (partial)",
+        "quantum ergodicity results"
+      ],
+      "degeneracy": "all add a measure/typicality assumption",
+      "status": "OBSERVATIONAL_DEGENERACY"
+    },
+    {
+      "for": "FB3 (arrow of time)",
+      "alternatives": [
+        "Past Hypothesis",
+        "inflationary initial conditions",
+        "bounce models",
+        "agential/cosmological accounts"
+      ],
+      "degeneracy": "all import an initial condition from cosmology",
+      "status": "OBSERVATIONAL_DEGENERACY — none derives the condition within chain B"
+    },
+    {
+      "for": "FC2 (UV completion)",
+      "alternatives": [
+        "string/M theory",
+        "asymptotic safety",
+        "triviality/fixed-point options"
+      ],
+      "degeneracy": "low-energy data underdetermines all",
+      "status": "MULTIPLE_DEEPER_REALIZATIONS"
+    }
   ],
   "realization_observation_gates": [
-    {"edge":"FA2","realization":"M→P: mathematical decoherence established in closed unitary model (P verified); physical instantiation requires environment+coupling — supplied by nature","status":"PASS (declared inputs)"},
-    {"edge":"FA3","realization":"P→O: classical statistics observable; but 'one realized outcome' observable NOT produced","status":"REALIZATION PASS / OBSERVATION GAP — no distinctive observable of a realized single outcome within class"},
-    {"edge":"FB2","realization":"M→P: ensemble math → lab thermo; realization selector = thermodynamic-limit regime (empirically instantiated)","status":"PASS"},
-    {"edge":"FB3","realization":"irreversibility realized in nature; its selection (initial condition) has NO_DEMONSTRATED_SELECTOR within chain","status":"OBSERVATION PASS / REALIZATION SELECTOR UNRESOLVED"},
-    {"edge":"FC1","realization":"EFT realized at all tested energies","status":"PASS"},
-    {"edge":"FC2","realization":"UV not directly observable; no distinctive observable at current reach","status":"OBSERVATION GAP — NO_DISTINCTIVE_OBSERVABLE at accessible scales"}
+    {
+      "edge": "FA2",
+      "realization": "M→P: mathematical decoherence established in closed unitary model (P verified); physical instantiation requires environment+coupling — supplied by nature",
+      "status": "PASS (declared inputs)"
+    },
+    {
+      "edge": "FA3",
+      "realization": "P→O: classical statistics observable; but 'one realized outcome' observable NOT produced",
+      "status": "REALIZATION PASS / OBSERVATION GAP — no distinctive observable of a realized single outcome within class"
+    },
+    {
+      "edge": "FB2",
+      "realization": "M→P: ensemble math → lab thermo; realization selector = thermodynamic-limit regime (empirically instantiated)",
+      "status": "PASS"
+    },
+    {
+      "edge": "FB3",
+      "realization": "irreversibility realized in nature; its selection (initial condition) has NO_DEMONSTRATED_SELECTOR within chain",
+      "status": "OBSERVATION PASS / REALIZATION SELECTOR UNRESOLVED"
+    },
+    {
+      "edge": "FC1",
+      "realization": "EFT realized at all tested energies",
+      "status": "PASS"
+    },
+    {
+      "edge": "FC2",
+      "realization": "UV not directly observable; no distinctive observable at current reach",
+      "status": "OBSERVATION GAP — NO_DISTINCTIVE_OBSERVABLE at accessible scales"
+    }
   ],
   "first_backward_stops": {
-    "chain_A":"A03 partition choice + A07 definite outcome: the S|E split and the realized outcome are added inputs, not outputs. Reverse reconstruction of classicality reaches decoherence (required) but cannot derive the partition or the outcome.",
-    "chain_B":"B06 Past Hypothesis: irreversibility requires a low-entropy initial condition whose origin is outside the chain. STOP.",
-    "chain_C":"C04 UV completion: low-energy data cannot select the microscopic theory. STOP.",
-    "note":"All three stops are genuine UNRESOLVED boundaries, not failures of the instrument."
+    "chain_A": "A03 partition choice + A07 definite outcome: the S|E split and the realized outcome are added inputs, not outputs. Reverse reconstruction of classicality reaches decoherence (required) but cannot derive the partition or the outcome.",
+    "chain_B": "B06 Past Hypothesis: irreversibility requires a low-entropy initial condition whose origin is outside the chain. STOP.",
+    "chain_C": "C04 UV completion: low-energy data cannot select the microscopic theory. STOP.",
+    "note": "All three stops are genuine UNRESOLVED boundaries, not failures of the instrument."
   },
   "recurring_structure_screen": {
     "candidates": [
-      {"pattern":"unitarity + branch/population algebra","occurrences":["A (P theorem)","C (S-matrix unitarity)","B (Liouville)"],"assessment":"the same mathematical constraint (norm/measure conservation) appears in all three chains","status":"RECURRING_STRUCTURE_CANDIDATE"},
-      {"pattern":"coarse-graining + lost information","occurrences":["A (trace over E)","B (coarse-grained entropy)","C (mode elimination)"],"assessment":"the same construction type: reduced description at the price of information loss","status":"RECURRING_STRUCTURE_CANDIDATE"},
-      {"pattern":"constraint transmission without generation","occurrences":["CT1-CT3"],"assessment":"earlier structure restricts possibility space without generating later structure — appears in all three chains","status":"RECURRING_STRUCTURE_CANDIDATE"}
+      {
+        "pattern": "unitarity + branch/population algebra",
+        "occurrences": [
+          "A (P theorem)",
+          "C (S-matrix unitarity)",
+          "B (Liouville)"
+        ],
+        "assessment": "the same mathematical constraint (norm/measure conservation) appears in all three chains",
+        "status": "RECURRING_STRUCTURE_CANDIDATE"
+      },
+      {
+        "pattern": "coarse-graining + lost information",
+        "occurrences": [
+          "A (trace over E)",
+          "B (coarse-grained entropy)",
+          "C (mode elimination)"
+        ],
+        "assessment": "the same construction type: reduced description at the price of information loss",
+        "status": "RECURRING_STRUCTURE_CANDIDATE"
+      },
+      {
+        "pattern": "constraint transmission without generation",
+        "occurrences": [
+          "CT1-CT3"
+        ],
+        "assessment": "earlier structure restricts possibility space without generating later structure — appears in all three chains",
+        "status": "RECURRING_STRUCTURE_CANDIDATE"
+      }
     ],
-    "h1_screen":"H1_UNDERDETERMINED — recurring mathematical constructions identified (RECURRING_STRUCTURE_FOUND), but no common SUBSTRATE R is proposed or established. Recurring structure is a property of our mathematics; whether it is one physical substrate remains unresolved. No independent primitive insertion was performed at any transition, but the three chains each retain at least one genuinely imported input (partition+outcome; statistical postulate+Past condition; UV choice).",
-    "h1_early_signal":"Mild support for H1: the chains share constraint structure rather than independent primitives. Explicitly NOT a confirmation."
+    "h1_screen": "H1_UNDERDETERMINED — recurring mathematical constructions identified (RECURRING_STRUCTURE_FOUND), but no common SUBSTRATE R is proposed or established. Recurring structure is a property of our mathematics; whether it is one physical substrate remains unresolved. No independent primitive insertion was performed at any transition, but the three chains each retain at least one genuinely imported input (partition+outcome; statistical postulate+Past condition; UV choice).",
+    "h1_early_signal": "Mild support for H1: the chains share constraint structure rather than independent primitives. Explicitly NOT a confirmation."
   },
   "gaps": [
-    {"gap_id":"G1","chain":"A","gap":"definite outcome selection","status":"NOT_DERIVED within C_bp (Experiment P + structural theorem)","priority":"highest — sharpest surviving frontier"},
-    {"gap_id":"G2","chain":"A","gap":"partition/pointer basis derivation","status":"STRUCTURAL_SELECTION unresolved"},
-    {"gap_id":"G3","chain":"B","gap":"origin of Past Hypothesis","status":"outside chain; requires cosmology"},
-    {"gap_id":"G4","chain":"B","gap":"statistical postulate status","status":"ASSUMPTION (typicality etc. are alternative assumptions, not derivations)"},
-    {"gap_id":"G5","chain":"C","gap":"UV completion selection","status":"UNDERDETERMINED (RC-02)"},
-    {"gap_id":"G6","chain":"cross","gap":"whether recurring constructions reflect one substrate or shared mathematics","status":"H1_UNDERDETERMINED"}
+    {
+      "gap_id": "G1",
+      "chain": "A",
+      "gap": "definite outcome selection",
+      "status": "NOT_DERIVED within C_bp (Experiment P + structural theorem)",
+      "priority": "highest — sharpest surviving frontier"
+    },
+    {
+      "gap_id": "G2",
+      "chain": "A",
+      "gap": "partition/pointer basis derivation",
+      "status": "STRUCTURAL_SELECTION unresolved"
+    },
+    {
+      "gap_id": "G3",
+      "chain": "B",
+      "gap": "origin of Past Hypothesis",
+      "status": "outside chain; requires cosmology"
+    },
+    {
+      "gap_id": "G4",
+      "chain": "B",
+      "gap": "statistical postulate status",
+      "status": "ASSUMPTION (typicality etc. are alternative assumptions, not derivations)"
+    },
+    {
+      "gap_id": "G5",
+      "chain": "C",
+      "gap": "UV completion selection",
+      "status": "UNDERDETERMINED (RC-02)"
+    },
+    {
+      "gap_id": "G6",
+      "chain": "cross",
+      "gap": "whether recurring constructions reflect one substrate or shared mathematics",
+      "status": "H1_UNDERDETERMINED"
+    }
   ],
   "divergences": [
-    {"where":"chain A reverse vs forward","finding":"forward: decoherence→classicality; reverse: classicality→decoherence REQUIRED but partition and outcome are added inputs. The reverse reconstruction stops EARLIER than the forward map suggests — historical/effective continuity does not run backward to a unique derivation"},
-    {"where":"chain B","finding":"forward: dynamics→SM→thermo; reverse: thermo→SM required, but microdynamics UNDERDETERMINED (classical vs quantum)","type":"MULTIPLE_DEEPER_REALIZATIONS"},
-    {"where":"chain C","finding":"forward: QFT→EFT clean; reverse: EFT→UV blocked at first step","type":"CONSTRAINT_WITHOUT_GENERATION"}
+    {
+      "where": "chain A reverse vs forward",
+      "finding": "forward: decoherence→classicality; reverse: classicality→decoherence REQUIRED but partition and outcome are added inputs. The reverse reconstruction stops EARLIER than the forward map suggests — historical/effective continuity does not run backward to a unique derivation"
+    },
+    {
+      "where": "chain B",
+      "finding": "forward: dynamics→SM→thermo; reverse: thermo→SM required, but microdynamics UNDERDETERMINED (classical vs quantum)",
+      "type": "MULTIPLE_DEEPER_REALIZATIONS"
+    },
+    {
+      "where": "chain C",
+      "finding": "forward: QFT→EFT clean; reverse: EFT→UV blocked at first step",
+      "type": "CONSTRAINT_WITHOUT_GENERATION"
+    }
   ]
 }
