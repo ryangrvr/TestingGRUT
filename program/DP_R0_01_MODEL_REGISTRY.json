@@ -1,0 +1,36 @@
+{
+  "artifact": "DP_R0_01_MODEL_REGISTRY",
+  "protocol": "program/DP_R0_01_PROTOCOL.md",
+  "note": "PLACEHOLDER skeleton — frozen BEFORE execution. No DP analysis performed. Variants to be populated from primary sources during Phase 1 only. Entries below are the variant CLASSES to investigate, not claims. No parameter values are asserted.",
+  "frozen_protocol_sha256_at_freeze": "TO_COMPUTE_AT_EXECUTION_START (protocol created this run; execution must hash and verify before analysis)",
+  "variant_classes": [
+    {
+      "class_id": "DPV1",
+      "class_name": "original Diósi 1989 / Penrose 1996 heuristic formulations",
+      "population_rule": "populate only from primary sources; record known defect (energy non-conservation) as variant property, not as disqualification",
+      "status": "TO_POPULATE_PHASE_1"
+    },
+    {
+      "class_id": "DPV2",
+      "class_name": "Markovian white-noise reformulation (2007 line)",
+      "population_rule": "record added structure introduced relative to DPV1",
+      "status": "TO_POPULATE_PHASE_1"
+    },
+    {
+      "class_id": "DPV3",
+      "class_name": "smeared / mass-density-resolution (finite-R0) formulations",
+      "population_rule": "record the 2013 resolution as CONJECTURE per the DP audit record; R0 is the added free ingredient",
+      "status": "TO_POPULATE_PHASE_1"
+    },
+    {
+      "class_id": "DPV4",
+      "class_name": "other materially distinct variants encountered in primary literature",
+      "population_rule": "add only with a documented primary source; never merge notation without an explicit notation_map entry",
+      "status": "TO_POPULATE_PHASE_1"
+    }
+  ],
+  "notation_conflation_watchlist": [
+    "R0 may appear in sources as: mass-density correlation length, smearing length, resolution scale, or cutoff — each occurrence must be mapped individually before being treated as the same parameter"
+  ],
+  "assertions_contained": "NONE — this registry makes no claim about parameter values, bounds, viability, or exclusions"
+}
