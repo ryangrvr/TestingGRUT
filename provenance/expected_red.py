@@ -84,7 +84,11 @@ def _numeric_cases():
 # to the OPEN PASS it waits on. The prose for a pass lives in OPEN_PASSES.txt, once, not here.
 DECLARED = {
     # test_resident tier-contradiction + clean-annotation declarations REMOVED 2026-09-12:
-    # the honest tier propagation (rung1/rung2/rung4/kr_contract_retarded_tier4 -> derived-pending,
+    # the honest tier propagation (EIGHT nodes shown -> derived-pending: rung1_inin_formalism,
+    # rung2_kms_gate, rung4_love_kk, kr_contract_retarded_tier4, passivity_channel_diagonal,
+    # u1_form_universality, rung7_w1_wz_map, info_i1_renorm_as_information; authority:
+    # git diff d5e9a99..67059a8 -- provenance/claims.json, field-level -- an earlier version of
+    # this comment named only four, corrected 2026-09-13 per P1A_EDGE_ADJUDICATION_01,
     # banked in the testing-repo line this tree carries) dissolved both live contradictions, so the
     # two tests PASS and expected_red itself flagged the declarations STALE. Classification, not
     # suppression, works in both directions: a declaration that outlives its red is as false as an
