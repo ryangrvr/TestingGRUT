@@ -51,8 +51,13 @@ class TestExpectedRed(unittest.TestCase):
         """The adjudication closes, the test keeps failing for an unrelated reason, and the runner
         would otherwise print green while citing a ruling that already happened. Staleness cannot
         catch it -- stale fires only when a test starts PASSING."""
+        # 2026-09-12: the fixture used to hard-code P1A-EDGE-REPRESENTATION; when P1A went MOOT
+        # for real (its declarations removed), simulating its closure stopped creating the refusal
+        # condition and this self-test went stale. Pick a pass a declaration actually cites, so the
+        # fixture survives any individual pass being ruled.
         base = X.open_passes()
-        X.open_passes = lambda: {**base, "P1A-EDGE-REPRESENTATION": {"status": "CLOSED", "symptomless": False}}
+        cited = sorted({pid for spec in X.DECLARED.values() for pid in spec["cases"].values()})[0]
+        X.open_passes = lambda: {**base, cited: {"status": "CLOSED", "symptomless": False}}
         rc, out = self._run()
         self.assertEqual(rc, 1)
         self.assertIn("NON-OPEN PASS", out)
@@ -123,9 +128,11 @@ class TestExpectedRed(unittest.TestCase):
     def test_a_moot_pass_cannot_be_cited_by_a_declaration(self):
         """MOOT is not a ruling. A declaration resting on a dissolved question must be removed,
         not carried."""
+        # 2026-09-12: same staleness as the CLOSED fixture above -- cite a pass that is
+        # actually cited by a declaration instead of the hard-coded (now genuinely MOOT) P1A.
         base = X.open_passes()
-        X.open_passes = lambda: {**base, "P1A-EDGE-REPRESENTATION":
-                                 {"status": "MOOT", "symptomless": False}}
+        cited = sorted({pid for spec in X.DECLARED.values() for pid in spec["cases"].values()})[0]
+        X.open_passes = lambda: {**base, cited: {"status": "MOOT", "symptomless": False}}
         rc, out = self._run()
         self.assertEqual(rc, 1)
         self.assertIn("NON-OPEN PASS", out)

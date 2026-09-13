@@ -285,17 +285,32 @@ class TestResident(unittest.TestCase):
         self.assertEqual(r["verdict"], "FLAG-FOR-FIREWALL")
         self.assertTrue(r["substantive"])
 
+    def _promoted(self, claim_id, tier):
+        # SYNTHETIC FIXTURE (2026-09-12): the honest tier propagation (background_time_translation_flow
+        # = assumed cascading rung1/rung2/rung4/kr_contract_retarded_tier4 to 'derived-pending') left
+        # NO live result-tier node with non-empty depends_on in the register, so the ORPHANED-RESULT
+        # change-guard can no longer be exercised on a live node. Promote one node to a result tier in
+        # an in-memory deep copy; the guard under test is unchanged and still runs on the live register.
+        import copy
+        claims = copy.deepcopy(self.claims)
+        node = next(c for c in claims if c["id"] == claim_id)
+        self.assertTrue(node.get("depends_on"), f"fixture needs non-empty depends_on on {claim_id}")
+        node["tier"] = tier
+        return claims
+
     def test_depends_on_emptying_flags(self):
         # orphaning a banked result by emptying its depends_on must NOT be a silent PASS
-        r = check_change("rung2_kms_gate", {"depends_on": []}, self.claims, self.src)
+        claims = self._promoted("rung2_kms_gate", "derived")
+        r = check_change("rung2_kms_gate", {"depends_on": []}, claims, self.src)
         self.assertNotEqual(r["verdict"], "PASS")
         self.assertEqual(r["verdict"], "FLAG-FOR-FIREWALL")
         self.assertTrue(r["substantive"])
         self.assertTrue(any("ORPHANED-RESULT" in f for f in r["consistency_flags"]))
 
     def test_orphaning_a_shown_result_flags(self):
-        # same hole on a different result-tier claim (rung4 shown, had two deps)
-        r = check_change("rung4_love_kk", {"depends_on": []}, self.claims, self.src)
+        # same hole on a different result-tier claim (rung4 promoted 'shown', has two deps)
+        claims = self._promoted("rung4_love_kk", "shown")
+        r = check_change("rung4_love_kk", {"depends_on": []}, claims, self.src)
         self.assertEqual(r["verdict"], "FLAG-FOR-FIREWALL")
         self.assertTrue(any("ORPHANED-RESULT" in f for f in r["consistency_flags"]))
 

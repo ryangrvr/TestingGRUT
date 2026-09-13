@@ -83,25 +83,12 @@ def _numeric_cases():
 # Every declaration: the enumerator that produces its live case set, and each declared case mapped
 # to the OPEN PASS it waits on. The prose for a pass lives in OPEN_PASSES.txt, once, not here.
 DECLARED = {
-    "test_resident.py::TestResident::test_no_tier_contradiction_in_live_register": {
-        "enumerate": _tier_cases,
-        "cases": {
-            # rung1_inin_action cases removed 2026-08-23: node split per Ruling B.
-            # rung1_inin_formalism inherits the old background-flow dependency contradiction.
-            # rung7_w1_wz_map / u1_form_universality cases REMOVED 2026-08-23 (owner edge
-            # correction): reattached to FORMALISM per their own GENERIC self-declarations,
-            # which RESOLVED the tier-vs-edge tensio            # which RESOLVED the tier-vs-edge tensio            # whidge review -> genericity evidence -> owner correction).
-            "rung1_inin_formalism": "P1A-EDGE-REPRESENTATION",
-            "rung2_kms_gate": "P1A-EDGE-REPRESENTATION",
-        },
-    },
-    "test_resident.py::TestResident::test_clean_annotation_change_passes": {
-        "enumerate": _annotation_cases,
-        "cases": {
-            "rung1_inin_formalism": "P1A-EDGE-REPRESENTATION",
-            "rung2_kms_gate": "P1A-EDGE-REPRESENTATION",
-        },
-    },
+    # test_resident tier-contradiction + clean-annotation declarations REMOVED 2026-09-12:
+    # the honest tier propagation (rung1/rung2/rung4/kr_contract_retarded_tier4 -> derived-pending,
+    # banked in the testing-repo line this tree carries) dissolved both live contradictions, so the
+    # two tests PASS and expected_red itself flagged the declarations STALE. Classification, not
+    # suppression, works in both directions: a declaration that outlives its red is as false as an
+    # undeclared red. P1A-EDGE-REPRESENTATION stays in OPEN_PASSES wherever still cited below.
     "test_prereg_immutable.py::TestBlindSafe::"
     "test_no_sealed_prereg_points_outward_at_its_own_context": {
         "enumerate": _pointer_cases,
@@ -123,8 +110,11 @@ DECLARED = {
     },
     "test_doc_sync.py::TestProseMatchesTheMarker::test_no_standing_doc_asserts_a_stale_net": {
         "enumerate": _stale_net_cases,
+        # GRUT_II_Agenda.md:7 removed 2026-09-12: the sentence gained its "as of the
+        # 2026-07-02 posing" historical cue, so the case is no longer produced (stale-case
+        # discipline: a declared case the enumerator no longer emits must be removed).
         "cases": {c: "P6-STALE-NETS-IN-STANDING-DOCS" for c in (
-            "GRUT_II_Agenda.md:7", "GRUT_ToE.md:7", "GRUT_ToE.md:53", "GRUT_ToE.md:172",
+            "GRUT_ToE.md:7", "GRUT_ToE.md:53", "GRUT_ToE.md:172",
             "GRUT_ToE.md:243", "GRUT_ToE.md:252", "GRUT_ToE.md:253", "README.md:19",
             "README.md:22", "GRUT_II_What_Survived.md:83")},
     },

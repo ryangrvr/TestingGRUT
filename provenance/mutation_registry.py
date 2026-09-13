@@ -494,6 +494,45 @@ BATTERIES = {
              "direction; every tension check in the selftest must fail."),
         ],
     },
+
+    # ------------------------------------- the Gamma_T closure computation (2026-09-12)
+    # Cited by the GAMMA_T prediction gate; register-reading calc whose verdict is COMPUTED
+    # from extracted statuses, so its failure modes are wrong COEFFICIENTS, wrong SCALING
+    # LAWS, and silently broken EXTRACTION -- one mutant per class, each aimed at the gate
+    # built to catch it. fail() was taught the "SELFTEST: FAIL" colon form the same day
+    # (GATE-FAIL alone classified as a crash, i.e. as proving nothing).
+    "gw_tensor_friction.py": {
+        "mutants": [
+            ("kernel_coefficient_stale",
+             "C2H = Fraction(13, 480)                    # H^2 omega^2 log coefficient / pi^2",
+             "C2H = Fraction(13, 470)                    # H^2 omega^2 log coefficient / pi^2",
+             "installs a STALE Tier-4 kernel coefficient (13/470 for 13/480). The H^2 correction "
+             "term is below double precision at LIGO frequencies, so every printed number is "
+             "IDENTICAL -- the exact (13/480)/(3/1280) = 104/9 identity gate is the only witness "
+             "that the banked coefficient and the hard-coded one still agree, and it must fire."),
+            ("chromaticity_power_softened",
+             "    gam = coeff * w**3 / OMEGA_PBAR**2 * (1.0 + hcorr)",
+             "    gam = coeff * w**2 / OMEGA_PBAR**2 * (1.0 + hcorr)",
+             "installs a w^2 friction law in place of w^3. The flattering failure: the number gets "
+             "SMALLER (more orders below the shared-slot bound) while the chromaticity CLASS -- the "
+             "one thing separating horn (a) from the achromatic horn (b) -- silently drifts toward "
+             "achromatic. The w^3 scaling gate across the band must reject it."),
+            ("crossover_pinned_flat",
+             "    wx = math.sqrt(B_STAKED*H0*wc/A_UV)",
+             "    wx = math.sqrt(B_STAKED*H0*OMEGA_P/A_UV)",
+             "pins the crossover w_x to a single value independent of w_c, collapsing the reported "
+             "~19.8-order w_x span to ZERO -- the flattering direction, since the span is the "
+             "printed evidence that w_c is an unpinned constant. The sqrt(w_c) ratio gate between "
+             "the hand-set and Planck values must reject it."),
+            ("chosen_extraction_broken",
+             "    has_chosen = bool(re.search(r'VERDICT = CHOSEN|CHOSEN AT THE ENUMERATED FRAME/ORDER', t))",
+             "    has_chosen = bool(re.search(r'VERDICT == CHOSEN|CHOSEN AT AN ENUMERATED FRAME/ORDER', t))",
+             "breaks the CHOSEN-verdict extractor (both regex alternatives miss the booked prose). "
+             "The dynamic needle then reads UNADJUDICATED where the register says CHOSEN -- the "
+             "exact silent-extraction failure the file's verdict discipline exists to prevent -- "
+             "and the well-formedness gate on p_tt_ansatz must reject the run."),
+        ],
+    },
 }
 
 # --------------------------------------------------------------------------- the ratchet

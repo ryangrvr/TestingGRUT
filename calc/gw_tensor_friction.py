@@ -66,7 +66,11 @@ OMEGA_C  = {            # three in-corpus values, 39.6-order span (SPEC section 
 }
 
 def fail(msg):
-    print("GATE-FAIL:", msg); sys.exit(1)
+    # Verdict contract (test_mutation_battery._run, 2026-09-12): a wrong answer a gate
+    # rejects must read as a CHECK, not a crash -- the harness matches the exact colon
+    # form "SELFTEST: FAIL". GATE-FAIL stays for the human log; the marker is for the machine.
+    print("GATE-FAIL:", msg)
+    print("SELFTEST: FAIL --", msg); sys.exit(1)
 
 # ================================================================ 0 . register reads
 # Dynamic needles: statuses are EXTRACTED, and the verdict computed from them.
