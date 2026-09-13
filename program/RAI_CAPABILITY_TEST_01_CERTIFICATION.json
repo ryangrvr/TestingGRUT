@@ -1,0 +1,57 @@
+{
+  "artifact": "RAI_CAPABILITY_TEST_01_CERTIFICATION",
+  "certifies": "RAI_CAPABILITY_TEST_01",
+  "date": "2026-09-12",
+  "status": "CERTIFIED_CONDITIONAL",
+  "certification_statement": "|N| = 0 — CERTIFIED, CONDITIONAL on the rung1/rung2 edge representation, which resolved the foundation tier contradiction by demotion rather than by adjudication (P1A-EDGE-REPRESENTATION: MOOT, unruled).",
+  "authorization": "owner directive 2026-09-12: authorize re-certification with the P1A residual named on the cert, not clean",
+  "phase0_gate_rerun": {
+    "head": "161a883",
+    "pytest": "3 failed / 236 passed / 1 skipped",
+    "expected_red_exit": 0,
+    "green_definition": "failing set == declared set (classification, not suppression); NOT zero failures",
+    "declared_reds": [
+      {"test": "test_doc_sync.py::TestProseMatchesTheMarker::test_no_standing_doc_asserts_a_stale_net", "cases": 9, "pass": "P6-STALE-NETS-IN-STANDING-DOCS"},
+      {"test": "test_prereg_immutable.py::TestBlindSafe::test_blind_safe_preregs_carry_no_result_adjacent_numerics", "pass": "P3-SEALED-HISTORY-POLICY"},
+      {"test": "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context", "passes": ["P2-TERMINATION-EVENTLOG", "P3-SEALED-HISTORY-POLICY", "P4-TERMINATION-KAPPA-RESULT"]}
+    ],
+    "register_invariants": {"claims_total": 74, "grut_scope": 53, "net": 16, "rung1_inin_formalism": "derived-pending", "rung2_kms_gate": "derived-pending"},
+    "prior_record_discrepancy": "frozen artifact counted 14 failures, restoration commit 15; noted, not resolved"
+  },
+  "conditional": {
+    "attaches_to": "certified content (frozen artifact Phase-1 foundation line; register as booked under the edge reading) — NOT the gate-pass; a lawful declared-red green was reachable with tiers still shown",
+    "mechanism": "foundation tier contradiction resolved by DEMOTION (honest tier propagation) not ADJUDICATION; the demotion presupposes the tier-contradiction check's reading of the R5 edge",
+    "pass": {"id": "P1A-EDGE-REPRESENTATION", "status": "MOOT", "ruled": false, "moot_set_by": "builder, commit 161a883, outside the stanza's anticipated moot route; encompassed by the owner's 2026-09-12 authorization, which post-dates it"},
+    "demotion_cone": {
+      "commit": "67059a8",
+      "authority": "git diff d5e9a99..67059a8 -- provenance/claims.json",
+      "shown_to_derived_pending": ["rung1_inin_formalism", "rung2_kms_gate", "rung4_love_kk", "kr_contract_retarded_tier4", "info_i1_renorm_as_information", "passivity_channel_diagonal", "rung7_w1_wz_map", "u1_form_universality"],
+      "travels_with": "rung2/rung4 doc-pin re-acceptances (161a883)"
+    },
+    "on_adverse_ruling": "all eight demotions and the pin re-acceptances up for review; this certification VOID pending re-run; it does not survive the re-ruling by default",
+    "scope_note": {"claim": "no row's reduction argument invokes the tier labels of any of the eight demoted nodes as a premise", "fences": ["bounded, not exculpatory", "unconditional VOID clause", "no-inheritance: a re-run after any edge re-ruling must re-establish tier-independence against the revised register"]}
+  },
+  "residuals_disclosed": [
+    {"id": "P1B-SHOWN-ON-LEDGER-INPUTS", "status": "OPEN", "may_have_no_symptom": true, "coupling": "the demotion that mooted P1A also removed P1B's live subject; an adverse edge ruling re-promoting rung1 makes it acutely live again"},
+    {"id": "P5-RESIDENT-SCOPE", "status": "OPEN", "may_have_no_symptom": true, "character": "resident.check_change() not scope-aware; failure mode SAFE (blocks, does not wave through); live under this green and invisible to it"},
+    {"id": "synthetic ORPHANED-RESULT fixtures", "detail": "the two test_resident guards exercise the unchanged guard on in-memory tier promotions; no live result-tier node with non-empty depends_on exists for the flag to fire on"},
+    {"id": "P6 10-to-9 declared-case reduction", "detail": "builder inserted a historical cue into P6-governed GRUT_II_Agenda.md:7 inside 161a883 without the P6 ruling; owner-ratifiable under P6; the 9 remaining prose cases stay declared-red per owner directive"}
+  ],
+  "not_certified": ["correspondence to truth", "closure of open passes P2/P3/P4/P5/P6", "any ruling on P1A", "Born Phase-2A hostile audit or Phase 2B authorization"],
+  "frozen_caveats": {"caveat_1": "DISCHARGED by the Phase-0 re-run this file records", "caveat_2": "carries forward: |N| bounds generative reach, not physics' content", "caveat_3": "carries forward: novelty from new inputs is input-provenance, not generative novelty"},
+  "freeze_discipline": {
+    "frozen_artifact_blobs": {"RAI_CAPABILITY_TEST_01.md": "1555a863cbb7e81b8b88e88d89d74d04f83b5f70", "RAI_CAPABILITY_TEST_01.json": "fa9dbd43b546bc9369c48a4c5254283de3462f28"},
+    "byte_identical_to_archive_commit": "89445a8",
+    "REALITY_STATUS_01": "untouched; carries no |N| row; nothing in it superseded — this file ADDS the certification to the program record",
+    "separate_citing_file_precedent": ["EC_BORN_01_PHASE2A_ADJUDICATION", "HISA01_REPAIRED_43_ADJUDICATION"]
+  },
+  "two_audit_record": {
+    "protocol": "provenance verifier + hostile refuter independent + mandatory referee",
+    "verifier": {"verdict": "PASS_WITH_CORRECTIONS", "corrections": 5, "all_incorporated": true},
+    "refuter": {"verdict": "NOT_REFUTED_WITH_AMENDMENTS", "sustained": {"blocking_curable": 1, "material": 5, "minor": 3}, "pressed_not_sustained": 7},
+    "referee": {"verdict": "ISSUE_AMENDED", "verifier_verifications_overruled": 2, "demotion_cone_corrected_to": 8, "scope_note": "retained only as fenced"},
+    "draft_pre_narration": "the draft carried a pre-written projection of the audit record; struck as a sustained BLOCKING defect and replaced by the real record"
+  },
+  "anti_laundering": {"conditional_in_citable_sentence": true, "correspondence_to_truth_language_used": false, "clean_certification_refused": true},
+  "canonical_GRUT_RAI_modified": false
+}
