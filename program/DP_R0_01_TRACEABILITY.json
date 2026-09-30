@@ -1,0 +1,28 @@
+{
+  "artifact": "DP_R0_01_TRACEABILITY",
+  "purpose": "protocol-freeze provenance record — created BEFORE any DP analysis",
+  "inputs_inherited": [
+    "program/REALITY_CHECK_05_DP_AUDIT.json",
+    "program/REALITY_CHECK_05_PARAMETER_SPACE.*",
+    "program/REALITY_CHECK_05_R0_DETERMINATION.md"
+  ],
+  "inheritance_rule": "Prior audit artifacts are CONTEXT, not premises. Every number in them must be re-derived source-by-source under DP-R0-01 before it may enter the parameter-space record.",
+  "frozen_matrix": "comparative compression matrix (0.86 DP score context) remains frozen and untouched; no rescoring authorized by DP-R0-01",
+  "protocol_files_created_this_freeze": [
+    "program/DP_R0_01_PROTOCOL.md",
+    "program/DP_R0_01_SCHEMA.md",
+    "program/DP_R0_01_MODEL_REGISTRY.json",
+    "program/DP_R0_01_TRACEABILITY.json",
+    "program/DP_R0_01_FREEZE_REPORT.md"
+  ],
+  "freeze_checks": {
+    "dp_analysis_performed": false,
+    "surviving_region_computed": false,
+    "viability_declared": false,
+    "rescoring_performed": false,
+    "experiment_designed": false,
+    "EC01_artifacts_modified": false,
+    "canonical_GRUT_RAI_modified": false
+  },
+  "next_authorized_action": "EXECUTION phase (separate authorized run): populate registry Phase 1, then phases 2-9 in frozen order, then independent hostile audit"
+}

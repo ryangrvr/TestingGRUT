@@ -1,0 +1,137 @@
+{
+  "artifact": "REALITY_CHECK_04_EXPERIMENT_P_ADJUDICATION",
+  "type": "independent audit of Experiment P (TestingGRUT @ 5febde9)",
+  "canonical_repo_modified": false,
+  "experiment_p_artifacts_modified": false,
+  "method": {
+    "source_priority": "executable code > raw results JSON > decision record > report",
+    "independent_verification": "Controls A, D, H re-computed independently in this audit (numpy, exact finite-dimensional); analytic cross-check of the decoherence mechanism performed via direct record-state overlap.",
+    "audit_seed_note": "RNG state at control D in the audit differs from Experiment P's sequential RNG consumption; conclusions do not depend on the specific random vector (verified: cross term is generically nonzero for any non-record-basis environment state)."
+  },
+  "status_table": {
+    "Closed unitary dynamics produce decoherence": "DERIVED",
+    "Decoherence suppresses reduced coherence": "DERIVED",
+    "Global unitary state selects one outcome": "NOT_DERIVED",
+    "Pointer basis equals realized outcome": "NOT_DERIVED (control F shows pointer/dephased appearance is coarse-graining-dependent)",
+    "Outcome probabilities are dynamically derived": "NOT_DERIVED",
+    "Born weights are derived": "NOT_DERIVED (inherited from initial-state amplitudes: control C, five amplitudes, exact tracking)",
+    "Reduced state uniquely identifies global outcome information": "OUTSIDE_SCOPE as tested (control D invalid as executed; true by general theory but NOT established by this experiment)",
+    "Coarse-graining uniquely selects an outcome": "NOT_DERIVED (control F: opposite — dephased G1 MANUFACTURES the definite-outcome appearance)",
+    "Additional outcome-selection structure is required": "DERIVED (within tested model class: control G shows exactly what C adds)",
+    "Result is universal beyond tested model class": "OUTSIDE_SCOPE / explicitly not claimed"
+  },
+  "control_verdicts": {
+    "A_decoherence": {
+      "status": "VERIFIED",
+      "independent_recheck": "cross term 0.0 exactly (N=8), purity 0.5, global purity 1.0, U unitary confirmed",
+      "analytic_crosscheck": "record-state overlap <e0|U1|e0> = 0 by construction (shift register, disjoint support) — decoherence is exact, not numerical",
+      "verdict": "DERIVED"
+    },
+    "B_definite_outcome": {
+      "status": "VERIFIED",
+      "evidence": "global purity = 1.0; branch populations 0.5/0.5; no selection operation anywhere in MODEL U code path",
+      "verdict": "NOT_DERIVED — correct; reduced diagonalization is never conflated with outcome"
+    },
+    "C_weights_vs_amplitudes": {
+      "status": "VERIFIED",
+      "evidence": "p0 tracks |alpha|^2 exactly for all five amplitudes; weights inherited from initial state",
+      "verdict": "STATE_DEPENDENT — correct classification"
+    },
+    "D_purifications": {
+      "status": "INVALID AS EXECUTED",
+      "internal_contradiction": "computed identical_reduced_decoherence = false, yet verdict string asserts NON-IDENTIFIABLE and outcome_weight_identifiable_from_reduced_state_alone = true (the negation of the verdict it sits under). The control contradicts itself in two ways.",
+      "mechanism": "the second environment initial state (generic superposition over record states) does NOT decohere under the same U: reduced cross term = 0.16337... The pair is NOT an identical-reduced-state pair, so the control does not test purificational indistinguishability.",
+      "downgrade": "Control D establishes NOTHING about purification non-identifiability. The general theorem (reduced states do not uniquely determine purifications/outcome measures) is textbook-valid but is NOT demonstrated by this experiment's calculation.",
+      "correction": "identical_reduced_decoherence: false must stand; the NON-IDENTIFIABLE label sourced from control D must be removed from the evidence chain."
+    },
+    "E_partitions": {
+      "status": "VERIFIED / LIMITED",
+      "evidence": "same p0 = 0.5 under keep-(s,a) and keep-(s) partitions",
+      "limitation": "compares nested truncations of the same reduced chain, not independently constructed partitions; test is weak"
+    },
+    "F_coarse_grainings": {
+      "status": "VERIFIED",
+      "evidence": "G1 (dephased) yields apparent definite outcome; G2 (full reduced state) retains superposition evidence",
+      "verdict": "the definite-outcome APPEARANCE is coarse-graining-dependent — correctly reported and is the sharpest single finding"
+    },
+    "G_unitary_vs_collapse": {
+      "status": "VERIFIED / CORRECTLY LABELED",
+      "evidence": "MODEL C = explicit Born weights + stochastic projection, labeled ADDITIONAL_INPUT",
+      "verdict": "supplies exactly the two missing operations (realized outcome + weight law); diagnostic only, not ontology evidence"
+    },
+    "H_identifiability": {
+      "status": "VERIFIED WITH SCOPING CORRECTION",
+      "evidence": "for alpha2 in {0.2, 0.5, 0.8}: cross term = 0 in all cases, weights 0.2/0.5/0.8 differ; same (C,G)",
+      "scoping_correction_1": "the compared reduced states do NOT have identical purity (0.68 vs 0.5); only the pointer-basis decoherence class (cross=0) is matched. Non-identifiability therefore holds relative to the DECLARED decoherence-observable set, which excludes branch populations.",
+      "scoping_correction_2": "p0 is itself a reduced-state diagonal element. If branch populations are admitted as declared observables, the weights ARE identifiable from the reduced state. Correct statement: 'outcome weights are not identifiable from decoherence structure (coherence suppression) alone'; they are identifiable from the full reduced state but as inherited initial-state information, not dynamics-derived.",
+      "verdict": "NON-IDENTIFIABLE from (C, G, decoherence observables); STATE_DEPENDENT when full reduced state is admitted"
+    }
+  },
+  "overreach_found": [
+    {
+      "location": "control D verdict string",
+      "claim": "NON-IDENTIFIABLE at the reduced level; weights are STATE-DEPENDENT ... not dynamics-derived",
+      "problem": "contradicts its own computed flag identical_reduced_decoherence=false and its own field outcome_weight_identifiable_from_reduced_state_alone=true",
+      "correction": "control D is invalid as executed; non-identifiability must be sourced from control H only, with the scoping correction"
+    },
+    {
+      "location": "H_identifiability conclusion string",
+      "claim": "identical decoherence observables",
+      "problem": "purity differs across pairs (0.68 vs 0.5); only the pointer-basis decoherence class (cross=0) is matched",
+      "correction": "state non-identifiability relative to the declared decoherence-observable set, not 'identical decoherence observables' unqualified"
+    },
+    {
+      "location": "primary_verdict",
+      "claim": "outcome information is non-identifiable from the effective decoherence structure and is carried by the initial state",
+      "problem": "correct as worded, but elsewhere (control D fields) the artifact implies the stronger generalized non-identifiability",
+      "correction": "accept the primary verdict in its exact wording; reject the stronger generalized version"
+    }
+  ],
+  "identifiability_formalization": {
+    "mapping": "(C, G, I) -> effective decoherence observables {pointer-basis cross-term class, reduced structure}",
+    "result": "many-to-one at the decoherence-observable level (control H: three distinct initial states -> same decoherence class), one-to-one at the full-reduced-state level",
+    "precise_statement": "Within the tested model class, the decoherence-observable map is non-injective in the initial state, and its fibers contain states with different outcome weights. Outcome weights are therefore not determined by decoherence structure. They are determined (trivially) by the initial state, which is an input — hence STATE_DEPENDENT, not DERIVED."
+  },
+  "model_class_boundary": {
+    "rules_out": "that the declared minimal closed measurement model (finite-dimensional s2⊗a2⊗eN, unitary record-type interaction, partial-trace coarse-graining) derives definite outcomes or a weight law",
+    "does_not_rule_out": [
+      "a different closed dynamics (nonlinear, hidden-variable, self-measuring, etc. outside the frozen model class)",
+      "Everettian derivations of Born weights via decision-theoretic or envariance arguments (different mathematical route, not tested)",
+      "objective-collapse ontologies (explicitly outside MODEL U)",
+      "any claim about the physical world rather than the tested model"
+    ]
+  },
+  "relation_to_reality_check_03": {
+    "status": "CONSISTENT AND CLOSING",
+    "rc03_claim": "closed substrate + coarse-graining plausibly derives effective open-system structure; outcome selection is the sharpest remaining gap",
+    "rc04_finding": "Experiment P confirms the first half (decoherence DERIVED) and establishes the second half as a no-go for the tested class (outcome selection NON-IDENTIFIABLE from decoherence structure). The RC03 frontier is closed at the tested model class: further progress requires a different model class or an additional declared primitive (selection rule / probability postulate)."
+  },
+  "hisa_01_relation": {
+    "note": "used only as epistemic-grounding control",
+    "finding": "P's verdicts rest on executable calculations with independent numerical verification, not corpus prose. Grounding standard satisfied (with the control-D exception, which this audit caught and downgraded)."
+  },
+  "frontier_status": "CLOSED_AT_TESTED_MODEL_CLASS",
+  "unitary_forensic_correction": {
+    "status": "APPLIED — this section supersedes all unitary-model claims above where they conflict",
+    "verification_artifact": "program/REALITY_CHECK_04_VERIFICATION.json",
+    "fact_1_original_model_defect": "The original calc/verify_experiment_p.py U1 was NOT unitary on its declared Hilbert space: dimension 2N=16, rank(U1)=9, ||U1^dagger*U1 - I|| = 1. Seven basis inputs lacked images and seven outputs were unoccupied.",
+    "fact_2_restricted_subspace_false_positive": "The earlier reported zero unitarity error was a restricted-subspace artifact: the sampled initial states did not exercise the defective portions of U1. It must not be cited as evidence of a valid closed-unitary model.",
+    "fact_3_quarantine": "The original defective construction and its outputs are preserved as quarantined historical artifacts and carry no evidentiary weight for closed-unitary claims.",
+    "fact_4_cyclic_repair": "The repaired construction is the complete cyclic permutation U1|e_j> = |e_{(j+1) mod 2N}> over the entire record Hilbert space (permutation verified bijective: e_j -> e_{j+1 mod 16}).",
+    "fact_5_unitarity_verification": "Repaired U1: ||U1^dagger*U1 - I|| = 0.0, ||U1*U1^dagger - I|| = 0.0, rank = 16, all row/column norms = 1, permutation bijective. Analytic argument: a bijection of an orthonormal basis is unitary by construction. Full U (dim 32): rank 32, ||U^dagger*U - I|| = 0.0, ||U*U^dagger - I|| = 0.0 on the entire Hilbert space.",
+    "fact_6_regenerated_AB": "Control A: cross term exactly 0, global purity = 1, reduced purity 0.5, branch populations (0.5, 0.5) — DERIVED. Record states E0 = U1|e0> = |e1>, E1 = U1|e1> = |e2>, overlap exactly 0, norms 1. Control B: global state remains the pure entangled superposition alpha|0>|e0> + beta|1>|e1>; no collapse/selection operation — NOT_DERIVED.",
+    "fact_7_control_D": "INVALID_AS_EXECUTED (remains so under the repaired model: generic environment state, cross term 0.13849... != 0). Provides NO evidentiary support for purificational non-identifiability. Original D failure preserved.",
+    "fact_8_control_H": "NARROWED: cross term = 0 for alpha in {0.2, 0.5, 0.8} while p0 = alpha^2 varies (0.04, 0.25, 0.64). Permitted claim only: 'decoherence observables alone do not determine branch weights.' The stronger claim that the full reduced state cannot determine the weights is explicitly PROHIBITED (p0 is itself a reduced-state element).",
+    "fact_9_weight_origin": "p_i = |alpha_i|^2, classified STATE_DEPENDENT / INHERITED FROM INITIAL AMPLITUDES / NOT DYNAMICALLY DERIVED, within the tested model class. Not a universal disproof of the Born rule.",
+    "corrected_verdict": "In the repaired model, closed unitary dynamics with orthogonal environmental records produce reduced-state decoherence while preserving a pure global entangled state. Definite outcome is therefore not derived by the tested unitary/coarse-graining route. Branch weights are inherited from the initial amplitudes and are not dynamically derived within this model class. Control D is invalid as executed and provides no evidence for purificational non-identifiability. Control H supports only the narrower claim that decoherence observables alone do not determine branch weights."
+  },
+  "final_verdict_sections": {
+    "A_what_demonstrated": "Exact, independently verified demonstration that the minimal closed model produces perfect pointer-basis decoherence (cross term = 0 analytically, not merely numerically) with the global state remaining a pure entangled superposition; outcome weights track initial amplitudes exactly (state-dependent, not dynamics-derived); the definite-outcome appearance is manufactured by the dephasing coarse-graining (control F); an explicit selection rule + probability postulate (MODEL C) supplies exactly the two missing operations.",
+    "B_what_not_demonstrated": "No derivation of definite outcomes; no derivation of Born weights; no purificational non-identifiability result (control D invalid as executed); no universal theorem about closed theories generally.",
+    "C_identifiability_result": "NON-IDENTIFIABLE from (C, G, decoherence observables) within the tested class; STATE_DEPENDENT when branch populations are admitted as observables.",
+    "D_model_class_boundary": "Finite-dimensional unitary s2⊗a2⊗eN record-type measurement model with partial-trace coarse-graining. No claim beyond it.",
+    "E_additional_structure_required": "An outcome-selection rule and/or probability postulate — irreducible ADDITIONAL_INPUT for this model class (demonstrated by control G's exact accounting of what MODEL C adds).",
+    "F_relation_to_rc03": "Confirms and closes the RC03 frontier at the tested model class: effective open-system structure is derivable; outcome selection is not, without additional declared structure.",
+    "G_final_research_status": "Experiment P establishes decoherence but not outcome selection or Born-weight derivation within the tested model class — with the audit's corrections that control D (purification non-identifiability) is invalid as executed and must be removed from the evidence chain, and that non-identifiability is scoped to the decoherence-observable set, not to the full reduced state."
+  }
+}

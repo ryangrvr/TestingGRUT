@@ -1,0 +1,64 @@
+{
+  "artifact": "EC_BORN_01_SCHEMA",
+  "type": "machine-readable schema for E&C-BORN-01 route records",
+  "freeze_status": "FROZEN — fields and vocabularies may not be extended after case work begins",
+  "note": "No field is populated during freeze. Allowed values are declared; judgments occur only in the separately authorized execution phase.",
+  "route_record_schema": {
+    "route_id": "R1..R8 (frozen families; see EC_BORN_01_ROUTE_REGISTRY.json)",
+    "target_claims": {
+      "type": "array",
+      "allowed_values": ["WEIGHT_REPRESENTATION", "OBJECTIVE_CHANCE", "RATIONAL_CREDENCE", "BRANCH_MEASURE", "OUTCOME_SELECTION"],
+      "rule": "each target assessed independently; no cross-target credit transfer"
+    },
+    "formal_result_type": {"type": "string", "freeze_rule": "per-route, from primary source"},
+    "mathematical_domain": {"type": "string"},
+    "exact_assumptions": {"type": "array", "rule": "every axiom/postulate/structural assumption required by the proof; classified not merely listed"},
+    "assumption_type": {"type": "array", "allowed_values": ["MATHEMATICAL", "PROBABILITY", "ONTOLOGICAL", "DECISION_THEORETIC", "PHYSICAL_DYNAMICAL", "TYPICALITY", "SEMANTIC"]},
+    "assumption_status": {"type": "array"},
+    "assumption_independence_status": {"type": "string"},
+    "derived_conclusion": {"type": "string"},
+    "what_is_not_derived": {"type": "array", "mandatory": true},
+    "circularity_status": {
+      "type": "one of",
+      "allowed_values": ["NOT_CIRCULAR", "CONDITIONAL_NONCIRCULAR", "PROBABILITY_STRUCTURE_IMPORTED", "TARGET_REDEFINED", "CIRCULAR_OR_TARGET_ASSUMED", "DISPUTED", "UNRESOLVED"]
+    },
+    "relation_to_outcome_selection": {"type": "string"},
+    "relation_to_Cbp_boundary": {
+      "type": "string",
+      "frozen_rule": "scope information only; not disconfirmation unless route demonstrably lies within the theorem's premises and claims the same target"
+    },
+    "empirical_leverage": {"type": "string"},
+    "criticisms_and_replies": {"type": "array", "rule": "primary-source objections + replies; disputes preserved, never averaged"},
+    "criticism_admission_rule": {"type": "string"},
+    "reply_admission_rule": {"type": "string"},
+    "final_disposition": {
+      "type": "one of",
+      "allowed_values": ["DERIVED_WITH_INDEPENDENT_PREMISES", "CONDITIONAL_DERIVATION", "WEIGHT_REPRESENTATION_ONLY", "RATIONAL_CREDENCE_ONLY", "BRANCH_MEASURE_ONLY", "OUTCOME_SELECTION_ONLY", "POSTULATED_MEASURE", "REFRAMED_TARGET", "ASSUMPTION_DEPENDENT_AND_CONTESTED", "INSUFFICIENTLY_SPECIFIED"]
+    },
+    "two_directional_attack": {
+      "attack_1_imports_born_content": "required record",
+      "attack_2_imports_weaker_than_born": "required record",
+      "rule": "both attacks mandatory per route; surviving both with independent premises earns a positive disposition"
+    }
+  },
+  "non_implications_frozen": [
+    "WEIGHT_REPRESENTATION not-implies OBJECTIVE_CHANCE",
+    "RATIONAL_CREDENCE not-implies OBJECTIVE_CHANCE",
+    "BRANCH_MEASURE not-implies OUTCOME_SELECTION",
+    "OUTCOME_SELECTION not-implies derived Born weights"
+  ],
+  "hard_firewalls_frozen": [
+    "decoherence != outcome selection",
+    "outcome selection != probability law",
+    "Born-weight reproduction != Born-weight explanation",
+    "diagonal reduced density matrix != outcome",
+    "branch existence != outcome selection",
+    "collapse models supply weights BY POSTULATE unless stochastic measure derived",
+    "reproduction of statistics != explanation of weights",
+    "framework-relative derivation != ontological necessity",
+    "mathematical measure uniqueness != physical origin of objective probability"
+  ],
+  "execution_order_frozen": ["PHASE1_sources", "PHASE2_premise_ledgers", "PHASE3_two_directional_attack", "PHASE4_classification", "PHASE5_cross_route_matrix", "PHASE6_hostile_audit", "PHASE7_integration_read_only"],
+  "inherited_artifacts_role": "CONTEXT ONLY — 10681b0, 8ebac8b, 793143e, 7b22da8, 7c8048b, DP-R0-01 set; conclusions not usable as classification evidence",
+  "out_of_scope": ["GRUT Born rule", "new interpretive frameworks", "escape-door/compression edits", "E&C chain expansion", "cosmology/gravity/constants/observers", "quarantined rewrite set and malformed JSONs"]
+}

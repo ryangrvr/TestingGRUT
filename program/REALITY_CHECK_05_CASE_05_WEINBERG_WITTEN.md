@@ -1,0 +1,51 @@
+# RC05_CASE_05 — Weinberg-Witten theorem as a scoped CONSTRAINT on emergent gravity
+
+> REALITY_CHECK_05 calibration case; frozen protocol, unmodified.
+
+## Sources
+
+- **S. Weinberg, E. Witten, Phys. Rev. Lett. 44, 1171 (1980)** — theorems: (1) a theory with a Lorentz-covariant conserved local 4-index current containing the energy-momentum tensor cannot have massless particles of spin j > 1/2 with nonvanishing standard energy; (2) a Lorentz-invariant QFT with well-defined Lorentz-covariant T^{mu nu} cannot have massless spin-2 particles with nonvanishing momentum `CANONICAL_PRIMARY`
+- **J. de Alcantara Bonfim, G. Shore, Ann. Phys. (1991); and various responses (e.g. 't Hooft-type emergent frameworks, Bjorken, Volovik)** — scope questions: composite gravitons, emergent gravity in non-Lorentz-invariant or condensed-matter-like constructions evade the assumptions `CANONICAL_PRIMARY`
+
+## Input ledger
+
+- assumption: Lorentz-invariant QFT with a gauge-invariant, well-defined, Lorentz-covariant conserved energy-momentum tensor → ASSUMED — explicit theorem hypotheses
+- assumption: emergent particle is a composite massless state carrying nonvanishing T^{mu nu} momentum → ASSUMED — explicit theorem hypotheses
+
+## Model reconstruction
+
+Weinberg-Witten is a NO-GO THEOREM: under its two hypotheses, a composite/emergent massless spin-2 graviton carrying standard energy-momentum momentum cannot arise in a Lorentz-invariant QFT framework. It is not a theory of gravity and not a universal statement.
+
+## Provenance map
+
+constraint -> theorem -> declared hypotheses -> primary source.
+
+## Identifiability
+
+N/A for a constraint; the theorem's scope is uniquely determined by its hypotheses.
+
+## Prediction analysis
+
+Not a prediction; a CONSTRAINT. Status: NOT_APPLICABLE to the prediction taxonomy. The constraint rules out a CLASS of constructions (those meeting its hypotheses) — emergent-gravity constructions that abandon Lorentz invariance of the microscopic theory or use non-standard conserved tensors are outside its scope.
+
+## Effective status
+
+NOT_APPLICABLE (theorem, not effective description).
+
+## Adversarial attack
+
+Would the instrument over-generalize to 'emergent gravity is impossible'? No: the theorem's assumptions are explicitly recorded, and known evasion routes (e.g. emergent gravity from deformed/altered Poincare symmetry, condensed-matter analogs) live outside the hypothesis set. Would the instrument misread it as empirical input? No: it is a mathematically proven result under stated assumptions. Both attack vectors failed.
+
+## Final classification
+
+```json
+{
+  "type": "SCOPED_CONSTRAINT",
+  "universal": false,
+  "assumptions": "Lorentz-invariant QFT; covariant conserved energy-momentum tensor; massless composite spin-2 with nonvanishing momentum"
+}
+```
+
+Confidence: HIGH | Instrument pass: True
+
+Limitations: Primary source canonical; not re-fetched. Secondary scope discussion cited representatively.

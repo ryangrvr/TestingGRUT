@@ -1,0 +1,62 @@
+{
+  "artifact": "EC_BORN_01_PHASE1E_EVIDENCE",
+  "frozen_boundary": "b613b34 (immutable)",
+  "rule": "Statement-level evidence only. NO premise adjudication in this phase.",
+  "statement_ledger": [
+    {
+      "statement_id": "ST-R5-MM-1",
+      "source_id": "S-R5-NEW",
+      "route_id": "R5",
+      "target_claim": "WEIGHT_REPRESENTATION (candidate; PHASE-2A question)",
+      "statement_type": "CLAIM",
+      "exact_statement": "We derive the quantum theory from five physical requirements... [full axioms and probability-structure extraction required from full text]",
+      "location": "arXiv:1004.1483v4 abstract + Sec. I-V (full text pending depth extraction)",
+      "verification_level": "ABSTRACT_VERIFIED",
+      "extraction_notes": "five requirements: (1) finite-dimensional systems connected by continuous reversible transformations; (2) the existence of a generic system; (3) no information without disturbance; (4) the composition rule; (5) local measurability. Probabilities enter as part of the reconstructed state-space structure; the exact location must be pinned from the full text before Phase-2A adjudication."
+    },
+    {
+      "statement_id": "ST-R6-DGZ-1",
+      "source_id": "S-R6-01",
+      "route_id": "R6",
+      "target_claim": "WEIGHT_REPRESENTATION + OBJECTIVE_CHANCE (candidate; Phase-2A)",
+      "statement_type": "THEOREM",
+      "exact_statement": "A subsystem of a random system with wave function psi is random with distribution given by the probability measure rho(x) = |psi(x)|^2 ('the appearance of randomness precisely as given by the probability measure rho=|psi|^2').",
+      "location": "arXiv:quant-ph/0308039 abstract; J. Stat. Phys. 67, 843 (1992)",
+      "verification_level": "ABSTRACT_VERIFIED",
+      "extraction_notes": "separate evidence objects required for Phase-2A: guidance dynamics / equivariance / rho=|psi|^2 / typicality. The abstract states the randomness result; its derivational status is a Phase-2A question."
+    },
+    {
+      "statement_id": "ST-R7-VW-1",
+      "source_id": "S-R7-01",
+      "route_id": "R7",
+      "target_claim": "WEIGHT_REPRESENTATION (dynamic relaxation route)",
+      "statement_type": "CLAIM",
+      "exact_statement": "The Born rule is shown to arise dynamically. Non-standard distributions rho != |psi|^2 relax toward |psi|^2, with a coarse-grained H-function decreasing approximately exponentially.",
+      "location": "arXiv:quant-ph/0403034v2 abstract; Proc. R. Soc. Lond. A 461, 253 (2005)",
+      "verification_level": "ABSTRACT_VERIFIED",
+      "extraction_notes": "H = integral dx rho log(rho/|psi|^2) (minus relative entropy). Phase-2A must determine whether relaxation constitutes derivation, conditional derivation, or typicality-imported structure."
+    },
+    {
+      "statement_id": "ST-R8-GRW-1",
+      "source_id": "S-R8-01",
+      "route_id": "R8",
+      "target_claim": "OUTCOME_SELECTION (dynamical) + WEIGHT_REPRESENTATION (candidate; Phase-2A)",
+      "statement_type": "MODEL",
+      "exact_statement": "A modification of the dynamics is 'postulated also for microscopic systems'; the resulting dynamics 'forbids the occurrence of linear superpositions of states localized in far-away spatial regions'; the model 'provides the basis for a conceptually appealing description of quantum measurement'.",
+      "location": "Phys. Rev. D 34, 470 (1986) abstract",
+      "verification_level": "ABSTRACT_VERIFIED",
+      "extraction_notes": "The stochastic localization law, its parameters, and the probability statement are extracted from full text in Phase-2A. The abstract already records that the modification is POSTULATED (not derived from standard dynamics) -- a key Phase-2A premise datum."
+    }
+  ],
+  "assumption_ledger": [],
+  "critique_ledger": [],
+  "reply_ledger": [],
+  "coverage_note": "Phase-1E adds live-verified route-defining primaries for R5-R8 at ABSTRACT_VERIFIED level. Full-text assumption extraction is a Phase-2A input task, permitted there under the frozen schema.",
+  "negative_controls": {
+    "premise_adjudication": false,
+    "circularity_verdicts": false,
+    "route_verdicts": false,
+    "scores_or_rankings": false,
+    "global_born_conclusion": false
+  }
+}

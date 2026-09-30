@@ -1,0 +1,159 @@
+OPEN PASSES -- the adjudications this program is waiting on.
+
+WHY THIS FILE EXISTS. Every declared expected-red in expected_red.py asserts that an adjudication
+is OPEN. Nothing verified that assertion. The failure it permitted: a pass closes, the test keeps
+failing for an unrelated reason, and the runner prints green while citing an adjudication that no
+longer exists. Staleness cannot catch it -- stale fires only when a test starts PASSING.
+
+So the passes are named here, each declaration cites one by id, and A DECLARATION CITING A CLOSED
+OR UNKNOWN PASS FAILS IN ITS OWN RIGHT. Closing a pass is a HUMAN ACT: set STATUS to CLOSED, with
+the date and the ruling, and every declaration resting on it must then be removed. If the test
+still fails afterwards, it is a NEW RED and says so.
+
+THREE STATUSES, because "the symptom went away" is not "the question was answered":
+  OPEN    the adjudication is live.
+  CLOSED  RULED. The owner decided it; the ruling is recorded in the stanza.
+  MOOT    the question DISSOLVED without being answered -- the structure it was about no longer
+          exists. A moot pass is not a ruling and must never be cited as one.
+
+AND A PASS MAY OUTLIVE ITS SYMPTOM. An OPEN pass with no failing test is normally an error: either
+it was ruled and this file was not updated, or its symptom disappeared without anyone ruling. So
+the runner FAILS on an open pass that nothing cites -- UNLESS the stanza declares
+`MAY_HAVE_NO_SYMPTOM: yes` with the reason no instrument can see it. Those are printed as STANDING
+OPEN QUESTIONS on every run, so that a quiet suite cannot become an answer by default.
+
+Machine-read fields: `PASS <id>`, `STATUS: OPEN|CLOSED|MOOT`, `MAY_HAVE_NO_SYMPTOM: yes`. The
+prose is for the reader.
+
+---------------------------------------------------------------------------------------------
+PASS P1A-EDGE-REPRESENTATION
+STATUS: OPEN
+OPENED: 2026-08-18
+SPLIT: 2026-08-19, out of the former P1-RUNG1-TIER, which spanned two questions with different
+  fates. Splitting it BEFORE the migration rather than after is the point: after the migration one
+  half is moot and the other is invisible, and a single pass covering both would have had to be
+  half-closed by whoever noticed.
+TITLE: does an R5 wiring edge mean what the tier-contradiction check reads it as meaning?
+QUESTION: Booking background_time_translation_flow (+1) and wiring its mandated R5 edges made
+  rung1_inin_action and rung2_kms_gate -- both at tier `shown` -- rest on an `assumed` input, so
+  the live register carries a standing tier contradiction at both. Is the EDGE REPRESENTATION
+  wrong: does an R5 wiring edge, which exists to make a presupposition's multiplicity visible,
+  mean the same thing the contradiction check reads it as meaning?
+CLOSES WHEN: the owner rules.
+GOES MOOT IF: the static-patch migration discharges background_time_translation_flow. That edge is
+  the ONLY dependency either node carries, so the symptom vanishes and the question dissolves --
+  WITHOUT BEING ANSWERED. If that happens, this stanza is set to MOOT, never to CLOSED, and the
+  discharge is recorded as the cause. A moot pass is not a ruling.
+
+---------------------------------------------------------------------------------------------
+PASS P1B-SHOWN-ON-LEDGER-INPUTS
+STATUS: OPEN
+MAY_HAVE_NO_SYMPTOM: yes
+OPENED: 2026-08-18
+SPLIT: 2026-08-19, out of the former P1-RUNG1-TIER. See P1A.
+TITLE: is `shown` right for a node whose inputs are priced in prose rather than wired as edges?
+QUESTION: rung1_inin_action stands at tier `shown` with ledger_delta 4 -- the system/bath split,
+  the Gaussian/linear-response truncation, the background Lorentzian causal structure, and the
+  4d-covariant gauge-orbit Ward zero. None of the four is an edge. The convention that lets a node
+  stand at `shown` while its inputs are declared in a ledger note has NEVER BEEN SCREENED, and it
+  is the larger of the two questions the tier contradiction raised.
+WHY IT MAY HAVE NO SYMPTOM, which is the whole reason this stanza exists: no instrument in this
+  repository can see those four inputs. The resident reads EDGES; ledger prose is invisible to it.
+  The tier-contradiction flag that raised this question fires on the fifth input, the one that WAS
+  wired -- and the migration is expected to discharge exactly that one. When it does, two of the
+  four declared reds go green and nothing anywhere fires on this question again.
+  A GREEN SUITE WOULD THEN BE THE ANSWER, AND NOBODY WOULD HAVE HAD TO GIVE ONE. Recorded before
+  the migration, because after it the recording would be worthless.
+CLOSES WHEN: the owner rules on the convention. Nothing else closes it, and in particular the
+  disappearance of the tier-contradiction flag does not.
+
+---------------------------------------------------------------------------------------------
+PASS P2-TERMINATION-EVENTLOG
+STATUS: OPEN
+OPENED: 2026-08-18
+TITLE: a blind-safe seal that names its own event log
+QUESTION: PREREG_TERMINATION_V3 and _V4 declare BLIND-SAFE and name RESULT_TERMINATION_events.txt,
+  which carries arXiv identifiers. There is a real defense: the termination condition names its
+  event log BY ARCHITECTURE -- quotes decide, entries land in the log -- and the log holds events,
+  not motive figures. Whether that defense holds, or whether this is the pointer defect one hop
+  out, is a judgement the builder should not make alone: calling a pre-existing sealed instrument
+  defective, on a guard that has now over-fired once and under-fired once, is the over-demotion
+  this program treats as its own defect class.
+CLOSES WHEN: the owner rules. Note the case set is TWO files, not one -- V4 was masked by
+  fail-fast until the case-granularity fix, and any ruling should say whether it covers both.
+
+---------------------------------------------------------------------------------------------
+PASS P3-SEALED-HISTORY-POLICY
+STATUS: OPEN
+OPENED: 2026-08-18
+TITLE: does the blind-safe guard treat sealed, superseded history as history?
+QUESTION: Two of the builder's own defects are sealed and therefore permanent: DESI v1 declared
+  BLIND-SAFE and carried arXiv identifiers; DESI v2 removed the figures but kept a named pointer
+  at the companion holding them. Both are superseded by v3, which carries the same predicate
+  cleanly. The seal forbids editing either, so these cases cannot be repaired -- only exempted or
+  kept. Exempting superseded seals would quiet the instrument that caught the builder's own error,
+  which is why the builder does not decide it.
+CLOSES WHEN: the owner rules on the policy, not on the two files individually.
+
+---------------------------------------------------------------------------------------------
+PASS P4-TERMINATION-KAPPA-RESULT
+STATUS: OPEN
+OPENED: 2026-08-18
+TITLE: a blind-safe seal that names a results file carrying significance figures
+QUESTION: PREREG_TERMINATION_V3 also names RESULT_KAPPA_2026-08-08.txt, which carries sigma
+  quantities and a signed numeric range. THIS IS A DIFFERENT QUESTION FROM P2 AND IS FILED
+  SEPARATELY ON PURPOSE. The architecture defense available to the event log does NOT extend to
+  it: a results file of significance figures is exactly what "the pointer is the leak" was written
+  about. Surfaced 2026-08-18 by the character-class fix to the pointer pattern -- before that fix
+  the guard could not see any pointer at a dated filename, so this case had never been reported.
+CLOSES WHEN: the owner rules. The builder states no verdict here; the previously-offered defense
+  is withdrawn as to this case, having been argued from the one target the broken pattern showed.
+
+---------------------------------------------------------------------------------------------
+PASS P5-RESIDENT-SCOPE
+STATUS: OPEN
+MAY_HAVE_NO_SYMPTOM: yes
+OPENED: 2026-08-19
+TITLE: the resident judges every node against GRUT's tier vocabulary, including nodes that are
+  not GRUT's
+QUESTION: auditor.audit() IS scope-aware -- the live audit filters to ledger_scope == "grut" --
+  but resident.check_change() is NOT. It judges all 21 vacuum-cluster nodes against DEFAULT_TIERS
+  and refuses every edit to them with "invalid tier", because they carry the physics vocabulary
+  (postulate / measured / heuristic / open) that the register adopted and the resident never
+  learned. The failure is SAFE: it blocks, it does not wave anything through. Which vocabulary the
+  resident should enforce per scope is a governance question, and the physics tier vocabulary is
+  itself awaiting a ruling.
+WHY IT HAS NO SYMPTOM: no test edits those nodes, so nothing fails. It was found only by
+  generalising an enumerator past the single node its test names.
+WHY IT IS FILED NOW RATHER THAN LATER -- this is the operational half. The static-patch migration's
+  FIRST act is an edit to rung1_inin_action, and that is the node whose edit-check is already red
+  under P1A. So the migration will meet TWO pre-existing failures at its first register commit,
+  neither of them caused by the migration:
+    (i)  P1A: a clean annotation change to rung1 or rung2 returns FLAG-FOR-FIREWALL for a tier
+         contradiction -- expected, declared, and NOT a sign that the edit is wrong;
+    (ii) THIS PASS: any edit to a vacuum-cluster node returns BLOCK with "invalid tier" -- also
+         expected, also not about the edit.
+  Recorded in advance so that a blocked edit is not diagnosed as a migration problem and chased in
+  the wrong direction.
+CLOSES WHEN: the owner rules on which vocabulary the resident enforces per scope.
+
+---------------------------------------------------------------------------------------------
+PASS P6-STALE-NETS-IN-STANDING-DOCS
+STATUS: OPEN
+OPENED: 2026-08-19
+TITLE: four standing documents assert net +13 as current state
+QUESTION: The owner ordered STATE.md corrected because its headline (+13, 49 nodes) disagreed with
+  its own machine-emitted REGISTER-SYNC marker (+15, 50). STATE.md is corrected. But extending the
+  guard to read PROSE rather than only the marker showed the defect is NOT confined to it: ten
+  lines across FOUR further standing documents -- GRUT_ToE.md (six), README.md (two),
+  GRUT_II_Agenda.md, GRUT_II_What_Survived.md -- assert a stale net as present tense, several
+  alongside stale node counts (45, 49, 70).
+  THE MARKER WAS ALWAYS CHECKED AND THE SENTENCES BESIDE IT NEVER WERE, in every one of these
+  files, which is why the drift is uniform rather than isolated.
+WHY IT IS NOT FIXED HERE: these are public-facing documents. README.md and GRUT_ToE.md are the
+  program's front matter, GRUT_II_What_Survived.md carries a deposit-adjacent summary, and amending
+  them is a wave-governed act rather than a bookkeeping edit. The builder corrected only the file
+  the owner named.
+CLOSES WHEN: the owner rules on whether to amend the four documents, and the amendment lands. The
+  guard test_doc_sync.TestProseMatchesTheMarker stays red until then, declared and pinned rather
+  than suppressed.

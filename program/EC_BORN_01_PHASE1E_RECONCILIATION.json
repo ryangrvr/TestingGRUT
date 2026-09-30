@@ -1,0 +1,64 @@
+{
+  "artifact": "EC_BORN_01_PHASE1E_RECONCILIATION",
+  "frozen_boundary": "b613b34 (immutable)",
+  "date": "2026-09-12",
+  "rule": "NO premise adjudication, NO circularity/independence/route verdicts, NO scores. Evidence assembly only.",
+  "discrepancies_committed_state_vs_reported": [
+    {
+      "id": "D1-R4",
+      "route": "R4",
+      "reported": "R4 split into execution subroutes R4a/R4b/R4c (Sebens-Carroll anchor), per Phase-1D narrative",
+      "committed_at_b613b34": "no R4a/R4b/R4c decomposition artifact present",
+      "status": "R4_EXECUTION_DECOMPOSITION_NOT_PRESENT_IN_FROZEN_RECORD",
+      "action": "recorded; NOT silently reconstructed; R4 left NOT adjudicated"
+    },
+    {
+      "id": "D2-R5",
+      "route": "R5",
+      "reported": "Hardy quant-ph/0101012 as R5 primary (Phase-1C narrative)",
+      "committed_at_b613b34": "registry identifies R5 as Masanes-Muller operational reconstruction",
+      "status": "RESOLVED: follow frozen registry. R5 = Masanes-Muller. Hardy recorded as related but separate provenance note; NOT substituted."
+    },
+    {
+      "id": "D3-ID-CORRECTIONS",
+      "reported": "earlier drafts used unverified identifiers (Sebens-Carroll 1405.7577; Kent 0905.0625; GRW BF01889370)",
+      "status": "GUESSED_IDENTIFIERS_REJECTED_BY_LIVE_VERIFICATION",
+      "verified_replacements": {
+        "Valentini-Westman": "arXiv:quant-ph/0403034v2 (ABSTRACT_VERIFIED)",
+        "Masanes-Muller": "arXiv:1004.1483v4 (ABSTRACT_VERIFIED)",
+        "DGZ quantum equilibrium": "arXiv:quant-ph/0308039v1 (ABSTRACT_VERIFIED; J.Stat.Phys. 67, 843 (1992))",
+        "GRW 1986": "doi:10.1103/PhysRevD.34.470 (ABSTRACT_VERIFIED; PRD 34, 470)"
+      },
+      "correction_trail_preserved": true
+    }
+  ],
+  "phase1e_added_sources": [
+    {"source_id": "S-R5-NEW", "route": "R5", "role": "PRIMARY_DERIVATION", "author": "L. Masanes, M. P. Müller", "title": "A derivation of quantum theory from physical requirements", "identifier": "arXiv:1004.1483v4", "access_status": "ABSTRACT_VERIFIED", "claims": "derives full quantum formalism (including state space and probability/structure) from five physical requirements; reconstruction of quantum formalism from operational-type axioms", "note": "probability-rule reconstruction status is a PHASE-2A question; not adjudicated here"},
+    {"source_id": "S-R6-01", "route": "R6", "role": "PRIMARY_DERIVATION", "author": "D. Dürr, S. Goldstein, N. Zanghì", "title": "Quantum Equilibrium and the Origin of Absolute Uncertainty", "identifier": "arXiv:quant-ph/0308039v1; J. Stat. Phys. 67, 843-907 (1992)", "access_status": "ABSTRACT_VERIFIED", "claims": "Bohmian mechanics; appearance of randomness precisely as given by rho=|psi|^2; effective wave function of subsystem as crucial ingredient; deterministic theory producing quantum-formalism phenomenology", "note": "separate evidence objects required for guidance dynamics / equivariance / rho=|psi|^2 / typicality in PHASE 2A"},
+    {"source_id": "S-R7-01", "route": "R7", "role": "PRIMARY_DERIVATION", "author": "A. Valentini, H. Westman", "title": "Dynamical Origin of Quantum Probabilities", "identifier": "arXiv:quant-ph/0403034v2; Proc. R. Soc. Lond. A 461, 253-272 (2005)", "access_status": "ABSTRACT_VERIFIED", "claims": "Born rule arises dynamically; non-standard distributions rho != |psi|^2 relax toward |psi|^2; coarse-grained H-function (= -relative entropy of rho w.r.t. |psi|^2) decreases approx exponentially", "note": "nonequilibrium counterexample class kept distinct from R6"},
+    {"source_id": "S-R8-01", "route": "R8", "role": "PRIMARY_DERIVATION", "author": "G. C. Ghirardi, A. Rimini, T. Weber", "title": "Unified dynamics for microscopic and macroscopic systems", "identifier": "Phys. Rev. D 34, 470 (1986); doi:10.1103/PhysRevD.34.470", "access_status": "ABSTRACT_VERIFIED", "claims": "modified dynamics postulated for microscopic systems; forbids far-apart spatial superpositions of macroscopic objects; standard QM (micro) and classical behavior (macro) derived consistently; Fokker-Planck description for macroscopic CM; 'provides the basis for a conceptually appealing description of quantum measurement'", "note": "stochastic law itself and its probability structure extracted in PHASE 2A; DP-R0-01 remains contextual only"},
+    {"source_id": "S-R4-KEEP", "route": "R4", "role": "PRIMARY_DERIVATION", "author": "C. Sebens, S. Carroll", "title": "Self-Locating Uncertainty and the Origin of Probability in Everettian Quantum Mechanics", "identifier": "arXiv:1405.7577 (version verified separately)", "access_status": "IDENTIFIER_PENDING_LIVE_VERIFICATION", "note": "awaiting Phase-2-window verification; R4 not adjudicated"}
+  ],
+  "route_readiness": {
+    "R1": "LIMITED_ADJUDICATION_READY",
+    "R2": "LIMITED_ADJUDICATION_READY",
+    "R3": "LIMITED_ADJUDICATION_READY",
+    "R4": "NOT_READY (execution decomposition absent from frozen record; primary identifier pending live verification)",
+    "R5": "FULL_ADJUDICATION_READY",
+    "R6": "FULL_ADJUDICATION_READY",
+    "R7": "FULL_ADJUDICATION_READY",
+    "R8": "FULL_ADJUDICATION_READY"
+  },
+  "readiness_rationale": "R5-R8 now have live-verified, route-defining primary anchors with exact identifiers. R1-R3 retain primary anchors but incomplete critique depth (LIMITED). R4 lacks the subroute decomposition in the frozen record.",
+  "phase2_window": "PHASE 2A authorized for R5, R6, R7, R8 only",
+  "phase1e_complete": true,
+  "negative_controls": {
+    "premise_adjudication": false,
+    "circularity_verdicts": false,
+    "route_verdicts": false,
+    "scores_or_rankings": false,
+    "global_born_conclusion": false,
+    "escape_door_modified": false,
+    "canonical_GRUT_RAI_modified": false
+  }
+}

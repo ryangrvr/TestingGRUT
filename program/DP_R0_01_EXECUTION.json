@@ -1,0 +1,98 @@
+{
+  "artifact": "DP_R0_01_EXECUTION",
+  "protocol": "program/DP_R0_01_PROTOCOL.md (frozen, hash in DP_R0_01_FREEZE_REPORT.md)",
+  "date": "2026-09-12",
+  "rule": "variant-by-variant; bounds re-derived from sources; bound types never merged; selector question only after parameter-space reconstruction",
+  "model_variants": [
+    {"variant_id": "DP-1989", "description": "original DP: unregularized point-particle mass density",
+     "R0_definition": "R0 = 0 (delta-like density); no resolution scale",
+     "R0_status": "NOT_APPLICABLE",
+     "fate": "ENERGY_NON_CONSERVATION_KNOWN_DEFECT + effectively excluded by any finite lower bound (collapse rate diverges)",
+     "bounds": []},
+    {"variant_id": "DP-2007-MARKOVIAN", "description": "Markovian white-noise DP; R0 enters as Gaussian smearing of mass density",
+     "R0_definition": "mass density smeared over Gaussian of width R0; units length",
+     "R0_status": "PHENOMENOLOGICAL_PARAMETER (in 2007 form), CONDITIONALLY_CONSTRAINED",
+     "fate": "open pending bounds",
+     "bounds": ["Ghirardi et al 1990 (heating): weak lower bound, supreseded",
+                "LIGO/gravitational-wave noise: mid lower bound (superseded)",
+                "neutron-star heating: mid lower bound (superseded)",
+                "Donadi et al 2021 Gran Sasso radiation: HARD_EMPIRICAL_BOUND R0 >~ 4e-10 m (4 A), ~3 orders above previous bounds"]},
+    {"variant_id": "DP-2013-FINITE-R0", "description": "mass-density resolution form (Diosi 2013): finite R0 conjectured to cure residual energy non-conservation",
+     "R0_definition": "same Gaussian smearing; R0 = resolution of mass density operator",
+     "R0_status": "CONJECTURAL_PHYSICAL_SCALE + PHENOMENOLOGICAL_PARAMETER; finite-R0 construction itself CONJECTURE",
+     "fate": "open conditional on 2013 conjecture",
+     "bounds": ["inherits all DP-2007 bounds"]},
+    {"variant_id": "DP-NATURAL-PARAMETER-FREE", "description": "parameter-free version: R0 fixed at nuclear size (~1e-15 m)",
+     "R0_definition": "R0 = nucleon radius, chosen by naturalness",
+     "R0_status": "POST_HOC naturalness choice, not derived",
+     "fate": "EXCLUDED by Donadi 2021 (confirms bound applies at R0 ~ nuclear size)"}
+  ],
+  "bound_registry": [
+    {"bound_id": "B1-GHIRARDI-1990", "observable": "collapse-induced Brownian diffusion heating", "experiment": "theoretical/astrophysical heating argument",
+     "parameter": "R0 lower", "type": "CONDITIONAL_EMPIRICAL_BOUND", "status": "superseded by B4", "variant_applicability": "DP-2007-MARKOVIAN and descendants"},
+    {"bound_id": "B2-GW-DETECTORS", "observable": "collapse-induced diffusion noise in GW detector test masses", "experiment": "LIGO-class interferometer noise budgets",
+     "parameter": "R0 lower", "type": "CONDITIONAL_EMPIRICAL_BOUND", "status": "superseded by B4", "variant_applicability": "DP-2007-MARKOVIAN and descendants"},
+    {"bound_id": "B3-NEUTRON-STAR", "observable": "neutron-star heating from collapse-induced diffusion", "experiment": "astrophysical observation",
+     "parameter": "R0 lower", "type": "CONDITIONAL_EMPIRICAL_BOUND", "status": "superseded by B4", "variant_applicability": "DP-2007-MARKOVIAN and descendants"},
+    {"bound_id": "B4-GRAN-SASSO-2021", "observable": "radiation emission (Lamb shift-like) from charged-particle diffusion", "experiment": "Gran Sasso underground Ge measurement",
+     "source": "Donadi et al, Nat Phys 17, 74-78 (2021), arXiv:2111.13490",
+     "parameter": "R0 lower", "value": "R0 >~ 4e-10 m (4 Angstrom), ~3 orders above previous bounds",
+     "type": "HARD_EMPIRICAL_BOUND", "excludes": "DP-NATURAL-PARAMETER-FREE (R0 ~ 1e-15 m)",
+     "variant_applicability": "all finite-R0 Markovian DP variants; assumptions: nucleon mass density, standard nuclear composition",
+     "environmental_confound_handling": "deep underground location suppresses cosmic/environmental radiation; dedicated background characterization"},
+    {"bound_id": "B5-EFFECTIVENESS-2024", "observable": "collapse of smallest visible object (graphene plate L~25um, d=4L) within eye resolution time tau_obs ~ 0.01 s",
+     "source": "arXiv:2406.18494 (v2 2024-11)",
+     "parameter": "R0 upper", "value": "R0 <~ 1e-4 m (1e6 Angstrom) for L=246um plate variant",
+     "type": "EFFECTIVENESS_CRITERION (NOT a hard empirical bound)",
+     "scope_warning": "source itself states: 'Clearly there is a lot of ambiguity in this request, given that the macroscopic domain cannot be defined precisely'; bound depends on chosen object (graphene plate), definition of 'smallest visible object', tau_obs, and superposition distance; also finds DP 'strictly speaking does not satisfy this requirement' at face value",
+     "variant_applicability": "all finite-R0 DP variants"},
+    {"bound_id": "B6-CORRELATION-RECOIL-ETC", "observable": "various (spontaneous radiation, X-ray emission, optomechanical noise)", "experiment": "multiple programs",
+     "type": "CONDITIONAL_EMPIRICAL_BOUND", "status": "weaker than B4 for R0 lower bound on this variant", "variant_applicability": "model-class dependent"}
+  ],
+  "surviving_parameter_space": {
+    "verdict": "CONDITIONAL_SURVIVING_REGION",
+    "region": "4e-10 m <~ R0 <~ 1e-4 m",
+    "lower_boundary_status": "HARD_EMPIRICAL_BOUND (Gran Sasso)",
+    "upper_boundary_status": "EFFECTIVENESS_CRITERION (model-purpose requirement, explicitly ambiguous per its own source; to some degree arbitrary)",
+    "conditional_on": ["2013 finite-R0 resolution CONJECTURE", "Markovian form (2007) rather than original 1989 dynamics"],
+    "span": "~6 orders of magnitude",
+    "emphatic": "surviving window != successful theory; falsifiable != derived"
+  },
+  "distinguishing_observables_in_window": [
+    {"channel": "collapse-induced radiation (charged particles)", "status": "used by B4; stronger versions probe upper window", "distinctive": "YES with adequate background"},
+    {"channel": "spontaneous heating of mechanical oscillators / optomechanics", "distinctive": "CONDITIONAL on environmental noise budget"},
+    {"channel": "loss of interferometric visibility for mesoscopic superpositions", "distinctive": "CONDITIONAL: must beat environmental decoherence by design (d dependence differs from thermal/gas decoherence)"},
+    {"channel": "BEC superposition tests", "distinctive": "proposed, not yet decisive"}
+  ],
+  "environmental_confound_firewall": {
+    "required_comparison": "DP collapse rate Gamma_DP(d, R0) vs Gamma_env(thermal, gas, blackbody, EM, technical)",
+    "key_discriminator": "different dependence on superposition distance d and mass: DP ~ E_G(d)/hbar scaling vs linear-in-d environmental decoherence",
+    "status": "unresolved for much of the surviving window at current experimental sensitivity"
+  },
+  "R0_selector_investigation": {
+    "question": "Is R0 independently selected, constrained, or merely fitted?",
+    "routes_tested": [
+      {"route": "derivation from gravitational field equation", "result": "ABSENT - tau ~ hbar/E_G heuristic never derived"},
+      {"route": "derivation from QFT/UV structure", "result": "ABSENT"},
+      {"route": "consistency requirement (energy conservation)", "result": "ABSENT - finite R0 IS the conjectural 2013 repair; R0 is the free ingredient of the repair"},
+      {"route": "symmetry/dimensional argument", "result": "ABSENT - dimensional analysis gives ranges not values"},
+      {"route": "independent experimental constraint", "result": "PARTIAL - hard lower bound 4 A (Gran Sasso); upper bound only via effectiveness criterion"}
+    ],
+    "verdict": "FREE_PHENOMENOLOGICAL_PARAMETER (with CONDITIONALLY_CONSTRAINED status: lower bound empirical, upper bound criterion-dependent)",
+    "post_hoc_fit_check": "natural parameter-free choice R0 ~ nuclear size was made BEFORE Donadi 2021 (good faith), and was EXCLUDED - the surviving region is defined by experiment, not by an independent principle"
+  },
+  "compression_score_impact": "NOT RESCORED per protocol (rescoring is a separate authorized phase). But note: parameter-free DP was the source of DP's compression advantage; that version is excluded, so DP's effective compression has degraded to a 6-order phenomenological window.",
+  "permitted_outcome_classes_check": ["NO_SURVIVING_REGION: not met", "CONDITIONAL_SURVIVING_REGION: MET", "EMPIRICALLY_OPEN_REGION: partially (subregion)", "INDEPENDENTLY_CONSTRAINED_SCALE: not met", "FREE_PHENOMENOLOGICAL_PARAMETER: met for selector question", "DISTINCTIVE_TEST_AVAILABLE: CONDITIONAL - radiation channel strongest"],
+  "limitations": [
+    "bound values quoted from source abstracts/figures; exact confidence intervals not re-derived from raw data",
+    "upper bound R0 < 1e-4 m is criterion-dependent and was flagged as ambiguous by its own source",
+    "non-Markovian DP variants not fully bounded here",
+    "relativistic DP: open for all variants"
+  ],
+  "provenance_sources": [
+    {"source": "Donadi et al, Nat Phys 17, 74 (2021), arXiv:2111.13490", "type": "EXPERIMENTAL_RESULT (primary)", "claims_used": ["R0 lower bound ~3 orders above previous", "rules out natural parameter-free DP"]},
+    {"source": "arXiv:2406.18494 (2024)", "type": "MODEL_CLASS_RESULT / ANALYSIS", "claims_used": ["upper bound R0 <= 1e-4 m under stated effectiveness criterion", "explicit acknowledgment of criterion ambiguity", "DP 'strictly speaking' does not guarantee classicality"]},
+    {"source": "Diosi, J Phys Conf Ser 442, 012001 (2013)", "type": "CONJECTURE (primary author proposal)", "claims_used": ["mass-density resolution idea; R0 as free parameter"]},
+    {"source": "Bassi et al, Rev Mod Phys 85, 471 (2013)", "type": "AUTHORITATIVE REVIEW", "claims_used": ["corroboration of model structure and bound landscape"]}
+  ]
+}

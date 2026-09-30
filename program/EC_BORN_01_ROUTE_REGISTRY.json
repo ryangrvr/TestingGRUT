@@ -1,0 +1,28 @@
+{
+  "artifact": "EC_BORN_01_ROUTE_REGISTRY",
+  "type": "frozen candidate-family list for the Born-rule provenance audit",
+  "freeze_status": "FROZEN — families may not be added, removed, or substituted after case work begins",
+  "registry": [
+    {"route_id": "R1", "family": "Gleason / Busch / noncontextual-measure", "canonical_core": "measure-theoretic derivation of the trace/Born form from assumptions on probability measures over the event structure of Hilbert space", "representative_result_class": "Gleason 1957; Gleason-type and Busch-type theorems for POVMs", "key_audit_question": "are the measure axioms (additivity, noncontextuality, normalization) weaker than the Born rule for the claimed target?"},
+    {"route_id": "R2", "family": "Envariance / symmetry", "canonical_core": "symmetry-based argument that entangled systems+environment determine subsystem measure", "representative_result_class": "Zurek envariance program", "known_dispute_class": "literature argues symmetry alone does not compel the measure absent probability assumptions; factorization choice is a premise", "key_audit_question": "which probability/probability-related premise does the symmetry argument import?"},
+    {"route_id": "R3", "family": "Deutsch–Wallace Everett decision theory", "canonical_core": "rationality axioms over quantum games imply Born weights as the unique rational credence / branch measure", "representative_result_class": "Deutsch 1999; Wallace argument", "known_dispute_class": "critiques hold decision axioms (esp. under branching) are additional postulates; separation of branch measure from single-outcome selection is mandatory", "key_audit_question": "do the decision axioms, within branching, already encode the probability content?"},
+    {"route_id": "R4", "family": "Typicality / frequency / self-locating uncertainty", "canonical_core": "typicality over a measure, frequency arguments, or self-locating credence in branching", "representative_result_class": "typicality-based Everett arguments; frequency-analysis literature", "key_audit_question": "does the typicality/measure assumption yield a conditional measure claim or an objective single-run chance?"},
+    {"route_id": "R5", "family": "Quantum reconstruction / operational axiomatization", "canonical_core": "operational axioms (information-theoretic or otherwise) from which the probability rule and Hilbert-space structure are reconstructed", "representative_result_class": "CBH-type, Hardy/Lucien-type reconstruction programs, generalized probability theories", "key_audit_question": "which axiom carries the probability content and is it independent for the claimed target?"},
+    {"route_id": "R6", "family": "Bohmian quantum-equilibrium / typicality", "canonical_core": "|psi|^2 measure as effective/typical equilibrium for the de Broglie–Bohm theory", "representative_result_class": "Bohmian equilibrium hypothesis; typicality justification literature", "key_audit_question": "is equilibrium a derived property or an added hypothesis? (guidance law distinct from measure)", "note": "quantum-equilibrium is a HYPOTHESIS within Bohmian mechanics on the current record"},
+    {"route_id": "R7", "family": "Bohmian nonequilibrium and counterexample class", "canonical_core": "demonstrated models with non-Born effective distributions under Bohmian dynamics", "representative_result_class": "Valentini-type quantum nonequilibrium literature", "role": "preserves the standing counterexample class; prevents silent assumption that Born weights are inevitable", "key_audit_question": "what empirical constraints bear on the nonequilibrium sector, and does R6's Born-weight claim depend on equilibrium being physical?"},
+    {"route_id": "R8", "family": "Collapse stochastic-law routes", "canonical_core": "stochastic dynamics postulates both outcome definiteness and the measure", "representative_result_class": "GRW/CSL-type and DP-type stochastic laws", "inherited_context_only": "DP admitted solely as audited contextual prior work (DP-R0-01 record); its conclusions are context, not classification evidence", "key_audit_question": "where does the stochastic measure enter — as postulate in the dynamics, or as derived structure?"}
+  ],
+  "rules": [
+    "no GRUT-specific Born-rule route exists in this registry; none may be added during execution",
+    "serious routes discovered mid-execution are recorded as OUT_OF_SCOPE_CANDIDATES for a future protocol version",
+    "route families are broad-family level; specific papers are chosen per family during execution under the source-admission rules of EC_BORN_01_PROTOCOL.md §13",
+    "each route record must carry the full EC_BORN_01_SCHEMA.json field set",
+    "no populated judgments exist at freeze time"
+  ],
+  "immutable_inputs": {
+    "protocol": "program/EC_BORN_01_PROTOCOL.md",
+    "schema": "program/EC_BORN_01_SCHEMA.json",
+    "committed_context_commits": ["10681b0", "8ebac8b", "793143e", "7b22da8", "0ca550c", "7c8048b"],
+    "canonical_GRUT_RAI": "UNMODIFIED"
+  }
+}

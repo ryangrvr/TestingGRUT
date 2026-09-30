@@ -1,0 +1,165 @@
+{
+  "artifact": "EXPERIMENT_P_HOSTILE_REPLICATION",
+  "phase": "REALITY_PROGRAM_PHASE_II",
+  "question": "Is the P boundary model-specific or class-wide? Can it be broken?",
+  "alpha": 0.8,
+  "p0_target": 0.6400000000000001,
+  "construction": "uniform branch-preserving unitary U = P_S0 + P_S1 (I \u2297 V_E), exactly unitary by construction; V_E varies per model class",
+  "results": {
+    "weight_inheritance_theorem": {
+      "statement": "For ANY closed unitary U = sum_i |i><i|_S \u2297 W_i (W_i unitary on A\u2297E), <Psi_f| Pi_i |Psi_f> = |alpha_i|^2 exactly, Pi_i = |i><i|_S \u2297 I_A \u2297 I_E. Branch weights are structural invariants of the branch-preserving unitary interaction class, independent of environment structure/dimension/memory/coupling.",
+      "proof": "<Psi_f|Pi_i|Psi_f> = |alpha_i|^2 <AE|W_i^\u2020 W_i|AE> = |alpha_i|^2 since W_i is unitary on the full A\u2297E space. Only branch preservation + unitarity used; no record or environmental assumption. Generalizes the record-subspace argument to the whole class.",
+      "consequence": "Dynamical weight generation in this class is IMPOSSIBLE without breaking branch preservation or unitarity (postselection / collapse / non-unitary dynamics = additional physical structure). The P 'inherited weights' finding is CLASS-WIDE.",
+      "status": "DERIVED (algebraic; verified numerically in every model below)"
+    },
+    "M01": {
+      "model": "finite record N=8 (cyclic shift)",
+      "notes": "",
+      "abs_cross": 0.0,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 0.0,
+      "record_overlap": 0.0
+    },
+    "M02": {
+      "model": "finite record N=64 (cyclic shift)",
+      "notes": "",
+      "abs_cross": 0.0,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 0.0,
+      "record_overlap": 0.0
+    },
+    "M03": {
+      "model": "spin bath 8 spin-1/2, product init, cyclic shift",
+      "notes": "",
+      "abs_cross": 0.0,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 0.0
+    },
+    "M04": {
+      "model": "spin bath, random entangled init, cyclic shift",
+      "notes": "",
+      "abs_cross": 0.02193745009800007,
+      "p0_observed": 0.6400000000000003,
+      "p1_observed": 0.3600000000000001,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0000000000000004,
+      "unitarity_err": 0.0,
+      "record_overlap": 0.04570302103750015,
+      "analytic_cross": 0.02193745009800007,
+      "note": "random init has GENERIC overlap ~1/sqrt(dE) with its shifted image: partial-overlap case, cross follows the same |alpha*beta|*delta law; NOT an orthogonal-record model"
+    },
+    "M05": {
+      "model": "oscillator bath 6 modes x 4 Fock levels, shift",
+      "notes": "",
+      "abs_cross": 0.0,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 0.0
+    },
+    "M06": {
+      "model": "repeated-interaction analog (V1 applied 3x)",
+      "unitarity_err": 0.0,
+      "evolution": [
+        {
+          "step": 1,
+          "abs_cross": 0.0,
+          "p0": 0.6400000000000001
+        },
+        {
+          "step": 2,
+          "abs_cross": 0.0,
+          "p0": 0.6400000000000001
+        },
+        {
+          "step": 3,
+          "abs_cross": 0.0,
+          "p0": 0.6400000000000001
+        }
+      ],
+      "p0_final": 0.6400000000000001,
+      "p0_expected": 0.6400000000000001,
+      "note": "decoherence complete after first collision and stays complete; weights invariant at every step"
+    },
+    "M07": {
+      "model": "chaotic bath (Haar-random V_E)",
+      "notes": "",
+      "abs_cross": 0.11751346158443841,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0000000000000002,
+      "unitarity_err": 7.771750467603197e-16,
+      "record_overlap": 0.2448197116342467,
+      "note": "generic Haar overlap ~ 1/sqrt(dE): NEAR-decoherence, not exact. Exact decoherence requires structured orthogonalizing records; weights remain |alpha|^2 regardless."
+    },
+    "M08": {
+      "model": "record overlap delta=0.3 (2-level rotation)",
+      "notes": "",
+      "abs_cross": 0.2629068276024797,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.35999999999999993,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 1.795819508129106e-17,
+      "delta": 0.3,
+      "analytic_cross": 0.2629068276024797,
+      "note": "cross = |alpha*beta|*sqrt(delta) exactly; weights STILL |alpha|^2"
+    },
+    "M09a": {
+      "model": "record overlap delta=0.01 (2-level rotation)",
+      "notes": "",
+      "abs_cross": 0.048,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.36,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0000000000000002,
+      "unitarity_err": 2.782531368306104e-20,
+      "delta": 0.01,
+      "analytic_cross": 0.048,
+      "note": "cross = |alpha*beta|*sqrt(delta) exactly; weights STILL |alpha|^2"
+    },
+    "M09b": {
+      "model": "record overlap delta=0.9 (2-level rotation)",
+      "notes": "",
+      "abs_cross": 0.4553679830642466,
+      "p0_observed": 0.6400000000000001,
+      "p1_observed": 0.35999999999999993,
+      "p0_expected": 0.6400000000000001,
+      "global_purity": 1.0,
+      "unitarity_err": 1.1102230246251565e-16,
+      "delta": 0.9,
+      "analytic_cross": 0.4553679830642466,
+      "note": "cross = |alpha*beta|*sqrt(delta) exactly; weights STILL |alpha|^2"
+    },
+    "M10": {
+      "model": "non-Markovian recoherence (V1 then V1^dagger)",
+      "unitarity_err": 0.0,
+      "abs_cross_mid": 0.0,
+      "abs_cross_final": 0.48,
+      "recoherence_restored": false,
+      "p0_final": 0.6400000000000001,
+      "p0_expected": 0.6400000000000001,
+      "note": "decoherence is dynamical and REVERSIBLE in closed systems; recoherence restores interference; outcome selection still absent"
+    }
+  },
+  "verdict": {
+    "decoherence_exact_for_orthogonal_records": true,
+    "overlap_law_holds_for_partial_overlap": true,
+    "generic_chaos_near_decoherence_only": true,
+    "weights_always_inherited": true,
+    "recoherence_restores_full_interference": true,
+    "all_unitary": true
+  },
+  "primary_conclusion": "The P boundary is CLASS-WIDE, not model-specific. Across finite/large records, spin baths (product and entangled), oscillator Fock baths, repeated interactions, Haar-chaotic environments, partial-overlap records, and recohering non-Markovian dynamics: (a) exact decoherence whenever the branch records are orthogonal, cross = |alpha*beta|*sqrt(delta) for overlap delta, (b) branch populations equal |alpha|^2 in EVERY model \u2014 now proven algebraically for the entire branch-preserving unitary class, (c) recoherence confirms decoherence is dynamical and reversible, never outcome selection. The hostile replication found NO counterexample within closed unitary measurement dynamics; weight generation in this class is IMPOSSIBLE without breaking branch preservation or unitarity, i.e. additional physical structure."
+}
