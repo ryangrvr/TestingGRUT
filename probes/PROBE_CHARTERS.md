@@ -89,3 +89,96 @@ Every probe reports:
 - **Question.** Does redundancy of environmental records select pointer observables **and** a system/environment
   split, or does it presuppose the split?
 - **Outcomes:** SELECTOR (given split) / SPLIT-PRICED.
+
+---
+
+# REPAIR 01 PRE-REGISTRATIONS (owner audit; written before any run)
+
+Frame: T2-1′ — C5 → D ⊕ H ⊕ A. D = primitive-dynamics structure; H = state / basin / measure / preparation;
+A = access / intervention / readout / reference-sharing. Each probe below attacks one wall. Every verdict states which
+of D / H / A it moved, and which it priced.
+
+## S2-3b — Zero-entropy uniquely-ergodic mixing (horocycle-type); attacks H
+
+**Firewall: three notions, pre-registered as distinct. None may be identified with another.**
+
+| Notion | Definition | Not the same as |
+|---|---|---|
+| **A. UNIQUE MEASURE** | the dynamics admits exactly one invariant Borel probability measure | B (B can hold off a null/exceptional set while A fails) |
+| **B. TIME-AVERAGE UNIVERSALITY** | for every (or every explicitly characterized) initial point, Birkhoff averages of continuous observables converge to the same value | C (B is a single-trajectory statement; it says nothing about ensembles) |
+| **C. PREPARATION FORGETTING** | pushforwards of distinct preparations become indistinguishable to the *observables an agent can access* | B, and mixing as such |
+
+Hard rule: for an **invertible measure-preserving** flow, fine-grained densities remain exactly distinguishable
+(TV / L¹ distance conserved). Any "forgetting" is therefore a statement about an **observable class (A)** and a
+**preparation class (H)**, never about fine-grained information.
+
+**System.** Horocycle flow h_t = [[1,t],[0,1]] on X₂ = SL(2,ℝ)/SL(2,ℤ) (unimodular lattices in ℝ²), simulated by
+Gauss reduction. X₂ is **non-compact**: this is the hostile variant. The compact-quotient case (Furstenberg: uniquely
+ergodic; Marcus/Ratner: mixing with rates) is KNOWN RESULT IMPORT, not simulated.
+
+**Measurements (separately reported):**
+1. **A:** exhibit or exclude multiple invariant measures (periodic horocycles: lattices with a horizontal vector;
+   Dani's classification — SECONDARY).
+2. **B:** Birkhoff averages of `1[|v₁|² < s]` vs the Haar value `3s/π` (s ≤ 1, analytic) from several starting lattices:
+   Haar-random, irrationally rotated ℤ², nearly horizontal, exactly periodic.
+3. **C-i decay of correlations:** Haar-sampled ⟨f · g∘h_t⟩ − ⟨f⟩⟨g⟩ for t up to O(10²).
+4. **C-ii weak convergence:** ⟨f⟩ under pushforwards of (a) two disjoint a.c. blob preparations, (b) a Dirac
+   preparation, (c) a periodic-orbit preparation.
+5. **C-iii fine-grained conservation:** the pulled-back indicator `1_{B₁} ∘ h_{−t}` distinguishes the pushed blobs with
+   contrast 1 at every t; forward/back round-trip error; growth with t of the number of coarse cells needed to
+   describe h_t(B₁) (zero entropy → expected polynomial, contrasted with the doubling map's exponential growth).
+
+**Outcomes (pre-registered):**
+- **H-MEASURE SELECTED / A-COARSE FORGETTING:** A (compact case) earned from D; C holds only for accessible
+  observables and a.c. preparations.
+- **H UNTOUCHED:** forgetting requires a separately supplied reference measure.
+- **NO-GO (scoped):** uniqueness and forgetting cannot co-occur without special (homogeneous, rigid) D.
+- **D-PRICED:** the selection rests on compactness / algebraic homogeneity that is itself inserted.
+
+## S2-1b — Can locality be selected without supplying graph distance, local dimension or k? Attacks D
+
+**Question.** Given only an abstract dynamics (a Hamiltonian as a spectrum, or a matrix in an arbitrary basis on
+`ℂ^N`), do competing locality criteria select the **same** tensor-product structure?
+
+**Criteria, all run on the same abstract dynamics:**
+1. minimal k (smallest k such that the Hamiltonian is k-local in some TPS);
+2. sparsest interaction graph;
+3. Lieb–Robinson velocity / light-cone sharpness;
+4. MDL (shortest description of H as a sum of local terms);
+5. stability (TPS robust to perturbation of H);
+6. locality-maximizing factorization (Zanardi / CPR-type);
+7. predictive autonomy (subsystems whose reduced dynamics is most nearly autonomous).
+
+**Hostile.** Construct dynamics where two criteria choose **different** TPSs (including different factorizations
+`N = d₁·d₂…`). Then ask: **what selects the objective function?** If nothing in the dynamics does, the criterion is
+an inserted D-item (or an A-item, if it is defined by what an agent can control).
+
+**Outcomes:** LOCALITY SELECTED (criteria agree, no inputs) / CRITERION-PRICED (D) / ACCESS-PRICED (A) / NONUNIQUE.
+
+## S2-7 — Consistent histories: set selection. Attacks A
+
+- **Question.** Does consistency (decoherence functional) select a unique quasi-classical set of histories, and
+  hence records and subsystems?
+- **Hostile:** Dowker–Kent: many mutually incompatible consistent sets; consistent sets that are not quasi-classical.
+- **Firewall:** if the selection requires a fixed coarse-graining, a fixed system/environment split or a fixed time
+  sequence of projectors supplied from outside → **A-PRICED**.
+- **Outcomes:** SELECTOR / NONUNIQUE / A-PRICED.
+
+## S2-8 — Quantum Darwinism / records. Attacks A
+
+- **Question.** Does the redundancy of environmental records select pointer observables **and** the
+  system/environment split, or only the pointer observable given the split?
+- **Firewall:** if redundancy is defined only after the split (S | E₁ ⊗ … ⊗ E_m) is specified → **A-PRICED**
+  (and possibly D-priced via S2-1b). A test that the split itself can be chosen by redundancy maximization over all
+  TPSs is required before any claim of selection.
+- **Outcomes:** SELECTOR (split and pointer) / SELECTOR (pointer, given split) / A-PRICED.
+
+## S2-G — Dimension selection (C5-G). Kept active
+
+Four notions, tested separately and never identified:
+1. **local Hilbert dimension** d (the factor size of the TPS; S2-1 / S2-1b);
+2. **graph / spectral dimension** of the interaction graph;
+3. **spacetime dimension** (from Lieb–Robinson cones or correlation decay);
+4. **information capacity** (log dimension per unit region / per record).
+
+**Outcomes per notion:** SELECTED / PRICED (D, H or A) / NONUNIQUE.

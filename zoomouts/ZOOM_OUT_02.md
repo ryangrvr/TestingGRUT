@@ -1,3 +1,18 @@
+> **REPAIR 01 (owner audit): T2-1 "C5 = D ⊕ H" is WITHDRAWN.** ACCESS / INTERVENTION / READOUT remains an independent
+> price in S2-3 (partition), S2-4 (threshold λ, hidden coin) and S2-5 (who holds the reference). It is replaced
+> provisionally by
+>
+>     T2-1′:  C5 → D ⊕ H ⊕ A
+>
+> - D = structural properties of the primitive dynamics;
+> - H = state / basin / measure / preparation;
+> - A = access / intervention / readout / reference-sharing structure.
+>
+> This is a classification over the tested toy universes. It is **re-expression, not derivation**. Do not collapse A
+> into D or H until that is explicitly derived. The three hostile fronts are S2-1b (D), S2-3b (H) and S2-7/S2-8 (A).
+> No T2-2 until S2-1b, S2-3b and at least one access probe are done. The strong success condition is now
+> **primitive structure → D, H, A jointly forced**.
+
 # SCOUT-2 ZOOM-OUT 02 (after the six mandated Wave-1 probes)
 
 ## Map of the C5 components after Wave 1

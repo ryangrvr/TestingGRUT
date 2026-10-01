@@ -1,3 +1,7 @@
+> **REPAIR 01 (owner audit):** "no measure needed" means **no independently chosen invariant measure**. Unique
+> ergodicity *supplies* a unique invariant measure and uniform time averages for the relevant observable class. It
+> does not eliminate the supplied topology/dynamics or the coarse partition (access, A).
+
 # S2-3 RESULT — probability from deterministic microdynamics + coarse access
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-3 (pre-registered firewall: an invariant measure existing ≠ a probability

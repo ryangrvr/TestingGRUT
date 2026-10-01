@@ -1,3 +1,12 @@
+> **REPAIR 01 (owner audit):** "LT iff ordered phase" is withdrawn. In the tested Ising reference-field model:
+> - asymptotically shared reference coherence exists in the ordered phase and disappears at long distance in the
+>   disordered phase;
+> - this activates the S2-5 J-reference witness.
+>
+> Finite-distance correlations are not a binary theorem about LT: above T_c they decay but do not vanish at finite
+> distance. At T = T_c correlations decay algebraically, and there is no non-zero long-range order parameter in the
+> thermodynamic limit.
+
 # S2-6 RESULT — can dynamics select basin / preparation / measure data?
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-6 (pre-registered; the measure problem is central).

@@ -1,3 +1,10 @@
+> **REPAIR 01 (owner audit) — accounting bug fixed:** the dynamics earns **frequency = measure of the selected
+> interval**. It does **not** choose the numerical weight λ: λ is the threshold / partition size in
+> `c_n = [nφ mod 1 < λ]`, which is part of A (access).
+> - Label: **AFFINE MIXING LAW FORCED; NUMERICAL WEIGHT ACCESS-PRICED** (replaces "mixture weights forced").
+> - Kept: rational independence can earn decorrelation; calling it generic is measure-priced.
+> - This is direct evidence that A is an independent remainder (Y-02).
+
 # S2-4 RESULT — convexity / mixtures without supplied randomness
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-4 (pre-registered).

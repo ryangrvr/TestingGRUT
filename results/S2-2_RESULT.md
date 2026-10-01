@@ -1,3 +1,8 @@
+> **REPAIR 01 (owner audit):** the headline is scoped to a **FAMILY COMPOSITION DISCRIMINATOR**. In the tested finite
+> GPT family, continuous reversible entangling interaction excludes the classical/simplex composite and the gbit
+> min/max polytopic composites, while the real and complex quantum tensor composites pass. This is **not** a general
+> theorem that continuous interaction forces tensor composition. Other non-polytopic GPT composites are untested.
+
 # S2-2 RESULT — which composition rule is forced?
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-2 (pre-registered). Local tomography is **not** used as an input.

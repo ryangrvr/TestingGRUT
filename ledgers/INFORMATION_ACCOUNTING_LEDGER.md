@@ -8,3 +8,11 @@
 | deterministic hidden coin (S2-4) | uniquely ergodic coin + hidden + incommensurate tester | convex mixtures with earned weights | independence condition; access rule | — | — | none (weights); Lebesgue if 'generic' | coin hidden; tester independent | RENAMED (randomness → access + independence) | CONVEXITY DERIVED (scoped), ACCESS- + INDEPENDENCE-PRICED |
 | shared reference frame (S2-5) | real kinematics + per-party reference systems + a shared correlated reference state | LT restored; complex statistics from real QM | which reference state exists and is shared | frame orientation (global J sign) | **yes: the shared reference state** | none | who holds which reference | RELOCATED (C5-F → C5-H) | LT REDUCED TO A SHARED-REFERENCE STATE |
 | basin / measure selection (S2-6) | dynamics + reference measure | attractors, phases, SRB statistics | which basin / phase; basin weights | frame orientation (J ↔ −J) | **yes** | **supplied** | — | NOT SELECTED (measure-priced); LT ⇔ ordered phase of a shared frame field | MEASURE-PRICED / BASIN-PRICED |
+
+**REPAIR 01 (owner audit) annotations** — rows above are kept for the record; corrected readings:
+- S2-2 row: label read as **FAMILY COMPOSITION DISCRIMINATOR** (finite family only) (Y-04).
+- S2-4 row: λ is **access**-supplied; the label is **AFFINE MIXING LAW FORCED; NUMERICAL WEIGHT ACCESS-PRICED** (Y-02).
+- S2-5 row: "RELOCATED (C5-F → C5-H)" is replaced by **one C5-F obstruction → H + A**; the label is **LT-OBSTRUCTION
+  ACTIVATED BY SHARED REFERENCE** (Y-05).
+- S2-6 row: "LT ⇔ ordered phase" is replaced by the asymptotic shared-coherence statement (Y-06).
+- Column discipline from now on: every row has an explicit **A (access)** entry; "none" must be argued, not assumed.

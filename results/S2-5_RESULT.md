@@ -1,3 +1,13 @@
+> **REPAIR 01 (owner audit):** full local tomography is **not** derived. What was established: a specific real-QM
+> global J⊗J degree of freedom, invisible to the original local observable sets, becomes locally distinguishable once
+> each party holds a suitably correlated reference resource.
+> - Label: **LT-OBSTRUCTION ACTIVATED BY SHARED REFERENCE**.
+> - Replace "C5-F → C5-H" with **one C5-F obstruction → H + A**:
+>   - the existence and state of the shared reference = H;
+>   - who holds and can use it = A.
+> - Full n-party LT is unproved here. The ABW / reference-frame literature is supporting known physics (SECONDARY;
+>   ABW abstract PRIMARY-ABSTRACT-VERIFIED by the owner, arXiv:1210.4535).
+
 # S2-5 RESULT — what removes the hidden global degrees of freedom that break local tomography?
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-5 (pre-registered).
