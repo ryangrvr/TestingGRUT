@@ -100,3 +100,44 @@ structure, the wall is confirmed at the dynamical level.
 - **Hypothesis.** Scale-free avalanches appear only in the limit drive/dissipation → 0. The tuning moves into a
   rate ratio.
 - **Outcomes:** UNTUNED FIXED POINT / TUNING RELOCATED / NO.
+
+## W2-QE — FINE-GRAINED FIREWALL (pre-registered per external audit, BEFORE the running simulation's output was read)
+
+- **Frozen fact.** Under pilot-wave evolution, `f = ρ/|ψ|²` is advected by the trajectory flow (`∂_t f + v·∇f = 0`).
+  The flow preserves the `|ψ|²` measure. Consequences:
+  - the fine-grained relative entropy `H_fine = ∫ρ ln f` is **exactly conserved**;
+  - there is no fine-grained dissipative attraction to f = 1;
+  - Valentini's H-theorem is a **coarse-grained** statement, and it does not prove equilibrium is always reached.
+- **Required reports:**
+  1. a fine-grained quantity (`H_fine` conservation, via the backward-trajectory evaluation of f);
+  2. the coarse-grained H̄;
+  3. dependence on coarse-cell size;
+  4. dependence on mode count;
+  5. dependence on initial microstructure;
+  6. recurrence / failure-to-relax controls;
+  7. a low-mode control;
+  8. whether apparent relaxation survives refinement of the coarse graining.
+- **Adjudications:**
+  - **A. COARSE-GRAINED RELAXATION — PREMISE-PRICED.** The ledger keeps the pilot-wave law, ψ (mixing), the
+    initial ensemble (no microstructure) and the coarse-graining.
+  - **B. ROBUST DYNAMICAL RELAXATION.** This would require proof that it is not a coarse-graining artifact.
+  - **C. NO RELAXATION.**
+- **Fence.** Outcome A must not be described as "Born derived from dynamics without preparation".
+
+## W2-DT — dimensional transmutation / anomalous scale generation vs TC-1 (required before TC-1 promotion)
+- **Question.** Can a theory with no explicit classical dimensionful selector dynamically generate a finite
+  non-zero physical scale, and so evade TC-1?
+- **Cases:**
+  - asymptotically free RG (Λ_QCD-type; also the exactly solvable large-N Gross–Neveu / O(N) gap equations);
+  - Coleman–Weinberg.
+- **Track** where the absolute scale enters, distinguishing:
+  1. breaking of classical scale symmetry;
+  2. an RG-invariant scale;
+  3. an absolute numerical scale in physical units.
+
+  For each, check whether it needs a renormalization boundary condition, a measured coupling at a reference
+  scale, a vacuum choice, or another supplied dimensionful datum.
+- **Outcomes:**
+  - **TC1-SURVIVES-ANOMALY** — a relational scale is generated, but its absolute value needs G-breaking boundary/reference data;
+  - **TC1-COUNTEREXAMPLE**;
+  - **TC1-NEEDS-REFORMULATION** — the deformation group is anomalous.
