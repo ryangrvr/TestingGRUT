@@ -1,0 +1,11 @@
+=== C1 Green-Kubo noise intensity of a deterministic chaotic forcing (exact) ===
+  h = cos 2pi y            : mean=0, C_0..C_3 = [1/2, 0, 0, 0], Sigma^2 = 1/2 -> Brownian limit, Q = Sigma^2
+  h = cos 2pi y + cos 4pi y: mean=0, C_0..C_3 = [1, 1/2, 0, 0], Sigma^2 = 2 -> Brownian limit, Q = Sigma^2
+  h = chi o T - chi, chi = cos 2pi y (coboundary): mean=0, C_0..C_3 = [1, -1/2, 0, 0], Sigma^2 = 0 -> NO noise survives (coboundary)
+
+=== C2 third cumulant: present at finite eps, O(eps) in the slow increment, gone in the limit ===
+  E_mu[h^3] = 3/4 (skewed forcing). Over slow time t: kappa3(eps S_N) ~ eps^3 * N * kbar3 = eps*t*kbar3 -> 0
+  O(beta) lemma: even-in-a term -4 beta int g kappa3 = O(eps); odd-in-a term covariance-only -> C-B with Q = Sigma^2
+
+=== C3 short-time order at finite eps (smooth forcing, first-order slow system) ===
+  v(s) ~ sigma_F^2 s^2 for s << correlation time  =>  S - D ~ -4*a*beta*sigma2*t**3  (t^3, vs C-B t^2 beyond the window)
