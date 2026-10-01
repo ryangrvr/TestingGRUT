@@ -69,6 +69,11 @@ is owed). The no-crossing constraint is on DESI exposure.
 
 ## 7. Scientific saturation assessment
 
+> **SUPERSEDED (2026-10-01):** the criteria below were local substitutes. The standing rule is now written in
+> `SATURATION_CRITERIA.md`; the certification against it is `SATURATION_CERTIFICATION_01.md`. Verdict there:
+> **NOT SATURATED — SPECIFIC HIGH-VALUE ROUTE REMAINS** (K1 `μη(z)` separation forecast). The assessment below
+> is retained for the audit trail.
+
 **No standing saturation criteria were found in the repository** (searched `playground/` and the
 root records). The criteria below are **declared here**; the owner should substitute the standing
 ones if they differ.

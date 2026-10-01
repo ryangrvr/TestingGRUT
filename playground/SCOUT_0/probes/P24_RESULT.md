@@ -54,3 +54,27 @@ supplied inputs, does it bear on an empirical observable, does it differ from a 
 
 **Status: P-24 COMPLETE (read-only census). K1 confirmed as the unique record lock satisfying the census criteria and distinct from the standard classes compared so far (conditional);
 K7 flagged unclassified.**
+
+## Addendum 01 — K7 classified; K1 occupancy checked
+
+**K7** (searched the whole repository, including `archive/`, `release/`, `books/`, `uploads/`):
+
+| Quantity | Where it exists | Label |
+|---|---|---|
+| `R = √(1+α)` | only as founding hypothesis H2 (`founding_h2_R_zeta_bridge`, `to-derive`, FRONTIER-RESERVED): "can R be formulated as a SPECTRAL INVARIANT of a vacuum operator…" — no measurement map | **RESERVED-HYPOTHESIS** |
+| `S = 12π/α²` | appears **only as a name** in the `rung9a` ledger note and `BUILD_BANKING_PROMPT.md`; no definition, no observable, no computation anywhere in the repository | **UNIDENTIFIED** |
+| `Ω_Λ(α)` | appears **only as a name** in the same two places; no formula. The register's `lambda_undetermined` node states GRUT does **not** fix Λ, so an α-determined Ω_Λ conflicts with the record's own open-field node | **UNIDENTIFIED** (and in tension with `lambda_undetermined`) |
+| `S = 12π/(R²−1)²` (α eliminated) | relation between a reserved-hypothesis quantity and an undefined one | **INTERNAL-RELATION**; not a prediction |
+
+**K7 adds no empirical lock.** K1 remains the unique census lock.
+
+**K1** (`probes/K1_OCCUPANCY_01.md`):
+- **The z = 0 amplitude form is POINT-INTERSECTION**: Linder's Only Run Gravity (`α_B = 0`) lies exactly
+  on `Σ₀ = μ₀/2` at its normalization epoch for every amplitude.
+- **The time-dependent form `μη ≡ 1` is DISTINCT-LINE within the declared comparison set**: Only Run
+  drifts off by `ε(a)/2`, and leading-order `α_T = 0` Horndeski cannot stay on the line without
+  reducing to GR.
+
+**Updated K1 wording:** *unique record lock satisfying the census criteria; its `z = 0` amplitude form is
+shared by Only Run Gravity; its time-dependent form (`μη ≡ 1`) has no occupant in the declared
+comparison set (beyond-Horndeski/DHOST/nonlocal not evaluated).*
