@@ -1,0 +1,41 @@
+=== V-BFOCK / A-BOSE: exact free-boson sector blocks ===
+  L= 6 N=1: dim=    6  E0=-2.0000000000 (N*eps(0)=-2)  gap=1.0000  support == {4 sin^2(q/2)} for all q: True
+  L= 6 N=3: dim=   56  E0=-6.0000000000 (N*eps(0)=-6)  gap=1.0000  support == {4 sin^2(q/2)} for all q: True
+  L= 6 N=5: dim=  252  E0=-10.0000000000 (N*eps(0)=-10)  gap=1.0000  support == {4 sin^2(q/2)} for all q: True
+  L=10 N=1: dim=   10  E0=-2.0000000000 (N*eps(0)=-2)  gap=0.3820  support == {4 sin^2(q/2)} for all q: True
+  L=10 N=3: dim=  220  E0=-6.0000000000 (N*eps(0)=-6)  gap=0.3820  support == {4 sin^2(q/2)} for all q: True
+  L=10 N=5: dim= 2002  E0=-10.0000000000 (N*eps(0)=-10)  gap=0.3820  support == {4 sin^2(q/2)} for all q: True
+
+=== HCB diagnostic (exclusion WITHOUT antisymmetry; NEW ASSUMPTION) vs free-fermion I-FF ===
+  L= 6 N= 1 (odd):  gap=1.0000  support == free-fermion SF-1 set: True
+  L= 6 N= 3 (odd):  gap=2.0000  support == free-fermion SF-1 set: True
+  L= 6 N= 5 (odd):  gap=1.0000  support == free-fermion SF-1 set: True
+  L=10 N= 1 (odd):  gap=0.3820  support == free-fermion SF-1 set: True
+  L=10 N= 3 (odd):  gap=1.0000  support == free-fermion SF-1 set: True
+  L=10 N= 5 (odd):  gap=1.2361  support == free-fermion SF-1 set: True
+  L=10 N= 9 (odd):  gap=0.3820  support == free-fermion SF-1 set: True
+  L=12 N= 1 (odd):  gap=0.2679  support == free-fermion SF-1 set: True
+  L=12 N= 3 (odd):  gap=0.7321  support == free-fermion SF-1 set: True
+  L=12 N= 9 (odd):  gap=0.7321  support == free-fermion SF-1 set: True
+  L=12 N=11 (odd):  gap=0.2679  support == free-fermion SF-1 set: True
+  L=12 N= 6 (even): gap=1.04e+00  (JW string gives an antiperiodic fermion ring: degenerate/twisted; reported, not used)
+
+=== Closed-form classes, prescriptions P and P' (all SF-1 families) ===
+  free bosons, EVERY family (D, E, D-1/4, D-3/4, E-3, E-bar, C-6): w^-(q) = 4*sin(q/2)**2, z_P = 2, z_P' = 2, soft set {0} -> class (2, 1)
+  SF-1 fermions (record): D, D-1/4, D-3/4 -> (1, 2); E, E-3, E-bar -> (2, 1); C-6 multiscale
+
+=== Sector invariant -> law class: occupation edge k_b against the dispersion ===
+  fermions (exclusion)  : k_b^inf(nu) = pi*nu;  edge velocity eps'(k_b) = 2*sin(pi*nu)
+  free bosons           : k_b^inf(nu) = 0;  edge velocity eps'(k_b) = 0
+  rule: z = 1 iff eps'(k_b^inf) != 0 (occupation edge in band interior); z = 2 iff k_b^inf at a band extremum
+    fermion D      nu=1/2 : eps'(k_F) = 2 -> z = 1   (record: 1)
+    fermion D-1/4  nu=1/4 : eps'(k_F) = sqrt(2) -> z = 1   (record: 1)
+    fermion D-3/4  nu=3/4 : eps'(k_F) = sqrt(2) -> z = 1   (record: 1)
+    fermion E/E-3  nu=0   : eps'(k_F) = 0 -> z = 2   (record: 2)
+    fermion E-bar  nu=1   : eps'(k_F) = 0 -> z = 2   (record: 2)
+
+=== FPB diagnostic: bosons placed in the Fermi pattern (exact eigenstate, NOT the sector ground state) ===
+  q=1.5708: min support w = -1.9939 (negative: de-excitations present); E_FPB - E_gs = 372.8 > 0
+  q=0.3927: min support w = -0.7649 (negative: de-excitations present); E_FPB - E_gs = 372.8 > 0
+  q=0.0982: min support w = -0.1960 (negative: de-excitations present); E_FPB - E_gs = 372.8 > 0
+  -> the Fermi pattern needs exclusion twice: to BE the ground state, and to BLOCK in-sea transitions
