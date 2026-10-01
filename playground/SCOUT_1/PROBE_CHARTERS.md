@@ -176,3 +176,40 @@ nonlinear universality class? Or does D1 merely exchange a supplied IR label for
   term (S2's drift)? If it must be newly supplied, say so.
 
 **Theorem target:** if B repeats, a **SELECTOR RELOCATION NO-GO** candidate. If A, the first GRUT-adjacent selector.
+
+---
+
+# W4-OG — operator generation / closure hostile against TC-4 (owner ruling after ZOOM_OUT_05)
+
+**Question:** is the irreducible supplied object the OPERATOR LIST, or only the FIELD / SYMMETRY / REPRESENTATION
+content that determines the RG-closed operator space `O_allowed(Φ, d, S)`?
+
+**Steps:**
+- **W4-1 closure principle.** Distinguish four kinds of operator:
+  1. forbidden by symmetry;
+  2. allowed but absent (fine tuning);
+  3. protected from generation (non-renormalization / integrability / topology);
+  4. redundant (field redefinitions / equations of motion).
+- **W4-2 background shift.** The D1 cubic current `J = λ₃u³` expanded about `u = u₀ + φ` has `λ₂,eff = 3λ₃u₀`. Same
+  microscopic λ₃, with u₀ = 0 and several u₀ ≠ 0. Does the class cross from EW/marginal to KPZ? What is u₀ (filling,
+  preparation, spontaneous, external)?
+- **W4-3 generated operator.** A model with `λ₂,bare = 0` that is Z₂-breaking (λ₂ allowed) only through a
+  non-current ingredient. Show `λ₂,eff ≠ 0` after coarse-graining (controlled calculation + numerics). Run the Z₂
+  control.
+- **W4-4 SSB.** Action symmetry vs state symmetry vs effective algebra around the state. What selects the broken
+  vacuum (mass sign, boundary condition, thermodynamic limit, infinitesimal source, initial condition)? Price each.
+- **W4-5 anomaly.** Anomaly-fixed coefficients (WZ/WZW, π⁰→γγ, Chern–Simons levels, LSM): coefficient fixed vs
+  representation supplied.
+- **W4-6 `CONTENT_SELECTION_LEDGER.md`.** Levels:
+  - C1 couplings;
+  - C2 operator basis / Wilson coefficients;
+  - C3 symmetry class;
+  - C4 field / representation;
+  - C5 dimension / locality / composition.
+
+**Outcomes:**
+- A. TC4-REFUTED-AT-OPERATOR-LEVEL;
+- B. TC4-SURVIVES-SCOPED;
+- C. TC4-REFINED-HIERARCHY.
+
+**D3 gate:** decided only after W4 and its zoom-out.

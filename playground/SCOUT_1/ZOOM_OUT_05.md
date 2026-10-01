@@ -1,3 +1,8 @@
+> **W4-0 (owner ruling): TC-4 status → HOSTILE TEST OPEN — OPERATOR-GENERATION LOOPHOLE.** Not promoted while
+> W4-OG is open. Wilsonian RG generically generates every symmetry-allowed operator. A zero bare coefficient of an
+> allowed operator may therefore be a *tuning*, not a supplied operator-class choice. The five instances are kept as
+> evidence only.
+
 # SCOUT-1 ZOOM-OUT 05 — after D1-SCOUT (required before opening D2/D3/D4)
 
 ## 1. What D1 settled
