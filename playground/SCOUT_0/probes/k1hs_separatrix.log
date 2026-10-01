@@ -1,0 +1,204 @@
+
+===== OmegaDE-tracking, c = 0.1 =====
+  leading roots b1/c candidates: [-2.8951, 5.1173]; strong-branch series coeffs b1..b5 = ['0.5117', '-2.13', '6.12', '-15.82', '38.94']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.577
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.02158 mu-1=+0.5163 minN=+2.27e-03
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.02158 mu-1=+0.5164 minN=+2.27e-03
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.447
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.02158 mu-1=+0.5164 minN=+6.15e-05
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.02158 mu-1=+0.5164 minN=+6.15e-05
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.363
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.02147 mu-1=+0.5192 minN=+2.28e-06
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.02147 mu-1=+0.5192 minN=+2.28e-06
+/home/user/TestingGRUT/playground/SCOUT_0/probes/k1hs_separatrix.py:56: RuntimeWarning: divide by zero encountered in scalar divide
+  mu = R*((2 + 2*M)*A + 2*Bp)/D; Sg = R*((2 + M)*A + 2*Bp)/D
+/home/user/TestingGRUT/playground/SCOUT_0/probes/k1hs_separatrix.py:89: RuntimeWarning: invalid value encountered in subtract
+  fam.append((B1, (ratio0, d[-1, 4] - 1, d[-1, 5] - 1, d[:, 6].min(), np.max(np.abs(2*d[:, 5] - d[:, 4] - 1)), d[:, 3].min(), np.max(np.abs(d[:, 4])))))
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+5.117, weak=-2.895):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +1.532  mu(1)-1=+inf Sig(1)-1=+inf  minN=+2.27e-12  K1res=nan  minR=0.944
+     aB(1)=+0.25: early ratio +1.537  mu(1)-1=+0.0446 Sig(1)-1=+0.0223  minN=+2.28e-12  K1res=9e-16  minR=0.944
+     aB(1)=+0.50: early ratio +1.532  mu(1)-1=+0.0223 Sig(1)-1=+0.0111  minN=+2.27e-12  K1res=7e-16  minR=0.944
+     aB(1)=+0.75: early ratio +1.536  mu(1)-1=+0.0149 Sig(1)-1=+0.0074  minN=+2.28e-12  K1res=7e-16  minR=0.944
+     aB(1)=+1.00: early ratio +1.535  mu(1)-1=+0.0111 Sig(1)-1=+0.0056  minN=+2.28e-12  K1res=7e-16  minR=0.944
+     aB(1)=+1.25: early ratio +1.532  mu(1)-1=+0.0089 Sig(1)-1=+0.0045  minN=+2.27e-12  K1res=7e-16  minR=0.944
+     aB(1)=+1.50: early ratio +1.537  mu(1)-1=+0.0074 Sig(1)-1=+0.0037  minN=+2.28e-12  K1res=7e-16  minR=0.944
+  => no grid member with strong-branch origin, mu(1)>1 and N>0 throughout
+
+===== OmegaDE-tracking, c = 0.3 =====
+  leading roots b1/c candidates: [-2.8951, 5.1173]; strong-branch series coeffs b1..b5 = ['1.535', '-7.885', '27.03', '-83.32', '245.2']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.547
+  (I) forward from a0=1e-01, series order 3: aB(1)=-0.01492 mu-1=-6.3556 minN=+6.79e-03
+  (I) forward from a0=1e-01, series order 5: aB(1)=-0.01493 mu-1=-6.3507 minN=+6.79e-03
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.423
+  (I) forward from a0=3e-02, series order 3: aB(1)=-0.01493 mu-1=-6.3508 minN=+1.85e-04
+  (I) forward from a0=3e-02, series order 5: aB(1)=-0.01493 mu-1=-6.3507 minN=+1.85e-04
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.343
+  (I) forward from a0=1e-02, series order 3: aB(1)=-0.01495 mu-1=-6.3405 minN=+6.84e-06
+  (I) forward from a0=1e-02, series order 5: aB(1)=-0.01495 mu-1=-6.3405 minN=+6.84e-06
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+5.117, weak=-2.895):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: early ratio +1.536  mu(1)-1=-0.3792 Sig(1)-1=-0.1896  minN=+6.84e-12  K1res=4e-15  minR=0.842
+     aB(1)=+0.00: early ratio +1.536  mu(1)-1=+inf Sig(1)-1=+inf  minN=+6.84e-12  K1res=nan  minR=0.842
+     aB(1)=+0.25: early ratio +1.534  mu(1)-1=+0.3792 Sig(1)-1=+0.1896  minN=+6.83e-12  K1res=9e-16  minR=0.842
+     aB(1)=+0.50: early ratio +1.535  mu(1)-1=+0.1896 Sig(1)-1=+0.0948  minN=+6.84e-12  K1res=7e-16  minR=0.842
+     aB(1)=+0.75: early ratio +1.535  mu(1)-1=+0.1264 Sig(1)-1=+0.0632  minN=+6.84e-12  K1res=7e-16  minR=0.842
+     aB(1)=+1.00: early ratio +1.535  mu(1)-1=+0.0948 Sig(1)-1=+0.0474  minN=+6.84e-12  K1res=7e-16  minR=0.842
+     aB(1)=+1.25: early ratio +1.535  mu(1)-1=+0.0758 Sig(1)-1=+0.0379  minN=+6.84e-12  K1res=7e-16  minR=0.842
+     aB(1)=+1.50: early ratio +1.536  mu(1)-1=+0.0632 Sig(1)-1=+0.0316  minN=+6.84e-12  K1res=7e-16  minR=0.842
+  => no grid member with strong-branch origin, mu(1)>1 and N>0 throughout
+
+===== a^1, c = 0.05 =====
+  leading roots b1/c candidates: [-1.2361, 3.2361]; strong-branch series coeffs b1..b5 = ['0.1618', '-0.008568', '0.0003602', '-1.674e-05', '7.466e-07']
+  (I) forward from a0=1e-01, series order 1: aB(1)=+0.53901 mu-1=+0.0090 minN=+3.30e-02
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.15358 mu-1=+0.0318 minN=+3.27e-02
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.15358 mu-1=+0.0318 minN=+3.27e-02
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.624
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.15358 mu-1=+0.0318 minN=+9.89e-03
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.15358 mu-1=+0.0318 minN=+9.89e-03
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.339
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.15358 mu-1=+0.0318 minN=+3.31e-03
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.15358 mu-1=+0.0318 minN=+3.31e-03
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+3.236, weak=-1.236):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +3.236  mu(1)-1=+inf Sig(1)-1=+inf  minN=+3.31e-05  K1res=nan  minR=0.951
+     aB(1)=+0.25: early ratio +3.236  mu(1)-1=+0.0195 Sig(1)-1=+0.0098  minN=+3.31e-05  K1res=7e-16  minR=0.951
+     aB(1)=+0.50: early ratio +3.236  mu(1)-1=+0.0098 Sig(1)-1=+0.0049  minN=+3.31e-05  K1res=7e-16  minR=0.951
+     aB(1)=+0.75: early ratio +3.236  mu(1)-1=+0.0065 Sig(1)-1=+0.0033  minN=+3.31e-05  K1res=7e-16  minR=0.951
+     aB(1)=+1.00: early ratio +3.236  mu(1)-1=+0.0049 Sig(1)-1=+0.0024  minN=+3.31e-05  K1res=9e-16  minR=0.951
+     aB(1)=+1.25: early ratio +3.236  mu(1)-1=+0.0039 Sig(1)-1=+0.0020  minN=+3.31e-05  K1res=7e-16  minR=0.951
+     aB(1)=+1.50: early ratio +3.236  mu(1)-1=+0.0033 Sig(1)-1=+0.0016  minN=+3.31e-05  K1res=7e-16  minR=0.951
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0033, +0.0975]
+
+===== a^1, c = 0.2 =====
+  leading roots b1/c candidates: [-1.2361, 3.2361]; strong-branch series coeffs b1..b5 = ['0.6472', '-0.1371', '0.02305', '-0.004285', '0.0007645']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.670
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.53014 mu-1=+0.1368 minN=+1.27e-01
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.52955 mu-1=+0.1369 minN=+1.27e-01
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.339
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.52978 mu-1=+0.1369 minN=+3.92e-02
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.52955 mu-1=+0.1369 minN=+3.92e-02
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.183
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.52965 mu-1=+0.1369 minN=+1.32e-02
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.52955 mu-1=+0.1369 minN=+1.32e-02
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+3.236, weak=-1.236):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: early ratio +3.236  mu(1)-1=-0.2900 Sig(1)-1=-0.1450  minN=+1.32e-04  K1res=3e-14  minR=0.819
+     aB(1)=+0.00: early ratio +3.236  mu(1)-1=+inf Sig(1)-1=+inf  minN=+1.32e-04  K1res=nan  minR=0.819
+     aB(1)=+0.25: early ratio +3.236  mu(1)-1=+0.2900 Sig(1)-1=+0.1450  minN=+1.32e-04  K1res=1e-15  minR=0.819
+     aB(1)=+0.50: early ratio +3.236  mu(1)-1=+0.1450 Sig(1)-1=+0.0725  minN=+1.32e-04  K1res=9e-16  minR=0.819
+     aB(1)=+0.75: early ratio +3.236  mu(1)-1=+0.0967 Sig(1)-1=+0.0483  minN=+1.32e-04  K1res=7e-16  minR=0.819
+     aB(1)=+1.00: early ratio +3.236  mu(1)-1=+0.0725 Sig(1)-1=+0.0363  minN=+1.32e-04  K1res=7e-16  minR=0.819
+     aB(1)=+1.25: early ratio +3.236  mu(1)-1=+0.0580 Sig(1)-1=+0.0290  minN=+1.32e-04  K1res=9e-16  minR=0.819
+     aB(1)=+1.50: early ratio +3.236  mu(1)-1=+0.0483 Sig(1)-1=+0.0242  minN=+1.32e-04  K1res=7e-16  minR=0.819
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0483, +1.4502]
+
+===== a^1.5, c = 0.05 =====
+  leading roots b1/c candidates: [-1.0972, 2.4305]; strong-branch series coeffs b1..b5 = ['0.1215', '-0.005874', '0.0001445', '-3.906e-06', '1.068e-07']
+  (I) forward from a0=1e-01, series order 1: aB(1)=+0.25737 mu-1=+0.0127 minN=+1.02e-02
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.11579 mu-1=+0.0283 minN=+1.01e-02
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.11579 mu-1=+0.0283 minN=+1.01e-02
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.798
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.11579 mu-1=+0.0283 minN=+1.67e-03
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.11579 mu-1=+0.0283 minN=+1.67e-03
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.494
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.11579 mu-1=+0.0283 minN=+3.21e-04
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.11579 mu-1=+0.0283 minN=+3.21e-04
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+2.431, weak=-1.097):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +2.431  mu(1)-1=+inf Sig(1)-1=+inf  minN=+3.22e-07  K1res=nan  minR=0.967
+     aB(1)=+0.25: early ratio +2.431  mu(1)-1=+0.0131 Sig(1)-1=+0.0066  minN=+3.22e-07  K1res=9e-16  minR=0.967
+     aB(1)=+0.50: early ratio +2.431  mu(1)-1=+0.0066 Sig(1)-1=+0.0033  minN=+3.22e-07  K1res=7e-16  minR=0.967
+     aB(1)=+0.75: early ratio +2.431  mu(1)-1=+0.0044 Sig(1)-1=+0.0022  minN=+3.22e-07  K1res=9e-16  minR=0.967
+     aB(1)=+1.00: early ratio +2.431  mu(1)-1=+0.0033 Sig(1)-1=+0.0016  minN=+3.22e-07  K1res=9e-16  minR=0.967
+     aB(1)=+1.25: early ratio +2.431  mu(1)-1=+0.0026 Sig(1)-1=+0.0013  minN=+3.22e-07  K1res=7e-16  minR=0.967
+     aB(1)=+1.50: early ratio +2.431  mu(1)-1=+0.0022 Sig(1)-1=+0.0011  minN=+3.22e-07  K1res=7e-16  minR=0.967
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0022, +0.0656]
+
+===== a^1.5, c = 0.2 =====
+  leading roots b1/c candidates: [-1.0972, 2.4305]; strong-branch series coeffs b1..b5 = ['0.4861', '-0.09398', '0.009247', '-0.001', '0.0001094']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.814
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.40047 mu-1=+0.1247 minN=+4.02e-02
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.40046 mu-1=+0.1247 minN=+4.02e-02
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.476
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.40046 mu-1=+0.1247 minN=+6.67e-03
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.40046 mu-1=+0.1247 minN=+6.67e-03
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.294
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.40046 mu-1=+0.1247 minN=+1.29e-03
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.40046 mu-1=+0.1247 minN=+1.29e-03
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+2.431, weak=-1.097):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +2.431  mu(1)-1=+inf Sig(1)-1=+inf  minN=+1.29e-06  K1res=nan  minR=0.875
+     aB(1)=+0.25: early ratio +2.431  mu(1)-1=+0.1997 Sig(1)-1=+0.0999  minN=+1.29e-06  K1res=7e-16  minR=0.875
+     aB(1)=+0.50: early ratio +2.431  mu(1)-1=+0.0999 Sig(1)-1=+0.0499  minN=+1.29e-06  K1res=7e-16  minR=0.875
+     aB(1)=+0.75: early ratio +2.431  mu(1)-1=+0.0666 Sig(1)-1=+0.0333  minN=+1.29e-06  K1res=7e-16  minR=0.875
+     aB(1)=+1.00: early ratio +2.431  mu(1)-1=+0.0499 Sig(1)-1=+0.0250  minN=+1.29e-06  K1res=9e-16  minR=0.875
+     aB(1)=+1.25: early ratio +2.431  mu(1)-1=+0.0399 Sig(1)-1=+0.0200  minN=+1.29e-06  K1res=9e-16  minR=0.875
+     aB(1)=+1.50: early ratio +2.431  mu(1)-1=+0.0333 Sig(1)-1=+0.0166  minN=+1.29e-06  K1res=9e-16  minR=0.875
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0333, +0.9986]
+
+===== a^2/(1+a^2), c = 0.05 =====
+  leading roots b1/c candidates: [-1.0, 2.0]; strong-branch series coeffs b1..b5 = ['0.1', '-0.105', '0.07181', '-0.04183', '0.02314']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.556
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.03984 mu-1=+0.0216 minN=+3.20e-03
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.03983 mu-1=+0.0216 minN=+3.20e-03
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.359
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.03983 mu-1=+0.0216 minN=+2.92e-04
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.03983 mu-1=+0.0216 minN=+2.92e-04
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.246
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.03983 mu-1=+0.0216 minN=+3.25e-05
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.03983 mu-1=+0.0216 minN=+3.25e-05
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+2.000, weak=-1.000):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +2.000  mu(1)-1=+inf Sig(1)-1=+inf  minN=+3.25e-09  K1res=nan  minR=0.983
+     aB(1)=+0.25: early ratio +2.000  mu(1)-1=+0.0034 Sig(1)-1=+0.0017  minN=+3.25e-09  K1res=7e-16  minR=0.983
+     aB(1)=+0.50: early ratio +2.000  mu(1)-1=+0.0017 Sig(1)-1=+0.0009  minN=+3.25e-09  K1res=7e-16  minR=0.983
+     aB(1)=+0.75: early ratio +2.000  mu(1)-1=+0.0011 Sig(1)-1=+0.0006  minN=+3.25e-09  K1res=9e-16  minR=0.983
+     aB(1)=+1.00: early ratio +2.000  mu(1)-1=+0.0009 Sig(1)-1=+0.0004  minN=+3.25e-09  K1res=9e-16  minR=0.983
+     aB(1)=+1.25: early ratio +2.000  mu(1)-1=+0.0007 Sig(1)-1=+0.0003  minN=+3.25e-09  K1res=9e-16  minR=0.983
+     aB(1)=+1.50: early ratio +2.000  mu(1)-1=+0.0006 Sig(1)-1=+0.0003  minN=+3.25e-09  K1res=7e-16  minR=0.983
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0006, +0.0172]
+
+===== a^2/(1+a^2), c = 0.2 =====
+  leading roots b1/c candidates: [-1.0, 2.0]; strong-branch series coeffs b1..b5 = ['0.4', '-0.48', '0.356', '-0.2116', '0.1074']
+  (I) forward from a0=1e-01, series order 1: blow-up at a=0.534
+  (I) forward from a0=1e-01, series order 3: aB(1)=+0.13786 mu-1=+0.0972 minN=+1.28e-02
+  (I) forward from a0=1e-01, series order 5: aB(1)=+0.13781 mu-1=+0.0972 minN=+1.28e-02
+  (I) forward from a0=3e-02, series order 1: blow-up at a=0.344
+  (I) forward from a0=3e-02, series order 3: aB(1)=+0.13781 mu-1=+0.0972 minN=+1.17e-03
+  (I) forward from a0=3e-02, series order 5: aB(1)=+0.13781 mu-1=+0.0972 minN=+1.17e-03
+  (I) forward from a0=1e-02, series order 1: blow-up at a=0.235
+  (I) forward from a0=1e-02, series order 3: aB(1)=+0.13781 mu-1=+0.0972 minN=+1.30e-04
+  (I) forward from a0=1e-02, series order 5: aB(1)=+0.13781 mu-1=+0.0972 minN=+1.30e-04
+  (II) backward shooting, aB(1) grid -> early ratio aB/aM at a=1e-4 (strong=+2.000, weak=-1.000):
+     aB(1)=-1.00: backward integration singular (not GR-restoring)
+     aB(1)=-0.75: backward integration singular (not GR-restoring)
+     aB(1)=-0.50: backward integration singular (not GR-restoring)
+     aB(1)=-0.25: backward integration singular (not GR-restoring)
+     aB(1)=+0.00: early ratio +2.000  mu(1)-1=+inf Sig(1)-1=+inf  minN=+1.30e-08  K1res=nan  minR=0.933
+     aB(1)=+0.25: early ratio +2.000  mu(1)-1=+0.0536 Sig(1)-1=+0.0268  minN=+1.30e-08  K1res=9e-16  minR=0.933
+     aB(1)=+0.50: early ratio +2.000  mu(1)-1=+0.0268 Sig(1)-1=+0.0134  minN=+1.30e-08  K1res=9e-16  minR=0.933
+     aB(1)=+0.75: early ratio +2.000  mu(1)-1=+0.0179 Sig(1)-1=+0.0089  minN=+1.30e-08  K1res=7e-16  minR=0.933
+     aB(1)=+1.00: early ratio +2.000  mu(1)-1=+0.0134 Sig(1)-1=+0.0067  minN=+1.30e-08  K1res=7e-16  minR=0.933
+     aB(1)=+1.25: early ratio +2.000  mu(1)-1=+0.0107 Sig(1)-1=+0.0054  minN=+1.30e-08  K1res=7e-16  minR=0.933
+     aB(1)=+1.50: early ratio +2.000  mu(1)-1=+0.0089 Sig(1)-1=+0.0045  minN=+1.30e-08  K1res=9e-16  minR=0.933
+  => GR-restoring (strong-branch origin), EFT-stable (N>0, R>0, alpha_K free), mu(1)>1 members: 30 grid points, aB(1) in [+0.05, +1.50], mu(1)-1 in [+0.0089, +0.2679]

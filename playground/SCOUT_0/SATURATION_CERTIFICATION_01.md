@@ -1,5 +1,17 @@
 # SCOUT_0 SATURATION CERTIFICATION 01 (against `SATURATION_CRITERIA.md`)
 
+> **AMENDMENT 02:** K1-HS (`probes/K1HS_RESULT.md`) resolves the strong side: A. STRONG-K1-VIABLE. K1 is
+> Horndeski-occupied on GRUT's μ > 1 side, so the high-value K1 route (criterion 1) has now been **pursued to a
+> non-distinctive result**. Remaining items are owed checks only:
+> - Linder-denominator consistency (weak side only);
+> - beyond-Horndeski classes (cannot make K1 more distinctive);
+> - independent re-derivation of P-15/P-02.
+>
+> **Criterion 1 → MET.** The PARTIALs of criteria 2, 5, 7, 9 and 13 stand. Re-certification against the full rule is
+> owed. Provisional reading: no high-value route remains; the verdict would move toward "PROVISIONALLY SATURATED —
+> OWED CHECKS ONLY" if those PARTIALs are accepted as owed checks rather than open probes. That is the owner's/auditor's
+> call; it is not self-certified here.
+>
 > **AMENDMENT 01:** the route named below (K1-Z forecast against Only Run) rested on a withdrawn occupancy claim
 > (CE-07). The external audit replaced it with **K1-H** (exact Horndeski submanifold), now run (`probes/K1H_RESULT.md`:
 > sign-split; the sign of x is load-bearing). The verdict stays **NOT SATURATED**. The remaining high-value route is

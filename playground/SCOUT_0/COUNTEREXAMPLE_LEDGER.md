@@ -61,3 +61,11 @@ One decisive counterexample per broad claim attempt. Smallest first.
 - **Smallest counterexample (b):** `α_M = 0.1·Ω_DE(a)/Ω_Λ`, `α_B` on the branch `b/c = (1−√13)/3`: early-GR-restoring, gradient-stable, non-GR (`μ−1 = −0.092` today), K1 residual 9e-16 (`probes/K1H_RESULT.md`).
 - **Same assumptions, opposite result:** with `x > 0` (μ > 1) no stable early-GR-restoring luminal Horndeski K1 history was found in the scanned class.
 - **Lesson for the scout:** never identify a model's normalization epoch with z = 0 without reading its boundary conditions; never promote a small-α, α_B′-dropped ratio to an exact statement about a differential constraint.
+
+## CE-08 (K1-H self-error, caught by external audit): "the μ > 1 K1 half-line is GR-only after stability"
+
+- **Claim attacked:** `probes/K1H_RESULT.md` §4, which classified μ > 1 as GR-ONLY-AFTER-STABILITY on the basis of forward-IVP blow-ups of the strong branch.
+- **Smallest counterexample:** `α_M = 0.2a`, `α_B` = the analytic strong-branch series (orders 3–5) integrated forward: converged `α_B(1) = +0.52955`, `μ(1) − 1 = +0.1369`, regular, N > 0 throughout, K1 residual ≲ 1e-15 (`probes/K1HS_RESULT.md`).
+- **Nearest counterexample:** the backward-shooting family: 30/30 EFT-stable μ > 1 members in each of 8 tested histories.
+- **Same assumptions, opposite result:** forward IVPs from the leading-order start blow up — truncation error amplified at rate √(4n+1) — exactly what K1-H read as instability.
+- **Lesson for the scout:** ODE sensitivity is not physical instability. A branch that emerges from a singular point must be solved as a separatrix/boundary problem — high-order series or backward shooting — never as a leading-order IVP.

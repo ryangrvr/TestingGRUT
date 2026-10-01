@@ -1,3 +1,15 @@
+> **REPAIRED (external audit + `K1HS_RESULT.md`):**
+> (1) **Stability source grade:** RECONSTRUCTED → **VERIFIED against published Horndeski equations** (Peirone et al.,
+> PRD 97, 043519 (2018), App. Eq. A18, BS convention, α_T = 0).
+> (2) **"μ > 1: GR-ONLY-AFTER-STABILITY" — WITHDRAWN.** "ODE-repelling" was conflated with "physically unstable", and the
+> forward IVPs started from a leading-order coefficient, so truncation error was amplified at rate √(4n+1). K1-HS solves the
+> branch properly (high-order series + backward shooting): **A. STRONG-K1-VIABLE** — EFT-stable, early-GR-restoring,
+> non-GR μ > 1 K1 histories exist in every tested history.
+> (3) **Terminology:** "attractor/repelling" below means ODE-ATTRACTING/ODE-REPELLING (forward in a), not EFT stability. As a
+> past asymptote the strong branch is the generic GR-restoring origin and the weak branch the exceptional one.
+> (4) The weak-side EFT stability is reading-dependent (`K1HS_RESULT.md` §6); "HORNDESKI-OCCUPIED for μ < 1" holds
+> under the BS reading only. The text below is kept for the audit trail.
+
 # SCOUT_0 K1-H RESULT — is `2Σ − μ = 1` a viable non-GR luminal Horndeski submanifold?
 
 **Question (external audit):** does the exact K1 constraint admit a globally viable, stable, non-GR

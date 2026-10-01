@@ -1,0 +1,20 @@
+mu - R(1 + A^2/D) = 0 ;  Sigma - R(1 + (aM+aB)A/D) = 0
+on K1: D = -R*alpha_B*(alpha_B + 2*alpha_M)/(R - 1)    mu - 1 = -2*alpha_M*(R - 1)/alpha_B    Sigma - 1 = -alpha_M*(R - 1)/alpha_B
+=> on K1 (R<1 for alpha_M>0 histories): sign(mu-1) = sign(alpha_M/alpha_B); reading L gives alpha c_s^2 = alpha_B A R/(2(1-R)),
+   i.e. reading-L gradient stability <=> alpha_B (alpha_B + 2 alpha_M) > 0  (strong side alpha_B>0: always; weak side needs alpha_B < -2 alpha_M)
+
+=== backward-shooting family, strong-branch origin, alpha_B(1) > 0 (mu(1) > 1 by the K1 identity) ===
+  OmegaDE      c=0.1: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0074, +0.2229];  reading L: 30/30, mu(1)-1 in [+0.0074, +0.2229]
+  OmegaDE      c=0.3: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0632, +1.8962];  reading L: 30/30, mu(1)-1 in [+0.0632, +1.8962]
+  a^1          c=0.05: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0033, +0.0975];  reading L: 30/30, mu(1)-1 in [+0.0033, +0.0975]
+  a^1          c=0.2: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0483, +1.4502];  reading L: 30/30, mu(1)-1 in [+0.0483, +1.4502]
+  a^1.5        c=0.05: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0022, +0.0656];  reading L: 30/30, mu(1)-1 in [+0.0022, +0.0656]
+  a^1.5        c=0.2: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0333, +0.9986];  reading L: 30/30, mu(1)-1 in [+0.0333, +0.9986]
+  a^2/(1+a^2)  c=0.05: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0006, +0.0172];  reading L: 30/30, mu(1)-1 in [+0.0006, +0.0172]
+  a^2/(1+a^2)  c=0.2: strong-origin, alpha_B>0 throughout, mu>1, EFT-stable members — reading BS: 30/30, mu(1)-1 in [+0.0089, +0.2679];  reading L: 30/30, mu(1)-1 in [+0.0089, +0.2679]
+
+=== K1-H weak-branch solutions (forward, exact weak start) under the two readings ===
+  OmegaDE  c=0.1: weak branch mu(1)-1=-0.0922  min N (BS) = +2.76e-07   min D/2 (L) = -8.17e-02  -> stable (BS) / UNSTABLE (L)
+  OmegaDE  c=0.3: weak branch mu(1)-1=-0.2587  min N (BS) = +8.29e-07   min D/2 (L) = -2.33e-01  -> stable (BS) / UNSTABLE (L)
+  a^1      c=0.2: weak branch mu(1)-1=-0.2898  min N (BS) = +8.76e-03   min D/2 (L) = -8.46e-02  -> stable (BS) / UNSTABLE (L)
+  a^1.5    c=0.2: weak branch mu(1)-1=-0.2251  min N (BS) = +5.81e-04   min D/2 (L) = -1.39e-01  -> stable (BS) / UNSTABLE (L)
