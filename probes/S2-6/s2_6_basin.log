@@ -1,0 +1,24 @@
+=== 1. basin probabilities depend on the reference measure ===
+  Lebesgue on [-2,2]                : P(basin of +1.13) = 0.5869
+  asymmetric exponential reference  : P(basin of +1.13) = 0.6027
+  -> the attractors are dynamical; their 'probabilities' are the reference-measure volumes of the basins (supplied)
+
+=== 2. MaxEnt is coordinate (reference-measure) dependent ===
+  uniform in x        : P(x < 0.5) = 0.4991, <x> = 0.5005
+  uniform in y = x^2  : P(x < 0.5) = 0.2493, <x> = 0.6671
+
+=== 3. logistic map r = 4: physical measure forgets a.c. preparations; singular ones are not forgotten ===
+  a.c. uniform                  : P(z < 0.5) after 30 steps = 0.5001  (arcsine value 0.5000)
+  a.c. narrow Gaussian at 0.3   : P(z < 0.5) after 30 steps = 0.5002  (arcsine value 0.5000)
+  Dirac on period-2 orbit       : P(z < 0.5) after 30 steps = 1.0000  (arcsine value 0.5000)
+  (the period-2 value is exact in exact arithmetic; float roundoff eventually ejects it, a numerical artefact)
+
+=== 4. shared reference frames from long-range order (2D Ising frame field, L = 64) ===
+  T = 1.8: <f_A f_B> at distance 32 = +0.916  ->  local-tomography signal 2<f_A f_B> = +1.833
+  T = 2.0: <f_A f_B> at distance 32 = +0.830  ->  local-tomography signal 2<f_A f_B> = +1.659
+  T = 2.2: <f_A f_B> at distance 32 = +0.619  ->  local-tomography signal 2<f_A f_B> = +1.238
+  T = 2.6: <f_A f_B> at distance 32 = -0.009  ->  local-tomography signal 2<f_A f_B> = -0.017
+  T = 3.2: <f_A f_B> at distance 32 = +0.001  ->  local-tomography signal 2<f_A f_B> = +0.002
+  -> in the ordered phase the parties share a frame and the J-correlation becomes locally accessible;
+     in the disordered phase it does not. EXISTENCE of the shared frame = being in the ordered basin
+     (T < T_c, d >= 2); its SIGN is irrelevant (complex conjugation).

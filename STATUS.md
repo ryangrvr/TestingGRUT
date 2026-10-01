@@ -1,7 +1,7 @@
 # STATUS
 
 - **Phase:** 0 (reconnaissance) complete; Wave 1 pre-registered.
-- **Done:** S2-1, S2-2, S2-3, S2-4; ZOOM_OUT_01 (synthesis: C5 ≈ dynamical-structure conditions + access). S2-5 (LT reduces to a shared-reference state). **Next:** S2-6 (basin / measure).
+- **Done:** S2-1, S2-2, S2-3, S2-4; ZOOM_OUT_01 (synthesis: C5 ≈ dynamical-structure conditions + access). S2-5 (LT reduces to a shared-reference state), S2-6 (basin / measure: measure-priced), ZOOM_OUT_02 (candidate T2-1: C5 = D ⊕ H). **Next:** S2-1b (selecting the locality criterion).
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).
 - **Provenance:** SCOUT-0 is frozen at `ab2da47` and SCOUT-1 at `a2987fe`, both in `ryangrvr/TestingGRUT`. GRUT-RAI
   canonical `master-w25bu9` is at `b935099` (owner-verified). Nothing here modifies any of them.

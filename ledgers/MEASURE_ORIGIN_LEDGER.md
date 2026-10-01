@@ -10,3 +10,6 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | "a typical point has frequency 1/2" | S2-3 | Lebesgue-a.e. | supplied | Baire-generic points have no limiting frequency |
 | uniquely ergodic time averages | S2-3 | none (every point) | **earned** | dynamics must be uniquely ergodic; no relaxation of ensembles |
 | "rationally independent testers are generic" | S2-4 | Lebesgue on rotation-number pairs | supplied if invoked as genericity; otherwise a stated condition | rationally dependent pairs are dense |
+| basin probabilities of coexisting attractors | S2-6 | reference measure on initial data (Lebesgue 0.587 vs asymmetric 0.603) | supplied | — |
+| MaxEnt | S2-6 | coordinate / reference measure (uniform in x: 0.499; in x²: 0.249) | supplied | — |
+| physical (SRB) measure of logistic r = 4 | S2-6 | Lebesgue-a.c. preparation class | supplied | the period-2 Dirac preparation is not forgotten |
