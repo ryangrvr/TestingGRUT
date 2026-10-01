@@ -1,0 +1,26 @@
+=== 1. purification ===
+  classical: mixed marginal [0.3 0.7] has a pure (point-mass) joint extension: False (every marginal of a point mass is a point mass)
+  real   : purification in the real theory reproduces rho: True;  purification entries real: True;  two purifications related by a orthogonal map on the purifier: True
+  complex: purification in the complex theory reproduces rho: True;  purification entries real: n/a;  two purifications related by a unitary map on the purifier: True
+  => purification holds in real AND complex QM: it separates quantum from classical, NOT complex from real
+
+=== 2. fermionic local tomography (2 modes, parity superselection) ===
+  max local-even statistic difference: 0.0 ; global even observable: 1.0 vs -1.0
+  => fermionic QT fails local tomography (like real QM) while satisfying purification (SECONDARY: D'Ariano et al.)
+
+=== 3. Bloch-ball bits V_d and locally tomographic composites ===
+  d = 2 real (rebit)    : K_bit = 3, locally tomographic composite needs K_AB = 9
+  d = 3 complex (qubit) : K_bit = 4, locally tomographic composite needs K_AB = 16
+  d = 5 quaternionic    : K_bit = 6, locally tomographic composite needs K_AB = 36
+  real        : bit = 2x2 Hermitian, dim 3; natural 4-level composite = 4x4 Hermitian, dim 10; locally tomographic needs 9 -> mismatch
+  complex     : bit = 2x2 Hermitian, dim 4; natural 4-level composite = 4x4 Hermitian, dim 16; locally tomographic needs 16 -> MATCH
+  quaternionic: bit = 2x2 Hermitian, dim 6; natural 4-level composite = 4x4 Hermitian, dim 28; locally tomographic needs 36 -> mismatch
+  real composite is too big (10 > 9: a global-only parameter, W1-L); quaternionic 4x4 is too small (28 < 36);
+  only complex matches -> within Jordan/HSD + ball bits, local tomography singles out complex QM
+  (consistent with Barnum-Wilce, SECONDARY). The dimension count is checked here; the theorem itself is not.
+
+=== 4. Born accounting ===
+  eps = 0.0: h(p(mixture)) = 0.7500, mixture of h(p) = 0.7500  -> affine: True
+  eps = 0.3: h(p(mixture)) = 0.7023, mixture of h(p) = 0.7500  -> affine: False
+  => the GPT framework (outcome probability affine in the state = operational mixing) already excludes every
+     non-Born h; given self-duality, p(E|rho) = Tr(E rho). Born is bought by the FRAMEWORK premise, not by an axiom
