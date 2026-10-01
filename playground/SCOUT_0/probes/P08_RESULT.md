@@ -8,9 +8,13 @@
 > exclusion was a category error (under the recorded doubling the coordinate images commute and a
 > faithful homomorphism exists), and the Sz.-Nagy survival sentence named a map of vectors, not a
 > representation — though a faithful representation does exist there, the pullback `f∘P_H`, under the
-> record's Poisson algebra type for the Λ-H row. The fermionic exclusion is correct and now proved
-> **map- and image-independently** (finite-dimensional observable algebra). Net: **exactly one
-> theorem-grade exclusion (Λ-F); every finer discrimination is reading- and image-dependent.**
+> admissible classical function/Poisson reading inherited from the Λ-H row. The fermionic failure is correct and now proved
+> **map- and image-independently** (finite-dimensional observable algebra). Net: **Λ-F fails the
+> conditional ℝ[x] faithfulness criterion at theorem grade; every finer discrimination is reading- and image-dependent.**
+> *Wording note 01 (auditor, post-banking): "excluded" is reserved for an EARNED R-1 selector; ℝ[x] is a NEW
+> ASSUMPTION, so Λ-F "fails the conditional ℝ[x] faithfulness criterion" — same mathematics. The Λ-H row's
+> "Poisson" entry covers several heterogeneous conservative realizations; it is not an independently established
+> observable algebra for the Sz.-Nagy construction specifically.*
 > Corrected status in §"Verdict" below. Original text retained beneath for the audit trail, marked
 > where superseded.
 
@@ -51,15 +55,15 @@ an injective unital homomorphism extending the lift's *recorded* coordinate imag
 **(2-dyn)** plus the dynamics on the image intertwines the source flow. (These sub-readings are
 **post hoc** relative to `cf0f7fe` and are used only to demote exclusions, never to create one.)
 Two further choices cut across them and the record fixes **neither**: whether coordinate images must
-be **self-adjoint**, and whether the Λ-H dilations are read as **Poisson** (the record's own algebra
-column for that row, `L0_LIFT_SELECTION_01.md` §1) or as operator algebras.
+be **self-adjoint**, and whether the Λ-H dilations are read under the admissible classical
+function/**Poisson** reading inherited from the Λ-H row (`L0_LIFT_SELECTION_01.md` §1) or as operator algebras.
 
 | Lift | Reading 1 | 2-map | 2-state | 2-dyn | Reason (recorded map) |
 |---|---|---|---|---|---|
 | Λ-H cotangent lift (`H = pᵀf`) | not excluded | **survives** | survives (point states) | survives | `f ↦ f∘π`: pullback along a surjection; `δ_(x,p)` reproduce `f(x)`; `ẋ = ∂H/∂p = f(x)` projects to the source semiflow |
 | Λ-H Sz.-Nagy dilation | not excluded | **survives** under the recorded **Poisson** reading (`f ↦ f∘P_H`, the dual of `H ⊂ K`); **✗ / NOT-ESTABLISHED** under an operator reading (`dim B(H) = 529 < dim ℝ[x]_{≤3} = 2600`; no degree-1 operator image recorded) | ✓ under Poisson (`δ_{x⊕0}` reproduces *all* polynomials, odd included); ✗ under vector states (expectations even in `x`) | ✗ on `K` | **reading-dependent.** `cf0f7fe`'s "inclusion `H₀ ⊂ K`" named a map of vectors; the faithful map is the pullback `f∘P_H` |
 | Λ-B complex bosonic quasi-free | not excluded | **survives** (doubling `J` ⇒ `[Φ(e_i),Φ(e_j)] = i·Im⟨e_i,e_j⟩ = 0`; the unique hom extending `x_i ↦ Φ(e_i)`) | ✓ with non-`*` images (`√2a_i`: coherent states are joint eigenvectors) / ✗ with `*`-images (`⟨x|Φ²|x⟩ = x² + ½`; coherent states not orthogonal) | ✓ with `√2a_i` (`f(a) ↦ f(Ta)`) / ✗ with `Φ` (Mehler, LS-5) | **image-dependent.** Price of the non-`*` image: `π(x_i)* ≠ π(x_i)` — the bosonic analogue of LS-8 |
-| Λ-F complex fermionic quasi-free | not excluded | **FAILS** | ✗ | ✗ | observable algebra finite-dimensional (`Cl(ℝ²³)`, `Λ(ℝ²³)`: `2²³`; `CAR(ℂ²³) = M_{2²³}(ℂ)`: `2⁴⁶`; even subalgebras smaller): **no injective linear map** from `ℝ[x]`, whatever the coordinates map to (Cayley–Hamilton gives a univariate annihilator for any image); for odd images also `{u,v}=0 ⇒ uv=0` and `u² = scalar`. **The one invariant exclusion** |
+| Λ-F complex fermionic quasi-free | not excluded | **FAILS** | ✗ | ✗ | observable algebra finite-dimensional (`Cl(ℝ²³)`, `Λ(ℝ²³)`: `2²³`; `CAR(ℂ²³) = M_{2²³}(ℂ)`: `2⁴⁶`; even subalgebras smaller): **no injective linear map** from `ℝ[x]`, whatever the coordinates map to (Cayley–Hamilton gives a univariate annihilator for any image); for odd images also `{u,v}=0 ⇒ uv=0` and `u² = scalar`. **The one invariant failure** (conditional criterion; not an R-1 exclusion) |
 
 *Superseded (`cf0f7fe`):* "Λ-B FAILS because the Wick map is not multiplicative" (category error;
 its "Wick" was the Isserlis pairing expansion, hard-coded, and its LS-5 citation contradicts LS-5);
@@ -71,7 +75,7 @@ reading, wrong argument); "`x_i ↦ a_i`" as the fermionic proof (map-specific);
 
 **CONDITIONAL-ON-NEW-ASSUMPTION; EARNED SCOPE NOT-FORMULABLE (constraint empty a fortiori);
 `ℝ[x]` BRANCH FORMULABLE — ONE THEOREM-GRADE EXCLUSION, REMAINING SURVIVOR SET READING- AND
-IMAGE-DEPENDENT / PROVISIONAL.**
+IMAGE-DEPENDENT / PROVISIONAL.** *("Exclusion" below = failure of the conditional criterion, never an R-1 exclusion; Wording note 01.)*
 
 1. **Reading 1 (earned scope): the test is not formulable** as an operator-representation test —
    the "full source observable algebra" is not an earned object, which is precisely the charter's
@@ -82,16 +86,16 @@ IMAGE-DEPENDENT / PROVISIONAL.**
    under superselection (LS-8). What holds is that no lift is excluded, at the
    readout-identification (D-1/LS-1) level, that identification itself being a price.*
    **This is the robust result.**
-2. **Reading 2 (canonical polynomial algebra, NEW ASSUMPTION):** exactly one exclusion holds under
+2. **Reading 2 (canonical polynomial algebra, NEW ASSUMPTION):** exactly one failure holds under
    every sub-reading **and every image class** — the **complex fermionic lift**, by
    finite-dimensionality of its observable algebra (theorem grade, map-independent; scoped to the
    recorded `N = 23` one-particle space). The cotangent lift survives every sub-reading. Λ-B is
    **image-dependent** and Sz.-Nagy **reading-dependent** (table): each survives under the
    recorded reading and fails under a stronger one the record does not select. By the gate's own
    R-1 logic, and its precedent of listing NOT-ESTABLISHED lifts separately from the count
-   (evaluation §4, FKM): **one theorem-grade exclusion; established survivors under the recorded
+   (evaluation §4, FKM): **Λ-F fails the conditional ℝ[x] faithfulness criterion at theorem grade; established survivors under the recorded
    readings {cotangent, Sz.-Nagy, Λ-B}** — the count records *non-exclusion*, and "theorem grade"
-   attaches to the Λ-F exclusion alone, never to the count. The stronger sub-readings are recorded
+   attaches to the Λ-F failure alone, never to the count. The stronger sub-readings are recorded
    as mathematics and **not adopted**; each would be a further NEW ASSUMPTION and a post-hoc selector.
 3. **The sharper conditional finding:** granted its own new assumption, **the faithfulness
    constraint still cannot select** — beyond Λ-F, every further pruning needs a choice the record
@@ -139,7 +143,7 @@ IMAGE-DEPENDENT / PROVISIONAL.**
   (self-adjoint images: multiplicative but not expectation-reproducing, dynamics Mehler;
   non-self-adjoint `√2a_i`: all three sub-readings, at the cost of non-self-adjointness — the
   bosonic analogue of LS-8). The Sz.-Nagy dilation carries a priced **algebra-type choice**
-  (Poisson: the pullback `f∘P_H` is faithful and reproduces all polynomials; operator reading:
+  (admissible classical function/Poisson reading inherited from the Λ-H row: the pullback `f∘P_H` is faithful and reproduces all polynomials; operator reading:
   fails/NOT-ESTABLISHED). The quasi-free pair's previously priced limitation (D-2 coverage) is
   sharpened only for Λ-F.
 - **New priced items for the record:** the coordinate **image class** (`*` or not) and the
@@ -147,7 +151,7 @@ IMAGE-DEPENDENT / PROVISIONAL.**
   control the survivor set. Both belong on the supplied-structure list alongside readout
   identification.
 - **P-09 (locality) inherits ALL FOUR lifts under the earned reading.** Any conditional `ℝ[x]`
-  branch is run separately, with Λ-F excluded and Λ-B / Sz.-Nagy flagged provisional, and must
+  branch is run separately, with Λ-F failing the ℝ[x] criterion and Λ-B / Sz.-Nagy flagged provisional, and must
   declare its image class and algebra type **in advance and uniformly** (verification §5; ruling 02
   §2). Every added notion of quantum locality is priced as NEW ASSUMPTION.
 
@@ -172,4 +176,4 @@ IMAGE-DEPENDENT / PROVISIONAL.**
 - C4c: `⟨x⊕0, A(x⊕0)⟩` invariant under `x ↦ −x`; `x₁` is not.
 - C5: `x`-projection of the cotangent flow equals the source flow to `0.0e+00`, independent of `p₀`.
 
-**Status: P-08 COMPLETE, CORRECTED (CONDITIONAL-ON-NEW-ASSUMPTION; earned scope NOT-FORMULABLE, constraint empty a fortiori; `ℝ[x]` branch: Λ-F excluded at theorem grade map- and image-independently, remaining survivor set reading- and image-dependent/provisional; terminal untouched). Next: P-09 (locality-of-representation), frozen charter, inheriting all four lifts at earned scope.**
+**Status: P-08 COMPLETE, CORRECTED (CONDITIONAL-ON-NEW-ASSUMPTION; earned scope NOT-FORMULABLE, constraint empty a fortiori; `ℝ[x]` branch: Λ-F fails the conditional ℝ[x] faithfulness criterion at theorem grade, map- and image-independently, remaining survivor set reading- and image-dependent/provisional; terminal untouched). Next: P-09 (locality-of-representation), frozen charter, inheriting all four lifts at earned scope.** *(P-09 done: `P09_RESULT.md`.)*

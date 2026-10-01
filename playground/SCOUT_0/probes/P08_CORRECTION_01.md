@@ -6,7 +6,7 @@ operator-representation test at all** (the "full source observable algebra" is n
 object; EA-0 `n4`; bridge-ruling output-map warning), so it supplies **no earned selector** and
 excludes nothing. **Withdrawn:** the conditional claim "Reading 2 prunes 4 → 2, survivors
 {cotangent, Sz.-Nagy}" *as proved* — both of its load-bearing arguments are defective.
-**Replaced by:** one theorem-grade, map-independent exclusion (the fermionic lift) plus an explicit
+**Replaced by:** one theorem-grade, map-independent failure of the conditional criterion (the fermionic lift) plus an explicit
 demonstration that **every finer discrimination is reading- and image-dependent**. Terminal
 (IRREDUCIBLE/SUPPLIED) untouched; no new selector; faithfulness failure remains a constraint, not
 a disqualification (charter fences).
@@ -21,7 +21,7 @@ exclusions, never to create one.
 
 > **Earned scope: the test is not formulable as stated; it reduces to D-1 at the declared
 > coordinate class and excludes nothing. All four lifts survive.**
-> **Conditional `ℝ[x₁,…,x_N]` branch (NEW ASSUMPTION): exactly one exclusion holds under every
+> **Conditional `ℝ[x₁,…,x_N]` branch (NEW ASSUMPTION): exactly one failure holds under every
 > admissible sub-reading and every admissible image class — the complex fermionic lift, by
 > finite-dimensionality of its observable algebra. For the other three, survival is
 > reading-dependent: no further pruning is reachable without a further unpriced choice.**
@@ -96,7 +96,7 @@ Clifford) or `a_ia_j ≠ 0` (complex Fock); and `u² = c` scalar gives `π(x_i²
 explicit 2-mode CAR/Majorana matrices (script, C1).
 
 Because (2-state) and (2-dyn) each contain (2-map) as a conjunct, failure of (2-map) propagates to
-all three. **This is the one invariant exclusion in the whole audit.**
+all three. **This is the one invariant failure in the whole audit** (conditional criterion; not an R-1 exclusion).
 
 *Scope notes.* (i) **Map-independent is not lift-variant-independent:** the dimension count rests
 on the recorded *finite* one-particle space. A fermionic-noise dilation of the CP semigroup, or a
@@ -169,7 +169,7 @@ observable = "compression to `H`, `⟨v,Pv⟩`" (verification §5); recorded `(R
 `V` = `P⊕0`, value `⟨U(t)v,(P⊕0)U(t)v⟩` (evaluation §3). The Algebra column of its row is
 **Poisson** (`L0_LIFT_SELECTION_01.md` §1).
 
-- **Under the recorded Poisson / function-algebra reading: (2-map) and (2-state) SURVIVE.**
+- **Under the admissible classical function/Poisson reading inherited from the Λ-H row: (2-map) and (2-state) SURVIVE.**
   The dual of the inclusion `H ⊂ K` is the projection `P_H: K → H`, and
   **`π(f) = f∘P_H`** is an injective unital algebra homomorphism (pullback along a surjection) with
   `δ_{x⊕0}(π(f)) = f(x)` for **all** polynomials — odd ones included (script, C4a: `1`, `x₁`,
@@ -239,19 +239,19 @@ Applying the gate's own R-1 logic (an exclusion holding under one admissible rea
 identity/theorem grade), and the gate's precedent of listing NOT-ESTABLISHED lifts separately from
 the survivor count (evaluation §4, FKM):
 
-> **Exactly one theorem-grade exclusion (Λ-F). Established survivors under the recorded readings:
+> **Λ-F fails the conditional ℝ[x] faithfulness criterion at theorem grade. Established survivors under the recorded readings:
 > {cotangent, Sz.-Nagy, Λ-B}; which of the latter two survives a *stronger* reading depends on a
 > choice the record does not make.**
 
 The count "3" therefore records *non-exclusion*, not three verified representations; "theorem
-grade" attaches to the Λ-F exclusion alone, never to the count.
+grade" attaches to the Λ-F failure alone, never to the count.
 
 ## 4. Corrected status
 
 > **P-08: CONDITIONAL-ON-NEW-ASSUMPTION. EARNED SCOPE: the faithful-operator-representation test is
 > not formulable (the "full source observable algebra" is not an earned object — the charter's own
 > BLOCKED/ambiguity criterion); it reduces to D-1 at the declared coordinate class and excludes
-> nothing. CONDITIONAL `ℝ[x]` BRANCH: formulable; exactly one exclusion is theorem-grade and
+> nothing. CONDITIONAL `ℝ[x]` BRANCH: formulable; exactly one failure of the criterion is theorem-grade and
 > image-independent — the complex fermionic lift over the recorded `N = 23` one-particle space, by
 > finite-dimensionality. Remaining survivor set READING- AND IMAGE-DEPENDENT / PROVISIONAL.
 > Terminal untouched.**
@@ -267,7 +267,7 @@ is excluded**, at the readout-identification (D-1/LS-1) level, the identificatio
 price.
 
 **P-09 inheritance (binding):** run the earned reading on **all four** lifts. Any `ℝ[x]` branch is
-run separately, with Λ-F excluded and Λ-B / Sz.-Nagy flagged provisional, and must declare its
+run separately, with Λ-F failing the ℝ[x] criterion and Λ-B / Sz.-Nagy flagged provisional, and must declare its
 image class (`*` or not) and algebra type (Poisson or operator) **in advance and uniformly**, per
 verification §5 and ruling 02 §2. Every added notion of quantum locality is priced as NEW
 ASSUMPTION.
@@ -314,3 +314,18 @@ algebra" escapes the three sub-readings above.
 - `FRONTIER_QUEUE.md` — P-08 and P-09 rows.
 - `COUNTEREXAMPLE_LEDGER.md` — CE-03 (the two defective `cf0f7fe` arguments) and CE-04 (this
   memo's own refuted "no single map" claim).
+
+## 8. Wording note 01 (auditor, post-banking; mathematics unchanged)
+
+1. **"Excluded" is reserved for an EARNED R-1 selector** (`L0_LIFT_SELECTION_01.md` §5 R-1). `ℝ[x]` is a
+   NEW ASSUMPTION, so the Λ-F result is stated as: **"Λ-F fails the conditional `ℝ[x]` faithfulness
+   criterion at theorem grade."** Wherever this memo, `P08_RESULT.md`, the frontier queue or the
+   counterexample ledger said "excluded"/"exclusion" for Λ-F, read "fails the conditional criterion".
+   The summary-grade lines were reworded in place; §§1–5 keep their audit-trail wording under this note.
+2. **Sz.-Nagy algebra type.** The canonical table puts Sz.-Nagy in the Λ-H row whose Algebra column
+   says "Poisson", but that row bundles several heterogeneous conservative realizations (cotangent,
+   Bateman, FKM baths, Sz.-Nagy). The successful branch is therefore stated as: **"under the
+   admissible classical function/Poisson reading inherited from the Λ-H row, `f ↦ f∘P_H` is
+   faithful"** — not as a Poisson observable algebra independently established for the Sz.-Nagy
+   construction. Phrases above such as "the record's Λ-H algebra type is Poisson" (§2, §5) are to be
+   read this way. The conclusion (reading-dependent survival) is unchanged.
