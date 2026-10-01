@@ -13,9 +13,11 @@
 | S2-6 | basin / measure | **DONE** | attractor weights, MaxEnt, SRB all measure-priced; LT ⇔ ordered phase of a shared frame field (2⟨f_A f_B⟩: 1.83 at T = 1.8 → 0 at T = 3.2) |
 | ZOOM_OUT_02 | after the six mandated probes | **DONE**, repaired | T2-1 (C5 = D ⊕ H) WITHDRAWN (Y-03) → T2-1′: C5 → D ⊕ H ⊕ A (classification only) |
 | REPAIR 01 | owner audit of Wave-1 synthesis | **DONE** | Y-02…Y-06 |
-| S2-7 | consistent-histories set selection (attacks A) | **NEXT** | — |
+| S2-7 | consistent-histories set selection (attacks A) | **DONE** | NONUNIQUE / A-PRICED: consistent sets on S and E slots; pointer Z–Z consistent only with large env (m = 7: 0.051); final basis always free; exact global Dowker–Kent sets |
 | S2-8 | Darwinism / records (attacks A) | **DONE** | pointer selected given split (χ_Z 0.871 vs χ_X 0); split not selected (R = 8 for every slot; same state R = 8 vs 0 across frames); R = 8/4/2 by fragment grouping; scrambling kills plateau. A-PRICED + D-priced |
 | S2-G | dimension selection: local Hilbert / graph-spectral / spacetime / capacity, separately | ACTIVE | — |
-| ZOOM_OUT_03 / T2-2 | only after S2-1b, S2-3b and ≥ 1 access probe | GATED | — |
+| ZOOM_OUT_03 | after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7 | **DONE** | none of D, H, A eliminated; candidate T2-2 (split centrality): C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res |
+| S2-Σ | joint TPS selection by a combined objective (attacks Σ) | **NEXT** | — |
+| S2-H2 | can basin data (ordered phase, preparation class) move into special D? | QUEUED | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

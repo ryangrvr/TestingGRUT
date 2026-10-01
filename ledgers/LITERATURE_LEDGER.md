@@ -18,3 +18,7 @@
 | Furstenberg (horocycle uniquely ergodic); Marcus (horocycle mixing) | uniquely ergodic + mixing, zero entropy | SECONDARY | S2-3 hostile |
 | Aleksandrova–Borish–Wootters (2013): real QM + universal rebit reproduces complex QM | the imaginary unit as a physical reference rebit | SECONDARY; **abstract PRIMARY-ABSTRACT-VERIFIED by the owner (arXiv:1210.4535)**; encoding identity ✓ | S2-5 |
 | Bartlett–Rudolph–Spekkens (2007): reference frames and superselection | shared frames lift superselection / restore local access | SECONDARY | S2-5 |
+| Furstenberg (1973); Dani (1978); Dani–Smillie (1984); Marcus; Ratner | horocycle unique ergodicity (compact), invariant measures on SL(2,ℝ)/SL(2,ℤ), equidistribution of non-periodic orbits, mixing rates | SECONDARY; numerics ✓ (X₂) | S2-3b |
+| Zurek, quantum Darwinism | redundancy / pointer selection given a split | SECONDARY; numerics ✓ | S2-8 |
+| Griffiths; Gell-Mann–Hartle; Dowker–Kent (1996) | consistent histories; abundance of consistent sets | SECONDARY; numerics ✓ | S2-7 |
+| Carroll–Singh (Hilbert-space fundamentalism); Stoica (objection to its uniqueness) | TPS from (H, ψ) | SECONDARY, **unverified here** | ZOOM_OUT_03 / S2-Σ |

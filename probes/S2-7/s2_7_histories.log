@@ -1,0 +1,28 @@
+==============================================================================
+S2-7  consistent histories: S + 4 env qubits, two-time histories
+==============================================================================
+  closed system (g = 0)      slot 0 (S): fraction of (theta1,theta2) consistent at eps=0.05: 0.001;  Z-Z histories: 1.000;  #consistent sets 1
+  closed system (g = 0)      slot 1 (E1): fraction of (theta1,theta2) consistent at eps=0.05: 0.080;  Z-Z histories: 0.000;  #consistent sets 109
+  monitored system (g ~ 1)   slot 0 (S): fraction of (theta1,theta2) consistent at eps=0.05: 0.014;  Z-Z histories: 0.251;  #consistent sets 19
+     consistent sets far (>0.15 pi) from the pointer Z: 19  e.g. [(np.float64(0.222), np.float64(0.806)), (np.float64(0.25), np.float64(0.778)), (np.float64(0.278), np.float64(0.722)), (np.float64(0.306), np.float64(0.694))]
+  monitored system (g ~ 1)   slot 1 (E1): fraction of (theta1,theta2) consistent at eps=0.05: 0.037;  Z-Z histories: 0.776;  #consistent sets 50
+  strongly monitored (g ~ 4) slot 0 (S): fraction of (theta1,theta2) consistent at eps=0.05: 0.028;  Z-Z histories: 0.244;  #consistent sets 39
+     consistent sets far (>0.15 pi) from the pointer Z: 39  e.g. [(np.float64(0.111), np.float64(0.444)), (np.float64(0.111), np.float64(0.472)), (np.float64(0.111), np.float64(0.5)), (np.float64(0.111), np.float64(0.528))]
+  strongly monitored (g ~ 4) slot 1 (E1): fraction of (theta1,theta2) consistent at eps=0.05: 0.011;  Z-Z histories: 0.741;  #consistent sets 15
+
+--- Dowker-Kent-type sets: global projectors onto the evolving state itself ---
+  trial 0: max |D| = 2.57e-16  (P1 = projector onto a random-tilted global vector; P2 = its evolved image) -> exactly consistent, no TPS, no record structure
+  trial 1: max |D| = 2.60e-16  (P1 = projector onto a random-tilted global vector; P2 = its evolved image) -> exactly consistent, no TPS, no record structure
+  trial 2: max |D| = 3.15e-16  (P1 = projector onto a random-tilted global vector; P2 = its evolved image) -> exactly consistent, no TPS, no record structure
+  => consistency admits sets built from arbitrary global (non-local, non-record) projectors.
+     Selecting the quasi-classical set needs a supplied projector family: local slot (split), a basis class
+     (coarse-graining), and the time sequence - all access data.
+
+--- Persistent records: Z-Z consistency vs environment size (omega = 0.3, g_k ~ U(2,6)) ---
+  m = 1: Z-Z max|D| = 0.232;  consistent (13x13 grid, eps=0.05): 2; of which not Z-Z: 2; distinct theta1/pi among consistent: [np.float64(0.417), np.float64(0.583)]
+  m = 2: Z-Z max|D| = 0.489;  consistent (13x13 grid, eps=0.05): 0; of which not Z-Z: 0; distinct theta1/pi among consistent: []
+  m = 3: Z-Z max|D| = 0.376;  consistent (13x13 grid, eps=0.05): 1; of which not Z-Z: 1; distinct theta1/pi among consistent: [np.float64(0.333)]
+  m = 5: Z-Z max|D| = 0.092;  consistent (13x13 grid, eps=0.05): 4; of which not Z-Z: 4; distinct theta1/pi among consistent: [np.float64(0.167), np.float64(0.333), np.float64(0.75), np.float64(0.833)]
+  m = 7: Z-Z max|D| = 0.051;  consistent (13x13 grid, eps=0.05): 42; of which not Z-Z: 42; distinct theta1/pi among consistent: [np.float64(0.0), np.float64(0.083), np.float64(0.167), np.float64(0.25), np.float64(0.333), np.float64(0.417), np.float64(0.5), np.float64(0.583), np.float64(0.667), np.float64(0.75), np.float64(0.833), np.float64(0.917), np.float64(1.0)]
+  note: off-diagonal terms with b != b' vanish identically (orthogonal final projectors), so the FINAL-time
+  basis is never constrained by consistency: it is a free (access) choice in every consistent set.
