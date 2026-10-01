@@ -1,0 +1,44 @@
+h_eps monotone on [0,1] for |eps| <= 1: True
+
+=== 1. d = 2 projective: sum_i h(p_i) over random orthonormal bases ===
+  eps=0.00: max |sum - 1| = 1.11e-15   (Born)
+  eps=0.05: max |sum - 1| = 1.55e-15   -> valid non-Born frame function
+  eps=0.20: max |sum - 1| = 1.55e-15   -> valid non-Born frame function
+  eps=0.50: max |sum - 1| = 1.33e-15   -> valid non-Born frame function
+
+=== 2. d = 3 projective (Gleason regime) ===
+  eps=0.00: max |sum - 1| = 1.554e-15, median 2.220e-16
+  eps=0.05: max |sum - 1| = 2.066e-02, median 6.295e-03
+  eps=0.20: max |sum - 1| = 8.265e-02, median 2.504e-02
+  eps=0.50: max |sum - 1| = 2.067e-01, median 5.868e-02
+  functional equation: h(x)+h(y)+h(1-x-y)=1 on the simplex, with (1,0,0): h(1)+2h(0)=1, d=2 embedding h(0)=0
+  => h(x+y) = h(x)+h(y) on [0,1] => (monotone) h(p) = p. Check residual of the equation for h_eps at random (x,y):
+   eps=0.05: residuals [0.0095 0.0085 0.0184 0.0028 0.0026]
+   eps=0.2: residuals [0.0381 0.0341 0.0734 0.0113 0.0104]
+   eps=0.5: residuals [0.0953 0.0852 0.1836 0.0283 0.0259]
+
+=== 3. d = 2 POVMs (Busch regime): effects E_k = (2/n)|phi_k><phi_k|, value v(E) = h(Tr rho E) ===
+  trine       eps=0.00: max |sum - 1| = 6.661e-16
+  trine       eps=0.20: max |sum - 1| = 8.246e-02
+  5-star      eps=0.00: max |sum - 1| = 6.661e-16
+  5-star      eps=0.20: max |sum - 1| = 1.513e-01
+  tetrahedron eps=0.00: max |sum - 1| = 6.661e-16
+  tetrahedron eps=0.20: max |sum - 1| = 8.270e-02
+  Busch: additivity over all effect decompositions => v linear in E => v(E) = Tr(rho E), already for d = 2
+
+=== 4. composition + no-signalling: Bell pair, joint weights h(p_ab), normalized ===
+  Bell        eps=0.00: Bob P(b=0) across Alice's 4 basis choices = [0.5 0.5 0.5 0.5]  spread 1.11e-16
+  Bell        eps=0.05: Bob P(b=0) across Alice's 4 basis choices = [0.5 0.5 0.5 0.5]  spread 2.22e-16
+  Bell        eps=0.20: Bob P(b=0) across Alice's 4 basis choices = [0.5 0.5 0.5 0.5]  spread 1.11e-16
+  Bell        eps=0.50: Bob P(b=0) across Alice's 4 basis choices = [0.5 0.5 0.5 0.5]  spread 0.00e+00
+  cos/sin 0.4 eps=0.00: Bob P(b=0) across Alice's 4 basis choices = [0.82085 0.82085 0.82085 0.82085]  spread 0.00e+00
+  cos/sin 0.4 eps=0.05: Bob P(b=0) across Alice's 4 basis choices = [0.81306 0.81382 0.81577 0.816  ]  spread 2.93e-03  SIGNALLING
+  cos/sin 0.4 eps=0.20: Bob P(b=0) across Alice's 4 basis choices = [0.78978 0.79282 0.80125 0.80227]  spread 1.25e-02  SIGNALLING
+  cos/sin 0.4 eps=0.50: Bob P(b=0) across Alice's 4 basis choices = [0.74362 0.75132 0.77523 0.7781 ]  spread 3.45e-02  SIGNALLING
+
+=== 5. premise audit ===
+  Gleason: frame function on projectors of a SUPPLIED Hilbert space, dim >= 3, noncontextual (depends on P only)
+  Busch: additive probability on the SUPPLIED effect algebra (all POVMs admitted as measurements)
+  no-signalling: SUPPLIED tensor-product composition + the joint-weight rule applied to the composite
+  contextual escape: Kochen-Specker forbids noncontextual value assignments, not contextual ones;
+  Bohmian mechanics gets h(p)=p only via the quantum-equilibrium initial distribution (supplied preparation)
