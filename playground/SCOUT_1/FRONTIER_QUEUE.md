@@ -37,3 +37,5 @@
 
 | **D1-SCOUT** | pin = 0 + extended nonlinear dynamics (SCOUT-only) | **DONE** | B at D1 level, C within inherited structure (S2 Z₂ forbids λ₂); pin reveals not selects; ξ ≈ 0.58 β^(-1/3); TC-4 candidate | — |
 | **ZOOM_OUT_05** | after D1 | **DONE** | refined quotient principle; TC-4; OWNER STOP (D2–D4 gated) | awaiting owner: reproduction / freeze / D3 |
+| **W4-OG** | operator generation / closure hostile vs TC-4 | **DONE** | C. TC4-REFINED-HIERARCHY: λ₂ generated (0 → 0.274) when allowed, not when forbidden (0.002); sector/SSB/anomaly mechanisms; TC-4 strong form refuted (X-12) | CONTENT_SELECTION_LEDGER.md |
+| **ZOOM_OUT_06** | after W4 | **DONE** | boundary moved up to C3/C4/C5 + sector/state; TC-4′ candidate; D3 precisely motivated | OWNER DECISION (D3 gated) |

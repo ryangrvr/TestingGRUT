@@ -1,3 +1,7 @@
+> **W4-OG OUTCOME (X-12):** TC-4's strong form is **REFUTED at the operator level**. "λ₂ must be newly supplied" holds
+> only in the Z₂-symmetric sector at u₀ = 0. Once Z₂ is broken by any supplied ingredient, λ₂ is generated (c₂ = 0.274
+> from 0). See `W4OG_RESULT.md` and TC-4′.
+
 > **W4-0 (owner ruling): TC-4 status → HOSTILE TEST OPEN — OPERATOR-GENERATION LOOPHOLE.** Not promoted while
 > W4-OG is open. Wilsonian RG generically generates every symmetry-allowed operator. A zero bare coefficient of an
 > allowed operator may therefore be a *tuning*, not a supplied operator-class choice. The five instances are kept as
