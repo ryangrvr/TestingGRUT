@@ -1,0 +1,24 @@
+=== leading order (alpha_M = c a^n, c > 0): sign of mu-1 and of N per branch ===
+  branch 0 (b/c = (1-sqrt(4n+1))/n): n=0.5: (mu-1)/(c a^n)=-2.732, N/(c a^n)=+8.000  n=1: (mu-1)/(c a^n)=-1.618, N/(c a^n)=+4.382  n=1.5: (mu-1)/(c a^n)=-1.215, N/(c a^n)=+2.903  n=2: (mu-1)/(c a^n)=-1.000, N/(c a^n)=+2.000  n=3: (mu-1)/(c a^n)=-0.768, N/(c a^n)=+0.829  n=4: (mu-1)/(c a^n)=-0.640, N/(c a^n)=+0.017  n=6: (mu-1)/(c a^n)=-0.500, N/(c a^n)=-1.167
+  branch 1 (b/c = (1+sqrt(4n+1))/n): n=0.5: (mu-1)/(c a^n)=+0.732, N/(c a^n)=+8.000  n=1: (mu-1)/(c a^n)=+0.618, N/(c a^n)=+6.618  n=1.5: (mu-1)/(c a^n)=+0.549, N/(c a^n)=+6.431  n=2: (mu-1)/(c a^n)=+0.500, N/(c a^n)=+6.500  n=3: (mu-1)/(c a^n)=+0.434, N/(c a^n)=+6.838  n=4: (mu-1)/(c a^n)=+0.390, N/(c a^n)=+7.233  n=6: (mu-1)/(c a^n)=+0.333, N/(c a^n)=+8.000
+  c < 0 flips both signs of N at leading order -> early-time gradient instability for alpha_M < 0
+
+=== numerical scan (start a0 = 0.01 on the leading-order branch, +-5% perturbations) ===
+  n=1.0 c=+0.05 branch 0 (b/c=-1.236): [0] mu-1=-0.0787 Sig-1=-0.0393 K1res=1e-15 minN=+2.2e-03 | [+5%] mu-1=-0.0787 Sig-1=-0.0393 K1res=9e-16 minN=+2.2e-03 | [-5%] mu-1=-0.0787 Sig-1=-0.0393 K1res=9e-16 minN=+2.1e-03
+  n=1.0 c=+0.05 branch 1 (b/c=+3.236): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.0789 Sig-1=-0.0395 K1res=3e-14 minN=+3.1e-03
+  n=1.0 c=+0.20 branch 0 (b/c=-1.236): [0] mu-1=-0.2898 Sig-1=-0.1449 K1res=1e-15 minN=+8.8e-03 | [+5%] mu-1=-0.2898 Sig-1=-0.1449 K1res=9e-16 minN=+9.0e-03 | [-5%] mu-1=-0.2898 Sig-1=-0.1449 K1res=9e-16 minN=+8.5e-03
+  n=1.0 c=+0.20 branch 1 (b/c=+3.236): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.2908 Sig-1=-0.1454 K1res=5e-14 minN=+1.2e-02
+  n=1.0 c=-0.05 branch 0 (b/c=-1.236): [0] mu-1=+0.0832 Sig-1=+0.0416 K1res=7e-16 minN=-8.4e-02 | [+5%] mu-1=+0.0832 Sig-1=+0.0416 K1res=1e-15 minN=-8.4e-02 | [-5%] mu-1=+0.0832 Sig-1=+0.0416 K1res=9e-16 minN=-8.4e-02
+  n=1.0 c=-0.05 branch 1 (b/c=+3.236): [0] mu-1=+0.1183 Sig-1=+0.0592 K1res=9e-14 minN=-6.2e-02 | [+5%] BLOW-UP | [-5%] mu-1=+0.0835 Sig-1=+0.0417 K1res=3e-13 minN=-8.3e-02
+  n=1.5 c=+0.05 branch 0 (b/c=-1.097): [0] mu-1=-0.0596 Sig-1=-0.0298 K1res=7e-16 minN=+1.5e-04 | [+5%] mu-1=-0.0596 Sig-1=-0.0298 K1res=9e-16 minN=+1.5e-04 | [-5%] mu-1=-0.0596 Sig-1=-0.0298 K1res=7e-16 minN=+1.4e-04
+  n=1.5 c=+0.05 branch 1 (b/c=+2.431): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.0596 Sig-1=-0.0298 K1res=2e-14 minN=+3.0e-04
+  n=1.5 c=+0.20 branch 0 (b/c=-1.097): [0] mu-1=-0.2251 Sig-1=-0.1125 K1res=9e-16 minN=+5.8e-04 | [+5%] mu-1=-0.2251 Sig-1=-0.1125 K1res=9e-16 minN=+6.0e-04 | [-5%] mu-1=-0.2251 Sig-1=-0.1125 K1res=9e-16 minN=+5.6e-04
+  n=1.5 c=+0.20 branch 1 (b/c=+2.431): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.2252 Sig-1=-0.1126 K1res=2e-14 minN=+1.2e-03
+  n=1.5 c=-0.05 branch 0 (b/c=-1.097): [0] mu-1=+0.0620 Sig-1=+0.0310 K1res=9e-16 minN=-3.9e-02 | [+5%] mu-1=+0.0620 Sig-1=+0.0310 K1res=7e-16 minN=-3.9e-02 | [-5%] mu-1=+0.0620 Sig-1=+0.0310 K1res=9e-16 minN=-3.9e-02
+  n=1.5 c=-0.05 branch 1 (b/c=+2.431): [0] mu-1=+0.1092 Sig-1=+0.0546 K1res=1e-14 minN=-3.8e-02 | [+5%] BLOW-UP | [-5%] mu-1=+0.0620 Sig-1=+0.0310 K1res=3e-14 minN=-3.9e-02
+  n=3.0 c=+0.05 branch 0 (b/c=-0.869): [0] mu-1=-0.0380 Sig-1=-0.0190 K1res=7e-16 minN=-3.9e-02 | [+5%] mu-1=-0.0380 Sig-1=-0.0190 K1res=8e-16 minN=-3.9e-02 | [-5%] mu-1=-0.0380 Sig-1=-0.0190 K1res=9e-16 minN=-3.9e-02
+  n=3.0 c=+0.05 branch 1 (b/c=+1.535): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.0380 Sig-1=-0.0190 K1res=1e-14 minN=-3.9e-02
+  n=3.0 c=+0.20 branch 0 (b/c=-0.869): [0] mu-1=-0.1472 Sig-1=-0.0736 K1res=7e-16 minN=-1.5e-01 | [+5%] mu-1=-0.1472 Sig-1=-0.0736 K1res=8e-16 minN=-1.5e-01 | [-5%] mu-1=-0.1472 Sig-1=-0.0736 K1res=8e-16 minN=-1.5e-01
+  n=3.0 c=+0.20 branch 1 (b/c=+1.535): [0] BLOW-UP | [+5%] BLOW-UP | [-5%] mu-1=-0.1472 Sig-1=-0.0736 K1res=1e-14 minN=-1.5e-01
+  n=3.0 c=-0.05 branch 0 (b/c=-0.869): [0] mu-1=+0.0388 Sig-1=+0.0194 K1res=9e-16 minN=-2.0e-03 | [+5%] mu-1=+0.0388 Sig-1=+0.0194 K1res=7e-16 minN=-2.0e-03 | [-5%] mu-1=+0.0388 Sig-1=+0.0194 K1res=7e-16 minN=-2.0e-03
+  n=3.0 c=-0.05 branch 1 (b/c=+1.535): [0] mu-1=-0.0401 Sig-1=-0.0201 K1res=9e-16 minN=-1.8e-01 | [+5%] BLOW-UP | [-5%] mu-1=+0.0388 Sig-1=+0.0194 K1res=6e-15 minN=-2.0e-03

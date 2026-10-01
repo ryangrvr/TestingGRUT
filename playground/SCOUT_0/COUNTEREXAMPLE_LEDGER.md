@@ -53,3 +53,11 @@ One decisive counterexample per broad claim attempt. Smallest first.
 - **Same assumptions, opposite result:** `b = 0` with any admissible σ gives `h = p` exactly (martingale convergence), including asymptotic-only absorption (QSD).
 - **Same result, fewer assumptions:** decomposition independence alone (outcome frequencies a function of `ρ₁₁` for all mixtures) forces `h` affine, hence Born.
 - **Lesson for the scout:** nonlinearity in the branch coordinate is the enemy of Born, not its source; Born fixation is a martingale (linearity) property of a supplied stochastic law. See `probes/P15_RESULT.md`.
+
+## CE-07 (K1-OCC self-error, caught by external audit with primary text)
+
+- **Claims attacked:** (a) "Only Run Gravity sits exactly on Σ₀ = μ₀/2 at z = 0 for every amplitude"; (b) "holding K1 at all times forces GR within leading-order luminal Horndeski" (both in `probes/K1_OCCUPANCY_01.md`).
+- **Smallest counterexample (a):** Only Run gives `2Σ − μ = R = m_p²/M_*²` exactly; Linder's benchmark has `R → 1` only in the early universe, so today `R ≠ 1` and the model is off K1.
+- **Smallest counterexample (b):** `α_M = 0.1·Ω_DE(a)/Ω_Λ`, `α_B` on the branch `b/c = (1−√13)/3`: early-GR-restoring, gradient-stable, non-GR (`μ−1 = −0.092` today), K1 residual 9e-16 (`probes/K1H_RESULT.md`).
+- **Same assumptions, opposite result:** with `x > 0` (μ > 1) no stable early-GR-restoring luminal Horndeski K1 history was found in the scanned class.
+- **Lesson for the scout:** never identify a model's normalization epoch with z = 0 without reading its boundary conditions; never promote a small-α, α_B′-dropped ratio to an exact statement about a differential constraint.

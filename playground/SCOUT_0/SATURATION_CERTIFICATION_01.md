@@ -1,5 +1,11 @@
 # SCOUT_0 SATURATION CERTIFICATION 01 (against `SATURATION_CRITERIA.md`)
 
+> **AMENDMENT 01:** the route named below (K1-Z forecast against Only Run) rested on a withdrawn occupancy claim
+> (CE-07). The external audit replaced it with **K1-H** (exact Horndeski submanifold), now run (`probes/K1H_RESULT.md`:
+> sign-split; the sign of x is load-bearing). The verdict stays **NOT SATURATED**. The remaining high-value route is
+> now: K1-H's owed items (primary-text stability, widened scan, separatrix fate, beyond-Horndeski), plus an owner
+> ruling on the sign of x. K1-Z is on hold.
+
 Supersedes ZOOM_OUT_04 §7 (its S-a…S-e were weaker local substitutes). Inputs: every probe result, the
 four zoom-outs, the edge-data audit, `K1_OCCUPANCY_01.md`, and the P-24 addendum.
 

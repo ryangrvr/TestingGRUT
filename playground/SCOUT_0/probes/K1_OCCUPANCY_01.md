@@ -1,3 +1,10 @@
+> **CORRECTED — see `K1_OCCUPANCY_CORRECTION_01.md` and `K1H_RESULT.md`.** Two conclusions below are WITHDRAWN:
+> (1) "Only Run sits exactly on Σ₀ = μ₀/2 at z = 0 for every amplitude" — Only Run gives `2Σ − μ = R`, so it is on K1
+> only where `M_*² = m_p²`, which in Linder's benchmark is the early GR-restoration epoch, not z = 0;
+> (2) "holding K1 at all a forces GR within leading-order Horndeski" — the exact condition is a first-order ODE that
+> admits non-GR solutions (K1-H: stable ones exist on the μ < 1 half-line). Linder 2020 formulas upgraded to
+> PRIMARY-TEXT-VERIFIED (external audit). The text below is kept unchanged for the audit trail.
+
 # SCOUT_0 K1 OCCUPANCY CHECK 01 — does an established theory occupy `Σ₀ = μ₀/2`?
 
 **Purpose:** a hostile discriminator check on K1 (`P24_RESULT.md`) before anyone considers the fenced
