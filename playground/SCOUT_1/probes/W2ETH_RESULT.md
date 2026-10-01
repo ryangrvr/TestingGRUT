@@ -65,3 +65,23 @@
 
 **Status: W2-ETH COMPLETE — ATTRACTOR SELECTION of the KMS *shape* under a genericity price (non-integrability).
 T stays supplied (initial energy). Record's quadratic parents excluded from the mechanism (E-3 tension).**
+
+## Addendum — does genericity fix a universal *number*? (`w2eth_level_stats.py`, `.log`)
+
+**Setup:** level-spacing ratio `⟨r⟩`, L = 11 open chain, random site fields (no spatial symmetry), three
+realizations per case.
+
+| Case | `⟨r⟩` per realization | Mean | Reference |
+|---|---|---|---|
+| generic real | 0.509, 0.487, 0.521 | 0.506 | GOE 0.5307 |
+| integrable random TFIM | 0.403, 0.373, 0.354 | 0.377 | Poisson 0.3863 |
+| "complex" fields (added Y) | 0.527, 0.523, 0.524 | 0.525 | GOE-like |
+
+- **Genericity does fix a universal weight-0 number, but only within a supplied symmetry class.** The value
+  of `⟨r⟩` is set by the antiunitary class (Dyson's threefold way).
+- **Hostile catch (recorded post-hoc in the log).** The "complex" control was meant to be GUE but is **not**.
+  Single-site X/Y fields can be rotated into the x–z plane by local z-rotations, which commute with ZZ. The
+  model therefore has a hidden antiunitary and is GOE. This is a live example of hostile test #2: *the
+  symmetry class is a supplied datum, and it can be hidden.*
+- **Pattern:** genericity × (supplied symmetry class) × (imported theorem: RMT universality). TP-1 again,
+  with the genericity class as the principle.
