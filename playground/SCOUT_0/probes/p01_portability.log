@@ -1,0 +1,31 @@
+=== C0 replication anchor: chain, pin=0.3, bath n=23 (C1-a) ===
+  lam_min=0.3045 (>= pin)  k(40)=6.820e-09 (<= e^-12 = 6.1e-6)  grade=EXPONENTIAL
+
+=== C1 GAP edge: delete the pin (pin = 0) on different bath graphs ===
+  chain (amenable, 1D):
+    n=  23: lam_min=4.47e-03  local mass below 0.15 = 0.013  k(40)=1.110e-03  grade=ALGEBRAIC
+    n=  95: lam_min=2.71e-04  local mass below 0.15 = 0.013  k(40)=1.110e-03  grade=ALGEBRAIC
+    n= 383: lam_min=1.68e-05  local mass below 0.15 = 0.013  k(40)=1.110e-03  grade=ALGEBRAIC
+  random 3-regular bath (non-amenable limit; Kesten-McKay bottom d-2sqrt(d-1) = 0.1716):
+    n=  200: lam_min=3.06e-03  soft mass (lam<0.154) = 1.87e-03  n*soft = 0.374  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.276, min visible lam=0.158
+    n=  800: lam_min=7.53e-04  soft mass (lam<0.154) = 4.53e-04  n*soft = 0.363  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.282, min visible lam=0.167
+    n= 3200: lam_min=1.88e-04  soft mass (lam<0.154) = 1.13e-04  n*soft = 0.361  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.264, min visible lam=0.175
+  random 4-regular bath (non-amenable limit; Kesten-McKay bottom d-2sqrt(d-1) = 0.5359):
+    n=  200: lam_min=3.64e-03  soft mass (lam<0.482) = 2.65e-03  n*soft = 0.530  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.642, min visible lam=0.600
+    n=  800: lam_min=9.04e-04  soft mass (lam<0.482) = 6.53e-04  n*soft = 0.523  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.664, min visible lam=0.570
+    n= 3200: lam_min=2.27e-04  soft mass (lam<0.482) = 1.66e-04  n*soft = 0.530  raw window grade=ALGEBRAIC | soft-removed kernel: grade=EXPONENTIAL, fitted rate=0.648, min visible lam=0.543
+  -> chain: soft mass is n-independent (a real algebraic tail). Expander: soft mass ~ 1/n -> 0, and the
+     remaining kernel is exponential with rate >= the Kesten-McKay bottom: pin-free memory is exponential in the limit.
+  -> the carrier is the bottom of the retained
+     site's local spectral measure, which the pin supplies only when the graph itself does not
+
+=== C2 PASSIVITY edge, symmetric families ===
+  two-branch bath with a-b spring w=-1.5: eigenvalues [-1.7     0.5679  4.0321] (NOT passive)
+    retained weights [0.       0.211325 0.788675]  -> unstable mode weight = 0.0e+00 (antisymmetric, invisible)
+    kernel strictly decreasing on window: True; k(40) = 2.875e-11 > 0; visible Bernstein weights all at lam >= 0: True
+  same graph, symmetry broken by 0.05 on h-a: unstable weight = 2.90e-05, k(40)/k(1) = 2.74e+25 (growth: positivity lost)
+  chain (Jacobi): every eigenvector has nonzero endpoint component -> min retained weight over modes: 3.80e-04 > 0, so on the chain an unstable mode is always visible
+
+=== C3 PASSIVITY edge, asymmetric (directed) Laplacian: accretive but not CM ===
+  min eig(K+K^T) = 0.150 >= 0 (accretive/passive); eigenvalues complex: True
+  kernel min = +5.523e-04 (sign change: False); increasing somewhere: True -> not CM (record E-4: affinity -> not CM)
