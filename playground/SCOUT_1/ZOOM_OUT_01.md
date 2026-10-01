@@ -7,6 +7,9 @@
 > structure. Part (ii)'s bijection only shows that the transported principles gP are equally compatible with the
 > earned layer; it does not show that every G-breaking principle reduces to supplying Q.
 > Status: CANONICAL-CANDIDATE, pending W2-DT.
+> **W2-DT update:** TC1-SURVIVES-ANOMALY. Standing clarification: in a quantum theory with a scale anomaly, read G as
+> the **RG-covariant** scaling action (rescaling + coupling flow). Dimensional transmutation generates an RG-invariant
+> scale, but its absolute value still needs a coupling at a reference scale (a G-breaking boundary datum).
 
 # SCOUT-1 ZOOM-OUT 01 (after W1-C, W1-A, W1-I, W1-P)
 
