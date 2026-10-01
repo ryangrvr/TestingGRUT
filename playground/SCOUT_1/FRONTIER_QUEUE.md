@@ -12,7 +12,7 @@
 | W1-S | spectral dimension ⇒ edge exponent | **DONE** | CROSS-LAYER RESTRICTION γ = d/2−1+k (supplied T, d, boundary) + NON-SELECTION continuum γ = D/2−1 (X-03); E-14's 3/2 = supplied Dirichlet end | — |
 | W1-F | prediction-first FDT/KMS | **RETIRED** | T/H = 1/2π fixed given supplied dS + Hadamard; T_dS = 2.8e-30 K; non-distinctive | — |
 | **ZOOM_OUT_02** | Wave-1 synthesis | **DONE** | price table (5 premise classes); TC-2 candidate (classification only); Wave 2 spawned | W2-QE next |
-| W2-QE | Born as attractor (dBB relaxation) | NEXT | — | — |
+| W2-QE | Born as attractor (dBB relaxation) | **DONE** | A. COARSE-GRAINED RELAXATION — PREMISE-PRICED: H_fine conserved; H̄(t=4π) retains 1%→23% of H_fine as C = 4→32 (fails refinement); 1 mode none, 2 weak; sub-cell disequilibrium invisible | forward cross-check appended when complete |
 | W2-ETH | thermalization ⇒ KMS without supplied passivity | **DONE** | ATTRACTOR SELECTION of KMS shape (price: non-integrability = genericity, a 6th premise class); T set by supplied energy; record's quadratic parents excluded (E-3 tension) | — |
 | W2-FP | criticality without tuning (SOC) | **DONE** | TUNING RELOCATED to exact zeros (ε = 0 conservation, r = 0 separation) = G-fixed values; supplied | — |
 | W2-DT | dimensional transmutation vs TC-1 | **DONE** | TC1-SURVIVES-ANOMALY (G read as RG-covariant); TRUE NET REDUCTION of dimensionless input; absent from GRUT's quadratic floor (E-3 tension #2) | Wave-3 target: marginal interacting sector (owner premise) |
