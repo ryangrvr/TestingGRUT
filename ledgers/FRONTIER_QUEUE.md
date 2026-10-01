@@ -13,8 +13,8 @@
 | S2-6 | basin / measure | **DONE** | attractor weights, MaxEnt, SRB all measure-priced; LT ⇔ ordered phase of a shared frame field (2⟨f_A f_B⟩: 1.83 at T = 1.8 → 0 at T = 3.2) |
 | ZOOM_OUT_02 | after the six mandated probes | **DONE**, repaired | T2-1 (C5 = D ⊕ H) WITHDRAWN (Y-03) → T2-1′: C5 → D ⊕ H ⊕ A (classification only) |
 | REPAIR 01 | owner audit of Wave-1 synthesis | **DONE** | Y-02…Y-06 |
-| S2-7 | consistent-histories set selection (attacks A) | QUEUED (3rd, promoted) | — |
-| S2-8 | Darwinism / records (attacks A; A-PRICED if redundancy needs the split) | **NEXT** | — |
+| S2-7 | consistent-histories set selection (attacks A) | **NEXT** | — |
+| S2-8 | Darwinism / records (attacks A) | **DONE** | pointer selected given split (χ_Z 0.871 vs χ_X 0); split not selected (R = 8 for every slot; same state R = 8 vs 0 across frames); R = 8/4/2 by fragment grouping; scrambling kills plateau. A-PRICED + D-priced |
 | S2-G | dimension selection: local Hilbert / graph-spectral / spacetime / capacity, separately | ACTIVE | — |
 | ZOOM_OUT_03 / T2-2 | only after S2-1b, S2-3b and ≥ 1 access probe | GATED | — |
 

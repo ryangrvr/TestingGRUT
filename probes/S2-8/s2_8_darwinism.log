@@ -1,0 +1,36 @@
+==============================================================================
+S2-8  quantum Darwinism: S + 8 environment qubits, H = sum g_k Z_S Y_k
+==============================================================================
+
+--- 1. GIVEN the split S | E1..E8 (qubits): mutual-information plateau ---
+  |F| :     0     1     2     3     4     5     6     7     8
+  I   : 0.000 0.920 0.990 0.999 1.000 1.001 1.009 1.080 2.000    H(S) = 1.000
+  redundancy R_0.1 (fragments = single qubits) = 8.00
+
+--- 2. Pointer selection GIVEN the split: Holevo chi(basis on S : one env qubit) ---
+  Z basis     : chi(S:E1) = 0.8712,  chi(S:E1..E3) = 0.9998
+  X basis     : chi(S:E1) = 0.0000,  chi(S:E1..E3) = 0.0000
+  (Z+X)/sqrt2 : chi(S:E1) = 0.3503,  chi(S:E1..E3) = 0.3990
+  => pointer = Z (the observable the interaction couples to): SELECTOR (pointer, given split).
+
+--- 3. Can redundancy select WHICH slot is the system? (same state, same qubit TPS) ---
+  partial records (t as above)  : R_0.1 with slot j as 'system', j = 0..8:  8.0  8.0  8.0  8.0  8.0  8.0  8.0  8.0  8.0
+  perfect records (GHZ)         : R_0.1 with slot j as 'system', j = 0..8:  8.0  8.0  8.0  8.0  8.0  8.0  8.0  8.0  8.0
+  => perfect records: every slot is equally a 'system' with maximal redundancy (GHZ symmetry) - split NOT selected.
+
+--- 4. Redundancy across TPSs of the same global state ---
+  frame 1 (GHZ)                 : H(S) = 1.000, I(S:F) by |F| = 0.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 2.00, R = 8.0
+  frame 2 = CNOT-ladder frame   : H(S) = 0.000, I(S:F) by |F| = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00, R = 0.0
+  => same global state: maximal redundancy in one TPS, NONE in another. Redundancy is a TPS-relative quantity.
+
+--- 5. Fragment individuation (access): group the 8 env qubits into fragments ---
+  fragments of 1 qubit(s) (8 fragments): R_0.1 = 8.00
+  fragments of 2 qubit(s) (4 fragments): R_0.1 = 4.00
+  fragments of 4 qubit(s) (2 fragments): R_0.1 = 2.00
+  => R counts fragments; the number depends on how the observer's accessible fragments are individuated (A).
+
+--- 6. Environment self-interaction (D): scrambling destroys local records ---
+  no env-env coupling                   : I(S:F) = 0.00 0.91 0.99 1.00 1.00 1.00 1.01 1.07 2.00  H(S)=1.00  R=8.00
+  env all-to-all scrambling, same t     : I(S:F) = 0.00 0.06 0.18 0.42 0.98 1.58 1.85 1.94 2.00  H(S)=1.00  R=2.00
+  env scrambling, record then scramble 3t: I(S:F) = 0.00 0.02 0.08 0.28 1.01 1.71 1.92 1.98 2.00  H(S)=1.00  R=2.00
+  => redundancy needs a non-scrambling environment of separately accessible fragments (a D + A condition).
