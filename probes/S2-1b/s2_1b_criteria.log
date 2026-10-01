@@ -1,0 +1,52 @@
+==============================================================================
+S2-1b  competing locality criteria on the same abstract dynamics
+==============================================================================
+
+--- 0. Minimal k without a supplied number of factors (N = 16) ---
+  random H, 1 factor (16)   : k = 1  (#factors 1)
+  random H, 4 (x) 4         : k = 2  (#factors 2)
+  random H, 2 (x) 8         : k = 2  (#factors 2)
+  random H, 2 (x) 2 (x) 4   : k = 3  (#factors 3)
+  random H, 2^4 qubits      : k = 4  (#factors 4)
+  => over all factorizations minimal k is won by the TRIVIAL factorization (k = 1). The criterion is
+     ill-posed unless the number of factors or the local dimension is supplied (finest = prime: 2^4).
+
+--- Case A. N = 16: strong generic pair terms + weak bridge.  H = h12 + h34 + g X2 X3 ---
+  TPS                                k     edges       mdl        lr      loc2      auto
+  qubits 2(x)2(x)2(x)2               2         3        39    0.0815       1.0    0.5059
+  ququarts 4(x)4                     2         1       255    0.0002       1.0    0.9997
+  2 (x) 8                            2         1       255    0.1579       1.0    0.8087
+    minimal k                      -> qubits 2(x)2(x)2(x)2   (TIE with ququarts 4(x)4, 2 (x) 8)
+    sparse graph (edge fraction)   -> qubits 2(x)2(x)2(x)2
+    Lieb-Robinson                  -> ququarts 4(x)4
+    MDL                            -> qubits 2(x)2(x)2(x)2
+    locality-max                   -> qubits 2(x)2(x)2(x)2   (TIE with ququarts 4(x)4, 2 (x) 8)
+    autonomy                       -> ququarts 4(x)4
+
+--- Case B. n = 5 qubits, same local dimension, same #factors; TPS2 = Clifford-rotated frame ---
+
+  H = transverse-field Ising chain (2-local NN): 1500 random Clifford frames; strict exact-criterion disagreement patterns: 0
+
+  H = 3-body ZZZ chain + X fields: 1500 random Clifford frames; strict exact-criterion disagreement patterns: 1
+
+  pattern: rotated frame BETTER on ('mdl',), WORSE on ('edges',)
+  TPS                                k     edges       mdl        lr      loc2      auto
+  computational                      3         7       159     0.074    0.6999    0.6999
+  Clifford-rotated                   3         8       141    0.1038    0.8518    0.2267
+    minimal k                      -> computational   (TIE with Clifford-rotated)
+    sparse graph (edge fraction)   -> computational
+    Lieb-Robinson                  -> computational
+    MDL                            -> Clifford-rotated
+    locality-max                   -> Clifford-rotated
+    autonomy                       -> computational
+
+--- Stability (Case A). Perturb H -> H + eps V. Which measure for V? ---
+  V ~ GUE (TPS-neutral)      eps=0.001 : k q/Q = 4/2, MDL q/Q = 255/255, loc2 q/Q = 1.000/1.000, auto q/Q = 0.506/1.000
+  V ~ GUE (TPS-neutral)      eps=0.1   : k q/Q = 4/2, MDL q/Q = 255/255, loc2 q/Q = 0.993/1.000, auto q/Q = 0.510/0.991
+  V ~ 2-local in QUBIT TPS   eps=0.001 : k q/Q = 2/2, MDL q/Q = 66/255, loc2 q/Q = 1.000/1.000, auto q/Q = 0.506/1.000
+  V ~ 2-local in QUBIT TPS   eps=0.1   : k q/Q = 2/2, MDL q/Q = 66/255, loc2 q/Q = 1.000/1.000, auto q/Q = 0.501/0.992
+  V ~ local in QUQUART TPS   eps=0.001 : k q/Q = 2/2, MDL q/Q = 39/255, loc2 q/Q = 1.000/1.000, auto q/Q = 0.506/1.000
+  V ~ local in QUQUART TPS   eps=0.1   : k q/Q = 2/2, MDL q/Q = 39/255, loc2 q/Q = 1.000/1.000, auto q/Q = 0.494/1.000
+  => exact criteria (k, edges, MDL) are destroyed by any TPS-neutral perturbation; they 'survive' only under a
+     perturbation measure that is itself local in a chosen TPS (circular). Weighted criteria survive but still
+     disagree (loc2 vs autonomy). STABILITY IS MEASURE-PRICED.

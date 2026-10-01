@@ -16,3 +16,5 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | Haar on X₂ as the reference for mixing / correlation decay | S2-3b | Haar | supplied on X₂ (A fails: periodic-orbit measures); **earned** on compact Γ\SL(2,ℝ) (unique ergodicity, imported) | rigid homogeneous D |
 | "every non-periodic orbit equidistributes" | S2-3b | none (pointwise, exceptional set characterized) | **earned** | non-uniform convergence near the periodic set |
 | forgetting of a.c. preparations | S2-3b | a.c. class w.r.t. Haar | reference measure earned (compact); the restriction to a.c. preparations is an **access** limit | Dirac preparations never forgotten |
+| "stable" TPS under generic perturbation | S2-1b | GUE (TPS-neutral) vs TPS-local perturbation measures | supplied | GUE destroys all exact locality; a local perturbation measure presupposes the TPS |
+| "random Clifford frames" search | S2-1b | uniform over short random H/S/CNOT circuits (sampling convenience) | supplied | existence claims only; no frequency claims made |
