@@ -74,3 +74,36 @@
 
 **Status: W2-QE COMPLETE — A. COARSE-GRAINED RELAXATION, PREMISE-PRICED (pilot-wave law, mixing ψ, coarse
 graining, no-microstructure assumption). Fine-grained disequilibrium conserved; relaxation fails refinement.**
+
+## Addendum — forward-particle cross-check (`w2qe_bohm_relaxation.log`) and the method cross-check (`w2qe_crosscheck.py`, `.log`)
+
+**Forward particles** (N = 20000, C = 12, M = 4 box):
+
+| Run | H̄ |
+|---|---|
+| 16 modes, t = 0 → 11 | 0.802 → 0.432 → 0.288 → 0.196 → 0.150 → 0.112 → 0.065 → 0.044 |
+| same, dt = 0.001 | agrees to ≤ 0.002 |
+| equilibrium start | flat at the sampling bias (0.003–0.004) |
+| 16 modes, random amplitudes | 1.086 → 0.133 |
+| 1 mode | 1.3608, constant |
+| 2 modes (1,2)+(2,1) | **0.346 → 0.336**: essentially **no** relaxation |
+
+The forward method reproduces the firewall pattern: many modes relax at the coarse level; the controls do not.
+
+**The two-mode discrepancy, resolved.** In the firewall run, the 2-mode case relaxed partially (C = 8: 0.60 → 0.28).
+Running forward particles on the **firewall's own box** gives, at t = π:
+
+| C | forward | backward (dt 0.002) | backward (dt 0.0005) |
+|---|---|---|---|
+| 8 | 0.380 | 0.407 | 0.412 |
+| 4 | 0.231 | 0.249 | 0.250 |
+
+- **The methods agree** to within the backward evaluation's grid error. That error shows up as norm drift (~4 %)
+  and as the slight upward drift of `H_fine` on an under-resolved grid.
+- **The difference is physical.** Equal-energy modes give a **static** velocity field. The density then spreads only
+  along closed streamlines, and how much coarse spreading occurs depends on the relative phase (1.37 vs 0.45 rad)
+  and on the cell geometry.
+- So low-mode relaxation is **not robust**: it ranges from none to partial depending on supplied ψ details.
+  This **strengthens** the mixing-ψ price on the ledger.
+
+**Adjudication unchanged: A. COARSE-GRAINED RELAXATION — PREMISE-PRICED.**
