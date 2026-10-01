@@ -4,7 +4,8 @@ Not ranked by total score. Status / strongest objection / next decisive test per
 
 | ID | Route | Status | InfoGain | DepReach | EmpReach | AssumpCost | ImportRisk | Strongest objection | Next decisive test |
 |----|-------|--------|----------|----------|----------|------------|------------|---------------------|--------------------|
-| P-06 | CM/non-CM boundary, Lorentzian-exponent family | **COMPLETE — success (a)**: S5-1 scaled kernel CM; terminal fully-CM member; p=2 proven counterexample; bracket [1.0,2.0] | high (serves S-7) | medium (generator layer only) | none | very low | low | bracket not yet a theorem (small-t only for 1<p<2) | P-06b proof of small-t mechanism; P-06c second deformation direction |
+| P-06 | CM/non-CM boundary, Lorentzian-exponent family | **COMPLETE — success (a)**: S5-1 scaled kernel CM; terminal fully-CM member; p=2 proven counterexample; bracket [1.0,2.0] | high (serves S-7) | medium (generator layer only) | none | very low | low | bracket not yet a theorem (small-t only for 1<p<2) | ~~P-06b~~ **DONE — bracket closed as exact theorem (see P-06b row)**; P-06c second deformation direction |
+| P-06b | exact CM boundary theorem | **COMPLETE — THEOREM**: f_p CM ⟺ 0<p≤1. p≤1/2: direct Bernstein rep ∫e^{-zs}(s²−1)^{μ−1/2}ds, μ=1/2−p. 1/2<p≤1: rep × prefactor z^{2p−1}; lemma z^α·CM is CM for α∈(0,1] ⇒ boundary IS the prefactor exponent. p>1: recurrence ⇒ f″(0)=−2^{ν−2}Γ(ν−1)<0 uniformly | high (closes P-06; d_mono order parameter exact in-family) | medium | none | very low | low | family-only; does not transfer to other deformation directions | P-06c (two-scale mixtures) tests family-specificity |
 | P-08 | faithful-representation lift audit | QUEUED | high | high (lift layer) | none | very low | low | "full observable algebra" may be unstated for the classical substrate | read L0_LIFT_SELECTION_01.md survivor definitions; state faithfulness precisely; test |
 | P-09 | locality-of-representation constraint | QUEUED (after P-08) | high | high | none | low (NEW ASSUMPTION declared) | low | locality of a lift may be ill-defined without a declared geometry on the quantum side | freeze definition; test survivors |
 | P-17 | Caldeira–Leggett bath as C-B candidate | QUEUED | high | high (noise-origin seam) | none | medium | medium | may just reproduce standard QBM (= S-1 equivalence class, the designed null) | compute reduced mean response at O(t³); compare to C-B identity |
@@ -16,5 +17,5 @@ Not ranked by total score. Status / strongest objection / next decisive test per
 
 ## Wave-2 spawn queue (from Wave-1 results so far)
 
-- **P-06b:** prove the t^α small-t CM-killing mechanism for the full kernel → closes [1.0,2.0] as a theorem.
+- ~~**P-06b:** prove the t^α small-t CM-killing mechanism~~ → **DONE** (`probes/P06B_RESULT.md`): exact iff theorem; mechanism = prefactor z^{2p−1} with α=2p−1≤1 ⟺ p≤1.
 - **P-06c:** two-scale Lorentzian mixtures — is the Lorentzian exponent the *general* d_mono order parameter or family-specific?
