@@ -1,0 +1,63 @@
+=== KMS controls (single temperature) ===
+
+KMS T=1: w = [1.0, 2.0], T = [1.0, 1.0], beta_i*w_i = [1.0, 2.0]
+   single-copy ergotropy W_1 = 0.000e+00  -> PASSIVE
+   W_N / N, N = 1..: 0.000e+00 0.000e+00 -7.401e-17 0.000e+00 1.776e-16 0.000e+00 -6.344e-17 0.000e+00 0.000e+00
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = -2.2204e-16  (beta* = 1.0000)
+
+KMS T=0.3, three modes: w = [0.5, 1.0, 1.7], T = [0.3, 0.3, 0.3], beta_i*w_i = [1.6667, 3.3333, 5.6667]
+   single-copy ergotropy W_1 = -1.388e-17  -> PASSIVE
+   W_N / N, N = 1..: -1.388e-17 1.388e-17 1.850e-17 1.388e-17 0.000e+00 3.701e-17
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 2.0817e-16  (beta* = 3.3333)
+
+ground state (T=0, beta=inf): w = [1.0, 2.0], T = [0, 0], beta_i*w_i = [inf, inf]
+   single-copy ergotropy W_1 = 0.000e+00  -> PASSIVE
+   W_N / N, N = 1..: 0.000e+00 0.000e+00 0.000e+00 0.000e+00 0.000e+00 0.000e+00 0.000e+00 0.000e+00 0.000e+00
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 0.0000e+00  (beta* = 10000.0000)
+
+=== non-KMS but single-copy passive (beta_i w_i non-decreasing with w) ===
+
+T(w): T1=1.0, T2=1.5: w = [1.0, 2.0], T = [1.0, 1.5], beta_i*w_i = [1.0, 1.3333]
+   single-copy ergotropy W_1 = 0.000e+00  -> PASSIVE
+   W_N / N, N = 1..: 0.000e+00 0.000e+00 1.607e-03 3.300e-03 4.806e-03 5.408e-03 6.156e-03 6.630e-03 7.044e-03
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 1.1360e-02  (beta* = 0.7634)
+
+T(w): T1=1.0, T2=0.8: w = [1.0, 2.0], T = [1.0, 0.8], beta_i*w_i = [1.0, 2.5]
+   single-copy ergotropy W_1 = 0.000e+00  -> PASSIVE
+   W_N / N, N = 1..: 0.000e+00 5.551e-17 -7.401e-17 1.110e-16 -8.882e-17 0.000e+00 5.664e-06 2.791e-05 6.340e-05
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 3.1457e-03  (beta* = 1.1602)
+
+three modes, T rising slowly: w = [0.5, 1.0, 1.7], T = [0.3, 0.35, 0.4], beta_i*w_i = [1.6667, 2.8571, 4.25]
+   single-copy ergotropy W_1 = 5.359e-04  -> NOT passive
+   W_N / N, N = 1..: 5.359e-04 5.359e-04 7.638e-04 9.905e-04 9.991e-04 1.050e-03
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 2.0261e-03  (beta* = 2.9348)
+
+=== non-KMS and not even single-copy passive (population inversion across modes) ===
+
+T1=1.0, T2=3.0: w = [1.0, 2.0], T = [1.0, 3.0], beta_i*w_i = [1.0, 0.6667]
+   single-copy ergotropy W_1 = 7.030e-02  -> NOT passive
+   W_N / N, N = 1..: 7.030e-02 7.030e-02 7.030e-02 7.030e-02 7.052e-02 7.076e-02 7.109e-02 7.140e-02 7.164e-02
+   asymptotic per-copy limit E - E(gibbs at equal entropy) = 7.4820e-02  (beta* = 0.5426)
+
+=== single-copy passivity condition (two qubits): passive iff w1/T1 <= w2/T2 for w1<w2 ===
+   2000 random cases agree with the analytic condition: True
+   => for TWO modes single-copy passivity leaves a profile freedom (w/T(w) non-decreasing);
+      the three-mode case above already fails: level w1+w2=1.5 < w3=1.7 but carries less population
+
+=== many modes, ONE copy: how much temperature-profile freedom survives single-copy passivity? ===
+   profile T(w) = T0*(1 + eps*(w-1)), T0 = 0.5, modes equally spaced in [0.5, 1.5]
+   m= 2: single-copy passive iff |eps| <~ 1.0000 (eps>0 side)
+   m= 3: single-copy passive iff |eps| <~ 1.0000 (eps>0 side)
+   m= 4: single-copy passive iff |eps| <~ 0.1501 (eps>0 side)
+   m= 6: single-copy passive iff |eps| <~ 0.0769 (eps>0 side)
+   m= 8: single-copy passive iff |eps| <~ 0.0522 (eps>0 side)
+   m=12: single-copy passive iff |eps| <~ 0.0151 (eps>0 side)
+   m=16: single-copy passive iff |eps| <~ 0.0101 (eps>0 side)
+   m=20: single-copy passive iff |eps| <~ 0.0073 (eps>0 side)
+   dense-spectrum argument: levels {a,b} vs {c} with c ~ a+b force f(a)+f(b) = f(a+b), f(w) = w/T(w)
+   (Cauchy) => f linear => single beta. A macroscopic bath acts as its own copies.
+
+=== what complete passivity leaves: the FDT ratio shape fixed, its scale T free ===
+   T=  0.1: noise/dissipation ratio coth(w/2T) at w=0.5,1,2 -> [1.0136 1.0001 1.    ]  ; in scaled variable w/T it is the same function
+   T=  1.0: noise/dissipation ratio coth(w/2T) at w=0.5,1,2 -> [4.083 2.164 1.313]  ; in scaled variable w/T it is the same function
+   T= 10.0: noise/dissipation ratio coth(w/2T) at w=0.5,1,2 -> [40.0083 20.0167 10.0333]  ; in scaled variable w/T it is the same function
