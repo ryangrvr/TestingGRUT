@@ -236,3 +236,34 @@ effective observables).
 - **W5-5:** GRUT variables that wash out under the earned flow.
 
 **Outcomes:** A. C3-PARTLY-ERASABLE / B. C3-SUPPLIED-IN-GRUT-SCOPE / C. C3-NOT-REDUCED.
+
+---
+
+# D3-SCOUT — representation / composition selection (owner ruling after ZOOM_OUT_07). SCOUT-only. D2/D4 closed.
+
+**D3-0 FROZEN TARGET** (written before any reconstruction is audited). Target package Q, with items counted separately:
+1. a convex state/effect structure;
+2. complex (vs real / quaternionic) scalars;
+3. a tensor / composite rule;
+4. a composite dimension rule (`K_AB = K_A K_B`, `N_AB = N_A N_B`);
+5. a reversible transformation group (`PU(d)`);
+6. probability pairing / Born structure;
+7. purification / dilation;
+8. local tomography;
+9. superselection status;
+10. whether outcome probabilities are built into the framework.
+
+**Anti-circularity rule:** a theorem does not count as deriving an item if that item appears in its premises in other
+language. That includes the framework itself: GPT convexity + linear probability pairing counts as **supplying**
+items 1 and 10 and part of item 6.
+
+**Routes:**
+- A. Chiribella–D'Ariano–Perinotti 2011;
+- B. Masanes–Müller 2011 / Hardy 2001;
+- C. Barnum–Wilce (Jordan / HSD + local tomography + qubit).
+
+**Steps:** price table (classes A–G); single-axiom ablation with counterexample theories; purification hostile;
+local-tomography comparison; Born accounting; GRUT bridge from the actual record; information-compression partial
+order.
+
+**Two verdicts:** PHYSICS and GRUT.
