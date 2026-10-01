@@ -1,0 +1,55 @@
+
+=== pinned chain n=400, pin=0.3 (S5-1 / C1-a parent) ===
+predicate invariance:
+  S_lam (lam=3)      all predicates unchanged: True
+  S_lam (lam=0.2)    all predicates unchanged: True
+  T_s (s=+0.5)       all predicates unchanged: True
+  T_s (s=-0.2)       all predicates unchanged: True
+component equivariance (ratio to base):
+  lambda_0 | W (support width) | m1=K_rr | m2 | kappa=1/(2 sqrt m1) | kappa^2*m1 | lambda_0/W | edge exponent gamma | skew | excess kurtosis
+  base: 0.300061 3.99988 2.3 6.29 0.32969 0.25 0.0750176 0.462132 6.21725e-15 -1
+  S_lam (lam=3)     0.900184 11.9996 6.9 56.61 0.190347 0.25 0.0750176 0.462132 6.18435e-15 -1
+  S_lam (lam=0.2)   0.0600123 0.799975 0.46 0.2516 0.73721 0.25 0.0750176 0.462132 4.33681e-16 -1
+  T_s (s=+0.5)      0.800061 3.99988 2.8 8.84 0.298807 0.25 0.200021 0.462132 4.88498e-15 -1
+  T_s (s=-0.2)      0.100061 3.99988 2.1 5.41 0.345033 0.25 0.0250161 0.462132 3.66374e-15 -1
+
+=== pinned half-plane 30x30, boundary site (EDA W-A) ===
+predicate invariance:
+  S_lam (lam=3)      all predicates unchanged: True
+  S_lam (lam=0.2)    all predicates unchanged: True
+  T_s (s=+0.5)       all predicates unchanged: True
+  T_s (s=-0.2)       all predicates unchanged: True
+component equivariance (ratio to base):
+  lambda_0 | W (support width) | m1=K_rr | m2 | kappa=1/(2 sqrt m1) | kappa^2*m1 | lambda_0/W | edge exponent gamma | skew | excess kurtosis
+  base: 0.320523 7.95895 4.3 21.49 0.241121 0.25 0.040272 0.379783 -8.5465e-16 -0.777778
+  S_lam (lam=3)     0.961568 23.8769 12.9 193.41 0.139212 0.25 0.040272 0.379783 -7.79947e-15 -0.777778
+  S_lam (lam=0.2)   0.0641045 1.59179 0.86 0.8596 0.539164 0.25 0.040272 0.379783 -1.91962e-15 -0.777778
+  T_s (s=+0.5)      0.820523 7.95895 4.8 26.04 0.228218 0.25 0.103094 0.379783 3.675e-15 -0.777778
+  T_s (s=-0.2)      0.120523 7.95895 4.1 19.81 0.246932 0.25 0.015143 0.379783 3.58953e-15 -0.777778
+
+=== asymmetric ring (E-4 type) ===
+  base       complex modes present: True  max|Im|/max|Re-lam0| = 0.200000
+  S_lam 3    complex modes present: True  max|Im|/max|Re-lam0| = 0.200000
+  T_s +0.5   complex modes present: True  max|Im|/max|Re-lam0| = 0.200000
+
+=== hidden-sector relabeling U (U e_r = e_r), chain n=120 ===
+  max |moment_k difference| k=1..8: 2.0841525854421933e-15
+  spectra equal: True  retained weights equal (sorted): True
+  bandwidth in the ORIGINAL frame: before 1  after 119
+  bandwidth in the TRANSPORTED frame (U^T Ku U): 1
+  => E-2 locality is U-invariant only with the frame transported; mu_r is U-invariant outright.
+  Lanczos(K,e_r) vs Lanczos(UKU^T,e_r), first 30 coefficients: max diff 2.220446049250313e-15
+
+=== weighted homogeneity of record identities (sympy) ===
+  E-15 Delta c3 homogeneous iff w_beta + 2 w_a = 1: [{w_beta: 1 - 2*w_a}]
+  E-15 drift identity sets w_x = w_beta + w_T1 + w_a - 2 (consistent for any w_T1); pure numbers 12, 24, 44, 5 are weight-0
+  E-14 kappa(lam K11)/kappa(K11) = 1/sqrt(lam)  (weight -1/2; kappa^2 K11 = 1/4 is weight 0)
+
+=== fixed-point lemma ===
+  If P is G-invariant and P => Q = q* with Q(g m) = rho(g) Q(m), then rho(g) q* = q* for all admissible g.
+  weight 1: solutions of lam^w q = q for generic lam: [0] (plus q = infinity)
+  weight -1/2: solutions of lam^w q = q for generic lam: [0] (plus q = infinity)
+  weight 2: solutions of lam^w q = q for generic lam: [0] (plus q = infinity)
+  pin shift: lambda_0 + s = lambda_0 has no solution for s != 0 -> no finite lambda_0 selectable by T_s-invariant P
+  => invariant P can only impose G-invariant sets: for a weight-w quantity {0}, (0,inf), {inf} and unions
+     (sign/class statements), or exact values of weight-0 (G-invariant) combinations.
