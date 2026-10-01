@@ -44,3 +44,12 @@ One decisive counterexample per broad claim attempt. Smallest first.
 - **Same assumptions, opposite result:** none inside class 𝓗 (theorem). Outside it (anharmonic bath, coupling nonlinear in bath coordinates) — open; P-18.
 - **Same result, fewer assumptions:** the Gaussian/thermal hypothesis is not needed — only that the free-force law is independent of the system preparation (otherwise the deterministic slip `−γ(t)q₀` appears, and is absorbed into the memory term).
 - **Lesson for the scout:** "ongoing noise vs initial uncertainty" is a statement relative to a declared state space. Before reading a reduced-data discriminator as ontology, ask whether an enlarged deterministic parent with the same forcing law exists. See `probes/P17_RESULT.md`.
+
+## CE-06 (P-15): "a nonlinear self-consistent drift on branch weights yields Born-like outcome weights"
+
+- **Claim attacked:** the P-15 charter's hope that nonlinear branching dynamics generates the weight law.
+- **Smallest counterexample:** `dp = 2p(1−p)(2p−1)dt + √(2p(1−p)) dW` (frozen λ = 2): exact `h(0.25) = 0.21955 ≠ 0.25`, `h(0.75) = 0.78045` (MC-verified within 0.2–0.4 SE).
+- **Nearest counterexample:** any `b ≢ 0` — the backward equation forces `h(p) = p ⇒ b ≡ 0`.
+- **Same assumptions, opposite result:** `b = 0` with any admissible σ gives `h = p` exactly (martingale convergence), including asymptotic-only absorption (QSD).
+- **Same result, fewer assumptions:** decomposition independence alone (outcome frequencies a function of `ρ₁₁` for all mixtures) forces `h` affine, hence Born.
+- **Lesson for the scout:** nonlinearity in the branch coordinate is the enemy of Born, not its source; Born fixation is a martingale (linearity) property of a supplied stochastic law. See `probes/P15_RESULT.md`.

@@ -1,0 +1,37 @@
+=== PRE-FLIGHT: does the S2 C-B variable define a branch population? ===
+  C-B potential V = x.K_b.x/2 + beta sum x^4: min eig K_b = 0.3045 > 0, beta >= 0 => V strictly convex
+  => unique equilibrium x = 0, no two attractors, no bounded [0,1] coordinate, no canonical map to |alpha|^2: UNFORMULABLE-FROM-S2
+
+=== CORE: backward equation b h' + (1/2) sigma^2 h'' = 0, h(0)=0, h(1)=1 ===
+  Born h(p) = p  =>  L p = b(p) * 1 + (1/2) sigma^2 * 0 = b(p)  =>  Born for all p in (0,1)  <=>  b == 0 on (0,1)
+  scale function s'(p) = exp(-int 2b/sigma^2);  h(p) = s(p)/s(1) when s(0+), s(1-) finite and exit is a.s.
+
+=== A: driftless Wright-Fisher-type, sigma^2 = 2 D p(1-p) ===
+  h(p) = p exactly (s' = 1).  Mean absorption time E[tau] = -(p ln p + (1-p) ln(1-p))/D: solves D p(1-p) T'' = -1: True , T(0+), T(1-) = (0, 0)  (finite: exit boundaries, absorption in finite time)
+  A': sigma = 4 sqrt(kappa) p(1-p) (QSD diffusive unraveling): speed density ~ 1/p^2 near 0 is non-integrable -> natural
+      boundaries: absorption only ASYMPTOTIC (p_t -> {0,1} a.s. by bounded-martingale convergence), still h(p) = p
+
+=== B: frozen nonlinear drift b = lam p(1-p)(2p-1), same sigma^2 = 2 D p(1-p); c = lam/D = 2 ===
+  exact h_B(p): h(0.1)=0.07793, h(0.25)=0.21955, h(0.4)=0.38390, h(0.5)=0.50000, h(0.6)=0.61610, h(0.75)=0.78045, h(0.9)=0.92207
+  h_B(p) - p   : -0.02207, -0.03045, -0.01610, +0.00000, +0.01610, +0.03045, +0.02207  -> SELECTION-NON-BORN (majority amplified)
+
+=== Monte Carlo verification of exact hitting probabilities (Euler-Maruyama, absorbing clip) ===
+  p0=0.25: A MC=0.2523 exact=0.2500 (|d|/se=0.8) | B MC=0.2201 exact=0.2195 (|d|/se=0.2)  unabsorbed: 0.0e+00, 0.0e+00
+  p0=0.6: A MC=0.6028 exact=0.6000 (|d|/se=0.8) | B MC=0.6149 exact=0.6161 (|d|/se=0.4)  unabsorbed: 0.0e+00, 0.0e+00
+
+=== C: noise off (sigma = 0): p' = lam p(1-p)(2p-1) ===
+  fixed points 0, 1/2 (unstable for lam>0), 1; p0>1/2 -> 1, p0<1/2 -> 0, approach exponential (asymptotic, never in finite time)
+  'probability of branch 1' = mu({p0 > 1/2}) requires a SUPPLIED measure mu on initial conditions: DETERMINISTIC-BASINS / MEASURE-REQUIRED
+
+=== D: noise without absorption: b = gamma(p0 - p), sigma^2 = 2 D p(1-p), gamma = 4, p0 = 1/2 ===
+  stationary density ~ p^(2.0-1)(1-p)^(2.0-1) = Beta(2.0,2.0); exponents >= 1 => both boundaries unattainable
+  MC from p0=0.25 to t=20: absorbed fraction 0.0290 (-> 0): NO-SELECTION (stochastic, fluctuating, no definite outcome)
+
+=== E: same dephasing Lindblad (L = sqrt(kappa) sigma_z), two unravelings ===
+  ensemble |rho_01|(t=4): random-unitary 0.0715, QSD 0.0635, Lindblad exact 0.0620
+  populations: random-unitary p_t = 0.3 on every trajectory; QSD: mean 0.3013, fraction within 0.05 of 0 or 1: 0.907
+  -> identical decoherence (same ensemble master equation); selection present only in the QSD unraveling
+
+=== F: decomposition independence <=> Born (mixtures with the same rho_11) ===
+  B: pure p=0.4 -> h=0.38390;  50/50 mixture of p=0.2, 0.6 (same rho_11 = 0.4) -> 0.39271: outcome frequencies depend on the decomposition
+  A: h(p)=p -> both give 0.4. h decomposition-independent for all mixtures <=> h affine <=> (with h(0)=0, h(1)=1) h(p)=p

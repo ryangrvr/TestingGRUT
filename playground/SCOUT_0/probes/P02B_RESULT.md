@@ -12,6 +12,10 @@ gaps > 0). The lowest supported excitation at `q` = lowest Ritz value of `H` on 
 
 ## 0. Verdict
 
+> **Grade note (external audit):** the statement "for every U > 0" is **IMPORTED-STANDARD** 1D
+> Bose–Hubbard / Luttinger / Tonks physics. The L ≤ 14 exact diagonalization is **finite-size
+> confirmation**, not the proof, and is not presented as one anywhere below.
+>
 > **SAME-SPLIT restored by interaction (1D).** For every U > 0 the dense sector (ν = 1/2) has `z → 1`
 > and a soft point at `q = 2πν = π`: class `(1, 2)`, as for SF-1's fermions. The dilute sector
 > (fixed N) has `z → 2`: class `(2, 1)`.
@@ -100,7 +104,7 @@ Bogoliubov phonons; Lieb II 2k_F softening). KNOWN-BUT-NEW-IN-GRUT: interaction 
 the SF-1 carrier, the free-boson collapse is singular at U = 0, and the edge quotient must be lifted
 from one-body spectral data to many-body IR data.
 
-**Status: P-02b COMPLETE (one controlled pass). SAME-SPLIT for U > 0 in 1D (D: z → 1 with a soft point
+**Status: P-02b COMPLETE (one controlled pass). SAME-SPLIT for U > 0 in 1D (IMPORTED-STANDARD Luttinger/Tonks physics; L ≤ 14 ED = finite-size confirmation only) (D: z → 1 with a soft point
 at π; E: z → 2, via the Tonks argument for finite U). The free-boson collapse is singular at U = 0.
 The audit theorem holds at its quadratic scope only; the interacting quotient is many-body IR data
 (velocity + fixed-point type), still supplied. Next in sequence: P-15.**
