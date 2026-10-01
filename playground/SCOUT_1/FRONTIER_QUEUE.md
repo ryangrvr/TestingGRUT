@@ -20,8 +20,9 @@
 | W2-POS | positivity bounds vs K1 sides | PARKED (literature-gated) | — | — |
 | **ZOOM_OUT_03** | information accounting | **DONE** | one TRUE NR (W2-DT), one partial (W2-ETH); E-3 linearity wall blocks all NR mechanisms; TC-3 conjecture | Wave 3 |
 | W3-NL | declared nonlinear class → universal fixed point (EW→KPZ) | **DONE** | any ε>0 → KPZ β→1/3; ε survives only as a scale (classical transmutation, NR scoped); field extension is a SCOUT construction (premise change) | — |
-| W3-TC3 | Gaussian coarse-graining preserves quotient data | NEXT | — | — |
-| W3-PIN | pin = 0 fork as RG entry point | QUEUED (analysis; owner-level fork not entered) | — | — |
+| W3-TC3 | Gaussian coarse-graining preserves quotient data | **DONE** | TC-3 REFINED: exact decimation preserves μ_r; Gaussian flow forgets irrelevant data; continuum of fixed points (labels s, D, k); isolated fixed points need interactions | — |
+| W3-PIN | pin = 0 fork as RG entry point | **DONE (analysis)** | pin = 0 + extended nonlinear conserved field = minimal premise change for GRUT-internal NR | — |
+| **ZOOM_OUT_04** | after Wave 3 | **DONE** | E-3 wall; in-premise near saturation; OWNER STOP POINT: decision menu D1–D5 | awaiting owner |
 
 **ZOOM_OUT_01 (done):** new order W1-R → W1-S → W1-G → W1-L → W1-F → ZOOM_OUT_02. TC-1 (selector–supply equivalence, G-moved components) recorded as CANONICAL-CANDIDATE.
 

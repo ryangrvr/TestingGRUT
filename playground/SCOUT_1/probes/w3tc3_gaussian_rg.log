@@ -1,0 +1,20 @@
+=== 1. Schur-complement decimation preserves G_rr(z) ===
+  z = (-0.5+0.1j): |G_full - G_decimated| = 3.47e-18
+  z = (1+0.05j): |G_full - G_decimated| = 1.24e-16
+  z = (3+0.01j): |G_full - G_decimated| = 3.39e-15
+  decimation = exact reduction: the retained quotient mu_r is invariant (no flow of quotient data)
+
+=== 2. IR forgetting: nearest + next-nearest hopping, bulk gamma (quadratic minimum => -1/2) ===
+  t2 = +0.0: gamma = -0.499
+  t2 = +0.1: gamma = -0.498
+  t2 = +0.2: gamma = -0.498
+  t2 = -0.2: gamma = -0.546
+  t2 = -0.25 (fine-tuned: k^2 term cancels, k^4 minimum): gamma = -0.739 (predicted -3/4)
+
+=== 3. continuum of Gaussian fixed points: long-range hopping J(r) = r^{-(1+s)} ===
+  s = 0.5: dispersion exponent ~ 0.512 (predicted s) -> bulk gamma = 1/s - 1 = +1.000
+  s = 1.0: dispersion exponent ~ 0.989 (predicted s) -> bulk gamma = 1/s - 1 = +0.000
+  s = 1.5: dispersion exponent ~ 1.436 (predicted s) -> bulk gamma = 1/s - 1 = -0.333
+  s = 1.8: dispersion exponent ~ 1.653 (predicted s) -> bulk gamma = 1/s - 1 = -0.444
+  decimating every other site of a power-law chain leaves J_eff(r) ~ r^{-(1+s)} (same tail): s is a
+  fixed-point LABEL, not a flowing coupling. The Gaussian class is a continuous family of fixed points.
