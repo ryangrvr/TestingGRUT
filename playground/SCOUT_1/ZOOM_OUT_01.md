@@ -1,3 +1,13 @@
+> **AUDIT REPAIR 01 (external audit; see `AUDIT_REPAIR_01.md`) — TC-1 RENAMED AND NARROWED.**
+> **TC-1 — EARNED-LAYER NON-SELECTION UNDER G.** A finite non-zero G-moved quotient component cannot be selected
+> by the currently earned G-invariant predicate set. Any selector must introduce G-breaking structure. The current
+> GRUT record contains no earned G-breaking reference (W2-TC1 census).
+> **Withdrawn:** the slogan "any principle fixing such a component is information-equivalent to supplying its
+> value". A selector could break G through some *other* independently selected reference, or through anomalous/RG
+> structure. Part (ii)'s bijection only shows that the transported principles gP are equally compatible with the
+> earned layer; it does not show that every G-breaking principle reduces to supplying Q.
+> Status: CANONICAL-CANDIDATE, pending W2-DT.
+
 # SCOUT-1 ZOOM-OUT 01 (after W1-C, W1-A, W1-I, W1-P)
 
 ## Results so far

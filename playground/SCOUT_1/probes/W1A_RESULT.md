@@ -1,3 +1,15 @@
+> **AUDIT REPAIR 01:** the selected object is sharpened. The theorem-level datum is the **LSM/Oshikawa momentum
+> (anomaly) shift `Δq = 2πν mod reciprocal lattice`**, together with the **obstruction to a unique symmetric gapped
+> ground state** at fractional cell filling.
+> - "All `q ∈ 2πν·ℤ` are soft" is **withdrawn** as a universal claim.
+> - The obstruction can be discharged by gaplessness, by ground-state degeneracy / translation breaking, or (in
+>   d > 1) by other anomaly realizations.
+> - Only in the declared **1D gapless branch** (YOA; the tested ED parents) does it appear as a low-energy state at
+>   `2k_F = 2πν`.
+>
+> Classification: **CROSS-LAYER SELECTION OF MOMENTUM SHIFT / ANOMALY DATUM**. The ED evidence stands for the tested
+> parents.
+
 # SCOUT-1 W1-A RESULT — LSM/Oshikawa: symmetry + sector fix the soft-point momenta (C01; C02/C03 hostile)
 
 **Charter:** `PROBE_CHARTERS.md` §W1-A. Preregistered outcomes: CROSS-LAYER SELECTION / NOT FIXED / UNRESOLVED.

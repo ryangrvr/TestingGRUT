@@ -1,3 +1,10 @@
+> **AUDIT REPAIR 01:** the U(1) no-go is scoped. **A unitary 1+1D conformal IR theory with a non-trivial
+> continuous U(1) current algebra has c ≥ 1.** So W1-A-style gapless U(1) Luttinger parents lie outside the c < 1
+> FQS region.
+> - This is **not** a theorem about every lattice system that merely has a U(1) conserved charge. Such a system
+>   may be gapped, or its U(1) may not appear as a current algebra in the IR.
+> - The mutual exclusion is between the **two declared gapless-conformal selector mechanisms** on the same parent.
+
 # SCOUT-1 W1-R RESULT — unitarity rigidity and the IR central charge (C04)
 
 **Charter:** `PROBE_CHARTERS.md` §W1-R. Preregistered outcomes: RIGIDITY SELECTION (premise-priced) / NOT FIXED.

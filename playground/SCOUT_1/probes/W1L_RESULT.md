@@ -1,3 +1,15 @@
+> **AUDIT REPAIR 01:** the headline becomes **REAL-vs-COMPLEX DISCRIMINATOR / SELECTION WITHIN THE DECLARED FIELD
+> CLASS**.
+> - Kept: standard real QM fails local tomography; standard complex QM satisfies it (rebit witness).
+> - Not claimed: that local tomography + tensor composition alone reconstruct complex QM from all probabilistic
+>   theories. Full reconstruction needs further axioms (e.g. a Jordan / homogeneous-self-dual class, a qubit, and
+>   composition / non-signalling assumptions, depending on the theorem).
+> - The quaternionic case is **open** (not checked).
+> - The owner option "composition + tomography + no-signalling collapses three primitives" is downgraded to a
+>   **HIGH-VALUE CROSS-LAYER HYPOTHESIS**. It still has to show that the complex field, the Hilbert/effect
+>   structure, `p = |α|²` and the Born weights all follow from one common premise set without circularly supplying
+>   any of them.
+
 # SCOUT-1 W1-L RESULT — do reconstruction axioms select the lift's number field? (C32)
 
 **Charter:** `PROBE_CHARTERS.md` §W1-L. Preregistered outcomes: SELECTION PRINCIPLE (premise-priced) / NOT FIXED.

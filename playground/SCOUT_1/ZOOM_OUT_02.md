@@ -1,3 +1,7 @@
+> **AUDIT REPAIR 01:** read the W1-A row as "momentum shift / anomaly datum `Δq = 2πν`", the W1-L row as
+> "real-vs-complex discriminator within the declared class", the composition-subfamily "three-for-one" as a
+> hypothesis, and TC-1 as "earned-layer non-selection under G". See `AUDIT_REPAIR_01.md`.
+
 # SCOUT-1 ZOOM-OUT 02 — Wave-1 synthesis (after W1-R, W1-S, W1-G, W1-L, W1-F)
 
 ## The Wave-1 ledger

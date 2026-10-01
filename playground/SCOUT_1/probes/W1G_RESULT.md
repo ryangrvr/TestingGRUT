@@ -1,3 +1,6 @@
+> **AUDIT REPAIR 01 (cross-reference):** the owner option recorded in W1-L (three-primitive collapse) is
+> downgraded to a HIGH-VALUE CROSS-LAYER HYPOTHESIS. W1-G's own premise-priced selection is unchanged.
+
 # SCOUT-1 W1-G RESULT — quantum-foundations selectors for the outcome weight law (C10, C11)
 
 **Charter:** `PROBE_CHARTERS.md` §W1-G. Question: do Gleason (d ≥ 3), Busch (POVMs, d ≥ 2) or composition +

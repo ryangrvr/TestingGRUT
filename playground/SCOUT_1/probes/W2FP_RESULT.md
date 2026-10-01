@@ -1,3 +1,8 @@
+> **AUDIT REPAIR 01 (scope):** the result is kept for the tested model only. **In the tested BTW
+> (absorbing-state-style) implementation, the apparent removal of critical tuning relocates it to exact bulk
+> conservation and a slow-drive / time-scale-separation limit.** It is not universalized to "SOC requires exactly
+> ε = 0 and r = 0" for all SOC models.
+
 # SCOUT-1 W2-FP RESULT — criticality without tuning? (BTW sandpile)
 
 **Charter:** `PROBE_CHARTERS.md` §W2-FP. Preregistered outcomes: UNTUNED FIXED POINT / TUNING RELOCATED / NO.

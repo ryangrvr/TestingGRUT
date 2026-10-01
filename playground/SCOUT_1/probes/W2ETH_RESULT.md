@@ -1,3 +1,12 @@
+> **AUDIT REPAIR 01:** "attractor" is repaired.
+> - A finite closed unitary system has recurrences and no literal dissipative Gibbs attractor.
+> - What was computed: **in the tested non-integrable finite chains (L ≤ 12), the reduced *diagonal ensemble*
+>   becomes closer to the Gibbs reduced state as L increases, consistent with ETH / local thermalization.**
+> - Classification: **LOCAL THERMALIZATION / EFFECTIVE ATTRACTOR IN THE THERMODYNAMIC-DEPHASING SENSE**, not a
+>   phase-space attractor.
+> - Kept: β is fixed by the initial energy; the non-integrability (genericity) price; the integrable control; the
+>   E-3 tension.
+
 # SCOUT-1 W2-ETH RESULT — KMS without a supplied passive preparation? (closed-system thermalization)
 
 **Charter:** `PROBE_CHARTERS.md` §W2-ETH. Preregistered outcomes: ATTRACTOR SELECTION (prices) / NO.

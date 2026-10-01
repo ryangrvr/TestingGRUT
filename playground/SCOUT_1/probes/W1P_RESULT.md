@@ -1,3 +1,15 @@
+> **AUDIT REPAIR 01:** "single-copy passivity suffices for a macroscopic dense bath" is **downgraded** to a
+> **FAMILY NUMERICAL OBSERVATION**. Inside the tested one-parameter family `T(ω) = T₀(1 + ε(ω−1))`, the passive
+> ε-window shrinks as the sampled mode count grows. It is **not** a dense-spectrum theorem, and the Cauchy sketch
+> is heuristic, not proved.
+> Explicitly retained:
+> - passivity ≠ complete passivity in general;
+> - non-Gibbs passive states exist (shown above for two modes);
+> - **complete passivity is the theorem-level equilibrium selector** (Pusz–Woronowicz/Lenard).
+>
+> Any infinite-system result making one-copy passivity sufficient must price its extra assumptions (clustering,
+> phase structure) separately.
+
 # SCOUT-1 W1-P RESULT — does complete passivity fix the forcing-law temperature profile? (C12)
 
 **Charter:** `PROBE_CHARTERS.md` §W1-P. Preregistered outcomes: SELECTION PRINCIPLE (premise-priced) / NOT FIXED.

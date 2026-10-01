@@ -1,3 +1,7 @@
+> **AUDIT REPAIR 01:** "TC-1 survives" now refers to the renamed **TC-1 — earned-layer non-selection under G**.
+> This census establishes its final sentence ("the current record contains no earned G-breaking reference") as a
+> **record census**. It is not universalized to future principles.
+
 # SCOUT-1 W2-TC1 RESULT — hostile search of the record for an earned absolute reference (TC-1 hygiene)
 
 **Question:** TC-1 (ZOOM_OUT_01) holds only if G (time/rate rescaling, pin shift, hidden relabeling) is a
