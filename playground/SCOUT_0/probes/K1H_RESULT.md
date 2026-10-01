@@ -7,8 +7,8 @@
 > non-GR μ > 1 K1 histories exist in every tested history.
 > (3) **Terminology:** "attractor/repelling" below means ODE-ATTRACTING/ODE-REPELLING (forward in a), not EFT stability. As a
 > past asymptote the strong branch is the generic GR-restoring origin and the weak branch the exceptional one.
-> (4) The weak-side EFT stability is reading-dependent (`K1HS_RESULT.md` §6); "HORNDESKI-OCCUPIED for μ < 1" holds
-> under the BS reading only. The text below is kept for the audit trail.
+> (4) Final audit ruling: there is only one stability criterion (`N`; Linder's own c_s² reduces to it exactly,
+> `k1hs_denominator.log`), so "HORNDESKI-OCCUPIED for μ < 1" holds in the tested EFT-stable histories, with no reading caveat. The text below is kept for the audit trail.
 
 # SCOUT_0 K1-H RESULT — is `2Σ − μ = 1` a viable non-GR luminal Horndeski submanifold?
 

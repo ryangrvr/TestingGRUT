@@ -106,22 +106,35 @@ wherever `α_B` crosses zero.
 > **K1-H's "μ > 1: GR-ONLY-AFTER-STABILITY" is WITHDRAWN.** (It was already demoted to UNRESOLVED by
 > the audit; K1-HS resolves it to A.)
 
-## 6. A denominator-consistency question (owed; affects only the weak side)
+## 6. Denominator question — RESOLVED (final audit ruling; `k1hs_denominator.py`)
 
-Linder's `μ = R(1 + A²/D)` has the standard quasi-static structure `μ = R(1 + A²/(2αc_s²))`, with `D`
-in the place of `2αc_s²`. The verified Horndeski expression gives
-`αc_s² = D/2 − (2−α_B)H′/H − ρ_m/(H²M_*²)`, which differs from `D/2` by background/matter terms
-(`3Ω_m(1 − R − α_B/2)` on a ΛCDM background normalized with `m_p`).
+> *Superseded text: an earlier version of this section offered two stability readings ("BS" vs "L", with
+> `αc_s² = D/2`) and said the weak side might be gradient-unstable. That "reading L" was a **mistaken
+> identification** and is withdrawn.*
 
-| Reading | Strong side (`α_B > 0`) | Weak side (K1-H, `−2α_M < α_B < 0`) |
-|---|---|---|
-| **BS** (stability = verified `N`) | EFT-stable (30/30) | EFT-stable (`min N > 0`) |
-| **L** (`αc_s² = D/2`, as Linder's `μ` structure implies) | EFT-stable (30/30): on K1, `αc_s² = α_B A R/(2(1−R)) > 0` | **gradient-UNSTABLE** (`min D/2` from −0.08 to −0.23) |
+- **What `D` is:** Linder's `G_matter`, `G_light` (his Eqs. 8–9) are quasi-static/sub-horizon Horndeski
+  expressions. Their denominator `D` is **not** `2αc_s²` in general.
+- **What `αc_s²` is:** Linder separately states
+  `αc_s² = (1 − α_B/2)A + (Hα_B)′/H + ρ_m(1−R)/H² + ρ_de(1+w)/H²`.
+  With the effective-background relation `−2H′/H = (ρ_m + ρ_de(1+w))/(m_p²H²)`, this reduces
+  **exactly** to `N = D/2 − (2−α_B)H′/H − ρ_m/(H²M_*²)` — the verified Bellini–Sawicki/Peirone
+  expression used throughout. (Checked symbolically: difference = 0, `k1hs_denominator.log`.)
+- **So there is one stability criterion: `N > 0`** (with `α = α_K + 3α_B²/2 > 0`).
 
-- **Either way, the strong half is occupied.**
-- The weak half's EFT status depends on which reading Linder's equations assume. That is an owed
-  primary-text check: whether his Eqs. (8)–(9) are exact quasi-static expressions on a general
-  background, or assume a background in which these terms cancel.
+**Resolved classification:**
+
+| K1 side | Status |
+|---|---|
+| weak (`μ < 1`) | **Horndeski-occupied in the tested EFT-stable histories** (K1-H: `min N > 0` for Ω_DE-tracking, `a¹`, `a^1.5`) |
+| strong (`μ > 1`) | **Horndeski-occupied in the tested EFT-stable histories** (§§3–4) |
+
+**Scope:**
+- luminal Horndeski (`α_T = 0`);
+- quasi-static approximation for the `μ/Σ` mapping, which is good at ordinary LSS scales and can fail
+  on very large scales (Peirone et al. 2018);
+- the tested backgrounds (ΛCDM) and α-histories only.
+
+It is **not** a statement about arbitrary super-horizon/large-scale perturbations, or beyond Horndeski.
 
 ## 7. Consequence (as pre-registered by the audit)
 
@@ -137,7 +150,7 @@ cut, against Horndeski's history-dependent `μ − 1 = 2α_M(1−R)/α_B`. But t
 constant `x` a cut ("x is a kernel, not a constant"), so that would need its own derivation before it
 could count. **Not pursued here.**
 
-**Status: K1-HS COMPLETE. A. STRONG-K1-VIABLE across all tested histories (series-converged and
-shooting families). K1-H's μ > 1 classification withdrawn. The weak side's EFT status is
-reading-dependent (owed primary-text check). K1-Z remains on hold; no sign(x) ruling; Π₀/p_tt not
-entered.**
+**Status: K1-HS COMPLETE (final audit ruling applied). A. STRONG-K1-VIABLE across all tested histories.
+K1 (`2Σ − μ = 1`) is Horndeski-degenerate on BOTH sides within the tested luminal/QSA class. K1-H's μ > 1
+classification is withdrawn (CE-08); the 'reading L' caveat is withdrawn. K1-Z RETIRED/NON-DISTINCTIVE; no
+sign(x) ruling; Π₀/p_tt not opened on the basis of K1.**
