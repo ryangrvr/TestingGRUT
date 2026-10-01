@@ -1,0 +1,35 @@
+=== 1. end-site readout on a chain: uniqueness up to sign gauge ===
+  max|a - a_rec| = 3.850697538609893e-12   max| |b| - b_rec | = 1.4583889651476056e-12
+  sign-gauge S K S (S_00 = 1): same mu_r: True   (S is a hidden-sector U preserving the chain frame)
+
+=== 2. interior-site readout: continuous family of distinct chains, same mu_r ===
+  chain A couplings (left|right): [0.715 1.157 0.931 0.708 1.13 ] | [0.881 0.929 0.793 1.051 0.615 0.823]
+  chain B couplings (left|right): [0.935 1.08  0.933 0.899 0.254] | [0.707 0.894 0.508 0.835 0.692 0.012]
+  centre couplings A: (1.0, 1.0)   B: (np.float64(0.7465), np.float64(1.2011))
+  same mu_r at the centre: True    spectra of K equal: True
+  isospectral but not isometric: |K_A - K_B|_F = 3.2153 ; mirror image of B equals A? False
+  atom partitions of sigma (13 atoms) into a left half of 6 and right half of 7: 1716 -> that many distinct chains (finite case); all splits n_L'+n_R'=13: 8190 (ordered)
+  infinite-chain case: sigma = f*sigma + (1-f)*sigma for any measurable 0<=f<=1 -> continuous family
+
+=== 3. different topology, same mu_r at the root ===
+  star-tree root measure has 3 atoms; Lanczos chain: a = [2.3 2.3 2.3]  b = [1.       1.414214]
+  chain with b1 = sqrt(2) reproduces mu_root: True
+  12x12 square-lattice corner: Lanczos chain b_0..b_6 = [1.4142 1.7321 1.8257 1.8886 1.9157 1.9389 1.9503]  (a 1D chain with these couplings has identical corner mu_r)
+
+=== 4. finite access depth: 2k moments <-> k Jacobi layers ===
+  k= 3: from m_0..m_6: max|a-a_true| over first 3 = 8.88e-16, max|b-|b_true|| over first 2 = 1.22e-15
+  k= 6: from m_0..m_12: max|a-a_true| over first 6 = 9.33e-15, max|b-|b_true|| over first 5 = 3.11e-15
+  k=10: from m_0..m_20: max|a-a_true| over first 10 = 5.73e-14, max|b-|b_true|| over first 9 = 7.44e-15
+  chains equal on layers < 5, different deeper: relative moment differences m_0..m_13:
+    -2.2e-16 0.0e+00 -1.3e-16 1.6e-16 1.9e-16 0.0e+00 0.0e+00 -6.4e-16 -8.2e-16 -8.6e-16 -1.2e-15 -4.0e-08 -3.0e-07 -1.3e-06
+
+=== 5. stability: noisy mu_r -> deep coefficients ===
+  eps=1e-12: median |b_j error| at j = 0, 5, 10, 20, 28: 9.2e-13 1.4e-11 1.3e-11 1.4e-11 7.4e-11
+  eps=1e-08: median |b_j error| at j = 0, 5, 10, 20, 28: 8.9e-09 8.7e-08 1.2e-07 8.1e-08 1.5e-06
+  eps=1e-04: median |b_j error| at j = 0, 5, 10, 20, 28: 9.7e-05 1.5e-03 1.1e-03 1.3e-03 1.4e-02
+
+=== 5b. moment route conditioning (Hankel matrix of mu_r, mpmath) ===
+  k= 4: cond(H_k) = 9.11e+08
+  k= 8: cond(H_k) = 1.52e+18
+  k=12: cond(H_k) = 6.18e+26
+  k=16: cond(H_k) = 2.01e+34
