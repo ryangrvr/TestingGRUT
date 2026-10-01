@@ -30,9 +30,12 @@ supplied inputs, does it bear on an empirical observable, does it differ from a 
 
 ## Verdict
 
-> **Census-confirmed (search grade): K1 `Σ₀ = μ₀/2` is the only lock on the record that is
-> simultaneously law-level, parameter-eliminated, tied to an identified empirical observable, and off
-> a standard class.**
+> **Census-confirmed (search grade): K1 `Σ₀ = μ₀/2` is the unique record lock satisfying the census
+> criteria (law-level, parameter-eliminated, tied to an identified empirical observable) and distinct
+> from the standard classes compared so far** — it is off the compared conformal/f(R)/DGP line
+> `Σ₀ = 0`. Whether another established modified-gravity class occupies the same time-constant
+> `Σ₀ = μ₀/2` line is an **owed literature question**; until it is answered K1 is not called "off
+> a standard class" without that qualification. *(Wording repair 01, external audit.)*
 >
 > - Every other lock is standard (K2, K3, K10), invisible (K4), non-distinctive (K5), fenced (K6),
 >   toy-internal (K8, K9), or lacks an identified observable (K7).
@@ -49,5 +52,5 @@ supplied inputs, does it bear on an empirical observable, does it differ from a 
 - (ii) A literature check of whether any standard theory occupies the line `Σ₀ = μ₀/2` with a
   time-constant shape. This decides whether K1, if ever derived, would discriminate GRUT.
 
-**Status: P-24 COMPLETE (read-only census). K1 confirmed as the unique distinctive conditional lock;
+**Status: P-24 COMPLETE (read-only census). K1 confirmed as the unique record lock satisfying the census criteria and distinct from the standard classes compared so far (conditional);
 K7 flagged unclassified.**

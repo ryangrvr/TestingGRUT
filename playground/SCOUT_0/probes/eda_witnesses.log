@@ -1,0 +1,17 @@
+=== W-A: same earned predicates (local NN coupling, passive, gapped, linear), different supplied graph ===
+  pin=0.3: chain n=400       predicates {'local': True, 'passive': True, 'gap': True, 'CM': True}  lam_min=0.3000  local slope of k_0 (tau 5-80): [-1.471 -1.486 -1.493 -1.497]
+  pin=0.3: half-plane 46x46  predicates {'local': True, 'passive': True, 'gap': True, 'CM': True}  lam_min=0.3002  local slope of k_0 (tau 5-80): [-1.181 -1.169 -1.159 -1.145]
+  pin=0.0: chain n=400       predicates {'local': True, 'passive': True, 'gap': False, 'CM': True}  lam_min=0.0000  local slope of k_0 (tau 5-80): [-1.471 -1.486 -1.493 -1.497]
+  pin=0.0: half-plane 46x46  predicates {'local': True, 'passive': True, 'gap': False, 'CM': True}  lam_min=0.0002  local slope of k_0 (tau 5-80): [-1.181 -1.169 -1.159 -1.145]
+  -> chain: edge exponent gamma=1/2, k_0 ~ tau^-3/2.  half-plane boundary site with a point coupling defect:
+     2D-type edge (k_0 ~ tau^-1 up to a slowly drifting logarithmic point-defect correction; slope ~ -1.16 here).
+     At pin=0.3 both models satisfy every E-1/E-2/E-3 predicate; edge exponent and memory law differ.
+
+=== W-B: short-time coefficients read spectral MOMENTS, not edge data (equivalent invariant) ===
+  chain     : int lam dmu_r = 2.300000  vs  (K_b)_{b0,b0} = 2.300000   (C-B Delta c3 = 24 beta T1 a (44 beta a^2 + 5 K11): K11 is the first moment of mu_r)
+  half-plane: int lam dmu_r = 4.300000  vs  (K_b)_{b0,b0} = 4.300000   (C-B Delta c3 = 24 beta T1 a (44 beta a^2 + 5 K11): K11 is the first moment of mu_r)
+
+=== W-C: S5-1 Markov coefficient kappa = 1/(2 sqrt(K11)) moves with the supplied pin ===
+  pin=0.3: K11=2.3  kappa=0.329690   (record: 1/(2 sqrt 2.3))
+  pin=0.1: K11=2.1  kappa=0.345033
+  pin=0.5: K11=2.5  kappa=0.316228

@@ -12,13 +12,17 @@ NEW HYPOTHESIS CLASS — DOES NOT ALTER OLD TERMINAL. E-1 stands at its recorded
 > **Neither edge ports as stated. Each ports as a statement about the retained site's local spectral
 > measure `μ_r`, and the C1-a chain is a family where the stated form and the spectral form coincide.**
 >
-> - **Gap → memory** ports as **"bottom of `supp μ_r` > 0 ⇒ exponential-grade memory"**. The pin is
->   one way to get it. On **non-amenable** bath graphs (random d-regular, d ≥ 3, converging to the
+> - **Gap → memory.** The portable theorem is **`inf supp μ_r > 0 ⇒ exponential-grade memory`** (for the
+>   symmetric spectral representation `k(τ) = ∫e^{−λτ}dμ_r`). What is amenability-specific is only
+>   **whether the supplied pin is load-bearing**: on the amenable chain, removing the pin lets `μ_r`
+>   reach 0 (algebraic memory); on the non-amenable infinite graph/tree class a positive spectral
+>   bottom exists without a pin, so the pin is not load-bearing. On **non-amenable** bath graphs (random d-regular, d ≥ 3, converging to the
 >   d-regular tree) memory is exponential **with no pin at all**: the soft mass seen by the retained
 >   site vanishes like `≈ 0.36/n` (d = 3), and the rest decays at a rate at or above the Kesten–McKay
 >   bottom `d − 2√(d−1)`. On the amenable chain the soft mass is n-independent (0.013) and the tail is
->   algebraic. **The gap edge is family-specific: it certifies P_memory exactly when the graph does
->   not already supply a spectral bottom.**
+>   algebraic. **The theorem ports everywhere; the pin's necessity is family-specific** (amenable vs
+>   non-amenable). *Wording repair 01 (external audit): earlier summaries said "gap → memory ports only
+>   to amenable baths"; that conflated the portable theorem with the load-bearing status of the pin.*
 > - **Passivity → positivity:** **sufficiency** ports to every symmetric family (all `λ ≥ 0` ⇒ CM).
 >   **Necessity** ports only where the retained site sees every mode (the chain does: Jacobi
 >   eigenvectors never vanish at the end). A symmetric two-branch bath with an unstable
@@ -27,7 +31,7 @@ NEW HYPOTHESIS CLASS — DOES NOT ALTER OLD TERMINAL. E-1 stands at its recorded
 >   non-monotone (complex modes; the record's E-4).
 
 Charter hypothesis ("gap → memory transfers; passivity → positivity transfers only for symmetric
-Laplacians"): **gap half FALSE in general** (it transfers only to amenable families); **passivity half
+Laplacians"): **gap half: the theorem `inf supp μ_r > 0 ⇒ exponential memory` transfers to every symmetric family; the pin is load-bearing only on amenable families**; **passivity half
 TRUE for sufficiency, FALSE for necessity** (symmetric families with invisible modes). Charter null
 ("neither transfers"): false as stated; both transfer in their spectral forms.
 
@@ -101,7 +105,8 @@ say that **the law-level invariants live in local spectral data at an edge** —
 the dispersion at `k_b^∞` — and that whatever supplies that edge (pin vs non-amenability; exclusion
 vs interaction) is fibre data.
 
-**Status: P-01 COMPLETE (one pass). Gap edge ports only to amenable baths (non-amenable baths give
-pin-free exponential memory). Passivity edge: sufficiency ports to symmetric families; necessity only
+**Status: P-01 COMPLETE (one pass). `inf supp μ_r > 0 ⇒ exponential memory` ports to every symmetric
+family; the pin is load-bearing only on amenable baths (non-amenable baths give pin-free exponential
+memory). Passivity edge: sufficiency ports to symmetric families; necessity only
 where the retained site sees every mode; asymmetry breaks sufficiency (E-4). Both edges factor
 through the retained local spectral measure. Next: P-24 lock census.**

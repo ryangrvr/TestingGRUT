@@ -54,7 +54,7 @@ class, geometry, preparation, coarse-graining, correlation scale, localization, 
 - L7′: amplitude cancels in `Γ(m₁)/Γ(m₂)`, but the exponent is fixed only by supplied geometry.
 - L5: bath amplitude and width cancel against measured `v` (P-23a).
 
-**Only L11 survives the variation and differs from a standard class.**
+**Only L11 survives the variation and differs from the standard classes compared (conformal/f(R)/DGP); whether another established class occupies its line is owed (P-24 wording repair).**
 
 ## 2. Reading L11 honestly
 

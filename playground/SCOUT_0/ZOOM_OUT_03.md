@@ -8,9 +8,9 @@ CANDIDATE structure only.
    reproduce SF-1 exactly). Theorem: the IR class is a function of the occupation-edge velocity
    `v_b = ε′(k_b^∞)`.
 2. **P-01:** both E-1 floor edges factor through the retained local spectral measure `μ_r`.
-   - Gap → memory ports only to amenable baths; non-amenable baths give pin-free exponential memory.
+   - `inf supp μ_r > 0 ⇒ exponential memory` ports to every symmetric family; the pin is load-bearing only on amenable baths (non-amenable baths give pin-free exponential memory).
    - Passivity → positivity: necessity needs every mode to be visible; asymmetry breaks it.
-3. **P-24:** `Σ₀ = μ₀/2` is census-confirmed as the record's only distinctive (conditional) lock.
+3. **P-24:** `Σ₀ = μ₀/2` is census-confirmed as the unique record lock satisfying the census criteria and distinct from the standard classes compared so far (conditional; occupancy of its line by other classes owed).
 
 ## 1. Repeated structure — the edge dictionary
 
@@ -61,7 +61,7 @@ local spectral measure**.
 
 ## 5–6. Parameters that cancel; empirical invariants
 
-Unchanged from ZOOM_OUT_02: K1 `Σ₀ = μ₀/2` (conditional) is the only distinctive lock; K5 (no
+Unchanged from ZOOM_OUT_02: K1 `Σ₀ = μ₀/2` (conditional) is the unique census lock distinct from the classes compared so far; K5 (no
 crossing) is on exposure. Edge exponents are amplitude-free (`τ^{−3/2}` does not care about
 coupling strength) but standard (van Hove), so they are not GRUT-distinctive.
 
