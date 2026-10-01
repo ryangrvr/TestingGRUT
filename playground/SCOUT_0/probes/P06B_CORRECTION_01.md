@@ -80,12 +80,18 @@ case with the same sign. Hence `f_p″ < 0` near `0` for every `p > 1`.
 
 ## 4. The boundary mechanism, correctly stated
 
-Within the family, the Bernstein (relaxation-rate) measure of `f_p` has density
-`∝ (s²−1)^{-p}` on `s ∈ [1,∞)` in the scaled rate `s = rate/κ`. **The UV spectral exponent `p`
-is the endpoint exponent of that measure at the gap edge `s = 1`.** CM is lost exactly when the
-measure ceases to be locally finite there (`p ≥ 1`), and on the far side the small-`z`
-expansion independently certifies `f″ < 0`. The boundary is a property of the Bernstein measure,
-not of a "prefactor exponent".
+Within the family, in the scaled rate `s = rate/κ`:
+
+- `0 < p < 1`: positive, absolutely continuous Bernstein measure on `[1,∞)` with density
+  `∝ (s²−1)^{-p}` — **the UV spectral exponent `p` is the endpoint exponent of that measure at
+  the gap edge `s = 1`**;
+- `p = 1`: the density becomes non-integrable, but the normalised measure has the singular endpoint
+  limit `δ_1`, which is the Bernstein measure of the exponential — **still CM**;
+- `p > 1`: CM fails (§3).
+
+The boundary is a property of the Bernstein measure, not of a "prefactor exponent". (Auditor's
+wording note, applied: do not say CM is "lost when the measure ceases to be locally finite at
+`p ≥ 1`" — `p = 1` is CM.)
 
 This is a family theorem. It does not derive the Level-0 generator, does not rescue S5-0, and
 does not establish `p` as a universal GRUT order parameter (P-06c remains the test of

@@ -1,6 +1,21 @@
 # SCOUT_0 W1 P-08 RESULT — the faithful-representation audit of the surviving lifts
 
-**Charter:** `PROBE_CHARTERS.md` P-08 (frozen). Script: `probes/p08_faithfulness_checks.py` (algebraic checks; log below).
+> **CORRECTED — see `P08_CORRECTION_01.md`** (itself adversarially audited by 14 independent
+> refuters before banking; three of its own claims were refuted and corrected there).
+> The earned-reading result stands, relabelled: at earned scope the test is **not formulable** as an
+> operator-representation test (the charter's own ambiguity criterion), so it excludes nothing.
+> `cf0f7fe`'s "4 → 2, survivors {cotangent, Sz.-Nagy}" is **withdrawn as proved**: the bosonic
+> exclusion was a category error (under the recorded doubling the coordinate images commute and a
+> faithful homomorphism exists), and the Sz.-Nagy survival sentence named a map of vectors, not a
+> representation — though a faithful representation does exist there, the pullback `f∘P_H`, under the
+> record's Poisson algebra type for the Λ-H row. The fermionic exclusion is correct and now proved
+> **map- and image-independently** (finite-dimensional observable algebra). Net: **exactly one
+> theorem-grade exclusion (Λ-F); every finer discrimination is reading- and image-dependent.**
+> Corrected status in §"Verdict" below. Original text retained beneath for the audit trail, marked
+> where superseded.
+
+**Charter:** `PROBE_CHARTERS.md` P-08 (frozen). Scripts: `probes/p08_faithfulness_checks.py`
+(original, audited) and `probes/p08b_recorded_map_checks.py` (correction; log below).
 **Governing texts read verbatim before evaluation:** `L0_LIFT_SELECTION_01.md` (§1 survivor
 table, §5 rules/terminals), `L0_LIFT_SELECTION_OWNER_RULING_02.md:30-32` (the preserved option,
 verbatim: "a faithful operator representation of the full source observable algebra"),
@@ -27,32 +42,65 @@ at which lifts fail:
   below. Faithfulness = the lift restricted to `𝒜_src` is an **injective algebra homomorphism**
   (a faithful operator representation in the ordinary sense).
 
-## Evaluation of the four non-representational survivors
+## Evaluation of the four non-representational survivors (CORRECTED)
 (`L0_POSTFLOOR_DEPOSIT_01.md:23`: cotangent/Hamiltonian, Sz.-Nagy, complex bosonic, complex fermionic)
 
-| Lift | Reading 1 | Reading 2 | Reason |
-|---|---|---|---|
-| Λ-H cotangent lift (`H = pᵀf`) | survives | **survives** | `f(x) ↦ f(x)` on phase space is an injective, multiplicative embedding (vertical subalgebra) |
-| Λ-H Sz.-Nagy dilation | survives | **survives** | the source algebra acts on the dilation space by the inclusion `H₀ ⊂ K`: injective and multiplicative; the dynamics is the dilated semigroup (I-1/I-3 unchanged) |
-| Λ-B complex bosonic quasi-free | survives | **FAILS** | with the supplied complex structure the field operators have `[Φ(f),Φ(g)] ≠ 0`, so the observable map is the Wick map; Wick is NOT multiplicative on the full polynomial algebra. Exact check: `Wick(x₁x₂x₃) = C₁₂x₃ + C₁₃x₂ + C₂₃x₁` but `Wick(x₁x₂)·Wick(x₃) = C₁₂x₃`; difference `C₁₃x₂ + C₂₃x₁ ≠ 0` for generic C (script: C₁₃ = −0.2, C₂₃ = 0.215). Making the map multiplicative forces a commutative Segal-type picture — which collapses to the representational Koopman/Segal lift (R-3: not a physical lift; LS-5: algebras not intertwined, Koopman ≠ real Λ-B) |
-| Λ-F complex fermionic quasi-free | survives | **FAILS** | `xᵢ ↦ aᵢ` violates multiplicativity on the nose: `aᵢ² = 0` (CAR) but `xᵢ² ≠ 0` in `𝒜_src` — the nilpotency invariant LS-4 already flagged, here as an exact algebraic obstruction |
+Reading 2 is split into the three sub-readings fixed in `P08_CORRECTION_01.md` §2 — **(2-map)**
+an injective unital homomorphism extending the lift's *recorded* coordinate image exists;
+**(2-state)** plus the recorded state identification reproduces polynomial expectations;
+**(2-dyn)** plus the dynamics on the image intertwines the source flow. (These sub-readings are
+**post hoc** relative to `cf0f7fe` and are used only to demote exclusions, never to create one.)
+Two further choices cut across them and the record fixes **neither**: whether coordinate images must
+be **self-adjoint**, and whether the Λ-H dilations are read as **Poisson** (the record's own algebra
+column for that row, `L0_LIFT_SELECTION_01.md` §1) or as operator algebras.
 
-## Verdict (under the frozen criteria)
+| Lift | Reading 1 | 2-map | 2-state | 2-dyn | Reason (recorded map) |
+|---|---|---|---|---|---|
+| Λ-H cotangent lift (`H = pᵀf`) | not excluded | **survives** | survives (point states) | survives | `f ↦ f∘π`: pullback along a surjection; `δ_(x,p)` reproduce `f(x)`; `ẋ = ∂H/∂p = f(x)` projects to the source semiflow |
+| Λ-H Sz.-Nagy dilation | not excluded | **survives** under the recorded **Poisson** reading (`f ↦ f∘P_H`, the dual of `H ⊂ K`); **✗ / NOT-ESTABLISHED** under an operator reading (`dim B(H) = 529 < dim ℝ[x]_{≤3} = 2600`; no degree-1 operator image recorded) | ✓ under Poisson (`δ_{x⊕0}` reproduces *all* polynomials, odd included); ✗ under vector states (expectations even in `x`) | ✗ on `K` | **reading-dependent.** `cf0f7fe`'s "inclusion `H₀ ⊂ K`" named a map of vectors; the faithful map is the pullback `f∘P_H` |
+| Λ-B complex bosonic quasi-free | not excluded | **survives** (doubling `J` ⇒ `[Φ(e_i),Φ(e_j)] = i·Im⟨e_i,e_j⟩ = 0`; the unique hom extending `x_i ↦ Φ(e_i)`) | ✓ with non-`*` images (`√2a_i`: coherent states are joint eigenvectors) / ✗ with `*`-images (`⟨x|Φ²|x⟩ = x² + ½`; coherent states not orthogonal) | ✓ with `√2a_i` (`f(a) ↦ f(Ta)`) / ✗ with `Φ` (Mehler, LS-5) | **image-dependent.** Price of the non-`*` image: `π(x_i)* ≠ π(x_i)` — the bosonic analogue of LS-8 |
+| Λ-F complex fermionic quasi-free | not excluded | **FAILS** | ✗ | ✗ | observable algebra finite-dimensional (`Cl(ℝ²³)`, `Λ(ℝ²³)`: `2²³`; `CAR(ℂ²³) = M_{2²³}(ℂ)`: `2⁴⁶`; even subalgebras smaller): **no injective linear map** from `ℝ[x]`, whatever the coordinates map to (Cayley–Hamilton gives a univariate annihilator for any image); for odd images also `{u,v}=0 ⇒ uv=0` and `u² = scalar`. **The one invariant exclusion** |
 
-** CONDITIONAL-ON-NEW-ASSUMPTION, with CONSTRAINT-EMPTY at the earned reading.**
+*Superseded (`cf0f7fe`):* "Λ-B FAILS because the Wick map is not multiplicative" (category error;
+its "Wick" was the Isserlis pairing expansion, hard-coded, and its LS-5 citation contradicts LS-5);
+"Sz.-Nagy survives by inclusion `H₀ ⊂ K`" (names no homomorphism — right verdict under the Poisson
+reading, wrong argument); "`x_i ↦ a_i`" as the fermionic proof (map-specific); and H4's fallback
+"injectivity-only prunes nothing" (Λ-F fails injectivity). See `P08_CORRECTION_01.md` §1.
 
-1. **Reading 1 (earned scope): the constraint is EMPTY** (charter null outcome). All four
-   survivors are faithful on the earned declared coordinate class (I-1 is exactly this at the
-   earned interface). Survivor count unchanged: 4.
-2. **Reading 2 (canonical polynomial algebra, NEW ASSUMPTION): the constraint PRUNES** the
-   complex bosonic and complex fermionic quasi-free lifts — survivor count 4 → 2 (cotangent,
-   Sz.-Nagy), with exact algebraic reasons (Wick non-multiplicativity; CAR nilpotency).
-3. **No earned-selector status is claimed and the terminal is untouched.** The pruning is
+## Verdict (under the frozen criteria; CORRECTED)
+
+**CONDITIONAL-ON-NEW-ASSUMPTION; EARNED SCOPE NOT-FORMULABLE (constraint empty a fortiori);
+`ℝ[x]` BRANCH FORMULABLE — ONE THEOREM-GRADE EXCLUSION, REMAINING SURVIVOR SET READING- AND
+IMAGE-DEPENDENT / PROVISIONAL.**
+
+1. **Reading 1 (earned scope): the test is not formulable** as an operator-representation test —
+   the "full source observable algebra" is not an earned object, which is precisely the charter's
+   own ambiguity/BLOCKED criterion. It reduces to D-1 at the declared coordinate class and
+   **excludes nothing**; all four lifts are carried forward. *Corrected from `cf0f7fe`'s "all four
+   are faithful on the earned coordinate class", which overstates: Sz.-Nagy's recorded coordinate
+   image is a functional, not an operator, and Λ-F's is odd with vanishing one-time expectation
+   under superselection (LS-8). What holds is that no lift is excluded, at the
+   readout-identification (D-1/LS-1) level, that identification itself being a price.*
+   **This is the robust result.**
+2. **Reading 2 (canonical polynomial algebra, NEW ASSUMPTION):** exactly one exclusion holds under
+   every sub-reading **and every image class** — the **complex fermionic lift**, by
+   finite-dimensionality of its observable algebra (theorem grade, map-independent; scoped to the
+   recorded `N = 23` one-particle space). The cotangent lift survives every sub-reading. Λ-B is
+   **image-dependent** and Sz.-Nagy **reading-dependent** (table): each survives under the
+   recorded reading and fails under a stronger one the record does not select. By the gate's own
+   R-1 logic, and its precedent of listing NOT-ESTABLISHED lifts separately from the count
+   (evaluation §4, FKM): **one theorem-grade exclusion; established survivors under the recorded
+   readings {cotangent, Sz.-Nagy, Λ-B}** — the count records *non-exclusion*, and "theorem grade"
+   attaches to the Λ-F exclusion alone, never to the count. The stronger sub-readings are recorded
+   as mathematics and **not adopted**; each would be a further NEW ASSUMPTION and a post-hoc selector.
+3. **The sharper conditional finding:** granted its own new assumption, **the faithfulness
+   constraint still cannot select** — beyond Λ-F, every further pruning needs a choice the record
+   does not make (self-adjointness of the coordinate image; Poisson vs operator algebra type for
+   the dilations; normalisable vs generalised states). This **reinforces** the lift terminal.
+4. **No earned-selector status is claimed and the terminal is untouched.** The pruning is
    conditional on adopting `𝒜_src`, which the record does not earn (EA-0; bridge ruling's
-   output-map warning). Even under Reading 2, two inequivalent non-representational lifts
-   survive, so the strongest reachable reading is still only a non-unique outcome — and since
-   the constraint's adoption is itself a new assumption, **IRREDUCIBLE/SUPPLIED stands
-   unmodified** in either reading. Charter forbidden reinterpretation honored.
+   output-map warning). **IRREDUCIBLE/SUPPLIED stands unmodified** in every reading. Charter
+   forbidden reinterpretation honored.
 
 ## Hostile attack on this result (immediate, per standing loop)
 
@@ -82,12 +130,46 @@ at which lifts fail:
   **REDISCOVERED-KNOWN** as mathematics; **KNOWN-BUT-NEW-IN-GRUT** as a constraint audit of the
   recorded survivor set (never priced in the canonical record as a faithfulness test).
 
-## What changes in the scout map
+## What changes in the scout map (CORRECTED)
 
 - Lift layer: the faithfulness constraint is now *executed* (the preserved option is no longer
-  merely preserved). Surviving non-representational lifts under the maximal admissible reading:
-  **cotangent lift, Sz.-Nagy dilation**. The quasi-free pair now carries TWO priced limitations:
-  coverage (D-2) and observable-map multiplicativity (P-08).
-- P-09 (locality) inherits the two-reading discipline and the pruned set.
+  merely preserved). At earned scope it is not formulable and excludes nothing. Under the
+  conditional `ℝ[x]` branch, only the fermionic lift carries a theorem-grade (map- and
+  image-independent) faithfulness failure. The bosonic lift carries a priced **image choice**
+  (self-adjoint images: multiplicative but not expectation-reproducing, dynamics Mehler;
+  non-self-adjoint `√2a_i`: all three sub-readings, at the cost of non-self-adjointness — the
+  bosonic analogue of LS-8). The Sz.-Nagy dilation carries a priced **algebra-type choice**
+  (Poisson: the pullback `f∘P_H` is faithful and reproduces all polynomials; operator reading:
+  fails/NOT-ESTABLISHED). The quasi-free pair's previously priced limitation (D-2 coverage) is
+  sharpened only for Λ-F.
+- **New priced items for the record:** the coordinate **image class** (`*` or not) and the
+  dilations' **algebra type** (Poisson or operator) are choices the record does not make, and they
+  control the survivor set. Both belong on the supplied-structure list alongside readout
+  identification.
+- **P-09 (locality) inherits ALL FOUR lifts under the earned reading.** Any conditional `ℝ[x]`
+  branch is run separately, with Λ-F excluded and Λ-B / Sz.-Nagy flagged provisional, and must
+  declare its image class and algebra type **in advance and uniformly** (verification §5; ruling 02
+  §2). Every added notion of quantum locality is priced as NEW ASSUMPTION.
 
-**Status: P-08 COMPLETE (CONDITIONAL-ON-NEW-ASSUMPTION; constraint empty at earned reading, prunes 4→2 under canonical Reading 2; terminal untouched). Next: P-09 (locality-of-representation), frozen charter.**
+## Correction-script log (`p08b_recorded_map_checks.py`)
+
+- C1: `dim Cl(ℝ²³) = 2²³ = 8 388 608` (polynomials of degree ≤ 9 already exceed it:
+  `C(32,9) = 28 048 800`); `dim_ℂ M_{2²³}(ℂ) = 2⁴⁶ ≈ 7.0e13` (degree ≤ 27 exceeds it; ≤ 28
+  real-linearly); 2-mode CAR `‖a₁a₂‖ = 1 ≠ 0`, `{a₁,a₂} = 0`; Majorana `g₁² = I`, `‖g₁g₂‖ = 1`.
+- C2: doubling `‖[Φ(e₁),Φ(e₂)]‖ = 0`; non-doubling `J` on `ℝ²`: `[Φ(e₁),Φ(e₂)] = i`.
+- C2b (non-`*` image): `π_a(x_i) = √2a_i` at `x = 0.9` gives `⟨π_a(x)⟩ = 0.9`,
+  `⟨π_a(x²)⟩ = 0.81 = x²`, `⟨π_a(x³)⟩ = 0.729 = x³` — exact, no vacuum variance (coherent states are
+  joint eigenvectors); `*`-case ruled out at once by `⟨x|x'⟩ = e^{−|x−x'|²/4} = 0.9139 ≠ 0`;
+  normalisation: Mehler defect on the `Φ`-image is `(1−T²)/2 = 0.32` in the `Var_vac = ½`
+  convention, vs LS-5's unit-variance `1 − T² = 0.64`.
+- C3: coherent `x = 0.9`: `⟨Φ⟩ = 0.9`, `⟨Φ²⟩ = 1.31 = x² + ½`; `⟨:Φ²:⟩ = 0.81 = x²`;
+  recorded `dΓ(1) = a†a`: `⟨x|dΓ|x⟩ = 0.405 = x²/2` but `dΓ ≠ ½Φ²` as operators.
+- C4a (Poisson reading): `δ_{x⊕0}(f∘P_H) = f(x)` exactly for `1`, `x₁`, `x₁x₂`, `x₁²x₃ − 2x₂` —
+  odd polynomials included, with a nonzero bath component present.
+- C4b (operator reading): `dim B(H) = 529 < dim ℝ[x]_{≤3} = 2600`; recorded quadratic image
+  non-multiplicative (`‖[P_{x₁²}, P_{x₁x₂}]‖ = 1 ≠ 0`; `image(x₁²)·image(x₂²) = 0` while
+  `x₁²x₂² ≠ 0`).
+- C4c: `⟨x⊕0, A(x⊕0)⟩` invariant under `x ↦ −x`; `x₁` is not.
+- C5: `x`-projection of the cotangent flow equals the source flow to `0.0e+00`, independent of `p₀`.
+
+**Status: P-08 COMPLETE, CORRECTED (CONDITIONAL-ON-NEW-ASSUMPTION; earned scope NOT-FORMULABLE, constraint empty a fortiori; `ℝ[x]` branch: Λ-F excluded at theorem grade map- and image-independently, remaining survivor set reading- and image-dependent/provisional; terminal untouched). Next: P-09 (locality-of-representation), frozen charter, inheriting all four lifts at earned scope.**

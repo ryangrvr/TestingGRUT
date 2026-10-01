@@ -58,11 +58,16 @@ violation is uniform in ν > 1. (For `1/2 < ν < 1` separately: `g_ν ~ c₀ + c
 `c₁ = 2^{−ν−1} Γ(−ν) < 0`, so `g″ ~ c₁(2ν)(2ν−1) z^{2ν−2} < 0` near 0; `ν = 1`: `g = zK₁`,
 `g″ ~ ln(z/2) + γ − 1/2 → −∞`.)
 
-**Where the boundary lives.** The Bernstein (relaxation-rate) measure of `f_p` has density
-`∝ (s²−1)^{-p}` on `[1,∞)` in the scaled rate `s = rate/κ`: the UV spectral exponent `p` is the
-endpoint exponent of that measure at the gap edge `s = 1`. CM is lost exactly when the measure stops
-being locally finite there (`p ≥ 1`), and (C) independently certifies `f″ < 0` beyond. (The earlier
-"prefactor `z^{2p−1}`" reading of the boundary is withdrawn.)
+**Where the boundary lives (Bernstein-measure picture).** In the scaled rate `s = rate/κ`:
+
+- `0 < p < 1`: the Bernstein measure of `f_p` is positive and absolutely continuous on `[1,∞)`,
+  with density `∝ (s²−1)^{-p}` — the UV spectral exponent `p` is the endpoint exponent at the gap
+  edge `s = 1`;
+- `p = 1`: the density is no longer integrable, but the *normalised* measure has the singular
+  endpoint limit `δ_1`, giving the exponential — **still CM**;
+- `p > 1`: CM fails ((C): `f″ < 0` near `0`).
+
+(The earlier "prefactor `z^{2p−1}`" reading of the boundary is withdrawn.)
 
 ## Numerical cross-checks (all pass; script log)
 
