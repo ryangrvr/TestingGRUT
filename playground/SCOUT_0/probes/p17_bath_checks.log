@@ -1,0 +1,21 @@
+=== C0 Drude: J(w) = g0 w k^2/(w^2+k^2)  ->  gamma(t) = (2/pi) int_0^inf J(w)/w cos(wt) dw ===
+  gamma(t) = gamma0*kappa*exp(-kappa*t)  (exponential = P-06b p=1 edge; classical noise C_F = T gamma by FDT)
+  T/kappa=5.00: negative Bernstein weights: none;  C_sym(t=0.5,2,5,10) = +3.023e+00, +6.744e-01, +3.358e-02, +2.262e-04 -> CM (all weights > 0)
+  T/kappa=0.30: negative Bernstein weights: ['c0'];  C_sym(t=0.5,2,5,10) = +1.787e-01, +3.798e-03, -2.882e-04, -2.180e-06 -> NOT CM
+  T/kappa=0.05: negative Bernstein weights: [1, 2, 3];  C_sym(t=0.5,2,5,10) = +1.056e-01, -4.666e-02, -1.366e-02, -1.732e-03 -> NOT CM
+  classical limit (T >> kappa): C_sym -> T gamma(t), CM;  low T (nu_1 = 2 pi T < kappa): Matsubara weights turn negative -> quantum noise kernel NOT CM though gamma(t) is exactly exponential
+
+=== C1 pathwise identity: autonomous Hamiltonian bath  ==  GLE with free-bath force F (one microstate) ===
+  Drude (CM edge)            max|q_H - q_GLE| on [0,6.0] = 5.34e-06  (|q| <= 1.05; GLE dt=1e-03, O(dt^2))
+  two-exponential (CM)       max|q_H - q_GLE| on [0,6.0] = 1.41e-06  (|q| <= 1.00; GLE dt=1e-03, O(dt^2))
+  resonant (non-CM)          max|q_H - q_GLE| on [0,6.0] = 4.06e-06  (|q| <= 1.03; GLE dt=1e-03, O(dt^2))
+  deterministic microstate: q_H(t) is a fixed trajectory; the 'exogenous' match is the Dirac law on that F path
+
+=== C3 O(beta) discriminator S-D(t) = -12 beta int_0^t g(t-s) mu(s) v(s) ds  (covariance-only) ===
+  overdamped white (= C-B, 1 site, K11=2.3): S-D / (-12 beta T a t^2) at t=1e-3,1e-2: 0.9962, 0.9624  (record: 1 as t->0)
+  inertial white  M=1.0: leading order t^5, ratio to -2 beta a g0 T t^5/(5M^3) at t=1e-2: 0.9933
+  inertial Drude  M=1, kappa=2.0: leading order t^6, ratio to -beta a T gamma(0) t^6/(10 M^3) at t=1e-2: 0.9961
+  limit to C-B at fixed t (Ohmic white, M -> 0; then Drude kappa -> inf): S-D(t) / C-B(t)
+    t=0.05: M=1,0.1,0.01,0.001 -> 0.0000, 0.0036, 0.3626, 0.9144  | Drude M=1e-3,kappa=1e4: 0.9209
+    t= 0.2: M=1,0.1,0.01,0.001 -> 0.0005, 0.1349, 0.8557, 0.9858  | Drude M=1e-3,kappa=1e4: 0.9868
+    t= 1.0: M=1,0.1,0.01,0.001 -> 0.2496, 0.9431, 0.9907, 0.9990  | Drude M=1e-3,kappa=1e4: 0.9991

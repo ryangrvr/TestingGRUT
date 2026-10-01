@@ -1,0 +1,16 @@
+=== C2: E q^(n)(0), n = 0..8 ;  A (CL thermal) vs B (exogenous Gaussian, matched cov) ===
+  n=0:  A-B = 0   A-D = 0   A-R = 0
+  n=1:  A-B = 0   A-D = 0   A-R = 0
+  n=2:  A-B = 0   A-D = 0   A-R = 0
+  n=3:  A-B = 0   A-D = 0   A-R = 0
+  n=4:  A-B = 0   A-D = 0   A-R = 0
+  n=5:  A-B = 0   A-D = 0   A-R = 0
+  n=6:  A-B = 0   A-D = -225*T*a*beta/8   A-R = 0
+  n=7:  A-B = 0   A-D = 0   A-R = 0
+  n=8:  A-B = 0   A-D = 15*T*a*beta*(63360*a**2*beta + 25973)/256   A-R = 0
+  predicted leading S-D: t^6 coefficient -beta*a*T*gamma(0)/(10 M^3) -> 6! * that = -225*T*a*beta/8
+  control beta=0: A-D all zero: True
+  control T=0 (bath at rest): A-D all zero: True
+  product prep: A_prod - B(shift-matched) nonzero at n: [2, 4, 6, 8] ; A_prod - B(+deterministic slip -gamma(t)q0) all zero: True
+  R (autonomous, random-phase) - B_R (exogenous random-phase, same law): all zero: True
+  B_R - B (exogenous, same covariance, different law): nonzero at n: []

@@ -35,3 +35,12 @@ One decisive counterexample per broad claim attempt. Smallest first.
 - **Same assumptions, opposite result:** add the hypothesis that `π` is a `*`-representation (self-adjoint coordinate images) and the dichotomy is restored — then *no* symmetric choice works, by `⟨x|x'⟩ = e^{−|x−x'|²/4} ≠ 0`.
 - **Same result, fewer assumptions:** the price is simply recorded instead: `π_a(x_i)* ≠ π_a(x_i)`, the bosonic analogue of the recorded Λ-F odd-image price LS-8. The record's own V-3 intertwiner (`W M_x W⁻¹ = a†`, "not the Segal field") points at this image class.
 - **Lesson for the scout:** an impossibility claim must state every hypothesis it uses. The draft's proof silently assumed self-adjointness (it used `⟨π²⟩ = ‖π|x⟩‖²`) while the claim was stated for all maps. Two of fourteen refuters found this independently; it would have been banked otherwise.
+
+## CE-05 (P-17): "the C-B retained-mean discriminator distinguishes ongoing randomness from a deterministic hidden environment"
+
+- **Claim attacked:** a tempting physical reading of S2-1 (not S2-1 as worded, which says "same deterministic state space").
+- **Smallest counterexample:** one system coordinate with quartic potential, one harmonic bath mode, linear coupling with counterterm, bath shifted-Gibbs. The retained-mean Taylor coefficients `E q⁽ⁿ⁾(0)` of the autonomous Hamiltonian equal those of the GLE driven by exogenous Gaussian forcing with covariance `Tγ`, exactly, for every `n ≤ 12` — while `S − D ≠ 0` (first at `t⁶`, `−18Taβ`). The discriminator fires identically for a deterministic bath and for primitive noise.
+- **Nearest counterexample:** a random-phase (fixed-energy, non-Gaussian) bath: differs from the Gaussian bath at `t¹²` (`138510T²aβ²`) but equals the exogenous random-phase process at every order. What differs is the law, never the ontology.
+- **Same assumptions, opposite result:** none inside class 𝓗 (theorem). Outside it (anharmonic bath, coupling nonlinear in bath coordinates) — open; P-18.
+- **Same result, fewer assumptions:** the Gaussian/thermal hypothesis is not needed — only that the free-force law is independent of the system preparation (otherwise the deterministic slip `−γ(t)q₀` appears, and is absorbed into the memory term).
+- **Lesson for the scout:** "ongoing noise vs initial uncertainty" is a statement relative to a declared state space. Before reading a reduced-data discriminator as ontology, ask whether an enlarged deterministic parent with the same forcing law exists. See `probes/P17_RESULT.md`.

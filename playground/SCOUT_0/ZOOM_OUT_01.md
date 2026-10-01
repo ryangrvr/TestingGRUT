@@ -80,6 +80,15 @@ is free of nuisance parameters.
   Alder–Wainwright tail. That tail is a non-CM-generator mechanism with a large literature, and a
   candidate for P-18's homogenization null.
 
+## Scope correction (auditor, applied in P-17)
+
+The Drude/P-06b correspondence is to the **friction/memory kernel** `γ(t) = (2/π)∫ J(ω)/ω cos ωt dω`,
+not automatically to `J(ω)`, to the finite-temperature quantum noise correlation, or to a measured
+noise spectrum. Four objects are kept separate: `J(ω)`, `γ(t)`, `C_F(t)`, and the reduced stochastic
+representation. Classical thermal `C_F = Tγ` inherits CM; the quantum symmetrized noise kernel of the
+same Drude bath is **not** CM at low temperature (negative Matsubara weights; `P17_RESULT.md` §1). §6's
+line-shape hypothesis is therefore restricted to the classical friction kernel.
+
 ## Decision
 
 The lift interface is banked and closed. Next, in priority order: **P-17**, then P-18, P-23,
