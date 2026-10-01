@@ -1,0 +1,89 @@
+==============================================================================
+S2-3b  horocycle flow on X2 = SL(2,R)/SL(2,Z)
+==============================================================================
+[sanity] Haar P(|v1|^2<0.5) = 0.4769  analytic 3s/pi = 0.4775;  <cos 2phi> = +0.0009
+[sanity] h_t-invariance of Haar (t=7.3): P = 0.4776
+
+--- A. UNIQUE INVARIANT MEASURE? ---
+  lattice diag(1.0,1.0)Z^2: h_(a^2) returns (y 1.0000 -> 1.0000); period a^2 = 1.000; orbit average of 1[|v1|^2<0.5] = 0.000  (Haar 0.477)
+  lattice diag(0.5,2.0)Z^2: h_(a^2) returns (y 4.0000 -> 4.0000); period a^2 = 0.250; orbit average of 1[|v1|^2<0.5] = 1.000  (Haar 0.477)
+  lattice diag(0.2,5.0)Z^2: h_(a^2) returns (y 25.0000 -> 25.0000); period a^2 = 0.040; orbit average of 1[|v1|^2<0.5] = 1.000  (Haar 0.477)
+  => a one-parameter family of periodic orbits, each carrying its own invariant probability measure;
+     their averages (0, 1, ...) differ from Haar. A FAILS on non-compact X2 (Dani: Haar + periodic-orbit measures).
+
+--- B. TIME-AVERAGE UNIVERSALITY (Birkhoff averages of 1[|v1|^2<0.5], target 0.4775) ---
+                                      T=1e+02    T=1e+03    T=1e+04    T=1e+05    
+  Haar-random lattice                 0.4724     0.4771     0.4778     0.4774     
+  Z^2 rotated by sqrt(2)-1            0.4756     0.4776     0.4774     0.4775     
+  Z^2 rotated by 1e-2                 0.2468     0.4516     0.4780     0.4770     
+  Z^2 rotated by 1e-3                 0.0000     0.2464     0.4546     0.4751     
+  Z^2 (periodic, horizontal vector)   0.0000     0.0000     0.0000     0.0000     
+  => B holds for every non-periodic start tested (Dani-Smillie: every non-periodic orbit equidistributes),
+     with point-dependent, non-uniform convergence time (~1/angle near the periodic set); fails on periodic orbits.
+
+--- C-i. DECAY OF CORRELATIONS under Haar (N = 400k; MC noise ~ 1e-3) ---
+   t      C_ff(t)    C_gg(t)    C_fg(t)
+      0  +0.2495    +0.4999    +0.0002
+    0.5  +0.1743    +0.3411    +0.0290
+      1  +0.1083    +0.1842    +0.0790
+      2  +0.0240    +0.0844    +0.0786
+      5  +0.0028    +0.0799    +0.0295
+     10  +0.0003    +0.0459    +0.0098
+     20  -0.0003    +0.0182    +0.0034
+     50  +0.0003    +0.0050    +0.0000
+    100  +0.0001    +0.0019    +0.0008
+    200  -0.0005    -0.0005    +0.0003
+
+--- C-ii. WEAK CONVERGENCE of accessible observable <1[|v1|^2<0.5]> under pushforward ---
+   t     blob1    blob2    Dirac(irrational)  periodic diag(.5,2)
+     0   0.0000   1.0000   0                  1
+     1   0.0000   0.0000   0                  1
+     2   0.0000   0.0000   1                  1
+     5   0.2078   0.8274   0                  1
+    10   0.5192   0.4587   0                  1
+    20   0.4620   0.4783   1                  1
+    50   0.4772   0.4826   0                  1
+   100   0.4766   0.4770   1                  1
+   200   0.4762   0.4774   1                  1
+   500   0.4783   0.4787   1                  1
+  Haar value 0.4775
+
+  coarse partition (10x10x10 cells in x, 1-1/y, phi): TV distance between pushed blob1, blob2
+   t     TV_coarse   [sampling floor for identical ensembles ~ 0.000]
+     0   1.0000
+     1   1.0000
+     2   0.8550
+     5   0.9474
+    10   0.8341
+    20   0.4079
+    50   0.1549
+   100   0.0851
+   200   0.0529
+   500   0.0438
+  sampling floor (two independent Haar ensembles): 0.0389
+
+--- C-iii. FINE-GRAINED INFORMATION under pullback: observable 1_{B1} o h_{-t} ---
+   t      P(B1 | prep1)  P(B1 | prep2)  contrast   max round-trip |dy|
+     0    1.0000         0.0000        1.0000     0.0e+00
+     1    1.0000         0.0000        1.0000     6.7e-16
+     2    1.0000         0.0000        1.0000     1.1e-15
+     5    1.0000         0.0000        1.0000     8.4e-15
+    10    1.0000         0.0000        1.0000     3.1e-14
+    20    1.0000         0.0000        1.0000     1.3e-13
+    50    1.0000         0.0000        1.0000     8.4e-13
+   100    1.0000         0.0000        1.0000     2.8e-12
+   200    1.0000         0.0000        1.0000     1.1e-11
+   500    1.0000         0.0000        1.0000     6.8e-11
+
+  complexity of the pulled-back observable: # of 20^3 coarse cells occupied by h_t(B1) (N=200k)
+  t=   0:    12 cells
+  t=   1:    41 cells
+  t=   2:    72 cells
+  t=   5:   350 cells
+  t=  10:  1282 cells
+  t=  20:  3940 cells
+  t=  50:  7651 cells
+  t= 100:  7978 cells
+  t= 200:  8000 cells
+  t= 500:  8000 cells
+  contrast: doubling map T^n of an interval of width 2^-12, cells of width 2^-12: 2^n (exponential)

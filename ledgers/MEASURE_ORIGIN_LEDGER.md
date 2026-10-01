@@ -13,3 +13,6 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | basin probabilities of coexisting attractors | S2-6 | reference measure on initial data (Lebesgue 0.587 vs asymmetric 0.603) | supplied | — |
 | MaxEnt | S2-6 | coordinate / reference measure (uniform in x: 0.499; in x²: 0.249) | supplied | — |
 | physical (SRB) measure of logistic r = 4 | S2-6 | Lebesgue-a.c. preparation class | supplied | the period-2 Dirac preparation is not forgotten |
+| Haar on X₂ as the reference for mixing / correlation decay | S2-3b | Haar | supplied on X₂ (A fails: periodic-orbit measures); **earned** on compact Γ\SL(2,ℝ) (unique ergodicity, imported) | rigid homogeneous D |
+| "every non-periodic orbit equidistributes" | S2-3b | none (pointwise, exceptional set characterized) | **earned** | non-uniform convergence near the periodic set |
+| forgetting of a.c. preparations | S2-3b | a.c. class w.r.t. Haar | reference measure earned (compact); the restriction to a.c. preparations is an **access** limit | Dirac preparations never forgotten |

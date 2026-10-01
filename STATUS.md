@@ -5,7 +5,8 @@
 - **Working synthesis:** T2-1 (C5 = D ⊕ H) **withdrawn**. Provisional classification **T2-1′: C5 → D ⊕ H ⊕ A**
   (D = primitive-dynamics structure; H = state / basin / measure / preparation; A = access / intervention / readout /
   reference-sharing). Re-expression, not derivation. Strong success = primitive structure → D, H, A jointly forced.
-- **Priority order:** S2-3b (attacks H) → S2-1b (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
+- **S2-3b DONE:** H-MEASURE SELECTED (compact, imported) / A-COARSE FORGETTING / D-PRICED; H partially → special D + A.
+- **Priority order:** S2-3b ✓ → S2-1b (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).
 - **Provenance:** SCOUT-0 is frozen at `ab2da47` and SCOUT-1 at `a2987fe`, both in `ryangrvr/TestingGRUT`. GRUT-RAI
