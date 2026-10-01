@@ -19,8 +19,8 @@
 | W2-TC1 | hostile search for an earned absolute reference | **DONE** | TC-1 SURVIVES full-record search (derived tier = 0; every scale supplied/measured/in units of H) | owner trade-off logged (rung7_wz state-shape inputs vs W1-P/W2-ETH) |
 | W2-POS | positivity bounds vs K1 sides | PARKED (literature-gated) | — | — |
 | **ZOOM_OUT_03** | information accounting | **DONE** | one TRUE NR (W2-DT), one partial (W2-ETH); E-3 linearity wall blocks all NR mechanisms; TC-3 conjecture | Wave 3 |
-| W3-NL | declared nonlinear class → universal fixed point (EW→KPZ) | NEXT | — | — |
-| W3-TC3 | Gaussian coarse-graining preserves quotient data | QUEUED | — | — |
+| W3-NL | declared nonlinear class → universal fixed point (EW→KPZ) | **DONE** | any ε>0 → KPZ β→1/3; ε survives only as a scale (classical transmutation, NR scoped); field extension is a SCOUT construction (premise change) | — |
+| W3-TC3 | Gaussian coarse-graining preserves quotient data | NEXT | — | — |
 | W3-PIN | pin = 0 fork as RG entry point | QUEUED (analysis; owner-level fork not entered) | — | — |
 
 **ZOOM_OUT_01 (done):** new order W1-R → W1-S → W1-G → W1-L → W1-F → ZOOM_OUT_02. TC-1 (selector–supply equivalence, G-moved components) recorded as CANONICAL-CANDIDATE.

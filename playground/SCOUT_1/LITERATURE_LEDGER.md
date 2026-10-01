@@ -33,3 +33,4 @@ The sandbox blocks arXiv and several publishers.
 | Dyson threefold way; Oganesyan–Huse ⟨r⟩ | generic spectra: ⟨r⟩ = 0.5307 (GOE), 0.5996 (GUE); Poisson 0.3863 | STANDARD-TEXTBOOK ✓ (L = 11, finite-size) | W2-ETH addendum |
 | Gross–Neveu 1974 (large N); Coleman–Weinberg 1973; one-loop QCD running | dimensional transmutation: RG-invariant scale; all dimensionless ratios fixed; absolute scale needs a coupling at a reference scale | STANDARD-TEXTBOOK ✓ (gap equation Λ = 10¹…10¹⁶; ΔV/m² = −1/4π) | W2-DT |
 | Valentini 1991 (coarse-grained H-theorem); Valentini–Westman 2005 (2D box relaxation) | coarse-grained H̄ decays for many-mode ψ; fine-grained H conserved; equilibrium not guaranteed | STANDARD (reproduced ✓ with backward trajectories, 96² grid) | W2-QE |
+| KPZ 1986; ASEP ↔ KPZ; Edwards–Wilkinson | symmetric exclusion: β = 1/4; any asymmetry: β = 1/3 (crossover t_x ∝ ε⁻⁴) | STANDARD-TEXTBOOK ✓ (simulation, finite-time) | W3-NL |
