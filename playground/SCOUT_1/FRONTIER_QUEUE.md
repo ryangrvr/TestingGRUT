@@ -7,9 +7,9 @@
 | W1-I | inverse spectral access + topology | **DONE** | NON-SELECTION (values); chain identifiability = Lanczos gauge slice; interior-readout family (X-02); access-depth theorem (2k moments ⟺ k layers; E-15 reads depth 0) | TP-1 (gauge variant) |
 | W1-P | complete passivity ⇒ KMS | **DONE** | SELECTION PRINCIPLE (premise-priced): T(ω) → single T; dense bath: single-copy passivity suffices; T free | owner option logged |
 | W1-G | Gleason/Busch/composition ⇒ Born | QUEUED | — | — |
-| W1-R | FQS unitarity rigidity | NEXT (reprioritized, ZOOM_OUT_01) | — | — |
+| W1-R | FQS unitarity rigidity | **DONE** | RIGIDITY SELECTION (premise-priced): c ∈ Kac set, lattice c → 0.501 at non-integrable point; criticality tuned, member = symmetry; NO-GO: U(1) sectors have c ≥ 1 (XXZ exponents continuous) | W1-A/W1-R mutually exclusive on one 1D parent |
 | W1-L | reconstruction ⇒ complex lift | QUEUED | — | — |
-| W1-S | spectral dimension ⇒ edge exponent | QUEUED | — | — |
+| W1-S | spectral dimension ⇒ edge exponent | NEXT | — | — |
 | W1-F | prediction-first FDT/KMS | QUEUED | — | — |
 
 **ZOOM_OUT_01 (done):** new order W1-R → W1-S → W1-G → W1-L → W1-F → ZOOM_OUT_02. TC-1 (selector–supply equivalence, G-moved components) recorded as CANONICAL-CANDIDATE.
