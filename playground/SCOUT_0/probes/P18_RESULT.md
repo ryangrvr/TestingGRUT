@@ -8,17 +8,25 @@ identifiability?** Script: `p18_homogenization_checks.py` (exact sympy; log
 
 ## 0. Verdict
 
-> **Noise survives as a true martingale (Brownian) limit without any detailed-balance condition,
-> exactly when the forcing is centred, diffusively scaled, and not a coboundary. The limit law is
-> C-B itself, with `Q = Σ²` given by Green–Kubo. At every finite timescale separation the chaotic bath
-> is, by P-17's argument, indistinguishable from an exogenous process with the same law. It does not
-> escape non-identifiability; it gives a second, independent physical parent of C-B.**
+> **Under the declared weak-invariance/homogenization hypotheses, centred diffusively scaled forcing
+> converges to Brownian noise whenever the asymptotic variance `Σ²` (Green–Kubo) is nonzero; no
+> detailed-balance condition is needed. Coboundaries give `Σ² = 0` (exact example below); an "iff"
+> characterization of `Σ² = 0` by coboundaries needs the relevant dynamical-class hypotheses (it holds
+> in the classical hyperbolic settings) and is not claimed for arbitrary chaos. The limit law is C-B
+> itself, with `Q = Σ²`. At every finite timescale separation the chaotic driver is, by P-17's
+> argument, indistinguishable from an exogenous process with the same law. It does not escape
+> non-identifiability. It is an AUTONOMOUS DETERMINISTIC CHAOTIC FORCING PARENT (a one-way driver),
+> not a second physical bath.**
+>
+> *Repair note 01 (auditor, post-banking): three phrases repaired — the "exactly when … not a
+> coboundary" statement (now hypothesis-scoped, above); "second physical parent/bath" (now
+> "deterministic chaotic driver", §2–3); the Kelly–Melbourne citation (§1b).*
 
 - **Charter hypothesis** ("not a true martingale unless detailed balance"): **FALSE.** The
   homogenization theorems need mixing plus a weak invariance principle, not detailed balance.
 - **Charter null** ("no noise survives averaging"): **TRUE only in the averaging scaling**
-  (`ẋ = f + h(y)`, fast `y`), or for a coboundary `h` in the diffusive scaling (exact example below).
-  **FALSE** in the diffusive scaling for generic `h`.
+  (`ẋ = f + h(y)`, fast `y`), or when `Σ² = 0` in the diffusive scaling (e.g. a coboundary `h`; exact
+  example below). **FALSE** in the diffusive scaling whenever `Σ² > 0` under the WIP hypotheses.
 
 ## 1. Parent and statement
 
@@ -35,8 +43,10 @@ kernel: **the reduced law equals that of `ẋ = f(x) + F` with `F` exogenous of 
 Exact, at every ε, any `h`, Gaussian or not.
 
 **(b) ε → 0 — C-B (IMPORTED-STANDARD).** Melbourne–Stuart (Nonlinearity 24, 2011),
-Gottwald–Melbourne (Proc. R. Soc. A 469, 2013) and Kelly–Melbourne (Ann. Probab. 44, 2016) give
-weak convergence in path space:
+Gottwald–Melbourne (Proc. R. Soc. A 469, 2013) and Kelly–Melbourne, "Deterministic homogenization
+for fast–slow systems with chaotic noise", J. Funct. Anal. 272 (2017) 4063–4102 (the broad
+deterministic-homogenization result; not the separate 2016 Ann. Probab. paper on smooth approximation
+of SDEs), give, under their weak-invariance-principle hypotheses, weak convergence in path space:
 
 `x_ε ⇒ X`, with `dX = f(X)dt + Σ dW` and `Σ² = C₀ + 2Σ_{n≥1}C_n`, `C_n = ∫h·h∘Tⁿ dμ`.
 
@@ -64,15 +74,17 @@ its natural extension, the baker's map, is invertible and area-preserving):
 
 | Ledger | Answer |
 |---|---|
-| PHYSICAL PARENT EXISTS | **Yes — a second, structurally different parent of C-B** (deterministic chaos, non-Gaussian at finite ε), at homogenization-limit grade. It is energy-conserving only when the fast flow is Hamiltonian chaos (e.g. Anosov geodesic flow, or the baker's map in discrete time); the skew product has **no back-reaction**, which fails a strict "physical bath" reading (action–reaction). That is the price, recorded. |
+| PHYSICAL PARENT EXISTS | **An autonomous deterministic chaotic forcing parent exists — not a physical bath.** It is a one-way driver of C-B (non-Gaussian at finite ε), at homogenization-limit grade. The skew product has **no back-reaction**, so the combined slow–fast system is not a reciprocal, energy-conserving Hamiltonian bath, even when the fast subsystem alone is Hamiltonian or area-preserving (Anosov geodesic flow; baker's map). Contrast: P-17 = reciprocal Hamiltonian environment; P-18 = one-way deterministic chaotic driver. |
 | REDUCED PROCESS LOOKS STOCHASTIC | Under `y(0) ~ μ`: yes. For a single `y(0)`: deterministic path. In the limit, Brownian. |
 | TRUE INNOVATIONS IDENTIFIABLE | **No** — (a) at finite ε, (b) in the limit. Escaping would require **back-reaction**, where the bath's state depends on the system path beyond a deterministic memory functional. Even there, the known homogenization limits (state-dependent drift and diffusion corrections) are again Markov diffusions that an exogenous multiplicative-noise model reproduces. |
 
 ## 3. Structural reading (feeds ZOOM-OUT 02)
 
-- **Universality.** Two unrelated microscopic parents give the same reduced law, **C-B**:
-  1. P-17: a Gaussian harmonic Hamiltonian bath, with FDT, through the WB + OD limits;
-  2. P-18: non-Gaussian deterministic chaos, through homogenization.
+- **Universality.** Two unrelated microscopic constructions give the same reduced law, **C-B**:
+  1. P-17: a **reciprocal Hamiltonian environment** (Gaussian harmonic bath, FDT), through the WB + OD
+     limits;
+  2. P-18: a **one-way deterministic chaotic driver** (non-Gaussian at finite ε), through
+     homogenization.
 
   Only one nuisance parameter survives per site: `Q = 2T` (FDT temperature in one parent, Green–Kubo
   integral in the other). This is the standard CLT/invariance-principle universality
@@ -87,9 +99,10 @@ its natural extension, the baker's map, is invertible and area-preserving):
   not about observations.
 
 **Classification:** REDISCOVERED-KNOWN (homogenization; Green–Kubo; coboundary degeneracy).
-KNOWN-BUT-NEW-IN-GRUT: the second physical parent of C-B, and the generic form of P-17's
-non-identifiability.
+KNOWN-BUT-NEW-IN-GRUT: a deterministic chaotic driver of C-B (contrasted with P-17's reciprocal
+Hamiltonian environment), and the generic form of P-17's non-identifiability.
 
-**Status: P-18 COMPLETE (one pass). Martingale noise survives without detailed balance (non-coboundary,
-diffusive scaling); limit = C-B with Green–Kubo `Q`; exact non-identifiability at every ε; a second
-universal parent of C-B. Old terminals untouched.**
+**Status: P-18 COMPLETE (one pass; repair note 01 applied). Under WIP/homogenization hypotheses,
+centred diffusive forcing with `Σ² > 0` gives Brownian noise without detailed balance; coboundaries
+give `Σ² = 0`; limit = C-B with Green–Kubo `Q`; exact non-identifiability at every ε; an autonomous
+deterministic chaotic driver of C-B (not a bath). Old terminals untouched.**

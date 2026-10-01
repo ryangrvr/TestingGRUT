@@ -14,6 +14,13 @@ never GRUT physics. S2-1, S2-HB, HT-B are untouched as worded.
 
 ## 0. Verdict
 
+> **Banked lesson (auditor, P-17 audit):** **REDUCED DATA IDENTIFY THE EFFECTIVE FORCING LAW, NOT THE
+> ONTOLOGY REALIZING THAT LAW** — within the declared realization classes. The nontrivial physical
+> content is *not* that identical laws are statistically indistinguishable (that is immediate). It is
+> that a **natural reciprocal Hamiltonian oscillator bath** — autonomous, energy-conserving, no stored
+> path — **realizes the same reduced law as the exogenous model**, rather than an artificial
+> path-storage construction (S2-HB's HB-U) doing so.
+
 > **The identifiability statement appeared at once, so per instruction it was proved rather than sampled.**
 >
 > **Theorem (P-17).** For a system with *any* smooth potential, linearly coupled to a harmonic bath
