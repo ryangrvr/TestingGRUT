@@ -26,3 +26,5 @@ The sandbox blocks arXiv and several publishers.
 | Hardy 2001; Chiribella–D'Ariano–Perinotti 2011; Masanes–Müller 2011 (local tomography) | K_AB = K_A K_B holds for complex, fails for real QM | STANDARD-TEXTBOOK ✓ (counting; rebit witness) | W1-L |
 | quaternionic composites not locally tomographic | — | SECONDARY (not checked) | W1-L |
 | Renou et al., Nature 600, 625 (2021) | network experiment excludes real QM under independent sources | SECONDARY (not readable from sandbox) | W1-L |
+| Gibbons–Hawking 1977; Bunch–Davies; Unruh–DeWitt detector | dS Bunch–Davies state is KMS at T = H/2π along geodesics | STANDARD-TEXTBOOK ✓ (detailed balance to 7 digits) | W1-F |
+| α-vacua non-thermal (Mottola; Allen) | dS-invariant non-Hadamard states are not KMS at H/2π | SECONDARY (not computed) | W1-F |
