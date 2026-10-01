@@ -141,3 +141,38 @@ structure, the wall is confirmed at the dynamical level.
   - **TC1-SURVIVES-ANOMALY** — a relational scale is generated, but its absolute value needs G-breaking boundary/reference data;
   - **TC1-COUNTEREXAMPLE**;
   - **TC1-NEEDS-REFORMULATION** — the deformation group is anomalous.
+
+---
+
+# D1-SCOUT (owner ruling after ZOOM_OUT_04) — SCOUT-ONLY premise experiment, NOT a GRUT premise adoption
+
+**Fence lift (SCOUT-only, new hypothesis class):** `D1-SCOUT = pin = 0 + spatially extended nonlinear (conserved)
+dynamics`. GRUT-RAI is untouched and SCOUT-0 stays frozen.
+
+**Primary question (selector-of-the-selector).** Does structure inherited from GRUT uniquely determine the relevant
+nonlinear universality class? Or does D1 merely exchange a supplied IR label for a supplied nonlinear operator/class?
+
+**Inherited objects:**
+- C1-a/L0-1 chain `ẋ = −Kx + noise`, with K reciprocal (E-1);
+- L0-1d ring with cycle affinity (E-4, asymmetric K, a declared class);
+- the S2 C-B drift `dx = [−Kx − 4βx^{∘3}]dt + B dW`, with `Q = 2 diag(T_i)` (E-15: gradient, odd, on-site, additive
+  site noise, supplied `T_i` profile).
+
+**Steps:**
+- **D1-0 formulability map:** field type, dimension, symmetries, locality, conservation, parity, time reversal,
+  noise, access. The most general low-order local equation allowed. No silent KPZ import.
+- **D1-1 operator uniqueness:**
+  - A. UNIVERSALITY-CLASS-SELECTED;
+  - B. OPERATOR-CLASS-SUPPLIED;
+  - C. NONLINEARITY-FORBIDDEN.
+- **D1-2 RG flow** (only if an operator survives): coupling / crossover / exponents / amplitudes / symmetry labels.
+- **D1-3 symmetry hostiles:** parity, number of conserved fields, range, momentum conservation, detailed balance,
+  dimension, boundary. Each is mapped `assumption → operator → IR class` and tagged earned / supplied / D1-only.
+- **D1-4 pin role:** pin > 0 vs pin = 0 under the same nonlinear dynamics. Does the pin select, or only reveal?
+- **D1-5 information accounting:** inputs before and after, separating UV values forgotten, operator content,
+  symmetry class, dimension, crossover scales and universal IR numbers. TRUE NET SELECTION only if the
+  specification of the IR law becomes smaller.
+- **D1-6 GRUT bridge:** can the field nonlinearity be obtained by local/conservative extension of an admitted GRUT
+  term (S2's drift)? If it must be newly supplied, say so.
+
+**Theorem target:** if B repeats, a **SELECTOR RELOCATION NO-GO** candidate. If A, the first GRUT-adjacent selector.

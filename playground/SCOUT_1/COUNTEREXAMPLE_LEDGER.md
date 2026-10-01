@@ -14,3 +14,5 @@ edited. Numbering: X-01, X-02, …
 | X-07 | W1-R "U(1) forces c ≥ 1" | external audit | holds for unitary 1+1D CFT with a U(1) current algebra, not every U(1)-conserving lattice system | **SCOPED** |
 | X-08 | W1-L "local tomography selects the complex field" (+ three-primitive owner option) | external audit | selects ℂ over ℝ within the declared field class only; reconstruction needs more axioms; ℍ open | **DOWNGRADED** |
 | X-09 | W2-ETH "Gibbs attractor" | external audit | finite unitary systems recur; computed object is the reduced diagonal ensemble | **REPAIRED** (local thermalization, dephasing sense) |
+| X-10 | W2-DT "first true net information reduction" | owner audit | transmutation trades g for a scale; one free physical parameter remains; cross-sector ratios free | **RELABELLED** parameter transmutation / internal dimensionless reduction |
+| X-11 | "E-3 wall": Gaussian ⇒ continuum of fixed points; isolated fixed points need interactions | owner audit | universal form unproved; free theories get discrete data from symmetry/topology/dimension | **SCOPED** to the tested Gaussian families |

@@ -1,3 +1,14 @@
+> **AUDIT REPAIR 02:** W2-DT's "TRUE NR" is relabelled **parameter transmutation / internal dimensionless
+> reduction**. Cross-sector ratios (`Λ_int/H` and the like) stay free. So SCOUT-1 has found **no global net
+> reduction**.
+>
+> The "E-3 wall" is scoped. In the Gaussian/free families tested, exact linear reduction leaves continuous IR labels
+> that are not dynamically selected. The class-collapsing mechanisms examined require interactions/nonlinearity or
+> additional rigidity premises.
+>
+> Working conjecture (owner wording): **a continuous quotient label is erased only if the RG/dynamics makes it
+> irrelevant or ties it to a rigidity constraint.**
+
 # SCOUT-1 ZOOM-OUT 03 — information accounting (after AUDIT REPAIR 01, W2-ETH, W2-FP, W2-TC1, W2-DT, W2-QE)
 
 **Central question:** has SCOUT-1 found a selector that **removes** input information, rather than exchanging one

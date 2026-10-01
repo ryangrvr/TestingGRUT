@@ -1,3 +1,7 @@
+> **AUDIT REPAIR 02 + OWNER RULING:** read W2-DT as parameter transmutation (not global NR), and read the E-3 wall
+> in its scoped form (see `ZOOM_OUT_03.md` banner). **Owner ruling: D1 opened as a SCOUT-ONLY premise experiment
+> ("D1-SCOUT"), not a GRUT premise adoption.** D2–D4 are not opened. A zoom-out is required after D1.
+
 # SCOUT-1 ZOOM-OUT 04 — after Wave 3 (W3-NL, W3-TC3; W3-PIN as analysis)
 
 ## 1. Where the campaign stands

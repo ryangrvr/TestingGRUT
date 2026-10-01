@@ -1,3 +1,11 @@
+> **AUDIT REPAIR 02 (scope):** no universal wording is claimed. **In the Gaussian/free families tested,
+> coarse-graining forgets irrelevant microscopic data but does not select their continuous IR fixed-point labels.
+> The class-collapsing mechanisms tested require interactions/nonlinearity or additional rigidity structure.**
+> - Free theories can still carry discrete data imposed by symmetry, topology, dimensionality or field content.
+>   Those are additional structures and do not refute the scoped result.
+> - Not claimed: "every Gaussian theory has a continuum of fixed points" or "isolated fixed points require
+>   interactions".
+
 # SCOUT-1 W3-TC3 RESULT — what Gaussian coarse-graining does to the quotient data
 
 **Charter:** ZOOM_OUT_03 §4–5 (TC-3 conjecture).

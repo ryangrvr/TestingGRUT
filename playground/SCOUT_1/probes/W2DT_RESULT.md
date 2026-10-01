@@ -1,3 +1,13 @@
+> **AUDIT REPAIR 02 (owner ruling):** relabelled **PARAMETER TRANSMUTATION / INTERNAL DIMENSIONLESS REDUCTION**,
+> not "global true net reduction".
+> - Transmutation trades a dimensionless coupling at a reference scale for one dimensionful RG-invariant scale. The
+>   renormalized theory still has **one free physical parameter**, now dimensional (as Gross–Neveu themselves state).
+> - Inside the isolated sector, with that scale as the unit, the dimensionless ratios become parameter-free. That is
+>   genuine **internal dimensionless predictivity**.
+> - Once the sector is coupled to others carrying H, M_Pl or τ₀, the ratios `Λ_int/H`, `Λ_int/M_Pl` and `Λ_int·τ₀`
+>   are free unless another principle fixes them.
+> - TC-1 is intact, and cleaner for it.
+
 # SCOUT-1 W2-DT RESULT — dimensional transmutation / anomalous scale generation vs TC-1
 
 **Charter:** `PROBE_CHARTERS.md` §W2-DT (pre-registered).
