@@ -1,3 +1,19 @@
+> **SOURCE-GRADE REPAIR (owner ruling at freeze; external audit read the primary arXiv records this sandbox could
+> not reach):**
+> - **Theorem headline / scope = PRIMARY-ABSTRACT-VERIFIED** for:
+>   - Chiribella–D'Ariano–Perinotti, arXiv:1011.6451: five informational axioms define a broad class; purification
+>     singles out QT; no Hilbert-space axioms assumed.
+>   - Hardy, arXiv:quant-ph/0101012: five axioms; continuous reversibility separates QT from classical probability;
+>     explains the complex numbers and the trace rule.
+>   - Masanes–Müller, arXiv:1004.1483: the full formalism from physical requirements. Their later summary names
+>     tomographic locality, continuous reversibility and a subspace axiom as core.
+>   - Barnum–Wilce, arXiv:1202.4513: Jordan/HSD systems + locally tomographic composites + at least one qubit ⇒
+>     finite-dimensional complex QM, with the stated superselection qualification.
+> - **Full proof / detailed premise dependency = OWED PRIMARY-TEXT REVIEW.**
+> - The detailed axiom-price interpretation remains **SCOUT analysis**. The computational ablations remain
+>   **locally verified**.
+> - The D3 conclusion is unchanged.
+
 # D3 PREMISE PRICE TABLE (SCOUT-only)
 
 ## How to read this table
