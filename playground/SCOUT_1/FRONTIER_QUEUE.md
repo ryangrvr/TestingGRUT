@@ -14,8 +14,8 @@
 | **ZOOM_OUT_02** | Wave-1 synthesis | **DONE** | price table (5 premise classes); TC-2 candidate (classification only); Wave 2 spawned | W2-QE next |
 | W2-QE | Born as attractor (dBB relaxation) | NEXT | — | — |
 | W2-ETH | thermalization ⇒ KMS without supplied passivity | **DONE** | ATTRACTOR SELECTION of KMS shape (price: non-integrability = genericity, a 6th premise class); T set by supplied energy; record's quadratic parents excluded (E-3 tension) | — |
-| W2-FP | criticality without tuning (SOC) | QUEUED | — | — |
-| W2-TC1 | hostile search for an earned absolute reference | QUEUED | — | — |
+| W2-FP | criticality without tuning (SOC) | **DONE** | TUNING RELOCATED to exact zeros (ε = 0 conservation, r = 0 separation) = G-fixed values; supplied | — |
+| W2-TC1 | hostile search for an earned absolute reference | **DONE** | TC-1 SURVIVES full-record search (derived tier = 0; every scale supplied/measured/in units of H) | owner trade-off logged (rung7_wz state-shape inputs vs W1-P/W2-ETH) |
 | W2-POS | positivity bounds vs K1 sides | PARKED (literature-gated) | — | — |
 
 **ZOOM_OUT_01 (done):** new order W1-R → W1-S → W1-G → W1-L → W1-F → ZOOM_OUT_02. TC-1 (selector–supply equivalence, G-moved components) recorded as CANONICAL-CANDIDATE.

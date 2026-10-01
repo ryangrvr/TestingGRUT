@@ -1,0 +1,11 @@
+L = 11 OBC, middle half of the spectrum; references GOE 0.5307, GUE 0.5996, Poisson 0.3863
+  generic real (GOE expected)                 : <r> = [0.5091 0.487  0.5205]  mean 0.5055
+  integrable random-TFIM (Poisson expected)   : <r> = [0.4034 0.3729 0.3541]  mean 0.3768
+  generic complex (GUE expected)              : <r> = [0.5265 0.5228 0.5241]  mean 0.5245
+  coupling magnitudes vary across realizations; <r> does not (universality); its value is set by the
+  supplied antiunitary-symmetry class (Dyson's threefold way): genericity fixes the value WITHIN a class.
+
+POST-HOC NOTE (added after the run, not program output): the third case is NOT GUE. Site fields
+(g_i, b_i) in the x-y plane can be rotated into the x-z plane by local z-rotations, which leave Z Z
+invariant, so the Hamiltonian is unitarily equivalent to a real one (a hidden antiunitary). The
+measured 0.5245 is GOE-like, as that equivalence predicts.

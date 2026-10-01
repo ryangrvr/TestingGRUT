@@ -1,0 +1,18 @@
+=== 1. conservative BTW, infinitely slow drive (no tuned parameter) ===
+  L=16                                     n= 12305  <s>=    27.50  s_c=<s^2>/<s>=      92.4  max=    422  P(s) slope (3..s_c/10)=-1.129
+  L=32                                     n= 12720  <s>=    95.75  s_c=<s^2>/<s>=     463.6  max=   2286  P(s) slope (3..s_c/10)=-0.988
+  L=64                                     n= 13061  <s>=   353.28  s_c=<s^2>/<s>=    2807.5  max=  13518  P(s) slope (3..s_c/10)=-1.005
+  finite-size scaling: s_c ~ L^2.463;  <s> ~ L^1.842 (exact BTW: <s> ~ L^2)
+
+=== 2. hostile: bulk dissipation eps (L = 64) ===
+  eps=0.01                                 n=  6276  <s>=    44.67  s_c=<s^2>/<s>=     182.6  max=   1128  P(s) slope (3..s_c/10)=-0.802
+  eps=0.03                                 n=  5907  <s>=    18.25  s_c=<s^2>/<s>=      58.1  max=    327  P(s) slope (3..s_c/10)=+nan
+  eps=0.1                                  n=  5215  <s>=     6.67  s_c=<s^2>/<s>=      17.6  max=     96  P(s) slope (3..s_c/10)=+nan
+  and at eps = 0.03 for L = 32 vs 64 (cutoff set by eps, not L):
+  eps=0.03, L=32                           n=  5933  <s>=    15.39  s_c=<s^2>/<s>=      49.5  max=    301  P(s) slope (3..s_c/10)=+nan
+  eps=0.03, L=64                           n=  5990  <s>=    17.73  s_c=<s^2>/<s>=      57.5  max=    305  P(s) slope (3..s_c/10)=+nan
+
+=== 3. hostile: finite drive rate r (grains per site per parallel step), L = 32 ===
+  r=0.0001                                 n=  4487  <s>=   239.88  s_c=<s^2>/<s>=    1018.0  max=   3114  P(s) slope (3..s_c/10)=-1.053
+  r=0.001: activity never stops (merged / infinite avalanche)
+  r=0.003: activity never stops (merged / infinite avalanche)

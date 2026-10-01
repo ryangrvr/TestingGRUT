@@ -29,3 +29,5 @@ The sandbox blocks arXiv and several publishers.
 | Gibbons–Hawking 1977; Bunch–Davies; Unruh–DeWitt detector | dS Bunch–Davies state is KMS at T = H/2π along geodesics | STANDARD-TEXTBOOK ✓ (detailed balance to 7 digits) | W1-F |
 | α-vacua non-thermal (Mottola; Allen) | dS-invariant non-Hadamard states are not KMS at H/2π | SECONDARY (not computed) | W1-F |
 | ETH (Deutsch 1991; Srednicki 1994; Rigol–Dunjko–Olshanii 2008); GGE for integrable chains | non-integrable closed systems relax locally to Gibbs at β fixed by energy; integrable ones to a GGE | STANDARD-TEXTBOOK (ED-indicated L ≤ 12) | W2-ETH |
+| Bak–Tang–Wiesenfeld 1987; Dhar 1990; Dickman–Muñoz–Vespignani–Zapperi 2000 | slowly driven conservative sandpiles reach scale-free states; criticality requires conservation and r → 0 | STANDARD-TEXTBOOK ✓ (simulation L ≤ 64) | W2-FP |
+| Dyson threefold way; Oganesyan–Huse ⟨r⟩ | generic spectra: ⟨r⟩ = 0.5307 (GOE), 0.5996 (GUE); Poisson 0.3863 | STANDARD-TEXTBOOK ✓ (L = 11, finite-size) | W2-ETH addendum |
