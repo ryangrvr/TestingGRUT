@@ -39,3 +39,5 @@
 | **ZOOM_OUT_05** | after D1 | **DONE** | refined quotient principle; TC-4; OWNER STOP (D2–D4 gated) | awaiting owner: reproduction / freeze / D3 |
 | **W4-OG** | operator generation / closure hostile vs TC-4 | **DONE** | C. TC4-REFINED-HIERARCHY: λ₂ generated (0 → 0.274) when allowed, not when forbidden (0.002); sector/SSB/anomaly mechanisms; TC-4 strong form refuted (X-12) | CONTENT_SELECTION_LEDGER.md |
 | **ZOOM_OUT_06** | after W4 | **DONE** | boundary moved up to C3/C4/C5 + sector/state; TC-4′ candidate; D3 precisely motivated | OWNER DECISION (D3 gated) |
+| **W5-ES** | emergent symmetry (C3 hostile) | **DONE** | A in principle (breaking detail erasable: cubic→O(N) for N<N_c; C₄→SO(2), ratio 1.037→1.0007) + B in GRUT scope; enlarged group set by C4/C5 + basin; redundant anisotropy kept (X-13) | — |
+| **ZOOM_OUT_07** | after W5 | **DONE** | boundary at C4/C5 + basin; TC-4′ refined; D3 precisely motivated | OWNER DECISION |

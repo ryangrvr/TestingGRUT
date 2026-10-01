@@ -23,3 +23,16 @@
   perturbation is in fact weakly RELEVANT (y_v ~ +0.01), i.e. N = 3 is NOT robustly enhanced (contested/marginal)
 
 === Part 2: 2D Ising at T_c, emergent rotation symmetry (L = 128, Wolff) ===
+  isotropic J: ratio C_axis(r) / C_diag(r) at equal |r| (diag points (k,k), |r| = k sqrt 2; axis interpolated)
+    |r| =   1.41: C_axis = 0.6636, C_diag = 0.6401, ratio = 1.0368
+    |r| =   2.83: C_axis = 0.5514, C_diag = 0.5457, ratio = 1.0103
+    |r| =   5.66: C_axis = 0.4665, C_diag = 0.4651, ratio = 1.0030
+    |r| =  11.31: C_axis = 0.4004, C_diag = 0.3996, ratio = 1.0018
+    |r| =  22.63: C_axis = 0.3486, C_diag = 0.3483, ratio = 1.0007
+  uniaxial anisotropy Jy/Jx = 0.5 at its T_c = 1.6410: C along x vs along y at the same r
+    r =  2: C_x = 0.6436, C_y = 0.5720, ratio = 1.1252
+    r =  4: C_x = 0.5402, C_y = 0.4864, ratio = 1.1107
+    r =  8: C_x = 0.4592, C_y = 0.4182, ratio = 1.0980
+    r = 16: C_x = 0.3959, C_y = 0.3643, ratio = 1.0867
+  -> the anisotropy does NOT wash out: it is redundant (a coordinate rescaling x -> x / xi_x), so the IR is
+     rotation-invariant only in rescaled coordinates; the aspect ratio is kept as geometry, not erased.
