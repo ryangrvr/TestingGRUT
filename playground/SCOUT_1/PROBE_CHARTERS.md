@@ -61,3 +61,42 @@
 ## W1-F — Prediction-first: fluctuation–dissipation relations (C13, C14)
 - **Question.** Does GRUT's earned structure force the Einstein relation or the KMS noise/dissipation ratio `2coth(πω/H)`?
 - **Expected.** Both follow from supplied/borrowed FDT/KMS and are standard, so RETIRE as NON-DISTINCTIVE unless a GRUT-earned premise is found.
+
+---
+
+# Wave 2 (preregistered after ZOOM_OUT_02)
+
+Common question: can a **dynamical attractor** replace a supplied *price* (preparation or tuning) found in
+Wave 1? If it can, a dynamical structure could earn a weight-0 value. If the attractor needs its own supplied
+structure, the wall is confirmed at the dynamical level.
+
+## W2-QE — Born as a dynamical attractor (de Broglie–Bohm relaxation)
+- **Question.** Starting from non-equilibrium `ρ₀ ≠ |ψ₀|²` in a 2D box, does Bohmian dynamics drive the
+  coarse-grained `ρ̄ → |ψ|²‾` (H̄ → 0) without a supplied equilibrium preparation?
+- **Hypothesis.** Yes for many-mode ψ (Valentini–Westman), with three prices:
+  - the guidance law;
+  - coarse-graining (fine-grained H̄ is conserved);
+  - mode complexity — few-mode or stationary ψ do not relax.
+- **Controls:**
+  - equilibrium start (stays);
+  - single mode (no motion);
+  - two modes (incomplete);
+  - dt halving (numerical convergence).
+- **Outcomes:**
+  - ATTRACTOR SELECTION (prices stated);
+  - NO ATTRACTOR;
+  - PARTIAL (relaxation only in a class).
+
+## W2-ETH — KMS without supplied passivity (closed-system thermalization)
+- **Question.** Does a closed non-integrable spin chain, started in a non-thermal product state, drive a small
+  subsystem to the KMS state at one temperature? Is the temperature fixed by anything but the supplied energy?
+- **Hypothesis.** Yes (ETH) for non-integrable chains. No for integrable chains, which go to a GGE. T is set by
+  the initial energy density (supplied).
+- **Outcomes:** ATTRACTOR SELECTION (prices) / NO.
+
+## W2-FP — criticality without tuning (self-organized criticality)
+- **Question.** Does a slowly driven, locally relaxing system (BTW/Manna sandpile) reach a scale-free state with
+  no tuned parameter? Is a time-scale separation (drive rate → 0) the hidden tuning?
+- **Hypothesis.** Scale-free avalanches appear only in the limit drive/dissipation → 0. The tuning moves into a
+  rate ratio.
+- **Outcomes:** UNTUNED FIXED POINT / TUNING RELOCATED / NO.

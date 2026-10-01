@@ -28,3 +28,4 @@ The sandbox blocks arXiv and several publishers.
 | Renou et al., Nature 600, 625 (2021) | network experiment excludes real QM under independent sources | SECONDARY (not readable from sandbox) | W1-L |
 | Gibbons–Hawking 1977; Bunch–Davies; Unruh–DeWitt detector | dS Bunch–Davies state is KMS at T = H/2π along geodesics | STANDARD-TEXTBOOK ✓ (detailed balance to 7 digits) | W1-F |
 | α-vacua non-thermal (Mottola; Allen) | dS-invariant non-Hadamard states are not KMS at H/2π | SECONDARY (not computed) | W1-F |
+| ETH (Deutsch 1991; Srednicki 1994; Rigol–Dunjko–Olshanii 2008); GGE for integrable chains | non-integrable closed systems relax locally to Gibbs at β fixed by energy; integrable ones to a GGE | STANDARD-TEXTBOOK (ED-indicated L ≤ 12) | W2-ETH |

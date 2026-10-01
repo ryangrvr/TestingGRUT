@@ -13,7 +13,7 @@
 | W1-F | prediction-first FDT/KMS | **RETIRED** | T/H = 1/2π fixed given supplied dS + Hadamard; T_dS = 2.8e-30 K; non-distinctive | — |
 | **ZOOM_OUT_02** | Wave-1 synthesis | **DONE** | price table (5 premise classes); TC-2 candidate (classification only); Wave 2 spawned | W2-QE next |
 | W2-QE | Born as attractor (dBB relaxation) | NEXT | — | — |
-| W2-ETH | thermalization ⇒ KMS without supplied passivity | QUEUED | — | — |
+| W2-ETH | thermalization ⇒ KMS without supplied passivity | **DONE** | ATTRACTOR SELECTION of KMS shape (price: non-integrability = genericity, a 6th premise class); T set by supplied energy; record's quadratic parents excluded (E-3 tension) | — |
 | W2-FP | criticality without tuning (SOC) | QUEUED | — | — |
 | W2-TC1 | hostile search for an earned absolute reference | QUEUED | — | — |
 | W2-POS | positivity bounds vs K1 sides | PARKED (literature-gated) | — | — |
