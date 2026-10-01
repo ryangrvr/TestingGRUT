@@ -9,6 +9,10 @@
 > - Results judged promotion-worthy are labelled `CANONICAL-CANDIDATE` and stay here until a separate promotion
 >   decision is made.
 
+**Location (owner decision):** this campaign lives on the branch `scout-2` of `ryangrvr/TestingGRUT`. The branch
+has unrelated history: it shares no commits with the frozen `scout-0` / `scout-1` branches, and it is not a
+separate repository, because this session could not create one (GitHub 403 for this integration).
+
 **Question.** Can the C5 layer itself emerge rather than be supplied? Can **systems, composition, states/effects,
 probability and tomography** arise from something more primitive? Or is C5 genuinely irreducible?
 

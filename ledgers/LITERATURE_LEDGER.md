@@ -12,3 +12,4 @@
 |---|---|---|---|
 | Cotler–Penington–Ranard, "Locality from the spectrum" (2019) | generic spectra admit at most one (locally unique) k-local TPS; most admit none | SECONDARY; dimension count + rank reproduced ✓ (n = 3…10) | S2-1 |
 | Zanardi (2001), observable-induced TPS | TPS is relative to a choice of observable algebra | SECONDARY; explicit inequivalent 2-local TPS pairs ✓ (n = 3, 4) | S2-1 |
+| Gross–Müller–Colbeck–Dahlsten (2010): boxworld reversible dynamics trivial | reversible dynamics of gbit composites are local + permutations | SECONDARY; incidence invariant + finiteness ✓ | S2-2 |

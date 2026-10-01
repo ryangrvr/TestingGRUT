@@ -1,0 +1,18 @@
+=== A. two gbits ===
+  max tensor (NS polytope): 24 vertices, 16 facets
+     facets through a product vertex: [12]; through a PR vertex: [8]
+     -> no automorphism maps a product vertex to a PR vertex (incidence count is invariant): no entangling map
+  min tensor (local polytope): 16 vertices (all product), 24 facets; facets per vertex: [16]
+     every vertex is a product state, so every automorphism permutes product states
+  any polytope has a FINITE automorphism group (a subgroup of the vertex permutations):
+  no continuous reversible dynamics, hence no continuous interaction, in either gbit composite
+
+=== B. classical bits ===
+  composite = simplex on 4 pure states; reversible maps = S_4 (24 permutations, includes CNOT);
+  Lie algebra of the automorphism group = 0 -> no CONTINUOUS reversible interaction
+
+=== C. continuous entangling one-parameter groups ===
+  complex qubits, exp(-i t ZZ), from |++>: entanglement (2 s0 s1) at t = 0, 0.2, 0.4, pi/4: [0.     0.3894 0.7174 1.    ]
+  real rebits,   exp(t iYX),  from |00> : entanglement (2 s0 s1) at t = 0, 0.2, 0.4, pi/4: [0.     0.3894 0.7174 1.    ]
+  Lie algebras: classical 0; gbit (square) 0; rebit (disc) so(2) dim 1; qubit (ball) so(3) dim 3;
+  composites: so(4) (dim 6) > local so(2)+so(2) (dim 2); su(4) (dim 15) > local su(2)+su(2) (dim 6)
