@@ -1,0 +1,18 @@
+=== hidden uniquely ergodic coin, lam = 0.300000: coin frequency = 0.300001 ===
+  (i)   s = [n sqrt2 mod 1 < mu]  (rationally independent): P(c=1,s=1) = 0.1200 vs product 0.1200
+       setting 0: observed 0.3000 vs convex mixture 0.3000; setting 1: observed 1.0000 vs convex mixture 1.0000
+  (ii)  s = [2 n phi mod 1 < mu]  (rationally dependent): P(c=1,s=1) = 0.2000 vs product 0.1200
+       setting 0: observed 0.1667 vs convex mixture 0.3000; setting 1: observed 1.0000 vs convex mixture 1.0000
+  (iii) s = c                     (tester reads the coin): P(c=1,s=1) = 0.3000 vs product 0.0900
+       setting 0: observed 0.0000 vs convex mixture 0.3000; setting 1: observed 1.0000 vs convex mixture 1.0000
+=== hidden uniquely ergodic coin, lam = 0.309017: coin frequency = 0.309017 ===
+  (i)   s = [n sqrt2 mod 1 < mu]  (rationally independent): P(c=1,s=1) = 0.1236 vs product 0.1236
+       setting 0: observed 0.3090 vs convex mixture 0.3090; setting 1: observed 1.0000 vs convex mixture 1.0000
+  (ii)  s = [2 n phi mod 1 < mu]  (rationally dependent): P(c=1,s=1) = 0.2000 vs product 0.1236
+       setting 0: observed 0.1817 vs convex mixture 0.3090; setting 1: observed 1.0000 vs convex mixture 1.0000
+  (iii) s = c                     (tester reads the coin): P(c=1,s=1) = 0.3090 vs product 0.0955
+       setting 0: observed 0.0000 vs convex mixture 0.3090; setting 1: observed 1.0000 vs convex mixture 1.0000
+
+-> mixtures (convexity) emerge from a deterministic hidden coin with EARNED weights, iff the tester's settings are
+   statistically independent of the coin: earned by rational independence of the rotation numbers (Weyl), lost
+   for rationally dependent or coin-reading testers. Prices: coin inaccessibility (access) + independence condition.
