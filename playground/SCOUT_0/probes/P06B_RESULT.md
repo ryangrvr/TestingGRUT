@@ -1,7 +1,9 @@
 # SCOUT_0 W1 P-06b RESULT — EXACT closure of the CM boundary (theorem)
 
 **Charter:** follow-up to P-06 (spawned by P-06's H2 and the auditor's follow-up directive).
-**Script:** `probes/p06b_exact_boundary.py` (mpmath dps=22; all checks pass, log below).
+**Script:** `probes/p06b_exact_boundary.py` (mpmath; all checks pass, log below).
+**Correction history:** `81ad661` banked this theorem with an invalid proof of the `1/2 < p ≤ 1` leg
+(false lemma). Repaired in `P06B_CORRECTION_01.md`; this file is the corrected statement.
 **Claim proved.** Within the declared Lorentzian-exponent family
 `S_p(x) ∝ (x²+κ²)^{-p}`, `f_p(t) ∝ t^{p-1/2} K_{p-1/2}(κt)`:
 
@@ -15,49 +17,37 @@ S5-0/S5-1 terminals untouched (per P-06 charter).
 Let `ν = p − 1/2`, `z = κt`. CM is invariant under `z ↦ κt` (positive rescaling) and under
 positive multiplication, so work with `g_ν(z) = z^ν K_ν(z)`.
 
-**(A) CM for `p ≤ 1/2` (ν ≤ 0, μ = −ν ≥ 0).** The standard representation
-(DLMF 10.32.9-type, valid for μ > −1/2)
+**(A) CM for all `0 < p < 1` — one Bernstein representation.** Put `μ = −ν = 1/2 − p ∈ (−1/2, 1/2)`.
+DLMF 10.32.8, valid for `Re μ > −1/2`:
 
 ```
 K_μ(z) = √π (z/2)^μ / Γ(μ+1/2) ∫_1^∞ e^{-zs} (s²−1)^{μ−1/2} ds
 ```
 
-gives, after dividing by `(z/2)^μ = z^{-ν}`:
+With `K_ν = K_{−ν} = K_μ`, the prefactor `(z/2)^μ = (z/2)^{−ν}` cancels against `z^ν` for either
+sign of `ν`, and `μ − 1/2 = −p`, `μ + 1/2 = 1 − p`:
 
 ```
-z^ν K_ν(z) = √π 2^{-μ} / Γ(μ+1/2) · ∫_1^∞ e^{-zs} (s²−1)^{μ−1/2} ds
+z^ν K_ν(z) = √π 2^ν / Γ(1−p) · ∫_1^∞ e^{-zs} (s²−1)^{-p} ds ,      0 < p < 1 .
 ```
 
-—a Laplace transform of the strictly positive weight `(s²−1)^{μ−1/2}` (integrable at s=1
-since μ ≥ 0). Hence CM. This is the exact Bernstein representation the auditor asked for;
-note it requires `ν ≤ 0` so that the `(z/2)^μ` prefactor cancels against `z^ν`.
+The weight `(s²−1)^{-p}` is strictly positive, integrable at `s = 1` iff `p < 1`, and exponentially
+damped at `∞` — a Laplace transform of a positive locally-finite measure on `[1,∞)`. Hence CM
+(Bernstein). This is exactly the auditor's formula; for `p ≤ 1/2` it coincides with the banked case
+(A) of `81ad661`, and for `1/2 < p < 1` it is the same formula with `μ ∈ (−1/2, 0)`, which DLMF
+permits.
 
-**(B) CM for `1/2 < p ≤ 1` (0 < ν ≤ 1/2).** Same representation with `ν > 0` leaves a factor:
+**Endpoint p = 1 (ν = 1/2):** `g = √(π/2) e^{-z}` — the recorded S5-1 scaled kernel, exactly CM.
+As `p → 1⁻` the normalised weight `(s²−1)^{-p}/Γ(1−p)` tends to `δ_1`, the Bernstein measure of
+`e^{-z}` — the endpoint is the continuous limit of (A). **Endpoint p → 0:** `g ∝ e^{-z}/z` — still a
+Laplace transform (measure on `[1,∞)`).
 
-```
-z^ν K_ν(z) = √π 2^{-ν} / Γ(ν+1/2) · z^{2ν} · ℒ[w],  w(s) = (s²−1)^{ν−1/2} ≥ 0.
-```
+**(B) — retracted.** `81ad661` proved `1/2 < p ≤ 1` via a prefactor `z^{2p−1}` and the lemma
+"`z^α·CM` is CM for `α ∈ (0,1]`". That lemma is false (`z e^{-z}` is not CM) and the leg is
+superseded by (A). See `P06B_CORRECTION_01.md` §1.
 
-The extra factor is multiplication by `z^α`, `α = 2ν ∈ (0, 1]`. Lemma: if `g` is CM and
-`α ∈ (0, 1]`, then `z^α g(z)` is CM.
-*Proof of lemma.* `α = 1`: `zg = −g′`, and derivatives of CM functions are CM. For
-`0 < α < 1`, write (standard) `z^α = (α/Γ(1−α)) ∫_0^∞ (1 − e^{-uz}) u^{-α−1} du`, so for
-`g = ℒ[μ]`:
-
-```
-z^α g(z) = (α/Γ(1−α)) ∫∫ u^{-α−1} [e^{-sz} − e^{-(s+u)z}] dμ(s) du
-         = (α/Γ(1−α)) ∫∫ u^{-α−1} ζ ∫_s^{s+u} e^{-ζz} dζ  dμ(s) du,
-```
-
-using `e^{-sz} − e^{-(s+u)z} = ζ∫_s^{s+u} e^{-ζz} dζ` with `ζ ∈ (s, s+u)`. Swapping the order,
-the coefficient of `e^{-ζz}` is `(1/Γ(1−α)) ∫_{ζ−s}^∞ u^{-α−1} du = (ζ−s)^{-α}/Γ(1−α) ≥ 0` on
-`ζ > s`. So `z^α g` is a positive mixture of CM atoms `ζ e^{-ζz}` ⇒ CM. ∎
-
-Since `ℒ[w]` is CM (A) and `α = 2p−1 ≤ 1 ⟺ p ≤ 1`, `g_ν` is CM exactly on `0 < p ≤ 1` —
-**the factor `z^{2p−1}` is precisely where the boundary lives.**
-
-**(C) Non-CM for `p > 1` (ν > 1).** Recurrence `d/dz [z^ν K_ν(z)] = −z^ν K_{ν−1}(z)`, so
-`g_ν′ = −z g_{ν−1}` and
+**(C) Non-CM for `p > 1` (ν > 1/2).** Recurrence `d/dz [z^ν K_ν(z)] = −z^ν K_{ν−1}(z)`
+(DLMF 10.29.4), so `g_ν′ = −z g_{ν−1}` and
 
 ```
 g_ν″(0) = −g_{ν−1}(0) = −2^{ν−2} Γ(ν−1) < 0   for every ν > 1 (integers included).
@@ -68,25 +58,31 @@ violation is uniform in ν > 1. (For `1/2 < ν < 1` separately: `g_ν ~ c₀ + c
 `c₁ = 2^{−ν−1} Γ(−ν) < 0`, so `g″ ~ c₁(2ν)(2ν−1) z^{2ν−2} < 0` near 0; `ν = 1`: `g = zK₁`,
 `g″ ~ ln(z/2) + γ − 1/2 → −∞`.)
 
-**Endpoint p = 1 (ν = 1/2):** `g = √(π/2) e^{-z}` — the recorded S5-1 scaled kernel, exactly
-CM. **Endpoint p → 0:** `g ∝ e^{-z}/z` — still a Laplace transform (measure on `[1,∞)`).
+**Where the boundary lives.** The Bernstein (relaxation-rate) measure of `f_p` has density
+`∝ (s²−1)^{-p}` on `[1,∞)` in the scaled rate `s = rate/κ`: the UV spectral exponent `p` is the
+endpoint exponent of that measure at the gap edge `s = 1`. CM is lost exactly when the measure stops
+being locally finite there (`p ≥ 1`), and (C) independently certifies `f″ < 0` beyond. (The earlier
+"prefactor `z^{2p−1}`" reading of the boundary is withdrawn.)
 
 ## Numerical cross-checks (all pass; script log)
 
+- (A): unified Laplace (Bernstein) representation verified to ≤ 3.8e-23 relative (dps=22) over
+  `z ∈ {0.2, 1, 4}` for `p ∈ {0.1, 0.25, 0.5, 0.6, 0.75, 0.9, 0.95, 0.99}` (endpoint singularity
+  removed by `s = 1 + t^{1/(1−p)}`).
+- Lemma counterexample recorded: `(z e^{-z})′(0.5) = +0.3033 > 0`; the script-line-8 identity of
+  `81ad661` has RHS/LHS = 1.5 at `(α,s,z) = (1/2, 1, 1)`.
 - (C): `f″(0.05) < 0` for p ∈ {1.05, 1.2, 1.5, 2.0, 2.5, 3.0}; analytic `f″(0) = −2^{ν−2}Γ(ν−1)`
   matches the trend for p ∈ {2, 2.5, 3} (e.g. p=3: −1.2488 vs predicted −1.2533 at z=0.05).
-- (A): Laplace-representation identity verified to ≤ 2.1e-23 / 3.0e-20 / 1.5e-13 (quadrature
-  floor at the endpoint-singular p=0.5 weight) for p ∈ {0.1, 0.25, 0.5}.
-- (ii): derivative-sign CM test (n≤4, t ∈ [0.05, 12]) passes for p ∈ {0.6, 0.75, 0.9, 1.0}.
+- Corroboration: derivative-sign CM test (n≤4, t ∈ [0.05, 12]) passes for p ∈ {0.6, 0.75, 0.9, 1.0}.
 - p=2: numeric `f″(0.5) = −0.3800867253` vs analytic `√(π/2)e^{-z}(z−1) = −0.3800867253` — exact.
 
-## Auditor items, answered
+## Auditor items, answered (corrected)
 
-1. **Bernstein representation for `0 < p < 1`:** YES, but only directly for `p ≤ 1/2` (case A).
-   For `1/2 < p ≤ 1` the representation exists but carries the prefactor `z^{2p−1}`; CM survives
-   because `z^α·CM` is CM for `α ∈ (0,1]` (lemma proved above). **The prefactor exponent `2p−1 ≤ 1`
-   IS the boundary** — this is why the naive "positive integral ⇒ CM for all p" reading fails
-   (it is exactly what would have contradicted the proven p=2 counterexample).
+1. **Bernstein representation for `0 < p < 1`:** YES, directly and uniformly — the auditor's formula
+   `z^ν K_ν(z) ∝ ∫_1^∞ e^{-zs}(s²−1)^{-p} ds` holds on the whole interval (DLMF 10.32.8 with index
+   `1/2 − p ∈ (−1/2, 1/2)`). The `81ad661` claim that it works "only for `p ≤ 1/2`" was wrong. The
+   representation fails at `p = 1` because the weight stops being integrable at `s = 1`; `p = 1` is
+   the explicit exponential endpoint.
 2. **Small-z expansion, `p > 1`:** for `ν > 1`, `g″(0) = −2^{ν−2}Γ(ν−1) < 0` — a violation AT the
    origin, uniform in p; for `1 < p < 3/2` the `z^{2ν}` term makes `g″ < 0` on a neighborhood of 0;
    `p = 3/2` is the logarithmic case with the same sign. **Yes: `f_p″ < 0` sufficiently near zero
@@ -94,11 +90,12 @@ CM. **Endpoint p → 0:** `g ∝ e^{-z}/z` — still a Laplace transform (measur
 
 ## Status
 
-**P-06b COMPLETE — scout theorem (family-level, exact):** within the Lorentzian-exponent family,
-`f_p` is CM iff `0 < p ≤ 1`. Literature classification: the CM of individual members
-(`e^{-z}`, `K_0`) is textbook (REDISCOVERED-KNOWN); the exact iff statement over the exponent
-family, and its role as the `d_mono` order parameter for the S5-1 parent, is
-**KNOWN-BUT-NEW-IN-GRUT** (ledger update pending). P-06c (second deformation direction) remains
+**P-06b COMPLETE — scout theorem (family-level, exact), proof repaired in CORRECTION 01:** within
+the Lorentzian-exponent family, `f_p` is CM iff `0 < p ≤ 1`. Literature classification: the CM of
+individual members (`e^{-z}`, `K_0`) is textbook (REDISCOVERED-KNOWN); the exact iff statement over
+the exponent family is standard Matérn-type material and its role as the `d_mono` order parameter
+for the S5-1 parent is **KNOWN-BUT-NEW-IN-GRUT** (explicit citation still owed; only DLMF
+10.32.8 / 10.29.4 / 10.30 are load-bearing here). P-06c (second deformation direction) remains
 queued — this theorem does not transfer across families automatically.
 
-**Next: P-08 (frozen charter).**
+**Next: P-08 (frozen charter) — already executed (`cf0f7fe`).**
