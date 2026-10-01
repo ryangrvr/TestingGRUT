@@ -1,0 +1,24 @@
+=== (b) Jacobian rank of 2-local couplings -> spectrum, modulo local unitaries ===
+   n  P(2-local)  P-3n  2^n-1  rank J  fibre dim = P-3n-rank   verdict        min level gap
+   3         36     27      7       7                    20   NON-UNIQUE      1.49e+00
+   4         66     54     15      15                    39   NON-UNIQUE      5.22e-01
+   5        105     90     31      31                    59   NON-UNIQUE      2.01e-01
+   6        153    135     63      63                    72   NON-UNIQUE      9.75e-02
+   7        210    189    127     127                    62   NON-UNIQUE      3.68e-02
+   8        276    252    255     252                     0   LOCALLY UNIQUE  1.76e-02
+   9        351    324    511     324                     0   LOCALLY UNIQUE  1.52e-02
+  10        435    405   1023     405                     0   LOCALLY UNIQUE  3.67e-03
+  image dimension of the 2-local family in spectrum space = rank; spectrum space dim = 2^n - 1
+  -> once P-3n < 2^n-1 (here n >= 8) the image is a proper submanifold: a Lebesgue-null set of spectra admits ANY 2-local TPS
+
+=== (c) explicit same-spectrum, LU-inequivalent 2-local Hamiltonians ===
+  n = 3: max |spectrum difference| = 1.78e-15
+     H : local-field norms [np.float64(1.299173), np.float64(2.03014), np.float64(2.242673)]
+     H': local-field norms [np.float64(0.745619), np.float64(1.60248), np.float64(1.882739)]
+     pair coupling singular values differ: True;  H: (np.float64(1.369742), np.float64(1.066525), np.float64(0.512044))  H': (np.float64(1.51379), np.float64(1.345938), np.float64(0.095747)) (first pair, sorted)
+     => LU-inequivalent (and not a qubit permutation): True
+  n = 4: max |spectrum difference| = 7.11e-15
+     H : local-field norms [np.float64(0.801293), np.float64(0.802667), np.float64(1.865013), np.float64(2.385856)]
+     H': local-field norms [np.float64(0.784176), np.float64(1.300821), np.float64(1.747781), np.float64(1.838792)]
+     pair coupling singular values differ: True;  H: (np.float64(1.847063), np.float64(1.658262), np.float64(0.776254))  H': (np.float64(1.77447), np.float64(1.278517), np.float64(0.595436)) (first pair, sorted)
+     => LU-inequivalent (and not a qubit permutation): True

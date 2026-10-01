@@ -2,8 +2,9 @@
 
 | ID | Probe | Status | Result |
 |---|---|---|---|
-| S2-1 | system individuation | **NEXT** | — |
-| S2-2 | composition rule | QUEUED | — |
+| S2-1 | system individuation | **DONE** | no-go baseline; 2-local TPS non-unique n ≤ 7, locally unique n ≥ 8 (criterion-, dimension-, measure-priced); explicit same-spectrum inequivalent pairs |
+| S2-1b | can the locality CRITERION itself be selected? | QUEUED (spawned) | — |
+| S2-2 | composition rule | **NEXT** | — |
 | S2-3 | probability from deterministic dynamics | QUEUED | — |
 | S2-4 | convexity / mixtures | QUEUED | — |
 | S2-5 | LT emergence | QUEUED | — |
