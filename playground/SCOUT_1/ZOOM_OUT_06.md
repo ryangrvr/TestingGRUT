@@ -1,3 +1,6 @@
+> **W5-0 (owner ruling): TC-4′ status → HOSTILE TEST OPEN — EMERGENT-SYMMETRY LOOPHOLE.** The C3 row below is
+> provisionally repaired. The W4 result itself is unchanged.
+
 # SCOUT-1 ZOOM-OUT 06 — after W4-OG (before any D3 decision)
 
 ## 1. What W4 changed

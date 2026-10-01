@@ -213,3 +213,26 @@ content that determines the RG-closed operator space `O_allowed(Φ, d, S)`?
 - C. TC4-REFINED-HIERARCHY.
 
 **D3 gate:** decided only after W4 and its zoom-out.
+
+---
+
+# W5-ES — emergent symmetry / C3 hostile (owner ruling after ZOOM_OUT_06; narrow)
+
+**Question:** can RG reduce the information needed to specify the symmetry class, by driving symmetry-breaking
+operators to zero and so producing `S_IR ⊋ S_UV`?
+
+**Three notions kept separate:** `S_UV` (exact microscopic), `S_state` (vacuum / sector), `S_IR` (fixed point /
+effective observables).
+
+**Tests:**
+- **W5-2:** the O(N) + cubic-anisotropy one-loop flow (known eigenvalue of v at the O(N) point).
+- **W5-2 lattice:** the 2D critical Ising square lattice (C4 rotation → emergent SO(2)).
+- **W5-4 hostile controls:**
+  - N > N_c (cubic anisotropy relevant);
+  - N ≈ N_c (marginal / scheme-contested: one-loop N_c = 4 vs best estimates ≈ 2.9);
+  - a runaway outside the basin (fluctuation-induced first-order);
+  - a dangerously irrelevant anisotropy (the 3D XY Z₆ case: cited);
+  - uniaxial anisotropy that is redundant (absorbed into the metric) rather than erased.
+- **W5-5:** GRUT variables that wash out under the earned flow.
+
+**Outcomes:** A. C3-PARTLY-ERASABLE / B. C3-SUPPLIED-IN-GRUT-SCOPE / C. C3-NOT-REDUCED.
