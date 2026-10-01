@@ -16,3 +16,5 @@
 | Birkhoff; Weyl equidistribution; mixing of expanding maps | standard ergodic theory | STANDARD-TEXTBOOK ✓ (numerics) | S2-3 |
 | non-normal numbers residual (Baire) | points without limiting frequency are topologically generic | SECONDARY (one explicit example ✓) | S2-3 |
 | Furstenberg (horocycle uniquely ergodic); Marcus (horocycle mixing) | uniquely ergodic + mixing, zero entropy | SECONDARY | S2-3 hostile |
+| Aleksandrova–Borish–Wootters (2013): real QM + universal rebit reproduces complex QM | the imaginary unit as a physical reference rebit | SECONDARY; encoding identity ✓ | S2-5 |
+| Bartlett–Rudolph–Spekkens (2007): reference frames and superselection | shared frames lift superselection / restore local access | SECONDARY | S2-5 |

@@ -9,8 +9,8 @@
 | S2-3b | zero-entropy uniquely-ergodic mixing (horocycle-type) as measure-free forgetting probability | QUEUED (spawned) | — |
 | S2-4 | convexity / mixtures | **DONE** | deterministic hidden uniquely-ergodic coin gives mixtures with earned weights iff the tester is independent (rationally independent rotations); access + independence priced |
 | ZOOM_OUT_01 | after S2-1…4 | **DONE** | candidate synthesis C5 ≈ D (dynamical-structure conditions) + access; nothing eliminated |
-| S2-5 | LT emergence | **NEXT** | — |
-| S2-6 | basin / measure | QUEUED | — |
+| S2-5 | LT emergence | **DONE** | LT failure = missing shared J-reference; restored by a shared correlated reference state (difference 0 → 2); C5-F (ℝ vs ℂ) reduces to a C5-H state datum |
+| S2-6 | basin / measure | **NEXT** | — |
 | S2-7 | consistent-histories set selection | QUEUED | — |
 | S2-8 | Darwinism / records | QUEUED | — |
 
