@@ -1,0 +1,31 @@
+=== 1. hypercubic lattices: local slope of k_0(tau) at tau = 50..3200; predicted -(gamma+1) ===
+  d=1 bulk                             slopes [-0.5007 -0.5002 -0.5   ]   -> gamma ~ -0.500   predicted -0.5 (= d/2 - 1 + #Dirichlet)
+  d=1 Dirichlet end                    slopes [-1.498  -1.4995 -1.4999]   -> gamma ~ +0.500   predicted +0.5 (= d/2 - 1 + #Dirichlet)
+  d=1 Neumann end                      slopes [-0.4993 -0.4998 -0.5   ]   -> gamma ~ -0.500   predicted -0.5 (= d/2 - 1 + #Dirichlet)
+  d=2 bulk                             slopes [-1.0014 -1.0003 -1.0001]   -> gamma ~ +0.000   predicted +0.0 (= d/2 - 1 + #Dirichlet)
+  d=2 bulk anisotropic Jx=1, Jy=0.2    slopes [-1.0042 -1.001  -1.0003]   -> gamma ~ +0.000   predicted +0.0 (= d/2 - 1 + #Dirichlet)
+  d=2 Neumann edge                     slopes [-1. -1. -1.]   -> gamma ~ +0.000   predicted +0.0 (= d/2 - 1 + #Dirichlet)
+  d=2 Dirichlet edge                   slopes [-1.9986 -1.9997 -1.9999]   -> gamma ~ +1.000   predicted +1.0 (= d/2 - 1 + #Dirichlet)
+  d=2 Dirichlet corner                 slopes [-2.9959 -2.999  -2.9997]   -> gamma ~ +2.000   predicted +2.0 (= d/2 - 1 + #Dirichlet)
+  d=3 bulk                             slopes [-1.502  -1.5005 -1.5001]   -> gamma ~ +0.500   predicted +0.5 (= d/2 - 1 + #Dirichlet)
+  d=3 bulk anisotropic 1, 0.5, 0.1     slopes [-1.5093 -1.5022 -1.5006]   -> gamma ~ +0.501   predicted +0.5 (= d/2 - 1 + #Dirichlet)
+  d=3 Dirichlet face                   slopes [-2.4993 -2.4998 -2.5   ]   -> gamma ~ +1.500   predicted +1.5 (= d/2 - 1 + #Dirichlet)
+  d=3 Dirichlet corner                 slopes [-4.4939 -4.4985 -4.4996]   -> gamma ~ +3.500   predicted +3.5 (= d/2 - 1 + #Dirichlet)
+
+=== 2. point defect V at a bulk site: rho_V(E) = rho_0(E) / |1 - V G_0(E)|^2 near the edge E -> 0 ===
+  d=1: |G_0| at distance s = 1e-2..1e-5 below the edge: [  4.9938  15.8094  49.9994 158.1137]
+  d=2: |G_0| at distance s = 1e-2..1e-5 below the edge: [0.6416 0.8254 1.0087 1.192 ]
+  d=3: |G_0| at distance s = 1e-2..1e-5 below the edge: [0.2447 0.2502 0.2519 0.2525]
+  d=1: |G_0| ~ s^{-1/2} diverges -> rho_V ~ E^{+1/2}: any V != 0 is RELEVANT (gamma -1/2 -> +1/2)
+  d=2: |G_0| ~ log(1/s) diverges slowly -> rho_V ~ 1/log^2 E: MARGINAL (gamma = 0 with log corrections)
+  d=3: |G_0| -> G_c finite (Watson) -> gamma = 1/2 unchanged unless V = -1/G_c (threshold resonance: gamma -> -1/2)
+
+=== 3. continuum of exponents: radial graphs of real dimension D (local, passive, bounded couplings) ===
+  D=1.0: slopes (tau 100..6400) [-0.5 -0.5 -0.5] -> gamma ~ -0.500 (predicted D/2-1 = -0.50);  couplings in [1.000, 1.000]
+  D=1.5: slopes (tau 100..6400) [-0.754 -0.753 -0.752] -> gamma ~ -0.248 (predicted D/2-1 = -0.25);  couplings in [0.841, 1.000]
+  D=2.0: slopes (tau 100..6400) [-1.021 -1.012 -1.006] -> gamma ~ +0.006 (predicted D/2-1 = +0.00);  couplings in [0.707, 1.000]
+  D=2.5: slopes (tau 100..6400) [-1.292 -1.272 -1.261] -> gamma ~ +0.261 (predicted D/2-1 = +0.25);  couplings in [0.595, 1.000]
+  D=3.0: slopes (tau 100..6400) [-1.567 -1.533 -1.516] -> gamma ~ +0.516 (predicted D/2-1 = +0.50);  couplings in [0.500, 1.000]
+  D=3.7: slopes (tau 100..6400) [-1.957 -1.902 -1.875] -> gamma ~ +0.875 (predicted D/2-1 = +0.85);  couplings in [0.392, 1.000]
+  every member: nearest-neighbour (local), symmetric PSD (passive), bounded couplings; add a pin for a gap.
+  => without translation invariance + integer dimension, gamma ranges over a continuum.

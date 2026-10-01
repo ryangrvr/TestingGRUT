@@ -21,3 +21,4 @@ The sandbox blocks arXiv and several publishers.
 | Calabrese–Cardy entanglement scaling | S(l) = (c/6) log[(2N/π) sin(πl/N)] (OBC), (c/3) log(L/π) (PBC half chain) | STANDARD-TEXTBOOK ✓ | W1-R |
 | XXZ Bethe ansatz (v, x₁) | v = π√(1−Δ²)/(2 arccos Δ); x₁ = (π − arccos Δ)/(2π) | STANDARD-TEXTBOOK ✓ (ED L ≤ 20) | W1-R |
 | U(1) current algebra ⇒ c ≥ 1 | gapless 1D U(1)-conserving CFT contains a U(1) Kac–Moody algebra (c ≥ 1) | STANDARD-TEXTBOOK (not separately checked) | W1-R |
+| van Hove / image method / threshold resonance (Levinson) / Bessel processes | γ = d/2 − 1 + #Dirichlet on hypercubic lattices; point defects relevant (d=1), marginal (d=2), irrelevant unless resonant (d=3); radial dimension D gives return probability t^{−D/2} | STANDARD-TEXTBOOK ✓ (Bessel exact; G₀ quadrature; expm_multiply n = 20000) | W1-S |
