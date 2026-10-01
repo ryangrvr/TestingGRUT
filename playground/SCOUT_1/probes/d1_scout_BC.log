@@ -1,0 +1,23 @@
+
+=== B. conserved scalar, operator content scanned (N = 4096, T = 1, dt = 0.02, t <= 2000) ===
+  J = 0 (reciprocal, E-1)                         : growth exponent [5-50, 50-500, 500-2000] = 0.243, 0.241, 0.277
+  J = eps u (affinity E-4, constant mobility)     : growth exponent [5-50, 50-500, 500-2000] = 0.241, 0.260, 0.248
+  Model B: inherited quartic made conservative    : growth exponent [5-50, 50-500, 500-2000] = 0.250, 0.245, 0.214
+  affinity + Model-B quartic                      : growth exponent [5-50, 50-500, 500-2000] = 0.267, 0.233, 0.233
+/home/user/TestingGRUT/playground/SCOUT_1/probes/d1_scout.py:85: RuntimeWarning: overflow encountered in power
+  ("J = eps u^3 (Z2-odd cubic current, SUPPLIED)", lambda v: v ** 3, 1.0, 0.0),
+/home/user/TestingGRUT/playground/SCOUT_1/probes/d1_scout.py:52: RuntimeWarning: invalid value encountered in add
+  ub = 0.5 * (u + up)
+/home/user/TestingGRUT/playground/SCOUT_1/probes/d1_scout.py:53: RuntimeWarning: invalid value encountered in subtract
+  F = -(up - u) + eps * J(ub) + np.sqrt(2 * T / dt) * rng.standard_normal(N)
+/home/user/TestingGRUT/playground/SCOUT_1/probes/d1_scout.py:53: RuntimeWarning: invalid value encountered in add
+  F = -(up - u) + eps * J(ub) + np.sqrt(2 * T / dt) * rng.standard_normal(N)
+/home/user/TestingGRUT/playground/SCOUT_1/probes/d1_scout.py:57: RuntimeWarning: invalid value encountered in subtract
+  u = u - dt * (F - np.roll(F, 1))
+  J = eps u^3 (Z2-odd cubic current, SUPPLIED)    : growth exponent [5-50, 50-500, 500-2000] = nan, nan, nan
+  J = eps u^2 (lambda_2, SUPPLIED mobility)       : growth exponent [5-50, 50-500, 500-2000] = 0.326, 0.298, 0.392
+  references: EW 1/4, KPZ 1/3
+
+=== C. pin role under the same lambda_2 dynamics ===
+  r =  0.00: W(t) at t = 10, 100, 1000, 2000 = [1.707 3.679 7.393 9.788]
+  r =  0.01: W(t) at t = 10, 100, 1000, 2000 = [1.666 2.591 2.739 2.732]
