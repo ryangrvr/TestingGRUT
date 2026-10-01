@@ -1,0 +1,22 @@
+=== 1. state-space dimension K(d) (number of real parameters of unnormalized states) ===
+  real        : (dA,dB)=(2,2): K_A*K_B=9, K(dA*dB)=10; (dA,dB)=(2,3): K_A*K_B=18, K(dA*dB)=21; (dA,dB)=(3,3): K_A*K_B=36, K(dA*dB)=45; (dA,dB)=(2,4): K_A*K_B=30, K(dA*dB)=36
+  complex     : (dA,dB)=(2,2): K_A*K_B=16, K(dA*dB)=16; (dA,dB)=(2,3): K_A*K_B=36, K(dA*dB)=36; (dA,dB)=(3,3): K_A*K_B=81, K(dA*dB)=81; (dA,dB)=(2,4): K_A*K_B=64, K(dA*dB)=64
+  quaternionic: (dA,dB)=(2,2): K_A*K_B=36; (dA,dB)=(2,3): K_A*K_B=90; (dA,dB)=(3,3): K_A*K_B=225; (dA,dB)=(2,4): K_A*K_B=168
+  complex: K_AB = K_A K_B exactly (d^2 is multiplicative). real: K(dA dB) > K_A K_B (global-only parameters).
+  quaternionic: no tensor product of quaternionic modules over H (non-commutative); composite proposals
+  (literature: quaternionic composites are not locally tomographic) -- NOT checked in this script.
+   d=2: real deficit K(d^2) - K(d)^2 = 1
+   d=3: real deficit K(d^2) - K(d)^2 = 9
+   d=4: real deficit K(d^2) - K(d)^2 = 36
+   d=5: real deficit K(d^2) - K(d)^2 = 100
+
+=== 2. real QM fails local tomography (rebits) ===
+  rho+: real=True, eigenvalues [0.  0.  0.5 0.5]
+  rho-: real=True, eigenvalues [0.  0.  0.5 0.5]
+  max |<A x B>_+ - <A x B>_-| over all local real observables: 0.0
+  global real observable sigma_y x sigma_y: 1.0 vs -1.0
+  => identical local statistics, globally distinguishable: local tomography FAILS for real QM
+
+=== 3. complex QM: local products span all Hermitian operators ===
+  2 qubits: rank of local Pauli products = 16 = 4^2 = 16
+  3 qubits: rank of local Pauli products = 64 = 4^3 = 64

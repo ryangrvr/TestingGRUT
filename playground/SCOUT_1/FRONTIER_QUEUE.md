@@ -8,9 +8,9 @@
 | W1-P | complete passivity ⇒ KMS | **DONE** | SELECTION PRINCIPLE (premise-priced): T(ω) → single T; dense bath: single-copy passivity suffices; T free | owner option logged |
 | W1-G | Gleason/Busch/composition ⇒ Born | **DONE** | SELECTION PRINCIPLE (premise-priced: Hilbert space, d≥3/POVMs, noncontextuality/composition); d=2 projective non-Born family; Bell pair blind to nonlinearity | W2-QE spawn (Born as attractor) |
 | W1-R | FQS unitarity rigidity | **DONE** | RIGIDITY SELECTION (premise-priced): c ∈ Kac set, lattice c → 0.501 at non-integrable point; criticality tuned, member = symmetry; NO-GO: U(1) sectors have c ≥ 1 (XXZ exponents continuous) | W1-A/W1-R mutually exclusive on one 1D parent |
-| W1-L | reconstruction ⇒ complex lift | NEXT | — | — |
+| W1-L | reconstruction ⇒ complex lift | **DONE** | SELECTION PRINCIPLE (premise-priced): local tomography + tensor composition ⇒ complex; rebit witness; primitive exchanged not removed | composition subfamily (W1-G+W1-L) |
 | W1-S | spectral dimension ⇒ edge exponent | **DONE** | CROSS-LAYER RESTRICTION γ = d/2−1+k (supplied T, d, boundary) + NON-SELECTION continuum γ = D/2−1 (X-03); E-14's 3/2 = supplied Dirichlet end | — |
-| W1-F | prediction-first FDT/KMS | QUEUED | — | — |
+| W1-F | prediction-first FDT/KMS | NEXT | — | — |
 
 **ZOOM_OUT_01 (done):** new order W1-R → W1-S → W1-G → W1-L → W1-F → ZOOM_OUT_02. TC-1 (selector–supply equivalence, G-moved components) recorded as CANONICAL-CANDIDATE.
 
@@ -20,3 +20,5 @@
 - C17/C18 positivity bounds (literature-gated).
 - C29 TKNN.
 - Wave-2 spawns are added after each zoom-out.
+
+**Owner options logged (not requested):** (i) complete passivity as an earned premise (W1-P); (ii) composition + local tomography + no-signalling as an earned premise would collapse number field, h(p) and p=|α|² (W1-G/W1-L).

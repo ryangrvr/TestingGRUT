@@ -23,3 +23,6 @@ The sandbox blocks arXiv and several publishers.
 | U(1) current algebra ⇒ c ≥ 1 | gapless 1D U(1)-conserving CFT contains a U(1) Kac–Moody algebra (c ≥ 1) | STANDARD-TEXTBOOK (not separately checked) | W1-R |
 | van Hove / image method / threshold resonance (Levinson) / Bessel processes | γ = d/2 − 1 + #Dirichlet on hypercubic lattices; point defects relevant (d=1), marginal (d=2), irrelevant unless resonant (d=3); radial dimension D gives return probability t^{−D/2} | STANDARD-TEXTBOOK ✓ (Bessel exact; G₀ quadrature; expm_multiply n = 20000) | W1-S |
 | Gleason 1957; Busch 2003; Gisin 1990 / Polchinski 1991 | noncontextual frame functions (d ≥ 3) / additive effect probabilities (d ≥ 2) are Born; nonlinear outcome weights signal under composition | STANDARD-TEXTBOOK ✓ (d=2 non-Born family; d=3/POVM failures; signalling spread up to 3.5e-2) | W1-G |
+| Hardy 2001; Chiribella–D'Ariano–Perinotti 2011; Masanes–Müller 2011 (local tomography) | K_AB = K_A K_B holds for complex, fails for real QM | STANDARD-TEXTBOOK ✓ (counting; rebit witness) | W1-L |
+| quaternionic composites not locally tomographic | — | SECONDARY (not checked) | W1-L |
+| Renou et al., Nature 600, 625 (2021) | network experiment excludes real QM under independent sources | SECONDARY (not readable from sandbox) | W1-L |
