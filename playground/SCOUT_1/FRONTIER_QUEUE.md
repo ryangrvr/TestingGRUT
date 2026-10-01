@@ -15,6 +15,7 @@
 | W2-QE | Born as attractor (dBB relaxation) | NEXT | — | — |
 | W2-ETH | thermalization ⇒ KMS without supplied passivity | **DONE** | ATTRACTOR SELECTION of KMS shape (price: non-integrability = genericity, a 6th premise class); T set by supplied energy; record's quadratic parents excluded (E-3 tension) | — |
 | W2-FP | criticality without tuning (SOC) | **DONE** | TUNING RELOCATED to exact zeros (ε = 0 conservation, r = 0 separation) = G-fixed values; supplied | — |
+| W2-DT | dimensional transmutation vs TC-1 | **DONE** | TC1-SURVIVES-ANOMALY (G read as RG-covariant); TRUE NET REDUCTION of dimensionless input; absent from GRUT's quadratic floor (E-3 tension #2) | Wave-3 target: marginal interacting sector (owner premise) |
 | W2-TC1 | hostile search for an earned absolute reference | **DONE** | TC-1 SURVIVES full-record search (derived tier = 0; every scale supplied/measured/in units of H) | owner trade-off logged (rung7_wz state-shape inputs vs W1-P/W2-ETH) |
 | W2-POS | positivity bounds vs K1 sides | PARKED (literature-gated) | — | — |
 

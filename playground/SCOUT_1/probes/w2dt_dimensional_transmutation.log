@@ -1,0 +1,30 @@
+=== 1a. Gross-Neveu: one RG trajectory, many (cutoff, coupling) pairs ===
+   Lam        lam(Lam)     m(gap eq)    m(minimize V)   Delta V / m^2
+     1e+01   1.361435   1.0000000000   1.00000000      -0.07918222
+     1e+02   0.682181   1.0000000000   0.99999999      -0.07957349
+     1e+04   0.341094   1.0000000000   0.99999996      -0.07957748
+     1e+08   0.170547   1.0000000000   0.99999999      -0.07957747
+     1e+16   0.085274   1.0000000000   0.99999997      -0.07957748
+   continuum value of Delta V/m^2 = -1/(4 pi) = -0.07957747  (pure number: no dimensionless input survives)
+
+=== 1b. the coupling is NOT a free dimensionless parameter: every lam is the same theory in other units ===
+   lam=0.20: m/Lam = 1.507e-07   Delta V/m^2 = -0.07957747
+   lam=0.30: m/Lam = 2.832e-05   Delta V/m^2 = -0.07957747
+   lam=0.50: m/Lam = 1.867e-03   Delta V/m^2 = -0.07957733
+   lam=1.00: m/Lam = 4.325e-02   Delta V/m^2 = -0.07950313
+   classical theory: one dimensionless parameter (lam). quantum theory: zero dimensionless parameters,
+   one scale m = the coordinate along the (anomalous) scaling orbit. Absolute m requires lam at a reference Lam.
+
+=== 2. one-loop QCD ===
+   n_f=5: b0=7.667, Lambda_1loop = 87.8 MeV  (inputs: alpha_s = 0.118 AT mu = M_Z = 91.1876 GeV)
+   hierarchy from a dimensionless UV boundary coupling at M_Pl (n_f = 5 throughout, illustrative):
+     alpha_s(M_Pl) = 0.02: Lambda/M_Pl = exp(-2pi/(b0 alpha)) = 1.599e-18
+     alpha_s(M_Pl) = 0.025: Lambda/M_Pl = exp(-2pi/(b0 alpha)) = 5.795e-15
+     alpha_s(M_Pl) = 0.03: Lambda/M_Pl = exp(-2pi/(b0 alpha)) = 1.367e-12
+   d ln(Lambda/M_Pl) / d alpha = 2 pi / (b0 alpha^2): a 1% change in alpha_UV moves the hierarchy by a factor 1.39
+
+=== 3. Coleman-Weinberg (massless scalar QED, 1-loop, lambda ~ e^4) ===
+   e = 0.1: m_S^2/m_V^2 = 3 e^2/(8 pi^2) = 0.00038   (lambda(<phi>) = 33 e^4/(8 pi^2) eliminated)
+   e = 0.3: m_S^2/m_V^2 = 3 e^2/(8 pi^2) = 0.00342   (lambda(<phi>) = 33 e^4/(8 pi^2) eliminated)
+   e = 0.5: m_S^2/m_V^2 = 3 e^2/(8 pi^2) = 0.00950   (lambda(<phi>) = 33 e^4/(8 pi^2) eliminated)
+   <phi> itself = the renormalization point at which lambda takes its CW value: a boundary datum.
