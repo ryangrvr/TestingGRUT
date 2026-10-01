@@ -1,0 +1,27 @@
+=== 1. doubling map: ensemble frequency of A = [0, 1/2) after t steps ===
+  (a) Lebesgue                            : 0.4987 0.4991 0.4987 0.4996 0.5010 0.5008 0.5014 0.5006
+  (b) a.c. density 2x                     : 0.2483 0.3750 0.4389 0.4843 0.4995 0.4989 0.5003 0.4992
+  (c) singular invariant Bernoulli(0.3)   : 0.7006 0.7018 0.7006 0.6983 0.7015 0.7019 0.6988 0.7019
+  (d) Dirac at fixed point 0              : 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
+  -> a.c. preparations forget their shape and converge to 1/2 (Lebesgue/SRB value);
+     singular invariant preparations stay at their own value forever (0.7, 1.0): the limit is preparation-class dependent
+
+=== 2. single trajectories (time averages over 190 steps; exact) ===
+  Lebesgue-random point: running frequency at n = 10, 50, 100, 190: [0.6   0.6   0.51  0.547]
+  constructed point (blocks 0^1 1^2 0^4 1^8 ...): running frequency at block ends: [1.    0.333 0.714 0.333 0.677 0.333 0.669]
+  -> no limiting frequency: such points form a residual (Baire-generic) set. 'Generic' in the topological
+     sense picks NON-convergent points; 'generic' in the Lebesgue sense picks 1/2. The notion of generic is supplied.
+
+=== 3. irrational rotation (uniquely ergodic, not mixing) ===
+  time average from x0 = 0.000000: 0.50000   (every initial point; no measure used)
+  time average from x0 = 0.123456: 0.50001   (every initial point; no measure used)
+  time average from x0 = 0.500000: 0.50000   (every initial point; no measure used)
+  time average from x0 = 0.333333: 0.50000   (every initial point; no measure used)
+  ensemble from a.c. preparation on [0, 0.1): frequency at t = 0,1,2,5,10,50,100,1000: [1.    0.    1.    1.    1.    0.017 0.    1.   ]
+  -> the measure is EARNED (unique ergodicity: time averages converge for every point), but ensembles never relax
+
+=== 4. affinity ===
+  t =  0: frequency of the mixture = 0.6401; mixture of frequencies = 0.6401
+  t =  8: frequency of the mixture = 0.6417; mixture of frequencies = 0.6414
+  t = 45: frequency of the mixture = 0.6404; mixture of frequencies = 0.6415
+  -> affine automatically: preparations are measures and the dynamics acts by linear pushforward (DEFINITIONAL)
