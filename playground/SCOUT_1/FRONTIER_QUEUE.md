@@ -34,3 +34,6 @@
 - Wave-2 spawns are added after each zoom-out.
 
 **Owner options logged (not requested):** (i) complete passivity as an earned premise (W1-P); (ii) composition + local tomography + no-signalling as an earned premise would collapse number field, h(p) and p=|α|² (W1-G/W1-L).
+
+| **D1-SCOUT** | pin = 0 + extended nonlinear dynamics (SCOUT-only) | **DONE** | B at D1 level, C within inherited structure (S2 Z₂ forbids λ₂); pin reveals not selects; ξ ≈ 0.58 β^(-1/3); TC-4 candidate | — |
+| **ZOOM_OUT_05** | after D1 | **DONE** | refined quotient principle; TC-4; OWNER STOP (D2–D4 gated) | awaiting owner: reproduction / freeze / D3 |

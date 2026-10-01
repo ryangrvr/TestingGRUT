@@ -56,9 +56,14 @@ over t windows [5–50, 50–500, 500–2000]):
 | Model B, S2 quartic made conservative | inherited operator, conserved form (D1) | 0.250, 0.245, 0.214 | EW / diffusive |
 | affinity + Model-B quartic | inherited + D1 | 0.267, 0.233, 0.233 | EW |
 | J = εu² | **supplied** density-dependent mobility (breaks Z₂) | 0.326, 0.298, 0.392 | KPZ (1/3; noisy) |
-| J = εu³ | **supplied** Z₂-odd cubic current | first run unstable (centred flux); Lax–Friedrichs rerun: see §1B′ | — |
+| J = εu³ | **supplied** Z₂-odd cubic current | first run unstable (centred flux). Lax–Friedrichs rerun (ε = 0.2): 0.242, 0.241, 0.239 | EW-like (marginal operator; log corrections not resolved) |
 
-**B′. Cubic rerun:** filled in from `d1_scout_cubic.log` (below, once complete).
+**B′. Cubic rerun** (`d1_scout_cubic.log`, Lax–Friedrichs flux, ε = 0.2):
+- The cubic current gives 0.242 / 0.241 / 0.239, i.e. the EW-like marginal class.
+- The λ₂ reference with the same flux and ε = 0.2 gives 0.256 / 0.250 / 0.277. It is still crossing over by
+  t = 2000, as expected from `t_x ∝ ε⁻⁴` (W3-NL) plus the extra numerical diffusion of the Lax–Friedrichs scheme.
+- So even inside the D1 class, **which** IR class is visible on a finite window depends on supplied magnitudes
+  through the crossover scale.
 
 **C. Pin role (λ₂ dynamics):**
 
