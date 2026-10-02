@@ -1,0 +1,55 @@
+
+==============================================================================
+G4-1 matched capacity, different state spaces
+==============================================================================
+  system                                 N    K   Hilbert d
+  regular 3-gon GPT (= classical trit)   3    2   —
+  regular 4-gon GPT (gbit)               2    2   —
+  regular 5-gon GPT                      2    2   —
+  regular 6-gon GPT                      2    2   —
+  regular 7-gon GPT                      2    2   —
+  regular 8-gon GPT                      2    2   —
+  classical simplex, 2 outcomes          2    1   —
+  classical simplex, 3 outcomes          3    2   —
+  classical simplex, 4 outcomes          4    3   —
+  rebit (real QM, d=2)                   2    2   2 (real)
+  qubit (complex QM, d=2)                2    3   2
+  spin factor / ball in R^4              2    4   —
+  qutrit (complex QM, d=3)               3    8   3
+  real QM, d=3                           3    5   3 (real)
+  => N = 2 for: classical bit (K=1), rebit (K=2), gbit / polygons (K=2), qubit (K=3), spin factors (K=4, ...):
+     SAME CAPACITY != SAME STATE SPACE; capacity does not fix the representation (C4/C5 needs extra principles).
+
+==============================================================================
+G4-2 capacity from dynamics
+==============================================================================
+  Markov chain, 7 states, closed classes {0,1},{2,3},{4} + transients: asymptotic distinguishable outputs = rank(P^inf) = 3 (initial capacity 7)
+  collective SU(2) noise on 3 qubits: commutant dim 5, centre dim 2, central blocks 2 with sizes [4, 4], multiplicities m_J = [2, 1] (theory: J=3/2 -> 1, J=1/2 -> 2)
+     -> noiseless capacity (perfectly distinguishable after twirl) = sum m_J = 3  (initial 8): CAPACITY DERIVED FROM D (noise symmetry)
+
+==============================================================================
+G4-3 access hostile: same state space, restricted effects
+==============================================================================
+  2 qubits, all effects: N = 4.  Readout restricted to functions of total S_z (collective access):
+     N = number of distinct S_z eigenvalues = 3
+  qutrit (d = 3), readout restricted to {|0><0|, |1><1| + |2><2|}: N = 2   <- G4 SAME as qubit, G1 (d) DIFFERENT
+  qubit, effects restricted to spectrum in [0.1, 0.9] (unsharp access): no effect reaches 0/1 -> N = 1
+
+==============================================================================
+G4-4 noise: exact vs epsilon vs channel capacity (depolarizing qubit, eps = 0.05)
+==============================================================================
+    p      exact N   eps-capacity (err<=0.05)   Holevo capacity (bits)
+   0.0         2                 2               1.0000
+   0.01        1                 2               0.9546
+   0.05        1                 2               0.8313
+   0.1         1                 2               0.7136
+   0.3         1                 1               0.3902
+
+==============================================================================
+G4-5 composition
+==============================================================================
+  classical: N_AB = N_A N_B;  complex QM: N = d_A d_B, K+1 = (K_A+1)(K_B+1);  real QM: N = 4 for 2 rebits but
+  K = 9 != (2+1)(2+1)-1 = 8 (local tomography fails) -> capacity multiplicative while state-space dimension is not.
+  two gbits: local polytope 16 vertices (K=8); no-signalling polytope 24 vertices (K=8); NS check True
+  min tensor (local polytope, dual effects)         : distinguishable sets of size 4: True, size 5: False
+  max tensor (boxworld: NS states, NS-dual effects) : distinguishable sets of size 4: True, size 5: False

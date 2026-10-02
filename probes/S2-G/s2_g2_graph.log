@@ -1,0 +1,44 @@
+
+==============================================================================
+G2-1 positive controls and G2-2 same-N-order, different connectivity
+==============================================================================
+  1D ring                            N= 2000 | d_g(r=(3, 5, 8, 12)):  0.85  0.91  0.94  0.96 | d_s(t=(2, 5, 10, 20, 50, 100)):  1.21  1.07  1.03  1.02  1.01  1.02 | d_w:  2.00  2.00  2.00  2.01
+  2D torus 45x45                     N= 2025 | d_g(r=(3, 5, 8, 12)):  1.66  1.80  1.87  1.92 | d_s(t=(2, 5, 10, 20, 50, 100)):  2.22  2.37  2.16  2.12  2.19  2.38 | d_w:  1.94  1.97  1.99  2.00
+  3D torus 13^3                      N= 2197 | d_g(r=(2, 3, 4, 5)):  2.00  2.37  2.54  2.64 | d_s(t=(2, 5, 10, 20, 50, 100)):  2.74  3.69  3.50  3.55  4.92  7.98 | d_w:  1.86  2.03  2.58  4.89
+  random 3-regular                   N= 2000 | d_g(r=(2, 3, 4, 5)):  1.55  2.19  2.81  3.41 | d_s(t=(2, 5, 10, 20, 50, 100)):  1.90  2.41  3.14  4.49  8.19 14.03 | d_w:  1.52  1.85  3.56 15.10
+  small world WS(k=2,p=0.05)         N= 2000 | d_g(r=(3, 5, 8, 12)):  0.98  1.03  1.26  1.15 | d_s(t=(2, 5, 10, 20, 50, 100)):  1.21  1.08  1.04  1.04  1.05  1.07 | d_w:  2.03  1.95  1.87  1.85
+  binary tree depth 10               N= 2047 | d_g(r=(2, 3, 4, 5)):  0.95  1.23  1.56  1.88 | d_s(t=(2, 5, 10, 20, 50, 100)):  1.33  1.11  1.25  1.35  1.54  1.68 | d_w:  2.41  2.70  2.96  3.27
+  Sierpinski gasket gen 7            N= 3282 | d_g(r=(4, 8, 16, 24)):  1.34  1.39  1.28  1.51 | d_s(t=(5, 10, 20, 50, 100, 200)):  1.51  1.45  1.36  1.42  1.35  1.43 | d_w:  2.26  2.30  2.30  2.32
+  comb 45 x 45                       N= 2025 | d_g(r=(3, 5, 8, 12)):  0.84  0.97  1.22  1.67 | d_s(t=(5, 10, 20, 50, 100, 200)):  1.06  1.02  1.01  1.00  0.99  0.99 | d_w:  2.00  1.99  1.94  1.87
+  known: Sierpinski d_f = log3/log2 = 1.585, d_s = 2 log3/log5 = 1.365, d_w = log5/log2 = 2.322;  comb: d_g = 2, d_s = 3/2
+
+==============================================================================
+G2-3 scale dependence: crossovers
+==============================================================================
+  2D bundled chains, eps = 0.01      d_s(t=(2, 5, 10, 30, 100, 300, 1000, 3000)):  1.25  1.17  1.22  1.52  2.14  2.19  1.29  1.30
+  3D layered, interlayer eps = 0.01  d_s(t=(2, 5, 10, 30, 100, 300, 1000, 3000)):  2.23  2.41  2.26  2.32  1.17  1.50  1.74  3.09
+  ring + small-world rewiring p=0.0   d_s(t=(2, 5, 10, 30, 100, 300)):  1.21  1.07  1.03  1.02  1.02  1.02
+  ring + small-world rewiring p=0.01  d_s(t=(2, 5, 10, 30, 100, 300)):  1.21  1.07  1.03  1.02  1.02  1.02
+  ring + small-world rewiring p=0.1   d_s(t=(2, 5, 10, 30, 100, 300)):  1.22  1.08  1.05  1.06  1.13  1.25
+
+==============================================================================
+G2-4 diffusion-operator hostile (same vertex set / same graph)
+==============================================================================
+  2D torus, standard walk          d_s:  2.37  2.16  2.12  2.19  2.38
+  2D torus, random weights U(.5,1.5) d_s:  2.33  2.16  2.12  2.18  2.36
+  2D torus, anisotropic eps=0.01    d_s:  1.17  1.22  1.38  1.78  2.16
+  2D torus, fractional Delta^0.50    d_s:  4.51  4.42  4.91  7.90 14.30   (theory 2d/alpha = 4)
+  2D torus, fractional Delta^0.25    d_s:  7.39  9.32 12.48 26.91 52.97   (theory 2d/alpha = 8)
+  1D ring, nearest neighbour          d_s:  1.07  1.03  1.02  1.02  1.02
+  1D ring, Levy rates 1/r^(1+1.5)     d_s:  1.62  1.51  1.47  1.45  1.46   (theory 2/alpha = 1.33)
+  1D ring, Levy rates 1/r^(1+1.0)     d_s:  2.24  2.11  2.08  2.14  2.26   (theory 2/alpha = 2.00)
+
+==============================================================================
+G2-5 structural hostiles
+==============================================================================
+  (a) d_s(t) depends ONLY on the normalized-Laplacian spectrum: isospectral non-isomorphic graphs have identical
+      d_s(t) at every t. Search over all connected graphs with 7 nodes (networkx atlas):
+      connected 7-node graphs: 853; normalized-Laplacian-cospectral non-isomorphic classes: 12; of which with DIFFERENT ball-growth profiles: 12
+      example: edges A = [(0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6)]
+               edges B = [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6)]
+  (b) same growth, different diffusion: comb (d_g ~ 2, d_s ~ 1.5) vs square torus (d_g = d_s = 2): see G2-2 rows.

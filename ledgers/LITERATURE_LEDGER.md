@@ -29,3 +29,7 @@
 | Popescu–Short–Winter, Nat. Phys. 2, 754 (2006); Goldstein–Lebowitz–Tumulka–Zanghì, PRL 96, 050403 (2006) | canonical typicality | OWNER-CITED (PSW link supplied); not fetched here. Used only as: typicality gives equilibrium relative to a measure — reproduced numerically (D2) | S2-D-arrow |
 | Goldstein–Tumulka–Zanghì, PRD 94, 023520 (2016) | entropy increases in both time directions from a low-entropy macrostate; one-sided arrow needs asymmetric boundary info | OWNER-CITED; two-sided behaviour reproduced (D10) | S2-D-arrow |
 | Barbour–Koslowski–Mercati (Janus point) | arrows away from a distinguished middle | SECONDARY, unverified; used only as the Janus classification frame | S2-D-arrow |
+| Spectral / walk / fractal dimensions (Rammal–Toulouse; Sierpinski d_s = 2 log3/log5); comb d_s = 3/2 | graph diffusion dimensions | STANDARD; numerics ✓ | S2-G2 |
+| Myrheim (1978), Meyer (1988) ordering-fraction dimension; Brightwell–Gregory (longest chain); Bombelli–Henson–Sorkin (sprinkling Lorentz invariance) | causal-set dimension estimators | STANDARD / SECONDARY; MM and midpoint ✓, chain-scaling bias ✓ | S2-G3 |
+| GPT capacity / polygon theories (Janotta et al.); noiseless subsystems (Knill–Laflamme–Viola; Zanardi) | operational capacity | SECONDARY; LP / commutant numerics ✓ | S2-G4 |
+| owner-cited: spectral-dimension review (Gen. Rel. Grav., 2018); GPT review (Phys. Rep., 2023) | estimator plurality; capacity ≠ geometry | OWNER-CITED, not fetched | S2-G |

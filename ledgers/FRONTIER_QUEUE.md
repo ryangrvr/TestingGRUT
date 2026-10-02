@@ -26,7 +26,10 @@
 | REPAIR 03 | T2-4 rescoped to an open candidate | **DONE** | Y-10 |
 | S2-D-arrow | closed unitary arrow from every state? | **DONE** | D0 theorem: no every-state / eternal continuous arrow (finite unitary); Prop. 2: H-only states stationary; arrows need H_corr\|Σ + freshness (max-mixed bath works; correlated 6.9-bit bath anti-arrows), A_res; typicality = equilibrium only (P(inc) 0.499); Janus; special state fixable by (H, Σ) + selector |
 | ZOOM_OUT_06 | after D-arrow | **DONE** | H_env → H_corr\|Σ; arrow not Σ-independent; orientation not selected; candidate T2-5 |
-| S2-G2 / G3 / G4 | dimension notions | **RECOMMENDED NEXT** | — |
+| REPAIR 04 | explicit finite-horizon every-state corollary (D0 Cor. 1′) | **DONE** | Y-11 |
+| S2-G2 / G3 / G4 | dimension origin campaign | **DONE** | dimension splits into derived observables of distinct parents; G2 scale / probe / site-priced; G3 from order (MM 1.998 / 2.996 / 4.014), not fixed by G2 (ℤ²: 2.9 vs 1.14), Lorentz not derived; G4 A-priced, does not fix representation (N = 2 for K = 1 … 4) |
+| ZOOM_OUT_07 | after the dimension campaign | **DONE** | C5-G eliminated as a single primitive (conceptual compression); candidate T2-6 |
+| S2-ΣH | combined boundary selector: joint (Σ, H_corr\|Σ) selection without hidden preferences | **RECOMMENDED NEXT** (awaiting owner) | — |
 | S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | QUEUED | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

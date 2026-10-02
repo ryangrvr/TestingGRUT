@@ -1,0 +1,41 @@
+
+==============================================================================
+G3-1/G3-2 sprinkled causal intervals in d-dim Minkowski: three order-theoretic estimators
+==============================================================================
+  d (true) |   N   | Myrheim-Meyer        | midpoint scaling     | longest chain L
+     2     |   500 | 2.009 +- 0.024     | 2.027 +- 0.041     | 40.5
+     2     |  2000 | 1.998 +- 0.013     | 2.000 +- 0.020     | 82.5
+           chain-scaling estimate d = log(N2/N1)/log(L2/L1) = 1.948
+     3     |   500 | 2.984 +- 0.037     | 3.065 +- 0.020     | 14.8
+     3     |  2000 | 2.996 +- 0.010     | 3.044 +- 0.039     | 24.8
+           chain-scaling estimate d = log(N2/N1)/log(L2/L1) = 2.678
+     4     |   500 | 3.984 +- 0.024     | 4.147 +- 0.206     | 8.0
+     4     |  2000 | 4.014 +- 0.094     | 4.129 +- 0.132     | 12.8
+           chain-scaling estimate d = log(N2/N1)/log(L2/L1) = 2.974
+
+  shape hostile: sprinkling into a SLAB (t in (0,1), |x_i| < 2), MM formula assumes an interval:
+     true d = 2: ordering fraction 0.1561 -> MM 'dimension' 3.467;  midpoint 3.816
+     true d = 3: ordering fraction 0.0288 -> MM 'dimension' 5.453;  midpoint 6.573
+     true d = 4: ordering fraction 0.0053 -> MM 'dimension' 7.371;  midpoint 8.966
+
+==============================================================================
+G3-3 same spatial graph (Z^2 or Z), different causal structure: lattice spacetimes, interval between tips
+==============================================================================
+  spatial Z^1, L1   cone, speed c=1, T=30: elements  1861, ordering fraction 0.5159 -> MM d = 1.958; midpoint d = 1.955
+  spatial Z^2, L1   cone, speed c=1, T=10: elements  1561, ordering fraction 0.2616 -> MM d = 2.832; midpoint d = 2.763
+  spatial Z^2, L1   cone, speed c=1, T=16: elements  6017, ordering fraction 0.2474 -> MM d = 2.902; midpoint d = 2.854
+  spatial Z^2, Linf cone, speed c=1, T=10: elements  3101, ordering fraction 0.2571 -> MM d = 2.854; midpoint d = 2.785
+  spatial Z^2, Linf cone, speed c=1, T=14: elements  8149, ordering fraction 0.2483 -> MM d = 2.897; midpoint d = 2.845
+  spatial Z^2, L1   cone, speed c=2, T=6: elements  1325, ordering fraction 0.2501 -> MM d = 2.889; midpoint d = 2.772
+  spatial Z^2, L1   ABSOLUTE TIME (instantaneous), speed c=1, T=10: elements  1561, ordering fraction 0.9149 -> MM d = 1.142; midpoint d = 1.220
+  continuum reference (G3-1): 1+1 -> 2, 2+1 -> 3.
+
+==============================================================================
+G3-4 / G3-5 propagation cones from local hopping Hamiltonians (single-particle amplitude, tail threshold 1e-10)
+==============================================================================
+  chain      : front speeds x 3.00;  cone-volume growth exponent 0.95
+  chain+NNN  : front speeds x 5.00;  cone-volume growth exponent 0.93
+  square     : front speeds axis (1,0) 2.70, diagonal (1,1) 3.75;  cone-volume growth exponent 1.91;  anisotropy max/min 1.39
+  triangular : front speeds axis (1,0) 3.90, bond diag (1,1) 5.52, anti-diag (1,-1) 7.57;  cone-volume growth exponent 1.97;  anisotropy max/min 1.94
+  square lattice low-energy dispersion E(k) = -4 + |k|^2 + O(k^4): quadratic (non-relativistic); cone set by the
+  lattice maximum group velocity, direction-dependent -> preferred lattice frame: LORENTZ STRUCTURE NOT DERIVED.
