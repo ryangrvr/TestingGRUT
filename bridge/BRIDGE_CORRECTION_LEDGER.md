@@ -38,3 +38,17 @@ emitted. Where a log line's wording is broader than the corrected scope, the cor
 **Grade:** **BRIDGE-THEOREM REVIEWED AT STATED SCOPE**, not CANONICAL GRUT THEOREM.
 
 **Status:** B2 is **accepted provisionally** by the owner, with BR3-01 and BR3-02 applied.
+
+## BRIDGE REPAIR 04 — accounting atoms are not automatically physical primitives (owner, after `2b874a3`)
+
+| ID | location | original wording | corrected reading | effect on the verdict |
+|---|---|---|---|---|
+| **BR4-01** | `B4_NINE_LAYER_COMPRESSION_MATRIX.md` §B4-11; `BRIDGE_ZOOM_OUT_04.md` §5 and Status; `BRIDGE_INFORMATION_LEDGER.md` BI-17 and summary | "atomic supplied-primitive count ↑" (six previously implicit items) | **"explicit supplied / declarative accounting items increase"** / "the dependency graph resolves into more atomic information items". The six are of different kinds: A_resolution and A_time are access / protocol declarations; R_closure is a mathematical convention / rule choice; the absolute coordinate value of H_epoch is gauge under global time translation, though the existence of a special-form boundary event is physical; Gibbs-vs-GGE is a supplied state-class / postulate choice; H_cross is genuine physical boundary data. **PHYSICAL COMPRESSION = 0; DEPENDENCY COMPRESSION > 0; EXPLICIT ACCOUNTING-ITEM COUNT ↑; PHYSICAL PRIMITIVE COUNT CHANGE = NOT ESTABLISHED** | none; no B4 scientific verdict changes |
+
+**Status:** B4 is **accepted provisionally** by the owner, with BR4-01 applied.
+
+## B5 — no repairs required
+
+B5 introduced no correction to earlier Bridge files. The success bar was preregistered from the owner's B5-0 text before
+any candidate was evaluated. Literature for P6 (heat-flow reversal by initial correlations) is a **KNOWN-RESULT IMPORT**,
+cited from memory and not re-fetched.

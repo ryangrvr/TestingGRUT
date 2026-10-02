@@ -1,0 +1,70 @@
+
+==============================================================================
+P1  R1 frame-overdetermination: frame(net) = frame(drift) = frame(noise)?
+==============================================================================
+  A  common supplied site frame: overlap(net frame, drift axes) = 1.000000; overlap(net frame, noise axes) = 1.000000
+  B  drift written on-site in an independently rotated frame (admissible: V convex, gradient flow well posed):
+     overlap(net frame, drift axes) = 0.3492; overlap(rotated frame, drift axes) = 1.000000
+     rotated-drift model relaxes: |x(20)| = 6.87e-04 (from |x(0)| = 4.15)
+     -> nothing earned forbids the independent rotation; agreement exists only because the declarations share a frame.
+  C  comparator: an ordinary nonlinear Langevin network x' = -K x - grad V4 + xi with site-local V4 and site-local noise
+     has the same frame agreement by construction (identical equations). -> CONSISTENCY-ONLY / STANDARD-STRUCTURE
+
+==============================================================================
+P2  generalized integrated transfer X(inf) = E1(0) - E1_G + g Q12_G - g Q12(0): provenance and variation
+==============================================================================
+  provenance: d(E1 + E_int)/dt = -g q1 p2 (equations of motion) => X(T) = E1(0) - E1(T) + g(Q12(T) - Q12(0)) for ANY
+  quadratic chain and ANY state (energy accounting); the T -> inf value additionally needs local return to equilibrium.
+  S6 canonical (2.3,1,2.3): bound states 0; X num/closed: (2.0,1.0,a=0.0): +1.16942/+1.16943; (1.0,1.0,a=0.0): +0.16942/+0.16943; (1.0,1.0,a=1.0): -0.16942/-0.16943; (0.5,1.5,a=0.4): -0.94917/-0.94917
+  kappa=3.0: bound states 0; X num/closed: (2.0,1.0,a=0.0): +1.12023/+1.12038; (1.0,1.0,a=0.0): +0.12034/+0.12038; (1.0,1.0,a=1.0): -0.12035/-0.12038; (0.5,1.5,a=0.4): -0.96379/-0.96389
+  g=0.6: bound states 0; X num/closed: (2.0,1.0,a=0.0): +1.05012/+1.05012; (1.0,1.0,a=0.0): +0.05012/+0.05012; (1.0,1.0,a=1.0): -0.05012/-0.05012; (0.5,1.5,a=0.4): -0.98496/-0.98496
+  kappa=2.6,g=1.2,c=2.5: bound states 0; X num/closed: (2.0,1.0,a=0.0): +1.19142/+1.19149; (1.0,1.0,a=0.0): +0.19147/+0.19149; (1.0,1.0,a=1.0): -0.19146/-0.19149; (0.5,1.5,a=0.4): -0.94251/-0.94255
+  bath pin c=2.8: bound states 0; X num/closed: (2.0,1.0,a=0.0): +1.11177/+1.11177; (1.0,1.0,a=0.0): +0.11177/+0.11177; (1.0,1.0,a=1.0): -0.11177/-0.11177; (0.5,1.5,a=0.4): -0.96647/-0.96647
+  class boundary: kappa=1.0 (bound state(s) [0.2308]): X(T) over T in [150,200] spans [+1.3500, +1.9992] -> no limit; the relation needs the a.c. relaxation class
+  comparator (random 30-node harmonic network, 3-site system): integral of bath flux over [0,6] = 0.532426; E_B(6) - E_B(0) = 0.532427 -> the same identity holds in any harmonic network
+
+==============================================================================
+P3  equal-temperature offset X(inf) = (1/2) T_b r^2 (S6): which parts are invariant?
+==============================================================================
+  general closed form (equal T, S6-type product with q1-qB cross alpha * Gibbs cross):
+     X(inf) = g Q12_G (1/2 - alpha) = -<E_int>_G (1/2 - alpha);  S6: g = 1, Q12_G = T r^2
+  S6 canonical (2.3,1,2.3), T=1.3, alpha=0.0: X = +0.22025; -<E_int>_G (1/2 - alpha) = +0.22025; 'r^2' analogue (K^-1)_12 = 0.33885; ratio X/|<E_int>_G| = +0.5000
+  S6 canonical (2.3,1,2.3), T=1.3, alpha=1.0: X = -0.22025; -<E_int>_G (1/2 - alpha) = -0.22025; 'r^2' analogue (K^-1)_12 = 0.33885; ratio X/|<E_int>_G| = -0.5000
+  kappa=3.0, T=1.3, alpha=0.0: X = +0.15644; -<E_int>_G (1/2 - alpha) = +0.15649; 'r^2' analogue (K^-1)_12 = 0.24075; ratio X/|<E_int>_G| = +0.4998
+  kappa=3.0, T=1.3, alpha=1.0: X = -0.15645; -<E_int>_G (1/2 - alpha) = -0.15649; 'r^2' analogue (K^-1)_12 = 0.24075; ratio X/|<E_int>_G| = -0.4999
+  g=0.6, T=1.3, alpha=0.0: X = +0.06516; -<E_int>_G (1/2 - alpha) = +0.06516; 'r^2' analogue (K^-1)_12 = 0.16708; ratio X/|<E_int>_G| = +0.5000
+  g=0.6, T=1.3, alpha=1.0: X = -0.06516; -<E_int>_G (1/2 - alpha) = -0.06516; 'r^2' analogue (K^-1)_12 = 0.16708; ratio X/|<E_int>_G| = -0.5000
+  kappa=2.6,g=1.2,c=2.5, T=1.3, alpha=0.0: X = +0.24891; -<E_int>_G (1/2 - alpha) = +0.24894; 'r^2' analogue (K^-1)_12 = 0.31915; ratio X/|<E_int>_G| = +0.4999
+  kappa=2.6,g=1.2,c=2.5, T=1.3, alpha=1.0: X = -0.24890; -<E_int>_G (1/2 - alpha) = -0.24894; 'r^2' analogue (K^-1)_12 = 0.31915; ratio X/|<E_int>_G| = -0.4999
+  bath pin c=2.8, T=1.3, alpha=0.0: X = +0.14530; -<E_int>_G (1/2 - alpha) = +0.14530; 'r^2' analogue (K^-1)_12 = 0.22354; ratio X/|<E_int>_G| = +0.5000
+  bath pin c=2.8, T=1.3, alpha=1.0: X = -0.14530; -<E_int>_G (1/2 - alpha) = -0.14530; 'r^2' analogue (K^-1)_12 = 0.22354; ratio X/|<E_int>_G| = -0.5000
+  static identity in ANY quadratic network (multi-site system S, equal T, product of the two Gibbs marginals):
+   random network 0: E_S(prod) - E_S(Gibbs) = -1.112204;  (1/2)<E_int>_G = -1.112204
+   random network 1: E_S(prod) - E_S(Gibbs) = -1.064791;  (1/2)<E_int>_G = -1.064791
+   random network 2: E_S(prod) - E_S(Gibbs) = -0.868788;  (1/2)<E_int>_G = -0.868788
+  -> the 1/2 is the quadratic-network equipartition identity (STANDARD); r is model-specific (kappa, g, c);
+     the sign flips for alpha > 1/2 (INPUT-DEPENDENT).
+
+==============================================================================
+P6  correlation-boundary sign: sweep of all PSD-admissible q1-q2 correlations at fixed S6 marginals
+==============================================================================
+  (Ts,Tb)=(1.0,1.0): admissible Q12(0) in [-0.5031, 0.5031] -> X(inf) in [-0.3337, +0.6725]; sampled (Q12, X, min eig): (-0.503,+0.6720,5.0e-04); (-0.252,+0.4210,2.2e-01); (+0.000,+0.1694,2.3e-01); (+0.252,-0.0821,2.2e-01); (+0.503,-0.3332,5.0e-04)
+  (Ts,Tb)=(2.0,1.0): admissible Q12(0) in [-0.7115, 0.7115] -> X(inf) in [+0.4580, +1.8809]; sampled (Q12, X, min eig): (-0.711,+1.8802,7.0e-04); (-0.356,+1.5252,2.3e-01); (+0.000,+1.1694,2.3e-01); (+0.356,+0.8137,2.3e-01); (+0.711,+0.4587,7.0e-04)
+  (Ts,Tb)=(10.0,1.0): admissible Q12(0) in [-1.5909, 1.5909] -> X(inf) in [+7.5785, +10.7603]; sampled (Q12, X, min eig): (-1.589,+10.7587,1.0e-03); (-0.795,+9.9649,2.3e-01); (+0.000,+9.1694,2.3e-01); (+0.795,+8.3740,2.3e-01); (+1.589,+7.5801,1.0e-03)
+  (Ts,Tb)=(0.5,1.0): admissible Q12(0) in [-0.3557, 0.3557] -> X(inf) in [-0.6863, +0.0252]; sampled (Q12, X, min eig): (-0.355,+0.0248,3.2e-04); (-0.178,-0.1527,1.4e-01); (+0.000,-0.3306,2.2e-01); (+0.178,-0.5084,1.4e-01); (+0.355,-0.6859,3.2e-04)
+  -> at equal T both signs occur: no parameter-free arrow sign (BOUNDARY-STATE-DEPENDENT). For large |Ts-Tb| the sign
+     is fixed, but only by a Cauchy-Schwarz / PSD bound with supplied marginals (generic positivity: not distinctive).
+
+==============================================================================
+B5-9 dimensionless combinations suggested by the exact equations (variation firewall applied)
+==============================================================================
+  S6 canonical (2.3,1,2.3) (1,1,a=0.0): X/(g Q12_G) = +0.5000; X/(Ts-Tb) = undef
+  S6 canonical (2.3,1,2.3) (1,1,a=0.7): X/(g Q12_G) = -0.2000; X/(Ts-Tb) = undef
+  S6 canonical (2.3,1,2.3) (2,1,a=0.0): X/(g Q12_G) = +3.4511; X/(Ts-Tb) = +1.1694
+  kappa=3.0 (1,1,a=0.0): X/(g Q12_G) = +0.4998; X/(Ts-Tb) = undef
+  kappa=3.0 (1,1,a=0.7): X/(g Q12_G) = -0.2000; X/(Ts-Tb) = undef
+  kappa=3.0 (2,1,a=0.0): X/(g Q12_G) = +4.6531; X/(Ts-Tb) = +1.1202
+  g=0.6 (1,1,a=0.0): X/(g Q12_G) = +0.5000; X/(Ts-Tb) = undef
+  g=0.6 (1,1,a=0.7): X/(g Q12_G) = -0.2000; X/(Ts-Tb) = undef
+  g=0.6 (2,1,a=0.0): X/(g Q12_G) = +10.4754; X/(Ts-Tb) = +1.0501
+  -> X/(g Q12_G) = 1/2 only at alpha = 0 and Ts = Tb (killed by H_cross / H_marginal variation); X/(Ts-Tb) depends on K and alpha.

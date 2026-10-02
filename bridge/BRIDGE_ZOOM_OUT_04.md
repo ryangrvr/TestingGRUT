@@ -79,9 +79,9 @@
 |---|---|
 | **Physically smaller?** | **No**: physical compression = 0 |
 | **Smaller as a dependency structure?** | **Yes**: 2 items downstream (A_closure, S_ref), 2 duplicate listings mergeable, 1 redundancy edge, 4 layers decomposed |
-| **Smaller as a count of atomic supplied primitives?** | **No: it grows.** 6 items supplied in practice but not booked separately are made explicit: A_resolution, A_time, R_closure, H_cross, H_epoch and the Gibbs-vs-GGE postulate |
+| **Smaller as a count of explicit accounting items?** | **No: the explicit supplied / declarative accounting-item count grows** [BR4-01]. 6 items supplied in practice but not booked separately are made explicit: A_resolution, A_time (protocol declarations), R_closure (convention), H_epoch (coordinate value gauge; the special-form event is physical), the Gibbs-vs-GGE postulate (state-class choice) and H_cross (genuine physical boundary data). **Physical primitive count change: NOT ESTABLISHED** |
 
-So the architecture is **bookkeeping-cleaner, not bookkeeping-smaller in primitive count.** Categories: **B (bookkeeping
+So the architecture is **bookkeeping-cleaner, not smaller in explicit accounting items**; no new count of physical primitives is claimed. Categories: **B (bookkeeping
 compression only) + D (new redundancy / overdetermination).** Not A, not C.
 
 ## 6. Which CUCs survive B4?
@@ -147,5 +147,5 @@ a short list of bookkeeping / scope CUCs, rather than new physics.
 ## Status
 
 - **BRIDGE REPAIR 03:** applied. **B2:** accepted provisionally. **B4:** DONE.
-- **Physical compression:** 0. **Dependency compression:** > 0. **Atomic primitive count:** ↑ (hidden items explicit).
+- **Physical compression:** 0. **Dependency compression:** > 0. **Explicit accounting-item count:** ↑ (hidden items explicit). **Physical primitive count change:** NOT ESTABLISHED [BR4-01].
 - **HARD STOP. Awaiting owner review before B5.**

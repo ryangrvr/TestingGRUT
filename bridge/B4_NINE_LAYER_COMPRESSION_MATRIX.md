@@ -301,14 +301,17 @@ The matrix does not contradict the expected graph; it adds the class-relative or
 | duplicate listings mergeable | R2 (split in layers 4 and 5); R3 (bath state in layers 4 and 5) | 2 |
 | conditional redundant encodings | R1 (net in on-site drift / non-uniform noise) | 1 (class-scoped) |
 | layers internally decomposable | 2 (generator / drift / orientation); 3 (interface / partition / resolution / time + closure downstream); 4 (sector ≠ H_marginals / H_cross / H_epoch / split); 5 (origin / bath state / noise law / partition / coarse map) | 4 layers |
-| **hidden supplied items made explicit** (supplied in practice, not booked as separate Ledger A items) | A_resolution, A_time, R_closure, H_cross and H_epoch (inside A-14's "declared initial asymmetry"), Gibbs-vs-GGE postulate | 6 |
+| **hidden supplied / declarative accounting items made explicit** (supplied in practice, not booked as separate Ledger A items; **not all physical primitives** [BR4-01]) | A_resolution, A_time, R_closure, H_cross and H_epoch (inside A-14's "declared initial asymmetry"), Gibbs-vs-GGE postulate | 6 |
 
 **Net reading.**
 - The **dependency structure is smaller and cleaner**: 4 removals or merges, plus 1 redundancy edge.
-- The **atomic count of supplied primitives is not smaller**. Making the hidden items explicit adds about 6 atoms, more
-  than the merges remove.
+- The **explicit count of supplied / declarative accounting items increases**: the dependency graph resolves into more
+  atomic information items (about 6 made explicit, more than the merges remove) [BR4-01].
+- These six are **not six new physical primitives**. They are of different kinds: A_resolution and A_time are access / protocol declarations; R_closure is a mathematical convention / rule choice; the absolute coordinate value of H_epoch is gauge under global time translation (the existence of a special-form boundary event is physical); Gibbs-vs-GGE is a supplied state-class / postulate choice; H_cross is genuine physical boundary data.
 
-The two must be kept distinct: **physical compression = 0; dependency compression > 0; atomic-primitive count ↑.**
+Keep these distinct: **PHYSICAL COMPRESSION = 0; DEPENDENCY COMPRESSION > 0; EXPLICIT ACCOUNTING-ITEM COUNT ↑;
+PHYSICAL PRIMITIVE COUNT CHANGE = NOT ESTABLISHED.** Bridge-1 has refined the ontology / accounting; it has not established
+a new count of fundamental primitives.
 
 ## B4-13 Bridge verdict category
 
