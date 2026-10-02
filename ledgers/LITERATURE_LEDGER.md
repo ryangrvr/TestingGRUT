@@ -21,4 +21,6 @@
 | Furstenberg (1973); Dani (1978); Dani–Smillie (1984); Marcus; Ratner | horocycle unique ergodicity (compact), invariant measures on SL(2,ℝ)/SL(2,ℤ), equidistribution of non-periodic orbits, mixing rates | SECONDARY; numerics ✓ (X₂) | S2-3b |
 | Zurek, quantum Darwinism | redundancy / pointer selection given a split | SECONDARY; numerics ✓ | S2-8 |
 | Griffiths; Gell-Mann–Hartle; Dowker–Kent (1996) | consistent histories; abundance of consistent sets | SECONDARY; numerics ✓ | S2-7 |
-| Carroll–Singh (Hilbert-space fundamentalism); Stoica (objection to its uniqueness) | TPS from (H, ψ) | SECONDARY, **unverified here** | ZOOM_OUT_03 / S2-Σ |
+| Cotler–Penington–Ranard, arXiv:1702.06142 | spectrum → local TPS given locality framework | OWNER-CITED (fetch blocked by proxy); **confirmed in scope** by S2-Σ (unique up to commutant given d, #factors) | S2-1, S2-Σ |
+| Carroll–Singh, PRA 103, 022213 (quantum mereology) | preferred factorization via quasiclassicality | OWNER-CITED (fetch blocked); **scope-priced** by S2-Σ (needs ψ, τ, d, criterion; epoch) | S2-Σ |
+| Stoica, arXiv:2103.15104 | structures from (H, ψ) alone cannot be both physically relevant and unique | OWNER-CITED (fetch blocked); **confirmed in scope** by S2-Σ (exact commutant blindness of H-only criteria) | S2-Σ |

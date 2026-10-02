@@ -18,3 +18,6 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | forgetting of a.c. preparations | S2-3b | a.c. class w.r.t. Haar | reference measure earned (compact); the restriction to a.c. preparations is an **access** limit | Dirac preparations never forgotten |
 | "stable" TPS under generic perturbation | S2-1b | GUE (TPS-neutral) vs TPS-local perturbation measures | supplied | GUE destroys all exact locality; a local perturbation measure presupposes the TPS |
 | "random Clifford frames" search | S2-1b | uniform over short random H/S/CNOT circuits (sampling convenience) | supplied | existence claims only; no frequency claims made |
+| weight-simplex win shares | S2-Σ | Dirichlet(1) on the 4-simplex | supplied | shares are measure-relative; only the Pareto front is measure-free |
+| perturbation robustness of Σ | S2-Σ | GUE scaled to ‖H‖ | supplied | winners change with ε |
+| candidate TPS family | S2-Σ | finite family (202 groupings × 7 frames) | supplied | non-dominance is robust to enlarging the family; any dominance claim would not be |

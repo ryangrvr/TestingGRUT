@@ -17,9 +17,10 @@
 | S2-8 | Darwinism / records (attacks A) | **DONE** | pointer selected given split (χ_Z 0.871 vs χ_X 0); split not selected (R = 8 for every slot; same state R = 8 vs 0 across frames); R = 8/4/2 by fragment grouping; scrambling kills plateau. A-PRICED + D-priced |
 | S2-G | dimension: split into G1 (with S2-Σ), G2, G3, G4 | ACTIVE | — |
 | ZOOM_OUT_03 | after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7 | **DONE** | none of D, H, A eliminated; candidate T2-2 (split centrality): C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res |
-| S2-Σ + S2-G1 | factorization AND local dimension selection without hidden weights: Pareto front, monotone-transform hostile, weight simplex, scale, state, symmetry (attacks Σ) | **NEXT** (re-chartered by owner; no weighted objective first) | — |
-| ZOOM_OUT_04 | Σ/G1 zoom-out: is Σ selected, or a multi-objective preference problem? | GATED on S2-Σ | — |
-| S2-H2 | unique global attractor from every admissible initial condition without a measure (contractive / Markov / gradient vs unitary) | GATED on ZOOM_OUT_04 | — |
+| S2-Σ + S2-G1 | factorization AND local dimension selection without hidden weights (attacks Σ) | **DONE** | no weakly dominant TPS in 58/58 runs; fronts 3–148 with 5–10 local-dim types; scalar winners vary with transform/normalization/weights/scale/state; translation + commutant degeneracies exact; dominance only in CPR scope (d, #factors supplied), up to commutant; ψ breaks it only via an epoch. Σ NOT DERIVED |
+| ZOOM_OUT_04 | Σ/G1 zoom-out | **DONE** | Σ survives as a supplied object: (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)); candidate T2-3 (commutant blindness) |
+| S2-Σb | epoch-integrated criteria (optional) | QUEUED | — |
+| S2-H2 | unique global attractor from every admissible initial condition without a measure (contractive / Markov / gradient vs unitary) | **NEXT** (unlocked) | — |
 | S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension (separately) | QUEUED after ZOOM_OUT_04 | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

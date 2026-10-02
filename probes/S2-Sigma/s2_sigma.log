@@ -1,0 +1,398 @@
+==============================================================================
+S2-Sigma + G1: factorization and local-dimension selection without hidden weights
+==============================================================================
+groupings 202; frames 7; candidates per run 1414
+NOTE (Sigma-2, exact): Pareto dominance is invariant under every strictly increasing componentwise transform;
+      the front below is therefore objective-scale-invariant by construction. Scalar winners are not.
+
+##############################################################################
+# Sigma-1/2/3/4/6: models x states (tau = 1, delta = 0.1, eps = 0)
+##############################################################################
+
+============================== M1 clustered pairs + weak bridges ==============================
+
+[M1 clustered pairs + weak bridges | product |0..0>]  candidates 1414;  Pareto front size 40;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: +0.6378  by 1 candidates, e.g. commutant e^-iHs:16x4:(03)(1245)
+   best R: +2.0000  by 220 candidates, e.g. id:8x4x2:(0)(134)(25)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); commutant e^-iHs:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 19 distinct winners; top shares: 0.44 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); 0.19 cliff2:8x4x2:(012)(34)(5); 0.09 cliff3:4x4x2x2:(0)(1)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 37 distinct winners; top shares: 0.28 commutant e^-iHs:8x4x2:(012)(3)(45); 0.16 cliff2:8x4x2:(012)(34)(5); 0.14 cliff1:16x2x2:(0123)(4)(5)
+
+[M1 clustered pairs + weak bridges | random local product]  candidates 1414;  Pareto front size 49;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: +0.6825  by 1 candidates, e.g. cliff4:32x2:(0)(12345)
+   best R: +2.0000  by 169 candidates, e.g. cliff1:16x2x2:(0)(1)(2345)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:4x4x4:(01)(23)(45); commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); commutant e^-iHs:4x4x2x2:(01)(23)(4)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 24 distinct winners; top shares: 0.43 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); 0.12 cliff3:4x4x2x2:(0)(12)(3)(45); 0.12 commutant e^-iHs:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 44 distinct winners; top shares: 0.32 commutant e^-iHs:4x4x2x2:(01)(23)(4)(5); 0.08 commutant e^-iHs:4x4x2x2:(0)(1)(23)(45); 0.06 cliff3:4x4x2x2:(0)(12)(3)(45)
+
+[M1 clustered pairs + weak bridges | ground]  candidates 1414;  Pareto front size 29;  weakly dominant candidate: NONE
+   front local-dim types (9): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'commutant e^-iHs', 'id']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 307 candidates, e.g. id:16x2x2:(0)(1234)(5)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: cliff3:4x4x2x2:(01)(2)(3)(45); commutant e^-iHs:4x4x2x2:(01)(23)(4)(5); id:4x4x2x2:(01)(2)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 9 distinct winners; top shares: 0.43 id:4x4x2x2:(01)(2)(3)(45); 0.41 cliff3:4x4x2x2:(01)(2)(3)(45); 0.10 id:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 34 distinct winners; top shares: 0.36 commutant e^-iHs:4x4x2x2:(01)(23)(4)(5); 0.17 commutant e^-iHs:8x2x2x2:(012)(3)(4)(5); 0.09 cliff3:4x4x2x2:(01)(2)(3)(45)
+
+[M1 clustered pairs + weak bridges | mid-spectrum eigenstate]  candidates 1414;  Pareto front size 30;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x2x2, 16x4, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x4x2
+   front frames: ['cliff2', 'cliff3', 'commutant e^-iHs', 'id']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: +0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 273 candidates, e.g. id:8x4x2:(0)(12)(345)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: id:16x2x2:(0145)(2)(3); id:4x4x4:(01)(23)(45); commutant e^-iHs:8x4x2:(014)(23)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 11 distinct winners; top shares: 0.34 id:16x2x2:(0145)(2)(3); 0.27 id:4x4x4:(01)(23)(45); 0.20 id:4x4x2x2:(01)(2)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 37 distinct winners; top shares: 0.25 commutant e^-iHs:16x2x2:(0145)(2)(3); 0.24 commutant e^-iHs:8x4x2:(014)(23)(5); 0.21 commutant e^-iHs:8x2x2x2:(012)(3)(4)(5)
+
+[M1 clustered pairs + weak bridges | Haar]  candidates 1414;  Pareto front size 49;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: +0.3652  by 1 candidates, e.g. cliff1:8x8:(045)(123)
+   best R: +2.0000  by 211 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:4x4x4:(01)(23)(45); cliff1:8x8:(045)(123); id:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 8 distinct winners; top shares: 0.83 commutant e^-iHs:4x4x4:(01)(23)(45); 0.07 id:4x4x2x2:(01)(2)(3)(45); 0.07 cliff1:8x8:(045)(123)
+   Sigma-3 Dirichlet(1) simplex [rank]: 32 distinct winners; top shares: 0.32 id:8x4x2:(012)(3)(45); 0.17 id:4x4x4:(01)(25)(34); 0.15 cliff1:8x4x2:(0)(123)(45)
+
+[M1 clustered pairs + weak bridges | record-forming |+>|0..>]  candidates 1414;  Pareto front size 47;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: +0.9139  by 1 candidates, e.g. cliff4:16x4:(05)(1234)
+   best R: +2.0000  by 251 candidates, e.g. id:8x4x2:(0)(12)(345)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); commutant e^-iHs:8x4x2:(012)(3)(45); cliff3:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 25 distinct winners; top shares: 0.45 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45); 0.19 cliff2:8x4x2:(012)(34)(5); 0.08 commutant e^-iHs:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 36 distinct winners; top shares: 0.27 commutant e^-iHs:8x4x2:(012)(3)(45); 0.24 cliff1:16x2x2:(0123)(4)(5); 0.14 cliff2:8x4x2:(012)(34)(5)
+
+[M1 clustered pairs + weak bridges | Gibbs beta=1]  candidates 1414;  Pareto front size 23;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0003  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +1.0000  by 86 candidates, e.g. cliff1:32x2:(02345)(1)
+   best P: +0.9997  by 6 candidates, e.g. id:16x4:(01)(2345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:8x2x2x2:(012)(3)(4)(5); cliff2:8x4x2:(0)(123)(45); id:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 8 distinct winners; top shares: 0.32 id:4x4x4:(01)(23)(45); 0.20 cliff2:8x2x2x2:(0)(123)(4)(5); 0.16 id:4x4x2x2:(01)(2)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 29 distinct winners; top shares: 0.41 commutant e^-iHs:8x2x2x2:(012)(3)(4)(5); 0.29 cliff3:8x4x2:(012)(3)(45); 0.09 cliff4:32x2:(01235)(4)
+
+============================== M2 TFIM ring (translation-symmetric) ==============================
+
+[M2 TFIM ring (translation-symmetric) | product |0..0>]  candidates 1414;  Pareto front size 148;  weakly dominant candidate: NONE
+   front local-dim types (9): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'haar', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: +1.1015  by 1 candidates, e.g. commutant e^-iHs:8x8:(024)(135)
+   best R: +2.0000  by 183 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: id:4x4x2x2:(01)(2)(34)(5); id:4x4x4:(01)(23)(45); id:4x4x2x2:(0)(12)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 21 distinct winners; top shares: 0.37 id:4x4x2x2:(0)(12)(3)(45); 0.18 id:4x4x4:(01)(23)(45); 0.12 commutant e^-iHs:4x4x4:(01)(23)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 58 distinct winners; top shares: 0.15 id:4x4x2x2:(01)(2)(34)(5); 0.12 id:4x4x2x2:(05)(1)(23)(4); 0.11 cliff3:32x2:(01345)(2)
+
+[M2 TFIM ring (translation-symmetric) | random local product]  candidates 1414;  Pareto front size 18;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x4, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['commutant e^-iHs', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: +1.6669  by 1 candidates, e.g. commutant e^-iHs:8x8:(014)(235)
+   best R: +2.0000  by 201 candidates, e.g. id:8x4x2:(01)(2)(345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: commutant e^-iHs:8x4x2:(012)(35)(4); commutant e^-iHs:8x4x2:(014)(23)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 16 distinct winners; top shares: 0.20 commutant e^-iHs:8x4x2:(012)(3)(45); 0.17 commutant e^-iHs:8x4x2:(014)(23)(5); 0.13 id:4x4x2x2:(0)(12)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 39 distinct winners; top shares: 0.30 commutant e^-iHs:8x4x2:(012)(3)(45); 0.13 commutant e^-iHs:4x4x2x2:(01)(23)(4)(5); 0.11 commutant e^-iHs:4x4x2x2:(05)(12)(3)(4)
+
+[M2 TFIM ring (translation-symmetric) | ground]  candidates 1414;  Pareto front size 68;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: +0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 371 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: id:4x4x2x2:(0)(12)(3)(45); id:4x4x4:(01)(23)(45); commutant e^-iHs:4x4x4:(05)(12)(34)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 4 distinct winners; top shares: 0.51 id:4x4x4:(01)(23)(45); 0.46 id:4x4x2x2:(0)(12)(3)(45); 0.02 id:32x2:(0)(12345)
+   Sigma-3 Dirichlet(1) simplex [rank]: 32 distinct winners; top shares: 0.35 commutant e^-iHs:4x4x4:(05)(12)(34); 0.19 commutant e^-iHs:4x4x2x2:(01)(2)(34)(5); 0.11 commutant e^-iHs:4x4x2x2:(05)(1)(23)(4)
+
+[M2 TFIM ring (translation-symmetric) | mid-spectrum eigenstate]  candidates 1414;  Pareto front size 64;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x8
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 207 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: id:4x4x4:(01)(23)(45); commutant e^-iHs:4x4x4:(05)(12)(34)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 6 distinct winners; top shares: 0.71 id:4x4x4:(01)(23)(45); 0.19 id:4x4x4:(03)(12)(45); 0.06 id:4x4x2x2:(0)(12)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 26 distinct winners; top shares: 0.58 commutant e^-iHs:4x4x4:(05)(12)(34); 0.18 commutant e^-iHs:4x4x4:(05)(14)(23); 0.12 commutant e^-iHs:4x4x2x2:(05)(1)(23)(4)
+
+[M2 TFIM ring (translation-symmetric) | Haar]  candidates 1414;  Pareto front size 31;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x2x2, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff1', 'cliff3', 'cliff4', 'commutant e^-iHs', 'haar', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: +0.2530  by 1 candidates, e.g. commutant e^-iHs:8x8:(024)(135)
+   best R: +2.0000  by 210 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:4x4x4:(01)(24)(35); id:4x4x4:(01)(23)(45); commutant e^-iHs:4x4x4:(01)(25)(34)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 19 distinct winners; top shares: 0.43 id:4x4x4:(01)(23)(45); 0.27 id:4x4x4:(05)(14)(23); 0.06 id:8x8:(015)(234)
+   Sigma-3 Dirichlet(1) simplex [rank]: 49 distinct winners; top shares: 0.30 commutant e^-iHs:4x4x4:(01)(25)(34); 0.11 id:8x4x2:(015)(24)(3); 0.10 commutant e^-iHs:16x2x2:(0)(1)(2345)
+
+[M2 TFIM ring (translation-symmetric) | record-forming |+>|0..>]  candidates 1414;  Pareto front size 49;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x4x2, 8x8
+   front frames: ['commutant e^-iHs', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: +1.1374  by 1 candidates, e.g. commutant e^-iHs:8x8:(024)(135)
+   best R: +2.0000  by 211 candidates, e.g. id:8x4x2:(0)(12)(345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: commutant e^-iHs:4x4x2x2:(0)(12)(3)(45); commutant e^-iHs:4x4x4:(03)(12)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 16 distinct winners; top shares: 0.40 commutant e^-iHs:4x4x2x2:(0)(12)(3)(45); 0.23 commutant e^-iHs:8x4x2:(0)(12)(345); 0.20 commutant e^-iHs:4x4x4:(03)(12)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 41 distinct winners; top shares: 0.58 commutant e^-iHs:4x4x2x2:(0)(12)(3)(45); 0.15 commutant e^-iHs:4x4x4:(03)(12)(45); 0.13 commutant e^-iHs:8x4x2:(0)(12)(345)
+
+[M2 TFIM ring (translation-symmetric) | Gibbs beta=1]  candidates 1414;  Pareto front size 33;  weakly dominant candidate: NONE
+   front local-dim types (7): 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1667  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +1.0000  by 380 candidates, e.g. cliff1:32x2:(0)(12345)
+   best P: +0.8333  by 44 candidates, e.g. id:32x2:(0)(12345)
+   best M: -0.0176  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 4 distinct: cliff3:8x2x2x2:(0)(125)(3)(4); cliff1:32x2:(0)(12345); cliff3:8x4x2:(0)(125)(34); commutant e^-iHs:4x4x2x2:(05)(12)(3)(4)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 8 distinct winners; top shares: 0.32 cliff3:8x2x2x2:(0)(125)(3)(4); 0.25 cliff1:32x2:(0)(12345); 0.19 cliff3:8x4x2:(0)(125)(34)
+   Sigma-3 Dirichlet(1) simplex [rank]: 34 distinct winners; top shares: 0.42 commutant e^-iHs:4x4x2x2:(05)(12)(3)(4); 0.18 cliff4:32x2:(01235)(4); 0.07 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4)
+
+============================== M3 record-forming star ==============================
+
+[M3 record-forming star | product |0..0>]  candidates 1414;  Pareto front size 45;  weakly dominant candidate: NONE
+   front local-dim types (9): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'haar', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.7470  by 2 candidates, e.g. cliff1:32x2:(01345)(2)
+   best R: +2.0000  by 216 candidates, e.g. cliff1:16x2x2:(0)(1)(2345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 5 distinct: cliff4:8x4x2:(034)(12)(5); cliff1:32x2:(01345)(2); cliff2:8x2x2x2:(015)(2)(3)(4); cliff2:4x2x2x2x2:(01)(2)(3)(4)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 19 distinct winners; top shares: 0.22 cliff2:8x2x2x2:(015)(2)(3)(4); 0.19 cliff2:4x2x2x2x2:(01)(2)(3)(4)(5); 0.18 cliff2:8x4x2:(015)(23)(4)
+   Sigma-3 Dirichlet(1) simplex [rank]: 32 distinct winners; top shares: 0.23 cliff4:8x4x2:(034)(12)(5); 0.16 cliff4:32x2:(01234)(5); 0.13 cliff2:4x4x2x2:(01)(23)(4)(5)
+
+[M3 record-forming star | random local product]  candidates 1414;  Pareto front size 34;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff2', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.5516  by 1 candidates, e.g. commutant e^-iHs:32x2:(01345)(2)
+   best R: +3.0000  by 12 candidates, e.g. id:8x2x2x2:(0)(1)(2)(345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:16x2x2:(0145)(2)(3); commutant e^-iHs:32x2:(01345)(2); commutant e^-iHs:8x4x2:(015)(24)(3)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 26 distinct winners; top shares: 0.25 commutant e^-iHs:16x2x2:(0145)(2)(3); 0.16 id:4x4x2x2:(05)(13)(2)(4); 0.09 commutant e^-iHs:32x2:(01345)(2)
+   Sigma-3 Dirichlet(1) simplex [rank]: 32 distinct winners; top shares: 0.28 commutant e^-iHs:8x4x2:(015)(24)(3); 0.10 commutant e^-iHs:16x2x2:(0145)(2)(3); 0.08 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4)
+
+[M3 record-forming star | ground]  candidates 1414;  Pareto front size 30;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 227 candidates, e.g. cliff1:16x2x2:(0)(1)(2345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 4 distinct: cliff4:4x4x2x2:(03)(12)(4)(5); commutant e^-iHs:8x2x2x2:(015)(2)(3)(4); id:32x2:(01235)(4); cliff4:8x4x2:(035)(12)(4)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 12 distinct winners; top shares: 0.37 cliff4:4x4x2x2:(03)(12)(4)(5); 0.17 id:32x2:(01235)(4); 0.14 cliff4:4x2x2x2x2:(0)(12)(3)(4)(5)
+   Sigma-3 Dirichlet(1) simplex [rank]: 29 distinct winners; top shares: 0.37 commutant e^-iHs:8x2x2x2:(015)(2)(3)(4); 0.18 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4); 0.10 cliff4:4x2x2x2x2:(03)(1)(2)(4)(5)
+
+[M3 record-forming star | mid-spectrum eigenstate]  candidates 1414;  Pareto front size 30;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 227 candidates, e.g. cliff1:16x2x2:(0)(1)(2345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 4 distinct: cliff4:4x4x2x2:(03)(12)(4)(5); commutant e^-iHs:8x2x2x2:(015)(2)(3)(4); id:32x2:(01235)(4); cliff4:8x4x2:(035)(12)(4)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 12 distinct winners; top shares: 0.36 cliff4:4x4x2x2:(03)(12)(4)(5); 0.18 id:32x2:(01235)(4); 0.14 cliff4:4x2x2x2x2:(0)(12)(3)(4)(5)
+   Sigma-3 Dirichlet(1) simplex [rank]: 28 distinct winners; top shares: 0.38 commutant e^-iHs:8x2x2x2:(015)(2)(3)(4); 0.18 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4); 0.10 cliff4:4x2x2x2x2:(03)(1)(2)(4)(5)
+
+[M3 record-forming star | Haar]  candidates 1414;  Pareto front size 36;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff2', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.2997  by 1 candidates, e.g. cliff2:8x8:(025)(134)
+   best R: +2.0000  by 210 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 4 distinct: id:8x2x2x2:(035)(1)(2)(4); id:16x2x2:(0135)(2)(4); cliff2:8x8:(045)(123); commutant e^-iHs:16x2x2:(0235)(1)(4)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 19 distinct winners; top shares: 0.18 id:16x2x2:(0135)(2)(4); 0.16 cliff2:4x4x4:(01)(23)(45); 0.15 commutant e^-iHs:16x2x2:(0235)(1)(4)
+   Sigma-3 Dirichlet(1) simplex [rank]: 37 distinct winners; top shares: 0.26 id:8x2x2x2:(035)(1)(2)(4); 0.18 commutant e^-iHs:16x2x2:(0245)(1)(3); 0.11 cliff2:8x8:(015)(234)
+
+[M3 record-forming star | record-forming |+>|0..>]  candidates 1414;  Pareto front size 42;  weakly dominant candidate: NONE
+   front local-dim types (8): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2
+   front frames: ['cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.5566  by 1 candidates, e.g. commutant e^-iHs:32x2:(01235)(4)
+   best R: +4.0000  by 3 candidates, e.g. id:4x2x2x2x2:(0)(1)(2)(35)(4)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: commutant e^-iHs:16x2x2:(0345)(1)(2); commutant e^-iHs:32x2:(01235)(4); commutant e^-iHs:16x2x2:(0124)(3)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 16 distinct winners; top shares: 0.21 id:4x2x2x2x2:(0)(13)(2)(4)(5); 0.21 commutant e^-iHs:32x2:(01235)(4); 0.18 commutant e^-iHs:16x2x2:(0345)(1)(2)
+   Sigma-3 Dirichlet(1) simplex [rank]: 22 distinct winners; top shares: 0.26 commutant e^-iHs:16x2x2:(0124)(3)(5); 0.17 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4); 0.15 id:8x2x2x2:(035)(1)(2)(4)
+
+[M3 record-forming star | Gibbs beta=1]  candidates 1414;  Pareto front size 19;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x2x2, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 8x2x2x2, 8x4x2
+   front frames: ['cliff1', 'cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.1425  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best Q: +0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +1.0000  by 173 candidates, e.g. id:32x2:(0)(12345)
+   best P: +0.8575  by 5 candidates, e.g. id:32x2:(01235)(4)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 4 distinct: cliff4:8x4x2:(034)(12)(5); commutant e^-iHs:8x2x2x2:(025)(1)(3)(4); cliff2:16x2x2:(0125)(3)(4); id:32x2:(01235)(4)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 10 distinct winners; top shares: 0.28 cliff4:8x4x2:(034)(12)(5); 0.20 cliff2:8x2x2x2:(012)(3)(4)(5); 0.17 cliff2:32x2:(01245)(3)
+   Sigma-3 Dirichlet(1) simplex [rank]: 33 distinct winners; top shares: 0.30 commutant e^-iHs:4x2x2x2x2:(05)(1)(2)(3)(4); 0.24 commutant e^-iHs:16x2x2:(0125)(3)(4); 0.16 commutant e^-iHs:8x2x2x2:(015)(2)(3)(4)
+
+============================== M4 generic random 2-local chain ==============================
+
+[M4 generic random 2-local chain | product |0..0>]  candidates 1414;  Pareto front size 9;  weakly dominant candidate: NONE
+   front local-dim types (5): 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 8x4x2, 8x8
+   front frames: ['commutant e^-iHs']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: +0.6994  by 1 candidates, e.g. commutant e^-iHs:8x8:(012)(345)
+   best R: +2.0000  by 212 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 1 distinct: commutant e^-iHs:8x4x2:(01)(2)(345)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 9 distinct winners; top shares: 0.68 commutant e^-iHs:8x4x2:(01)(2)(345); 0.16 commutant e^-iHs:8x4x2:(012)(34)(5); 0.09 commutant e^-iHs:8x8:(012)(345)
+   Sigma-3 Dirichlet(1) simplex [rank]: 12 distinct winners; top shares: 0.92 commutant e^-iHs:8x4x2:(01)(2)(345); 0.02 commutant e^-iHs:16x2x2:(0)(1245)(3); 0.02 commutant e^-iHs:8x4x2:(012)(3)(45)
+
+[M4 generic random 2-local chain | random local product]  candidates 1414;  Pareto front size 12;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x2x2, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['commutant e^-iHs', 'id']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: +0.8844  by 1 candidates, e.g. commutant e^-iHs:8x8:(012)(345)
+   best R: +2.0000  by 211 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 1 distinct: commutant e^-iHs:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 10 distinct winners; top shares: 0.91 commutant e^-iHs:8x4x2:(012)(3)(45); 0.08 commutant e^-iHs:8x8:(012)(345); 0.01 commutant e^-iHs:8x4x2:(0)(12)(345)
+   Sigma-3 Dirichlet(1) simplex [rank]: 14 distinct winners; top shares: 0.95 commutant e^-iHs:8x4x2:(012)(3)(45); 0.03 commutant e^-iHs:16x2x2:(0)(1)(2345); 0.01 commutant e^-iHs:8x8:(012)(345)
+
+[M4 generic random 2-local chain | ground]  candidates 1414;  Pareto front size 31;  weakly dominant candidate: NONE
+   front local-dim types (7): 16x2x2, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff2', 'cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 252 candidates, e.g. id:8x4x2:(045)(12)(3)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 3 distinct: id:8x2x2x2:(0)(123)(4)(5); commutant e^-iHs:16x2x2:(0123)(4)(5); id:16x2x2:(0123)(4)(5)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 10 distinct winners; top shares: 0.24 id:16x2x2:(0123)(4)(5); 0.24 id:8x2x2x2:(0)(123)(4)(5); 0.14 id:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 30 distinct winners; top shares: 0.26 commutant e^-iHs:16x2x2:(0123)(4)(5); 0.17 commutant e^-iHs:8x2x2x2:(012)(3)(4)(5); 0.15 commutant e^-iHs:8x4x2:(045)(12)(3)
+
+[M4 generic random 2-local chain | mid-spectrum eigenstate]  candidates 1414;  Pareto front size 21;  weakly dominant candidate: NONE
+   front local-dim types (6): 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x4x2, 8x8
+   front frames: ['cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +2.0000  by 202 candidates, e.g. id:16x2x2:(0345)(1)(2)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: id:4x4x4:(05)(12)(34); commutant e^-iHs:4x4x4:(03)(12)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 9 distinct winners; top shares: 0.38 id:4x4x4:(05)(12)(34); 0.31 id:4x4x4:(03)(12)(45); 0.12 id:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 31 distinct winners; top shares: 0.30 commutant e^-iHs:4x4x4:(03)(12)(45); 0.18 commutant e^-iHs:8x2x2x2:(012)(3)(4)(5); 0.14 commutant e^-iHs:16x2x2:(0123)(4)(5)
+
+[M4 generic random 2-local chain | Haar]  candidates 1414;  Pareto front size 40;  weakly dominant candidate: NONE
+   front local-dim types (10): 16x2x2, 16x4, 2x2x2x2x2x2, 32x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x2x2x2, 8x4x2, 8x8
+   front frames: ['cliff2', 'cliff3', 'cliff4', 'id']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: +0.2908  by 1 candidates, e.g. cliff2:8x8:(035)(124)
+   best R: +2.0000  by 210 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 1 distinct: id:4x4x4:(05)(12)(34)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 18 distinct winners; top shares: 0.65 id:4x4x4:(05)(12)(34); 0.09 id:16x2x2:(0)(1234)(5); 0.06 id:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [rank]: 33 distinct winners; top shares: 0.60 id:4x4x4:(05)(12)(34); 0.15 cliff3:8x4x2:(012)(3)(45); 0.14 cliff2:16x2x2:(0123)(4)(5)
+
+[M4 generic random 2-local chain | record-forming |+>|0..>]  candidates 1414;  Pareto front size 10;  weakly dominant candidate: NONE
+   front local-dim types (6): 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 4x4x4, 8x4x2, 8x8
+   front frames: ['commutant e^-iHs']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: +0.9093  by 1 candidates, e.g. commutant e^-iHs:8x8:(012)(345)
+   best R: +2.0000  by 213 candidates, e.g. id:16x2x2:(0)(1)(2345)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 1 distinct: commutant e^-iHs:8x4x2:(01)(2)(345)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 9 distinct winners; top shares: 0.55 commutant e^-iHs:8x4x2:(01)(2)(345); 0.17 commutant e^-iHs:8x4x2:(012)(34)(5); 0.09 commutant e^-iHs:8x8:(012)(345)
+   Sigma-3 Dirichlet(1) simplex [rank]: 12 distinct winners; top shares: 0.87 commutant e^-iHs:8x4x2:(01)(2)(345); 0.06 commutant e^-iHs:8x4x2:(012)(34)(5); 0.03 commutant e^-iHs:4x4x4:(03)(12)(45)
+
+[M4 generic random 2-local chain | Gibbs beta=1]  candidates 1414;  Pareto front size 19;  weakly dominant candidate: NONE
+   front local-dim types (6): 16x4, 2x2x2x2x2x2, 4x2x2x2x2, 4x4x2x2, 8x4x2, 8x8
+   front frames: ['cliff3', 'cliff4', 'commutant e^-iHs', 'id']
+   best L: -1.0793  by 4 candidates, e.g. id:8x8:(012)(345)
+   best Q: -0.0000  by 1414 candidates, e.g. id:32x2:(0)(12345)
+   best R: +1.0000  by 1132 candidates, e.g. id:32x2:(02345)(1)
+   best P: +0.9207  by 4 candidates, e.g. id:8x8:(012)(345)
+   best M: -0.0154  by 2 candidates, e.g. id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   Sigma-2 equal-weight scalar winners over 4 transforms x 3 normalizations: 2 distinct: id:8x4x2:(012)(3)(45); commutant e^-iHs:8x4x2:(012)(3)(45)
+   Sigma-3 Dirichlet(1) simplex [minmax]: 7 distinct winners; top shares: 0.72 id:8x4x2:(012)(3)(45); 0.13 id:4x4x2x2:(0)(12)(3)(45); 0.09 id:16x4:(0345)(12)
+   Sigma-3 Dirichlet(1) simplex [rank]: 27 distinct winners; top shares: 0.34 commutant e^-iHs:8x4x2:(012)(3)(45); 0.21 commutant e^-iHs:16x2x2:(0123)(4)(5); 0.09 id:8x4x2:(012)(3)(45)
+
+##############################################################################
+# Sigma-5: scale hostile (tau, delta, fragment, perturbation eps)
+##############################################################################
+  M1  eps=0.0  tau=0.2 delta=0.1 frag=single: front   31, dominant no , front dtypes  9, scalar winners 3, simplex top 0.34 commutant e^-iHs:4x4x2x2:(01)(2)(34)(5)
+  M1  eps=0.0  tau=1.0 delta=0.1 frag=single: front   47, dominant no , front dtypes 10, scalar winners 3, simplex top 0.45 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45)
+  M1  eps=0.0  tau=5.0 delta=0.1 frag=single: front   37, dominant no , front dtypes  9, scalar winners 4, simplex top 0.31 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45)
+  M1  eps=0.0  tau=1.0 delta=0.3 frag=single: front   39, dominant no , front dtypes  9, scalar winners 2, simplex top 0.38 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45)
+  M1  eps=0.0  tau=1.0 delta=0.1 frag=pairs : front   47, dominant no , front dtypes 10, scalar winners 1, simplex top 0.56 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45)
+  M1  eps=0.05 tau=0.2 delta=0.1 frag=single: front   23, dominant no , front dtypes  6, scalar winners 3, simplex top 0.31 commutant e^-iHs:8x8:(012)(345)
+  M1  eps=0.05 tau=1.0 delta=0.1 frag=single: front   22, dominant no , front dtypes  6, scalar winners 4, simplex top 0.29 cliff2:16x2x2:(0125)(3)(4)
+  M1  eps=0.05 tau=5.0 delta=0.1 frag=single: front   17, dominant no , front dtypes  5, scalar winners 2, simplex top 0.83 commutant e^-iHs:4x4x4:(01)(23)(45)
+  M1  eps=0.05 tau=1.0 delta=0.3 frag=single: front   26, dominant no , front dtypes  6, scalar winners 3, simplex top 0.26 cliff1:16x2x2:(0123)(4)(5)
+  M1  eps=0.05 tau=1.0 delta=0.1 frag=pairs : front   53, dominant no , front dtypes 10, scalar winners 2, simplex top 0.37 commutant e^-iHs:4x4x2x2:(01)(2)(3)(45)
+  M1  eps=0.3  tau=0.2 delta=0.1 frag=single: front   12, dominant no , front dtypes  4, scalar winners 1, simplex top 0.88 commutant e^-iHs:4x4x4:(01)(23)(45)
+  M1  eps=0.3  tau=1.0 delta=0.1 frag=single: front   10, dominant no , front dtypes  4, scalar winners 1, simplex top 0.89 commutant e^-iHs:4x4x4:(01)(23)(45)
+  M1  eps=0.3  tau=5.0 delta=0.1 frag=single: front   11, dominant no , front dtypes  4, scalar winners 2, simplex top 0.36 commutant e^-iHs:16x2x2:(0145)(2)(3)
+  M1  eps=0.3  tau=1.0 delta=0.3 frag=single: front   14, dominant no , front dtypes  4, scalar winners 2, simplex top 0.89 commutant e^-iHs:4x4x4:(01)(23)(45)
+  M1  eps=0.3  tau=1.0 delta=0.1 frag=pairs : front   22, dominant no , front dtypes  7, scalar winners 3, simplex top 0.30 commutant e^-iHs:4x2x2x2x2:(0)(1)(2)(3)(45)
+  M4  eps=0.0  tau=0.2 delta=0.1 frag=single: front   22, dominant no , front dtypes  9, scalar winners 1, simplex top 0.79 commutant e^-iHs:8x4x2:(012)(3)(45)
+  M4  eps=0.0  tau=1.0 delta=0.1 frag=single: front   10, dominant no , front dtypes  6, scalar winners 1, simplex top 0.55 commutant e^-iHs:8x4x2:(01)(2)(345)
+  M4  eps=0.0  tau=5.0 delta=0.1 frag=single: front   58, dominant no , front dtypes 10, scalar winners 3, simplex top 0.27 commutant e^-iHs:16x2x2:(0)(1234)(5)
+  M4  eps=0.0  tau=1.0 delta=0.3 frag=single: front   11, dominant no , front dtypes  6, scalar winners 1, simplex top 0.64 commutant e^-iHs:8x4x2:(012)(3)(45)
+  M4  eps=0.0  tau=1.0 delta=0.1 frag=pairs : front   20, dominant no , front dtypes  6, scalar winners 5, simplex top 0.24 commutant e^-iHs:4x2x2x2x2:(03)(1)(2)(4)(5)
+  M4  eps=0.05 tau=0.2 delta=0.1 frag=single: front    9, dominant no , front dtypes  5, scalar winners 3, simplex top 0.41 commutant e^-iHs:8x8:(012)(345)
+  M4  eps=0.05 tau=1.0 delta=0.1 frag=single: front    4, dominant no , front dtypes  3, scalar winners 2, simplex top 0.43 commutant e^-iHs:8x8:(012)(345)
+  M4  eps=0.05 tau=5.0 delta=0.1 frag=single: front   17, dominant no , front dtypes  4, scalar winners 2, simplex top 0.65 commutant e^-iHs:16x2x2:(0)(1234)(5)
+  M4  eps=0.05 tau=1.0 delta=0.3 frag=single: front    6, dominant no , front dtypes  3, scalar winners 3, simplex top 0.42 commutant e^-iHs:8x8:(012)(345)
+  M4  eps=0.05 tau=1.0 delta=0.1 frag=pairs : front   11, dominant no , front dtypes  4, scalar winners 3, simplex top 0.53 commutant e^-iHs:8x8:(012)(345)
+  M4  eps=0.3  tau=0.2 delta=0.1 frag=single: front   16, dominant no , front dtypes  6, scalar winners 1, simplex top 0.50 commutant e^-iHs:16x2x2:(0)(1234)(5)
+  M4  eps=0.3  tau=1.0 delta=0.1 frag=single: front    5, dominant no , front dtypes  5, scalar winners 2, simplex top 0.49 commutant e^-iHs:8x8:(012)(345)
+  M4  eps=0.3  tau=5.0 delta=0.1 frag=single: front   12, dominant no , front dtypes  5, scalar winners 1, simplex top 0.65 commutant e^-iHs:16x2x2:(0)(1234)(5)
+  M4  eps=0.3  tau=1.0 delta=0.3 frag=single: front    3, dominant no , front dtypes  3, scalar winners 2, simplex top 0.67 commutant e^-iHs:8x4x2:(0)(12)(345)
+  M4  eps=0.3  tau=1.0 delta=0.1 frag=pairs : front    6, dominant no , front dtypes  5, scalar winners 4, simplex top 0.52 commutant e^-iHs:4x2x2x2x2:(0)(12)(3)(4)(5)
+
+##############################################################################
+# Sigma-7: symmetry / degeneracy
+##############################################################################
+  (a) ring, translation-related pairings (01)(23)(45) vs (12)(34)(05): V_a = [-1.25       -1.12678435  2.          0.75       -0.17578125], V_b = [-1.25       -1.12678435  2.          0.75       -0.17578125], identical: True
+      front size 148; front members sharing an identical vector with another candidate: 110
+  (b) M1 clustered pairs + weak bridges: max |H-only criteria (L,P,M): id frame - commutant frame| = 4.4e-16;  max |V(W frame, psi) - V(id frame, psi(-s))| = 0.0e+00;  max |V(W frame, psi) - V(id frame, psi)| = 1.963
+  (b) M2 TFIM ring (translation-symmetric): max |H-only criteria (L,P,M): id frame - commutant frame| = 2.2e-16;  max |V(W frame, psi) - V(id frame, psi(-s))| = 0.0e+00;  max |V(W frame, psi) - V(id frame, psi)| = 2.251
+  (b) M3 record-forming star: max |H-only criteria (L,P,M): id frame - commutant frame| = 2.2e-16;  max |V(W frame, psi) - V(id frame, psi(-s))| = 0.0e+00;  max |V(W frame, psi) - V(id frame, psi)| = 0.017
+  (b) M4 generic random 2-local chain: max |H-only criteria (L,P,M): id frame - commutant frame| = 4.4e-16;  max |V(W frame, psi) - V(id frame, psi(-s))| = 0.0e+00;  max |V(W frame, psi) - V(id frame, psi)| = 2.868
