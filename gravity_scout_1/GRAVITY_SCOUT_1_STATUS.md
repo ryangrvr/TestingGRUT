@@ -1,6 +1,6 @@
 # GRAVITY-SCOUT-1 STATUS
 
-**Not frozen.** Hard stop after G1 for owner review.
+**Not frozen.**
 
 | item | pin |
 |---|---|
@@ -12,13 +12,15 @@
 | item | status |
 |---|---|
 | Charter | DONE |
-| G1 d_min | DONE: d_min^incl NO CONSTRAINT; d_min^prep CONSTRAINED-NONUNIQUE (conditional / heuristic) |
-| GRAVITY_ZOOM_OUT_01 | DONE. **HARD STOP** |
-| G2 𝒩 · G3 orientation · G4 modular pattern / dimension | not authorized |
+| G1 d_min | DONE; **accepted provisionally after GRAVITY REPAIR 01** (GR1-01 … 10). Inclusion level: fixed background 0; perturbative gravity: no positive scale, subsystem notion replaced; fine-grained (scoped): ordinary split may fail. Preparation level: PREPARATION-CLASS CONSTRAINT — CONSTRAINED-NONUNIQUE — CONDITIONAL ON L_all — HEURISTIC |
+| GRAVITY_ZOOM_OUT_01 | DONE (repaired by GRAVITY REPAIR 01) |
+| GRAVITY REPAIR 01 | DONE (`GRAVITY_CORRECTION_LEDGER.md`) |
+| G2 gravitational subsystem structure | **NEXT** (authorized; hard stop after ZOOM_OUT_02) |
+| G3 orientation · G4 modular pattern / dimension | not authorized |
 
 ## Correction ledger
 
-None yet. Owner repairs, if any, go in an additive `GRAVITY_CORRECTION_LEDGER.md`.
+`GRAVITY_CORRECTION_LEDGER.md` (additive): GRAVITY REPAIR 01.
 
 ## Integrity
 

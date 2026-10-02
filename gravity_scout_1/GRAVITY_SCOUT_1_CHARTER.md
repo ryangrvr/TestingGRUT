@@ -29,8 +29,8 @@ simplest new degree of freedom that QFT-SCOUT-1 created.
 | gate | target | question | stop |
 |---|---|---|---|
 | **G1** | **d_min** | **Does gravity force a nonzero minimum splitting distance d_min, or otherwise constrain the admissible collar scale?** | **HARD STOP → `GRAVITY_ZOOM_OUT_01.md`** |
-| G2 | 𝒩 | the intermediate type-I factor | not authorized |
-| G3 | orientation | — | not authorized |
+| **G2** | **subsystem structure** (𝒩 and its replacement) | **What replaces QFT split / type-I subsystem structure when gravitational gauge constraints are imposed, and does the replacement remove any frozen residual information or only relocate it into charges, dressing, boundary observables, or resolution?** (owner reframing, with GRAVITY REPAIR 01) | **HARD STOP → `GRAVITY_ZOOM_OUT_02.md`** |
+| G3 | orientation | — | not authorized (owner review after G2) |
 | G4 | modular pattern / dimension | — | not authorized |
 
 Owner ruling: "hard stop after d_min. If gravity cannot narrow that simplest new degree of freedom without inserting the
