@@ -6,39 +6,40 @@
 **Chartered correction (owner).** "Type III ⇒ no product state" is **not** claimed. The question is the existence of a
 **normal** product state for a **chosen sharp complementary localization**, contrasted with split-buffer localization.
 
-## 1. Theorem chain (imports graded; QFT-SCOUT propositions marked)
+## 1. Theorem chain (as repaired by QFT REPAIR 01; see `QFT_CORRECTION_LEDGER.md`)
 
-| ID | statement (hypotheses explicit) | grade |
-|---|---|---|
-| **T1 Reeh–Schlieder** | In a Haag–Kastler / Wightman QFT with the spectrum condition and weak additivity, the vacuum Ω is cyclic and separating for 𝒜(O) whenever O has a non-empty causal complement. *(Bounded-energy-state extensions are NOT bundled here; they are a separate import, not used in G1)* | KNOWN-RESULT IMPORT — SOURCE LOCATED, TEXT NOT RE-READ (Reeh & Schlieder, Nuovo Cimento 22 (1961) 1051; owner pointer CMP 2026 for bounded-energy refinements) |
-| **T2 Type** | Under standard hypotheses (e.g. free fields; more generally the scaling-limit / modular conditions), local algebras of double cones and wedges are factors of type III₁ | KNOWN-RESULT IMPORT — SOURCE LOCATED (Araki 1964 for the free field; Fredenhagen 1985; Buchholz–D'Antoni–Fredenhagen 1987) |
-| **T3 Haag duality** | 𝒜(O′)′ = 𝒜(O) for wedges (Bisognano–Wichmann setting) and for double cones of the free field | KNOWN-RESULT IMPORT — SOURCE LOCATED (Araki 1963; Bisognano–Wichmann 1975 / 1976) |
-| **T4 Split ⇔ normal product states** | For regions O₁ ⋐ O₂ (a buffer), the split property, i.e. a type I factor 𝒩 with 𝒜(O₁) ⊂ 𝒩 ⊂ 𝒜(O₂), gives 𝒜(O₁) ∨ 𝒜(O₂)′ ≅ 𝒜(O₁) ⊗̄ 𝒜(O₂)′. **Any normal states on the two algebras extend to a normal product state.** Conversely, for standard pairs the existence of a normal product state (faithful marginals) implies split. The free field and theories satisfying nuclearity have the split property for strictly separated regions | KNOWN-RESULT IMPORT — SOURCE LOCATED (Doplicher–Longo, Invent. Math. 75 (1984) 493; Buchholz 1974; Buchholz–Wichmann 1986; review: Summers 2009, arXiv:0812.1517; owner pointer CMP 2024 for split-property scope) |
-| **L1 (QFT-SCOUT, elementary, proved here)** | Let ℳ be a factor and take the **sharp complementary pair** (ℳ, ℳ′), which Haag duality T3 identifies with (𝒜(O), 𝒜(O′)). If (ℳ, ℳ′) is split, i.e. some type I factor 𝒩 has ℳ ⊂ 𝒩 ⊂ (ℳ′)′ = ℳ, then 𝒩 = ℳ, so **ℳ is type I.** Contrapositive: **a non-type-I local factor with Haag duality gives a non-split sharp complementary pair.** *Proof:* (ℳ′)′ = ℳ by the bicommutant theorem, so the chain collapses. ∎ | **proved** (one line) |
-| **C1 (combination)** | T2 + T3 + L1 + the converse direction of T4 imply: **for a sharp complementary localization with Haag duality and a type III local factor, there is no normal product state with faithful marginals on 𝒜(O) ∨ 𝒜(O′) = B(H).** | **QFT-SCOUT PROPOSITION, conditional on the T4-converse import.** Not independently peer reviewed |
+| ID | statement (hypotheses explicit) | role in G1 | grade |
+|---|---|---|---|
+| **S1 Uncorrelated-state criterion** | For von Neumann algebras A, B with A ∨ B a factor: **(A, B) is split iff there exists a normal A–B-uncorrelated state on A ∨ B.** For commuting A, B, a product state φ(ab) = φ₁(a)φ₂(b) is uncorrelated | **load-bearing** | KNOWN-RESULT IMPORT — PRIMARY / SOURCE-TEXT VERIFIED (Buchholz & Summers, *Quantum statistics and locality*, Phys. Lett. A 337 (2005) 17–21; Summers 2009, Thm. 5.4) [Q1R-06] |
+| **S2 Split ⇒ tensor product** | If A ⊂ 𝒩 ⊂ B′ with 𝒩 a type I factor, then A ∨ B ≅ A ⊗̄ B spatially, and **arbitrary normal marginal states extend to normal product states** | buffered case | KNOWN-RESULT IMPORT — SOURCE-TEXT VERIFIED (Summers 2009, Thm. 4.1 and the product-extension construction). Doplicher–Longo, Invent. Math. 75 (1984) 493 is **bibliographically verified only** (paywalled body not inspected) |
+| **L1 (proved here)** | If (ℳ, ℳ′) is split for a factor ℳ, i.e. ℳ ⊂ 𝒩 ⊂ (ℳ′)′ = ℳ with 𝒩 type I, then 𝒩 = ℳ, so **ℳ is type I.** *Proof:* bicommutant theorem. ∎ | load-bearing | proved (one line) |
+| **G1-P1 Sharp normal-product obstruction** | **Let ℳ ⊂ B(H) be a non-type-I factor. Then the sharp commuting pair (ℳ, ℳ′) admits no normal product state.** *Proof:* (1) ℳ a factor ⇒ ℳ ∨ ℳ′ = B(H), a factor. (2) A normal product state is uncorrelated. (3) Normal uncorrelated state + factor join ⇒ split (S1). (4) Split (ℳ, ℳ′) ⇒ ℳ type I (L1). (5) Contradiction. ∎ **Geometric form:** for an AQFT region O with Haag duality 𝒜(O′) = 𝒜(O)′, if 𝒜(O) is a non-type-I factor, the same holds for the geometric sharp pair (𝒜(O), 𝒜(O′)) | **the G1 core** | **QFT-SCOUT ASSEMBLY OF SOURCE-TEXT-VERIFIED THEOREMS** |
+| **S3 Non-normal products (sharp pair)** | For a type II or type III factor ℳ with N = ℳ′: normal product states are impossible; **product extensions of normal marginals can exist only non-normally (singularly)**; for type I, normal product states exist | control | KNOWN-RESULT IMPORT — SOURCE-TEXT VERIFIED (Rédei & Summers, as checked by the owner) |
+| T2 Type (physical realization) | Local algebras of double cones / wedges are type III₁ factors under standard hypotheses: **one physically relevant route to non-type-I**, not the mathematical reason | realization | KNOWN-RESULT IMPORT — SOURCE LOCATED (Araki 1964; Fredenhagen 1985; Buchholz–D'Antoni–Fredenhagen 1987) |
+| T3 Haag duality | 𝒜(O′) = 𝒜(O)′ (wedges; free-field double cones) | **geometric identification step only** [Q1R-03] | KNOWN-RESULT IMPORT — SOURCE LOCATED (Araki 1963; Bisognano–Wichmann 1975/76) |
+| T1 Reeh–Schlieder | The vacuum is cyclic and separating for 𝒜(O) under the standard hypotheses | **not load-bearing for G1** [Q1R-04]; retained for vacuum structure and G2 | KNOWN-RESULT IMPORT — SOURCE LOCATED (Reeh & Schlieder 1961) |
 
-**Hypotheses the conclusion actually uses (priced):**
-- **normality:** the state class;
-- **factoriality** of 𝒜(O);
-- **Haag duality** for O (the sharpness of the complementary split);
-- **non-type-I** (type III) of 𝒜(O);
-- **faithful marginals / standardness** (via T4).
+**Load-bearing G1 inputs (priced):** **normality** (relative to the chosen representation) + **factoriality** +
+**non-type-I** + **sharp complement (ℳ, ℳ′)**. For the spacetime reading, add **Haag duality**.
 
-**Type III alone is not used and is not sufficient.** Without Haag duality, 𝒜(O′) can be strictly smaller than 𝒜(O)′
-and the pair can split.
+**Not required:** faithful marginals, standardness, Reeh–Schlieder, type III specifically [Q1R-01, Q1R-02, Q1R-04].
+- **Type III is stronger than necessary.** The obstruction also covers type II factors. AQFT's type III local algebras are
+  the physically relevant realization of the general non-type-I obstruction.
+- **This is not a claim about all infinite-dimensional algebras.** Infinite-dimensional type I algebras (B(H) ⊗ B(K))
+  remain the control: they admit normal product states.
 
-**What survives without normality.** Non-normal ("singular") product states on the C*-level always exist for
-C*-independent commuting algebras. H_cross = 0 is therefore admissible **only if normality (locally finite energy /
-regularity) is dropped.** Normality is the load-bearing price.
+**Normality is the load-bearing state-class restriction** [Q1R-05]. Normality is understood relative to the chosen
+representation. Identifying it with "finite energy" or another physical property needs separate assumptions, which are
+not made here.
 
 ## 2. Controls
 
 | class | H_cross = 0 (product state) | evidence |
 |---|---|---|
-| **Finite / type-I control** (B(H₁) ⊗ B(H₂); any lattice at fixed spacing) | **always admissible and normal** (ρ₁ ⊗ ρ₂) | elementary; L1 is consistent, since type I pairs can split |
-| **Sharp AQFT localization** (Haag duality, type III) | **inadmissible in the normal class** (C1) | T1 – T4, L1 |
-| **Split-buffer AQFT localization** (O₁ ⋐ O₂) | **admissible** (normal product states exist) | T4 |
-| Non-normal state class | admissible | C*-level product states |
+| **Finite or infinite type-I control** (B(H₁) ⊗ B(H₂); any lattice at fixed spacing) | **always admissible and normal** (ρ₁ ⊗ ρ₂) | elementary; consistent with L1, since type I sharp pairs split |
+| **Sharp non-type-I factor / commutant** (algebraic; geometric with Haag duality) | **inadmissible in the normal class** (G1-P1) | S1, L1 (+ T3 for geometry) |
+| **Split-buffer localization** (A ⊂ 𝒩 ⊂ B′, 𝒩 type I) | **admissible**; arbitrary normal marginals extend to normal product states | S2 |
+| Non-normal state class (type II / III sharp pair) | product extensions of normal marginals exist **only non-normally** | S3 |
 
 **Lattice illustration** (`g1/g1_hcross_lattice.py` + `.log`; free massive scalar in 1+1D, m = 1, box [−6, 6], a = 0.05 →
 0.003125). This is **not proof.**
@@ -53,9 +54,10 @@ regularity) is dropped.** Normality is the load-bearing price.
 - **Buffered cuts.** I(A:B) converges as a → 0. For d = 0.5, 1.0 and 2.0 it reaches **0.058398, 0.014897 and 0.001412**;
   the increments shrink to ≤ 4e-7.
 - **The vacuum is correlated across every tested split** (I > 0), so it is not itself a product state. This is
-  consistent with T1, and is a statement about one state, not about the class.
+  consistent with T1, and is a statement about one state, not about the class (T1 is not load-bearing for G1-P1).
 
-**What infinite / type-III structure buys over the type-I control:** exactly the **sharp-split obstruction**. At any
+**What non-type-I structure buys over the type-I control:** exactly the **sharp-split obstruction** (the AQFT type III
+local algebras being the physical realization). At any
 finite spacing the product state is admissible. Its minimal relative-entropy cost and its energy cost diverge in the
 continuum, and the theorem chain makes that an inadmissibility statement in the normal class. A buffer removes the
 obstruction.
@@ -68,7 +70,7 @@ obstruction.
 | **H_cross overall** | the admissible set loses its product member for sharp splits; correlated normal states remain (the vacuum, its local excitations, …). **The realized correlated state is not selected** | **CONSTRAINED-NONUNIQUE** |
 | **H_cross = 0 with a split buffer** | admissible; no constraint | no change |
 | **Σ ⊗ H coupling** | **strengthened, not compressed.** Whether "zero correlation" is possible now depends on the **geometry of the split** (sharp vs buffered) | coupling made structural (CONDITIONAL, priced) |
-| **New priced items exposed** | normality; Haag duality; type; for split preparations, the **buffer scale d** and an intermediate type I factor 𝒩. 𝒩 is not unique in general, though there is a canonical choice given the vacuum (Doplicher–Longo, import) | supplied / declarative accounting items (BR4-01 discipline: not automatically physical primitives) |
+| **New priced items exposed** | normality; factoriality; non-type-I; sharp complement; Haag duality (geometric reading only); for split preparations, the **buffer scale d** and an intermediate type I factor 𝒩. 𝒩 is not unique in general, though there is a canonical choice given the vacuum (Doplicher–Longo, import) | supplied / declarative accounting items (BR4-01 discipline: not automatically physical primitives) |
 
 **Relevance to the Bridge-1 arrow finding.** The product ("fresh, independent") preparation that powers the S6 transient
 and SCOUT's fresh-bath arrow (D4) is **not available as a sharp normal state in the AQFT envelope.** A fresh boundary
@@ -76,14 +78,21 @@ needs a buffer, i.e. a split scale. There is no contradiction with Bridge-1: S6 
 chain, which corresponds to the type-I control column. But the special-form boundary event H_epoch, read in this
 envelope, must carry localization data (d, 𝒩), not just "product at t = 0".
 
-> **G1 TERMINAL:** **H_cross = 0 INADMISSIBLE IN THE SHARP NORMAL-STATE CLASS** (FORBIDDEN-in-class, via
-> Haag duality + type III + normality + the split ⇔ normal-product-state import). **ADMISSIBLE WITH A SPLIT BUFFER.**
-> Overall **H_cross: CONSTRAINED-NONUNIQUE.** Not selected; **not TRUE COMPRESSION.**
+> **G1 TERMINAL (after QFT REPAIR 01):** **H_cross = 0 INADMISSIBLE IN THE SHARP NORMAL-STATE CLASS**
+> (FORBIDDEN-in-class, via G1-P1: non-type-I factor + sharp complement + normality; Haag duality for the geometric
+> reading). **ADMISSIBLE WITH A SPLIT BUFFER.** Overall **H_cross: CONSTRAINED-NONUNIQUE.** Not selected; **not TRUE
+> COMPRESSION.**
+>
+> **First genuine admissibility restriction on the frozen residual:**
+> - finite / type-I envelope: H_cross = 0 allowed;
+> - sharp non-type-I normal-state envelope: H_cross = 0 forbidden.
+>
+> This is a class restriction, not RENAMING. **The admissible H_cross depends on the localization class.**
 
 ## 4. Scope and limits
 
-- **C1** depends on the T4-converse import. Its precise hypotheses (faithfulness of the marginals, standardness) are
-  carried as stated; the primary text was **not re-read** (egress blocked).
+- **G1-P1** is an assembly of source-text-verified theorems (S1, owner-verified) and the one-line L1. It needs neither
+  faithful marginals, standardness nor Reeh–Schlieder [QFT REPAIR 01].
 - **The lattice** illustrates one model: a free scalar in 1+1D. The relative-entropy bound covers *all* product states;
   the energy figure covers only the product of vacuum marginals.
 - **Bounded-energy and general-state entanglement claims** are not used. They are a separate import, reserved for later.

@@ -6,9 +6,10 @@
 
 **It narrowed it, in a stated class.**
 
-The product member of the H_cross class (H_cross = 0) is **FORBIDDEN** for a **sharp complementary localization** in the
-**normal-state** class. The hypotheses are Haag duality, a type III factor, normality, and the split ⇔ normal-product-state
-import. Type III alone is not used.
+The product member of the H_cross class (H_cross = 0) is **FORBIDDEN** for a **sharp complementary pair** in the
+**normal-state** class [as repaired by QFT REPAIR 01]. The load-bearing hypotheses are a non-type-I factor, a sharp
+complement and normality. Haag duality is needed only for the geometric reading; type III is sufficient but not
+necessary.
 
 This is a genuine constraint that the finite / type-I envelope cannot produce; there, product states are always
 admissible.
@@ -21,7 +22,7 @@ admissible.
 
 ## 3. What did it cost (pricing)?
 
-- New supplied / declarative items: **normality, Haag duality, local type, factoriality, faithful marginals**.
+- New supplied / declarative items: **normality, factoriality, non-type-I, sharp complement**; **Haag duality** for the geometric reading only [Q1R-01 … 03]. Faithful marginals and standardness are no longer required.
 - For split preparations, also the **buffer scale d** and an **intermediate type I factor 𝒩** (canonical only given the
   vacuum; import).
 - The quantum lift (ħ, complex structure) is supplied (QP-5), so everything is **auxiliary to canonical GRUT**.
@@ -45,10 +46,10 @@ product-of-marginals energy also diverges, roughly like ln(1/a)/a. Buffered mutu
 
 ## 6. Grades and open points
 
-- **C1 (no normal product state for a sharp split)** is a QFT-SCOUT proposition. Its one-line lemma L1 is proved here; it
-  rests on the T4-converse import.
-- **All theorem imports are SOURCE LOCATED, TEXT NOT RE-READ.** The egress proxy blocks arxiv.org and link.springer.com.
-  The owner can upgrade them to PRIMARY-SOURCE VERIFIED, as was done for BR5-05.
+- **G1-P1** (replacing C1) is a QFT-SCOUT ASSEMBLY OF SOURCE-TEXT-VERIFIED THEOREMS. Summers 2009 Thm. 5.4 and
+  Buchholz–Summers 2005 were verified by the owner; L1 is proved here [Q1R-06].
+- **Remaining imports** (type, Haag duality, Reeh–Schlieder, Doplicher–Longo) stay SOURCE LOCATED / bibliographically
+  verified.
 - **Bounded-energy entanglement results** are a separate import, unused in G1.
 
 ## 7. Recommendation
