@@ -1,3 +1,25 @@
+> **REPAIR 02 (owner audit).** ZOOM_OUT_04 is accepted provisionally, with these repairs.
+>
+> **The commutant is H-relative gauge.** Σ is restated as:
+>
+>     Σ = (d, #factors, preference order, scale, [state / epoch information]) / Sym(H)
+>
+> where Sym(H) includes the commutant, read as **H-relative physical equivalence** (CPR), not as nonuniqueness.
+>
+> **T2-3 is repaired to:** *An H-only covariant selector can determine at most a TPS class modulo the symmetries /
+> commutant of H. This is an H-relative gauge / equivalence, not by itself a physical failure of uniqueness. The tested
+> time-evolution subgroup e^{−iHs} shows that state-based criteria can acquire epoch dependence. Whether generic
+> commutant directions e^{−if(H)} remain distinct after adding ψ is not adjudicated.*
+>
+> **Literature grades:**
+> - CPR: PRIMARY-TEXT-VERIFIED (scope: n, d, k supplied).
+> - Carroll–Singh: PRIMARY-TEXT-VERIFIED (headline and setup). S2-Σ is a SCOUT GENERALIZATION / HOSTILE EXTENSION,
+>   not a reproduction.
+> - Stoica: PRIMARY-ABSTRACT-VERIFIED. QUALITATIVELY SUPPORTED / FULL THEOREM NOT REPRODUCED.
+>
+> **Carried forward:** *Σ has not been selected from (H, ψ) in the tested family.* The evidence is the Pareto,
+> dimension, objective, scale and state conflicts, **not** the commutant degeneracy.
+
 # SCOUT-2 ZOOM-OUT 04 (after S2-Σ + G1)
 
 **Central question (owner):** is Σ genuinely selected, or have locality, classicality and objectivity merely become a

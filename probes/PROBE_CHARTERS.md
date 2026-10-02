@@ -328,3 +328,60 @@ Separate every entry:
   - invertible Hamiltonian / unitary controls.
 - **Firewall:** a closed invertible microscopic theory cannot erase fine-grained information. If a unique basin needs
   dissipation, openness or coarse-graining, that price goes into D or A.
+
+---
+
+# S2-H2 PRE-REGISTRATION (owner review of `c063723`; written before any run)
+
+## S2-H2 — state / basin selection by dynamics (attacks H)
+
+**Question.** Can primitive dynamics uniquely determine the physical state or basin from **every** admissible
+initial condition, with no supplied measure or preparation class? "Almost every" counts as **MEASURE-PRICED**.
+
+**H2-0 — three notions, kept separate:**
+
+| Notion | Question |
+|---|---|
+| **H2-A ATTRACTOR UNIQUENESS** | does one asymptotic state / orbit / gauge class exist? |
+| **H2-B GLOBAL REACHABILITY** | does every admissible initial state converge to it? |
+| **H2-C INFORMATION ERASURE** | are distinct initial states unrecoverable from the *exact* final microstate, including all degrees of freedom of the model (environment / bath where present)? |
+
+A and B do not imply C.
+
+**H2-5 — admissible state spaces, fixed now. No exclusions after the run.** Any later exclusion is priced as
+H / Σ / A.
+
+| Model | Dynamics | Admissible states |
+|---|---|---|
+| H2-1 contraction | F(x) = c·R(x) + b on ℝ², c < 1, R a rotation | all of ℝ² |
+| H2-1′ dilation | the same contraction realized unitarily: system + fresh ancilla register (swap-type collision model, qubit) | all system density matrices; ancillas fixed in \|0⟩ |
+| H2-2a gradient, unique minimum | V(x) = x⁴/4 + x²/2 − a·x | all of ℝ |
+| H2-2b gradient, double well | V = x⁴/4 − x²/2 + εx | all of ℝ, **including** the unstable stationary point |
+| H2-2c gradient, symmetric well | V = x⁴/4 − x²/2 | as in H2-2b; outcome tested modulo the gauge x ↔ −x |
+| H2-3 Markov | primitive, doubly stochastic 5-state chain; also a generic primitive chain | all probability vectors |
+| H2-3′ quantum channel | primitive amplitude-damping + dephasing qubit channel | all density matrices |
+| H2-4 unitary hostile | random Hamiltonian on 6 qubits | all pure states |
+| H2-7 alignment / frame field | (i) dissipative Kuramoto-type alignment of N planar frames on complete and ring graphs; (ii) Ising frame field under zero-temperature Glauber dynamics | all phase / spin configurations, including twisted and domain configurations |
+
+**Required in every model:**
+- H2-6 robustness: small generic perturbations; whether uniqueness survives (otherwise **TUNING-PRICED**);
+- H2-8 accounting row;
+- H2-9 classification:
+  - **H → D RELOCATION** (the attractor value appears as an explicit parameter of the law); or
+  - **TRUE H COMPRESSION INTO D** (the attractor is fixed by the symmetry or class of D, with no state-valued
+    parameter).
+
+**H2-10 strong targets:**
+- consensus / alignment, unique modulo a global gauge;
+- the uniform stationary state of a doubly stochastic primitive process;
+- the ordered shared reference, unique modulo J ↔ −J.
+
+**Verdict vocabulary:**
+- H-SELECTED-FROM-D;
+- H-SELECTED-MOD-GAUGE;
+- H-MEASURE-PRICED;
+- H-TUNING-PRICED;
+- H-ACCESS-PRICED;
+- NO FINE-GRAINED H SELECTION;
+- H → D RELOCATION;
+- TRUE H COMPRESSION INTO D.

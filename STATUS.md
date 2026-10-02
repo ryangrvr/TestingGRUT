@@ -13,7 +13,8 @@
 - **Owner review:** ZOOM_OUT_03 accepted provisionally; working decomposition C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res (T2-2 classification only). H splitting: H_measure → D, H_preparation → A (S2-3b).
 - **S2-Σ + G1 DONE:** no TPS dominates without a scoring convention (58/58 runs); local dimension remains a Σ primitive; CPR / Carroll–Singh / Stoica reconciled by scope.
 - **ZOOM_OUT_04 DONE:** Σ survives as a supplied object: Σ = (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)). Candidate T2-3: H-only selectors are commutant-blind; breaking it uses ψ at a chosen epoch.
-- **Next:** S2-H2 (unlocked); optional S2-Σb; G2–G4.
+- **REPAIR 02 DONE (owner audit):** the commutant is H-relative gauge, not nonuniqueness (Y-07); the epoch claim is scoped to e^{−iHs} (Y-08); literature regraded (Y-09). Carried forward: Σ not selected from (H, ψ) in the tested family, on the Pareto / dimension / objective / scale / state evidence.
+- **Next:** S2-H2 (pre-registered) → ZOOM_OUT_05. Σb is NOT automatic.
 - **History:** S2-3b ✓ → S2-1b ✓ → S2-8 ✓ → S2-7 ✓ (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).

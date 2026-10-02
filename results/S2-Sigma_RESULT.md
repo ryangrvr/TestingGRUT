@@ -1,3 +1,39 @@
+> **REPAIR 02 (owner audit of `c063723`).**
+>
+> **Σ-1 — commutant = H-relative equivalence.**
+> - The exact identity stands: any unitary-covariant selector built only from H is blind to W with [W, H] = 0.
+> - Taken alone, this is a **BARE-TPS DIFFERENCE**, not physically distinct nonuniqueness.
+> - CPR's physical equivalence relation already quotients H-preserving unitaries, so these frames are an
+>   **H-RELATIVE PHYSICAL EQUIVALENCE** (gauge for an H-only problem).
+> - "DEGENERACY-PROTECTED NONUNIQUENESS" is therefore **retained only for the translation-symmetric case**, where the
+>   question is whether the related TPSs are physically inequivalent once something other than H distinguishes them.
+>   For the commutant it is replaced by **H-RELATIVE GAUGE**.
+> - **The physical nonuniqueness of S2-Σ is unchanged by quotienting.** It consists of Pareto-incomparable TPSs,
+>   competing local dimensions, and preference, scale and state dependence.
+>
+> **Σ-2 — epoch claim scoped.**
+> - The probe tested only the one-parameter subgroup W(s) = e^{−iHs}. For it, V(W(s)Σ; H, ψ) = V(Σ; H, ψ(−s)) holds
+>   exactly. A state breaks *this subgroup* only relative to an epoch.
+> - It is **not** generalized to the full commutant e^{−if(H)}: a nonlinear f is not a time translation.
+> - Whether generic commutant directions remain physically distinct after adding ψ is **not adjudicated**.
+>
+> **Σ-3 — literature grades** (external audit by the owner):
+> - **CPR:** PRIMARY-TEXT-VERIFIED. It fixes n, d and a k-locality class; existence is non-generic; uniqueness is asked
+>   *within* the supplied class; H-preserving unitary equivalences are already quotiented. Retained: "uniqueness can
+>   hold after locality class / d / n / k are supplied." "Unique up to commutant" is **not** a disagreement with CPR.
+> - **Carroll–Singh:** PRIMARY-TEXT-VERIFIED (headline and setup). They minimize a specific combination of
+>   entanglement production and internal spreading, with fixed subsystem dimensions d_A, d_B, starting from H and
+>   possibly an initial state.
+>   - The SCOUT five-criterion Pareto problem is **not** a reproduction. It is a **SCOUT GENERALIZATION / HOSTILE
+>     EXTENSION**.
+>   - The scale and state dependence found here is **not** attributed to the published theorem.
+> - **Stoica:** PRIMARY-ABSTRACT-VERIFIED. The S2-Σ results are **CONSISTENT WITH** the claim — **QUALITATIVELY
+>   SUPPORTED / FULL THEOREM NOT REPRODUCED**. Commutant blindness alone does not confirm it.
+>
+> **Carried-forward headline:** Σ has not been selected from (H, ψ) in the tested family. After quotienting genuine
+> H-symmetry redundancy, several physically relevant, Pareto-incomparable factorizations and local dimensions remain.
+> Choosing among them needs preferences, scales and state information.
+
 # S2-Σ (+ S2-G1) RESULT — factorization and local-dimension selection without hidden weights
 
 **Charter:** `probes/PROBE_CHARTERS.md`, Wave 2 §S2-Σ. Pre-registered at `a4d433e`, before any run.
@@ -156,7 +192,7 @@ Scope check (`s2_sigma_scope.py`): candidate sets are restricted step by step.
 
 | Work | Scope classification |
 |---|---|
-| **Cotler–Penington–Ranard** (arXiv:1702.06142, owner-cited) | **CONFIRMED IN SCOPE.** With the local dimension, the number of factors and the locality framework supplied, and when H is genuinely local in that d (M2, M4 for d = 2; M1 for d = 4), locality selects the TPS **up to the commutant of H**. Outside its native d, or with the wrong d supplied, no dominance. The theorem's inputs (k, d) are exactly the Σ primitives found here |
+| **Cotler–Penington–Ranard** (arXiv:1702.06142; PRIMARY-TEXT-VERIFIED by the owner; see REPAIR 02) | **CONFIRMED IN SCOPE.** With the local dimension, the number of factors and the locality framework supplied, and when H is genuinely local in that d (M2, M4 for d = 2; M1 for d = 4), locality selects the TPS **up to the commutant of H**. Outside its native d, or with the wrong d supplied, no dominance. The theorem's inputs (k, d) are exactly the Σ primitives found here |
 | **Carroll–Singh** (PRA 103, 022213, owner-cited) | **SCOPE-PRICED.** Quasiclassicality (Q) needs a state and a time horizon. It breaks the commutant degeneracy only by choosing an epoch, and its winner changes with ψ, τ and d. A preferred factorization "from H" via quasiclassicality is in fact from (H, ψ, τ, d, criterion), and it is not robust to adding the other natural criteria (L, R, P, M) without weights |
 | **Stoica** (arXiv:2103.15104, owner-cited) | **CONFIRMED IN SCOPE.** H-only structure is invariant under the commutant (Σ-7b, exact), so it cannot be unique. Adding ψ makes it unique only relative to a time origin plus supplied criteria |
 

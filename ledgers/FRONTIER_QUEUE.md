@@ -19,8 +19,10 @@
 | ZOOM_OUT_03 | after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7 | **DONE** | none of D, H, A eliminated; candidate T2-2 (split centrality): C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res |
 | S2-Σ + S2-G1 | factorization AND local dimension selection without hidden weights (attacks Σ) | **DONE** | no weakly dominant TPS in 58/58 runs; fronts 3–148 with 5–10 local-dim types; scalar winners vary with transform/normalization/weights/scale/state; translation + commutant degeneracies exact; dominance only in CPR scope (d, #factors supplied), up to commutant; ψ breaks it only via an epoch. Σ NOT DERIVED |
 | ZOOM_OUT_04 | Σ/G1 zoom-out | **DONE** | Σ survives as a supplied object: (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)); candidate T2-3 (commutant blindness) |
-| S2-Σb | epoch-integrated criteria (optional) | QUEUED | — |
-| S2-H2 | unique global attractor from every admissible initial condition without a measure (contractive / Markov / gradient vs unitary) | **NEXT** (unlocked) | — |
+| S2-Σb | epoch-integrated criteria (optional; not automatic) | HELD | — |
+| REPAIR 02 | owner audit of S2-Σ (commutant = H-relative gauge; epoch scoped; literature regraded) | **DONE** | Y-07…Y-09 |
+| S2-H2 | state / basin selection by dynamics: A/B/C notions, admissible spaces pre-registered (attacks H) | **NEXT** | — |
+| ZOOM_OUT_05 | after H2: what irreducible specification remains? then choose G2-4 / Σb / D-hostile / saturation | GATED on H2 | — |
 | S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension (separately) | QUEUED after ZOOM_OUT_04 | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).
