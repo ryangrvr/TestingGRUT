@@ -30,4 +30,5 @@
 
 **Sharpened residual for A:**
 
-    A_seed ⊕ A_partition ⊕ A_resolution ⊕ A_time   (+ closure-rule convention; A_closure = f(D, A_seed))
+    A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time,   A_interface := (A_seed, A_readout)   [BR2-01]
+    A_closure = f(D, A_seed; R_closure)   [BR2-02]

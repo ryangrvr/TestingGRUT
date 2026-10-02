@@ -1,0 +1,142 @@
+N = 600; spectrum [0.3000, 4.3000]; r_N = 0.5821091654 vs r = 0.5821091654
+
+==============================================================================
+B2-0 the S6 preparation as Sigma0 = Sigma_G + Delta0 (consistency of the re-implementation)
+==============================================================================
+  (Ts,Tb)=(2,1): rank(Delta0) = 3 (theorem: <= 3); X_J(200) = 1.16942 vs closed form 1.16943; D(0) = 0.19967
+  (Ts,Tb)=(10,1): rank(Delta0) = 3 (theorem: <= 3); X_J(200) = 9.16941 vs closed form 9.16943; D(0) = 5.57787
+  (Ts,Tb)=(0.5,1): rank(Delta0) = 3 (theorem: <= 3); X_J(200) = -0.33057 vs closed form -0.33057; D(0) = 0.27578
+  (Ts,Tb)=(0.1,1): rank(Delta0) = 3 (theorem: <= 3); X_J(200) = -0.73057 vs closed form -0.73057; D(0) = 1.53584
+
+==============================================================================
+B2-1 EQUAL-TEMPERATURE CONTROL: factorized product at T vs global Gibbs at T (same D, Sigma, A, T)
+==============================================================================
+  admissible: min eig State A 2.326e-01, State B 2.326e-01
+  A factorized: max |local(t) - local(0)| over t in [0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 40.0]: 3.388e-01; X_J(200) = 0.169425; D(0) = 0.01936
+  B Gibbs: max |local(t) - local(0)| over t in [0.0, 1.0, 2.0, 5.0, 10.0, 20.0, 40.0]: 8.882e-16; X_J(200) = 0.000000; D(0) = 0.00000
+  closed form for A: X_J(inf) = (Ts - Tb) + T r^2/2 = 0.169426
+  what distinguishes A from B (Delta = A - B, all temperatures equal):
+    site-1 q-variance: A 0.43478 (bare T/2.3) vs B 0.58211 (dressed T r)  -> marginal is interaction-dressed in B
+    S-B cross q-covariance <q1 q2>: A 0.00000 vs B 0.33885 (= T r^2 = 0.33885); |cross block| A 0.000 vs B 0.41673
+    bath q-block: |A_BB - B_BB| = 0.29834 (rank 1); p-sector identical: 0.0e+00
+    interaction energy <E_int> = -<q1 q2>: A -0.00000 vs B -0.33885; rank(A - B) = 2
+  -> TEMPERATURE DIFFERENCE NOT NECESSARY for the S6 transient. The mismatch is entirely interaction-induced
+     (missing S-B correlation + undressed marginals), all in the q-sector.
+  ISOLATING H_cross: product of the Gibbs MARGINALS (S1(0) = S_ref exactly, bath marginal = Gibbs), cross = 0:
+    min eig 2.326e-01; D(0) = 1.11e-16; D(t) at t = 1, 2, 5, 10, 20: 4.95e-02, 3.38e-02, 3.19e-03, 8.47e-06, 9.34e-07
+    X_J(200) = 0.338850 vs prediction T r^2 = 0.338851 (= Q12_G - Q12(0); marginals give 0)
+  -> with EVERY marginal at its equilibrium value, the missing cross-correlation alone drives a transient and a net
+     J transfer: CORRELATION / INTERACTION-ENERGY MISMATCH IS PHYSICALLY LOAD-BEARING.
+
+==============================================================================
+B2-2 SAME MARGINALS, DIFFERENT S-B CORRELATIONS (S6 marginals fixed)
+==============================================================================
+  admissibility of the q-cross family at S6 marginals (Ts = Tb = T): Schur complement T(1/2.3 - alpha^2 r^3) > 0 -> |alpha| < 1.4847
+  marginals of the S6 member (Ts, Tb) = (1, 1):
+    1 zero cross (S6): min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0. 0. 0.]; J(0.5,1,2) = [ 0.1451  0.0524 -0.025 ]; X_J(inf) ~ +0.16942; X_sigma(inf) ~ 0.01936
+    2 weak q-cross alpha=0.3: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.04836 0.0324  0.00071]; J(0.5,1,2) = [ 0.0936  0.0565 -0.0413]; X_J(inf) ~ +0.06777; X_sigma(inf) ~ 0.01936
+    3 strong q-cross alpha=1.0 (Gibbs value): min eig 1.53e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.16121 0.10801 0.00236]; J(0.5,1,2) = [-0.0266  0.0662 -0.0794]; X_J(inf) ~ -0.16942; X_sigma(inf) ~ 0.01936
+    3' near-maximal alpha=1.4: min eig 2.82e-02; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.2257  0.15121 0.00331]; J(0.5,1,2) = [-0.0953  0.0717 -0.1011]; X_J(inf) ~ -0.30496; X_sigma(inf) ~ 0.01936
+    3'' p-cross beta=0.5: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.16593 0.03252 0.01067]; J(0.5,1,2) = [ 0.312   0.1141 -0.0408]; X_J(inf) ~ +0.16943; X_sigma(inf) ~ 0.01936
+    3''' mixed q1-p2 gamma=0.3: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.21858 0.0933  0.00283]; J(0.5,1,2) = [ 0.3072  0.0701 -0.0134]; X_J(inf) ~ +0.16942; X_sigma(inf) ~ 0.01936
+    closed form at fixed S6 marginals: X_J(inf) = (Ts-Tb) + Tb r^2/2 - Q12(0) = (Ts-Tb) + Tb r^2 (1/2 - alpha)
+  marginals of the S6 member (Ts, Tb) = (2, 1):
+    1 zero cross (S6): min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0. 0. 0.]; J(0.5,1,2) = [0.326 0.287 0.26 ]; X_J(inf) ~ +1.16942; X_sigma(inf) ~ 0.19967
+    2 weak q-cross alpha=0.3: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.04836 0.0324  0.00071]; J(0.5,1,2) = [0.2745 0.2911 0.2437]; X_J(inf) ~ +1.06777; X_sigma(inf) ~ 0.19967
+    3 strong q-cross alpha=1.0 (Gibbs value): min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.16121 0.10801 0.00236]; J(0.5,1,2) = [0.1543 0.3008 0.2057]; X_J(inf) ~ +0.83057; X_sigma(inf) ~ 0.19967
+    3' near-maximal alpha=1.4: min eig 1.98e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.2257  0.15121 0.00331]; J(0.5,1,2) = [0.0856 0.3063 0.1839]; X_J(inf) ~ +0.69503; X_sigma(inf) ~ 0.19967
+    3'' p-cross beta=0.5: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.16593 0.03252 0.01067]; J(0.5,1,2) = [0.4929 0.3488 0.2442]; X_J(inf) ~ +1.16942; X_sigma(inf) ~ 0.19967
+    3''' mixed q1-p2 gamma=0.3: min eig 2.33e-01; S1(0) same as S6: True; max |S1 - S1_S6| at t=2,5,10: [0.21858 0.0933  0.00283]; J(0.5,1,2) = [0.4881 0.3047 0.2716]; X_J(inf) ~ +1.16942; X_sigma(inf) ~ 0.19967
+    closed form at fixed S6 marginals: X_J(inf) = (Ts-Tb) + Tb r^2/2 - Q12(0) = (Ts-Tb) + Tb r^2 (1/2 - alpha)
+  4 cross block grafted from the S6 (2,1) state evolved to t=3.0, marginals restored, scale 1.0: min eig 2.20e-01; X_J(inf) ~ +1.00742 (S6: +1.16942); max |S1 - S1_S6| at t = 2: 0.2907
+  -> with every marginal fixed, correlation changes alter the transient, J(t) and the SIGN of X_J(inf); X_sigma(inf) = D(0)
+     is blind to them (it only sees S1(0) and S1(inf)). H_cross IS AN INDEPENDENT PREPARATION DATUM.
+
+==============================================================================
+B2-3 is productness needed for return to equilibrium? correlated finite-rank / trace-class perturbations
+==============================================================================
+  S6 product (2,1): rank(Sigma0 - Sigma_G) = 3; |S1(t) - S_ref| at t=10,40,100,200: [0.00549 0.00023 0.00001 0.     ]
+  q-cross alpha=1.4: rank(Sigma0 - Sigma_G) = 3; |S1(t) - S_ref| at t=10,40,100,200: [0.00351 0.00004 0.00001 0.     ]
+  mixed gamma=0.3 + p-cross 0.5: rank(Sigma0 - Sigma_G) = 4; |S1(t) - S_ref| at t=10,40,100,200: [0.00801 0.00009 0.00002 0.     ]
+  marginal-matched product: rank(Sigma0 - Sigma_G) = 2; |S1(t) - S_ref| at t=10,40,100,200: [0.00236 0.00015 0.00001 0.     ]
+  graft (B2-2 item 4): rank(Sigma0 - Sigma_G) = 5; |S1(t) - S_ref| at t=10,40,100,200: [0.00103 0.00007 0.      0.     ]
+  -> local return to equilibrium holds for correlated finite-rank deviations (numerical, finite N). The LS-1 argument
+     extends: see B2_HCORR_RESULT.md, Proposition B2-P1 (bridge proof sketch, not canonically verified).
+
+==============================================================================
+B2-4 correlation reversal / anti-arrow (same D, Sigma, A)
+==============================================================================
+  forward: S6 (2,1) evolved to tau=8.0; reversed state Sigma_R = R Sigma(tau) R (p -> -p) declared as new t=0; min eig 2.33e-01
+  entropy: global S(Sigma(tau)) - S(Sigma_R) = 0.0e+00; retained-marginal entropies equal: 0.0e+00
+   t=0: D_reversed(t) = 0.00028   vs   D_forward(tau - t) = 0.00028
+   t=2: D_reversed(t) = 0.00122   vs   D_forward(tau - t) = 0.00122
+   t=4: D_reversed(t) = 0.01409   vs   D_forward(tau - t) = 0.01409
+   t=6: D_reversed(t) = 0.14313   vs   D_forward(tau - t) = 0.14313
+   t=8: D_reversed(t) = 0.19967   vs   D_forward(tau - t) = 0.19967
+  X_J over [0, tau]: forward +1.13711, reversed -1.13711
+  -> the reversed preparation runs back to the less-equilibrated S6 state (D rises to D(0)); D + Sigma + A DO NOT SELECT
+     THE ARROW BOUNDARY. The two states have identical entropies (global and retained marginal) and differ only in the sign
+     of their q-p correlations.
+
+==============================================================================
+B2-5 special epoch: the S6 product state at t = 0, evolved to +t and -t
+==============================================================================
+   t=+-0.5: C_SB(+t) = 0.53509, C_SB(-t) = 0.53509; D(+t) = 0.22613, D(-t) = 0.22613; J(+t) = +0.32599, J(-t) = -0.32599
+   t=+-1: C_SB(+t) = 0.81036, C_SB(-t) = 0.81036; D(+t) = 0.22835, D(-t) = 0.22835; J(+t) = +0.28701, J(-t) = -0.28701
+   t=+-2: C_SB(+t) = 0.73485, C_SB(-t) = 0.73485; D(+t) = 0.14313, D(-t) = 0.14313; J(+t) = +0.25996, J(-t) = -0.25996
+   t=+-5: C_SB(+t) = 0.51022, C_SB(-t) = 0.51022; D(+t) = 0.00297, D(-t) = 0.00297; J(+t) = +0.01098, J(-t) = -0.01098
+   t=+-10: C_SB(+t) = 0.42059, C_SB(-t) = 0.42059; D(+t) = 0.00002, D(-t) = 0.00002; J(+t) = +0.00179, J(-t) = -0.00179
+   t=+-20: C_SB(+t) = 0.41871, C_SB(-t) = 0.41871; D(+t) = 0.00000, D(-t) = 0.00000; J(+t) = +0.00024, J(-t) = -0.00024
+  C_SB(0) = 6.6e-15; Gibbs cross norm (stationary) = 0.41673
+  time-reversal relation: Sigma0 = R Sigma0 R  =>  Sigma(-t) = R Sigma(t) R: C_SB and D even in t, J odd.
+  -> SPECIAL MOMENT SELECTED BY PREPARATION; ORIENTATION NOT SELECTED (Janus: relaxation toward both time directions).
+
+==============================================================================
+B2-7 temperature parameters and the stationary-state class
+==============================================================================
+  (2,1): X_J(inf) ~ +1.16942 (closed +1.16943); D(0) = 0.19967; S1(inf) -> Tb diag(r,1)
+  (10,1): X_J(inf) ~ +9.16941 (closed +9.16943); D(0) = 5.57787; S1(inf) -> Tb diag(r,1)
+  (0.5,1): X_J(inf) ~ -0.33057 (closed -0.33057); D(0) = 0.27578; S1(inf) -> Tb diag(r,1)
+  (0.1,1): X_J(inf) ~ -0.73057 (closed -0.73057); D(0) = 1.53584; S1(inf) -> Tb diag(r,1)
+  (1,1): X_J(inf) ~ +0.16942 (closed +0.16943); D(0) = 0.01936; S1(inf) -> Tb diag(r,1)
+  (1.05,1): X_J(inf) ~ +0.21942 (closed +0.21943); D(0) = 0.01424; S1(inf) -> Tb diag(r,1)
+  (1,1.05): X_J(inf) ~ +0.12790 (closed +0.12790); D(0) = 0.02656; S1(inf) -> Tb diag(r,1)
+  Gibbs at T=0.5: stationary (max drift 3.6e-16) -> every T is admissible
+  Gibbs at T=1.0: stationary (max drift 7.2e-16) -> every T is admissible
+  Gibbs at T=3.0: stationary (max drift 2.2e-15) -> every T is admissible
+  non-thermal GGE Q = F(K), P = K F(K): min eig 1.69e-01; stationary drift 8.3e-16; retained marginal diag(0.5622, 1.0015) is not a Gibbs marginal at any single T
+  -> stationarity under D admits every T AND non-thermal GGEs (the harmonic chain is integrable): THERMAL STATE CLASS
+     CONDITIONALLY DEFINED (by a supplied Gibbs/KMS postulate); TEMPERATURE VALUE SUPPLIED.
+
+==============================================================================
+B2-8 / B2-9 does the environment (bath state) carry H_corr? relaxation mechanism vs boundary selection
+==============================================================================
+  system Gibbs Ts=2 + bath Gibbs T_b=1: S1(200) = [ 0.58211  1.      -0.     ] -> the bath's state fixes the local limit
+  system Gibbs Ts=2 + bath Gibbs T_b=1.5: S1(200) = [ 0.87316  1.5     -0.     ] -> the bath's state fixes the local limit
+  system Gibbs Ts=2 + bath in the restriction of the GGE: S1(200) = [ 0.56217  1.00148 -0.     ] vs GGE marginal diag(0.5622, 1.0015)
+  same bath T_b = 1, different (H_sys, H_cross): the local limit is identical, the transients and X_J differ:
+    S6 (2,1): S1(200) = [ 0.58211  1.      -0.     ]; X_J(inf) ~ +1.16942
+    S6 (2,1) + q-cross 1.4: S1(200) = [0.58211 1.      0.     ]; X_J(inf) ~ +0.69503
+    S6 (0.1,1): S1(200) = [ 0.58211  1.      -0.     ]; X_J(inf) ~ -0.73057
+    marginal-matched: S1(200) = [ 0.58211  1.      -0.     ]; X_J(inf) ~ +0.33885
+  -> the bath state determines the local asymptotic state CONDITIONAL on T_b (PARTIAL RELOCATION INTO ENVIRONMENT);
+     T_b, H_sys, H_cross and the epoch are not determined. D COMPRESSES MEMORY OF H_corr DOWNSTREAM (the local state
+     forgets it) but the integrated record X_J keeps it: X_J(inf) = E1(0) - E1_G + Q12_G - Q12(0).
+
+==============================================================================
+B2-10 noise-layer firewall: overdamped stochastic environment x' = -K x + noise, Q = 2 diag(T_i) (L0-1e)
+==============================================================================
+  uniform T=1: stationary <x1 x2> = 0.33885 (cross-correlated; = T K^-1 for uniform: 0.33885); product-of-marginals prep vs stationary prep: |<x1x2> diff| at t=0 0.3389, t=3 1.38e-03
+  non-uniform T_i: stationary <x1 x2> = 0.17657 (cross-correlated; = T K^-1 for uniform: nan); product-of-marginals prep vs stationary prep: |<x1x2> diff| at t=0 0.1766, t=3 7.34e-04
+  -> the noise layer fixes the STATIONARY correlation structure conditional on T_i (another environment state:
+     RELOCATION of the reference state into supplied T_i), and erases any initial H_cross at rate >= 2*0.3; it does not
+     select which initial correlation was prepared. Not identified with the S6 conservative bath.
+
+==============================================================================
+B2-11 entropy firewall
+==============================================================================
+  equal-T factorized A vs Gibbs B: entropy S(A) - S(B) = -0.14591; A relaxes (X_J = +0.169), B is stationary
+  marginal-matched product (Gibbs marginals, zero cross) vs Gibbs: S(M) - S(B) = +0.14591 (= the Gibbs S-B mutual information); M is NOT stationary (X_J = +0.3388), B is: the HIGHER-entropy state relaxes
+  forward-evolved vs reversed state (B2-4): identical global and marginal entropies, opposite local arrows.
+  -> neither 'low entropy' nor 'temperature gradient' labels the boundary: the load-bearing datum is the correlation
+     structure relative to the split (and, for reversal, the sign of q-p correlations).

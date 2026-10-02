@@ -186,11 +186,14 @@ blocks of 6 (of 4).
 
 **Sharpened A_res (tested classes):**
 
-    A_res  →  A_seed(+readout identification) ⊕ A_partition ⊕ A_resolution ⊕ A_time
-    with  A_closure / effect structure = f(D, A_seed; closure rule)
+    A_res  →  A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time,   A_interface := (A_seed, A_readout)   [BR2-01]
+    with  A_closure / effect structure = f(D, A_seed; R_closure)   [BR2-02]
 
-- Seven listed SCOUT items reduce to **four supplied primitives plus one convention**:
-  1. coupled/accessible + effect/readout → **A_seed**, with the effects downstream;
+- Seven listed SCOUT items reduce to **four supplied blocks plus one convention** (A_interface is itself a pair [BR2-01]):
+  1. coupled/accessible + effect/readout → **A_interface = (A_seed, A_readout)**. The effects / closure are downstream of
+     the **seed component only**. The readout is **not** derived from the seed [BR2-01]: in the classical observability
+     representation the readout vector plays the seed's role, but that identification is not established across the
+     canonical classes (P-5 / P-6 separate the coupling seed from the downstream probe);
   2. grouping + coarse-graining → **A_partition**, but only where the coarse map is a fragment restriction. General
      aggregating coarse maps were **not tested**, so A_coarse ⊆ A_partition is **CONDITIONAL**;
   3. resolution / threshold → **A_resolution**;

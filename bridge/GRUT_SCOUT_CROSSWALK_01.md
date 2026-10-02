@@ -28,3 +28,12 @@
 | O-6 strict pointwise arrow FALSIFIED; S6 integrated arrow preparation-relative | D0 no every-state arrow (finite unitary, continuous functionals); effective arrows need H_corr\|Σ | **SCOUT STRICTLY SHARPER** (a theorem in its scope; the preparation price identified) |
 | GS1: geometry selected from full site-resolved access; single-site access underdetermined | S2-8 / A_res: what is recorded / accessible depends on the fragment / access structure | **OVERLAPPING** (GS1 shows geometry recovery is access-priced) |
 | EA-0 L7: non-trivial endogenous access only via exact local invariant structure of the generator | A_res (B3 pending) | **UNCERTAIN until B3** |
+
+## B2 addendum (additive; the B0 rows above are kept as filed)
+
+| GRUT result | SCOUT result | classification after B2 |
+|---|---|---|
+| S6 declared product preparation (layer 4) | H_corr\|Σ (reviewed) | **RENAMING / IDENTICAL in role.** The S6 preparation is one explicit member of the H_corr\|Σ class, independently converged. B2-1: the equal-T transient ½T_b r² is a correlation / interaction-energy mismatch |
+| S6 equal-temperature offset ½T_b r²; marginal-matched transient T·r² | D3 / D6 (correlations vs marginals) | **IDENTICAL in content** (classical Gaussian infinite bath vs finite quantum) |
+| reversed S6 preparation anti-relaxes (B2-4); Σ(−t) = RΣ(t)R (B2-5) | D1 mirror / D7 record reversal; Janus | **IDENTICAL in structure**. D0 is used only conceptually (outside its scope) |
+| S6 relaxation for any trace-class Δ (B2-P1, bridge sketch) | D4 / D5 (fresh bath mechanism) | **OVERLAPPING**: the mechanism forgets H_corr locally but does not select it |

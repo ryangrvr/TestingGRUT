@@ -21,10 +21,14 @@
 | `P6_SEED_SELECTION_VERDICT_01.md` | seed = NON-DERIVED INPUT; selected only up to block decomposition; L-A / L-B/E / L-C / L-D1 / L-D2 |
 | `L0_ACCESS_BRIDGE_OWNER_RULING_02.md` | NONUNIQUE-LIFT; direct classical branch TRIVIAL/IDENTITY (end-site readout globally observable); scope §5 |
 | `calc/p5_access.py`, `calc/p6_seed_selection.py` (**inspected, not run or imported**) | the closure *rules*: P-5 uses alg{I, H, B}; P-6 uses the unital product span of the seed, ad_H-closed, with `adh=False` for the L-D2 sufficiency test |
+| **B2 additions:** `S6_OWNER_RULING_02.md` | S6-1 = NET-ARROW-CONFIRMED (+ NO-ERASURE-ON-OPEN-MEMBERS); LS-1 / LS-2 / LS-3 banked; fences §9 ("preparation-relative") |
+| `S6_1_THEOREM_01.md` | K_∞, LS-0 spectral map, Σ₀ = Σ_G + Δ₀ (rank ≤ 3), X_J(∞) = (T_s − T_b) + ½T_b r², D(t) |
+| `S6_1_COARSEGRAINED_ARROW_CHARTER_01.md` | declared product preparation; orientation f_J = ±J on L1 / L2, σ = −Ḋ |
+| `S6_1_VERDICT_01.md` | member values used as reproduction targets (`calc/s6_1_certify.py` not run or imported) |
 | `GRUT_WORKING_THEORY_SYNTHESIS_01.md` (Ledger A-13), `SYN0_OWNER_RULING_01.md` §2 | how access is booked: "access seed / declared readout / access sets" (A-13), layer 3 = "access / readout" |
 
 ## Precedence and use rules
 
 - Later owner rulings govern over historical wording (e.g. the EA-0 corrections over the EA-0 formulation text).
-- No canonical code is imported. The canonical models are **re-implemented** in `bridge/b1/` and `bridge/b3/` from the charter definitions.
+- No canonical code is imported. The canonical models are **re-implemented** in `bridge/b1/`, `bridge/b3/` and `bridge/b2/` from the charter definitions.
 - Claims are not copied between the two sources without a crosswalk classification.

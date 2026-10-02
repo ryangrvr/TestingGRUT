@@ -17,9 +17,10 @@ That is **CONDITIONAL COMPRESSION**. It is the first non-zero Bridge compression
 
 ## 2. Is access best described as one primitive or several?
 
-**Several.** The tested classes need **four supplied primitives plus one convention**:
+**Several.** The tested classes need **four supplied blocks plus one convention** (A_interface is itself a pair, seed + readout [BR2-01]):
 
-    A_res  →  A_seed ⊕ A_partition ⊕ A_resolution ⊕ A_time   (closure-rule convention),   A_closure = f(D, A_seed)
+    A_res  →  A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time,   A_interface := (A_seed, A_readout)   [BR2-01]
+    A_closure = f(D, A_seed; R_closure)   [BR2-02]
 
 - **A_partition is not reducible to A_seed.** The same total readout grouped differently changes the record counts.
 - **A_coarse ⊆ A_partition** is shown only for fragment-restriction coarse maps (CONDITIONAL; aggregating maps not tested).
@@ -83,7 +84,7 @@ The access boundary stays supplied.
 **The boundary did not shrink. The A_res component was sharpened.**
 
     C5 → D_dyn ⊕ [Σ ⊗ H_corr]_coupled ⊕ A_res,
-    A_res = A_seed ⊕ A_partition ⊕ A_resolution ⊕ A_time   (closure downstream, rule-conditional)
+    A_res = A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time   (A_closure = f(D, A_seed; R_closure)) [BR2-01, BR2-02]
 
 - One listed item (effect / closure structure) is now downstream of D + seed + rule instead of independently supplied.
   That is a bookkeeping compression **inside** A_res, not the elimination of a residual component.
