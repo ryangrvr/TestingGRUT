@@ -9,14 +9,15 @@
 > and verify it explicitly for a restricted translation-invariant nearest-neighbour qubit class. No unconditional
 > all-(k, d, n) theorem is attributed to them.
 
-**Replace** case (a)'s "the joint principle adds no selection power beyond H-locality" **with:**
+**Replace** case (a)'s "The joint principle adds no selection power beyond H-locality." (table row (a)) **with:**
 
 > If H's local TPS class is unique (the assumption above), the joint principle adds no selection power beyond
 > H-locality. If H has several genuine dual local TPS classes, ψ-productness can distinguish among them.
 
 ## E-02 (IR-02) — same file, dichotomy (b), and `results/S2-SigmaH_RESULT.md` §ΣH-0 / §ΣH-16
 
-**Replace** "(b) incompatible pair … there is a genuine trade-off: a Pareto family" **with:**
+**Replace** table row "(b) incompatible pair (the generic case) | F_H ∩ F_ψ = ∅ | there is a genuine trade-off between
+H-locality and ψ-independence: a Pareto family. …" **with:**
 
 > (b) If F_H ∩ F_ψ = ∅, no frame achieves exact locality and exact productness together. This does **not** by itself
 > imply several Pareto-incomparable optima: a single dominating compromise is not excluded by this proposition. Pareto
@@ -24,7 +25,9 @@
 > consequence of Prop. 2.
 
 **In `S2-SigmaH_RESULT.md`:**
-- replace "The numerics follow this dichotomy in every case" with "The numerics *classify* every tested case
+- in §ΣH-0, replace "When it fails, there is a Pareto trade-off. **The numerics follow this dichotomy in every case**"
+  (lines 46 – 47) with "When it fails, no frame is exactly both; Pareto nonuniqueness is a numerical finding." Also
+  replace "The numerics follow this dichotomy in every case" with "The numerics *classify* every tested case
   consistently with this dichotomy; the Pareto nonuniqueness in case (b) is numerical, not proved";
 - in §ΣH-16, label the Pareto-family clause "(numerical, tested models)".
 
