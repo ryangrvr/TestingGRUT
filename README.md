@@ -27,7 +27,7 @@ probability and tomography** arise from something more primitive? Or is C5 genui
 | `ledgers/` | counterexample, literature, information-accounting, measure-origin, frontier queue |
 | `zoomouts/` | periodic zoom-outs |
 | `scripts/` | shared code |
-| `handoff/` | campaign handoff (at the end) |
+| `SCOUT_2_HANDOFF.md` | **final campaign handoff (frozen)** |
 | `provenance/` | frozen SCOUT-0 / SCOUT-1 summaries (read-only) |
 
-Current state: `STATUS.md`.
+Current state: `STATUS.md` — **FROZEN: SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE — INDEPENDENT REVIEW OWED.** Start with `SCOUT_2_HANDOFF.md`.

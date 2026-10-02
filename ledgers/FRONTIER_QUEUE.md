@@ -15,11 +15,11 @@
 | REPAIR 01 | owner audit of Wave-1 synthesis | **DONE** | Y-02…Y-06 |
 | S2-7 | consistent-histories set selection (attacks A) | **DONE** | NONUNIQUE / A-PRICED: consistent sets on S and E slots; pointer Z–Z consistent only with large env (m = 7: 0.051); final basis always free; exact global Dowker–Kent sets |
 | S2-8 | Darwinism / records (attacks A) | **DONE** | pointer selected given split (χ_Z 0.871 vs χ_X 0); split not selected (R = 8 for every slot; same state R = 8 vs 0 across frames); R = 8/4/2 by fragment grouping; scrambling kills plateau. A-PRICED + D-priced |
-| S2-G | dimension: split into G1 (with S2-Σ), G2, G3, G4 | ACTIVE | — |
+| S2-G | dimension: split into G1 (with S2-Σ), G2, G3, G4 | **DONE** (G1 in S2-Σ; G2 / G3 / G4 in S2-G) | see S2-Σ + G1 and S2-G2 / G3 / G4 rows |
 | ZOOM_OUT_03 | after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7 | **DONE** | none of D, H, A eliminated; candidate T2-2 (split centrality): C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res |
 | S2-Σ + S2-G1 | factorization AND local dimension selection without hidden weights (attacks Σ) | **DONE** | no weakly dominant TPS in 58/58 runs; fronts 3–148 with 5–10 local-dim types; scalar winners vary with transform/normalization/weights/scale/state; translation + commutant degeneracies exact; dominance only in CPR scope (d, #factors supplied), up to commutant; ψ breaks it only via an epoch. Σ NOT DERIVED |
 | ZOOM_OUT_04 | Σ/G1 zoom-out | **DONE** | Σ survives as a supplied object: (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)); candidate T2-3 (commutant blindness) |
-| S2-Σb | epoch-integrated criteria (optional; not automatic) | HELD | — |
+| S2-Σb | epoch-integrated criteria | **RETIRED** (superseded by S2-ΣH ΣH-5 epoch prescriptions; reopen only in a future campaign) | — |
 | REPAIR 02 | owner audit of S2-Σ (commutant = H-relative gauge; epoch scoped; literature regraded) | **DONE** | Y-07…Y-09 |
 | S2-H2 | state / basin selection by dynamics (attacks H) | **DONE** | structural attractors compress H into D mod gauge (symmetric contraction; doubly stochastic; all-to-all alignment, Ising complete graph 200/200) — TUNING / NON-LOCALITY / ARROW priced; explicit-parameter cases = RELOCATION; dissipation dilates to H_env; unitary: no fine-grained selection; local coupling keeps basins (ring 21/30 twisted; 2D 44% frozen stripes) |
 | ZOOM_OUT_05 | after H2 | **DONE** | remaining: D_dyn + arrow, H_env, Σ/Sym(H), A_res; candidate T2-4 (every H→D compression is arrow-priced, paid by H_env) |
@@ -31,7 +31,10 @@
 | ZOOM_OUT_07 | after the dimension campaign | **DONE** | C5-G eliminated as a single primitive (conceptual compression); candidate T2-6 |
 | REPAIR 05 | G3 MM domain-of-validity scope | **DONE** | Y-12 |
 | S2-ΣH | joint (Σ, H_corr\|Σ) selector | **DONE** | outcome C/D(+E): a frame is selected only for non-generic compatible pairs (the compatibility is the supplied boundary); generic pairs Pareto / preference / threshold / language-priced; d not selected; epoch moves (C_min covariant), C_avg / C_typ fail the positive control; orientation not selected |
-| ZOOM_OUT_08 | FORMAL SATURATION GATE | **DONE — REVIEW OWED** | recommends SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE; residual C5 → D_dyn ⊕ [Σ⊗H_corr]_coupled ⊕ A_res; candidate T2-7 |
-| S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | HELD (scope-broadening appendix; owner choice) | — |
+| ZOOM_OUT_08 | FORMAL SATURATION GATE | **DONE — PASSED (owner ruling)** | recommends SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE; residual C5 → D_dyn ⊕ [Σ⊗H_corr]_coupled ⊕ A_res; candidate T2-7 |
+| S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | **OUT-OF-ENVELOPE / FUTURE SCOPE EXTENSION** (not unfinished SCOUT-2 work) | — |
+| REPAIR 06 | ΣH-0 product-frame dimension count | **DONE** | Y-13 |
+| FREEZE | owner ruling: SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE — INDEPENDENT REVIEW OWED | **FROZEN** | handoff: `SCOUT_2_HANDOFF.md` |
 
-**Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).
+**No open finite-envelope items.** Every probe is DONE, RETIRED or OUT-OF-ENVELOPE. No "next" marker remains.
+Zoom-outs: `zoomouts/ZOOM_OUT_01 … 08.md`.

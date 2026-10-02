@@ -38,8 +38,9 @@ frames including the ψ-product frame W_ψ. That gives 1414 candidates per case.
 
 ## ΣH-0 (theorem; see the separate file)
 
-**Prop. 1.** Every pure ψ is a product state in a coset of frames of dimension (N−1)² + 1. **State independence alone
-selects no TPS.**
+**Prop. 1 (as repaired by REPAIR 06 / Y-13).** Every pure ψ is a product state in a high-dimensional, non-unique family
+of frames F_ψ, with dim F_ψ = (N−1)² + 1 + 2Σ_i(d_i − 1) and codimension 2N − 2 − 2Σ_i(d_i − 1) in U(N). The fixed-target
+coset alone has dimension (N−1)² + 1. **State independence alone selects no TPS.**
 
 **Prop. 2.** Joint compatibility F_H ∩ F_ψ ≠ ∅ is non-generic. When it holds, the joint selector reproduces CPR's class
 (given k, d, n) and adds nothing. When it fails, there is a Pareto trade-off. **The numerics follow this dichotomy in
@@ -151,8 +152,8 @@ At low c_ψ, MDL is dominated by the H-description and picks id qubits. At high 
 
 ## ΣH-16 — scoped theorem (as supported)
 
-> State independence cannot identify subsystem structure: every pure state is a product state in a (N−1)² + 1-dimensional
-> family of frames (Prop. 1). Hamiltonian locality constrains subsystem structure only relative to a locality class
+> State independence cannot identify subsystem structure: every pure state is a product state in a high-dimensional,
+> non-unique family of frames, of codimension 2N − 2 − 2Σ_i(d_i − 1) in U(N) (Prop. 1, REPAIR 06). Hamiltonian locality constrains subsystem structure only relative to a locality class
 > (CPR). In the tested finite systems (n = 6, 1414 candidates per case, 8 cases):
 > - jointly demanding locality and independence yields a **dominant frame only for non-generic compatible pairs**, where
 >   the compatibility itself is the supplied boundary datum;

@@ -8,13 +8,23 @@ For any unit vector |ψ⟩ ∈ ℂ^N and any factor dimensions with Π d_i = N, 
 W|ψ⟩ = e^{iφ}|0⟩⊗…⊗|0⟩. In the TPS defined by W, ψ is a product state: every factor entropy and every total correlation is
 zero.
 
-The set of such W is the coset {V W₀ : V|0…0⟩ ∝ |0…0⟩}, which is ≅ U(1) × U(N−1). Its real dimension is (N−1)² + 1,
-against N² for U(N).
+**Two sets, distinguished (REPAIR 06, Y-13).**
 
-*Proof.* Take a Householder reflection W₀ sending ψ to |0…0⟩ up to a phase; compose with the stabilizer. ∎
+1. **Fixed target ray.** For a *fixed* product ray |0…0⟩, the set {W : W|ψ⟩ ∝ |0…0⟩} is the coset {V W₀ : V|0…0⟩ ∝ |0…0⟩}
+   ≅ U(1) × U(N−1), of real dimension **(N−1)² + 1**.
+2. **The full product-making family.** F_ψ = {W : W|ψ⟩ is *some* product state} also ranges over the manifold of pure
+   product rays, of real dimension 2 Σ_i (d_i − 1). Hence
 
-**Consequence.** Minimizing state correlation over unrestricted TPSs has minimum 0, attained on a set of essentially
-full dimension. → **STATE INDEPENDENCE ALONE → NO TPS SELECTOR.** The same holds for "initial low entropy", which is
+       dim F_ψ = (N−1)² + 1 + 2 Σ_i (d_i − 1),
+       codim F_ψ in U(N) = 2N − 2 − 2 Σ_i (d_i − 1),
+
+   which is the codimension used in Proposition 2.
+
+*Proof.* Take a Householder reflection W₀ sending ψ to |0…0⟩ up to a phase, and compose with the stabilizer: this gives
+set 1. Set 2 is the union over product rays r of the analogous cosets, fibred over the product-ray manifold. ∎
+
+**Consequence.** Minimizing state correlation over unrestricted TPSs has minimum 0, attained on a **high-dimensional,
+non-unique family** of frames. → **STATE INDEPENDENCE ALONE → NO TPS SELECTOR.** The same holds for "initial low entropy", which is
 zero for every factor in such a frame.
 
 ## Proposition 2 (where the information has to come from)
