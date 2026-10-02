@@ -1,3 +1,7 @@
+> **REPAIR 03:** the arrow / H_env statements below are scoped to the tested collision and channel dilations. Whether
+> every effective arrow in a closed unitary universe needs a special state is OPEN (S2-D-arrow). See ZOOM_OUT_05,
+> REPAIR 03 and Y-10.
+
 # S2-H2 RESULT — can dynamics select the universe's state / basin?
 
 **Charter:** `probes/PROBE_CHARTERS.md` §S2-H2. Pre-registered at `90a133c`, including the admissible state spaces.

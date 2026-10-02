@@ -385,3 +385,47 @@ H / Σ / A.
 - NO FINE-GRAINED H SELECTION;
 - H → D RELOCATION;
 - TRUE H COMPRESSION INTO D.
+
+---
+
+# S2-D-ARROW PRE-REGISTRATION (owner-approved; theorem-first; written before any numerics)
+
+**Primary question.** Can a closed unitary universe produce a nontrivial effective subsystem arrow from **EVERY**
+admissible global state, without a low-entropy, low-correlation or otherwise special preparation?
+
+**Secondary question.** Is Σ needed before "the arrow" can even be defined?
+
+Each supplied item is priced if it is needed:
+- a low-entanglement / product start;
+- low subsystem entropy;
+- special correlations;
+- a measure / typicality distribution;
+- a TPS;
+- a coarse-graining.
+
+| Step | Content |
+|---|---|
+| **D0** | A theorem: no nonconstant continuous arrow functional is monotone along any orbit of finite-dimensional unitary dynamics (recurrence), together with a window version via time reversal. Scope: finite-dimensional closed unitary only |
+| **D1** | Every-state hostile for S(ρ_S(t)), using: product; Haar; the time-reversed post-maximum state; an energy eigenstate; a recurrence-near state |
+| **D2** | Typicality ≠ arrow: Haar / energy-shell typical states are already near-maximal at t = 0. Measure the available increase and the direction asymmetry |
+| **D3 / D6** | Same marginals, different correlations: product vs correlated (time-reversed evolved) states with an equal or near-maximally-mixed bath marginal |
+| **D4** | Collision models with pure / thermal / maximally mixed / classically correlated / GHZ-entangled ancillas. Five separate questions: attractor; its value; Markovianity (trace-distance non-increase); entropy arrow; records |
+| **D5** | Freshness firewall: fresh vs finite reused bath (M = 1, 2, 4) vs recycled ancilla |
+| **D7** | Record arrow (S2-8 diagnostics) vs the antiunitary time-reverse of a record-forming final state |
+| **D8** | The same global state and H in inequivalent TPSs (Clifford / Haar frames; **not** commutant frames, which are H-relative gauge after REPAIR 02) |
+| **D9** | Access: full state vs local marginal vs coarse macro-variable vs records |
+| **D10** | Janus: entropy on both sides of a special middle state; classify BOUNDARY CONDITION ELIMINATED vs TIME ORIENTATION NOT SELECTED; whether a law-fixed special state can carry dynamics |
+| **D11** | STRONG (every state) and WEAK (typical: measure, macrostate, TPS, coarse-graining, preparation class) verdicts kept separate |
+| **D12** | ARROW_ORIGIN_LEDGER |
+| **D13** | Outcomes A–E as given by the owner |
+| **D14** | Theorem target, scoped |
+
+**Admissible state space:** all pure (and, for D3 / D4 / D6, mixed) states of the stated finite-dimensional system. No
+exclusions.
+
+**Literature** (owner-cited; primary verification attempted, see the literature ledger):
+- Popescu–Short–Winter (Nat. Phys. 2006);
+- Goldstein–Lebowitz–Tumulka–Zanghì (canonical typicality, PRL 2006);
+- Goldstein–Tumulka–Zanghì (PRD 94, 023520);
+- Bocchieri–Loinger (quantum recurrence);
+- Barbour–Koslowski–Mercati (Janus point).
