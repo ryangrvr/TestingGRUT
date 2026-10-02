@@ -13,9 +13,10 @@ representation, and P = (log Δ_N − log Δ_M)/2π are used at the scope of the
 
 | reference | grade |
 |---|---|
-| Wiesbrock, CMP 157 (1993) 83–92; CMP 158 (1993) 537–543 | SOURCE LOCATED |
-| Araki–Zsidó, math/0412061 | SOURCE LOCATED |
-| Kähler–Wiesbrock, JMP 42 (2001) 74–86 | SOURCE LOCATED; its abstract states a 3+1 Poincaré representation from algebras in specified modular position, plus a net via BW |
+| Wiesbrock, CMP 157 (1993) 83–92 | **KNOWN-RESULT IMPORT — PRIMARY / SOURCE-TEXT VERIFIED** (author-uploaded full text, owner-inspected) for: HSMI → U(a); positive generator; modular scaling relation; N = U(1)MU(−1); the **qualified** type III₁ statement [Q3R-05] |
+| Wiesbrock, CMP 158 (1993) 537–543 | SOURCE LOCATED |
+| Araki–Zsidó, math/0412061 | SOURCE LOCATED / ABSTRACT VERIFIED |
+| Kähler–Wiesbrock, JMP 42 (2001) 74–86 | **PRIMARY-PUBLISHER ABSTRACT VERIFIED** for exactly: modular groups of algebras in specified modular position → a 3+1 Poincaré representation; combined with BW → a 3+1 local net. Nothing more of the paywalled theorem is claimed [Q3R-05] |
 | Buchholz–Dreyer–Florig–Summers (2000), geometric modular action | CITED FROM THE STANDARD LITERATURE, TEXT NOT RE-READ |
 
 ## G3-0 Two directions (kept separate)
@@ -25,11 +26,11 @@ representation, and P = (log Δ_N − log Δ_M)/2π are used at the scope of the
 | **A: Borchers (1992)** | standard (M, Ω); one-parameter U(a) with a **positive** generator; U(a)MU(−a) ⊂ M for a ≥ 0 | Δ_M^{it}U(a)Δ_M^{−it} = U(e^{−2πt}a), J U(a) J = U(−a); and N := U(1)MU(−1) ⊂ M is a (−)HSMI | **CONSISTENCY / RELOCATION**: U and its positivity were supplied |
 | **B: Wiesbrock converse (1993; Araki–Zsidó)** | N ⊂ M with common cyclic separating Ω; the **signed** half-sided condition Δ_M^{−it}NΔ_M^{it} ⊂ N for t ≥ 0 | a positive-energy representation of the affine (translation–dilation) group; U(a) with N = U(1)MU(−1); **P = (log Δ_N − log Δ_M)/2π ≥ 0** | a genuine **reconstruction**: positive energy is not separately supplied |
 
-**Together, A and B make an equivalence:**
+**Together, A and B make the two structures logically interdefinable at the theorem scope** [Q3R-04]:
 
-    (−)HSMI (N ⊂ M, Ω)   ⟺   (M, Ω) + a positive-energy half-sided translation group U, normalized by N = U(1)MU(−1)
+    (−)HSMI (N ⊂ M, Ω)   ⟺   one-dimensional Borchers triple (M, U, Ω), normalized by N = U(1)MU(−1)
 
-**This equivalence is the key to the information audit (G3-1).**
+**This interdefinability is the key to the accounting audit (G3-1).** No Shannon / Kolmogorov information measure was defined or computed; "same information" means logical interdefinability within the theorem class.
 
 ## G3-1 Information audit of half-sidedness — **the smuggling located**
 
@@ -44,15 +45,16 @@ The supplied facts, item by item:
 | 5 | half-sidedness (invariance only for one half-line of the modular parameter) | **equivalent (by A ⇔ B) to the existence of a positive-energy translation with half-sided invariance.** It is the positivity + direction information in disguise |
 | 6 | the sign (t ≥ 0 vs t ≤ 0) | whether N = U(+1)MU(−1) or N = U(−1)MU(+1): **the relation between the inclusion order and the positive-energy direction.** It flips under antiunitary maps (below) |
 
-**Verdict on the owner's adversarial question.** Half-sided modular position is **not** cheaper *information* than "a
-positive, oriented, half-sided translation structure along one ray." By the Borchers ⇔ Wiesbrock equivalence the two
-are **logically interconvertible.**
+**Verdict on the owner's adversarial question.** Half-sided modular position is **not** a cheaper source of the
+positivity and one-sided ordering than "a positive, oriented, half-sided translation structure along one ray." By
+Borchers ⇔ Wiesbrock the two are **logically interdefinable at the theorem scope** [Q3R-04]. No information metric is
+claimed.
 
-It **is** a cheaper *specification*:
+Informally, it **is** a cheaper *specification*:
 - the input is a finite datum: two algebras, one vector and one sign bit;
 - the output is a continuum one-parameter group, the dilations, and the totally ordered continuum of algebras
   M(s) = U(s)MU(−s);
-- the scale is fixed by the inclusion gap (toy: generator coefficient 1.00 for the gap 1, 2.50 for the gap 2.5).
+- **the inclusion fixes the normalization of the reconstructed translation parameter relative to N and M** (N = U(1)MU(−1)). Converting it to a physical metric scale requires additional geometric input. The toy's "gap 1 / 2.5" already uses a supplied coordinate [Q3R-03]: **PARAMETER NORMALIZATION CONDITIONALLY FIXED; PHYSICAL SCALE SUPPLIED.**
 
 > **Classification:** **PARTIAL CONDITIONAL COMPRESSION (specification-level)**. Information-level it is **RELOCATION
 > into half-sidedness** (logical equivalence). The smuggling is located precisely in items 5 + 6 (and 2).
@@ -78,10 +80,13 @@ It **is** a cheaper *specification*:
 - **In the standard form, dim(NΩ) = 4 < 16 = dim H**, so a proper N is not standard.
 
 **What the infinite / type-III setting buys.** An **unbounded modular generator** is necessary for a non-trivial HSMI
-(F1). Moreover, a non-trivial HSMI forces type III₁ (Wiesbrock 1993, import). The finite and type-I control admits
+(F1). Moreover, **standard non-trivial HSMIs under Wiesbrock's additional hypotheses** (factor condition and
+cyclicity / standardness of the relative commutant N′ ∩ M) force the ambient factor into type III₁ (Wiesbrock 1993,
+source-text verified scope) [Q3R-02]. It is **not** claimed that every HSMI forces III₁ from half-sidedness alone;
+singular HSMIs with trivial relative commutant are the reason to keep the distinction. The finite and type-I control admits
 **only** the trivial inclusion.
 
-## G3-3 One translation line is not Σ — **PARTIAL CONDITIONAL COMPRESSION OF Σ (one-dimensional, chiral)**
+## G3-3 One translation line is not Σ — **PARTIAL CONDITIONAL COMPRESSION OF ONE-DIMENSIONAL ORDERED LOCALIZATION STRUCTURE** [Q3R-01]
 
 | earned from one HSMI | still needed for Σ |
 |---|---|
@@ -91,8 +96,11 @@ It **is** a cheaper *specification*:
 | the dilation / modular relation (the affine group) | intersections producing bounded local regions |
 | — | isotony / locality for a higher-dimensional net |
 | — | identification of physical observables with these algebras |
+| — | **non-trivial bounded-interval algebras** A(a, b) = M(a) ∩ M(b)′. A general HSMI can have **trivial relative commutant N′ ∩ M = ℂ·1**; explicit modern examples exist. Then the bounded-interval candidates collapse, while the affine / ordering structure remains |
 
-One-dimensional localization is **not** promoted to full Σ.
+**One HSMI conditionally reconstructs an ORDERED HALF-LINE / BORCHERS-TRIPLE localization structure, not automatically
+a one-dimensional local net.** A non-trivial local interval net needs additional priced assumptions (standardness /
+non-triviality of the relative commutants). One-dimensional ordered localization is **not** promoted to full Σ.
 
 ## G3-4 Multiple HSMIs / modular intersections — **CONDITIONAL COMPRESSION with the geometry type RELOCATED into the relation pattern**
 
@@ -139,24 +147,25 @@ One-dimensional localization is **not** promoted to full Σ.
 
 | structure | grade |
 |---|---|
-| translations (one null direction) | **reconstructed** from one HSMI (CONDITIONAL; equivalent to a positive half-sided translation) |
+| translations (one null direction) | **reconstructed** from one HSMI (CONDITIONAL; interdefinable with a positive half-sided translation); parameter normalization fixed, **physical scale supplied** |
 | boosts / dilations (one) | the modular group itself acts as the dilation (CONDITIONAL; given HSMI) |
 | full Lorentz / Poincaré group | **CONDITIONAL** on a finite set of algebras in a specified modular pattern (Kähler–Wiesbrock); the pattern encodes the group type |
 | spacetime geometry | **RELOCATED** into the relation pattern (dimension, incidence) |
-| local net | **CONDITIONAL**, and the 3+1 step consumes BW (partly circular) |
+| local net | **not automatic** even in 1D (relative-commutant price); the 3+1 step consumes BW (partly circular) |
 
 ## G3-8 Σ comparison with the frozen residual
 
 **Not asked:** "can geometry be reconstructed after a full net is supplied?" That is RELOCATION by definition.
 
 **Asked:** can a small modular seed generate a larger localization net?
-- One HSMI generates a **one-dimensional** net from two algebras + Ω + a sign. A finite modular pattern generates a
+- One HSMI generates an **ordered half-line family** (a Borchers triple) from two algebras + Ω + a sign. It is **not
+  automatically a local interval net** [Q3R-01]. A finite modular pattern generates a
   3+1 Poincaré representation and, with BW, a net.
 - **The seed encodes the geometry type** (the relation pattern) and **the positivity / direction** (half-sidedness), so
   **TRUE COMPRESSION is not earned.**
 
-> **Terminal: PARTIAL CONDITIONAL COMPRESSION of Σ** (specification-level), with the geometry type and orientation
-> RELOCATED into the modular-position pattern.
+> **Terminal: PARTIAL CONDITIONAL COMPRESSION OF ONE-DIMENSIONAL ORDERED LOCALIZATION STRUCTURE** (specification-level).
+> The geometry type and orientation are RELOCATED into the modular-position pattern. **Full Σ remains uncompressed.**
 
 ## G3-9 Dimension — **DIMENSION REMAINS SUPPLIED**
 
@@ -175,18 +184,22 @@ selected.**
 
 ## Terminal
 
-> **G3 TERMINAL:**
-> - **One HSMI:** PARTIAL CONDITIONAL COMPRESSION (specification-level) of a one-dimensional localization + positive
->   translation + dilation structure. Information-level it is **RELOCATION into half-sidedness** (the Borchers ⇔
->   Wiesbrock equivalence).
-> - **Positive energy:** DERIVED given the signed HSMI, i.e. relocated into it, not separately supplied.
-> - **Orientation:** RELOCATED (hsm sign + inclusion order + complex structure); **NOT SELECTED** (G2 preserved).
-> - **Σ:** PARTIAL (1D) CONDITIONAL COMPRESSION.
-> - **Poincaré / 3+1 net:** CONDITIONAL on a finite modular pattern that encodes the geometry type; the net step is
->   partly BW-circular.
-> - **Dimension:** SUPPLIED.
-> - **Vacuum / state:** SUPPLIED.
-> - **TRUE COMPRESSION = 0.**
+> **G3 TERMINAL (after QFT REPAIR 03, Q3R-06):**
+> 1. A signed HSMI conditionally reconstructs a **positive-energy translation–dilation representation** and an **ordered
+>    continuum of half-line algebras** M(a) = U(a)MU(−a).
+> 2. This structure is **logically interdefinable, at the theorem scope**, with the corresponding positive half-sided
+>    Borchers-triple data. Positivity is therefore **relocated into half-sided modular position**, not freely produced from
+>    nothing.
+> 3. A **non-trivial bounded-region local net is NOT automatic.** Relative-commutant / standardness information is an
+>    additional price; HSMIs with N′ ∩ M = ℂ·1 exist.
+> 4. Orientation remains **unselected**.
+> 5. The physical metric scale remains **supplied**: the inclusion fixes only the parameter normalization
+>    N = U(1)MU(−1).
+> 6. Full Σ remains **uncompressed**. Only one-dimensional ordered localization receives **PARTIAL CONDITIONAL
+>    COMPRESSION**.
+> 7. Poincaré reconstruction is conditional on a supplied modular-position pattern.
+> 8. Dimension remains **supplied**.
+> 9. **TRUE COMPRESSION = 0.**
 
 ## Scope
 

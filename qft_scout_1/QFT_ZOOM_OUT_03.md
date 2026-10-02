@@ -2,21 +2,27 @@
 
 **Branch:** `qft-scout-1`. All frozen inputs untouched. **G4 not started.**
 
+> **Amended by QFT REPAIR 03** (owner, after `80f250a`). The answers below are read with Q3R-01 … 06 (`QFT_CORRECTION_LEDGER.md`):
+> - one HSMI gives an **ordered half-line / Borchers-triple** structure, not automatically a local interval net;
+> - type III₁ is forced only under Wiesbrock's additional relative-commutant hypotheses;
+> - the inclusion fixes the **parameter normalization, not a physical scale**;
+> - "same information" means **logical interdefinability at the theorem scope**.
+
 ## 1. What does one HSMI reconstruct?
 
 From two algebras N ⊂ M, a common standard Ω and a sign bit, one HSMI reconstructs:
 - a **positive-energy affine (translation + dilation) group representation**, with P = (log Δ_N − log Δ_M)/2π ≥ 0;
 - the translated, totally ordered **continuum** M(s) = U(s)MU(−s);
-- the scale, fixed by the inclusion gap.
+- the **parameter normalization** N = U(1)MU(−1). A physical metric scale stays supplied [Q3R-03].
 
-That is a **one-dimensional (light-ray) localization structure.**
+That is a **one-dimensional ordered half-line (Borchers-triple) localization structure** [Q3R-01]. A non-trivial bounded-interval local net is **not** automatic.
 
 ## 2. What information is priced by the signed half-sided condition?
 
 **Exactly the positivity, direction and ordering of that structure.**
 
 Borchers' theorem (positive half-sided translations ⇒ HSMI) and Wiesbrock's converse (HSMI ⇒ positive translations)
-make the two **logically equivalent**. Half-sidedness is a cheaper **specification** but **not cheaper information.**
+make the two **logically interdefinable at the theorem scope** [Q3R-04]. Half-sidedness is, informally, a cheaper **specification**; no information measure is claimed.
 
 The smuggling is located in:
 - the half-sided property ↔ positivity + half-sided invariance;
@@ -40,9 +46,10 @@ All are supplied.
 
 ## 5. How much of Σ is genuinely reconstructed?
 
-**One dimension, chiral (PARTIAL CONDITIONAL COMPRESSION).**
+**Only one-dimensional ordered localization (PARTIAL CONDITIONAL COMPRESSION); full Σ remains uncompressed** [Q3R-01].
 
 Still needed:
+- non-trivial relative commutants / bounded-interval algebras (HSMIs with N′ ∩ M = ℂ·1 exist);
 - transverse localization;
 - causal complements;
 - bounded regions;
@@ -66,7 +73,7 @@ patterns of algebras.
 ## 8. Did QFT-SCOUT-1 earn its first CONDITIONAL / TRUE COMPRESSION?
 
 **Its first CONDITIONAL COMPRESSION (specification-level) of Σ / D-type structure: yes.** A finite seed of two algebras,
-Ω and a sign generates a continuum one-dimensional net plus a positive translation–dilation group. This is exactly the
+Ω and a sign generates an ordered continuum of half-line algebras (a Borchers triple, not automatically a local interval net) plus a positive translation–dilation group [Q3R-01]. This is exactly the
 owner's preregistered example of CONDITIONAL COMPRESSION ("recovering a net from a state plus modular-position
 assumptions").
 
@@ -88,7 +95,7 @@ multi-algebra pattern encodes the geometry type.
 | H_epoch | NOT SELECTED |
 | orientation | NOT SELECTED |
 | D_dyn | injective outer modular homomorphism, CONDITIONALLY SELECTED by type III₁ M |
-| Σ | 1D PARTIAL CONDITIONAL COMPRESSION |
+| Σ | PARTIAL CONDITIONAL COMPRESSION of 1D **ordered** localization only; full Σ uncompressed |
 | Poincaré | CONDITIONAL (pattern-priced) |
 | dimension | SUPPLIED |
 | TRUE COMPRESSION | **0** |

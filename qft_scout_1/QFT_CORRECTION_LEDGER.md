@@ -49,3 +49,16 @@
 | Buchholz–Dreyer–Florig–Summers (2000), geometric modular action; Borchers–Yngvason thermal-state modular groups | CITED FROM THE STANDARD LITERATURE / MEMORY, TEXT NOT RE-READ. Not verdict-bearing |
 | Lemmas F1, F2 (finite obstruction) | proved here |
 | Antiunitary maps flip the hsm sign (Θ·Δ^{is}·Θ⁻¹ = Δ_Θ^{−is}) while P stays ≥ 0 | elementary QFT-SCOUT observation |
+
+## QFT REPAIR 03 — sharpen G3 reconstruction scope (owner, after `80f250a`; G3 accepted provisionally)
+
+Unchanged: H_cross CONSTRAINED-NONUNIQUE; orientation NOT SELECTED; H_epoch NOT SELECTED; TRUE COMPRESSION = 0.
+
+| ID | change |
+|---|---|
+| **Q3R-01** | **HSMI ⇒ Borchers triple, not automatically a non-trivial local interval net.** Keep: HSMI (N ⊂ M, Ω) ↔ one-dimensional Borchers triple (M, U, Ω) (Wiesbrock / Araki–Zsidó scope), giving positive U(a), modular / dilation covariance and the ordered family M(a) = U(a)MU(−a). Candidate intervals A(a, b) = M(a) ∩ M(b)′ can be trivial: explicit HSMIs with N′ ∩ M = ℂ·1 exist (owner pointer, arXiv:2111.03172). New Σ grade: **PARTIAL CONDITIONAL COMPRESSION OF ONE-DIMENSIONAL ORDERED LOCALIZATION STRUCTURE.** Full frozen Σ remains uncompressed |
+| **Q3R-02** | **Type III₁ scope.** F1 / F2 are kept (bounded generator + one-sided invariance ⇒ two-sided; finite standard proper HSMIs obstructed). "A non-trivial HSMI forces III₁" is narrowed to: **standard non-trivial HSMIs under Wiesbrock's additional relative-commutant hypothesis (factor + cyclicity / standardness of N′ ∩ M) force type III₁.** Not claimed from half-sidedness alone |
+| **Q3R-03** | **Normalization ≠ physical scale.** N = U(1)MU(−1) fixes the translation parameter relative to (N, M). It does not derive a meter, a proper distance, an absolute null interval or a physical length scale. The toy's gaps used a supplied coordinate. **PARAMETER NORMALIZATION CONDITIONALLY FIXED; PHYSICAL SCALE SUPPLIED** |
+| **Q3R-04** | **Logical interdefinability, not measured information equality.** Borchers + Wiesbrock interconvert a signed HSMI and the positive half-sided Borchers-triple data under the theorem hypotheses: **LOGICALLY INTERDEFINABLE AT THE THEOREM SCOPE**, hence **RELOCATION INTO HALF-SIDED MODULAR POSITION** of positivity and half-sided translation structure. No Shannon / Kolmogorov information is claimed equal. "Cheaper specification" is retained only informally |
+| **Q3R-05** | **Source upgrades.** Wiesbrock CMP 157 (1993): **PRIMARY / SOURCE-TEXT VERIFIED** (author-uploaded full text inspected by the owner) for HSMI → U(a), the positive generator, the modular scaling relation, N = U(1)MU(−1), and the qualified III₁ statement. Kähler–Wiesbrock 2001: **PRIMARY-PUBLISHER ABSTRACT VERIFIED** for exactly a 3+1 Poincaré representation from the modular groups of algebras in specified modular position, plus a 3+1 net when combined with BW. Araki–Zsidó: SOURCE LOCATED / ABSTRACT VERIFIED |
+| **Q3R-06** | **Revised G3 terminal** (nine points, as recorded in `G3_MODULAR_RECONSTRUCTION_RESULT.md`) |
