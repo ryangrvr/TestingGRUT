@@ -14,8 +14,9 @@ The residual boundary datum is
     H_arrow = H_corr = independence / low inter-subsystem correlation (incl. freshness of
               not-yet-interacted degrees of freedom), relative to Σ, at a chosen time.
 
-Low entropy is **neither necessary** (maximally mixed bath) **nor sufficient** (correlated low-entropy-marginal
-counterexamples are possible by the same construction).
+Low entropy is **neither necessary** (maximally mixed bath) **nor sufficient**. In D1 the reversed state is globally
+pure, so its environment entropy equals S_S = 1.238 bits, out of a possible 8. That environment is low-entropy, yet the
+state runs an anti-arrow (1.238 → 0), because it is correlated.
 
 **2. Is the arrow definable independently of Σ?** **No.**
 - The same global state is product in one frame (the Householder frame, S_S(0) = 0, then rising) and at equilibrium in
