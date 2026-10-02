@@ -1,0 +1,60 @@
+
+==============================================================================
+B1-0 canonical net, for reference only (NOT an input to any reconstruction below)
+==============================================================================
+  C1-a: N=24, spectrum [0.3000, 4.2829], nondegenerate: True; nnz(K) = 70
+  canonical geometry predicate (L0-1b): Q, monotone, SURVIVES = (np.float64(23.000000000000195), True, True)
+
+==============================================================================
+B1-1 interaction support / sparsity (generator-only criteria on Kp)
+==============================================================================
+  sparsest frame: the normal-mode frame makes Kp DIAGONAL (nnz = 24) < canonical chain (nnz = 70).
+  -> pure sparsity / autonomy / response-factorization optimum = decoupled normal modes: NO interaction edges, the
+     L0-1b geometry predicate is undefined (empty graph). The canonical net is NOT the sparsity optimum.
+  Requiring a CONNECTED sparsest net (bandwidth-1 chain): Lanczos from ANY unit start vector q gives a frame where Kp is
+  tridiagonal (a nearest-neighbour chain), so the constraint selects a CONTINUUM (q on S^{N-1} modulo sign).
+  400 random start vectors: 400 chains; sign-gauge cooperative (Kamke) 400; all pins >= 0 (passive spring reading) 0; L0-1b geometry predicate SURVIVES with pins >= 0: 0; of these NOT signed-permutation-equivalent to the canonical chain: 0; uniform pin 0.3 (canonical C1-a form): 0
+  start q = canonical end-site + eps*noise, eps=0.02: passive (pins >= 0) chains 50/50; + geometry SURVIVES 50; of these inequivalent to canonical 50
+  start q = canonical end-site + eps*noise, eps=0.05: passive (pins >= 0) chains 38/50; + geometry SURVIVES 38; of these inequivalent to canonical 38
+  start q = canonical end-site + eps*noise, eps=0.1: passive (pins >= 0) chains 11/50; + geometry SURVIVES 11; of these inequivalent to canonical 11
+  start q = canonical end-site + eps*noise, eps=0.2: passive (pins >= 0) chains 1/50; + geometry SURVIVES 1; of these inequivalent to canonical 1
+  -> GENERAL PASSIVE COOPERATIVE CLASS (weighted springs, non-uniform pins >= 0): a CONTINUUM of inequivalent chain nets for
+     the same generator, all passing the L0-1b geometry predicate. Random q fails (pins < 0) only because the admissible set is
+     a neighbourhood, not the whole sphere.
+  L0-1b class (uniform pin 0.3, weighted springs >= 0): random small rotations fixing the uniform mode that keep K - 0.3I a weighted Laplacian: 0/3000
+  optimization: no inequivalent isospectral weighted Laplacian found in 8 restarts -> reported as NOT FOUND (the L0-1b class may pin the net)
+  NARROW C1-a class (uniform pin 0.3, UNIT springs): the path is determined by its Laplacian spectrum (DLS, known result), so the
+  net is unique up to graph automorphism and the K-commutant (H-relative gauge) -> CONDITIONAL on the supplied class (CRITERION-PRICED).
+
+==============================================================================
+B1-2 the same generator spectrum, a 2D canonical-style net vs a 1D chain net (geometry / dimension not reconstructable)
+==============================================================================
+  UNIFORM 5x5 grid: 11 degenerate eigenvalue pairs -> it CANNOT be a connected chain in any frame (a Jacobi matrix has a simple
+  spectrum): spectral multiplicity constrains which nets are possible (a partial, not complete, constraint).
+  5x5 grid net: geometry predicate (np.float64(4.451414419202023), False) (Q, line-ordering) ; Lanczos chain frame of the SAME operator: (np.float64(80.92600854294129), True); chain pins >= 0: False
+  -> the generator alone does not fix even the DIMENSION of the net-derived geometry (2D lattice vs 1D chain, same spectrum).
+
+==============================================================================
+B1-3 invariant-sector structure and response kernels
+==============================================================================
+  Kp has nondegenerate spectrum: its invariant subspaces are spans of eigenvectors (global modes), none localized -> no net.
+  memory kernel k(tau) of the canonical retained site:  3.88e-01 5.56e-02 8.83e-03 3.12e-04 5.47e-07
+  memory kernel of a Lanczos-chain 'site 0' (random q):  2.89e-01 3.12e-02 4.20e-03 1.26e-04 1.93e-07
+  -> every unit vector is the 'retained site' of some chain net; the retained/bath partition is not fixed by K.
+
+==============================================================================
+B1-4 noise layer (L0-1e: Q = 2 diag(T_i)) as a net carrier
+==============================================================================
+  uniform T_i = 1: Q' is proportional to I in every frame -> carries NO net information
+  non-uniform T_i: the eigenframe of Q' recovers the canonical site axes (min |overlap| = 1.000000) -> net carried by the NOISE layer
+  -> with non-uniform site temperatures the net is RECONSTRUCTABLE from Q alone: RELOCATION (net information encoded in the
+     supplied environment layer), not derivation.
+
+==============================================================================
+B1-5 nonlinear drift (L0-1c on-site convex quartic) as a net carrier
+==============================================================================
+  quartic tensor of V in the deleted-net frame -> tensor power iteration + deflation recovers 24 axes; min over recovered axes of max |overlap with a canonical site| = 1.00000000; residual ||T|| after deflation = 4.3e-13
+  orthogonally decomposable symmetric tensors have a unique decomposition up to sign/permutation (known result) -> the
+  on-site quartic drift DETERMINES the canonical site axes. The drift was supplied in site-local form, so this is
+  RELOCATION / REDUNDANT SUPPLY (net recoverable from the drift layer), not derivation from un-netted structure.
+  control: a quartic that is on-site in a DIFFERENT frame recovers THAT frame instead (overlap with canonical sites 0.587) -> the drift selects whatever net it was written in.

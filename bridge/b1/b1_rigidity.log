@@ -1,0 +1,25 @@
+
+==============================================================================
+(i) GLOBAL search, L0-1b class: other frames where K - 0.3 I is a weighted graph Laplacian (canonical: path, N = 12 and 24)
+==============================================================================
+  N=12: restarts 12; exactly feasible Laplacian frames 0; of these INEQUIVALENT to the path 0; best residual violation 3.37e-11
+  N=24: restarts 6; exactly feasible Laplacian frames 0; of these INEQUIVALENT to the path 0; best residual violation 7.69e-02
+
+==============================================================================
+(ii) the 2D grid generator: is there ANY passive chain frame (all pins >= 0)?  maximize the minimum pin over Lanczos start vectors
+==============================================================================
+  weighted 4x4 grid (pin 0.3): best achievable minimum pin over Lanczos chain frames = 0.1475 (passive chain exists iff >= 0)
+  start at canonical site  0: min pin of its chain frame -0.2488
+  start at canonical site  5: min pin of its chain frame -0.5109
+
+==============================================================================
+(iii) inspect the near-feasible N=12 frame and the passive chain frame of the 2D grid
+==============================================================================
+  N=12 best frame: violation 0.0e+00; after zeroing |entries| < 1e-4: signed-permutation-equivalent to the path: False; off-diagonal nonzeros 116 (path: 22)
+  4x4 grid passive chain frame: min pin +0.1475; chain geometry predicate (Q, monotone, SURVIVES) = (np.float64(40.530749061977026), True, True); canonical 2D grid net predicate = (np.float64(3.846114830175086), False, np.False_)
+
+==============================================================================
+(iv) verify the N=12 isospectral weighted Laplacian is a genuine L0-1b-class member
+==============================================================================
+  min off-diagonal weight +1.29e-05 (>= 0 required); max |row sum of Lw| 1.4e-15; max |spectrum difference| vs path Laplacian 1.7e-14
+  positive-weight edges 66 of 66; weight range [1.288e-05, 1.522]; geometry predicate (Q, monotone, SURVIVES) = (np.float64(34.135711051641884), False, False)
