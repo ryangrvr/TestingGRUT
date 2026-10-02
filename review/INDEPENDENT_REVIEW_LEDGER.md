@@ -48,7 +48,7 @@ or the nominal frame. Applied to every SCOUT-2 case classified "incompatible" (`
 - H5a: min C_min over all 202 id-frame groupings = 1.46 bits;
 - H7: 1.64 bits.
 
-Both are certified. **No IR-06.**
+Both are certified, so no further incompatibility misclassification was found. (The ID IR-06 was later used for frozen-ledger precedence.)
 
 **S2-Σ (NR-Σ-1 … 7):** REVIEW-CONFIRMED-WITH-SCOPE (`review/NR_SIGMA_RESULT.md`).
 
