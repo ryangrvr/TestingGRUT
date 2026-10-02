@@ -1,0 +1,122 @@
+
+==============================================================================
+H2-1  deterministic contraction on R^2:  F(x) = c R(phi) x + b,  c = 0.8
+==============================================================================
+  b = 0 (law is rotation-equivariant about 0): fixed point x* = [-0.  0.];  max |x_400 - x*| over starts incl. 1e6: 1.8e-33
+  b = (1.3, -0.4) (explicit offset): fixed point x* = [1.400924 0.950654];  max |x_400 - x*| over starts incl. 1e6: 1.1e-16
+  A: unique fixed point (Banach).  B: EVERY start in R^2 converges; no measure, no exclusions.
+  C (exact rational arithmetic, n = 200): |x_a - x_b|_1 at n=200 = 4.56e-26 (initial 1e-6); exact inversion recovers x0_a: True
+     float64 inversion after n =  20: recovery error 2.6e-14
+     float64 inversion after n =  60: recovery error 7.2e-11
+     float64 inversion after n = 120: recovery error 1.1e-04
+     float64 inversion after n = 200: recovery error 1.1e+04
+  => the affine contraction is a BIJECTION: fine-grained information is NOT erased; it is pushed below any
+     finite resolution (A-priced forgetting).  Genuine erasure needs a non-injective law:
+     F(x) = 0.8|x| + 0.5 (Lipschitz 0.8, non-injective): F(0.37) = 0.796, F(-0.37) = 0.796  -> merged EXACTLY in one step
+
+==============================================================================
+H2-1'  the contraction realized unitarily: qubit system + fresh ancillas |0>, partial-swap collisions
+==============================================================================
+   k   TD(system)   TD(global = sqrt(1-|<a|b>|^2))   <Z_sys> for both
+   0   0.7071       0.707107                        -1.000 +0.000
+   1   0.5351       0.707107                        -0.362 +0.319
+   2   0.4121       0.707107                        +0.072 +0.536
+   3   0.3225       0.707107                        +0.368 +0.684
+   4   0.2558       0.707107                        +0.569 +0.785
+   5   0.2050       0.707107                        +0.707 +0.853
+   6   0.1657       0.707107                        +0.800 +0.900
+   7   0.1348       0.707107                        +0.864 +0.932
+   8   0.1101       0.707107                        +0.907 +0.954
+  => system converges toward the ANCILLA state |0>; global distinguishability is conserved exactly;
+     the attractor value is the bath's PREPARATION (H relocated into the environment's state).
+
+==============================================================================
+H2-2  gradient flows  dx/dt = -V'(x)
+==============================================================================
+  a  unique min, V = x^4/4 + x^2/2 - 0.7x:
+     x0 :   -5.0e+01 -1.0e+00 -3.0e-01 -1.0e-09  0.0e+00  1.0e-09  3.0e-01  1.0e+00  5.0e+01
+     x(60):   0.5414   0.5414   0.5414   0.5414   0.5414   0.5414   0.5414   0.5414   0.5414
+  a0 unique min, symmetric (a = 0):
+     x0 :   -5.0e+01 -1.0e+00 -3.0e-01 -1.0e-09  0.0e+00  1.0e-09  3.0e-01  1.0e+00  5.0e+01
+     x(60):  -0.0000  -0.0000  -0.0000  -0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+  b  double well + tilt eps = 0.05:
+     x0 :   -5.0e+01 -1.0e+00 -3.0e-01 -1.0e-09  0.0e+00  1.0e-09  3.0e-01  1.0e+00  5.0e+01
+     x(60):  -1.0241  -1.0241  -1.0241  -1.0241  -1.0241  -1.0241   0.9740   0.9740   0.9740
+  c  symmetric double well:
+     x0 :   -5.0e+01 -1.0e+00 -3.0e-01 -1.0e-09  0.0e+00  1.0e-09  3.0e-01  1.0e+00  5.0e+01
+     x(60):  -1.0000  -1.0000  -1.0000  -1.0000   0.0000   1.0000   1.0000   1.0000   1.0000
+  a / a0: every start reaches the unique minimum (strictly convex V): A + B hold for EVERY x0.
+  b: two stable minima persist under the tilt; the unstable stationary point never leaves -> BASIN DATA SURVIVES.
+  c: outcomes +-1 are gauge-related by x -> -x, BUT x0 = 0 stays at 0 forever (an admissible stationary state).
+  C: forward then backward integration, T =  2.0: recovered x0 = 3.000000 (true 3.0)
+  C: forward then backward integration, T =  8.0: recovered x0 = 3.000009 (true 3.0)
+  C: forward then backward integration, T = 20.0: recovered x0 = 515178.548014 (true 3.0)
+  => finite-time gradient flow is invertible (ODE uniqueness); convergence is asymptotic; information is lost
+     only below finite resolution / as T -> infinity (A-priced), not from the exact microstate at finite T.
+
+==============================================================================
+H2-3  primitive Markov chains and a primitive qubit channel
+==============================================================================
+  doubly stochastic (Birkhoff mixture): primitive True;  stationary pi = [0.2 0.2 0.2 0.2 0.2];  |lambda_2| = 0.496;  det P = -2.52e-03
+     from [1. 0. 0. 0. 0.]:  p_60 = [0.2 0.2 0.2 0.2 0.2]
+     from [0. 0. 0. 0. 1.]:  p_60 = [0.2 0.2 0.2 0.2 0.2]
+     from [0.2 0.2 0.2 0.2 0.2]:  p_60 = [0.2 0.2 0.2 0.2 0.2]
+     C: invert P^3  on the float64 distribution: recovery error 4.9e-13  (cond 1.7e+04)
+     C: invert P^10 on the float64 distribution: recovery error 1.1e-03  (cond 1.3e+14)
+     C: invert P^30 on the float64 distribution: recovery error 3.8e-01  (cond 1.2e+18)
+  generic row-stochastic: primitive True;  stationary pi = [0.233  0.2278 0.1529 0.2501 0.1362];  |lambda_2| = 0.204;  det P = -7.62e-04
+     from [1. 0. 0. 0. 0.]:  p_60 = [0.233  0.2278 0.1529 0.2501 0.1362]
+     from [0. 0. 0. 0. 1.]:  p_60 = [0.233  0.2278 0.1529 0.2501 0.1362]
+     from [0.2 0.2 0.2 0.2 0.2]:  p_60 = [0.233  0.2278 0.1529 0.2501 0.1362]
+     C: invert P^3  on the float64 distribution: recovery error 7.8e-15  (cond 1.5e+03)
+     C: invert P^10 on the float64 distribution: recovery error 8.0e-08  (cond 1.6e+10)
+     C: invert P^30 on the float64 distribution: recovery error 8.0e-01  (cond 1.5e+33)
+  => unique stationary distribution from EVERY initial distribution (A + B).  At distribution level P^t is
+     injective here (det != 0): the exact distribution still encodes p_0; forgetting is resolution-priced.
+     Stochasticity (probability) is supplied in the transition law: PROBABILITY D-PRICED.
+  H2-6 robustness: perturb the doubly stochastic chain (row-renormalized noise 0.02): pi = [0.1927 0.1982 0.2067 0.1985 0.204 ]
+     primitivity (uniqueness) survives (open condition); UNIFORMITY of pi does not (tuned constraint).
+  amplitude-damping+dephasing qubit channel, step  0: TD = 0.7071;  rho_a[0,0] = 0.0000
+  amplitude-damping+dephasing qubit channel, step 10: TD = 0.0168;  rho_a[0,0] = 0.9718
+  amplitude-damping+dephasing qubit channel, step 20: TD = 0.0004;  rho_a[0,0] = 0.9992
+  amplitude-damping+dephasing qubit channel, step 30: TD = 0.0000;  rho_a[0,0] = 1.0000
+  amplitude-damping+dephasing qubit channel, step 40: TD = 0.0000;  rho_a[0,0] = 1.0000
+  => unique fixed point |0><0| = the zero-temperature bath state (Stinespring: same as H2-1').
+
+==============================================================================
+H2-4  unitary hostile: random Hamiltonian, 6 qubits
+==============================================================================
+  eigenvalues of U(0.3): |lambda| in [1.000000000000, 1.000000000000]  (no attracting fixed point)
+   t=   0: global TD = 0.992178987987;  qubit-0 TD = 0.0555
+   t=   1: global TD = 0.992178987987;  qubit-0 TD = 0.0996
+   t=   5: global TD = 0.992178987987;  qubit-0 TD = 0.1548
+   t=  20: global TD = 0.992178987987;  qubit-0 TD = 0.1124
+   t= 100: global TD = 0.992178987987;  qubit-0 TD = 0.1642
+  => NO FINE-GRAINED H SELECTION: exact distinguishability conserved; apparent equilibration only in reduced /
+     coarse observables (cf. S2-3b).  Scope: unitary / Hamiltonian / isometric dynamics.
+
+==============================================================================
+H2-7  shared reference frames: dissipative alignment (U(1)) and Ising frame field (Z2: J <-> -J)
+==============================================================================
+  complete graph, identical frames, 20 random starts: final order r in [1.000000, 1.000000]
+  complete graph, admissible stationary start (two antipodal clusters 23/17): r = 0.150 -> 1.000;  with 1e-6 kick -> 1.000
+  ring (nearest-neighbour), 30 random starts: final winding numbers {-3: 1, -2: 7, -1: 8, 0: 9, 1: 4, 2: 1};  r of non-synced finals: [np.float64(0.0), np.float64(0.001), np.float64(0.002)]
+     twisted states (winding q != 0) are stable attractors -> BASIN DATA SURVIVES on the ring.
+  H2-6 complete graph with frequency disorder sigma = 0.0: r = 1.000
+  H2-6 complete graph with frequency disorder sigma = 0.2: r = 0.985
+  H2-6 complete graph with frequency disorder sigma = 0.5: r = 0.753
+  H2-6 complete graph with frequency disorder sigma = 1.0: r = 0.274
+     disorder makes order a REGIME of D (K > K_c ~ 2 sqrt(2/pi) sigma), not structural.
+  2D Ising frame field, ZERO-temperature Glauber (pure energy descent), L = 32, 120 random starts, 3000 sweeps:
+     reached a uniform aligned state (|m| = 1): 0.56;  frozen striped states: 0.44
+  finite-T Glauber T = 1.8: <|m|> = 0.959;  frame correlation 2<f_A f_B> at distance 16: 1.896
+  finite-T Glauber T = 3.2: <|m|> = 0.068;  frame correlation 2<f_A f_B> at distance 16: -0.013
+  complete-graph Ising, zero-T, N = 201 (odd), 200 starts: uniform aligned final states 1.00; orientation + : 0.49
+
+==============================================================================
+H2-7 checks: exact stationarity of the antipodal start; frozenness of zero-T striped states
+==============================================================================
+  antipodal 23/17 config: max |d theta/dt| = 7.2e-17 (float sin(pi) = 1.2e-16; exactly 0 in exact arithmetic); largest Jacobian eigenvalue = +1.026 (unstable)
+  => the earlier 'r -> 1 without kick' is float roundoff acting as the kick. In exact dynamics this admissible
+     state never synchronizes. The set of such non-synchronized equilibria is closed, nowhere dense and Lebesgue-null.
+  non-uniform zero-T states after 3000 more sweeps: 53 -> still non-uniform 53; straight horizontal/vertical stripes: 53

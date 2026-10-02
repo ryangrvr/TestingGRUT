@@ -21,3 +21,5 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | weight-simplex win shares | S2-Σ | Dirichlet(1) on the 4-simplex | supplied | shares are measure-relative; only the Pareto front is measure-free |
 | perturbation robustness of Σ | S2-Σ | GUE scaled to ‖H‖ | supplied | winners change with ε |
 | candidate TPS family | S2-Σ | finite family (202 groupings × 7 frames) | supplied | non-dominance is robust to enlarging the family; any dominance claim would not be |
+| "random starts" in H2 (Kuramoto, Ising, ring) | S2-H2 | uniform on phases / spins (sampling) | supplied for frequencies only | fractions (21/30 twisted, 44% stripes) are sampling-measure-relative; the existence of alternative attractors is not |
+| exclusion of unstable equilibria (Kuramoto complete graph, symmetric well) | S2-H2 | none — closed nowhere-dense null set (Baire and Lebesgue agree) | n/a | "every admissible state" fails; exclusion priced |

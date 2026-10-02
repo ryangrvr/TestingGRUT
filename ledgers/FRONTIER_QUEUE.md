@@ -21,8 +21,9 @@
 | ZOOM_OUT_04 | Σ/G1 zoom-out | **DONE** | Σ survives as a supplied object: (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)); candidate T2-3 (commutant blindness) |
 | S2-Σb | epoch-integrated criteria (optional; not automatic) | HELD | — |
 | REPAIR 02 | owner audit of S2-Σ (commutant = H-relative gauge; epoch scoped; literature regraded) | **DONE** | Y-07…Y-09 |
-| S2-H2 | state / basin selection by dynamics: A/B/C notions, admissible spaces pre-registered (attacks H) | **NEXT** | — |
-| ZOOM_OUT_05 | after H2: what irreducible specification remains? then choose G2-4 / Σb / D-hostile / saturation | GATED on H2 | — |
+| S2-H2 | state / basin selection by dynamics (attacks H) | **DONE** | structural attractors compress H into D mod gauge (symmetric contraction; doubly stochastic; all-to-all alignment, Ising complete graph 200/200) — TUNING / NON-LOCALITY / ARROW priced; explicit-parameter cases = RELOCATION; dissipation dilates to H_env; unitary: no fine-grained selection; local coupling keeps basins (ring 21/30 twisted; 2D 44% frozen stripes) |
+| ZOOM_OUT_05 | after H2 | **DONE** | remaining: D_dyn + arrow, H_env, Σ/Sym(H), A_res; candidate T2-4 (every H→D compression is arrow-priced, paid by H_env) |
+| S2-D-arrow | can a closed unitary universe generate an effective subsystem arrow from EVERY admissible global state? (new D-hostile) | **RECOMMENDED NEXT** (awaiting owner) | — |
 | S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension (separately) | QUEUED after ZOOM_OUT_04 | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

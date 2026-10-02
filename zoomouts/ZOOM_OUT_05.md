@@ -1,0 +1,64 @@
+# SCOUT-2 ZOOM-OUT 05 (after REPAIR 02 and S2-H2)
+
+**Central question (owner):** after quotienting the Σ gauge correctly, and after H2, what genuinely irreducible
+specification remains?
+
+## Status of each wall
+
+| wall | after REPAIR 02 + H2 |
+|---|---|
+| **D_dyn** | Not attacked directly. It has **grown**: it now has to carry an **arrow** (dissipation / non-injectivity) whenever it compresses H, plus exact symmetries or non-local coupling to make the compression structural |
+| **H** | **Splitting further.** H_measure → D (S2-3b; doubly stochastic uniformity, H2-3). H_state → D mod gauge in structural dissipative cases (H2). The fine-grained state is **never** selected by isometric dynamics (H2-4, S2-3b). Every dissipative compression **relocates H into an environment preparation** (H2-1′, channel). Local coupling leaves basin data (twists, stripes) |
+| **Σ** | Not selected from (H, ψ) in the tested family (Pareto / dimension / objective / scale / state evidence; the commutant is H-relative gauge). Supplied: **(d, #factors, preference order, scale) / Sym(H)** |
+| **A_res** | Unchanged. It also prices every "forgetting" claim made in H2: resolution-limited forgetting in bijective contractions, gradient flows and Markov chains |
+
+## Irreducible specification remaining (tested scope)
+
+    D_dyn  (+ an arrow: dissipation / non-injectivity, + exact symmetry or non-local coupling where H is compressed)
+    H_env  (the low-entropy preparation of whatever environment the arrow dumps information into)
+    Σ      (d, #factors, preference order, scale) / Sym(H)
+    A_res  (resolution, fragments, readout basis, time sequence)
+
+**What moved:** parts of H — the measure, the attractor state mod gauge, and the existence of the shared frame under
+all-to-all alignment — compressed into D. That is the campaign's first **TRUE H COMPRESSION INTO D**.
+
+**What it cost:** an arrow. In every dilated model the arrow is supplied by **H_env**. So H was not eliminated: the
+irreducible H-item became the **environment's low-entropy preparation** instead of the system's state.
+
+## The ten questions
+
+1. **Derived or renamed?** One genuine compression (structural attractors mod gauge), plus relocations. The
+   compression is real in the toy universes, and **arrow-priced**.
+2. **Where did the measure enter?** It was needed **nowhere** for B in the contraction, gradient, Markov or
+   complete-graph models. It did enter as the *exclusion* of unstable equilibria (Kuramoto, symmetric well), where
+   Baire and Lebesgue agree. "Every state" failed there, and the failure is priced.
+3. **Where did access enter?** All "forgetting" in bijective dissipative laws is **resolution-priced** (A). Exact
+   inversion recovers x₀.
+4. **Unique decomposition?** Unchanged: Σ supplied.
+5. **Unique composition?** Unchanged.
+6. **Did a basin sneak in?** Yes, as **H_env**: fresh ancillas |0⟩, the zero-temperature bath.
+7. **Is an observer assumed?** Only through the resolution-priced notion of forgetting.
+8. **Did information decrease?** **Yes, for the first time, in a scoped sense.** In the structural models the attractor
+   carries no information beyond D's symmetry class. Globally, though, information is conserved and moved to the
+   environment.
+9. **Has the C5 boundary moved?** Yes. The C5-H remainder is now **H_env + arrow**, not the system's basin. The shared
+   reference resource (S2-5) moves into D **only** for non-local dissipative alignment.
+10. **Hostile that would overturn this:** a **closed, unitary** universe whose *effective* arrow (records,
+    dissipation of subsystems) arises without a supplied low-entropy environment preparation, from **every**
+    admissible global state. If no such universe exists, H_env is the irreducible H-item.
+
+**Candidate T2-4** (classification; **CANONICAL-CANDIDATE: NO**): *In the tested universes, every compression of H
+into D uses a non-injective or dissipative arrow. Every arrow, once unitarily dilated, is paid for by an environment
+preparation (H_env), and global fine-grained information is conserved. Structural (parameter-free) compression further
+needs exact symmetry or non-local coupling.* The general part — dissipation needs a bath; unitary dilation conserves
+distinguishability — is KNOWN RESULT (Stinespring, Landauer-type). The SCOUT content is its role as the price of
+every H → D move found in this campaign.
+
+## Choice of next phase (the owner asked that the choice be made here)
+
+| option | value |
+|---|---|
+| **S2-D-arrow** (a new hostile against D) | **recommended.** It attacks the item every H-compression now rests on. Can a closed unitary universe generate an effective subsystem arrow from every admissible global state? Or only from low-entropy / product preparations, i.e. a past-hypothesis-type H_env? This also tests whether Σ (which subsystem is the "environment") is needed to define the arrow |
+| S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension. Independent of the arrow question; can run after |
+| S2-Σb | epoch-integrated criteria. Lower priority: the commutant is gauge, and the physical Σ nonuniqueness does not depend on epoch |
+| saturation | **not reached.** H2 produced a new positive mechanism and a new price, so the campaign is still yielding |

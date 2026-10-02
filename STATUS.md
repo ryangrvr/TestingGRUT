@@ -14,7 +14,9 @@
 - **S2-Σ + G1 DONE:** no TPS dominates without a scoring convention (58/58 runs); local dimension remains a Σ primitive; CPR / Carroll–Singh / Stoica reconciled by scope.
 - **ZOOM_OUT_04 DONE:** Σ survives as a supplied object: Σ = (d, #factors, preference order, scale, epoch) / (Sym(H) × commutant(H)). Candidate T2-3: H-only selectors are commutant-blind; breaking it uses ψ at a chosen epoch.
 - **REPAIR 02 DONE (owner audit):** the commutant is H-relative gauge, not nonuniqueness (Y-07); the epoch claim is scoped to e^{−iHs} (Y-08); literature regraded (Y-09). Carried forward: Σ not selected from (H, ψ) in the tested family, on the Pareto / dimension / objective / scale / state evidence.
-- **Next:** S2-H2 (pre-registered) → ZOOM_OUT_05. Σb is NOT automatic.
+- **S2-H2 DONE:** first TRUE H COMPRESSION INTO D (structural attractors mod gauge), priced by exact symmetry / non-local coupling / an arrow. Dissipation relocates H into the environment's preparation (H_env). Unitary: no fine-grained selection. Local coupling keeps basin data.
+- **ZOOM_OUT_05 DONE:** remaining specification: D_dyn + arrow, H_env, Σ/Sym(H), A_res. Candidate T2-4 (arrow price).
+- **Next (recommended; owner choice):** S2-D-arrow (closed unitary universe: an effective arrow without a supplied H_env?), then G2–G4. Σb held.
 - **History:** S2-3b ✓ → S2-1b ✓ → S2-8 ✓ → S2-7 ✓ (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).
