@@ -59,3 +59,24 @@
   are an illustration of the resolution ladder, not a physical claim.
 - **The S2 ingredient list** (boundary Hamiltonian, unique vacuum, density of boundary-generated states) is summarized
   from the owner-verified source and **not re-read** in this environment.
+
+## GRAVITY REPAIR 02 — gravitational subsystem / resolution scope (owner ruling after GRAVITY_ZOOM_OUT_02)
+
+**Applied to:** `G2_GRAVITATIONAL_SUBSYSTEM_RESULT.md`, `G2_SUBSYSTEM_LEDGER.md`, `GRAVITY_ZOOM_OUT_02.md`, status.
+**Effect:** G2 is accepted **provisionally** after this repair.
+**No change to:** TRUE COMPRESSION = 0; empirical payoff = 0; zero confirmed distinctive GRUT quantitative predictions.
+
+| ID | correction | applied as |
+|---|---|---|
+| **GR2-01** | Donnelly–Giddings do not literally reconstruct a replacement type-I algebra | "𝒩 is replaced by ⊕_charge 𝒩_E" is withdrawn **as a continuum claim**. Replacement: **the ordinary AQFT type-I interpolation is no longer the relevant localization structure; perturbatively, a charge-labelled gravitational splitting (of Hilbert-space subspaces, at leading order) replaces its operational role.** The toy ⊕_E B(ℋ_E) is an **algebraic caricature only**: shared charge labels, sector-wise independence, loss of arbitrary product specification. Classification: **CONSTRAINED / CHARGE-SECTOR GRAVITATIONAL SPLITTING** + **RELOCATION into charges + dressing + perturbative order** |
+| **GR2-02** | Raju forbids ordinary split independence, not every conceivable type-I factor | Terminal: **ORDINARY QFT SPLIT INDEPENDENCE FORBIDDEN IN CLASS** (verified scope). A Doplicher–Longo-style 𝒩 implementing independent inside / outside specification is **BLOCKED / NOT APPLICABLE** there. No claim that no type-I factor of any kind can occur |
+| **GR2-03** | Resolution vs observable-class dependence | **Source-backed:** subsystem independence is **OBSERVABLE-CLASS / COARSE-GRAINING / PERTURBATIVE-ORDER dependent** (Donnelly–Giddings: leading-order exterior observables resolve total charges only; Raju: a rich boundary algebra determines the global state, while coarse-grained observable sets and their entropy are generally state-dependent). **Illustration only:** the ε ladder → **A_resolution COUPLING CANDIDATE — ILLUSTRATION GRADE**; gravity is **not** shown to determine A_resolution. The toy 75 / 6 equality with T1 is a **dimension coincidence only** |
+| **GR2-04** | Residual mapping | Σ / A_partition: **CONSTRAINED / OBSERVABLE-CLASS-PRICED**. A_interface: **RELOCATION**. A_resolution: **POTENTIALLY LOAD-BEARING; NOT YET DERIVED**. A_time: not yet tested. Gravitational charge sector: **NEW SUPPLIED LABEL**. No supplied residual information disappears. The earlier "A_resolution and Σ / A_partition are no longer independent residual entries" is superseded |
+| **GR2-05** | Crossed-product controls | Witten II∞ and CLPW II₁ are kept as examples of gravity changing algebraic type. Terminal: **NO TYPE-I INTERPOLATION ESTABLISHED**. No inference of a type-I interpolation, independent product preparation, or a universal gravitational subsystem algebra |
+| **GR2-06** | Revised G2 terminal | Recorded verbatim in `G2_GRAVITATIONAL_SUBSYSTEM_RESULT.md` ("Revised G2 terminal") |
+
+### Owner ruling on the next gate (recorded with REPAIR 02)
+
+- **Orientation is deferred.**
+- **G3 = OPERATIONAL ACCESS, FINITE TIME AND GRAVITATIONAL RESOLUTION** (G3-0 … G3-10). Hard stop after
+  `GRAVITY_ZOOM_OUT_03.md`.

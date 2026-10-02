@@ -30,8 +30,9 @@ simplest new degree of freedom that QFT-SCOUT-1 created.
 |---|---|---|---|
 | **G1** | **d_min** | **Does gravity force a nonzero minimum splitting distance d_min, or otherwise constrain the admissible collar scale?** | **HARD STOP → `GRAVITY_ZOOM_OUT_01.md`** |
 | **G2** | **subsystem structure** (𝒩 and its replacement) | **What replaces QFT split / type-I subsystem structure when gravitational gauge constraints are imposed, and does the replacement remove any frozen residual information or only relocate it into charges, dressing, boundary observables, or resolution?** (owner reframing, with GRAVITY REPAIR 01) | **HARD STOP → `GRAVITY_ZOOM_OUT_02.md`** |
-| G3 | orientation | — | not authorized (owner review after G2) |
-| G4 | modular pattern / dimension | — | not authorized |
+| **G3** | **operational access** (Σ / A_partition, A_interface, A_resolution, A_time) | **Does gravity itself constrain or select the observable class / time access / resolution at which a subsystem description exists, or does G2 merely relocate subsystem structure into still-supplied A_interface, A_resolution and A_time?** (owner ruling with GRAVITY REPAIR 02) | **HARD STOP → `GRAVITY_ZOOM_OUT_03.md`** |
+| — | orientation | deferred by owner ruling | not authorized |
+| — | modular pattern / dimension | — | not authorized |
 
 Owner ruling: "hard stop after d_min. If gravity cannot narrow that simplest new degree of freedom without inserting the
 Planck scale by hand, we should know before building a larger gravity campaign."

@@ -1,5 +1,8 @@
 # G2 SUBSYSTEM LEDGER — what each subsystem structure buys, and what it is priced by
 
+> **Repaired by GRAVITY REPAIR 02 (GR2-01 … GR2-06; `GRAVITY_CORRECTION_LEDGER.md`).** G2 is accepted provisionally
+> after that repair. Where wording differs, the ledger takes precedence. Script and log outputs are kept as emitted.
+
 ## 1. New priced premises opened by G2 (added to QG-1 … QG-7)
 
 | ID | premise | status |
@@ -19,7 +22,7 @@ Carried: **U_ε** (the extended neighbourhood / collar), the **state class**, an
 |---|---|---|---|
 | **S0. Flat AQFT split** A_in ⊂ 𝒩 ⊂ A_out, 𝒩 type I (G = 0) | normal product extensions of arbitrary normal marginals; independent state specification; spatial tensor-product implementation A_in ∨ A_out′ ≅ A_in ⊗̄ A_out′ | split / nuclearity (QP-4); collar d; the choice of 𝒩 (non-unique; canonical given a standard vector — Doplicher–Longo, bibliographically verified only) | H_cross = 0 admissible with collar (QFT-SCOUT-1) |
 | **S1. Perturbative gravitational splitting** (Donnelly–Giddings, O(κ)) | localization of information **modulo total Poincaré charges**. Within subspaces of fixed charge matrix elements, exterior measurements at the tested order do not resolve the interior state | QG-8 (charges), QG-9 (order), QG-10 (dressing), U_ε, state class | independence survives **only charge-sector-wise**; the charges are shared (outside-measurable) data |
-| **S2. Fine-grained split failure** (Raju, scoped examples) | no independent inside / outside state specification: boundary-near observables fix the full state | QG-8, QG-11 (exact boundary observables), QG-12 | ordinary type-I split structure **forbidden in class**, at the source's scope |
+| **S2. Fine-grained split failure** (Raju, scoped examples) | no independent inside / outside state specification: boundary-near observables fix the full state | QG-8, QG-11 (exact boundary observables), QG-12 | **ordinary QFT split independence forbidden in class** at the source's scope; a Doplicher–Longo-style 𝒩 is blocked / not applicable there [GR2-02] |
 | **S3a. Witten crossed product** | type III₁ → type II∞ (crossed product by the modular group); a semifinite trace; entropy defined up to a state-independent constant | specific large-N emergent black-hole setting; the boundary Hamiltonian fluctuation used in the crossing | type change, **no type-I interpolation reported** |
 | **S3b. CLPW de Sitter static patch** | operators dressed to an observer worldline → type II₁; a finite trace; a maximum-entropy state (empty dS) | QG-13; the de Sitter static-patch setting | type change, **no type-I interpolation reported** |
 
@@ -54,7 +57,11 @@ type I. The toy does **not** model gravity. It switches the priced ingredients o
    - The threshold tracks the Schmidt scale of Ω (~λ).
    - ε is a **numerical proxy** for observational resolution. This is an analogy, not a derivation of any gravitational
      resolution limit.
-   - The dimension coincidence with T1 is noted, not claimed as algebra identity.
+   - The equality with T1's 75 / 6 is a **dimension coincidence only, not an algebraic identification** [GR2-03].
+   - The ε hierarchy is **A_resolution COUPLING CANDIDATE — ILLUSTRATION GRADE**: discarding numerically small
+     generators is not a physically derived gravitational resolution [GR2-03].
+4. **The T1 direct sum ⊕_E B(ℋ_E) is an algebraic caricature** of shared charge labels, not the continuum
+   Donnelly–Giddings algebra [GR2-01].
 
 ## 4. Information ledger — where did the "independence" go?
 

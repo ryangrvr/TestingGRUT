@@ -1,5 +1,8 @@
 # GRAVITY-SCOUT-1 · G2 — GRAVITATIONAL SUBSYSTEM STRUCTURE (result)
 
+> **Repaired by GRAVITY REPAIR 02 (GR2-01 … GR2-06; `GRAVITY_CORRECTION_LEDGER.md`).** G2 is accepted provisionally
+> after that repair. Where wording differs, the ledger takes precedence. Script and log outputs are kept as emitted.
+
 **Question (owner, with GRAVITY REPAIR 01).** What replaces QFT split / type-I subsystem structure when gravitational
 gauge constraints are imposed? Does the replacement remove any frozen residual information, or only relocate it into
 charges, dressing, boundary observables, or resolution?
@@ -17,16 +20,30 @@ charges, dressing, boundary observables, or resolution?
 | framework | outcome for the type-I intermediate 𝒩 | grade |
 |---|---|---|
 | flat AQFT (G = 0) | **𝒩 SURVIVES**. It is CONSTRAINED-NONUNIQUE, and canonical given a standard vector (Doplicher–Longo) | standard; DL bibliographically verified only |
-| perturbative gravity (Donnelly–Giddings, O(κ)) | **𝒩 REPLACED** by **charge-sector gravitational splitting**. Independence survives modulo total Poincaré charges | **CONSTRAINED / CHARGE-SECTOR SPLITTING**; information **RELOCATED** into charges + dressing + order |
-| fine-grained gravity (Raju, scoped examples) | **𝒩 FORBIDDEN IN CLASS** | **QFT TYPE-I SPLIT STRUCTURE FORBIDDEN IN CLASS**, at the verified scope only |
-| crossed products (Witten; CLPW) | **no type-I interpolation established**: the type changes, and no 𝒩 is reported | NOT APPLICABLE / NOT ESTABLISHED |
+| perturbative gravity (Donnelly–Giddings, O(κ)) | **The ordinary AQFT type-I interpolation is no longer the relevant localization structure. A charge-labelled gravitational splitting of Hilbert-space subspaces replaces its operational role** [GR2-01]. No continuum replacement algebra is claimed | **CONSTRAINED / CHARGE-SECTOR GRAVITATIONAL SPLITTING** + **RELOCATION into charges + dressing + perturbative order** |
+| fine-grained gravity (Raju, scoped examples) | a Doplicher–Longo-style intermediate type-I factor implementing independent inside / outside specification is **BLOCKED / NOT APPLICABLE** [GR2-02]. No claim that no type-I factor of any kind can occur | **ORDINARY QFT SPLIT INDEPENDENCE FORBIDDEN IN CLASS**, at the verified scope only |
+| crossed products (Witten; CLPW) | the type changes (II∞; II₁). No type-I interpolation, independent product preparation or universal gravitational subsystem algebra is inferred [GR2-05] | **NO TYPE-I INTERPOLATION ESTABLISHED** |
 
 - **No unique gravitational analogue of 𝒩.** CONDITIONALLY SELECTED: none at G ≠ 0.
-- **Subsystem structure is RESOLUTION / OBSERVABLE-CLASS / PERTURBATIVE-ORDER dependent.** This is the consistent
-  reading of S1 versus S2 (G2-3).
+- **Source-backed:** subsystem independence is **OBSERVABLE-CLASS / COARSE-GRAINING / PERTURBATIVE-ORDER dependent**
+  (G2-3) [GR2-03].
+- **Quantitative physical A_resolution dependence: NOT YET DERIVED.** The ε toy is an illustration only
+  (**A_resolution COUPLING CANDIDATE — ILLUSTRATION GRADE**) [GR2-03].
 - **TRUE COMPRESSION: 0.** **Empirical payoff: none.**
 
 The frameworks differ, and per G2-5 they are **not** forced into one answer.
+
+## Revised G2 terminal [GR2-06]
+
+- **Flat AQFT:** ordinary split independence / type-I interpolation is available under the split premises.
+- **Perturbative gravity:** its operational role is replaced by a charge-labelled gravitational splitting, priced by
+  total charges, dressing and perturbative order.
+- **Fine-grained boundary-complete gravity** at Raju's verified scope: ordinary split independence fails.
+- These statements concern **different observable algebras and levels of approximation**, and are not contradictory.
+- **Source-backed dependence:** OBSERVABLE CLASS / COARSE GRAINING / PERTURBATIVE ORDER.
+- **Quantitative physical A_resolution dependence: NOT YET DERIVED.** The ε toy is an illustration only.
+- No unique gravitational analogue of 𝒩 has been selected.
+- **TRUE COMPRESSION = 0.**
 
 ## G2-0 / G2-7 Flat and non-gravitational control
 
@@ -59,7 +76,9 @@ The frameworks differ, and per G2-5 they are **not** forced into one answer.
 - **Setup:** an arbitrary extended neighbourhood U_ε; no positive minimum ε at O(κ) (GR1-01).
 
 **Toy T1** (the charge caricature). The outside also holds H_in:
-- A_in becomes ⊕_E B(ℋ_E): dim 6, center 3 (the charge sectors). It is no longer a factor.
+- A_in becomes ⊕_E B(ℋ_E): dim 6, center 3 (the charge sectors). It is no longer a factor. **This direct sum is an
+  algebraic caricature only** [GR2-01]. It illustrates shared charge labels, sector-wise independence and the loss of
+  arbitrary product specification. It is **not** claimed to be the continuum algebra derived by Donnelly–Giddings.
 - H_in is shared by both algebras. A naive ρ ⊗ σ fails to be a product for the dressed pair by exactly Var_ρ(H_in)
   (0.584 here).
 - Charge-sharp marginals give products, and each sector is a type-I factor.
@@ -94,7 +113,12 @@ ability to specify the state independently on a bounded subregion and its comple
 collar? **At the verified scope, yes**: the failure concerns the state on the whole slice, so a collar does not restore
 independent specification.
 
-**Terminal: QFT TYPE-I SPLIT STRUCTURE FORBIDDEN IN CLASS** (the scoped examples only).
+**Terminal: ORDINARY QFT SPLIT INDEPENDENCE FORBIDDEN IN CLASS** (the scoped examples only) [GR2-02]. The specific QFT
+split implementation (a Doplicher–Longo-style 𝒩 giving independent inside / outside specification) is
+BLOCKED / NOT APPLICABLE there. No abstract claim excludes every type-I factor.
+
+**Coarse-graining** [GR2-03]. The source also discusses whether coarse-graining the observable set restores an
+approximate split description, and states that the answer / coarse-grained entropy is generally **state-dependent**.
 
 **Toy T2** (algebraic skeleton only; the ingredient list is a summary, not re-read here):
 - The outside holds the **exact** vacuum projector P₀ of H_tot (P₀ is a function of H_tot).
@@ -116,7 +140,8 @@ contradictory.
 **Toy illustration (T2 resolution ladder).** At fixed small λ, coarsening the numerical resolution ε steps the
 computed outside algebra down through three stages:
 - full B(H): no interior subsystem;
-- an algebra with the T1 charge-sector dimensions (75 / 6, at λ = 10⁻², ε = 10⁻⁴);
+- an algebra whose dimensions equal T1's (75 / 6, at λ = 10⁻², ε = 10⁻⁴). This is a **dimension coincidence only, not an
+  algebraic identification** [GR2-03];
 - vacuum-sector data (50 / 10).
 
 The step thresholds track the Schmidt scale of Ω (~λ). Exploiting fine-grained data requires amplification ~1/s_min.
@@ -124,17 +149,23 @@ The step thresholds track the Schmidt scale of Ω (~λ). Exploiting fine-grained
 **Caveat.** ε is a numerical proxy for observational resolution. This is an analogy, not a derivation of any
 gravitational resolution limit. The literature debate between these positions is **not adjudicated** here.
 
-**Recorded:** **subsystem structure is RESOLUTION / OBSERVABLE-CLASS / PERTURBATIVE-ORDER dependent** (a consistent
-reading; illustration grade for the resolution mechanism).
+**Recorded** [GR2-03]:
+- **source-backed:** subsystem independence is **OBSERVABLE-CLASS / COARSE-GRAINING / PERTURBATIVE-ORDER dependent**;
+- **illustration only:** the ε hierarchy (**A_resolution COUPLING CANDIDATE — ILLUSTRATION GRADE**). Gravity is **not**
+  shown to physically determine A_resolution.
+
+(Superseded wording, kept for the record: "subsystem structure is RESOLUTION / OBSERVABLE-CLASS / PERTURBATIVE-ORDER
+dependent (a consistent reading; illustration grade for the resolution mechanism)".)
 
 **Map to the frozen residual:**
 
 | frozen component | gravitational reading |
 |---|---|
-| **Σ / A_partition** | The inside / outside partition is no longer fixed by net data alone. It is charge-sector-labelled (S1), or absent in the exact boundary algebra (S2). **A_partition becomes observable-class dependent** |
-| **A_resolution** | **Load-bearing for whether a subsystem exists at all**: coarse exterior access gives charge-sector splitting, exact access gives none. A_resolution and Σ / A_partition are **coupled**, no longer independent residual entries |
-| **A_interface** | The dressing prescription and boundary readout are interface data (A_readout at the boundary): **RELOCATION** into A_interface |
-| **gravitational charge sector** | a **new supplied label** (QG-8) that the subsystem notion now depends on |
+| **Σ / A_partition** | **CONSTRAINED / OBSERVABLE-CLASS-PRICED** [GR2-04]. The physically useful subsystem decomposition depends on which gravitational observables are included |
+| **A_resolution** | **POTENTIALLY LOAD-BEARING; NOT YET DERIVED** [GR2-04]. G2 motivates a coupling to Σ / A_partition but selects no physical resolution scale |
+| **A_time** | not yet tested [GR2-04] |
+| **A_interface** | **RELOCATION** [GR2-04]: dressing and boundary readout are supplied interface information |
+| **gravitational charge sector** | **NEW SUPPLIED LABEL** (QG-8) [GR2-04] |
 | **H_cross** | a candidate further class restriction at toy level: product preparations across a dressed pair require charge-sharp interiors |
 
 ## G2-4 Crossed-product controls (kept separate; PRIMARY ARXIV ABSTRACT VERIFIED)
@@ -157,7 +188,8 @@ reading; illustration grade for the resolution mechanism).
 The selection question was asked only after G2-1 – G2-4. The answer is per framework (see the Verdict).
 
 - **There is no unique gravitational analogue of 𝒩.**
-- The closest structure is the S1 charge-sector decomposition: 𝒩 → ⊕_charge 𝒩_E in the toy. It is **relocated** into
+- The closest structure is the S1 charge-labelled gravitational splitting, which replaces 𝒩's *operational role*
+  (caricatured as ⊕_charge 𝒩_E in the toy only [GR2-01]). It is **relocated** into
   the charge labels and the dressing choice, **not selected**.
 
 ## G2-8 Payoff firewall

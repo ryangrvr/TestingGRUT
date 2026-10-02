@@ -1,6 +1,9 @@
 # GRAVITY-SCOUT-1 ZOOM-OUT 02 (after GRAVITY REPAIR 01 + G2) — HARD STOP for owner review
 
-**Branch:** `gravity-scout-1`. All frozen inputs untouched. **Not frozen.** G3 is **not** started.
+**Branch:** `gravity-scout-1`. All frozen inputs untouched. **Not frozen.**
+
+> **Repaired by GRAVITY REPAIR 02 (GR2-01 … GR2-06; `GRAVITY_CORRECTION_LEDGER.md`).** G2 is accepted provisionally
+> after that repair. Where wording differs, the ledger takes precedence. Script and log outputs are kept as emitted.
 
 ## 1. Does ordinary QFT split independence survive dynamical gravity?
 
@@ -17,7 +20,8 @@
 - exterior measurements at the tested order do not resolve the interior beyond the charges;
 - the construction uses an arbitrary U_ε, with no minimum scale.
 
-In the finite caricature (T1), the type-I factor becomes a **charge-sector direct sum** ⊕_E B(ℋ_E): its center is the
+The ordinary type-I interpolation is no longer the relevant localization structure; the charge-labelled splitting replaces
+its **operational role** [GR2-01]. In the finite caricature only (T1), the type-I factor becomes a **charge-sector direct sum** ⊕_E B(ℋ_E): its center is the
 charges, and each sector is a type-I factor.
 
 ## 3. Is the replacement charge-priced / dressing-priced?
@@ -49,33 +53,37 @@ literature debate itself is not adjudicated.
 | ε | outside algebra (dim alg / dim A_in) |
 |---|---|
 | 10⁻⁶ | full B(H) (400 / 1): no interior subsystem |
-| 10⁻⁴ | charge-sector dimensions (75 / 6) |
+| 10⁻⁴ | dimensions equal to T1's (75 / 6): a dimension coincidence only [GR2-03] |
 | 10⁻² | vacuum-sector data (50 / 10) |
 
 The thresholds track the Schmidt scale of the vacuum (~λ), a proxy for the order of the in / out coupling. ε is a
 numerical proxy for resolution, **an analogy only**.
 
-**Recorded: subsystem structure is RESOLUTION / OBSERVABLE-CLASS / PERTURBATIVE-ORDER dependent.**
+**Recorded (repaired, GR2-03):** source-backed dependence is **OBSERVABLE CLASS / COARSE GRAINING / PERTURBATIVE ORDER**.
+Quantitative physical A_resolution dependence is **NOT YET DERIVED**: the ε ladder is an **A_resolution COUPLING CANDIDATE —
+ILLUSTRATION GRADE**.
 
 ## 6. Does any type-I intermediate 𝒩 survive or become canonical?
 
 | framework | 𝒩 |
 |---|---|
 | flat | survives (non-unique; canonical given a standard vector) |
-| perturbative gravity | **replaced** (charge-sector splitting) |
-| fine-grained, scoped | **forbidden in class** |
+| perturbative gravity | operational role **replaced** by charge-labelled gravitational splitting [GR2-01] |
+| fine-grained, scoped | ordinary QFT split independence **forbidden in class**; a Doplicher–Longo-style 𝒩 blocked / not applicable [GR2-02] |
 | crossed products (Witten II∞, CLPW II₁) | **no type-I interpolation established**; not inferred from finite entropy |
 
 **No canonical gravitational 𝒩.** CONDITIONALLY SELECTED: none.
 
 ## 7. Did gravity constrain Σ, A_partition or A_resolution?
 
-**It coupled them more than it constrained them.**
+**Σ / A_partition became observable-class-priced; the A_resolution coupling is a candidate only** [GR2-04].
 
 | component | effect |
 |---|---|
 | **A_partition** | becomes observable-class dependent: charge-labelled (S1) or absent in the exact boundary algebra (S2) |
-| **A_resolution** | becomes **load-bearing for whether a subsystem exists at all**. Σ / A_partition and A_resolution are **no longer independent residual entries**. This is a dependency coupling, the main structural finding of G2 |
+| **Σ / A_partition** | **CONSTRAINED / OBSERVABLE-CLASS-PRICED** [GR2-04] |
+| **A_resolution** | **POTENTIALLY LOAD-BEARING; NOT YET DERIVED** [GR2-04] (superseded: "no longer independent residual entries") |
+| **A_time** | not yet tested |
 | **A_interface** | absorbs the dressing prescription and the boundary readout (RELOCATION) |
 | **H_cross** | candidate, toy-level only: product preparations across a dressed pair require charge-sharp interiors |
 
@@ -95,11 +103,11 @@ numerical proxy for resolution, **an analogy only**.
 
 ## 10. Does Gravity-SCOUT-1 justify G3 orientation?
 
-**Recommendation: not as the next gate.**
+**Recommendation: not as the next gate.** (Owner ruling after REPAIR 02: orientation deferred; G3 = operational access.)
 - **What G3 would likely find.** Gravity entered G2 through energy positivity (a unique energy-minimizing vacuum, QG-12;
   an observer energy bounded below, QG-13). A G3 would most likely reproduce QFT-SCOUT-1's pattern: **orientation priced
   by an imposed positivity / passivity input, NOT SELECTED**.
-- **Where the live signal is.** It is the **Σ / A_partition ↔ A_resolution coupling** found here. A narrowly scoped next
+- **Where the live signal is.** It is the **Σ / A_partition ↔ observable-class coupling** found here (with an A_resolution coupling **candidate**, illustration grade [GR2-03]). A narrowly scoped next
   gate on that coupling (what minimal observable-class / resolution data fixes the subsystem notion) would test the
   campaign's only new structural result directly.
 - **If G3 is run anyway,** preregister NOT SELECTED as the expected terminal, and treat any orientation claim from energy
@@ -113,7 +121,7 @@ The choice is the owner's.
 |---|---|
 | G1 (repaired) | inclusion: no positive universal d_min; subsystem notion replaced (perturbative) / may fail (fine-grained). Preparation: PREPARATION-CLASS CONSTRAINT, conditional on L_all, heuristic |
 | G2 | 𝒩 replaced (perturbative) / forbidden in class (fine-grained, scoped) / not established (crossed products). Subsystem structure is resolution / observable-class / order dependent |
-| Residual narrowing | **A_partition ↔ A_resolution coupling** (structural); H_cross charge-sharp restriction (toy-level candidate) |
+| Residual narrowing | Σ / A_partition **CONSTRAINED / OBSERVABLE-CLASS-PRICED** (source-backed); A_resolution coupling **candidate, illustration grade**; H_cross charge-sharp restriction (toy-level candidate) [GR2-03, GR2-04] |
 | TRUE COMPRESSION | **0** |
 | Distinctive predictions | **0** |
 | Status | auxiliary to canonical GRUT |
