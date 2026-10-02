@@ -69,3 +69,14 @@ Wherever H1 is described as "H local in Σ_A (id), ψ product in Σ_B (cliff1)" 
 > crossed bonds) and the end cuts (one crossed bond, C > 0). The clean conflict claim (no dominance; the H-local and
 > ψ-product frames both on the front; priority orders disagree) was **reproduced independently for certified-incompatible
 > pairs** (every id-frame grouping with C_min ≥ 1.67 bit; 3/3 seeds; review/NR_SIGMAH_RESULT.md).
+
+## E-07 (IR-07) — `ledgers/ARROW_ORIGIN_LEDGER.md` AR-01
+
+Replace the "record arrow?" cell "NO" with:
+
+> continuous I(S:F): no every-state arrow (D0); thresholded R_δ: not theorem-covered; numerically reversible (D7, NR-D7)
+
+## E-08 (IR-06) — frozen-ledger precedence (no file edits proposed)
+
+Superseded rows are **not** rewritten. Readers use the precedence rule: repair / correction > final handoff > review
+errata > historical row. `review/REVIEW_ACCOUNTING_LEDGER.md` is the reviewed accounting.
