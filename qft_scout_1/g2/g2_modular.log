@@ -1,0 +1,40 @@
+
+==============================================================================
+G2-1 finite / type-I control: standard form of (B(C^n), rho) on C^n (x) C^n
+==============================================================================
+  Tomita relation S = J Delta^(1/2): |J Delta^(1/2) A Omega - A* Omega| = 1.0e-14; Delta Omega = Omega: 3.7e-15
+  sigma_t on M is rho^(it) A rho^(-it): error 8.5e-14  (an INNER flow: no spacetime, no physical-time content)
+  KMS (Tomita convention): omega(A sigma_(-i)(B)) = omega(B A): error 1.5e-14  -> omega is KMS at beta = -1 for sigma_t, i.e. beta = +1 for tau_t = sigma_(-t)
+
+==============================================================================
+G2-2 state dependence (same algebra, different faithful states)
+==============================================================================
+  modular Hamiltonians K = -log rho differ: |K1 - K2| = 3.730
+  ANY Hermitian K is the modular Hamiltonian of rho_K = e^-K/Z: |(-log rho_K) - K| mod scalar = 3.2e-15 -> in type I every inner flow is modular for some state
+  Connes cocycle (finite): sigma2_t = Ad(u_t) sigma1_t with u_t = rho2^(it) rho1^(-it) in M: error 1.3e-14; u_t unitary: 2.9e-15
+  -> type I: modular flows are inner and STATE-PRICED (the flow carries exactly the state's information).
+
+==============================================================================
+G2-3 sign inversion
+==============================================================================
+  commutant M': Delta^(it) (1 (x) B) Delta^(-it) = 1 (x) rho^T^(-it) B rho^T^(it): error 9.4e-14 -> the commutant's own modular flow (Delta' = Delta^-1) runs the opposite way
+  J commutes with Delta^(it) (antilinear: J Delta^(it) J = Delta^(it)): error 2.8e-14; J maps M to M' (J (A(x)1) J = 1(x)conj-transpose form)
+  anti-automorphism alpha(A) = A^T: sigma^(phi o alpha)_t = alpha^-1 sigma^phi_(-t) alpha: error 1.6e-15 -> anti-isomorphisms reverse modular time
+  -> the parametrization sign of modular time flips under algebra <-> commutant (which side is 'the system': a Sigma / A_partition choice)
+  passivity test (Pusz-Woronowicz form, finite): work extractable by cyclic unitaries U from rho under generator H
+   H = +K (modular Hamiltonian, tau_t = sigma_-t): max extractable work (random search 0.0000; exact 0.0000)
+   H = -K (reversed orientation): max extractable work (random search 2.0541; exact 2.1918)
+  -> passivity selects H = +K, i.e. the orientation tau_t = sigma_(-t) (positive temperature); the reversed orientation is maximally active.
+     But passivity (no work from cycles) is itself a Kelvin-type arrow postulate: orientation is RELOCATED into it, not derived.
+
+==============================================================================
+G2-4 lattice illustration (80-digit precision): modular Hamiltonian of an interval vs boost-like / conformal profiles
+==============================================================================
+  vacuum: H_p[j,j] / 2pi x            at j = [0, 1, 2, 5, 10, 15, 20, 25]: [0.996 0.976 0.952 0.874 0.728 0.56  0.356 0.161]
+          H_p[j,j] / 2pi x(l-x)/l   at j = [0, 1, 2, 5, 10, 15, 20, 25]: [1.013 1.027 1.038 1.07  1.121 1.159 1.124 1.071]
+  thermal beta=4 (same algebra, different state): H_p[j,j] / 2pi x            at j = [0, 1, 2, 5, 10, 15, 20, 25]: [0.706 0.394 0.252 0.116 0.061 0.041 0.031 0.025]
+                                                  H_p[j,j] / 2pi x(l-x)/l   at j = [0, 1, 2, 5, 10, 15, 20, 25]: [0.718 0.414 0.275 0.142 0.093 0.085 0.098 0.166]
+  -> vacuum: near the cut the modular Hamiltonian is 2 pi x (boost-like, BW); across the interval it tracks the conformal
+     two-ended profile 2 pi x(l-x)/l (geometric only for conformal theories; the small mass mu = 0.02 gives deviations);
+     a thermal state on the SAME algebra is not boost-like. The geometric identification is a property of the vacuum +
+     covariance + spectrum condition (supplied), not of the algebra alone.
