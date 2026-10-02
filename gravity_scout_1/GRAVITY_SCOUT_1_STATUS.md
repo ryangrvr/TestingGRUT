@@ -18,12 +18,13 @@
 | G2 gravitational subsystem structure | DONE; **accepted provisionally after GRAVITY REPAIR 02** (GR2-01 … 06). Type-I interpolation's operational role replaced by charge-labelled gravitational splitting (perturbative); ordinary QFT split independence forbidden in class (fine-grained, scoped); no type-I interpolation established (crossed products). Source-backed: observable-class / coarse-graining / perturbative-order dependence; A_resolution coupling candidate (illustration grade); TRUE COMPRESSION 0 |
 | GRAVITY_ZOOM_OUT_02 | DONE (repaired by GRAVITY REPAIR 02) |
 | GRAVITY REPAIR 02 | DONE |
-| G3 operational access / finite time / resolution | **NEXT** (authorized; hard stop after ZOOM_OUT_03) |
+| G3 operational access / finite time / resolution | DONE: AdS ACCESS CONSTRAINED (conditional on access data); flat A_time CONSTRAINED-NONUNIQUE; COARSE-GRAINING SUPPLIED; PERTURBATIVE ORDER SUPPLIED; exact ≠ robust access (kinematic illustration); CONDITIONALLY SELECTED none; TRUE COMPRESSION 0 |
+| GRAVITY_ZOOM_OUT_03 | DONE. **HARD STOP** (recommends saturation ruling / freeze, or an explicitly chosen further gate) |
 | orientation · modular pattern / dimension | deferred / not authorized |
 
 ## Correction ledger
 
-`GRAVITY_CORRECTION_LEDGER.md` (additive): GRAVITY REPAIR 01; G2 note; GRAVITY REPAIR 02.
+`GRAVITY_CORRECTION_LEDGER.md` (additive): GRAVITY REPAIR 01; G2 note; GRAVITY REPAIR 02; G3 note.
 
 ## Integrity
 

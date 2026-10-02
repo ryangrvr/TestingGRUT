@@ -80,3 +80,18 @@
 - **Orientation is deferred.**
 - **G3 = OPERATIONAL ACCESS, FINITE TIME AND GRAVITATIONAL RESOLUTION** (G3-0 … G3-10). Hard stop after
   `GRAVITY_ZOOM_OUT_03.md`.
+
+## G3 note (no repair; recorded with G3)
+
+- **Access vector.** G3 records resolution as an access vector (𝒪, Λ, ε_t, k, ∂, δ), not as a single ε
+  (`G3_ACCESS_LEDGER.md` §1).
+- **Toy numerics procedure** (`g3/g3_timeband.py`). Two defects were found and fixed before the log was emitted:
+  1. mpmath's general eigensolver failed to converge; it was replaced by the Hermitian solver `eighe`;
+  2. a precision artifact at the smallest ε_t for N = 8 (condition number beyond the working precision) produced a spurious
+     trade-off row. Fixed with 160-digit arithmetic and a positivity guard that treats beyond-precision matrices as
+     singular.
+- **Mode normalizations** c_n are set to 1. The model is the standard global-AdS₄ l = 0 spectrum, not a transcription of
+  the CPR paper's own truncated construction (not re-read).
+- **Source caution.** A search summary attributed to arXiv:2008.01740 a coarse-grained time-band algebra with a
+  non-trivial commutant in states with a macroscopic bulk observer. This may conflate it with later work, and it is not
+  used as evidence. All CPR protocol facts are owner-stated, not re-read here.

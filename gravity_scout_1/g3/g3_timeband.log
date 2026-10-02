@@ -1,0 +1,42 @@
+columns: N, eps/pi, cond(G), ||f_0||/||f_0||_(eps=pi), ||f_top||/||f_top||_(eps=pi)
+N=2  eps=pi/1   cond=       1.0  f0=       1.0  ftop=       1.0
+N=2  eps=pi/2   cond=     5.696  f0=     1.916  ftop=     1.868
+N=2  eps=pi/4   cond=     242.9  f0=     12.66  ftop=     10.07
+N=2  eps=pi/8   cond=  2.598e+4  f0=     151.5  ftop=      97.6
+N=2  eps=pi/16  cond=   1.96e+6  f0=    1739.0  ftop=    1062.0
+N=2  eps=pi/32  cond=   1.31e+8  f0=  1.975e+4  ftop=   1.19e+4
+
+N=3  eps=pi/1   cond=       1.0  f0=       1.0  ftop=       1.0
+N=3  eps=pi/2   cond=     44.87  f0=     2.885  ftop=     2.946
+N=3  eps=pi/4   cond=  8.282e+4  f0=     152.3  ftop=     63.45
+N=3  eps=pi/8   cond=  1.371e+8  f0=    7647.0  ftop=    2399.0
+N=3  eps=pi/16  cond=  1.82e+11  f0=   3.55e+5  ftop=  1.038e+5
+N=3  eps=pi/32  cond=   2.0e+14  f0=  1.617e+7  ftop=  4.646e+6
+
+N=4  eps=pi/1   cond=       1.0  f0=       1.0  ftop=       1.0
+N=4  eps=pi/2   cond=     701.0  f0=     7.329  ftop=      5.48
+N=4  eps=pi/4   cond=  3.165e+7  f0=    2208.0  ftop=     416.0
+N=4  eps=pi/8   cond= 8.503e+11  f0=  4.558e+5  ftop=  6.082e+4
+N=4  eps=pi/16  cond= 1.991e+16  f0=  8.522e+7  ftop=  1.044e+7
+N=4  eps=pi/32  cond= 3.615e+20  f0= 1.555e+10  ftop=  1.865e+9
+
+N=6  eps=pi/1   cond=       1.0  f0=       1.0  ftop=       1.0
+N=6  eps=pi/2   cond=  2.872e+5  f0=     102.2  ftop=      20.7
+N=6  eps=pi/4   cond= 5.268e+12  f0=  6.147e+5  ftop=  1.859e+4
+N=6  eps=pi/8   cond= 4.159e+19  f0=  2.124e+9  ftop=   4.04e+7
+N=6  eps=pi/16  cond= 2.974e+26  f0= 6.425e+12  ftop= 1.089e+11
+N=6  eps=pi/32  cond= 1.491e+33  f0= 1.881e+16  ftop= 3.099e+14
+
+N=8  eps=pi/1   cond=       1.0  f0=       1.0  ftop=       1.0
+N=8  eps=pi/2   cond=  1.611e+8  f0=    1851.0  ftop=     80.52
+N=8  eps=pi/4   cond= 1.078e+18  f0=  2.114e+8  ftop=   8.48e+5
+N=8  eps=pi/8   cond= 2.626e+27  f0= 1.218e+13  ftop= 2.733e+10
+N=8  eps=pi/16  cond= 5.156e+36  f0= 5.957e+17  ftop= 1.157e+15
+N=8  eps=pi/32  cond= 7.207e+45  f0= 2.798e+22  ftop= 5.242e+19
+
+time-band / cutoff trade-off: smallest eps (bisection, 1e-4 relative) with cond(G) <= threshold
+N=2  omega_max= 5  eps_min/pi: cond<=1e6 -> 0.06976, cond<=1e12 -> 0.007059   omega_max*eps_min(1e6) = 1.096
+N=3  omega_max= 7  eps_min/pi: cond<=1e6 -> 0.1964, cond<=1e12 -> 0.05285   omega_max*eps_min(1e6) = 4.319
+N=4  omega_max= 9  eps_min/pi: cond<=1e6 -> 0.3141, cond<=1e12 -> 0.1236   omega_max*eps_min(1e6) = 8.881
+N=6  omega_max=13  eps_min/pi: cond<=1e6 -> 0.4756, cond<=1e12 -> 0.2683   omega_max*eps_min(1e6) = 19.42
+N=8  omega_max=17  eps_min/pi: cond<=1e6 -> 0.5798, cond<=1e12 -> 0.3848   omega_max*eps_min(1e6) = 30.96
