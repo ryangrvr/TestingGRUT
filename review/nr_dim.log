@@ -1,0 +1,41 @@
+
+==============================================================================
+NR-G2 graph / spectral / walk dimensions
+==============================================================================
+  Z^1 simple random walk, exact combinatorial return probabilities: d_s = 0.9990 0.9999
+  Z^2 simple random walk, exact combinatorial return probabilities: d_s = 1.9980 1.9998
+  Sierpinski gen 9 (corner): d_g (r = 2^k) 1.573 1.581 1.584 1.585 [theory 1.585];  MC d_s 1.397 1.413 1.101 1.414 [1.365];  MC d_w 2.338 2.301 2.322 2.321 [2.322]
+  ring, nearest-neighbour: MC d_s 0.99 0.99 0.99 [theory 1]
+  ring, Levy jumps P(|j|) ~ |j|^-2 (alpha = 1): MC d_s 2.08 1.94 2.22 [theory 2/alpha = 2]
+  K_1,6 vs K_2,5: normalized-Laplacian spectra equal True; ball-growth profiles equal False -> identical d_s(t), different growth
+
+==============================================================================
+NR-G3 causal-order estimators (Myrheim primary formula; light-cone sampler) and graph != causal order
+==============================================================================
+  formula check r(2) = 0.5000 (1/2), r(4) = 0.1000
+  Poisson-type sprinkling into the d=2 interval: MM at N=60: 1.970; N=1500: 2.002
+  Poisson-type sprinkling into the d=3 interval: MM at N=60: 2.973; N=1500: 2.997
+  Poisson-type sprinkling into the d=4 interval: MM at N=60: 4.232; N=1500: 3.976
+  same spatial Z^2 lattice: related-pair fraction with L1 cones 0.2552 (MM-equivalent value 2.863), with instantaneous propagation 0.9284 (MM-equivalent 1.119)
+  REPAIR 05 scope: lattice-order values are MM-equivalent ordering-fraction values, NOT spacetime dimensions; the result is only that the
+  spatial graph does not determine the causal-order statistics.
+
+==============================================================================
+NR-G4 operational capacity
+==============================================================================
+  classical bit (K=1): N = 2; gbit square (K=2): N = 2; hexagon GPT (K=2): N = 2; qubit (K=3): N = 2 (orthogonal pair; no 3 orthogonal vectors in C^2)
+  access: two qubits, all effects N = 4; collective S_z readout only: N = 3
+  dynamics: 6-state Markov chain with 3 closed classes: asymptotic capacity rank(P^inf) = 3 (from 6)
+
+==============================================================================
+SUMMARY (machine checks)
+==============================================================================
+  G2-lattice: True
+  G2-fractal: True
+  G2-diffusion: True
+  G2-cospectral: True
+  G3-mm: True
+  G3-graph: True
+  G4-repr: True
+  G4-access: True
+  G4-dyn: True

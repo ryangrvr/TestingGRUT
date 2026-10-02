@@ -35,18 +35,27 @@ The frozen `scout-2` (`af0042f`) is never edited. Errata live in `ERRATA_PROPOSE
 | S2-Σ: the 8 load-bearing claims | REVIEW-CONFIRMED-WITH-SCOPE (δ-threshold stable window noted) | NR_SIGMA_RESULT.md |
 | S2-D-arrow key numbers (D1, D3/D6, D4, D5, D7, D8, D2) | REVIEW-CONFIRMED (numerics; theorem errata IR-03 / IR-04 separate) | NR_DARROW_RESULT.md |
 | S2-H2 key numbers (structural, relocation, alignment, stripes, invertibility) | REVIEW-CONFIRMED (H4 every-state claim rests on the majority argument, scope noted) | NR_H2_RESULT.md |
-| S2-1 / 1b / 2 / 3 / 3b / 4 / 5 / 6 / 7 / 8, S2-G | UNREVIEWED (lower priority) | — |
+| S2-1 individuation | REVIEW-CONFIRMED-WITH-SCOPE (local ≠ global; IR-01) | NR_LOWER_RESULT.md |
+| S2-1b locality criteria | REVIEW-CONFIRMED | NR_LOWER_RESULT.md |
+| S2-2 composition | REVIEW-CONFIRMED-WITH-SCOPE (family discriminator) | NR_LOWER_RESULT.md |
+| S2-3 / 3b probability and measure | REVIEW-CONFIRMED-WITH-SCOPE (compact theorem imported) | NR_LOWER_RESULT.md |
+| S2-4 convexity | REVIEW-CONFIRMED | NR_LOWER_RESULT.md |
+| S2-5 / 6 shared reference | REVIEW-CONFIRMED-WITH-SCOPE (Y-05, Y-06) | NR_LOWER_RESULT.md |
+| S2-7 histories | REVIEW-CONFIRMED | NR_LOWER_RESULT.md |
+| S2-8 Darwinism | REVIEW-CONFIRMED (R_δ numerical, IR-07) | NR_LOWER_RESULT.md |
+| S2-G2 / G3 / G4 | REVIEW-CONFIRMED (G3 with REPAIR 05 scope) | NR_LOWER_RESULT.md |
 
 ## 3. Information-accounting review
 
 | item | status |
 |---|---|
-| ledgers (accounting, measure, arrow, dimension, joint) | UNREVIEWED (second-reader audit owed) |
+| ledgers (accounting, measure, arrow, dimension, joint) | AUDITED → `REVIEW_ACCOUNTING_LEDGER.md` (IR-06 precedence, IR-07) |
+| further decomposition of A_res | UNREVIEWED |
 | IR-05 lesson | **compatibility must be tested over the complete candidate grouping class**, not just the finest TPS or the nominal frame. Applied to every SCOUT-2 case classified "incompatible": only H1 failed |
 
 ## 4. Unresolved findings
 
 | ID | status |
 |---|---|
-| IR-01 … IR-05 | recorded; errata E-01 … E-06 proposed; none affects the residual boundary |
+| IR-01 … IR-07 | recorded; errata E-01 … E-08 proposed; none affects the residual boundary |
 | open | none threatening `C5 → D_dyn ⊕ [Σ ⊗ H_corr]_coupled ⊕ A_res` |
