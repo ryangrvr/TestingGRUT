@@ -33,8 +33,8 @@ The frozen `scout-2` (`af0042f`) is never edited. Errata live in `ERRATA_PROPOSE
 | S2-ΣH: Haar / local-d tie / epoch covariance | REVIEW-CONFIRMED | NR_SIGMAH_RESULT.md |
 | S2-ΣH: H5a, H7 incompatibility (complete grouping test) | REVIEW-CONFIRMED (1.46 / 1.64 bits; no IR-06) | ir06_check.log |
 | S2-Σ: the 8 load-bearing claims | REVIEW-CONFIRMED-WITH-SCOPE (δ-threshold stable window noted) | NR_SIGMA_RESULT.md |
-| S2-D-arrow key numbers | UNREVIEWED (next) | — |
-| S2-H2 key numbers | UNREVIEWED | — |
+| S2-D-arrow key numbers (D1, D3/D6, D4, D5, D7, D8, D2) | REVIEW-CONFIRMED (numerics; theorem errata IR-03 / IR-04 separate) | NR_DARROW_RESULT.md |
+| S2-H2 key numbers | UNREVIEWED (next) | — |
 | S2-1 / 1b / 2 / 3 / 3b / 4 / 5 / 6 / 7 / 8, S2-G | UNREVIEWED (lower priority) | — |
 
 ## 3. Information-accounting review

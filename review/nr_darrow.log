@@ -1,0 +1,50 @@
+
+==============================================================================
+NR-D1 exact time-reversal mirror / anti-arrow (real H => complex conjugation is a Sigma-local symmetry)
+==============================================================================
+  original params n=10 tilt 1.4 S={0,1}: t* = 8.0, S_S(t*) = 1.238; reversed state forward: S 1.238 -> 0.000; mirror error 1.7e-13
+  variant n=8 tilt 1.1 S={3}: t* = 1.9, S_S(t*) = 0.600; reversed state forward: S 0.600 -> 0.000; mirror error 9.8e-14
+
+==============================================================================
+NR-D3/D6 same marginals, different correlations (mixed, S = qubit 0, bath initially maximally mixed)
+==============================================================================
+  original params n=8 tau=3: marginals identical True; bath entropy 6.902 of 7; correlated C: S_S 0.955 0.999 0.825 -0.000 | product-of-marginals D: S_S 0.955 0.997 0.986 0.968
+  variant n=7 tau=2: marginals identical True; bath entropy 5.445 of 6; correlated C: S_S 0.999 0.976 0.439 -0.000 | product-of-marginals D: S_S 0.999 0.997 0.782 0.705
+
+==============================================================================
+NR-D4/D5 partial-swap collisions (theta = 0.6): fresh maximally mixed bath vs correlated / reused bath
+==============================================================================
+  fresh MAX-MIXED bath (channel): TD 0.482 0.328 0.223 0.152 0.104 0.071 0.048 | monotone True | S_sys 0.633 -> 0.997; joint-sim TD agrees: True; record in ancilla 1: 0.225
+  classically correlated bath (same max-mixed marginals): TD 0.482 0.263 0.170 0.202 0.203 0.150 0.072 | monotone False
+  D5 reused bath M=1: monotone TD False; S_sys first 0.633, min over 21 collisions 0.007 (at 21), final 0.007
+  D5 reused bath M=2: monotone TD False; S_sys first 0.633, min over 21 collisions 0.126 (at 7), final 0.436
+
+==============================================================================
+NR-D7 record arrow vs its time reverse (S + 6 env, H = sum g_k Z_S Y_k; Theta = X_S K)
+==============================================================================
+  seed A: forward redundancy [0, 0, 0, 0, 4, 6]; from Theta psi(t_f): [6, 4, 0, 0, 0, 0]; <I(S:E_k)> fwd 0.975, after reversal 0.000
+  seed B: forward redundancy [0, 0, 0, 0, 3, 6]; from Theta psi(t_f): [6, 3, 0, 0, 0, 0]; <I(S:E_k)> fwd 0.980, after reversal -0.000
+
+==============================================================================
+NR-D8 same global state, inequivalent TPSs (n = 10, S = first two slots)
+==============================================================================
+  computational                       : S_S(t) 0.930 1.198 1.177 1.258 1.201 1.167
+  fresh Clifford frame                : S_S(t) 1.967 1.986 1.913 1.976 1.962 1.988
+  QR product frame (state -> |0..0>)  : S_S(t) 0.000 1.933 1.991 1.964 1.935 1.985
+
+==============================================================================
+NR-D2 typicality: Haar on an energy shell |E| < 1, n = 10, S = {0,1}
+==============================================================================
+  dt=1.0: <S_S(0)> = 1.977 (max 2); <dS> = +0.00021 +- 0.00018; P(increase) = 0.527 +- 0.013
+  dt=0.3: <S_S(0)> = 1.977 (max 2); <dS> = -0.00010 +- 0.00006; P(increase) = 0.479 +- 0.013
+
+==============================================================================
+SUMMARY
+==============================================================================
+NR-D1: REPRODUCED (2/2) — exact time-reversal mirror; reversed state runs an anti-arrow to S = 0
+NR-D3: REPRODUCED (2/2) — same marginals: correlated state recoheres to purity, product-of-marginals does not (max-mixed-ish bath)
+NR-D4: REPRODUCED (2/2) — fresh maximally mixed bath: Markovian contraction, entropy rise, records; correlated bath: non-monotone
+NR-D5: REPRODUCED (3/3) — bath reuse destroys monotone (semigroup) behaviour; single reused ancilla re-purifies
+NR-D7: REPRODUCED (2/2) — records form forward (0 -> >=5) and un-form from the reversed state (>=5 -> 0)
+NR-D8: REPRODUCED (1/1) — same global state: product/rising in one TPS, flat high-entropy in another
+NR-D2: REPRODUCED (2/2) — typicality: P(increase) ~ 1/2, states already near maximal
