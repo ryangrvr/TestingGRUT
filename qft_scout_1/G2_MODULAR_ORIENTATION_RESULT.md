@@ -39,7 +39,7 @@ So ω is KMS at **β = −1 for σ_t**, i.e. at **β = +1 for τ_t := σ_{−t}*
 
 **This is the baseline:** a canonical one-parameter group with no geometric or physical-time meaning.
 
-## G2-2 State dependence — **type I: STATE-PRICED; type III₁: an intrinsic outer flow class (CONDITIONALLY SELECTED)**
+## G2-2 State dependence — **type I: STATE-PRICED; type III₁: an injective outer modular homomorphism (CONDITIONALLY SELECTED)** [Q2R-01]
 
 **Type I.**
 - Different faithful states give different modular Hamiltonians (‖K₁ − K₂‖ = 3.73).
@@ -48,23 +48,28 @@ So ω is KMS at **β = −1 for σ_t**, i.e. at **β = +1 for τ_t := σ_{−t}*
 - **In type I the modular flow carries exactly the state's information: STATE-PRICED / RELOCATION.**
 
 **Beyond type I** (imports):
-- **Connes cocycle theorem (1973).** The image of σ^ω in Out(M) is **independent of the faithful normal state**. This
-  gives a canonical homomorphism δ_M : ℝ → Out(M).
-- **Connes T-invariant.** For semifinite M (types I, II), δ_M is trivial. For **type III₁**, T(M) = {0}, so δ_M is
-  **injective**.
-- AQFT local algebras are type III₁, indeed the unique hyperfinite III₁ factor (Buchholz–D'Antoni–Fredenhagen 1987
-  under scaling-limit assumptions; Haagerup 1987 for uniqueness).
+- **Connes cocycle theorem (1973).** For any factor M, the modular automorphism groups of faithful normal states define
+  one **canonical, state-independent modular homomorphism δ_M : ℝ → Out(M)**, whose kernel is Connes' T(M).
+- **Semifinite factors (types I, II):** modular automorphisms are inner, so δ_M is trivial.
+- **Type III₁:** T(M) = {0}, so δ_M is **injective / faithful.**
+- **Other type III classes** (III_λ, III₀) can also have non-trivial outer modular structure, but **not** the III₁
+  injectivity property.
+- **Physical local algebras** [Q2R-02]: under the standard phase-space / nuclearity / scaling assumptions used in the
+  canonical AQFT structural results (Buchholz–D'Antoni–Fredenhagen 1987), physically relevant local algebras fall into the
+  **hyperfinite (injective) III₁ class.** Haagerup's uniqueness theorem (1987) identifies the injective III₁ factor
+  uniquely up to isomorphism.
 
-**So a type III₁ local algebra carries a canonical, state-independent, faithful one-parameter *outer* flow.** A type I
-algebra does not. This is what type III₁ buys at G2. It is a different non-type-I property from G1's: G1 needed only
-non-type-I, while G2 needs type III, since type II has a trivial δ_M.
+**New G2 structure, stated narrowly:** **TYPE III₁ CONDITIONALLY SELECTS AN INJECTIVE, STATE-INDEPENDENT OUTER MODULAR
+HOMOMORPHISM δ_M.** It does **not** select a specific representative σ_t (those remain state-priced through Connes
+cocycles), physical time, or orientation. Type III₁ does not uniquely create the idea of an outer modular structure; it
+makes δ_M injective. This differs from G1's property: G1 needed only non-type-I, while G2's injectivity needs III₁.
 
 **Limits.**
 - δ_M is an outer **class**, not a specific automorphism group. Picking the group needs a state (STATE-PRICED).
 - For a local algebra 𝒜(O), physical inertial time translations do not even preserve 𝒜(O). δ_M relates to physical
   dynamics only through (2) (wedges: boost / Rindler time) or (3) (an interpretation).
 
-> **Classification:** the intrinsic outer flow class is **CONDITIONALLY SELECTED** (given M type III₁). As **dynamics**
+> **Classification:** the injective outer modular homomorphism is **CONDITIONALLY SELECTED** (given M type III₁). As **dynamics**
 > it is interpretation-priced. The specific flow is STATE-PRICED.
 
 ## G2-3 Sign inversion — **ORIENTATION NOT SELECTED (CONVENTION- / Σ-PRICED)**
@@ -73,7 +78,7 @@ non-type-I, while G2 needs type III, since type II has a trivial δ_M.
 |---|---|---|
 | algebra ↔ commutant (M ↔ M′) | **reverses**: Δ′ = Δ^{−1}. The commutant's flow is 1 ⊗ ρᵀ^{−it}Bρᵀ^{it} | finite check, error 9e-14. For wedges, the right and left wedges' modular flows are opposite boosts |
 | modular conjugation J | commutes with Δ^{it} (antilinear) and **maps M → M′**: it carries the M-flow to the M′-flow | error 3e-14 |
-| anti-automorphism α of M | σ^{φ∘α}_t = α^{−1}∘σ^φ_{−t}∘α: **reverses** | finite check with α = transpose, error 2e-15. For hyperfinite III₁, M ≅ M^op (by uniqueness), so δ_M is carried to its reverse by an anti-automorphism of the **same** algebra |
+| anti-automorphism α of M [Q2R-03] | σ^{φ∘α}_t = α^{−1}∘σ^φ_{−t}∘α: **reverses** | finite check with α = transpose, error 2e-15. For hyperfinite III₁, M ≅ M^op (by uniqueness), so δ_M is carried to its reverse by an anti-automorphism of the **same** algebra |
 | Tomita parameter convention (Δ^{it} vs Δ^{−it}) | a definitional sign | convention |
 | replacing the state | changes the inner flow, not the outer class or its sign | G2-2 |
 
@@ -83,8 +88,11 @@ non-type-I, while G2 needs type III, since type II has a trivial δ_M.
   - declaring which algebra is "the system" (a Σ / A_partition choice);
   - the Tomita / KMS sign convention;
   - extra physical input (G2-4 / G2-5).
-- A possible exception exists in principle for factors not anti-isomorphic to themselves (Connes 1975). It is **not
-  realized** by AQFT's hyperfinite III₁ local algebras.
+- **Scope [Q2R-02/03]:** the opposite algebra of an injective III₁ factor is again injective III₁, so Haagerup uniqueness
+  gives R_∞ ≅ R_∞^op: an anti-isomorphism exists **for the hyperfinite III₁ class**. For that class, modular orientation
+  is not invariant under algebraic structure considered up to anti-isomorphism. **This is not claimed for every factor
+  or for arbitrary type III₁ factors.** Factors not anti-isomorphic to themselves (Connes 1975) are the control showing
+  that anti-isomorphism cannot be assumed universally.
 
 ## G2-4 Bisognano–Wichmann — **CONSISTENCY / RELOCATION (orientation into the spectrum condition)**
 
@@ -94,8 +102,13 @@ flow **coincides with** the supplied geometric boost flow, and J with CPT × rot
 **Accounting.**
 - **Nothing geometric is reconstructed.** Poincaré covariance is an input. The theorem is a consistency constraint
   linking the state to the supplied geometry.
-- **The orientation is fixed by the spectrum condition** (energy-momentum in the forward cone V̄₊), i.e. a supplied time
-  orientation. The modular flow is the boost by −2πt *relative to that cone*. The left wedge gets the reverse.
+- **The geometric sign / orientation in the BW identification is priced by the supplied relativistic structure** [Q2R-04]:
+  - the Poincaré representation;
+  - the wedge choice;
+  - the spectrum / future-cone condition;
+  - the modular sign convention.
+
+  The modular flow is the boost by −2πt relative to these. The left wedge gets the reverse.
 
 **Lattice illustration** (80 digits; vacuum of the free field with μ = ma = 0.02; a 30-site interval).
 - Near the cut the modular Hamiltonian is boost-like: H_p[j,j] / 2π(j + ½) = **0.996, 0.976, 0.952** at j = 0, 1, 2.
@@ -104,8 +117,9 @@ flow **coincides with** the supplied geometric boost flow, and J with CPT × rot
 - **A thermal state (β = 4) on the same algebra is not boost-like:** the ratios are 0.706, 0.394, 0.252, ….
 - So the geometric identification belongs to **vacuum + covariance + spectrum condition**, not to the algebra alone.
 
-> **Classification:** BW **constrains** (modular flow must equal the boost) and **reconstructs nothing new.**
-> Orientation is **RELOCATED into the spectrum condition**.
+> **Classification:** BW earns the **consistency relation "vacuum modular flow = wedge boost flow"** and does not by
+> itself reconstruct the prior spacetime structure. The sign is priced by the supplied relativistic structure (Poincaré
+> representation, wedge, spectrum condition, modular convention) [Q2R-04]. G3 tests the inverse direction.
 
 ## G2-5 KMS, passivity and orientation — **CONVENTION-PRICED / RELOCATION into passivity**
 
@@ -113,16 +127,20 @@ The four notions are separated as follows:
 
 | notion | status |
 |---|---|
-| **Modular KMS** | the theorem: β = −1 for σ_t in the Tomita convention |
+| **Modular KMS** | the theorem: β = −1 for σ_t **in the code's modular-parameter convention** σ_t(A) = ρ^{it}Aρ^{−it}, i.e. β = +1 for σ_{−t}. **This sign is a modular-parameter convention, not physical evidence for either temporal orientation** [Q2R-06] |
 | **Positive physical temperature** | the *declaration* that physical time τ_t = σ_{−βt} with β > 0 |
-| **Passivity** | Pusz–Woronowicz 1978: ω is completely passive for τ iff KMS at β ≥ 0 (or a ground state) |
+| **Passivity** | theorem-grade thermodynamics (Pusz–Woronowicz 1978) concerns **complete passivity** and KMS / ground states |
 | **Orientation** | not fixed by any of the above without a further postulate |
 
 **Finite check.** For H = +K (τ_t = σ_{−t}), ρ is passive: the maximum extractable cyclic work is **0.0000** (random
 search and exact). For the reversed orientation H = −K, ρ is maximally active (**2.19** exact).
 
-So **passivity selects the orientation relative to the state.** But passivity, "no work from cyclic processes", is a
-**Kelvin-type second-law postulate.** The arrow is RELOCATED into it, not derived. **β > 0 is not a derived arrow.**
+**Finite control:** for the chosen faithful state, H = +K is passive and H = −K is active. So **imposing** passivity
+distinguishes the two candidate signs **in this control** [Q2R-05].
+
+**Theorem-grade reading:** passivity / complete passivity can orient a dynamics relative to a state **once the Kelvin-type
+thermodynamic condition is imposed.** This relocates the orientation into the thermodynamic postulate; it does not derive
+that postulate. **"Passivity derives / selects the arrow" is not claimed. β > 0 is not a derived arrow.**
 
 ## G2-6 Split-buffer carryover — **RELOCATION into (d, 𝒩, ω)**
 
@@ -142,15 +160,19 @@ is given (Doplicher–Longo; bibliographic only).
 
 | frozen item | G2 result | class |
 |---|---|---|
-| **time orientation** | flips under M ↔ M′, under anti-automorphisms (M ≅ M^op for hyperfinite III₁), and under the Tomita convention. Fixed only by Σ-choice, convention, spectrum condition or passivity, all supplied | **NOT SELECTED: CONVENTION-PRICED / RELOCATION** |
+| **time orientation** | flips under M ↔ M′, under anti-automorphisms (R_∞ ≅ R_∞^op for the hyperfinite III₁ class [Q2R-02/03]), and under the modular-parameter convention. Fixed only by Σ-choice, convention, the supplied relativistic structure (BW) or an imposed passivity criterion | **NOT SELECTED: CONVENTION-PRICED / RELOCATION** |
 | **H_epoch** (special-form event) | no modular datum picks an origin; with a split buffer, (d, 𝒩, ω) are supplied | **RELOCATION / not selected** |
-| **D_dyn (time-flow structure)** | type I: the flow is STATE-PRICED. **Type III₁: a canonical state-independent outer flow class exists** (Connes), but it is physical dynamics only via BW (wedge boost time) or the thermal-time interpretation | outer class **CONDITIONALLY SELECTED** (given M type III₁); as dynamics, interpretation-priced |
+| **D_dyn (time-flow structure)** | type I: the flow is STATE-PRICED. **Type III₁: the canonical state-independent modular homomorphism δ_M is injective** (Connes T(M) = {0}), but it is physical dynamics only via BW (wedge boost time) or the thermal-time interpretation | injective δ_M **CONDITIONALLY SELECTED** (given M type III₁); as dynamics, interpretation-priced |
 | **Lorentz / boost structure** | BW identifies the modular flow with supplied boosts | **CONSISTENCY** (a constraint), no reconstruction. The modular → geometry direction is G3 |
 
-> **G2 TERMINAL:** **ORIENTATION NOT SELECTED** (CONVENTION- / Σ- / SPECTRUM-CONDITION- / PASSIVITY-PRICED);
-> **H_epoch NOT SELECTED** (RELOCATION into (d, 𝒩, ω)); **modular time: STATE-PRICED in type I; a canonical outer flow
-> CLASS is CONDITIONALLY SELECTED by type III₁ algebras** (not orientation, not physical time without interpretation).
-> No TRUE COMPRESSION.
+> **G2 TERMINAL (after QFT REPAIR 02):**
+> - **ORIENTATION NOT SELECTED.**
+> - **H_epoch NOT SELECTED.**
+> - A type III₁ factor conditionally supplies an **injective, state-independent outer modular homomorphism δ_M**. Neither
+>   a particular inner representative, a physical-time interpretation, nor orientation follows from that fact alone.
+> - BW gives a geometric consistency relation under supplied relativistic hypotheses.
+> - Thermodynamic orientation requires a supplied passivity / KMS criterion.
+> - **TRUE COMPRESSION = 0.**
 
 ## Scope
 
