@@ -101,9 +101,9 @@ equilibrium (B2-3):
 This is the GRUT-side counterpart of SCOUT D3 / D6 (correlations, not marginals, carry the arrow-relevant boundary datum),
 in a classical Gaussian infinite-bath model.
 
-## B2-3 Productness is sufficient, not necessary — **bridge proof sketch + numerics**
+## B2-3 Productness is sufficient, not necessary — **bridge theorem (reviewed at stated scope) + numerics**
 
-**Proposition B2-P1** (bridge, proof sketch; *not* canonically verified).
+**Proposition B2-P1** (bridge; **BRIDGE-THEOREM REVIEWED AT STATED SCOPE** [BR3 review note]; not a canonical GRUT theorem).
 - **Setup:**
   - K = K_∞ = 2.3·I − T on ℓ²(ℕ);
   - Σ_G = T_b·diag(K⁻¹, I);
@@ -127,7 +127,7 @@ used.** The proof is the LS-1 mechanism, unchanged.
 **Numerics (finite N).** |S₁(t) − S_ref| at t = 200 is below 1e-5 for every correlated case: rank-3, -4 and -5 deviations,
 the marginal-matched product and the graft.
 
-> **PRODUCTNESS IS SUFFICIENT, NOT NECESSARY, FOR LOCAL RELAXATION** (bridge-sketch grade). The residual is not "the
+> **PRODUCTNESS IS SUFFICIENT, NOT NECESSARY, FOR LOCAL RELAXATION** (bridge theorem, reviewed at stated scope). The residual is not "the
 > preparation must be independent". It is **which correlation-boundary member was realized.**
 
 ## B2-4 Correlation reversal / anti-arrow — **D + Σ + A DO NOT SELECT THE ARROW BOUNDARY**
@@ -166,23 +166,30 @@ The epoch is the point where the *declared form* (productness) holds, so it is s
 
 ## B2-6 S6 orientation firewall (bookkeeping clarification; S6 is not downgraded)
 
-The S6 charter fixes f_J = +J on L1 (T_s > T_b), −J on L2 (T_s < T_b), and σ = −Ḋ. So NET-ARROW-CONFIRMED means: **given
-the supplied preparation and the forward sign convention tied to that preparation's temperature ordering, the integrated
-observables keep a net forward value.**
+**S6 contains two declared notions of forward. Neither is selected by the time-symmetric dynamics itself** [BR3-02]:
+- **J channel:** f_J = +J on L1 (T_s > T_b) and −J on L2 (T_s < T_b). This sign is tied to the declared hot / cold
+  ordering.
+- **Entropy-reference channel:** σ = −Ḋ, i.e. descent toward the supplied reference S_ref = T_b·diag(r, 1). This direction
+  is **reference-relative**, not the L1 / L2 temperature-sign convention.
+
+So NET-ARROW-CONFIRMED means: given the supplied preparation, the J-channel sign convention and the supplied reference
+state, the integrated observables keep a net forward value.
 
 | earned (theorem-grade, canonical) | supplied / conventional |
 |---|---|
 | local return to equilibrium (LS-1) | which preparation is realized (H_sys, H_bath, H_cross) |
 | closed-form integrated transfer (LS-2) | the reference state S_ref (= the bath's Gibbs marginal) |
-| t⁻⁶ entropy tail with late sign reversal (LS-3) | the forward sign convention (L1 / L2) |
+| t⁻⁶ entropy tail with late sign reversal (LS-3) | the J-channel sign convention (L1 / L2); the σ-channel reference direction (descent to S_ref) |
 | no erasure on the declared open members | the boundary epoch t = 0 |
 
-**New bridge observation.** At **T_s = T_b** the L1 / L2 convention has **no reference**, yet the net transfer is
-non-zero (½Tr²). Its *sign* is set by the correlations (B2-2: negative for α > ½). The orientation convention therefore
-does not carry the arrow; the preparation does.
+**New bridge observation.** At **T_s = T_b** the L1 / L2 convention for J has **no ordering to refer to**, yet the raw J
+transfer is non-zero (½Tr²) when the correlation boundary is mismatched. Its *sign* is set by the correlations (B2-2:
+negative for α > ½). The entropy-reference construction keeps its supplied reference at T_s = T_b (D(0) = 0.019 > 0). In
+neither channel does the convention carry the arrow; the preparation (and, for σ, the supplied reference) does.
 
-**Proposed:** CANONICAL UPDATE CANDIDATE **B2-CUC-1** (bookkeeping clarification only; not applied). Annotate S6-1:
-"forward = relative to the declared preparation's temperature ordering; the equal-temperature offset ½T_b r² is a
+**Proposed:** CANONICAL UPDATE CANDIDATE **B2-CUC-1** (bookkeeping clarification only; not applied). Annotate S6-1 [as split by BR3-02]:
+"S6 has two declared forward notions: a temperature-ordering sign for J (L1 / L2), and descent toward the supplied
+reference S_ref for D. Neither is selected by the time-symmetric dynamics. The equal-temperature offset ½T_b r² is a
 correlation (interaction-energy) mismatch of the declared product preparation, and its sign depends on the declared
 S–B correlations."
 
@@ -195,7 +202,9 @@ X_J(∞) = (T_s − T_b) + ½T_b r² to 2e-5. Every member relaxes locally to T_
 
 **Stationarity does not select Gibbs either.**
 - The harmonic chain is integrable.
-- Every Q = F(K), P = K·F(K) with F > 0 is stationary, because AΣ + ΣAᵀ = 0 if and only if P = KQ with [Q, K] = 0.
+- For every positive function F(K), the zero-q–p-cross covariance Q = F(K), P = K·F(K) is stationary. Thus the harmonic
+  chain admits an infinite non-Gibbs stationary family [BR3-01]. (No claim is made that this family exhausts all
+  stationary covariances; cross blocks and spectral degeneracies are not characterized.)
 - A non-thermal GGE, F(λ) = λ⁻¹(1 + 0.4·cos 2λ), is admissible (min eigenvalue 0.169) and stationary (drift 8e-16). Its
   retained marginal diag(0.562, 1.0015) is not a Gibbs marginal at any single T.
 
@@ -306,7 +315,8 @@ quantitative predictions.** Only B5 can test any removed freedom.
 ## Scope and limits
 
 - **Model scope:** one canonical model, the S6 infinite pinned chain (classical, Gaussian, harmonic), with finite-N
-  numerics and an infinite-N proof sketch (B2-P1).
+  numerics and an infinite-N bridge theorem (B2-P1, reviewed at stated scope; local covariance convergence only, not
+  global trace-norm convergence).
 - **Not covered:** non-Gaussian and nonlinear cases, and the quantum version (SCOUT's domain).
-- **Verification:** the proposition is single-author and not independently verified. It is graded as a **bridge proof
-  sketch**.
+- **Verification:** the proposition received an independent logic review (owner) at its stated scope; grade
+  **BRIDGE-THEOREM REVIEWED AT STATED SCOPE**, not a canonical GRUT theorem.

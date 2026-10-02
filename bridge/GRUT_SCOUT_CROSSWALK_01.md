@@ -36,4 +36,4 @@
 | S6 declared product preparation (layer 4) | H_corr\|Σ (reviewed) | **RENAMING / IDENTICAL in role.** The S6 preparation is one explicit member of the H_corr\|Σ class, independently converged. B2-1: the equal-T transient ½T_b r² is a correlation / interaction-energy mismatch |
 | S6 equal-temperature offset ½T_b r²; marginal-matched transient T·r² | D3 / D6 (correlations vs marginals) | **IDENTICAL in content** (classical Gaussian infinite bath vs finite quantum) |
 | reversed S6 preparation anti-relaxes (B2-4); Σ(−t) = RΣ(t)R (B2-5) | D1 mirror / D7 record reversal; Janus | **IDENTICAL in structure**. D0 is used only conceptually (outside its scope) |
-| S6 relaxation for any trace-class Δ (B2-P1, bridge sketch) | D4 / D5 (fresh bath mechanism) | **OVERLAPPING**: the mechanism forgets H_corr locally but does not select it |
+| S6 relaxation for any trace-class Δ (B2-P1, bridge theorem reviewed at stated scope) | D4 / D5 (fresh bath mechanism) | **OVERLAPPING**: the mechanism forgets H_corr locally but does not select it |

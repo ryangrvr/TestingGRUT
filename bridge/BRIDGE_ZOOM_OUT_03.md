@@ -38,7 +38,7 @@ reached independently.
 ## 3. Is productness necessary, sufficient, or one convenient preparation?
 
 **Sufficient, not necessary, for local relaxation. It is one convenient member.**
-- **Proposition B2-P1** (bridge proof sketch, not independently verified): the LS-1 mechanism (Gibbs invariance + a.c.
+- **Proposition B2-P1** (bridge theorem; reviewed at stated scope [BR3 review note]): the LS-1 mechanism (Gibbs invariance + a.c.
   spectrum + Riemann–Lebesgue) extends verbatim to **any trace-class** covariance perturbation, cross blocks included.
 - Finite-N numerics confirm relaxation for rank-2 to rank-5 correlated deviations.
 - The residual is therefore not "the preparation must be independent". It is **which correlation-boundary member was
@@ -70,8 +70,9 @@ reached independently.
 - Σ₀ = RΣ₀R implies Σ(−t) = RΣ(t)R, so C_SB and D are even in t and J is odd: Janus-symmetric relaxation.
 - A reversed preparation, with identical global and marginal entropies, runs back to the less-equilibrated state exactly
   (D_rev(t) = D_fwd(τ − t)).
-- S6's NET-ARROW-CONFIRMED stands as stated. Its "forward" is a convention tied to the preparation's temperature
-  ordering (f_J = ±J on L1 / L2, σ = −Ḋ). At T_s = T_b that convention has no reference, yet the correlations set the sign.
+- S6's NET-ARROW-CONFIRMED stands as stated. S6 contains two declared notions of forward [BR3-02]: a temperature-ordering
+  sign for J (f_J = ±J on L1 / L2) and descent toward the supplied reference S_ref for D (σ = −Ḋ). Neither is selected
+  by the time-symmetric dynamics. At T_s = T_b the J ordering disappears, yet the correlations set the sign of J.
 - Proposed **B2-CUC-1** (bookkeeping clarification; not applied).
 - **ORIENTATION NOT SELECTED; D + Σ + A DO NOT SELECT THE ARROW BOUNDARY.**
 
@@ -80,7 +81,7 @@ reached independently.
 | class | B2 instance |
 |---|---|
 | **TRUE COMPRESSION** | **none** |
-| **CONDITIONAL COMPRESSION** | the local asymptotic state = f(bath state) via the a.c. relaxation mechanism, i.e. the memory of H_corr compressed downstream (B2-P1, bridge-sketch grade) |
+| **CONDITIONAL COMPRESSION** | the local asymptotic state = f(bath state) via the a.c. relaxation mechanism, i.e. the memory of H_corr compressed downstream (B2-P1, bridge theorem reviewed at stated scope) |
 | **RELOCATION** | reference / local-limit state into the bath state (partial, given Gibbs + T_b); stationary correlation structure into the noise parameters T_i |
 | **RENAMING** | S6 declared product preparation ↔ SCOUT H_corr\|Σ |
 | **SUPPLIED** | H_sys, H_cross, H_epoch, T_s, T_b, the Gibbs-vs-GGE choice, the orientation convention |

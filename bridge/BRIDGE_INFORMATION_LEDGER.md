@@ -41,17 +41,21 @@ information enters and what Bridge-1 has shown about it.
 | BI-11b | S–B correlations H_cross | 4 | H_corr\|Σ proper | **SUPPLIED; INDEPENDENT; LOAD-BEARING** (sets the sign of X_J at equal T) | B2-1, B2-2 |
 | BI-11c | boundary epoch H_epoch | 4 | special moment | **SUPPLIED** (selected by the preparation form; Janus-symmetric) | B2-5 |
 | BI-11d | temperature values T_s, T_b | 4, 5 | — | **SUPPLIED**; thermal class CONDITIONALLY DEFINED (stationarity also admits non-thermal GGEs) | B2-7 |
-| BI-12 | environment correlations / freshness | 5 | H_corr | bath state → local asymptotic state: **PARTIAL RELOCATION INTO ENVIRONMENT** (conditional on Gibbs postulate + T_b). Relaxation mechanism: **CONDITIONAL COMPRESSION** of H_corr memory downstream (B2-P1, bridge sketch). Noise layer: **RELOCATION** of the reference state | B2-3, B2-8, B2-9, B2-10 |
+| BI-12 | environment correlations / freshness | 5 | H_corr | bath state → local asymptotic state: **PARTIAL RELOCATION INTO ENVIRONMENT** (conditional on Gibbs postulate + T_b). Relaxation mechanism: **CONDITIONAL COMPRESSION** of H_corr memory downstream (B2-P1, bridge theorem reviewed at stated scope). Noise layer: **RELOCATION** of the reference state | B2-3, B2-8, B2-9, B2-10 |
 | BI-13 | quantum lift, ħ, Born rule, gravity, cosmology | 6–10 | — | **BLOCKED / NO MAPPING** by rule (not reopened) | charter |
+| BI-15 | duplicate listings: S–B split (A-14 / layer-5 name); S6 bath state (layers 4 / 5) | 4, 5 | Σ grouping; H_marginals | **REDUNDANT SUPPLY [list]** (bookkeeping only; R2, R3) | B4-9 |
+| BI-16 | σ-channel reference S_ref | 4/5 → derived | H_marginals (bath) | **CONDITIONAL COMPRESSION / RELOCATION**: downstream of the bath state by canonical LS-1 (R3′) | B4-9 |
+| BI-17 | hidden supplied items (A_resolution, A_time, R_closure, H_cross, H_epoch, Gibbs-vs-GGE postulate) | 3, 4, 5 | A_res; H_corr\|Σ | **SUPPLIED, unbooked** in Ledger A (made explicit by B4) | B4-11 |
+| BI-18 | layer 2 internal structure (static coupling vs generator class vs drift vs orientation carrier) | 2 | D_dyn; orientation | **LAYER INTERNALLY DECOMPOSABLE** (regrouping, not compression); orientation carrier class-relative (B4-CUC-2) | B4-4 |
 | BI-14 | commutant copies of a net; access relabelling / appended uncoupled sectors (P-5 L-E, L-A) | — | H-relative gauge | **GAUGE** (both programs) | B1 C1-a row; SCOUT handoff Q6 |
 
-## Tally after B0 + B1 + B3 + B2
+## Tally after B0 + B1 + B3 + B2 (B4 synthesis adds BI-15 … BI-18; matrix in `B4_NINE_LAYER_COMPRESSION_MATRIX.md`)
 
 | class | count |
 |---|---|
 | TRUE COMPRESSION | **0** |
 | CONDITIONAL COMPRESSION | 4 (BI-02, BI-06, BI-10b, BI-12 memory), plus the reconstruction-given-readout part of BI-10c; each priced by a supplied net, seed, rule or bath state |
-| RELOCATION / REDUNDANT SUPPLY / CONSISTENCY | 5 (BI-03, BI-04; BI-10g auxiliary branch → D; BI-12 bath state → local limit; BI-12 noise → reference state) |
+| RELOCATION / REDUNDANT SUPPLY / CONSISTENCY | 6 (BI-03, BI-04; BI-10g auxiliary branch → D; BI-12 bath state → local limit; BI-12 noise → reference state; BI-15 duplicate listings [list]); BI-16 S_ref downstream |
 | RENAMING | 3 (BI-07, BI-09, BI-11: S6 preparation ↔ H_corr\|Σ) |
 | GAUGE | 1 |
 | NO BRIDGE | 3 (BI-01, BI-05, BI-08) |
@@ -59,5 +63,5 @@ information enters and what Bridge-1 has shown about it.
 | NOT YET TESTED | 0 among the mapped layers |
 | BLOCKED / NO MAPPING | 1 group, plus BI-10g at Level-0 |
 
-**Layers eliminated:** none. **TRUE COMPRESSION:** 0. **Access bookkeeping:** A_res sharpened to A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time, with A_interface := (A_seed, A_readout) and A_closure = f(D, A_seed; R_closure) [BR2-01, BR2-02]. **Preparation bookkeeping (B2):** H_corr|Σ made explicit as (H_marginals, H_cross) at the declared-form epoch; H_cross is load-bearing, temperature difference and low entropy are not the price. **Redundancies found:** the local net is supplied redundantly whenever site-local drift or
+**Layers eliminated:** none. **TRUE COMPRESSION:** 0 (B4 matrix: 0 TC cells). **B4:** physical compression 0; dependency compression > 0 (closure and S_ref downstream, 2 duplicate listings, 4 layers decomposable); atomic supplied-primitive count ↑ (6 hidden items made explicit). **Access bookkeeping:** A_res sharpened to A_interface ⊕ A_partition ⊕ A_resolution ⊕ A_time, with A_interface := (A_seed, A_readout) and A_closure = f(D, A_seed; R_closure) [BR2-01, BR2-02]. **Preparation bookkeeping (B2):** H_corr|Σ made explicit as (H_marginals, H_cross) at the declared-form epoch; H_cross is load-bearing, temperature difference and low entropy are not the price. **Redundancies found:** the local net is supplied redundantly whenever site-local drift or
 non-uniform site noise is also supplied.
