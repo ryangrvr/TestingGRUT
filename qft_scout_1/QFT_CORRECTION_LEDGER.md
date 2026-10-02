@@ -62,3 +62,11 @@ Unchanged: H_cross CONSTRAINED-NONUNIQUE; orientation NOT SELECTED; H_epoch NOT 
 | **Q3R-04** | **Logical interdefinability, not measured information equality.** Borchers + Wiesbrock interconvert a signed HSMI and the positive half-sided Borchers-triple data under the theorem hypotheses: **LOGICALLY INTERDEFINABLE AT THE THEOREM SCOPE**, hence **RELOCATION INTO HALF-SIDED MODULAR POSITION** of positivity and half-sided translation structure. No Shannon / Kolmogorov information is claimed equal. "Cheaper specification" is retained only informally |
 | **Q3R-05** | **Source upgrades.** Wiesbrock CMP 157 (1993): **PRIMARY / SOURCE-TEXT VERIFIED** (author-uploaded full text inspected by the owner) for HSMI → U(a), the positive generator, the modular scaling relation, N = U(1)MU(−1), and the qualified III₁ statement. Kähler–Wiesbrock 2001: **PRIMARY-PUBLISHER ABSTRACT VERIFIED** for exactly a 3+1 Poincaré representation from the modular groups of algebras in specified modular position, plus a 3+1 net when combined with BW. Araki–Zsidó: SOURCE LOCATED / ABSTRACT VERIFIED |
 | **Q3R-06** | **Revised G3 terminal** (nine points, as recorded in `G3_MODULAR_RECONSTRUCTION_RESULT.md`) |
+
+## G4 — no repairs to earlier gates
+
+- **The bar** is carried unchanged from Bridge-1 B5-0. The comparator is ordinary AQFT / relativistic QFT with the same
+  premises.
+- **New G4 numerics are illustrations:** lattice mass / regulator / buffer variation and the 80-digit 2π slope.
+- **Q2a's "CFT universality" of the c/6 coefficient** is a KNOWN-RESULT IMPORT (Calabrese–Cardy-type), cited from the
+  standard literature, text not re-read. The lattice reproduces it numerically.

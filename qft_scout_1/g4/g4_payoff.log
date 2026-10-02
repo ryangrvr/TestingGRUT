@@ -1,0 +1,23 @@
+
+==============================================================================
+Q2  entanglement candidates under variation of supplied theory data (mass, field content, regulator, buffer)
+==============================================================================
+  stencil 2nd, m=0.5: dS per halving [0.1665 0.1666 0.1667] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = +0.1150; dE_prod(a->) [ 12.   28.4  65.6 148.8]; I(A:B) d=1: 0.05794
+  stencil 2nd, m=1.0: dS per halving [0.1663 0.1666 0.1666] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = +0.0000; dE_prod(a->) [  9.8  24.   56.8 131.3]; I(A:B) d=1: 0.01490
+  stencil 2nd, m=2.0: dS per halving [0.1653 0.1663 0.1666] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = -0.1155; dE_prod(a->) [  7.6  19.6  48.  113.6]; I(A:B) d=1: 0.00141
+  stencil 4th, m=0.5: dS per halving [0.1666 0.1666 0.1667] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = +0.1403; dE_prod(a->) [ 14.5  34.2  78.6 177.9]; I(A:B) d=1: 0.05794
+  stencil 4th, m=1.0: dS per halving [0.1664 0.1666 0.1666] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = +0.0253; dE_prod(a->) [ 12.   29.   68.4 157.4]; I(A:B) d=1: 0.01490
+  stencil 4th, m=2.0: dS per halving [0.1657 0.1664 0.1666] (-> c/6=0.1667); finite part S-(1/6)ln(1/a) = -0.0902; dE_prod(a->) [  9.4  23.9  58.1 136.8]; I(A:B) d=1: 0.00141
+  field content: n decoupled fields are additive -> sharp-cut coefficient n/6 (c = n); e.g. 2 fields: increment = 2 x 0.1667 = 0.3333
+  -> universal: the log coefficient c/6 (fixed by the supplied CFT data c, i.e. field content); non-universal: finite parts,
+     buffered MI values (mass- and buffer-dependent), and the product-state energy coefficient (regulator-dependent).
+
+==============================================================================
+Q3  near-cut 2*pi modular slope under mass variation (80-digit precision; interval of 30 sites)
+==============================================================================
+  vacuum, mu = m a = 0.02: H_p[j,j]/(2 pi (j+1/2)) at j = 0, 1, 2: [0.996 0.976 0.952]
+  vacuum, mu = m a = 0.2: H_p[j,j]/(2 pi (j+1/2)) at j = 0, 1, 2: [0.998 0.997 0.992]
+  vacuum, mu = m a = 0.5: H_p[j,j]/(2 pi (j+1/2)) at j = 0, 1, 2: [0.985 0.985 0.985]
+  thermal beta=4, mu=0.02 (state change): [0.706 0.394 0.252]
+  -> the 2*pi slope at the entangling point is mass-independent (vacuum, any mass) but STATE-dependent; it is the standard
+     Bisognano-Wichmann / Unruh normalization of relativistic QFT (comparator), not a GRUT-distinctive number.
