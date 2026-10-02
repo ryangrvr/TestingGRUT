@@ -15,9 +15,11 @@
 | REPAIR 01 | owner audit of Wave-1 synthesis | **DONE** | Y-02…Y-06 |
 | S2-7 | consistent-histories set selection (attacks A) | **DONE** | NONUNIQUE / A-PRICED: consistent sets on S and E slots; pointer Z–Z consistent only with large env (m = 7: 0.051); final basis always free; exact global Dowker–Kent sets |
 | S2-8 | Darwinism / records (attacks A) | **DONE** | pointer selected given split (χ_Z 0.871 vs χ_X 0); split not selected (R = 8 for every slot; same state R = 8 vs 0 across frames); R = 8/4/2 by fragment grouping; scrambling kills plateau. A-PRICED + D-priced |
-| S2-G | dimension selection: local Hilbert / graph-spectral / spacetime / capacity, separately | ACTIVE | — |
+| S2-G | dimension: split into G1 (with S2-Σ), G2, G3, G4 | ACTIVE | — |
 | ZOOM_OUT_03 | after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7 | **DONE** | none of D, H, A eliminated; candidate T2-2 (split centrality): C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res |
-| S2-Σ | joint TPS selection by a combined objective (attacks Σ) | **NEXT** | — |
-| S2-H2 | can basin data (ordered phase, preparation class) move into special D? | QUEUED | — |
+| S2-Σ + S2-G1 | factorization AND local dimension selection without hidden weights: Pareto front, monotone-transform hostile, weight simplex, scale, state, symmetry (attacks Σ) | **NEXT** (re-chartered by owner; no weighted objective first) | — |
+| ZOOM_OUT_04 | Σ/G1 zoom-out: is Σ selected, or a multi-objective preference problem? | GATED on S2-Σ | — |
+| S2-H2 | unique global attractor from every admissible initial condition without a measure (contractive / Markov / gradient vs unitary) | GATED on ZOOM_OUT_04 | — |
+| S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension (separately) | QUEUED after ZOOM_OUT_04 | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

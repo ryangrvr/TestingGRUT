@@ -10,7 +10,8 @@
 - **S2-8 DONE:** pointer selected given split; split / fragments not selected → A-PRICED.
 - **S2-7 DONE:** consistency filters, does not select; A-PRICED.
 - **ZOOM_OUT_03 DONE:** none of D, H, A eliminated. Candidate **T2-2 (split centrality)**: C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res — D and A share the factorization Σ. Strong success NOT met.
-- **Next:** S2-Σ (joint TPS selection), S2-G (active), S2-H2.
+- **Owner review:** ZOOM_OUT_03 accepted provisionally; working decomposition C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res (T2-2 classification only). H splitting: H_measure → D, H_preparation → A (S2-3b).
+- **Next:** S2-Σ + S2-G1 (Pareto / objective-invariance, no weighted objective first) → ZOOM_OUT_04 → S2-H2; G2–G4 after.
 - **History:** S2-3b ✓ → S2-1b ✓ → S2-8 ✓ → S2-7 ✓ (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).

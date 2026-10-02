@@ -182,3 +182,149 @@ Four notions, tested separately and never identified:
 4. **information capacity** (log dimension per unit region / per record).
 
 **Outcomes per notion:** SELECTED / PRICED (D, H or A) / NONUNIQUE.
+
+---
+
+# WAVE 2 PRE-REGISTRATIONS (owner review of `59d77f6`; written before any run)
+
+## S2-Σ (+ S2-G1) — factorization AND local dimension selection without hidden weights
+
+**Hostile question.** Can (H, ψ) select a factorization *and* a local dimension in an objective-independent way?
+Or does every proposed selector import a utility function, a scale or a factor dimension?
+
+### Σ-0 Firewall
+
+- A unique maximum of a hand-chosen weighted score F = w_L L + w_Q Q + … does **NOT** count as a selected TPS. Such
+  an F is **SELECTOR-PRICED** unless its weights and normalizations are derived.
+- Criteria are computed independently. Each is oriented so that larger is better:
+
+| criterion | definition |
+|---|---|
+| **L** locality | −k_eff, the ‖H‖²-weighted mean factor-support size of H |
+| **Q** quasiclassical stability (Carroll–Singh-type) | −(mean over factors of the entanglement-entropy growth S_f(τ) − S_f(0)) under H for the state ψ |
+| **R** record redundancy | max over factors f of #{g ≠ f : I(f:g)(τ) ≥ (1−δ) S_f(τ)}, counted only when S_f(τ) > 0.1 bit |
+| **P** predictive autonomy | the ‖H‖² fraction on single-factor supports |
+| **M** description length | −(dimension of the support-closed operator space containing H) / N² |
+
+- All criteria are LU-invariant (exact-factor-support decomposition; factor entropies).
+- **Admissible candidates** have ≥ 2 factors. This is a supplied constraint: the trivial factorization wins L, P and M
+  degenerately (S2-1b).
+- **Candidate set** (a supplied finite family; recorded in Σ-9): every set partition of n = 6 qubit slots into ≥ 2
+  blocks (202 groupings, so local dimensions 2…32 and mixed), crossed with frames:
+  - the identity;
+  - random Clifford circuits;
+  - one Haar-random global unitary;
+  - the commutant frame W = e^{−iHs}.
+
+**Outcomes (more than one may hold):**
+- **A. ROBUST TPS SELECTOR:** one candidate weakly dominates all others.
+- **B. PARETO NONUNIQUENESS.**
+- **C. DIMENSION-PRICED.**
+- **D. SCALE-PRICED.**
+- **DEGENERACY-PROTECTED NONUNIQUENESS.**
+
+### Σ-1 Pareto front first
+
+- Compute V(Σ) = (L, Q, R, P, M) for every candidate, with no scalarization.
+- Report:
+  - the front size;
+  - whether a single candidate weakly dominates all the others;
+  - the block-size types (local dimensions) and frames present on the front.
+
+### Σ-2 Monotone-transformation hostile
+
+- Pareto dominance is invariant under every strictly increasing componentwise transform. That invariance is stated
+  and checked.
+- Scalar winners are recomputed under transforms (log1p of shifted values, square, sqrt) and normalizations (min-max,
+  z-score, rank).
+- Report the number of distinct winners.
+
+### Σ-3 Weight simplex (only after Σ-1)
+
+- Sample Dirichlet(1) weights on the 4-simplex. This sampling measure is supplied and named.
+- Report the win share per candidate under each normalization, and whether any candidate wins > 90%.
+- Calling a weight vector "natural" is forbidden.
+
+### Σ-4 Local dimension as a variable
+
+- No fixed "qubits". Block-size multisets range over {1⁶}, {2,2,2}, {3,3}, mixed, and so on.
+- **TPS choice** and **local-dimension choice** are recorded separately.
+- If the objective family cannot jointly select d → **LOCAL DIMENSION REMAINS A Σ PRIMITIVE**.
+
+### Σ-5 Scale hostile
+
+Vary:
+- the time horizon τ;
+- the redundancy threshold δ (record resolution);
+- the fragment definition (single factors vs pairs);
+- the perturbation strength ε (GUE added to H; measure named).
+
+A selector is strong only if its front / winner is stable over a nontrivial window. Otherwise → **SCALE-PRICED**.
+
+### Σ-6 State dependence
+
+- The same H is evaluated in several states:
+  - a product state;
+  - a random-local product state;
+  - the ground state;
+  - a mid-spectrum eigenstate;
+  - a Haar-random state;
+  - a record-forming state;
+  - a Gibbs state (β = 1).
+- If ψ changes the winner, that cost moves explicitly into **H** (the state chooses the subsystems).
+
+### Σ-7 Symmetry / degeneracy hostile
+
+- **(a)** A translation-symmetric ring: groupings related by translation.
+- **(b)** The **commutant frame** W = e^{−iHs}. H-only criteria (L, P, M) are exactly invariant under it, while
+  ψ-criteria transform as a time shift.
+- Identical vectors for inequivalent TPSs → **DEGENERACY-PROTECTED NONUNIQUENESS**.
+
+### Σ-8 Literature conflict, decided by toy models rather than authority
+
+| work | claim | assumptions to identify from the toy models |
+|---|---|---|
+| Cotler–Penington–Ranard (arXiv:1702.06142) | the spectrum determines a local TPS when one exists | which assumptions this needs |
+| Carroll–Singh (PRA 103, 022213) | quasiclassicality defines a preferred factorization | which assumptions this needs |
+| Stoica (arXiv:2103.15104) | structures from (H, ψ) alone cannot be both physically relevant and unique | which assumptions this needs |
+
+Each literature statement is classified by scope.
+
+### Σ-9 Information accounting
+
+Separate every entry:
+- H;
+- ψ;
+- total dimension N;
+- local dimension;
+- number of factors;
+- objective family;
+- weights;
+- normalization;
+- time scale;
+- coarse scale / δ;
+- fragment definition;
+- the measure over candidate TPSs (the candidate family).
+
+**Σ DERIVED** only if every material entry except H and ψ is eliminated or shown to be gauge.
+
+## S2-G — dimension, split into four questions (kept separate in the ledger)
+
+| Question | Content | Run with |
+|---|---|---|
+| **G1** local Hilbert factor dimension | jointly with Σ (above) | S2-Σ |
+| **G2** graph / spectral dimension | from N(r) ~ r^d, spectral density, return probability. The graph, metric or diffusion operator used is priced | after the Σ zoom-out |
+| **G3** spacetime dimension | not inferred from graph dimension. Does causal / dynamical propagation fix an effective spacetime dimension uniquely? | after the Σ zoom-out |
+| **G4** operational / information capacity | the maximum distinguishable-state count: derived from D + H + Σ, or supplied? | after the Σ zoom-out |
+
+## S2-H2 — preview (do NOT run before the Σ/G1 zoom-out)
+
+- **Target:** a unique global physical attractor / state from every admissible initial condition, with no supplied
+  measure.
+- **Compare:**
+  - contractive dissipative dynamics;
+  - primitive Markov semigroups;
+  - gradient systems with a unique minimum;
+  - invertible Hamiltonian / unitary controls.
+- **Firewall:** a closed invertible microscopic theory cannot erase fine-grained information. If a unique basin needs
+  dissipation, openness or coarse-graining, that price goes into D or A.

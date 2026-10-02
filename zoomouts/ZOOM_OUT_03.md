@@ -1,3 +1,17 @@
+> **OWNER REVIEW (after `59d77f6`): ZOOM_OUT_03 accepted provisionally.** The working decomposition is
+> `C5 → D_dyn ⊕ H ⊕ Σ ⊕ A_res`. T2-2 stays a CLASSIFICATION ONLY.
+> - **D_dyn** = dynamical structure once a decomposition is available.
+> - **H** = state / basin / measure / preparation.
+> - **Σ** = factorization + local dimension + grouping + relevant scale / objective structure.
+> - **A_res** = residual access / readout choices after Σ.
+>
+> **S2-3b is upgraded.** It is an honest case of H splitting: **H_measure → D** (the invariant measure is fixed by the
+> structure of the dynamics, compact case) and **H_preparation → A** (forgetting is relative to accessible readouts;
+> fine-grained information is conserved). H is no longer monolithic.
+>
+> **Priority change:** S2-Σ runs together with S2-G1 (local dimension), with **no weighted objective first**. A
+> zoom-out follows before S2-H2.
+
 # SCOUT-2 ZOOM-OUT 03 (after REPAIR 01, S2-3b, S2-1b, S2-8, S2-7)
 
 **Gate check.** T2-2 is allowed only after S2-1b, S2-3b and at least one access probe. All are done: S2-1b ✓,
