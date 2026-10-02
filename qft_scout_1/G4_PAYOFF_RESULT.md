@@ -20,7 +20,7 @@ GRUT** (QP-5 lift supplied).
 | **Q2a** c/6 log coefficient | ✓ | ✗ (c supplied) | ✓ | ✓ | ✗ (CFT universality) | ✓ | ✓ | **STANDARD-STRUCTURE / INPUT-DEPENDENT** |
 | **Q2b** finite parts, energy coefficient | ✓ | ✗ | ✗ (regulator) | ✗ | ✗ | partly | — | **CUTOFF-DEPENDENT** |
 | **Q2c** buffered MI | ✓ | ✗ (m, d) | ✓ | ✓ | ✗ | ✓ | ✓ | **INPUT-DEPENDENT / STANDARD** |
-| **Q3** universal 2π | ✓ (BW) | ✗ (vacuum / wedge only) | ✓ given modular normalization | ✓ | ✗ (BW / Unruh) | ✓ (Unruh) | ✓ | **STANDARD-STRUCTURE** |
+| **Q3** universal 2π | ✓ (BW) | — (the exact wedge identification is vacuum-specific; local near-surface universality not adjudicated [Q4R-01]) | ✓ given modular normalization | ✓ | ✗ (BW / Unruh) | ✓ (Unruh) | ✓ | **STANDARD AQFT / QFT STRUCTURE** (fails criterion 5 regardless of any thermal behavior) |
 | **Q4** HSMI positivity | ✓ | ✗ (state, HSMI) | ✓ | ✓ | ✗ | ✗ | — | **STANDARD MODULAR STRUCTURE** |
 | **Q5** finite seed → continuum | ✓ | ✗ | — | ✓ | ✗ | ✗ (no spectrum / coupling / amplitude fixed) | — | **STRUCTURAL COMPRESSION / NO QUANTITATIVE OBSERVABLE** |
 | **Q6** modular Poincaré | ✓ (given the pattern) | ✗ (pattern encodes dimension; scale and spectrum free) | — | ✓ | ✗ | ✗ | — | **CONDITIONAL SYMMETRY RECONSTRUCTION / NO PAYOFF** |

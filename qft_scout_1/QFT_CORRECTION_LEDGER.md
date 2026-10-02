@@ -70,3 +70,12 @@ Unchanged: H_cross CONSTRAINED-NONUNIQUE; orientation NOT SELECTED; H_epoch NOT 
 - **New G4 numerics are illustrations:** lattice mass / regulator / buffer variation and the 80-digit 2π slope.
 - **Q2a's "CFT universality" of the c/6 coefficient** is a KNOWN-RESULT IMPORT (Calabrese–Cardy-type), cited from the
   standard literature, text not re-read. The lattice reproduces it numerically.
+
+## QFT REPAIR 04 — final G4 scope (owner freeze ruling, after `9a96734`; G4 terminal and prediction count unchanged)
+
+| ID | change |
+|---|---|
+| **Q4R-01** | **The thermal modular profile does not disprove local 2π universality.** The finite thermal-interval lattice control shows only that the chosen interval's full modular Hamiltonian is not the vacuum BW boost profile. Replaced wording: "the 2π slope fails for a thermal state", "state-priced", "vacuum-only". Corrected reading: **the exact BW wedge identification is vacuum-specific; in the finite thermal-interval lattice control the full modular profile is not boost-like; this control does not adjudicate the more general continuum question of universal local 2π behavior arbitrarily near an entangling surface** (cf. the broader literature on universal local modular temperatures, e.g. arXiv:1611.08517, owner pointer, not re-read). Q3 stays **STANDARD AQFT / QFT STRUCTURE**: it fails the bar because it is standard, BW / modular-framework-dependent and not GRUT-distinctive, **not** because of thermal behavior. The script / log line "STATE-dependent" in `g4/g4_payoff.*` is kept as emitted, and this entry takes precedence |
+| **Q4R-02** | **Saturation wording.** "No identified open item within AQFT + modular theory could produce TRUE COMPRESSION" is replaced by: **"No route identified or tested under the present QFT-SCOUT-1 charter yields TRUE COMPRESSION or a distinctive observable."** Added: "A further result would require either an untested theorem / structure within AQFT or a materially altered premise envelope." No impossibility over all AQFT / modular theory is claimed |
+
+**Status:** G4 accepted. **QFT-SCOUT-1 FROZEN** by owner ruling, with Q4R-01 and Q4R-02 applied.

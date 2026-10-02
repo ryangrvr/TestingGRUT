@@ -29,8 +29,12 @@ correlation function or dimensionless ratio, and its parameter normalization is 
 
 ## 4. Did 2π become anything beyond standard AQFT?
 
-**No.** The near-cut slope is 2π independently of the mass (lattice: 0.996 / 0.998 / 0.985) but fails for a thermal
-state (0.706). It is the standard BW / Unruh vacuum–wedge normalization (Q3: STANDARD-STRUCTURE, state-priced).
+**No.** The near-cut slope is 2π independently of the mass (lattice: 0.996 / 0.998 / 0.985). It is the standard
+BW / Unruh normalization: **STANDARD AQFT / QFT STRUCTURE**, not GRUT-distinctive.
+
+**[Q4R-01]** The exact BW wedge identification is vacuum-specific. In the finite thermal-interval lattice control the full
+modular profile is not boost-like (0.706). That control does **not** adjudicate the continuum question of universal local
+2π behavior near an entangling surface, and the negative payoff verdict does not rely on it.
 
 ## 5. Did the sharp-product obstruction become operationally predictive?
 
@@ -79,8 +83,10 @@ refined, in the AQFT envelope, by:
 - All four gates are closed.
 - The one genuine narrowing (H_cross) is established at source-verified theorem grade.
 - Every remaining candidate is standard, input-dependent or relocated.
-- No identified open item within AQFT + modular theory could produce TRUE COMPRESSION or a distinctive observable without
-  adding a new selector.
+- **No route identified or tested under the present QFT-SCOUT-1 charter yields TRUE COMPRESSION or a distinctive
+  observable** [Q4R-02].
+- A further result would require either an untested theorem / structure within AQFT or a materially altered premise
+  envelope. No impossibility across all AQFT or modular theory is claimed.
 
 **Possible next envelopes** (owner's choice; not started):
 - gravity / causal structure, e.g. whether gravitational constraints select the split scale d or the modular-position
