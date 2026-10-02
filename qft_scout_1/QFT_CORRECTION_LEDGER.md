@@ -37,3 +37,15 @@
 - BW gives a geometric consistency relation under supplied relativistic hypotheses;
 - thermodynamic orientation requires a supplied passivity / KMS criterion;
 - TRUE COMPRESSION = 0.
+
+## G3 — source grades and notes (no repairs to earlier gates)
+
+| item | grade |
+|---|---|
+| Borchers covariance Δ^{it}U(a)Δ^{−it} = U(e^{−2πt}a); HSMI ⇒ positive-energy affine representation; P = (log Δ_N − log Δ_M)/2π | used at the scope of the **owner-supplied modern restatement** (SOURCE-TEXT VERIFIED by the owner) |
+| Wiesbrock, CMP 157 (1993) 83–92 (−hsm convention Δ_M^{−it}NΔ_M^{it} ⊆ N, t ≥ 0; correspondence with chiral CFT / III₁ subfactors); CMP 158 (1993) 537–543 | SOURCE LOCATED (bibliographic record + abstract via web search) |
+| Araki–Zsidó, math/0412061 | SOURCE LOCATED |
+| Kähler–Wiesbrock, JMP 42 (2001) 74–86 (3+1 Poincaré from algebras in specified modular position; net via BW) | SOURCE LOCATED (abstract) |
+| Buchholz–Dreyer–Florig–Summers (2000), geometric modular action; Borchers–Yngvason thermal-state modular groups | CITED FROM THE STANDARD LITERATURE / MEMORY, TEXT NOT RE-READ. Not verdict-bearing |
+| Lemmas F1, F2 (finite obstruction) | proved here |
+| Antiunitary maps flip the hsm sign (Θ·Δ^{is}·Θ⁻¹ = Δ_Θ^{−is}) while P stays ≥ 0 | elementary QFT-SCOUT observation |

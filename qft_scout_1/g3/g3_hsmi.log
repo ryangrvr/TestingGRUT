@@ -1,0 +1,36 @@
+
+==============================================================================
+G3-2 FINITE / TYPE-I CONTROL: can a non-trivial half-sided modular inclusion exist?
+==============================================================================
+  Lemma F1 (proved): if log Delta is bounded and sigma_t(N) subset N for t in [0, eps), the derivation d = i[log Delta, .]
+  maps N into N (derivative at 0+ of a curve staying in the closed subspace N); hence sigma_t(N) = exp(t d)(N) subset N for
+  ALL real t. In finite dimensions log Delta is bounded: HALF-SIDED INVARIANCE => TWO-SIDED INVARIANCE.
+  Lemma F2 (proved): finite dimensions, Omega separating for M and cyclic for N subset M => dim N >= dim H >= dim M, so N = M.
+
+  (a) random subalgebras N = U (B(C^2) (x) 1) U^+ inside M = B(C^4), random faithful rho: defect of sigma_t(N) from N
+   trial 0 t=-1.00:8.33e-01 t=-0.10:3.34e-01 t=-0.01:3.42e-02 t=+0.01:3.41e-02 t=+0.10:3.32e-01 t=+1.00:8.81e-01
+   trial 1 t=-1.00:9.56e-01 t=-0.10:3.07e-01 t=-0.01:3.15e-02 t=+0.01:3.15e-02 t=+0.10:3.07e-01 t=+1.00:8.35e-01
+   trial 2 t=-1.00:8.37e-01 t=-0.10:3.25e-01 t=-0.01:3.34e-02 t=+0.01:3.34e-02 t=+0.10:3.25e-01 t=+1.00:8.01e-01
+   trial 3 t=-1.00:8.11e-01 t=-0.10:3.42e-01 t=-0.01:3.52e-02 t=+0.01:3.52e-02 t=+0.10:3.43e-01 t=+1.00:7.63e-01
+   trial 4 t=-1.00:8.59e-01 t=-0.10:3.47e-01 t=-0.01:3.54e-02 t=+0.01:3.53e-02 t=+0.10:3.40e-01 t=+1.00:8.98e-01
+  -> never half-sided: the defect is present for BOTH signs, symmetric to first order (relative asymmetry at |t|=0.01: max 2.22e-03)
+
+  (b) a modular-invariant subalgebra (rho = rho_a (x) rho_b, N = B(C^2) (x) 1): defect for both signs
+   t=-1.00:3.5e-15 t=-0.10:7.4e-16 t=+0.10:6.5e-16 t=+1.00:3.5e-15  -> invariance is two-sided (consistent with F1)
+
+  (c) standardness: in the standard form H = C^4 (x) C^4 (dim 16), the cyclic subspace of N = B(C^2) (x) 1 (x) 1 has dimension
+   dim(N Omega) = 4 < 16 = dim H: Omega is NOT cyclic for N (F2) -> N cannot be standard unless N = M
+  -> FINITE / TYPE-I OBSTRUCTION: a half-sided modular inclusion needs an UNBOUNDED modular generator; with standard N it
+     is impossible in finite dimensions (it collapses to N = M). Import (Wiesbrock 1993): a non-trivial HSMI forces type III_1.
+
+==============================================================================
+G3-1 / G3-6 light-ray toy: chiral modular flows act geometrically (BW / Hislop-Longo, supplied)
+==============================================================================
+  modular flow of the right ray (a, inf): x -> a + e^{-2 pi t}(x - a);  of the left ray (-inf, b) [commutant]: x -> b + e^{+2 pi t}(x - b)
+  right rays: N=(1,inf) subset M=(0,inf): -hsm;  (G_N - G_M)/2pi as a vector field = [1. 1. 1. 1. 1. 1. 1.] (constant -> a TRANSLATION, coefficient +1.00)
+  left rays (mirror): N=(-inf,-1) subset M=(-inf,0): +hsm;  (G_N - G_M)/2pi as a vector field = [1. 1. 1. 1. 1. 1. 1.] (constant -> a TRANSLATION, coefficient +1.00)
+  right rays, larger gap: N=(2.5,inf) subset M=(0,inf): -hsm;  (G_N - G_M)/2pi as a vector field = [2.5 2.5 2.5 2.5 2.5 2.5 2.5] (constant -> a TRANSLATION, coefficient +2.50)
+  -> one inclusion yields a translation generator (scale = the inclusion gap): the generator of x -> x + s, i.e. the same
+     rightward null translation for BOTH mirrored configurations; the hsm SIGN records whether N = U(+gap) M U(-gap) (-hsm)
+     or N = U(-gap) M U(+gap) (+hsm), i.e. the relation between the inclusion order and the positive-energy direction.
+  -> the family M(s) = U(s) M U(-s), s in R, is a totally ordered continuum generated from ONE inclusion (a light-ray net).
