@@ -23,3 +23,4 @@ Every use of *generic, typical, random, almost surely, high probability, natural
 | candidate TPS family | S2-Σ | finite family (202 groupings × 7 frames) | supplied | non-dominance is robust to enlarging the family; any dominance claim would not be |
 | "random starts" in H2 (Kuramoto, Ising, ring) | S2-H2 | uniform on phases / spins (sampling) | supplied for frequencies only | fractions (21/30 twisted, 44% stripes) are sampling-measure-relative; the existence of alternative attractors is not |
 | exclusion of unstable equilibria (Kuramoto complete graph, symmetric well) | S2-H2 | none — closed nowhere-dense null set (Baire and Lebesgue agree) | n/a | "every admissible state" fails; exclusion priced |
+| "typical states look thermal" | S2-D-arrow D2 | Haar on ℂ¹⁰²⁴ / Haar on the energy shell | supplied | yields equilibrium appearance only; P(increase) = 0.499 ± 0.013 (no arrow) |

@@ -23,7 +23,10 @@
 | REPAIR 02 | owner audit of S2-Σ (commutant = H-relative gauge; epoch scoped; literature regraded) | **DONE** | Y-07…Y-09 |
 | S2-H2 | state / basin selection by dynamics (attacks H) | **DONE** | structural attractors compress H into D mod gauge (symmetric contraction; doubly stochastic; all-to-all alignment, Ising complete graph 200/200) — TUNING / NON-LOCALITY / ARROW priced; explicit-parameter cases = RELOCATION; dissipation dilates to H_env; unitary: no fine-grained selection; local coupling keeps basins (ring 21/30 twisted; 2D 44% frozen stripes) |
 | ZOOM_OUT_05 | after H2 | **DONE** | remaining: D_dyn + arrow, H_env, Σ/Sym(H), A_res; candidate T2-4 (every H→D compression is arrow-priced, paid by H_env) |
-| S2-D-arrow | can a closed unitary universe generate an effective subsystem arrow from EVERY admissible global state? (new D-hostile) | **RECOMMENDED NEXT** (awaiting owner) | — |
-| S2-G2 / G3 / G4 | graph-spectral / spacetime / capacity dimension (separately) | QUEUED after ZOOM_OUT_04 | — |
+| REPAIR 03 | T2-4 rescoped to an open candidate | **DONE** | Y-10 |
+| S2-D-arrow | closed unitary arrow from every state? | **DONE** | D0 theorem: no every-state / eternal continuous arrow (finite unitary); Prop. 2: H-only states stationary; arrows need H_corr\|Σ + freshness (max-mixed bath works; correlated 6.9-bit bath anti-arrows), A_res; typicality = equilibrium only (P(inc) 0.499); Janus; special state fixable by (H, Σ) + selector |
+| ZOOM_OUT_06 | after D-arrow | **DONE** | H_env → H_corr\|Σ; arrow not Σ-independent; orientation not selected; candidate T2-5 |
+| S2-G2 / G3 / G4 | dimension notions | **RECOMMENDED NEXT** | — |
+| S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | QUEUED | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).

@@ -1,0 +1,87 @@
+
+==============================================================================
+D1  subsystem entropy S(rho_S(t)), S = qubits {0,1} (max 2 bits), n = 10, every-state hostile
+==============================================================================
+  state                                    t=0     t=0.5   t=1     t=2     t=4     t=8     
+  product (real, tilt 1.4)                 0.000   0.616   0.816   1.013   0.930   1.238   
+  Haar                                     1.979   1.983   1.981   1.987   1.990   1.990   
+  time-reversed K psi_prod(t*=8.0)         1.238   1.164   1.149   1.192   0.930   0.000   
+  energy eigenstate (mid)                  1.883   1.883   1.883   1.883   1.883   1.883   
+  mirror check (Corollary 2): max |S(rev(s)) - S(prod(t*-s))| = 8.9e-16; reversed state: S 1.238 -> 0.000 (forward DEcrease)
+  recurrence (3 qubits, Lemma 1): max fidelity over t in [50, 1e5] = 0.99999 at t = 46251.70; S(qubit0) there = 0.0001 (started at 0; max reached early 0.073)
+
+==============================================================================
+D2  typicality is not an arrow (Haar on the full space; and an energy shell)
+==============================================================================
+  Haar on C^1024                              : <S_S(0)> = 1.990 (max 2), <dS over dt=1> = +0.0002, increase 0.52 / decrease 0.48
+  energy shell |E - 0| < 1 (Haar on the shell): <S_S(0)> = 1.978 (max 2), <dS over dt=1> = +0.0010, increase 0.61 / decrease 0.39
+  => typical states are already near-maximal; no entropy budget, no preferred direction: EQUILIBRIUM TYPICALITY != ARROW.
+
+==============================================================================
+D3/D6  same marginals, different S-E correlations (mixed states, n = 8, S = qubit 0, bath MAXIMALLY MIXED at start)
+==============================================================================
+  columns t = 0,1,2,3,5 ; each entry S_S / I(S:E) / TD(rho_S, I/2)
+  A product |0><0| (x) I/128                  -0.000/-0.000/0.500  0.825/0.814/0.241  0.999/0.445/0.015  0.955/0.857/0.124  0.979/0.764/0.086
+  C correlated: K rho_A(tau) K                0.955/0.857/0.124  0.999/0.445/0.015  0.825/0.814/0.241  -0.000/0.000/0.500  0.999/0.445/0.015
+  D product of C's marginals                  0.955/-0.000/0.124  0.997/0.061/0.030  0.986/0.065/0.071  0.968/0.067/0.106  0.993/0.074/0.048
+  mixture lam*C + (1-lam)*D, lam=0.3          0.955/0.059/0.124  0.998/0.075/0.025  0.959/0.124/0.119  0.857/0.037/0.219  0.996/0.084/0.037
+  mixture lam*C + (1-lam)*D, lam=0.7          0.955/0.341/0.124  0.999/0.188/0.018  0.895/0.364/0.188  0.532/0.013/0.379  0.999/0.193/0.022
+  bath entropy in C and D at t=0: 6.902 bits (max 7); marginals identical: True
+
+==============================================================================
+D4/D5  collision models: partial swap theta = 0.6; ancilla preparation and freshness varied
+==============================================================================
+  fresh pure |0>                           TD_sys: 0.535 0.412 0.322 0.256 0.205 0.166 0.135 | monotone(Markov-like) True | S_sys(a): -0.000->-0.000 | rho_sys(a)[0,0] final 1.000 | record in 1st ancilla at end (TD a vs b) 0.324
+  fresh thermal p0 = 0.8                   TD_sys: 0.502 0.357 0.255 0.182 0.131 0.094 0.068 | monotone(Markov-like) True | S_sys(a): 0.342->0.694 | rho_sys(a)[0,0] final 0.814 | record in 1st ancilla at end (TD a vs b) 0.265
+  fresh MAXIMALLY MIXED                    TD_sys: 0.482 0.328 0.223 0.152 0.104 0.071 0.048 | monotone(Markov-like) True | S_sys(a): 0.633->0.997 | rho_sys(a)[0,0] final 0.534 | record in 1st ancilla at end (TD a vs b) 0.225
+  classically correlated (all-equal bits)  TD_sys: 0.482 0.263 0.170 0.202 0.203 0.150 0.072 | monotone(Markov-like) False | S_sys(a): 0.633->0.997 | rho_sys(a)[0,0] final 0.534 | record in 1st ancilla at end (TD a vs b) 0.225
+  GHZ-entangled ancillas                   TD_sys: 0.482 0.263 0.170 0.202 0.203 0.150 0.072 | monotone(Markov-like) False | S_sys(a): 0.633->0.997 | rho_sys(a)[0,0] final 0.534 | record in 1st ancilla at end (TD a vs b) 0.225
+  -- freshness (D5): maximally mixed bath, 21 collisions --
+  finite bath M=1, reused cyclically       TD_sys: 0.482 0.037 0.693 0.170 0.285 0.638 0.002 0.587 0.361 0.109 0.706 | monotone(Markov-like) False | S_sys(a): 0.633->0.007 | rho_sys(a)[0,0] final 0.999 | record in 1st ancilla at end (TD a vs b) 0.001
+  finite bath M=2, reused cyclically       TD_sys: 0.482 0.086 0.310 0.683 0.320 0.055 0.495 0.598 0.144 0.211 0.580 | monotone(Markov-like) False | S_sys(a): 0.633->0.436 | rho_sys(a)[0,0] final 0.910 | record in 1st ancilla at end (TD a vs b) 0.032
+  finite bath M=4, reused cyclically       TD_sys: 0.482 0.223 0.079 0.140 0.348 0.291 0.207 0.186 0.287 0.285 0.206 | monotone(Markov-like) False | S_sys(a): 0.633->0.938 | rho_sys(a)[0,0] final 0.646 | record in 1st ancilla at end (TD a vs b) 0.081
+  finite bath M=7, reused cyclically       TD_sys: 0.482 0.223 0.104 0.048 0.119 0.180 0.201 0.244 0.184 0.112 0.101 | monotone(Markov-like) False | S_sys(a): 0.633->0.985 | rho_sys(a)[0,0] final 0.571 | record in 1st ancilla at end (TD a vs b) 0.165
+
+==============================================================================
+D7  record arrow vs its time reverse (S + 6 env, H = sum g_k Z_S Y_k; Theta = X_S K is a symmetry)
+==============================================================================
+  t      0.000  0.173  0.347  0.520  0.693  0.866
+  forward from |+>|0..>: <I(S:E_k)> 0.000  0.221  0.485  0.733  0.921  0.985   redundancy 0 0 0 0 3 6
+  from Theta psi(t_f):    <I(S:E_k)> 0.985  0.921  0.733  0.485  0.221  0.000   redundancy 6 3 0 0 0 0
+  Haar global state: <I(S:E_k)> = 0.064, redundancy 0 (no records)
+
+==============================================================================
+D8  same global state and H, inequivalent TPSs (n = 10, S = first two slots)
+==============================================================================
+  computational                          S_S(t) at t = [0, 0.5, 1, 2, 4, 8]: 0.930 0.998 0.954 1.192 1.238 1.167
+  Clifford frame                         S_S(t) at t = [0, 0.5, 1, 2, 4, 8]: 1.944 1.983 1.874 1.983 1.973 1.976
+  Householder frame (state -> product)   S_S(t) at t = [0, 0.5, 1, 2, 4, 8]: 0.000 1.536 1.231 1.548 1.261 1.174
+  in the Householder frame the SAME state is product (S_S(0) = 0, a 'low-entropy environment'), but H written in
+  that frame is non-local; low correlation is a Sigma-relative notion -> arrow price is jointly H + Sigma.
+
+==============================================================================
+D9  access: full state vs local marginal vs coarse macro-variable (Z-magnetization histogram)
+==============================================================================
+  product start:
+     t=0: global TD 0.0158, S_S 0.000, coarse S 2.683
+     t=1: global TD 0.0158, S_S 0.816, coarse S 2.706
+     t=2: global TD 0.0158, S_S 1.013, coarse S 2.707
+     t=4: global TD 0.0158, S_S 0.930, coarse S 2.585
+  time-reversed start:
+     t=0: global TD 0.0158, S_S 0.930, coarse S 2.585
+     t=1: global TD 0.0158, S_S 0.995, coarse S 2.631
+     t=2: global TD 0.0158, S_S 1.013, coarse S 2.707
+     t=4: global TD 0.0158, S_S 0.000, coarse S 2.683
+
+==============================================================================
+D10  Janus: entropy on both sides of a special state; a special state fixed by (H, Sigma)
+==============================================================================
+  real product state: max |S_S(t) - S_S(-t)| over t in [0,6] = 0.0e+00  -> two-sided (Janus) arrow; orientation NOT selected
+  mean-field (minimal-energy product) state: E = -11.9176 (ground -12.4416); found in 6/12 restarts, distinct minimizers 2 (reflection-related pair: True);  energy variance 0.807
+  minimizer 0: S_S(t), t = -4..4: 0.566 0.584 0.325 0.000 0.325 0.584 0.566;  half-chain S(t=4) = 1.033
+  minimizer 1: S_S(t), t = -4..4: 0.620 0.351 0.159 0.000 0.159 0.351 0.620;  half-chain S(t=4) = 1.033
+  stationarity of an H-only state (Proposition 2): ground state S_S(t) = 0.406 0.406 0.406
+  alternative selector 'max-energy product state': E = 18.682; S_S(t), t=-4..4: 0.007 0.009 0.008 0.000 0.008 0.009 0.007; overlap with mean-field 0.000
+  alternative selector 'min energy-variance product state': E = 6.987; S_S(t), t=-4..4: 0.903 0.320 0.101 0.000 0.101 0.320 0.903; overlap with mean-field 0.000
+  => several (H, Sigma)-covariant extremal principles each fix a different special Janus state: the boundary condition
+     is fixed by (H, Sigma) ONLY after a selector functional is chosen (preference-priced, as in S2-Sigma).

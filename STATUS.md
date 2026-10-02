@@ -17,7 +17,9 @@
 - **S2-H2 DONE:** first TRUE H COMPRESSION INTO D (structural attractors mod gauge), priced by exact symmetry / non-local coupling / an arrow. Dissipation relocates H into the environment's preparation (H_env). Unitary: no fine-grained selection. Local coupling keeps basin data.
 - **ZOOM_OUT_05 DONE:** remaining specification: D_dyn + arrow, H_env, Σ/Sym(H), A_res. Candidate T2-4 (arrow price).
 - **REPAIR 03 DONE:** T2-4 rescoped to an OPEN CANDIDATE (Y-10).
-- **Now:** S2-D-arrow (owner-approved; theorem-first) → ZOOM_OUT_06 → then decide on G2–G4.
+- **S2-D-arrow DONE:** D0 no-go theorem (finite closed unitary: no every-state / eternal continuous arrow); H-only states stationary (Prop. 2); effective arrows need H_corr|Σ (independence / freshness relative to Σ), not low bath entropy; typicality = equilibrium only; Janus, orientation not selected.
+- **ZOOM_OUT_06 DONE:** remaining: D_dyn, H_corr|Σ (at an epoch), Σ/Sym(H), A_res; orientation unselected. Candidate T2-5.
+- **Next (recommended; owner choice):** S2-G2/G3/G4; later S2-D-arrow-∞ (continuous-spectrum loophole).
 - **History:** S2-3b ✓ → S2-1b ✓ → S2-8 ✓ → S2-7 ✓ (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).
