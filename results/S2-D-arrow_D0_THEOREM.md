@@ -59,6 +59,21 @@ decreases A**. To find it:
 → **EVERY-STATE ARROW = IMPOSSIBLE** for every continuous functional: global, subsystem, coarse-grained or
 record-based.
 
+## Corollary 1′ (every state, any fixed nonzero horizon) — REPAIR 04 clarification
+
+*Owner-requested clarification; not a new result.*
+
+Suppose a continuous A were non-decreasing on one fixed interval [0, T], T > 0, for **every** admissible state.
+
+1. Apply this to the admissible states U_{kT} ρ U_{kT}† for k = 0, 1, 2, …. Then A(ρ(t)) is non-decreasing on each
+   [kT, (k+1)T].
+2. The intervals share endpoints, so A(ρ(t)) is non-decreasing on [0, ∞).
+3. By Theorem 1, A(ρ(t)) is constant for every ρ, i.e. A is conserved.
+
+The same argument works for non-increasing. Hence, in finite closed unitary dynamics:
+
+> **EVERY-STATE ARROW OVER ANY FIXED NONZERO HORIZON = IMPOSSIBLE** for any non-conserved continuous functional.
+
 ## Corollary 2 (window mirror under a Σ-respecting time reversal)
 
 Suppose there is an antiunitary Θ with ΘHΘ⁻¹ = H and A(ΘρΘ⁻¹) = A(ρ). Then for every ρ and t, the state
@@ -102,8 +117,8 @@ This is consistent with REPAIR 02: H-only covariant selectors see at most commut
 > In a finite closed unitary universe, with a fixed TPS:
 > 1. exact global information is preserved (‖ρ_a(t) − ρ_b(t)‖₁ constant);
 > 2. no nonconstant continuous arrow functional — subsystem entropy, coarse-grained entropy, mutual information or a
->    record diagnostic — is monotone along any single orbit forever (Theorem 1), and none is monotone for every
->    admissible state over any horizon (Corollary 1);
+>    record diagnostic — is monotone along any single orbit forever (Theorem 1). None that is non-conserved is monotone on a fixed nonzero
+>    horizon [0, T] for every admissible state (Corollary 1′, by concatenating U_{kT}-shifted windows);
 > 3. if the dynamics has a Σ-local time-reversal symmetry, every arrow window has an exactly mirrored anti-arrow window
 >    (Corollary 2).
 >

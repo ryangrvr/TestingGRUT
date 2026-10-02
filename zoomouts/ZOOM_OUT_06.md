@@ -27,8 +27,9 @@ state runs an anti-arrow (1.238 → 0), because it is correlated.
 → **The arrow price is jointly H + Σ.**
 
 **3. Did any unitary mechanism work for every state?** **No, and it cannot.** D0 Theorem 1 / Corollary 1: in finite
-closed unitary dynamics no continuous arrow functional is monotone along any orbit forever, nor for every state over
-any window. Outcome A is excluded in scope.
+closed unitary dynamics no continuous arrow functional is monotone along any orbit forever. By Corollary 1′ (REPAIR 04),
+no non-conserved one is monotone on any fixed nonzero horizon [0, T] for every admissible state: the U_{kT}-shifted
+windows concatenate into eternal monotonicity, which Theorem 1 forbids. Outcome A is excluded in scope.
 
 **4. Did typicality contribute anything beyond equilibrium?** **No.** Typical states (Haar, or Haar on an energy shell)
 are already at equilibrium: ⟨S_S⟩ = 1.98 – 1.99 of 2, and P(increase) = 0.499 ± 0.013. Typicality gives the

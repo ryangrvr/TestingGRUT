@@ -429,3 +429,112 @@ exclusions.
 - Goldstein–Tumulka–Zanghì (PRD 94, 023520);
 - Bocchieri–Loinger (quantum recurrence);
 - Barbour–Koslowski–Mercati (Janus point).
+
+---
+
+# S2-G2 / G3 / G4 PRE-REGISTRATION — DIMENSION ORIGIN CAMPAIGN (owner-approved; written before any run)
+
+G1 (local Hilbert factor dimension) is already adjudicated: **Σ PRIMITIVE**. "Dimension" stays split. Emergence of one
+notion **never** counts as emergence of another.
+
+**Central question:** which dimensions are derived from lower-level dynamics / relations, which are observer- or
+probe-dependent, and which remain supplied?
+
+## G2 — graph / spectral dimension
+
+**G2-0 estimators, kept separate:**
+
+| estimator | definition |
+|---|---|
+| growth d_g | N(r) ~ r^{d_g} (BFS balls) |
+| spectral d_s | P_ret(t) = (1/N) Tr e^{−tΔ} ~ t^{−d_s/2}; d_s(t) = −2 d ln P / d ln t |
+| walk d_w | ⟨r²(t)⟩ ~ t^{2/d_w} (heat-kernel second moment in graph distance) |
+| Hausdorff | = growth dimension for graphs (noted, not separate) |
+
+**Steps:**
+- **G2-1** positive controls: chain, square and cubic tori.
+- **G2-2** same order of N, different graphs:
+  - chain;
+  - square;
+  - random 3-regular;
+  - small-world (Watts–Strogatz);
+  - binary tree;
+  - Sierpinski gasket (known d_f = 1.585, d_s = 1.365, d_w = 2.322);
+  - comb.
+- **G2-3** scale hostile:
+  - anisotropic 2D (bundled chains, transverse weight ε);
+  - layered 3D;
+  - small-world perturbation of a ring.
+- **G2-4** diffusion-operator hostile, on the same graph:
+  - standard vs random-weighted vs anisotropic Laplacian;
+  - fractional generator Δ^{α/2} (same graph, different dynamics);
+  - long-range Lévy-type rates on a ring.
+- **G2-5** structural:
+  - d_s is a Laplacian-spectral invariant (blind to every isospectral rearrangement);
+  - a same-growth / different-diffusion pair (comb vs square).
+
+**Verdicts:** G2-DERIVED-FROM-D / G2-SCALE-PRICED / G2-PROBE-DYNAMICS-PRICED / G2-NONUNIQUE.
+
+## G3 — spacetime / causal dimension
+
+**G3-0 firewall:** a spacetime claim needs a causal order or propagation cones. A diffusion exponent is never
+"spacetime dimension".
+
+**Steps:**
+- **G3-1** sprinkled causal intervals in 1+1, 2+1 and 3+1 Minkowski; Myrheim–Meyer ordering-fraction estimator.
+- **G3-2** estimator comparison:
+  - Myrheim–Meyer;
+  - midpoint scaling;
+  - longest-chain scaling (N^{1/d});
+  - sensitivity to region shape (interval vs slab) and to N.
+- **G3-3** same spatial graph dimension, different causal structure: lattice spacetimes over the same 2D spatial lattice
+  with Manhattan (L1) vs Chebyshev (L∞) cones, and different propagation speeds; MM estimates compared.
+- **G3-4** propagation cones from local quadratic hopping Hamiltonians:
+  - chain;
+  - square lattice;
+  - triangular lattice;
+  - chain with next-nearest hopping.
+
+  Measure cone speed per direction and cone volume growth.
+- **G3-5** Lorentz hostile: anisotropic cones and non-relativistic dispersion at the same dimension. DIMENSION SELECTED
+  and LORENTZ STRUCTURE SELECTED are scored separately.
+
+**Verdicts:** CAUSAL DIMENSION DERIVED FROM ORDER / G3-D-PRICED / ESTIMATOR-PRICED / GRAPH DIMENSION ≠ SPACETIME
+DIMENSION / LORENTZ STRUCTURE NOT DERIVED.
+
+## G4 — operational / information capacity
+
+**Definitions, kept separate:**
+
+| symbol | meaning |
+|---|---|
+| d | Hilbert dimension (where defined) |
+| K | affine dimension of the state space |
+| N | the maximum number of perfectly distinguishable states (no-restriction effects unless stated) |
+| log₂ N | classical bit capacity |
+
+**Steps:**
+- **G4-1** controls with matched N and different state spaces: classical simplex, rebit, qubit, gbit (square),
+  polygons, spin-factor balls. N is computed by LP over vertex subsets for the polytopes.
+- **G4-2** capacity from dynamics:
+  - closed classes of a Markov chain;
+  - the noiseless-subsystem structure of collective SU(2) noise on 3 qubits (commutant algebra).
+- **G4-3** access hostile: the same state space with restricted effect sets (collective-only readout; unsharp effects).
+- **G4-4** noise: exact capacity vs ε-distinguishability capacity vs Holevo / channel capacity for a depolarized qubit.
+- **G4-5** composition:
+  - N_AB vs N_A N_B for classical, real and complex QM;
+  - two gbits under min-tensor (local polytope) and max-tensor (boxworld), by LP;
+  - K_AB vs K_A K_B (cross-reference SCOUT-1 D3 / S2-2).
+
+**Verdicts:** CAPACITY DERIVED FROM D / CAPACITY A-PRICED / COMPOSITION-PRICED / CAPACITY DOES NOT FIX
+REPRESENTATION.
+
+## Critical cross-hostiles (actively sought)
+
+| pattern | test case |
+|---|---|
+| G2 same, G3 different | L1 vs L∞ cones over the same spatial lattice |
+| G3 same, G4 different | the same causal set carrying different local systems |
+| G4 same, G1 / representation different | capacity 2 for bit / rebit / qubit / gbit / polygons / spin factors; capacity 2 for an access-restricted qutrit |
+
+The ledger is `ledgers/DIMENSION_ORIGIN_LEDGER.md`. **ZOOM_OUT_07** comes afterwards, with the owner's eight questions.
