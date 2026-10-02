@@ -1,0 +1,20 @@
+== T0  G = 0 (flat control) ==
+dim A_out = 25 (= n_out^2 = 25),  dim A_in = 16 (= n_in^2 = 16),  center(A_in) = 1  -> type-I factor, tensor split; any marginals extend to a product
+== T1  charge dressing: outside also holds H_in ==
+dim A_out = 75,  dim A_in = 6 (= 1+4+1 = sum_E n_E^2),  center(A_in) = 3  (= number of charge sectors)
+H_in commutes with A_in and A_out (shared central element): True
+naive tensor state rho (x) sigma: w(H_in H_in) - w(H_in)w(H_in) = 0.5842  = Var_rho(H_in)  (nonzero => NOT a product state for the dressed pair)
+charge-sharp marginal (sector E = 1):  Var(H_in) = 0.0e+00  -> product across the dressed pair; A_in restricted to sector E=1 is B(C^2), a type-I factor
+== T2  exact boundary Hamiltonian: outside holds the vacuum projector P_0 of H_tot ==
+lam=0      Schmidt(Omega) = 1.00e+00 0.00e+00 0.00e+00 0.00e+00   [eps: dim alg{1(x)B(K),P_0} / dim A_in] 1e-02:50/10 1e-04:50/10 1e-06:50/10 1e-10:50/10   min doublet splitting = 0.00e+00
+lam=0.001  Schmidt(Omega) = 1.00e+00 9.08e-05 6.87e-05 2.42e-05   [eps: dim alg{1(x)B(K),P_0} / dim A_in] 1e-02:50/10 1e-04:50/10 1e-06:400/1 1e-10:400/1   min doublet splitting = 3.27e-05
+lam=0.01   Schmidt(Omega) = 1.00e+00 9.08e-04 6.88e-04 2.42e-04   [eps: dim alg{1(x)B(K),P_0} / dim A_in] 1e-02:50/10 1e-04:75/6 1e-06:400/1 1e-10:400/1   min doublet splitting = 3.16e-04
+lam=0.1    Schmidt(Omega) = 1.00e+00 9.08e-03 6.94e-03 2.43e-03   [eps: dim alg{1(x)B(K),P_0} / dim A_in] 1e-02:50/10 1e-04:400/1 1e-06:400/1 1e-10:400/1   min doublet splitting = 2.87e-03
+lam=0.3    Schmidt(Omega) = 9.99e-01 2.72e-02 2.13e-02 7.40e-03   [eps: dim alg{1(x)B(K),P_0} / dim A_in] 1e-02:50/10 1e-04:400/1 1e-06:400/1 1e-10:400/1   min doublet splitting = 1.79e-02
+(n^2 = 400; eps = relative singular-value resolution used to decide linear (in)dependence)
+Reading: lam = 0 -> P_0 is a product projector; the outside gains only |0><0|_in (x) B(K) (charge-like data).
+lam != 0 -> Omega has full Schmidt rank n_in (outside-cyclic); b1 P_0 b2 spans all matrix units, A_out = B(H),
+A_in = C: no interior subsystem survives. The smallest Schmidt coefficient ~ lam^k sets the precision needed
+to exploit it (operator-norm amplification ~ 1/s_min): reconstruction is exact algebraically but resolution-priced.
+At coarse eps the computed algebra collapses to the charge-like algebra: eps is a numerical proxy for observational
+resolution (an ANALOGY, not a derivation of any gravitational resolution limit).

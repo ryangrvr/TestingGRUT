@@ -44,3 +44,18 @@
 3. **G2 is reframed:** "What replaces QFT split / type-I subsystem structure when gravitational gauge constraints are
    imposed, and does the replacement remove any frozen residual information or only relocate it into charges, dressing,
    boundary observables, or resolution?"
+
+## G2 note (no repair; recorded with G2)
+
+- **G2 opens QG-8 … QG-13** (asymptotic charges, perturbative order, dressing prescription, observable class /
+  resolution, vacuum premises, observer / clock). See `G2_SUBSYSTEM_LEDGER.md`.
+- **Toy numerics procedure** (`g2/g2_subsystem.py`). Two numerical defects were found and fixed before the log was
+  emitted:
+  1. an out-of-memory full SVD of the stacked commutant system;
+  2. a zero / near-scalar generator stack whose purely relative threshold counted rounding noise as rank.
+
+  The final code uses unit-norm, identity-projected generators and an absolute floor. The resolution parameter ε is
+  explicit and reported. Intermediate algebra dimensions at coarse ε are **resolution-dependent by construction**: they
+  are an illustration of the resolution ladder, not a physical claim.
+- **The S2 ingredient list** (boundary Hamiltonian, unique vacuum, density of boundary-generated states) is summarized
+  from the owner-verified source and **not re-read** in this environment.
