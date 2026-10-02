@@ -538,3 +538,33 @@ REPRESENTATION.
 | G4 same, G1 / representation different | capacity 2 for bit / rebit / qubit / gbit / polygons / spin factors; capacity 2 for an access-restricted qutrit |
 
 The ledger is `ledgers/DIMENSION_ORIGIN_LEDGER.md`. **ZOOM_OUT_07** comes afterwards, with the owner's eight questions.
+
+---
+
+# S2-ΣH PRE-REGISTRATION — JOINT FACTORIZATION / BOUNDARY-CONDITION SELECTOR (owner-approved; first saturation candidate)
+
+**Question.** Can one principle on the closed pair (H, ψ) jointly select **both** a physical factorization Σ and the
+independence boundary condition, with no hidden weights, scales, epochs or access assumptions?
+
+| Step | Content |
+|---|---|
+| **ΣH-0** | Theorem-first: a productness no-go, plus a joint-compatibility proposition (see the result file) |
+| **ΣH-1** | Pareto front over (L_H, −C_ψ), not combined. L_H = −k_eff (the S2-Σ locality). C_ψ(Σ, t) = Σ_f S(ρ_f(t)) − S(ρ(t)) (total correlation; for pure ψ, Σ_f S_f) |
+| **Candidates** | the 202 groupings of 6 qubit slots (local dimensions 2 … 32, mixed) × frames: identity; 3 random Clifford circuits; a Haar unitary; the commutant frame e^{−iH·0.7}; **the ψ-product frame W_ψ** (a Householder map sending ψ(0) to \|0…0⟩). That is 1414 candidates |
+| **ΣH-2** | local dimension variable: the grouping types on fronts and among winners |
+| **ΣH-3** | lexicographic rules A, B, C, D as specified by the owner. C and D use k_max, the MDL of H's support closure, and autonomy P |
+| **ΣH-4** | ε-constraint: min C s.t. L ≥ L_min, and max L s.t. C ≤ ε, swept over quantiles |
+| **ΣH-5** | epoch variable on a symmetric grid t ∈ [−10, 10], step 0.25: C₀ (t = 0, a supplied epoch); C_min (inf over the grid: picks an epoch); C_avg (uniform time average on the grid: a time measure); C_typ (median over the grid: a typicality measure). Kept separate |
+| **ΣH-6** | time translation ψ → e^{−iHs}ψ, s = 2.3 |
+| **ΣH-7** | time reversal Θ = K for real H; ψ vs Θψ |
+| **ΣH-8** | arrow quality R only after ΣH-1 … 7: the fraction of steps with non-decreasing C over a forward horizon h ∈ {2, 5} from the selected epoch |
+| **ΣH-9** | records, with one fragment rule for all TPSs: every factor in turn is the system, every other single factor is a fragment; R = the max redundancy count. Comparability across factor numbers is checked |
+| **ΣH-10** | MDL = #(H Pauli terms > δ in Σ) + c_ψ · #(ψ amplitudes > δ in a declared product basis of Σ). Varied: the basis language (computational vs local Hadamard), c_ψ ∈ {¼, 1, 4}, δ ∈ {10⁻³, 10⁻⁶, 10⁻⁹} |
+| **ΣH-11** | symmetry: quotient candidates by Sym(H, ψ) (translation on the ring model); bare-TPS degeneracy and physical equivalence reported separately |
+| **ΣH-12** | positive control: H strongly local (mixed-field Ising chain), ψ product in that same frame |
+| **ΣH-13** | hard hostiles: (1) H local in Σ_A, ψ product in Σ_B (a Clifford frame); (2) the ψ-product-many-TPS case (W_ψ); (3) a translation-symmetric ring; (4) a record-forming state; (5) an eigenstate and a Gibbs state; (6) the Janus mean-field state; (7) Haar |
+| **ΣH-14** | the ledger `ledgers/JOINT_BOUNDARY_LEDGER.md` |
+| **ΣH-15** | success standard A – E as specified by the owner |
+| **ΣH-16** | theorem target, scoped |
+
+ZOOM_OUT_08 follows as a **FORMAL SATURATION GATE**, brought to the owner. No GRUT bridge and no automatic freeze.

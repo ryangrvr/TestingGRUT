@@ -30,10 +30,13 @@ What remains supplied is the **parent structure**, not "a dimension".
 **4. Which depend on A?**
 - **G4 strongly:** collective readout 4 → 3; a restricted qutrit 3 → 2; unsharp effects → 1.
 - **G2:** the probe scale and the site / averaging choice (comb backbone 1.51 vs tooth 1.00).
-- **G3:** the estimator and region choice (slab 5.45 vs interval 3.00).
+- **G3:** the estimator and its domain of validity. Applying the interval-calibrated MM to a slab gives 5.45 for parent 3.
+  That is an estimator failure, not a change of dimension (REPAIR 05).
 
 **5. Can G2 determine G3? If not, what extra causal structure is needed?** **No.**
-- The same ℤ² spatial graph gives causal d ≈ 2.9 with finite-speed cones and 1.14 with absolute time.
+- The same ℤ² spatial graph gives different causal-order statistics: an MM-equivalent ordering-fraction dimension of ≈ 2.9
+  with finite-speed cones and 1.14 with absolute time. These are effective order dimensions, not calibrated spacetime
+  dimensions (REPAIR 05).
 - The extra input is a **finite-speed propagation rule (a causal order)** plus an **interval-type region**.
 - Even then **Lorentz structure is not derived**: lattice cones are anisotropic (1.39 – 1.94) with quadratic dispersion.
   In causal sets, Lorentz invariance is inherited from the sprinkling parent.

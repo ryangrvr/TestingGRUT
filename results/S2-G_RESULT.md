@@ -91,14 +91,19 @@ SITE / AVERAGING-PRICED**. The graph connectivity itself remains a D / Σ input 
 | 3 | 500 / 2000 | 2.984 / **2.996** | 3.065 / 3.044 | **2.678** |
 | 4 | 500 / 2000 | 3.984 / **4.014** | 4.147 / 4.129 | **2.974** |
 
-- **CAUSAL DIMENSION DERIVED FROM ORDER**, given an interval-shaped region. MM converges fastest.
+- **CAUSAL DIMENSION DERIVED FROM ORDER**, given an interval-shaped region. This positive control uses the MM calibration
+  **inside its intended scope**: Poisson sprinklings into flat Alexandrov intervals. MM converges fastest.
 - Chain scaling is strongly biased at these N. → **ESTIMATOR-PRICED.**
-- **Shape hostile (a slab instead of an interval):** MM gives **3.47 / 5.45 / 7.37** for true 2 / 3 / 4. The region shape is a
-  supplied input.
+- **Shape hostile (a slab instead of an interval) — REPAIR 05.** Applying the flat-Alexandrov-interval MM calibration to a
+  slab gives strongly biased estimates: **3.47 / 5.45 / 7.37** for parent dimensions 2 / 3 / 4.
+  - This is an **estimator-domain hostile**: the ordering fraction alone is not a geometry-independent dimension estimator
+    for arbitrary regions.
+  - **The parent dimension has not changed.**
+  - Label: **ESTIMATOR / DOMAIN-OF-VALIDITY PRICED.**
 
 **G3-3 same spatial graph, different causal structure** (lattice spacetimes, interval between tips):
 
-| spatial graph | causal rule | MM d |
+| spatial graph | causal rule | **MM-equivalent ordering-fraction dimension** (not a calibrated spacetime dimension) |
 |---|---|---|
 | ℤ | L1 cone, c = 1 | 1.958 |
 | ℤ² | L1 cone, c = 1 | 2.832 (T = 10), **2.902** (T = 16) |
@@ -106,8 +111,14 @@ SITE / AVERAGING-PRICED**. The graph connectivity itself remains a D / Σ input 
 | ℤ² | L1 cone, c = 2 | 2.889 |
 | **ℤ² (same graph)** | **absolute time (instantaneous propagation)** | **1.142** (midpoint 1.220) |
 
-**The same spatial graph (d_g = d_s = 2) yields causal dimension ≈ 3 (finite-speed cones) or ≈ 1 (absolute time).**
-→ **GRAPH DIMENSION ≠ SPACETIME DIMENSION.** The extra input is a **finite-speed propagation rule** plus the region.
+**REPAIR 05.**
+- These lattice orders are **not** Poisson sprinklings of Minkowski intervals. The numbers are **effective MM order
+  dimensions**, not physical spacetime dimensions.
+- **The valid conclusion:** the same spatial graph (d_g = d_s = 2), equipped with different causal / propagation
+  relations, has different ordering statistics: an MM-equivalent value of ≈ 2.9 for finite-speed cones and ≈ 1.14 for
+  absolute time.
+- **Therefore the spatial graph does not determine the causal-order structure.** → **GRAPH DIMENSION ≠ CAUSAL ORDER
+  STRUCTURE** (G2 ≠ G3). The extra input is a propagation rule (a causal order).
 
 **G3-4 / G3-5: propagation cones** from hopping Hamiltonians (tail threshold 10⁻¹⁰; the threshold-defined speeds exceed the
 group velocity):
@@ -184,7 +195,7 @@ The three notions disagree. They are not merged.
 
 | pattern | instance |
 |---|---|
-| **G2 same, G3 different** | the spatial ℤ² graph gives causal d ≈ 2.9 (finite-speed cones) vs 1.14 (absolute time) |
+| **G2 same, G3 different** | the same spatial ℤ² graph gives different causal-order statistics: an MM-equivalent ordering-fraction dimension of ≈ 2.9 (finite-speed cones) vs 1.14 (absolute time) |
 | **G3 same, G4 different** | causal order constrains no local state space: the same causal set can carry a qubit (N = 2) or a qutrit (N = 3) at each element. Construction-level, but the information accounting is exact: no G3 datum enters N |
 | **G4 same, G1 / representation different** | N = 2 for K = 1 … 4 and for the access-restricted qutrit (d = 3) |
 
