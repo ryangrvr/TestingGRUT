@@ -17,9 +17,14 @@
 | `L0_1C_CHARTER_01.md` | V = ½xᵀK_b x + βΣxᵢ⁴ (the on-site convex quartic) |
 | `L0_ACCESS_BRIDGE_01.md`, `S2_NOISE_ORIGIN_HARD_DDET_01.md` | L0-1e noise Q = 2·diag(T_i) |
 | `GS1_GEOMETRY_SELECTION_VERDICT_01.md` | geometry SELECTED-IN-CLASS from full site-resolved access; single-site access UNDERDETERMINED |
+| **B3 additions:** `P5_ACCESS_VERDICT_01.md` | access = representational + closure-given-seed + access-split; the seed is declarative |
+| `P6_SEED_SELECTION_VERDICT_01.md` | seed = NON-DERIVED INPUT; selected only up to block decomposition; L-A / L-B/E / L-C / L-D1 / L-D2 |
+| `L0_ACCESS_BRIDGE_OWNER_RULING_02.md` | NONUNIQUE-LIFT; direct classical branch TRIVIAL/IDENTITY (end-site readout globally observable); scope §5 |
+| `calc/p5_access.py`, `calc/p6_seed_selection.py` (**inspected, not run or imported**) | the closure *rules*: P-5 uses alg{I, H, B}; P-6 uses the unital product span of the seed, ad_H-closed, with `adh=False` for the L-D2 sufficiency test |
+| `GRUT_WORKING_THEORY_SYNTHESIS_01.md` (Ledger A-13), `SYN0_OWNER_RULING_01.md` §2 | how access is booked: "access seed / declared readout / access sets" (A-13), layer 3 = "access / readout" |
 
 ## Precedence and use rules
 
 - Later owner rulings govern over historical wording (e.g. the EA-0 corrections over the EA-0 formulation text).
-- No canonical code is imported. The canonical models are **re-implemented** in `bridge/b1/` from the charter definitions.
+- No canonical code is imported. The canonical models are **re-implemented** in `bridge/b1/` and `bridge/b3/` from the charter definitions.
 - Claims are not copied between the two sources without a crosswalk classification.

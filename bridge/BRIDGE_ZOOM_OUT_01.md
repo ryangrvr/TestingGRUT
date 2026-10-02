@@ -7,12 +7,12 @@
 
 **No.**
 - With the local net deleted, the earned linear generator K does **not** reconstruct it:
-  - The sparsest / most factorized frame is the decoupled normal-mode frame, which has no edges.
-  - The connected-chain frames form a continuum.
+  - Under the tested sparsity / autonomy / response-factorization criteria [BR1-02], the optimal frame is the decoupled normal-mode frame, which has no edges.
+  - The connected-chain frames form a continuum (one per cyclic start vector [BR1-01]).
   - Passivity leaves a continuum of inequivalent nets that all pass the geometry predicate.
   - A 2D-grid operator admits a passive 1D chain reading.
   - Inside the L0-1b class itself there is an explicit isospectral, inequivalent net at N = 12 whose geometry predicate fails.
-- Unique reconstruction occurs only in the narrow C1-a class (unit springs; DLS). That class *is* a supplied net.
+- Unique reconstruction occurs only in the narrow C1-a class (unit springs; DLS, a KNOWN-RESULT IMPORT [BR1-03]). That class *is* a supplied net.
 
 ## 2. Is the canonical local net redundant, consistency-checked or still supplied?
 
