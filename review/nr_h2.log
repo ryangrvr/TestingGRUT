@@ -1,0 +1,44 @@
+
+==============================================================================
+NR-H1 structural positive controls: symmetric contraction; doubly stochastic primitive chain
+==============================================================================
+  F(x) = 0.7 R x (equivariant about 0, no offset): max |x_300| over starts incl. 5e5 = 1.8e-41  -> attractor 0 fixed by symmetry
+  doubly stochastic primitive 6-state chain (row/col sums 1.000/1.000; primitive True): max deviation from uniform after 80 steps over 11 starts = 1.7e-16
+  perturbed (row-renormalized noise 0.03): stationary pi = [0.1756 0.1484 0.1655 0.1688 0.1718 0.1699] (max |pi - 1/6| = 0.0183) -> uniformity is tuned
+
+==============================================================================
+NR-H2 explicit-target relocation: the attractor value tracks a state-valued parameter of the law
+==============================================================================
+  F(x) = 0.7 R x + b, b = [1. 0.]: x_300 = [0.728597 0.604652]; (I - cR)^-1 b = [0.728597 0.604652]
+  F(x) = 0.7 R x + b, b = [-2.  3.]: x_300 = [-3.271151  0.976485]; (I - cR)^-1 b = [-3.271151  0.976485]
+  gradient flow V = x^4/4 + x^2/2 - a x, a = 0.3: endpoints from -8, 0, 8: [0.278418 0.278418 0.278418]; unique minimum (root of x^3+x-a) = 0.278418
+  gradient flow V = x^4/4 + x^2/2 - a x, a = -1.1: endpoints from -8, 0, 8: [-0.722637 -0.722637 -0.722637]; unique minimum (root of x^3+x-a) = -0.722637
+
+==============================================================================
+NR-H3 alignment: all-to-all vs nearest-neighbour ring (identical oscillators, own RK4)
+==============================================================================
+  complete graph: 20 random starts, final r in [1.000000, 1.000000]
+  ring: 30 random starts, twisted (winding != 0) finals: 19/30; winding histogram {np.int64(-3): np.int64(1), np.int64(-2): np.int64(4), np.int64(-1): np.int64(5), np.int64(0): np.int64(11), np.int64(1): np.int64(6), np.int64(2): np.int64(3)}
+
+==============================================================================
+NR-H4 zero-temperature Ising frame field: 2D lattice (random-sequential updates) vs complete graph
+==============================================================================
+  2D L=24, 60 random starts, 1500 sweeps: uniform 0.60; non-uniform 0.40, of which straight stripes 24/24
+  complete graph N=201: 100 starts, aligned finals 1.00; '+' orientation 0.53 (gauge)
+
+==============================================================================
+NR-H5 exact invertibility / information preservation where claimed
+==============================================================================
+  affine contraction, exact rationals, 150 steps forward then back: recovered x0 exactly: True
+  gradient flow T = 2 forward/back (RK4 h = 1e-4): x0 = 2.5 recovered as 2.50000000
+  unitary dilation (6 fresh |0> ancillas): global distinguishability per collision [0.70710678 0.70710678 0.70710678 0.70710678 0.70710678 0.70710678] (constant)
+  Markov distribution map P^3 (det P = 0.090 != 0): exact inversion recovers p0 to 6.9e-16
+
+==============================================================================
+SUMMARY
+==============================================================================
+NR-H1: REPRODUCED (3/3) — structural attractors: symmetric contraction -> 0; doubly stochastic -> uniform from every start; uniformity tuned
+NR-H2: REPRODUCED (2/2) — explicit-target laws relocate the state value into D (attractor tracks b, a)
+NR-H3: REPRODUCED (2/2) — all-to-all alignment synchronizes every random start; local ring keeps twisted basins
+NR-H4: REPRODUCED (2/2) — 2D zero-T Ising freezes a finite fraction in straight stripes; complete graph aligns every start (mod Z2)
+NR-H5: REPRODUCED (4/4) — bijective / finite-time / unitary / invertible-Markov laws preserve fine-grained information
