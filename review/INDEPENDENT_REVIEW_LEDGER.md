@@ -25,17 +25,19 @@
 | **IR-03** | D0 "covered examples" list | "Rényi entropies" is too broad. S₀(ρ) = log rank ρ is discontinuous: ρ_ε = diag(1−ε, ε) → diag(1, 0) jumps from log 2 to 0 | Restrict to **continuous Rényi entropies (finite-dimensional, α > 0)**; exclude rank entropy and other discontinuous functionals explicitly | **no** |
 | **IR-04** | D0 covered list + D0 Prop. 2 wording | (a) The **thresholded** S2-8 / D7 redundancy `I(S:F) >= (1-δ) H(S)` is an integer count, generally **discontinuous** at threshold crossings, so D0 does not directly cover it. D0 does cover the continuous mutual informations it is built from. Record reversal was shown separately and numerically (D7: redundancy 6 → 0). (b) "The minimal case is Σ" is not proved. Σ is a **demonstrated sufficient** additional covariant structure, not a proved minimal one | Remove the thresholded redundancy from the covered list (keep the continuous MI); demote "minimal" to "sufficient (minimality not proved)" | **no** |
 
-**Net effect of IR-01 … IR-04:** the final residual `C5 → D_dyn ⊕ [Σ ⊗ H_corr]_coupled ⊕ A_res` is **unchanged**. The
+| **IR-05** | S2-ΣH H1 "conflict" case (found by numerical reproduction) | The original conflict state is exactly product across the id-frame 2-cut (01235)\|(4). Its non-dominance came from an intra-frame cut trade-off, not a clean H-local-frame vs ψ-product-frame conflict. Weak-conflict instances can be coarse-compatible and then show dominance (correctly) | Erratum E-06: describe H1 as coarse-grouping-compatible with an inner-cut trade-off. The intended conflict claim is **reproduced 3/3 with certified-incompatible pairs** (NR-ΣH-2-certified). Compatibility must be checked at every grouping | **no** (it strengthens the Σ-relativity of compatibility) |
+
+**Net effect of IR-01 … IR-05:** the final residual `C5 → D_dyn ⊕ [Σ ⊗ H_corr]_coupled ⊕ A_res` is **unchanged**. The
 theorem package is review-clean only after the errata in `review/ERRATA_PROPOSED.md`.
 
 ## Numerical reproduction queue (owner-specified order)
 
-| ID | target |
-|---|---|
-| NR-ΣH-1 | positive compatible case |
-| NR-ΣH-2 | H1 conflict |
-| NR-ΣH-3 | Haar case |
-| NR-ΣH-4 | local-dimension tie |
-| NR-ΣH-5 | epoch covariance |
+| ID | target | status (`review/NR_SIGMAH_RESULT.md`) |
+|---|---|---|
+| NR-ΣH-1 | positive compatible case | **REPRODUCED** 3/3 |
+| NR-ΣH-2 | H1 conflict | as constructed: **not reproduced → IR-05**; certified-incompatible: **REPRODUCED** 3/3 |
+| NR-ΣH-3 | Haar case | **REPRODUCED** 3/3 |
+| NR-ΣH-4 | local-dimension tie | **REPRODUCED** 3/3 |
+| NR-ΣH-5 | epoch covariance | **REPRODUCED** 3/3 |
 
 Then: the S2-Σ 58-run sweep (later), and the D-arrow / H2 key numbers (later).

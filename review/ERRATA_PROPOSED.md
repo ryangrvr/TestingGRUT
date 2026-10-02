@@ -59,3 +59,13 @@ H-locality and ψ-independence: a Pareto family. …" **with:**
   Pareto clause is numerical (IR-02)".
 - §J: "D0 covers continuous functionals (not rank entropy or thresholded counts)".
 - §P: tick the theorem-review items, with IR-01 … IR-04 referenced.
+
+## E-06 (IR-05) — `results/S2-SigmaH_RESULT.md`, `ledgers/JOINT_BOUNDARY_LEDGER.md`, `SCOUT_2_HANDOFF.md` §L
+
+Wherever H1 is described as "H local in Σ_A (id), ψ product in Σ_B (cliff1)" / "incompatible", **add:**
+
+> In the H-local id frame this ψ is exactly product across the inner 2-cut (01235)|(4), so the pair is
+> **coarse-grouping-compatible**. Its non-dominance arises mainly from a trade-off between that inner cut (C = 0, two
+> crossed bonds) and the end cuts (one crossed bond, C > 0). The clean conflict claim (no dominance; the H-local and
+> ψ-product frames both on the front; priority orders disagree) was **reproduced independently for certified-incompatible
+> pairs** (every id-frame grouping with C_min ≥ 1.67 bit; 3/3 seeds; review/NR_SIGMAH_RESULT.md).

@@ -1,0 +1,32 @@
+==============================================================================
+INDEPENDENT REPRODUCTION NR-SigmaH-1..5 (3 fresh frame seeds)
+==============================================================================
+sanity: sum of exact-support weights 885.478880 vs ||H - tr||^2 885.478880; max support size with weight: 2 (expect 2)
+
+--- frame seed 11 ---
+NR1 positive: front 6 -> 5 LU classes; frames ['id']; dominant yes; rule A frames ['cl2', 'id'], rule B frames ['cl2', 'id']
+NR4 d-tie: dominant LU classes span dtypes ['16x4', '32x2', '8x8']; identical (L, Cmin) vectors: True
+NR2 conflict: front 5 -> 3 LU classes; frames ['id']; dominant NONE; rule A ['id'] vs rule B ['cl1', 'id']
+NR3 Haar: front 6; dominant NONE; rule B (correlation first) frames ['Wpsi']; rule A frames ['comm']
+NR5 epoch: C0 dominance before yes / after shift NONE; Cmin dominant set identical after shift: True; t* before [np.float64(0.0)] after [np.float64(-2.25)]
+
+--- frame seed 22 ---
+NR1 positive: front 7 -> 5 LU classes; frames ['id']; dominant yes; rule A frames ['cl1', 'cl3', 'id'], rule B frames ['cl1', 'cl3', 'id']
+NR4 d-tie: dominant LU classes span dtypes ['16x4', '32x2', '8x8']; identical (L, Cmin) vectors: True
+NR2 conflict: front 3 -> 1 LU classes; frames ['id']; dominant yes; rule A ['cl1', 'cl3', 'id'] vs rule B ['cl1', 'cl3', 'id']
+NR3 Haar: front 5; dominant NONE; rule B (correlation first) frames ['Wpsi']; rule A frames ['comm']
+NR5 epoch: C0 dominance before yes / after shift NONE; Cmin dominant set identical after shift: True; t* before [np.float64(0.0)] after [np.float64(-2.25)]
+
+--- frame seed 33 ---
+NR1 positive: front 7 -> 5 LU classes; frames ['id']; dominant yes; rule A frames ['cl1', 'cl3', 'id'], rule B frames ['cl1', 'cl3', 'id']
+NR4 d-tie: dominant LU classes span dtypes ['16x4', '32x2', '8x8']; identical (L, Cmin) vectors: True
+NR2 conflict: front 2 -> 1 LU classes; frames ['id']; dominant yes; rule A ['cl1', 'id'] vs rule B ['cl1', 'id']
+NR3 Haar: front 5; dominant NONE; rule B (correlation first) frames ['Wpsi']; rule A frames ['cl3', 'id']
+NR5 epoch: C0 dominance before yes / after shift NONE; Cmin dominant set identical after shift: True; t* before [np.float64(0.0)] after [np.float64(-2.25)]
+
+==============================================================================
+NR1: REPRODUCED (3/3 seeds) — positive compatible case: dominant set exists and lies in the native (id) frame after LU quotient
+NR2: NOT REPRODUCED (0/3 seeds) — conflict: no dominance; both the H-local and the psi-product frames on the front; rules A and B disagree
+NR3: REPRODUCED (3/3 seeds) — Haar: no dominance; correlation-first rule returns the trivial psi-product frame
+NR4: REPRODUCED (3/3 seeds) — local-dimension tie: dominant classes span several dtypes with identical (L, Cmin)
+NR5: REPRODUCED (3/3 seeds) — epoch: C0 loses dominance under time shift; Cmin dominant set unchanged with t* shifted by -2.25
