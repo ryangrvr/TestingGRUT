@@ -1,0 +1,18 @@
+m = 1.0, box [-6.0, 6.0], Dirichlet; sites N = 2L/a
+ a        N     S_sharp(A)   (1/6)ln(1/ma)   I_sharp=2S   dE_prod (phys)   I(A:B) d=0.5   I(A:B) d=1.0   I(A:B) d=2.0
+ 0.05000   240     0.49967       0.49929       0.99934           9.796       0.058417       0.014905       0.001413
+ 0.02500   480     0.61492       0.61481       1.22984          23.994       0.058404       0.014899       0.001412
+ 0.01250   960     0.73037       0.73034       1.46073          56.807       0.058400       0.014898       0.001412
+ 0.00625  1920     0.84587       0.84586       1.69174         131.262       0.058398       0.014897       0.001412
+ 0.00313  3840     0.96139       0.96139       1.92278         297.825       0.058398       0.014897       0.001412
+
+sharp entropy increment per halving of a (expected -> c/6 = 0.1667 for c = 1, one boundary point): [0.1663 0.1666 0.1666 0.1667]
+energy cost of the sharp product state, ratio per halving of a: [2.449 2.368 2.311 2.269]
+buffer d = 0.5: I(A:B) changes per halving of a: [-1.23e-05 -4.90e-06 -1.50e-06 -4.00e-07]  (converging -> finite continuum value ~ 0.05840)
+buffer d = 1.0: I(A:B) changes per halving of a: [-6.1e-06 -1.6e-06 -4.0e-07 -1.0e-07]  (converging -> finite continuum value ~ 0.01490)
+buffer d = 2.0: I(A:B) changes per halving of a: [-8.e-07 -2.e-07 -0.e+00 -0.e+00]  (converging -> finite continuum value ~ 0.00141)
+
+reading: sharp cut -> the product of vacuum marginals costs unbounded relative entropy (I = 2S ~ (1/3) ln(1/a)) and unbounded
+energy (~ ln(1/a)/a) as a -> 0, consistent with no NORMAL product state across a sharp complementary cut in the continuum;
+with a buffer the vacuum correlations stay finite, consistent with the split property (normal product states exist).
+The vacuum itself is correlated across every tested split (I > 0 for all d): H_cross != 0 for this state, as Reeh-Schlieder suggests.
