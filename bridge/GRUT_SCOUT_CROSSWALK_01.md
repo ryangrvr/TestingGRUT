@@ -37,3 +37,9 @@
 | S6 equal-temperature offset ½T_b r²; marginal-matched transient T·r² | D3 / D6 (correlations vs marginals) | **IDENTICAL in content** (classical Gaussian infinite bath vs finite quantum) |
 | reversed S6 preparation anti-relaxes (B2-4); Σ(−t) = RΣ(t)R (B2-5) | D1 mirror / D7 record reversal; Janus | **IDENTICAL in structure**. D0 is used only conceptually (outside its scope) |
 | S6 relaxation for any trace-class Δ (B2-P1, bridge theorem reviewed at stated scope) | D4 / D5 (fresh bath mechanism) | **OVERLAPPING**: the mechanism forgets H_corr locally but does not select it |
+
+## BR5-01 note (additive)
+
+The B0 table above numbers its rows 1–10 by listing gravity (row 9) and cosmological transport (row 10) separately.
+**Canonical GRUT has exactly nine supplied layers**, and layer 9 combines the gravitational branch with the cosmological
+transport inputs. Rows 9 and 10 together are canonical layer 9. No tenth canonical layer is implied.

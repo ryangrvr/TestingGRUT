@@ -231,7 +231,7 @@ only by S6's declaration "retained = accessed" (R2).
 | 6 | BL | by Bridge scope |
 | 6 × As | BL[lift] | EA-0 auxiliary constructions need a lift |
 | 7, 8 | NM | untouched |
-| 9a × Lor | S | **convergence on a supplied item**: SCOUT's "Lorentz structure not derived" overlaps GRUT's supplied universal causal cone. Not compression |
+| 9a × Lor | S | GRUT explicitly supplies its universal causal-cone / Lorentz structure. SCOUT-2 found Lorentz structure NOT DERIVED / not selected within its premise envelope. The correspondence is convergence on a residual boundary, not a shared derivation [BR5-03]. Not compression |
 | 9b | NM | |
 
 **Label overlap noted, not tested.** A-5's price list names "readout identification" and "dilation/bath preparation",

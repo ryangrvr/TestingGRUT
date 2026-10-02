@@ -318,5 +318,4 @@ quantitative predictions.** Only B5 can test any removed freedom.
   numerics and an infinite-N bridge theorem (B2-P1, reviewed at stated scope; local covariance convergence only, not
   global trace-norm convergence).
 - **Not covered:** non-Gaussian and nonlinear cases, and the quantum version (SCOUT's domain).
-- **Verification:** the proposition received an independent logic review (owner) at its stated scope; grade
-  **BRIDGE-THEOREM REVIEWED AT STATED SCOPE**, not a canonical GRUT theorem.
+- **Verification:** B2-P1 received an independent logic review in the Bridge audit and was found sound at its stated scope; it has not received independent human peer review [BR5-02]. Grade **BRIDGE-THEOREM REVIEWED AT STATED SCOPE**, not a canonical GRUT theorem.

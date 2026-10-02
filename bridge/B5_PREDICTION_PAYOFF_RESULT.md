@@ -105,8 +105,16 @@ A full sweep of the PSD-admissible q₁–q₂ correlations at the S6 marginals 
 - Where the sign is fixed, it is fixed only by a Cauchy–Schwarz / PSD bound with supplied marginals. That is a generic
   positivity bound and is excluded by the bar.
 - This matches the known open-system result that initial correlations can reverse heat flow, up to bounds set by the
-  correlations. **KNOWN-RESULT IMPORT** (Partovi 2008; Jennings & Rudolph 2010; Micadei et al. 2019), cited from memory
-  and not re-fetched in this environment.
+  correlations. **KNOWN-RESULT IMPORT — PRIMARY-SOURCE VERIFIED** [BR5-05]:
+  - M. H. Partovi, Phys. Rev. E 77, 021110 (2008): correlated thermal systems can show cold-to-hot heat flow (reversal of
+    the thermodynamic arrow);
+  - D. Jennings & T. Rudolph, Phys. Rev. E 81, 061130 (2010): correlations / entanglement permit reversals and a hierarchy
+    of thermodynamic arrows;
+  - K. Micadei et al., Nature Communications 10, 2456 (2019): experimental reversal of heat flow in initially
+    quantum-correlated thermal qubits.
+
+  These support **only** the qualitative background that initial correlations can reverse the direction of energy flow.
+  They are **not** evidence for Bridge-1's classical-Gaussian quantitative formulas.
 
 ### B5-9 Dimensionless combinations
 

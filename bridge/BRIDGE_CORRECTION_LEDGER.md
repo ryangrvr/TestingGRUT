@@ -50,5 +50,17 @@ emitted. Where a log line's wording is broader than the corrected scope, the cor
 ## B5 — no repairs required
 
 B5 introduced no correction to earlier Bridge files. The success bar was preregistered from the owner's B5-0 text before
-any candidate was evaluated. Literature for P6 (heat-flow reversal by initial correlations) is a **KNOWN-RESULT IMPORT**,
-cited from memory and not re-fetched.
+any candidate was evaluated. Literature for P6 (heat-flow reversal by initial correlations) was originally graded
+**KNOWN-RESULT IMPORT, cited from memory and not re-fetched**; it is upgraded by BR5-05 below.
+
+## BRIDGE REPAIR 05 — final handoff / provenance cleanup (owner freeze ruling, after `2cba90c`; no scientific verdict changes)
+
+| ID | location | original wording | corrected reading |
+|---|---|---|---|
+| **BR5-01** | `BRIDGE_1_HANDOFF.md` (B0 row); `BRIDGE_INFORMATION_LEDGER.md` BI-13; `GRUT_SCOUT_CROSSWALK_01.md` (additive note) | "the 10 supplied layers mapped"; BI-13 "layers 6–10" | **"the nine canonical supplied layers mapped."** Canonical GRUT has exactly nine supplied layers. Layer 9 combines the gravitational branch and the cosmological transport inputs. No tenth canonical layer |
+| **BR5-02** | `BRIDGE_1_HANDOFF.md` header; `B2_HCORR_RESULT.md` scope | "B2-P1 was logic-reviewed by the owner" / "independent logic review (owner)" | **"B2-P1 received an independent logic review in the Bridge audit and was found sound at its stated scope; it has not received independent human peer review."** The grade stays **BRIDGE-THEOREM REVIEWED AT STATED SCOPE**, not CANONICAL GRUT THEOREM (the B2-P1 review note above is read with this attribution) |
+| **BR5-03** | `BRIDGE_1_HANDOFF.md`; `BRIDGE_ZOOM_OUT_04.md` §7; `B4_NINE_LAYER_COMPRESSION_MATRIX.md` B4-8 | "Supplied in both programs: Lorentz / causal-cone structure" | **"GRUT explicitly supplies its universal causal-cone / Lorentz structure. SCOUT-2 found Lorentz structure NOT DERIVED / not selected within its premise envelope. The correspondence is convergence on a residual boundary, not a shared derivation."** No compression implied |
+| **BR5-04** | `BRIDGE_1_HANDOFF.md`; `BRIDGE_ZOOM_OUT_05.md` §9 | "A change could come only from a quantum lift, a non-Gaussian physical bath, or gravity" | **"A change would require a materially enlarged or altered premise envelope, for example a physical quantum lift, a non-Gaussian physical bath, gravity, an infinite-dimensional / field-theoretic primitive structure, or a genuinely new selector principle."** Not exhaustive |
+| **BR5-05** | `B5_PREDICTION_PAYOFF_RESULT.md` P6 | `KNOWN-RESULT IMPORT — cited from memory / not re-fetched` | **`KNOWN-RESULT IMPORT — PRIMARY-SOURCE VERIFIED`** (owner-checked against the publication pages): Partovi, PRE 77, 021110 (2008); Jennings & Rudolph, PRE 81, 061130 (2010); Micadei et al., Nat. Commun. 10, 2456 (2019). They support **only** the qualitative background that initial correlations can reverse energy-flow direction, **not** Bridge-1's classical-Gaussian quantitative formulas |
+
+**Status:** B5 is accepted. **BRIDGE-1 FROZEN** by owner ruling with BR5-01 … BR5-05 applied.

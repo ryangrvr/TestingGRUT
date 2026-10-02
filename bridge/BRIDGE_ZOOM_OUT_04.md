@@ -109,7 +109,7 @@ where:
 - The local asymptotic state is downstream of the bath part of H_marginals.
 - Σ is redundantly re-encoded in site-local drift / noise when those are supplied.
 - Orientation is **not selected**.
-- Lorentz / causal cone is **supplied** in both programs (convergence, not compression).
+- Lorentz / causal cone: GRUT explicitly supplies its universal causal-cone / Lorentz structure. SCOUT-2 found Lorentz structure NOT DERIVED / not selected within its premise envelope. The correspondence is convergence on a residual boundary, not a shared derivation [BR5-03].
 - Lift, ħ, outcome and gravity / cosmology are outside the C5 bridge.
 
 **GRUT's distinctive contributions to the residual:**

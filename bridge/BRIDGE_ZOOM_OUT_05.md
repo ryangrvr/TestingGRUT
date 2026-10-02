@@ -75,8 +75,7 @@ parameter-free only because it is energy conservation. Outside the absolutely co
 | **B2-o3** | C_SB(t) > 0 for all t ≠ 0 | refines the epoch statement only |
 | **B4-o1** | the A-5 label overlap | concerns the fenced lift layer |
 
-**Envelope caveat.** A change could come only from **outside** the envelope: a quantum lift, a non-Gaussian physical
-bath, or the gravity sector. These are fenced by charter.
+**Envelope caveat.** A change would require a materially enlarged or altered premise envelope, for example a physical quantum lift, a non-Gaussian physical bath, gravity, an infinite-dimensional / field-theoretic primitive structure, or a genuinely new selector principle. The list is illustrative, not exhaustive [BR5-04].
 
 ## 10. Has Bridge-1 reached scientific saturation at its current premise envelope?
 
