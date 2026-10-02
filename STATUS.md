@@ -22,7 +22,9 @@
 - **REPAIR 04 DONE:** D0 Corollary 1′ (every-state arrow over any fixed nonzero horizon impossible; explicit concatenation).
 - **S2-G2/G3/G4 DONE:** dimension = several derived observables of distinct parents (graph + probe walk; causal order + region; state / effect / access); none determines another; Lorentz not derived; G1 stays in Σ.
 - **ZOOM_OUT_07 DONE:** C5-G eliminated as a single primitive. Candidate T2-6.
-- **Next (recommended; owner choice):** S2-ΣH combined boundary selector; then a saturation test or the GRUT bridge (owner stop).
+- **REPAIR 05 DONE:** G3 MM domain-of-validity scope (Y-12).
+- **S2-ΣH DONE:** no joint selector without a preference; frame selected only for non-generic compatible pairs; d not selected; epoch moves; orientation not selected.
+- **ZOOM_OUT_08 — FORMAL SATURATION GATE:** recommends **SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE — REVIEW OWED**. Residual: C5 → D_dyn ⊕ [Σ ⊗ H_corr]_coupled ⊕ A_res. **Awaiting owner review.** No freeze, no GRUT bridge opened.
 - **History:** S2-3b ✓ → S2-1b ✓ → S2-8 ✓ → S2-7 ✓ (attacks D) → S2-7 / S2-8 (attack A) ; S2-G active. **No T2-2** until
   S2-1b, S2-3b and ≥ 1 access probe are complete.
 - **Location:** branch `scout-2` of ryangrvr/TestingGRUT (unrelated history; owner-approved fallback).

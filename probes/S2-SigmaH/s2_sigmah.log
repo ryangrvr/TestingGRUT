@@ -1,0 +1,222 @@
+
+==============================================================================
+SigmaH-1/2/5: Pareto fronts over (L_H, -C_psi) for four epoch prescriptions; dominance; local dims (H2 = W_psi frame present in every run)
+==============================================================================
+
+[PC  positive control: MFI chain + product psi (same frame)]  candidates 1414
+   Pareto(L, -C0  ): front   10 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+9 ties); frames ['cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cmin): front   10 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+9 ties); frames ['cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cavg): front    8 (distinct vectors   4); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff3', 'commutant']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front   11 (distinct vectors   3); dominant: NONE; frames ['cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['32x2']
+
+[H1  conflict: MFI local in id, psi product in cliff1 frame]  candidates 1414
+   Pareto(L, -C0  ): front    8 (distinct vectors   2); dominant: NONE; frames ['cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2']
+   Pareto(L, -Cmin): front    8 (distinct vectors   2); dominant: NONE; frames ['cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2']
+   Pareto(L, -Cavg): front    3 (distinct vectors   2); dominant: NONE; frames ['cliff1', 'cliff3', 'commutant']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    3 (distinct vectors   2); dominant: NONE; frames ['cliff1', 'cliff3', 'commutant']; dtypes ['32x2']
+
+[H3  translation ring (TFIM) + translation-invariant product psi]  candidates 1414
+   Pareto(L, -C0  ): front   25 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+24 ties); frames ['cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cmin): front   25 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+24 ties); frames ['cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cavg): front    2 (distinct vectors   1); dominant: cliff1:32x2:(0)(12345) (+1 ties); frames ['cliff1', 'cliff3']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    2 (distinct vectors   1); dominant: cliff1:32x2:(0)(12345) (+1 ties); frames ['cliff1', 'cliff3']; dtypes ['32x2']
+
+[H4  record-forming star + |+>|0..>]  candidates 1414
+   Pareto(L, -C0  ): front    2 (distinct vectors   1); dominant: id:32x2:(01245)(3) (+1 ties); frames ['cliff3', 'id']; dtypes ['32x2']
+   Pareto(L, -Cmin): front    2 (distinct vectors   1); dominant: id:32x2:(01245)(3) (+1 ties); frames ['cliff3', 'id']; dtypes ['32x2']
+   Pareto(L, -Cavg): front    5 (distinct vectors   5); dominant: NONE; frames ['W_psi', 'cliff2', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    6 (distinct vectors   6); dominant: NONE; frames ['cliff2', 'commutant', 'id']; dtypes ['32x2']
+
+[H5a MFI mid-spectrum eigenstate]  candidates 1414
+   Pareto(L, -C0  ): front    9 (distinct vectors   3); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Cmin): front    9 (distinct vectors   3); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Cavg): front    9 (distinct vectors   3); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    9 (distinct vectors   3); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+
+[H5b MFI Gibbs beta = 1]  candidates 1414
+   Pareto(L, -C0  ): front    6 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+5 ties); frames ['cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Cmin): front    6 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+5 ties); frames ['cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Cavg): front    6 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+5 ties); frames ['cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    6 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+5 ties); frames ['cliff2', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+
+[H6  MFI Janus mean-field product state]  candidates 1414
+   Pareto(L, -C0  ): front   10 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+9 ties); frames ['cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cmin): front   10 (distinct vectors   1); dominant: id:32x2:(0)(12345) (+9 ties); frames ['cliff2', 'cliff3', 'id']; dtypes ['16x4', '32x2', '8x8']
+   Pareto(L, -Cavg): front    1 (distinct vectors   1); dominant: id:32x2:(0)(12345); frames ['id']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    1 (distinct vectors   1); dominant: id:32x2:(0)(12345); frames ['id']; dtypes ['32x2']
+
+[H7  MFI Haar state]  candidates 1414
+   Pareto(L, -C0  ): front    4 (distinct vectors   2); dominant: NONE; frames ['W_psi', 'cliff2', 'cliff3', 'id']; dtypes ['32x2']
+   Pareto(L, -Cmin): front    5 (distinct vectors   4); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff3', 'commutant', 'id']; dtypes ['32x2']
+   Pareto(L, -Cavg): front    8 (distinct vectors   5); dominant: NONE; frames ['W_psi', 'cliff1', 'cliff2', 'cliff3', 'id']; dtypes ['32x2']
+   Pareto(L, -Ctyp): front    6 (distinct vectors   3); dominant: NONE; frames ['cliff1', 'cliff2', 'cliff3', 'haar', 'id']; dtypes ['32x2']
+
+==============================================================================
+SigmaH-3/4: lexicographic priority rules and epsilon-constraint sweeps (C0 = supplied epoch; Cmin = epoch-free)
+==============================================================================
+
+[PC  positive control: MFI chain + product psi (same frame)]
+   lexicographic A (max L; min C)                 [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic B (min C; max L)                 [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic C (min k; min C; min MDL)        [C0]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [10, 15, 119, 247, 423]; common to all: 10; e.g. cliff2:16x4:(0123)(45); cliff2:32x2:(01234)(5)
+   lexicographic A (max L; min C)                 [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic B (min C; max L)                 [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [10, 15, 119, 247, 423]; common to all: 10; e.g. cliff2:16x4:(0123)(45); cliff2:32x2:(01234)(5)
+
+[H1  conflict: MFI local in id, psi product in cliff1 frame]
+   lexicographic A (max L; min C)                 [C0]: 6 winner(s): id:16x4:(0123)(45); id:32x2:(01234)(5); cliff2:16x4:(0123)(45) ...
+   lexicographic B (min C; max L)                 [C0]: 2 winner(s): cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+   lexicographic C (min k; min C; min MDL)        [C0]: 2 winner(s): cliff1:8x4x2:(0)(123)(45); cliff1:8x4x2:(01)(235)(4)
+   lexicographic D (min C; min k; max autonomy)   [C0]: 2 winner(s): cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [2, 6, 8, 15, 19, 136]; common to all: 0; e.g. cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+   lexicographic A (max L; min C)                 [Cmin]: 6 winner(s): id:16x4:(0123)(45); id:32x2:(01234)(5); cliff2:16x4:(0123)(45) ...
+   lexicographic B (min C; max L)                 [Cmin]: 2 winner(s): cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 2 winner(s): cliff1:8x4x2:(0)(123)(45); cliff1:8x4x2:(01)(235)(4)
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 2 winner(s): cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [2, 6, 8, 15, 19, 136]; common to all: 0; e.g. cliff1:32x2:(0)(12345); cliff3:32x2:(0)(12345)
+
+[H3  translation ring (TFIM) + translation-invariant product psi]
+   lexicographic A (max L; min C)                 [C0]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   lexicographic B (min C; max L)                 [C0]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   lexicographic C (min k; min C; min MDL)        [C0]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [C0]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [25, 33, 149, 266, 389]; common to all: 25; e.g. cliff1:32x2:(01235)(4); cliff2:16x4:(0123)(45)
+   lexicographic A (max L; min C)                 [Cmin]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   lexicographic B (min C; max L)                 [Cmin]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 25 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:32x2:(02345)(1) ...
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [25, 42, 149, 266, 389]; common to all: 25; e.g. cliff1:32x2:(01235)(4); cliff2:16x4:(0123)(45)
+
+[H4  record-forming star + |+>|0..>]
+   lexicographic A (max L; min C)                 [C0]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   lexicographic B (min C; max L)                 [C0]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   lexicographic C (min k; min C; min MDL)        [C0]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [C0]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [2, 3, 11, 82, 190, 393]; common to all: 2; e.g. cliff3:32x2:(01245)(3); id:32x2:(01245)(3)
+   lexicographic A (max L; min C)                 [Cmin]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   lexicographic B (min C; max L)                 [Cmin]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 2 winner(s): id:32x2:(01245)(3); cliff3:32x2:(01245)(3)
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [2, 3, 11, 82, 190, 393]; common to all: 2; e.g. cliff3:32x2:(01245)(3); id:32x2:(01245)(3)
+
+[H5a MFI mid-spectrum eigenstate]
+   lexicographic A (max L; min C)                 [C0]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic B (min C; max L)                 [C0]: 1 winner(s): W_psi:32x2:(01234)(5)
+   lexicographic C (min k; min C; min MDL)        [C0]: 31 winner(s): W_psi:32x2:(0)(12345); W_psi:16x4:(01)(2345); W_psi:32x2:(02345)(1) ...
+   lexicographic D (min C; min k; max autonomy)   [C0]: 1 winner(s): W_psi:32x2:(01234)(5)
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [1, 2, 6, 10, 15, 102]; common to all: 0; e.g. W_psi:32x2:(01234)(5)
+   lexicographic A (max L; min C)                 [Cmin]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic B (min C; max L)                 [Cmin]: 1 winner(s): W_psi:32x2:(01234)(5)
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 31 winner(s): W_psi:32x2:(0)(12345); W_psi:16x4:(01)(2345); W_psi:32x2:(02345)(1) ...
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 1 winner(s): W_psi:32x2:(01234)(5)
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [1, 2, 6, 10, 15, 102]; common to all: 0; e.g. W_psi:32x2:(01234)(5)
+
+[H5b MFI Gibbs beta = 1]
+   lexicographic A (max L; min C)                 [C0]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic B (min C; max L)                 [C0]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic C (min k; min C; min MDL)        [C0]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic D (min C; min k; max autonomy)   [C0]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 2 distinct winner SETS, sizes [6, 15]; common to all: 6; e.g. cliff2:32x2:(01234)(5); cliff3:32x2:(01234)(5)
+   lexicographic A (max L; min C)                 [Cmin]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic B (min C; max L)                 [Cmin]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 6 winner(s): id:32x2:(0)(12345); id:32x2:(01234)(5); cliff2:32x2:(01234)(5) ...
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 2 distinct winner SETS, sizes [6, 15]; common to all: 6; e.g. cliff2:32x2:(01234)(5); cliff3:32x2:(01234)(5)
+
+[H6  MFI Janus mean-field product state]
+   lexicographic A (max L; min C)                 [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic B (min C; max L)                 [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic C (min k; min C; min MDL)        [C0]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [C0]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [10, 15, 94, 169, 252]; common to all: 10; e.g. cliff2:16x4:(0123)(45); cliff2:32x2:(01234)(5)
+   lexicographic A (max L; min C)                 [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic B (min C; max L)                 [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 1 winner(s): id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 10 winner(s): id:32x2:(0)(12345); id:16x4:(01)(2345); id:8x8:(012)(345) ...
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 5 distinct winner SETS, sizes [10, 15, 94, 169, 252]; common to all: 10; e.g. cliff2:16x4:(0123)(45); cliff2:32x2:(01234)(5)
+
+[H7  MFI Haar state]
+   lexicographic A (max L; min C)                 [C0]: 3 winner(s): id:32x2:(01234)(5); cliff2:32x2:(01234)(5); cliff3:32x2:(01234)(5)
+   lexicographic B (min C; max L)                 [C0]: 1 winner(s): W_psi:32x2:(0)(12345)
+   lexicographic C (min k; min C; min MDL)        [C0]: 31 winner(s): W_psi:32x2:(0)(12345); W_psi:16x4:(01)(2345); W_psi:32x2:(02345)(1) ...
+   lexicographic D (min C; min k; max autonomy)   [C0]: 1 winner(s): W_psi:32x2:(0)(12345)
+   epsilon-constraint sweep [C0] (8 tolerances, full tie sets): 6 distinct winner SETS, sizes [1, 3, 6, 12, 15, 71]; common to all: 0; e.g. W_psi:32x2:(0)(12345)
+   lexicographic A (max L; min C)                 [Cmin]: 1 winner(s): commutant:32x2:(0)(12345)
+   lexicographic B (min C; max L)                 [Cmin]: 1 winner(s): W_psi:32x2:(0)(12345)
+   lexicographic C (min k; min C; min MDL)        [Cmin]: 31 winner(s): W_psi:32x2:(0)(12345); W_psi:16x4:(01)(2345); W_psi:32x2:(02345)(1) ...
+   lexicographic D (min C; min k; max autonomy)   [Cmin]: 1 winner(s): W_psi:32x2:(0)(12345)
+   epsilon-constraint sweep [Cmin] (8 tolerances, full tie sets): 7 distinct winner SETS, sizes [1, 1, 1, 6, 12, 15, 71]; common to all: 0; e.g. commutant:32x2:(0)(12345)
+
+==============================================================================
+SigmaH-6: time translation psi -> e^{-iHs} psi, s = 2.25 (grid-aligned)
+==============================================================================
+   PC  C0  : dominant set before ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | after NONE | same Sigma class: False
+   PC  Cmin: dominant set before ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | after ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | same Sigma class: True | t* before [np.float64(0.0)] after [np.float64(-2.25)]
+   H1  C0  : dominant set before NONE | after NONE | same Sigma class: False
+   H1  Cmin: dominant set before NONE | after NONE | same Sigma class: False | t* before [] after []
+   H6  C0  : dominant set before ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | after NONE | same Sigma class: False
+   H6  Cmin: dominant set before ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | after ['cliff2:16x4:(0123)(45)', 'cliff2:32x2:(01234)(5)'] | same Sigma class: True | t* before [np.float64(0.0)] after [np.float64(-2.25)]
+
+==============================================================================
+SigmaH-7: time reversal (Theta = K, real H): psi vs conj(psi)
+==============================================================================
+   PC : Cmin-dominant before ['id:32x2:(0)(12345)', 'id:16x4:(01)(2345)'] t*=[np.float64(0.0)]; reversed ['id:32x2:(0)(12345)', 'id:16x4:(01)(2345)'] t*=[np.float64(0.0)]
+        id-frame qubit TPS: C(t) at t = -4,-2,0,2,4: 3.643 3.691 -0.000 3.691 3.643  -> symmetric about the special epoch: orientation not selected
+   H6 : Cmin-dominant before ['id:32x2:(0)(12345)', 'id:16x4:(01)(2345)'] t*=[np.float64(0.0)]; reversed ['id:32x2:(0)(12345)', 'id:16x4:(01)(2345)'] t*=[np.float64(0.0)]
+        id-frame qubit TPS: C(t) at t = -4,-2,0,2,4: 3.056 3.029 -0.000 3.029 3.056  -> symmetric about the special epoch: orientation not selected
+
+==============================================================================
+SigmaH-8: add arrow quality R (forward relaxation from the Cmin epoch) as a third criterion
+==============================================================================
+   PC  horizon h=2: Pareto(L, -Cmin, R) front    6; dominant id:16x4:(01)(2345) (+5)
+   PC  horizon h=5: Pareto(L, -Cmin, R) front    3; dominant NONE
+   H1  horizon h=2: Pareto(L, -Cmin, R) front    6; dominant NONE
+   H1  horizon h=5: Pareto(L, -Cmin, R) front   15; dominant NONE
+   H3  horizon h=2: Pareto(L, -Cmin, R) front   22; dominant NONE
+   H3  horizon h=5: Pareto(L, -Cmin, R) front   27; dominant NONE
+   H4  horizon h=2: Pareto(L, -Cmin, R) front    4; dominant NONE
+   H4  horizon h=5: Pareto(L, -Cmin, R) front   12; dominant NONE
+   H5a horizon h=2: Pareto(L, -Cmin, R) front    9; dominant NONE
+   H5a horizon h=5: Pareto(L, -Cmin, R) front    9; dominant NONE
+   H5b horizon h=2: Pareto(L, -Cmin, R) front    6; dominant id:32x2:(0)(12345) (+5)
+   H5b horizon h=5: Pareto(L, -Cmin, R) front    6; dominant id:32x2:(0)(12345) (+5)
+   H6  horizon h=2: Pareto(L, -Cmin, R) front    6; dominant id:16x4:(01)(2345) (+5)
+   H6  horizon h=5: Pareto(L, -Cmin, R) front    9; dominant NONE
+   H7  horizon h=2: Pareto(L, -Cmin, R) front   11; dominant NONE
+   H7  horizon h=5: Pareto(L, -Cmin, R) front   16; dominant NONE
+
+==============================================================================
+SigmaH-9: records under ONE fragment rule (each factor = system; each other single factor = fragment) at t* + 2
+==============================================================================
+   PC : max record count 2 attained by 188 candidates; mean record count by #factors: 2:1.00, 3:1.30, 4:0.97, 5:0.34, 6:0.00;  Pareto(L,-Cmin,Rrec) front 16
+   H4 : max record count 4 attained by 30 candidates; mean record count by #factors: 2:1.00, 3:1.69, 4:1.98, 5:2.11, 6:2.29;  Pareto(L,-Cmin,Rrec) front 6
+   H6 : max record count 2 attained by 240 candidates; mean record count by #factors: 2:1.00, 3:1.35, 4:1.02, 5:0.75, 6:0.71;  Pareto(L,-Cmin,Rrec) front 17
+
+==============================================================================
+SigmaH-10: MDL = #H support-closure params(delta) + c_psi * #amplitudes(delta) in a declared language
+==============================================================================
+   PC : 45 language/precision/cost settings -> 3 distinct MDL winners: W_psi:32x2:(0)(12345); cliff3:4x2x2x2x2:(0)(12)(3)(4)(5); id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   H1 : 45 language/precision/cost settings -> 6 distinct MDL winners: W_psi:32x2:(0)(12345); cliff1:4x2x2x2x2:(0)(1)(23)(4)(5); cliff3:4x2x2x2x2:(0)(12)(3)(4)(5); id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5); id:4x2x2x2x2:(01)(2)(3)(4)(5) ...
+   H6 : 45 language/precision/cost settings -> 4 distinct MDL winners: W_psi:32x2:(0)(12345); cliff1:4x2x2x2x2:(0)(1)(23)(4)(5); cliff3:4x2x2x2x2:(0)(12)(3)(4)(5); id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+   H7 : 45 language/precision/cost settings -> 3 distinct MDL winners: W_psi:32x2:(0)(12345); id:16x2x2:(0)(1)(2345); id:2x2x2x2x2x2:(0)(1)(2)(3)(4)(5)
+
+==============================================================================
+SigmaH-11: symmetry quotient on the translation ring (Sym(H,psi) contains translations)
+==============================================================================
+   Cmin front: 25 bare TPS candidates -> 13 classes after quotienting id-frame groupings by translations+reflection
+
+==============================================================================
+SigmaH-11b: quotient every Cmin Pareto front by local-unitary (LU) equivalence of frames for the same grouping
+==============================================================================
+   PC : Cmin front 10 bare candidates -> 5 LU classes; frames ['id']; dtypes ['16x4', '32x2', '8x8']
+   H1 : Cmin front 8 bare candidates -> 3 LU classes; frames ['cliff1', 'id']; dtypes ['16x4', '32x2']
+   H3 : Cmin front 25 bare candidates -> 15 LU classes; frames ['id']; dtypes ['16x4', '32x2', '8x8']
+   H4 : Cmin front 2 bare candidates -> 1 LU classes; frames ['id']; dtypes ['32x2']
+   H5a: Cmin front 9 bare candidates -> 6 LU classes; frames ['W_psi', 'cliff1', 'commutant', 'id']; dtypes ['32x2']
+   H5b: Cmin front 6 bare candidates -> 4 LU classes; frames ['commutant', 'id']; dtypes ['32x2']
+   H6 : Cmin front 10 bare candidates -> 5 LU classes; frames ['id']; dtypes ['16x4', '32x2', '8x8']
+   H7 : Cmin front 5 bare candidates -> 4 LU classes; frames ['W_psi', 'cliff1', 'commutant', 'id']; dtypes ['32x2']

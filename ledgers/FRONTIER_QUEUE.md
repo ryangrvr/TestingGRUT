@@ -29,7 +29,9 @@
 | REPAIR 04 | explicit finite-horizon every-state corollary (D0 Cor. 1′) | **DONE** | Y-11 |
 | S2-G2 / G3 / G4 | dimension origin campaign | **DONE** | dimension splits into derived observables of distinct parents; G2 scale / probe / site-priced; G3 from order (MM 1.998 / 2.996 / 4.014), not fixed by G2 (ℤ²: 2.9 vs 1.14), Lorentz not derived; G4 A-priced, does not fix representation (N = 2 for K = 1 … 4) |
 | ZOOM_OUT_07 | after the dimension campaign | **DONE** | C5-G eliminated as a single primitive (conceptual compression); candidate T2-6 |
-| S2-ΣH | combined boundary selector: joint (Σ, H_corr\|Σ) selection without hidden preferences | **RECOMMENDED NEXT** (awaiting owner) | — |
-| S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | QUEUED | — |
+| REPAIR 05 | G3 MM domain-of-validity scope | **DONE** | Y-12 |
+| S2-ΣH | joint (Σ, H_corr\|Σ) selector | **DONE** | outcome C/D(+E): a frame is selected only for non-generic compatible pairs (the compatibility is the supplied boundary); generic pairs Pareto / preference / threshold / language-priced; d not selected; epoch moves (C_min covariant), C_avg / C_typ fail the positive control; orientation not selected |
+| ZOOM_OUT_08 | FORMAL SATURATION GATE | **DONE — REVIEW OWED** | recommends SCOUT-2 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE; residual C5 → D_dyn ⊕ [Σ⊗H_corr]_coupled ⊕ A_res; candidate T2-7 |
+| S2-D-arrow-∞ | infinite / continuous-spectrum arrow loophole | HELD (scope-broadening appendix; owner choice) | — |
 
 **Zoom-out** after S2-1…S2-4 (`zoomouts/ZOOM_OUT_01.md`).
