@@ -1,5 +1,8 @@
 # GRAVITY-SCOUT-1 · G3 — OPERATIONAL ACCESS, FINITE TIME AND GRAVITATIONAL RESOLUTION (result)
 
+> **Repaired by GRAVITY REPAIR 03 (GR3-01 … GR3-06; `GRAVITY_CORRECTION_LEDGER.md`).** G3 is accepted provisionally
+> after that repair. Where wording differs, the ledger takes precedence. Script and log outputs are kept as emitted.
+
 **Central question (owner).** Does gravity itself constrain or select the observable class / time access / resolution
 at which a subsystem description exists? Or does G2 merely relocate subsystem structure into still-supplied A_interface,
 A_resolution and A_time?
@@ -14,9 +17,9 @@ A_resolution and A_time?
 
 | setting | terminal |
 |---|---|
-| **AdS, boundary time band** (CPR protocol; WdW perturbative holography) | **ACCESS CONSTRAINED + CONDITIONAL ON ACCESS DATA.** Gravity excludes an interior subsystem hidden from boundary time-band observers, *given* declared ε_t, Λ, operator class and a unique vacuum. **Gravity does not determine ε_t, Λ or the operator class** |
-| **AdS, robustness** (G3-2 illustration) | **EXACT ALGEBRAIC ACCESS ≠ ROBUST OPERATIONAL ACCESS.** Every ε_t > 0 works algebraically, but the conditioning grows like ε_t^{−(4N−2)}. The robust time band grows with the energy cutoff. This is **kinematic**, not gravitational |
-| **Asymptotically flat, finite retarded time** (BCHW) | **A_time CONSTRAINED-NONUNIQUE.** The Bondi mass is not in the algebra of any finite portion of null infinity (under the entropy-bound premises). A class of finite-time measurements is forbidden |
+| **AdS, boundary time band** (CPR protocol; WdW perturbative holography) | **ACCESS CONSTRAINED — CONDITIONAL ON ACCESS DATA.** At the verified low-energy / perturbative AdS scope, gravity excludes a bulk-state degree of freedom that remains independent of the specified near-boundary access data [GR3-04]. **Gravity does not determine ε_t, Λ or the operator class** |
+| **AdS, robustness** (G3-2 illustration) | **KINEMATIC ILLUSTRATION OF ALGEBRAIC ACCESS VS ROBUSTNESS** [GR3-03]. *In the truncated free-field toy only:* every ε_t > 0 is algebraically invertible, the conditioning grows like ε_t^{−(4N−2)} for the tested construction, and fixed conditioning needs a wider band as N grows. Not a gravity theorem |
+| **Asymptotically flat, finite retarded time** (BCHW) | **A_time ⊗ A_interface(Bondi-charge readout): CONSTRAINED-NONUNIQUE — FINITE-TIME CHARGE ACCESS FORBIDDEN IN CLASS** [GR3-01]. Finite windows remain admissible, and Bondi-mass readout remains a meaningful target. Only the combination is forbidden. **A_time itself: SUPPLIED / NOT SELECTED** |
 | **Coarse-graining** (Raju) | **COARSE-GRAINING SUPPLIED.** No gravity-derived principle uniquely selects the coarse-grained algebra; the result is generally state-dependent |
 | **Perturbative order** | **PERTURBATIVE ORDER SUPPLIED.** No canonical nested hierarchy is supplied by the sources used |
 
@@ -27,13 +30,13 @@ A_resolution and A_time?
 
 ## G3-1 AdS finite-time boundary protocol (Chowdhury–Papadoulaki–Raju, arXiv:2008.01740)
 
-**Owner-stated source-text facts** (recorded; **not re-read here**, source located only):
-- observers remain near the boundary;
-- their detectors operate only in a small time band [0, ε];
-- they use simple low-energy unitaries and low-energy measurements;
+**PRIMARY ARXIV ABSTRACT VERIFIED** [GR3-02] for exactly the following (details beyond the abstract keep their prior
+owner-audited / source-text grade):
+- observers live near the boundary of global AdS and do not leave the near-boundary region;
+- they use simple low-energy unitaries and make measurements in a small interval of time;
 - gravitational backreaction and vacuum entanglement are essential;
-- within the stated low-energy Hilbert space, the protocol identifies the bulk state;
-- the same protocol fails in nongravitational QFT.
+- the low-energy bulk state can be completely identified;
+- the protocol fails in theories without gravity, including nongravitational gauge theories.
 
 **Priced:**
 - global AdS geometry;
@@ -52,10 +55,11 @@ A_resolution and A_time?
 The exact reconstruction is therefore **CONDITIONAL ON ACCESS DATA**: a relocation into A_time / A_resolution /
 A_interface, not a selection.
 
-**What gravity does remove.** Given those access data, an interior subsystem whose low-energy state is hidden from every
-boundary time band is excluded. Without gravity the same protocol fails, so the combination
+**What gravity does remove** [GR3-04]. At the verified low-energy / perturbative AdS scope, gravity excludes a bulk-state
+degree of freedom that remains independent of the specified near-boundary access data. This is **not** generalized to
+arbitrary-energy states, nonperturbative AdS quantum gravity, arbitrary observer algebras, or all asymptotics. Without gravity the same protocol fails, so the combination
 
-> (independent hidden interior) + (boundary time-band access, low-energy sector)
+> (bulk-state degree of freedom independent of the access data) + (specified near-boundary time-band access, low-energy sector)
 
 is admissible at G = 0 and **excluded** at G ≠ 0 at the stated scope.
 
@@ -78,7 +82,10 @@ data.**
 - **The fixed-robustness band grows with the cutoff.** The smallest ε_t/π with cond ≤ 10⁶ is
   0.070 / 0.196 / 0.314 / 0.476 / 0.580 for N = 2 / 3 / 4 / 6 / 8.
 
-**Establishes only:** **EXACT ALGEBRAIC ACCESS ≠ ROBUST OPERATIONAL ACCESS.**
+**Establishes only** [GR3-03]: **KINEMATIC ILLUSTRATION OF ALGEBRAIC ACCESS VS ROBUSTNESS** (exact algebraic access ≠ robust
+operational access *in this truncated free-field model*). The sources give "small time band" (CPR) and "infinitesimal
+interval" (WdW) at their scopes. The statements "every ε_t > 0 works" and the exponent 4N − 2 belong to this toy, not to
+any gravity theorem.
 - The states stay mathematically reachable for every ε_t > 0, but reconstruction becomes ill-conditioned.
 - A_time and Λ (A_resolution) are **coupled kinematically**. The construction contains no gravity, and with gravity off
   it is identical (G3-9).
@@ -103,7 +110,13 @@ data.**
 **Reading.** This is a genuine **gravity-related access constraint**: it forbids a class of finite-time measurements
 (finite-window charge readout). It selects no window.
 
-**Terminal: A_time CONSTRAINED-NONUNIQUE (asymptotically flat).**
+**Terminal** [GR3-01]: **A_time ⊗ A_interface(Bondi-charge readout): CONSTRAINED-NONUNIQUE — FINITE-TIME CHARGE ACCESS
+FORBIDDEN IN CLASS** (asymptotically flat).
+- Finite time windows remain admissible.
+- A_time itself stays **SUPPLIED / NOT SELECTED**.
+- This is a residual **coupling** constraint, not an elimination of A_time.
+
+(Superseded: "A_time CONSTRAINED-NONUNIQUE" as a standalone statement.)
 
 **Comparison with AdS.** In AdS, boundary energy data enters a protocol that works in an arbitrarily small time band. At
 null infinity, the analogous total charge is not available in any finite window. Notably, the **charge labels of G2's
@@ -113,12 +126,14 @@ perturbative gravitational splitting are themselves not finite-time accessible a
 
 ## G3-4 Wheeler–DeWitt perturbative control (Chowdhury–Godet–Papadoulaki–Raju, arXiv:2107.14802)
 
-**Abstract-located.**
-- At leading nontrivial order around AdS, the WdW and diffeomorphism constraints force correlations between a component
+**PRIMARY ARXIV ABSTRACT VERIFIED** [GR3-02].
+- At leading nontrivial order in Newton's constant about AdS, the WdW and diffeomorphism constraints force correlations between a component
   of the asymptotic metric and energetic excitations of matter / gravitons.
-- This gives a perturbative version of holography.
-- **Owner-stated (not re-read):** two states / density matrices agreeing on the boundary for an infinitesimal time
-  interval agree in the bulk, at the stated perturbative scope.
+- Strictly localized excitations are disallowed.
+- Two states or density matrices coinciding at the boundary for an infinitesimal interval of time coincide everywhere in
+  the bulk.
+- This gives perturbative holography at the stated scope. The infinitesimal-time statement is now abstract-verified, no
+  longer only owner-stated.
 
 **Classification: both.**
 - **Independent support** that gravity constrains the observable algebra. The correlation is forced by the gravitational
@@ -138,6 +153,12 @@ The source distinguishes three things:
 
 **Terminal: A_resolution / observable class REMAINS SUPPLIED (COARSE-GRAINING SUPPLIED).** This is the key selector test,
 and it fails to select.
+
+**Grade** [GR3-05]:
+- Raju's primary abstract verifies only that coarse-graining possibilities are discussed.
+- The statements about state-dependent coarse-grained entropy keep their prior **owner source-text verified** grade. They
+  are not independently re-verified here.
+- **A_resolution: SUPPLIED / NOT SELECTED.**
 
 ## G3-6 Perturbative-order test
 
@@ -167,20 +188,25 @@ algebra / time resolution, **without freely declaring the target cutoff**.
 - Every reconstruction theorem used needs a declared ε_t, Λ, operator class, asymptotic region or order. That is
   **RELOCATION / CONDITIONAL ACCESS**.
 - **Earned:**
-  - **A_time CONSTRAINED-NONUNIQUE** (asymptotically flat): a class of finite-time measurements is forbidden;
-  - **ACCESS CONSTRAINED** (AdS): a hidden-interior combination is excluded, conditional on access data.
+  - **A_time ⊗ A_interface(Bondi-charge readout) CONSTRAINED-NONUNIQUE** (asymptotically flat): finite-time charge access
+    is forbidden in class [GR3-01];
+  - **ACCESS CONSTRAINED** (AdS): a bulk degree of freedom independent of the specified access data is excluded at the
+    verified scope, conditional on access data [GR3-04].
 
 ## G3-9 Flat / nongravitational controls
 
 | control | result |
 |---|---|
-| AdS protocol, gravity off | fails (owner-stated source result). The hidden-interior combination is admissible at G = 0 |
+| AdS protocol, gravity off | fails in theories without gravity, including nongravitational gauge theories (primary abstract verified [GR3-02]). The independent-bulk combination is admissible at G = 0 |
 | null infinity, gravity off | no Bondi mass; the finite-window statement has no gravity-off analogue here |
 | WdW, gravity off | no constraint, so no forced boundary–bulk correlation |
 | conditioning toy | identical with gravity off (kinematic) |
 | ordinary QFT | AQFT locality / split independence is the comparison; independent interior specification is available under the split premises |
 
 ## G3-10 Orientation firewall
+
+**Owner scope ruling (with GRAVITY REPAIR 03): no orientation gate is run.** Terminal: **ORIENTATION REMAINS SUPPLIED /
+NOT SELECTED** (a campaign scope ruling, not a theorem).
 
 The following are **supplied** in every setting used:
 - retarded time;
@@ -205,13 +231,18 @@ The seven-criterion bar is unchanged.
 
 with the gravity refinements:
 
-| component | refinement |
+| component | refinement (final G3 mapping, GR3-06) |
 |---|---|
-| Σ / A_partition | CONSTRAINED / OBSERVABLE-CLASS-PRICED (G2). AdS: a hidden-interior combination excluded given the access data (G3) |
-| A_interface | RELOCATION (dressing, boundary detectors, null-infinity window) |
-| A_resolution | SUPPLIED (Λ, operator class, coarse-graining). Kinematically coupled to A_time |
-| A_time | asymptotics-dependent. AdS: conditional access. Flat: CONSTRAINED-NONUNIQUE |
+| Σ / A_partition | **CONSTRAINED / OBSERVABLE-CLASS-PRICED** |
+| A_interface | **RELOCATION / LOAD-BEARING** (dressing, charge / boundary readout, asymptotic-observable choice) |
+| A_resolution | **SUPPLIED / NOT SELECTED**. Coupled kinematically to time-band robustness in the toy; gravity does not select it |
+| A_time | **SUPPLIED / NOT SELECTED**. Specific combinations with observable targets are constrained: asymptotically flat, finite time × Bondi-charge readout is forbidden; AdS, small / infinitesimal boundary-time data can determine low-energy / perturbative bulk information under the stated assumptions |
+| perturbative order | **SUPPLIED** |
+| asymptotic structure | **SUPPLIED and load-bearing** |
 | charge sector | NEW SUPPLIED LABEL; not finite-time accessible at null infinity |
-| orientation | supplied |
+| orientation | **SUPPLIED / NOT SELECTED** (campaign scope ruling) |
+
+**General statement** [GR3-06]: **gravity constrains admissible combinations of subsystem, interface, time and
+observable-class data. It does not select the individual residual entries.**
 
 **TRUE COMPRESSION = 0.** All results are auxiliary to canonical GRUT.

@@ -95,3 +95,35 @@
 - **Source caution.** A search summary attributed to arXiv:2008.01740 a coarse-grained time-band algebra with a
   non-trivial commutant in states with a macroscopic bulk observer. This may conflate it with later work, and it is not
   used as evidence. All CPR protocol facts are owner-stated, not re-read here.
+
+## GRAVITY REPAIR 03 — G3 access / time scope (owner ruling after GRAVITY_ZOOM_OUT_03)
+
+**Applied to:** `G3_OPERATIONAL_ACCESS_RESULT.md`, `G3_ACCESS_LEDGER.md`, `GRAVITY_ZOOM_OUT_03.md`, status, handoff.
+**Effect:** G3 is accepted **provisionally** after this repair.
+**No change to:** CONDITIONALLY SELECTED = none; TRUE COMPRESSION = 0; empirical payoff = 0; ZERO CONFIRMED DISTINCTIVE
+GRUT QUANTITATIVE PREDICTIONS.
+
+| ID | correction | applied as |
+|---|---|---|
+| **GR3-01** | The finite-time Bondi theorem constrains an access combination, not A_time alone | "A_time CONSTRAINED-NONUNIQUE" as a standalone statement is withdrawn. Replacement: **A_time ⊗ A_interface(Bondi-charge readout): CONSTRAINED-NONUNIQUE — FINITE-TIME CHARGE ACCESS FORBIDDEN IN CLASS**. Finite windows remain admissible, and Bondi-mass readout remains a meaningful target; only the combination "Bondi charge accessible from a finite portion of null infinity" is forbidden. **A_time itself: SUPPLIED / NOT SELECTED.** This is a residual coupling constraint, not an elimination of A_time |
+| **GR3-02** | AdS and flat source grades | **PRIMARY ARXIV ABSTRACT VERIFIED:**<br>CPR arXiv:2008.01740 (near-boundary observers in global AdS; simple low-energy unitaries; measurements in a small time interval; observers stay near the boundary; backreaction and vacuum entanglement essential; complete identification of the low-energy bulk state; fails without gravity, incl. nongravitational gauge theories);<br>CGPR arXiv:2107.14802 (leading nontrivial order in G about AdS; forced asymptotic-metric / energetic-excitation correlations; strictly localized excitations disallowed; boundary coincidence for an infinitesimal interval ⇒ bulk coincidence; perturbative holography);<br>BCHW arXiv:1709.08632 (the Bondi mass is not measurable in finite retarded time and not in the algebra of any finite portion of future null infinity; large-radius / fixed-retarded-time attempts obstructed by quantum fluctuations; derivation tied to asymptotic entropy bounds).<br>Details beyond the abstracts keep their prior grades; BCHW body assumptions are unverified |
+| **GR3-03** | Source theorem vs time-band toy | **Source-backed:** CPR, a small time interval suffices at the stated low-energy protocol scope; WdW, an infinitesimal interval gives perturbative boundary uniqueness at its stated scope. **Toy only:** every ε_t > 0 is algebraically invertible; conditioning grows rapidly as the band shrinks, numerically ~ε_t^{−(4N−2)} for the tested construction; fixed conditioning needs a wider band as N grows. Neither "every ε_t > 0 works" nor the exponent is promoted to a gravity theorem. Grade: **KINEMATIC ILLUSTRATION OF ALGEBRAIC ACCESS VS ROBUSTNESS** |
+| **GR3-04** | AdS residual statement scope | "Gravity excludes an interior subsystem hidden from boundary time-band observers" is replaced by: **at the verified low-energy / perturbative AdS scope, gravity excludes a bulk-state degree of freedom that remains independent of the specified near-boundary access data.** Not generalized to arbitrary-energy states, nonperturbative AdS quantum gravity, arbitrary observer algebras, or all asymptotics. Classification: **ACCESS CONSTRAINED — CONDITIONAL ON ACCESS DATA** |
+| **GR3-05** | Coarse-graining grade | **COARSE-GRAINING SUPPLIED** is preserved. Raju's primary abstract verifies only that coarse-graining possibilities are discussed. The state-dependent coarse-grained-entropy statements keep the prior owner source-text grade and are not re-verified here. No gravity-derived rule in this campaign selects a unique coarse-grained algebra. **A_resolution: SUPPLIED / NOT SELECTED** |
+| **GR3-06** | Residual coupling summary | Σ / A_partition: **CONSTRAINED / OBSERVABLE-CLASS-PRICED**. A_interface: **RELOCATION / LOAD-BEARING**. A_resolution: **SUPPLIED / NOT SELECTED** (kinematic coupling to time-band robustness in the toy only). A_time: **SUPPLIED / NOT SELECTED**, with constrained combinations (flat: finite time × Bondi-charge readout forbidden; AdS: small / infinitesimal boundary-time data determines low-energy / perturbative bulk information under the stated assumptions). Perturbative order: **SUPPLIED**. Asymptotic structure: **SUPPLIED and load-bearing**. **General statement: gravity constrains admissible combinations of subsystem, interface, time and observable-class data. It does not select the individual residual entries** |
+
+### Orientation scope ruling (recorded with REPAIR 03)
+
+- **No orientation gate is run.**
+- Orientation was not independently attacked because every Gravity-SCOUT-1 route consumed an oriented structure as input:
+  future null infinity / retarded time, the positive-energy AdS Hamiltonian, the future-directed causal structure, or an
+  oriented time band.
+- Nothing in G1 – G3 supplied a mechanism capable of breaking the corresponding orientation choice without importing it.
+- **Terminal: ORIENTATION REMAINS SUPPLIED / NOT SELECTED.** This is a campaign scope ruling, not a theorem that gravity
+  can never select orientation.
+
+### Final verdict (owner ruling)
+
+**GRAVITY-SCOUT-1 SCIENTIFICALLY SATURATED AT CURRENT PREMISE ENVELOPE — EXTERNAL REVIEW STILL WELCOME**, with **NO
+DISTINCTIVE PAYOFF FOUND AT CURRENT GRAVITY-SCOUT-1 PREMISE ENVELOPE** and **ZERO CONFIRMED DISTINCTIVE GRUT
+QUANTITATIVE PREDICTIONS.**

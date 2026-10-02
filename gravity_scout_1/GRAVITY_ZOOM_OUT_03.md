@@ -1,5 +1,8 @@
 # GRAVITY-SCOUT-1 ZOOM-OUT 03 (after GRAVITY REPAIR 02 + G3) — HARD STOP for owner review
 
+> **Repaired by GRAVITY REPAIR 03 (GR3-01 … GR3-06; `GRAVITY_CORRECTION_LEDGER.md`).** G3 is accepted provisionally
+> after that repair. Where wording differs, the ledger takes precedence. Script and log outputs are kept as emitted.
+
 **Branch:** `gravity-scout-1`. All frozen inputs untouched. **Not frozen.** Orientation not started.
 
 ## 1. Does gravity itself select an operational observable algebra?
@@ -17,9 +20,11 @@ Raju's coarse-grained algebras are state-dependent, and no gravity-derived rule 
 
 **Yes, in two different directions, asymptotics-dependent:**
 - **Asymptotically flat (BCHW):** the Bondi mass is not in the algebra of any finite portion of null infinity.
-  **A_time CONSTRAINED-NONUNIQUE.** A class of finite-time measurements is forbidden; no window is selected.
-- **AdS (CPR protocol; WdW):** gravity *enlarges* finite-time access. An interior hidden from boundary time-band
-  observers is excluded, given declared ε_t, Λ and operator class. **ACCESS CONSTRAINED, CONDITIONAL ON ACCESS DATA.**
+  **A_time ⊗ A_interface(Bondi-charge readout): CONSTRAINED-NONUNIQUE — FINITE-TIME CHARGE ACCESS FORBIDDEN IN CLASS**
+  [GR3-01]. Finite windows remain admissible; A_time itself is supplied / not selected.
+- **AdS (CPR protocol; WdW):** gravity *enlarges* finite-time access. At the verified low-energy / perturbative scope,
+  a bulk degree of freedom independent of the specified near-boundary access data is excluded [GR3-04]. **ACCESS
+  CONSTRAINED — CONDITIONAL ON ACCESS DATA.**
 
 ## 3. Are AdS and asymptotically flat answers different?
 
@@ -47,7 +52,8 @@ illustration. G3-2's ε_t is a physical time band, but its condition number is *
 **Both remain supplied, but they are not operationally independent.**
 - At fixed robustness they trade off: cond ≤ 10⁶ needs ε_t/π ≥ 0.070 → 0.580 as N = 2 → 8.
 - This coupling is kinematic (Fourier), not gravitational.
-- Gravity adds only the asymptotics-dependent A_time constraint (flat) and the conditional access enlargement (AdS).
+- Gravity adds only **combination** constraints: finite time × Bondi-charge readout forbidden (flat), and the conditional
+  access enlargement (AdS) [GR3-06]. Both A_time and A_resolution stay **SUPPLIED / NOT SELECTED**.
 
 ## 7. Does any gravity theorem select a coarse-graining?
 
@@ -57,7 +63,8 @@ nested hierarchy in the sources used.
 ## 8. Did Σ / A_partition become conditionally determined by access?
 
 **Constrained, not determined.**
-- Given AdS access data, the hidden-interior partition is **excluded** (ACCESS CONSTRAINED).
+- Given AdS access data, a bulk degree of freedom independent of those data is **excluded** at the verified scope
+  (ACCESS CONSTRAINED) [GR3-04].
 - But no unique partition is fixed: the admissible subsystem decomposition still depends on the supplied observable
   class / coarse-graining.
 
@@ -77,14 +84,14 @@ Grade: **CONSTRAINED / OBSERVABLE-CLASS-PRICED**, plus the AdS access exclusion.
 - **Main campaign results (all residual-ledger, all auxiliary):**
   - d enters only as a preparation-class constraint;
   - the subsystem notion becomes observable-class / coarse-graining / order dependent;
-  - A_time is asymptotics-dependent (flat: constrained; AdS: conditional access);
+  - access combinations are constrained, asymptotics-dependently; A_time itself is not selected [GR3-01];
   - no selection anywhere.
 - **A further step** would need an untested selector (e.g. a physically derived resolution from measurement-apparatus
   gravity, or black-hole / de Sitter observer-algebra settings beyond the abstracts used here) or a materially altered
   premise envelope.
 
-**Suggested next owner action:** a saturation ruling and freeze / handoff (analogous to QFT-SCOUT-1), or an explicitly
-chosen further gate. The choice is the owner's.
+**Owner ruling (with GRAVITY REPAIR 03):** no orientation gate; GRAVITY-SCOUT-1 declared scientifically saturated at the
+current premise envelope; handoff and freeze.
 
 ## Scorecard
 
@@ -92,7 +99,7 @@ chosen further gate. The choice is the owner's.
 |---|---|
 | G1 (repaired) | no positive universal d_min; preparation-class constraint (conditional on L_all, heuristic) |
 | G2 (repaired) | ordinary split independence replaced (perturbative) / forbidden in class (fine-grained, scoped); observable-class / coarse-graining / order dependent |
-| G3 | AdS: ACCESS CONSTRAINED, conditional on access data; flat: A_time CONSTRAINED-NONUNIQUE; COARSE-GRAINING SUPPLIED; PERTURBATIVE ORDER SUPPLIED; exact ≠ robust access (kinematic) |
+| G3 (repaired) | AdS: ACCESS CONSTRAINED — CONDITIONAL ON ACCESS DATA; flat: A_time ⊗ A_interface(Bondi-charge readout) CONSTRAINED-NONUNIQUE; COARSE-GRAINING SUPPLIED; PERTURBATIVE ORDER SUPPLIED; toy: kinematic illustration of algebraic access vs robustness. **ACCESS COMBINATIONS CONSTRAINED; ACCESS VARIABLES NOT SELECTED** |
 | TRUE COMPRESSION | **0** |
 | Distinctive predictions | **0** |
 
