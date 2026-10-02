@@ -84,7 +84,7 @@ The criteria disagree, as functions of local dimension, before any weighting ent
 ## Σ-3 Weight simplex (Dirichlet(1) on the 4-simplex, 20 000 samples; the sampling measure is supplied)
 
 - **Min-max normalization:** 4 – 26 distinct winners per run.
-- **Rank normalization:** 9 – 58 distinct winners per run.
+- **Rank normalization:** 12 – 58 distinct winners per run.
 - A top share **> 0.9 occurs once in 28 main runs**: M4 with the random local product state, 0.91, a commutant-frame
   winner.
 - Large weight regions are occupied by **different local dimensions**. Example, M1 Haar state:
