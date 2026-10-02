@@ -65,7 +65,7 @@ A qubit system collides with fresh |0⟩ ancillas through a partial swap (θ = 0
 |---|---|
 | x⁴/4 + x²/2 − 0.7x | every start → 0.5414. **H-SELECTED-FROM-D, H → D RELOCATION** (via a) |
 | a = 0 | every start → 0. **Symmetry compression, TUNING-PRICED** |
-| double well, tilt 0.05 | → −1.0241 or +0.9740 by basin. The point 0 stays at −1.0241 only because the tilt moves the unstable point. **BASIN DATA SURVIVES**; bistability is structurally stable |
+| double well, tilt 0.05 | → −1.0241 or +0.9740 by basin. With the tilt, x₀ = 0 is no longer stationary: the unstable point moves to ≈ +0.05, so 0 flows to −1.0241. **BASIN DATA SURVIVES**; bistability is structurally stable |
 | symmetric double well | ±1, gauge-related, **but x₀ = 0 stays at 0 forever**. **H-SELECTED-MOD-GAUGE only on the complement of the unstable point** (exclusion priced), and only at the tuned ε = 0 |
 
 - **C:** the finite-time flow is a diffeomorphism. Backward integration recovers x₀ = 3.000000 (T = 2) and 3.000009
