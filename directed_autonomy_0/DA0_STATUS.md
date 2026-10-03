@@ -21,7 +21,8 @@ handoff.
   was found. Sign / frustration architecture is O(1) in the proved low-T regime; the full architecture retains
   indeterminate residuals (window frustration, magnitude textures, T₀, full-space transition, finite-ε EP). The window
   simulation was **not** run (owner option (a)). This is not PF-D.
-- **Primary Model 2:** candidate audit only (`C3_PM2_CANDIDATE_AUDIT.md`). The proposal is M2-D (adaptive flow network,
-  conserved-flux competition); fallback M2-B. **NOT RUN; awaiting owner selection.**
+- **Primary Model 2: M2-D SELECTED** (owner; M2-B not selected). **PM2 CHARTERED** (`C3_PM2_CHARTER.md`): an adaptive
+  conserved-flow network with a frozen law, a corner outlet plus homogeneous injection, a deterministic Stage A, and the
+  R-TREE / SP-TREE firewall. **NOT RUN; awaiting owner review.**
 - **C3-B closed. No simulation.**
 - **Boundaries:** pre-repair charter `f266be2`; Repair 02 `31b5714`; preflight `dde3b94`.
