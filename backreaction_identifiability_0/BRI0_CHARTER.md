@@ -1,7 +1,14 @@
 # BRI0 — BACK-REACTION IDENTIFIABILITY 0: CHARTER 0 (charter only; NOT RUN)
 
 **Status:** CHARTER 0. **No bath simulation, no numerical result, no candidate Hamiltonian, no witness protocols, no
-bath-size grid.** Analytic statements are marked **PROVED HERE (INTERNALLY PROVED / NOT EXTERNALLY REVIEWED)**,
+bath-size grid.**
+
+> **BRI0 SCOPE REPAIR 01 (§R at the end) supersedes the text below wherever they differ.**
+> - **Owner ruling:** Charter 0 CONDITIONALLY ACCEPTED.
+> - The primary competitor E₂ (G > 0) is replaced by **E₂±** (G ∈ ℝ \ {0}).
+> - BRI-C2 is replaced by **BRI-C2±**.
+> - The §8 witnesses are made reflection-safe.
+> - BRI-UPPER is narrowed to its proved scope. Analytic statements are marked **PROVED HERE (INTERNALLY PROVED / NOT EXTERNALLY REVIEWED)**,
 **KNOWN** (literature or standard technique, metadata only) or **CONJECTURE**. No PR, no merge.
 
 **Branch:** `grut-backreaction-identifiability-0`, created from the frozen scientific parent
@@ -378,3 +385,206 @@ packaging work under the frozen saturation programme, with its own future branch
 3. Accept BRI-C2 as the exact operational meaning of E₂ membership under clamping, so that future witnesses target
    standardised-force fdd (marginal shape plus copula)?
 4. Accept BRI-UPPER as earned (analytic, INTERNALLY PROVED / NOT EXTERNALLY REVIEWED)?
+
+
+## §R — BRI0 SCOPE REPAIR 01 (owner review of `89b8236`; no candidate selected or run)
+
+### BRI-O1 — Clamp family accepted
+
+𝒫 = 𝒳 (§4) is BRI0's primary interventional protocol family. The scientific object is the **interventional
+environment-force law**, not passive free-evolution reduced data. The following are kept:
+- common q(0) = 0 and q̇(0) = 0;
+- one shared environment preparation;
+- a causal response;
+- a finite 𝒫_test, to be preregistered later.
+
+**Reference protocol.** The at-rest clamp q ≡ 0 is the default reference, but it may serve as the standardisation
+reference **only at times where its force variance is non-zero** (BRI-O4). No witness trajectories are selected.
+
+### BRI-O2 — Primary competitor: E₂± (signed location-scale / affine exogenous class)
+
+**E₂±:** F_q(t) = M_t[q] + G_t[q]·ξ(t), where:
+- M is an arbitrary deterministic causal functional;
+- **G is an arbitrary deterministic causal functional with G_t[q] ∈ ℝ \ {0}**;
+- ξ is one shared, protocol-independent path law.
+
+Deterministic **sign** changes of the noise amplitude are allowed. **Arbitrary nonlinear transformations of ξ are not**:
+the restriction remains affine (location-scale) separability.
+
+The ladder becomes **E₁ ⊂ E₂± ⊂ E_univ**.
+- **E₁:** deterministic nonlinear memory plus one fixed additive random law.
+- **E₂±:** additionally, arbitrary deterministic causal magnitude and sign modulation.
+- **E_univ:** an arbitrary causal transformation of one fixed random object.
+
+**Why signs are allowed.** A deterministic factor such as A′(q(t)) changing sign does not change the underlying random
+law. It is ordinary multiplicative response and must not count as the sought escape. The C1 control (§10) is therefore
+expected to lie in E₂± wherever its multiplicative coefficient is non-zero. **The §10 sign audit is resolved in this
+way. The positive-G class E₂ of §5 is retired as primary.**
+
+### BRI-O3 — Zero-amplitude firewall
+
+G = 0 is **not** allowed in E₂±. A zero multiplier makes the stochastic force degenerate and is not an invertible affine
+map.
+
+**Degeneracy set:** D_q := {t : Var F_q(t) = 0}.
+
+**Exact consequence (PROVED HERE).** In E₂±, Var F_q(t) = G_t[q]²·Var ξ(t) with G ≠ 0. So D_q = D_ξ := {t : Var ξ(t) = 0}
+for every q: **membership requires a common degeneracy set.**
+
+**Rules for future finite witness campaigns:**
+- primary witness times are chosen before results;
+- the reference force must be non-degenerate at those times;
+- a protocol-dependent zero of the force amplitude is reported as a **degeneracy change (BRI-DEG)**. Strictly, it is
+  outside E₂±, but **it alone never earns BRI-E2+.**
+
+**BRI-E2+ requires** a **non-degenerate** standardised-force law difference that cannot be removed by deterministic
+affine location, magnitude and sign modulation. A zero of A′(q) therefore cannot become a trivial "success".
+
+### BRI-O4 — BRI-C2± (replaces BRI-C2; PROVED HERE)
+
+**Assumptions:** clamped protocols, E F_q(t)² < ∞, and environment causality (§4).
+
+**Definition.** At non-degenerate times, Z_q(t) := (F_q(t) − E F_q(t)) / sd F_q(t).
+
+**PROP BRI-C2±.** F ∈ E₂± ⟺ both of the following hold:
+- (i) D_q = D, a common set, for all q ∈ 𝒳;
+- (ii) for each q there is a **deterministic causal sign function** s_q(t) ∈ {+1, −1}, depending on q only through
+  q_[0,t], such that the fdd of s_q·Z_q, on finite tuples of times outside D, are **common across all q ∈ 𝒳**.
+
+**Proof (⇒).**
+- For clamped q, F_q(t) = m_q(t) + g_q(t)·ξ(t), with deterministic, causal m_q and g_q, and g_q(t) ≠ 0.
+- D_q = D_ξ (BRI-O3).
+- Off D, Z_q(t) = sgn(g_q(t))·Z_ξ(t), where Z_ξ is the standardised ξ.
+- Set s_q(t) := sgn(g_q(t)). This is causal because G is causal, and s_q·Z_q = Z_ξ has a q-independent law. ∎
+
+**Proof (⇐), the converse construction.**
+1. Let ℒ be the common fdd family of s_q·Z_q (off D).
+2. Let ξ be a process with fdd ℒ off D and ξ(t) := 0 on D. Its law is protocol-independent by (ii).
+3. Set M_t[q] := E F_q(t).
+4. Set G_t[q] := s_q(t)·sd F_q(t) off D, and G_t[q] := 1 on D, so that G ≠ 0 everywhere.
+5. M and G are causal: the law of F_q(t) depends only on q_[0,t] (environment causality), and s_q is causal by
+   hypothesis.
+6. Off D, M_t[q] + G_t[q]·ξ(t) has the same fdd as E F_q + sd F_q·s_q·(s_q Z_q) = F_q, because s_q² = 1. On D both
+   sides equal the deterministic value E F_q(t).
+7. Hence F_q has the same fdd as M[q] + G[q]·ξ for every q, with one shared Law(ξ). ∎
+
+**Reference-independent form.** The statement is **common-orbit invariance across the family**; it does not depend on
+any particular reference. The at-rest clamp is only a convenient representative of ℒ where it is non-degenerate. If a
+later 𝒫_test uses times at which the at-rest force is degenerate, a different carrier reference must be fixed in that
+candidate charter before results.
+
+**Reflection-orbit form and its exact scope (correction to the owner text's "equivalently").** For a finite ordered
+tuple τ = (t₁ < … < t_k) outside D, let L_q(τ) be the law of (Z_q(t₁), …, Z_q(t_k)), and let O(τ) be the orbit of the
+reference law under the group R_k = {diag(s₁, …, s_k) : s_i ∈ {±1}}. Then:
+
+- **(a) Necessity.** F ∈ E₂± ⟹ L_q(τ) ∈ O(τ) for every q and every τ. *Proof:* restrict the causal signs of (ii) to τ.
+  ∎ **Consequently, a reflection-orbit violation at any single tuple is a sufficient witness of E₂± escape.** This is
+  the primary witness (BRI-O5).
+- **(b) Global, possibly non-causal signs.** If L_q(τ) ∈ O(τ) for every τ, then a **global** sign function
+  s_q: [0, T] \ D → {±1} exists such that s_q·Z_q has the reference fdd. *Proof:* for each τ, the set of valid sign
+  vectors is non-empty and finite. Marginalisation commutes with coordinate reflection, so valid vectors for τ′ ⊃ τ
+  restrict to valid vectors for τ. These sets form an inverse system of non-empty compact sets, so by compactness of
+  {±1}^{[0,T]} (Tychonoff) a consistent global selection exists. ∎
+- **(c) The per-tuple orbit condition does NOT imply E₂± membership.** E₂± requires the selection in (b) to be
+  **causal**, and orbit consistency does not force that.
+  - **Counterexample (PROVED HERE).** Let ζ be standardised and symmetric with E ζ³ = 0 (e.g. standard normal), and
+    η := ζ + ζ² − 1. Let the reference law at (t₁, t₂) be that of (ζ, η)/standardisation.
+  - Take two protocols q and q′ that agree on [0, t₁] and differ on (t₁, t₂], with Z_{q′} = (ζ, η) and
+    Z_q = (−ζ, η) (standardised), realised causally by an environment whose t₂-response sign depends on q after t₁.
+  - Both lie in the reference orbit: q′ via (+, +) and q via (−, +). The latter is the **only** valid sign vector,
+    because (−ζ, ±η) has law (ζ, ±(−ζ + ζ² − 1)), and neither sign reproduces (ζ, ζ + ζ² − 1).
+  - So s_q(t₁) = −1 and s_{q′}(t₁) = +1 although q and q′ agree on [0, t₁]: no causal sign function exists, and F ∉ E₂±.
+  - The family satisfies every per-tuple orbit condition, yet is outside E₂±.
+- **(d) Registered consequence.** "Causal-sign inconsistency" is a **second, distinct** escape mode: orbit-consistent at
+  every tuple, but with no causal sign selection. It is a genuine E₂± escape, but it involves future-dependent sign
+  bookkeeping rather than a change in the standardised law's shape. **It may not earn BRI-E2+ without a separate owner
+  ruling** in the candidate charter. The **primary** BRI-E2+ witness remains the reflection-orbit violation (a).
+
+### BRI-O5 — Witness interpretation under E₂± (replaces §8)
+
+**Invariant under E₂±**, at non-degenerate witness times, with no qualification:
+- standardised **even** cumulants and their ratios (e.g. excess kurtosis);
+- **absolute values** of standardised odd cumulants (e.g. |skewness|);
+- any functional of the standardised law that is invariant under reflection;
+- for a finite vector: the dependence law **modulo coordinatewise reflections**. Examples are |correlation| and
+  the absolute value of every mixed standardised cumulant: a reflection multiplies κ(Z₁^{a₁}, …, Z_k^{a_k}) by
+  ∏ s_i^{a_i}, so only its sign can change. The copula is invariant only up to the
+  reflection action, under which a coordinate's u ↦ 1 − u.
+
+**Not invariant:** the sign of standardised skewness, the sign of correlations, and the raw copula. **A raw copula-sign
+or skew-sign change never counts as escape.**
+
+**Primary mathematical witness:** the standardised finite-dimensional force law of some protocol lies **outside the
+reference orbit** under every allowed coordinatewise reflection (BRI-O4 (a)). Marginal cumulants and copula diagnostics
+are **secondary** ways of proving this.
+
+### BRI-O6 — Exact-characterisation scope
+
+BRI-C1 and BRI-C2± are exact under the clamp setup **as statements about finite-dimensional distributions.**
+- fdd determine the law on the product (cylinder) σ-algebra.
+- They determine the **path-space law** when the force processes have, for every q, versions with **continuous** (or
+  càdlàg) paths. The cylinder σ-algebra then generates the Borel σ-algebra of C[0, T] (resp. D[0, T] with the Skorokhod
+  topology), so fdd equality is path-law equality.
+- For the converse construction to yield a path-regular ξ, it suffices that m_q(t) = E F_q(t) and sd F_q(t) are
+  continuous and bounded away from 0 off D on the times used. Otherwise the representation is stated at the fdd level.
+- **Fdd equality is not silently upgraded** to equality of arbitrary path-space measures.
+
+**Finite tests:** a finite 𝒫_test can **prove escape**. It **cannot** prove membership in E₁ or E₂±. Membership requires
+the full-family analytic characterisation or an explicit shared representation (BRI-E2-THEOREM).
+
+### BRI-O7 — BRI-UPPER accepted, at its proved scope
+
+**BRI-UPPER — E_UNIV NON-IDENTIFIABILITY BOUND: ACCEPTED, EARNED (INTERNALLY PROVED / NOT EXTERNALLY REVIEWED).**
+
+**The proved continuous-time theorem:** every classical, deterministic, causal environment in the declared parent class
+(Ẏ = B(Y, q), F = C(Y, q), Y(0) = Ψ(q(0), U), with the §6 regularity) lies in E_univ. Reciprocal and energy-absorbing
+back-reaction is included.
+
+**Kept separately:** the standard discrete-time randomisation result for general non-anticipating stochastic kernels on
+standard Borel spaces (KNOWN technique).
+
+**Wording repaired.** §6 consequence 1 ("No classical, causal, back-reacting environment escapes E_univ") and §13's
+E_univ row are superseded by this narrower statement:
+- **No environment in the declared continuous-time deterministic parent class escapes E_univ.**
+- In discrete time, general non-anticipating stochastic environments are also representable.
+- **A continuous-time statement for general stochastic environments is not claimed.** It would need separately stated
+  regularity assumptions and a proof.
+- Quantum environments remain out of scope.
+
+### BRI-O8 — Strictness of the ladder under E₂± (PROVED HERE)
+
+- **E₂± \ E₁.** F_q(t) = (1 + q(t)²)·ξ(t), with ξ i.i.d. standard normal. It is in E₂± (G > 0 is allowed). It is not in
+  E₁, because Var F_q(t) = (1 + q(t)²)² varies with q, while E₁ requires a q-invariant centred law (BRI-C1). *Survives
+  unchanged.*
+- **E_univ \ E₂± (reflection-safe).** F_q(t) = ξ(t) + q(t)·(ξ(t)² − 1), with ξ i.i.d. standard normal. It is in E_univ.
+  - Its third central moment is 6q + 8q³, where q = q(t), and its variance is 1 + 2q².
+  - So the **absolute** standardised skewness is 0 at q(t) = 0 and **non-zero** whenever q(t) ≠ 0.
+  - |skewness| is reflection-invariant (BRI-O5), so it is E₂±-invariant, and the at-rest clamp and any q with q(t) ≠ 0
+    give different values.
+  - Hence F ∉ E₂±. ∎
+
+So **E₁ ⊊ E₂± ⊊ E_univ.**
+
+### Accepted scientific reading
+
+> A future **BRI-E2+** means: back-reaction changes the **standardised random response** in a way that **no shared
+> deterministic affine modulation (location, magnitude and sign) of one exogenous process** can represent.
+
+**Back-reaction itself is never the discriminator.** At the universal level it is always representable (BRI-UPPER). The
+only interesting question is whether the response stays in the affine orbit M[q] + G[q]·ξ.
+
+### Candidates (unchanged hold)
+
+- **C1** remains a future structural control. Sign changes of A′(q) are now allowed; zeros are excluded from primary
+  witness times and from primary escape grading (BRI-O3). No C1 computation, and A(q) is not chosen.
+- **X1:** the exact anharmonic Hamiltonian, 𝒫_test, N_B grid, coupling normalisation and escape statistics are **not**
+  chosen. They belong to the next candidate charter.
+
+### Grades: additions under Repair 01
+
+| ID | grade | meaning |
+|---|---|---|
+| **BRI-DEG** | **DEGENERACY CHANGE ONLY** | a protocol-dependent zero-variance set. Outside E₂± but **never** BRI-E2+ by itself |
+| **BRI-CSI** | **CAUSAL-SIGN INCONSISTENCY ONLY** | orbit-consistent at every tuple, but with no causal sign selection (BRI-O4 (c)). An E₂± escape whose grade requires an owner ruling; **not** BRI-E2+ by default |
+
+BRI-E1, BRI-E2+, BRI-E2−, BRI-E2-THEOREM and BRI-UPPER keep their meanings, with "E₂" read as **E₂±** throughout.
