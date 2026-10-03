@@ -1,5 +1,7 @@
 # RA0 ZOOM-OUT 05 (after G5) — HARD STOP for owner review
 
+> **Repaired by RA0 REPAIR 03** (RA3-01 … 05). Where wording differs, the ledger takes precedence.
+
 **Branch:** `grut-reflexive-autonomy-0`. Not frozen. No consciousness, quantum, collapse or Born-rule work.
 
 All "proved" items below are proved in `G5_METASTABLE_RECOVERY_THEOREM.md`. They are **not externally reviewed**.
@@ -54,7 +56,7 @@ G5 argmax partition is identical to G4-P's {f > s/2}. Verified to 1e-14.
 - The recovery map R uses only V and π.
 - The hidden partition appears only in proofs and in the post-hoc audit, which runs after R returns.
 - Seeded Newton starts are a solver for a fixed polynomial system. The theory does not depend on them, and the audit
-  confirms that the solver finds the predicted 2^k solutions.
+  shows that the numerical solver found 2^k distinct idempotents. That is evidence, not proof of completeness [RA3-02].
 
 ## 7. Is the G4-T partition derivation now theorem-grade?
 
@@ -67,7 +69,8 @@ Conditions (priced):
 - s²C_V → 0 (H3 weakened);
 - a divergence certificate that is a proof about the family.
 
-**The bounds are loose.** On F1 the lemma's condition holds with the true ε from M = 80. The theorem's own sufficient
+**The bounds are loose.** [RA3-01] On F1 the numerical lower estimate ε_num falls below ε_glob from M = 80, but that does
+not certify the lemma's condition, and no logged M is rigorously certified. The theorem's own sufficient
 condition (via the proved ε bound) is only met at about M ≈ 400 by extrapolation, and much later if the analytic
 Davis–Kahan bound on s is used.
 

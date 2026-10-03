@@ -69,3 +69,20 @@ here as standing readings:
   cancellation. The corrected bound, with first-order terms ≤ Λs² because A is an algebra and third order ≤ 2s²(C_V + Λ),
   is the one logged.
 - The rounding-lemma constant was tightened from 4 to 2 (|d_i| + |d_j| ≥ 1 ⇒ d_i² + d_j² ≥ 1/2). Both versions are valid.
+
+## RA0 REPAIR 03 (owner review of `86e885a`)
+
+G5 PASSES after this repair. Terminals preserved: **METASTABLE BLIND RECOVERY PROVED** and **CONDITIONAL DYNAMICAL
+PARTITION DERIVATION — THEOREM-GRADE IN G4-T CLASS**, in the vanishing misclassified π-mass sense. All proofs:
+**INTERNALLY PROVED / NOT EXTERNALLY REVIEWED**.
+
+| ID | item | correction |
+|---|---|---|
+| **RA3-01** | numerical tensor norm | `inj_norm_sym()` is projected-gradient ascent from finitely many starts, so its output is a **numerical lower estimate ε_num**, not the true value. Banach's theorem justifies the diagonal reduction but does not certify the global maximum. Use **ε_num ≤ ε_true ≤ ε_bd = s²(11Λ + 2C_V)**. The finite-M theorem condition is rigorously certified only when ε_bd < ε_glob, which **does not happen through M = 160**. M ≈ 400 is an extrapolation, not a verified crossing. The statement "Lemma G5-3's hypothesis is met from M = 80 using the true ε" is **withdrawn**. The asymptotic theorem is unchanged (H3′ ⇒ ε_bd → 0). The code and log label "true eps" are kept as emitted and read as ε_num |
+| **RA3-02** | numerical idempotent enumeration | "Idempotent count found = 2^K" → **"the numerical solver found 2^K distinct idempotents"**. Before ε_bd < ε_glob is certified, this is evidence, not proof that no further solutions exist. Once the hypothesis is rigorously met, Lemma G5-3 proves the exact count independently of the solver |
+| **RA3-03** | blind recovery vs blind certification | **Blind recovery (proved):** given a certified slow space V_N and π_N, R uses no hidden partition, labels, external K, coordinates, ε or objective. **Certification (not blind):** membership of a family in the G4-T/G5 class needs a family-level proof (diverging rank-K cut; η/g → 0 or equivalent; p_min bounded below; s²C_V → 0), in which the proof partition may appear. **G5 is a blind recovery theorem conditional on a certified metastable family, not a universal finite-kernel metastability detector** |
+| **RA3-04** | asymptotic-uniqueness corollary | Added COROLLARY G5-U: if 𝔅_N and 𝒞_N both satisfy the G5 hypotheses for the same V_N, then d_π(𝔅_N, 𝒞_N) → 0 up to block permutation, and ‖E_{A_𝔅} − E_{A_𝒞}‖ → 0. Terminal: **ASYMPTOTIC UNIQUENESS OF THE METASTABLE PARTITION WITHIN THE G5 CLASS**. Not exact finite-N uniqueness |
+| **RA3-05** | source grades | The owner independently verified the primary records for Anandkumar et al. 2014, Mu–Hsu–Goldfarb 2015, Auddy–Yuan 2023 and Robeva 2016. They remain **contextual / supporting only**. G5 is self-contained and internally proved; **no external validation of G5 is claimed** |
+
+**Applied to:** `G5_METASTABLE_RECOVERY_THEOREM.md`, `RA0_ZOOM_OUT_05.md`. This ledger row supersedes the G5-note sentence
+on M = 80 and the zoom-out 05 wording "the solver finds the predicted 2^k solutions".

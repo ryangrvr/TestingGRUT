@@ -1,5 +1,9 @@
 # RA0 · G5 — METASTABLE BLIND-RECOVERY THEOREM (result)
 
+> **Repaired by RA0 REPAIR 03** (RA3-01 … 05; `RA0_CORRECTION_LEDGER.md`). G5 PASSES after this repair. All proofs are
+> **INTERNALLY PROVED / NOT EXTERNALLY REVIEWED**. Where wording differs, the ledger takes precedence; logs are kept as
+> emitted (the log's "true eps" label reads as ε_num).
+
 **Central question.** Under the G4-T hypotheses with fixed rank K, does η_N/g_N → 0 make the cubic moment tensor of the
 canonical slow space near-odeco, with primitive components converging to the block-indicator idempotents? And does that
 make blind partition recovery theorem-grade?
@@ -79,7 +83,7 @@ Summing: 3Λs² + 6Λs² + 2s²(C_V + Λ) = s²(11Λ + 2C_V). ∎
 - This is the step where the **algebra structure of A** is used: it makes the perturbation **second order** in s.
 - C_V enters only through the third-order term, which is why H3′ needs only s²·C_V → 0.
 
-**Numerics (F1).** ‖W − I‖ ≈ s, with ≤ √2·s holding at every M. The true ε scales ∝ s², e.g. 1.27e-2 → 2.3e-4 for
+**Numerics (F1).** ‖W − I‖ ≈ s, with ≤ √2·s holding at every M. The numerical lower estimate ε_num [RA3-01] scales ∝ s², e.g. 1.27e-2 → 2.3e-4 for
 M = 20 … 160.
 
 ## G5.4 Source audit
@@ -92,6 +96,10 @@ M = 20 … 160.
 | Robeva, *SIAM J. Matrix Anal. Appl.* 37 (2016) 86–102 | the eigenvectors of odeco tensors | rederived in Lemma G5-1 |
 | Newton–Kantorovich theorem (standard; Kantorovich 1948, Ortega–Rheinboldt) | existence, uniqueness and error bound for a zero near an approximate solution | **used** in Lemma G5-3 |
 | Banach's theorem on symmetric multilinear forms (norm attained on the diagonal) | injective norm of a symmetric tensor = max |T(a, a, a)| | used only in the numerics |
+
+**[RA3-05] Source grades.** The owner audit independently verified the primary records of AGHKT 2014, Mu–Hsu–Goldfarb
+2015, Auddy–Yuan 2023 and Robeva 2016. These remain **contextual / supporting only**. They do not validate G5, and no
+external validation of G5 is claimed.
 
 **Verdict.** G5 does not rely on an external tensor-recovery theorem. Identifiability is proved directly (Lemma G5-3), so
 the terminal SOURCE THEOREM MISMATCH does not apply. Full texts were not re-read in this environment; citations rest on
@@ -225,7 +233,7 @@ matches to ≤ 4e-14.
 Bounds are reported as computed, including the loose ones. Proof-side quantities use the hidden labels, after R has
 returned.
 
-| M | idempotents / primitive (blind) | s (DK bound) | ε true | ε_bd = s²(11Λ + 2C_V) | ε_glob | L² idempotent error (bound) | sup error | misclassified (bound with true ε / with ε_bd) |
+| M | idempotents / primitive found by the numerical solver (blind) | s (DK bound) | ε_num (lower estimate) | ε_bd = s²(11Λ + 2C_V) (proved upper bound) | ε_glob | L² idempotent error (bound) | sup error | misclassified (indicative value from ε_num, not certified / bound from ε_bd) |
 |---|---|---|---|---|---|---|---|---|
 | 5 | 8 / 3 | 0.997 (none) | 3.70 | 29.4 | 1.4e-3 | 0.60 (10.8) | 1.03 | 0.31 (vacuous) |
 | 10 | 8 / 3 | 0.992 (none) | 5.32 | 33.6 | 1.2e-3 | 0.62 (15.1) | 1.09 | 0.33 (vacuous) |
@@ -235,14 +243,56 @@ returned.
 | 160 | 8 / 3 | 0.016 (0.13) | 2.3e-4 | 7.5e-3 | 1.2e-3 | 0.0075 (0.016) | 0.020 | 0 (2.2e-3 / 6.9e-3) |
 
 **Reading.**
-- **Every proved inequality holds.** The idempotent count found is 2^k = 8 and the primitive count is k = 3 at every M.
-  Lemma G5-3 guarantees this only once ‖E‖ < ε_glob; at smaller M it holds without a guarantee.
-- **The theorem's hypothesis is met late.**
-  - Lemma G5-3, applied with the *true* ε, holds from M = 80 (9.1e-4 < 1.2e-3).
-  - Theorem G5's stated sufficient condition (ε_bd < ε_glob) is not yet met at M = 160 (7.5e-3); extrapolating
-    ε_bd ∝ s² ∝ M^{−2}, it would be met around M ≈ 400.
+- **[RA3-01] ε sandwich.** ε_num ≤ ε_true ≤ ε_bd. ε_num is a projected-gradient lower estimate from finitely many
+  starts. Banach's theorem reduces the norm to a diagonal maximisation but does not certify that the optimizer found the
+  global maximum.
+- **Every proved inequality checked holds** (‖W − I‖ ≤ √2 s; ε_num ≤ ε_bd; idempotent error ≤ bound; misclassified
+  mass ≤ the ε_bd bound wherever that bound is non-vacuous).
+- **[RA3-02] Enumeration.** The numerical solver found 2^k = 8 distinct idempotents, 3 of them primitive, at every M.
+  This is **evidence, not proof of completeness**. Lemma G5-3 proves the exact count only once the rigorous condition
+  ε_bd < ε_glob holds.
+- **The rigorous condition is not reached in the logged range.**
+  - Through M = 160, ε_bd ≥ 7.5e-3 > ε_glob ≈ 1.2e-3. **No logged M is rigorously certified.**
+  - ε_num < ε_glob from M = 80 is suggestive only; it does not certify Lemma G5-3's hypothesis.
+  - Extrapolating ε_bd ∝ s² ∝ M^{−2}, the crossing would be near M ≈ 400. This is an **extrapolation, not a verified
+    crossing**.
+  - The asymptotic theorem is unaffected: H3′ gives ε_bd → 0.
   - With the fully analytic s ≤ η/(g − η) (DK, about 8× looser), the guarantee starts far later.
 - **The bounds are asymptotically correct in rate but loose in constants.** This is preserved as found.
+
+## G5.9a Blind recovery versus blind certification [RA3-03]
+
+**BLIND RECOVERY (proved).** Given a canonical certified slow space V_N and its stationary law π_N, the map R uses no
+hidden partition, basin labels, external K, coordinates, ε or clustering objective.
+
+**CERTIFICATION (not blind).** To establish that a family belongs to the G4-T/G5 class, one still has to prove:
+- a diverging rank-K cut;
+- η/g → 0, or an equivalent sufficient certificate;
+- p_min bounded below;
+- s²C_V → 0.
+
+The hidden proof partition may appear in that family-level proof.
+
+**So G5 is a blind recovery theorem conditional on a certified metastable family.** It is **not** a universal
+finite-kernel metastability detector. From a single finite P_N, G5 does not determine whether an observed gap will
+diverge.
+
+## G5.9b COROLLARY G5-U — asymptotic uniqueness of the metastable partition [RA3-04] (INTERNALLY PROVED)
+
+**Statement.** Suppose two proof partitions 𝔅_N and 𝒞_N (fixed K) both satisfy the G5 hypotheses for the same canonical
+slow space V_N. Let d_π(P, Q) = min over block permutations σ of π{x : σ(P(x)) ≠ Q(x)}.
+
+**Proof.**
+- **The partitions merge in mass.** d_π is a pseudometric: permutations compose, and the union bound gives the triangle
+  inequality. Π_N = R(V_N) does not depend on either proof partition. Theorem G5 (4) gives d_π(Π_N, 𝔅_N) ≤ m_N^𝔅 → 0
+  and d_π(Π_N, 𝒞_N) ≤ m_N^𝒞 → 0. Hence **d_π(𝔅_N, 𝒞_N) → 0**.
+- **The algebras merge too.** ‖E_{A_𝔅} − E_{A_𝒞}‖ ≤ ‖E_{A_𝔅} − E_V‖ + ‖E_V − E_{A_𝒞}‖ ≤ s_N^𝔅 + s_N^𝒞 → 0, directly
+  from Davis–Kahan. ∎
+
+**Terminal: ASYMPTOTIC UNIQUENESS OF THE METASTABLE PARTITION WITHIN THE G5 CLASS.**
+- This is **not** exact finite-N uniqueness: two admissible proof partitions may differ on sets of vanishing π-mass.
+- It does mean that no two asymptotically distinct metastable partitions can both satisfy the theorem for the same
+  canonical slow sector. The proof partition is not secretly choosing between them.
 
 ## G5.10 General-conjecture firewall
 
@@ -256,7 +306,8 @@ returned.
 
 ## Terminal
 
-**METASTABLE BLIND RECOVERY PROVED.** The proof is written here and not externally reviewed.
+**METASTABLE BLIND RECOVERY PROVED** — INTERNALLY PROVED / NOT EXTERNALLY REVIEWED. Plus **ASYMPTOTIC UNIQUENESS OF THE
+METASTABLE PARTITION WITHIN THE G5 CLASS** (Corollary G5-U). Recovery is blind; family certification is not [RA3-03].
 
 **Sense:** vanishing misclassified π-mass, L² convergence of the canonical primitive idempotents, and projector
 convergence. **Exact eventual recovery is not proved; it needs the supplied pointwise margin H4.**
