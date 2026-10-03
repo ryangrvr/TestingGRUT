@@ -59,7 +59,7 @@
 | C0 | demand a state chosen covariantly in every spacetime (natural / locally covariant) |
 | C1 | state (vacuum selector) |
 | C11 | the Fewster–Verch dynamical-locality framework (abstract-verified). The "no natural state" theorem for dynamically local theories reducing to Minkowski QFT is **REVIEW / SECONDARY** (via arXiv:1502.04642). BFV gave earlier arguments |
-| C12 | **NO-GO / NONSELECTION RESULT** (secondary-grade): naturality forbids a preferred state rather than selecting one. Hollands–Wald: covariance fixes *fields* up to finitely many parameters, not states |
+| C12 | **NO-GO / NONSELECTION RESULT (control only)** (secondary-grade). **Conditional scope** [SSR1-06]: dynamically local, nontrivial locally covariant theories, under the additional Fewster–Verch hypotheses, do not admit the relevant natural preferred-state assignment. **Not** generalized to "physics admits no preferred states", and it does **not** bear the overall screen terminal. Hollands–Wald: covariance fixes *fields* up to finitely many parameters, not states |
 
 ## Q1 — Measure / typicality selection (multiverse measures)
 

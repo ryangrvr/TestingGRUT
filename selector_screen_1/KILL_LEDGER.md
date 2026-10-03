@@ -1,5 +1,8 @@
 # KILL LEDGER — GRUT SELECTOR SCREEN 01
 
+> Repaired by SELECTOR SCREEN REPAIR 01 (SSR1-01 … 06; `SELECTOR_SCREEN_CORRECTION_LEDGER.md`). A5 moves from S1 to S5
+> [SSR1-02]: S1 13 → 12 and S5 23 → 24. Candidate total (49) and survivors (0) are unchanged.
+
 Every candidate is killed at its **first decisive failure**. Cards are in `candidates/`; sources in `SOURCE_LEDGER.md`.
 
 **Grade key:**
@@ -10,17 +13,17 @@ Every candidate is killed at its **first decisive failure**. Cards are in `candi
 
 | # | candidate | target | first fatal test | exact reason | priced hidden input | source grade |
 |---|---|---|---|---|---|---|
-| A1 | quasiclassical factorization (Carroll–Singh) | Σ | S1 | the quasiclassicality functional, dimensions and test states carry the preference; several quasiclassical factorizations exist (Adil et al.) | **objective** | LOC |
+| A1 | quasiclassical factorization (Carroll–Singh) | Σ | S1 | a definite Schwinger-Entropy algorithm, but run over a **supplied factorization class** (fixed d_A, d_B; prescribed candidate states; measurement-limit example; no global uniqueness theorem; varying dimensions left to future work) → conditional selection; does not eliminate all Σ information [SSR1-01]. Adil et al. = supporting non-uniqueness evidence only | **partition class (fixed dimensions) + state prescription** | **PRIMARY / SOURCE-TEXT VERIFIED (owner)** |
 | A2 | locality from the spectrum (CPR) | Σ | S1 | the locality class is the selecting criterion and is already a frozen supplied item (BI-09 RENAMING; E-01); nonselecting on W-Σ1 | **criterion (locality class)** | ABS + FROZEN |
 | A3 | spectrum-only TPS (Loizeau–Sels; Soulas et al.) | Σ | S2 | any unitary-invariant map gives the same output for the isospectral twins N₁, N₂ | none needed: **nonselecting** | LOC + FROZEN |
 | A4 | observable-induced TPS (Zanardi; ZLL) | Σ / A_partition | S5 | the TPS is relative to the accessible algebra (by the source's own statement) | **observable algebra (A_interface / A_partition)** | ABS |
-| A5 | minimal-scrambling mereology | Σ | S1 | scrambling objective + candidate family | **objective** | LOC |
+| A5 | minimal-scrambling mereology | Σ / A_partition | S5 | selection = dynamics + operational constraints, optimized over a **supplied family of operationally admissible algebras / partitions** [SSR1-02] | **operational family (A_interface / A_partition)** | PRIMARY VERIFIED (publisher abstract, owner) + full-text mirror (owner) |
 | A6 | space from Hilbert space | dimension / geometry | S5 | the TPS and the state are assumed | **partition + state** | LOC |
 | A7 | Stoica non-uniqueness | Σ | — | **NO-GO / NONSELECTION RESULT** (contested) | — | LOC |
 | B1 | predictability sieve | A_readout | S5 | system / environment split (circular per Kastner) | **partition** | ABS |
 | B2 | Quantum Darwinism | A_readout / A_partition | S5 | fragments + threshold δ (frozen S2-8: ACCESS-PRICED) | **partition + threshold** | LOC + FROZEN |
 | B3 | spectrum broadcast structure | A_readout | S5 | multipartite split given | **partition** | LOC |
-| B4 | records with a maximum length scale (Riedel) | A_partition | S5 | uniqueness bought by the record-length cutoff + spatial TPS | **cutoff (+ partition)** | ABS |
+| B4 | records with a maximum length scale (Riedel) | A_partition | S5 | records can induce a preferred branch decomposition *assuming* the spatial-locality tensor structure; a maximum record length is *sufficient* for uniqueness; neither is derived [SSR1-04] | **cutoff (+ partition)** | ABS |
 | C1 | consistency alone | A_partition / A_time | — | **NO-GO / NONSELECTION RESULT** (Dowker–Kent) | — | ABS |
 | C2 | quasiclassical realms | A_partition / A_resolution | S5 | conserved densities, volumes, ρ chosen; incompatible realms | **coarse-graining + state** | ABS |
 | C3 | one real fine-grained history | A_resolution | S1 | the preferred basis is posited | **posited law (new supplied selector)** | ABS |
@@ -46,13 +49,13 @@ Every candidate is killed at its **first decisive failure**. Cards are in `candi
 | K6 | Janus point | orientation / H_epoch | S2 | two arrows; the epoch is fixed only given the solution | **state / measure**; nonselecting | LOC / ABS (Zeh) |
 | K7 | WCH / Past Hypothesis | orientation / H_epoch | S1 | the arrow is postulated | **posited law (new supplied selector)** | LOC |
 | K8 | DeWitt condition | state | S1 | explicit boundary condition at a = 0 | **boundary condition** | LOC |
-| L1 | LQC dynamical initial conditions | state | S5 | ordering / refinement + pre-classicality load-bearing; Bianchi I degenerates | **quantization / ordering + objective** | ABS |
+| L1 | LQC dynamical initial conditions | state | S5 | **credited:** one difference equation supplies dynamics + initial conditions, and with large-volume semiclassicality a unique wavefunction is claimed. **But** the admissibility condition stays load-bearing, the quantization is non-unique, ordering / discretization matter, and large ambiguity classes persist (Bianchi I zero solution; 2023 infinite-dimensional ambiguity space, owner-cited) [SSR1-03]. Strongest state-selection near-miss | **quantization / ordering + admissibility objective** | ABS (+ owner-cited 2023) |
 | M1 | passivity / KMS (control) | orientation | S1 | already priced (Q2R-04 … 06) | **postulate / convention (frozen)** | FROZEN |
 | N1 | classical sequential growth | orientation / dimension | S1 | growth direction built in; free couplings | **target imported (orientation) + couplings** | ABS |
 | N2 | BD action suppression | dimension | S1 | the action is dimension-specific | **target imported (dimension)** | ABS |
 | N3 | CDT | dimension / orientation | S1 | 4-simplices + foliation input | **target imported (dimension, orientation)** | ABS |
 | O1 | bootstrap | theory data / dimension | S5 | gap assumptions + d; otherwise a family | **spectrum assumptions** | ABS |
-| P1 | natural (locally covariant) state | state | — | **NO-GO / NONSELECTION RESULT** (no natural state; secondary grade) | — | SEC |
+| P1 | natural (locally covariant) state | state | — | **NO-GO / NONSELECTION RESULT, control only**: under the Fewster–Verch hypotheses (dynamically local, nontrivial, locally covariant), no natural preferred-state assignment. Not generalized; does not bear the terminal [SSR1-06] | — | SEC |
 | Q1 | multiverse measure / typicality | state / constants | S5 | measure-dependent | **measure + reference class** | ABS |
 | Q2 | anthropic dimensionality | dimension | S5 | ensemble + observer selection + supplied law forms | **measure / observer selection** | ABS |
 | R1 | string-gas three large dimensions | dimension | S5 | a "maximum" from a thermal fluctuation; preferred only "if the string coupling is sufficiently large"; total dimension supplied | **state + coupling regime** | ABS (GKM) / LOC (BV) |
@@ -66,10 +69,10 @@ Every candidate is killed at its **first decisive failure**. Cards are in `candi
 
 | verdict | count | candidates |
 |---|---|---|
-| KILLED — S1 | **13** | A1, A2, A5, C3, K2, K7, K8, M1, N1, N2, N3, R3, R4 |
+| KILLED — S1 | **12** | A1, A2, C3, K2, K7, K8, M1, N1, N2, N3, R3, R4 |
 | KILLED — S2 | **7** | A3, F4, H1, I1, K4, K5, K6 |
 | KILLED — S4 | **0** | — |
-| KILLED — S5 | **23** | A4, A6, B1, B2, B3, B4, C2, E1, E2, E3, F1, F2, F3, H2, J1, K1, K3, L1, O1, Q1, Q2, R1, R2 |
+| KILLED — S5 | **24** | A4, A5, A6, B1, B2, B3, B4, C2, E1, E2, E3, F1, F2, F3, H2, J1, K1, K3, L1, O1, Q1, Q2, R1, R2 |
 | KILLED — S6 | **2** | G1, G2 |
 | NO-GO / NONSELECTION RESULT | **4** | A7, C1, D1, P1 |
 | AMBIGUOUS — SOURCE INCOMPLETE | **0** | — |
@@ -79,11 +82,11 @@ Every candidate is killed at its **first decisive failure**. Cards are in `candi
 
 | hidden selector | count | candidates |
 |---|---|---|
-| **partition / observable algebra / clock split / boundary region** | 10 | A4, A6, B1, B2, B3, F2, F3, H2, J1, R2 |
+| **partition / observable algebra / operational family / clock split / boundary region / fixed factorization class** | 12 | A1, A4, A5, A6, B1, B2, B3, F2, F3, H2, J1, R2 |
 | **constraint set / prior / measure / observer selection** | 6 | E1, E2, E3, K5, Q1, Q2 |
 | **target imported as input** (orientation sign, dimension, already-priced postulate) | 5 | K2, M1, N1, N2, N3 |
 | **nonselecting** (the principle accepts both witness members) | 5 | A3, F4, H1, I1, K4 |
-| **objective / criterion / trade-off** | 4 | A1, A2, A5, F1 |
+| **objective / criterion / trade-off** | 2 | A2, F1 |
 | **boundary condition / contour / wavefunction proposal** | 4 | K1, K3, K7, K8 |
 | **state / initial conditions** | 3 | C2, K6, R1 |
 | **convention (machine / language)** | 2 | G1, G2 |
@@ -95,7 +98,7 @@ Every candidate is killed at its **first decisive failure**. Cards are in `candi
 | **total** | **45** | |
 
 **Pattern.**
-- The most frequent hidden selector is a **partition / observable algebra**. This is exactly the frozen Σ / A_partition /
+- The most frequent hidden selector (12 of 45 kills) is a **partition / observable algebra / supplied factorization class**. This is exactly the frozen Σ / A_partition /
   A_interface residual reappearing as an input.
 - Next come **measures / priors / constraint sets** and **boundary conditions**, which are the frozen H-state and
   orientation residuals reappearing.

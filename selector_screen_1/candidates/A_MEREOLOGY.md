@@ -42,20 +42,21 @@
 | C11 | snippets only. The Soulas et al. vs Stoica dispute (2025–26) is unresolved, but **C7 kills any purely unitary-invariant selector of Σ regardless of how that dispute ends** |
 | C12 | **KILLED — S2** (nonselecting on a frozen twin) |
 
-## A1 — Quasiclassical factorization (Carroll–Singh)
+## A1 — Quasiclassical factorization (Carroll–Singh) [repaired: SSR1-01]
 
 | C | content |
 |---|---|
-| C0 | among factorizations ℋ = ℋ_S ⊗ ℋ_E, choose the one maximizing quasiclassical (robust, predictable) dynamics for given H |
-| C1 | Σ |
-| C2 | W-Σ2 / W-Σ1 |
-| C3 | H; factor dimensions; a quasiclassicality functional (purity / pointer-entropy-based); test states; a time window |
-| C4 | the "most quasiclassical" factorization |
-| C5 | the functional, the dimensions, the test states and the window carry the selecting preference. SCOUT S2-Σ already graded objective-based Σ selection **CRITERION-PRICED** with Pareto conflicts. **FAIL S1** |
-| C6 | Adil et al. (PRD 113, 103535, 2026; snippet): **several factorizations of one H admit a quasiclassical description**. So the criterion is not selecting even with its inputs |
-| C7 | the twin exists (Adil et al.; frozen Pareto ties) |
-| C8 | changing the functional / window changes the output (Zanardi et al. 2024 use a different objective) |
-| C12 | **KILLED — S1** (objective supplied). Non-uniqueness evidence noted |
+| C0 | an explicit algorithm (primary / source-text verified, owner): (1) for a bipartite decomposition with **fixed dimensions d_A, d_B**, (2) construct a Candidate Pointer Observable, (3) construct **prescribed** initially peaked product states, (4) compute entanglement-growth and pointer-predictability measures, (5) define the **Schwinger Entropy**, and (6) minimize it over candidate factorizations |
+| C1 | Σ (the full frozen factorization target) |
+| C2 | W-Σ1 / W-Σ2 / W-Σ3 (including the grouping-dimension ties 32×2 / 16×4 / 8×8) |
+| C3 | H; fixed (d_A, d_B); the CPO construction; the prescribed candidate-state family; the Schwinger-Entropy definition |
+| C4 | the factorization minimizing Schwinger Entropy *within the fixed-dimension class* |
+| C5 | **This is more than announcing a preference: a definite algorithm exists.** It is still not an input-free selector for the frozen Σ target: (1) d_A, d_B are fixed before optimization, so part of the factorization class is supplied (cf. frozen W-Σ3, where the grouping dimensions themselves are the open choice); (2) the CPO / state construction uses a prescribed family of candidate states; (3) the worked example is restricted to the quantum-measurement-limit regime; (4) the paper calls the Schwinger Entropy suggestive, with a definition / purview that may need refinement; (5) varying the factor dimensions is explicitly left to future work; (6) no general theorem proves a unique global minimizer for arbitrary H. **FAIL S1 at the frozen Σ target scope**: it conditionally selects within a supplied factorization class and does not eliminate all Σ information |
+| C6 | across the frozen dimension-tied witness W-Σ3 it does not act (the dimensions are input) |
+| C7 | supporting evidence only: Adil et al. 2026 (LOC) find that **for a fixed Hamiltonian several tensor factorizations can admit quasiclassical descriptions**. This is **not** a proof that Carroll–Singh's exact Schwinger-Entropy objective has degenerate minima |
+| C8 | (d_A, d_B) and the candidate-state prescription are load-bearing by construction |
+| C11 | Carroll & Singh: **PRIMARY / SOURCE-TEXT VERIFIED** (owner inspection) for the algorithm and its explicit scope |
+| C12 | **KILLED — S1** at the frozen Σ target scope (conditional selection within a supplied factorization class) |
 
 ## A4 — Observable-induced TPS (Zanardi 2001; Zanardi–Lidar–Lloyd 2004)
 
@@ -68,14 +69,18 @@
 | C8 | vary 𝒜 → the TPS changes (by the source's own statement) |
 | C12 | **KILLED — S5** (accessible-observable algebra). A **strengthened nonselection** reading is recorded (TPS is relative, by theorem) |
 
-## A5 — Minimal-scrambling operational mereology (Zanardi et al. 2024)
+## A5 — Minimal-scrambling operational mereology (Zanardi–Dallas–Andreadakis–Lloyd 2024) [repaired: SSR1-02]
 
 | C | content |
 |---|---|
-| C0 | choose the (algebra, commutant) pair minimizing a short-time scrambling rate under H |
-| C3 | H; a family of candidate algebras; a scrambling objective |
-| C5 | both the objective and the candidate family are supplied |
-| C12 | **KILLED — S1** (objective). Not distinct from A1 in input accounting |
+| C0 | select the subsystem partition (algebra / commutant pair) minimizing a short-time scrambling rate under H, **given operational constraints** |
+| C1 | Σ / A_partition |
+| C2 | W-Σ2 |
+| C3 | H; **a supplied family of operationally admissible algebras / partitions** (in the examples: a supplied family S of candidate subsets, or a supplied adjoint orbit); the scrambling functional |
+| C5 | the authors formulate selection as dynamics **plus operational constraints**. The Hamiltonian selects only *relative to the supplied family of operational possibilities*, and that family is A_interface / A_partition information |
+| C8 | change the admissible family → the selected partition changes |
+| C11 | publisher abstract: PRIMARY VERIFIED (owner); full-text mirror inspected (owner) for the operational-family wording |
+| C12 | **KILLED — S5** (the supplied operational family of algebras / partitions = A_interface / A_partition). Supersedes the earlier "KILLED — S1 (objective)" |
 
 ## A6 — Space from Hilbert space (Cao–Carroll–Michalakis)
 

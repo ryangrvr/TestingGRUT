@@ -2,6 +2,9 @@
 
 > **SCREEN-NO-GO — NO NAMED CANDIDATE PLAUSIBLY PASSES S1 AND S2**
 >
+> Repaired by **SELECTOR SCREEN REPAIR 01** (SSR1-01 … 06; `SELECTOR_SCREEN_CORRECTION_LEDGER.md`). Terminal, candidate
+> count (49) and survivor count (0) are unchanged. A5 moved S1 → S5 [SSR1-02].
+>
 > Pre-campaign reconnaissance only. **No selector campaign is opened.** Owner review is required before any selector
 > campaign.
 
@@ -63,10 +66,10 @@ scale. Several candidates aim at more than one target. See the census table.
 
 | verdict | count |
 |---|---|
-| KILLED — S1 | 13 |
+| KILLED — S1 | 12 |
 | KILLED — S2 | 7 |
 | KILLED — S4 | 0 |
-| KILLED — S5 | 23 |
+| KILLED — S5 | 24 |
 | KILLED — S6 | 2 |
 | NO-GO / NONSELECTION RESULT | 4 |
 | AMBIGUOUS — SOURCE INCOMPLETE | 0 |
@@ -76,11 +79,11 @@ scale. Several candidates aim at more than one target. See the census table.
 
 | hidden selector | count |
 |---|---|
-| partition / observable algebra / clock / boundary region | 10 |
+| partition / observable algebra / operational family / clock / boundary region / fixed factorization class | 12 |
 | constraint set / prior / measure / observer selection | 6 |
 | target imported as input | 5 |
 | nonselecting on a frozen witness | 5 |
-| objective / criterion / trade-off | 4 |
+| objective / criterion / trade-off | 2 |
 | boundary condition / contour | 4 |
 | state | 3 |
 | convention | 2 |
@@ -97,10 +100,10 @@ scale. Several candidates aim at more than one target. See the census table.
 | **Quantum relativity of subsystems** (Ali Ahmad et al. 2022; Castro-Ruiz–Oreshkov) | subsystem decompositions are frame-relative: a strengthened **nonselection** of Σ / A_partition | ABS |
 | **Dowker–Kent** | consistency alone cannot recover quasiclassical physics (set selection unsolved) | ABS |
 | **Clock ambiguity** (Albrecht–Iglesias) | the choice of clock changes the apparent laws: A_time / partition nonselection | ABS |
-| **No natural state** (Fewster–Verch line) | local covariance forbids a preferred state | SEC (via review) |
+| **No natural state** (Fewster–Verch line) | **conditional scope**: dynamically local, nontrivial locally covariant theories, under the additional Fewster–Verch hypotheses, admit no natural preferred-state assignment. A control only; not generalized to "physics admits no preferred states"; does not bear the terminal [SSR1-06] | SEC (via review) |
 | **Stoica non-uniqueness** | physically relevant emergent structure is not unique under Hilbert-space fundamentalism | LOC (contested) |
 | **Machine dependence of algorithmic priors** (Müller 2010; Leike–Hutter) | simplicity rankings are convention-priced; the machine-independent route fails | ABS |
-| **Multiple quasiclassical factorizations of one H** (Adil et al. 2026) | the quasiclassicality criterion does not single out Σ | LOC |
+| **Multiple quasiclassical factorizations of one H** (Adil et al. 2026) | for a fixed H, several tensor factorizations can admit quasiclassical descriptions. **Supporting evidence only**: not a proof that Carroll–Singh's exact Schwinger-Entropy objective has degenerate minima [SSR1-01] | LOC |
 | **Contour dependence of the wavefunction of the universe** (FLT vs DDHHHJ) | boundary-condition pricing demonstrated within one model | ABS |
 | **Kleitman–Rothschild** | counting alone favours non-manifold-like orders (no dimension from counting) | LOC / memory |
 | **Frozen isospectral twin W-Σ1** (Bridge B1) | **any** unitary-invariant (spectrum-only) Σ selector is nonselecting. This is a structural kill independent of the literature | FROZEN |
@@ -131,7 +134,7 @@ SELECTOR** (primitive substitution or renaming), not candidate compression.
 |---|---|
 | **S6 (convention)** | the algorithmic-simplicity family (G1, G2): reference-machine changes can reverse rankings on finite witness pairs |
 | **Orientation** | K2, N1, N3 import it; K4, K5, K6 and the no-boundary bounce histories realize both arrows (Janus); E3 and RG presuppose a flow direction. **No candidate breaks time-reversal symmetry without importing a sign, a boundary condition or a measure** |
-| **S5 (anti-smuggling)** | the most frequent killer (23). Load-bearing inputs were identified explicitly in each C8 |
+| **S5 (anti-smuggling)** | the most frequent killer (24). Load-bearing inputs were identified explicitly in each C8 |
 
 ## 10. Frozen-control compatibility
 
@@ -160,8 +163,9 @@ SELECTOR** (primitive substitution or renaming), not candidate compression.
 - the gravitational layer;
 - charge / asymptotic labels.
 
-The screen adds a **literature-wide** reason for this, beyond the frozen campaigns: across 49 named principles, every
-selection result found is conditional on a supplied entry of the same coupled cluster. The pattern holds across
+The screen adds a **broad survey-level pattern across the 49 named candidates and 18 families screened** [SSR1-05]: every
+selection result found is conditional on a supplied entry of the same coupled cluster. This is not exhaustive and not an
+impossibility theorem. The pattern holds across
 mereology, decoherence, histories, information theory, algorithmic simplicity, variational, RG, holographic, cosmological,
 causal-set, bootstrap and anthropic approaches.
 
@@ -171,23 +175,45 @@ causal-set, bootstrap and anthropic approaches.
 
 **Per the selector-challenge GO / NO-GO rule: DO NOT OPEN SELECTOR CAMPAIGN** on the present evidence.
 
-**Scope of the negative:**
-- The negative is about the **surveyed** principles, graded at abstract level.
+**Scope of the negative** [SSR1-05]:
+- Among the named candidates screened, none is currently **sufficiently specified and sufficiently input-independent** to
+  plausibly pass both S1 and S2 at the frozen target scope. That is all the terminal means.
+- The negative is about the **surveyed** principles, mostly graded at abstract level (Carroll–Singh and the
+  Zanardi et al. operational-family wording are owner-verified in text).
 - It is not an impossibility theorem.
 - A principle not in this census, or a primary-text reading that overturns an abstract-level input accounting, could reopen
   the question.
 
-**What would reopen it:** a named candidate stated *before computation* that does all of the following:
-- names its §2 witness pair;
-- chooses a member;
-- uses only inputs carrying strictly less selecting information than the target;
-- survives the C7 twin test.
+**What would reopen it:** a new screen is justified only by a **named new candidate** that can state, *before calculation*:
+1. its frozen target pair;
+2. which member it predicts;
+3. its complete input set;
+4. why those inputs contain strictly less equivalent selecting information than the target.
 
-The most instructive near-miss for any future attempt is **L1 (LQC dynamical initial conditions)**. It shows a dynamical
-law can carry boundary information, but in the published versions only through supplied quantization choices plus a
-pre-classicality objective.
+It must then survive the C7 twin test.
+
+The most instructive near-miss for any future attempt is **L1 (LQC dynamical initial conditions)**, the strongest
+state-selection near-miss [SSR1-03].
+- Bojowald 2001 genuinely claims that one discrete evolution equation supplies both dynamics and initial conditions, and
+  that with large-volume semiclassicality it predicts a unique wavefunction. So dynamics **can** carry boundary
+  information.
+- The surveyed formulation still does not eliminate the supplied quantization / admissibility information needed to
+  obtain the selected state:
+  - the pre-classical condition is load-bearing;
+  - the quantization and ordering are non-unique;
+  - the Bianchi I analogue leaves only the zero solution;
+  - a 2023 polymer-quantum-cosmology analysis (owner-cited) reports an infinite-dimensional ambiguity space.
 
 **Negative-result value (Stage 9).** The kill ledger is a map of *why* known selector ideas fail: they **relocate** into
 partition, measure, boundary condition or convention, **import** the target, or are **nonselecting** on frozen twins. On this
 evidence the scientifically justified next action is to stop adding principles, unless a candidate meeting the reopening
 condition is named.
+
+## Final screen interpretation (owner, SSR1)
+
+The most important screen result is **not** "all conceivable selectors fail". It is:
+
+> **Every sufficiently developed candidate examined either remains conditional on a supplied element of the frozen residual /
+> coupled class, fails to distinguish a frozen surviving pair, or is itself a nonselection result.**
+
+**Final queue terminal: SELECTOR CAMPAIGN: NO-GO AT CURRENT SCREEN — REQUIRES A NEW NAMED CANDIDATE TO REOPEN.**

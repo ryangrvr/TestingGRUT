@@ -86,7 +86,7 @@ boundary / state pricing.
 | C5 | an explicit boundary condition, privileging a = 0 as "initial" |
 | C12 | **KILLED — S1** (boundary condition = selecting input) |
 
-## L1 — LQC dynamical initial conditions (Bojowald 2001) — *the family the owner flagged for special attention*
+## L1 — LQC dynamical initial conditions (Bojowald 2001) — *the family the owner flagged for special attention* [repaired: SSR1-03]
 
 | C | content |
 |---|---|
@@ -102,4 +102,6 @@ boundary / state pricing.
 | C9 | **orientation:** the isotropic difference equation and its solution are reflection-symmetric across v = 0 (triad orientation), and v → −v is a gauge / orientation reversal. No time orientation is selected. *(Memory-grade, not verdict-bearing; the kill rests on C8.)* |
 | C10 | G → 0 has no analogue (LQC is intrinsically gravitational). The frozen flat controls do not apply. Not decisive |
 | C11 | abstract-verified (search): Bojowald 2001, Cartin–Khanna 2005, Bojowald–Simpson 2014 |
-| C12 | **KILLED — S5** (quantization / ordering / refinement + pre-classicality are load-bearing); also not robust beyond isotropy |
+| C12a | **Credit** [SSR1-03]: Bojowald 2001 genuinely claims that **one discrete evolution equation supplies both the dynamics and the initial conditions**, and that with the requirement of semiclassical behaviour at large volume **a unique wavefunction is predicted**. This is **not** an externally imposed boundary proposal like K1 – K8. It is evidence that dynamics can absorb some boundary information |
+| C12b | **Why S5 still fails** [SSR1-03]: (i) the semiclassical / pre-classical admissibility condition remains load-bearing; (ii) the quantization is not unique; (iii) operator-ordering / discretization choices materially affect results; (iv) later polymer / LQC analyses retain large ambiguity classes. **Controls:** Cartin–Khanna 2005, for their Bianchi I quantization the imposed pre-classical constraints leave only the zero solution; ordering / discretization studies show sensitivity to quantization choices; a 2023 polymer-quantum-cosmology analysis (owner-cited; not re-read here) reports an **infinite-dimensional ambiguity space capable of producing discretionary dynamics** |
+| C12 | **KILLED — S5.** LQC demonstrates that dynamics can carry boundary information, but the surveyed formulation does not eliminate the supplied quantization / admissibility information required to obtain the selected state. **Strongest state-selection near-miss** |

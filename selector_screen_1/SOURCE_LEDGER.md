@@ -1,5 +1,7 @@
 # SOURCE LEDGER — GRUT SELECTOR SCREEN 01
 
+> Repaired by SELECTOR SCREEN REPAIR 01: A-1 and A-5 upgraded on owner inspection; A-9, P-1 scoped; L-4 added.
+
 ## Grading rule and environment limitation
 
 | grade | meaning in this screen |
@@ -21,15 +23,15 @@
 
 | ref | source | grade | key abstract-level content used |
 |---|---|---|---|
-| A-1 | Carroll & Singh, "Quantum Mereology: Factorizing Hilbert Space into Subsystems with Quasi-Classical Dynamics", PRA 103, 022213 (2021), arXiv:2005.12938 | SOURCE LOCATED (snippet close to the abstract) | the factorization is chosen by a quasiclassicality criterion (an extension of the predictability sieve), given only H. A uniqueness theorem is **not** confirmed |
+| A-1 | Carroll & Singh, "Quantum Mereology: Factorizing Hilbert Space into Subsystems with Quasi-Classical Dynamics", PRA 103, 022213 (2021), arXiv:2005.12938 | **PRIMARY / SOURCE-TEXT VERIFIED (owner inspection)** [SSR1-01] | the algorithm: fixed d_A, d_B; Candidate Pointer Observable; prescribed peaked product states; entanglement-growth and predictability measures; Schwinger Entropy minimized over candidate factorizations. Measurement-limit example; the Schwinger Entropy is called suggestive; varying dimensions left to future work; no general unique-minimizer theorem |
 | A-2 | Cotler, Penington, Ranard, "Locality from the Spectrum", CMP (2019), arXiv:1702.06142 | PRIMARY ABSTRACT VERIFIED (search) | the spectrum "almost always encodes a unique description of local degrees of freedom when such a description exists"; "multiple dual local descriptions" in special cases |
 | A-3 | Zanardi, "Virtual Quantum Subsystems", PRL 87, 077901 (2001) | PRIMARY ABSTRACT VERIFIED (search) | accessible observables "select a preferred tensor product structure"; compoundness "relativized" |
 | A-4 | Zanardi, Lidar, Lloyd, PRL 92, 060402 (2004) | PRIMARY ABSTRACT VERIFIED (search) | TPS "relative and observable induced" |
-| A-5 | Zanardi et al., "Operational Quantum Mereology and Minimal Scrambling", Quantum 8, 1406 (2024), arXiv:2212.14340 | SOURCE LOCATED | subsystems chosen by minimizing a scrambling rate over a family of algebras |
+| A-5 | Zanardi, Dallas, Andreadakis, Lloyd, "Operational Quantum Mereology and Minimal Scrambling", Quantum 8, 1406 (2024), arXiv:2212.14340 | **PRIMARY VERIFIED (publisher abstract, owner); full-text mirror inspected (owner)** [SSR1-02] | selection = dynamics + operational constraints; optimization over a supplied family of operationally admissible algebras (examples: a supplied family S of subsets; a supplied adjoint orbit) |
 | A-6 | Cao, Carroll, Michalakis, "Space from Hilbert Space", PRD 95, 024031 (2017), arXiv:1606.08444 | SOURCE LOCATED | "Given a decomposition of Hilbert space into a tensor product of factors" |
 | A-7 | Stoica, arXiv:2102.08620; arXiv:2103.15104 | SOURCE LOCATED | no-go: emergent structure that is physically relevant is not unique ("Hilbert-space fundamentalism") |
 | A-8 | Soulas, Franzmann, Di Biagio, arXiv:2512.07468 (2025); Stoica comment arXiv:2603.07674 (2026) | SOURCE LOCATED | proposes a unique TPS from unitary-invariant data; contested |
-| A-9 | Adil et al., "Search for classical subsystems in quantum worlds", PRD 113, 103535 (2026), arXiv:2403.10895 | SOURCE LOCATED | **several factorizations of one H admit a quasiclassical description** |
+| A-9 | Adil et al., "Search for classical subsystems in quantum worlds", PRD 113, 103535 (2026), arXiv:2403.10895 | SOURCE LOCATED | several factorizations of one H can admit a quasiclassical description. **Supporting evidence only**; not a proof about Carroll–Singh's exact objective [SSR1-01] |
 | A-10 | Loizeau & Sels, Found. Phys. 55, 3 (2025), arXiv:2409.01391 | SOURCE LOCATED | subsystem decomposition ↔ spectral decomposition, given H, an initial state and a TPS |
 
 ## B. Decoherence / Darwinism / SBS
@@ -93,7 +95,7 @@
 | N-4 | Ambjørn, Jurkiewicz, Loll, PRL 93, 131301 (2004); PRL 95, 171301 (2005) | PRIMARY ABSTRACT VERIFIED (search) for 2004 | 4D emergence with 4-simplices and a causal foliation as input |
 | O-1 | Kos, Poland, Simmons-Duffin, JHEP 1411 (2014) 109; Kos et al., JHEP 1608 (2016) 036 | PRIMARY ABSTRACT VERIFIED (search) | island "assuming that σ and ε are the only relevant scalars" |
 | O-2 | Paulos et al., arXiv:1607.06109 | PRIMARY ABSTRACT VERIFIED (search) | bounds, not a unique theory |
-| P-1 | Fewster & Verch, AHP 13, 1613 (2012), arXiv:1106.4785; BFV CMP 237, 31 (2003) | PRIMARY ABSTRACT VERIFIED (search) for SPASs / dynamical locality. The **"no natural state"** theorem is **REVIEW / SECONDARY** (via arXiv:1502.04642 and the author list). BFV only "early arguments" | no locally covariant preferred state for dynamically local theories (secondary-grade) |
+| P-1 | Fewster & Verch, AHP 13, 1613 (2012), arXiv:1106.4785; BFV CMP 237, 31 (2003) [scope: SSR1-06; conditional on the Fewster–Verch hypotheses; control only] | PRIMARY ABSTRACT VERIFIED (search) for SPASs / dynamical locality. The **"no natural state"** theorem is **REVIEW / SECONDARY** (via arXiv:1502.04642 and the author list). BFV only "early arguments" | no locally covariant preferred state for dynamically local theories (secondary-grade) |
 | P-2 | Hollands & Wald, CMP 223, 289 (2001) | PRIMARY ABSTRACT VERIFIED (search) | Wick polynomials unique up to finitely many parameters (fields, not states) |
 | Q-1 | Freivogel, CQG 28, 204007 (2011); Dyson–Kleban–Susskind JHEP 0210 (2002) 011; Albrecht & Sorbo PRD 70, 063528 (2004) | PRIMARY ABSTRACT VERIFIED (search) | measure dependence; opposite conclusions from different counting |
 | Q-2 | Tegmark, "On the dimensionality of spacetime", CQG 14, L69 (1997) | PRIMARY ABSTRACT VERIFIED (search) | 3+1 selected by observer existence in an ensemble ("dead worlds") |
@@ -118,6 +120,7 @@
 | L-1 | Bojowald PRL 87, 121301 (2001) | PRIMARY ABSTRACT VERIFIED (search) | dynamical law + initial conditions from one difference equation; **plus pre-classicality** → a unique wavefunction |
 | L-2 | Cartin & Khanna PRL 94, 111302 (2005) | PRIMARY ABSTRACT VERIFIED (search) | Bianchi I: "only the zero solution" satisfies the constraints |
 | L-3 | Date PRD 72, 067301 (2005); Bojowald, Cartin, Khanna PRD 76, 064018 (2007); Bojowald & Simpson CQG 31, 185016 (2014) | BKS / BS PRIMARY ABSTRACT VERIFIED (search); Date SOURCE LOCATED | lattice-refinement and factor-ordering dependence |
+| L-4 | 2023 polymer-quantum-cosmology ambiguity analysis (owner-cited; bibliographic details not recorded here) | **OWNER-CITED — NOT RE-READ HERE** [SSR1-03] | reports an infinite-dimensional ambiguity space capable of producing discretionary dynamics |
 
 ## R. Other candidates found
 

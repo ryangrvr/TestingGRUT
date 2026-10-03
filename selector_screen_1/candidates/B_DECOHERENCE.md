@@ -37,7 +37,7 @@
 | C3 | a pre-given system and multiple environment fragments; the objectivity definition |
 | C12 | **KILLED — S5** (multipartite split supplied) |
 
-## B4 — Records with a maximum length scale (Riedel 2017) — *the strongest uniqueness claim in this family*
+## B4 — Records with a maximum length scale (Riedel 2017) — *the strongest uniqueness claim in this family* [scope: SSR1-04]
 
 | C | content |
 |---|---|
@@ -49,4 +49,5 @@
 | C5 | uniqueness is bought by ℓ, which is an A_resolution datum, plus Σ (supplied). **FAIL S1 / S5** |
 | C7 | twin: worlds that differ only in ℓ give different decompositions (Shor-code-type extended records are the stated exception) |
 | C8 | ℓ is load-bearing (the source states uniqueness *given* ℓ) |
-| C12 | **KILLED — S5** (cutoff ℓ + spatial TPS supplied) |
+| C11 | exact scope [SSR1-04]: redundant records **can** induce a preferred branch decomposition **assuming** the tensor structure associated with spatial locality, and a maximum record-length scale is **sufficient** to guarantee uniqueness. The paper does **not** derive either the spatial TPS or the length scale; it assumes them |
+| C12 | **KILLED — S5**: priced by the supplied spatial tensor structure (Σ) and a maximum record-length / resolution scale |
