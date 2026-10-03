@@ -1,5 +1,9 @@
 # DA0 · C1 — NON-REVERSIBLE ENDOGENOUS MACROSTRUCTURE (result)
 
+> **Repaired by DA0 C1 REPAIR 01** (C1R-01 … 08; `DA0_CORRECTION_LEDGER.md`). Where wording differs, the ledger takes
+> precedence. The original log `c1/c1_nonreversible.log` is preserved. The repair numerics are in `c1/c1_repair.py` +
+> `c1/c1_repair.log`.
+
 **Central question.** Can the RA0 endogenous macro-algebra / partition construction survive the removal of detailed
 balance, and produce a canonically directed coarse structure without supplying:
 - a time orientation (beyond the priced forward-kernel convention);
@@ -85,7 +89,15 @@ balance, and produce a canonically directed coarse structure without supplying:
 - **(2) First term.** Substitute the decomposition. The E₀G₁E₀/z² term and the R_⊥G₁R_⊥ term integrate to 0. The residue
   term is E₀G₁R_⊥(0) + R_⊥(0)G₁E₀, of norm ≤ 2eaη.
 - **(2) Second term.** Norm ≤ ρ·R₀/(1 − δ)·η²R₀² = (e + ρa)δ²/(1 − δ).
-- **(2) Rank.** ‖E − E₀‖ < 1 forces rank E = rank E₀ = K (Kato).
+- **(2) Rank [C1R-01: homotopy; replaces the earlier ‖E − E₀‖ < 1 argument].** The stated hypotheses do not make the
+  explicit projector bound < 1 at finite N, and for the F1 families it is large or infinite. So the rank is fixed by a
+  homotopy instead.
+  - Set G_t = G₀ + tG₁ for t ∈ [0, 1], and keep the same circle |z| = ρ.
+  - For every t, η_t = tη ≤ η, so ℓ_t ≤ ℓ < ρ and δ_t ≤ δ < 1. The circle therefore stays in the resolvent set of G_t
+    (Neumann series) for the whole homotopy.
+  - The Riesz projector E_t varies continuously in t, and its rank is an integer, so the rank is constant.
+  - At t = 0 the rank is K (Lemma C1-1). Hence **rank E₁ = K**.
+  - The projector-difference estimate is kept **only** for convergence.
 - **Asymptotics.** δ ≈ √(ηe/g) + C_a·η/g → 0, so ‖E − E₀‖ = O(η/g).
 - **(3)** Fast rates are ≥ g; slow rates are ≤ |λ| ≤ ℓ.
 - **(5)** For unit x in one range, the distance to the other range is ≤ ‖(E − E₀)x‖. The dimensions are equal. ∎
@@ -111,18 +123,38 @@ family-level proof that uses the hidden 𝔅.
 - Every changed pair involves a misassigned state.
 - Σ_{x∈S} Σ_y |J_xy| ≤ 2Σ_{x∈S} π_x q_x (stationarity), and this is counted twice.
 
-**Recovery.** Add **N4 (non-degenerate macro drive):** each nonzero entry of J_𝔅 is ≥ c_J·η_N, or J_𝔅 ≡ 0. Then
-4q_max·m_N/(c_J η_N) = O(η/g²) → 0. So the **support and sign pattern of the macro current**, and the macro EP, are
-recovered blindly.
+**Recovery [C1R-02: N4 replaced by two layers].**
+- **N4a (current scale).** j_min,N = min over nonzero entries of |J_𝔅(a, b)|.
+- **N4b (relative recovery).** q_max,N·m_N / j_min,N → 0.
+- Under N4b, **every nonzero hidden macro-current entry eventually has the correct sign, and its relative error → 0.**
+- **Why N4 was not enough.** With m_N = O((η/g)²) and j_min ≥ c_J η, the relative error is O(q_max η/g²). N3 gives only
+  η/g → 0, which does not imply η/g² → 0 when g → 0. Example: η = g^{3/2}.
+- **Sufficient specialisation** when j_min ≥ c_J η: **q_max·η/g² → 0.**
 
-**Covariance.** G* satisfies N1 – N4 with the same constants:
-- ‖G₁*‖ = ‖G₁‖;
-- E₀(G*) = E₀(G)*;
-- the adjoint resolvent has the same norm at conjugate points;
-- the blocks are the same.
+**Zero currents [C1R-03].** The earlier claim "support and sign pattern are recovered" is **withdrawn**.
+- A hidden zero entry J_𝔅(a, b) = 0 is proved only to have J_Π(a, b) → 0.
+- Certifying exact absence of that directed edge would need a structural-zero theorem. No finite threshold is allowed
+  (C0), and an exact zero is never inferred from a vanishing sequence.
+- Where a family has exact graph-theoretic zeros **by construction**, that is stated as a **family-specific fact**:
+  - R2: non-adjacent basins have no micro edges at all;
+  - R5: no circulation was placed on the basin pair (1, 3).
 
-So Π(G*) and Π(G) converge in mass to the same 𝔅, and J_Q(G*) = −J_Q(G). **The macro current and the affinities reverse;
-the undirected partition is invariant.** ∎
+**Entropy production [C1R-04].** Macro-EP recovery is **removed** from this proposition. EP contains log traffic ratios,
+which are ill-conditioned when a directional rate vanishes. **Kept:**
+- EP_Q computed blindly from the recovered partition;
+- the logged numerical EP values;
+- EP(G*) = EP(G);
+- EP_Q ≤ EP (log-sum inequality).
+
+**Time reversal [C1R-05].** The blanket statement "G* satisfies N1 – N4 with the same constants" is **withdrawn**. The
+block-decoupled operator of G* is formed by deleting inter-block rates and readjusting the diagonal. It need not equal
+the π-adjoint G₀*, because π|_{B_i} need not be stationary for an isolated block. **Kept, exact:**
+- J(G*) = −J(G);
+- for any fixed partition, J_Q(G*) = −J_Q(G).
+
+**Kept, conditional:** if G_N and G_N* are **each** certified under C1-T / C1-R for the same asymptotic proof partition,
+their blind partitions converge to that partition and their coarse currents reverse. The logged numerical covariance is
+evidence, as logged. ∎
 
 ### PROP C1-A (A-pricing; PROVED HERE)
 
@@ -140,8 +172,11 @@ of J_Q, is canonical, and J_Q is a multiple of it.
 **No canonical cycle.** If the dimension is ≥ 2 (e.g. a complete macro graph with K ≥ 4), J_Q is canonical but no cycle
 is. The terminal is then **FLUX STRUCTURE ONLY — NO CANONICAL CYCLE**.
 
-**Caveat for this run.** In every family run here, the macro cycle-space dimension is 1 **by construction**: K = 3
-complete, or a K = 4 ring. That is a family property, not a derived one.
+**Caveat for the original run.** In R0 – R4 the macro cycle-space dimension is 1 **by construction** (K = 3 complete,
+or a K = 4 ring). That is a family property, not a derived one.
+
+**[C1R-07]** The multi-cycle case is closed by R5 (§C1.2a): macro cycle-space dimension 3, canonical J_Q, **no canonical
+cycle decomposition**.
 
 ## C1.2 Results (numerical illustration)
 
@@ -181,6 +216,47 @@ The blind side reads (G, π) and the certified rank. The audit uses the hidden l
 
 **The bounds are valid wherever finite, and loose.** The gap(V, A) measured on the blind side equals the audit value.
 
+### C1.2a R5 — multi-cycle metastable macro-current [C1R-07] (`c1/c1_repair.log`)
+
+**Purpose.** Close the multi-cycle case of DC1-01.
+
+**Construction.**
+- K = 4 nearly-uncoupled basins.
+- All six basin pairs are coupled, so the **macro graph is complete and its cycle-space dimension is 3**.
+- The supplied D carries a superposition of two independent circulations, 0→1→2→0 (θ = 0.5) and 0→2→3→0 (θ = 0.3).
+
+**What the analysis does not do.** It chooses no spanning tree and no cycle basis, and never decomposes J into cycles.
+The two circulations are part of the **supplied** D only.
+
+| M | rank-4 cut | R(V) | misclassified (audit) | macro cycle-space dim | edges carrying J_Q | J_Q a multiple of one cycle? | max\|J_Q* + J_Q\| | max\|J_Q − J_𝔅\| (audit) |
+|---|---|---|---|---|---|---|---|---|
+| 10 | 1.40 | 16 / 4 | 0 | 3 | 5 | **no** | 2.8e-17 | 5.2e-18 |
+| 20 | 2.41 | 16 / 4 | 0 | 3 | 5 | **no** | 1.7e-17 | 6.5e-18 |
+| 40 | 4.39 | 16 / 4 | 0 | 3 | 5 | **no** | 1.4e-16 | 2.4e-18 |
+| 80 | 8.37 | 16 / 4 | 0 | 3 | 5 | **no** | 1.4e-16 | 1.2e-18 |
+
+**What is reported.** The canonical macro current **matrix** J_Q itself; the log prints it in blind labels.
+- Its row sums are ≤ 2.4e-16, so it is divergence-free.
+- It is supported on 5 of the 6 macro edges.
+- The sixth entry, J_𝔅(1, 3), is a **structural zero by construction**: no circulation was placed on that pair, even
+  though reversible traffic flows over it. The blind value is at round-off (~1e-17). Per C1R-03, this is a family fact,
+  not a certified zero.
+
+**Basis-free multi-cycle test.** J_Q is a multiple of one simple cycle iff its support is a single cycle. Here it is not:
+5 support edges on 4 vertices. So **any** cycle representation of J_Q needs at least two independent cycles, and none is
+canonical.
+
+**Terminal (R5): NONREVERSIBLE PARTITION DERIVATION + CANONICAL MACRO FLUX; NO CANONICAL CYCLE DECOMPOSITION.**
+
+### C1.2b N4a / N4b audit [C1R-02] (`c1/c1_repair.log`; proof side)
+
+| family | j_min/η (N4a) | q_max·η/g² (N4b specialisation), M small → large | verdict |
+|---|---|---|---|
+| R1a | 7.4e-3 → 7.2e-3, constant | 15.5 → 6.8 → 3.2 (∝ 1/M) | **satisfies N4a and N4b asymptotically** (g = O(1), η ∝ 1/M). Not yet small at tested M |
+| R2 | 7.6e-2, constant | 12.2 → 4.1 → 2.0 → 0.96 (∝ 1/M) | **satisfies N4a and N4b asymptotically** |
+| R5 | 1.7e-3 → 1.6e-3, constant | 41.8 → 13.5 → 5.9 → 2.8 (∝ 1/M) | **satisfies N4a and N4b asymptotically** |
+| R4 | 4.2e-4 → 2.8e-7, **→ 0** | 7.3 → 12.9 → 26 → 51, **growing** (g ∝ M^{−2}, η ∝ M^{−3}) | **fails N4a and N4b.** Its macro current is correctly left uninterpreted |
+
 ### R3 — biased site-modulated ring (no metastability)
 
 - **No cut.** The top decay-rate ratio stays bounded at → 4 (3.94, 3.98, 3.995, 3.999 for L = 25 … 200), like G3's
@@ -190,7 +266,7 @@ The blind side reads (G, π) and the certified rank. The audit uses the hidden l
   (2.75e-3 at L = 200).
 - **Rotating slow mode.** The slowest pair is −0.0007 ± 0.0173i at L = 200.
 
-### DC1-02 (non-normal instability)
+### DC1-02 (non-normal instability) [status per C1R-08: untriggered possible terminal]
 
 **Not triggered in any family.**
 - ‖E‖_π ≤ 1.008, K(Γ) ≤ 3.8 and cond_π(eigenvectors) ≤ 37 across all partition families.
@@ -199,6 +275,8 @@ The blind side reads (G, π) and the certified rank. The audit uses the hidden l
   **decreasing** with L.
 - No family producing SPECTRAL SEPARATION PRESENT — NONNORMAL RECOVERY UNSTABLE was constructed. That terminal stays
   untested, and is not claimed to be impossible.
+- [C1R-08] It remains an **untriggered possible terminal**; its absence is not claimed in general. N2 stays a priced
+  hypothesis. No pathological family is required before C2.
 
 ## C1.3 Per-family terminals
 
@@ -208,11 +286,12 @@ The blind side reads (G, π) and the certified rank. The audit uses the hidden l
 | R1a | yes | **yes**: canonical macro 3-cycle, covariant | **NONREVERSIBLE PARTITION DERIVATION**, graded CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D |
 | R1b | yes | **no**: macro detailed balance, micro EP > 0 | NONREVERSIBLE PARTITION DERIVATION with **C1-D negative**. The directedness stays microscopic |
 | R2 | yes | **yes**: canonical macro 4-cycle; complex slow eigenvalues (macro rotation), i.e. a metastable-set / cycle **mixture** in the Conrad–Weber–Schütte sense | **NONREVERSIBLE PARTITION DERIVATION**, graded CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D |
-| R4 | yes | technically yes, but negligible (current ~1e-12; orientation set by incidental asymmetry) | partition derived; directed content **not interpreted** |
+| R4 | yes | **fails N4a / N4b** [C1R-02]; current ~1e-12, orientation set by incidental asymmetry | partition derived; directed content **not interpreted** |
+| R5 [C1R-07] | yes | **yes** (N4a / N4b asymptotically): canonical macro flux J_Q on a cycle space of dimension 3; not a single cycle | **NONREVERSIBLE PARTITION DERIVATION + CANONICAL MACRO FLUX; NO CANONICAL CYCLE DECOMPOSITION** |
 | R3 | **no** (no diverging cut) | — | **CYCLE / FLUX STRUCTURE ONLY — NO PARTITION**, with a canonical cycle (cycle space dim 1). **K1-equivalent** |
 
-**Overall C1 terminal: NONREVERSIBLE PARTITION DERIVATION** (theorem-grade under N1 – N3 plus G5 regularity; macro-current
-recovery under N4), graded **CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D**. **Directed
+**Overall C1 terminal (preserved after C1 REPAIR 01): NONREVERSIBLE PARTITION DERIVATION** (theorem-grade under N1 – N3
+plus G5 regularity; the signs of non-degenerate nonzero macro currents are recovered under N4b), graded **CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D**. **Directed
 macrostructure appears iff the supplied A carries net inter-block circulation** (PROP C1-A; R1a vs R1b).
 
 ## C1.4 Comparator table (C0 §2.3)
@@ -220,17 +299,19 @@ macrostructure appears iff the supplied A carries net inter-block circulation** 
 | control | relation to the C1 positive (R1a, R2) |
 |---|---|
 | **K1** metastable bit / thermostat | **Coincides in kind at the macro level.** The derived macro-dynamics is itself a small driven cycle, the same type of object as the driven 3-state loop. What differs is that the loop's states are **derived, not supplied**. A directed cycle alone is not novel |
-| **K2** ε-machine / causal states | **Not exceeded.** The macro process is asymptotically a K-state Markov chain whose rows differ generically, so its causal states are, asymptotically, the macrostates themselves. C1 **supplies the endogenous process and channel** that K2 takes as given (permitted by C0-P3), but adds nothing beyond predictive sufficiency at the macro level |
+| **K2** ε-machine / causal states | **Not exceeded** [wording per C1R-06]. *Comparator observation, not a theorem:* in the ideal / asymptotic first-order Markov description, when distinct macrostates have distinct conditional future laws, the causal-state construction identifies those macrostates. C1 does not exceed predictive sufficiency. It derives the **physical macro-process** to which K2 may then be applied (permitted by C0-P3) |
 | **K3** IIT 4.0 | **Structurally different.** No units, candidate subsets, grain or maximisation are used; there is no integration measure |
 | **K4** RA0 reversible partition | **Extends it.** Partition recovery now holds without detailed balance (Kato in place of Davis–Kahan), and a directed macro current is recovered, with covariance under G → G* |
 
 ## C1.5 Information accounting (DC1-04)
 
-**Derived:**
-- the macro-partition, blindly, in the certified nearly-uncoupled non-reversible class;
-- the macro-current topology and sign pattern (under N4);
-- the canonical macro cycle where the macro cycle space is one-dimensional;
-- covariance under time reversal.
+**Earned in C1 (after C1 REPAIR 01):**
+- RA0-style macro-partition recovery extends to a certified non-reversible nearly-uncoupled class;
+- nonzero macro-current relations (their signs and relative magnitudes) can be recovered under N4b;
+- the full macro current J_Q is canonical;
+- for a fixed partition, time-reversal covariance of the current is exact;
+- a canonical macro cycle exists where the macro cycle space is one-dimensional;
+- a multi-cycle current need not yield a canonical cycle decomposition (R5).
 
 **Supplied:**
 - the microscopic non-reversible generator D, **including A**, which fixes whether any macro current exists;
@@ -239,11 +320,14 @@ macrostructure appears iff the supplied A carries net inter-block circulation** 
 - the family / scaling, and the nearly-uncoupled certificate (N3);
 - the non-normal regularity N1 and N2;
 - p_min and s²C_V;
-- macro-drive non-degeneracy N4;
-- the one-dimensional macro cycle space (by construction).
+- N4b, wherever directed sign recovery is claimed;
+- the macro graph, including its cycle-space dimension (by construction in every family).
 
 **Not earned:**
 - orientation from orientation-free laws;
+- exact zero-current support, in general (C1R-03);
+- general macro-EP recovery (C1R-04);
+- equality of time-reversed certificates (C1R-05);
 - inside / outside;
 - subsystem factorisation;
 - consciousness;

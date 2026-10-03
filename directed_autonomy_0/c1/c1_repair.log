@@ -1,0 +1,64 @@
+== N4a/N4b audit: R1a ==
+  M= 20: eta 5.508e-01, g 2.966e-01, q_max 2.47, j_min 4.095e-03; j_min/eta 7.434e-03 (N4a: bounded below?); q_max*eta/g^2 1.545e+01 (N4b specialisation: -> 0?)
+  M= 40: eta 2.777e-01, g 3.009e-01, q_max 2.23, j_min 2.029e-03; j_min/eta 7.308e-03 (N4a: bounded below?); q_max*eta/g^2 6.826e+00 (N4b specialisation: -> 0?)
+  M= 80: eta 1.379e-01, g 3.004e-01, q_max 2.10, j_min 9.994e-04; j_min/eta 7.249e-03 (N4a: bounded below?); q_max*eta/g^2 3.209e+00 (N4b specialisation: -> 0?)
+== N4a/N4b audit: R2 ==
+  M= 10: eta 3.367e-01, g 2.426e-01, q_max 2.13, j_min 2.567e-02; j_min/eta 7.624e-02 (N4a: bounded below?); q_max*eta/g^2 1.218e+01 (N4b specialisation: -> 0?)
+  M= 20: eta 1.702e-01, g 2.949e-01, q_max 2.10, j_min 1.287e-02; j_min/eta 7.562e-02 (N4a: bounded below?); q_max*eta/g^2 4.109e+00 (N4b specialisation: -> 0?)
+  M= 40: eta 8.556e-02, g 3.010e-01, q_max 2.09, j_min 6.496e-03; j_min/eta 7.592e-02 (N4a: bounded below?); q_max*eta/g^2 1.975e+00 (N4b specialisation: -> 0?)
+  M= 80: eta 4.282e-02, g 3.004e-01, q_max 2.03, j_min 3.246e-03; j_min/eta 7.581e-02 (N4a: bounded below?); q_max*eta/g^2 9.642e-01 (N4b specialisation: -> 0?)
+== N4a/N4b audit: R4 ==
+  M= 10: eta 4.660e-03, g 3.377e-02, q_max 1.78, j_min 1.957e-06; j_min/eta 4.201e-04 (N4a: bounded below?); q_max*eta/g^2 7.287e+00 (N4b specialisation: -> 0?)
+  M= 20: eta 5.674e-04, g 8.840e-03, q_max 1.78, j_min 5.512e-10; j_min/eta 9.715e-07 (N4a: bounded below?); q_max*eta/g^2 1.293e+01 (N4b specialisation: -> 0?)
+  M= 40: eta 7.100e-05, g 2.207e-03, q_max 1.78, j_min 2.549e-09; j_min/eta 3.590e-05 (N4a: bounded below?); q_max*eta/g^2 2.595e+01 (N4b specialisation: -> 0?)
+  M= 80: eta 8.850e-06, g 5.534e-04, q_max 1.78, j_min 2.516e-12; j_min/eta 2.843e-07 (N4a: bounded below?); q_max*eta/g^2 5.144e+01 (N4b specialisation: -> 0?)
+== N4a/N4b audit: R5 ==
+  M= 10: eta 9.410e-01, g 2.426e-01, q_max 2.61, j_min 1.620e-03; j_min/eta 1.722e-03 (N4a: bounded below?); q_max*eta/g^2 4.178e+01 (N4b specialisation: -> 0?)
+  M= 20: eta 4.750e-01, g 2.949e-01, q_max 2.48, j_min 7.866e-04; j_min/eta 1.656e-03 (N4a: bounded below?); q_max*eta/g^2 1.354e+01 (N4b specialisation: -> 0?)
+  M= 40: eta 2.364e-01, g 3.010e-01, q_max 2.28, j_min 3.877e-04; j_min/eta 1.640e-03 (N4a: bounded below?); q_max*eta/g^2 5.943e+00 (N4b specialisation: -> 0?)
+  M= 80: eta 1.174e-01, g 3.004e-01, q_max 2.13, j_min 1.919e-04; j_min/eta 1.635e-03 (N4a: bounded below?); q_max*eta/g^2 2.764e+00 (N4b specialisation: -> 0?)
+== R5 multi-cycle metastable macro-current (C1R-07) ==
+  M= 10 n=54: micro EP 2.241e-03; top decay-rate cuts [(1.4, 4), (1.21, 3), (1.15, 2)]; ||E||_pi 1.000, K(Gamma) 6.480
+    BLIND R(V): idempotents 16, primitive 4, gap(V,A_blind) 2.327e-01
+    macro cycle-space dim 3; macro EP_Q 1.739e-03; J_Q supported on 5 macro edges; J_Q is a multiple of a single cycle: False
+    canonical macro current J_Q (blind labels):
+      [ 0.      0.0041 -0.0041 -0.    ]
+      [-0.0041  0.      0.0016  0.0024]
+      [ 0.0041 -0.0016  0.     -0.0024]
+      [ 0.     -0.0024  0.0024  0.    ]
+    divergence of J_Q (row sums) 1.5e-16
+    COVARIANCE (G -> G*): same partition True; max|J_Q* + J_Q| 2.8e-17
+    AUDIT (hidden labels, after blind): misclassified 0.00e+00; max|J_Q - J_B| 5.2e-18; hidden J_B(0,1) 4.051e-03, J_B(0,2) -1.620e-03, J_B(0,3) -2.431e-03, J_B(1,2) 4.051e-03, J_B(1,3) -1.195e-17, J_B(2,3) 2.431e-03
+  M= 20 n=110: micro EP 1.062e-03; top decay-rate cuts [(2.41, 4), (1.24, 3), (1.16, 2)]; ||E||_pi 1.000, K(Gamma) 2.816
+    BLIND R(V): idempotents 16, primitive 4, gap(V,A_blind) 1.051e-01
+    macro cycle-space dim 3; macro EP_Q 8.191e-04; J_Q supported on 5 macro edges; J_Q is a multiple of a single cycle: False
+    canonical macro current J_Q (blind labels):
+      [ 0.     -0.0012  0.0012  0.    ]
+      [ 0.0012  0.      0.0008 -0.002 ]
+      [-0.0012 -0.0008  0.      0.002 ]
+      [-0.     0.002 -0.002  0.   ]
+    divergence of J_Q (row sums) 1.1e-16
+    COVARIANCE (G -> G*): same partition True; max|J_Q* + J_Q| 1.7e-17
+    AUDIT (hidden labels, after blind): misclassified 0.00e+00; max|J_Q - J_B| 6.5e-18; hidden J_B(0,1) 1.967e-03, J_B(0,2) -7.866e-04, J_B(0,3) -1.180e-03, J_B(1,2) 1.967e-03, J_B(1,3) -1.764e-17, J_B(2,3) 1.180e-03
+  M= 40 n=220: micro EP 5.102e-04; top decay-rate cuts [(4.39, 4), (1.24, 3), (1.19, 2)]; ||E||_pi 1.000, K(Gamma) 1.912
+    BLIND R(V): idempotents 16, primitive 4, gap(V,A_blind) 5.217e-02
+    macro cycle-space dim 3; macro EP_Q 3.945e-04; J_Q supported on 5 macro edges; J_Q is a multiple of a single cycle: False
+    canonical macro current J_Q (blind labels):
+      [ 0.      0.001  -0.0004 -0.0006]
+      [-0.001  0.     0.001  0.   ]
+      [ 0.0004 -0.001   0.      0.0006]
+      [ 0.0006 -0.     -0.0006  0.    ]
+    divergence of J_Q (row sums) 1.3e-17
+    COVARIANCE (G -> G*): same partition True; max|J_Q* + J_Q| 1.4e-16
+    AUDIT (hidden labels, after blind): misclassified 0.00e+00; max|J_Q - J_B| 2.4e-18; hidden J_B(0,1) 9.692e-04, J_B(0,2) -3.877e-04, J_B(0,3) -5.815e-04, J_B(1,2) 9.692e-04, J_B(1,3) 4.182e-18, J_B(2,3) 5.815e-04
+  M= 80 n=440: micro EP 2.496e-04; top decay-rate cuts [(8.37, 4), (1.25, 3), (1.18, 2)]; ||E||_pi 1.000, K(Gamma) 1.528
+    BLIND R(V): idempotents 16, primitive 4, gap(V,A_blind) 2.559e-02
+    macro cycle-space dim 3; macro EP_Q 1.930e-04; J_Q supported on 5 macro edges; J_Q is a multiple of a single cycle: False
+    canonical macro current J_Q (blind labels):
+      [ 0.      0.0005 -0.0005  0.    ]
+      [-0.0005  0.      0.0002  0.0003]
+      [ 0.0005 -0.0002  0.     -0.0003]
+      [ 0.     -0.0003  0.0003  0.    ]
+    divergence of J_Q (row sums) 2.4e-16
+    COVARIANCE (G -> G*): same partition True; max|J_Q* + J_Q| 1.4e-16
+    AUDIT (hidden labels, after blind): misclassified 0.00e+00; max|J_Q - J_B| 1.2e-18; hidden J_B(0,1) 4.798e-04, J_B(0,2) -1.919e-04, J_B(0,3) -2.879e-04, J_B(1,2) 4.798e-04, J_B(1,3) 4.794e-19, J_B(2,3) 2.879e-04
