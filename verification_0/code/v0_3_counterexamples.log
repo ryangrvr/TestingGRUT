@@ -1,0 +1,75 @@
+==============================================================================================================
+CE-1  flat (quartic) minimum: eps(k) = -4cos k + cos 2k  =>  eps(k)-eps(0) = 8 sin^4(k/2)
+  identity check max|eps(k)-eps(0)-8sin^4(k/2)| = 8.881784197001252e-16
+  bosons L=6 N=3: GS deg=1  E0=-9.0000000000 (N eps(0)=-9.0)  support = single line 8 sin^4(q/2) with weight 1 for all m != 0: True
+  bosons L=10 N=3: GS deg=1  E0=-9.0000000000 (N eps(0)=-9.0)  support = single line 8 sin^4(q/2) with weight 1 for all m != 0: True
+  bosons L=10 N=1: GS deg=1  E0=-3.0000000000 (N eps(0)=-3.0)  support = single line 8 sin^4(q/2) with weight 1 for all m != 0: True
+  bosons P: w-(q) = 8 sin^4(q/2): q=1e-02: dlogw/dlogq=4.0000; q=1e-04: dlogw/dlogq=4.0000
+  bosons P': w1 = 8 sin^4(pi/L): exponent 4.  => free-boson class (4,1), NOT (2,1).  Fermion E (N=1) identical.
+  [fermion E, quartic band] P': L=[50, 200, 800]  successive -dlog w1/dlog L = 3.9982, 3.9999
+==============================================================================================================
+CE-2  degenerate minima: eps(k) = 2cos k + cos 2k, minima at k0 = +-2pi/3 (eps=-3/2); 3 | L
+  bosons L=6 N=2: E0=-3.0000000000 (N*(-1.5)=-3.0)  GS degeneracy = 3  (expected N+1 = 3)
+    ref all in +k0 (n+=2)        E-E0=1.3e-15: m=1:min w=+2.0000,W(w=0)=0.000 | m=2:min w=+4.5000,W(w=0)=0.000 | m=3:min w=+2.0000,W(w=0)=0.000
+    ref all in -k0 (n-=2)        E-E0=1.3e-15: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=-0.0000,W(w=0)=1.000 | m=3:min w=+2.0000,W(w=0)=0.000
+    ref n+=1, n-=1               E-E0=0.0e+00: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=+0.0000,W(w=0)=1.000 | m=3:min w=+2.0000,W(w=0)=0.000
+    ref (|2,0> - |0,2>)/sqrt2    E-E0=1.3e-15: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=-0.0000,W(w=0)=0.500 | m=3:min w=+2.0000,W(w=0)=0.000
+  bosons L=6 N=3: E0=-4.5000000000 (N*(-1.5)=-4.5)  GS degeneracy = 4  (expected N+1 = 4)
+    ref all in +k0 (n+=3)        E-E0=8.9e-16: m=1:min w=+2.0000,W(w=0)=0.000 | m=2:min w=+4.5000,W(w=0)=0.000 | m=3:min w=+2.0000,W(w=0)=0.000
+    ref all in -k0 (n-=3)        E-E0=8.9e-16: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=-0.0000,W(w=0)=1.000 | m=3:min w=+2.0000,W(w=0)=0.000
+    ref n+=2, n-=1               E-E0=8.9e-16: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=-0.0000,W(w=0)=1.000 | m=3:min w=+2.0000,W(w=0)=0.000
+  bosons L=12 N=3: E0=-4.5000000000 (N*(-1.5)=-4.5)  GS degeneracy = 4  (expected N+1 = 4)
+    ref all in +k0 (n+=3)        E-E0=-8.9e-16: m=1:min w=+0.5000,W(w=0)=0.000 | m=2:min w=+2.0000,W(w=0)=0.000 | m=3:min w=+3.7321,W(w=0)=0.000 | m=4:min w=+4.5000,W(w=0)=0.000 | m=5:min w=+3.7321,W(w=0)=0.000 | m=6:min w=+2.0000,W(w=0)=0.000
+    ref all in -k0 (n-=3)        E-E0=0.0e+00: m=1:min w=+0.2679,W(w=0)=0.000 | m=2:min w=+0.5000,W(w=0)=0.000 | m=3:min w=+0.2679,W(w=0)=0.000 | m=4:min w=+0.0000,W(w=0)=1.000 | m=5:min w=+0.5000,W(w=0)=0.000 | m=6:min w=+2.0000,W(w=0)=0.000
+    ref n+=2, n-=1               E-E0=8.9e-16: m=1:min w=+0.2679,W(w=0)=0.000 | m=2:min w=+0.5000,W(w=0)=0.000 | m=3:min w=+0.2679,W(w=0)=0.000 | m=4:min w=-0.0000,W(w=0)=1.000 | m=5:min w=+0.5000,W(w=0)=0.000 | m=6:min w=+2.0000,W(w=0)=0.000
+  => q* = 2pi/3 (= 2k0 mod quotient) is soft or not depending on WHICH ground state is declared;
+     the 'unique condensate' hypothesis of TARGET 1 fails and (I-z,I-q) = (2,1) or (2,2) is state-dependent.
+  fermions, same band, N=1, L=12: unique sector GS? False (gap 0.0e+00) -> family E ill-defined here.
+==============================================================================================================
+CE-3  symmetric band with a stationary inflection at the D-type edge: eps(k) = -cos^3(k)/3
+  identity check max|eps+cos^3/3| = 5.551115123125783e-17  eps'(pi/2) = sin cos^2 = 0, eps''(pi/2)=0, eps'''(pi/2) = 2
+  fermion ED L=10 N=5: GS deg=1, unique by levels=True, ED support == form-factor support: True
+  fermion ED L=14 N=7: GS deg=1, unique by levels=True, ED support == form-factor support: True
+  [fermion D, cubic-inflection band (v_b=0)] P: q=1e-01: w-=8.323e-05, dlogw/dlogq=2.9975; q=1e-02: w-=8.333e-08, dlogw/dlogq=3.0000; q=1e-03: w-=8.333e-11, dlogw/dlogq=3.0000; q=3e-04: w-=2.250e-12, dlogw/dlogq=2.9984
+  [fermion D, cubic-inflection band (v_b=0)] Q_soft reps in [0,pi] = [0.0, 3.141591]  ->  I-q = 2
+  predicted: w-(q) ~ (eps'''/24) q^3 = q^3/12 -> 8.333e-11 at q=1e-3
+  [fermion D, cubic band] P': L=[102, 402, 1602]  successive -dlog w1/dlog L = 2.9997, 3.0000
+  => class (3,2) with v_b = 0, while cosine-band E/E-3/Ebar have v_b = 0 and class (2,1): class is NOT a function of v_b.
+==============================================================================================================
+CE-4  asymmetric band (broken reflection): eps(k) = sin(k)/2 - sin(2k)/4 ; mirror eps_m(k) = eps(-k)
+  identity check: 2.7755575615628914e-17  eps(0)=eps(pi)=0; eps'(0)=eps''(0)=0, eps'''(0)=3/2; eps'(pi) = -1
+  ED L=8 N=3 [eps]: GS deg=1; ED support matches k->k-q formula: True; matches k->k+q formula: False
+  ED L=8 N=3 [mirror]: GS deg=1; ED support matches k->k-q formula: True; matches k->k+q formula: False
+  ED L=12 N=5 [eps]: GS deg=1; ED support matches k->k-q formula: True; matches k->k+q formula: False
+  ED L=12 N=5 [mirror]: GS deg=1; ED support matches k->k-q formula: True; matches k->k+q formula: False
+  [eps (occupied (-pi,0))] P: q=1e-02: w-=1.000e-02, dlogw/dlogq=0.9999; q=1e-03: w-=1.000e-03, dlogw/dlogq=1.0000; q=1e-04: w-=1.000e-04, dlogw/dlogq=1.0000; q=1e-05: w-=1.000e-05, dlogw/dlogq=1.0000
+  [eps (occupied (-pi,0))] Q_soft reps in [0,pi] = [0.0, 3.141589]  ->  I-q = 2
+  [mirror (occupied (0,pi))] P: q=1e-02: w-=6.250e-08, dlogw/dlogq=3.0000; q=1e-03: w-=6.250e-11, dlogw/dlogq=3.0000; q=1e-04: w-=6.250e-14, dlogw/dlogq=3.0000; q=1e-05: w-=6.250e-17, dlogw/dlogq=3.0001
+  [mirror (occupied (0,pi))] Q_soft reps in [0,pi] = [0.0, 3.141593]  ->  I-q = 2
+  [eps] P': L=[100, 400, 1600]  successive -dlog w1/dlog L = 0.9989, 0.9999
+  [mirror] P': L=[100, 400, 1600]  successive -dlog w1/dlog L = 2.9993, 3.0000
+  => same nu=1/2, same set of edges {0,pi}, same |v| data; z_P = 1 or 3 depending on chirality; occupied set is
+     NOT [-pi nu, pi nu] (k_b = pi nu fails); P restricted to q in (0,pi] sees only one orientation of edges.
+==============================================================================================================
+CE-5  multiple disconnected pockets (exclusion): eps(k) = -2cos 3k - 0.5 cos k, mu = -1.0
+  occupied intervals: [(-2.36917, -1.76413), (-0.43146, 0.43146), (1.76413, 2.36917)]  nu=0.329927
+  Fermi points: [np.float64(-2.36917), np.float64(-1.76413), np.float64(-0.43146), np.float64(0.43146), np.float64(1.76413), np.float64(2.36917)]  velocities eps'(k_F): [np.float64(-4.75346), np.float64(4.52805), np.float64(-5.98133), np.float64(5.98133), np.float64(-4.52805), np.float64(4.75346)]
+  predicted Q_soft = pairwise Fermi-point differences mod quotient: [np.float64(0.0), np.float64(0.6050353), np.float64(0.8629192), np.float64(1.332674), np.float64(1.5448475), np.float64(1.9377093), np.float64(2.1498829), np.float64(2.1955932), np.float64(2.7549182), np.float64(2.8006285)] -> 10
+  [three pockets] P: q=1e-02: w-=4.478e-02, dlogw/dlogq=0.9888; q=1e-03: w-=4.523e-03, dlogw/dlogq=0.9989; q=1e-04: w-=4.528e-04, dlogw/dlogq=0.9999; q=1e-05: w-=4.528e-05, dlogw/dlogq=1.0000
+  [three pockets] Q_soft reps in [0,pi] = [0.0, 0.605035, 0.862919, 1.332674, 1.544848, 1.937709, 2.149883, 2.195593, 2.754918, 2.800628]  ->  I-q = 10
+  L=12: N=#(eps<mu)=3 odd=True unique=True  ED GS deg=1, ED support == form-factor: True
+  L=600: N=#(eps<mu)=199 odd=True unique=True
+  L=6000: N=#(eps<mu)=1981 odd=True unique=True
+  => z=1 but I-q = 10 (six Fermi points, not 2); there is no single k_b or v_b.
+==============================================================================================================
+CE-6  two bands: two-leg ladder, rung t_perp=1: eps_-(k) = -2cos k - 1, eps_+(k) = -2cos k + 1; rho_q summed over legs
+  ED ladder L=6 N=4: GS deg=1, ED support == two-band intraband formula: True
+  ED ladder L=6 N=8: GS deg=1, ED support == two-band intraband formula: True
+  mu=0.5: k_-=2.418858 (v=1.32288), k_+=1.318116 (v=1.93649); predicted Q_soft = {0, 2k_-, 2k_+} mod quotient = [0.0, np.float64(1.445468), np.float64(2.636232)]
+  P: q=1e-03: dlogw/dlogq=0.9994; q=1e-05: dlogw/dlogq=1.0000
+  numerical zeros of w-(q) on (0,pi]: [0.0, np.float64(1.445), np.float64(2.636)] -> I-q = 3; z=1 with two different velocities
+==============================================================================================================
+CE-7  d>1 scope of TARGET 2: 4x4 periodic square lattice, N=5 (closed shell for fermions)
+  hcb     : E0=-15.3004085279 GS deg=1; support at q=(pi/2,0): (2.8882,0.5173), (6.2936,0.0030), (7.2248,0.0012), (7.8728,0.0001), (8.2770,0.0001), (8.9871,0.0005) ...
+  fermion : E0=-12.0000000000 GS deg=1; support at q=(pi/2,0): (2.0000,0.6000)
+  free-fermion E0 = -4 + 4*(-2) = -12.  HCB != free fermions in 2D (JW strings do not cancel).

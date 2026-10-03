@@ -1,0 +1,24 @@
+(a) small-L exact checks
+  L=10 N=5: O(m)=[np.int64(0), np.int64(1), np.int64(2), np.int64(8), np.int64(9)]  E=-6.4721359550  ||H psi - E psi||=5.7e-15  E_gs=-10.0000000000 (N eps(0)=-10)  E-E_gs=3.5278640450  ED support == boson-formula support (all m, with weights): True
+     min w per m: -0.000000, -1.000000, -1.381966, -1.000000, -0.000000, +1.236068, -0.000000, -1.000000, -1.381966, -1.000000
+  L=10 N=3: O(m)=[np.int64(0), np.int64(1), np.int64(9)]  E=-5.2360679775  ||H psi - E psi||=3.2e-15  E_gs=-6.0000000000 (N eps(0)=-6)  E-E_gs=0.7639320225  ED support == boson-formula support (all m, with weights): True
+     min w per m: +0.000000, -0.381966, +0.000000, +1.000000, +2.236068, +3.236068, +2.236068, +1.000000, +0.000000, -0.381966
+  L=6 N=3: O(m)=[np.int64(0), np.int64(1), np.int64(5)]  E=-4.0000000000  ||H psi - E psi||=1.5e-15  E_gs=-6.0000000000 (N eps(0)=-6)  E-E_gs=2.0000000000  ED support == boson-formula support (all m, with weights): True
+     min w per m: -0.000000, -1.000000, -0.000000, +2.000000, -0.000000, -1.000000
+
+(b) L=1026
+  N= 513 (pattern unique=True): E-E_gs= 372.8271  min w: q=2pi*256/L -> -1.993876, q=2pi*64/L -> -0.763484, q=2pi*16/L -> -0.195623
+  N= 257 (pattern unique=True): E-E_gs=  51.4304  min w: q=2pi*256/L -> -0.000000, q=2pi*64/L -> -0.431967, q=2pi*16/L -> -0.131342
+  N= 769 (pattern unique=True): E-E_gs=1075.4304  min w: q=2pi*256/L -> -2.824080, q=2pi*64/L -> -0.778856, q=2pi*16/L -> -0.195887
+  N=   1 (pattern unique=True): E-E_gs=   0.0000  min w: q=2pi*256/L -> +1.993876, q=2pi*64/L -> +0.151656, q=2pi*16/L -> +0.009593
+  N=   3 (pattern unique=True): E-E_gs=   0.0001  min w: q=2pi*256/L -> +1.981591, q=2pi*64/L -> +0.146974, q=2pi*16/L -> +0.008395
+  N=1025 (pattern unique=True): E-E_gs=2048.0000  min w: q=2pi*256/L -> -2.824080, q=2pi*64/L -> -0.778856, q=2pi*16/L -> -0.195887
+  N=  31 (pattern unique=True): E-E_gs=   0.0930  min w: q=2pi*256/L -> +1.802010, q=2pi*64/L -> +0.080939, q=2pi*16/L -> -0.008395
+  N=  33 (pattern unique=True): E-E_gs=   0.1122  min w: q=2pi*256/L -> +1.788660, q=2pi*64/L -> +0.076193, q=2pi*16/L -> -0.009593
+  closed form for N=L/2: E-E_gs = 2N - 2/sin(pi/L) = 372.827093
+  closed-form min w (N=L/2, finite L): -4 sin(pi m/L) cos(pi(m+1)/L);  thermodynamic: -2 sin q
+    q=1.570796: m=256  finite=-1.993876  -2 sin(q)=-2.000000
+    q=0.392699: m=64  finite=-0.763484  -2 sin(q)=-0.765367
+    q=0.098175: m=16  finite=-0.195623  -2 sin(q)=-0.196034
+  sectors N (1..1025) with |E-E_gs - 372.8| < 0.05:
+    [(513, np.True_, np.float64(372.82709288936394))]
