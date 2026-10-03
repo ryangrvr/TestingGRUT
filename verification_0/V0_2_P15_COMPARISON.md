@@ -46,3 +46,38 @@ extraction. The reproduction was done by a context-isolated sub-agent from the s
 **Not VER-I2.**
 
 **Frozen `scout-0` is not modified.**
+
+## 3. Owner ruling (additive; review of `55a9aa8`)
+
+**Final grade: V0-2-C — P-15 CHAIN REPRODUCED WITH CORRECTION — VER-I1 (ORCHESTRATOR-EXPOSED).** Criterion-2 item 3:
+**COMPLETE AT VER-I1 WITH CORRECTION.**
+
+**Accepted corrected theorem.** The common hypothesis class is:
+- an interior diffusion coefficient non-degenerate on (0, 1);
+- Engelbert–Schmidt / local-integrability conditions;
+- the absorbing-endpoint convention;
+- drift taken as an L¹_loc / Lebesgue-a.e. equivalence class;
+- decomposition tests over [0, 1], endpoints included.
+
+Under it, **h(p) = p ⟺ b = 0 Lebesgue-a.e. ⟺ p_t is the bounded martingale branch coordinate ⟺ outcome statistics are
+decomposition-independent.** Pointwise b ≡ 0 needs stronger regularity, e.g. continuous b.
+
+**Preserved:**
+- p = |α|² is SUPPLIED;
+- the stochastic law is SUPPLIED;
+- probability is not derived;
+- absorption supplies selection;
+- the martingale structure supplies the Born weights, conditional on those supplied ingredients.
+
+**CR-2 wording repair (supersedes §2 where they differ).** SF is **not** an extra hypothesis of the final biconditional
+chain.
+- SF (finite scale, i.e. attracting endpoints) is required for the **general** backward boundary-value formula
+  𝓛h = 0, h(0) = 0, h(1) = 1, for arbitrary drift.
+- **Within the repaired equivalence theorem, SF follows** when the Born / zero-drift / martingale conditions hold.
+- Absorbing endpoints remain part of the common class.
+
+**CR-3 accepted.** Dependence only on ρ₁₁ and dependence on the full ρ are kept distinct. The original control-F pair
+tests the former. The reproduction's phase-balanced same-ρ decompositions are banked as the correct witness for the ρ
+version.
+
+Frozen `scout-0` is not modified.
