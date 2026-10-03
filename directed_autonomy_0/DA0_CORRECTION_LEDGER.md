@@ -205,3 +205,26 @@ Strahler, barriers, controls) was computed or inspected.**
 | **PM2-S3** | **Declared reading of Stage-A positive item 4** (no numeric rule in the charter), fixed in `c3/pm2_stageA_summary.py`. It was written after the L = 16 numbers were visible and before L ≥ 24 were. The PM2 Strahler slope interval must lie entirely above the R-TREE slope interval and above the SP slope, and at L = 48 and 64 the PM2 interval must lie above the R-TREE interval and the SP value. The outcome (FAIL) holds under any reading, since PM2 never exceeds R-TREE. P3 reading: the 95% lower bound of pooled-OLS ρ must be > 0 |
 | **PM2-S4** | **Exact readings added for interpretation** (INTERNALLY PROVED / NOT EXTERNALLY REVIEWED). **PROP PM2-U:** for even L, the exact uniform-start trajectory cannot reach a spanning tree. The diagonal reflection fixes no edge, so σ-symmetric active sets have even size, while N − 1 is odd. Uniform-start trees are therefore round-off-selected and used for nothing. **Corollary of n_reroute = S_e:** ρ > 0 is generic to every growing tree family; the controls give ρ_R = 0.78, ρ_A2 = 0.75 and ρ_SP = 0.51 |
 | **PM2-S5** | **Stage-A outcome** (`C3_PM2_STAGE_A.md`). Production verdicts: P1 PASS (finite-size; τ_PM2 drifts 0.99 → 0.60 toward the R-TREE band ≈ 0.38 – 0.44), P2 FAIL, P3 PASS (ρ = 0.674 [0.651, 0.698], generic and below the controls), Strahler-beyond-controls FAIL. **The Stage-A positive is not met; PM2-A PARTIAL is not reached.** Proposed terminal: **PM2-B — GENERATED TREE / NETWORK — GENERIC TOPOLOGICAL HIERARCHY ONLY** (owner to rule). Robustness pass (step 0.05): all verdicts identical (item 5 met) |
+
+## PM2 STAGE A — OWNER RULING (review of `2139cc4`)
+
+**Ruling:** **PM2 DETERMINISTIC STAGE A ACCEPTED — PM2-B TERMINAL ACCEPTED WITH SCOPE DISCIPLINE.**
+
+**Terminal (precise scope; supersedes the shorter PM2-B wording in `C3_PM2_STAGE_A.md` §4 and in PM2-S5):**
+
+> **PM2-B — GENERATED TREE / NETWORK; REGISTERED HIERARCHY IS GENERIC / RANDOM-TREE-LIKE; NO DISTINCT GROWING COLLECTIVE
+> ARCHITECTURE ESTABLISHED.**
+
+**Deterministic PM2 Stage A is CLOSED.** The reviewed Stage-A scientific boundary is
+**`grut-directed-autonomy-0 @ 2139cc436e79782c231286f4437bdf62402140e0`**. This is recorded as a boundary on the branch;
+no new branch or tag is created.
+
+| ID | correction / record |
+|---|---|
+| **PM2-O1** | **Owner reading accepted:** trees are generated from the perturbed ensemble; flow feedback matters (A1 selects no tree); P1 passes its finite-size rule but drifts toward R-TREE; P2 fails; P3 ρ > 0 is generic, with PM2 below R-TREE / A2; Strahler does not exceed R-TREE; reduced static barriers do not grow; the robustness pass preserves every verdict; PM2-A PARTIAL is not reached; **TRUE COMPRESSION = 0** |
+| **PM2-O2** | **Scope firewall.** PM2-B must **not** be read as "adaptive flow networks have no hierarchy" or as any universal negative. The supplied hierarchy A2 is itself not cleanly separated from R-TREE by the registered P1 / P2 / Strahler suite. **Earned negative:** no distinctive growing collective architecture was established **under the registered invariant suite** |
+| **PM2-O3** | **R1 (asymptotic τ) is OPEN and NOT ACTIONABLE at present.** No larger-L run will be made to chase τ. P1 is the lone survivor, and its separation shrinks with size. A larger-L distinction would not repair the failures of depth, rerouting distinctiveness or barriers |
+| **PM2-O4** | **PM2-BIS is NOT opened.** Fluctuating sources and edge revival remain physically plausible future mechanisms. Adding them before the architecture detector is qualified would make any later positive uninterpretable |
+| **PM2-O5** | **Next gate: C3-D0 — ARCHITECTURE DETECTOR QUALIFICATION** (`C3_D0_ARCHITECTURE_DETECTOR.md`). Charter and candidate audit only, calibrated on controls only. PM2 Stage-A outputs are frozen and may not be used to tune a detector. No D0 computation is made until the detector choice and the second positive hierarchy are preregistered and reviewed |
+
+**Preserved:** PM1 terminal; all previous boundaries; RA0-frozen `ab4fd86`. **C3-B closed. No PR. No merge.**

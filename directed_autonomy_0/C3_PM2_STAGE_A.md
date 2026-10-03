@@ -286,3 +286,17 @@ mechanism, at the level of growing collective architecture beyond random trees.
 
 Stage A is complete. Implementation changes are in the ledger (PM2-I0 … I5, before the grid). Nothing was varied after
 results: γ, ν, κ, δ, geometry and drive are unchanged. **No PM2-BIS, no noise, no C3-B. Stopping for owner review.**
+
+## 7. Owner ruling (additive; the ledger takes precedence)
+
+**PM2 DETERMINISTIC STAGE A ACCEPTED.** The terminal is accepted with this precise scope:
+**PM2-B — GENERATED TREE / NETWORK; REGISTERED HIERARCHY IS GENERIC / RANDOM-TREE-LIKE; NO DISTINCT GROWING COLLECTIVE
+ARCHITECTURE ESTABLISHED.**
+- The Stage-A boundary is `2139cc4`.
+- R1 is open and not actionable.
+- PM2-BIS is not opened.
+- The scope firewall is PM2-O2: this is not a universal negative, because the registered detectors also fail to separate
+  the supplied hierarchy A2 from R-TREE.
+- Next gate: C3-D0 (`C3_D0_ARCHITECTURE_DETECTOR.md`).
+
+See ledger PM2-O1 … O5.
