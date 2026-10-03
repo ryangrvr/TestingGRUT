@@ -1,0 +1,102 @@
+
+==============================================================================
+C1(a)  driftless Wright-Fisher: sigma^2 = 2 D p(1-p), b = 0
+==============================================================================
+[WF] s'(x) = 1,   m(x) = -1/(D*x*(x - 1))
+   eps=1e-4 : S=0.2499       M=8.1116281    Sigma=0.2867709    N=1.740325
+   eps=1e-8 : S=0.24999999   M=17.322068    Sigma=0.28768189   N=4.042835
+   eps=1e-16: S=0.25         M=35.742749    Sigma=0.28768207   N=8.6480052
+   => boundary 0 is exit (accessible, attracting; finite-time absorption)
+ODE residual for h=x: 0
+T(p) = -[p ln p + (1-p) ln(1-p)]/D ; residual of (1/2)sigma^2 T'' + 1 : 0
+T(0+) = 0   T(1-) = 0
+   D=1, p= 0.10: Green quadrature E tau = 0.32508297339144823951   closed form = 0.32508297339144823951   diff = 0.0
+   D=1, p= 0.25: Green quadrature E tau = 0.56233514461880835029   closed form = 0.56233514461880835029   diff = -1.15e-41
+   D=1, p= 0.50: Green quadrature E tau = 0.69314718055994530942   closed form = 0.69314718055994530942   diff = 0.0
+   D=1, p= 0.90: Green quadrature E tau = 0.32508297339144823951   closed form = 0.32508297339144823951   diff = 0.0
+
+==============================================================================
+C1(b)  variant sigma = 4 sqrt(kappa) p(1-p), b = 0
+==============================================================================
+[QSD-variant] s'(x) = 1,   m(x) = 1/(8*kappa*x**2*(x - 1)**2)
+   eps=1e-4 : S=0.2499       M=1251.5696    Sigma=0.93045072   N=311.83678
+   eps=1e-8 : S=0.24999999   M=12500004.0   Sigma=2.0819252    N=3124998.8
+   eps=1e-16: S=0.25         M=1.25e+15     Sigma=4.3845103    N=3.125e+14
+   => boundary 0 is natural, ATTRACTING (s(0+) finite): approached only as t->inf
+Scale s(x)=x is finite at both ends => both endpoints ATTRACTING, but Sigma=inf => NOT exit:
+natural attracting boundaries: p_t -> {0,1} a.s. as t->inf, never reached in finite time.
+Particular sol. of (1/2)sigma^2 T''=-1 (T(1/2)=T'(1/2)=0): (-2*x*log(x) + 2*x*log(x - 1) - 2*I*pi*x + log(x) - log(x - 1) + I*pi)/(8*kappa)
+  limit at 0+ : -oo  -> no bounded solution, E tau = +inf (indeed tau = inf a.s.)
+logit y: drift = 8*kappa*(2*x - 1)   diffusion coeff = -4*sqrt(kappa)*Abs(x*(x - 1))/(x*(x - 1))
+   drift in terms of y: 8*kappa*tanh(yy/2)  (= 8 kappa tanh(y/2))
+   scale of y-process: s_y'(y) = (tanh(yy/2) + 1)**2*exp(-yy)  s_y(y) = -(-2*exp(yy) + 2*tanh(yy/2) + 2)*exp(-yy)
+   s_y(+-inf) = 2 -2  (finite: y -> +-inf a.s.)
+   P(y -> +inf) = exp(yy)/(exp(yy) + 1) ; with y = logit(p): pp_
+   => h(p) = p  CONFIRMED (independent of the martingale argument)
+
+==============================================================================
+C2  b = lambda p(1-p)(2p-1), sigma^2 = 2 D p(1-p); frozen lambda=2, D=1
+==============================================================================
+2b/sigma^2 = lambda*(2*x - 1)/D
+s'(x) = exp(lambda*(-4*x**2 + 4*x - 1)/(4*D))
+h(p) = s(p)/s(1) = Integral(exp(lambda*y/D)*exp(-lambda*y**2/D), (y, 0, x))/Integral(exp(lambda*y/D)*exp(-lambda*y**2/D), (y, 0, 1))
+ODE residual b h' + (1/2) sigma^2 h'': 0
+h(0) = 0  h(1) = 1
+[C2] s'(x) = exp(-2*x**2 + 2*x - 1/2),   m(x) = -exp(2*x**2 - 2*x + 1/2)/(x*(x - 1))
+   eps=1e-4 : S=0.18778893   M=12.62859     Sigma=0.26005209   N=2.1114573
+   eps=1e-8 : S=0.18784958   M=27.813709    Sigma=0.26091795   N=4.9638757
+   eps=1e-16: S=0.18784959   M=58.184277    Sigma=0.26091813   N=10.668974
+   => boundary 0 is exit (accessible, attracting; finite-time absorption)
+
+  p     h (closed form erf, 20 d)      h (quadrature)            |diff|    spec      spec-ok(5dp)  h-p
+  0.1   0.077927293835155296592   0.077927293835155296592   2.9e-42   0.07793  True        -0.022072706
+  0.25  0.21954678740599844567    0.21954678740599844567    2.9e-42   0.21955  True        -0.030453213
+  0.4   0.38390079186514348908    0.38390079186514348908    0.0       0.38390  True        -0.016099208
+  0.5   0.5                       0.5                       0.0       0.50000  True        0.0
+  0.6   0.61609920813485651092    0.61609920813485651092    0.0       0.61610  True        0.016099208
+  0.75  0.78045321259400155433    0.78045321259400155433    1.1e-41   0.78045  True        0.030453213
+  0.9   0.92207270616484470341    0.92207270616484470341    1.1e-41   0.92207  True        0.022072706
+  closed form: h(p) = [erf(sqrt2 (p-1/2)) + erf(1/sqrt2)] / [2 erf(1/sqrt2)]
+  symmetry: h(p)+h(1-p) = 1.0
+
+==============================================================================
+C3  decomposition counterexample under C2
+==============================================================================
+  h(0.2) = 0.169327146748297   h(0.6) = 0.616099208134857
+  pure p=0.4           : 0.383900791865143   (spec 0.38390)
+  50/50 mix of 0.2,0.6 : 0.392713177441577   (spec 0.39271)
+  difference           : 0.008812385576
+  Under C1 (h=p): pure 0.4, mixture (0.2+0.6)/2 = 0.4 exactly.
+
+  NOTE: pure |psi> with p=0.4 and the 50/50 mixture of pure p=0.2, p=0.6 states have DIFFERENT
+  density matrices (off-diagonals).  Same-rho comparisons (Bloch vector r=(0,0,-0.2), rho=diag(0.4,0.6)):
+   A {p=1,p=0} w=.4,.6              rho_11=0.4 |rho_01|=0.0  outcome-1 freq = 0.4
+   B {p=.4 phi=0, p=.4 phi=pi}      rho_11=0.4 |rho_01|=1.01e-43  outcome-1 freq = 0.3839007919
+   C {.2/0,.2/pi,.6/0,.6/pi}        rho_11=0.4 |rho_01|=9.2e-44  outcome-1 freq = 0.3927131774
+  => same rho, three different frequencies under C2: rho-dependence also violated.
+
+==============================================================================
+HOSTILE side-checks
+==============================================================================
+(H1) interior zero of sigma, b = 0:  sigma(p) = 4 sqrt(kappa) p(1-p)|2p-1|
+   int_(1/4)^(1/2-1e-2) dx/sigma^2 = 24.55864227
+   int_(1/4)^(1/2-1e-4) dx/sigma^2 = 2499.578446
+   int_(1/4)^(1/2-1e-8) dx/sigma^2 = 24999999.58
+   -> diverges like 1/(4 (1/2-x)): 1/sigma^2 not locally integrable at 1/2 => 1/2 is an absorbing (natural, attracting) trap
+   started at p<1/2: p_t bounded martingale on [0,1/2], converges to 0 or 1/2,
+   P(->1/2) = 2p, P(->1) = 0.  So h(p) = 0 on (0,1/2], h(p) = 2p-1 on [1/2,1): martingale but NOT Born.
+   e.g. h(0.4) = 0 vs Born 0.4;  50/50 mix of {0,1}: 0.5 vs h(0.5) = 0  -> decomposition-dependent.
+
+(H2) both endpoints non-attracting (entrance): sigma^2=2p(1-p), b=(1/2-p)*c with c=3 (b set to 0 at endpoints)
+[H2] s'(x) = 1/(8*(x*(1 - x))**(3/2)),   m(x) = 8*sqrt(x*(1 - x))
+   eps=1e-4 : S=24.707575    M=0.61417952   Sigma=14.977385    N=0.19750167
+   eps=1e-8 : S=2499.7113    M=0.61418485   Sigma=1535.0871    N=0.19770009
+   eps=1e-16: S=25000000.0   M=0.61418485   Sigma=15354621.0   N=0.19770011
+   => boundary 0 is entrance (inaccessible, non-attracting)
+   s(0+)=-inf, s(1-)=+inf: recurrent in (0,1); p_t never converges => h = 0 on (0,1), h(1)=1.
+   h is constant on (0,1): interior decompositions give p-bar-independent value 0, yet h != p and b != 0.
+   With decompositions allowed to use the endpoints: 0.5 h(0)+0.5 h(1) = 0.5 != h(0.5) = 0, detected.
+
+(H3) b nonzero on a Lebesgue-null set N (e.g. b = 1 on rationals): occupation-time formula
+   int_0^t 1_N(p_s) ds = int 1_N(a) L_t^a / sigma^2(a) da = 0, so the drift integral vanishes:
+   law identical to b=0, h = p, p_t martingale, yet b != 0 pointwise.  Only b=0 a.e. is determined.
