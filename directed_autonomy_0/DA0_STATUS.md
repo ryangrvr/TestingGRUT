@@ -1,6 +1,7 @@
 # DA0 STATUS
 
-**State:** **C3 PM2 STAGE A COMPLETE — AWAITING OWNER REVIEW.** (C2 closed; C2 final handoff accepted.)
+**State:** **C3-D0 ARCHITECTURE DETECTOR QUALIFICATION — CHARTER / AUDIT ONLY, AWAITING OWNER REVIEW.** PM2 Stage A is
+accepted and closed. (C2 closed; C2 final handoff accepted.)
 
 **C2 terminal (accepted):** C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING ARCHITECTURE
 FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN. `C2_FINAL_HANDOFF.md` is the accepted terminal C2
@@ -31,10 +32,21 @@ handoff.
   - **P3:** ρ > 0, but generic and below the controls.
   - **Strahler:** fails beyond the controls.
   - **The Stage-A positive is NOT met; PM2-A PARTIAL is not reached.**
-  - **Proposed terminal (owner to rule):** PM2-B — GENERATED TREE / NETWORK — GENERIC TOPOLOGICAL HIERARCHY ONLY.
-  - **Residuals:** asymptotic τ (R1); fluctuation mechanism, **not opened** (R2); weak power of the invariants, since the
-    A2 supplied hierarchy is ≈ R-TREE (R3).
+  - **OWNER RULING: PM2 STAGE A ACCEPTED.** Terminal: **PM2-B — GENERATED TREE / NETWORK; REGISTERED HIERARCHY IS
+    GENERIC / RANDOM-TREE-LIKE; NO DISTINCT GROWING COLLECTIVE ARCHITECTURE ESTABLISHED.** Deterministic PM2 Stage A is
+    **CLOSED**; the Stage-A boundary is **`2139cc436e79782c231286f4437bdf62402140e0`**.
+  - **Scope firewall (PM2-O2):** this is not a universal negative, because A2 (a supplied hierarchy) is also not separated
+    by the registered suite.
+  - **R1** (asymptotic τ) is open and **not actionable**; no larger L will be run.
+  - **PM2-BIS is NOT opened.**
   - **TRUE COMPRESSION: 0.**
+- **C3-D0 — ARCHITECTURE DETECTOR QUALIFICATION** (`C3_D0_ARCHITECTURE_DETECTOR.md`): charter and candidate audit only;
+  **NOT RUN.**
+  - Controls: N0 R-TREE, N1 SP-TREE, P0 A2, **P1 ternary nested block tree** (new), and proposed ε-controls.
+  - **Primary detector:** coarse-skeleton recurrence Φ.
+  - Qualification rules Q1 – Q6.
+  - Terminals: D0-A / D0-B / D0-INDETERMINATE.
+  - Calibrated on controls only; PM2 Stage A is frozen.
 - **C3-B closed. No noise, no PM2-BIS.**
 - **Boundaries:** pre-repair charter `f266be2`; Repair 02 `31b5714`; preflight `dde3b94`; PM2 Repair 01 `86692eb`;
-  PM2 implementation declarations `c6de0fa`.
+  PM2 implementation declarations `c6de0fa`; **PM2 Stage A `2139cc4` (accepted)**.
