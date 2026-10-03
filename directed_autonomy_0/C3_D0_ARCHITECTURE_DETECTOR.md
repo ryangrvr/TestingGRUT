@@ -3,6 +3,12 @@
 **Status:** CHARTER / AUDIT ONLY. **No D0 control computation has been made.** No adaptive-flow simulation, no PM2-BIS,
 no C3-B.
 
+> **D0 CHARTER REPAIR 01 (§R at the end) supersedes the text below wherever they differ.**
+> - **Owner ruling:** charter CONDITIONAL PASS. After Repair 01 is committed, the D0 control computation is approved to
+>   run without another owner stop.
+> - Superseded by §R: the "vanishing fraction" wording (§D0-F2, §D0-F2.2), the Q3 rule and its interpretation, the Q6
+>   rule, and the D0-A grade labels.
+
 **Owner ruling that opens D0:**
 - PM2 deterministic Stage A is accepted. Terminal: **PM2-B — GENERATED TREE / NETWORK; REGISTERED HIERARCHY IS
   GENERIC / RANDOM-TREE-LIKE; NO DISTINCT GROWING COLLECTIVE ARCHITECTURE ESTABLISHED** (ledger PM2-O1 … O5).
@@ -368,3 +374,114 @@ Charter and audit only. **No D0 computation, no detector code, no PM2-BIS, no C3
 - Burd, Waymire & Winn, "A self-similar invariance of critical binary Galton–Watson trees", *Bernoulli* 6 (2000);
 - Flajolet, Sipala & Steyaert, "Analytic variations on the common subexpression problem", ICALP 1990;
 - Aho, Hopcroft & Ullman (1974): the rooted-tree isomorphism canonical form.
+
+
+## §R — D0 CHARTER REPAIR 01 (owner review of `e52a276`; before any D0 computation)
+
+### D0-O1 — P1 accepted
+
+The deterministic nested 3 × 3 block tree (§D0-F2.1) is the second supplied hierarchy. Its BFS block-level routing does
+not disqualify it:
+- N1 controls directly for the BFS / comb confound;
+- P1's supplied architectural content is the **growing recursive nesting**;
+- P1 differs from P0 in recursion arity, branching multiplicity, mass ratios and junction geometry.
+
+P1 is graded **ARCHITECTURE SUPPLIED**. It can never count as a physical C3 result.
+
+### D0-O2 — Φ accepted as the primary; scales frozen; scope
+
+The primary is **Φ** as in §D0-F4:
+- units: light nodes with S_v ≥ ⌈√N⌉;
+- skeleton resolution μ_v = ⌈√S_v⌉;
+- canonical heavy-light decomposition (a tied maximum means no heavy child);
+- homeomorphic reduction;
+- AHU rooted-isomorphism classes.
+
+**The exponents ½ (in √N and √S) are frozen** and will not be varied after results.
+
+**Scope.** Φ is an **operational detector of pathwise recurrence of collective coarse branching motifs across scales**.
+- "Φ qualified" does **not** mean all possible mathematical notions of hierarchy are identified.
+- A Φ failure rejects **this operational definition**. It does not show that hierarchy is impossible or undetectable.
+
+### D0-O3 — ε-controls and Q6 kept; scale-range wording corrected
+
+**Correction.** The earlier statement that randomising below N^{1/3} affects a "vanishing fraction" of the scale range is
+**false** on a logarithmic mass scale: log(N^{1/3}) / log N = 1/3.
+
+**Correct statement.** P0-ε / P1-ε preserve a **growing majority** (asymptotically about **two-thirds**, modulo discrete
+recursion levels) of the supplied recursive log-mass range, while replacing a **non-vanishing fine-scale portion** (about
+**one-third** of the log-mass range) with random-tree structure.
+- The randomised portion is not vanishing.
+- This makes Q6 a **substantial** robustness test.
+
+### D0-O4 — Q3 and Q6 repaired (exact algebra, fixed before computing)
+
+**Notation.** For each family F and its ordered grid L_1 < … < L_m (G2: m = 4; G3: m = 3):
+- **m_R(L), h_R(L):** the N0 sample mean and 95% t half-width over seeds 1 – 20, with h = t_{0.975, 19} · s / √20. A
+  zero sample s.d. gives h = 0.
+- **lo_X(L) / up_X(L):** m_X ∓ h_X for any 20-seed ensemble X.
+
+**Deterministic positives (F = P0 on G2, F = P1 on G3):**
+
+| ID | exact rule |
+|---|---|
+| **Q1** | for all j: Φ_F(L_j) > up_R(L_j) |
+| **Q2** | for all j: Φ_F(L_j) > Φ_{N1}(L_j) |
+| **Q3** | let Δ_j = Φ_F(L_j) − m_R(L_j). For every adjacent pair j = 1 … m − 1: **Δ_{j+1} ≥ Δ_j − [h_R(L_j) + h_R(L_{j+1})]** (and Q1 at every size) |
+| **Q4** | the detector reads only the parent array (code inspection, plus the relabelling unit test, D0-O6) |
+| **Q5** | Φ is defined and computed for N0 and N1 with no special-casing beyond Φ := 0 for \|U\| ≤ 1 |
+
+**ε-positives (Fε = P0-ε on G2, Fε = P1-ε on G3; seeds 1 – 20):**
+
+| ID | exact rule |
+|---|---|
+| **Q6.1** | for all j: **Δlow_j = lo_{Fε}(L_j) − up_R(L_j) > 0** |
+| **Q6.2** | for all j: lo_{Fε}(L_j) > Φ_{N1}(L_j) |
+| **Q6.3** | let Δε_j = m_{Fε}(L_j) − m_R(L_j). For every adjacent pair: **Δε_{j+1} ≥ Δε_j − [h_{Fε}(L_j) + h_{Fε}(L_{j+1}) + h_R(L_j) + h_R(L_{j+1})]** |
+
+**Q6** passes for a family iff Q6.1 – Q6.3 all hold.
+
+**Interpretation (renamed).** A pass of Q3 / Q6.3 means **SCALE-STRUCTURAL, NON-SHRINKING OVER THE PREREGISTERED FINITE
+GRID**. It does not mean "asymptotically proved". A D0-A pass establishes empirical scale-structural separation over the
+tested growing sequences, not a thermodynamic-limit theorem.
+
+### D0-O5 — Grids fixed
+
+Exactly G2 = {16, 32, 64, 128} and G3 = {27, 81, 243}. N0 and N1 are evaluated on both. No sizes are added after results.
+
+### D0-O6 — Implementation firewall
+
+**Before** any control value is computed:
+1. Implement Φ exactly as chartered (`c3/d0_detector.py`), reusing the Stage-A tree code unchanged.
+2. Write unit tests (`c3/d0_tests.py`) for:
+   - (a) **relabelling invariance:** a random permutation of node labels leaves Φ unchanged;
+   - (b) **rooted-isomorphism invariance:** children-order permutations leave Φ unchanged, and isomorphic trees built
+     differently give equal Φ;
+   - (c) **analytic N1:** Φ(N1) = 0 with \|U\| = 0, at all grid L (LEMMA D0-N1);
+   - (d) **analytic hand cases:** a path gives Φ = 0; the complete binary tree of depth 6 gives Φ = 6/7. Derivation: 14
+     units, at subtree depths 3 / 4 / 5 (8 / 4 / 2 of them). Their skeletons are a cherry, the depth-2 complete tree, and
+     the depth-2 complete tree, so there are 2 classes;
+   - (e) **construction validity** (not Φ): P1 and the ε-trees are spanning trees using only lattice edges.
+3. **Do not inspect** P0 / P1 / N0 / ε Φ values while modifying the implementation, except to debug a violation of these
+   exact tests. Any such inspection is recorded in the additive ledger before the final computation is rerun.
+
+**Secondary diagnostics** (cannot rescue Φ), with implementation fixed here:
+- exact class count D(T) and its log-log slope;
+- Horton ratio R_B (geometric mean of N_k / N_{k+1}), with Tokunaga T_1, T_2 and c = T_2 / T_1;
+- light depth λ = mean light-edge count to the root / log₂N;
+- a two-sample KS statistic of the light fraction q over nodes with S ∈ [√N, N), for P vs pooled N0;
+- τ, η_H and Strahler (Stage-A definitions).
+
+### D0-O7 — Qualification grades (supersede the D0-A row of §D0-T)
+
+| ID | grade | requirement |
+|---|---|---|
+| **D0-A-N** | **CANONICAL HIERARCHY DETECTOR QUALIFIED — NOISE-TOLERANT** | Q1 – Q5 for P0 **and** P1, **and** Q6 for P0-ε **and** P1-ε. **This is the only grade that, by itself, may support a later owner decision to apply Φ to a stochastic / physically generated tree family** |
+| **D0-A-T** | **CANONICAL TEMPLATE-HIERARCHY DETECTOR QUALIFIED — TEMPLATE-ONLY** | Q1 – Q5 for P0 and P1, but Q6 fails for at least one ε-family. Φ recognises supplied deterministic recursive motifs. It is **not** shown fit for PM2-BIS or another noisy generator. This is an instrument result, **not a failure** |
+| **D0-B** | **REGISTERED TREE OBSERVABLES INSUFFICIENT — HIERARCHY NOT OPERATIONALLY IDENTIFIED** | the primary fails Q1 – Q5 for P0 or P1 |
+| **D0-INDETERMINATE** | stated technical obstruction only | |
+
+### D0-O8 — Run scope
+
+Run only N0, N1, P0, P1, P0-ε and P1-ε, at exactly the preregistered grids and seeds. **PM2 Stage-A trees are not
+scored.** No PM2-BIS, no C3-B.

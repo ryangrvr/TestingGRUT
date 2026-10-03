@@ -228,3 +228,22 @@ no new branch or tag is created.
 | **PM2-O5** | **Next gate: C3-D0 — ARCHITECTURE DETECTOR QUALIFICATION** (`C3_D0_ARCHITECTURE_DETECTOR.md`). Charter and candidate audit only, calibrated on controls only. PM2 Stage-A outputs are frozen and may not be used to tune a detector. No D0 computation is made until the detector choice and the second positive hierarchy are preregistered and reviewed |
 
 **Preserved:** PM1 terminal; all previous boundaries; RA0-frozen `ab4fd86`. **C3-B closed. No PR. No merge.**
+
+## D0 CHARTER REPAIR 01 (owner review of `e52a276`; before any D0 computation)
+
+**Ruling:** C3-D0 CHARTER CONDITIONALLY ACCEPTED. After this repair is committed, the D0 control computation is approved
+to run without another owner stop. The repaired text is `C3_D0_ARCHITECTURE_DETECTOR.md` §R.
+
+| ID | correction |
+|---|---|
+| **D0-O1** | P1 (nested 3 × 3 block tree) accepted as the second supplied hierarchy; ARCHITECTURE SUPPLIED; never a C3 result |
+| **D0-O2** | Φ accepted as the primary. The √N / √S exponents are frozen. **Scope:** an operational detector of pathwise recurrence of collective coarse branching motifs; a failure rejects this operational definition only |
+| **D0-O3** | **Wording error corrected.** Randomising below N^{1/3} is **not** a vanishing fraction of the log-mass range; it is about **one-third**. The ε-controls keep about **two-thirds** of the supplied recursive range (a growing majority). Q6 and the ε-controls are kept as a substantial robustness test |
+| **D0-O4** | Q3 replaced by an adjacent-pair non-shrinking rule: Δ_{j+1} ≥ Δ_j − [h_R(L_j) + h_R(L_{j+1})]. Q6 is made exact: Δlow_j = lo_{Fε} − up_R > 0 for all j; lo_{Fε} > Φ_{N1}; adjacent non-shrinking with the combined Fε and R half-widths. Interpretation: **scale-structural, non-shrinking over the preregistered finite grid**, not asymptotically proved |
+| **D0-O5** | Grids fixed exactly: G2 = {16, 32, 64, 128}, G3 = {27, 81, 243} |
+| **D0-O6** | Implementation firewall: detector plus unit tests (relabelling, children-order and isomorphism invariance; analytic N1 Φ = 0; path Φ = 0; complete binary depth 6 Φ = 6/7; construction validity) **before** any control value. No inspection of control Φ while modifying code, except for exact-test violations, which must be ledgered |
+| **D0-O7** | Grades: **D0-A-N** (noise-tolerant; the only grade that may support applying Φ to a stochastic generator) / **D0-A-T** (template-only; an instrument result, not a failure) / D0-B / D0-INDETERMINATE |
+| **D0-O8** | Run only N0, N1, P0, P1, P0-ε, P1-ε on the fixed grids and seeds. PM2 trees are not scored |
+
+**Preserved:** PM2 Stage-A boundary `2139cc4`; PM2-B and its scope firewalls; all C2 / C3 boundaries; RA0-frozen
+`ab4fd86`. No PM2-BIS, no C3-B, no PR, no merge.
