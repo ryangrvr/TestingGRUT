@@ -109,3 +109,20 @@ FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN. C3 not 
 
 **Applied to:** `C2_CHARTER.md`, `C2_GROWING_ARCHITECTURE.md`, `DA0_ZOOM_OUT_02.md`, `DA0_STATUS.md`. Created
 `C2_FINAL_HANDOFF.md`.
+
+## C3 CHARTER REPAIR 01 (owner review of `f266be2`; charter only, no computation)
+
+**Owner ruling:** C3 CHARTER CONDITIONALLY ACCEPTED — PRIMARY MODEL ACCEPTED, REPAIR BEFORE RUN. The pre-repair boundary
+is `f266be2f6432e4c8de6c73a183ea5135fe816a8e`.
+
+| ID | correction |
+|---|---|
+| **C3R-01** | "n = 1 ⇒ no architecture" and "architecture needs n ≠ 1" are **withdrawn**. At T = T′ the σ-marginal is uniform, but J \| σ ~ N(s_b/μ, T/μ) keeps bond / loop correlations (plaquette ⟨ΠJ_b⟩ = 1/μ⁴). CPS mean-field has an ordered q > 0 phase for n ≤ 2, including n = 1. A1′ is renamed **EQUILIBRIUM ADAPTIVE-COUPLING COMPARATOR**; A0 / A1 remain the nulls. For T ≠ T′, the two reservoirs are supplied, and entropy production / heat flow is to be calculated at finite ε, not asserted |
+| **C3R-02** | Primary analytic object: **𝓕_T(J) = (μ/2)ΣJ_b² − T log Z_T(J)**, with dJ/dt = −ε∇𝓕_T + slow noise. Stationary points depend on (T, μ), **not on T′**. Hessian μδ − (1/T)Cov_J(s_b, s_b′). Exact linear instability of J = 0 at **T = 1/μ** |
+| **C3R-03** | **C3-F2:** exact local gauge symmetry σ_i → η_iσ_i, J_ij → η_iη_jJ_ij. Architecture is counted modulo all exact symmetries, using gauge-invariant observables. No gauge fixing may generate K-growth. Generated gauge-invariant frustration is distinguished from gauge copies |
+| **C3R-04** | The pairwise median-PR criterion is withdrawn: it certifies independent product bits (PR ~ N/2). It is replaced by **PR_edge on elementary transitions** (independent bits → O(1)), plus a non-vanishing contrast **liminf S_ab > 0** |
+| **C3R-05** | **C3-M1 resolved model-specifically.** Detector = symmetry-inequivalent stable minima of 𝓕_T joined by canonical minimum-barrier saddles, with diverging barriers / exit times. No clustering, PCCA, chosen K, lag-time partitions or fitted macrostate count. C3-A1 requires growth **and** collective edges **and** growing barriers |
+| **C3R-06** | **Analytic preflight first** (landscape → symmetries → stability → loop expansion → bond-local vs collective), on separate approval. No large-lattice simulation before review |
+| **C3R-07** | **CPS motivates the mechanism; it does not validate the local lattice theory.** The analysed CPS model is mean-field / infinite-range; the nearest-neighbour version is a new construction |
+
+**C3-B stays closed. No C3 code, no C3 calculation.**

@@ -14,6 +14,8 @@ handoff.
 - CONJECTURE C2-B is **open**.
 - TRUE COMPRESSION: **0**.
 
-**C3 CHARTERED — NOT RUN; AWAITING OWNER REVIEW** (`C3_CHARTER.md`).
-- **Open item before any run:** the canonical scalable detector, C3-M1.
-- **Proposed primary model** (subject to review): local two-temperature adaptive-coupling Ising, CPS-type.
+**C3 CHARTER: CONDITIONAL PASS; primary model ACCEPTED** (local adaptive-coupling Ising, CPS-type).
+- **C3 CHARTER REPAIR 01** (C3R-01 … 07) applied.
+- **NOT RUN; AWAITING OWNER REVIEW.**
+- **Next, only on separate approval:** the analytic preflight (§3.5″). No simulation before that.
+- **Pre-repair charter boundary:** `f266be2f6432e4c8de6c73a183ea5135fe816a8e`.
