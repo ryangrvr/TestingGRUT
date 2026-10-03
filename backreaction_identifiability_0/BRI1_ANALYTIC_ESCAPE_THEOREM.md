@@ -184,3 +184,43 @@ hard to escape for large reservoirs. The SCOUT-0 saturation verdict is not reope
 
 **X1 numerical evidence:** the 20 frozen-τ PF4Q values are banked unchanged as supporting evidence only. They were not
 rerun and not used. No certified pipeline, no N_B grid run, and no D_orb.
+
+## §T4-R — Owner ruling and reservoir-limit scope repair (additive; supersedes T4 / T6 wording where they differ)
+
+**Ruling (review of `845b513`):**
+- **BRI1-X1-THEOREM accepted.**
+- **BRI-E2+O earned at class-theorem level for X1.**
+- Status: INTERNALLY PROVED / NOT EXTERNALLY REVIEWED. δ and N₀ are existential, and the frozen-τ PF4Q grade remains
+  indeterminate.
+
+**Owner reading (accepted).** There exists δ > 0 such that, **for every fixed t ∈ (0, δ)**, there is a finite threshold
+N₀(t) with the X1 interventional force family outside E₂± for all finite N_B ≥ N₀(t). T2 holds for every fixed
+t* ∈ (0, δ), so this form follows directly. It contains the existential-t* statement.
+
+**Scope repair.** The phrases "it is in **E₁** at the fdd level", "the protocol-independent Gaussian of the E₁ class" and
+"returns to the … (E₁) class" (T4, T6) are narrowed to the following.
+
+> **E₁-TYPE RESERVOIR LIMIT FOR THE FROZEN / POINTWISE-FIXED PROTOCOL FAMILY.**
+> - For the frozen Candidate-1 protocols P0 / P1 / P2, the centred finite-dimensional force laws converge to the
+>   **same** Gaussian law, with covariance C₀.
+> - The same pointwise argument applies to any separately fixed admissible bounded clamp for which the BRI1-R1 moment
+>   estimates hold.
+> - **No theorem** establishes one shared E₁ representation **uniformly over the entire infinite clamp class 𝒳**. It is
+>   not needed for BRI1-X1 and is not claimed.
+
+**Still accepted:**
+- the standardised-skewness witness is O(N_B⁻¹);
+- the witness vanishes as N_B → ∞;
+- the frozen Candidate-1 centred laws converge to the common Gaussian linear-response limit.
+
+**Frozen-τ firewall (permanent):** **PF4Q-I / X1-PF-INDETERMINATE AT THE FROZEN τ.** The 20 τ-values remain strong
+numerical evidence only, not certified, and are not rerun.
+
+**Relation to P-17 / P-18 (precise wording; supersedes the T6 paragraph).**
+- P-17 and P-18 are **not** overturned. P-17 remains exact for class 𝓗, and P-18 remains exact for its one-way-driver
+  class.
+- What is established: **the P-17 / P-18 non-identifiability mechanism does not extend universally from their tested
+  classes to all finite reciprocal anharmonic baths under the restricted affine competitor E₂±. X1 is an explicit
+  counterexample.**
+- BRI-UPPER is intact: X1 ∈ E_univ.
+- The result locates the boundary of the **affine quotient**, not the boundary of universal exogenous representation.
