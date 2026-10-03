@@ -49,3 +49,18 @@ MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D — A-PRICED**. The original log is
 - **Wording discipline (standing).** At the logged finite sizes, the N4b sufficient quantity q_max·η/g² is still > 1 for
   R1a and R5 and ≈ 1 for R2 at the largest M. Their certification is **asymptotic, from the analytic 1/M scaling**, not
   from having entered a numerically small-error regime.
+
+## DA0 C2 CHARTER REPAIR 01 (owner review of `92393d1`; before any C2 computation)
+
+| ID | correction |
+|---|---|
+| **C2R-01** | Bounded description alone does not separate emergent from encoded architecture. **C2-F3′** requires both a DESCRIPTION TEST and an ARCHITECTURE-EXPLICITNESS TEST (no tree / level / basin / block / layer-count / level-indexed coupling / isomorphic latent variable). Otherwise the family is ARCHITECTURE EXPLICIT IN FAMILY, and recovery is graded ARCHITECTURE SUPPLIED BY FAMILY |
+| **C2R-02** | GREM / CREM rejected as strong E1 (hierarchy explicit) and moved to the P1 comparator class. E1 is chosen after a recorded audit: **East model** (C2 §6a) |
+| **C2R-03** | **C2-F6:** forbidden are supplied macro-units, subject units, subsystem blocks and recovery grains. Allowed but priced are microscopic sites / spins, locality and local rules. Microscopic sites may not be relabelled as emergent architecture |
+| **C2R-04** | C2-A1 is split into **A1a** (abstract: K, p_min, C_V, s) and **A1b** (family → s). s = O(η/g) with a K-independent constant is not assumed. K-dependence of every constant is reported |
+| **C2R-05** | Primary metric **m_rel = min_σ max_i π(B_i Δ B̂_σ(i))/π(B_i)**, with the permutation chosen on the audit side only. It is bounded explicitly from the idempotent errors. s·K^{3/2} → 0 is a candidate sufficient condition only |
+| **C2R-06** | The "gap-free ⇒ maybe K-uniform" inference is withdrawn. Gap-free concerns coefficient separation, not dimension. Whether K^{3/2} is a proof artefact remains open |
+| **C2R-07** | Nesting metric ν; no forced nesting, no hierarchical-clustering optimisation; exact numerical nesting is evidence only |
+| **C2R-08** | **C2-F7** disorder firewall |
+| **C2R-09** | H1 and H2 get dual grades (… and ARCHITECTURE SUPPLIED BY FAMILY). H1 must account for n·λ_s/g → 0 for the 2^n slow sector to separate |
+| **C2R-10** | CONJECTURE C2-B is stated only under an explicit locality / rate / temperature class, and is not inferred from the product bound spread ≥ R^d |
