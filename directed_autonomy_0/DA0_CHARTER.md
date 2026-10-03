@@ -1,5 +1,9 @@
 # DA0 CHARTER — GRUT DIRECTED AUTONOMY CONSTRUCTION 0
 
+> **DA0 CHARTER REPAIR 01** (DC1-01 … 04; `DA0_CORRECTION_LEDGER.md`) applied **before any computation**. These are
+> preregistration repairs, not post-hoc changes. Owner ruling: **C0 and the C0 → C1 → C2 → C3 sequence approved; C1
+> APPROVED TO RUN** after this repair, with no second approval round.
+
 **Branch:** `grut-directed-autonomy-0`, based on `grut-reflexive-autonomy-0-frozen @ ab4fd860ebbc72a6a3c0c5dd1ff2cef52616b7f5`.
 
 **Status.**
@@ -118,8 +122,18 @@ a **canonically directed** coarse structure without supplying:
   - the time reversal P* (the π-adjoint);
   - the symmetric part S = (G + G*)/2 and the antisymmetric part A = (G − G*)/2;
   - the stationary probability flux J(x, y) = π(x)G(x, y) − π(y)G(y, x);
-  - the entropy production rate (Schnakenberg; zero iff reversible);
-  - the cycle decomposition of J (Kalpazidou / Schnakenberg, KNOWN);
+  - **[DC1-01] Canonical:**
+    - the stationary edge current J_xy = π_x G_xy − π_y G_yx;
+    - the cycle space / circulation subspace of the transition graph;
+    - edge affinities, where defined.
+  - **[DC1-01] Basis-priced / diagnostic only:** any particular fundamental-cycle decomposition of J. It depends on a
+    cycle basis or spanning tree and on orientation conventions, unless C1 proves a basis-independent selector. A
+    "canonical cycle" must be identified invariantly from D; otherwise the terminal is **FLUX STRUCTURE ONLY — NO
+    CANONICAL CYCLE**.
+  - **[DC1-01] Entropy production.** For a finite jump process with **mutually supported** forward and backward
+    transitions, EP = ½ Σ_xy J_xy log[(π_x G_xy)/(π_y G_yx)] ≥ 0, with EP = 0 iff detailed balance holds. If one-way
+    edges occur, the extended convention (EP = +∞) must be stated explicitly; the finite formula is not to be applied
+    silently. All C1 families are built with mutually supported edges.
   - Riesz spectral projectors E = (2πi)^{−1} ∮_Γ (z − G)^{−1} dz for spectral sets separated by a cut. These are
     canonical and basis-free but **not orthogonal**; the real Schur form is used only as numerics.
 - **Known starting point.** Conrad, Weber & Schütte, "Finding dominant structures of nonreversible Markov processes",
@@ -128,7 +142,22 @@ a **canonically directed** coarse structure without supplying:
   paraphrase, this literature. Any reliance on a chosen number of Schur vectors or a crispness objective violates
   C0-P2 / C0-P4.
 
-### 3.3 The orientation price (preregistered before any computation)
+### 3.3 The orientation price (preregistered before any computation; repaired by DC1-03)
+
+**[DC1-03] What is supplied.**
+- Choosing P rather than P* supplies **one binary orientation convention**.
+- Separately, the antisymmetric component A = (G − G*)/2 and the current J generally carry **much more** than one bit.
+  They are part of the **supplied microscopic dynamics D**.
+- C1 must therefore **not** claim that rich directed macrostructure is new information beyond D.
+- The only possible positive grade is **CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D**.
+
+**[DC1-03] Structural test for "more than the global bit":**
+- under P → P*, every directed quantity must reverse covariantly;
+- two families with the same π and the same symmetric part S, but inequivalent antisymmetric parts A₁ and A₂, are
+  allowed to induce different macro-flux structures. That dependence is **A-PRICED**, not TRUE COMPRESSION.
+- None of this is orientation selection: C1 inherits a forward kernel.
+
+**Original §3.3 text** (retained; superseded where it differs):
 
 Specifying the forward kernel P_N (rather than P*_N) already fixes **one global bit**: the direction of time in which the
 dynamics is given. This bit is **priced as supplied**.
@@ -146,10 +175,10 @@ If every directed feature reduces to the single global bit applied to a reversib
 
 | item | question |
 |---|---|
-| C1.1 | **Cut criterion without self-adjointness.** Eigenvalues are complex. Preregister a no-ε criterion: a cut between spectral sets diverges iff the ratio of relaxation rates (Re) across it diverges along a rank-indexed sequence. **Price the non-normality:** Riesz projector norms ‖E_N‖ may grow, and a cut whose projector norm diverges must be reported, not hidden |
+| C1.1 | **[DC1-02] Cut criterion without self-adjointness.** Use the decay rate r(λ) = −Re λ ≥ 0. A divergence r_fast/r_slow → ∞ is **only the timescale criterion**. For non-normal G it does not by itself give a stable invariant subspace. Candidate spectral sets must be **closed under complex conjugation**, so the Riesz range is real. For each candidate cut report: the Riesz projector E_N; ‖E_N‖; K_N(Γ) = (length Γ / 2π)·sup_{z∈Γ} ‖(z − G_N)^{−1}‖; and pseudospectral / eigenvector conditioning. Perturbative results need the **contour-resolvent product to vanish**. A diverging decay-rate gap with exploding projector or resolvent conditioning is **SPECTRAL SEPARATION PRESENT — NONNORMAL RECOVERY UNSTABLE**: it may support C1 INDETERMINATE and is **not** promoted to a recovered macrostructure. The contour is not a modelling input when it merely encloses an already spectrally defined, conjugation-closed set, since the Riesz projector does not depend on the contour within the resolvent set. All requirements are asymptotic limits; no finite tolerance |
 | C1.2 | **Subspace convergence.** Davis–Kahan does not apply. Allowed tools: Kato-type resolvent-contour perturbation bounds, with pseudospectral / condition-number dependence stated explicitly. Find the non-reversible analogue of G4-T and price every new constant |
 | C1.3 | **Algebra or not.** Does the Riesz range approach a unital commutative function algebra (Gelfand, finite case, inherited from G4-F)? The L²(π) defect is used and priced. Possible outcomes: a partition algebra, a non-algebraic cycle sector, or a mixture |
-| C1.4 | **Directed macro-dynamics.** If a partition is recovered, is the induced macro-generator non-reversible, with nonzero macro-flux / cycle affinities fixed by D? If no partition, is the dominant structure a cycle or flux, and is it canonical? |
+| C1.4 | **[DC1-04] Split into C1-P and C1-D.** **C1-P:** can non-reversible D yield a macro-partition / algebra without supplied labels, K, objective or ε? **C1-D:** *conditional on* a recovered partition, does the induced macro-generator Q carry nonzero stationary current, entropy production or directed connectivity? A positive C1-D with a negative C1-P does **not** earn a directed endogenous partition. If there is no partition but J has canonical flux structure, report that separately. For any recovered Q, compare Q with Q*: the undirected partition must be covariant, the macro current and the affinities must change sign, and no supplied cycle basis may be used. **Original C1.4 wording:** | If a partition is recovered, is the induced macro-generator non-reversible, with nonzero macro-flux / cycle affinities fixed by D? If no partition, is the dominant structure a cycle or flux, and is it canonical? |
 | C1.5 | **Blind recovery.** Can the RA0 / G5 map R (or a non-reversible analogue) be applied without labels, with recovery = certification separated as in RA3-03? |
 | C1.6 | **Comparator table** (§2.3) for every positive |
 
@@ -158,7 +187,7 @@ If every directed feature reduces to the single global bit applied to a reversib
 | control | construction | expected-if-correct (preregistered) |
 |---|---|---|
 | R0 | RA0 family F1 (reversible) | zero entropy production; reproduces G5; directed content = global bit only |
-| R1 | F1 plus a π-preserving divergence-free circulation inside and between blocks (non-reversible, same π) | tests whether the partition survives and whether the macro-flux is endogenous |
+| R1 | **[DC1-03] matched pair**: same F1 reversible skeleton, same π, same symmetric part S, with two non-collinear divergence-free circulations: R1a between blocks, R1b inside blocks | separates "reversing one global arrow" from the detailed current topology carried by A |
 | R2 | metastable cycle: K basins on a ring, inter-basin forward rate ≫ backward rate | candidate NONREVERSIBLE PARTITION with directed macro-cycle |
 | R3 | biased walk on a ring (no metastability) | candidate CYCLE / FLUX STRUCTURE ONLY — NO PARTITION |
 | K1 | two-state metastable bit; thermostat-type feedback chain | must not be classed as a novel directed structure |
@@ -172,12 +201,26 @@ Controls are **not** to be multiplied to accumulate examples. Further families n
 
 - **NONREVERSIBLE PARTITION DERIVATION** — with directed macro-dynamics whose directed content exceeds the global bit.
 - **CYCLE / FLUX STRUCTURE ONLY — NO PARTITION** — a canonical dominant cycle / flux structure with no partition algebra.
+  [DC1-01] "Cycle" here requires an invariantly identified cycle. Otherwise use **FLUX STRUCTURE ONLY — NO CANONICAL
+  CYCLE**.
+- [DC1-02] **SPECTRAL SEPARATION PRESENT — NONNORMAL RECOVERY UNSTABLE** — a sub-terminal that can support
+  C1 INDETERMINATE.
+- [DC1-03] The positive grade is named **CONDITIONAL DERIVATION OF DIRECTED MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D**.
   This is **not** a failure: it may be more relevant to self-sustaining internal processing than a static partition.
 - **DIRECTIONALITY REQUIRES SUPPLIED ORIENTATION / DECOMPOSITION** — all directed content reduces to the supplied global
   bit, or needs a supplied decomposition.
 - **C1 INDETERMINATE** — reserved for a stated technical obstruction.
 
 Terminals may be reported **per family**. They are not to be collapsed into a single verdict.
+
+### 3.6a C1 final information accounting [DC1-04]
+
+Every positive terminal must distinguish:
+- **Derived:** the macro-partition (if earned); the macro-current topology and directed relations (if earned).
+- **Supplied:** the microscopic non-reversible generator D; its forward-time convention; irreducibility; family and
+  scaling assumptions; any non-normal regularity required.
+- **Not earned:** orientation from orientation-free laws; consciousness; inside / outside; subsystem factorisation; TRUE
+  COMPRESSION unless a frozen residual is actually removed.
 
 ### 3.7 C1 hard stop
 
