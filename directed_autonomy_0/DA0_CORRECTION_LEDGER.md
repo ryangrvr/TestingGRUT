@@ -126,3 +126,14 @@ is `f266be2f6432e4c8de6c73a183ea5135fe816a8e`.
 | **C3R-07** | **CPS motivates the mechanism; it does not validate the local lattice theory.** The analysed CPS model is mean-field / infinite-range; the nearest-neighbour version is a new construction |
 
 **C3-B stays closed. No C3 code, no C3 calculation.**
+
+## C3 CHARTER REPAIR 02 (owner review of `38febe1`; before the analytic preflight)
+
+**Owner ruling:** Repair 01 accepted; primary model remains accepted. **Analytic preflight APPROVED after Repair 02. No
+simulation.**
+
+| ID | correction |
+|---|---|
+| **C3R-08** | A plaquette (or any bounded loop) is the first gauge-invariant **inter-bond interaction**, not C3 collectivity. Its support is bounded, so its participation is O(1), and it does not satisfy C3-A1. The preflight question is whether bounded loop interactions bootstrap into extended, symmetry-inequivalent metastable structures |
+| **C3R-09** | The primary dimension is **fixed at d = 3 before results**. d = 1, 2 are analytic controls only |
+| **C3R-10** | Mandatory ferromagnetic-envelope test: Z_T(J) ≤ Z_T(\|J\|), so 𝓕_T(J) ≥ 𝓕_T(\|J\|), with strictness. It constrains global minima only. The key question is frustrated **local** minima with diverging barriers |

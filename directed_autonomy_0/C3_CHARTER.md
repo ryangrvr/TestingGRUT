@@ -4,6 +4,8 @@
 > - **Owner review:** CONDITIONAL PASS. **Primary model ACCEPTED** (local adaptive-coupling Ising). **DO NOT RUN YET.**
 > - **Pre-repair charter boundary:** `f266be2f6432e4c8de6c73a183ea5135fe816a8e`.
 > - Where wording differs, the repaired text and the ledger take precedence.
+> - **C3 CHARTER REPAIR 02** (C3R-08 … 10) was applied **before the analytic preflight**. **Analytic preflight APPROVED;
+>   no simulation.**
 
 **Status:** CHARTER ONLY — **NOT RUN; AWAITING OWNER REVIEW.** No C3 code exists and no C3 experiment has been run.
 
@@ -153,7 +155,10 @@ level-dependent rules, initial conditions, external drive or a supplied objectiv
 **PROPOSED: LOCAL TWO-TEMPERATURE ADAPTIVE-COUPLING ISING MODEL** (a CPS-type law on a lattice).
 
 **Rule:**
-- spins σ_i = ±1 on a d-dimensional hypercubic lattice with periodic boundaries;
+- spins σ_i = ±1 on a d-dimensional hypercubic lattice with periodic boundaries. **[C3R-09] The primary dimension is
+  fixed at d = 3, before any result,** because C3 tests whether dynamically generated couplings can produce the
+  collective / frustrated architecture for which C2-E2 considered the 3D EA setting. d = 1 or 2 may be used **only as
+  analytic controls**, and cannot replace d = 3 without a later owner ruling;
 - **one real coupling J_ij per nearest-neighbour bond** (W);
 - **fast:** heat-bath Glauber for σ at temperature T, with H(σ | J) = −Σ J_ij σ_i σ_j;
 - **slow:** Langevin for each J_ij at temperature T′:
@@ -226,7 +231,7 @@ The first C3-A calculation, **once separately approved**, is analytic only:
 2. derive its exact symmetries and the gauge quotient;
 3. derive the stability of the homogeneous state (T_lin = 1/μ and beyond);
 4. carry the high-temperature / loop expansion of log Z_T(J) far enough to find the **first coupling between adaptive
-   bonds**. Bond-local terms come first; genuinely collective, gauge-invariant terms enter through closed loops, starting
+   bonds**. Bond-local terms come first; [C3R-08 corrected] the **first gauge-invariant inter-bond interaction** enters through closed loops, starting
    at plaquettes on the hypercubic lattice;
 5. decide whether the first generated structure is **bond-local bookkeeping** or **genuinely loop / collective**.
 
@@ -247,6 +252,27 @@ The first C3-A calculation, **once separately approved**, is analytic only:
      not an endogenous partition.
 
 **No K, ε (cut), tolerance, depth or module count enters any physical definition.**
+
+### 3.5‴ Repair 02 additions [C3R-08, C3R-10]
+
+**[C3R-08] A plaquette is not C3 collectivity.**
+
+| term | what it is |
+|---|---|
+| bond-local term | one-bond bookkeeping |
+| plaquette term | the **first gauge-invariant inter-bond interaction**. It has **bounded support** (four bonds), so its participation stays **O(1)** under C3-F1 / §3.2a, and it does **not** by itself satisfy C3-A1 |
+
+The preflight question is therefore not "do plaquette terms occur?" but **"can the bounded local loop interactions
+bootstrap into symmetry-inequivalent extended metastable structures?"**
+
+**[C3R-10] Ferromagnetic-envelope hostile theorem (mandatory, before any simulation).**
+- **To prove or falsify, using the exact even-subgraph expansion:** Z_T(J) ≤ Z_T(|J|), hence 𝓕_T(J) ≥ 𝓕_T(|J|), with
+  precise strictness conditions.
+- **Expected consequence:** the global minimisers lie in the unfrustrated / ferromagnetic gauge class.
+- **What it does not do:** it does **not** rule out frustrated local metastable minima.
+- **Key hostile question:** can the adaptive landscape have a growing number or depth of symmetry-inequivalent
+  **frustrated local minima with diverging barriers**, despite the unfrustrated global envelope?
+- Dynamically generated bond disorder is **not** to be read as spin-glass architecture unless this is addressed.
 
 ### 3.6 Required hostile controls
 
