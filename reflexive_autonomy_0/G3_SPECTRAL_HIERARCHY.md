@@ -1,5 +1,8 @@
 # RA0 · G3 — CANONICAL ASYMPTOTIC SPECTRAL HIERARCHY (result)
 
+> **Repaired by RA0 REPAIR 02** (RA2-01 … 05; `RA0_CORRECTION_LEDGER.md`). G3 is accepted provisionally after this repair.
+> Where wording differs, the ledger takes precedence. Logs are kept as emitted; all numerical values are preserved.
+
 **Central question.** Can a microscopic family define a complete multiscale hierarchy of dynamically separated sectors,
 without choosing an ε, an observable channel, an eigenvalue cutoff or a preferred macro scale?
 
@@ -35,6 +38,13 @@ No eigenvector is matched across sizes.
 Identifying a slow projector with named structure (basins, density modes) is a **diagnostic using supplied labels**. It is
 not part of the definition.
 
+**Scope of canonicality [RA2-02].**
+- *Earned, every finite N:* ordered spectral levels are intrinsic; the spectral projector at a specified gap is basis-free;
+  degeneracies need no eigenbasis choice.
+- *Conditional, across N:* a cross-N filtration is canonical only if the sequence of gap ranks is itself fixed by spectral
+  data without externally matching modes. This is established in the constructed fixed-rank controls D1, D2 and the
+  ladder with β > 2. **No general theorem for arbitrary families is claimed.**
+
 ## G3.5 Controls
 
 ### A — independent particles (N two-state particles)
@@ -60,7 +70,10 @@ uniformly in N. ∎
 **One-particle sector (exact formula), L = 100 / 1000 / 10 000:**
 - largest ratio 3.996 / 4.000 / 4.000 at rank 2;
 - spread 1.0e3 / 1.0e5 / 1.0e7;
-- counting N(xλ₁) for x = 1, 4, 9, 16 is exactly **2, 4, 6, 8** = 2√x.
+- counting N(xλ₁) for x = 1, 4, 9, 16 is exactly **2, 4, 6, 8**.
+- [RA2-03] For fixed x and large L, λ_q/λ₁ → q², so the ±q one-particle count approaches **2⌊√x⌋** (away from
+  finite-size / Nyquist qualifications). At the tested perfect squares this is exactly 2, 4, 6, 8; it is **not** 2√x
+  for general x.
 
 **PROP G3-B (no canonical cut in the slow window).** For SSEP on the ring:
 1. By self-duality, the span of {1, η_x} is invariant and carries the one-particle levels λ_q^{(1)} ∝ sin²(πq/L). This is
@@ -75,7 +88,7 @@ uniformly in N. ∎
 
 **Reading.**
 - SSEP has an intrinsic **scale hierarchy**: the spread grows ~L². It is a **continuum / tower**, not a sharp split.
-- The one-particle counting function has an L-independent **scaling profile** (2√x). That is a canonical cross-N object
+- The one-particle counting function has an L-independent **scaling profile** (2⌊√x⌋ [RA2-03]). That is a canonical cross-N object
   using counting functions only, and it encodes spectral dimension 1, consistent with frozen SCOUT S2-G2 (spectral
   dimension = CONDITIONAL DERIVATION from graph + probe).
 - The **many-body** counting function grows with L at fixed x. The "slow sector below xλ₁" is not size-stable.
@@ -99,6 +112,11 @@ Largest adjacent ratio @ rank:
   exactly the A_resolution relocation the no-ε rule forbids.
 
 ### D — metastable positive controls
+
+**[RA2-04] Interpretation.** D1 – D3 were **built** with metastable scale separation. They establish that the no-ε
+spectral criterion (i) detects true asymptotic scale separation and (ii) returns the correct basis-free projector /
+filtration in positive controls. They do **not** show that generic dynamics generate metastability: the rule detects
+objectively supplied separation; it does not create it.
 
 **D1 — 3 symmetric basins (complete graphs of size M), inter-basin rate ∝ 1/M.**
 
@@ -125,18 +143,23 @@ Largest adjacent ratio @ rank:
 |---|---|---|---|---|---|
 | top ratio @ rank | 1.65 @ 3 | 2.80 @ 3 | 5.06 @ 3 | 11.06 @ 3 | 23.49 @ 3 |
 
-The diverging cut is at rank 3. **G3 succeeds whenever the family has a genuine scale separation.**
+The diverging cut is at rank 3. **G3 succeeds in the tested positive controls, which were built with a genuine scale
+separation [RA2-04].**
+
+[RA2-01] Each M in D3 uses a **newly generated** random matrix; the tested objects are not a nested realization of one
+defined family, and no limit has been proved. G4 replaces D3 with a deterministic family rule (`g4/`).
 
 ## G3.6 Algebra test (spectral subspace ≠ observable algebra)
 
 | subspace | contains constants | P-invariant | product-closed | generated algebra |
 |---|---|---|---|---|
 | D1 slow projector (symmetric basins) | yes | yes (spectral) | **yes** (residual ~1e-15) | = functions of basin label (proper) |
-| D3 slow projector (non-symmetric) | yes | yes | **asymptotically**: residual 0.324 → 0.068 → 0.021 → 0.0067 → 0.0025 (M = 5 … 80) | → basin-label algebra only as M → ∞; at finite M the exact subspace is not an algebra |
+| D3 slow projector (non-symmetric) | yes | yes | residual 0.324 → 0.068 → 0.021 → 0.0067 → 0.0025 (M = 5 … 80). **[RA2-01] Numerical evidence for asymptotic algebraization, not a proof of convergence to zero** (fresh random matrix per M; residual measured on eigenbasis pairs, Euclidean norm) | at finite M the exact subspace is not an algebra |
 | SSEP lowest eigenspace + constants (L = 10) | yes | yes | **no** (residual 1.000) | functions of the E₁ coordinates: 121 level sets of 252 states (**proper**), but **not semigroup-closed** (one-step lumpability defect 0.40) |
 
 **Reading.**
-- A canonical spectral projector becomes an observable algebra (asymptotically) **only** in the metastable case.
+- A canonical spectral projector was observed to approach an observable algebra **only** in the metastable controls
+  (exactly for symmetric basins; numerical evidence only for D3 [RA2-01]).
 - In the hydrodynamic case the lowest eigenspace is not an algebra, and the algebra it generates is proper but not
   autonomous. **ALGEBRA CLOSURE FAILED** (SSEP).
 
@@ -147,9 +170,9 @@ The diverging cut is at rank 3. **G3 succeeds whenever the family has a genuine 
 | A independent particles | **NO NONTRIVIAL ASYMPTOTIC SPECTRAL SEPARATION** |
 | B SSEP (hydrodynamic) | **MULTISCALE CONTINUUM — NO CANONICAL CUT**; ALGEBRA CLOSURE FAILED (lowest eigenspace); canonical counting-function scaling profile |
 | C ladder | **FAMILY / SCALING PRICED** (cut only for β > 2) |
-| D1 / D3 metastable | **CANONICAL SPECTRAL PROJECTOR** (algebra exact for symmetric basins, asymptotic otherwise) |
+| D1 / D3 metastable | **CANONICAL SPECTRAL PROJECTOR** (algebra exact for symmetric basins; D3: numerical evidence for asymptotic algebraization, not proved [RA2-01]) |
 | D2 nested metastable | **CANONICAL NESTED SPECTRAL FILTRATION** |
-| overall | **CONDITIONAL DYNAMICAL HIERARCHY DERIVATION.** When the supplied family carries a genuine diverging scale separation, the dynamics alone define a canonical (nested) projector hierarchy, with no ε, channel, cutoff or chosen level. When it does not (hydrodynamic continuum, independent particles), no canonical cut exists |
+| overall [RA2-05, preserved] | **CONDITIONAL DYNAMICAL HIERARCHY DERIVATION.** When the supplied family carries a genuine diverging scale separation, the dynamics alone define a canonical (nested) projector hierarchy, with no ε, channel, cutoff or chosen level. When it does not (hydrodynamic continuum, independent particles), no canonical cut exists |
 
 ## G3.8 Selector firewall
 

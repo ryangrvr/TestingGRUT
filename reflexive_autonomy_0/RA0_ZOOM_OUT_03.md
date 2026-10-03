@@ -1,5 +1,8 @@
 # RA0 ZOOM-OUT 03 (after RA0 REPAIR 01 + G3) — HARD STOP for owner review
 
+> **Repaired by RA0 REPAIR 02** (RA2-01 … 05; `RA0_CORRECTION_LEDGER.md`). Where wording differs, the ledger takes
+> precedence.
+
 **Branch:** `grut-reflexive-autonomy-0`. New theory construction. Not frozen. No consciousness, quantum, collapse or
 Born-rule work.
 
@@ -32,7 +35,9 @@ Born-rule work.
 
 ## 3. Was it canonical without cross-N mode matching?
 
-**Yes.** Cuts use only ordered distinct levels, ranks and adjacent ratios. Projectors are basis-free. Divergence is judged
+**Yes at each finite N; conditionally across N [RA2-02].** Each finite-N projector is canonical and basis-free. A cross-N
+filtration is canonical only when the gap ranks are themselves fixed by spectral data; that holds in D1, D2 and the ladder
+β > 2, and no general theorem is claimed. Cuts use only ordered distinct levels, ranks and adjacent ratios. Projectors are basis-free. Divergence is judged
 along rank-indexed sequences, which are allowed data. Naming the slow sector (basins, density modes) is a diagnostic with
 supplied labels, not part of the definition.
 
@@ -50,15 +55,16 @@ supplied labels, not part of the definition.
 **Yes.**
 - D1: the rank-3 projector = basin-indicator span (to 1e-15).
 - D2: the nested filtration.
-- D3 (non-symmetric): a diverging cut, with the product-closure residual → 0. **G3 succeeds when the dynamics truly
-  separate scales.**
+- D3 (non-symmetric): a diverging cut; the product-closure residual decreases strongly with M (numerical evidence, not a
+  proof [RA2-01]). **The rule detects scale separation that the controls were built to contain; it does not show that
+  generic dynamics create it [RA2-04].**
 
 ## 6. Was any resulting subspace an algebra?
 
 | case | algebra? |
 |---|---|
 | symmetric metastable basins | **exactly** |
-| non-symmetric metastable basins | **asymptotically** (residual 0.32 → 0.0025) |
+| non-symmetric metastable basins | **numerical evidence for asymptotic algebraization** (residual 0.32 → 0.0025; not proved [RA2-01]) |
 | SSEP lowest eigenspace | **no** (product residual 1.0); its generated algebra (121 of 252 level sets) is proper but not semigroup-closed (defect 0.40) |
 
 ## 7. How strongly did family / scaling choices change the hierarchy?
