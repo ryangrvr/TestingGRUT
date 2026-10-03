@@ -1,0 +1,153 @@
+== K1 controls ==
+  two-state bit (any rates): EP = 0.00e+00  (every 2-state chain satisfies detailed balance)
+  driven 3-state loop (thermostat/clock): EP = 2.072; cycle-space dim 1; J(0->1) = 0.300 = J(1->2) = 0.300 = J(2->0) = 0.300; eigenvalues [-1.65-0.779j -1.65+0.779j -0.  +0.j   ] -> canonical directed cycle with NO metastable cut
+== R1 matched-pair check (DC1-03): same pi, same symmetric part S, different antisymmetric part A ==
+  M=20: max|pi_a - pi_b| 2.1e-16; max|S_a - S_b| 9.4e-16; cosine(A_a, A_b) in pi-weighted HS 1.47e-16 (non-collinear)
+  M=80: max|pi_a - pi_b| 6.6e-17; max|S_a - S_b| 3.6e-15; cosine(A_a, A_b) in pi-weighted HS 1.11e-15 (non-collinear)
+== DC1-02 probe (diagnostic): driven rings with one slow defect bond -- does non-normal conditioning explode? ==
+  fwd 1 bwd 0.05 slow-bond 0.05 L=10: cond_pi(eigvecs) 1.4e+01; ||E(rank 3)||_pi 2.44; pi max/min 1.9e+01
+  fwd 1 bwd 0.05 slow-bond 0.05 L=20: cond_pi(eigvecs) 2.1e+01; ||E(rank 3)||_pi 1.87; pi max/min 1.9e+01
+  fwd 1 bwd 0.05 slow-bond 0.05 L=40: cond_pi(eigvecs) 2.7e+01; ||E(rank 3)||_pi 1.40; pi max/min 1.9e+01
+  fwd 1 bwd 0.02 slow-bond 0.01 L=10: cond_pi(eigvecs) 6.1e+01; ||E(rank 3)||_pi 7.58; pi max/min 9.8e+01
+  fwd 1 bwd 0.02 slow-bond 0.01 L=20: cond_pi(eigvecs) 8.2e+01; ||E(rank 3)||_pi 5.82; pi max/min 9.8e+01
+  fwd 1 bwd 0.02 slow-bond 0.01 L=40: cond_pi(eigvecs) 1.2e+02; ||E(rank 3)||_pi 3.75; pi max/min 9.8e+01
+== R0  F1 reversible (RA0 baseline, K4) ==
+  M= 20 n=90: EP 7.532e-30; top decay-rate cuts (ratio, rank) [(2.45, 2), (1.86, 3), (1.04, 59)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 3.756 (circle separates: True), cond(eigvecs) 1.7e+00, |Im E| 0.0e+00, |E^2-E| 1.1e-16, |GE-EG| 9.5e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 1.447e-01
+          macro: EP_Q 6.825e-31; macro cycle-space dim 1; |J_Q| max 7.633e-17; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 8.3e-17; EP(G*) 1.531e-29; gap(V, V*) 5.645e-15
+    PROOF eta 5.51e-01, ||E0|| 1.000, g 2.966e-01, a*g 1.00, eta/g 1.86e+00; ell inf (slow |lam|<=ell: False); ratio bound g/ell 0.00
+          ||E-E0|| 1.447e-01 <= bound inf;  gap(V,A_true) 1.447e-01;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 7.530e-17, 4*qmax*mis 0.0e+00
+  M= 40 n=180: EP 8.063e-30; top decay-rate cuts (ratio, rank) [(3.38, 3), (2.45, 2), (1.03, 6)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 2.191 (circle separates: True), cond(eigvecs) 1.7e+00, |Im E| 0.0e+00, |E^2-E| 8.3e-17, |GE-EG| 6.8e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 6.812e-02
+          macro: EP_Q 9.697e-31; macro cycle-space dim 1; |J_Q| max 6.592e-17; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 4.9e-17; EP(G*) 1.887e-29; gap(V, V*) 5.231e-15
+    PROOF eta 2.78e-01, ||E0|| 1.000, g 3.009e-01, a*g 1.00, eta/g 9.22e-01; ell 3.58e+00 (slow |lam|<=ell: True); ratio bound g/ell 0.08
+          ||E-E0|| 6.812e-02 <= bound inf;  gap(V,A_true) 6.812e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 6.455e-17, 4*qmax*mis 0.0e+00
+  M= 80 n=360: EP 1.441e-29; top decay-rate cuts (ratio, rank) [(6.44, 3), (2.47, 2), (1.03, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.650 (circle separates: True), cond(eigvecs) 1.7e+00, |Im E| 0.0e+00, |E^2-E| 7.6e-17, |GE-EG| 1.4e-15
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 3.320e-02
+          macro: EP_Q 1.167e-30; macro cycle-space dim 1; |J_Q| max 9.714e-17; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.7e-16; EP(G*) 3.962e-29; gap(V, V*) 3.398e-14
+    PROOF eta 1.38e-01, ||E0|| 1.000, g 3.004e-01, a*g 1.00, eta/g 4.59e-01; ell 2.55e-01 (slow |lam|<=ell: True); ratio bound g/ell 1.18
+          ||E-E0|| 3.320e-02 <= bound 4.191e+01;  gap(V,A_true) 3.320e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 9.939e-17, 4*qmax*mis 0.0e+00
+== R1a F1 skeleton + inter-block circulation (same pi, same S) ==
+  M= 20 n=90: EP 3.761e-03; top decay-rate cuts (ratio, rank) [(2.44, 2), (1.86, 3), (1.04, 59)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 3.757 (circle separates: True), cond(eigvecs) 1.8e+00, |Im E| 0.0e+00, |E^2-E| 1.1e-16, |GE-EG| 9.9e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 1.447e-01
+          macro: EP_Q 2.809e-03; macro cycle-space dim 1; |J_Q| max 4.095e-03; canonical macro cycle [0, 2, 1] with circulation 4.095e-03
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 3.1e-17; EP(G*) 3.761e-03; gap(V, V*) 9.920e-03
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 5.51e-01, ||E0|| 1.000, g 2.966e-01, a*g 1.00, eta/g 1.86e+00; ell inf (slow |lam|<=ell: False); ratio bound g/ell 0.00
+          ||E-E0|| 1.448e-01 <= bound inf;  gap(V,A_true) 1.447e-01;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 4.095e-03, 4*qmax*mis 0.0e+00
+  M= 40 n=180: EP 1.838e-03; top decay-rate cuts (ratio, rank) [(3.39, 3), (2.43, 2), (1.03, 6)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 2.192 (circle separates: True), cond(eigvecs) 1.7e+00, |Im E| 0.0e+00, |E^2-E| 9.7e-17, |GE-EG| 7.6e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 6.814e-02
+          macro: EP_Q 1.373e-03; macro cycle-space dim 1; |J_Q| max 2.029e-03; canonical macro cycle [0, 2, 1] with circulation 2.029e-03
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 5.3e-17; EP(G*) 1.838e-03; gap(V, V*) 4.407e-03
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 2.78e-01, ||E0|| 1.000, g 3.009e-01, a*g 1.00, eta/g 9.23e-01; ell 3.59e+00 (slow |lam|<=ell: True); ratio bound g/ell 0.08
+          ||E-E0|| 6.817e-02 <= bound inf;  gap(V,A_true) 6.814e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 2.029e-03, 4*qmax*mis 0.0e+00
+  M= 80 n=360: EP 8.879e-04; top decay-rate cuts (ratio, rank) [(6.45, 3), (2.46, 2), (1.03, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.651 (circle separates: True), cond(eigvecs) 1.7e+00, |Im E| 0.0e+00, |E^2-E| 7.6e-17, |GE-EG| 9.1e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 3.321e-02
+          macro: EP_Q 6.654e-04; macro cycle-space dim 1; |J_Q| max 9.994e-04; canonical macro cycle [0, 1, 2] with circulation 9.994e-04
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.5e-16; EP(G*) 8.879e-04; gap(V, V*) 1.973e-03
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 1.38e-01, ||E0|| 1.000, g 3.004e-01, a*g 1.00, eta/g 4.59e-01; ell 2.55e-01 (slow |lam|<=ell: True); ratio bound g/ell 1.18
+          ||E-E0|| 3.322e-02 <= bound 4.206e+01;  gap(V,A_true) 3.321e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 9.994e-04, 4*qmax*mis 0.0e+00
+== R1b F1 skeleton + intra-block circulation (same pi, same S) ==
+  M= 20 n=90: EP 5.370e-02; top decay-rate cuts (ratio, rank) [(2.45, 2), (1.86, 3), (1.05, 59)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 3.738 (circle separates: True), cond(eigvecs) 3.7e+01, |Im E| 4.4e-16, |E^2-E| 1.1e-16, |GE-EG| 8.4e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 1.446e-01
+          macro: EP_Q 3.783e-30; macro cycle-space dim 1; |J_Q| max 1.874e-16; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 3.8e-17; EP(G*) 5.370e-02; gap(V, V*) 1.218e-02
+    PROOF eta 5.51e-01, ||E0|| 1.000, g 2.969e-01, a*g 1.00, eta/g 1.85e+00; ell inf (slow |lam|<=ell: False); ratio bound g/ell 0.00
+          ||E-E0|| 1.446e-01 <= bound inf;  gap(V,A_true) 1.446e-01;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 1.865e-16, 4*qmax*mis 0.0e+00
+  M= 40 n=180: EP 2.720e-02; top decay-rate cuts (ratio, rank) [(3.39, 3), (2.45, 2), (1.03, 6)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 2.190 (circle separates: True), cond(eigvecs) 4.2e+00, |Im E| 5.7e-18, |E^2-E| 7.6e-17, |GE-EG| 7.2e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 6.811e-02
+          macro: EP_Q 2.712e-30; macro cycle-space dim 1; |J_Q| max 1.145e-16; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.8e-16; EP(G*) 2.720e-02; gap(V, V*) 2.746e-03
+    PROOF eta 2.78e-01, ||E0|| 1.000, g 3.010e-01, a*g 1.00, eta/g 9.22e-01; ell 3.58e+00 (slow |lam|<=ell: True); ratio bound g/ell 0.08
+          ||E-E0|| 6.811e-02 <= bound inf;  gap(V,A_true) 6.811e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 1.141e-16, 4*qmax*mis 0.0e+00
+  M= 80 n=360: EP 1.337e-02; top decay-rate cuts (ratio, rank) [(6.44, 3), (2.47, 2), (1.03, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.650 (circle separates: True), cond(eigvecs) 1.2e+01, |Im E| 1.2e-17, |E^2-E| 6.9e-17, |GE-EG| 6.2e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 3.320e-02
+          macro: EP_Q 2.013e-32; macro cycle-space dim 1; |J_Q| max 1.388e-17; no canonical macro cycle / zero macro current
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.2e-16; EP(G*) 1.337e-02; gap(V, V*) 6.427e-04
+    PROOF eta 1.38e-01, ||E0|| 1.000, g 3.005e-01, a*g 1.00, eta/g 4.59e-01; ell 2.55e-01 (slow |lam|<=ell: True); ratio bound g/ell 1.18
+          ||E-E0|| 3.320e-02 <= bound 4.187e+01;  gap(V,A_true) 3.320e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 1.281e-17, 4*qmax*mis 0.0e+00
+== R2  4 metastable basins on a driven ring (fwd 1, bwd 0.2) ==
+  M= 10 n=54: EP 1.837e-01; top decay-rate cuts (ratio, rank) [(2.0, 3), (1.99, 4), (1.12, 44)]
+    BLIND rank 4: ||E||_pi 1.008, K(Gamma) 3.522 (circle separates: True), cond(eigvecs) 4.9e+00, |Im E| 2.1e-16, |E^2-E| 1.7e-16, |GE-EG| 9.3e-16
+          R(V): idempotents 16, primitive 4, gap(V,A_blind) 5.386e-02
+          macro: EP_Q 1.648e-01; macro cycle-space dim 1; |J_Q| max 2.567e-02; canonical macro cycle [0, 1, 2, 3] with circulation 2.567e-02
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 6.9e-17; EP(G*) 1.837e-01; gap(V, V*) 1.250e-01
+    AUDIT blind macro cycle in hidden labels [0, 1, 2, 3]; hidden J_B cycle [0, 1, 2, 3]
+    PROOF eta 3.37e-01, ||E0|| 1.002, g 2.426e-01, a*g 1.00, eta/g 1.39e+00; ell inf (slow |lam|<=ell: False); ratio bound g/ell 0.00
+          ||E-E0|| 7.279e-02 <= bound inf;  gap(V,A_true) 5.386e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 2.567e-02, 4*qmax*mis 0.0e+00
+  M= 20 n=110: EP 9.288e-02; top decay-rate cuts (ratio, rank) [(4.08, 4), (2.0, 3), (1.04, 82)]
+    BLIND rank 4: ||E||_pi 1.002, K(Gamma) 1.997 (circle separates: True), cond(eigvecs) 7.9e+00, |Im E| 1.2e-16, |E^2-E| 9.7e-17, |GE-EG| 7.0e-16
+          R(V): idempotents 16, primitive 4, gap(V,A_blind) 1.356e-02
+          macro: EP_Q 8.285e-02; macro cycle-space dim 1; |J_Q| max 1.287e-02; canonical macro cycle [0, 2, 3, 1] with circulation 1.287e-02
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 9.2e-17; EP(G*) 9.288e-02; gap(V, V*) 5.520e-02
+    AUDIT blind macro cycle in hidden labels [3, 0, 1, 2]; hidden J_B cycle [0, 1, 2, 3]
+    PROOF eta 1.70e-01, ||E0|| 1.000, g 2.949e-01, a*g 1.00, eta/g 5.77e-01; ell 4.03e-01 (slow |lam|<=ell: True); ratio bound g/ell 0.73
+          ||E-E0|| 3.120e-02 <= bound inf;  gap(V,A_true) 1.356e-02;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 1.287e-02, 4*qmax*mis 0.0e+00
+  M= 40 n=220: EP 4.700e-02; top decay-rate cuts (ratio, rank) [(7.71, 4), (2.0, 3), (1.03, 177)]
+    BLIND rank 4: ||E||_pi 1.000, K(Gamma) 1.570 (circle separates: True), cond(eigvecs) 1.7e+01, |Im E| 2.4e-16, |E^2-E| 1.2e-16, |GE-EG| 7.4e-16
+          R(V): idempotents 16, primitive 4, gap(V,A_blind) 2.628e-03
+          macro: EP_Q 4.183e-02; macro cycle-space dim 1; |J_Q| max 6.496e-03; canonical macro cycle [0, 1, 2, 3] with circulation 6.496e-03
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 4.1e-17; EP(G*) 4.700e-02; gap(V, V*) 2.777e-02
+    AUDIT blind macro cycle in hidden labels [0, 1, 2, 3]; hidden J_B cycle [0, 1, 2, 3]
+    PROOF eta 8.56e-02, ||E0|| 1.000, g 3.010e-01, a*g 1.00, eta/g 2.84e-01; ell 1.20e-01 (slow |lam|<=ell: True); ratio bound g/ell 2.52
+          ||E-E0|| 1.418e-02 <= bound 3.900e+00;  gap(V,A_true) 2.628e-03;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 6.496e-03, 4*qmax*mis 0.0e+00
+  M= 80 n=440: EP 2.353e-02; top decay-rate cuts (ratio, rank) [(15.03, 4), (2.0, 3), (1.04, 8)]
+    BLIND rank 4: ||E||_pi 1.000, K(Gamma) 1.351 (circle separates: True), cond(eigvecs) 5.6e+00, |Im E| 1.6e-16, |E^2-E| 4.5e-17, |GE-EG| 1.9e-15
+          R(V): idempotents 16, primitive 4, gap(V,A_blind) 4.536e-04
+          macro: EP_Q 2.090e-02; macro cycle-space dim 1; |J_Q| max 3.246e-03; canonical macro cycle [0, 1, 3, 2] with circulation 3.246e-03
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.3e-16; EP(G*) 2.353e-02; gap(V, V*) 1.380e-02
+    AUDIT blind macro cycle in hidden labels [1, 2, 3, 0]; hidden J_B cycle [0, 1, 2, 3]
+    PROOF eta 4.28e-02, ||E0|| 1.000, g 3.004e-01, a*g 1.00, eta/g 1.43e-01; ell 4.99e-02 (slow |lam|<=ell: True); ratio bound g/ell 6.02
+          ||E-E0|| 6.973e-03 <= bound 9.562e-01;  gap(V,A_true) 4.536e-04;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 3.246e-03, 4*qmax*mis 0.0e+00
+== R4  non-normal stress: 3 drifting rings, inter h/M^4 ==
+  M= 10 n=45: EP 4.981e-01; top decay-rate cuts (ratio, rank) [(15.45, 3), (1.99, 7), (1.91, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.188 (circle separates: True), cond(eigvecs) 7.4e+00, |Im E| 1.0e-16, |E^2-E| 1.4e-16, |GE-EG| 7.9e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 1.823e-03
+          macro: EP_Q 2.576e-08; macro cycle-space dim 1; |J_Q| max 1.957e-06; canonical macro cycle [0, 2, 1] with circulation 1.957e-06
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 2.9e-17; EP(G*) 4.981e-01; gap(V, V*) 2.948e-03
+    AUDIT blind macro cycle in hidden labels [0, 2, 1]; hidden J_B cycle [0, 2, 1]
+    PROOF eta 4.66e-03, ||E0|| 1.000, g 3.377e-02, a*g 0.55, eta/g 1.38e-01; ell 5.04e-03 (slow |lam|<=ell: True); ratio bound g/ell 6.70
+          ||E-E0|| 1.858e-03 <= bound 5.541e-01;  gap(V,A_true) 1.823e-03;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 1.957e-06, 4*qmax*mis 0.0e+00
+  M= 20 n=90: EP 4.872e-01; top decay-rate cuts (ratio, rank) [(31.9, 3), (2.23, 7), (1.76, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.088 (circle separates: True), cond(eigvecs) 8.8e+00, |Im E| 1.3e-16, |E^2-E| 9.7e-17, |GE-EG| 1.1e-15
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 1.169e-04
+          macro: EP_Q 1.642e-14; macro cycle-space dim 1; |J_Q| max 5.512e-10; canonical macro cycle [0, 1, 2] with circulation 5.512e-10
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.4e-16; EP(G*) 4.872e-01; gap(V, V*) 3.452e-04
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 5.67e-04, ||E0|| 1.000, g 8.840e-03, a*g 0.39, eta/g 6.42e-02; ell 5.82e-04 (slow |lam|<=ell: True); ratio bound g/ell 15.19
+          ||E-E0|| 1.996e-04 <= bound 1.650e-01;  gap(V,A_true) 1.169e-04;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 5.512e-10, 4*qmax*mis 0.0e+00
+  M= 40 n=180: EP 4.993e-01; top decay-rate cuts (ratio, rank) [(63.28, 3), (2.23, 7), (1.78, 5)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.042 (circle separates: True), cond(eigvecs) 1.0e+01, |Im E| 1.1e-16, |E^2-E| 1.1e-16, |GE-EG| 6.8e-16
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 9.965e-06
+          macro: EP_Q 2.805e-12; macro cycle-space dim 1; |J_Q| max 2.549e-09; canonical macro cycle [0, 2, 1] with circulation 2.549e-09
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.6e-16; EP(G*) 4.993e-01; gap(V, V*) 4.354e-05
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 7.10e-05, ||E0|| 1.000, g 2.207e-03, a*g 0.08, eta/g 3.22e-02; ell 7.12e-05 (slow |lam|<=ell: True); ratio bound g/ell 31.01
+          ||E-E0|| 2.553e-05 <= bound 4.575e-02;  gap(V,A_true) 9.965e-06;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 2.549e-09, 4*qmax*mis 0.0e+00
+  M= 80 n=360: EP 4.948e-01; top decay-rate cuts (ratio, rank) [(126.45, 3), (2.24, 7), (1.77, 11)]
+    BLIND rank 3: ||E||_pi 1.000, K(Gamma) 1.021 (circle separates: True), cond(eigvecs) 2.0e+01, |Im E| 7.6e-17, |E^2-E| 7.6e-17, |GE-EG| 1.1e-15
+          R(V): idempotents 8, primitive 3, gap(V,A_blind) 4.517e-07
+          macro: EP_Q 2.188e-17; macro cycle-space dim 1; |J_Q| max 2.516e-12; canonical macro cycle [0, 1, 2] with circulation 2.516e-12
+          COVARIANCE (G -> G*, blind): same partition True; max|J_Q* + J_Q| 1.2e-16; EP(G*) 4.948e-01; gap(V, V*) 4.771e-06
+    AUDIT blind macro cycle in hidden labels [0, 1, 2]; hidden J_B cycle [0, 1, 2]
+    PROOF eta 8.85e-06, ||E0|| 1.000, g 5.534e-04, a*g 0.03, eta/g 1.60e-02; ell 8.85e-06 (slow |lam|<=ell: True); ratio bound g/ell 62.50
+          ||E-E0|| 3.043e-06 <= bound 1.940e-02;  gap(V,A_true) 4.517e-07;  AUDIT misclassified 0.00e+00;  hidden macro current |J_B| max 2.516e-12, 4*qmax*mis 0.0e+00
+== R3  biased site-modulated ring (no metastability) ==
+  L= 25: EP 5.090e-01; top decay-rate cuts [(3.939, 3), (2.166, 5), (1.689, 7)]; cycle-space dim 1; J on ring edges min 2.2409e-02 max 2.2409e-02; slowest pair [-0.0459+0.1396j -0.0459-0.1396j]
+  L= 50: EP 4.955e-01; top decay-rate cuts [(3.979, 3), (2.235, 5), (1.763, 7)]; cycle-space dim 1; J on ring edges min 1.0961e-02 max 1.0961e-02; slowest pair [-0.0113+0.0687j -0.0113-0.0687j]
+  L=100: EP 5.036e-01; top decay-rate cuts [(3.995, 3), (2.245, 5), (1.773, 7)]; cycle-space dim 1; J on ring edges min 5.5387e-03 max 5.5387e-03; slowest pair [-0.0028+0.0348j -0.0028-0.0348j]
+  L=200: EP 4.984e-01; top decay-rate cuts [(3.999, 3), (2.249, 5), (1.776, 7)]; cycle-space dim 1; J on ring edges min 2.7521e-03 max 2.7521e-03; slowest pair [-0.0007+0.0173j -0.0007-0.0173j]
