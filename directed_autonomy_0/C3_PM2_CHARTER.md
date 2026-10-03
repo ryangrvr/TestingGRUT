@@ -2,6 +2,11 @@
 
 **Status:** CHARTER ONLY — **NOT RUN.** No PM2 calculation or simulation exists.
 
+> **PM2 CHARTER REPAIR 01** (PM2R-01 … 07) was applied **before any computation**.
+> - **Owner ruling:** charter CONDITIONAL PASS; frozen law ACCEPTED. After this repair is committed, **deterministic
+>   Stage A is approved to run** without another stop.
+> - **Repaired text (§R below) supersedes** the original sections wherever they differ.
+
 **Owner ruling:** **M2-D SELECTED as C3 Primary Model 2. M2-B not selected.**
 
 **Base:** `grut-directed-autonomy-0 @ b71e9307`.
@@ -249,3 +254,141 @@ Charter only. No PM2 calculation or simulation.
 - Hu & Cai, *PRL* 111, 138701 (2013);
 - Bohn & Magnasco, *PRL* 98, 088702 (2007) (cond-mat/0607819);
 - Rigon, Rinaldo, Rodríguez-Iturbe et al., *Water Resour. Res.* 29 (1993), optimal channel networks.
+
+
+---
+
+## §R — PM2 CHARTER REPAIR 01 (supersedes conflicting text above)
+
+### PM2R-01 — Fixed source density, and exact scaling covariance
+
+**Drive (replaces PM2-F1's drive):**
+- h_i = +1 at every non-outlet node; h_outlet = −(N − 1), fixed by Kirchhoff conservation.
+- Same corner outlet, same homogeneous bulk rule.
+- On a tree: **S_e = M_e = |B_e|**.
+- Rerouted mass = the number of unit-source nodes whose outlet path changes; R = m_reroute/(N − 1).
+- Initial condition (unchanged): C(0) = 1 (uniform) or 1 + δξ.
+- (The old total-flux normalisation made m_reroute ≤ 1 at every N, so ρ > 0 was impossible.)
+
+**PROP PM2-S (exact scaling covariance; PROVED HERE).** Two facts:
+- **Linearity:** for fixed C, Q(C, h) is linear in h.
+- **Ratio invariance:** Q(λC, h) = Q(C, h), because flows depend only on conductance ratios.
+
+Let C* be stationary for h, so Q*_e² = νγ C*_e^{γ+1} on active edges and C*_e = 0 otherwise. Under h → ah, put
+**C′ = a^{2/(γ+1)} C***. Then:
+- Q′ = aQ*, and Q′² = a²Q*² = νγ (a^{2/(γ+1)}C*)^{γ+1}. So C′ is stationary.
+- The support (topology) is unchanged.
+- **E(C′; ah) = a^{2γ/(γ+1)} E(C*; h)**, since a²/a^{2/(γ+1)} = a^{2γ/(γ+1)} = (a^{2/(γ+1)})^γ.
+- For γ = 1/2: **C → a^{4/3}C and E → a^{2/3}E.** ∎
+
+**Caveat on trajectories.** Trajectories map onto trajectories (with a time rescaling) **only if the initial condition is
+rescaled too**. The set of stationary points is covariant; *which* one is reached from C(0) = 1 can depend on the initial
+scale. The fixed-density drive with C(0) = 1 is therefore what is frozen here.
+
+**Reduced energy.** Ē = E / H_N^{2γ/(γ+1)}, with H_N = Σ_{h_i>0} h_i = N − 1, i.e. Ē = E/(N − 1)^{2/3}. Any barrier
+diagnostic reports **both raw and reduced** values. Trivial drive scaling is not a barrier result.
+
+### PM2R-02 — Pruning is absorbing: tree-to-tree swaps are not Stage-A dynamics
+
+**Boundary convention (lower-semicontinuous):**
+- Q_e²/C_e = 0 when Q_e = 0 and C_e = 0;
+- Q_e²/C_e = +∞ when C_e = 0 but nonzero flow would be required.
+
+**Terminology.** A fundamental swap is a **static landscape adjacency / rerouting comparison**. Straight-path or
+mountain-pass quantities are **static energy-barrier diagnostics**. Static barrier paths must keep every source connected
+to the outlet (the straight path between two trees keeps the union of their supports positive for t ∈ (0, 1)). **Neither
+is a physical elementary transition of the deterministic law.**
+
+**Stage-A ceiling (maximum possible grade):** **PM2-A PARTIAL — ENDOGENOUS GROWING COLLECTIVE FLOW ARCHITECTURE
+CONSTRUCTED; DYNAMICAL BARRIERS / REVERSIBLE TRANSITIONS UNESTABLISHED.** This is **not C3-A1**. If reached, it may justify
+a later, separately chartered PM2-BIS (a physical fluctuation / edge-revival mechanism), which is **not added now**.
+
+### PM2R-03 — Initial-condition information firewall
+
+The i.i.d. perturbation carries O(N) random numbers, so:
+- **A seed-specific final topology is not derived architecture.** The seed selects an instance, as in spontaneous
+  symmetry breaking.
+- **The number of distinct trees across seeds is a sampling diagnostic only** (bounded by 20). It is not a growth
+  criterion.
+- **What can be earned** is an **ensemble-stable structural law** of the fixed dynamics: branch scaling, path / basin
+  scaling, rerouting scaling, and canonical depth beyond the controls.
+
+**Stage-A question 3 (replaced):** "Does an ensemble-stable canonical depth / hierarchy measure (outlet Strahler order)
+grow with N beyond R-TREE and SP-TREE, robustly across seeds?"
+
+### PM2R-04 — P1, repaired
+
+**Per-tree fit.**
+- S_e = |B_e|. For each tree, the CCDF P(S_e ≥ s) is evaluated at s_k = unique integer rounds of 20 log-spaced points in
+  **[√(N/10), √(10N)]** (one decade centred at √N, fixed algebraically).
+- τ = −(OLS slope of log P vs log s).
+- Edges within one tree are not independent samples.
+
+**Uncertainty:**
+- **PM2 perturbed** and **R-TREE**: one τ per seed (20 each); report the mean and 95% t-interval.
+- **SP-TREE**: a single τ_SP, with no interval.
+- **The uniform-start PM2 tree** is reported separately.
+
+**Pass at L = 48 and 64:**
+- the PM2 interval does not overlap the R-TREE interval; **and**
+- τ_SP lies outside the PM2 interval.
+
+### PM2R-05 — P2, repaired
+
+**Branch length.** For edge e = (u → v), with v downstream:
+
+  L_branch(e) = max_{w ∈ B_e} d_T(w, v) = 1 + height(u).
+
+This is the longest upstream path draining through e.
+
+**Fit.** L_branch ~ S_e^{η_H}, by an OLS fit of log L_branch vs log S_e over edges with S_e in the P1 window. One exponent
+per tree; the same uncertainty and comparison rules as P1.
+
+### PM2R-06 — P3, repaired (structural diagnostic only)
+
+**Swap set (canonical, complete; no selection by rerouted mass).** Every non-tree lattice edge f, paired with every tree
+edge e on the cycle that f closes. Every spanning tree defines a stationary point of the law (on a tree the flows are
+fixed, Q_e = S_e, and C_e = (S_e²/νγ)^{1/(γ+1)}), so **every swap is a valid stationary-tree candidate**.
+
+**Exact identity (PROVED HERE).** Removing e re-attaches B_e through f. Exactly the nodes of B_e change their outlet path,
+so **n_reroute(f, e) = S_e**.
+
+**Statistic.** Per tree, the **median** of n_reroute over the full swap set (the mean is also reported). Fit
+median ~ N^ρ across L; R = n/(N − 1). The same statistic is reported for R-TREE and SP-TREE as structural context.
+
+**Scope.** ρ > 0 is a **structural** collectivity diagnostic. It establishes neither metastability nor transitions.
+
+**Static-barrier diagnostic (reported; it cannot upgrade Stage A).**
+- 10 swaps per PM2 tree, drawn uniformly from the full swap set with `default_rng(1000 + seed)`.
+- For each swap, take the maximum of E along the straight conductance path (11 points, t = 0, 0.1, …, 1) between the two
+  stationary trees, minus E(T_a). Report it raw and reduced.
+
+### PM2R-07 — A1 scope
+
+A1 freezes Q at the uniform-network flow Q⁰, which already reflects the outlet, boundary and geometry. **A1 is not an
+architecture-free null.** It tests only whether conductance → flow feedback matters. **A0 is the true no-adaptation
+null.**
+
+### Revised Stage-A positive
+
+A Stage-A positive requires **all** of the following:
+1. sparse / tree architecture from the fixed homogeneous law;
+2. P1 or P2 distinct from **both** R-TREE and SP-TREE (PM2R-04 / 05);
+3. P3 with ρ > 0;
+4. canonical depth (Strahler) growing beyond the controls;
+5. ensemble robustness.
+
+**Barrier diagnostics never upgrade Stage A.** The maximum grade is the PM2R-02 ceiling.
+
+**Implementation parameters** (numerical only; not model parameters): explicit Euler with adaptive step (max relative
+change 5% per step); pruning floor C < 10⁻¹² · max C → 0; convergence when the relative stationarity residual on active
+edges is < 10⁻⁶ and the topology has been unchanged for 2000 steps (or a step cap, reported).
+
+**Stage-A grid (fixed):**
+- L ∈ {16, 24, 32, 48, 64};
+- PM2 uniform start, plus perturbed seeds 1 … 20 (δ = 0.01);
+- R-TREE seeds 1 … 20; SP-TREE;
+- A0, A1, A2. **A2** = a deterministic recursive-bisection spanning tree (supplied hierarchy). Each rectangle is split
+  along its longer side; the far half attaches across the cut at the mid-cut cell; recursion runs from the outlet.
+
+**No changes** to γ, ν, κ, δ, geometry or drive after results. No noise. No C3-B.

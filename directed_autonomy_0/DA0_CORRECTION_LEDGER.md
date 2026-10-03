@@ -167,3 +167,15 @@ law needs **endogenous local competition**. PM1 is retained as a C3 comparator.
 selected**. It adds a one-line structural result: **sign-blind constraints preserve the unfrustrated global envelope**.
 
 **Boundaries preserved:** Repair 02 `31b5714e134b78dfe6b6ff75c814654c94f09cb2`; C2 `99428ff`; RA0-frozen `ab4fd86`.
+
+## PM2 CHARTER REPAIR 01 (owner review of `80677c0`; before any PM2 computation)
+
+| ID | correction |
+|---|---|
+| **PM2R-01** | Drive h_i = +1 (fixed source density), h_outlet = −(N − 1). The old normalisation made m_reroute ≤ 1, so ρ > 0 was impossible. PROP PM2-S (exact): h → ah maps stationary C → a^{2/(γ+1)}C and E → a^{2γ/(γ+1)}E, with topology unchanged. Trajectories are covariant only if the initial condition is rescaled. Reduced Ē = E/(N − 1)^{2/3} |
+| **PM2R-02** | Pruning (C = 0) is absorbing, so fundamental swaps are **static** adjacencies and barriers are **static** diagnostics, not Stage-A dynamics. Lower-semicontinuous boundary convention. Stage-A ceiling: **PM2-A PARTIAL … DYNAMICAL BARRIERS / REVERSIBLE TRANSITIONS UNESTABLISHED** (not C3-A1) |
+| **PM2R-03** | Seed-specific topologies and the number of distinct trees are not derived architecture. Only ensemble-stable structural laws can be earned. Q3 is replaced |
+| **PM2R-04** | P1: per-tree CCDF fit on the window [√(N/10), √(10N)]; one τ per seed; t-intervals for PM2 and R-TREE; a single deterministic τ_SP; the pass rule is restated |
+| **PM2R-05** | P2: L_branch(e) = longest upstream path within B_e to e's downstream endpoint; same rules |
+| **PM2R-06** | P3: the full canonical swap set (all non-tree f × cycle edges e). n_reroute(f, e) = S_e exactly. Median per tree, fit ~N^ρ. Structural only. Static-barrier diagnostic on 10 preregistered random swaps per tree |
+| **PM2R-07** | A1 is not an architecture-free null; A0 is the true null |
