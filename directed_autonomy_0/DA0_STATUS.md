@@ -14,5 +14,6 @@ handoff.
 - CONJECTURE C2-B is **open**.
 - TRUE COMPRESSION: **0**.
 
-**C3 not opened.** The next decision is whether the surviving obstruction justifies C3: where does growing architecture
-come from?
+**C3 CHARTERED — NOT RUN; AWAITING OWNER REVIEW** (`C3_CHARTER.md`).
+- **Open item before any run:** the canonical scalable detector, C3-M1.
+- **Proposed primary model** (subject to review): local two-temperature adaptive-coupling Ising, CPS-type.
