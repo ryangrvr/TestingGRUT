@@ -274,3 +274,20 @@ not certified."**
 best candidate is P2 (3π/2)³ ≈ −0.250, the largest magnitude, which leaves the widest margin.
 
 **D_orb (PF4Q-08):** "D_orb ~ O(N_B⁻²)" remains a feasibility heuristic. It is not derived here and not used.
+
+## 6. Owner ruling on PF4Q and provenance wording repair (additive)
+
+**Ruling.** BRI1-PF4Q is accepted as reported at `d5a0bdb`.
+- **PF4Q-I, X1-PF-INDETERMINATE AT THE FROZEN τ**, for the stated reason: finite-time non-vanishing at τ was not
+  certified.
+- The 20 K-values remain **strong numerical evidence only, not certified**. They are not called zero, they do not upgrade
+  PF-A, and the certification rule is not weakened.
+- **The certified-τ pipeline is not to be built now.** It remains documented (§2) as a possible future verification
+  project.
+
+**Wording repair (provenance only).** Wherever §3 / §3.1 / §4 describe Methods A and B as "independent", read: **two
+independent formulations / deterministic cross-checks with shared numerical infrastructure**.
+- They are distinct in formulation: variational equations vs a finite difference in ε.
+- They follow different declared resolution paths: trapezoid h = 0.06 vs 0.08 / 0.12.
+- They share the DOP853 ODE solver, the trapezoid quadrature family and the core code (`pf4q_core.py`).
+- They are not fully independent numerical reproductions.

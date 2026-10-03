@@ -1,7 +1,8 @@
 # BRI0 STATUS
 
-**State:** **BRI1-PF4Q DONE — X1-PF-INDETERMINATE RETAINED (PF4Q-I: finite-time non-vanishing at τ not certified);
-BRI1-R1 PROVED; 20 / 20 frozen K-values non-zero as NUMERICAL EVIDENCE ONLY; AWAITING OWNER REVIEW.**
+**State:** **BRI1-X1-THEOREM PROVED — BRI-E2+O EARNED AT CLASS-THEOREM LEVEL FOR X1** (X1 ∉ E₂± for all
+sufficiently large finite N_B; the witness vanishes O(N_B⁻¹) in the reservoir limit, which is E₁). The frozen-τ grade stays
+**PF4Q-I / X1-PF-INDETERMINATE**. INTERNALLY PROVED / NOT EXTERNALLY REVIEWED. AWAITING OWNER REVIEW.
 
 **Branch:** `grut-backreaction-identifiability-0`.
 
@@ -11,7 +12,8 @@ BRI1-R1 PROVED; 20 / 20 frozen K-values non-zero as NUMERICAL EVIDENCE ONLY; AWA
 the SCOUT-0 saturation map. It does not reopen or weaken the SCOUT-0 verdict. It is not part of DA0.
 
 **Boundaries:** Charter 0 `89b8236`; Scope Repair 01 `8df4b88`; Scope Repair 02 and Candidate 1 `6220a9e` (accepted);
-PF4Q declaration `6d25e7e`; PF4Q amendment `35d6985`; PF4Q run = this commit. See `BRI0_LEDGER.md` and `BRI1_PF4Q.md`.
+PF4Q declaration `6d25e7e`; PF4Q amendment `35d6985`; PF4Q run `d5a0bdb` (accepted); analytic escape theorem = this
+commit. See `BRI0_LEDGER.md` and `BRI1_PF4Q.md`.
 
 **Accepted (owner ruling, Scope Repair 01, `BRI0_CHARTER.md` §R):**
 - **Clamp family 𝒫 = 𝒳 accepted** as the primary interventional protocol family. The object is the interventional
@@ -37,7 +39,17 @@ PF4Q declaration `6d25e7e`; PF4Q amendment `35d6985`; PF4Q run = this commit. Se
 - Positives: **BRI-E2+O** (orbit / shape) and **BRI-E2+C** (causal-affine coherence failure). Both are genuine BRI-E2+.
 - Finite CSI certificate registered (BRI-O11).
 
-**BRI1-PF4Q (`BRI1_PF4Q.md`):**
+**BRI1 analytic escape theorem (`BRI1_ANALYTIC_ESCAPE_THEOREM.md`):**
+- **T1:** c_{P1}(t, t; t) < 0 on some (0, δ). This uses an exact Taylor expansion through t⁷ with an integrable
+  remainder.
+- **T2:** κ₃(F_{P1,N}(t*)) ≠ 0 for all N_B ≥ N₀.
+- **T3:** the P0 skewness is exactly 0, so P1 shows a reflection-safe orbit violation and X1 ∉ E₂±.
+- **T4:** the reservoir limit is the protocol-independent Gaussian, i.e. E₁.
+- Existential δ and N₀; no new computation.
+- Earned: the identifiability theorem relative to E₂± only. **Not** GRUT physics, primitive randomness, ontology, or an
+  escape from E_univ.
+
+**BRI1-PF4Q (`BRI1_PF4Q.md`), accepted; certified-τ pipeline not to be built now:**
 - **LEMMA BRI1-R1 proved:** κ₃(F) = K/N_B + O(N_B⁻²).
 - **V1** certified (arb); **V3** passes; **V2** led to a pre-run Method-A amendment.
 - **All 20 frozen K_q[a,b,c] are non-zero as evidence:** two independent methods agree to about 10⁻¹¹, with |K| from
