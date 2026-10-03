@@ -1,5 +1,8 @@
 # RA0 · G1 — FINITE REFLEXIVE AUTONOMY (result)
 
+> **Repaired by RA0 REPAIR 01** (RA1-01 … 06; `RA0_CORRECTION_LEDGER.md`). Where wording differs, the ledger takes
+> precedence. Logs are kept as emitted.
+
 **Evidence:**
 - the propositions below (proofs given);
 - the exhaustive finite checks in `g1/g1_finite.py` + `g1/g1_finite.log` (independent code path, not independent
@@ -99,7 +102,10 @@ This supersedes the weaker scratch wording ("μF = νF only when there is no non
 
 ## G1.3 Generic no-go
 
-**PROP 6.** Let 𝒮_n be the row-stochastic polytope, of dimension n(n − 1) inside the affine space 𝒜_n of real matrices
+**PROP 6 — KNOWN / REDERIVED IN RA0** [RA1-01]. The codimension (k − 1)(n − k) matches the classical
+lumpability-testing literature: the asymptotic chi-square test of a fixed k-block lumping has (k − 1)(n − k) degrees of
+freedom (owner-cited; Statistics & Probability Letters, ScienceDirect S0167715203001263; not re-read here). The internal
+proof is retained, and the measure-zero corollary stands. **No novelty is claimed.** Let 𝒮_n be the row-stochastic polytope, of dimension n(n − 1) inside the affine space 𝒜_n of real matrices
 with unit row sums. For a partition Π with 1 < k < n blocks, the lumpable set L_Π is contained in an affine subspace of
 𝒜_n of **codimension exactly (k − 1)(n − k) ≥ 1**.
 
@@ -197,18 +203,21 @@ is lumpable iff that factor's dynamics receive no back-action from the rest.
 
 | dynamics | D1 factor fixed | D2 factor fixed |
 |---|---|---|
-| non-interacting in D1 | **True** | False |
+| factor autonomous in D1 (here realised by a product kernel) | **True** | False |
 | generic interacting | False | False |
 
 **Reading.**
 - The scratch claim "both twins necessarily receive the same answer" is **refined**:
   - the operator is identical;
-  - it selects a decomposition **only when the dynamics are exactly non-interacting in it**;
+  - it selects a decomposition **only when that decomposition has an exact autonomous factor** [RA1-02]. That means
+    no back-action onto the coarse variable: P(A_{t+1} | A_t, B_t) = P(A_{t+1} | A_t). The rest may still depend on A,
+    so one-way / triangular interacting dynamics qualify. Full factorization P_A ⊗ P_B is **not** required;
   - for interacting dynamics it accepts neither.
 - Every frozen Σ witness involves interacting nets (W-Σ1: coupled isospectral oscillator nets; W-Σ2 / W-Σ3: Pareto /
   dimension ties with interaction).
-- So on the frozen witnesses **finite reflexive autonomy does not select Σ**. Where it does select (decoupled factors), it
-  recovers the textbook "non-interacting subsystems", which is a dynamics-conditional derivation (cf. frozen E-S2 / CPR
+- So on the frozen witnesses **finite reflexive autonomy does not select Σ**. Where it does select (autonomous factors), it
+  recovers factors with no back-action. **Finite reflexive autonomy detects autonomous factors, not necessarily
+  independent factors** [RA1-02]. This is a dynamics-conditional derivation (cf. frozen E-S2 / CPR
   class), not a selection among interacting twins.
 
 ## G1 terminal
@@ -222,7 +231,8 @@ is lumpable iff that factor's dynamics receive no back-action from the rest.
 3. **Generic finite dynamics** (measure one in the interior of the stochastic polytope) have **no** nontrivial exact
    autonomous coarse-graining. The codimension is exactly (k − 1)(n − k).
 4. **Structured dynamics** (symmetry, sparsity, determinism) can have **several**, incomparable, nontrivial fixed points.
-5. **The structure found reflects symmetry / conservation / decoupling already present in D:** RELOCATION into D.
+5. **The structure found reflects symmetry / conservation / autonomous (no-back-action) factors already present in D:**
+   RELOCATION into D [RA1-02].
 6. **Orientation is not selected.** Bijections and reversible chains are exactly symmetric. Non-reversible asymmetry is
    supplied by P.
 7. **Σ twins** that are interacting, or encoded outside P, are not distinguished.

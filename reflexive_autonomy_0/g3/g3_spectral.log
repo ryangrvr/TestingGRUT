@@ -1,0 +1,39 @@
+== A  independent two-state particles (a=0.1, b=0.25) ==
+  N= 2: zero-dim 1; largest adjacent ratios (ratio, rank): [(1.65, 3)]
+  N= 4: zero-dim 1; largest adjacent ratios (ratio, rank): [(1.65, 5), (1.256, 11), (1.133, 15)]
+  N= 6: zero-dim 1; largest adjacent ratios (ratio, rank): [(1.65, 7), (1.256, 22), (1.133, 42)]
+  N= 8: zero-dim 1; largest adjacent ratios (ratio, rank): [(1.65, 9), (1.256, 37), (1.133, 93)]
+  N=10: zero-dim 1; largest adjacent ratios (ratio, rank): [(1.65, 11), (1.256, 56), (1.133, 176)]
+== B  SSEP ring, N = L/2 (full many-particle kernel) ==
+  L= 8 (70 states): zero-dim 1; top adjacent ratios [(1.619, 3), (1.248, 17), (1.209, 8)];  spread lambda_max/lambda_1 = 19.3;  counting N(x*lambda_1), x=1,4,9,16: [2, 16, 45, 66]
+  L=10 (252 states): zero-dim 1; top adjacent ratios [(1.716, 3), (1.261, 5), (1.261, 21)];  spread lambda_max/lambda_1 = 36.7;  counting N(x*lambda_1), x=1,4,9,16: [2, 20, 60, 151]
+  L=12 (924 states): zero-dim 1; top adjacent ratios [(1.775, 3), (1.315, 5), (1.182, 25)];  spread lambda_max/lambda_1 = 62.6;  counting N(x*lambda_1), x=1,4,9,16: [2, 24, 79, 229]
+  L=14 (3432 states): zero-dim 1; top adjacent ratios [(1.814, 3), (1.275, 5), (1.187, 8)];  spread lambda_max/lambda_1 = 98.6;  counting N(x*lambda_1), x=1,4,9,16: [2, 21, 103, 330]
+  one-particle sector, large L (exact formula): largest adjacent distinct-level ratio and spread
+    L=  100: top ratio 3.996 at rank 2;  spread 1.01e+03;  counting (x=1,4,9,16, both +/-q) [2, 4, 6, 8]
+    L= 1000: top ratio 4.000 at rank 2;  spread 1.01e+05;  counting (x=1,4,9,16, both +/-q) [2, 4, 6, 8]
+    L=10000: top ratio 4.000 at rank 2;  spread 1.01e+07;  counting (x=1,4,9,16, both +/-q) [2, 4, 6, 8]
+== G3.6 algebra test, SSEP L=10: lowest nonzero eigenspace E1 (+ constants) ==
+  dim(E1 + constants) = 3; P-invariant by construction; product-closure residual = 1.000
+  generated algebra = functions of E1 coordinates: 121 level sets of 252 states (proper: True);  its one-step lumpability defect = 0.400 (semigroup-closed iff 0)
+== C  two-lane ladder (one particle), inter-lane rate gamma_L = L^-beta ==
+  beta=0: largest adjacent ratio @ rank:  L=50: 3.98@rank3  L=100: 4@rank3  L=200: 4@rank3  L=400: 4@rank3
+  beta=1: largest adjacent ratio @ rank:  L=50: 2.54@rank3  L=100: 4@rank3  L=200: 4@rank3  L=400: 4@rank3
+  beta=2: largest adjacent ratio @ rank:  L=50: 19.7@rank2  L=100: 19.7@rank2  L=200: 19.7@rank2  L=400: 19.7@rank2
+  beta=3: largest adjacent ratio @ rank:  L=50: 986@rank2  L=100: 1.97e+03@rank2  L=200: 3.95e+03@rank2  L=400: 7.9e+03@rank2
+== D  metastable positive control ==
+  D1 3 basins, M=  5: top ratio     4.00 at rank 3 (next none (only two distinct nonzero levels));  product-closure residual 1.31e-15;  basin-indicator residual (diagnostic) 6.56e-16
+  D1 3 basins, M= 10: top ratio     7.33 at rank 3 (next none (only two distinct nonzero levels));  product-closure residual 1.89e-15;  basin-indicator residual (diagnostic) 6.54e-16
+  D1 3 basins, M= 20: top ratio    14.00 at rank 3 (next none (only two distinct nonzero levels));  product-closure residual 1.40e-15;  basin-indicator residual (diagnostic) 6.40e-16
+  D1 3 basins, M= 40: top ratio    27.33 at rank 3 (next none (only two distinct nonzero levels));  product-closure residual 1.16e-15;  basin-indicator residual (diagnostic) 7.28e-16
+  D1 3 basins, M= 80: top ratio    54.00 at rank 3 (next none (only two distinct nonzero levels));  product-closure residual 1.97e-15;  basin-indicator residual (diagnostic) 1.36e-15
+  D2 nested 4 basins / 2 super, M=  5: top cuts (ratio, rank) [(3.0, 2), (2.7, 4)]
+  D2 nested 4 basins / 2 super, M= 10: top cuts (ratio, rank) [(5.5, 2), (5.1, 4)]
+  D2 nested 4 basins / 2 super, M= 20: top cuts (ratio, rank) [(10.5, 2), (10.0, 4)]
+  D2 nested 4 basins / 2 super, M= 40: top cuts (ratio, rank) [(20.5, 2), (20.0, 4)]
+== D3 non-symmetric metastable control: 3 basins, random symmetric intra-basin rates, inter rates random * M^-1 ==
+  M=  5: top ratio     1.65 at rank 3;  product-closure residual 3.243e-01
+  M= 10: top ratio     2.80 at rank 3;  product-closure residual 6.835e-02
+  M= 20: top ratio     5.06 at rank 3;  product-closure residual 2.063e-02
+  M= 40: top ratio    11.06 at rank 3;  product-closure residual 6.719e-03
+  M= 80: top ratio    23.49 at rank 3;  product-closure residual 2.542e-03

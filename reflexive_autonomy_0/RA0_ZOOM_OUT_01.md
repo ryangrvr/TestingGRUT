@@ -19,7 +19,7 @@ exhaustively. See `G1_FINITE_REFLEXIVE_AUTONOMY.md`.
   - universal endpoints;
   - generic emptiness (codimension (k − 1)(n − k));
   - non-uniqueness under symmetry.
-- **What exact autonomy finds:** structure already in D (symmetry orbits, conserved / closed classes, decoupled factors).
+- **What exact autonomy finds:** structure already in D (symmetry orbits, conserved / closed classes, autonomous no-back-action factors [RA1-02]).
 - **Orientation is covariant, never chosen.** One explicit non-reversible example shows direction-dependent autonomy, but
   the asymmetry is the supplied irreversibility of P.
 

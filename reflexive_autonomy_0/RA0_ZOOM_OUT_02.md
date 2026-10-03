@@ -1,12 +1,17 @@
 # RA0 ZOOM-OUT 02 (after G2) — HARD STOP for owner review
 
+> **Repaired by RA0 REPAIR 01** (RA1-01 … 06; `RA0_CORRECTION_LEDGER.md`). Where wording differs, the ledger takes
+> precedence. Logs are kept as emitted.
+
 **Branch:** `grut-reflexive-autonomy-0`. New theory construction. Not frozen. No quantum extension, collapse model, Born
 rule or consciousness claim.
 
 ## 1. Did asymptotic autonomy produce anything nontrivial?
 
-**Yes, conditionally.** In SSEP on a ring, the **slow spectral sector** of the microscopic kernel is nontrivial:
-- its slowest modes are **exactly** the linear density modes (residual 0 at L = 8, 10, 12);
+**Yes, conditionally.** In SSEP on a ring, the microscopic kernel has a nontrivial **canonical finite-size lowest
+eigenspace** [RA1-04]:
+- it lies exactly in the linear-occupation span at L = 8, 10, 12 (identification with density modes: numerically exact at
+  tested sizes);
 - the next slow modes are correlation modes;
 - the separation is intrinsic: λ_q/λ₁ → q², while fast modes diverge as L².
 
@@ -17,7 +22,7 @@ scaling ℓ = √L.
 
 **No.**
 - "Defect → 0" alone accepts the micro-partition, conserved quantities and trivially relaxing interleaved classes.
-- The spectral slow sector is canonical **given the family**, but the family scaling changes it: the ladder flips between
+- No unique asymptotic slow subspace is defined yet [RA1-05], and the family scaling changes the slow structure: the ladder flips between
   density only, density + lane imbalance, and lane imbalance only as β crosses 2.
 - Without locality (independent particles), the "slow" variables are the individual particles.
 
@@ -41,7 +46,8 @@ zero defect alone does not exclude the micro-description.
 ## 6. Does it distinguish any frozen witness pair?
 
 **No.**
-- It distinguishes two macro decompositions of the same SSEP dynamics (contiguous vs interleaved).
+- A dynamical diagnostic distinguishes the two **supplied** candidate decompositions of the same SSEP dynamics
+  (contiguous vs interleaved). That is not a selection [RA1-06].
 - But the frozen Σ witnesses are subsystem nets of the same generator. The slow sector is a function of the generator, so
   it is the same for both descriptions, and it outputs collective modes, not a net.
 
@@ -68,7 +74,7 @@ zero defect alone does not exclude the micro-description.
 | gate | terminal |
 |---|---|
 | G1 | **FINITE REFLEXIVE AUTONOMY NO-GO** (lumpability / bisimulation; universal endpoints; generic codimension (k − 1)(n − k); symmetry non-uniqueness; orientation covariant; interacting twins not distinguished) |
-| G2 | **CONDITIONAL MACROVARIABLE DERIVATION FROM A SUPPLIED SYSTEM FAMILY** + ASYMPTOTIC AUTONOMY NONUNIQUE + SCALING RELOCATION (+ SYMMETRY RELOCATION without locality); canonical slow **subspace** given the family, algebra closure OPEN |
+| G2 | **CONDITIONAL MACROVARIABLE DERIVATION FROM A SUPPLIED SYSTEM FAMILY** + ASYMPTOTIC AUTONOMY NONUNIQUE + SCALING RELOCATION (+ SYMMETRY RELOCATION without locality); canonical finite-size lowest eigenspace; no unique asymptotic slow subspace defined yet [RA1-05] |
 | frozen witnesses distinguished | **0** |
 | residual inputs eliminated | **0** |
 
