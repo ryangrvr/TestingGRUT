@@ -1,0 +1,207 @@
+IMPL (implementation parameters, not model parameters): {'max_rel_change': 0.0125, 'prune_floor': 1e-12, 'stat_tol': 1e-06, 'stable_steps': 2000, 'step_cap': 400000, 'y_ref': 0.001} integrator: adapt_y
+=== L=16 N=256 edges=480 ===
+  PM2 uniform start: steps 32520, resid 0.0e+00, active 255 (tree needs 255), tree True, E 2.473852e+03, Ebar 6.151961e+01
+    uniform-start tree stats (tau, eta_H, P3 median, P3 mean, Strahler): (np.float64(1.5405), np.float64(0.8519), np.float64(13.0), np.float64(23.6032), np.float64(2.0))
+    seed  1: steps 45376, active 255, tree True, Ebar 6.084386e+01, tau 1.0130, eta_H 0.6118, P3_median 19.0000, P3_mean 31.0880, Strahler 4.0000, 35s
+    seed  2: steps 43546, active 255, tree True, Ebar 6.125125e+01, tau 1.0236, eta_H 0.6222, P3_median 20.0000, P3_mean 30.6429, Strahler 4.0000, 33s
+    seed  3: steps 43578, active 255, tree True, Ebar 6.093126e+01, tau 0.9777, eta_H 0.6555, P3_median 15.0000, P3_mean 29.6458, Strahler 4.0000, 33s
+    seed  4: steps 45151, active 255, tree True, Ebar 5.938081e+01, tau 0.7324, eta_H 0.5028, P3_median 14.0000, P3_mean 31.4475, Strahler 4.0000, 31s
+    seed  5: steps 44753, active 255, tree True, Ebar 6.042186e+01, tau 0.8909, eta_H 0.6939, P3_median 20.0000, P3_mean 32.4694, Strahler 4.0000, 30s
+    seed  6: steps 43563, active 255, tree True, Ebar 6.104110e+01, tau 1.0411, eta_H 0.7192, P3_median 20.0000, P3_mean 31.5321, Strahler 4.0000, 31s
+    seed  7: steps 44238, active 255, tree True, Ebar 6.130935e+01, tau 1.0255, eta_H 0.6612, P3_median 23.0000, P3_mean 29.4523, Strahler 4.0000, 29s
+    seed  8: steps 44033, active 255, tree True, Ebar 5.993756e+01, tau 0.8922, eta_H 0.6455, P3_median 19.0000, P3_mean 30.0336, Strahler 4.0000, 29s
+    seed  9: steps 42552, active 255, tree True, Ebar 6.170565e+01, tau 1.0959, eta_H 0.6732, P3_median 19.0000, P3_mean 28.9845, Strahler 4.0000, 29s
+    seed 10: steps 44771, active 255, tree True, Ebar 6.124118e+01, tau 1.0783, eta_H 0.7010, P3_median 20.0000, P3_mean 28.2245, Strahler 4.0000, 30s
+    seed 11: steps 44379, active 255, tree True, Ebar 6.059020e+01, tau 1.0240, eta_H 0.7327, P3_median 18.0000, P3_mean 31.4924, Strahler 4.0000, 30s
+    seed 12: steps 45543, active 255, tree True, Ebar 6.056418e+01, tau 0.8568, eta_H 0.6348, P3_median 21.0000, P3_mean 31.3734, Strahler 4.0000, 31s
+    seed 13: steps 43780, active 255, tree True, Ebar 6.127641e+01, tau 0.9665, eta_H 0.6710, P3_median 20.0000, P3_mean 29.4555, Strahler 4.0000, 29s
+    seed 14: steps 44498, active 255, tree True, Ebar 6.116269e+01, tau 0.9551, eta_H 0.6400, P3_median 18.0000, P3_mean 29.5336, Strahler 4.0000, 30s
+    seed 15: steps 42931, active 255, tree True, Ebar 6.169754e+01, tau 1.1245, eta_H 0.7130, P3_median 22.0000, P3_mean 29.8252, Strahler 4.0000, 29s
+    seed 16: steps 44658, active 255, tree True, Ebar 6.189758e+01, tau 0.9615, eta_H 0.6796, P3_median 18.0000, P3_mean 29.3852, Strahler 4.0000, 31s
+    seed 17: steps 42475, active 255, tree True, Ebar 6.049869e+01, tau 1.1364, eta_H 0.7014, P3_median 19.0000, P3_mean 30.0337, Strahler 4.0000, 29s
+    seed 18: steps 42579, active 255, tree True, Ebar 6.094908e+01, tau 1.0073, eta_H 0.6990, P3_median 19.0000, P3_mean 31.2192, Strahler 4.0000, 29s
+    seed 19: steps 44255, active 255, tree True, Ebar 6.087143e+01, tau 1.0175, eta_H 0.6835, P3_median 22.0000, P3_mean 30.2708, Strahler 4.0000, 32s
+    seed 20: steps 44380, active 255, tree True, Ebar 5.949782e+01, tau 1.0274, eta_H 0.7340, P3_median 16.0000, P3_mean 28.8770, Strahler 4.0000, 30s
+  PM2 perturbed: tree runs 20/20 (non-tree 0); distinct trees (diagnostic only) 20; uniform-start tree among them: False
+    Ebar over seeds: min 5.938081e+01  median 6.094017e+01  max 6.189758e+01  (max-min)/median 4.13e-02
+    PM2 tau: mean 0.9924  95% [0.9476, 1.0371]
+    PM2 eta_H: mean 0.6688  95% [0.6441, 0.6934]
+    PM2 P3_median: mean 19.1000  95% [18.0491, 20.1509]
+    PM2 P3_mean: mean 30.2493  95% [29.7304, 30.7683]
+    PM2 Strahler: mean 4.0000  95% [4.0000, 4.0000]
+    static straight-path barrier diagnostic (200 swaps): median raw 9.4378e+00, median reduced 2.3470e-01, max raw 1.1975e+03, fraction > 0 0.975
+    R-TREE tau: mean 0.4388  95% [0.3862, 0.4914]
+    R-TREE eta_H: mean 0.6715  95% [0.6326, 0.7105]
+    R-TREE P3_median: mean 35.9500  95% [29.4163, 42.4837]
+    R-TREE P3_mean: mean 58.6673  95% [52.8779, 64.4568]
+    R-TREE Strahler: mean 4.1500  95% [3.9210, 4.3790]
+    SP-TREE (tau, eta_H, P3 med, P3 mean, Strahler): (np.float64(1.4788), np.float64(0.8712), np.float64(11.0), np.float64(17.2549), np.float64(2.0))
+    A2 bisection (supplied hierarchy): (np.float64(0.3941), np.float64(0.6613), np.float64(33.0), np.float64(60.2372), np.float64(4.0))
+    A0 frozen C=1: active edges 480 (no topology selection); max |Q| 127.5; E 1.042871e+05, Ebar 2.593406e+03
+    A1 flow-decoupled (stationary C under fixed Q0): active edges 480 of 480; spanning tree? False
+  [L=16 done in 176s]
+=== L=24 N=576 edges=1104 ===
+  PM2 uniform start: steps 54521, resid 0.0e+00, active 575 (tree needs 575), tree True, E 7.113057e+03, Ebar 1.028674e+02
+    uniform-start tree stats (tau, eta_H, P3 median, P3 mean, Strahler): (np.float64(1.6589), np.float64(0.9303), np.float64(18.0), np.float64(38.9238), np.float64(2.0))
+    seed  1: steps 67052, active 575, tree True, Ebar 1.025808e+02, tau 0.8097, eta_H 0.6917, P3_median 37.0000, P3_mean 52.3394, Strahler 5.0000, 81s
+    seed  2: steps 66255, active 575, tree True, Ebar 9.994946e+01, tau 0.7628, eta_H 0.5613, P3_median 27.0000, P3_mean 58.7844, Strahler 4.0000, 80s
+    seed  3: steps 66399, active 575, tree True, Ebar 1.019232e+02, tau 0.7789, eta_H 0.6852, P3_median 35.0000, P3_mean 55.3678, Strahler 4.0000, 80s
+    seed  4: steps 65681, active 575, tree True, Ebar 1.021162e+02, tau 0.7517, eta_H 0.6637, P3_median 39.0000, P3_mean 55.5806, Strahler 4.0000, 80s
+    seed  5: steps 65765, active 575, tree True, Ebar 9.941460e+01, tau 0.7036, eta_H 0.6082, P3_median 26.0000, P3_mean 56.0901, Strahler 5.0000, 80s
+    seed  6: steps 66855, active 575, tree True, Ebar 1.014232e+02, tau 0.8310, eta_H 0.6527, P3_median 32.0000, P3_mean 55.3322, Strahler 4.0000, 82s
+    seed  7: steps 66312, active 575, tree True, Ebar 9.973607e+01, tau 0.9215, eta_H 0.6465, P3_median 25.0000, P3_mean 54.9907, Strahler 5.0000, 79s
+    seed  8: steps 67200, active 575, tree True, Ebar 1.011892e+02, tau 1.1388, eta_H 0.6890, P3_median 31.0000, P3_mean 49.8177, Strahler 4.0000, 83s
+    seed  9: steps 65670, active 575, tree True, Ebar 1.017022e+02, tau 0.9359, eta_H 0.6420, P3_median 33.0000, P3_mean 51.0438, Strahler 5.0000, 83s
+    seed 10: steps 65247, active 575, tree True, Ebar 1.025015e+02, tau 0.7918, eta_H 0.6384, P3_median 33.0000, P3_mean 54.9295, Strahler 5.0000, 81s
+    seed 11: steps 64404, active 575, tree True, Ebar 1.007868e+02, tau 0.9302, eta_H 0.7237, P3_median 28.0000, P3_mean 53.4286, Strahler 4.0000, 81s
+    seed 12: steps 65701, active 575, tree True, Ebar 9.998291e+01, tau 1.0183, eta_H 0.6578, P3_median 28.0000, P3_mean 55.0026, Strahler 4.0000, 79s
+    seed 13: steps 64219, active 575, tree True, Ebar 1.004088e+02, tau 0.8113, eta_H 0.6267, P3_median 26.0000, P3_mean 54.0863, Strahler 4.0000, 78s
+    seed 14: steps 68267, active 575, tree True, Ebar 1.009178e+02, tau 0.8238, eta_H 0.6515, P3_median 36.0000, P3_mean 56.2093, Strahler 4.0000, 84s
+    seed 15: steps 66808, active 575, tree True, Ebar 1.024962e+02, tau 0.8984, eta_H 0.6652, P3_median 28.0000, P3_mean 53.7625, Strahler 5.0000, 82s
+    seed 16: steps 65233, active 575, tree True, Ebar 1.016498e+02, tau 0.7875, eta_H 0.6469, P3_median 38.0000, P3_mean 55.5271, Strahler 4.0000, 78s
+    seed 17: steps 67045, active 575, tree True, Ebar 1.028084e+02, tau 1.0578, eta_H 0.6978, P3_median 35.0000, P3_mean 53.2807, Strahler 4.0000, 79s
+    seed 18: steps 65311, active 575, tree True, Ebar 1.020190e+02, tau 0.8586, eta_H 0.6751, P3_median 31.0000, P3_mean 53.2722, Strahler 5.0000, 79s
+    seed 19: steps 65057, active 575, tree True, Ebar 1.025892e+02, tau 0.9127, eta_H 0.6921, P3_median 35.0000, P3_mean 51.1251, Strahler 4.0000, 77s
+    seed 20: steps 66228, active 575, tree True, Ebar 1.010576e+02, tau 0.9368, eta_H 0.6751, P3_median 30.0000, P3_mean 54.3374, Strahler 4.0000, 76s
+  PM2 perturbed: tree runs 20/20 (non-tree 0); distinct trees (diagnostic only) 20; uniform-start tree among them: False
+    Ebar over seeds: min 9.941460e+01  median 1.015365e+02  max 1.028084e+02  (max-min)/median 3.34e-02
+    PM2 tau: mean 0.8731  95% [0.8213, 0.9248]
+    PM2 eta_H: mean 0.6595  95% [0.6428, 0.6763]
+    PM2 P3_median: mean 31.6500  95% [29.6340, 33.6660]
+    PM2 P3_mean: mean 54.2154  95% [53.2470, 55.1838]
+    PM2 Strahler: mean 4.3500  95% [4.1210, 4.5790]
+    static straight-path barrier diagnostic (200 swaps): median raw 1.2764e+01, median reduced 1.8459e-01, max raw 3.2501e+03, fraction > 0 0.970
+    R-TREE tau: mean 0.4160  95% [0.3779, 0.4540]
+    R-TREE eta_H: mean 0.6791  95% [0.6608, 0.6974]
+    R-TREE P3_median: mean 61.1500  95% [48.7738, 73.5262]
+    R-TREE P3_mean: mean 114.0851  95% [103.5785, 124.5916]
+    R-TREE Strahler: mean 4.9000  95% [4.6907, 5.1093]
+    SP-TREE (tau, eta_H, P3 med, P3 mean, Strahler): (np.float64(1.6876), np.float64(0.945), np.float64(17.0), np.float64(26.56), np.float64(2.0))
+    A2 bisection (supplied hierarchy): (np.float64(0.3878), np.float64(0.6598), np.float64(49.0), np.float64(121.0624), np.float64(5.0))
+    A0 frozen C=1: active edges 1104 (no topology selection); max |Q| 287.5; E 6.121090e+05, Ebar 8.852179e+03
+    A1 flow-decoupled (stationary C under fixed Q0): active edges 1104 of 1104; spanning tree? False
+  [L=24 done in 455s]
+=== L=32 N=1024 edges=1984 ===
+  PM2 uniform start: steps 74961, resid 0.0e+00, active 1023 (tree needs 1023), tree True, E 1.514984e+04, Ebar 1.492190e+02
+    uniform-start tree stats (tau, eta_H, P3 median, P3 mean, Strahler): (np.float64(1.7729), np.float64(0.9219), np.float64(25.0), np.float64(52.9191), np.float64(2.0))
+    seed  1: steps 81061, active 1023, tree True, Ebar 1.425539e+02, tau 0.9256, eta_H 0.6720, P3_median 37.0000, P3_mean 82.4016, Strahler 5.0000, 154s
+    seed  2: steps 79380, active 1023, tree True, Ebar 1.406808e+02, tau 0.7772, eta_H 0.6309, P3_median 45.0000, P3_mean 92.9505, Strahler 5.0000, 153s
+    seed  3: steps 80726, active 1023, tree True, Ebar 1.445305e+02, tau 0.8126, eta_H 0.6201, P3_median 42.0000, P3_mean 84.8833, Strahler 5.0000, 153s
+    seed  4: steps 79486, active 1023, tree True, Ebar 1.449517e+02, tau 0.8744, eta_H 0.6624, P3_median 45.0000, P3_mean 82.5720, Strahler 5.0000, 151s
+    seed  5: steps 81648, active 1023, tree True, Ebar 1.440873e+02, tau 0.6407, eta_H 0.5866, P3_median 55.0000, P3_mean 88.2209, Strahler 4.0000, 157s
+    seed  6: steps 81845, active 1023, tree True, Ebar 1.461786e+02, tau 0.6690, eta_H 0.5757, P3_median 49.0000, P3_mean 81.9893, Strahler 5.0000, 156s
+    seed  7: steps 80414, active 1023, tree True, Ebar 1.470915e+02, tau 0.7893, eta_H 0.6236, P3_median 47.0000, P3_mean 80.5933, Strahler 5.0000, 153s
+    seed  8: steps 79437, active 1023, tree True, Ebar 1.449643e+02, tau 0.7449, eta_H 0.5758, P3_median 43.0000, P3_mean 81.6437, Strahler 5.0000, 150s
+    seed  9: steps 82491, active 1023, tree True, Ebar 1.457112e+02, tau 0.8076, eta_H 0.6764, P3_median 50.0000, P3_mean 83.3859, Strahler 5.0000, 158s
+    seed 10: steps 79205, active 1023, tree True, Ebar 1.455592e+02, tau 0.8129, eta_H 0.6707, P3_median 43.0000, P3_mean 82.1913, Strahler 5.0000, 155s
+    seed 11: steps 82568, active 1023, tree True, Ebar 1.444978e+02, tau 0.7697, eta_H 0.6678, P3_median 50.0000, P3_mean 83.2176, Strahler 5.0000, 156s
+    seed 12: steps 76984, active 1023, tree True, Ebar 1.492941e+02, tau 0.7676, eta_H 0.6454, P3_median 54.0000, P3_mean 77.4329, Strahler 5.0000, 148s
+    seed 13: steps 81458, active 1023, tree True, Ebar 1.469107e+02, tau 0.8630, eta_H 0.7307, P3_median 48.0000, P3_mean 76.9119, Strahler 5.0000, 152s
+    seed 14: steps 81270, active 1023, tree True, Ebar 1.455670e+02, tau 0.7048, eta_H 0.6691, P3_median 54.0000, P3_mean 86.4259, Strahler 5.0000, 153s
+    seed 15: steps 79458, active 1023, tree True, Ebar 1.459502e+02, tau 0.9325, eta_H 0.7205, P3_median 46.0000, P3_mean 78.3752, Strahler 5.0000, 147s
+    seed 16: steps 81020, active 1023, tree True, Ebar 1.450309e+02, tau 0.6824, eta_H 0.5817, P3_median 49.0000, P3_mean 87.5777, Strahler 5.0000, 155s
+    seed 17: steps 79418, active 1023, tree True, Ebar 1.438536e+02, tau 0.7667, eta_H 0.6399, P3_median 42.0000, P3_mean 86.0498, Strahler 5.0000, 152s
+    seed 18: steps 75761, active 1023, tree True, Ebar 1.428209e+02, tau 0.7344, eta_H 0.6661, P3_median 46.0000, P3_mean 82.1826, Strahler 5.0000, 147s
+    seed 19: steps 81185, active 1023, tree True, Ebar 1.452584e+02, tau 0.8589, eta_H 0.6678, P3_median 41.0000, P3_mean 80.1302, Strahler 5.0000, 153s
+    seed 20: steps 80899, active 1023, tree True, Ebar 1.453569e+02, tau 0.7777, eta_H 0.6315, P3_median 44.0000, P3_mean 83.3722, Strahler 5.0000, 156s
+  PM2 perturbed: tree runs 20/20 (non-tree 0); distinct trees (diagnostic only) 20; uniform-start tree among them: False
+    Ebar over seeds: min 1.406808e+02  median 1.451447e+02  max 1.492941e+02  (max-min)/median 5.93e-02
+    PM2 tau: mean 0.7856  95% [0.7485, 0.8227]
+    PM2 eta_H: mean 0.6457  95% [0.6253, 0.6662]
+    PM2 P3_median: mean 46.5000  95% [44.2970, 48.7030]
+    PM2 P3_mean: mean 83.1254  95% [81.3287, 84.9221]
+    PM2 Strahler: mean 4.9500  95% [4.8453, 5.0547]
+    static straight-path barrier diagnostic (200 swaps): median raw 1.4346e+01, median reduced 1.4130e-01, max raw 4.1903e+03, fraction > 0 0.945
+    R-TREE tau: mean 0.3841  95% [0.3552, 0.4131]
+    R-TREE eta_H: mean 0.6741  95% [0.6539, 0.6942]
+    R-TREE P3_median: mean 104.7500  95% [86.2762, 123.2238]
+    R-TREE P3_mean: mean 220.1804  95% [205.6390, 234.7218]
+    R-TREE Strahler: mean 5.1000  95% [4.8907, 5.3093]
+    SP-TREE (tau, eta_H, P3 med, P3 mean, Strahler): (np.float64(1.8159), np.float64(0.9647), np.float64(23.0), np.float64(35.8788), np.float64(2.0))
+    A2 bisection (supplied hierarchy): (np.float64(0.3602), np.float64(0.6649), np.float64(86.0), np.float64(213.157), np.float64(5.0))
+    A0 frozen C=1: active edges 1984 (no topology selection); max |Q| 511.5; E 2.124926e+06, Ebar 2.092956e+04
+    A1 flow-decoupled (stationary C under fixed Q0): active edges 1984 of 1984; spanning tree? False
+  [L=32 done in 887s]
+=== L=48 N=2304 edges=4512 ===
+  PM2 uniform start: steps 105948, resid 0.0e+00, active 2303 (tree needs 2303), tree True, E 4.347081e+04, Ebar 2.492691e+02
+    uniform-start tree stats (tau, eta_H, P3 median, P3 mean, Strahler): (np.float64(1.9047), np.float64(0.955), np.float64(36.0), np.float64(88.7074), np.float64(3.0))
+    seed  1: steps 96950, active 2303, tree True, Ebar 2.404694e+02, tau 0.7214, eta_H 0.6526, P3_median 86.0000, P3_mean 148.7512, Strahler 5.0000, 348s
+    seed  2: steps 93657, active 2303, tree True, Ebar 2.360807e+02, tau 0.7552, eta_H 0.6260, P3_median 75.0000, P3_mean 148.5617, Strahler 6.0000, 345s
+    seed  3: steps 94605, active 2303, tree True, Ebar 2.432653e+02, tau 0.6552, eta_H 0.6515, P3_median 91.0000, P3_mean 145.6476, Strahler 5.0000, 346s
+    seed  4: steps 94630, active 2303, tree True, Ebar 2.336896e+02, tau 0.6047, eta_H 0.5845, P3_median 75.0000, P3_mean 155.1048, Strahler 6.0000, 348s
+    seed  5: steps 95395, active 2303, tree True, Ebar 2.364176e+02, tau 0.7765, eta_H 0.6626, P3_median 67.0000, P3_mean 156.1951, Strahler 6.0000, 349s
+    seed  6: steps 98418, active 2303, tree True, Ebar 2.409263e+02, tau 0.7735, eta_H 0.6096, P3_median 85.0000, P3_mean 144.5312, Strahler 6.0000, 354s
+    seed  7: steps 95521, active 2303, tree True, Ebar 2.343475e+02, tau 0.6960, eta_H 0.6624, P3_median 83.0000, P3_mean 157.3330, Strahler 6.0000, 351s
+    seed  8: steps 95363, active 2303, tree True, Ebar 2.374405e+02, tau 0.6681, eta_H 0.6265, P3_median 83.0000, P3_mean 155.6868, Strahler 6.0000, 348s
+    seed  9: steps 95024, active 2303, tree True, Ebar 2.344376e+02, tau 0.6678, eta_H 0.6166, P3_median 88.0000, P3_mean 148.4893, Strahler 6.0000, 351s
+    seed 10: steps 94186, active 2303, tree True, Ebar 2.384334e+02, tau 0.6530, eta_H 0.6115, P3_median 85.0000, P3_mean 154.2997, Strahler 5.0000, 347s
+    seed 11: steps 94819, active 2303, tree True, Ebar 2.382085e+02, tau 0.7275, eta_H 0.6837, P3_median 77.0000, P3_mean 143.5427, Strahler 5.0000, 341s
+    seed 12: steps 94667, active 2303, tree True, Ebar 2.335975e+02, tau 0.5426, eta_H 0.5449, P3_median 97.0000, P3_mean 167.1639, Strahler 5.0000, 355s
+    seed 13: steps 95163, active 2303, tree True, Ebar 2.344191e+02, tau 0.5546, eta_H 0.5365, P3_median 82.0000, P3_mean 158.8254, Strahler 6.0000, 360s
+    seed 14: steps 95196, active 2303, tree True, Ebar 2.403393e+02, tau 0.6302, eta_H 0.5723, P3_median 90.0000, P3_mean 146.9086, Strahler 5.0000, 357s
+    seed 15: steps 96398, active 2303, tree True, Ebar 2.332287e+02, tau 0.6998, eta_H 0.6599, P3_median 73.0000, P3_mean 161.8150, Strahler 6.0000, 359s
+    seed 16: steps 94256, active 2303, tree True, Ebar 2.365092e+02, tau 0.6332, eta_H 0.5352, P3_median 74.0000, P3_mean 158.4798, Strahler 6.0000, 339s
+    seed 17: steps 96064, active 2303, tree True, Ebar 2.400383e+02, tau 0.7216, eta_H 0.6200, P3_median 77.0000, P3_mean 144.3682, Strahler 5.0000, 345s
+    seed 18: steps 91583, active 2303, tree True, Ebar 2.379772e+02, tau 0.6666, eta_H 0.6772, P3_median 83.0000, P3_mean 151.5824, Strahler 6.0000, 330s
+    seed 19: steps 92229, active 2303, tree True, Ebar 2.384919e+02, tau 0.5155, eta_H 0.5414, P3_median 104.0000, P3_mean 157.9701, Strahler 6.0000, 333s
+    seed 20: steps 94705, active 2303, tree True, Ebar 2.360574e+02, tau 0.6965, eta_H 0.6201, P3_median 73.0000, P3_mean 151.5937, Strahler 6.0000, 342s
+  PM2 perturbed: tree runs 20/20 (non-tree 0); distinct trees (diagnostic only) 20; uniform-start tree among them: False
+    Ebar over seeds: min 2.332287e+02  median 2.369749e+02  max 2.432653e+02  (max-min)/median 4.24e-02
+    PM2 tau: mean 0.6680  95% [0.6338, 0.7021]
+    PM2 eta_H: mean 0.6148  95% [0.5923, 0.6372]
+    PM2 P3_median: mean 82.4000  95% [78.2101, 86.5899]
+    PM2 P3_mean: mean 152.8425  95% [149.8099, 155.8751]
+    PM2 Strahler: mean 5.6500  95% [5.4210, 5.8790]
+    static straight-path barrier diagnostic (200 swaps): median raw 8.5441e+00, median reduced 4.8993e-02, max raw 1.3189e+04, fraction > 0 0.895
+    R-TREE tau: mean 0.3967  95% [0.3764, 0.4169]
+    R-TREE eta_H: mean 0.6559  95% [0.6300, 0.6818]
+    R-TREE P3_median: mean 191.0500  95% [159.9181, 222.1819]
+    R-TREE P3_mean: mean 435.9880  95% [398.0966, 473.8793]
+    R-TREE Strahler: mean 5.6500  95% [5.4210, 5.8790]
+    SP-TREE (tau, eta_H, P3 med, P3 mean, Strahler): (np.float64(2.0397), np.float64(0.9843), np.float64(34.0), np.float64(54.5306), np.float64(2.0))
+    A2 bisection (supplied hierarchy): (np.float64(0.3415), np.float64(0.6906), np.float64(147.0), np.float64(441.6213), np.float64(6.0))
+    A0 frozen C=1: active edges 4512 (no topology selection); max |Q| 1151.5; E 1.212152e+07, Ebar 6.950686e+04
+    A1 flow-decoupled (stationary C under fixed Q0): active edges 4512 of 4512; spanning tree? False
+  [L=48 done in 2055s]
+=== L=64 N=4096 edges=8064 ===
+  PM2 uniform start: steps 128769, resid 0.0e+00, active 4095 (tree needs 4095), tree True, E 9.217550e+04, Ebar 3.601192e+02
+    uniform-start tree stats (tau, eta_H, P3 median, P3 mean, Strahler): (np.float64(2.0409), np.float64(0.9623), np.float64(48.0), np.float64(121.5204), np.float64(3.0))
+    seed  1: steps 99291, active 4095, tree True, Ebar 3.371982e+02, tau 0.5339, eta_H 0.6057, P3_median 140.0000, P3_mean 236.2401, Strahler 6.0000, 597s
+    seed  2: steps 103079, active 4095, tree True, Ebar 3.339821e+02, tau 0.6007, eta_H 0.5982, P3_median 113.0000, P3_mean 235.0273, Strahler 6.0000, 619s
+    seed  3: steps 100472, active 4095, tree True, Ebar 3.308591e+02, tau 0.5429, eta_H 0.6384, P3_median 134.0000, P3_mean 261.3714, Strahler 6.0000, 603s
+    seed  4: steps 100787, active 4095, tree True, Ebar 3.387863e+02, tau 0.5939, eta_H 0.6220, P3_median 123.0000, P3_mean 233.8219, Strahler 6.0000, 615s
+    seed  5: steps 101226, active 4095, tree True, Ebar 3.384820e+02, tau 0.6635, eta_H 0.6642, P3_median 111.0000, P3_mean 233.2476, Strahler 6.0000, 609s
+    seed  6: steps 101308, active 4095, tree True, Ebar 3.422681e+02, tau 0.6549, eta_H 0.6368, P3_median 112.0000, P3_mean 220.9950, Strahler 6.0000, 606s
+    seed  7: steps 100176, active 4095, tree True, Ebar 3.332496e+02, tau 0.5803, eta_H 0.5516, P3_median 111.0000, P3_mean 244.5902, Strahler 5.0000, 609s
+    seed  8: steps 101762, active 4095, tree True, Ebar 3.302931e+02, tau 0.5797, eta_H 0.6316, P3_median 126.0000, P3_mean 251.3420, Strahler 6.0000, 617s
+    seed  9: steps 101022, active 4095, tree True, Ebar 3.374178e+02, tau 0.6296, eta_H 0.6592, P3_median 124.0000, P3_mean 235.1584, Strahler 6.0000, 606s
+    seed 10: steps 102401, active 4095, tree True, Ebar 3.383895e+02, tau 0.6325, eta_H 0.6383, P3_median 117.0000, P3_mean 234.9504, Strahler 6.0000, 612s
+    seed 11: steps 100284, active 4095, tree True, Ebar 3.352149e+02, tau 0.5048, eta_H 0.5824, P3_median 144.0000, P3_mean 241.1138, Strahler 6.0000, 611s
+    seed 12: steps 102402, active 4095, tree True, Ebar 3.336165e+02, tau 0.6559, eta_H 0.6202, P3_median 104.0000, P3_mean 246.4630, Strahler 6.0000, 619s
+    seed 13: steps 102085, active 4095, tree True, Ebar 3.420426e+02, tau 0.6012, eta_H 0.6362, P3_median 135.0000, P3_mean 230.8630, Strahler 5.0000, 612s
+    seed 14: steps 100855, active 4095, tree True, Ebar 3.323265e+02, tau 0.6407, eta_H 0.6113, P3_median 107.0000, P3_mean 249.3898, Strahler 6.0000, 606s
+    seed 15: steps 100941, active 4095, tree True, Ebar 3.348962e+02, tau 0.5626, eta_H 0.5630, P3_median 133.0000, P3_mean 239.9953, Strahler 6.0000, 612s
+    seed 16: steps 101910, active 4095, tree True, Ebar 3.354038e+02, tau 0.6735, eta_H 0.6153, P3_median 106.0000, P3_mean 238.6940, Strahler 6.0000, 601s
+    seed 17: steps 100912, active 4095, tree True, Ebar 3.336881e+02, tau 0.5610, eta_H 0.5797, P3_median 117.0000, P3_mean 241.3702, Strahler 6.0000, 599s
+    seed 18: steps 100718, active 4095, tree True, Ebar 3.317367e+02, tau 0.6086, eta_H 0.6241, P3_median 109.0000, P3_mean 246.7494, Strahler 6.0000, 596s
+    seed 19: steps 101214, active 4095, tree True, Ebar 3.358508e+02, tau 0.5524, eta_H 0.6099, P3_median 152.0000, P3_mean 238.2922, Strahler 6.0000, 604s
+    seed 20: steps 101348, active 4095, tree True, Ebar 3.334828e+02, tau 0.6082, eta_H 0.5898, P3_median 126.0000, P3_mean 243.3951, Strahler 6.0000, 617s
+  PM2 perturbed: tree runs 20/20 (non-tree 0); distinct trees (diagnostic only) 20; uniform-start tree among them: False
+    Ebar over seeds: min 3.302931e+02  median 3.350556e+02  max 3.422681e+02  (max-min)/median 3.57e-02
+    PM2 tau: mean 0.5990  95% [0.5770, 0.6210]
+    PM2 eta_H: mean 0.6139  95% [0.6000, 0.6278]
+    PM2 P3_median: mean 122.2000  95% [115.7353, 128.6647]
+    PM2 P3_mean: mean 240.1535  95% [236.1118, 244.1952]
+    PM2 Strahler: mean 5.9000  95% [5.7559, 6.0441]
+    static straight-path barrier diagnostic (200 swaps): median raw 2.0183e+01, median reduced 7.8853e-02, max raw 8.4474e+03, fraction > 0 0.925
+    R-TREE tau: mean 0.3848  95% [0.3624, 0.4072]
+    R-TREE eta_H: mean 0.6541  95% [0.6399, 0.6684]
+    R-TREE P3_median: mean 307.6500  95% [243.6707, 371.6293]
+    R-TREE P3_mean: mean 796.4862  95% [724.2104, 868.7619]
+    R-TREE Strahler: mean 6.0000  95% [6.0000, 6.0000]
+    SP-TREE (tau, eta_H, P3 med, P3 mean, Strahler): (np.float64(2.2055), np.float64(0.9912), np.float64(45.0), np.float64(73.1897), np.float64(2.0))
+    A2 bisection (supplied hierarchy): (np.float64(0.3341), np.float64(0.6688), np.float64(260.0), np.float64(777.1494), np.float64(6.0))
+    A0 frozen C=1: active edges 8064 (no topology selection); max |Q| 2047.5; E 4.137573e+07, Ebar 1.616503e+05
+    A1 flow-decoupled (stationary C under fixed Q0): active edges 8064 of 8064; spanning tree? False
+  [L=64 done in 3655s]
+EXIT 0
