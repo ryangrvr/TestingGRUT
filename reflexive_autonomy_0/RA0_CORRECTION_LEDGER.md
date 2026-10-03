@@ -52,3 +52,20 @@ G3 is accepted provisionally after this repair. All numerical values are preserv
 - **Floating-point floor.** For the exactly lumpable ladder, Δ_alg reads 1e-12 … 1e-9 (eigenvector round-off), slightly
   above the proved bound s·(4/√p_min + C_V) ~ 1e-14 … 1e-12. This is round-off on an exact zero, not a violation; every
   other logged bound holds.
+
+## G5 note (owner ruling on `573898e`; no repair)
+
+G4 is accepted provisionally as CONDITIONAL DYNAMICAL PARTITION DERIVATION. The owner's three tightenings are recorded
+here as standing readings:
+
+| ID | item | standing reading |
+|---|---|---|
+| **G5-R1** | G4 rank ≥ 3 rounding | Numerical only in G4. G5 targets the metastable recovery theorem directly, **not** CONJECTURE G4-C, which remains open |
+| **G5-R2** | G4-T H3 | Load-bearing and **priced**. G4 did not show "diverging gap alone ⇒ partition algebra". It showed "nearly decoupled + reversible + regular block masses / eigenfunctions ⇒ partition algebra asymptotically". G5 weakens H3 to H3′ (p_min ≥ p_*, s²·C_V → 0) but does not remove it |
+| **G5-R3** | "blind" | Separated into **mathematical canonicality** (the idempotent and primitive sets are fixed by V and π) and **algorithmic discovery** (seeded Newton or tensor-power starts are numerical solvers only) |
+
+**Process notes, before the logged G5 run:**
+- The first draft of the tensor bound (Lemma G5-2) mis-stated the third-order term as O(s³) and missed the first-order
+  cancellation. The corrected bound, with first-order terms ≤ Λs² because A is an algebra and third order ≤ 2s²(C_V + Λ),
+  is the one logged.
+- The rounding-lemma constant was tightened from 4 to 2 (|d_i| + |d_j| ≥ 1 ⇒ d_i² + d_j² ≥ 1/2). Both versions are valid.

@@ -1,0 +1,35 @@
+== G5.9 main control F1 (K=3 hidden; rank 3 certified by G4-T) ==
+   blind:  #idempotents (theory: 2^k = 8 when eps < eps_glob), #primitive (theory: k), tie mass, gap(V,A_blind)
+   proof:  s=||E_V-E_A|| vs DK bound; ||W-I|| vs sqrt2*s; eps=||T~-T_A||_inj vs bound(s); local/global thresholds;
+           idempotent L2 error vs bound; sup error (margin diagnostic); misclassified mass vs bound (eps) and (eps_bd)
+  M=  5 n=22: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 1.768e-01
+     PROOF s 9.974e-01 (DK inf, eta/g 3.46e+00); ||W-I|| 1.362e+00 <= 1.411e+00; Lam 1.98, C_V 3.89, s^2 C_V 3.87e+00
+     PROOF eps 3.702e+00 <= eps_bd 2.944e+01;  eps_loc 6.301e-02, eps_glob 1.36e-03  -> theorem hypotheses met at this M: False (with true eps), False (with bound)
+     PROOF idempotent L2 err 6.036e-01 <= 1.080e+01;  sup err 1.027 (exact iff < 1/2 suffices);  misclassified 3.14e-01 <= 1.18e+03 (eps) / 7.40e+04 (eps_bd)
+  M= 10 n=45: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 3.484e-01
+     PROOF s 9.923e-01 (DK inf, eta/g 2.33e+00); ||W-I|| 1.324e+00 <= 1.403e+00; Lam 2.12, C_V 5.40, s^2 C_V 5.31e+00
+     PROOF eps 5.320e+00 <= eps_bd 3.356e+01;  eps_loc 5.902e-02, eps_glob 1.19e-03  -> theorem hypotheses met at this M: False (with true eps), False (with bound)
+     PROOF idempotent L2 err 6.184e-01 <= 1.513e+01;  sup err 1.092 (exact iff < 1/2 suffices);  misclassified 3.29e-01 <= 2.42e+03 (eps) / 9.61e+04 (eps_bd)
+  M= 20 n=90: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 1.447e-01
+     PROOF s 1.447e-01 (DK 1.30e+01, eta/g 9.28e-01); ||W-I|| 1.450e-01 <= 2.046e-01; Lam 2.10, C_V 2.19, s^2 C_V 4.59e-02
+     PROOF eps 1.273e-02 <= eps_bd 5.746e-01;  eps_loc 5.958e-02, eps_glob 1.21e-03  -> theorem hypotheses met at this M: False (with true eps), False (with bound)
+     PROOF idempotent L2 err 6.583e-02 <= 1.701e-01;  sup err 0.178 (exact iff < 1/2 suffices);  misclassified 0.00e+00 <= 1.81e-01 (eps) / 2.83e+01 (eps_bd)
+  M= 40 n=180: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 6.812e-02
+     PROOF s 6.812e-02 (DK 8.56e-01, eta/g 4.61e-01); ||W-I|| 6.816e-02 <= 9.633e-02; Lam 2.12, C_V 2.18, s^2 C_V 1.01e-02
+     PROOF eps 3.102e-03 <= eps_bd 1.286e-01;  eps_loc 5.886e-02, eps_glob 1.19e-03  -> theorem hypotheses met at this M: False (with true eps), False (with bound)
+     PROOF idempotent L2 err 3.111e-02 <= 7.248e-02;  sup err 0.084 (exact iff < 1/2 suffices);  misclassified 0.00e+00 <= 3.79e-02 (eps) / 1.45e+00 (eps_bd)
+  M= 80 n=360: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 3.320e-02
+     PROOF s 3.320e-02 (DK 2.98e-01, eta/g 2.29e-01); ||W-I|| 3.320e-02 <= 4.695e-02; Lam 2.12, C_V 2.15, s^2 C_V 2.36e-03
+     PROOF eps 9.106e-04 <= eps_bd 3.043e-02;  eps_loc 5.896e-02, eps_glob 1.19e-03  -> theorem hypotheses met at this M: True (with true eps), False (with bound)
+     PROOF idempotent L2 err 1.515e-02 <= 3.374e-02;  sup err 0.040 (exact iff < 1/2 suffices);  misclassified 0.00e+00 <= 8.89e-03 (eps) / 8.78e-02 (eps_bd)
+  M=160 n=720: BLIND idempotents 8, primitive 3; ties 0.0e+00, gap 1.645e-02
+     PROOF s 1.645e-02 (DK 1.29e-01, eta/g 1.14e-01); ||W-I|| 1.645e-02 <= 2.326e-02; Lam 2.12, C_V 2.13, s^2 C_V 5.76e-04
+     PROOF eps 2.307e-04 <= eps_bd 7.454e-03;  eps_loc 5.902e-02, eps_glob 1.19e-03  -> theorem hypotheses met at this M: True (with true eps), False (with bound)
+     PROOF idempotent L2 err 7.504e-03 <= 1.611e-02;  sup err 0.020 (exact iff < 1/2 suffices);  misclassified 0.00e+00 <= 2.17e-03 (eps) / 6.91e-03 (eps_bd)
+== G5.8 rank-2 reduction: G5 map vs PROP G4-P rounding {f > s/2} on F2 coarse level (any V of dim 2) ==
+  M=  5: idempotents 4 (theory 4 for every 2-dim V), primitive 2; partition == G4-P rounding: True;  max|e_+ - closed form| 4.4e-16
+  M= 20: idempotents 4 (theory 4 for every 2-dim V), primitive 2; partition == G4-P rounding: True;  max|e_+ - closed form| 8.0e-15
+  M= 80: idempotents 4 (theory 4 for every 2-dim V), primitive 2; partition == G4-P rounding: True;  max|e_+ - closed form| 4.3e-14
+== refusal check (stress, not a G5 output): G5 map on forced non-metastable slow spaces ==
+  SSEP L=10: forced rank 3: idempotents found 1515, primitive 1084 -> REFUSE
+  ladder beta=0 L=50 (mod): forced rank 3: idempotents found 8, primitive 3 -> partition with gap 0.577
