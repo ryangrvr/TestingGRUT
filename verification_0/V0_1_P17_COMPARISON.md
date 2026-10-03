@@ -52,3 +52,38 @@ the spec alone. The independent derivation is **not** edited below.
 
 **Owner option:** if CL-1 is judged a substantive scope correction rather than a clarification, the grade becomes V0-1-C
 (reproduced with correction). The theorem is unaffected either way.
+
+## 4. Owner ruling (additive; review of `f83c929`)
+
+**Final grade: V0-1-C — P-17 REPRODUCED WITH CORRECTION — VER-I1 (ORCHESTRATOR-EXPOSED).** This supersedes the V0-1-A of
+§3.
+
+**CL-1 is a correction.** The original's unqualified positive sentence ("reduced data identify the forcing law … and the
+memory kernel") is stronger than the theorem proves.
+
+**Corrected verification reading.** P-17 proves that, for a fixed reduced system model, memory kernel and effective
+forcing law, the hidden Hamiltonian-bath realisation and a matched exogenous realisation have identical reduced path laws.
+Therefore the ontology realising the effective forcing cannot be inferred from those reduced data within class 𝓗.
+Positive inverse identification requires additional conditions:
+- identifying γ presupposes known M and V and sufficiently informative initial / interventional data;
+- identifying the forcing law from the path presupposes enough of the deterministic reduced equation, including the
+  memory term, to reconstruct the residual forcing.
+
+**No theorem of unrestricted joint identifiability of (γ, Law F) was proved.**
+
+**Reproduced successfully:**
+- bath elimination;
+- memory kernel;
+- free force;
+- preparation hypothesis;
+- product-preparation slip;
+- equality of path laws;
+- the thermal Gaussian law;
+- Gaussian covariance sufficiency;
+- all of T1 – T8.
+
+There is no coefficient, sign or theorem failure. Frozen `scout-0` is **not** modified. The correction lives only in VER0
+and in later syntheses citing P-17.
+
+**Criterion-2 item 1: COMPLETE at VER-I1, with correction.** The deferred C-B interpretation and the C3 / C4 checks do
+not block it, and are listed as **not reproduced**.
