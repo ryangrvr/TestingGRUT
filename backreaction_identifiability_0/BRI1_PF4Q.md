@@ -196,3 +196,81 @@ that the enclosures contain zero.
 - V2 PASSES for the amended Method A (trapezoid, h ≤ 0.08: |error| ≤ 10⁻¹³).
 
 **Grading is unchanged:** evidence only; PF4Q-I.
+
+## 4. Results — the 20 frozen K_q[a,b,c] (NUMERICAL EVIDENCE ONLY; NOT CERTIFIED)
+
+**Run record** (`preflight/pf4q_run.py`, log `pf4q_run.log`, values `pf4q_results.json`):
+- The first execution printed all 20 values, then crashed while writing JSON (a numpy-bool serialisation error), so
+  `pf4q_run_attempt1_json_crash.log` is kept as emitted.
+- After the one-line serialisation fix, the deterministic rerun reproduced **every printed value identically** (diff
+  empty).
+
+**Columns:**
+- K_A: Method A (variational) on the trapezoid at h = 0.06;
+- |A − B|: difference from Method B (finite difference, Richardson, trapezoid h = 0.08);
+- max spread: the largest of |A₀.₀₆ − A₀.₀₈|, |A₀.₀₆ − B₀.₀₈| and |B₀.₀₈ − B₀.₁₂|.
+
+| τ component | P1: K_A | P1: \|A − B\| | P1: max spread | P2: K_A | P2: \|A − B\| | P2: max spread |
+|---|---|---|---|---|---|---|
+| (π, π, π) | −0.14878490 | < 10⁻¹¹ | < 10⁻¹⁰ | −0.14878490 | < 10⁻¹¹ | < 10⁻¹⁰ |
+| (π, π, 3π/2) | −0.04432639 | < 10⁻¹¹ | 9·10⁻¹² | −0.04446964 | 10⁻¹² | 8·10⁻¹² |
+| (π, π, 2π) | −0.02861432 | < 10⁻¹¹ | 4·10⁻¹¹ | −0.11718637 | < 10⁻¹¹ | 1.5·10⁻⁹ |
+| (π, 3π/2, 3π/2) | +0.06894372 | < 10⁻¹¹ | 9·10⁻¹¹ | +0.07089725 | < 10⁻¹¹ | 8·10⁻¹¹ |
+| (π, 3π/2, 2π) | +0.08596046 | < 10⁻¹¹ | 5·10⁻¹⁰ | +0.14047054 | < 10⁻¹¹ | 2·10⁻⁹ |
+| (π, 2π, 2π) | −0.12240520 | < 10⁻¹¹ | 1.2·10⁻⁹ | −0.12335677 | < 10⁻¹¹ | 1.2·10⁻⁸ |
+| (3π/2, 3π/2, 3π/2) | −0.24181326 | < 10⁻¹¹ | 5·10⁻¹⁰ | −0.24953226 | < 10⁻¹¹ | 5·10⁻¹⁰ |
+| (3π/2, 3π/2, 2π) | +0.12598512 | < 10⁻¹¹ | 2·10⁻⁹ | +0.09826085 | 10⁻¹² | 2.6·10⁻⁹ |
+| (3π/2, 2π, 2π) | −0.09578872 | 3·10⁻¹² | 2.2·10⁻⁹ | −0.05959596 | 4·10⁻¹² | 1.5·10⁻⁸ |
+| (2π, 2π, 2π) | +0.00565026 | 1.3·10⁻¹¹ | 8.7·10⁻⁸ | −0.14313464 | 2·10⁻¹¹ | 3.8·10⁻⁸ |
+
+**Evidence criterion (§3.1): met by 20 / 20 components.**
+- Methods A and B agree to ≤ 2·10⁻¹¹.
+- The largest spread is 8.7·10⁻⁸, against |K| ≥ 5.65·10⁻³.
+- The tertiary Gauss–Hermite n = 192 values agree to its own (lower) accuracy.
+
+**Internal consistency:**
+- **K(π, π, π) is identical for P1 and P2**, as causality requires, since q₁ = q₂ on [0, π].
+- The P1 and P2 components involving later times differ.
+
+**The smallest component**, P1 (2π, 2π, 2π) = +5.65·10⁻³:
+- Its spread is the largest of all (8.7·10⁻⁸), and it still meets the criterion by a factor of about 65 000.
+- The Gauss–Hermite n = 192 value (4.99·10⁻³) is visibly under-resolved there, consistent with the V2 diagnosis at
+  t = 2π.
+
+**Sign pattern** (all 20 components):
+
+| components | P1 | P2 |
+|---|---|---|
+| (π,π,π), (π,π,3π/2), (π,π,2π), (π,2π,2π), (3π/2)³, (3π/2,2π,2π) | − | − |
+| (π,3π/2,3π/2), (π,3π/2,2π), (3π/2,3π/2,2π) | + | + |
+| (2π)³ | + | − |
+
+The one-time components (K = 3c) are:
+- K(π)³ = −0.1488 (both protocols);
+- K(3π/2)³ = −0.2418 (P1) and −0.2495 (P2);
+- K(2π)³ = +0.0057 (P1) and −0.1431 (P2).
+
+**Leading-order reading (no claim inflation).** By BRI1-R1, κ₃(F_q(t_a), F_q(t_b), F_q(t_c)) = K_q[a,b,c]/N_B +
+O(N_B⁻²), and every third cumulant of P0 vanishes exactly. If these values were certified, each would be a
+leading-order, reflection-safe orbit violation (BRI-E2+O type) at the preregistered tuple. They do **not** establish a
+finite-N_B detection threshold, do not validate D_orb, and do not require the N_B grid. They are not GRUT physics.
+
+## 5. Grading (PF4Q-06)
+
+**BRI1-R1:** PROVED (§1).
+
+**Certified enclosures:** NONE. The machinery is unavailable (§2), so budget items 3 – 5 are only estimated.
+
+**Per the owner's PF4Q-04 fallback, high-precision deterministic values are evidence only and may not upgrade PF-A.**
+
+**Rule applied: PF4Q-I.** Retain **X1-PF-INDETERMINATE**, with the narrower statement: **"finite-time non-vanishing at τ
+not certified."**
+- **Precise reason:** no certified enclosure was computed (machinery absent). It is **not** that enclosures contain zero.
+- **Strength of the evidence:** 20 / 20 components are non-zero, with two independent formulations and quadratures
+  agreeing to about 10⁻¹¹ and magnitudes 5.7·10⁻³ – 0.25.
+- The coefficients are **not** called zero. **PF-B is not assigned. PF4Q-Z does not arise.**
+
+**Path to PF-A (owner decision):** build the certified pipeline sketched in §2 and certify at least one component. The
+best candidate is P2 (3π/2)³ ≈ −0.250, the largest magnitude, which leaves the widest margin.
+
+**D_orb (PF4Q-08):** "D_orb ~ O(N_B⁻²)" remains a feasibility heuristic. It is not derived here and not used.
