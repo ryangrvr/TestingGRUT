@@ -1,6 +1,7 @@
 # DA0 STATUS
 
-**State:** **C3-D0 RUN COMPLETE — D0-B; AWAITING OWNER REVIEW.** PM2 Stage A is accepted and closed. (C2 closed; C2 final handoff accepted.)
+**State:** **C3 ARCHITECTURE TRACK — HOLD: OPERATIONAL DEFINITION UNRESOLVED.** C3-D0 result accepted (D0-B); PM2 Stage A is
+accepted and closed. (C2 closed; C2 final handoff accepted.)
 
 **C2 terminal (accepted):** C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING ARCHITECTURE
 FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN. `C2_FINAL_HANDOFF.md` is the accepted terminal C2
@@ -48,6 +49,15 @@ handoff.
   - Exact recurrence (5a) is brittle; mass-law families 1 – 4 are offset class.
   - **C3 must repair its operational definition of architecture before any further physical-model search.**
   - PM2-BIS remains unopened.
+  - **OWNER RULING: C3-D0 RESULT ACCEPTED** — D0-B, with exactly its existing scope. Reviewed boundary:
+    **`31404439d0be359659ef456bb60924e824989c42`**.
+- **C3 ARCHITECTURE TRACK — HOLD: OPERATIONAL DEFINITION UNRESOLVED.**
+  - The architecture question is **not** closed permanently, but the current detector programme is stopped.
+  - No further physical architecture generator is opened until a new operational definition is justified independently.
+  - PM2-BIS remains unopened. C3-B remains closed. TRUE COMPRESSION remains 0.
+- **Forward-program note:** the next substantive GRUT research direction is being chartered separately from DA0 and is
+  not part of this branch.
 - **C3-B closed. No noise, no PM2-BIS.**
 - **Boundaries:** pre-repair charter `f266be2`; Repair 02 `31b5714`; preflight `dde3b94`; PM2 Repair 01 `86692eb`;
-  PM2 implementation declarations `c6de0fa`; **PM2 Stage A `2139cc4` (accepted)**; D0 Repair 01 `06cce52`.
+  PM2 implementation declarations `c6de0fa`; **PM2 Stage A `2139cc4` (accepted)**; D0 Repair 01 `06cce52`; **D0 result `3140443` (accepted)**. RA0-frozen
+  `ab4fd86` unchanged.

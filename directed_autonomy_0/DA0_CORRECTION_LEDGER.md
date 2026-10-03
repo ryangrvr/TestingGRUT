@@ -257,3 +257,20 @@ to run without another owner stop. The repaired text is `C3_D0_ARCHITECTURE_DETE
 | **D0-S3** | **Verdicts.** P0: Q1 – Q5 PASS. P0-ε: Q6 PASS. P1: Q1, Q2, Q4, Q5 PASS; **Q3 FAIL** (Δ: 0.429 → 0.276 at 27 → 81, below the required 0.330). P1-ε: Q6.1, Q6.2 PASS; **Q6.3 FAIL** (0.293 → 0.106, below the required 0.135) |
 | **D0-S4** | **Terminal: D0-B — REGISTERED TREE OBSERVABLES INSUFFICIENT — HIERARCHY NOT OPERATIONALLY IDENTIFIED.** Scope: rejects Φ as chartered under the preregistered finite-grid non-shrinking rule. It is not a universal statement and leaves PM2-B unchanged. Nothing was varied after results |
 | **D0-S5** | **Audit conjectures not supported at tested sizes** (charter §D0-F3 text is kept as emitted; this entry takes precedence). "Φ(N0) → 0": observed Φ_N0 = 0.25 – 0.52. "D(P0), D(P1) = O(log N)": observed N^{0.70} and N^{0.53}. The prediction that families 1 – 4 are offset class is consistent with the secondaries. The prediction that 5a is a brittle template detector is confirmed (ε-families ≈ N0) |
+
+## C3-D0 — OWNER RULING (review of `3140443`)
+
+**Ruling:** **C3-D0 RESULT ACCEPTED.** Terminal: **D0-B — REGISTERED TREE OBSERVABLES INSUFFICIENT — HIERARCHY NOT
+OPERATIONALLY IDENTIFIED**, accepted exactly with its existing scope. Reviewed scientific boundary:
+`grut-directed-autonomy-0 @ 31404439d0be359659ef456bb60924e824989c42`.
+
+| ID | record |
+|---|---|
+| **D0-R1** | Φ is rejected **as chartered**, under the preregistered finite-grid non-shrinking criterion. This is **not** a theorem that hierarchy is impossible or undetectable |
+| **D0-R2** | P0 passed, including the noise-tolerance control (P0-ε, Q6). P1 stayed above the R-TREE baseline at every tested size but failed the preregistered scale-stability rule (Q3; P1-ε Q6.3) |
+| **D0-R3** | **Freeze:** no exponents, thresholds, scales, sizes or detector definitions are retuned after this result. **No additional D0 sizes and no second Φ campaign are authorised** |
+| **D0-R4** | **C3 ARCHITECTURE TRACK — HOLD: OPERATIONAL DEFINITION UNRESOLVED.** Not closed permanently. The current detector programme is stopped, and no further physical architecture generator is opened until a new operational definition is justified independently. PM2-BIS remains unopened; C3-B remains closed; TRUE COMPRESSION = 0 |
+| **D0-R5** | **Forward-program note:** the next substantive GRUT research direction is being chartered separately from DA0 and is not part of this branch |
+
+**Preserved:** PM2 Stage-A boundary `2139cc4`; D0 Repair 01 `06cce52`; all earlier C2 / C3 boundaries; RA0-frozen
+`ab4fd86`. No PR, no merge.
