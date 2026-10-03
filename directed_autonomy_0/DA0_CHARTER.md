@@ -29,7 +29,7 @@
 |---|---|---|
 | **C0** | comparator firewall: what a positive result must beat | **preregistered in this charter (§2)**; awaiting owner approval |
 | **C1** | non-reversible endogenous macrostructure | **preregistered (§3)**; not started |
-| C2 | growing capacity: K_N → ∞, or a filtration whose depth grows | named only; preregistered after C1 |
+| C2 | growing endogenous architecture: C2-A (K_N → ∞) and C2-B (filtration depth → ∞), tested separately | **chartered in `C2_CHARTER.md`** (C1 accepted after C1 REPAIR 01); awaiting owner approval to run |
 | C3 | genuinely reflexive internal modelling | named only; preregistered after C2 |
 
 No consciousness interpretation is permitted before C3 closes, and then only by owner ruling.

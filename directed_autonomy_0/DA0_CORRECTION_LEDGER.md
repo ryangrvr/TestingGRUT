@@ -42,3 +42,10 @@ MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D — A-PRICED**. The original log is
 
 **Applied to:** `C1_NONREVERSIBLE_MACROSTRUCTURE.md`, `DA0_ZOOM_OUT_01.md`, `DA0_STATUS.md`. New numerics:
 `c1/c1_repair.py`, `c1/c1_repair.log`.
+
+## Owner ruling on `1c3e9ad` (no repair)
+
+- **C1 ACCEPTED AFTER REPAIR 01. C2 APPROVED TO CHARTER.**
+- **Wording discipline (standing).** At the logged finite sizes, the N4b sufficient quantity q_max·η/g² is still > 1 for
+  R1a and R5 and ≈ 1 for R2 at the largest M. Their certification is **asymptotic, from the analytic 1/M scaling**, not
+  from having entered a numerically small-error regime.
