@@ -144,3 +144,26 @@ simulation.**
   cube at T = 1.1. Inspection showed it was the J = 0 minimum with round-off signs (|J_b| ~ 1e-10). A declared
   computational zero (|J_b| ≤ 1e-6 means absent) was added, and the logged run is the corrected one.
 - The analytic results stand independently of this check.
+
+## C3 PREFLIGHT SCOPE REPAIR 01 and PRIMARY MODEL 1 CLOSURE (owner review of `dde3b94`)
+
+**Owner ruling:** **option (a)**. The window simulation is **not** authorised. The preflight is accepted after the scope
+repairs. Primary Model 1 is closed as the primary C3 route, with its residuals preserved. This is **not PF-D**, and not a
+universal no-go.
+
+| ID | correction |
+|---|---|
+| **C3P-01** | "PF-B for T < T_lin/2" is narrowed to **PF-B — PROVED FOR SIGN / FRUSTRATION ARCHITECTURE ONLY** (full support, unfrustrated plaquettes, ≤ 8 winding sectors modulo gauge). For the full C3-A question, **NONUNIFORM MAGNITUDE ARCHITECTURE REMAINS OPEN**: Griffiths + Tarski give a uniform greatest fixed point but do not exclude intermediate nonuniform ones, and uniqueness is only claimed below an uncomputed T₀ |
+| **C3P-02** | "The adaptive transition is first-order-like at T₁" is narrowed to: **the uniform stationary branch has a subcritical / first-order-like bifurcation structure. A full-space thermodynamic / adaptive transition and its location are not established.** Any uniform-ray free-energy crossing is a uniform-ray statement only |
+
+**PRIMARY MODEL 1 TERMINAL:** PRIMARY MODEL 1 CLOSED — ADAPTIVE COUPLING GENERATES ORDER BUT NO GROWING COLLECTIVE
+ARCHITECTURE MECHANISM WAS FOUND; SIGN/FRUSTRATION ARCHITECTURE IS O(1) IN THE PROVED LOW-T REGIME; FULL ARCHITECTURE
+RETAINS INDETERMINATE RESIDUALS.
+
+**Construction lesson.** Pure local Hebbian reinforcement is biased toward unfrustrated (Mattis-like) order. The next
+law needs **endogenous local competition**. PM1 is retained as a C3 comparator.
+
+**Primary Model 2:** a candidate audit / proposal only (`C3_PM2_CANDIDATE_AUDIT.md`). It is **not run** and **not
+selected**. It adds a one-line structural result: **sign-blind constraints preserve the unfrustrated global envelope**.
+
+**Boundaries preserved:** Repair 02 `31b5714e134b78dfe6b6ff75c814654c94f09cb2`; C2 `99428ff`; RA0-frozen `ab4fd86`.

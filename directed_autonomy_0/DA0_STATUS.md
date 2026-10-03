@@ -15,11 +15,13 @@ handoff.
 - TRUE COMPRESSION: **0**.
 
 **C3:**
-- **Charter:** CONDITIONAL PASS, primary model accepted. Repairs 01 (C3R-01 … 07) and 02 (C3R-08 … 10) applied. Primary
-  dimension fixed at d = 3.
-- **Analytic preflight complete** (`C3_ANALYTIC_PREFLIGHT.md`):
-  - **PF-B** for T < T_lin/2. Proved: the sign architecture of local minima is ≤ 8 winding sectors modulo gauge.
-  - **PF-INDETERMINATE** in T_lin/2 ≤ T ≤ T*.
-  - **PF-C not reached.**
-- **NO SIMULATION. C3-B closed. HARD STOP for owner review.**
-- **Boundaries:** pre-repair charter `f266be2`; Repair 02 commit `31b5714`.
+- **Charter:** primary dimension d = 3; repairs 01 and 02 applied.
+- **Analytic preflight:** accepted after SCOPE REPAIR 01 (C3P-01, C3P-02).
+- **PRIMARY MODEL 1 CLOSED** — adaptive coupling generates order, but no mechanism for growing collective architecture
+  was found. Sign / frustration architecture is O(1) in the proved low-T regime; the full architecture retains
+  indeterminate residuals (window frustration, magnitude textures, T₀, full-space transition, finite-ε EP). The window
+  simulation was **not** run (owner option (a)). This is not PF-D.
+- **Primary Model 2:** candidate audit only (`C3_PM2_CANDIDATE_AUDIT.md`). The proposal is M2-D (adaptive flow network,
+  conserved-flux competition); fallback M2-B. **NOT RUN; awaiting owner selection.**
+- **C3-B closed. No simulation.**
+- **Boundaries:** pre-repair charter `f266be2`; Repair 02 `31b5714`; preflight `dde3b94`.

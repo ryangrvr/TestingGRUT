@@ -1,5 +1,10 @@
 # DA0 · C3 — ANALYTIC PREFLIGHT (primary model, d = 3)
 
+> **C3 PREFLIGHT SCOPE REPAIR 01** (C3P-01, C3P-02; `DA0_CORRECTION_LEDGER.md`). Owner chose **option (a)**: the window
+> test is **not** authorised.
+>
+> **PRIMARY MODEL 1 CLOSED** — see §PM1-T at the end. Where wording differs, the ledger takes precedence.
+
 **Charter.** C3 CHARTER REPAIR 01 + 02 (C3R-01 … 10).
 
 **Scope:**
@@ -86,7 +91,11 @@ adaptive transition. In fact:
   **e(K) = K + (11/3)K³ + O(K⁵)**. So e(K)/K > 1 for small K > 0, and e(K)/K → 0 as K → ∞.
 - Hence m* := max_K e(K)/K > 1, and **non-zero uniform stationary points exist for T_lin < T ≤ T* := m*/μ**: an unstable
   small branch near J = 0 and a large ordered branch with |J| → 1/μ.
-- The adaptive transition is therefore **first-order-like (subcritical)**, at some T₁ ∈ (T_lin, T*] where 𝓕 values cross.
+- [C3P-02, narrowed] **The uniform stationary branch has a subcritical / first-order-like bifurcation structure. A
+  full-space thermodynamic / adaptive transition, and its location, are NOT established here.** A free-energy crossing
+  along the uniform ray, if computed, would be a **uniform-ray crossing** only, not the transition of the full adaptive
+  landscape. (Superseded wording: "the adaptive transition is therefore first-order-like (subcritical), at some
+  T₁ ∈ (T_lin, T*] where 𝓕 values cross".)
 - The exact value of m* (3D Ising) is **not computed**.
 - **Tiny-graph illustration (secondary).** On the single cube, e/K = 1.004, 1.017, 1.072, 1.277 at K = 0.05 … 0.4,
   matching the cube series 1 + (5/3)K², peaking and then falling. At T = 1.1 and 1.3 (μ = 1), J = 0 **and** the ferro
@@ -211,12 +220,13 @@ nonnegative diagonal. Every local minimum qualifies. Then:
 
 | regime | verdict | basis |
 |---|---|---|
-| **T < T_lin/2** | **PF-B — EXTENDED UNFRUSTRATED ORDER AVAILABLE, NOT GROWING ARCHITECTURE** | **Proved for sign architecture:** modulo gauge, every local minimum is nonnegative in one of ≤ 8 winding sectors, so the frustration architecture is O(1) (PF5-L (ii)). Magnitude textures in the nonnegative sector are bounded between 0 and the uniform maximal fixed point. Their uniqueness is expected (deep ordered: every K_b > √2) but proved only for T < T₀ via a cluster expansion that is cited, not executed (**OPEN constant**) |
+| **T < T_lin/2** | [C3P-01] **PF-B — PROVED FOR SIGN / FRUSTRATION ARCHITECTURE ONLY.** For the full C3-A question: **NONUNIFORM MAGNITUDE ARCHITECTURE REMAINS OPEN** (intermediate positive fixed points are not excluded; uniqueness only below an uncomputed T₀). Superseded label: "PF-B — EXTENDED UNFRUSTRATED ORDER AVAILABLE, NOT GROWING ARCHITECTURE" | **Proved for sign architecture:** modulo gauge, every local minimum is nonnegative in one of ≤ 8 winding sectors, so the frustration architecture is O(1) (PF5-L (ii)). Magnitude textures in the nonnegative sector are bounded between 0 and the uniform maximal fixed point. Their uniqueness is expected (deep ordered: every K_b > √2) but proved only for T < T₀ via a cluster expansion that is cited, not executed (**OPEN constant**) |
 | **T_lin/2 ≤ T ≤ T*** (with T* = m*/μ > T_lin, the end of the nonzero branches) | **PF-INDETERMINATE** | Frustrated local minima are **not excluded** by PF5-L. Evidence against them: the global envelope is unfrustrated (PF5-E); the Landau plaquette term penalises frustration; the natural FF branch is a **saddle**; tiny-graph checks found none. **No concrete analytic mechanism for a growing number / depth of frustrated collective minima, or for diverging barriers, was found.** |
 | **T > T*** | J = 0 is the only stationary point on the uniform ray; locally stable | no architecture |
 
 **Overall preflight outcome:**
-- **PF-B** is proved in the low-temperature regime.
+- **PF-B is proved for sign / frustration architecture only** in the low-temperature regime [C3P-01]. Nonuniform
+  magnitude architecture there remains **open**.
 - **PF-INDETERMINATE** holds in the window T_lin/2 ≤ T ≤ T*. The precisely stated obstruction: whether self-consistent,
   dense-frustration (EA-like) local minima of 𝓕_T exist on the 3D torus with bounded-below Hessian, and with
   growing collective edges and barriers.
@@ -230,8 +240,8 @@ nonnegative diagonal. Every local minimum qualifies. Then:
   O(1) architecture after the gauge quotient.
 
 **Information accounting (preflight):**
-- **Derived:** the exact landscape 𝓕_T; the gauge quotient; the instability T_lin = 1/μ; a subcritical adaptive
-  transition; the unfrustrated global envelope; the local-minimum frustration bound |C| ≥ 2T_lin/T; O(1) sign
+- **Derived:** the exact landscape 𝓕_T; the gauge quotient; the instability T_lin = 1/μ; a subcritical uniform
+  stationary branch (not a certified full-space transition, C3P-02); the unfrustrated global envelope; the local-minimum frustration bound |C| ≥ 2T_lin/T; O(1) sign
   architecture for T < T_lin/2.
 - **Supplied:** the lattice (d = 3), locality, W = J, the update law, the constants (μ, T, T′, ε), the order of limits
   (ε → 0 first), and (if T ≠ T′) two reservoirs.
@@ -245,3 +255,44 @@ nonnegative diagonal. Every local minimum qualifies. Then:
 - **(b)** Authorise one narrowly targeted **window test**: a search for stable frustrated stationary points of 𝓕_T on
   moderate 3D tori in T_lin/2 ≤ T ≤ T*. Stationary points would be computed with a controlled approximation, which must
   itself be preregistered. That test can upgrade the window only to PF-C or PF-B / D.
+
+
+## PM1-T — PRIMARY MODEL 1 TERMINAL (owner ruling: option (a); window test NOT run)
+
+**PRIMARY MODEL 1 CLOSED — ADAPTIVE COUPLING GENERATES ORDER BUT NO GROWING COLLECTIVE ARCHITECTURE MECHANISM WAS FOUND;
+SIGN / FRUSTRATION ARCHITECTURE IS O(1) IN THE PROVED LOW-T REGIME; FULL ARCHITECTURE RETAINS INDETERMINATE RESIDUALS.**
+
+This is **not PF-D** and **not** a universal no-go result.
+
+**Why the window test was declined.**
+- A negative result would not close C3-A, because nonfrustrated collective **magnitude** textures remain unexcluded.
+- A positive result would only grant PF-C permission, and would still need scaling of minima, collective edges and
+  diverging barriers.
+- There is not enough positive mechanism to justify a simulation campaign.
+
+**Proved / earned:**
+- the exact adiabatic landscape;
+- the gauge quotient;
+- T_lin = 1/μ;
+- the subcritical uniform stationary branch;
+- the exact loop expansion;
+- the ferromagnetic-envelope theorem (PF5-E);
+- the local-minimum frustration bound (PF5-L);
+- O(1) sign / frustration architecture for T < T_lin/2.
+
+**Open:**
+- frustrated local minima in the window T_lin/2 ≤ T ≤ T*;
+- nonuniform nonnegative magnitude fixed points;
+- the uniqueness constant T₀;
+- the full-space transition structure;
+- finite-ε entropy production for T ≠ T′.
+
+**Not earned:** C3-A1; growing architecture; a growing barrier hierarchy; C3-B; TRUE COMPRESSION.
+
+**Construction lesson (recorded).** Pure local Hebbian reinforcement dynamically generates its coupling field. But its
+derived landscape has an unfrustrated global envelope and locally favours unfrustrated loops. No mechanism was found that
+turns reinforcement alone into growing collective architecture. **The next adaptive law needs endogenous local
+competition, not merely reinforcement.**
+
+**Retained as a C3 comparator (PM1).** It separates *adaptation / generated couplings* from *generated complex
+architecture*.
