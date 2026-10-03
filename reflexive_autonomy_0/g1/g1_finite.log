@@ -1,0 +1,31 @@
+== G1.1 exact characterization (exhaustive over all 52 partitions of 5 states) ==
+  random Dirichlet (20)          mismatches vs (A: Kemeny-Snell) / (B: KS + distinct lumped rows): 0
+  sparse random (20)             mismatches vs (A: Kemeny-Snell) / (B: KS + distinct lumped rows): 0
+  all 120 permutations           mismatches vs (A: Kemeny-Snell) / (B: KS + distinct lumped rows): 0
+  iid chain (all rows equal)     mismatches vs (A: Kemeny-Snell) / (B: KS + distinct lumped rows): 0
+  identity                       mismatches vs (A: Kemeny-Snell) / (B: KS + distinct lumped rows): 0
+== G1.2 monotonicity (all refining pairs, both versions) ==
+  random       refining pairs 358  violations A 0  B 0
+  sparse       refining pairs 358  violations A 0  B 0
+  permutation  refining pairs 358  violations A 0  B 0
+== G1.2 endpoints ==
+  random          A: TOP True BOT True |Fix_A|=2   B: TOP True BOT True |Fix_B|=2
+  iid             A: TOP True BOT True |Fix_A|=52   B: TOP True BOT False |Fix_B|=1
+  two equal rows  A: TOP True BOT True |Fix_A|=3   B: TOP True BOT False |Fix_B|=2
+== G1.3 generic no-go: 1000 random Dirichlet(1) chains, n=5 ==
+  chains with a nontrivial Version-A fixed point: 0 / 1000
+  codimension check: rank of KS constraints on the affine row-sum space vs (k-1)(n-k)
+  all nontrivial partitions of 5 states: codim == (k-1)(n-k): True
+== G1.4 symmetry ==
+  circulant (Z6-equivariant) on 6 states: |Fix_A|=4 |Fix_B|=4; nontrivial B: [(0, 1, 0, 1, 0, 1), (0, 1, 2, 0, 1, 2)]
+  Z2-orbit (0, 1, 2, 0, 1, 2) fixed: True;  Z3-orbit (0, 1, 0, 1, 0, 1) fixed: True;  comparable: False
+== G1.5 orientation ==
+  all 120 bijections on 5 states: Fix(T) == Fix(T^-1) for both versions: True
+  reversible chain: P* == P: True
+  nonreversible chain (pi derived from P): Pi lumpable forward True, for the time reversal P* False
+  Fix_A(P) = [(0, 0, 0, 0, 0), (0, 0, 1, 1, 1), (0, 1, 2, 3, 4)];  Fix_A(P*) = [(0, 0, 0, 0, 0), (0, 1, 2, 3, 4)]
+  covariance check: computing with P* as 'forward' simply swaps the two sets: True
+== G1.6 twin control: 4 states = {0,1}^2, two candidate subsystem decompositions ==
+  non-interacting in D1 : D1 factor fixed (A) True; D2 factor fixed (A) False
+  generic interacting   : D1 factor fixed (A) False; D2 factor fixed (A) False
+  (identical P for both decompositions; F distinguishes them only through exact autonomy of their factors)
