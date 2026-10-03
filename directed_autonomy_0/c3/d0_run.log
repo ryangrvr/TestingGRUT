@@ -1,0 +1,103 @@
+computed 294 trees in 26s
+
+=== PRIMARY Phi per family and size (mean, 95% half-width; |U| and #classes are means for ensembles) ===
+  L= 16 N0  : Phi 0.2500 +- 0.1146 | |U| 3.1 | classes 2.2
+  L= 16 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L= 16 P0  : Phi 0.6667 +- 0.0000 | |U| 3.0 | classes 1.0
+  L= 16 P0e : Phi 0.5667 +- 0.0733 | |U| 3.0 | classes 1.3
+  L= 32 N0  : Phi 0.4613 +- 0.0614 | |U| 7.3 | classes 3.9
+  L= 32 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L= 32 P0  : Phi 0.7143 +- 0.0000 | |U| 7.0 | classes 2.0
+  L= 32 P0e : Phi 0.5857 +- 0.0206 | |U| 7.0 | classes 2.9
+  L= 64 N0  : Phi 0.5114 +- 0.0409 | |U| 15.9 | classes 7.7
+  L= 64 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L= 64 P0  : Phi 0.8571 +- 0.0000 | |U| 14.0 | classes 2.0
+  L= 64 P0e : Phi 0.6357 +- 0.0305 | |U| 14.0 | classes 5.1
+  L=128 N0  : Phi 0.4807 +- 0.0366 | |U| 33.0 | classes 17.0
+  L=128 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L=128 P0  : Phi 0.8966 +- 0.0000 | |U| 29.0 | classes 3.0
+  L=128 P0e : Phi 0.6914 +- 0.0177 | |U| 29.0 | classes 8.9
+  L= 27 N0  : Phi 0.4464 +- 0.0661 | |U| 6.5 | classes 3.5
+  L= 27 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L= 27 P1  : Phi 0.8750 +- 0.0000 | |U| 16.0 | classes 2.0
+  L= 27 P1e : Phi 0.7390 +- 0.0341 | |U| 13.2 | classes 3.5
+  L= 81 N0  : Phi 0.5243 +- 0.0325 | |U| 19.9 | classes 9.4
+  L= 81 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L= 81 P1  : Phi 0.8000 +- 0.0000 | |U| 25.0 | classes 5.0
+  L= 81 P1e : Phi 0.6305 +- 0.0245 | |U| 22.1 | classes 8.2
+  L=243 N0  : Phi 0.4158 +- 0.0182 | |U| 62.2 | classes 36.3
+  L=243 N1  : Phi 0.0000 +- 0.0000 | |U| 0.0 | classes 0.0
+  L=243 P1  : Phi 0.9236 +- 0.0000 | |U| 144.0 | classes 11.0
+  L=243 P1e : Phi 0.8421 +- 0.0050 | |U| 121.2 | classes 19.1
+
+=== QUALIFICATION (exact algebra of sec. R, D0-O4) ===
+  P0: Delta_j [np.float64(0.4167), np.float64(0.253), np.float64(0.3458), np.float64(0.4159)]; up_R [np.float64(0.3646), np.float64(0.5227), np.float64(0.5523), np.float64(0.5172)]; h_R [np.float64(0.1146), np.float64(0.0614), np.float64(0.0409), np.float64(0.0366)]
+  P0: Q1 True  Q2 True  Q3 True  Q4 True  Q5 True
+  P0e: Delta_low_j [np.float64(0.1287), np.float64(0.0424), np.float64(0.0529), np.float64(0.1564)]; Delta_eps_j [np.float64(0.3167), np.float64(0.1244), np.float64(0.1243), np.float64(0.2107)]; h_eps [np.float64(0.0733), np.float64(0.0206), np.float64(0.0305), np.float64(0.0177)]
+  P0e: Q6.1 True  Q6.2 True  Q6.3 True  => Q6 True
+  P1: Delta_j [np.float64(0.4286), np.float64(0.2757), np.float64(0.5078)]; up_R [np.float64(0.5126), np.float64(0.5567), np.float64(0.434)]; h_R [np.float64(0.0661), np.float64(0.0325), np.float64(0.0182)]
+  P1: Q1 True  Q2 True  Q3 False  Q4 True  Q5 True
+  P1e: Delta_low_j [np.float64(0.1923), np.float64(0.0493), np.float64(0.4031)]; Delta_eps_j [np.float64(0.2926), np.float64(0.1063), np.float64(0.4263)]; h_eps [np.float64(0.0341), np.float64(0.0245), np.float64(0.005)]
+  P1e: Q6.1 True  Q6.2 True  Q6.3 False  => Q6 False
+
+  GRADE (mechanical): D0-B
+
+=== SECONDARY DIAGNOSTICS (reported; cannot rescue Phi) ===
+  N0   D(T) [121.0, 430.9, 1608.5, 5958.3] slope(log D vs log N) 0.938
+     L= 16: lambda 0.1488  tau 0.4388  eta_H 0.6715  Strahler 4.15  R_B 4.149  T1 1.547  T2 3.852  c 2.718
+     L= 32: lambda 0.1537  tau 0.3841  eta_H 0.6741  Strahler 5.10  R_B 4.131  T1 1.257  T2 3.540  c 2.942
+     L= 64: lambda 0.1602  tau 0.3848  eta_H 0.6541  Strahler 6.00  R_B 4.129  T1 1.136  T2 3.088  c 2.757
+     L=128: lambda 0.1635  tau 0.3698  eta_H 0.6483  Strahler 6.90  R_B 4.271  T1 1.314  T2 3.455  c 2.726
+  N1   D(T) [31, 63, 127, 255] slope(log D vs log N) 0.507
+     L= 16: lambda 0.1099  tau 1.4788  eta_H 0.8712  Strahler 2.00  R_B 16.000  T1 14.000  T2 nan  c nan
+     L= 32: lambda 0.0938  tau 1.8159  eta_H 0.9647  Strahler 2.00  R_B 32.000  T1 30.000  T2 nan  c nan
+     L= 64: lambda 0.0807  tau 2.2055  eta_H 0.9912  Strahler 2.00  R_B 64.000  T1 62.000  T2 nan  c nan
+     L=128: lambda 0.0703  tau 2.6083  eta_H 0.9978  Strahler 2.00  R_B 128.000  T1 126.000  T2 nan  c nan
+  P0   D(T) [88, 232, 609, 1596] slope(log D vs log N) 0.697
+     L= 16: lambda 0.1265  tau 0.3941  eta_H 0.6613  Strahler 4.00  R_B 3.893  T1 1.011  T2 3.250  c 3.214
+     L= 32: lambda 0.1353  tau 0.3602  eta_H 0.6649  Strahler 5.00  R_B 3.915  T1 0.885  T2 2.678  c 3.024
+     L= 64: lambda 0.1412  tau 0.3341  eta_H 0.6688  Strahler 6.00  R_B 3.931  T1 0.809  T2 2.369  c 2.928
+     L=128: lambda 0.1454  tau 0.3207  eta_H 0.6715  Strahler 7.00  R_B 3.942  T1 0.757  T2 2.178  c 2.876
+  P0e  D(T) [114.9, 444.3, 1623.7, 6100.9] slope(log D vs log N) 0.953
+     L= 16: lambda 0.1329  tau 0.3779  eta_H 0.6776  Strahler 4.00  R_B 4.199  T1 1.114  T2 4.196  c 3.862
+     L= 32: lambda 0.1402  tau 0.3524  eta_H 0.6647  Strahler 5.00  R_B 4.114  T1 1.036  T2 3.216  c 3.151
+     L= 64: lambda 0.1490  tau 0.3169  eta_H 0.6520  Strahler 6.00  R_B 4.090  T1 0.976  T2 2.978  c 3.086
+     L=128: lambda 0.1518  tau 0.3227  eta_H 0.6685  Strahler 7.00  R_B 4.075  T1 0.865  T2 2.443  c 2.839
+     KS(light fraction, top window) P0 vs N0 at L=16: 0.1355  (n_F 95, n_R 1440)
+     KS(light fraction, top window) P0e vs N0 at L=16: 0.0924  (n_F 1680, n_R 1440)
+     KS(light fraction, top window) N1 vs N0 at L=16: 0.7250  (n_F 15, n_R 1440)
+     KS(light fraction, top window) P0 vs N0 at L=32: 0.1371  (n_F 313, n_R 4696)
+     KS(light fraction, top window) P0e vs N0 at L=32: 0.0664  (n_F 5739, n_R 4696)
+     KS(light fraction, top window) N1 vs N0 at L=32: 0.7821  (n_F 31, n_R 4696)
+     KS(light fraction, top window) P0 vs N0 at L=64: 0.1024  (n_F 1021, n_R 14589)
+     KS(light fraction, top window) P0e vs N0 at L=64: 0.0598  (n_F 17378, n_R 14589)
+     KS(light fraction, top window) N1 vs N0 at L=64: 0.8055  (n_F 63, n_R 14589)
+     KS(light fraction, top window) P0 vs N0 at L=128: 0.1190  (n_F 3316, n_R 44769)
+     KS(light fraction, top window) P0e vs N0 at L=128: 0.0486  (n_F 58669, n_R 44769)
+     KS(light fraction, top window) N1 vs N0 at L=128: 0.8178  (n_F 127, n_R 44769)
+  N0   D(T) [316.5, 2503.3, 20357.8] slope(log D vs log N) 0.948
+     L= 27: lambda 0.1550  tau 0.4135  eta_H 0.6777  Strahler 5.00  R_B 3.808  T1 0.990  T2 2.837  c 3.302
+     L= 81: lambda 0.1625  tau 0.3869  eta_H 0.6399  Strahler 6.40  R_B 4.133  T1 1.129  T2 3.127  c 2.851
+     L=243: lambda 0.1654  tau 0.3725  eta_H 0.6342  Strahler 7.70  R_B 4.350  T1 1.237  T2 3.298  c 2.751
+  N1   D(T) [53, 161, 485] slope(log D vs log N) 0.504
+     L= 27: lambda 0.0975  tau 1.7464  eta_H 0.9550  Strahler 2.00  R_B 27.000  T1 25.000  T2 nan  c nan
+     L= 81: lambda 0.0769  tau 2.3460  eta_H 0.9946  Strahler 2.00  R_B 81.000  T1 79.000  T2 nan  c nan
+     L=243: lambda 0.0626  tau 2.9987  eta_H 0.9994  Strahler 2.00  R_B 243.000  T1 241.000  T2 nan  c nan
+  P1   D(T) [71, 233, 721] slope(log D vs log N) 0.527
+     L= 27: lambda 0.2027  tau 0.6161  eta_H 0.6361  Strahler 4.00  R_B 6.009  T1 2.813  T2 5.100  c 1.813
+     L= 81: lambda 0.2116  tau 0.4360  eta_H 0.4673  Strahler 6.00  R_B 4.585  T1 1.732  T2 2.684  c 1.550
+     L=243: lambda 0.2170  tau 0.5522  eta_H 0.5994  Strahler 7.00  R_B 5.149  T1 1.942  T2 4.075  c 2.098
+  P1e  D(T) [312.0, 2360.3, 17830.0] slope(log D vs log N) 0.921
+     L= 27: lambda 0.1713  tau 0.5369  eta_H 0.5967  Strahler 5.00  R_B 3.936  T1 1.369  T2 2.106  c 1.545
+     L= 81: lambda 0.1798  tau 0.4185  eta_H 0.5196  Strahler 6.00  R_B 4.648  T1 1.803  T2 3.597  c 1.999
+     L=243: lambda 0.1862  tau 0.5310  eta_H 0.5972  Strahler 7.05  R_B 5.134  T1 2.170  T2 4.140  c 1.908
+     KS(light fraction, top window) P1 vs N0 at L=27: 0.2366  (n_F 113, n_R 3558)
+     KS(light fraction, top window) P1e vs N0 at L=27: 0.0868  (n_F 2700, n_R 3558)
+     KS(light fraction, top window) N1 vs N0 at L=27: 0.7634  (n_F 26, n_R 3558)
+     KS(light fraction, top window) P1 vs N0 at L=81: 0.1668  (n_F 699, n_R 20948)
+     KS(light fraction, top window) P1e vs N0 at L=81: 0.1200  (n_F 19170, n_R 20948)
+     KS(light fraction, top window) N1 vs N0 at L=81: 0.8044  (n_F 80, n_R 20948)
+     KS(light fraction, top window) P1 vs N0 at L=243: 0.2217  (n_F 3180, n_R 125023)
+     KS(light fraction, top window) P1e vs N0 at L=243: 0.1030  (n_F 83483, n_R 125023)
+     KS(light fraction, top window) N1 vs N0 at L=243: 0.8229  (n_F 242, n_R 125023)
+EXIT 0

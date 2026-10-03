@@ -247,3 +247,13 @@ to run without another owner stop. The repaired text is `C3_D0_ARCHITECTURE_DETE
 
 **Preserved:** PM2 Stage-A boundary `2139cc4`; PM2-B and its scope firewalls; all C2 / C3 boundaries; RA0-frozen
 `ab4fd86`. No PM2-BIS, no C3-B, no PR, no merge.
+
+## C3-D0 RUN RECORD (after Repair 01 `06cce52`; additive)
+
+| ID | record |
+|---|---|
+| **D0-S1** | **Implementation firewall honoured.** `c3/d0_detector.py` and `c3/d0_tests.py` were written before any control Φ. **36 / 36 tests passed on the first execution**: invariance; analytic N1 (Φ = 0, \|U\| = 0, D = 2L − 1 at all 7 sizes); path; binary depth 6 Φ = 6/7; construction validity. **No control Φ was inspected during implementation and no debugging inspection occurred.** Before the run: one edge-count-only check that the ε-trees are randomised, and per-tree wall-time measurements (no values printed). Two junk lines in a draft of `phi` (dead code, never executed) were removed before the tests ran |
+| **D0-S2** | **Run exactly as preregistered.** N0 / N1 / P0 / P1 / P0-ε / P1-ε on G2 = {16, 32, 64, 128} and G3 = {27, 81, 243}, seeds 1 – 20: 294 trees. PM2 trees were not scored. Logged in `c3/d0_run.log` and `c3/d0_results.json` |
+| **D0-S3** | **Verdicts.** P0: Q1 – Q5 PASS. P0-ε: Q6 PASS. P1: Q1, Q2, Q4, Q5 PASS; **Q3 FAIL** (Δ: 0.429 → 0.276 at 27 → 81, below the required 0.330). P1-ε: Q6.1, Q6.2 PASS; **Q6.3 FAIL** (0.293 → 0.106, below the required 0.135) |
+| **D0-S4** | **Terminal: D0-B — REGISTERED TREE OBSERVABLES INSUFFICIENT — HIERARCHY NOT OPERATIONALLY IDENTIFIED.** Scope: rejects Φ as chartered under the preregistered finite-grid non-shrinking rule. It is not a universal statement and leaves PM2-B unchanged. Nothing was varied after results |
+| **D0-S5** | **Audit conjectures not supported at tested sizes** (charter §D0-F3 text is kept as emitted; this entry takes precedence). "Φ(N0) → 0": observed Φ_N0 = 0.25 – 0.52. "D(P0), D(P1) = O(log N)": observed N^{0.70} and N^{0.53}. The prediction that families 1 – 4 are offset class is consistent with the secondaries. The prediction that 5a is a brittle template detector is confirmed (ε-families ≈ N0) |

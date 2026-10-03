@@ -1,7 +1,6 @@
 # DA0 STATUS
 
-**State:** **C3-D0 ARCHITECTURE DETECTOR QUALIFICATION — CHARTER / AUDIT ONLY, AWAITING OWNER REVIEW.** PM2 Stage A is
-accepted and closed. (C2 closed; C2 final handoff accepted.)
+**State:** **C3-D0 RUN COMPLETE — D0-B; AWAITING OWNER REVIEW.** PM2 Stage A is accepted and closed. (C2 closed; C2 final handoff accepted.)
 
 **C2 terminal (accepted):** C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING ARCHITECTURE
 FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN. `C2_FINAL_HANDOFF.md` is the accepted terminal C2
@@ -40,13 +39,15 @@ handoff.
   - **R1** (asymptotic τ) is open and **not actionable**; no larger L will be run.
   - **PM2-BIS is NOT opened.**
   - **TRUE COMPRESSION: 0.**
-- **C3-D0 — ARCHITECTURE DETECTOR QUALIFICATION** (`C3_D0_ARCHITECTURE_DETECTOR.md`): charter and candidate audit only;
-  **NOT RUN.**
-  - Controls: N0 R-TREE, N1 SP-TREE, P0 A2, **P1 ternary nested block tree** (new), and proposed ε-controls.
-  - **Primary detector:** coarse-skeleton recurrence Φ.
-  - Qualification rules Q1 – Q6.
-  - Terminals: D0-A / D0-B / D0-INDETERMINATE.
-  - Calibrated on controls only; PM2 Stage A is frozen.
+- **C3-D0 — ARCHITECTURE DETECTOR QUALIFICATION.** Charter `e52a276`; REPAIR 01 `06cce52`. **RUN**
+  (`C3_D0_RESULT.md`).
+  - **Terminal: D0-B — REGISTERED TREE OBSERVABLES INSUFFICIENT — HIERARCHY NOT OPERATIONALLY IDENTIFIED.**
+  - Φ passes everything on P0, including noise tolerance (P0-ε Q6).
+  - On P1, Φ separates at every size but **fails non-shrinking Q3** (gap dip at L = 81). P1-ε fails Q6.3 likewise.
+  - Random-tree recurrence baseline Φ_N0 ≈ 0.25 – 0.52.
+  - Exact recurrence (5a) is brittle; mass-law families 1 – 4 are offset class.
+  - **C3 must repair its operational definition of architecture before any further physical-model search.**
+  - PM2-BIS remains unopened.
 - **C3-B closed. No noise, no PM2-BIS.**
 - **Boundaries:** pre-repair charter `f266be2`; Repair 02 `31b5714`; preflight `dde3b94`; PM2 Repair 01 `86692eb`;
-  PM2 implementation declarations `c6de0fa`; **PM2 Stage A `2139cc4` (accepted)**.
+  PM2 implementation declarations `c6de0fa`; **PM2 Stage A `2139cc4` (accepted)**; D0 Repair 01 `06cce52`.
