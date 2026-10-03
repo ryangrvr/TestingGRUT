@@ -167,3 +167,32 @@ Budget item status:
 X1-PF-A in this turn (PF4Q-04 fallback). The applicable rule is **PF4Q-I**: BRI1-R1 is proved and finite-time
 non-vanishing at τ is **not certified**. In this turn the reason is that certification machinery is absent, **not**
 that the enclosures contain zero.
+
+### 3.1 Validation-driven amendment (recorded BEFORE any τ evaluation; triggered only by V2 on P0)
+
+**V2 failed for Method A as declared.**
+- With tensor Gauss–Hermite at n = 64, the P0 one-time variance E[x₀(t)²] drifts from the certified m₂ by up to
+  5·10⁻⁴ at t = 2π (`preflight/pf4q_validate.log`).
+- The diagnostic (`preflight/pf4q_v2_diagnostic.log`, P0 only) shows phase mixing: x₀(t) becomes increasingly
+  oscillatory in the initial data, so Gauss–Hermite converges slowly. At t = 2π the error is
+  1.6·10⁻³ (n = 96), 2.0·10⁻⁴ (n = 128) and 6·10⁻⁸ (n = 192).
+- The uniform trapezoid converges exponentially: 7·10⁻¹⁰ (h = 0.12), 1·10⁻¹³ (h = 0.08), ≤ 5·10⁻¹⁶ (h = 0.06).
+- No τ coefficient was computed or inspected in this diagnosis.
+
+**Amendment (supersedes §3 where they differ):**
+- **Method A:** variational equations on the **uniform trapezoid** grid, h_A ∈ {0.08, 0.06}, same domain. Gauss–Hermite
+  at n = 192 is reported as a **tertiary** check only.
+- **Method B:** unchanged. Finite difference on the trapezoid with h_B ∈ {0.12, 0.08} and ε ∈ {10⁻³, 5·10⁻⁴},
+  Richardson-extrapolated.
+- **Independence:** A and B differ in formulation (variational vs finite difference in ε). The decisive comparison uses
+  **different grids**: A at h = 0.06 against B at h = 0.08.
+- **Evidence criterion (replaces §3):** a component is "numerically non-zero (evidence)" only if both hold:
+  - |A₀.₀₆ − B_R(0.08)| < 10⁻⁶;
+  - |K_A(0.06)| > 100 × max(|A₀.₀₆ − A₀.₀₈|, |A₀.₀₆ − B_R(0.08)|, |B_R(0.08) − B_R(0.12)|).
+
+**Status of the validations:**
+- V1 is certified and PASSES.
+- V3 PASSES: series −4.4647·10⁻⁷; A −4.4647·10⁻⁷; B −4.4647·10⁻⁷; all negative.
+- V2 PASSES for the amended Method A (trapezoid, h ≤ 0.08: |error| ≤ 10⁻¹³).
+
+**Grading is unchanged:** evidence only; PF4Q-I.

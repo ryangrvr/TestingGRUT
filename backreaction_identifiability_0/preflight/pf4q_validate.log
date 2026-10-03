@@ -1,0 +1,14 @@
+V1 certified: Z_x = [1.9352478184967272764 +/- 2.59e-20]
+V1 certified: m2 = [0.46791991697366518864 +/- 2.58e-21]  m4 = [0.53208008302633481136 +/- 2.58e-21]
+V1 m2+m4 = [1.0000000000000000000 +/- 3e-25]  contains 1: True
+V1 Var(x0^2) = 1-m2-m2^2 = [0.31313103432569308786 +/- 4.14e-21]  excludes 0 and >0: True
+V1 quadrature GH n=48: m2 0.467916613691923  m4 0.532103405368144  (|dm2| 3.3e-06; pruned mass 2.6e-41; nodes 808)
+V1 quadrature GH n=64: m2 0.467919601750291  m4 0.532077082856267  (|dm2| 3.2e-07; pruned mass 1.3e-41; nodes 1164)
+V1 quadrature GH n=96: m2 0.467919913583545  m4 0.532080083379519  (|dm2| 3.4e-09; pruned mass 1.2e-41; nodes 1816)
+V1 quadrature trap h=0.12: m2 0.467919916973665 (|dm2| 5.6e-17; nodes 10575)
+V1 quadrature trap h=0.08: m2 0.467919916973665 (|dm2| 5.6e-17; nodes 24069)
+V2 P0: E[x0(t)^2] at t=0.392699: 0.467919971232799  (minus m2: 5.4e-08)
+V2 P0: E[x0(t)^2] at t=3.141593: 0.467926325658303  (minus m2: 6.4e-06)
+V2 P0: E[x0(t)^2] at t=4.712389: 0.467829053186960  (minus m2: -9.1e-05)
+V2 P0: E[x0(t)^2] at t=6.283185: 0.467396339038372  (minus m2: -5.2e-04)
+V3 t_v=pi/8 (validation only): series c = -4.464734e-07 (last term -2.3e-12); method A c = -4.464740e-07; method B c (Richardson) = -4.464743e-07; sign negative: True
