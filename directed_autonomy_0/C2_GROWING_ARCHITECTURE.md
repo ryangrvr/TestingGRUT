@@ -1,5 +1,8 @@
 # DA0 · C2 — GROWING ENDOGENOUS ARCHITECTURE (result)
 
+> **Repaired by C2 SCOPE REPAIR 01** (C2S-01, C2S-02; `DA0_CORRECTION_LEDGER.md`). The owner ruled that C2-A PASSES.
+> Where wording differs, the ledger takes precedence.
+
 **Preregistration.** C2 CHARTER + C2 CHARTER REPAIR 01 (C2R-01 … 10), with **E1 = East model** chosen and recorded
 before any computation.
 
@@ -258,7 +261,7 @@ because q → 0.
 | C2-A, H1 | **LARGE K, TRIVIAL ARCHITECTURE + ARCHITECTURE SUPPLIED BY FAMILY** (exact product of independent flips; depth 1) |
 | C2-A, H2 | **CLOCK + ARCHITECTURE SUPPLIED BY FAMILY** (cycle-space dim 1 at every K) |
 | C2-B, P1 | **FIXED-DEPTH NESTING** proved (PROP C2-B1); nested blind recovery to d = 5 numerically; **ARCHITECTURE SUPPLIED BY FAMILY + DEPTH REQUIRES SUPPLIED SCALING** |
-| C2-B, **E1 East** | **DEPTH REQUIRES SUPPLIED SCALING** (no diverging cut at fixed q; levels appear only as q → 0, depth ≤ 3 for L ≤ 10). **Timescale filtration without partition filtration.** The single partition-like level is a microscopic-site relabelling (C2-F6) with p_min → 0. **No EMERGENT ARCHITECTURE FROM A BOUNDED-DESCRIPTION RULE** |
+| C2-B, **E1 East** | [C2S-02] **No endogenous growing partition architecture found; the tested spectral hierarchy requires q → 0, consistent with known East theory** (this is evidence at L ≤ 12, not a theorem that fixed-q East can never produce one). Original wording: **DEPTH REQUIRES SUPPLIED SCALING** (no diverging cut at fixed q; levels appear only as q → 0, depth ≤ 3 for L ≤ 10). **Timescale filtration without partition filtration.** The single partition-like level is a microscopic-site relabelling (C2-F6) with p_min → 0. **No EMERGENT ARCHITECTURE FROM A BOUNDED-DESCRIPTION RULE** |
 | CONJECTURE C2-B | open; the evidence (P1, East) is consistent with it |
 
 ## C2.4 Comparator obligations (C2 §8)
@@ -277,6 +280,12 @@ because q → 0.
 - K4: extended to growing K by Theorem C2-A1a.
 
 ## C2.5 Information accounting
+
+**[C2S-01] Blind recovery vs certification.** No K is supplied to the partition-recovery map once the canonical slow
+space is certified: K = dim V. But **obtaining the correct slow space is certification, not blind discovery**.
+- In the numerical controls, the known construction rank was used to extract the first K modes.
+- Analytically, the family-level proof certifies that rank, and that proof may use the hidden architecture.
+- This is the RA3-03 firewall: **blind recovery, conditional rank / cut certification.**
 
 **Derived:**
 - a **K-explicit blind recovery theorem**, Theorem C2-A1a with the improved Lemma G5-3′, replacing K^{3/2} by

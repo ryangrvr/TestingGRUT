@@ -77,3 +77,22 @@ MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D — A-PRICED**. The original log is
   of C2R-05.
 - **Improved Lemma G5-3′.** Introduced in C2. It **supersedes** the anticipated s·K^{3/2} sufficient condition in the C2
   charter §3, with s·K^{3/4} under balance. The C2 charter's §3 remains as written (preregistration text).
+
+## C2 SCOPE REPAIR 01 (owner review of `b403594`)
+
+**Owner ruling:**
+- **C2-A PASSES:** blind recovery with K_N → ∞ is proved under the stated regularity, with the balanced sufficient
+  condition s_N·K_N^{3/4} → 0 (Lemma G5-3′ accepted).
+- Growing architecture from a simple rule: **NOT FOUND**.
+- Unbounded partition depth without supplied scaling: **NOT FOUND**.
+- Intrinsic K-growth obstruction: **OPEN**.
+- TRUE COMPRESSION: **0**.
+- **C3 not opened.**
+
+| ID | correction |
+|---|---|
+| **C2S-01** | "No K supplied" is too broad. Correct statement: **no K is supplied to the partition-recovery map once the canonical slow space is certified. The family-level certification of that slow space may use the hidden proof architecture.** The numerical controls used the construction rank to extract the first K modes. Firewall: blind recovery, conditional rank / cut certification (RA3-03) |
+| **C2S-02** | The East terminal is evidence, not a theorem: **"No endogenous growing partition architecture found; the tested spectral hierarchy requires q → 0, consistent with known East theory."** It is not claimed that fixed-q East can never produce a partition-like hierarchy for all L |
+
+**Applied to:** `C2_GROWING_ARCHITECTURE.md`, `DA0_ZOOM_OUT_02.md`, `DA0_STATUS.md`. **C2-E2** is preregistered in the C2
+charter §6b; it is **not run**.

@@ -144,6 +144,81 @@ Sources were consulted via metadata and abstracts only.
   equilibrium measure also concentrates on the all-ones configuration as q → 0, so the **p_min regularity of G5 may
   fail**. That is to be reported, not engineered around.
 
+## 6b. C2-E2 — collective bounded-rule partition search (preregistered after C2; NOT RUN)
+
+**Owner ruling.** A small C2 extension, not a new gate. Exactly **one** model, preregistered before calculation, chosen
+for a mechanism **qualitatively different** from East: collective organisation, not kinetically trapped individual
+sites.
+
+**Closure rule.** If E2 also fails to yield a growing partition architecture at fixed microscopic rules, **C2 closes**
+with the lesson:
+
+> dynamics can recover arbitrarily large architecture once it exists, but no dynamics was found that generates that
+> architecture without paying for it.
+
+**Entry requirements (owner):**
+1. a fixed local rule;
+2. no explicit basin or tree labels;
+3. microscopic parameters fixed in N (strongest test);
+4. a known mechanism for **collective** metastability;
+5. no externally specified order parameter in the recovery calculation.
+
+C2-F3′, F6 and F7 apply in full.
+
+**Candidate audit** (metadata only):
+
+| candidate | verdict |
+|---|---|
+| ferromagnetic Ising / Potts below T_c (local, collective) | **excluded as E2**: the number of collective macrostates is fixed (2, or q). It cannot test *growing* architecture |
+| Curie–Weiss, SK (mean-field) | **excluded**: not local |
+| Hopfield-type networks | **excluded**: stored patterns are explicit architecture (C2-F3′) |
+| GREM / CREM | **excluded** (C2R-02) |
+| East, plaquette, FA (kinetically constrained) | **excluded**: defect / trap mechanism, the same failure mode as East |
+| 2D Edwards–Anderson spin glass | **not chosen**: T_c = 0 in 2D (no finite-temperature spin-glass phase), so a fixed-T test is expected to need T → 0 scaling, the same failure mode as East |
+| **3D Edwards–Anderson ±J spin glass** | **CHOSEN.** Local nearest-neighbour rule; i.i.d. symmetric ±J couplings (disorder law fixed); collective, frustration-driven metastability; finite T_c ≈ 1.10 (high-precision finite-size scaling, e.g. Hasenbusch–Pelissetto–Vicari). **Whether many metastable macrostates exist at fixed T < T_c is a genuinely open question** (droplet picture: one pair of states; RSB picture: many). The rule contains no tree, basin, level or block index. **C2-F3′ passed; the disorder law is supplied (C2-F7)** |
+
+**E2 = 3D Edwards–Anderson ±J model with heat-bath Glauber dynamics.**
+- **Rule:** spins σ_i = ±1; nearest-neighbour bonds J_ij i.i.d. uniform on {+1, −1}; H = −Σ J_ij σ_i σ_j; single-spin
+  flip rate 1/(1 + e^{βΔH}). The chain is reversible with respect to the Gibbs law.
+- **Fixed temperatures (both < T_c), preregistered:** T = 0.5 and T = 0.8.
+- **Priced:**
+  - the cubic lattice, locality and boundary conditions;
+  - the disorder law;
+  - T;
+  - the exact global Z₂ symmetry σ → −σ. It produces exact paired sectors; a recovered "partition" that is only the
+    Z₂ pair (K = 2) is **not** growing architecture.
+
+**Registered limitation (before computation).** Exact spectral analysis is feasible only up to N ≈ 16 – 20 spins (2^N
+states, sparse eigensolver).
+- **Geometries:** 2 × 2 × N/4, with N ∈ {8, 12, 16, 20}. Periodic along the long axis; open in the two width-2
+  directions, to avoid doubled bonds.
+- These sizes are **far below** the asymptotic regime where the 3D T_c is meaningful. **The most likely honest terminal
+  is E2 INDETERMINATE AT ACCESSIBLE SIZES.** This is registered in advance so that no outcome is over-read.
+
+**Protocol (no optimisation, no order parameter in recovery):**
+- **Disorder:** 20 realisations per size, from preregistered seeds 1 … 20 (`numpy.random.default_rng(seed)`). Report
+  **ensemble statistics** (medians, fractions); never a selected realisation (C2-F7).
+- **Per realisation:**
+  - the lowest ≈ 64 eigenvalues of the symmetrised generator, and the decay-rate cut ratios;
+  - the top cut (ratio, rank);
+  - the blind map R on that slow space: number of primitive idempotents, Δ_HS, recovered block masses.
+- **Growth test:** do the ensemble median top ratio **and** the median top-cut rank K grow with N at fixed T?
+- **Post hoc only, as description:** the overlap with ground-state pairs, and whether recovered blocks are Z₂ orbits or
+  site-indexed (C2-F6).
+
+**Strong-evidence criteria** (all required, in a majority of realisations, and trending with N):
+1. a growing top-cut ratio;
+2. a top-cut rank K > 2 beyond the Z₂ pair, growing with N;
+3. R returns exactly K primitive idempotents, with Δ_HS small and decreasing;
+4. blocks that are not Z₂ orbits alone and not microscopic-site labels.
+
+**E2 terminals:**
+- **E2 GROWING PARTITION ARCHITECTURE — EVIDENCE AT ACCESSIBLE SIZES** (never "proved");
+- **E2 NO GROWING PARTITION ARCHITECTURE FOUND**;
+- **E2 INDETERMINATE AT ACCESSIBLE SIZES**.
+
+**Authorisation.** E2 runs only on owner go-ahead. This section is the preregistration.
+
 ## 7. C2 terminals (preregistered; per route, per family; not collapsed)
 
 **C2-A:**

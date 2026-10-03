@@ -1,19 +1,17 @@
 # DA0 STATUS
 
-**State:** C2 COMPLETE — **HARD STOP for owner review.** C3 not opened.
+**State:**
+- **C2 reviewed.** C2 SCOPE REPAIR 01 (C2S-01, C2S-02) applied.
+- **C2-E2 (3D Edwards–Anderson ±J) preregistered** in C2 charter §6b, **not run**; awaiting owner go-ahead.
+- C3 not opened.
 
-**C2 terminals (per route):**
-- **C2-A:**
-  - BLIND RECOVERY WITH K_N → ∞ PROVED (Theorem C2-A1a + Lemma G5-3′; balanced: s·K^{3/4} → 0), with every recovered
-    architecture SUPPLIED BY FAMILY;
-  - growth-rate obstruction not found;
-  - H1: LARGE K, TRIVIAL;
-  - H2: CLOCK.
-- **C2-B:**
-  - FIXED-DEPTH NESTING proved;
-  - DEPTH REQUIRES SUPPLIED SCALING (P1 and East);
-  - East gives a timescale filtration without a partition filtration;
-  - no EMERGENT ARCHITECTURE FROM A BOUNDED-DESCRIPTION RULE.
-- **TRUE COMPRESSION:** 0.
+**Owner C2 ruling:**
+- Growing blind macro-partition recovery: **YES** (C2-A PASSES; s·K^{3/4} → 0 under balance).
+- Growing architecture from a simple rule: **NOT FOUND**.
+- Unbounded partition depth without supplied scaling: **NOT FOUND**.
+- Intrinsic K-growth obstruction: **OPEN**.
+- TRUE COMPRESSION: **0**.
+
+**Firewall (C2S-01):** blind recovery; conditional rank / cut certification.
 
 **Base:** `grut-reflexive-autonomy-0-frozen @ ab4fd860ebbc72a6a3c0c5dd1ff2cef52616b7f5`. DA0 is not frozen.
