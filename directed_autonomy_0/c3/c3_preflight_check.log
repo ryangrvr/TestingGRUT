@@ -1,0 +1,26 @@
+== (1) envelope inequality ==
+  plaquette: min[F(J) - F(|J|)] over 2000 random (J,T) = 0.00e+00 (>= 0 required); frustrated samples with strict inequality: 993
+  cube (8 spins, 12 bonds, 6 faces): min[F(J) - F(|J|)] over 2000 random (J,T) = 0.00e+00 (>= 0 required); frustrated samples with strict inequality: 1938
+== (2) local minima vs frustration bound (mu = 1) ==
+  plaquette T=0.30 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~1.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=0.45 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.999']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=0.55 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.996']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=0.70 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.978']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=0.90 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.901']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=1.10 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  plaquette T=1.30 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=0.30 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~1.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=0.45 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~1.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=0.55 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~1.0']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=0.70 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.999']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=0.90 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.993']; distinct stable minima 1, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=1.10 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.0', '|J|~0.969']; distinct stable minima 2, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+  cube T=1.30 (bound: frustrated 4-cycle needs T >= 0.50): minima ['|J|~0.0', '|J|~0.882']; distinct stable minima 2, of which frustrated 0; all satisfy Var(s_b) <= mu*T: True
+== (3) uniform branch on the cube (finite-graph illustration only) ==
+  single cube, uniform J = K*T: e(K)/K where e = <s_b> (bond-averaged); small-K series predicts 1 + c K^2 with c > 0
+    K=0.05: e/K = 1.0042
+    K=0.1: e/K = 1.0171
+    K=0.2: e/K = 1.0718
+    K=0.4: e/K = 1.2768
+    K=0.8: e/K = 1.1832
+    K=1.6: e/K = 0.6248

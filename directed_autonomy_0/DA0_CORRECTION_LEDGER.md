@@ -137,3 +137,10 @@ simulation.**
 | **C3R-08** | A plaquette (or any bounded loop) is the first gauge-invariant **inter-bond interaction**, not C3 collectivity. Its support is bounded, so its participation is O(1), and it does not satisfy C3-A1. The preflight question is whether bounded loop interactions bootstrap into extended, symmetry-inequivalent metastable structures |
 | **C3R-09** | The primary dimension is **fixed at d = 3 before results**. d = 1, 2 are analytic controls only |
 | **C3R-10** | Mandatory ferromagnetic-envelope test: Z_T(J) ≤ Z_T(\|J\|), so 𝓕_T(J) ≥ 𝓕_T(\|J\|), with strictness. It constrains global minima only. The key question is frustrated **local** minima with diverging barriers |
+
+## C3 analytic preflight note (process; no repair)
+
+- **Secondary sanity check (`c3/c3_preflight_check.py`).** The first run reported a "frustrated" stable minimum on the
+  cube at T = 1.1. Inspection showed it was the J = 0 minimum with round-off signs (|J_b| ~ 1e-10). A declared
+  computational zero (|J_b| ≤ 1e-6 means absent) was added, and the logged run is the corrected one.
+- The analytic results stand independently of this check.

@@ -14,8 +14,12 @@ handoff.
 - CONJECTURE C2-B is **open**.
 - TRUE COMPRESSION: **0**.
 
-**C3 CHARTER: CONDITIONAL PASS; primary model ACCEPTED** (local adaptive-coupling Ising, CPS-type).
-- **C3 CHARTER REPAIR 01** (C3R-01 … 07) applied.
-- **NOT RUN; AWAITING OWNER REVIEW.**
-- **Next, only on separate approval:** the analytic preflight (§3.5″). No simulation before that.
-- **Pre-repair charter boundary:** `f266be2f6432e4c8de6c73a183ea5135fe816a8e`.
+**C3:**
+- **Charter:** CONDITIONAL PASS, primary model accepted. Repairs 01 (C3R-01 … 07) and 02 (C3R-08 … 10) applied. Primary
+  dimension fixed at d = 3.
+- **Analytic preflight complete** (`C3_ANALYTIC_PREFLIGHT.md`):
+  - **PF-B** for T < T_lin/2. Proved: the sign architecture of local minima is ≤ 8 winding sectors modulo gauge.
+  - **PF-INDETERMINATE** in T_lin/2 ≤ T ≤ T*.
+  - **PF-C not reached.**
+- **NO SIMULATION. C3-B closed. HARD STOP for owner review.**
+- **Boundaries:** pre-repair charter `f266be2`; Repair 02 commit `31b5714`.
