@@ -64,3 +64,16 @@ MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D — A-PRICED**. The original log is
 | **C2R-08** | **C2-F7** disorder firewall |
 | **C2R-09** | H1 and H2 get dual grades (… and ARCHITECTURE SUPPLIED BY FAMILY). H1 must account for n·λ_s/g → 0 for the 2^n slow sector to separate |
 | **C2R-10** | CONJECTURE C2-B is stated only under an explicit locality / rate / temperature class, and is not inferred from the product bound spread ≥ R^d |
+
+## C2 note (process; no repair)
+
+- **Exploratory runs.** The C2 script was run three times while adding (i) the A2b breakdown sweep, (ii) the P1 ζ-scaling
+  check, and (iii) the East Δ_HS, L = 10 and modal-configuration diagnostics. The logged run is the final one. Earlier
+  outputs were identical on the shared parts.
+- **Numerical-diagnostic threshold flagged.** The East depth count classifies a cut as "diverging" when the fitted
+  exponent in 1/q exceeds 0.5. This is a numerical diagnostic, not a certificate. Under C0-P4 it is never a modelling
+  input.
+- **Upper-bound m_rel.** m_rel is computed with a Hungarian (sum-optimal) matching, which upper-bounds the min-max m_rel
+  of C2R-05.
+- **Improved Lemma G5-3′.** Introduced in C2. It **supersedes** the anticipated s·K^{3/2} sufficient condition in the C2
+  charter §3, with s·K^{3/4} under balance. The C2 charter's §3 remains as written (preregistration text).

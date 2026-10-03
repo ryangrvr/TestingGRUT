@@ -1,0 +1,111 @@
+# DA0 ZOOM-OUT 02 (after C2) — HARD STOP for owner review
+
+**Branch:** `grut-directed-autonomy-0`. C3 not opened. No consciousness interpretation.
+
+All proofs are INTERNALLY PROVED / NOT EXTERNALLY REVIEWED. Numerics are illustrations.
+
+## 1. Was blind recovery proved for K_N → ∞, and at what growth rate?
+
+**Yes: THEOREM C2-A1a**, stated abstractly in (K, p_min, κ = K·p_max, C_V, s).
+- **Under balance and C_V = O(√K): s_N·K_N^{3/4} → 0 is sufficient.**
+- It gives a 2^K / K idempotent count, idempotent errors, total mass, and an **explicit per-block bound**
+  m_rel ≤ ((256/9)Kε² + 8s²)/p_min.
+
+**Dynamical translation (C2-A1b).** Davis–Kahan, the Weyl certificate and the C1-T block constants carry **no K factor**.
+So (η/g)·K^{3/4} → 0 suffices in the reversible balanced class.
+
+**Finite-size certification.** In the rate family FK with ζ ∝ K^{−1}, the condition is **rigorously certified at every
+tested K = 4 … 64**. Recovery was exact there (m_rel = 0).
+
+## 2. Is the K^{3/2} obstruction intrinsic or an artefact of Lemma G5-3?
+
+**Partly an artefact, proved.**
+- G5-3(b) bounded idempotent norms using λ_i ≥ 1. Using λ_min = p_max^{−1/2} (**Lemma G5-3′**) changes the threshold from
+  K^{−5/2} to κ^{−3/2}Λ^{−2}, i.e. ~K^{−1} under balance.
+- **Whether K^{3/4} is intrinsic is open.**
+- Numerically, FK recovery stayed exact up to s ≈ 0.32 at every K ≤ 64, and broke only at s ≈ 1 (no metastability),
+  independent of K. **No growth-rate obstruction was found.**
+- FK is mean-field and balanced, so this is evidence, not a necessity result.
+
+## 3. Was fixed-depth nesting proved?
+
+**Yes (PROP C2-B1):** ν(Π^(j), Π^(j+1)) ≤ m_tot^(j) + m_tot^(j+1) → 0 at fixed depth. No forced nesting or hierarchical
+optimisation is used.
+- **Numerically:** P1 nested blind recovery holds at every level up to depth 5, with ν = 0 (evidence).
+- **Unbounded depth** would need uniform-in-level control. That is **not** provided.
+
+## 4. Did any family give d_N → ∞ without supplied scaling?
+
+**No.**
+- **P1 (supplied tree):** at fixed ζ, the level ratios stay bounded as d grows; they diverge only as ζ → 0.
+- **East:** at fixed q, the top ratios **fall** with L (q = 0.1: 10.0 → 3.4 from L = 4 to 12). Levels appear only as
+  q → 0, giving depth ≤ 3 for L ≤ 10.
+- Both **DEPTH REQUIRES SUPPLIED SCALING**. CONJECTURE C2-B remains open, with consistent evidence.
+
+## 5. Did any architecture arise from a bounded-description rule?
+
+**No.** East passes the description and explicitness tests, but:
+- its slow spaces are a **timescale filtration, not a partition filtration**;
+- the only partition-like level, found at L = 6 and 8, consists of **isolated-vacancy positions**, a microscopic-site
+  relabelling excluded by C2-F6;
+- that level has block masses ~q → 0, so G5's regularity fails;
+- deeper levels are refused (Δ_HS up to 6e3).
+
+**No EMERGENT ARCHITECTURE FROM A BOUNDED-DESCRIPTION RULE.**
+
+## 6. How do H1 / H2 / H3 compare with the positives?
+
+| control | result |
+|---|---|
+| **H1** | K = 2^n is recovered blindly, but the macro-dynamics is **exactly a Kronecker sum of independent flips**, with depth 1. Separation of the 2^n sector degrades with n·λ_s/g. **LARGE K, TRIVIAL + SUPPLIED** |
+| **H2** | K up to 32 is recovered blindly, with cycle-space dimension 1 at every K. **CLOCK + SUPPLIED** |
+| **H3** | the derived first-order Markov macro-processes have K causal states, equal to the macrostates. K2 is not exceeded anywhere |
+
+**Every positive recovery in C2 (FK, H1, H2, P1) has a supplied architecture.**
+
+## 7. Was any capacity measure, level, K, ε or objective supplied?
+
+**No.**
+- Nothing is optimised.
+- K comes out as the count of primitive idempotents.
+- Levels are certified cuts.
+- No nesting is forced.
+- m_rel uses a proof-side Hungarian matching, which gives an upper bound on the min-max.
+
+**One numerical-diagnostic threshold is flagged:** the East depth count uses a fitted-exponent classification
+(a > 0.5). It is not a certificate.
+
+**Priced:**
+- every recovered architecture (supplied by its family);
+- the scalings ζ → 0 and q → 0;
+- balance and C_V;
+- reversibility.
+
+## 8. Is C3 warranted, and with what starting object?
+
+**Not as an endogenous programme on present evidence.**
+- C2 shows that growing macro-architecture can be **recovered** blindly, now with a K-explicit theorem.
+- But every unbounded architecture found is **supplied by the family**, and unbounded depth **requires supplied
+  scaling**.
+- The bounded-rule candidate, East, yields timescales, not a partition architecture.
+
+**If the owner opens C3 anyway**, the honest starting object is a **blindly recovered nested partition filtration of a
+certified, supplied-architecture family** (P1 class), with the supplied architecture and scaling **priced**. C3 would
+then test reflexive internal modelling on a substrate whose size was given, not emergent.
+
+**Alternative before C3:** a second E1 attempt, preregistered (e.g. local low-temperature spin dynamics), aimed
+specifically at a **partition** architecture from a bounded rule.
+
+## Scorecard
+
+| item | result |
+|---|---|
+| K-explicit blind recovery | **PROVED** (Theorem C2-A1a + Lemma G5-3′; balanced: s·K^{3/4}) |
+| growth-rate obstruction | **not found** (evidence of K-independence in FK) |
+| fixed-depth nesting | **PROVED** (PROP C2-B1) |
+| unbounded depth without supplied scaling | **no** (P1, East) |
+| emergent architecture from a bounded rule | **no** (East: timescales only; site relabelling) |
+| comparators | H1 trivial, H2 clock, K2 not exceeded |
+| TRUE COMPRESSION | 0 |
+
+**HARD STOP.** Returning for owner review. C3 not opened.
