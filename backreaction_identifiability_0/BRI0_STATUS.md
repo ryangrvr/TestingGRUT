@@ -1,6 +1,7 @@
 # BRI0 STATUS
 
-**State:** **BRI0 CHARTER 0 — OWNER-ACCEPTED AFTER SCOPE REPAIR 01; NO CANDIDATE RUN.**
+**State:** **SCOPE REPAIR 02 APPLIED; CANDIDATE 1 CHARTERED; ANALYTIC PREFLIGHT DONE — X1-PF-INDETERMINATE; NO
+NUMERICAL RUN; AWAITING OWNER REVIEW.**
 
 **Branch:** `grut-backreaction-identifiability-0`.
 
@@ -9,7 +10,8 @@
 **Programme:** BRI0 — BACK-REACTION IDENTIFIABILITY 0. Lane 3; a **new-premise campaign** downstream of P-17 / P-18 and
 the SCOUT-0 saturation map. It does not reopen or weaken the SCOUT-0 verdict. It is not part of DA0.
 
-**Boundaries:** Charter 0 `89b8236`; Scope Repair 01 = this commit.
+**Boundaries:** Charter 0 `89b8236`; Scope Repair 01 `8df4b88` (accepted); Scope Repair 02 and Candidate 1 = this
+commit. See `BRI0_LEDGER.md`.
 
 **Accepted (owner ruling, Scope Repair 01, `BRI0_CHARTER.md` §R):**
 - **Clamp family 𝒫 = 𝒳 accepted** as the primary interventional protocol family. The object is the interventional
@@ -30,12 +32,21 @@ the SCOUT-0 saturation map. It does not reopen or weaken the SCOUT-0 verdict. It
   deterministic causal parent class lies in E_univ, back-reaction included. The discrete-time randomisation result for
   stochastic kernels is kept separately. **No continuous-time general-stochastic claim.** Quantum is out of scope.
 
-**Exact bath candidate still unchosen:**
-- no C1 A(q);
-- no X1 Hamiltonian;
-- no 𝒫_test;
-- no N_B grid;
-- no coupling normalisation;
-- no escape statistics.
+**Scope Repair 02 (§R2):**
+- E₂± membership requires **one shared causal sign functional** S_t[q_[0,t]].
+- Positives: **BRI-E2+O** (orbit / shape) and **BRI-E2+C** (causal-affine coherence failure). Both are genuine BRI-E2+.
+- Finite CSI certificate registered (BRI-O11).
 
-No simulation. No PR. No merge.
+**Candidate 1 (`BRI1_CANDIDATE_CHARTER.md`), analytic preflight only:**
+- **C1:** the A = q + q³/3 harmonic control lies **in E₂± exactly** (proof plus an exact series check). Structurally it
+  is BRI-E1.
+- **X1:** the finite Duffing bath, ε = N_B^{−1/2}, is well posed and reciprocal.
+  - The exact i.i.d. structure under clamp gives κ_n(F) = N_B^{1−n/2}κ_n(X^ε).
+  - The first non-affine departure is O(N_B^{−1}), and X1 → E₁ in the reservoir limit.
+  - The O(N_B^{−1}) odd-cumulant coefficient is proved non-zero as a functional, but **not certified at the frozen τ**.
+- **CSI** is structurally impossible at τ.
+- **Terminal: X1-PF-INDETERMINATE.** Resolution proposed: a certified deterministic quadrature, pending owner
+  authorisation.
+- **Frozen:** P0 / P1 / P2, τ = (π, 3π/2, 2π), D_orb, N_B ∈ {1, 2, 4, 8, 16, 32, 64}. No sample count.
+
+No simulation, no Monte Carlo, no quadrature, no numerical D_orb. No PR. No merge.
