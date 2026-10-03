@@ -146,6 +146,13 @@ Sources were consulted via metadata and abstracts only.
 
 ## 6b. C2-E2 — collective bounded-rule partition search (preregistered after C2; NOT RUN)
 
+> **WITHDRAWN BEFORE EXECUTION [C2S-03].** The registered exact-spectral sequence 2 × 2 × N/4 has fixed transverse
+> widths. It is a finite-width spin-glass tube / ladder, effectively one-dimensional in the limit. It does **not**
+> approach the cubic L × L × L thermodynamic limit, whose T_c ≈ 1.10 the registration relied on. **E2 NOT RUN —
+> ACCESSIBLE EXACT-SPECTRAL GEOMETRY DOES NOT PRESERVE THE TARGET 3D THERMODYNAMIC LIMIT.** This is a methodological
+> withdrawal, **not** a failed physical test, and **not** evidence about the 3D EA model. The text below is kept as the
+> preregistration record.
+
 **Owner ruling.** A small C2 extension, not a new gate. Exactly **one** model, preregistered before calculation, chosen
 for a mechanism **qualitatively different** from East: collective organisation, not kinetically trapped individual
 sites.
@@ -185,8 +192,11 @@ C2-F3′, F6 and F7 apply in full.
   - the cubic lattice, locality and boundary conditions;
   - the disorder law;
   - T;
-  - the exact global Z₂ symmetry σ → −σ. It produces exact paired sectors; a recovered "partition" that is only the
-    Z₂ pair (K = 2) is **not** growing architecture.
+  - the exact global Z₂ symmetry σ → −σ. [C2S-04, corrected wording] It commutes with the generator and gives
+    parity / even–odd spectral structure and configuration pairing. At finite N the Glauber chain is **irreducible**,
+    so the symmetry does **not** create two disconnected Markov sectors; the two-pure-state reading belongs to the
+    thermodynamic symmetry-breaking discussion. A recovered K = 2 structure explainable solely by this supplied
+    symmetry is **not** growing architecture.
 
 **Registered limitation (before computation).** Exact spectral analysis is feasible only up to N ≈ 16 – 20 spins (2^N
 states, sparse eigensolver).

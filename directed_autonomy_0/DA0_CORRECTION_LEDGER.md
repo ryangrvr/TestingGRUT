@@ -96,3 +96,16 @@ MACROSTRUCTURE FROM SUPPLIED NONREVERSIBLE D — A-PRICED**. The original log is
 
 **Applied to:** `C2_GROWING_ARCHITECTURE.md`, `DA0_ZOOM_OUT_02.md`, `DA0_STATUS.md`. **C2-E2** is preregistered in the C2
 charter §6b; it is **not run**.
+
+## C2S-03 / C2S-04 and C2 CLOSURE (owner review of `c394e03`)
+
+| ID | correction |
+|---|---|
+| **C2S-03** | The registered E2 sequence 2 × 2 × L (L = N/4) keeps both transverse widths fixed. It is a finite-width spin-glass tube / ladder, effectively one-dimensional in the limit, not the cubic L × L × L sequence whose T_c ≈ 1.10 (finite-size scaling up to L = 40) was cited. T = 0.5 or 0.8 therefore does **not** place this sequence inside the 3D spin-glass phase. A positive result would show only finite-width / tube structure, a negative result would not rule out 3D architecture, and an indeterminate result adds nothing. Recorded: **E2 NOT RUN — ACCESSIBLE EXACT-SPECTRAL GEOMETRY DOES NOT PRESERVE THE TARGET 3D THERMODYNAMIC LIMIT.** It is **not** recorded as "E2 NO GROWING PARTITION ARCHITECTURE FOUND", and **not** counted as a failed physical test |
+| **C2S-04** | "Global Z₂ produces exact paired sectors" is withdrawn. At finite N the heat-bath Glauber chain is irreducible; global spin flip commutes with the generator and gives parity structure and configuration pairing, not two disconnected Markov sectors. A K = 2 structure explainable solely by this supplied symmetry is non-novel for C2 |
+
+**C2 FINAL OWNER RULING:** C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING ARCHITECTURE
+FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN. C3 not opened.
+
+**Applied to:** `C2_CHARTER.md`, `C2_GROWING_ARCHITECTURE.md`, `DA0_ZOOM_OUT_02.md`, `DA0_STATUS.md`. Created
+`C2_FINAL_HANDOFF.md`.

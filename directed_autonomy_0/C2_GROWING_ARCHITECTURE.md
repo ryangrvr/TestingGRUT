@@ -1,7 +1,14 @@
 # DA0 · C2 — GROWING ENDOGENOUS ARCHITECTURE (result)
 
-> **Repaired by C2 SCOPE REPAIR 01** (C2S-01, C2S-02; `DA0_CORRECTION_LEDGER.md`). The owner ruled that C2-A PASSES.
+> **Repaired by C2 SCOPE REPAIR 01** (C2S-01 … 04; `DA0_CORRECTION_LEDGER.md`). The owner ruled that C2-A PASSES.
 > Where wording differs, the ledger takes precedence.
+>
+> **C2 CLOSED (owner ruling): C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING
+> ARCHITECTURE FROM A SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN.**
+> - **C2-E2 (3D EA ±J)** was preregistered but **withdrawn before execution** [C2S-03]. The accessible exact-spectral
+>   geometry, 2 × 2 × L, is a finite-width tube and does not approach the 3D thermodynamic limit. This is **not** a
+>   failed test.
+> - See `C2_FINAL_HANDOFF.md`.
 
 **Preregistration.** C2 CHARTER + C2 CHARTER REPAIR 01 (C2R-01 … 10), with **E1 = East model** chosen and recorded
 before any computation.

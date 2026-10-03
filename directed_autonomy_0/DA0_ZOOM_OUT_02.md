@@ -8,6 +8,13 @@
 > - **TRUE COMPRESSION: 0**.
 >
 > C3 is **not** opened. C2-E2 has been preregistered (C2 charter §6b).
+>
+> **Update (C2S-03, C2S-04).** C2-E2 was **withdrawn before execution** as non-diagnostic for its registered 3D question:
+> the 2 × 2 × L sequence is a finite-width tube, not the cubic 3D limit. The Z₂ wording is corrected: an irreducible
+> chain with a parity symmetry, not two disconnected sectors.
+>
+> **C2 CLOSED:** C2 COMPLETE — GROWING BLIND RECOVERY PROVED CONDITIONALLY; ENDOGENOUS GROWING ARCHITECTURE FROM A
+> SIMPLE FIXED RULE NOT FOUND; INTRINSIC K-GROWTH OBSTRUCTION OPEN.
 
 **Branch:** `grut-directed-autonomy-0`. C3 not opened. No consciousness interpretation.
 
