@@ -52,7 +52,8 @@ def analyze(combo, branch):
         spread = max(c) - min(c)
         if spread > RC.CHI2_START_DISAGREEMENT_FLAG:
             flags.append(e)
-        table.append({"eps": e, "chi2": min(c), "n_starts": len(c), "start_spread": spread,
+        table.append({"eps": e, "chi2": min(c), "start_chi2": sorted(c), "n_starts": len(c), "start_spread": spread,
+                      "flag_spread_gt_0p2": spread > RC.CHI2_START_DISAGREEMENT_FLAG,
                       "H0": best["point"].get("H0"), "omch2": best["point"].get("omch2")})
     if 0.0 not in grid:
         return {"combo": combo, "status": "INCOMPLETE (no eps=0)"}
@@ -63,6 +64,8 @@ def analyze(combo, branch):
     if branch == "primary" and free:
         fb = min(free, key=lambda r: r["chi2_eff"])
         free_best = {"eps": fb["point"]["card01_eps"], "chi2": fb["chi2_eff"],
+                     "start_chi2": sorted(r["chi2_eff"] for r in free),
+                     "start_eps": [r["point"]["card01_eps"] for r in sorted(free, key=lambda r: r["chi2_eff"])],
                      "spread": max(r["chi2_eff"] for r in free) - min(r["chi2_eff"] for r in free), "n": len(free)}
         if fb["chi2_eff"] < chi_hat:
             eps_hat, chi_hat = float(fb["point"]["card01_eps"]), float(fb["chi2_eff"])
@@ -77,13 +80,49 @@ def analyze(combo, branch):
         cb = min(cpl, key=lambda r: r["chi2_eff"])
         res["chi2_w0wa"] = cb["chi2_eff"]
         res["w0wa_best"] = {"w0": cb["point"].get("w"), "wa": cb["point"].get("wa"),
+                            "start_chi2": sorted(r["chi2_eff"] for r in cpl),
                             "spread": max(r["chi2_eff"] for r in cpl) - min(r["chi2_eff"] for r in cpl), "n": len(cpl)}
         res["I_CPL"] = chi_L - cb["chi2_eff"]
         res["F"] = res["I_card"] / res["I_CPL"] if res["I_CPL"] > 0 else None
         res["tension_branch_vs_CPL_dchi2"] = chi_hat - cb["chi2_eff"]
     if branch == "primary" and "I_CPL" in res:
         at_bound = eps_hat <= RC.EPS_RANGE_BOUNDARY + 1e-3
-        res["result_state"] = RC.decide(res["I_CPL"], res["I_card"], eps_hat, lo, hi, at_bound)
+        mech = RC.decide(res["I_CPL"], res["I_card"], eps_hat, lo, hi, at_bound)
+        # Owner convergence ruling: load-bearing minimizations = LambdaCDM null, CPL comparator, branch best fit
+        # (best grid point and free-eps fit), and the grid points bracketing each 95% profile-set crossing.
+        F = RC.CHI2_START_DISAGREEMENT_FLAG
+        sp = {t["eps"]: t for t in table}
+        srt = sorted(sp)
+        lb = {"LambdaCDM_null(eps=0)": sp[0.0]["start_spread"],
+              "CPL_comparator": res["w0wa_best"]["spread"],
+              f"branch_best_grid(eps={float(eps[i])})": sp[float(eps[i])]["start_spread"]}
+        if free_best:
+            lb["free_eps_fit"] = free_best["spread"]
+        for edge, val, hit in (("lo", lo, lo_edge), ("hi", hi, hi_edge)):
+            if hit:
+                continue
+            below = max([e for e in srt if e <= val], default=None); above = min([e for e in srt if e >= val], default=None)
+            for e in (below, above):
+                if e is not None:
+                    lb[f"profile_set_{edge}_bracket(eps={e})"] = sp[e]["start_spread"]
+        incomplete = [k for k, t in sp.items() if t["n_starts"] < RC.N_STARTS]
+        if free_best and free_best["n"] < RC.N_STARTS:
+            incomplete.append("free")
+        if res["w0wa_best"]["n"] < RC.N_STARTS:
+            incomplete.append("cpl")
+        flagged = {k: v for k, v in lb.items() if v > F}
+        res["load_bearing_start_spreads"] = lb
+        res["load_bearing_flagged_gt_0p2"] = flagged
+        res["incomplete_points"] = incomplete
+        res["mechanical_S5_output"] = mech
+        if incomplete:
+            res["result_state"] = "INCOMPLETE - NO VERDICT"
+        elif flagged:
+            res["result_state"] = "CARD-01-v1 - NUMERICALLY UNRESOLVED / NO ACCEPTED SCIENTIFIC VERDICT"
+            res["mechanical_S5_output_label"] = ("MECHANICAL OUTPUT - NOT SCIENTIFICALLY ACCEPTED DUE TO FROZEN "
+                                                 "CONVERGENCE FAILURE")
+        else:
+            res["result_state"] = mech
     elif branch == "control":
         res["result_state"] = "CONTROL - NOT A GRUT CLAIM (no result state)"
     return res
@@ -98,7 +137,7 @@ def main():
         out["control"] = analyze(RC.PRIMARY, "control")
     json.dump(out, open(SUMMARY, "w"), indent=1, default=float)
     for k, v in out.items():
-        print(k, {kk: v.get(kk) for kk in ("result_state", "eps_hat", "I_card", "I_CPL", "F", "profile_set_95",
+        print(k, {kk: v.get(kk) for kk in ("result_state", "mechanical_S5_output", "load_bearing_flagged_gt_0p2", "eps_hat", "I_card", "I_CPL", "F", "profile_set_95",
                                             "boundary_null_chernoff_p", "start_disagreement_flags")})
 
 

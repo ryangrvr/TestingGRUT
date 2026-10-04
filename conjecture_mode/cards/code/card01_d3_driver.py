@@ -28,7 +28,7 @@ def run_job(job):
     t = tag(combo, model, eps, s)
     if os.path.exists(os.path.join(OUT, t + ".json")):
         return t, 0
-    env = dict(os.environ, OMP_NUM_THREADS="1")
+    env = dict(os.environ, OMP_NUM_THREADS=str(max(1, (os.cpu_count() or 4) // NW)))  # ~3.7 GB RSS/job: cgroup OOM at 4 jobs, so NW <= 2
     with open(os.path.join(LOGS, t + ".log"), "w") as lf:
         rc = subprocess.call([PY, os.path.join(HERE, "card01_d3_run.py"), combo, model, repr(eps), str(s), OUT],
                              stdout=lf, stderr=subprocess.STDOUT, env=env)
@@ -61,8 +61,16 @@ def main():
     run_all([(P, "cpl", 0.0, s) for s in range(RC.N_STARTS)] + grid_jobs(P, RC.EPS_GRID_PRIMARY))
     # P2
     e0 = best_grid_eps(P)
+    if not all(os.path.exists(os.path.join(OUT, tag(P, "card", e, s) + ".json"))
+               for e in RC.EPS_GRID_PRIMARY for s in range(RC.N_STARTS)):
+        print("P1 INCOMPLETE - stopping before P2 (free-eps must be seeded from the complete grid)", flush=True)
+        return
     run_all([(P, "free", e0, s) for s in range(RC.N_STARTS)])
     print(f"PHASE P1+P2 COMPLETE (primary); best grid eps = {e0}", flush=True)
+    # Owner convergence ruling: stop after the PRIMARY for owner review; extensions/control need a new instruction.
+    if os.environ.get("CARD01_RUN_EXTENSIONS") != "1":
+        print("STOP FOR OWNER REVIEW (extensions and control not authorized yet)", flush=True)
+        return
     # P3
     jobs = []
     for c in EXTS:
