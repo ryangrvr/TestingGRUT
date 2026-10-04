@@ -1,0 +1,62 @@
+CARD-01 NETWORK / PROVENANCE PREFLIGHT  2026-10-04T12:04:14Z
+method: curl -sSI (HEAD) / git ls-remote; no content downloaded
+proxy status:
+{
+  "enabled": true,
+  "port": 39873,
+  "caBundlePath": "/root/.ccr/ca-bundle.crt",
+  "hasSystemCa": true,
+  "bundleCoversEveryHost": true,
+  "noProxy": "localhost,127.0.0.1,::1,127.0.0.0/8,0.0.0.0/8,::,169.254.0.0/16,api.anthropic.com,api-staging.anthropic.com,api-pr-preview.anthropic.com,mcp-proxy.anthropic.com,mcp-proxy-staging.anthropic.com,registry.npmjs.org,jsr.io,npm.jsr.io,pypi.org,files.pythonhosted.org,index.crates.io,proxy.golang.org,host.docker.internal,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,100.64.0.0/10,.svc.cluster.local,*.svc.cluster.local",
+  "selective": false,
+  "standalone
+HEAD https://github.com/CobayaSampler/bao_data/archive/refs/tags/v2.6.tar.gz -> 403 final=https://github.com/CobayaSampler/bao_data/archive/refs/tags/v2.6.tar.gz
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/CamSpec_NPIPE.zip -> 2V5Ijoia2V5MSIsImV4cCI6MTc5MTExNzI1NCwibmJmIjoxNzkxMTE1NDU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.ttEoSjUt2IDSUb-avl6iB61N87lq0mjAE9NgDT3OTIo&response-content-disposition=attachment%3B%20filename%3DCamSpec_NPIPE.zip&response-content-type=application%2Foctet-stream
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowT.zip -> Ijoia2V5MSIsImV4cCI6MTc5MTExNTc1NSwibmJmIjoxNzkxMTE1NDU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.U8PbdRLatBfl6Zi9GAc8amWbHFWlggbzce2yxSB-Bl8&response-content-disposition=attachment%3B%20filename%3Dplanck_2018_lowT.zip&response-content-type=application%2Foctet-stream
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowE.zip -> Ijoia2V5MSIsImV4cCI6MTc5MTExNTc1NSwibmJmIjoxNzkxMTE1NDU1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.U8PbdRLatBfl6Zi9GAc8amWbHFWlggbzce2yxSB-Bl8&response-content-disposition=attachment%3B%20filename%3Dplanck_2018_lowE.zip&response-content-type=application%2Foctet-stream
+HEAD https://github.com/CobayaSampler/sn_data/archive/refs/tags/v1.8.tar.gz -> 403 final=https://github.com/CobayaSampler/sn_data/archive/refs/tags/v1.8.tar.gz
+HEAD https://lambda.gsfc.nasa.gov/data/suborbital/ACT/ACT_dr6/likelihood/data/ACT_dr6_likelihood_v1.2.tgz -> curl: (56) CONNECT tunnel failed, response 403
+000 final=https://lambda.gsfc.nasa.gov/data/suborbital/ACT/ACT_dr6/likelihood/data/ACT_dr6_likelihood_v1.2.tgz
+HEAD https://data.desi.lbl.gov/public/ -> curl: (56) CONNECT tunnel failed, response 403
+000 final=https://data.desi.lbl.gov/public/
+HEAD https://data.desi.lbl.gov/public/papers/y3/ -> curl: (56) CONNECT tunnel failed, response 403
+000 final=https://data.desi.lbl.gov/public/papers/y3/
+HEAD https://www.desi.lbl.gov/ -> curl: (56) CONNECT tunnel failed, response 403
+000 final=https://www.desi.lbl.gov/
+HEAD https://pypi.org/simple/cobaya/ -> 200 final=https://pypi.org/simple/cobaya/
+ls-remote CobayaSampler/bao_data:
+013822a12a865079ab0de17bdffed0b64a84c542	refs/tags/v2.3
+030f2350a1371e8242c8fe869aaa0307997abd54	refs/tags/v2.4
+af68b102910259783eba07e631189908e8e92583	refs/tags/v2.5
+b7b8a36e9bccb063081f811f323cada21ab5fbdd	refs/tags/v2.6
+ls-remote CobayaSampler/planck_native_data:
+abcbf96ae4a88f966f572b4209ef45d35098c4b4	refs/tags/plik_lite
+abcbf96ae4a88f966f572b4209ef45d35098c4b4	refs/tags/v1
+ls-remote CobayaSampler/sn_data:
+23588b0f6e57fa0c06c86786760377fb5e3f97b4	refs/tags/v1.5
+538d170ec534a33ddf7adbb0d1cd53af30c548ad	refs/tags/v1.6
+91dc5582de055085999a499e0ae32ec33afb1fb2	refs/tags/v1.7
+61d96434cafc2770928322c38e5a750e686368ae	refs/tags/v1.8
+ls-remote CobayaSampler/cobaya:
+23ee4b6538722275a53911f2d1bc8ca6e58d8dcc	refs/tags/v3.5.7
+1fc087f7987ae9349c66ee9ae9f08172ba122eca	refs/tags/v3.6
+e4c33bad0eab5e88421098cc59245a8a97dfb2fe	refs/tags/v3.6.1
+899f30a49f85de610dac321e91a1af50018e56aa	refs/tags/v3.6.2
+ls-remote desihub/desilike:
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+
+--- follow-up probes 2026-10-04T12:04:30Z
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/CamSpec_NPIPE.zip -> 200
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowT.zip -> 200
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowE.zip -> 200
+HEAD https://portal.nersc.gov/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+HEAD https://lambda.gsfc.nasa.gov/ -> curl: (56) CONNECT tunnel failed, response 403
+000
+ls-remote ACTCollaboration/act_dr6_lenslike:
+07dbe23c6ca4c89b8e82fb9d2c7a6857858d3909	refs/pull/4/head
+6e69cb6e81360624bba4cc7c406ff9a0e8103b5d	refs/pull/8/head
+950569d9405f5c3ec79403fd8e25914f7ee382e5	refs/tags/v1.0.0
+6e10b3edc367606181b7010baeb5ffa4ae8bb9d1	refs/tags/v1.0.6
+78dcd4a9a2b5b0d872c231906f05e14765dede14	refs/tags/v1.2.0
+b386ddbb5821c1216c709f051c9289292f174d30	refs/tags/v1.2.1
