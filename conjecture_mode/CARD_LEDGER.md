@@ -1,0 +1,17 @@
+# CONJECTURE MODE — CARD LEDGER
+
+**Branch:** `grut-conjecture-mode-1`, from `grut-program-governance-1-frozen @ 5baa8afd83b8a2dbce31b8f3c4bd484417afbc11`.
+**Governing law:** `program_governance/PROGRAM_CAMPAIGN_GATE_01.md` and `program_governance/CONJECTURE_MODE_CHARTER_01.md`, both at the frozen governance snapshot. This ledger is an experiment record under that law and cannot amend it.
+**Intake:** Cards #1–#4 are entered **exactly** at the statuses in governance Annex A. No grade is upgraded or downgraded on intake. Cards #2–#4 are **not** rerun.
+
+| Card | Name | Status | Primary branch / controls | C0.2 origin | Grade (Annex A) | Result state | Notes (scope only) |
+|---|---|---|---|---|---|---|---|
+| **#1** | Horizon relaxor | POSTULATED | **ε < 0 (dissipative) only**; ε > 0 = CONTROL — NOT A GRUT CLAIM | audited in `cards/CARD_01_HORIZON_RELAXOR_SPEC.md` §C0.2 | **C2-R — RECONNAISSANCE** (historical) | not yet run under Charter 01 | Historical safe statement (Annex A): under the tested projection the model gave a positive-slope one-parameter manifold through ΛCDM and did not enter the DESI+CMB+SN preferred `w0 > −1, wa < 0` quadrant except near ΛCDM. `wa/(1+w0) = 1.37` is **not banked**. **Pre-data spec boundary:** see the row below |
+| #1 (v1 spec) | — | POSTULATED HEURISTIC TOY LAW | as above | as above | **executor C1 verdict: CARD-01-C1-PASS (with notes), subject to owner review** | **NOT EXECUTABLE**: the owner threshold ruling is pending | Pre-data spec committed at the CARD-01 PRE-DATA SPEC BOUNDARY. No DESI product accessed |
+| **#2** | Matter-responsive vacuum | (historical) | — | **NOT AUDITED** | **C1-REPAIR** | — | The prior CMB anchor was insufficient for an interacting model. Repairs required before any C2: separate baryons from interacting CDM; a consistent background evolution from recombination; an explicit `Q^μ` interaction / perturbation prescription; a physical early-universe parameterization; a full comparison with proper likelihood machinery. Prior approximate χ² values are **not** banked as class-level results |
+| **#3** | Linear geometric target | (historical) | — | **NOT AUDITED** | **C1-EQUIVALENT (narrow scope)** | — | Equivalence banked in `EQUIVALENCE_REGISTRY.md` EQ-01. Not extended to radiation, curvature, perturbations, other interaction laws or nonlinear targets |
+| **#4** | Long-memory variants of Card #2 | (historical) | — | **NOT AUDITED** | **C2-R — RECONNAISSANCE**, inheriting Card #2's C1 defect | — | Safe statement: the particular tested exponential and power-law kernels did not improve the approximate fit relative to the tested single-pole implementation. Not generalized to arbitrary memory kernels |
+
+**Origin-audit note (governance Annex A).** Cards #2–#4 predate C0.2. The owner has observed that they drifted toward DESI's preferred region. Any future rerun of #2–#4 must first pass the C0.2 origin audit and C-F9 as a C1 item.
+
+**Card budget (C-F1).** Target: the late-time dark-energy w(z) residual. Distinct cards so far: #1, #2, #4 (where #4 is a variant of #2). Card #3 is an equivalence and uses no slot. No new card is opened in this commit.

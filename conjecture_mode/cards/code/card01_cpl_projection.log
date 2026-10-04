@@ -1,0 +1,19 @@
+CARD-01 registered CPL diagnostic (unweighted LSQ in z on [0,2])
+  c0 = (1+w0)/eps = 0.433262795583067
+  ca =  wa/eps    = 0.674115607186169
+  ratio wa/(1+w0) = ca/c0 = 1.55590467046443   (exact constant; locus exactly linear)
+  fractional residual int(R-fit)^2 / int(R-mean)^2 = 0.0225197
+  scipy cross-check: c0=0.433262795583 ca=0.674115607186 ratio=1.555904670464
+
+UNREGISTERED HISTORICAL DIAGNOSTIC (local z=0 value+slope map, scout-1 cpl_fit):
+  c0_loc = R(0) = 0.5   ca_loc = R'(0) = 0.2325   ratio = 0.465
+  (analytic: R(0)=1/2, R'(0) = 3*OM/4 = 0.2325, ratio = 3*OM/2 = 0.465)
+  note: the value 1.37 is NOT produced by either map; it is not found in the frozen scout-1 record.
+
+Sign / range facts (model only):
+  R(0) = 0.5, R(2) = 0.9005964215, R(1100) = 0.999999997583, R(z->-1) = 0.4082840237
+  R is strictly increasing in z (dR/dz = (dE2/dz)/(1+E2)^2 > 0) and 0 < R < 1 for all z > -1.
+  eps=-0.1: registered CPL (w0, wa) = (-1.0433263, -0.067411561); pointwise w on [0,2] in [-1.0900596, -1.05]
+  eps=-0.3: registered CPL (w0, wa) = (-1.1299788, -0.20223468); pointwise w on [0,2] in [-1.2701789, -1.15]
+  global-fit w0 > -1 possible on eps<0?  1+w0 = eps*c0 with c0 = 0.4332627956 > 0  => NO: w0 < -1 for every eps < 0
+  sign of wa on eps<0: wa = eps*ca, ca = 0.6741156072 => wa < 0 for eps < 0
