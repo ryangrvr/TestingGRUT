@@ -1,17 +1,17 @@
-# B1R1 INDEPENDENT REPRODUCTION 01 — V1
-## Executed under `B1R1_PUBLICATION_VERIFICATION_CHARTER_01.md` (frozen `8d765ea`), V1 lane only
+# BRI1 INDEPENDENT REPRODUCTION 01 — V1
+## Executed under `BRI1_PUBLICATION_VERIFICATION_CHARTER_01.md` (frozen `8d765ea`), V1 lane only
 
 **Independence firewall (declared before derivation).** This reproduction was
 performed from the frozen model definitions only:
 
-- `B1R0_CHARTER.md` §1 (X1 Hamiltonian, preparation, sign convention),
-  §4 (clamp family), §R B1R-O2/O4/O9 (E2± definition and B1R-C2±
+- `BRI0_CHARTER.md` §1 (X1 Hamiltonian, preparation, sign convention),
+  §4 (clamp family), §R BRI-O2/O4/O9 (E2± definition and BRI-C2±
   characterization — used as **frozen inputs/definitions**, not derivation
   source);
-- `B1R1_CANDIDATE_CHARTER.md` §1 (protocol definitions P0/P1/P2, s(u));
+- `BRI1_CANDIDATE_CHARTER.md` §1 (protocol definitions P0/P1/P2, s(u));
 - standard mathematical theorems, identified in the Standard-Theorem Ledger.
 
-**Not used:** the prose proof in `B1R1_ANALYTIC_ESCAPE_THEOREM.md` (opened
+**Not used:** the prose proof in `BRI1_ANALYTIC_ESCAPE_THEOREM.md` (opened
 only after the derivation was complete, for the comparison section below);
 frozen-τ PF4Q numerical values; old numerical K-values; old scripts.
 
@@ -296,7 +296,7 @@ propagates exactly through diffeomorphisms. ✓
 
 ## V1-10 — E2± escape (identifiability)
 
-*Competitor definition (frozen, B1R-O9/B1R-C2±):* F ∈ E2± iff (i) the
+*Competitor definition (frozen, BRI-O9/BRI-C2±):* F ∈ E2± iff (i) the
 degeneracy sets D_q coincide across q, and (ii) there exists **one shared
 deterministic causal sign functional** S_t: q_[0,t] ↦ {±1} such that, with
 s_q(t) := S_t[q_[0,t]], the finite-dimensional laws of s_q · Z_q (off the
@@ -332,11 +332,11 @@ representation.
 
 *Classification:* the escape occurs at the one-time tuple (t, t, t), with
 non-degenerate variances at both protocols (V1-9). It is a **reflection-orbit
-violation** in the sense of B1R-O5/B1R-O10(a): the standardized law of P1
+violation** in the sense of BRI-O5/BRI-O10(a): the standardized law of P1
 lies outside every coordinatewise reflection image of the common reference
 law (here the reference value |γ| = 0 cannot be matched by any sign flip of
 a nonzero |γ|). It is **not** a degeneracy artifact (both variances > 0), so
-it is **B1R-E2+O**, not B1R-DEG. ✓
+it is **BRI-E2+O**, not BRI-DEG. ✓
 
 **Disposition: REPRODUCED-INDEPENDENTLY.**
 
@@ -422,7 +422,7 @@ directory is committed.
 
 ---
 
-## Post-derivation comparison with `B1R1_ANALYTIC_ESCAPE_THEOREM.md`
+## Post-derivation comparison with `BRI1_ANALYTIC_ESCAPE_THEOREM.md`
 
 *(performed only after V1-1…V1-11 were complete, per the frozen ordering)*
 
@@ -443,7 +443,7 @@ directory is committed.
    has a density") matches.
 9. The E2± escape mechanism: |γ| reflection-invariance ⇒ common-law value
    forced to 0 by P0 ⇒ contradiction with P1 ≠ 0; one-time tuple; non-
-   degenerate ⇒ B1R-E2+O, not B1R-DEG (V1-10).
+   degenerate ⇒ BRI-E2+O, not BRI-DEG (V1-10).
 10. Reservoir-limit scope: O(N_B^(−1)) vanishing witness; Gaussian limit
     pointwise-fixed over frozen protocols only; no uniform statement over
     𝒳 (V1-11) — matching the §T4-R scope repair exactly.
@@ -466,8 +466,8 @@ directory is committed.
   the hand derivation verifies through the order actually needed.
 
 **Over-strong dependence check:** the derivation used only (i) frozen X1 /
-protocol definitions, (ii) frozen B1R0 class characterizations (B1R-C2±,
-B1R-O5/O9/O10 — inputs, not the proof under test), (iii) standard theorems
+protocol definitions, (ii) frozen BRI0 class characterizations (BRI-C2±,
+BRI-O5/O9/O10 — inputs, not the proof under test), (iii) standard theorems
 (S1–S5) with hypotheses checked. Nothing stronger than the frozen theorem
 was assumed: no uniform-in-𝒳 statement, no certified numerical values, no
 all-orders expansion, no complex-analytic radius claims.
@@ -494,7 +494,7 @@ all-orders expansion, no complex-analytic radius claims.
 > exactly zero for P0 for all N_B, while for P1 and N_B ≥ N₀(t) it is
 > nonzero, with κ₃(F_{P1,N_B}(t)) = K(t)/N_B + O(N_B^(−2)) and K(t) < 0;
 > equivalently the leading coefficient is C₇ = −Var(x₀²)/(28π³) < 0, where
-> x₀ is the unforced Duffic Gibbs trajectory and Var(x₀²) > 0.
+> x₀ is the unforced Duffing Gibbs trajectory and Var(x₀²) > 0.
 >
 > The witness is mesoscopic: |γ₁[F_{P1,N_B}(t)]| = O(N_B^(−1)) and vanishes
 > as N_B → ∞, with the centred frozen-protocol force laws converging to a
@@ -514,7 +514,7 @@ scope pointwise-fixed; no E_univ claim.
 
 ## V1 terminal
 
-All eleven steps reproduce; nine of eleven fully independently, two with
+All eleven steps reproduce; seven of eleven fully independently, four with
 standard theorems whose hypotheses are explicitly checked; no discrepancy;
 no over-strong assumptions; the firewalls held (frozen-τ unused, no old
 proof prose used as source, no values fitted).
