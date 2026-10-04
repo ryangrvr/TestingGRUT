@@ -125,7 +125,7 @@ This is a genuine contribution, but its shape is: known invariance logic, applie
 
 **V2 disposition (supplemental): KNOWN-RESULT-NEW-FRAMING**
 
-- It **SUPERSEDES** the disposition in 722ac2's V2 audit (`NOVEL-THEOREM-SHAPE`). The original audit's central factual error was rating G and H as NOT-FOUND; the causal location-scale literature and the location-scale regression mainstream make them KNOWN-IN-NEARBY-FORM.
+- It **SUPERSEDES** the disposition in 7322ac2's V2 audit (`NOVEL-THEOREM-SHAPE`). The original audit's central factual error was rating G and H as NOT-FOUND; the causal location-scale literature and the location-scale regression mainstream make them KNOWN-IN-NEARBY-FORM.
 - The original V2 document is preserved unchanged; this supplement governs.
 - The remaining novelty is real but must be claimed as such: *first constructive, quantified, dynamical-instance of shared-location-scale rejection across an intervention family on a fixed environment* — with the static invariance logic credited to the causal/statistical literature.
 
