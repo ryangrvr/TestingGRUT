@@ -60,3 +60,19 @@ ls-remote ACTCollaboration/act_dr6_lenslike:
 6e10b3edc367606181b7010baeb5ffa4ae8bb9d1	refs/tags/v1.0.6
 78dcd4a9a2b5b0d872c231906f05e14765dede14	refs/tags/v1.2.0
 b386ddbb5821c1216c709f051c9289292f174d30	refs/tags/v1.2.1
+
+=== RE-PREFLIGHT after owner enabled full network access 2026-10-04T12:08:34Z (same ruling 86ccbb2e, same run config c9899abc)
+HEAD https://github.com/CobayaSampler/bao_data/archive/refs/tags/v2.6.tar.gz -> 403
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/CamSpec_NPIPE.zip -> 200
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowT.zip -> 200
+HEAD https://github.com/CobayaSampler/planck_native_data/releases/download/v1/planck_2018_lowE.zip -> 200
+HEAD https://github.com/CobayaSampler/sn_data/archive/refs/tags/v1.8.tar.gz -> 403
+HEAD https://lambda.gsfc.nasa.gov/data/suborbital/ACT/ACT_dr6/likelihood/data/ACT_dr6_likelihood_v1.2.tgz -> 200
+HEAD https://data.desi.lbl.gov/public/ -> 200
+HEAD https://data.desi.lbl.gov/public/papers/y3/ -> 200
+HEAD https://www.desi.lbl.gov/ -> 200
+HEAD https://portal.nersc.gov/ -> 200
+--- archive-route probes 12:08:45Z
+GET(range 0-0) https://codeload.github.com/CobayaSampler/bao_data/tar.gz/refs/tags/v2.6 -> 403
+GET(range 0-0) https://api.github.com/repos/CobayaSampler/bao_data/releases/tags/v2.6 -> 403
+GET(range 0-0) https://github.com/CobayaSampler/bao_data/releases/tag/v2.6 -> 403

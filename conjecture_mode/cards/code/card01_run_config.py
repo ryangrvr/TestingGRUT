@@ -5,7 +5,7 @@ Implements the frozen spec (8c634145) and the owner ruling S1-S8 / O3. Nothing h
 data access (C-F6, owner ruling).
 
 Software (pinned): python 3.11.15; camb 2.0.4; cobaya 3.6.2; act_dr6_lenslike 1.2.1 (data v1.2);
-Py-BOBYQA 1.5.0; numpy 2.4.6; scipy 1.17.1; getdist 1.7.7.
+Py-BOBYQA 1.5.0; clipy-like 0.15 (benabed/clipy tag clipy_0.15 @ ad1aff3b); numpy 2.4.6; scipy 1.17.1; getdist 1.7.7.
 """
 import os
 
@@ -23,6 +23,8 @@ CAMB_EXTRA_ARGS = {
     "num_massive_neutrinos": 1,
     "nnu": 3.044,
     "dark_energy_model": "ppf",
+    # CR-2 (pre-evaluation conformance, see CARD_01_RUN_CORRECTIONS.md): DESI DR2 baseline BBN table
+    "bbn_predictor": "PArthENoPE_880.2_standard.dat",
 }
 
 
@@ -66,8 +68,9 @@ CPL_PRIOR_CONSTRAINT = {"w0wa_lt0": "lambda w, wa: 0 if w + wa < 0 else -np.inf"
 # ---------------------------------------------------------------- likelihood combinations (S6, owner-approved)
 BAO = {"bao.desi_dr2.desi_bao_all": None}
 CMB = {  # DESI DR2 paper baseline CMB
-    "planck_2018_lowl.TT": None,                       # Planck low-ell TT (Commander), Cobaya native
-    "planck_2018_lowl.EE": None,                       # Planck low-ell EE (SimAll), Cobaya native
+    # CR-1 (pre-evaluation conformance): the DESI DR2 baseline uses the clik versions (official PLA data via clipy)
+    "planck_2018_lowl.TT_clik": None,                  # Planck PR3 low-ell TT Commander (commander_dx12_v3_2_29.clik)
+    "planck_2018_lowl.EE_clik": None,                  # Planck PR3 low-ell EE SimAll (simall_100x143_offlike5_EE_Aplanck_B.clik)
     "planck_NPIPE_highl_CamSpec.TTTEEE": None,         # Planck PR4 NPIPE CamSpec high-ell TTTEEE
     "act_dr6_lenslike.ACTDR6LensLike": {               # Planck PR4 + ACT DR6 lensing, likelihood v1.2
         "variant": "actplanck_baseline", "lens_only": False, "lmax": 4000, "version": "v1.2"},
@@ -81,7 +84,11 @@ COMBINATIONS = {
 PRIMARY = "PRIMARY_DESI_CMB"
 
 # ---------------------------------------------------------------- minimizer protocol (frozen in spec)
-MINIMIZER = {"minimize": {"method": "bobyqa", "best_of": 3, "ignore_prior": True}}
+# CR-3 (pre-evaluation): ignore_prior False so the Gaussian nuisance priors shipped with the likelihoods are kept;
+# flat cosmological priors are removed analytically (chi2_eff in card01_d3_run.py). 3 starts = 3 separate seeded
+# runs (CR-4) so start-to-start disagreement can be flagged.
+MINIMIZER = {"minimize": {"method": "bobyqa", "best_of": 1, "ignore_prior": False}}
+N_STARTS = 3
 CHI2_START_DISAGREEMENT_FLAG = 0.2      # flag a grid point if the 3 starts disagree by more than this
 CONVERGENCE_NOTE = "profile chi2 = 2*(-log L) minimized over all non-eps parameters incl. likelihood nuisances"
 

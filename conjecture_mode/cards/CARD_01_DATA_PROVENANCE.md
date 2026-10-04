@@ -39,3 +39,26 @@
 | `www.desi.lbl.gov` | **403** (blocked) |
 
 **D1/D2: UNAVAILABLE.** Under O3, no mirror or reconstructed chains were sought or used.
+
+---
+
+# RESUMPTION — owner enabled full network access (2026-10-04T12:08Z)
+
+The ruling (`86ccbb2e`) is unchanged, and so is the run configuration (`c9899abc`, apart from the pre-evaluation corrections CR-1 to CR-4 in `CARD_01_RUN_CORRECTIONS.md`). The re-preflight is appended to `CARD_01_NETWORK_PREFLIGHT.log`.
+
+## Acquisition routes
+
+All acquired files are hashed in `CARD_01_PRODUCT_SHA256.txt`.
+
+| Component | Route | Pin | O3 |
+|---|---|---|---|
+| DESI DR2 BAO (`bao.desi_dr2.desi_bao_all`) | git clone of `CobayaSampler/bao_data`. The GitHub archive and web routes still return 403 for this repository; git transport works | tag v2.6 = commit `b7b8a36e…`, verified MATCH | **PASS.** Pinned commit. All files hashed. Standard `bao.desi_dr2` implementation. **Traceability:** the official DESI DR2 README (`data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/README.md`) states that "the DESI DR2 BAO likelihoods used to produce these results are publicly available at github.com/CobayaSampler/bao_data/tree/master/desi_bao_dr2". The `desi_bao_dr2` git tree at v2.6 (`0c850733…`) is **identical** to the tree at `master` (`bb0c1c90…`) |
+| Planck low-ℓ TT Commander / EE SimAll (clik) | official Planck Legacy Archive `COM_Likelihood_Data-baseline_R3.00`, downloaded by `cobaya-install`, read by clipy-like 0.15 (`benabed/clipy` tag `clipy_0.15` = `ad1aff3b…`, git clone; the clipy PyPI package is the same version) | PR3 baseline | **PASS** (collaboration distribution) |
+| Planck PR4 NPIPE CamSpec TTTEEE | `CobayaSampler/planck_native_data` release v1 asset `CamSpec_NPIPE.zip` (HTTP 200), via `cobaya-install` | tag v1 = `abcbf96a…` | **PASS** (the standard public distribution, used by DESI through `planck_NPIPE_highl_CamSpec.TTTEEE`) |
+| Planck + ACT DR6 lensing v1.2 | NASA LAMBDA `ACT_dr6_likelihood_v1.2.tgz` (HTTP 200), via `cobaya-install` / `act_dr6_lenslike` 1.2.1 | v1.2 | **PASS** (collaboration distribution; variant `actplanck_baseline`, as in the DESI input) |
+| Pantheon+ / Union3 / DESY5 | git clone of `CobayaSampler/sn_data` (archive route 403) | tag v1.8 = `61d96434…`, verified MATCH | **PASS** (pinned commit, hashed; standard `sn.*` implementations) |
+| `planck_supp_data_and_covmats` (an install dependency only; not a likelihood input) | git clone | tag v2.1 = `621f4c5d…` | — |
+
+## D1/D2
+
+The official DESI chains are now reachable at `data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/cobaya/base_w_wa/`. Only the DESI-released chains will be used.
