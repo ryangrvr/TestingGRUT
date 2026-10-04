@@ -1,6 +1,7 @@
 # VER0 STATUS
 
-**State:** **VER0-B (BRI1-X1 reproduction) IN PROGRESS.** V0-1-C, V0-2-C, V0-3-C (with T3-F) and V0-4-C accepted.
+**State:** **VER0-B (BRI1-X1) DONE — VER0-B-A, VER-I1 (orchestrator-exposed / context-isolated reproducer); AWAITING OWNER
+REVIEW.** V0-1-C, V0-2-C, V0-3-C (with T3-F) and V0-4-C accepted.
 
 **Branch:** `grut-independent-verification-0`, from `scout-0 @ ab2da47` (frozen, unmodified).
 
@@ -9,7 +10,8 @@
   `fdcd3a6`.
 - V0-2: spec `cc4710e`; reproduction before unsealing `bde523e`; comparison `55a9aa8`; owner ruling `661cdbe`.
 - V0-3: spec `335067a`; reproduction before unsealing `4ce8686`; comparison `9d673bb`; owner ruling `e250f2e`.
-- V0-4: spec `4110a67`; blind reading before unsealing `f181330`; comparison = this commit.
+- V0-4: spec `4110a67`; blind reading before unsealing `f181330`; comparison `3770ce7`; owner ruling `7d09ad7`.
+- VER0-B: spec `938feb6`; reproduction before unsealing `046a945`; comparison = this commit.
 
 **SCOUT-0:** PROVISIONALLY SATURATED — OWED CHECKS ONLY. **Criterion 2 is not met.** Items 1 (P-17), 2 (P-02 / SF-1; TARGET 3 = F) and 3
 (P-15) are complete at VER-I1 with correction. Item 5 (EDA-01) is complete at VER-I1 with correction.
@@ -23,6 +25,6 @@ Items 4 and 6 are **OUTSTANDING — PRIMARY-TEXT ACCESS DEPENDENT**. Every item 
 | V0-4 EDA-01 | **V0-4-C, VER-I1 (orchestrator-exposed)** (owner ruling). Headline NO-FIX confirmed (22 / 22). 6 / 22 rows discordant at the CON boundary. E-13 restated against the edge-data set |
 | V0-5 K1-H / K1-HS | **outstanding — primary-text access dependent** |
 | V0-6 secondary primary-text checks | **outstanding — primary-text access dependent** |
-| VER0-B BRI1-X1 | **in progress**: statement-only target; context-isolated reproducer (the orchestrator is the author) |
+| VER0-B BRI1-X1 | **VER0-B-A, VER-I1 (orchestrator-exposed / context-isolated reproducer)** (pending owner ruling). Strengthening S-1: escape for every N_B ≥ 1 at small t. Precision P-1: "family" |
 
 No PR. No merge.
