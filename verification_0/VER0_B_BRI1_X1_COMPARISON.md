@@ -63,3 +63,34 @@ the statement-only spec. The orchestrator re-ran both scripts, and both logs are
   sub-agent, so this is not external review.
 - **Orchestrator-exposed:** I authored BRI1.
 - **Not VER-I2.**
+
+## 3. Owner ruling (additive; review of `ae56ed0`)
+
+**VER0-B ACCEPTED.** **Final grade: VER0-B-A — BRI1-X1 THEOREM INDEPENDENTLY REPRODUCED — VER-I1 (orchestrator-exposed /
+context-isolated reproducer).**
+
+**P-1:** "interventional force law" → "interventional force **family**" is an **editorial / mathematical precision, not
+grade-bearing**. E₂± was already defined at family level, and the proof uses the P0 / P1 family comparison correctly. The
+grade remains A.
+
+**S-1 accepted as a VER0 independently reproduced strengthening** (INTERNALLY REPRODUCED / NOT EXTERNALLY REVIEWED):
+- There exists δ\* > 0 such that for every 0 < t < δ\* and **every finite N_B ≥ 1**, the X1 interventional force family
+  lies outside E₂±.
+- **Reason:** K_P1(t) = −c t⁷ + O(t⁸), with c > 0, and |κ₃(X^ε_P1(t)) − εK_P1(t)| ≤ C\*ε³t¹², uniformly for 0 < ε ≤ 1.
+  The five-power small-time separation permits one δ\* independent of ε (equivalently, of N_B).
+
+**The closed BRI0 branch is not amended or reopened.** `grut-backreaction-identifiability-0 @ f2e6999` remains the
+historical BRI0 theorem boundary. S-1 is banked in VER0 for use in a later standalone paper or synthesis.
+
+**Scientific statement now supported.** A finite reciprocal anharmonic environment can generate an interventional
+reduced-force **family** outside the shared causal affine exogenous class E₂± at **every finite bath size**, on a common
+non-empty small-time interval. The distinguishing standardised-skewness witness vanishes as O(N_B⁻¹) in the reservoir
+limit.
+
+**Firewalls preserved:**
+- no primitive randomness;
+- no unique ontology;
+- no escape from E_univ;
+- no GRUT-specific prediction;
+- no TRUE COMPRESSION;
+- frozen τ remains **PF4Q-I / X1-PF-INDETERMINATE**.
