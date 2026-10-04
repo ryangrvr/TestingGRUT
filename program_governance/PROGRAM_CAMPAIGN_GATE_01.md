@@ -1,6 +1,6 @@
 # GRUT PROGRAM CAMPAIGN GATE 01
 
-**Status:** program law, **awaiting owner review / freeze**.
+**Status:** program law, **FROZEN BY OWNER RULING** (`PROGRAM_GOVERNANCE_OWNER_RULING_01.md`).
 **Home:** `grut-program-governance-1`, branched from `grut-selector-screen-1-frozen @ a1194546c08d81c110a6ad8cc7583fddeedbebd1`. This branch is the authoritative home for program-wide campaign governance.
 **Companion:** `program_governance/CONJECTURE_MODE_CHARTER_01.md`, which holds the full Door C rules.
 **Supersedes:** the non-authoritative pointer recorded in `verification_0/VER0_LEDGER.md` (branch `grut-independent-verification-0`, owner pointer at `3770ce7`). That pointer named this file as the rule's future home. VER0 is not amended by this file.

@@ -6,7 +6,7 @@
 - ER-2: owner-lock authority is clarified;
 - ER-3: the expected-verdict sentence is removed from the Card #1 requirements.
 
-The governance state is **awaiting owner review / freeze**.
+The governance state is **FROZEN BY OWNER RULING** (`PROGRAM_GOVERNANCE_OWNER_RULING_01.md`).
 
 **Home:** `grut-program-governance-1`, branched from `grut-selector-screen-1-frozen @ a1194546c08d81c110a6ad8cc7583fddeedbebd1`. This file is **program law**.
 
@@ -430,7 +430,7 @@ This charter modifies the proposed program-wide campaign gate as follows:
 
 The selector-screen terminal governs the first door, not the second. This is not permission for unrestricted parameter fitting.
 
-*Placement:* this charter's §7 text is incorporated into `program_governance/PROGRAM_CAMPAIGN_GATE_01.md` on `grut-program-governance-1`, which is the authoritative home for program-wide campaign governance. It is binding once the owner reviews and freezes the governance state.
+*Placement:* this charter's §7 text is incorporated into `program_governance/PROGRAM_CAMPAIGN_GATE_01.md` on `grut-program-governance-1`, which is the authoritative home for program-wide campaign governance. It is binding: governance is **FROZEN BY OWNER RULING** (`PROGRAM_GOVERNANCE_OWNER_RULING_01.md`).
 
 ---
 
@@ -706,7 +706,7 @@ Whatever the result, preserve all of the following:
 ## 10. Execution order (each step needs separate owner authorization)
 
 1. **Done:** charter accepted in substance (A8 kept; ER-1–ER-3 applied). Committed on `grut-program-governance-1` together with `PROGRAM_CAMPAIGN_GATE_01.md`.
-2. Owner review and **freeze** of the governance state.
+2. **Done:** owner review and **freeze** of the governance state (**FROZEN BY OWNER RULING**, `PROGRAM_GOVERNANCE_OWNER_RULING_01.md`).
 3. Create the descendant execution branch (e.g. `grut-conjecture-mode-1`) from the frozen governance snapshot. Add the equivalence registry, the card ledger and the CONJECTURE-GENERAL register, and enter Cards #1–#4 at the Annex A statuses.
 4. Write and commit the Card #1 C0 spec:
    - all fields;
