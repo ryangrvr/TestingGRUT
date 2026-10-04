@@ -93,3 +93,13 @@ file-access report. **Not VER-I2.**
 
 **Frozen `scout-0` is not modified.** Criterion-2 item 5 ("EDA-01's row classification checked by a second reader") is
 **discharged at VER-I1, with correction** (pending owner ruling).
+
+## 5. Owner ruling (additive; review of `3770ce7`)
+
+**V0-4 ACCEPTED.** **Final grade: V0-4-C — EDA-01 SECOND-READER AUDIT: HEADLINE NO-FIX VERDICT CONFIRMED; ROW MATRIX
+REPRODUCED WITH CORRECTION — VER-I1 (orchestrator-exposed).**
+- Criterion-2 item 5: **COMPLETE AT VER-I1 WITH CORRECTION.**
+- CR-V4-1, CR-V4-2 and CR-V4-3 are accepted.
+- **No further EDA-01 classification audit.**
+- **Robust result:** FIX = 0 for all 22 rows under both independent readings. The six CON / IND / READ / SUP boundary
+  disagreements remain explicitly reader-dependent and do not affect the headline.
