@@ -1,0 +1,72 @@
+W1  E-13 / SF-1 versus the corrected edge-data quotient (fresh code, numpy 2.4.6)
+====================================================================================================
+
+PARENT A
+  D (nu=1/2)       N= 1001 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-1.5692, 1.5692]
+     |edge velocities|         : [2.0, 2.0]
+     (edge, first nonzero deriv order r_e) in L->inf : [(1.5692, 1)]
+     soft set reps in [0,pi]   : [0.0, 3.1416]   (n_soft = 2);  min omega_minus away from soft set = 0.3002
+     z (prescription P, log-slope) = 1.0000
+  D-1/4 (nu=1/4)   N=  501 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-0.7846, 0.7846]
+     |edge velocities|         : [1.4131, 1.4131]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.7846, 1)]
+     soft set reps in [0,pi]   : [0.0, 1.5724]   (n_soft = 2);  min omega_minus away from soft set = 0.1968
+     z (prescription P, log-slope) = 0.9990
+  E (fixed N)      N=    1 L=2002 unique_GS=True
+     edge momenta (finite L)   : [0.0]
+     |edge velocities|         : [0.0]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.0, 2)]
+     soft set reps in [0,pi]   : [0.0]   (n_soft = 1);  min omega_minus away from soft set = 0.0225
+     z (prescription P, log-slope) = 1.9990
+
+PARENT B
+  D (nu=1/2)       N= 1001 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-1.5692, 1.5692]
+     |edge velocities|         : [1.9969, 1.9969]
+     (edge, first nonzero deriv order r_e) in L->inf : [(1.5692, 1)]
+     soft set reps in [0,pi]   : [0.0, 3.1416]   (n_soft = 2);  min omega_minus away from soft set = 0.2781
+     z (prescription P, log-slope) = 0.9990
+  D-1/4 (nu=1/4)   N=  501 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-0.7846, 0.7846]
+     |edge velocities|         : [0.4131, 0.4131]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.7846, 1)]
+     soft set reps in [0,pi]   : [0.0, 1.5724]   (n_soft = 2);  min omega_minus away from soft set = 0.0483
+     z (prescription P, log-slope) = 0.9964
+  E (fixed N)      N=    1 L=2002 unique_GS=True
+     edge momenta (finite L)   : [0.0]
+     |edge velocities|         : [0.0]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.0, 4)]
+     soft set reps in [0,pi]   : [0.0002]   (n_soft = 1);  min omega_minus away from soft set = 0.0001
+     z (prescription P, log-slope) = 3.9981
+
+PARENT C
+  D (nu=1/2)       N= 1000 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-1.9929, -0.4268, 0.4268, 1.9929]
+     |edge velocities|         : [4.8143, 2.1868, 2.1868, 4.8143]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.4268, 1), (1.9929, 1)]
+     soft set reps in [0,pi]   : [0.0, 0.8505, 1.5692, 2.2942, 2.4166]   (n_soft = 5);  min omega_minus away from soft set = 0.2845
+     z (prescription P, log-slope) = 0.9983
+  D-1/4 (nu=1/4)   N=  500 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-1.6885, -0.907, 0.907, 1.6885]
+     |edge velocities|         : [2.919, 2.3069, 2.3069, 2.919]
+     (edge, first nonzero deriv order r_e) in L->inf : [(0.907, 1), (1.6885, 1)]
+     soft set reps in [0,pi]   : [0.0, 0.7846, 1.8109, 2.5924, 2.9031]   (n_soft = 5);  min omega_minus away from soft set = 0.3059
+     z (prescription P, log-slope) = 0.9986
+  E (fixed N)      N=    2 L=2002 unique_GS=True
+     edge momenta (finite L)   : [-1.3182, 1.3182]
+     |edge velocities|         : [0.0003, 0.0003]
+     (edge, first nonzero deriv order r_e) in L->inf : [(1.3181, 2)]
+     soft set reps in [0,pi]   : [0.0, 2.6362]   (n_soft = 2);  min omega_minus away from soft set = 0.0805
+     z (prescription P, log-slope) = 1.9790
+
+READING
+  * Every parent satisfies the SF-1 predicate: class(dense) != class(dilute).
+  * Parent A reproduces SF-1: D -> (z=1, soft {0, pi}); D-1/4 -> (1, {0, pi/2}); E -> (2, {0}).
+    D and D-1/4 share the class but have different edge positions and velocities (2 vs sqrt2):
+    the class is a strict compression of the edge-data set, so it cannot fix those values.
+  * Parent B: same predicate, but the dilute edge has r_e = 4 -> z = 4, class (4, 1) != (2, 1).
+  * Parent C: two pockets. The dense sector has 4 occupation edges with two distinct |velocities|
+    (one v_b cannot describe it) and more soft momenta; the dilute sector has n_soft = 2 (0 and 2k0).
+  => same earned predicate, different edge data, different effective-law class: E-13 does not FIX.

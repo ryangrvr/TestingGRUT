@@ -1,0 +1,24 @@
+W2  pinned conservative chain: E-1 / E-14 / E-19 (fresh stand-in code)
+====================================================================================================
+(a) vary the spectral bottom pin (supplied S-1) -- predicates unchanged, edge-read quantities move
+  pin=0.10  band=[0.10,4.10]  r=0.729844 (numeric 0.729844)  kappa=0.345033  X_J zero at T_s/T_b=0.73366
+            X_J(inf) at (T_s,T_b)=(2, 1):+1.26634, (10, 1):+9.26634, (0.5, 1):-0.23366, (0.1, 1):-0.63366, (0.9, 1):+0.16634
+  pin=0.30  band=[0.30,4.30]  r=0.582109 (numeric 0.582109)  kappa=0.329690  X_J zero at T_s/T_b=0.83057
+            X_J(inf) at (T_s,T_b)=(2, 1):+1.16943, (10, 1):+9.16943, (0.5, 1):-0.33057, (0.1, 1):-0.73057, (0.9, 1):+0.06943
+  pin=0.60  band=[0.60,4.60]  r=0.469338 (numeric 0.469338)  kappa=0.310087  X_J zero at T_s/T_b=0.88986
+            X_J(inf) at (T_s,T_b)=(2, 1):+1.11014, (10, 1):+9.11014, (0.5, 1):-0.38986, (0.1, 1):-0.78986, (0.9, 1):+0.01014
+  pin=1.00  band=[1.00,5.00]  r=0.381966 (numeric 0.381966)  kappa=0.288675  X_J zero at T_s/T_b=0.92705
+            X_J(inf) at (T_s,T_b)=(2, 1):+1.07295, (10, 1):+9.07295, (0.5, 1):-0.42705, (0.1, 1):-0.82705, (0.9, 1):-0.02705
+  record check (pin=0.3): r = 0.582109, |X_J| (2,1),(10,1),(1/2,1),(1/10,1) = [1.16943, 9.16943, 0.33057, 0.73057] ; kappa = 0.329690 = 1/(2 sqrt 2.3)
+  -> the predicate NET-ARROW (X_J, X_sigma of fixed forward sign on the declared pairs) holds at every pin;
+     the numbers, and the sign of X_J for a near-equilibrium pair such as (0.9, 1), are functions of the
+     band bottom: at (0.9,1) X_J changes sign where r^2/2 = 0.1, i.e. it is an edge READ, not a FIX.
+  E-1 memory: pin=0.3: k_pin/(e^(-pin tau) k_0) = [1.0, 1.0, 1.0, 1.0] ; lambda_min = 0.3000 ; late log-rate(20->40) = 0.3517
+  E-1 memory: pin=0.6: k_pin/(e^(-pin tau) k_0) = [1.0, 1.0, 1.0, 1.0] ; lambda_min = 0.6000 ; late log-rate(20->40) = 0.6517
+  -> both pins are EXPONENTIAL-grade (P_memory holds); the decay rate is the supplied spectral bottom.
+
+(b) vary the edge exponent at fixed band edges, fixed locality (nearest-neighbour), fixed conservativity
+  alpha=1.0: end-site measure ~ (1-x^2)^0.5; spectrum [0.3000,4.3000]; native phi(t) envelope exponent = 1.492 (theory alpha+1/2 = 1.5)
+  alpha=2.0: end-site measure ~ (1-x^2)^1.5; spectrum [0.3000,4.3000]; native phi(t) envelope exponent = 2.478 (theory alpha+1/2 = 2.5)
+  -> 'native g=1 -> non-Markovian dissipation only, branch-cut tail' holds for both; the tail exponent
+     (t^-3/2 in the record) is a read-out of the supplied chain's edge exponent, not fixed by S5-1.
