@@ -72,3 +72,31 @@ The reproducer was context-isolated, spec-only, with a file-access report. **Not
 
 **Frozen `scout-0` is not modified.** The corrections live in VER0 and in later syntheses citing P-02. The original's §6
 proposal ("the law class factors through v_b^∞") should be read with CR-e.
+
+## 3. Owner ruling (additive; review of `9d673bb`)
+
+**V0-3 ACCEPTED.**
+- **Overall grade:** **V0-3-C — P-02 / HCB-SF1 REPRODUCED WITH CORRECTION — VER-I1 (orchestrator-exposed).**
+- **Explicit subgrade:** **V0-3-T3-F — SINGLE-v_b SECTOR-INVARIANT THEOREM REFUTED AS STATED.**
+- **Criterion-2 item 2:** COMPLETE AT VER-I1 WITH CORRECTION.
+
+**Survives:**
+- the free-boson collapse;
+- HCB ↔ SF-1, at its corrected scope;
+- exclusion as the 1D carrier;
+- the registered cosine-band sector results;
+- A1 – A4;
+- C-6.
+
+**False within its declared class:** the theorem that the general free 1D single-band law class factors through one
+scalar k_b^∞ / v_b.
+
+**Banked replacement.** The relevant quotient is an **edge-data set**: positions and orientations of the relevant
+occupation edges, plus their local dispersion orders / jets. The dynamical exponent and the soft-point structure are
+separate invariants. At the verified scope:
+- local support exponents depend on r_e at the relevant edges;
+- soft momenta depend on the inequivalent allowed edge differences;
+- multiple pockets cannot be reduced to one v_b;
+- the scalar v_b = 0 / ≠ 0 classification is only a special compression for the generic single-pocket cosine-like case.
+
+**CR-a … CR-g are accepted.** Frozen `scout-0` is not modified.
