@@ -1,0 +1,73 @@
+[card01_cobaya_theory.card01camb] `camb` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/camb
+[bao.desi_dr2.desi_bao_all] Initialized.
+[planck_2018_lowl.tt_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik' on test data. got -11.6257 expected -11.6257 (diff 1.02746e-06)
+----
+crop is not implemented for this likelihood
+[planck_2018_lowl.ee_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik' on test data. got -197.99 expected -197.99 (diff -4.1778e-08)
+----
+crop is not implemented for this likelihood
+[planck_npipe_highl_camspec.ttteee] L-range for 143x143: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for 217x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for 143x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for TE: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for EE: 30 2000
+[planck_npipe_highl_camspec.ttteee] Number of data points: 9915
+Loading ACT DR6 lensing likelihood v1.2...
+/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/act_dr6_lenslike/act_dr6_lenslike.py:422: UserWarning: Hartlap correction to cinv: 0.949874686716792
+  warnings.warn(f"Hartlap correction to cinv: {hartlap_correction}")
+[minimize] Initializing
+[minimize] Run 1/1 will start from random initial point:
+[minimize] {'logA': np.float64(3.047399635445273), 'ns': np.float64(0.9655081014398773), 'H0': np.float64(69.26958382622048), 'ombh2': np.float64(0.02225732511286785), 'omch2': np.float64(0.1185174448610864), 'tau': np.float64(0.0575305400186958), 'card01_eps': np.float64(-0.08), 'A_planck': np.float64(1.0018703442950858), 'amp_143': np.float64(18.34728332078572), 'amp_217': np.float64(12.136770158343488), 'amp_143x217': np.float64(9.068798331713284), 'n_143': np.float64(0.9964099695492894), 'n_217': np.float64(1.4167208767225505), 'n_143x217': np.float64(1.541749010285812), 'calTE': np.float64(0.9966851078025675), 'calEE': np.float64(0.9973840346959792)}
+[prior] *WARNING* There are unbounded parameters (['calEE', 'calTE', 'A_planck']). Prior bounds are given at 0.9999995 confidence level. Beware of likelihood modes at the edge of the prior
+[minimize] Covariance matrix loaded for params ['logA', 'ns', 'H0', 'ombh2', 'omch2', 'tau', 'A_planck', 'amp_143', 'amp_217', 'amp_143x217', 'n_143', 'n_217', 'n_143x217', 'calTE', 'calEE']
+[minimize] Missing proposal covariance for params ['card01_eps']
+[minimize] Starting run 1/1
+[minimize] Run 1/1 converged.
+[minimize] -log(posterior) minimized to 5504.65
+[minimize] Parameter values at minimum:
+   weight  minuslogpost      logA        ns         H0     ombh2     omch2       tau  card01_eps  A_planck    amp_143    amp_217  amp_143x217     n_143     n_217  n_143x217     calTE     calEE            As      rdrag  chi2__BAO    chi2__CMB  minuslogprior  minuslogprior__0          chi2  chi2__bao.desi_dr2.desi_bao_all  chi2__planck_2018_lowl.TT_clik  chi2__planck_2018_lowl.EE_clik  chi2__planck_NPIPE_highl_CamSpec.TTTEEE  chi2__act_dr6_lenslike.ACTDR6LensLike
+0     1.0    5504.64617  3.047404  0.965515  69.269958  0.022257  0.118517  0.057531   -0.080011   1.00187  18.343219  12.134241     9.066947  0.997523  1.415467   1.542707  0.996684  0.997395  2.106061e-09  147.62256  13.631377  10962.92316       6.186122          6.186122  10996.920097                        13.631377                       23.005152                      396.711325                             10543.206684                              20.365561
+V1R2A__free__r2 cycle 1: chi2_eff = 10972.7676
+[card01_cobaya_theory.card01camb] `camb` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/camb
+[bao.desi_dr2.desi_bao_all] Initialized.
+[planck_2018_lowl.tt_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik' on test data. got -11.6257 expected -11.6257 (diff 1.02746e-06)
+----
+crop is not implemented for this likelihood
+[planck_2018_lowl.ee_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik' on test data. got -197.99 expected -197.99 (diff -4.1778e-08)
+----
+crop is not implemented for this likelihood
+[planck_npipe_highl_camspec.ttteee] L-range for 143x143: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for 217x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for 143x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for TE: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for EE: 30 2000
+[planck_npipe_highl_camspec.ttteee] Number of data points: 9915
+Loading ACT DR6 lensing likelihood v1.2...
+/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/act_dr6_lenslike/act_dr6_lenslike.py:422: UserWarning: Hartlap correction to cinv: 0.949874686716792
+  warnings.warn(f"Hartlap correction to cinv: {hartlap_correction}")
+[minimize] Initializing
+[minimize] Run 1/1 will start from random initial point:
+[minimize] {'logA': np.float64(3.047404384142187), 'ns': np.float64(0.9655149377224194), 'H0': np.float64(69.26995831457326), 'ombh2': np.float64(0.022257321714517126), 'omch2': np.float64(0.11851748341792488), 'tau': np.float64(0.057530926158917), 'card01_eps': np.float64(-0.08001119322787403), 'A_planck': np.float64(1.0018702800020494), 'amp_143': np.float64(18.34321916887911), 'amp_217': np.float64(12.134241056719326), 'amp_143x217': np.float64(9.066947095836932), 'n_143': np.float64(0.9975228536927407), 'n_217': np.float64(1.4154667227226152), 'n_143x217': np.float64(1.542707246118106), 'calTE': np.float64(0.9966839255352961), 'calEE': np.float64(0.9973951097578648)}
+[prior] *WARNING* There are unbounded parameters (['calEE', 'calTE', 'A_planck']). Prior bounds are given at 0.9999995 confidence level. Beware of likelihood modes at the edge of the prior
+[minimize] Covariance matrix loaded for params ['logA', 'ns', 'H0', 'ombh2', 'omch2', 'tau', 'A_planck', 'amp_143', 'amp_217', 'amp_143x217', 'n_143', 'n_217', 'n_143x217', 'calTE', 'calEE']
+[minimize] Missing proposal covariance for params ['card01_eps']
+[minimize] Starting run 1/1
+[minimize] Run 1/1 converged.
+[minimize] -log(posterior) minimized to 5504.62
+[minimize] Parameter values at minimum:
+   weight  minuslogpost      logA        ns         H0    ombh2     omch2       tau  card01_eps  A_planck    amp_143    amp_217  amp_143x217     n_143     n_217  n_143x217    calTE     calEE            As       rdrag  chi2__BAO     chi2__CMB  minuslogprior  minuslogprior__0          chi2  chi2__bao.desi_dr2.desi_bao_all  chi2__planck_2018_lowl.TT_clik  chi2__planck_2018_lowl.EE_clik  chi2__planck_NPIPE_highl_CamSpec.TTTEEE  chi2__act_dr6_lenslike.ACTDR6LensLike
+0     1.0   5504.622227  3.047614  0.965517  69.311335  0.02225  0.118552  0.057522   -0.083455  1.001937  18.253246  12.101071     9.002599  0.999252  1.426757   1.555421  0.99668  0.997416  2.106502e-09  147.622062  13.745632  10962.835901       6.206149          6.206149  10996.832156                        13.745632                       22.999357                      396.711325                              10543.12522                              20.250623
+V1R2A__free__r2 cycle 2: chi2_eff = 10972.7197
+{"tag": "V1R2A__free__r2", "chi2_eff": 10972.719722417181, "converged_cycles": true, "n_cycles": 2, "seconds": 935.3893573284149}

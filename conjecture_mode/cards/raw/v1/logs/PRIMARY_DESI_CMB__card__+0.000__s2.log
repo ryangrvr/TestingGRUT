@@ -1,0 +1,35 @@
+[card01_cobaya_theory.card01camb] `camb` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/camb
+[bao.desi_dr2.desi_bao_all] Initialized.
+[planck_2018_lowl.tt_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik' on test data. got -11.6257 expected -11.6257 (diff 1.02746e-06)
+----
+crop is not implemented for this likelihood
+[planck_2018_lowl.ee_clik] `clipy` module loaded successfully from /tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/code/planck/clipy/clipy
+----
+clipy_0.15
+Checking likelihood '/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/cobaya_packages/data/planck_2018/baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik' on test data. got -197.99 expected -197.99 (diff -4.1778e-08)
+----
+crop is not implemented for this likelihood
+[planck_npipe_highl_camspec.ttteee] L-range for 143x143: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for 217x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for 143x217: 500 2500
+[planck_npipe_highl_camspec.ttteee] L-range for TE: 30 2000
+[planck_npipe_highl_camspec.ttteee] L-range for EE: 30 2000
+[planck_npipe_highl_camspec.ttteee] Number of data points: 9915
+Loading ACT DR6 lensing likelihood v1.2...
+/tmp/claude-0/-home-user-TestingGRUT/17cb0cf7-4309-5646-9e0e-c1d4c882613e/scratchpad/d3env/lib/python3.11/site-packages/act_dr6_lenslike/act_dr6_lenslike.py:422: UserWarning: Hartlap correction to cinv: 0.949874686716792
+  warnings.warn(f"Hartlap correction to cinv: {hartlap_correction}")
+[minimize] *WARNING* This run has been SEEDED with seed 2017
+[minimize] Initializing
+[minimize] Run 1/1 will start from random initial point:
+[minimize] {'logA': np.float64(3.0361559384012957), 'ns': np.float64(0.9701719987853908), 'H0': np.float64(68.96532927999378), 'ombh2': np.float64(0.022492905603941744), 'omch2': np.float64(0.12024099822055563), 'tau': np.float64(0.05610943969921232), 'A_planck': np.float64(1.0015921426775718), 'amp_143': np.float64(11.130122767684663), 'amp_217': np.float64(20.2312918523559), 'amp_143x217': np.float64(9.453791736368215), 'n_143': np.float64(0.830043020535748), 'n_217': np.float64(1.0839949454907838), 'n_143x217': np.float64(0.8336742111344502), 'calTE': np.float64(1.0025421187294292), 'calEE': np.float64(1.0057772800072275)}
+[prior] *WARNING* There are unbounded parameters (['calTE', 'A_planck', 'calEE']). Prior bounds are given at 0.9999995 confidence level. Beware of likelihood modes at the edge of the prior
+[minimize] Starting run 1/1
+[minimize] Run 1/1 converged.
+[minimize] -log(posterior) minimized to 5506.9
+[minimize] Parameter values at minimum:
+   weight  minuslogpost      logA        ns         H0     ombh2     omch2       tau  A_planck    amp_143    amp_217  amp_143x217     n_143     n_217  n_143x217     calTE     calEE            As       rdrag  chi2__BAO     chi2__CMB  minuslogprior  minuslogprior__0          chi2  chi2__bao.desi_dr2.desi_bao_all  chi2__planck_2018_lowl.TT_clik  chi2__planck_2018_lowl.EE_clik  chi2__planck_NPIPE_highl_CamSpec.TTTEEE  chi2__act_dr6_lenslike.ACTDR6LensLike
+0     1.0   5506.900963  3.043139  0.965989  68.057953  0.022299  0.117861  0.054716  1.003461  19.208645  12.992278      9.90621  0.927535  1.249609    1.32156  0.996576  0.997523  2.097097e-09  147.751567  13.618641  10964.550099       6.864924          6.864924  11000.072079                        13.618641                        22.89555                      396.065922                             10545.588627                              21.903339
+{"tag": "PRIMARY_DESI_CMB__card__+0.000__s2", "chi2_eff": 10977.277194439886, "seconds": 837.625084400177}
