@@ -1,5 +1,5 @@
-# B1R1 PUBLICATION VERIFICATION SYNTHESIS 01
-## Final synthesis under `B1R1_PUBLICATION_VERIFICATION_CHARTER_01.md` (frozen `8d765ea`)
+# BRI1 PUBLICATION VERIFICATION SYNTHESIS 01
+## Final synthesis under `BRI1_PUBLICATION_VERIFICATION_CHARTER_01.md` (frozen `8d765ea`)
 
 **Synthesis only.** This document consolidates the verification campaign's outcome. It does not change any theorem, result, novelty disposition, or numerical evidence.
 
@@ -88,8 +88,7 @@ The audit was targeted, not exhaustive.
 
 ## 7. Publication contribution paragraph
 
-> The verified contribution of B1R1-X1 is a constructive, quantified demonstration that a finite reciprocal anharmonic environment — a set of Duffing oscillators coupled to a driven degree of freedom — produces a pattern of environmental forces across different interventions that cannot be captured by any single shared force law of the affine location-scale form. The proof rests on a standardized third-cumulant witness that is invariant under all such shared transformations yet differs between interventions for sufficiently large finite bath size. The distinguishing signature is mesoscopic: it scales as 1/N_B in the number of bath oscillators and vanishes in the thermodynamic limit, where the standard linear-response description is recovered. The result is proved analytically and illustrated by deterministic numerical simulation; it is positioned relative to known results on non-Gaussian bath forces, location-scale noise models, and interventional identifiability.
-
+> The verified contribution of BRI1-X1 is a constructive, quantified demonstration that a finite reciprocal anharmonic environment—a set of Duffing oscillators coupled to a driven degree of freedom—can generate environmental force laws across interventions that cannot all be represented by a single shared causal signed-affine exogenous process. The proof uses a standardized third-cumulant witness: for each fixed sufficiently small time \(t>0\), there exists a finite \(N_0(t)\) such that for every \(N_B\ge N_0(t)\), the driven protocol has a nonzero shape witness while the reference protocol has zero third cumulant exactly. The distinguishing signature is mesoscopic, scaling asymptotically as \(O(1/N_B)\) and vanishing in the reservoir limit, where the common Gaussian linear-response reservoir law is recovered. The theorem is analytic; deterministic finite-\(N_B\) numerics provide an evidence-grade illustration at preregistered finite times that are not claimed to lie inside the theorem's certified short-time interval. The result is positioned against known work on non-Gaussian bath forces, location-scale noise models, and interventional identifiability.
 ---
 
 ## 8. GRUT-independence gate (P6)
@@ -169,11 +168,11 @@ These rules are lessons earned by this campaign; they did not govern earlier wor
 
 ## 15. Final terminal
 
-# **B1R1-PUB-READY-WITH-POSITIONING**
+# **BRI1-PUB-READY-WITH-POSITIONING**
 
 **Why this terminal follows:** V1 stands (P1, P2 pass). V2 establishes the novelty positioning: the ingredients are known but the constructive dynamical instantiation with a shape-invariant witness and quantified finite-size disappearance is a genuine contribution that requires explicit positioning against known location-scale/interventional literature (P3 pass, with the caveat). P4 and P5 pass. P6 passes. No external human review exists — this is acknowledged and does not block the terminal, because the terminal describes readiness for drafting, not acceptance.
 
-B1R1-PUB-READY would require novelty beyond KNOWN-RESULT-NEW-FRAMING; the V2 supplement showed the novelty is the framing/instantiation, not a new theorem family. B1R1-PUB-OPEN would require an unresolved criterion; all six are resolved.
+BRI1-PUB-READY would require novelty beyond KNOWN-RESULT-NEW-FRAMING; the V2 supplement showed the novelty is the framing/instantiation, not a new theorem family. BRI1-PUB-OPEN would require an unresolved criterion; all six are resolved.
 
 ---
 
