@@ -32,6 +32,13 @@ def run_all(jobs):
 def main():
     os.makedirs(OUT, exist_ok=True); os.makedirs(LOGS, exist_ok=True)
     run_all([(t, "A") for t in C.TARGETS])
+    def tagname(t, arm):
+        m, e = (t.split(":")[0], float(t.split(":")[1])) if t.startswith("card:") else (t, 0.0)
+        return os.path.join(OUT, f"V1R__{m}__{e:+.3f}__{arm}.json")
+    missing = [t for t in C.TARGETS if not os.path.exists(tagname(t, "A"))]
+    if missing:
+        print(f"STAGE A INCOMPLETE {missing} - stopping (no stage B on an incomplete profile)", flush=True)
+        return
     print("STAGE A COMPLETE", flush=True)
     from card01_v1r_analyze import load, load_bearing
     done_b = set()

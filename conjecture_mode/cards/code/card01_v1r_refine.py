@@ -77,33 +77,63 @@ def one_cycle(model, eps, point):
     return chi2, {k: row[k] for k in sampled}, row
 
 
+def _sub(args):
+    """ER-G (execution repair): every Cobaya model build runs in its own subprocess so that at most one model
+    (~3.7 GB) is resident per worker.  The numerical procedure is unchanged."""
+    import subprocess, tempfile
+    with tempfile.NamedTemporaryFile("r", suffix=".json", delete=False) as tf:
+        out = tf.name
+    rc = subprocess.call([sys.executable, os.path.abspath(__file__)] + args + [out])
+    if rc != 0:
+        raise RuntimeError(f"subprocess {args[0]} failed rc={rc}")
+    r = json.load(open(out)); os.unlink(out)
+    return r
+
+
+def _mode_sampled(model, eps, out):
+    from cobaya.model import get_model
+    probe = build(model, float(eps), {}); probe.pop("sampler")
+    json.dump(list(get_model(probe).parameterization.sampled_params()), open(out, "w"))
+
+
+def _mode_cycle(model, eps, point_json, out):
+    chi2, point, row = one_cycle(model, float(eps), json.load(open(point_json)))
+    json.dump({"chi2": chi2, "point": point, "row": row}, open(out, "w"))
+
+
 def main():
+    if sys.argv[1] == "--sampled":
+        return _mode_sampled(*sys.argv[2:5])
+    if sys.argv[1] == "--cycle":
+        return _mode_cycle(*sys.argv[2:6])
     target, arm, outdir = sys.argv[1], sys.argv[2], sys.argv[3]
     model, eps = (target.split(":")[0], float(target.split(":")[1])) if target.startswith("card:") else (target, 0.0)
     tag = f"V1R__{model}__{eps:+.3f}__{arm}"
     out = os.path.join(outdir, tag + ".json")
     if os.path.exists(out):
         return
-    from cobaya.model import get_model
-    probe = build(model, eps, {}); probe.pop("sampler")
-    sampled = list(get_model(probe).parameterization.sampled_params())
+    sampled = _sub(["--sampled", model, repr(eps)])
     point = start_point(model, eps, arm, sampled)
     if model == "free" and arm == "A":
         eps = point["card01_eps"]
-    hist, t0, prev, conv = [], time.time(), None, False
+    hist, t0, prev, conv, row = [], time.time(), None, False, None
+    os.makedirs(outdir, exist_ok=True)
+    pj = os.path.join(outdir, tag + ".point.tmp.json")
     for cyc in range(1, C.MAX_CYCLES + 1):
-        chi2, point, row = one_cycle(model, eps, point)
+        json.dump(point, open(pj, "w"))
+        r = _sub(["--cycle", model, repr(eps), pj])
+        chi2, point, row = r["chi2"], r["point"], r["row"]
         hist.append(chi2)
         print(f"{tag} cycle {cyc}: chi2_eff = {chi2:.4f}", flush=True)
         if prev is not None and prev - chi2 < C.CYCLE_IMPROVEMENT_STOP:
             conv = True
             break
         prev = chi2
+    os.path.exists(pj) and os.unlink(pj)
     res = {"tag": tag, "model": model, "eps_target": eps if model == "card" else None, "arm": arm,
            "cycle_chi2": hist, "chi2_eff": min(hist), "converged_cycles": conv, "n_cycles": len(hist),
            "point": point, "final_row": row, "seconds": time.time() - t0,
            "start": {"A": "best valid v1 solution", "B": "distinct admissible start"}[arm]}
-    os.makedirs(outdir, exist_ok=True)
     json.dump(res, open(out, "w"), indent=1)
     print(json.dumps({k: res[k] for k in ("tag", "chi2_eff", "converged_cycles", "n_cycles", "seconds")}), flush=True)
 

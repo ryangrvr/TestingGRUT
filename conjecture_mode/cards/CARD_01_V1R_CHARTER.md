@@ -112,3 +112,17 @@ The driver stops for owner review.
 - `826f0d1`;
 - the original run configuration;
 - the owner threshold ruling.
+
+---
+
+## Execution repair log (v1R)
+
+These are execution repairs only. No item in §1–§4 changed: the start rule, tolerance, covariance, cycle rule, cap, arm-B rule and acceptance are all the same.
+
+| ID | Event | Repair |
+|---|---|---|
+| **ER-G** | **OOM in the first v1R launch** (2 workers). Each refine process held its parameter-probe model **and** its per-cycle models in memory, reaching about 7.5 GB RSS (kernel log: `Memory cgroup out of memory: Killed process … anon-rss ~7.5 GB`). 14 of 21 started arm-A jobs died with rc = −9 and wrote no output. The 7 that finished (ε = −0.005, −0.01, −0.015, −0.04, −0.05, −0.15, −0.30) are **kept**: they ran the identical procedure, and the code change affects only process boundaries. | Each model build (the parameter probe and every cycle) now runs in its own subprocess, so at most one model (~3.7 GB) is resident per worker. The driver also stops before stage B if any arm-A result is missing. Two workers are retained. |
+
+The first-launch logs are kept in scratch (`v1r_driver.log`, renamed `v1r_driver_attempt1_oom.log`).
+
+**Values seen in the killed jobs' logs before the repair** (cycle-1 χ², incomplete, disclosed): ε = 0: 10977.20; CPL: 10970.20; ε = −0.4: 10997.51; ε = −0.5: 11013.95; ε = −0.7: 11050.20; ε = −1: 11113.91. None of these is used; each target restarts from its v1 best under the unchanged procedure.
