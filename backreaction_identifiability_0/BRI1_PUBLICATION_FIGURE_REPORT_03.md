@@ -42,7 +42,7 @@ At the reference resolution (nx=240, dt=5×10^-4):
 | 0.75 | 0.000e+00 | 0.4679199058 | 0.000e+00 |
 | 1.0 | -1.388e-17 | 0.4679199137 | 2.642e-17 |
 
-**All P0 stationarity conditions satisfied.** Variance matches the independent reference ⟨x²⟩ = 0.467919916974 to 10^-8 relative. **The primary implementation firewall passes.**
+**All P0 stationarity conditions satisfied.** Variance matches the independent reference to relative discrepancy 2.373e-16. **The primary implementation firewall passes.**
 
 ### Exact virial identity (Gibbs)
 

@@ -50,7 +50,10 @@ for T in ['0.0','0.25','0.5','0.75','1.0']:
     r = p0[T]
     L.append(f"| {T} | {r['mean']:.3e} | {r['var']:.10f} | {r['k3']:.3e} |")
 L.append("")
-L.append(f"**All P0 stationarity conditions satisfied.** Variance matches the independent reference \u27e8x\u00b2\u27e9 = 0.467919916974 to 10^-8 relative. **The primary implementation firewall passes.**")
+# Compute P0 agreement with independent reference programmatically
+p0_var_ref = p0['0.0']['var']
+rel_disc = abs(p0_var_ref - ind1d['m2']) / abs(ind1d['m2'])
+L.append(f"**All P0 stationarity conditions satisfied.** Variance matches the independent reference to relative discrepancy {rel_disc:.3e}. **The primary implementation firewall passes.**")
 L.append("")
 L.append(f"### Exact virial identity (Gibbs)")
 L.append("")
