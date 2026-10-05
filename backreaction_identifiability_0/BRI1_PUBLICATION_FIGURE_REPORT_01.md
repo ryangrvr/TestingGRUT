@@ -18,11 +18,16 @@ Per charter §1, the following were fixed before execution:
   documented in §4 as a deviation with cause, not as a silent change.
 - **Seed policy:** single fixed seed 20260101 (numpy PCG64 Generator).
 - **Integrator:** RK4 fixed-step, dt = 1/512 (26 steps to t_num = 0.05).
-  Local truncation O(dt⁵); global O(dt⁴) ≈ 10⁻¹⁰ — negligible vs sampling
-  noise (verified below).
+  Formal local truncation O(dt⁵); formal global order O(dt⁴). **No actual
+  step-refinement/convergence check was performed in this run, so no
+  numerical error bound follows from the formal order alone**; the
+  integration error is expected to be small relative to sampling noise
+  but this was not verified.
 - **Statistic:** third central moment κ₃(F_q(t_num)) and standardized
   skewness γ₁(F_q(t_num)).
-- **Slope fit:** OLS of log|γ₁(P1)| on log(N_B).
+- **Slope fit:** OLS of log|γ₁(P1)| on log(N_B). **Note: any slope
+  produced from the noise-dominated output is not an estimate of the
+  physical exponent and must not be interpreted as such.**
 - **Exclusion criteria:** none — all results reported.
 - **Expected behavior:** |γ₁(P1)| ∝ 1/N_B asymptotically; γ₁(P0) ≈ 0.
 
@@ -58,8 +63,11 @@ run completed (see `v3_output.log`) but the result is uninformative:
 - The **true** signal at t_num = 0.05 is
   κ₃(F_{P1,N}(0.05)) ≈ 3c(0.05)/N_B ≈ −Var(x₀²)·(0.05)⁷/(28π³)·3/N_B ≈
   **10⁻¹⁰–10⁻¹¹** for N_B ∈ {4,…,64}.
-- Signal-to-noise ratio ≈ 10⁻⁸–10⁻⁹. **Detection at t_num = 0.05 via Monte
-  Carlo would require ~10¹⁸ samples. Not feasible.**
+- Signal-to-noise ratio ≈ 10⁻⁸–10⁻⁹. **Reaching SNR of order unity at
+  t_num = 0.05 via Monte Carlo would require roughly 10²⁰–10²² samples,
+  depending on where the true signal lies in the quoted 10⁻¹⁰–10⁻¹¹ range
+  (order-of-magnitude estimate from the measured noise floor and signal
+  range; not a precise power calculation). Not feasible.**
 
 **This is a design error in the preregistered path, not a failure of the
 theorem.** The theorem's small-time regime (t → 0) is precisely where the
