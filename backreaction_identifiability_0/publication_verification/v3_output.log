@@ -1,0 +1,11 @@
+Preregistered: t_num=0.05, NB=[4, 8, 16, 32, 64], samples=20000, seed=20260101
+Integrator: RK4 fixed dt=0.001953125, steps=26. RK4 fixed-step, dt=1/512; local error O(dt^5), global O(dt^4) ~ 1e-10; integration error negligible vs sampling
+  N_B     kappa3_P0     gamma1_P0     kappa3_P1     gamma1_P1      var_P0      var_P1
+    4   4.08238e-03   1.29174e-02  -7.12545e-03  -2.23947e-02  4.6397e-01  4.6606e-01
+    8  -4.74621e-03  -1.46046e-02   8.59344e-03   2.71746e-02  4.7269e-01  4.6416e-01
+   16  -5.12487e-03  -1.60867e-02  -1.78262e-03  -5.49249e-03  4.6646e-01  4.7227e-01
+   32  -3.85849e-03  -1.22249e-02   3.00768e-03   9.41277e-03  4.6357e-01  4.6739e-01
+   64   7.95846e-03   2.51446e-02   1.25341e-02   3.85661e-02  4.6443e-01  4.7271e-01
+
+OLS: log|gamma1_P1| = 0.004*log(N_B) + -4.117
+implied p = -0.004  (theorem asymptotic p = 1)
