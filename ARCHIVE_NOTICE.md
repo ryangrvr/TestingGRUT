@@ -1,0 +1,1 @@
+This repository is the frozen historical record of the GRUT program. Active work continues in `vsctestinggrut`. Imported records there are pinned to the full commit SHAs listed in `TESTINGGRUT_ARCHIVE_INDEX_01.md` on branch `archive-index`.
