@@ -1,0 +1,162 @@
+{
+  "schema": "META_LAW_LOCAL_VALIDATION_V1",
+  "scope": "ISSUE_5_FOUNDATIONS_ONLY",
+  "review": "DRAFT_PENDING_EXTERNAL_REVIEW",
+  "utc_date": "2026-10-09",
+  "checkout_head_during_checks": "c670710bd217ba01bdf8f5a58d84f072dafb5984",
+  "working_tree_dirty_during_checks": true,
+  "python": "3.12.14",
+  "exact_control_tests": 18,
+  "freshness_fixtures": [
+    {
+      "fixture": "unchanged",
+      "exit": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "fixture": "missing_results",
+      "exit": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "fixture": "changed_results",
+      "exit": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "fixture": "missing_table",
+      "exit": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "fixture": "changed_table",
+      "exit": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "fixture": "changed_code",
+      "exit": 1,
+      "expected": 1,
+      "pass": true
+    }
+  ],
+  "default_engineering": {
+    "provenance_tests": {
+      "tests": 242,
+      "failures": 9,
+      "errors": 0,
+      "skipped": 1
+    },
+    "passed": 232,
+    "baseline_deltas": [],
+    "infrastructure_errors": [],
+    "classifier_agreement": true,
+    "axes": {
+      "engineering_integrity": "BLOCKED",
+      "scientific_status": "REVIEW_REQUIRED",
+      "profile_execution_integrity": "PASS",
+      "bank_gate": "FLAG-FOR-FIREWALL",
+      "open_passes": [
+        "P1A-EDGE-REPRESENTATION",
+        "P1B-SHOWN-ON-LEDGER-INPUTS",
+        "P2-TERMINATION-EVENTLOG",
+        "P3-SEALED-HISTORY-POLICY",
+        "P4-TERMINATION-KAPPA-RESULT",
+        "P5-RESIDENT-SCOPE",
+        "P6-STALE-NETS-IN-STANDING-DOCS"
+      ],
+      "scientific_approval": false,
+      "external_review": "NOT_PERFORMED_BY_THIS_RUN"
+    },
+    "protected_inputs": {
+      "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+      "digest": "efc48249a1657d5cd0e6bd3bde1aae0a653ceb1e6e78f26b23cf95184da851e1",
+      "tracked_file_count": 1757
+    },
+    "adjudication_problems": [
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_expected_red.py::TestExpectedRed::test_a_declaration_citing_a_closed_pass_is_refused"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_expected_red.py::TestExpectedRed::test_a_moot_pass_cannot_be_cited_by_a_declaration"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_expected_red.py::TestExpectedRed::test_a_symptomless_pass_is_allowed_and_printed"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_expected_red.py::TestExpectedRed::test_the_declared_state_is_accepted"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_public_doc.py::TestPublicDoc::test_the_calc_manifest_matches_the_repository"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_public_numbers.py::TestPublicNumbers::test_no_drift_from_the_register"
+      },
+      {
+        "kind": "UNDECLARED_FAILING_TEST",
+        "node": "test_public_numbers.py::TestPublicNumbers::test_the_stamped_test_count_is_true"
+      },
+      {
+        "kind": "NEW_DECLARED_SET_MEMBER",
+        "node": "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context",
+        "case": "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value"
+      },
+      {
+        "kind": "NEW_DECLARED_SET_MEMBER",
+        "node": "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context",
+        "case": "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound"
+      },
+      {
+        "kind": "NEW_DECLARED_SET_MEMBER",
+        "node": "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context",
+        "case": "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value"
+      },
+      {
+        "kind": "NEW_DECLARED_SET_MEMBER",
+        "node": "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context",
+        "case": "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound"
+      },
+      {
+        "kind": "ORPHANED_OPEN_PASS",
+        "pass": "P1A-EDGE-REPRESENTATION"
+      },
+      {
+        "kind": "ORPHANED_OPEN_PASS",
+        "pass": "P6-STALE-NETS-IN-STANDING-DOCS"
+      }
+    ],
+    "case_digest": "fc6c0495455622e495d16dcb48bbbdd1ba2fb3622ffd5ca102e8ab96013cfc42"
+  },
+  "manifest_lock_sha256": "b46f65a0ad10193f9443dffee4227b041949dda8541d7f7e98a109ead70a396d",
+  "raw_evidence_sha256": {
+    "summary.json": "cef7a60c9a5a5f598025d744bb89cb2ebca66c649ee4d97608899e86dd0b4a56",
+    "provenance.xml": "8d18146fd8ba396467e45d17b00a36b0434258ced302c474cd1e581ee5c48f58",
+    "provenance_suite.log": "ee7269e513f6cf033319ae7e80a3919e1dcb1d5927e16d8d83d3b121bf41ff7a",
+    "runner_tests.log": "0fe7d8d4850247ca12bbea6a44281b34fec4390b03a04f7eb23345dc6eccfcce",
+    "expected_red_classifier.log": "86455e4dbd4a1aecb91e33cd905c1adc7fe39d046790d935d7b1fe04a3767268"
+  },
+  "workflow_validation": "PASS: YAML, read-only permissions, pinned actions, branch/path scope and check mode",
+  "initial_invalid_invocation": {
+    "command": "development/checks.py --output outside repository",
+    "exit": 1,
+    "error": "REPORT FAILURE: Missing/nonlocal/empty report asset: assets.json",
+    "disposition": "Rejected report invocation; reran using default in-repository output without changing runner or tests."
+  },
+  "hosted_validation": "NOT_YET_RUN_AT_LOCAL_SNAPSHOT",
+  "expensive_mutation_and_falsifier_profiles": "NOT_RUN",
+  "scientific_approval": false,
+  "cards_consumed": 0,
+  "IP12_drafts_consumed": 0,
+  "canonical_files_changed": []
+}

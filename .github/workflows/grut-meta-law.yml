@@ -1,0 +1,46 @@
+name: Meta-law standard controls
+
+on:
+  push:
+    branches: ["codex/meta-law-lab-05"]
+  pull_request:
+    paths:
+      - "development/meta_law_lab/**"
+      - ".github/workflows/grut-meta-law.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-reproduction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - name: Verify exact standard controls and evidence freshness
+        run: python development/meta_law_lab/run.py --check
+      - name: Preserve scientific boundary
+        if: always()
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'TEXT'
+          Issue #5 foundations controls only. DRAFT; external review pending.
+          No GRUT candidate K, bank decision, novelty or Card-1 authorization.
+          Inherited engineering BLOCKED / science REVIEW_REQUIRED is independent.
+          TEXT
+      - name: Retain auditable evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: meta-law-standard-controls
+          path: |
+            development/meta_law_lab/RESULTS.json
+            development/meta_law_lab/PROOFS.md
+            development/meta_law_lab/SOURCES.json
+          if-no-files-found: error
+          retention-days: 30
