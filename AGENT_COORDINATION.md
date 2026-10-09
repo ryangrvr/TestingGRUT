@@ -5833,3 +5833,35 @@ cards consumed zero. Full kinetic manuscript/ZIP not independently obtained;
 only its supplied two-state control independently reproduced here. All
 scientific conclusions and code checks are same-author; external review
 pending. New green control checks cannot clear the inherited red machinery.
+
+
+### 2026-10-09 · Codex · issue #5 adaptive/meta-law audit
+
+Isolated `codex/meta-law-lab-05`, based on PR #4 head c670710. Added
+`development/meta_law_lab/` and its read-only, pinned control workflow.
+DRAFT verdict: REDUCES TO FIXED-LAW FORMALISM at the stated architecture
+scope. Proved the intervention-preserving stationary finite-memory lift,
+identifiability result, finite-state clock caveat, response-rank bound,
+conditional selection limits, passive urn/static-mixture equivalence and
+its forcing distinction. Inspected a bounded 37-source primary/canonical
+ledger and the actual Smolin matrix recurrence. No originality claimed.
+
+Verified: 18 exact control tests PASS; 1,024 feedback-policy/initial-state
+comparisons / 8,192 record cells have zero rational difference. Twenty-four
+randomized-policy/initial-state comparisons also match. Wrong-kernel oracle
+is detected. Unchanged evidence fixture passes; five missing/stale/table/
+code fixtures correctly fail. Machine JSON and generated tables match.
+YAML/read-only permissions/pinned actions/check-mode and document/source
+references verified. Existing 22 reporting tests PASS. Default machinery
+reproduces 232 PASS / 9 FAIL / 1 SKIP, zero baseline deltas, no infrastructure
+errors, classifier agreement true. Engineering BLOCKED; science
+REVIEW_REQUIRED; protected-input digest and manifest lock unchanged.
+Raw local JUnit, logs, summary and validation snapshot are retained. An
+initial outside-repository report invocation was rejected and recorded;
+the canonical in-repository invocation succeeded at its expected red status.
+
+No canonical science, expected-red manifest, charter, ruling or bank changed.
+No K, scoring, L0 price, CR-5 implementation, Card or IP-12 draft. Card 1
+CLOSED; consumed zero. All proofs/verdicts remain DRAFT — external review
+pending; no physical experiment or thermodynamic/relativistic completion
+claimed. Hosted verification is separate evidence after push.

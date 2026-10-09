@@ -1,0 +1,1086 @@
+{
+  "code_sha256": {
+    "controls.py": "2a005636d6c33f39771a9290b63e563b4a5c1e794790e85307afe62928498fe7",
+    "run.py": "98705658c527e1fbc2626f0aca7c8cc024680391df7674a8aa09be1c61da33d9",
+    "test_controls.py": "eab86ea45ee430eda5c0b4120189844ba48a60af6061b3d7c392266e87a29805"
+  },
+  "controls": {
+    "C01_kernel": {
+      "interventions": 2,
+      "noise_weights": [
+        {
+          "rational": [
+            3,
+            4
+          ]
+        },
+        {
+          "rational": [
+            1,
+            4
+          ]
+        }
+      ],
+      "row_sums": [
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        {
+          "rational": [
+            1,
+            1
+          ]
+        }
+      ],
+      "rows": 16,
+      "states": 8
+    },
+    "C02_all_feedback_policies": {
+      "comparisons": 1024,
+      "deterministic_policies": 128,
+      "horizon": 3,
+      "initial_states": 8,
+      "maximum_exact_difference": {
+        "rational": [
+          0,
+          1
+        ]
+      },
+      "record_cells": 8192
+    },
+    "C03_hidden_memory_witness": {
+      "P_next_one_memory_one": {
+        "rational": [
+          3,
+          4
+        ]
+      },
+      "P_next_one_memory_zero": {
+        "rational": [
+          1,
+          4
+        ]
+      },
+      "intervention": 0,
+      "law_label": 1,
+      "visible_state": 0
+    },
+    "C04_rank_bound": {
+      "determinant": 1,
+      "excluded_classical_hidden_state_bounds": [
+        1,
+        2,
+        3
+      ],
+      "fixed_comparator_states": 4,
+      "matrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "preparations": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "probe_actions": [
+        0,
+        0
+      ],
+      "rank": 4,
+      "responses": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "C05_state_law_unification": {
+      "N": 3,
+      "antisymmetric": true,
+      "autonomous_pair_exact_match": true,
+      "matrices": [
+        [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            -1,
+            0,
+            1
+          ],
+          [
+            -2,
+            -1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            -2,
+            0,
+            3
+          ],
+          [
+            -2,
+            -3,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            7,
+            1
+          ],
+          [
+            -7,
+            0,
+            3
+          ],
+          [
+            -1,
+            -3,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            15,
+            15
+          ],
+          [
+            -15,
+            0,
+            -9
+          ],
+          [
+            -15,
+            9,
+            0
+          ]
+        ]
+      ],
+      "traces": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "C06_unbounded_clock": {
+      "claim_grade": "finite prefix only; nonperiodicity is proved in PROOFS.md",
+      "definition": "y_n=1 iff n is a power of two, n>=1",
+      "one_times_through_64": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "successive_gaps": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ]
+    },
+    "C07_growing_memory": {
+      "actions": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "binary_prefix_integer": 11,
+      "state_domain": "nonnegative integers; finite coordinate, unbounded capacity",
+      "update": "m'=2*m+a"
+    },
+    "C08_contraction_selection": [
+      {
+        "closed_form_error": {
+          "rational": [
+            69,
+            4384
+          ]
+        },
+        "error": {
+          "rational": [
+            69,
+            4384
+          ]
+        },
+        "initial": {
+          "rational": [
+            -1,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            1,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            -37,
+            4384
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            1,
+            8768
+          ]
+        },
+        "error": {
+          "rational": [
+            1,
+            8768
+          ]
+        },
+        "initial": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            1,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            63,
+            8768
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            17,
+            1096
+          ]
+        },
+        "error": {
+          "rational": [
+            17,
+            1096
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            1,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            25,
+            1096
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            1369,
+            8768
+          ]
+        },
+        "error": {
+          "rational": [
+            1369,
+            8768
+          ]
+        },
+        "initial": {
+          "rational": [
+            10,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            1,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            1433,
+            8768
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            139,
+            8768
+          ]
+        },
+        "error": {
+          "rational": [
+            139,
+            8768
+          ]
+        },
+        "initial": {
+          "rational": [
+            -1,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            2,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            -11,
+            8768
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            1,
+            4384
+          ]
+        },
+        "error": {
+          "rational": [
+            1,
+            4384
+          ]
+        },
+        "initial": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            2,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            63,
+            4384
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            135,
+            8768
+          ]
+        },
+        "error": {
+          "rational": [
+            135,
+            8768
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            2,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            263,
+            8768
+          ]
+        }
+      },
+      {
+        "closed_form_error": {
+          "rational": [
+            171,
+            1096
+          ]
+        },
+        "error": {
+          "rational": [
+            171,
+            1096
+          ]
+        },
+        "initial": {
+          "rational": [
+            10,
+            1
+          ]
+        },
+        "steps": 6,
+        "target": {
+          "rational": [
+            2,
+            137
+          ]
+        },
+        "value": {
+          "rational": [
+            187,
+            1096
+          ]
+        }
+      }
+    ],
+    "C09_basin_dependence": {
+      "fixed_points": [
+        -1,
+        0,
+        1
+      ],
+      "negative_initial_value_after_3": {
+        "rational": [
+          -7027826527743859,
+          9007199254740992
+        ]
+      },
+      "positive_initial_value_after_3": {
+        "rational": [
+          7027826527743859,
+          9007199254740992
+        ]
+      },
+      "zero_initial_value_after_3": {
+        "rational": [
+          0,
+          1
+        ]
+      }
+    },
+    "C10_replication": [
+      {
+        "closed_form": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "initial": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "relative_fitness": 1,
+        "steps": 5,
+        "value": {
+          "rational": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "closed_form": {
+          "rational": [
+            1,
+            3
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            3
+          ]
+        },
+        "relative_fitness": 1,
+        "steps": 5,
+        "value": {
+          "rational": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "closed_form": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "relative_fitness": 1,
+        "steps": 5,
+        "value": {
+          "rational": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "closed_form": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "initial": {
+          "rational": [
+            0,
+            1
+          ]
+        },
+        "relative_fitness": 2,
+        "steps": 5,
+        "value": {
+          "rational": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "closed_form": {
+          "rational": [
+            16,
+            17
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            3
+          ]
+        },
+        "relative_fitness": 2,
+        "steps": 5,
+        "value": {
+          "rational": [
+            16,
+            17
+          ]
+        }
+      },
+      {
+        "closed_form": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "initial": {
+          "rational": [
+            1,
+            1
+          ]
+        },
+        "relative_fitness": 2,
+        "steps": 5,
+        "value": {
+          "rational": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "C11_stochastic_constant": {
+      "mutation_prob_0_to_1": {
+        "rational": [
+          1,
+          4
+        ]
+      },
+      "mutation_prob_1_to_0": {
+        "rational": [
+          1,
+          2
+        ]
+      },
+      "stationary_P_1": {
+        "rational": [
+          1,
+          3
+        ]
+      },
+      "stationary_flux_each_direction": {
+        "rational": [
+          1,
+          6
+        ]
+      }
+    },
+    "C12_precedence_vs_static_latent": {
+      "after_do_first_success": {
+        "static_mixture_next_success": {
+          "rational": [
+            1,
+            2
+          ]
+        },
+        "urn_next_success": {
+          "rational": [
+            2,
+            3
+          ]
+        }
+      },
+      "after_observe_first_success": {
+        "both_next_success": {
+          "rational": [
+            2,
+            3
+          ]
+        }
+      },
+      "enumerated_word_cells": 126,
+      "maximum_exact_difference": {
+        "rational": [
+          0,
+          1
+        ]
+      },
+      "pair_covariance": {
+        "rational": [
+          1,
+          12
+        ]
+      },
+      "three_trial_joint": [
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              4
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              4
+            ]
+          },
+          "word": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              12
+            ]
+          },
+          "word": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "static_beta_mixture_probability": {
+            "rational": [
+              1,
+              4
+            ]
+          },
+          "urn_probability": {
+            "rational": [
+              1,
+              4
+            ]
+          },
+          "word": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "C13_zero_to_one": {
+      "P_born": {
+        "rational": [
+          37,
+          64
+        ]
+      },
+      "birth_rate_per_step": {
+        "rational": [
+          1,
+          4
+        ]
+      },
+      "literal_empty_domain_supports_normalized_probability": false,
+      "steps": 3,
+      "zero_rate_P_born": 0
+    },
+    "C14_objective_price": {
+      "branches": [
+        0,
+        1,
+        2
+      ],
+      "cost_A": [
+        0,
+        1,
+        4
+      ],
+      "cost_B": [
+        4,
+        1,
+        0
+      ],
+      "minimizer_A": 0,
+      "minimizer_B": 2
+    },
+    "C15_drift": {
+      "fixed_augmented_update": "(x,c)->(c,c+delta); record y=x",
+      "increment": {
+        "rational": [
+          1,
+          1000000
+        ]
+      },
+      "initial_dimensionless_parameter": {
+        "rational": [
+          1,
+          137
+        ]
+      },
+      "parameter_after_4": {
+        "rational": [
+          250137,
+          34250000
+        ]
+      },
+      "steps": 4
+    }
+  },
+  "python": "3.12.14",
+  "review": "DRAFT_PENDING_EXTERNAL_REVIEW_SAME_AUTHOR_CHECKS",
+  "schema": "META_LAW_STANDARD_CONTROLS_V1",
+  "scope": "ISSUE_5_FOUNDATIONS_ONLY_NO_CANDIDATE_NO_CARD",
+  "tests": 18
+}
