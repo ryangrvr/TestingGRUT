@@ -1,0 +1,46 @@
+name: Foundations standard controls
+
+on:
+  push:
+    branches: ["codex/foundations-lab-03"]
+  pull_request:
+    paths:
+      - "development/foundations_lab/**"
+      - ".github/workflows/grut-foundations.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  standard-control-reproduction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - name: Reproduce frozen standard controls and verify evidence freshness
+        run: python development/foundations_lab/run.py --check
+      - name: State the scientific boundary
+        if: always()
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'TEXT'
+          Standard/control reproduction only. No GRUT candidate, bank decision,
+          external scientific approval, or Card-1 authorization is granted.
+          Issue #2 engineering/scientific checks remain independent.
+          TEXT
+      - name: Retain auditable control evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: foundations-standard-controls
+          path: |
+            development/foundations_lab/RESULTS.json
+            development/foundations_lab/PROOFS.md
+            development/foundations_lab/SOURCES.json
+          if-no-files-found: error
+          retention-days: 30
