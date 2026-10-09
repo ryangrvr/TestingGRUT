@@ -1,0 +1,51 @@
+name: Physical admissibility standard controls
+
+on:
+  push:
+    branches: ["codex/physical-admissibility-07"]
+  pull_request:
+    paths:
+      - "development/physical_admissibility_lab/**"
+      - ".github/workflows/grut-physical-admissibility.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  standard-reproduction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - name: Reproduce standard controls without regenerating evidence
+        run: python development/physical_admissibility_lab/run.py --check
+      - name: Hostile reporter freshness fixtures
+        run: python development/physical_admissibility_lab/verify_fixtures.py
+      - name: Preserve scientific and engineering boundaries
+        if: always()
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'TEXT'
+          Issue #7 standard physical comparator controls only.
+          DRAFT; external scientific review pending. No K, candidate, L0 price or Card.
+          Card 1 CLOSED; zero consumed. No Stage-3 lock or CR-5 approval.
+          Inherited engineering BLOCKED / science REVIEW_REQUIRED remains independent.
+          TEXT
+      - name: Retain proof and machine evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: physical-admissibility-standard-controls
+          path: |
+            development/physical_admissibility_lab/RESULTS.json
+            development/physical_admissibility_lab/TABLES.md
+            development/physical_admissibility_lab/PROOFS.md
+            development/physical_admissibility_lab/SOURCES.json
+            development/physical_admissibility_lab/INPUTS.json
+          if-no-files-found: error
+          retention-days: 30

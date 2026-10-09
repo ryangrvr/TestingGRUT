@@ -5865,3 +5865,37 @@ No K, scoring, L0 price, CR-5 implementation, Card or IP-12 draft. Card 1
 CLOSED; consumed zero. All proofs/verdicts remain DRAFT — external review
 pending; no physical experiment or thermodynamic/relativistic completion
 claimed. Hosted verification is separate evidence after push.
+
+
+### 2026-10-09 · Codex · Issue #7 physical-admissibility standard controls
+
+Isolated codex/physical-admissibility-07 from PR #6 head ad885bf6. Added
+development/physical_admissibility_lab and pinned read-only workflow.
+DRAFT verdict: USEFUL BUT STANDARD CONSISTENCY PROGRAM ONLY. Exact fixed
+CPTP embedding preserves the eight-state control under feedback; perfect
+four-word decoding requires retained quantum d>=4, with success<=d/4.
+Proved closed-unitary erasure resource and finite-faithful-bath obstructions,
+DB hidden-lift pair symmetry and bounded-rate CTMC no-jump bound. Ordinary
+thermal-operation and Hamiltonian countermodels defeat broader exclusion
+claims. Three-spin Pauli control kills an exact Hamiltonian light-cone
+premise; standard CP/Bell and EFT positivity boundaries are retained.
+Audited 14 comparator classes as a partial order and 29 primary sources
+with inspection depth. No universal QFT/gravity completion or novel law.
+
+Verified 21 control tests / 12 computational groups PASS; 1,024 feedback
+comparisons and 8,192 probability cells have exact rational equality.
+Unchanged evidence passes; five missing/result/table/code/proof mutations
+correctly fail. Source references, local artifact links, YAML, pinned
+actions, read-only permissions and check mode verified. Existing 22
+reporting tests PASS. Inherited default judge reproduces 232 PASS / 9 FAIL
+/ 1 SKIP, zero deltas/infrastructure errors, classifier agreement true.
+Same 7/4/2 blockers and science REVIEW_REQUIRED; engineering BLOCKED.
+Protected input digest and expected-red manifest lock unchanged.
+Raw logs/JUnit and dirty-base validation are retained. No mutation/slow
+jobs run here. Hosted verification is separate after push.
+
+Current canonical governance and current kinetic manuscript were read;
+no private manuscript copy or ZIP fixture rerun. No canonical files,
+charter, ruling, manifest allowlist, bank or CR-5 machinery changed. No K,
+candidate evaluation, L0 pricing, scoring, Card or IP-12 draft. Card 1
+CLOSED; zero consumed. All scientific claims pending external review.

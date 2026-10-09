@@ -1,0 +1,46 @@
+  EXPECTED-RED  test_prereg_immutable.py::TestBlindSafe::test_blind_safe_preregs_carry_no_result_adjacent_numerics
+                [P3-SEALED-HISTORY-POLICY] 1 case(s)
+                  - PREREG_DESI_DR3_2026-08-18.txt :: an arXiv id
+  EXPECTED-RED  test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context
+                [P2-TERMINATION-EVENTLOG] 2 case(s)
+                  - PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id
+                  - PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id
+                [P3-SEALED-HISTORY-POLICY] 1 case(s)
+                  - PREREG_DESI_DR3_2026-08-18_v2.txt -> RESULT_DESI_DR3_CONTEXT_2026-08-18.txt :: an arXiv id
+                [P4-TERMINATION-KAPPA-RESULT] 3 case(s)
+                  - PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value
+                  - PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value stated as a quantity rather than as a bound
+                  - PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a signed numeric range
+
+  *** ORPHANED OPEN PASS 'P1A-EDGE-REPRESENTATION': open, and no declared case cites it.
+      Either it was ruled and OPEN_PASSES.txt was not updated, or its symptom disappeared without a ruling -- in which case it is MOOT, not CLOSED, and the stanza must say so. If it genuinely cannot have a symptom, declare MAY_HAVE_NO_SYMPTOM: yes with the reason no instrument can see it.
+  *** ORPHANED OPEN PASS 'P6-STALE-NETS-IN-STANDING-DOCS': open, and no declared case cites it.
+      Either it was ruled and OPEN_PASSES.txt was not updated, or its symptom disappeared without a ruling -- in which case it is MOOT, not CLOSED, and the stanza must say so. If it genuinely cannot have a symptom, declare MAY_HAVE_NO_SYMPTOM: yes with the reason no instrument can see it.
+  *** NEW RED: test_expected_red.py::TestExpectedRed::test_a_declaration_citing_a_closed_pass_is_refused
+      Not a declared adjudication.
+  *** NEW RED: test_expected_red.py::TestExpectedRed::test_a_moot_pass_cannot_be_cited_by_a_declaration
+      Not a declared adjudication.
+  *** NEW RED: test_expected_red.py::TestExpectedRed::test_a_symptomless_pass_is_allowed_and_printed
+      Not a declared adjudication.
+  *** NEW RED: test_expected_red.py::TestExpectedRed::test_the_declared_state_is_accepted
+      Not a declared adjudication.
+  *** NEW RED: test_public_doc.py::TestPublicDoc::test_the_calc_manifest_matches_the_repository
+      Not a declared adjudication.
+  *** NEW RED: test_public_numbers.py::TestPublicNumbers::test_no_drift_from_the_register
+      Not a declared adjudication.
+  *** NEW RED: test_public_numbers.py::TestPublicNumbers::test_the_stamped_test_count_is_true
+      Not a declared adjudication.
+  *** NEW RED (case): test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context
+      PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value
+      The test is a declared failure; THIS CASE IS NOT. A new member of a declared set is new.
+  *** NEW RED (case): test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context
+      PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound
+      The test is a declared failure; THIS CASE IS NOT. A new member of a declared set is new.
+  *** NEW RED (case): test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context
+      PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value
+      The test is a declared failure; THIS CASE IS NOT. A new member of a declared set is new.
+  *** NEW RED (case): test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context
+      PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound
+      The test is a declared failure; THIS CASE IS NOT. A new member of a declared set is new.
+
+FAIL: the failing set is not the declared set.
