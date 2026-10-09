@@ -1,0 +1,87 @@
+{
+  "IP12_drafts_consumed": 0,
+  "card_1": "CLOSED",
+  "cards_consumed": 0,
+  "date_utc": "2026-10-09",
+  "evidence_grade": "SAME_AUTHOR_EXTERNAL_REVIEW_PENDING",
+  "existing_reporting_tests": {
+    "passed": 22,
+    "tests": 22
+  },
+  "hosted_execution": "NOT_YET_RUN_AT_LOCAL_VALIDATION",
+  "inherited_engineering": {
+    "axes": {
+      "bank_gate": "FLAG-FOR-FIREWALL",
+      "engineering_integrity": "BLOCKED",
+      "external_review": "NOT_PERFORMED_BY_THIS_RUN",
+      "open_passes": [
+        "P1A-EDGE-REPRESENTATION",
+        "P1B-SHOWN-ON-LEDGER-INPUTS",
+        "P2-TERMINATION-EVENTLOG",
+        "P3-SEALED-HISTORY-POLICY",
+        "P4-TERMINATION-KAPPA-RESULT",
+        "P5-RESIDENT-SCOPE",
+        "P6-STALE-NETS-IN-STANDING-DOCS"
+      ],
+      "profile_execution_integrity": "PASS",
+      "scientific_approval": false,
+      "scientific_status": "REVIEW_REQUIRED"
+    },
+    "baseline_deltas": [],
+    "blocker_counts": {
+      "new_declared_set_members": 4,
+      "orphaned_open_passes": 2,
+      "undeclared_failing_tests": 7
+    },
+    "classifier_agreement": true,
+    "counts": {
+      "errors": 0,
+      "failures": 9,
+      "skipped": 1,
+      "tests": 242
+    },
+    "expected_red_manifest_sha256": "b46f65a0ad10193f9443dffee4227b041949dda8541d7f7e98a109ead70a396d",
+    "infrastructure_errors": [],
+    "passed": 232,
+    "protected_inputs": {
+      "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+      "digest": "efc48249a1657d5cd0e6bd3bde1aae0a653ceb1e6e78f26b23cf95184da851e1",
+      "tracked_file_count": 1757
+    }
+  },
+  "runner_hostile_fixtures": [
+    {
+      "expected": 0,
+      "fixture": "unchanged",
+      "returncode": 0
+    },
+    {
+      "expected": 1,
+      "fixture": "missing",
+      "returncode": 1
+    },
+    {
+      "expected": 1,
+      "fixture": "tampered_result",
+      "returncode": 1
+    },
+    {
+      "expected": 1,
+      "fixture": "changed_code",
+      "returncode": 1
+    }
+  ],
+  "schema": "FOUNDATIONS_LOCAL_VALIDATION_V1",
+  "scientific_approval": false,
+  "source_commit": "b5d0493a23e5b741397f4dd3867bd8a09da08858",
+  "source_id_resolution": "PASS",
+  "source_ledger_count": 86,
+  "standard_controls": {
+    "arithmetic": "Rational identities plus explicitly labelled float illustrations",
+    "output_matches_current_code": true,
+    "passed": 13,
+    "tests": 13
+  },
+  "workflow_structure": "PASS_YAML_READ_ONLY_PINNED_ACTIONS_PINNED_PYTHON_NO_DEPENDENCY_INSTALL",
+  "working_tree_dirty": true
+}

@@ -1,0 +1,834 @@
+{
+  "schema": "FOUNDATIONS_SOURCES_V1",
+  "cutoff_utc": "2026-10-09",
+  "scope": "Bounded primary-source audit; search retrieval and targeted reading are not exhaustive independent verification.",
+  "inspection_legend": {
+    "FULL_TEXT_TARGETED": "Original text or PDF available; specific sections inspected. Not a claim every line was independently checked.",
+    "ABSTRACT_METADATA": "Primary abstract/metadata or author repository inspected; no paywalled full-text access claimed.",
+    "COLLABORATION_RELEASE": "Original collaboration release/data page inspected.",
+    "REPOSITORY_FULL_TEXT": "Repository file or issue contract read via GitHub connector; blob identity recorded where supplied.",
+    "USER_PROVIDED_EXCERPT": "Conversation excerpt only; unavailable full artifact not independently checked."
+  },
+  "negative_searches": [
+    {
+      "topic": "Independent QIH validation",
+      "queries": [
+        "exact QIH title + independent review/replication",
+        "Quantum Information Holography + arXiv/peer review/experiment",
+        "QIH Technologies benchmark/patent"
+      ],
+      "result": "Independent deposited critique found; no independent experimental validation found in inspected records. NOT FOUND is not IMPOSSIBLE."
+    },
+    {
+      "topic": "Current experimental opportunities",
+      "queries": [
+        "2026 gravitational entanglement",
+        "2026 matter-wave interference/collapse",
+        "2026 clocks/Lorentz/equivalence",
+        "DESI DR2 July 2026",
+        "2026 dark matter/neutrino/GW",
+        "monitored quantum systems/quantum thermodynamics"
+      ],
+      "result": "Primary paper/release sample, with evidence categories, not exhaustive latest-limit ranking."
+    }
+  ],
+  "sources": [
+    {
+      "id": "G01",
+      "title": "NORTH_STAR.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/NORTH_STAR.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Read-only canonical source; individual blob identity, not a claimed gate change.",
+      "git_blob_sha": "9ca583435390f9c22684a9c57b14f945dba842f8"
+    },
+    {
+      "id": "G02",
+      "title": "RULES.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/RULES.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Read-only canonical source; individual blob identity, not a claimed gate change.",
+      "git_blob_sha": "1dcb0281579ab1e0e5bfc95c2e62cd33b8b2fa0a"
+    },
+    {
+      "id": "G03",
+      "title": "STAGE3_CHARTER.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/STAGE3/STAGE3_CHARTER.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Read-only canonical source; individual blob identity, not a claimed gate change.",
+      "git_blob_sha": "8dd7b05ab1ccec191e1ee8c54fcb41fbfd85c052"
+    },
+    {
+      "id": "G04",
+      "title": "R1_SYNTHESIS.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/RESULTS/R1/R1_SYNTHESIS.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Read-only canonical source; individual blob identity, not a claimed gate change.",
+      "git_blob_sha": "13ad1cc8050b7a11397f6992632530186ddd2049"
+    },
+    {
+      "id": "G05",
+      "title": "STATE.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/STATE.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Canonical source predates the supplied owner discussion; preserve authority distinctions.",
+      "git_blob_sha": "14c41d4487d74b8af86a7fc3cc273e23f7512789"
+    },
+    {
+      "id": "G07",
+      "title": "SCOREBOARD.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/SCOREBOARD.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Canonical source predates the supplied owner discussion; preserve authority distinctions.",
+      "git_blob_sha": "730d09a9bdaff1da471eeb65a42533c689749c18"
+    },
+    {
+      "id": "G08",
+      "title": "DIVISION_OF_LABOR.md",
+      "url": "https://github.com/ryangrvr/vsctestinggrut/blob/grut2-stage3/PROGRAM/DIVISION_OF_LABOR.md",
+      "source_date": "2026-10-07",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Canonical source predates the supplied owner discussion; preserve authority distinctions.",
+      "git_blob_sha": "0343f6e283acce6d1092565ebc7847a324160c70"
+    },
+    {
+      "id": "G06",
+      "title": "Kinetic-freedom theorem review supplied by owner",
+      "url": "user-provided conversation excerpt",
+      "source_date": "2026-10-09",
+      "accessed_utc": "2026-10-09",
+      "inspection": "USER_PROVIDED_EXCERPT",
+      "note": "Two-state formula independently reproduced. Full manuscript and executable ZIP not obtained in this lane; analytic/smooth higher-jet and three-state claims are reported, not independently rerun."
+    },
+    {
+      "id": "G09",
+      "title": "Issue #3 authorized contract",
+      "url": "https://github.com/ryangrvr/TestingGRUT/issues/3",
+      "source_date": "2026-10-09",
+      "accessed_utc": "2026-10-09",
+      "inspection": "REPOSITORY_FULL_TEXT",
+      "note": "Explicitly excludes Stage-3 K, scoring, cards and IP-12 drafts."
+    },
+    {
+      "id": "Q01",
+      "title": "Unification of Information, Light, and Gravity",
+      "url": "https://zenodo.org/records/8395240",
+      "source_date": "2023-09-30",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Author-deposited manuscript; deposition is not independent validation. Downloaded PDF, text extraction, targeted equation inspection; no claim every line independently verified.",
+      "pdf_sha256": "92c6fb3375915aab4413ce0e98939755b700049ac5df5018346196a00fbe6948",
+      "pdf_pages": 2
+    },
+    {
+      "id": "Q02",
+      "title": "QIH as a Common Extension of Quantum Mechanics and General Relativity",
+      "url": "https://zenodo.org/records/18236622",
+      "source_date": "2026-01-13",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Author-deposited manuscript; deposition is not independent validation. Downloaded PDF, text extraction, targeted equation inspection; no claim every line independently verified.",
+      "pdf_sha256": "c61ec8159aa41dba7e982aacefb3ba7895cb6b303c57d224eacc3a50443c2729",
+      "pdf_pages": 5
+    },
+    {
+      "id": "Q03",
+      "title": "Quantum Information Holography: A Self-Adjoint Horizon Operator Unifying Quantum Mechanics, Relativity, Gauge Theory, and the Riemann Spectrum",
+      "url": "https://zenodo.org/records/19546750",
+      "source_date": "2026-04-13",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Author-deposited manuscript; deposition is not independent validation. Downloaded PDF, text extraction, targeted equation inspection; no claim every line independently verified. PDF title: Quantum Information Holography and the Born Rule. Equation locations: \u00a715 p10, \u00a7117 p109, \u00a7129 p117, \u00a7137 p121, \u00a7144 p125, \u00a7155 p132, \u00a7160 p135, \u00a7169 p139, \u00a7171 pp140\u2013141. Spectral pages visually checked.",
+      "pdf_sha256": "cc0caac558edbd768faec9f7d6ef5a9617a865a3f35e6165f2640feabcd404e2",
+      "pdf_pages": 149
+    },
+    {
+      "id": "Q04",
+      "title": "Reality As Spin Interference",
+      "url": "https://zenodo.org/records/20184170",
+      "source_date": "2026-05-14",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Author-deposited manuscript; deposition is not independent validation. Downloaded PDF, text extraction, targeted equation inspection; no claim every line independently verified.",
+      "pdf_sha256": "3bffa840496c2c5d2c41893f061a6edfbc53e280dc029d785c3c227c732164c6",
+      "pdf_pages": 9
+    },
+    {
+      "id": "Q05",
+      "title": "Dark Matter, Primes, and Quantum Information Holography (QIH): A Symmetric Collapse and Prime Resilience Hypothesis",
+      "url": "https://zenodo.org/records/8410689",
+      "source_date": "2023-10-05",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Author-deposited manuscript; deposition is not independent validation. Downloaded PDF, text extraction, targeted equation inspection; no claim every line independently verified.",
+      "pdf_sha256": "9013d01fbd7bd2c12222be5c874ca0be416f02b23b1087b6545ff9e28fcd684c",
+      "pdf_pages": 3
+    },
+    {
+      "id": "Q06",
+      "title": "Asymmetric Primes and the QIH Hypothesis",
+      "url": "https://zenodo.org/records/8396788",
+      "source_date": "2023-10",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "PDF retrieval unsuccessful (timeout/504). No body-level audit."
+    },
+    {
+      "id": "Q07",
+      "title": "Independent critical/propositional QIH\u2013Theory of Objectivity comparison",
+      "url": "https://zenodo.org/records/19835329",
+      "source_date": "2026",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Independent deposited critique found in search; landing page returned 410 on open. Not established as peer-reviewed or replication."
+    },
+    {
+      "id": "Q08",
+      "title": "QIH Technologies live page and search-cache commercial claims",
+      "url": "https://qihtechnologies.com/",
+      "source_date": "retrieved 2026-10-09",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Live page Coming Soon. Cached AI/patent/performance assertions are not verified benchmarks or granted patents."
+    },
+    {
+      "id": "F01",
+      "title": "Statistical distance and the geometry of quantum states",
+      "url": "https://doi.org/10.1103/PhysRevLett.72.3439",
+      "source_date": "1994",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F02",
+      "title": "Monotone metrics on matrix spaces",
+      "url": "https://doi.org/10.1016/0024-3795(94)00211-8",
+      "source_date": "1996",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F03",
+      "title": "Geometrical formulation of quantum mechanics",
+      "url": "https://arxiv.org/abs/gr-qc/9706069",
+      "source_date": "1997",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F04",
+      "title": "Quantum mechanics and the covariance of physical laws in quantum reference frames",
+      "url": "https://www.nature.com/articles/s41467-018-08155-0",
+      "source_date": "2019",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F05",
+      "title": "Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence",
+      "url": "https://arxiv.org/abs/1503.06237",
+      "source_date": "2015",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F06",
+      "title": "The large N limit of superconformal field theories and supergravity",
+      "url": "https://arxiv.org/abs/hep-th/9711200",
+      "source_date": "1997",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F07",
+      "title": "Informational derivation of quantum theory",
+      "url": "https://arxiv.org/abs/1011.6451",
+      "source_date": "2010/2011",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F08",
+      "title": "Quantum nonlocality as an axiom",
+      "url": "https://link.springer.com/article/10.1007/BF02058098",
+      "source_date": "1994",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F09",
+      "title": "Information causality as a physical principle",
+      "url": "https://doi.org/10.1038/nature08400",
+      "source_date": "2009",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F10",
+      "title": "Holographic derivation of entanglement entropy from AdS/CFT",
+      "url": "https://doi.org/10.1103/PhysRevLett.96.181602",
+      "source_date": "2006",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F11",
+      "title": "Holographic duality: exploring quantum gravity via quantum field theory",
+      "url": "https://arxiv.org/abs/2506.06595",
+      "source_date": "2025",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F12",
+      "title": "Causality, analyticity and an IR obstruction to UV completion",
+      "url": "https://arxiv.org/abs/hep-th/0602178",
+      "source_date": "2006",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F13",
+      "title": "A categorical semantics of quantum protocols",
+      "url": "https://arxiv.org/abs/quant-ph/0402130",
+      "source_date": "2004",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F14",
+      "title": "TASI lectures on the conformal bootstrap",
+      "url": "https://arxiv.org/html/1602.07982v1",
+      "source_date": "2016",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F15",
+      "title": "Precision Islands in the Ising and O(N) Models",
+      "url": "https://doi.org/10.1007/JHEP08(2016)036",
+      "source_date": "2016",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F16",
+      "title": "Quantum tensor product structures are observable induced",
+      "url": "https://doi.org/10.1103/PhysRevLett.92.060402",
+      "source_date": "2004",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F17",
+      "title": "Lectures on anomalies",
+      "url": "https://arxiv.org/abs/0802.0634",
+      "source_date": "2008",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F18",
+      "title": "Photons and gravitons in S-matrix theory: Derivation of charge conservation and equality of gravitational and inertial mass",
+      "url": "https://doi.org/10.1103/PhysRev.135.B1049",
+      "source_date": "1964",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F19",
+      "title": "The causal set approach to quantum gravity",
+      "url": "https://arxiv.org/abs/1903.11544",
+      "source_date": "2019",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F20",
+      "title": "Emergence of a 4D world from causal quantum gravity",
+      "url": "https://doi.org/10.1103/PhysRevLett.93.131301",
+      "source_date": "2004",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F21",
+      "title": "The spin-foam approach to quantum gravity",
+      "url": "https://doi.org/10.12942/lrr-2013-3",
+      "source_date": "2013",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F22",
+      "title": "Asymptotically safe quantum gravity and its phenomenology \u2013 a review",
+      "url": "https://arxiv.org/html/2606.21522v1",
+      "source_date": "2026-06-19",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F23",
+      "title": "The swampland: Introduction and review",
+      "url": "https://arxiv.org/abs/1903.06239",
+      "source_date": "2019",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F24",
+      "title": "Thermodynamics of spacetime: The Einstein equation of state",
+      "url": "https://doi.org/10.1103/PhysRevLett.75.1260",
+      "source_date": "1995",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F25",
+      "title": "Entanglement equilibrium and the Einstein equation",
+      "url": "https://doi.org/10.1103/PhysRevLett.116.201101",
+      "source_date": "2016",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F26",
+      "title": "Gravity and the standard model with neutrino mixing",
+      "url": "https://arxiv.org/abs/hep-th/0610241",
+      "source_date": "2006/2007",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F27",
+      "title": "Quantum decoherence",
+      "url": "https://arxiv.org/abs/1911.06282",
+      "source_date": "2019",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F28",
+      "title": "Quantum Darwinism",
+      "url": "https://doi.org/10.1038/nphys1202",
+      "source_date": "2009",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F29",
+      "title": "Classical equations for quantum systems",
+      "url": "https://doi.org/10.1103/PhysRevD.47.3345",
+      "source_date": "1993",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F30",
+      "title": "Models of wave-function collapse, underlying theories, and experimental tests",
+      "url": "https://doi.org/10.1103/RevModPhys.85.471",
+      "source_date": "2013",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F31",
+      "title": "Quantum equilibrium and the origin of absolute uncertainty",
+      "url": "https://arxiv.org/abs/quant-ph/0308039",
+      "source_date": "1992 paper / 2003 posting",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F32",
+      "title": "Relative state formulation of quantum mechanics",
+      "url": "https://doi.org/10.1103/RevModPhys.29.454",
+      "source_date": "1957",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source. Publisher full text behind authorization wall; no full-text reading claimed."
+    },
+    {
+      "id": "F33",
+      "title": "Relational quantum mechanics",
+      "url": "https://arxiv.org/abs/quant-ph/9609002",
+      "source_date": "1996",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F34",
+      "title": "Quantum-Bayesian coherence",
+      "url": "https://doi.org/10.1103/RevModPhys.85.1693",
+      "source_date": "2013",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F35",
+      "title": "Inferring statistical complexity",
+      "url": "https://doi.org/10.1103/PhysRevLett.63.105",
+      "source_date": "1989",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F36",
+      "title": "Modeling by shortest data description",
+      "url": "https://doi.org/10.1016/0005-1098(78)90005-5",
+      "source_date": "1978",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F37",
+      "title": "The renormalization group and the epsilon expansion",
+      "url": "https://doi.org/10.1016/0370-1573(74)90023-4",
+      "source_date": "1974",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F38",
+      "title": "Quantized Hall conductance in a two-dimensional periodic potential",
+      "url": "https://doi.org/10.1103/PhysRevLett.49.405",
+      "source_date": "1982",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F39",
+      "title": "Passive states and KMS states for general quantum systems",
+      "url": "https://link.springer.com/article/10.1007/BF01614224",
+      "source_date": "1978",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "F40",
+      "title": "Causal diagrams for empirical research",
+      "url": "https://doi.org/10.1093/biomet/82.4.669",
+      "source_date": "1995",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Primary paper or author-written review; targeted comparison, not independent verification of every theorem in this source."
+    },
+    {
+      "id": "E01",
+      "title": "Spin entanglement witness for quantum gravity",
+      "url": "https://doi.org/10.1103/PhysRevLett.119.240401",
+      "source_date": "2017",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock.",
+      "related_urls": [
+        "https://doi.org/10.1103/PhysRevLett.119.240402"
+      ]
+    },
+    {
+      "id": "E02",
+      "title": "Classical theories of gravity produce entanglement",
+      "url": "https://www.nature.com/articles/s41586-025-09595-7",
+      "source_date": "2025-10-22",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock. Related PRD paper accepted 2026-09-01; theory-independent witness obstruction, not a performed experiment.",
+      "related_urls": [
+        "https://journals.aps.org/prd/accepted/10.1103/r8ry-sp35"
+      ]
+    },
+    {
+      "id": "E03",
+      "title": "Probing quantum mechanics with nanoparticle matter-wave interferometry",
+      "url": "https://www.nature.com/articles/s41586-025-09917-9",
+      "source_date": "2026-01-21",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock. Full source search/extract includes Methods: highest-mass fringes are not quantum/classical discriminating in present geometry. Published-paper value mu=15.5; group web summary elsewhere reports 15.4. Do not merge definitions."
+    },
+    {
+      "id": "E04",
+      "title": "Quantum ground-state cooling of two librational modes of a nanorotor",
+      "url": "https://www.nature.com/articles/s41567-026-03219-1",
+      "source_date": "2026-04-06",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E05",
+      "title": "New DESI DR2 Lyman-alpha results shed light on dark energy",
+      "url": "https://www.desi.lbl.gov/2026/07/30/new-desi-dr2-lyman-alpha-results-shed-light-on-dark-energy/",
+      "source_date": "2026-07-30",
+      "accessed_utc": "2026-10-09",
+      "inspection": "COLLABORATION_RELEASE",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E06",
+      "title": "DESI DR2 publications and data availability",
+      "url": "https://data.desi.lbl.gov/doc/papers/dr2/",
+      "source_date": "2025/2026",
+      "accessed_utc": "2026-10-09",
+      "inspection": "COLLABORATION_RELEASE",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E07",
+      "title": "LZ dark matter search with 4.2 tonne-years",
+      "url": "https://doi.org/10.1103/4dyc-z8zf",
+      "source_date": "2025-07-02",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E08",
+      "title": "LVK O4a ultralight dark matter search",
+      "url": "https://doi.org/10.1103/qdnd-rsnh",
+      "source_date": "2026-09-22",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E09",
+      "title": "Direct neutrino-mass bound from KATRIN",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40208982/",
+      "source_date": "2025",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E10",
+      "title": "MICROSCOPE mission: Final results of the test of the equivalence principle",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36179190/",
+      "source_date": "2022",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E11",
+      "title": "Optical clock comparison test of Lorentz symmetry",
+      "url": "https://arxiv.org/abs/1809.10742",
+      "source_date": "2018/2019",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E12",
+      "title": "Lu+ optical frequency references with accuracy verified at the 19th digit",
+      "url": "https://www.nature.com/articles/s41586-026-11072-8",
+      "source_date": "2026-09-23",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E13",
+      "title": "Testing general relativity with the latest and loudest compact binary merger observations",
+      "url": "https://ligo.org/science-summaries/o4b_tgr/",
+      "source_date": "2026",
+      "accessed_utc": "2026-10-09",
+      "inspection": "COLLABORATION_RELEASE",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E14",
+      "title": "GWTC-4.0 testing-GR data/release",
+      "url": "https://dcc.ligo-wa.caltech.edu/LIGO-P2500066-v7/public",
+      "source_date": "2026",
+      "accessed_utc": "2026-10-09",
+      "inspection": "COLLABORATION_RELEASE",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E15",
+      "title": "Probing coherent quantum thermodynamics using a trapped ion",
+      "url": "https://www.nature.com/articles/s41467-024-51263-3",
+      "source_date": "2024",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E16",
+      "title": "Experimentally probing entropy reduction via iterative quantum information transfer",
+      "url": "https://doi.org/10.1103/5lp2-9sps",
+      "source_date": "2025-08-26",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E17",
+      "title": "Postselection-free experimental observation of the measurement-induced phase transition in circuits with universal gates",
+      "url": "https://www.nature.com/articles/s42005-025-02443-0",
+      "source_date": "2026-02-14",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "E18",
+      "title": "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres",
+      "url": "https://arxiv.org/abs/1508.05949",
+      "source_date": "2015",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Evidence class and limitations in EXPERIMENTS.md; not a GRUT lock."
+    },
+    {
+      "id": "N01",
+      "title": "Neural case report of mathematical imagery associated with acquired savant abilities",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22937821/",
+      "source_date": "2013",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N02",
+      "title": "Theories of consciousness",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35505255/",
+      "source_date": "2022",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N03",
+      "title": "Conscious processing and the global neuronal workspace hypothesis",
+      "url": "https://doi.org/10.1016/j.neuron.2020.01.026",
+      "source_date": "2020",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N04",
+      "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness",
+      "url": "https://www.nature.com/articles/s41586-025-08888-1",
+      "source_date": "2025",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N05",
+      "title": "The free-energy principle: a unified brain theory?",
+      "url": "https://doi.org/10.1038/nrn2787",
+      "source_date": "2010",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N06",
+      "title": "A theoretically based index of consciousness independent of sensory processing and behavior",
+      "url": "https://orbi.uliege.be/handle/2268/171542",
+      "source_date": "2013",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N07",
+      "title": "GNWT response to the 2025 adversarial theory-comparison results",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41080705/",
+      "source_date": "2025",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "N08",
+      "title": "Integrated information theory (IIT) 4.0: Formulating the properties of phenomenal existence in physical terms",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011465",
+      "source_date": "2023",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Consciousness/neural claim only; does not validate QIH or imply consciousness-caused collapse."
+    },
+    {
+      "id": "M01",
+      "title": "NIST DLMF section 25.10: Zeros of the Riemann zeta function",
+      "url": "https://dlmf.nist.gov/25.10",
+      "source_date": "current reference, retrieved 2026-10-09",
+      "accessed_utc": "2026-10-09",
+      "inspection": "FULL_TEXT_TARGETED",
+      "note": "Existence of infinitely many critical-line zeros is distinct from the unproved Riemann hypothesis."
+    },
+    {
+      "id": "F41",
+      "title": "Quantum theory based on real numbers can be experimentally falsified",
+      "url": "https://www.nature.com/articles/s41586-021-04160-4",
+      "source_date": "2021",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Natural real-composite model excluded under independent-source network assumptions; not a claim against every real embedding."
+    },
+    {
+      "id": "E19",
+      "title": "Testing real quantum theory in an optical quantum network",
+      "url": "https://doi.org/10.1103/PhysRevLett.128.040402",
+      "source_date": "2022-01-24",
+      "accessed_utc": "2026-10-09",
+      "inspection": "ABSTRACT_METADATA",
+      "note": "Natural real-composite model excluded under independent-source network assumptions; not a claim against every real embedding."
+    }
+  ]
+}

@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| *(none)* | | | |
 
 ## ANSWERED QUESTIONS
 
@@ -5805,3 +5804,32 @@ and trigger/permission structure verified. No protected scientific input,
 accepted baseline, ruling, seal, charter, bank decision or candidate was edited.
 CR-5 private inputs remain separate. Card 1 closed; cards consumed zero.
 These are same-author builder checks, not external approval.
+
+
+### 2026-10-09 · Codex · issue #3 foundations/control cycle
+
+Executed the owner-authorized isolated foundations lane on
+`codex/foundations-lab-03`, based on engineering head b5d0493. Added
+`development/foundations_lab/` with the required eight-part decision report,
+25 framework families, target/experiment/observer audits, five targeted QIH
+PDF audits, an 86-source ledger with inspection levels and hashes, exact
+standard proofs, dependency-free controls and machine-readable evidence.
+Recommendation: CONTINUE GRUT BUT BROADEN/REFRAME; this is a draft scientific
+judgment, not a canonical owner ruling.
+
+Verified locally on Python 3.12.14: 13/13 standard controls PASS; checked-in
+JSON matches current code. Hostile missing/tampered result and changed-code
+fixtures all fail; unchanged fixture passes. Existing 22 reporting tests PASS.
+Inherited default suite exactly reproduces 232 PASS / 9 FAIL / 1 SKIP, with
+zero baseline deltas, zero infrastructure errors, and classifier agreement.
+Engineering remains BLOCKED (7 undeclared failures, 4 undeclared pointer
+cases, 2 orphaned OPEN passes); science REVIEW_REQUIRED; 25 bank flags and
+the observational-manifest lock unchanged. YAML syntax and read-only pinned
+workflow structure PASS. Hosted execution is separate evidence after push.
+
+Canonical GRUT sources were read, never edited. No candidate K, score, L0
+price, CR-5 implementation, bank decision or IP-12 draft. Card 1 CLOSED;
+cards consumed zero. Full kinetic manuscript/ZIP not independently obtained;
+only its supplied two-state control independently reproduced here. All
+scientific conclusions and code checks are same-author; external review
+pending. New green control checks cannot clear the inherited red machinery.
