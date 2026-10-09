@@ -5758,3 +5758,25 @@ NEXT: OWNER REVIEW. If accepted, the remaining consequence prerequisites
 are the low-frequency/epoch-window fork-(ii) path and the
 certificate-vs-manifest face ruling. CC-C, Axis-2 C, Gate-E A, Noise A,
 Tier-4 banked, Lambda_R one, H^2 fork-gated -- all unchanged.
+
+
+### 2026-10-09 · Codex · isolated development branch and repeatable checks
+
+The owner requested a new branch in TestingGRUT for ongoing building and testing.
+Created local `codex/grut-cr5-build-test` from `scout-0` at
+`ab2da47407bb670d94e2a52c87599fa13fd8ab99`. Remote branch creation was rejected
+by the GitHub integration with HTTP 403, Resource not accessible by integration.
+No remote branch, pull request, workflow run, or canonical scientific mutation is claimed.
+
+Added `development/checks.py`, pinned test dependencies, four reporting regression
+tests, developer instructions, and a prepared GitHub Actions workflow. The runner
+retains exact logs and JUnit/JSON reports and treats bank-gate flags as
+REVIEW_REQUIRED even when the legacy command returns zero.
+
+Verified on Python 3.12.14: source syntax PASS; both provenance validators PASS;
+reporting tests 4/4 PASS; bank gate 25 NEW flags / FLAG-FOR-FIREWALL. Full default
+provenance suite: 232 passed, 9 failed, 1 skipped. Its 242 individual case outcomes
+match a run on the untouched checkout exactly. Workflow YAML syntax and expected
+trigger/read-only permission structure PASS; GitHub-hosted execution remains untested.
+`git diff --check` PASS. No register, accepted baseline, calculation manifest,
+preregistration, ruling, charter, or experiment was edited. No Card 1 work was undertaken.
