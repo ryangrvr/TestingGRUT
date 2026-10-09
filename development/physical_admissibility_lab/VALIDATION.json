@@ -1,0 +1,106 @@
+{
+  "schema": "PHYSICAL_ADMISSIBILITY_LOCAL_VALIDATION_V1",
+  "scope": "ISSUE_7_FOUNDATIONS_ONLY",
+  "review": "DRAFT_PENDING_EXTERNAL_SCIENTIFIC_REVIEW",
+  "utc_date": "2026-10-09",
+  "checkout_head_during_checks": "ad885bf6d35deeab00d15410509df51f741d935e",
+  "working_tree_dirty_during_checks": true,
+  "python": "3.12.14",
+  "standard_control_tests": 21,
+  "control_groups": 12,
+  "record_cells_exactly_equal": 8192,
+  "freshness_fixtures": [
+    {
+      "fixture": "unchanged",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "pass": true
+    },
+    {
+      "fixture": "missing_results",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "pass": true
+    },
+    {
+      "fixture": "wrong_result",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "pass": true
+    },
+    {
+      "fixture": "wrong_table",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "pass": true
+    },
+    {
+      "fixture": "changed_code",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "pass": true
+    },
+    {
+      "fixture": "changed_proof",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "pass": true
+    }
+  ],
+  "default_engineering": {
+    "provenance_tests": {
+      "tests": 242,
+      "failures": 9,
+      "errors": 0,
+      "skipped": 1
+    },
+    "passed": 232,
+    "baseline_deltas": [],
+    "infrastructure_errors": [],
+    "classifier_agreement": true,
+    "axes": {
+      "engineering_integrity": "BLOCKED",
+      "scientific_status": "REVIEW_REQUIRED",
+      "profile_execution_integrity": "PASS",
+      "bank_gate": "FLAG-FOR-FIREWALL",
+      "open_passes": [
+        "P1A-EDGE-REPRESENTATION",
+        "P1B-SHOWN-ON-LEDGER-INPUTS",
+        "P2-TERMINATION-EVENTLOG",
+        "P3-SEALED-HISTORY-POLICY",
+        "P4-TERMINATION-KAPPA-RESULT",
+        "P5-RESIDENT-SCOPE",
+        "P6-STALE-NETS-IN-STANDING-DOCS"
+      ],
+      "scientific_approval": false,
+      "external_review": "NOT_PERFORMED_BY_THIS_RUN"
+    },
+    "blocker_counts": {
+      "UNDECLARED_FAILING_TEST": 7,
+      "NEW_DECLARED_SET_MEMBER": 4,
+      "ORPHANED_OPEN_PASS": 2
+    },
+    "protected_inputs": {
+      "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+      "digest": "efc48249a1657d5cd0e6bd3bde1aae0a653ceb1e6e78f26b23cf95184da851e1",
+      "tracked_file_count": 1757
+    },
+    "manifest_sha256": "b46f65a0ad10193f9443dffee4227b041949dda8541d7f7e98a109ead70a396d",
+    "existing_runner_tests": 22
+  },
+  "mutation_slow_jobs": "NOT_RUN",
+  "external_review": "NOT_PERFORMED_BY_THIS_AUTHOR",
+  "card1": "CLOSED",
+  "cards_consumed": 0,
+  "raw_evidence_sha256": {
+    "evidence/bank_gate.log": "cb63fba1ba353360794a9327b9559645b867a6f0627c624093a674628cab6783",
+    "evidence/controls.log": "43bca8768bd8bd6b1108683272bb5ff1ae73451f06bdb7cfdf08c815585a1cb5",
+    "evidence/expected_red_classifier.log": "86455e4dbd4a1aecb91e33cd905c1adc7fe39d046790d935d7b1fe04a3767268",
+    "evidence/freshness.json": "d0cce7409d113826909bd4b062b2ccfe78e062d363296b5c6af05c6e6b95d71f",
+    "evidence/provenance.xml": "7db4b38857c99ea36257de7dbac373a28ac95afd6a25376e6437fbb18de2e00b",
+    "evidence/provenance_suite.log": "e15629bcfe0639e8a1a24d8cb9cb6f7ebaea5e5d3d6a5424360bceca5d4989b8",
+    "evidence/runner_tests.log": "c601858bde4caf3a1209cf814ff27b945b938be54f6898d3a9f411466827f329",
+    "evidence/summary.json": "e981ef39e2bcce0067696c7be6ac8e4fde1ec7fac3d29bff09ecefcd03d97d39",
+    "evidence/summary.md": "e96972449a2e63d148c4429a772eb1e30acae5b5b49e9fa1ca29ae008ac972af"
+  }
+}
