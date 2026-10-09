@@ -5780,3 +5780,28 @@ match a run on the untouched checkout exactly. Workflow YAML syntax and expected
 trigger/read-only permission structure PASS; GitHub-hosted execution remains untested.
 `git diff --check` PASS. No register, accepted baseline, calculation manifest,
 preregistration, ruling, charter, or experiment was edited. No Card 1 work was undertaken.
+
+
+### 2026-10-09 · Codex · issue #2 two-axis integrity cycle
+
+Executed the authorized development-only queue from 114af03, preserving draft PR #1.
+Frozen observational manifest: exact 242 outcomes, declared/live case sets, OPEN_PASS
+states, bank inventory, protected input digest, measured versions and hash lock.
+Added separate engineering/scientific checks, executed the unchanged classifier,
+and compared its full diagnostics with an independent audit. Added hostile tests
+for stale/missing reports, new and removed reds, case masking, contradictory
+statuses, process errors, metadata and mid-run code changes.
+
+Verified final local implementation on Python 3.12.14: 22 reporting tests PASS;
+syntax/selected imports/both validators PASS; 232 PASS / 9 FAIL / 1 SKIP exactly
+reproduced; zero baseline deltas and zero infrastructure errors; classifier
+agreement true. Engineering BLOCKED: seven undeclared failing tests, four
+undeclared pointer cases, and uncited OPEN P1A/P6. Scientific REVIEW_REQUIRED;
+25 bank flags unchanged. No new regression. Machine results and report are in
+development/CYCLE_01_LOCAL_RESULTS.json and CYCLE_01_REPORT.md.
+
+Separate expensive profiles/jobs are configured but not executed. Workflow YAML
+and trigger/permission structure verified. No protected scientific input,
+accepted baseline, ruling, seal, charter, bank decision or candidate was edited.
+CR-5 private inputs remain separate. Card 1 closed; cards consumed zero.
+These are same-author builder checks, not external approval.
