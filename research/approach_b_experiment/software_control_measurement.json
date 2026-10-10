@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "INVENTED-MEASUREMENT-CONTRACT-SOFTWARE-CONTROL",
+  "purpose": "SOFTWARE_CONTROL_ONLY",
+  "independent_shots_assumed": true,
+  "no_postselection_assumed": true,
+  "energy_sampling_failure_probability": 0.005,
+  "claimed_simultaneous_energy_certificate_failure_probability": 0.005,
+  "power_miss_probability": 0.05,
+  "evidence": [],
+  "energy_tests": [
+    {
+      "id": "energy_constant",
+      "setting_id": "full_cycle_constant",
+      "mode_id": "mode_1",
+      "occupation_cap": 4,
+      "energy_model_bias_abs_phonons": 0.002,
+      "baseline": {
+        "id": "baseline_constant",
+        "shots": 250000,
+        "estimator_min": 0.0,
+        "estimator_max": 4.0,
+        "mean_readout_bias_abs_phonons": 0.002,
+        "unresolved_tail_mean_max_phonons": 0.003
+      },
+      "driven": {
+        "id": "driven_constant",
+        "shots": 250000,
+        "estimator_min": 0.0,
+        "estimator_max": 4.0,
+        "mean_readout_bias_abs_phonons": 0.002,
+        "unresolved_tail_mean_max_phonons": 0.003
+      }
+    },
+    {
+      "id": "energy_sign_reversal",
+      "setting_id": "full_cycle_sign_reversal",
+      "mode_id": "mode_1",
+      "occupation_cap": 4,
+      "energy_model_bias_abs_phonons": 0.002,
+      "baseline": {
+        "id": "baseline_sign_reversal",
+        "shots": 250000,
+        "estimator_min": 0.0,
+        "estimator_max": 4.0,
+        "mean_readout_bias_abs_phonons": 0.002,
+        "unresolved_tail_mean_max_phonons": 0.003
+      },
+      "driven": {
+        "id": "driven_sign_reversal",
+        "shots": 250000,
+        "estimator_min": 0.0,
+        "estimator_max": 4.0,
+        "mean_readout_bias_abs_phonons": 0.002,
+        "unresolved_tail_mean_max_phonons": 0.003
+      }
+    }
+  ],
+  "spin_contrasts": [
+    {
+      "setting_a": "full_cycle_constant",
+      "setting_b": "full_cycle_sign_reversal"
+    }
+  ],
+  "energy_contrasts": [
+    {
+      "test_a": "energy_constant",
+      "test_b": "energy_sign_reversal"
+    }
+  ]
+}
