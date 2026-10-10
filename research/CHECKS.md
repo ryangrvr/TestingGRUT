@@ -18,6 +18,8 @@ check. Remote content verification is not external scientific approval.
 
 | `45a1d7a2685f5a88a45ac43f3b296d19a4f3b824` | Published interaction-consistency assessment: conditional soft Ward/Jacobi restrictions and a 2026 axion/gravity positivity argument, with the higher-connected-moment uniformity assumption exposed; exact positive distributions defeat positivity-only variance bounds. No GRUT generating law or Card 2 | Pending independent scientific review. Exact Ward/Jacobi controls, 19 positive-distribution fixtures and 266 principal-minor checks passed; the displayed gravitational path integral and full string proof were not recomputed. All 65 prior manifest entries and the Card-1 ledger remain intact. Remote report/code/results/manifest/ledger blob IDs and fetched tree matched local files, index and worktree. PR 12 had no submitted reviews when checked on 2026-10-10 |
 
+| `edb3a86c823a4f88b845b95a2e6d215657116afa` | Record the owner's explicit one-attempt Card-2 authorization and the unresolved per-card external-kit precondition; no law draft, candidate evaluation or frozen slot | Metadata-only record. Live canonical STATE/CHECKS, PR #10 and Issue #9 preserve pending external review. Remote document/intake blob IDs and fetched tree matched local index/worktree. Existing packet manifests and Card-1 ledger are unchanged; one frozen slot consumed, two remain |
+
 The separate [Card-1 register](card01/CHECKS.md) preserves that attempt's pending
 checks. One frozen slot consumed, two remain. Neither register changes canonical
 status or confers evaluator/CR-5 external clearance.
