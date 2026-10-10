@@ -1,0 +1,1015 @@
+{
+  "bank_inventory": {
+    "baseline_label": "claims.baseline.json",
+    "held_flags": {
+      "kr_contract_retarded_tier4": {
+        "_relay": "owner in-session 2026-09-01: 'I would actually bank Tier 4 ... execute the formal bank relay for Tier 4 only' -- single-flag hold; the 23 pre-existing flags remain UNREVIEWED by design (relay-and-hold)",
+        "severity": "SUBSTANTIVE",
+        "sha": "505479bcf7dddd2c5664f8d5d8cd3d078901ac02bbf7a5c492931edd0dae86ca"
+      }
+    },
+    "report": {
+      "blocks": [],
+      "deletions": [
+        "rung1_inin_action"
+      ],
+      "flags": [
+        {
+          "_changed_fields": [],
+          "_severity": "NEW-NODE",
+          "claim_id": "rung1_inin_formalism",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "background_time_translation_flow"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": true,
+            "warnings": [
+              "LAUNDERING-WAIVER: ledger_delta=+4 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+            ]
+          },
+          "hints": [],
+          "is_new": true,
+          "ledger": {
+            "current_net": 12,
+            "delta": 4,
+            "net_changes": true,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [],
+          "_severity": "NEW-NODE",
+          "claim_id": "rung1_ontology_finite_memory",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "background_time_translation_flow"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": [
+              "rung1_ontology_finite_memory: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+            ]
+          },
+          "hints": [],
+          "is_new": true,
+          "ledger": {
+            "current_net": 15,
+            "delta": 1,
+            "net_changes": true,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "rung2_kms_gate",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung3_single_pole",
+              "rung4_love_kk",
+              "rung6_qm_limit",
+              "rung7_wz",
+              "rung8_falsifier",
+              "arrow_of_time",
+              "info_i1_renorm_as_information",
+              "info_i2_beyond_standard_bridge",
+              "rung7_w2_wa_sign",
+              "eft_operator_basis",
+              "passivity_channel_diagonal",
+              "kr_contract_retarded_tier4",
+              "x_no_pin_theorem",
+              "kk_static_transfer",
+              "zeta_interior_family",
+              "rung7_w3_nocrossing_export",
+              "info_i3_distinct_consequence",
+              "founding_h3_doubleslit_anchor",
+              "rung7_w1_wz_map",
+              "rung5_gr_limit",
+              "u2_kernel_universality"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "background_time_translation_flow"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": -1,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "boundary_condition",
+            "depends_on",
+            "edge_note",
+            "overturning_computation",
+            "tier_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung3_single_pole",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung5_gr_limit",
+              "rung7_wz",
+              "rung7_w2_wa_sign",
+              "u2_kernel_universality",
+              "rung7_w3_nocrossing_export",
+              "eft_operator_basis",
+              "zeta_interior_family",
+              "x_no_pin_theorem",
+              "kk_static_transfer"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_ontology_finite_memory",
+              "rung2_kms_gate"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "rung4_love_kk",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung7_w1_wz_map",
+              "rung7_w2_wa_sign",
+              "rung7_w3_nocrossing_export"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung5_gr_limit",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "eft_operator_basis",
+              "zeta_interior_family",
+              "x_no_pin_theorem",
+              "kk_static_transfer"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung3_single_pole",
+              "entropy_area_unruh"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": true,
+            "warnings": [
+              "rung5_gr_limit: recovery-with-imports (tier assumed, +2) - must be labeled a RECOVERY, not a derivation",
+              "LAUNDERING-WAIVER: ledger_delta=+2 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+            ]
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 2,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung6_qm_limit",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung8_falsifier",
+              "founding_h3_doubleslit_anchor"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "born_rule"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": true,
+            "warnings": [
+              "rung6_qm_limit: recovery-with-imports (tier assumed, +2) - must be labeled a RECOVERY, not a derivation",
+              "LAUNDERING-WAIVER: ledger_delta=+2 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+            ]
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 2,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "statement"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung7_wz",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung7_w2_wa_sign",
+              "rung7_w3_nocrossing_export"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_ontology_finite_memory",
+              "rung2_kms_gate",
+              "rung3_single_pole"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 3,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "cutoff_convention",
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung8_falsifier",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "founding_h3_doubleslit_anchor"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "rung6_qm_limit"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 2,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "rung9b_bridge",
+          "consistency_flags": [
+            "RE-OPENS: 'rung9b_bridge' is currently a closed/disfavored disposition (disposition='settled-negative'); changing it re-opens settled ground -- firewall must decide."
+          ],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung9a_value",
+              "rung1_inin_formalism",
+              "p_tt_ansatz"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "arrow_of_time",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "past_hypothesis"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": [
+              "arrow_of_time: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+            ]
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 1,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "p_tt_ansatz",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung9b_bridge",
+              "mu_linear",
+              "rung7_w2_wa_sign",
+              "rung7_w3_nocrossing_export",
+              "l0_r3_payoff_mu_linear"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": true,
+            "warnings": [
+              "p_tt_ansatz: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation",
+              "LAUNDERING-WAIVER: ledger_delta=+1 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+            ]
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 1,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "info_i1_renorm_as_information",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "rung9a_value"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "info_i2_beyond_standard_bridge",
+          "consistency_flags": [
+            "RE-OPENS: 'info_i2_beyond_standard_bridge' is currently a closed/disfavored disposition (disposition='screened-refuted'); changing it re-opens settled ground -- firewall must decide."
+          ],
+          "dependencies": {
+            "downstream_affected": [
+              "info_i3_distinct_consequence"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "rung9a_value"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "l0_r2_exact_unique_breaker",
+          "consistency_flags": [
+            "RE-OPENS: 'l0_r2_exact_unique_breaker' is currently a closed/disfavored disposition (disposition='screened-dissolves'); changing it re-opens settled ground -- firewall must decide."
+          ],
+          "dependencies": {
+            "downstream_affected": [
+              "l0_r3_payoff_mu_linear"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "l0_r1_redundancy_exists"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "rung7_w1_wz_map",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "rung7_w2_wa_sign",
+              "rung7_w3_nocrossing_export"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung4_love_kk"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note",
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "u1_form_universality",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "u2_kernel_universality",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung3_single_pole"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "depends_on",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "eft_operator_basis",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "zeta_interior_family",
+              "x_no_pin_theorem",
+              "kk_static_transfer"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate",
+              "rung5_gr_limit"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "tier"
+          ],
+          "_severity": "TIER-OR-LEDGER",
+          "claim_id": "passivity_channel_diagonal",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [
+              "x_no_pin_theorem",
+              "kk_static_transfer"
+            ],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung2_kms_gate"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [
+            "attaches_to",
+            "edge_note"
+          ],
+          "_severity": "SUBSTANTIVE",
+          "claim_id": "analogue_gravity_acoustic",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": false,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [],
+          "_severity": "NEW-NODE",
+          "claim_id": "background_time_translation_flow",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": [
+              "background_time_translation_flow: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+            ]
+          },
+          "hints": [],
+          "is_new": true,
+          "ledger": {
+            "current_net": 15,
+            "delta": 1,
+            "net_changes": true,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [],
+          "_severity": "NEW-NODE",
+          "claim_id": "response_lorentz_covariance",
+          "consistency_flags": [
+            "ORPHANED-RESULT: a new 'shown' result with empty depends_on rests on nothing -- a result should rest on something (or be marked a borrowed axiom)."
+          ],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [
+            "HINT (non-authoritative): sub_status prose mentions 'deferred' but the structured `disposition` is open -- verify it is a cross-reference/negation, not a missed migration."
+          ],
+          "is_new": true,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        },
+        {
+          "_changed_fields": [],
+          "_severity": "NEW-NODE",
+          "claim_id": "kr_contract_retarded_tier4",
+          "consistency_flags": [],
+          "dependencies": {
+            "downstream_affected": [],
+            "introduces_cycle": [],
+            "rests_on": [
+              "rung1_inin_formalism",
+              "rung2_kms_gate"
+            ],
+            "unresolved": []
+          },
+          "discipline": {
+            "blocking": [],
+            "laundering_blocked": false,
+            "laundering_waiver": false,
+            "warnings": []
+          },
+          "hints": [],
+          "is_new": true,
+          "ledger": {
+            "current_net": 16,
+            "delta": 0,
+            "net_changes": false,
+            "new_net": 16
+          },
+          "substantive": true,
+          "verdict": "FLAG-FOR-FIREWALL"
+        }
+      ],
+      "n_changed": 24,
+      "net_baseline": 14,
+      "net_working": 16,
+      "overall": "FLAG-FOR-FIREWALL",
+      "passes": [],
+      "silent_changes": []
+    }
+  },
+  "declarations": {
+    "test_prereg_immutable.py::TestBlindSafe::test_blind_safe_preregs_carry_no_result_adjacent_numerics": {
+      "cases": {
+        "PREREG_DESI_DR3_2026-08-18.txt :: an arXiv id": "P3-SEALED-HISTORY-POLICY"
+      },
+      "live_cases": [
+        "PREREG_DESI_DR3_2026-08-18.txt :: an arXiv id"
+      ]
+    },
+    "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context": {
+      "cases": {
+        "PREREG_DESI_DR3_2026-08-18_v2.txt -> RESULT_DESI_DR3_CONTEXT_2026-08-18.txt :: an arXiv id": "P3-SEALED-HISTORY-POLICY",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value": "P4-TERMINATION-KAPPA-RESULT",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value stated as a quantity rather than as a bound": "P4-TERMINATION-KAPPA-RESULT",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a signed numeric range": "P4-TERMINATION-KAPPA-RESULT",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id": "P2-TERMINATION-EVENTLOG"
+      },
+      "live_cases": [
+        "PREREG_DESI_DR3_2026-08-18_v2.txt -> RESULT_DESI_DR3_CONTEXT_2026-08-18.txt :: an arXiv id",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a signed numeric range",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id"
+      ]
+    }
+  },
+  "engineering_inputs": {
+    "digest": "fa9c69122f75d975656a63e65d5ce27569ff9eda5f51e5c455716172932de8a1",
+    "file_count": 40
+  },
+  "open_passes": {
+    "P1A-EDGE-REPRESENTATION": {
+      "status": "CLOSED",
+      "symptomless": false
+    },
+    "P1B-SHOWN-ON-LEDGER-INPUTS": {
+      "status": "OPEN",
+      "symptomless": true
+    },
+    "P2-TERMINATION-EVENTLOG": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P3-SEALED-HISTORY-POLICY": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P4-TERMINATION-KAPPA-RESULT": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P5-RESIDENT-SCOPE": {
+      "status": "OPEN",
+      "symptomless": true
+    },
+    "P6-STALE-NETS-IN-STANDING-DOCS": {
+      "status": "OPEN",
+      "symptomless": false
+    }
+  },
+  "protected_inputs": {
+    "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+    "digest": "821866b2563914460bbc74ef73e32c7b0a70908a1c392b4b00f95063bb59d125",
+    "tracked_file_count": 1757
+  },
+  "source_commit": "32aabb1a10e9bc9f74de11c692e5eafe1bb2afc4",
+  "tool_versions": {
+    "packages": {
+      "Pygments": "2.21.0",
+      "iniconfig": "2.3.1",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pytest": "9.1.1"
+    },
+    "python": "3.12.14"
+  },
+  "untracked_protected_paths": [],
+  "working_tree_dirty": true
+}

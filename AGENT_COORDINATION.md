@@ -5758,3 +5758,88 @@ NEXT: OWNER REVIEW. If accepted, the remaining consequence prerequisites
 are the low-frequency/epoch-window fork-(ii) path and the
 certificate-vs-manifest face ruling. CC-C, Axis-2 C, Gate-E A, Noise A,
 Tier-4 banked, Lambda_R one, H^2 fork-gated -- all unchanged.
+
+
+### 2026-10-09 · Codex · isolated development branch and repeatable checks
+
+The owner requested a new branch in TestingGRUT for ongoing building and testing.
+Created local `codex/grut-cr5-build-test` from `scout-0` at
+`ab2da47407bb670d94e2a52c87599fa13fd8ab99`. Remote branch creation was rejected
+by the GitHub integration with HTTP 403, Resource not accessible by integration.
+No remote branch, pull request, workflow run, or canonical scientific mutation is claimed.
+
+Added `development/checks.py`, pinned test dependencies, four reporting regression
+tests, developer instructions, and a prepared GitHub Actions workflow. The runner
+retains exact logs and JUnit/JSON reports and treats bank-gate flags as
+REVIEW_REQUIRED even when the legacy command returns zero.
+
+Verified on Python 3.12.14: source syntax PASS; both provenance validators PASS;
+reporting tests 4/4 PASS; bank gate 25 NEW flags / FLAG-FOR-FIREWALL. Full default
+provenance suite: 232 passed, 9 failed, 1 skipped. Its 242 individual case outcomes
+match a run on the untouched checkout exactly. Workflow YAML syntax and expected
+trigger/read-only permission structure PASS; GitHub-hosted execution remains untested.
+`git diff --check` PASS. No register, accepted baseline, calculation manifest,
+preregistration, ruling, charter, or experiment was edited. No Card 1 work was undertaken.
+
+
+### 2026-10-09 · Codex · issue #2 two-axis integrity cycle
+
+Executed the authorized development-only queue from 114af03, preserving draft PR #1.
+Frozen observational manifest: exact 242 outcomes, declared/live case sets, OPEN_PASS
+states, bank inventory, protected input digest, measured versions and hash lock.
+Added separate engineering/scientific checks, executed the unchanged classifier,
+and compared its full diagnostics with an independent audit. Added hostile tests
+for stale/missing reports, new and removed reds, case masking, contradictory
+statuses, process errors, metadata and mid-run code changes.
+
+Verified final local implementation on Python 3.12.14: 22 reporting tests PASS;
+syntax/selected imports/both validators PASS; 232 PASS / 9 FAIL / 1 SKIP exactly
+reproduced; zero baseline deltas and zero infrastructure errors; classifier
+agreement true. Engineering BLOCKED: seven undeclared failing tests, four
+undeclared pointer cases, and uncited OPEN P1A/P6. Scientific REVIEW_REQUIRED;
+25 bank flags unchanged. No new regression. Machine results and report are in
+development/CYCLE_01_LOCAL_RESULTS.json and CYCLE_01_REPORT.md.
+
+Separate expensive profiles/jobs are configured but not executed. Workflow YAML
+and trigger/permission structure verified. No protected scientific input,
+accepted baseline, ruling, seal, charter, bank decision or candidate was edited.
+CR-5 private inputs remain separate. Card 1 closed; cards consumed zero.
+These are same-author builder checks, not external approval.
+
+
+### 2026-10-10 · Codex Work · Issue #2 concrete repair and independent-path review
+
+Prepared a development-only five-file repair patch in a disposable checkout: all seven targeted failures become passes; full overlay 239 PASS / 2 FAIL / 1 SKIP; every other outcome and all declarations/passes/seals identical. Protected source and observational manifest remain unchanged. Four pointer cases and P1A/P6 remain rejected; current evidence does not establish P1A’s specified MOOT condition. Twenty-five bank flags retained. No owner disposition or canonical publication made.
+
+Development regressions: 34 PASS. Strict contradictory/duplicate classifier verdict checks added. Exact numerical dependencies checked/reported for separate expensive profiles. The initial missing-SymPy full-mutation failure is retained; after environment repair all 14 controls and 55 mutants execute successfully (9 profile tests PASS). Slow profile 233 PASS / 9 FAIL: all 15 cited falsifiers exit zero; no skip, no unapproved delta. Default 232 PASS / 9 FAIL / 1 SKIP, zero deltas/errors, actual classifier agreement true; engineering BLOCKED, science REVIEW_REQUIRED.
+
+Separate CR-5 harness verifies all 20 bundle payload hashes first, constructs its oracle/control checkpoint before supplied-code comparison, and matches 183 arithmetic comparisons. Signed weights [-1,2] yield fraction 2 in supplied appearance routine: invalid-input contract review required, not a failure of valid certified arithmetic. No private kit source is committed. These checks are same-author builder evidence, not external approval. No new foundations lane, candidate, scoring, pricing, card or IP-12 draft. Reports and exact patches: development/CYCLE_02_REPORT.md and development/review_cycle_02/.
+
+### 2026-10-10 UTC (2026-10-09 Chicago) · Codex Work · owner reconciliation / readiness
+
+Implemented Issue #2 owner comment 6092113130 on the development branch only:
+exactly four existing V3/V4 event-log numeric cases assigned to still-OPEN P2;
+P1A CLOSED by the R5 semantic ruling, not by discharge or MOOT. Rechecked the
+original 2c522b2 checkpoint (V4 manifested, V3 retired/unsealed, later sigma line
+absent). P4 remains separate. Original observational manifest/lock unchanged;
+explicit hash-locked owner transition supports only these two protected paths.
+
+P6 closure NOT recorded: original fb1242f/9a7150e four-document amendment diff
+adds a retirement/consolidation scope claim in GRUT_ToE.md:53 beyond numerical
+synchronization or a historical cue. Exact diff retained, P6 remains OPEN as the
+owner expressly ordered for an excess diff. No symptomless exemption invented.
+
+Default: 232 PASS / 9 FAIL / 1 SKIP, zero unapproved deltas/errors, actual classifier
+agreement true. Review-only seven-repair patch: 239 PASS / 2 FAIL / 1 SKIP; exact
+patch unchanged from cycle 2; no undeclared pointer cases, P6 only classifier
+obligation. 38 development tests PASS. No repair integration, scientific banking,
+canonical edit, new foundations lane, candidate, price/scoring operation, card or
+IP-12 draft. All 25 bank flags retained and grouped by owner disposition needed.
+
+CR-5: all 20 payload hashes verified before imports, 183 valid arithmetic agreements
+retained. Nine owner-contract hostile fixtures show invalid signed/zero reference
+weights accepted or nonfinite weights rejected too late; positive-measure all-masked
+VOID and zero atoms retained. Review-only precondition supplied; private kit untouched.
+Independent evaluator review, valid CR-5 integration/re-freeze and review remain
+uncleared. OWNER_READINESS_SYNTHESIS.md distinguishes these actual pre-draft
+requirements from later lock duties and historical bank/pass dispositions.

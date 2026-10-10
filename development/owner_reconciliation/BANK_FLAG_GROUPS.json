@@ -1,0 +1,295 @@
+{
+  "counts": {
+    "DELETED_ACCEPTED_NODE": 1,
+    "NEW_NODES_AND_INPUT_BOOKINGS": 5,
+    "REOPENED_SETTLED_DISPOSITIONS": 3,
+    "SUBSTANTIVE_SCOPE_AND_DEPENDENCY_EDITS": 10,
+    "TIER_AND_DEPENDENCY_CHANGES": 6
+  },
+  "disposition_needed": {
+    "DELETED_ACCEPTED_NODE": "Review deletion of rung1_inin_action together with the split replacement and preservation of obligations.",
+    "NEW_NODES_AND_INPUT_BOOKINGS": "Review origins, prices, stance/waiver and dependency provenance; response_lorentz_covariance has ORPHANED-RESULT and needs a derivation dependency or explicit borrowed-input status.",
+    "REOPENED_SETTLED_DISPOSITIONS": "Explicit firewall decision on settled-negative/screened-refuted/screened-dissolves changes; no automatic reopening or acceptance.",
+    "SUBSTANTIVE_SCOPE_AND_DEPENDENCY_EDITS": "Review statement/scope/edge and attached-object changes; confirm they preserve claimed grade.",
+    "TIER_AND_DEPENDENCY_CHANGES": "Review tier movement and dependencies against evidence; P1A closure does not bank any row."
+  },
+  "groups": {
+    "DELETED_ACCEPTED_NODE": [
+      {
+        "id": "rung1_inin_action",
+        "status": "REVIEW_REQUIRED"
+      }
+    ],
+    "NEW_NODES_AND_INPUT_BOOKINGS": [
+      {
+        "changed_fields": [],
+        "consistency_flags": [],
+        "id": "rung1_inin_formalism",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "LAUNDERING-WAIVER: ledger_delta=+4 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+        ]
+      },
+      {
+        "changed_fields": [],
+        "consistency_flags": [],
+        "id": "rung1_ontology_finite_memory",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "rung1_ontology_finite_memory: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+        ]
+      },
+      {
+        "changed_fields": [],
+        "consistency_flags": [],
+        "id": "background_time_translation_flow",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "background_time_translation_flow: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+        ]
+      },
+      {
+        "changed_fields": [],
+        "consistency_flags": [
+          "ORPHANED-RESULT: a new 'shown' result with empty depends_on rests on nothing -- a result should rest on something (or be marked a borrowed axiom)."
+        ],
+        "id": "response_lorentz_covariance",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [],
+        "consistency_flags": [],
+        "id": "kr_contract_retarded_tier4",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      }
+    ],
+    "REOPENED_SETTLED_DISPOSITIONS": [
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [
+          "RE-OPENS: 'rung9b_bridge' is currently a closed/disfavored disposition (disposition='settled-negative'); changing it re-opens settled ground -- firewall must decide."
+        ],
+        "id": "rung9b_bridge",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [
+          "RE-OPENS: 'info_i2_beyond_standard_bridge' is currently a closed/disfavored disposition (disposition='screened-refuted'); changing it re-opens settled ground -- firewall must decide."
+        ],
+        "id": "info_i2_beyond_standard_bridge",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [
+          "RE-OPENS: 'l0_r2_exact_unique_breaker' is currently a closed/disfavored disposition (disposition='screened-dissolves'); changing it re-opens settled ground -- firewall must decide."
+        ],
+        "id": "l0_r2_exact_unique_breaker",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      }
+    ],
+    "SUBSTANTIVE_SCOPE_AND_DEPENDENCY_EDITS": [
+      {
+        "changed_fields": [
+          "boundary_condition",
+          "depends_on",
+          "edge_note",
+          "overturning_computation",
+          "tier_note"
+        ],
+        "consistency_flags": [],
+        "id": "rung3_single_pole",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "rung5_gr_limit",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "rung5_gr_limit: recovery-with-imports (tier assumed, +2) - must be labeled a RECOVERY, not a derivation",
+          "LAUNDERING-WAIVER: ledger_delta=+2 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+        ]
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "rung6_qm_limit",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "rung6_qm_limit: recovery-with-imports (tier assumed, +2) - must be labeled a RECOVERY, not a derivation",
+          "LAUNDERING-WAIVER: ledger_delta=+2 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+        ]
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "statement"
+        ],
+        "consistency_flags": [],
+        "id": "rung7_wz",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "cutoff_convention",
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "rung8_falsifier",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "arrow_of_time",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "arrow_of_time: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+        ]
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "p_tt_ansatz",
+        "status": "REVIEW_REQUIRED",
+        "warnings": [
+          "p_tt_ansatz: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation",
+          "LAUNDERING-WAIVER: ledger_delta=+1 is accepted ONLY because laundering_ok is declared; the firewall/human must confirm this stance/recovery."
+        ]
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "u2_kernel_universality",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "eft_operator_basis",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "attaches_to",
+          "edge_note"
+        ],
+        "consistency_flags": [],
+        "id": "analogue_gravity_acoustic",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      }
+    ],
+    "TIER_AND_DEPENDENCY_CHANGES": [
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "rung2_kms_gate",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "rung4_love_kk",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "info_i1_renorm_as_information",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "rung7_w1_wz_map",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "depends_on",
+          "edge_note",
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "u1_form_universality",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      },
+      {
+        "changed_fields": [
+          "tier"
+        ],
+        "consistency_flags": [],
+        "id": "passivity_channel_diagonal",
+        "status": "REVIEW_REQUIRED",
+        "warnings": []
+      }
+    ]
+  },
+  "inventory_exactly_unchanged": true,
+  "pre_card_status": "Not a blanket charter requirement to bank this historical workbench inventory before Card 1. Any future reliance must preserve unaccepted status and be independently licensed.",
+  "scientific_acceptance": false,
+  "total": 25
+}

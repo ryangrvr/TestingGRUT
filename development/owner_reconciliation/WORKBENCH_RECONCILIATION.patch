@@ -1,0 +1,84 @@
+diff --git a/provenance/OPEN_PASSES.txt b/provenance/OPEN_PASSES.txt
+index 38e1644..30b90fd 100644
+--- a/provenance/OPEN_PASSES.txt
++++ b/provenance/OPEN_PASSES.txt
+@@ -27,7 +27,16 @@ prose is for the reader.
+ 
+ ---------------------------------------------------------------------------------------------
+ PASS P1A-EDGE-REPRESENTATION
+-STATUS: OPEN
++STATUS: CLOSED
++CLOSED: 2026-10-09 America/Chicago (2026-10-10 UTC), owner ruling in
++  https://github.com/ryangrvr/TestingGRUT/issues/2#issuecomment-6092113130
++RULING: an R5 wiring edge is a substantive dependency/presupposition for
++  provenance-tier consistency. A shown node resting through R5 on an assumed input
++  is a real tier contradiction unless an explicit rule justifies that tier.
++  Closure is by ruling, NOT MOOT or discharge of background_time_translation_flow.
++  The booked input and edges remain. No current declaration cites P1A; any future
++  tier violation must surface as a new red. P1B remains separate and OPEN.
++The original question and proposed moot condition below are historical.
+ OPENED: 2026-08-18
+ SPLIT: 2026-08-19, out of the former P1-RUNG1-TIER, which spanned two questions with different
+   fates. Splitting it BEFORE the migration rather than after is the point: after the migration one
+@@ -70,6 +79,18 @@ CLOSES WHEN: the owner rules on the convention. Nothing else closes it, and in p
+ ---------------------------------------------------------------------------------------------
+ PASS P2-TERMINATION-EVENTLOG
+ STATUS: OPEN
++SCOPED: 2026-10-09 America/Chicago, owner direction in
++  https://github.com/ryangrvr/TestingGRUT/issues/2#issuecomment-6092113130
++RULING: the four current V3/V4 numeric event-log pointer cases belong to this
++  already-OPEN adjudication. Classification is not exemption or acceptance.
++  At 2c522b20d21d3390903d3cb4b6a063d0a8fbbaee, V4 was manifested, V3 explicitly
++  DRAFT -- NEVER SEALED, RETIRED PERMANENTLY and unmanifested, and the event log
++  lacked the later 6.24 -> 4.87 sigma line. Current mutable-target contents cannot
++  establish a historical pre-seal leak. Later manifestation as immutable history
++  does not turn V3 into an in-force sealed instrument.
++  The live policy question distinguishes seal-time causal blindness from safety
++  for later blinded reading of a mutable companion. P4 KAPPA cases remain separate.
++The original opening text below is preserved as history, not a finding that V3 was sealed.
+ OPENED: 2026-08-18
+ TITLE: a blind-safe seal that names its own event log
+ QUESTION: PREREG_TERMINATION_V3 and _V4 declare BLIND-SAFE and name RESULT_TERMINATION_events.txt,
+@@ -140,6 +161,18 @@ CLOSES WHEN: the owner rules on which vocabulary the resident enforces per scope
+ ---------------------------------------------------------------------------------------------
+ PASS P6-STALE-NETS-IN-STANDING-DOCS
+ STATUS: OPEN
++OWNER DIRECTION: 2026-10-09 America/Chicago, Issue #2 comment 6092113130 authorizes
++  only synchronization of stale present-tense count/net assertions with emitted
++  values and explicit preservation of historical figures. Closure is conditional
++  on verifying that the landed document changes contain no substantive excess.
++VERIFICATION: original GRUT-RAI commits fb1242fd700248de518bfe85e77c629642ed01a8
++  and 9a7150e80357951b97787c85ccf3a4788466eb88 were inspected. The GRUT_ToE.md
++  validator-description amendment adds: "the 21 vacuum-cluster nodes were retired
++  from the ledger sum in the V2 consolidation". This is a scope/history claim,
++  not just count synchronization; it survives at current line 53. Consequently
++  the conditional closure requirement is NOT certified. P6 remains OPEN even
++  though the stale-net enumerator is empty. No symptomless exemption is added.
++  Exact landed diff and evidence: development/owner_reconciliation/.
+ OPENED: 2026-08-19
+ TITLE: four standing documents assert net +13 as current state
+ QUESTION: The owner ordered STATE.md corrected because its headline (+13, 49 nodes) disagreed with
+diff --git a/provenance/expected_red.py b/provenance/expected_red.py
+index 004c32e..0757d2e 100644
+--- a/provenance/expected_red.py
++++ b/provenance/expected_red.py
+@@ -93,6 +93,19 @@ DECLARED = {
+             ":: an arXiv id": "P2-TERMINATION-EVENTLOG",
+             "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
+             ":: an arXiv id": "P2-TERMINATION-EVENTLOG",
++            # Owner direction, Issue #2 comment 6092113130 (2026-10-09 Chicago):
++            # current mutable-target numerics belong to OPEN P2, not acceptance
++            # or proof of a historical pre-seal leak. V3 was an unsealed draft.
++            "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
++            ":: a sigma value": "P2-TERMINATION-EVENTLOG",
++            "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
++            ":: a sigma value stated as a quantity rather than as a bound":
++                "P2-TERMINATION-EVENTLOG",
++            "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
++            ":: a sigma value": "P2-TERMINATION-EVENTLOG",
++            "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
++            ":: a sigma value stated as a quantity rather than as a bound":
++                "P2-TERMINATION-EVENTLOG",
+             "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt "
+             ":: a sigma value": "P4-TERMINATION-KAPPA-RESULT",
+             "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt "

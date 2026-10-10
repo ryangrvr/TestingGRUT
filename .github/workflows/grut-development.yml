@@ -1,0 +1,147 @@
+name: GRUT development checks
+
+on:
+  push:
+    branches: ["codex/grut-cr5-build-test"]
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: "Separate guard execution profile"
+        type: choice
+        default: default
+        options: [default, full-mutation, slow-falsifiers]
+
+permissions:
+  contents: read
+
+jobs:
+  engineering-integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      scientific_status: ${{ steps.run.outputs.scientific_status }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0 # Owner transition verifies exact protected diff from the historical source.
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - name: Install pinned test dependencies
+        run: python -m pip install -r development/requirements-test.txt
+      - name: Run the development checks
+        id: run
+        run: python development/checks.py --reconciliation development/owner_reconciliation/transition.json
+      - name: Retain logs and machine-readable results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: grut-development-results
+          path: development/results/
+          if-no-files-found: error
+          retention-days: 14
+
+  scientific-status:
+    needs: engineering-integrity
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Preserve the independent scientific status
+        env:
+          SCIENTIFIC_STATUS: ${{ needs.engineering-integrity.outputs.scientific_status }}
+        run: |
+          python3 - <<'PY'
+          import os
+          status = os.environ.get("SCIENTIFIC_STATUS") or "NOT_ESTABLISHED"
+          text = f"Scientific status: **{status}**. This check grants no scientific approval.\n"
+          print(text)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write(text)
+          raise SystemExit(0 if status == "NO_RECORDED_OPEN_FLAGS" else 1)
+          PY
+
+  repair-overlay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - run: python -m pip install -r development/requirements-test.txt
+      - name: Verify seven concrete repairs in a disposable checkout
+        run: python development/reconciliation_review.py --output development/results/repair-overlay --stamp 2026-10-10 --reconciliation development/owner_reconciliation/transition.json
+      - name: Retain review-only patch, raw outcomes and surviving guard failures
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: grut-repair-overlay-review-only
+          path: development/results/
+          if-no-files-found: error
+          retention-days: 14
+
+  full-mutation:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.profile == 'full-mutation') ||
+      (github.event_name == 'pull_request' && github.event.action == 'edited' &&
+       github.event.changes.title && github.event.pull_request.head.repo.full_name == github.repository &&
+       github.event.pull_request.head.ref == 'codex/grut-cr5-build-test' &&
+       contains(github.event.pull_request.title, '[full-mutation]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - run: python -m pip install -r development/requirements-test.txt
+      - run: python -m pip install -r development/requirements-numerical.txt
+      - name: Execute all mutation guards with profile comparison
+        run: python development/checks.py --profile full-mutation --reconciliation development/owner_reconciliation/transition.json
+      - name: Retain mutation reports even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: grut-full-mutation-results
+          path: development/results/
+          if-no-files-found: error
+          retention-days: 14
+
+  slow-falsifiers:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.profile == 'slow-falsifiers') ||
+      (github.event_name == 'pull_request' && github.event.action == 'edited' &&
+       github.event.changes.title && github.event.pull_request.head.repo.full_name == github.repository &&
+       github.event.pull_request.head.ref == 'codex/grut-cr5-build-test' &&
+       contains(github.event.pull_request.title, '[slow-falsifiers]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - run: python -m pip install -r development/requirements-test.txt
+      - run: python -m pip install -r development/requirements-numerical.txt
+      - name: Execute registered slow falsifiers with profile comparison
+        run: python development/checks.py --profile slow-falsifiers --reconciliation development/owner_reconciliation/transition.json
+      - name: Retain falsifier reports even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: grut-slow-falsifier-results
+          path: development/results/
+          if-no-files-found: error
+          retention-days: 14
