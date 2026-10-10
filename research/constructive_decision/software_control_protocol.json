@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "invented-software-control-protocol",
+  "independent_shots_assumed": true,
+  "sampling_failure_probability": 0.01,
+  "settings": [
+    {
+      "id": "partial_constant",
+      "shots": 3000,
+      "segments": [
+        {
+          "duration_s": 0.7853981633974483,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "partial_sign_reversal",
+      "shots": 3000,
+      "segments": [
+        {
+          "duration_s": 0.39269908169872414,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": 1
+            }
+          ]
+        },
+        {
+          "duration_s": 0.39269908169872414,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full_cycle_constant",
+      "shots": 3000,
+      "segments": [
+        {
+          "duration_s": 3.141592653589793,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full_cycle_sign_reversal",
+      "shots": 3000,
+      "segments": [
+        {
+          "duration_s": 1.5707963267948966,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": 1
+            }
+          ]
+        },
+        {
+          "duration_s": 1.5707963267948966,
+          "duration_abs_error_s": 0.0,
+          "drives": [
+            {
+              "mode_id": "mode_1",
+              "drive_id": "force_1",
+              "sign": -1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

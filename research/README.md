@@ -7,6 +7,8 @@
 | [Reconnaissance 02](recon02/REPORT.md) | Exact conventional joint image for system visibility and a fixed accessible record; matched-response and correlation-encoding controls | Operational baseline target established; no GRUT selector; Card 2 held |
 | [Reconnaissance 03](recon03/REPORT.md) | Bounded-local-control audit: exact block-record capacity, even-chain N/2 compression threshold, singleton/decoder/reset boundaries | Conditional standard quantum result; no generated identity/interface or GRUT law; Card 2 held |
 | [Reconnaissance 04](recon04/REPORT.md) | Mixed/correlated-record locality extension; shared interaction computes pointer, response, records and energy; energy-conserving encoding defeats local-record rigidity | Bounded conventional investigation complete at author level; pending review; no GRUT selector or Card 2 |
+| [Interaction-Origin 01](interaction_origin01/REPORT.md) | Complete vacuum/one-particle dynamics leave higher-order interacting completions free; spectroscopy distinguishes them | Bounded author-level audit; pending review; no GRUT selector or Card 2 |
+| [Constructive decision](constructive_decision/DECISION.md) | Select Approach B: independently calibrated conventional force model forecasts coherence and mode energy without holdout fitting | Forecast implementation and author software controls complete; actual calibration absent; no new GRUT law or Card 2 |
 
 The recon02 [operation-closure supplement](recon02/OPERATION_CLOSURE.md) proves
 that a family admitting specified memory-only controls and their resource costs
