@@ -3,6 +3,7 @@
 import argparse
 import ast
 from datetime import datetime, timezone
+from importlib.metadata import version
 import json
 import hashlib
 from collections import Counter
@@ -21,6 +22,24 @@ from integrity import (adjudication_problems, baseline_deltas, classifier_agrees
     profiles_env, read_junit, source_identity, verify_assets)
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def numerical_environment(requirements):
+    observed = {}
+    for line in Path(requirements).read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        if not re.fullmatch(r'[A-Za-z0-9_-]+==[0-9]+(?:\.[0-9]+)+', line):
+            raise ValueError('Expensive-profile dependency must have an exact version pin')
+        name, expected = line.split('==')
+        installed = version(name)
+        if installed != expected:
+            raise ValueError(f'Expensive-profile dependency mismatch: {name} {installed} != {expected}')
+        observed[name] = installed
+    if not observed:
+        raise ValueError('Missing numerical dependency contract')
+    return observed
 
 
 def command_status(name, returncode, output):
@@ -117,6 +136,7 @@ def main():
     env = profiles_env(os.environ, args.profile)
     checks, errors, deltas, problems, cases, counts, state = [], [], [], [], {}, None, {}
     agreement = False
+    numerical_packages = {}
     identity = source_identity(ROOT)
     manifest_path = ROOT / "development/expected_red_manifest.json"
     manifest = None
@@ -124,6 +144,8 @@ def main():
         manifest = locked_manifest(manifest_path)
         if manifest["source_commit"] != PINNED_SOURCE:
             raise ValueError("Manifest source differs from issue #2's frozen source")
+        if args.profile != 'default':
+            numerical_packages = numerical_environment(ROOT / 'development/requirements-numerical.txt')
         checks.append(syntax_check(outdir))
         capture = ROOT / "development/capture_state.py"
         checks.append(run_check("state_before", [sys.executable, str(capture), "--root", str(ROOT)], ROOT, outdir, env))
@@ -174,6 +196,7 @@ def main():
     result = {"schema_version": 2, "repository": "ryangrvr/TestingGRUT", **identity,
               "utc": datetime.now(timezone.utc).isoformat(), "profile": args.profile,
               "baseline_source": manifest["source_commit"] if manifest else None,
+              "numerical_packages": numerical_packages,
               "checks": checks, "provenance_tests": counts, "axes": axes,
               "baseline_deltas": deltas, "adjudication_problems": problems,
               "classifier_agreement_with_raw_and_independent_audit": agreement if args.profile == "default" else "NOT_RUN_SUBSET_OR_SLOW_PROFILE",

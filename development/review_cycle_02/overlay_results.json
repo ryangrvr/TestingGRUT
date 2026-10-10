@@ -1,0 +1,70 @@
+{
+  "allowlist_passes_and_all_seals_byte_identical": true,
+  "before_target_cases": {
+    "test_expected_red.py::TestExpectedRed::test_a_declaration_citing_a_closed_pass_is_refused": "FAIL",
+    "test_expected_red.py::TestExpectedRed::test_a_moot_pass_cannot_be_cited_by_a_declaration": "FAIL",
+    "test_expected_red.py::TestExpectedRed::test_a_symptomless_pass_is_allowed_and_printed": "FAIL",
+    "test_expected_red.py::TestExpectedRed::test_the_declared_state_is_accepted": "FAIL",
+    "test_public_doc.py::TestPublicDoc::test_the_calc_manifest_matches_the_repository": "FAIL",
+    "test_public_numbers.py::TestPublicNumbers::test_no_drift_from_the_register": "FAIL",
+    "test_public_numbers.py::TestPublicNumbers::test_the_stamped_test_count_is_true": "FAIL"
+  },
+  "card_1_authorized": false,
+  "changed_outcomes": [
+    "test_expected_red.py::TestExpectedRed::test_a_declaration_citing_a_closed_pass_is_refused",
+    "test_expected_red.py::TestExpectedRed::test_a_moot_pass_cannot_be_cited_by_a_declaration",
+    "test_expected_red.py::TestExpectedRed::test_a_symptomless_pass_is_allowed_and_printed",
+    "test_expected_red.py::TestExpectedRed::test_the_declared_state_is_accepted",
+    "test_public_doc.py::TestPublicDoc::test_the_calc_manifest_matches_the_repository",
+    "test_public_numbers.py::TestPublicNumbers::test_no_drift_from_the_register",
+    "test_public_numbers.py::TestPublicNumbers::test_the_stamped_test_count_is_true"
+  ],
+  "changed_paths": [
+    "PUBLIC_NUMBERS.md",
+    "docs/WHERE_IT_STOPS.md",
+    "provenance/CALC_MANIFEST.txt",
+    "provenance/emit_public_numbers.py",
+    "provenance/test_expected_red.py"
+  ],
+  "engineering_clearance": false,
+  "external_review": "NOT_PERFORMED_BY_THIS_RUN",
+  "historical_correction_stamp_unchanged": true,
+  "overlay_counts": {
+    "FAIL": 2,
+    "PASS": 239,
+    "SKIP": 1
+  },
+  "patch_sha256": "4c46efcb263d738d1909474cecb5905ecd1c94db5a6da11885ee08c0c2bf8ba1",
+  "precondition_sha256": {
+    "PUBLIC_NUMBERS.md": "1a1b32220b3826a076141227cb5f8cd5eb95aed10e9867767b3805dfc40b3849",
+    "docs/WHERE_IT_STOPS.md": "fac2bd9a39b6e36d4c8066fe90ececc4eda58acebe1984256cd1f742cff4d431",
+    "provenance/CALC_MANIFEST.txt": "f4d355085efcaa2a1c8a7d3dbdbd892eae70cdd0bf8b56af5202f8f9dd57b471",
+    "provenance/emit_public_numbers.py": "a90ae620f74b71a8c6a82cb2eb4cae3cbc2423afb478db1805fcd1a1bb6baa70",
+    "provenance/test_expected_red.py": "2077c6b58078c171860e3e195cb4fdad7b52c61a86cdddd8fc7d1b89aa31e7b9"
+  },
+  "proposed_wave_stamp": "2026-10-10",
+  "protected_inputs": {
+    "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+    "digest": "efc48249a1657d5cd0e6bd3bde1aae0a653ceb1e6e78f26b23cf95184da851e1",
+    "tracked_file_count": 1757
+  },
+  "pytest_counts": {
+    "errors": 0,
+    "failures": 2,
+    "skipped": 1,
+    "tests": 242
+  },
+  "remaining_new_pointer_cases": [
+    "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+    "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound",
+    "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+    "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound"
+  ],
+  "remaining_orphan_passes": [
+    "P1A-EDGE-REPRESENTATION",
+    "P6-STALE-NETS-IN-STANDING-DOCS"
+  ],
+  "scientific_approval": false,
+  "scope": "REVIEW_ONLY_NOT_APPLIED",
+  "source_commit": "b5d0493a23e5b741397f4dd3867bd8a09da08858"
+}

@@ -62,6 +62,28 @@ jobs:
           raise SystemExit(0 if status == "NO_RECORDED_OPEN_FLAGS" else 1)
           PY
 
+  repair-overlay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+      - run: python -m pip install -r development/requirements-test.txt
+      - name: Verify seven concrete repairs in a disposable checkout
+        run: python development/reconciliation_review.py --output development/results/repair-overlay --stamp 2026-10-10
+      - name: Retain review-only patch, raw outcomes and surviving guard failures
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: grut-repair-overlay-review-only
+          path: development/results/
+          if-no-files-found: error
+          retention-days: 14
+
   full-mutation:
     if: >-
       (github.event_name == 'workflow_dispatch' && inputs.profile == 'full-mutation') ||
@@ -79,6 +101,7 @@ jobs:
         with:
           python-version: "3.12.14"
       - run: python -m pip install -r development/requirements-test.txt
+      - run: python -m pip install -r development/requirements-numerical.txt
       - name: Execute all mutation guards with profile comparison
         run: python development/checks.py --profile full-mutation
       - name: Retain mutation reports even on failure
@@ -107,6 +130,7 @@ jobs:
         with:
           python-version: "3.12.14"
       - run: python -m pip install -r development/requirements-test.txt
+      - run: python -m pip install -r development/requirements-numerical.txt
       - name: Execute registered slow falsifiers with profile comparison
         run: python development/checks.py --profile slow-falsifiers
       - name: Retain falsifier reports even on failure

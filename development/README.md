@@ -68,7 +68,7 @@ must pass when enabled. These are pre-existing guard contracts, not observed
 claims that the expensive runs succeeded. A profile run reports its execution
 integrity and leaves the default engineering axis NOT_ESTABLISHED; it cannot
 replace the default classifier run. Baseline input/adjudication/bank drift is
-still rejected. This cycle does not claim expensive-job execution.
+still rejected. Cycle 1 did not execute the expensive jobs. Cycle 2 executes both profiles successfully with pinned numerical dependencies; see CYCLE_02_REPORT.md.
 
 To activate the separate hosted jobs on this development branch, manually edit
 draft PR #1's title to include `[full-mutation]` or `[slow-falsifiers]`. Only a
@@ -82,3 +82,15 @@ branch and leaves the frozen default untouched. See
 Actions use pinned release commits and read-only tokens. Scientific status has
 its own failing check whenever review is outstanding. The PR stays draft.
 CR-5's private inputs and independent review lane are outside this cycle.
+
+## Cycle 2 review-only repair
+
+See [CYCLE_02_REPORT.md](CYCLE_02_REPORT.md) for the concrete five-file patch, exact 242-case overlay comparison, owner dispositions, separate CR-5 review and expensive-profile execution evidence. The default protected record and locked manifest remain unchanged.
+
+```bash
+python -m pip install -r development/requirements-numerical.txt
+python development/reconciliation_review.py --output development/results/review-overlay --stamp 2026-10-10
+python -m development.cr5_review.check --bundle /absolute/path/GRUT_G2_14R_CR5_REVIEW_BUNDLE.zip --output development/results/cr5-review
+```
+
+The CR-5 bundle is kept outside this repository. Its exact hash is pinned in the harness. A separate arithmetic implementation is not external authorship; synthetic receipts do not certify physical pipelines. Invalid signed reference weights remain an explicit review finding.

@@ -154,7 +154,15 @@ def classifier_observed_failures(output):
 
 def classifier_agrees(cases, problems, output, returncode):
     failures = {node for node, status in cases.items() if status in ("FAIL", "ERROR")}
-    verdict = "FAIL: the failing set is not the declared set." if problems else "No new red."
+    # A matching substring cannot certify a contradictory or duplicated transcript.
+    failure_verdict = "FAIL: the failing set is not the declared set."
+    success_pattern = r"^All \d+ failing tests are declared, at \d+ declared cases, each citing an OPEN pass\. No new red\.$"
+    failure_lines = re.findall(r"^FAIL:.*$", output, re.MULTILINE)
+    success_lines = re.findall(success_pattern, output, re.MULTILINE)
+    if problems:
+        valid_verdict = failure_lines == [failure_verdict] and not success_lines
+    else:
+        valid_verdict = not failure_lines and len(success_lines) == 1
     diagnostics = {
         "UNDECLARED_FAILING_TEST": {(n,) for n in re.findall(r"^\s*\*\*\* NEW RED: (\S+)", output, re.MULTILINE)},
         "STALE_DECLARATION": {(n,) for n in re.findall(r"^\s*\*\*\* STALE DECLARATION: (\S+)", output, re.MULTILINE)},
@@ -172,7 +180,7 @@ def classifier_agrees(cases, problems, output, returncode):
     if set(re.findall(r"^\s*\*\*\* (?:UNKNOWN|NON-OPEN) PASS '([^']+)'", output, re.MULTILINE)) != invalid_passes:
         return False
     return (classifier_observed_failures(output) == failures
-            and returncode == (1 if problems else 0) and verdict in output)
+            and returncode == (1 if problems else 0) and valid_verdict)
 
 
 def profiles_env(base, profile):

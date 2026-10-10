@@ -131,6 +131,19 @@ class HostileIntegrityTests(unittest.TestCase):
         problems.append({"kind": "NEW_DECLARED_SET_MEMBER", "node": "test_fixture.py::test_a", "case": "hidden"})
         self.assertFalse(classifier_agrees(cases, problems, output, 1))
 
+    def test_classifier_contradictory_or_duplicate_verdicts_are_rejected(self):
+        cases = {"test_fixture.py::test_a": "FAIL"}
+        problems = [{"kind": "UNDECLARED_FAILING_TEST", "node": "test_fixture.py::test_a"}]
+        bad = "  *** NEW RED: test_fixture.py::test_a\n"
+        fail = "FAIL: the failing set is not the declared set.\n"
+        success = "All 0 failing tests are declared, at 0 declared cases, each citing an OPEN pass. No new red.\n"
+        self.assertTrue(classifier_agrees(cases, problems, bad + fail, 1))
+        for extra in (fail, success, "FAIL: another verdict\n"):
+            self.assertFalse(classifier_agrees(cases, problems, bad + fail + extra, 1))
+        self.assertTrue(classifier_agrees({}, [], success, 0))
+        for text in (success + fail, success * 2, "quoted No new red.\n"):
+            self.assertFalse(classifier_agrees({}, [], text, 0))
+
     def test_matching_observed_red_is_not_automatically_authorized(self):
         state = state_fixture()
         cases = {"test_fixture.py::test_a": "FAIL"}

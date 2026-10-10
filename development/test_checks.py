@@ -3,10 +3,25 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from checks import command_status, junit_counts
+from checks import command_status, junit_counts, numerical_environment
 
 
 class ReportingTests(unittest.TestCase):
+    def test_expensive_profile_dependencies_cannot_silently_drift(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as tmp:
+            req = Path(tmp) / 'requirements.txt'
+            req.write_text('numeric==1.2.3\n')
+            with patch('checks.version', return_value='1.2.3'):
+                self.assertEqual(numerical_environment(req), {'numeric': '1.2.3'})
+            with patch('checks.version', return_value='1.2.4'):
+                with self.assertRaises(ValueError):
+                    numerical_environment(req)
+            for body in ('numeric>=1.2\n', '# no pins\n'):
+                req.write_text(body)
+                with self.assertRaises(ValueError):
+                    numerical_environment(req)
+
     def test_exit_zero_cannot_hide_bank_flags(self):
         self.assertEqual(command_status("bank_gate", 0,
                          "OVERALL: FLAG-FOR-FIREWALL\n"), "REVIEW_REQUIRED")
