@@ -1,0 +1,88 @@
+{
+  "base_protected_inputs": {
+    "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+    "digest": "efc48249a1657d5cd0e6bd3bde1aae0a653ceb1e6e78f26b23cf95184da851e1",
+    "tracked_file_count": 1757
+  },
+  "changed_protected_paths": {
+    "provenance/expected_red.py": "100a77813424894a0d46103e65131733b981ca0541dccbb21a04ef6927d6a4fc",
+    "provenance/OPEN_PASSES.txt": "1799a250144410928becca2a77fbc9c71e731d5ac04194b09d80ab75305809c0",
+    "GRUT_ToE.md": "45f5e6387beadf385da38d74f2f5709e80a8104c461b8bcfd9ec9a218e812afc"
+  },
+  "declarations": {
+    "test_prereg_immutable.py::TestBlindSafe::test_blind_safe_preregs_carry_no_result_adjacent_numerics": {
+      "cases": {
+        "PREREG_DESI_DR3_2026-08-18.txt :: an arXiv id": "P3-SEALED-HISTORY-POLICY"
+      },
+      "live_cases": [
+        "PREREG_DESI_DR3_2026-08-18.txt :: an arXiv id"
+      ]
+    },
+    "test_prereg_immutable.py::TestBlindSafe::test_no_sealed_prereg_points_outward_at_its_own_context": {
+      "cases": {
+        "PREREG_DESI_DR3_2026-08-18_v2.txt -> RESULT_DESI_DR3_CONTEXT_2026-08-18.txt :: an arXiv id": "P3-SEALED-HISTORY-POLICY",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound": "P2-TERMINATION-EVENTLOG",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value": "P4-TERMINATION-KAPPA-RESULT",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value stated as a quantity rather than as a bound": "P4-TERMINATION-KAPPA-RESULT",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a signed numeric range": "P4-TERMINATION-KAPPA-RESULT"
+      },
+      "live_cases": [
+        "PREREG_DESI_DR3_2026-08-18_v2.txt -> RESULT_DESI_DR3_CONTEXT_2026-08-18.txt :: an arXiv id",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt :: a signed numeric range",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: a sigma value stated as a quantity rather than as a bound",
+        "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt :: an arXiv id"
+      ]
+    }
+  },
+  "open_passes": {
+    "P1A-EDGE-REPRESENTATION": {
+      "status": "CLOSED",
+      "symptomless": false
+    },
+    "P1B-SHOWN-ON-LEDGER-INPUTS": {
+      "status": "OPEN",
+      "symptomless": true
+    },
+    "P2-TERMINATION-EVENTLOG": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P3-SEALED-HISTORY-POLICY": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P4-TERMINATION-KAPPA-RESULT": {
+      "status": "OPEN",
+      "symptomless": false
+    },
+    "P5-RESIDENT-SCOPE": {
+      "status": "OPEN",
+      "symptomless": true
+    },
+    "P6-STALE-NETS-IN-STANDING-DOCS": {
+      "status": "CLOSED",
+      "symptomless": false
+    }
+  },
+  "original_manifest_sha256": "b46f65a0ad10193f9443dffee4227b041949dda8541d7f7e98a109ead70a396d",
+  "owner_direction_file_sha256": "ee4a5b217ffc02f3293cb53a1740d336a9b68e8837de71b2a16051e8f5f4f138",
+  "owner_direction_url": "https://github.com/ryangrvr/TestingGRUT/issues/2#issuecomment-6092788257",
+  "reconciled_protected_inputs": {
+    "algorithm": "sha256-of-sorted-path-sha256-map-v1",
+    "digest": "a8620298eaf0ebf71e69713ee0d19722360646dcf1d4617f4363c1bbec3385f1",
+    "tracked_file_count": 1757
+  },
+  "schema_version": 2,
+  "scope": "WORKBENCH_ONLY_NO_SCIENTIFIC_ACCEPTANCE"
+}

@@ -1,0 +1,85 @@
+{
+  "CR5_change": "mandatory whole-list validation at PrevalidatedKit boundary, direct supplied module remains unsafe",
+  "CR5_original_contract_findings": [
+    {
+      "actual_fraction": "2",
+      "expected": "reject negative reference-measure weights",
+      "kind": "UNVALIDATED_REFERENCE_WEIGHTS",
+      "scope": "invalid input; not evidence that valid certified arithmetic fails",
+      "severity": "INPUT_CONTRACT_REVIEW_REQUIRED"
+    }
+  ],
+  "canonical_changes": false,
+  "external_approval": false,
+  "final_supported_profile_mismatches": [],
+  "original_affected_HB_fixtures": 7,
+  "original_affected_price_fixtures": 619,
+  "prior_proposal_exact_remaining_differences_before_this_repair": [
+    {
+      "after": {
+        "value": 106
+      },
+      "agrees": false,
+      "before": {
+        "value": 106
+      },
+      "before_agrees": false,
+      "expected": 114,
+      "fixture": "normal-price-112-p6",
+      "kind": "EXACT_VALUE"
+    },
+    {
+      "after": {
+        "value": 106
+      },
+      "agrees": false,
+      "before": {
+        "value": 106
+      },
+      "before_agrees": false,
+      "expected": 114,
+      "fixture": "normal-price-112-p10",
+      "kind": "EXACT_VALUE"
+    },
+    {
+      "after": {
+        "value": 106
+      },
+      "agrees": false,
+      "before": {
+        "value": 106
+      },
+      "before_agrees": false,
+      "expected": 114,
+      "fixture": "normal-price-112-p16",
+      "kind": "EXACT_VALUE"
+    },
+    {
+      "after": {
+        "value": "23"
+      },
+      "agrees": false,
+      "before": {
+        "value": "23"
+      },
+      "before_agrees": false,
+      "expected": "ERROR",
+      "fixture": "ledger-underprice-IP-2-24",
+      "kind": "REJECT"
+    },
+    {
+      "after": {
+        "value": 22
+      },
+      "agrees": false,
+      "before": {
+        "value": 22
+      },
+      "before_agrees": false,
+      "expected": "ERROR",
+      "fixture": "ledger-underprice-IP-3-23-explicit-table",
+      "kind": "REJECT"
+    }
+  ],
+  "private_evaluator_full_patch_sha256": "e877bca9123a52ddf15f8c97da7879985f8935133def5a1e251db4a1097897d3"
+}

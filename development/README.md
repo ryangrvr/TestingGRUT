@@ -1,3 +1,30 @@
+# Current review lane — Issue #9
+
+The current branch is `codex/final-precard-clearance`, starting exactly at
+`b89a0e607e71450fce07d5cc55daae8224acad18`. See
+[FINAL PRE-CARD REVIEW PACKET](final_precard/REVIEW_PACKET.md) and its pinned
+`REVIEW_MANIFEST.json`. Status: **READY FOR EXTERNAL CHECK**; same-author evidence,
+not external clearance. P6 is CLOSED by the exact owner-directed clause removal.
+Card 1 remains closed and all 25 bank flags remain unchanged.
+
+```bash
+bash development/final_precard/review.sh /absolute/path/GRUT_FINAL_PRECARD_REVIEW_INPUTS.zip /fresh/output/directory
+python development/checks.py --reconciliation development/final_precard/P6_TRANSITION.json
+python development/reconciliation_review.py --output development/results/fresh-overlay --stamp 2026-10-10 --reconciliation development/final_precard/P6_TRANSITION.json
+```
+
+The first command requires Python 3.12.14 and the separately supplied private
+archive; no private Stage-3 source is committed. The record commands additionally
+use the previously pinned test dependencies. The actual record is 234/7/1; the
+unintegrated review-only repair is 239/2/1 with a clean classifier. Five repair
+failures remain in actual source. The two axes continue to report engineering
+BLOCKED / science REVIEW_REQUIRED. No allowlist expansion follows from readiness.
+
+The material below is the **historical b89a0e6 workbench checkpoint**, retained for
+continuity. Its P6 OPEN status and original transition describe that checkpoint.
+Current invocations use `final_precard/P6_TRANSITION.json`, never refresh the
+original observational manifest, and admit only the exact P6 source/outcome effects.
+
 # GRUT engineering workbench
 
 This branch implements [issue #2](https://github.com/ryangrvr/TestingGRUT/issues/2)
