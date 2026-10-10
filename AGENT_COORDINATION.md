@@ -5857,3 +5857,23 @@ Review status READY FOR EXTERNAL CHECK, same-author only. Canonical implementati
 and re-freeze not approved; no external signer, bank acceptance, candidate or
 Card-1 opening. All 25 bank flags retained. No foundations lane. Full packet at
 development/final_precard/REVIEW_PACKET.md.
+
+
+### 2026-10-10 · Codex Work · development engineering completion
+
+Owner requested “can you finish” after the pinned Issue #9 review delivery.
+Applied the original exact five-file repair on codex/engineering-finish, based
+on c32. The full check exposed live-registry contamination by a hostile pin
+fixture; failed runs were rejected and retained. The unchanged pin checker now
+runs against copied inputs: baseline passes, changed tier fails with target
+named, live registry/pins unchanged. Its ordinary actual-register guard remains.
+
+Applied default: 239 PASS / 2 declared FAIL / 1 SKIP; live classifier exit zero,
+independent audit agrees, no outcome/input delta, no orphan/new pointer case,
+no infrastructure error, all source/state inputs restored after execution.
+65 historical engineering methods at c32 and six applied controls pass. Original
+manifest/lock, declarations, OPEN passes, seals and all 25 bank flags unchanged.
+Pinned c32 private replay remains exact: 2,084 entries, all 183 valid CR-5 cases.
+Engineering PASS; scientific REVIEW_REQUIRED; evaluator READY FOR EXTERNAL CHECK.
+No canonical integration/re-freeze or external approval, candidate, scoring,
+bank acceptance or Card-1 opening. Full record: development/finish/FINISHED.md.

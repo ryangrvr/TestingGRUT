@@ -1,0 +1,64 @@
+diff --git a/provenance/test_doc_register_pins.py b/provenance/test_doc_register_pins.py
+index d69eea9..ee08311 100644
+--- a/provenance/test_doc_register_pins.py
++++ b/provenance/test_doc_register_pins.py
+@@ -29,27 +29,44 @@ class TestDocRegisterPins(unittest.TestCase):
+         import json
+         import shutil
+         import tempfile
+-        claims_p = os.path.join(HERE, "claims.json")
+-        with open(claims_p) as f:
+-            d = json.load(f)
+-        cited = json.load(open(os.path.join(HERE, "doc_register_pins.json")))["nodes"]
+-        target = sorted(cited)[0]
+-        for c in d["claims"]:
+-            if c["id"] == target:
+-                c["tier"] = "shown" if c["tier"] != "shown" else "to-derive"
+-                break
+-        bak = claims_p + ".pintest"
+-        shutil.copy(claims_p, bak)
+-        try:
++        # The hostile probe must not modify the registry used by other tests or
++        # by a concurrently running classifier. Run the unchanged checker on
++        # copied inputs with the same relative layout instead.
++        root = os.path.dirname(HERE)
++        with tempfile.TemporaryDirectory(prefix="grut-pin-probe-") as tmp:
++            probe = os.path.join(tmp, "provenance")
++            os.mkdir(probe)
++            os.mkdir(os.path.join(tmp, "docs"))
++            for name in ("claims.json", "doc_register_pins.json", "doc_register_pins.py"):
++                shutil.copyfile(os.path.join(HERE, name), os.path.join(probe, name))
++            shutil.copyfile(os.path.join(root, "docs", "WHERE_IT_STOPS.src.md"),
++                            os.path.join(tmp, "docs", "WHERE_IT_STOPS.src.md"))
++            import doc_register_pins as P
++            for name in P.ARTIFACTS:
++                path = os.path.join(root, name)
++                if os.path.isfile(path):
++                    shutil.copyfile(path, os.path.join(tmp, name))
++            claims_p = os.path.join(probe, "claims.json")
++            with open(claims_p) as f:
++                d = json.load(f)
++            with open(os.path.join(probe, "doc_register_pins.json")) as f:
++                cited = json.load(f)["nodes"]
++            baseline = subprocess.run(
++                [sys.executable, os.path.join(probe, "doc_register_pins.py")],
++                capture_output=True, text=True)
++            self.assertEqual(baseline.returncode, 0, baseline.stdout + baseline.stderr)
++            target = sorted(cited)[0]
++            for c in d["claims"]:
++                if c["id"] == target:
++                    c["tier"] = "shown" if c["tier"] != "shown" else "to-derive"
++                    break
+             with open(claims_p, "w") as f:
+                 json.dump(d, f, indent=1)
+-            r = subprocess.run([sys.executable, os.path.join(HERE, "doc_register_pins.py")],
++            r = subprocess.run([sys.executable, os.path.join(probe, "doc_register_pins.py")],
+                                capture_output=True, text=True)
+             self.assertEqual(r.returncode, 1,
+                              "a cited node changed tier and the pin check passed -- it is blind")
+             self.assertIn(target, r.stdout)
+-        finally:
+-            shutil.move(bak, claims_p)
+ 
+ 
+ if __name__ == "__main__":

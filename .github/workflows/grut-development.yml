@@ -2,7 +2,7 @@ name: GRUT development checks
 
 on:
   push:
-    branches: ["codex/grut-cr5-build-test", "codex/final-precard-clearance"]
+    branches: ["codex/grut-cr5-build-test", "codex/final-precard-clearance", "codex/engineering-finish"]
   pull_request:
     types: [opened, reopened, synchronize, edited]
   workflow_dispatch:
@@ -23,6 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          # This is the immutable evaluator review snapshot, not approval of
+          # later engineering changes or an external review.
+          ref: c32f672288fcad2a9d08772b8ef2bf46ddee70a2
           persist-credentials: false
           fetch-depth: 0
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
@@ -52,7 +55,14 @@ jobs:
         run: python -m pip install -r development/requirements-test.txt
       - name: Run the development checks
         id: run
-        run: python development/checks.py --reconciliation development/final_precard/P6_TRANSITION.json
+        env:
+          REVIEW_BRANCH: ${{ github.head_ref || github.ref_name }}
+        run: |
+          if [ "$REVIEW_BRANCH" = "codex/engineering-finish" ]; then
+            python development/finish_checks.py
+          else
+            python development/checks.py --reconciliation development/final_precard/P6_TRANSITION.json
+          fi
       - name: Retain logs and machine-readable results
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -82,6 +92,9 @@ jobs:
           PY
 
   repair-overlay:
+    # The finish branch tests the applied repair in engineering-integrity.
+    # The original review branch retains the historical before/after overlay.
+    if: (github.head_ref || github.ref_name) != 'codex/engineering-finish'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:

@@ -27,6 +27,32 @@ original observational manifest, and admit only the exact P6 source/outcome effe
 
 # GRUT engineering workbench
 
+The owner requested completion after the Issue #9 packet. The exact reviewed
+five-file repair is now applied on `codex/engineering-finish`. Run:
+
+```bash
+python development/finish_checks.py
+```
+
+This checks the actual applied tree against the fixed c32 review snapshot and
+the already frozen repair hash. Only five named FAIL→PASS effects are permitted;
+the original observation manifest, declarations, OPEN passes, seals and bank
+inventory remain unchanged. The full current provenance suite and live
+classifier are run. Historical owner/packet tests are executed at their exact
+input snapshot; additional hostile tests cover the applied transition.
+
+The full check reproduced a live-registry mutation by the hostile pin fixture.
+Its additional, separately frozen repair runs the unchanged checker on copied
+inputs. The copied baseline must pass and the changed tier must fail with the
+target named. The ordinary pin guard still checks the actual register. No test
+identity or expected outcome changes under this isolation repair.
+
+The expected result is **engineering PASS**, **scientific REVIEW_REQUIRED**.
+The immutable evaluator/CR-5 packet remains at
+`c32f672288fcad2a9d08772b8ef2bf46ddee70a2`; replay it from that exact checkout.
+Its status is still **READY FOR EXTERNAL CHECK**, not external approval.
+Card 1 is CLOSED. The older sections below are historical engineering records.
+
 This branch implements [issue #2](https://github.com/ryangrvr/TestingGRUT/issues/2)
 and remains the development-only [draft PR #1](https://github.com/ryangrvr/TestingGRUT/pull/1).
 It supplies no scientific approval. Card 1 remains closed.
