@@ -160,7 +160,15 @@ CLOSES WHEN: the owner rules on which vocabulary the resident enforces per scope
 
 ---------------------------------------------------------------------------------------------
 PASS P6-STALE-NETS-IN-STANDING-DOCS
-STATUS: OPEN
+STATUS: CLOSED
+OWNER DISPOSITION: 2026-10-09 America/Chicago, Issue #2 comment 6092788257.
+  https://github.com/ryangrvr/TestingGRUT/issues/2#issuecomment-6092788257
+  CLOSED by owner ruling + landed narrow amendment: remove only the extra
+  retirement/consolidation clause from GRUT_ToE.md. Current +16 / 53 GRUT nodes
+  and 74 total remain; historical values remain explicitly historical.
+  The four-document amendment scope and document-sync guards were checked.
+  No bank disposition, evaluator clearance or Card-1 authorization follows.
+  Closure evidence: development/final_precard/P6_EVIDENCE.json.
 OWNER DIRECTION: 2026-10-09 America/Chicago, Issue #2 comment 6092113130 authorizes
   only synchronization of stale present-tense count/net assertions with emitted
   values and explicit preservation of historical figures. Closure is conditional
@@ -169,9 +177,9 @@ VERIFICATION: original GRUT-RAI commits fb1242fd700248de518bfe85e77c629642ed01a8
   and 9a7150e80357951b97787c85ccf3a4788466eb88 were inspected. The GRUT_ToE.md
   validator-description amendment adds: "the 21 vacuum-cluster nodes were retired
   from the ledger sum in the V2 consolidation". This is a scope/history claim,
-  not just count synchronization; it survives at current line 53. Consequently
-  the conditional closure requirement is NOT certified. P6 remains OPEN even
-  though the stale-net enumerator is empty. No symptomless exemption is added.
+  not just count synchronization; it survived at line 53 of b89a0e6. Consequently
+  the then-conditional closure requirement was NOT certified and P6 remained
+  OPEN at that checkpoint despite the empty enumerator. This record is historical.
   Exact landed diff and evidence: development/owner_reconciliation/.
 OPENED: 2026-08-19
 TITLE: four standing documents assert net +13 as current state

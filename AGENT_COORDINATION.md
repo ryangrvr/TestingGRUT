@@ -5843,3 +5843,17 @@ VOID and zero atoms retained. Review-only precondition supplied; private kit unt
 Independent evaluator review, valid CR-5 integration/re-freeze and review remain
 uncleared. OWNER_READINESS_SYNTHESIS.md distinguishes these actual pre-draft
 requirements from later lock duties and historical bank/pass dispositions.
+
+
+## Issue #9 final pre-Card packet — 2026-10-10 UTC / 2026-10-09 Chicago owner directions
+
+Branch codex/final-precard-clearance from exact b89a0e6. P6 owner clause removal
+verified, P6 CLOSED; historical values retained. Frozen independent Appendix-B
+oracle, partial HB proof controls, historical/full-K NR-4 regression and mandatory
+CR-5 PrevalidatedKit boundary have zero supported-profile mismatches. 183 valid
+CR-5 results preserved, 32 invalid entrypoint checks and 240 weighted comparisons
+pass. Private source is outside this repo; public hashes/tests/results only.
+Review status READY FOR EXTERNAL CHECK, same-author only. Canonical implementation
+and re-freeze not approved; no external signer, bank acceptance, candidate or
+Card-1 opening. All 25 bank flags retained. No foundations lane. Full packet at
+development/final_precard/REVIEW_PACKET.md.

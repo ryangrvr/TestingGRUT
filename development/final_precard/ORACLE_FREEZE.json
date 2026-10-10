@@ -1,0 +1,50 @@
+{
+  "phase": "FROZEN_BEFORE_SUBJECT_COMPARISON",
+  "author_boundary": "SAME_AUTHOR_REVIEW_CODE_NOT_EXTERNAL_CHECK",
+  "charter_blob_sha": "8dd7b05ab1ccec191e1ee8c54fcb41fbfd85c052",
+  "parent_sha": "b89a0e607e71450fce07d5cc55daae8224acad18",
+  "files": {
+    "__init__.py": "fe6f90b36f5c79fca1bb0032c8eca8cdb820b6d71d1c9fdd56a7286ba5a2fd91",
+    "price_oracle.py": "e6dc6804eed439a5b66a2925578bd7ba38a6839b832f8fbff34a622e4562877a",
+    "hb_oracle.py": "0ad52ddfe02e264525fb2bdb9d3a21f3c8038ec9bd93d1dc7df3925cb1afc165",
+    "nr4_oracle.py": "90cc3d267798d5272d026cc2b3a41d9222e2f0ab37fa70fe99f49d619a52b23d",
+    "weight_boundary.py": "8978b07c8eae6c81ca0406091be560346368a555bce65633b85e2cf3867ede3f",
+    "test_oracles.py": "fd2e0595b482b1e2534f737f85b433b31d9394d4612e6880f670692df962746a"
+  },
+  "test_nodes": [
+    "development.final_precard.test_oracles.AblationReference.test_boundary_order_before_all_callbacks",
+    "development.final_precard.test_oracles.AblationReference.test_full_K_mask_and_missing_image",
+    "development.final_precard.test_oracles.AblationReference.test_reference_measure_contract",
+    "development.final_precard.test_oracles.AblationReference.test_unresolved_and_mismatched_inputs",
+    "development.final_precard.test_oracles.AblationReference.test_zero_weight_fiber_and_all_excluded_VOID",
+    "development.final_precard.test_oracles.HostileBathReference.test_domain_and_finite_chart_validation",
+    "development.final_precard.test_oracles.HostileBathReference.test_invertible_affine_exact_zero_certificate",
+    "development.final_precard.test_oracles.HostileBathReference.test_near_zero_is_not_exact_zero",
+    "development.final_precard.test_oracles.HostileBathReference.test_representation_covariance",
+    "development.final_precard.test_oracles.HostileBathReference.test_singular_and_degenerate_covariance_reject",
+    "development.final_precard.test_oracles.HostileBathReference.test_static_tail_exact_witness",
+    "development.final_precard.test_oracles.PriceReference.test_all_operators_have_explicit_valid_payload",
+    "development.final_precard.test_oracles.PriceReference.test_alpha_equivalent_normal_prices",
+    "development.final_precard.test_oracles.PriceReference.test_alphabet_and_reserved_slots",
+    "development.final_precard.test_oracles.PriceReference.test_capture_and_free_variable_preservation",
+    "development.final_precard.test_oracles.PriceReference.test_definition_charge_and_cycles",
+    "development.final_precard.test_oracles.PriceReference.test_elias_exact_power_boundaries",
+    "development.final_precard.test_oracles.PriceReference.test_integer_and_literal_domains",
+    "development.final_precard.test_oracles.PriceReference.test_ledger_and_hooks",
+    "development.final_precard.test_oracles.PriceReference.test_malformed_unsupported_and_empty_ast",
+    "development.final_precard.test_oracles.PriceReference.test_prenex_nnf_semantics",
+    "development.final_precard.test_oracles.PriceReference.test_quantified_term_is_not_silently_hoisted",
+    "development.final_precard.test_oracles.PriceReference.test_repricing_exact_literal_controls",
+    "development.final_precard.test_oracles.PriceReference.test_wrong_argument_counts"
+  ],
+  "controls": "24 PASS",
+  "python": "3.12.14",
+  "scope": "Appendix-B syntax/logic arithmetic and abstract finite HB/NR4 controls, no law or candidate",
+  "explicit_profile_obligations": [
+    "Conditional/process AST arities are fixture contracts; Appendix B gives tokens, not arities.",
+    "Raw syntax pricing is separate from prenex normal-form pricing; shorter own form requires equivalence proof.",
+    "Counts include binder variable tokens in the explicit Polish fixture representation.",
+    "Rational sign bit prices absolute numerator and positive denominator.",
+    "Input/table/selection hooks are arithmetic, not certificates of complete IP gates."
+  ]
+}

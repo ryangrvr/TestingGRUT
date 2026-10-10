@@ -94,7 +94,9 @@ def review(root, output, stamp, reconciliation=None):
         if reconciliation:
             # A local pre-push review can contain the authorized pass/declaration
             # edits not yet in HEAD. Copy only these hash-checked two paths.
-            from owner_transition import PATHS as OWNER_PATHS
+            from owner_transition import PATHS, P6_PATHS, P6_URL
+            transition_data = json.loads(Path(reconciliation).read_text())
+            OWNER_PATHS = P6_PATHS if transition_data['owner_direction_url'] == P6_URL else PATHS
             for p in OWNER_PATHS:
                 (overlay / p).write_bytes((root / p).read_bytes())
         for p, digest in preconditions.items():
@@ -104,8 +106,8 @@ def review(root, output, stamp, reconciliation=None):
         run([sys.executable, "-m", "pytest", "-q", *TARGETS, "--junitxml=" + str(before)],
             overlay / "provenance", output, "target-before", env, expected=1)
         old, _ = read_junit(before)
-        if old != {n: 'FAIL' for n in TARGETS}:
-            raise ValueError("The seven claimed defects were not independently reproduced")
+        if old != {n: manifest['pytest_cases'][n] for n in TARGETS}:
+            raise ValueError("The repair targets differ from the exact owner-reconciled observations")
         path = overlay / PATCH_PATHS[0]
         path.write_text(isolated_fixture_source(path.read_text()))
         count = len(manifest['pytest_cases'])
@@ -132,12 +134,15 @@ def review(root, output, stamp, reconciliation=None):
             raise ValueError("Overlay introduced an unapproved outcome change or missing test")
         # This runs the live classifier and real enumerators, never the synthetic
         # unit fixture. Owner scoping changes only the recorded obligations.
+        from owner_transition import P6
+        classifier_exit = 0 if reconciliation and manifest['open_passes'][P6]['status']=='CLOSED' else 1
         classifier = run([sys.executable, "provenance/expected_red.py"], overlay,
-                         output, "overlay-live-classifier", env, expected=1)
+                         output, "overlay-live-classifier", env, expected=classifier_exit)
         new_cases = re.findall(r"\*\*\* NEW RED \(case\): [^\n]+\n[ \t]+([^\n]+)", classifier)
         orphans = re.findall(r"\*\*\* ORPHANED OPEN PASS '([^']+)'", classifier)
         expected_new = 0 if reconciliation else 4
         expected_orphans = ['P6-STALE-NETS-IN-STANDING-DOCS'] if reconciliation else ['P1A-EDGE-REPRESENTATION', 'P6-STALE-NETS-IN-STANDING-DOCS']
+        if reconciliation and manifest['open_passes'][P6]['status']=='CLOSED': expected_orphans=[]
         if len(new_cases) != expected_new or sorted(orphans) != expected_orphans:
             raise ValueError("Live guard obligations changed in the fixture repair")
         if re.search(r"\*\*\* NEW RED: ", classifier):
@@ -148,7 +153,7 @@ def review(root, output, stamp, reconciliation=None):
             if captured[key] != manifest[key]:
                 raise ValueError('Overlay altered owner/scientific observations: ' + key)
         audit = adjudication_problems(cases, captured)
-        if not classifier_agrees(cases, audit, classifier, 1):
+        if not classifier_agrees(cases, audit, classifier, classifier_exit):
             raise ValueError('Overlay classifier disagrees with independent audit/raw results')
         # Exact protected declaration/pass/seal byte invariance, including unused records.
         invariant_paths = ['provenance/expected_red.py', 'provenance/OPEN_PASSES.txt',
@@ -163,7 +168,8 @@ def review(root, output, stamp, reconciliation=None):
               'protected_inputs': original['protected_inputs'], 'precondition_sha256': preconditions,
               'proposed_wave_stamp': stamp, 'historical_correction_stamp_unchanged': True,
               'before_target_cases': old, 'overlay_counts': dict(Counter(cases.values())),
-              'pytest_counts': counts, 'changed_outcomes': list(TARGETS), 'changed_paths': changed,
+              'pytest_counts': counts, 'review_targets': list(TARGETS),
+              'changed_outcomes': [n for n in TARGETS if old[n] != cases[n]], 'changed_paths': changed,
               'repair_paths': list(PATCH_PATHS),
               'owner_paths_copied_from_review_input': sorted(OWNER_PATHS) if reconciliation else [],
               'classifier_agreement_with_raw_and_independent_audit': True,
