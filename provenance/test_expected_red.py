@@ -12,6 +12,7 @@ and this one certifies the others.
 pytest is stubbed with the true failing set: the battery is testing the classifier, not the suite,
 and running the suite from inside the suite would recurse.
 """
+from copy import deepcopy
 import contextlib
 import io
 import types
@@ -28,6 +29,16 @@ class TestExpectedRed(unittest.TestCase):
     def setUp(self):
         self._subprocess = X.subprocess
         self._passes = X.open_passes
+        self._declared = X.DECLARED
+        # Unit inputs must be valid independently of the live integration state.
+        X.DECLARED = deepcopy(self._declared)
+        for entry in X.DECLARED.values():
+            cases = frozenset(entry['cases'])
+            entry['enumerate'] = lambda cases=cases: set(cases)
+        cited = {pid for entry in X.DECLARED.values() for pid in entry['cases'].values()}
+        fixture_passes = {pid: {'status': 'OPEN', 'symptomless': False} for pid in cited}
+        fixture_passes['P1B-SHOWN-ON-LEDGER-INPUTS'] = {'status': 'OPEN', 'symptomless': True}
+        X.open_passes = lambda: deepcopy(fixture_passes)
         failing = "\n".join("FAILED " + t for t in X.DECLARED)
         X.subprocess = types.SimpleNamespace(
             run=lambda *a, **k: types.SimpleNamespace(returncode=1, stdout=failing))
@@ -35,6 +46,7 @@ class TestExpectedRed(unittest.TestCase):
     def tearDown(self):
         X.subprocess = self._subprocess
         X.open_passes = self._passes
+        X.DECLARED = self._declared
 
     def _run(self):
         buf = io.StringIO()
@@ -52,7 +64,7 @@ class TestExpectedRed(unittest.TestCase):
         would otherwise print green while citing a ruling that already happened. Staleness cannot
         catch it -- stale fires only when a test starts PASSING."""
         base = X.open_passes()
-        X.open_passes = lambda: {**base, "P1A-EDGE-REPRESENTATION": {"status": "CLOSED", "symptomless": False}}
+        X.open_passes = lambda: {**base, "P4-TERMINATION-KAPPA-RESULT": {"status": "CLOSED", "symptomless": False}}
         rc, out = self._run()
         self.assertEqual(rc, 1)
         self.assertIn("NON-OPEN PASS", out)
@@ -124,7 +136,7 @@ class TestExpectedRed(unittest.TestCase):
         """MOOT is not a ruling. A declaration resting on a dissolved question must be removed,
         not carried."""
         base = X.open_passes()
-        X.open_passes = lambda: {**base, "P1A-EDGE-REPRESENTATION":
+        X.open_passes = lambda: {**base, "P4-TERMINATION-KAPPA-RESULT":
                                  {"status": "MOOT", "symptomless": False}}
         rc, out = self._run()
         self.assertEqual(rc, 1)

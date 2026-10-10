@@ -2,11 +2,11 @@
 
 *A negative-results report on a program that modelled the gravitational vacuum as a medium with memory, priced every assumption it took, and pushed until it stopped.*
 
-D. Ryan Grover · 2026-08-18
+D. Ryan Grover · 2026-10-10
 
 > **Correction record, 2026-08-14.** Part I's first draft failed its mandatory hostile pre-screen (DO-NOT-SHIP): I.1 overstated two priority claims and contained a physics error in its gauge fence. The section was left standing under a do-not-cite banner rather than pulled, then corrected: I.1 is now one third its drafted length and claims nothing beyond the literature it cites; the register nodes that carried the same over-scoped clause were corrected **first**, with the source read (arXiv:2507.03103) that the register itself had flagged as owed. The full trail — draft, verdict, correction — is in the repository history.
 >
-> **Published in parts.** Complete as of 2026-08-18: the front matter, the note on the
+> **Published in parts.** Complete as of 2026-10-10: the front matter, the note on the
 > prior deposit, **Part 0**, **Part I** (corrected; see the record above), **Part II**,
 > **Part III**, **Part IV**, **Part V**, **Part VI**,
 > **Part VII** — except **VII.3**, which is left unwritten for its author — the appendices, and
@@ -637,40 +637,143 @@ Generated at build time by listing the calculation directory's Python files; the
 | `calc/C1_GROUND_TRUTH_MODE.py` | no (support or superseded) |
 | `calc/C1_PRIMITIVE_VALIDATION.py` | no (support or superseded) |
 | `calc/L0_redundancy.py` | yes |
+| `calc/a6_common_mode.py` | no (support or superseded) |
 | `calc/anomaly_c0_map.py` | yes |
 | `calc/arrow_origin.py` | yes |
+| `calc/c1_seam.py` | no (support or superseded) |
+| `calc/c1a2_packaging.py` | no (support or superseded) |
+| `calc/ca1_carrier.py` | no (support or superseded) |
+| `calc/cc1_ccons.py` | no (support or superseded) |
 | `calc/class_c_solver.py` | no (support or superseded) |
 | `calc/class_c_stage_c1.py` | no (support or superseded) |
+| `calc/clock_mismatch_check.py` | no (support or superseded) |
+| `calc/common.py` | no (support or superseded) |
 | `calc/conformalon_joint.py` | yes |
 | `calc/conformalon_q2_band.py` | no (support or superseded) |
+| `calc/cp1_coupling.py` | no (support or superseded) |
 | `calc/delta4_stability.py` | yes |
+| `calc/discriminator_d1.py` | no (support or superseded) |
+| `calc/end_site_general.py` | no (support or superseded) |
 | `calc/energy_basis_decoherence.py` | yes |
+| `calc/eq1_equivalence.py` | no (support or superseded) |
 | `calc/experiment_p_hostile_replication.py` | no (support or superseded) |
 | `calc/experiment_p_hostile_replication_v2.py` | no (support or superseded) |
 | `calc/experiment_p_identifiability.py` | no (support or superseded) |
 | `calc/finite_T_exponent.py` | yes |
 | `calc/finite_T_pole_structure.py` | yes |
+| `calc/fs1_free.py` | no (support or superseded) |
+| `calc/g1_geometry.py` | no (support or superseded) |
+| `calc/g2_spectral.py` | no (support or superseded) |
+| `calc/gr1_gravity.py` | no (support or superseded) |
+| `calc/gr2_l6_finite_size.py` | no (support or superseded) |
+| `calc/gr2a_coupling.py` | no (support or superseded) |
+| `calc/gr2b_probe.py` | no (support or superseded) |
+| `calc/gr2c_reach.py` | no (support or superseded) |
+| `calc/gr2d2_qcone.py` | no (support or superseded) |
+| `calc/gr2d_cone.py` | no (support or superseded) |
+| `calc/gs1_geometry.py` | no (support or superseded) |
 | `calc/gw_dissipation_bounds.py` | yes |
 | `calc/gw_tensor_friction.py` | yes |
 | `calc/isw_exclusion.py` | yes |
 | `calc/isw_tt_auto.py` | yes |
+| `calc/kernel_nonstationarity.py` | no (support or superseded) |
+| `calc/kernel_transport_rule.py` | no (support or superseded) |
 | `calc/kk_static_transfer.py` | yes |
+| `calc/l01a_gap_passivity.py` | no (support or superseded) |
+| `calc/l01b_locality.py` | no (support or superseded) |
+| `calc/l01c_linearity.py` | no (support or superseded) |
+| `calc/l01d_cycle_affinity.py` | no (support or superseded) |
+| `calc/l01e_appendix.py` | no (support or superseded) |
+| `calc/l01e_lyapunov_timing_nonmember.py` | no (support or superseded) |
+| `calc/l01g_d1_latetime_nonmember.py` | no (support or superseded) |
+| `calc/l01g_verifier_num_nonmember.py` | no (support or superseded) |
+| `calc/l01g_verifier_toy_nonmember.py` | no (support or superseded) |
+| `calc/l01h_appendix.py` | no (support or superseded) |
+| `calc/l01h_j6_check_nonmember.py` | no (support or superseded) |
+| `calc/l01h_verifier_toy1_nonmember.py` | no (support or superseded) |
+| `calc/l01h_verifier_toy2_nonmember.py` | no (support or superseded) |
+| `calc/l01h_verifier_toy3_nonmember.py` | no (support or superseded) |
+| `calc/l01h_verifier_toy4_nonmember.py` | no (support or superseded) |
+| `calc/l01h_verifier_toy5_nonmember.py` | no (support or superseded) |
+| `calc/make_publication_pdf.py` | no (support or superseded) |
 | `calc/mu_linear.py` | yes |
 | `calc/mu_slip_interior.py` | yes |
 | `calc/mz_inheritance.py` | yes |
 | `calc/noise_transversality_check.py` | yes |
 | `calc/operator_basis.py` | yes |
+| `calc/p2_influence_cone.py` | no (support or superseded) |
+| `calc/p3_nc_lift.py` | no (support or superseded) |
+| `calc/p4_hierarchy.py` | no (support or superseded) |
+| `calc/p5_access.py` | no (support or superseded) |
+| `calc/p6_seed_selection.py` | no (support or superseded) |
+| `calc/partition_selection_p1.py` | no (support or superseded) |
 | `calc/q1_energy_basis_magnitude.py` | yes |
 | `calc/q2_audit.py` | no (support or superseded) |
 | `calc/q2_controls.py` | no (support or superseded) |
 | `calc/q2_estimator_validity.py` | no (support or superseded) |
 | `calc/q2_run.py` | no (support or superseded) |
 | `calc/q2_stochastic_sy.py` | no (support or superseded) |
+| `calc/rs1_retained.py` | no (support or superseded) |
 | `calc/rung3_spectral_structure.py` | yes |
+| `calc/s1_L1_L3_generic.py` | no (support or superseded) |
+| `calc/s1_koopman_vs_mehler.py` | no (support or superseded) |
+| `calc/s1_linear_observability.py` | no (support or superseded) |
+| `calc/s2_L7_examples.py` | no (support or superseded) |
+| `calc/s2_noise_origin.py` | no (support or superseded) |
+| `calc/s2_nonlinear_rank.py` | no (support or superseded) |
+| `calc/s2_spectra_wick.py` | no (support or superseded) |
+| `calc/s3_L7_random_sector.py` | no (support or superseded) |
+| `calc/s3_car_locality.py` | no (support or superseded) |
+| `calc/s3_lifts.py` | no (support or superseded) |
+| `calc/s41_sel4.py` | no (support or superseded) |
+| `calc/s4_L7_config_sectors.py` | no (support or superseded) |
+| `calc/s4_kvn_cotangent.py` | no (support or superseded) |
+| `calc/s5_L7_correlated_sector.py` | no (support or superseded) |
+| `calc/s5_conservative_origin.py` | no (support or superseded) |
+| `calc/s6_1_certify.py` | no (support or superseded) |
+| `calc/s6_L7_nofrozen.py` | no (support or superseded) |
+| `calc/s7_L7_rank6.py` | no (support or superseded) |
+| `calc/s8_L4_inclusion.py` | no (support or superseded) |
+| `calc/s9_L5.py` | no (support or superseded) |
+| `calc/sector_selection_s1.py` | no (support or superseded) |
+| `calc/sf1_formation.py` | no (support or superseded) |
 | `calc/sigma0_anomaly_screen.py` | yes |
 | `calc/static_patch_tt_response.py` | yes |
+| `calc/sx1_length.py` | no (support or superseded) |
+| `calc/t3_01_ir_coefficient.py` | no (support or superseded) |
+| `calc/t3_01_preserve_buggy_result.py` | no (support or superseded) |
+| `calc/t3_02_quotient_remainder.py` | no (support or superseded) |
+| `calc/t3_03_kernel_ratio.py` | no (support or superseded) |
+| `calc/t3_04_deep_ir.py` | no (support or superseded) |
+| `calc/t3_05_h4_sector.py` | no (support or superseded) |
+| `calc/t3_05a_ub_attribution.py` | no (support or superseded) |
+| `calc/t3_05b_m4_repair.py` | no (support or superseded) |
+| `calc/t3_05b_residual_check.py` | no (support or superseded) |
+| `calc/t3_05c_additivity_probe.py` | no (support or superseded) |
+| `calc/t3_05c_synthetic_linearity.py` | no (support or superseded) |
+| `calc/t3_05d_additivity_bisect.py` | no (support or superseded) |
+| `calc/t3_05e_trace_c0c2.py` | no (support or superseded) |
+| `calc/t3_05f_kernel_provenance.py` | no (support or superseded) |
+| `calc/t3_05g_provenance_close.py` | no (support or superseded) |
+| `calc/t3_05g_record_completion.py` | no (support or superseded) |
+| `calc/t3_05h_frame_test.py` | no (support or superseded) |
+| `calc/t3_05j_additivity_probe_v2.py` | no (support or superseded) |
+| `calc/t3_05j_ub_survival.py` | no (support or superseded) |
+| `calc/t3_05k2_namespace_reconciliation.py` | no (support or superseded) |
+| `calc/t3_05k_partition_reconciliation.py` | no (support or superseded) |
+| `calc/t3_05l_p_branch_absorptive.py` | no (support or superseded) |
+| `calc/t3_06a_structure_adjudication.py` | no (support or superseded) |
+| `calc/t3_06b_keystone_status.py` | no (support or superseded) |
+| `calc/t3_07_h6_extraction_adjudication.py` | no (support or superseded) |
+| `calc/t3_07_h_exactness_refutation.py` | no (support or superseded) |
+| `calc/t3_07b_slot_certificate.py` | no (support or superseded) |
+| `calc/t3_08a_two_time_structure.py` | no (support or superseded) |
+| `calc/t3_09_representation_closure.py` | no (support or superseded) |
+| `calc/t3_09b_transform_verification.py` | no (support or superseded) |
+| `calc/tt1_channel.py` | no (support or superseded) |
 | `calc/tt_worldline_spectrum.py` | no (support or superseded) |
 | `calc/two_scale_desitter.py` | yes |
+| `calc/u1_universality.py` | no (support or superseded) |
 | `calc/u5u6_deformability.py` | yes |
 | `calc/vacuum_scheme_compare.py` | yes |
 | `calc/verify_experiment_p.py` | no (support or superseded) |
@@ -678,6 +781,7 @@ Generated at build time by listing the calculation directory's Python files; the
 | `calc/wz_dark_energy.py` | yes |
 | `calc/wz_sign.py` | yes |
 | `calc/x_no_pin.py` | yes |
+| `calc/xi_stochastic_closure.py` | no (support or superseded) |
 | `calc/zeta_interior.py` | yes |
 
 ## Appendix F — Errata to this document's own sources

@@ -24,12 +24,12 @@ OUT = os.path.join(ROOT, "PUBLIC_NUMBERS.md")
 
 # The date is an ARGUMENT, never `today` -- a block that silently re-dates itself on every run
 # cannot be diffed, and "generated on a stated date" is the property the rule needs.
-STAMP_DATE = "2026-08-12"
+STAMP_DATE = "2026-10-10"
 # Date split (2026-08-17 pre-screen ruling): the correction record is a frozen historical
 # stamp; the byline and completeness line are living wave stamps. One shared token let the
 # banner mis-date the Part-I correction.
 CORRECTION_DATE = "2026-08-14"   # the Part-I correction arc (register-first, then prose)
-WAVE_DATE = "2026-08-18"         # bumped at the close of every wave
+WAVE_DATE = "2026-10-10"         # bumped at the close of every wave
 
 # The collected-test count is a STAMPED CONSTANT, not a live collection.
 # WHY (found by the guard on its first run): the emitter originally shelled out to pytest to count
@@ -37,7 +37,7 @@ WAVE_DATE = "2026-08-18"         # bumped at the close of every wave
 # this block changed the number the block asserts. A number-emitter that recurses through its own
 # verifier is not a stable reference. The constant is enforced against a real collection by
 # test_public_numbers.py::test_the_stamped_test_count_is_true, so it cannot silently rot.
-STAMPED_TEST_COUNT = 240
+STAMPED_TEST_COUNT = 242
 
 
 def _load():
