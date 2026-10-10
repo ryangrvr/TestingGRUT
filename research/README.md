@@ -10,6 +10,7 @@
 | [Interaction-Origin 01](interaction_origin01/REPORT.md) | Complete vacuum/one-particle dynamics leave higher-order interacting completions free; spectroscopy distinguishes them | Bounded author-level audit; pending review; no GRUT selector or Card 2 |
 | [Constructive decision](constructive_decision/DECISION.md) | Select Approach B: independently calibrated conventional force model forecasts coherence and mode energy without holdout fitting | Design frozen by owner direction; author software controls complete; actual calibration absent; no new GRUT law or Card 2 |
 | [Approach-B experimental handoff](approach_b_experiment/HANDOFF.md) | Identify a demonstrated single-ion platform; add joint energy sampling and contrast-power contracts without changing the design packet | Design handoff frozen; actual calibration/energy certificate absent: BLOCKED; no experiment or Card 2 |
+| [Published interaction-principle assessment](interaction_principles_assessment/REPORT.md) | Established Ward/Jacobi selection and a conditional axion/gravity positivity argument; exact moment controls isolate the higher-contribution assumption | Published conditional mechanism identified; physical uniformity and universal origin not established; author controls pending review; no GRUT law or Card 2 |
 
 The [Approach-B freeze](APPROACH_B_FREEZE.md) records the owner's design-stage stop,
 the apparatus-evidence condition for resuming experimental work, and the card
