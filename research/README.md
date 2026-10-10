@@ -5,6 +5,7 @@
 | [Card 1](card01/REPORT.md) | Exact conditional rate relation; the proposed generated identity/interface chain fails | Author KILL; one frozen slot consumed; pending independent review |
 | [Reconnaissance 01](recon01/REPORT.md) | Published coupling/noise discriminator reproduced; SI benchmark and memory scope audited | Known-model comparison retained; no new GRUT candidate or experimental lock |
 | [Reconnaissance 02](recon02/REPORT.md) | Exact conventional joint image for system visibility and a fixed accessible record; matched-response and correlation-encoding controls | Operational baseline target established; no GRUT selector; Card 2 held |
+| [Reconnaissance 03](recon03/REPORT.md) | Bounded-local-control audit: exact block-record capacity, even-chain N/2 compression threshold, singleton/decoder/reset boundaries | Conditional standard quantum result; no generated identity/interface or GRUT law; Card 2 held |
 
 The recon02 [operation-closure supplement](recon02/OPERATION_CLOSURE.md) proves
 that a family admitting specified memory-only controls and their resource costs
