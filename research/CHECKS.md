@@ -20,6 +20,10 @@ check. Remote content verification is not external scientific approval.
 
 | `edb3a86c823a4f88b845b95a2e6d215657116afa` | Record the owner's explicit one-attempt Card-2 authorization and the unresolved per-card external-kit precondition; no law draft, candidate evaluation or frozen slot | Metadata-only record. Live canonical STATE/CHECKS, PR #10 and Issue #9 preserve pending external review. Remote document/intake blob IDs and fetched tree matched local index/worktree. Existing packet manifests and Card-1 ledger are unchanged; one frozen slot consumed, two remain |
 
-The separate [Card-1 register](card01/CHECKS.md) preserves that attempt's pending
-checks. One frozen slot consumed, two remain. Neither register changes canonical
-status or confers evaluator/CR-5 external clearance.
+| `b871073fc2c7e02097dd82657480c6a667a012c4` | One correlation-gradient Card 2 frozen under the owner's limited section 18.1 development waiver before numerical evaluation; second slot consumed; all six source hashes pinned | Pending independent review. Remote freeze commit, tree, index and worktree verified before the first numerical audit. The waiver does not confer kit clearance; no Card 3 is authorized |
+| `71ab66a012a2b5a9ab19ea6114684121378797af` | Exact local-marginal Noether obstruction and invariant product-block cuts defeat record/interaction generation; non-affine mixture witness; conventional writing/exchange countermodels; true conditional phase relation insufficient; AUTHOR KILL, formal first terminal S0 CARD-INCOMPLETE | Pending independent scientific review. 111 exact rational controls, 66 local-marginal cells and one numerical local-drive comparison pass; two finite phase trajectories agree within 1.83e-11. These document failure, not a passing charter score. All 78 prior manifested files and the six frozen Card-2 sources are unchanged. Remote report/code/results/manifest/law/Card-1-ledger blob IDs match local files; fetched commit/tree/index/worktree verified. PRs 10 and 12 still have no submitted reviews |
+
+The separate [Card-1 register](card01/CHECKS.md) and
+[Card-2 register](card02/CHECKS.md) preserve their pending checks. Two frozen
+slots consumed; one remains; Card 3 is unopened. These registers change no
+canonical status and confer no evaluator/CR-5 external clearance.
