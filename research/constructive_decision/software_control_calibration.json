@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "invented-software-control-calibration",
+  "purpose": "SOFTWARE_CONTROL_ONLY",
+  "state_model": "CENTERED_PRODUCT_ISOTROPIC_GAUSSIAN",
+  "initial_system_environment_product": true,
+  "claimed_simultaneous_calibration_failure_probability": 0.0,
+  "evidence": [],
+  "modes": [
+    {
+      "id": "mode_1",
+      "physical_frequency_rad_s": 7000000.0,
+      "physical_frequency_abs_error_rad_s": 0.0,
+      "detuning_rad_s": 2.0,
+      "detuning_abs_error_rad_s": 0.0,
+      "occupation": 0.3,
+      "occupation_abs_error": 0.0,
+      "drives": [
+        {
+          "id": "force_1",
+          "real_rad_s": 0.2,
+          "imag_rad_s": 0.0,
+          "absolute_error_rad_s": 0.0
+        }
+      ]
+    }
+  ],
+  "readout": {
+    "bright_given_plus_x": 0.99,
+    "plus_abs_error": 0.0,
+    "bright_given_minus_x": 0.02,
+    "minus_abs_error": 0.0,
+    "absolute_probability_model_error": 0.0
+  }
+}

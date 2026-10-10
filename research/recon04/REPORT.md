@@ -1,0 +1,376 @@
+# One interaction generates response and records; local access remains controllable
+
+10 October 2026. Bounded conventional reconnaissance authorized by the owner,
+on the existing development branch. **No Card 2 formulation or GRUT law.**
+Author-produced proofs and synthetic controls, pending independent review.
+The owner accepted Recon03's author-level completion; that is not independent
+scientific clearance. Its frozen packet is not changed by this supplement.
+
+## Results
+
+1. The proposed imperfect-record extension is valid for arbitrary correlated,
+   mixed conditional environment states:
+   D_final([i-d,i+d]) >= D_initial(i), with chain-boundary truncation and an
+   admitted transported measurement. Independence and perfect copies are
+   unnecessary. The fixed disjoint-block packing consequence follows.
+2. A single specified central-spin Hamiltonian gives exact pointer conservation,
+   coherence, conditional records and memory energy from the same inputs.
+   Before environmental encoding it forces a directly measurable relation
+   D_i^2 = 2r_i*DeltaE_i/h_i - (DeltaE_i/h_i)^2. Its physical reason is
+   preservation of each conditional memory's Bloch length under local unitary
+   evolution. It is ordinary quantum mechanics, not a new GRUT restriction.
+3. Under the same admitted post-interaction control ceiling, one energy-
+   conserving phase pulse can continuously erase both local records while
+   preserving the complete system channel, each local memory energy, their
+   total bare energy, initial preparations and global conditional distinguishability.
+   Thus neither shared writing dynamics nor measured memory energy makes
+   local allocation unique on this explicit conventional slice.
+
+These are finite analytical statements, not a claim that every possible
+record-generating principle is impossible. The pulse repertoire, coupling
+inventory, preparation and access definitions are the load-bearing boundary.
+
+## 1. Imperfect and mixed records: exact extension
+
+Let E be an N-site qubit chain, rho_0^E and rho_1^E any density matrices,
+and U a **common** depth-d circuit of disjoint nearest-neighbour gates.
+No independence, purity, replica preparation or particular S channel is
+assumed for this lemma. For site i, let Delta_i=rho_i|0-rho_i|1 and choose
+A_i=sign(Delta_i), with value zero on its kernel. This Hermitian contraction
+defines a Helstrom binary POVM (I +/- A_i)/2 and
+
+\[
+ {1\over2}\operatorname{Tr}(A_i\Delta_i)
+ ={1\over2}\|\Delta_i\|_1=D_i^{\rm initial}.
+\]
+
+Extend A_i by identity on other sites, and put A_i'=U A_i U^dagger.
+The circuit support induction places A_i' inside the truncated block
+B_i=[i-d,i+d]. For both conditional states separately,
+
+\[
+ \operatorname{Tr}[U\rho_b^EU^\dagger A_i']
+ =\operatorname{Tr}[\rho_b^E A_i].
+\]
+
+Thus the transported POVM has *exactly* the initial probabilities. Its
+success is (1+D_i_initial)/2, and optimizing measurements on B_i gives
+
+\[
+ \boxed{D_{B_i}^{\rm final}\ge D_i^{\rm initial}.}
+\]
+
+As in Recon03, retain only gates intersecting the evolving support to form
+the cone circuit C_i. Then A_i'=C_i A_i C_i^dagger, with C_i supported in
+B_i and depth at most d. An inverse-cone circuit followed by the initial
+one-site Helstrom measurement implements the decoder. Calibrated knowledge
+of U, an available inverse and that single-site measurement are supplied
+capabilities; preservation of a fixed raw detector is not asserted.
+
+For L=2d+1 and the predeclared disjoint blocks [jL,(j+1)L-1], their centers
+are i_j=jL+d. If every such selected initial site has D_i_j>=1-2delta,
+for 0<=delta<1/2, then
+
+\[
+ R_\delta^{\rm pack}\ge\lfloor N/(2d+1)\rfloor.
+\]
+
+If only some centers qualify, their count is the guaranteed lower bound.
+When no complete block fits, this statement gives zero, not a new guaranteed
+perfect global record. Global distinguishability can itself be imperfect
+or zero. It is still preserved by U, but the perfect-copy concentration
+threshold of Recon03 is not extended to arbitrary mixed pairs by this lemma.
+
+**Analytical grade:** proved conditional standard quantum statement. Numerical
+site/POVM controls include correlated mixed preparations as well as product
+and uninformative cases. They are diagnostics, not the proof or external review.
+
+## 2. Complete finite interaction model and premises
+
+Let S be a qubit and E a finite set of labelled memory qubits. With Pauli
+matrices X=[[0,1],[1,0]], Y=[[0,-i],[i,0]], Z=diag(1,-1), write
+
+\[
+ H={\Omega\over2}Z_S+\sum_i(h_iZ_i+g_iZ_SX_i),\qquad
+ h_i>0,\quad g_i\ge0.
+\]
+
+Omega,h_i,g_i are energies; time evolution is exp(-iHt/hbar), t>=0.
+The domain is a finite tensor-product Hilbert space, so the Hermitian
+Hamiltonian has a unique unitary evolution for every parameter value.
+There is no thermostat, fitted noise kernel, added observer or infinite
+volume limit. The labels, Hilbert spaces, clock and hbar are **POSTULATED**
+standard inputs, not structures generated by GRUT.
+
+At t=0 supply a factorized preparation rho_S tensor product_i rho_i,
+with arbitrary rho_S and rho_i=(I-r_i Z_i)/2, 0<=r_i<=1. When described
+thermally, r_i=tanh(beta_i h_i), including pure-state limits. beta_i is an
+independently supplied inverse temperature. The preparation is thermal
+for each *bare* h_i Z_i, not for the interacting total H. Factorization
+and the initially available memory polarization are load-bearing. They
+are not derived low-entropy boundary conditions.
+
+The main matched comparison uses two memories F,R on the fixed graph with
+edges S-F, S-R and F-R. This supplied triangle differs from the separate
+mixed-record chain. The accessible fragment is always F; R and FR are
+separate disclosed diagnostic access classes. Arbitrary thermal baths,
+relativistic fields or fundamental gravitational dynamics are not included.
+
+The unitary writing stage conserves the full H exactly. Bare-memory energy
+can change through the interaction energy. These energy changes are not
+automatically heat or dissipative work. KMS/FDT and Onsager restrictions on
+equilibrium linear response are not assumed for this initially factorized,
+finite, driven protocol. Quantum positivity and conservation during the
+autonomous stage are checked. Norm bounds and quench work are included below.
+
+## 3. What follows from the common Hamiltonian
+
+**Pointer algebra, DERIVED from a supplied coupling.** If at least one g_i
+is nonzero, the system-only commutant of H_int=Z_S tensor sum_i g_iX_i is
+span{I_S,Z_S}. Indeed [A_S tensor I,H_int]=[A_S,Z_S] tensor sum_i g_iX_i;
+the latter environment operator is nonzero. A qubit A_S therefore commutes
+with H_int iff its X and Y coefficients vanish. Total H also commutes
+with Z_S, so its two populations are conserved.
+
+This singles out the Z basis relative to the supplied H. It does not derive
+the S/environment split, explain why this interaction axis is realized or
+select an observer. When all g_i=0 the interaction commutant is the entire
+system algebra and no environmental record is written. A transverse system
+term Omega*X_S/2 would destroy the exact total-Z conservation; its absence
+is a supplied inventory condition, not a universal principle.
+
+**Exact conditional propagators.** For s=+1,-1, put R_i=sqrt(h_i^2+g_i^2),
+alpha_i=R_i*t/hbar, c_i=cos(alpha_i), k_i=sin(alpha_i)/R_i. Then
+
+\[
+ U_{s,i}=c_iI-ik_i(h_iZ_i+s g_iX_i),\qquad
+ U_s^E=\bigotimes_iU_{s,i}.
+\]
+
+They are generated by the same H. The initial memory state is rotated
+conditionally, not copied by an independently supplied CNOT writing rule.
+With W_i=U_-i^dagger U_+i, multiplication of the Pauli matrices gives
+
+\[
+ W_i=q_i I-2ic_ik_i g_iX_i+2ik_i^2h_i g_iY_i,\qquad
+ q_i=1-{2g_i^2\over h_i^2+g_i^2}\sin^2\alpha_i.
+\]
+
+Since rho_i has no X or Y expectation, Tr(rho_i W_i)=q_i, independently
+of r_i. The exact system channel preserves populations and multiplies
+rho_S[0,1] by
+
+\[
+ Q(t)=e^{-i\Omega t/\hbar}\prod_iq_i(t),\qquad V=|Q|.
+\]
+
+All matrix units are fixed by this expression, including extension to an
+untouched reference. There is no separately attached response law.
+For equal prior pointer alternatives, conditional memory states are
+rho_i|s=U_s,i rho_i U_s,i^dagger, with
+
+\[
+ \boxed{D_i=r_i\sqrt{1-q_i^2}},\qquad
+ \boxed{\Delta E_i=h_i r_i(1-q_i)}.
+\]
+
+The second is the same for both alternatives and for their mixture. The
+first follows because each conditional Bloch vector has length r_i,
+their equal Z component is -r_i q_i, and their transverse components have
+opposite signs. The latter's length is r_i*sqrt(1-q_i^2).
+
+Eliminating q_i gives the forced, independently measurable relation
+
+\[
+ \boxed{D_i^2=2r_i{\Delta E_i\over h_i}
+                    -\left({\Delta E_i\over h_i}\right)^2.}
+\]
+
+D_i is measured by conditional state discrimination; DeltaE_i by memory
+energy readout; h_i and r_i by independent calibration/preparation. Thus
+this is not substitution of D's definition into an invented equation.
+Its reason is conditional single-memory unitarity plus the specified
+symmetry and preparation. It is a standard Bloch-sphere restriction, not
+a GRUT consequence beyond standard physics. Residual Omega,g_i,t,h_i,r_i
+remain supplied even though this conditional relation holds across them.
+
+**Degeneracy and recurrence.** r_i=0 permits decoherence but no record in
+that memory: its conditional states are both I/2. g_i=0 yields q_i=1,
+D_i=DeltaE_i=0. At h_i=g_i=h, q_i=cos^2(sqrt(2)h*t/hbar). Records written
+at alpha=pi/2 disappear at the revival alpha=pi. No irreversible attractor,
+permanent memory or unique outcome is derived in this finite model.
+
+For two identical h=g memories, V=cos^4(alpha). On nonzero-V intervals,
+the conventional dephasing generator gamma(Z rho Z-rho) has
+gamma=-(1/2)*d(log V)/dt=2sqrt(2)h*tan(alpha)/hbar. It becomes negative
+after the zero and before revival, although every full reduced channel is
+CPTP. At V=0 the time-local inverse is singular. Recon01's positive-rate
+criterion cannot be applied through these intervals as if it covered
+all finite retained-memory dynamics.
+
+**Hostile preparation boundary.** At h=g=1, t*=pi/(2sqrt(2)) in hbar=1
+units, W_i=iY_i. Initially I/4 and |Phi+><Phi+| on FR have identical local
+I/2 marginals. The product preparation gives Q_env=0; the Bell preparation
+gives Tr[|Phi+><Phi+| (iY tensor iY)]=1. Local temperatures alone do not
+certify the product channel formula. The entangled preparation is outside
+the declared independent-memory resource class, explicitly so labelled.
+
+## 4. Matched energy-conserving control destroys the promoted relation
+
+After the same writing time, turn off both g_i couplings by the same quench.
+Then evolve the memories for the same duration tau under their bare drift
+and an admitted neighbouring F-R phase control
+
+\[
+ H_C(\phi)={\hbar\phi\over\tau}P_{11},\quad
+ P_{11}=|11\rangle\langle11|,quad0\le\phi\le\pi.
+\]
+
+The gate is G_phi=diag(1,1,1,exp(-i phi)). It commutes with Z_F and Z_R
+separately, not merely H_F+H_R. Bare drift commutes with it too and changes
+neither D nor energy. The same F access, preparation, dimensions, geometry,
+duration and one-pulse norm ceiling are retained. Identity is phi=0 under
+that same ceiling; we do not require identical microscopic pulse waveforms.
+
+For product conditional memories just after the writing stage, the gate
+multiplies F's off-diagonal element by
+p_0|R + exp(i phi)*p_1|R. R's probabilities are the same in both branches,
+with Z expectation -r_R q_R. Hence, exactly,
+
+\[
+ D_F^{\rm out}=D_F^{\rm write}
+ \sqrt{1-(1-r_R^2q_R^2)\sin^2(\phi/2)},
+\]
+
+and the analogous formula exchanges F and R. Every local energy is
+unchanged. The reduced S channel is also exactly unchanged because
+Tr[G_phi U_+ rho_E U_-^dagger G_phi^dagger]=Tr[U_+ rho_E U_-^dagger].
+Global FR distinguishability is invariant under the common unitary.
+
+The same measured writing energy thus gives
+
+\[
+ (D_F^{\rm out})^2
+ -\left[2r_F{\Delta E_F\over h_F}
+              -({\Delta E_F\over h_F})^2\right]
+ =-(D_F^{\rm write})^2(1-r_R^2q_R^2)\sin^2(\phi/2).
+\]
+
+It is strictly negative on the stated nondegenerate parameter set. The
+pre-encoding equality fails under ordinary admissible control; promoting
+it to a controller-independent law would therefore be incorrect.
+
+**Exact slice with all physical inputs matched.** Choose h_F=h_R=g_F=g_R=1,
+r_F=r_R=r, t*=pi/(2sqrt(2)), hbar=1. Then q_F=q_R=0 and
+
+\[
+ V=0,\quad \Delta E_F=\Delta E_R=r,\qquad
+ D_F^{\rm out}=D_R^{\rm out}=r|\cos(\phi/2)|.
+\]
+
+As phi runs from 0 to pi, both accessible single-memory records span the
+whole interval [0,r] while the **same writing H, complete S channel,
+each memory energy, initial r, memory size and global conditional record**
+remain fixed. For r=0.8 the two local records go from 0.8 to 0, while
+global D_FR remains 0.8; for r=1 it remains 1. Information is moved into
+correlations. There are no discarded degrees of freedom or added ancillas.
+Before the phase gate the conditional product-state difference is, up to
+a common local basis and an overall sign, (r/2)*(X tensor I + I tensor X).
+Its eigenvalues are r,0,0,-r, proving D_FR=r exactly; common-unitary
+invariance then proves it for every phi.
+
+**Cost and conservation accounting.** The coupled writing stage conserves
+the full H. At this slice its interaction expectation at the end is -2r;
+turning g off therefore costs common quench work W_off=2r. This is identical
+before every phase comparison. With numerical tau=1 the pulse norm is
+phi<=pi. For both writing and post-control stages a common total norm
+ceiling of 8 (energy units) is sufficient, including Omega=0.3 and bare
+drift. Bare local energies commute with H_C and remain constant throughout
+the pulse, not only at its endpoint. Ideal work on switching H_C on is
+Tr(H_C rho_E); switching it off gives its negative because H_C commutes
+with the evolution. Ideal net switching work is zero. Maximum control
+norm and transient switching-work capacity are supplied resources.
+No zero practical controller cost, free reset, native synthesis certificate,
+or emergent control mechanism is claimed.
+
+The known pulse parameter phi remains **observable-active freedom**. The
+writing relation becomes predictive only after independently fixing which
+post-controls are permitted or applied. Its survival cannot be inferred
+from an energy measurement alone. This is an obstruction on this specified
+slice, not a theorem that all response/record restrictions are impossible.
+
+## 5. Reproduction, measurement and hostile comparison
+
+Run `bash research/recon04/reproduce.sh` from repository root in the pinned
+environment in requirements.txt. [TABLES.md](TABLES.md) is generated from
+[results.json](results.json); it records all counts and discrepancies.
+No numerical agreement is labelled new physics or independent verification.
+
+Mixed-state preparations are reproduced from disclosed recipes, RNG seed
+and loop order; their complex128 input hashes are recorded. Local Hamiltonian
+matrices, gates, all site bounds, cone probability checks, selected blocks,
+packing counts, and scalar interaction/control results are machine-readable.
+The local-formula checks use matrix exponentiation independently of the
+analytical expressions; complete eight-dimensional H checks verify channel
+matrix units and total energy. General phase controls cover all disclosed
+two-memory profiles, in addition to the exact matched slice. The floating
+tolerance is 1e-10, not an interval or laboratory certificate. Proofs carry
+the entire-family claims. Content hashes are in [MANIFEST.json](MANIFEST.json).
+
+A concrete experiment would prepare the same two memories with calibrated
+r=0.8, calibrate h_i and g_i, evolve for t*, make the same coupling-off
+quench, then compare phi=0 and phi=pi under the same duration/norm ceiling.
+Conditional tomography/discrimination should give local D=0.8 and 0;
+local energy measurements should give the same DeltaE=0.8 in both cases.
+Full process tomography should find the same dephasing S channel, while
+FR discrimination retains D=0.8. These are predictions of the specified
+standard model. Deviations beyond independent preparation, timing, control,
+leakage and readout error certificates would falsify that combined model/
+calibration package, not establish GRUT. No available platform lock or
+required shot count has been independently certified here.
+
+## 6. What emerges, what remains supplied, and verdict
+
+| Structure | Result and premise boundary |
+|---|---|
+| S and memory identities; spatial access | Supplied tensor factors, graph and F readout; no persistent partition generated |
+| Pointer algebra and population persistence | Computed from the supplied single-axis H; no explanation for the axis/inventory itself |
+| Conditional memory records | Generated by exp(-iHt/hbar) from supplied polarizations; no independently inserted copying circuit |
+| Response and finite-memory noise | Computed from the same H/preparation; not a separately attached kernel, and not always positive-rate Markovian |
+| Local energy/record equality before encoding | Forced conditional Bloch-sphere relation, standard physics |
+| Accessibility after encoding | Depends on the admitted, measured phi and chosen fragment; energy conservation does not fix it |
+| Mixed-record persistence under shallow control | Proved for arbitrary correlated states with available calibrated decoding |
+| Born outcomes, low entropy origin, stable observers | Not derived or postulated as unexplained closing variables |
+
+**Novelty audit.** Conditional Hamiltonian dynamics and the commutant pointer
+criterion are established quantum mechanics. Mixed environments suppressing
+records while supporting decoherence are explicitly treated by Zwolak,
+Quan and Zurek; their papers use their own supplied decohering Hamiltonians
+and initial states. Our additional bare-memory drift and energy-accounting
+control are solved explicitly here, not attributed as identical formulas
+to those papers. Energy-record geometry uses qubit unitary spectrum
+preservation. The phase countermodel is ordinary diagonal quantum control.
+No dynamical-systems attractor, predictive-state theorem, causal inference,
+information identity or statistical-mechanical condition supplies a new
+selection principle by changing notation. Model forward prediction is not
+generation of the physical inventory or a universal joint selector.
+
+Recon01 prevents overclaiming a positive-rate gravity/noise threshold in
+this recurring model. Recon02's response/record freedom survives even when
+local memory energy is also held fixed on the displayed slice. Recon03 and
+its mixed extension preserve decodable block capacity, consistent with the
+two-memory phase gate putting records into correlations. None is contradicted.
+
+All assumptions capable of selecting the displayed relation are exposed.
+No Appendix-B/L0 compression or information-price credit is claimed for
+this conventional control. That accounting would remain separate and
+mandatory for a future owner-authorized candidate.
+
+**VERDICT: retained as conditional standard-physics results with an explicit
+matched hostile comparator; NO NEW GRUT SELECTOR ESTABLISHED.** The physical
+reason for the pre-encoding equality is identified, and the independent
+post-control premise it needs is demonstrated rather than hidden. This
+bounded reconnaissance is complete, pending independent review. No new
+foundations prerequisite follows from it. Card 1 stays consumed and killed;
+two remain; Card 2 unopened. No canonical merge, bank change, experiment
+certification or evaluator/CR-5 clearance is conferred.

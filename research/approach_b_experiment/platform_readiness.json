@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "BLOCKED_INDEPENDENT_APPARATUS_CALIBRATION_AND_ENERGY_CERTIFICATE_ABSENT",
+  "platform": "Documented ETH single-40Ca+ axial-mode implementation; reference apparatus only",
+  "apparatus_access_established": false,
+  "complete_calibration_and_holdout_bundle_retrieved": false,
+  "prospective_forecast_for_actual_platform_generated": false,
+  "experimental_validation_performed": false,
+  "independent_grut_review": "PENDING",
+  "card_2_opened": false,
+  "cards_remaining": 2,
+  "published_summaries_only": [
+    {
+      "quantity": "physical_mode_frequency_hz",
+      "reported_approximate_value": 1900000,
+      "fresh_run_specific_interval": null,
+      "source": "P1 main p.2"
+    },
+    {
+      "quantity": "displacement_rate_parameter_c_inverse_s",
+      "reported_typical_value": 36000,
+      "reported_uncertainty": 400,
+      "uncertainty_coverage_interpretation_established": false,
+      "normalization_to_our_branch_force_verified_from_raw_data": false,
+      "source": "P1 supplemental calibration routines"
+    },
+    {
+      "quantity": "motional_frequency_calibration_accuracy_hz",
+      "reported_approximate_value": 20,
+      "recalibration_duration_s": 20,
+      "recalibration_interval_s": 300,
+      "fresh_whole_domain_error_certificate": null,
+      "source": "P1 supplemental calibration routines"
+    }
+  ],
+  "missing_required_inputs": [
+    "Run-specific complex force data and drift/normalization certificate",
+    "Actual physical frequencies, detunings and clock/waveform bounds",
+    "Occupation and centered isotropic product-Gaussian state validation",
+    "Heating, other-mode and effective-approximation discrepancy bounds",
+    "Independent spin detection probabilities and phase certificate",
+    "Bounded energy estimator and response calibration",
+    "Unresolved energy tail mean and energy model discrepancy certificate",
+    "Frozen trial retention and independent shot sampling design",
+    "Fresh held-out spin and energy outcomes"
+  ],
+  "search_boundary": "Open arXiv v1 paper/supplement, publisher record and targeted article-ID/title data searches; no claim of exhaustive data nonexistence."
+}
