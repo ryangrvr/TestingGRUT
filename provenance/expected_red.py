@@ -93,6 +93,19 @@ DECLARED = {
             ":: an arXiv id": "P2-TERMINATION-EVENTLOG",
             "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
             ":: an arXiv id": "P2-TERMINATION-EVENTLOG",
+            # Owner direction, Issue #2 comment 6092113130 (2026-10-09 Chicago):
+            # current mutable-target numerics belong to OPEN P2, not acceptance
+            # or proof of a historical pre-seal leak. V3 was an unsealed draft.
+            "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
+            ":: a sigma value": "P2-TERMINATION-EVENTLOG",
+            "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
+            ":: a sigma value stated as a quantity rather than as a bound":
+                "P2-TERMINATION-EVENTLOG",
+            "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
+            ":: a sigma value": "P2-TERMINATION-EVENTLOG",
+            "PREREG_TERMINATION_V4_2026-08-10.txt -> RESULT_TERMINATION_events.txt "
+            ":: a sigma value stated as a quantity rather than as a bound":
+                "P2-TERMINATION-EVENTLOG",
             "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt "
             ":: a sigma value": "P4-TERMINATION-KAPPA-RESULT",
             "PREREG_TERMINATION_V3_2026-08-10.txt -> RESULT_KAPPA_2026-08-08.txt "

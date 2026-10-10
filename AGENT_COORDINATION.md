@@ -5814,3 +5814,32 @@ Prepared a development-only five-file repair patch in a disposable checkout: all
 Development regressions: 34 PASS. Strict contradictory/duplicate classifier verdict checks added. Exact numerical dependencies checked/reported for separate expensive profiles. The initial missing-SymPy full-mutation failure is retained; after environment repair all 14 controls and 55 mutants execute successfully (9 profile tests PASS). Slow profile 233 PASS / 9 FAIL: all 15 cited falsifiers exit zero; no skip, no unapproved delta. Default 232 PASS / 9 FAIL / 1 SKIP, zero deltas/errors, actual classifier agreement true; engineering BLOCKED, science REVIEW_REQUIRED.
 
 Separate CR-5 harness verifies all 20 bundle payload hashes first, constructs its oracle/control checkpoint before supplied-code comparison, and matches 183 arithmetic comparisons. Signed weights [-1,2] yield fraction 2 in supplied appearance routine: invalid-input contract review required, not a failure of valid certified arithmetic. No private kit source is committed. These checks are same-author builder evidence, not external approval. No new foundations lane, candidate, scoring, pricing, card or IP-12 draft. Reports and exact patches: development/CYCLE_02_REPORT.md and development/review_cycle_02/.
+
+### 2026-10-10 UTC (2026-10-09 Chicago) · Codex Work · owner reconciliation / readiness
+
+Implemented Issue #2 owner comment 6092113130 on the development branch only:
+exactly four existing V3/V4 event-log numeric cases assigned to still-OPEN P2;
+P1A CLOSED by the R5 semantic ruling, not by discharge or MOOT. Rechecked the
+original 2c522b2 checkpoint (V4 manifested, V3 retired/unsealed, later sigma line
+absent). P4 remains separate. Original observational manifest/lock unchanged;
+explicit hash-locked owner transition supports only these two protected paths.
+
+P6 closure NOT recorded: original fb1242f/9a7150e four-document amendment diff
+adds a retirement/consolidation scope claim in GRUT_ToE.md:53 beyond numerical
+synchronization or a historical cue. Exact diff retained, P6 remains OPEN as the
+owner expressly ordered for an excess diff. No symptomless exemption invented.
+
+Default: 232 PASS / 9 FAIL / 1 SKIP, zero unapproved deltas/errors, actual classifier
+agreement true. Review-only seven-repair patch: 239 PASS / 2 FAIL / 1 SKIP; exact
+patch unchanged from cycle 2; no undeclared pointer cases, P6 only classifier
+obligation. 38 development tests PASS. No repair integration, scientific banking,
+canonical edit, new foundations lane, candidate, price/scoring operation, card or
+IP-12 draft. All 25 bank flags retained and grouped by owner disposition needed.
+
+CR-5: all 20 payload hashes verified before imports, 183 valid arithmetic agreements
+retained. Nine owner-contract hostile fixtures show invalid signed/zero reference
+weights accepted or nonfinite weights rejected too late; positive-measure all-masked
+VOID and zero atoms retained. Review-only precondition supplied; private kit untouched.
+Independent evaluator review, valid CR-5 integration/re-freeze and review remain
+uncleared. OWNER_READINESS_SYNTHESIS.md distinguishes these actual pre-draft
+requirements from later lock duties and historical bank/pass dispositions.

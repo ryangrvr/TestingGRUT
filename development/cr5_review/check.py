@@ -176,6 +176,8 @@ def run(bundle, output):
             D = load(tmp / 'decoupling_reference.py', 'decoupling_reference')
             A = load(tmp / 'nr4_ablation.py', 'review_supplied_nr4')
             rows, issues = compare(D, A)
+            from .weight_contract import audit
+            weight_contract = audit(A)
         finally:
             if previous is None:
                 sys.modules.pop('decoupling_reference', None)
@@ -188,6 +190,7 @@ def run(bundle, output):
               'hashes_verified_before_import': True, 'payload_members_verified': len(manifest),
               'comparison_count': len(rows), 'discrepancies': discrepancies,
               'input_contract_findings': issues, 'comparisons': rows,
+              'owner_weight_contract': weight_contract,
               'valid_input_arithmetic': 'PASS' if not discrepancies else 'FAIL',
               'broader_evaluator': 'NOT_IN_THIS_BUNDLE_NOT_REVIEWED',
               'certificate_theorems_and_physical_locks': 'NOT_CERTIFIED_BY_SOFTWARE_FIXTURES',

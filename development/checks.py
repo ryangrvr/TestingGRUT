@@ -130,6 +130,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "development/results")
     parser.add_argument("--profile", choices=("default", "full-mutation", "slow-falsifiers"), default="default")
+    parser.add_argument("--reconciliation", type=Path,
+                        help="Explicit locked owner transition; original manifest is never refreshed")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     outdir = Path(tempfile.mkdtemp(prefix=args.profile + "-", dir=args.output.resolve()))
@@ -144,6 +146,9 @@ def main():
         manifest = locked_manifest(manifest_path)
         if manifest["source_commit"] != PINNED_SOURCE:
             raise ValueError("Manifest source differs from issue #2's frozen source")
+        if args.reconciliation:
+            from owner_transition import reconciled_manifest
+            manifest = reconciled_manifest(manifest, args.reconciliation, ROOT)
         if args.profile != 'default':
             numerical_packages = numerical_environment(ROOT / 'development/requirements-numerical.txt')
         checks.append(syntax_check(outdir))
@@ -195,6 +200,7 @@ def main():
     axes = choose_axes(errors, deltas, problems, agreement, state, cases, args.profile)
     result = {"schema_version": 2, "repository": "ryangrvr/TestingGRUT", **identity,
               "utc": datetime.now(timezone.utc).isoformat(), "profile": args.profile,
+              "owner_reconciliation": str(args.reconciliation) if args.reconciliation else None,
               "baseline_source": manifest["source_commit"] if manifest else None,
               "numerical_packages": numerical_packages,
               "checks": checks, "provenance_tests": counts, "axes": axes,

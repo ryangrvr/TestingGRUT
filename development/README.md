@@ -7,7 +7,7 @@ It supplies no scientific approval. Card 1 remains closed.
 ```bash
 python3 -m venv development/venv
 development/venv/bin/python -m pip install -r development/requirements-test.txt
-development/venv/bin/python development/checks.py
+development/venv/bin/python development/checks.py --reconciliation development/owner_reconciliation/transition.json
 ```
 
 The frozen observation was independently reproduced in a pristine worktree at
@@ -40,11 +40,20 @@ The two report axes and GitHub checks are distinct:
 | Engineering integrity FAIL | Infrastructure error, classifier disagreement, or an unapproved observation/input/version delta |
 | Scientific status REVIEW_REQUIRED | Bank flags, open passes or provenance failures remain; engineering success does not resolve them |
 
-The present blocker is explicit: nine observed failing tests versus two declared
-tests, four additional live pointer-leak cases, and uncited nonsymptomless OPEN
-passes P1A and P6. Keeping these unchanged does not authorize engineering green.
-The 25 bank flags (24 flagged changes plus one deletion) retain their original
-review state. No accepted baseline, seal, ruling or adjudication is rewritten.
+After the Issue #2 owner direction, P2 owns the four current event-log numeric
+cases (classification while OPEN, not acceptance), and P1A is CLOSED by semantic
+ruling. P6 remains OPEN: original document diffs contain an extra consolidation/
+retirement clause, so its conditional closure requirement is not certified.
+The actual default retains seven unrepaired machinery failures; the review-only
+overlay repairs those seven and leaves P6 as its only classifier obligation.
+The 25 bank flags (24 flagged changes plus one deletion) remain unaccepted.
+See [OWNER_READINESS_SYNTHESIS.md](OWNER_READINESS_SYNTHESIS.md).
+
+The original manifest/lock remain historical and unchanged. The explicit locked
+`owner_reconciliation/transition.json` records only the authorized P2/P1A changes
+and the exact two protected source paths; it cannot refresh test outcomes, bank
+flags or any other adjudication. Omitting `--reconciliation` still compares with
+the original snapshot and correctly rejects the now-authorized source delta.
 
 Every invocation uses a new results directory. Requested JUnit files are removed
 before a subprocess runs; missing/empty/malformed reports, duplicate node IDs,
@@ -56,8 +65,8 @@ Outputs live under `development/results/` and remain ignored by Git.
 Separate expensive guard profiles are available:
 
 ```bash
-development/venv/bin/python development/checks.py --profile full-mutation
-development/venv/bin/python development/checks.py --profile slow-falsifiers
+development/venv/bin/python development/checks.py --profile full-mutation --reconciliation development/owner_reconciliation/transition.json
+development/venv/bin/python development/checks.py --profile slow-falsifiers --reconciliation development/owner_reconciliation/transition.json
 ```
 
 The first enables `GRUT_FULL_MUTATION=1` and runs `test_mutation_battery.py`.
@@ -89,7 +98,7 @@ See [CYCLE_02_REPORT.md](CYCLE_02_REPORT.md) for the concrete five-file patch, e
 
 ```bash
 python -m pip install -r development/requirements-numerical.txt
-python development/reconciliation_review.py --output development/results/review-overlay --stamp 2026-10-10
+python development/reconciliation_review.py --output development/results/review-overlay --stamp 2026-10-10 --reconciliation development/owner_reconciliation/transition.json
 python -m development.cr5_review.check --bundle /absolute/path/GRUT_G2_14R_CR5_REVIEW_BUNDLE.zip --output development/results/cr5-review
 ```
 

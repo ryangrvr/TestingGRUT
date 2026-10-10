@@ -14,7 +14,8 @@ import subprocess
 import sys
 import tempfile
 
-from integrity import locked_manifest, profiles_env, read_junit, source_identity
+from integrity import (adjudication_problems, classifier_agrees, locked_manifest,
+                       profiles_env, read_junit, source_identity)
 
 TARGETS = (
     "test_expected_red.py::TestExpectedRed::test_a_declaration_citing_a_closed_pass_is_refused",
@@ -67,11 +68,14 @@ def run(argv, cwd, output, name, env, expected=0, timeout=900):
     return result.stdout
 
 
-def review(root, output, stamp):
+def review(root, output, stamp, reconciliation=None):
     root, output = root.resolve(), output.resolve()
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp):
         raise ValueError("Explicit fixed review stamp required")
     manifest = locked_manifest(root / "development/expected_red_manifest.json")
+    if reconciliation:
+        from owner_transition import reconciled_manifest
+        manifest = reconciled_manifest(manifest, reconciliation, root)
     original = source_identity(root)
     if original['protected_inputs'] != manifest['protected_inputs'] or original['untracked_protected_paths']:
         raise ValueError("Protected source differs from frozen review input")
@@ -87,6 +91,12 @@ def review(root, output, stamp):
         overlay = Path(tmp) / "checkout"
         run(["git", "clone", "--quiet", "--shared", "--no-hardlinks", str(root), str(overlay)],
             root, output, "clone", env)
+        if reconciliation:
+            # A local pre-push review can contain the authorized pass/declaration
+            # edits not yet in HEAD. Copy only these hash-checked two paths.
+            from owner_transition import PATHS as OWNER_PATHS
+            for p in OWNER_PATHS:
+                (overlay / p).write_bytes((root / p).read_bytes())
         for p, digest in preconditions.items():
             if hashlib.sha256((overlay / p).read_bytes()).hexdigest() != digest:
                 raise ValueError("Clone differs from frozen protected input")
@@ -109,7 +119,9 @@ def review(root, output, stamp):
         patch = run(["git", "diff", "--", *PATCH_PATHS], overlay, output, "proposal-diff", env)
         (output / "review-only.patch").write_text(patch)
         changed = run(["git", "diff", "--name-only"], overlay, output, "changed-paths", env).splitlines()
-        if sorted(changed) != sorted(PATCH_PATHS):
+        extra = set(changed) - set(PATCH_PATHS)
+        allowed_extra = OWNER_PATHS if reconciliation else set()
+        if not set(PATCH_PATHS) <= set(changed) or not extra <= allowed_extra:
             raise ValueError("Repair touched an unexpected protected input")
         full = output / "overlay.xml"
         run([sys.executable, "-m", "pytest", "-q", "--junitxml=" + str(full)],
@@ -118,16 +130,26 @@ def review(root, output, stamp):
         expected = {**manifest['pytest_cases'], **{n: 'PASS' for n in TARGETS}}
         if cases != expected:
             raise ValueError("Overlay introduced an unapproved outcome change or missing test")
-        # This runs the unmodified live classifier and its real enumerators, not
-        # the synthetic unit fixture. It must still reject all four cases/two passes.
+        # This runs the live classifier and real enumerators, never the synthetic
+        # unit fixture. Owner scoping changes only the recorded obligations.
         classifier = run([sys.executable, "provenance/expected_red.py"], overlay,
                          output, "overlay-live-classifier", env, expected=1)
         new_cases = re.findall(r"\*\*\* NEW RED \(case\): [^\n]+\n[ \t]+([^\n]+)", classifier)
         orphans = re.findall(r"\*\*\* ORPHANED OPEN PASS '([^']+)'", classifier)
-        if len(new_cases) != 4 or sorted(orphans) != ['P1A-EDGE-REPRESENTATION', 'P6-STALE-NETS-IN-STANDING-DOCS']:
+        expected_new = 0 if reconciliation else 4
+        expected_orphans = ['P6-STALE-NETS-IN-STANDING-DOCS'] if reconciliation else ['P1A-EDGE-REPRESENTATION', 'P6-STALE-NETS-IN-STANDING-DOCS']
+        if len(new_cases) != expected_new or sorted(orphans) != expected_orphans:
             raise ValueError("Live guard obligations changed in the fixture repair")
         if re.search(r"\*\*\* NEW RED: ", classifier):
             raise ValueError("An undeclared failing test remains in the proposed overlay")
+        captured = json.loads(run([sys.executable, 'development/capture_state.py', '--root', str(overlay)],
+                                  overlay, output, 'overlay-state', env))
+        for key in ('declarations', 'open_passes', 'bank_inventory'):
+            if captured[key] != manifest[key]:
+                raise ValueError('Overlay altered owner/scientific observations: ' + key)
+        audit = adjudication_problems(cases, captured)
+        if not classifier_agrees(cases, audit, classifier, 1):
+            raise ValueError('Overlay classifier disagrees with independent audit/raw results')
         # Exact protected declaration/pass/seal byte invariance, including unused records.
         invariant_paths = ['provenance/expected_red.py', 'provenance/OPEN_PASSES.txt',
                            *subprocess.check_output(['git', 'ls-files', 'provenance/prereg/'], cwd=root, text=True).splitlines()]
@@ -137,12 +159,17 @@ def review(root, output, stamp):
     if source_identity(root)['protected_inputs'] != original['protected_inputs']:
         raise ValueError("Original protected inputs changed during review")
     result = {'scope': 'REVIEW_ONLY_NOT_APPLIED', 'source_commit': original['source_commit'],
+              'owner_reconciliation': str(reconciliation) if reconciliation else None,
               'protected_inputs': original['protected_inputs'], 'precondition_sha256': preconditions,
               'proposed_wave_stamp': stamp, 'historical_correction_stamp_unchanged': True,
               'before_target_cases': old, 'overlay_counts': dict(Counter(cases.values())),
               'pytest_counts': counts, 'changed_outcomes': list(TARGETS), 'changed_paths': changed,
+              'repair_paths': list(PATCH_PATHS),
+              'owner_paths_copied_from_review_input': sorted(OWNER_PATHS) if reconciliation else [],
+              'classifier_agreement_with_raw_and_independent_audit': True,
+              'overlay_adjudication_problems': audit,
               'remaining_new_pointer_cases': sorted(new_cases), 'remaining_orphan_passes': sorted(orphans),
-              'allowlist_passes_and_all_seals_byte_identical': True,
+              'allowlist_passes_and_all_seals_byte_identical_to_review_input': True,
               'patch_sha256': hashlib.sha256(patch.encode()).hexdigest(),
               'engineering_clearance': False, 'scientific_approval': False,
               'external_review': 'NOT_PERFORMED_BY_THIS_RUN', 'card_1_authorized': False}
@@ -156,5 +183,6 @@ if __name__ == '__main__':
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--stamp', required=True)
+    parser.add_argument('--reconciliation', type=Path)
     args = parser.parse_args()
-    review(args.root, args.output, args.stamp)
+    review(args.root, args.output, args.stamp, args.reconciliation)

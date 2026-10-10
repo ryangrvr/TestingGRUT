@@ -4,9 +4,18 @@ import tempfile
 import unittest
 from cr5_review import oracle as O
 from cr5_review.check import unique_json, verified_bytes
+from cr5_review.weight_contract import validated_weights
 
 
 class CR5ReviewTests(unittest.TestCase):
+    def test_owner_weight_contract_rejects_nonfinite_signed_and_zero_measures(self):
+        for weights in ([-1, 2], [2, -1], [-1, 1], [0, 0], [], [1, float('nan')],
+                        [1, float('inf')], [1, float('-inf')], [1, 'NaN']):
+            with self.subTest(weights=weights), self.assertRaises(ValueError):
+                validated_weights(weights)
+        self.assertEqual(validated_weights([0, 2]), (O.F(0), O.F(2)))
+        self.assertEqual(validated_weights(['1/3', '2/3']), (O.F(1, 3), O.F(2, 3)))
+
     def test_reference_errors_add_probe_annulus_and_tail_without_fitting(self):
         result = O.reference({'x': (3, '1/16')}, {'x': O.F(1, 8) + O.F(1, 4)})
         self.assertEqual(result, {'x': (O.F(3), O.F(7, 16))})
