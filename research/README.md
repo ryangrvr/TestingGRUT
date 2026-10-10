@@ -6,6 +6,11 @@
 | [Reconnaissance 01](recon01/REPORT.md) | Published coupling/noise discriminator reproduced; SI benchmark and memory scope audited | Known-model comparison retained; no new GRUT candidate or experimental lock |
 | [Reconnaissance 02](recon02/REPORT.md) | Exact conventional joint image for system visibility and a fixed accessible record; matched-response and correlation-encoding controls | Operational baseline target established; no GRUT selector; Card 2 held |
 
+The recon02 [operation-closure supplement](recon02/OPERATION_CLOSURE.md) proves
+that a family admitting specified memory-only controls and their resource costs
+cannot narrow local-record allocation at a surviving visibility. Its closure
+and spare-control assumptions are explicit; it is not an unconditional no-go.
+
 Two card slots remain. No later card is formulated or evaluated in the
 reconnaissance. The canonical state, evaluator/CR-5 external review and bank
 flags are not changed by these development packets. Source papers, reproducible
