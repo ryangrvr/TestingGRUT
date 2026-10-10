@@ -1,5 +1,11 @@
 # Authorized development research
 
+The latest [Card-2 authorization record](CARD02_AUTHORIZATION.md) explicitly
+authorizes one new attempt but preserves the charter's external-kit precondition.
+Current intake status is **AUTHORIZED — BLOCKED BEFORE DRAFT**. No candidate has
+been formulated; two slots remain. Earlier card-hold statements below describe
+their historical packets, not a rejection of the new authorization.
+
 | Packet | Result | Scientific status |
 |---|---|---|
 | [Card 1](card01/REPORT.md) | Exact conditional rate relation; the proposed generated identity/interface chain fails | Author KILL; one frozen slot consumed; pending independent review |
