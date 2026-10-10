@@ -4,6 +4,7 @@
 |---|---|---|
 | [Card 1](card01/REPORT.md) | Exact conditional rate relation; the proposed generated identity/interface chain fails | Author KILL; one frozen slot consumed; pending independent review |
 | [Reconnaissance 01](recon01/REPORT.md) | Published coupling/noise discriminator reproduced; SI benchmark and memory scope audited | Known-model comparison retained; no new GRUT candidate or experimental lock |
+| [Reconnaissance 02](recon02/REPORT.md) | Exact conventional joint image for system visibility and a fixed accessible record; matched-response and correlation-encoding controls | Operational baseline target established; no GRUT selector; Card 2 held |
 
 Two card slots remain. No later card is formulated or evaluated in the
 reconnaissance. The canonical state, evaluator/CR-5 external review and bank
