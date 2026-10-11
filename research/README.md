@@ -13,6 +13,19 @@ scalar-loop obstruction. [Exact results](constructive_physics/attempt01/results.
 reproduce the algebra. A fundamental GRUT law and independent clearance remain
 unestablished. Closure of prior routes does not suspend this mission.
 
+**Current owner assessment:** retain CP-01 as a conditional construction and
+an unsuccessful fundamental construction. Its frozen action, derivations,
+countermodel and quantum obstruction are unchanged. Weak-coupling loop
+suppression can support a leading approximation under specified matching
+conditions; it does not fix independently allowed finite interaction terms.
+
+**CP-02 is proposed, not authorized.** The proposed scope is a quantum-stable
+physical mechanism constraining otherwise allowed interaction coefficients.
+No replacement potential, generating law or candidate evaluation may begin
+without separate explicit owner authorization. This preserves GRUT's active
+mission without opening Card 3 or creating an unlimited candidate queue.
+The [current state](REORIENTATION_STATE.json) records this boundary.
+
 The following decisions and scientific packets are preserved as history.
 
 **Current owner direction: Stage 3 inactive; no canonical T-3 final count or
