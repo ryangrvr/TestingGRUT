@@ -49,10 +49,13 @@ autocorrelation time — the pointwise correlator diverges as t⁻⁸ and has no
 spatially extended or homogeneous modes the response integrates the light cone to the horizon and acquires the
 record's power-law tails (48/πΔ⁵ …); those are not a medium "with memory" either.
 
-**Priority (R9).** The position-space conformal-field noise kernel in dS/conformally-flat backgrounds is in
-Pérez-Nadal–Roura–Verdaguer (2009) and Cho–Hu (2014); the worldline form is an immediate corollary; the proper-time
-Fourier polynomial above is a corollary too and is recorded here as a *placement*, not as new physics
-(equation-level comparison: `08`). "Memory lives in the noise kernel" is Hu–Verdaguer stochastic gravity.
+**Priority (R9; checked at equation level in `08`).** The position-space conformal-field noise kernel in
+conformally flat backgrounds is **Cho–Hu (2014)**, eqs. (29)+(30) — their (C₁₁)_M at Δs = 0 is exactly 1/(4π⁴Δη⁸), the
+constant found independently in `v1` — with the conformal rule Ñ = Ω⁻²NΩ⁻² due to Eftekharzadeh–Bates–Roura–Anderson–Hu
+(2012) and the dissipation-kernel rule and FDR preservation in Satin–Cho–Hu (2016). (Pérez-Nadal–Roura–Verdaguer 2009
+treat the minimally coupled field only.) The worldline sinh⁻⁸ form is a two-line corollary and is not new; the
+proper-time spectrum G⁺_T(ω), the odd-polynomial dissipative part and the 4H rate are not printed in those papers and
+are recorded as corollaries/placements. "Memory lives in the noise kernel" is Hu–Verdaguer stochastic gravity.
 
 ## D3 — Einstein's equation as the medium's equation of state (IMPORTED: Jacobson 1995; reproduced in `v2`)
 

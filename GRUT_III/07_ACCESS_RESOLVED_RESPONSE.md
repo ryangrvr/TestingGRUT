@@ -63,6 +63,21 @@ The record's "graviton channel has no stationary reduced object" is therefore: *
 stationary; only the zero-mode position random-walks, with a derived diffusion constant (Starobinsky's stochastic
 inflation). "Infinite memory" is the random walk; "finite memory" is thermal.
 
+
+**T6 (realizability: every causal passive kernel is an integrated-out field, at the two-point level; IMPORTED).**
+Let χ be a causal linear response kernel whose spectral function ρ(ω) satisfies ω ρ(ω) ≥ 0 (passivity/stability).
+Then (i) classically there is a bath of harmonic oscillators, linearly coupled, with spectral density proportional to
+ρ, whose elimination reproduces χ exactly (Ford–Kac–Mazur 1965; Caldeira–Leggett 1983; Mori–Zwanzig; the record's
+P-17 is the converse: reduced data identify the forcing law, not the bath); (ii) in relativistic QFT a covariant
+two-point function with positive spectral measure dσ(s) is that of a *generalized free field*, a superposition of free
+fields of mass √s (Källén–Lehmann), so the kernel is literally "an integrated-out field". Scope: two-point/Gaussian
+level only; it says nothing about higher cumulants or back-reaction; and the realizing field content is **not unique**
+(many local Lagrangians give the same σ — P-17's non-identifiability). Consequence for constructions: eliminating one
+specified local field (the constructive branch's CP-05, with its massive retarded kernel and J₁ tail inside the light
+cone) exhibits *a* realization of a passive kernel; the kernel cannot *select* that field. "Every causal stable kernel
+is an integrated-out field" is therefore proved in this sense and false in the stronger sense (it does not single out a
+sector) — which is the distinction the CP-05 review drew.
+
 ## 3. The memory dictionary (replaces every earlier use of the word)
 
 | object | what is computed | result | source |
@@ -80,6 +95,12 @@ preparation, the conventional ρ_f^conv and N_f^conv, the proposed ρ_f^X (or st
 *mechanism* that produces it. A residual with no mechanism is what SCOUT_0 called "supplied". A mechanism that is
 an additional field or operator in P0's content is conventional physics with a price, not GRUT. A mechanism that is
 *forced* by P0–P5 and excluded in the conventional comparison would be a GRUT result. **None exists at present.**
+
+Two further requirements, learned from the constructive branch's CP-05 review: (i) **no refitting** — a residual test
+must connect *separately measured* quantities (e.g. a static range, a force strength, and a propagating response)
+without re-fitting a parameter between them; a relation such as μ² = m²(1 − 3η) is not an independent test while m is
+unmeasured; (ii) **the price of a mechanism is displayed** — if the mechanism is an added light field coupled to T_μν,
+the existing fifth-force bounds apply (`03`, F1 note) and must be quoted with their confidence levels.
 
 ## 5. Applied to the record (v8 §C)
 

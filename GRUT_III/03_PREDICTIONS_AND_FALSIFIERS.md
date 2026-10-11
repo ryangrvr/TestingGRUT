@@ -16,12 +16,26 @@ These are shared with ΛCDM / GR + QFT. They refute the minimal framework; they 
 
 | # | Statement | Source | Refuted by | Status |
 |---|---|---|---|---|
-| F1 | w ≡ −1: Λ is an integration constant of the equation of state and does not evolve | D3 | Model-independent ≥5σ evolving dark energy. This would refute ΛCDM equally and would force an additional light field into P0's content (allowed, priced). | DESI DR2 (2025) prefers w₀w_aCDM over ΛCDM at roughly 2.8–4.2σ depending on the supernova compilation (checked against the paper in `08`); no DR3 release exists. **The live risk.** |
+| F1 | w ≡ −1: Λ is an integration constant of the equation of state and does not evolve | D3 | Model-independent ≥5σ evolving dark energy. This would refute ΛCDM equally and would force an additional light field into P0's content (allowed, priced). | DESI DR2 (arXiv:2503.14738, Table VI): preference for w₀w_aCDM over ΛCDM at 3.1σ (DESI+CMB) and 2.8σ / 3.8σ / 4.2σ with Pantheon+ / Union3 / DESY5 supernovae (Δχ²_MAP with two extra d.o.f.; the paper states no combination exceeds 4.2σ); best fits e.g. w₀ = −0.752 ± 0.057, w_a = −0.86 (DESI+CMB+DESY5), with phantom crossing above z ≈ 0.4. No DR3 cosmology release exists. **The live risk.** |
 | F2 | Ξ = d_L^GW/d_L^EM = 1, c_T = c, tensor friction below ∼10⁻¹⁶⁰ s⁻¹ | D5 | Standard-siren detection of Ξ ≠ 1 or α_M ≠ 0 | Consistent (GW170817) |
 | F3 | Horizon absorption/tidal heating exactly GR's (η_s/s = ħ/4πk_B) | D4 | EMRI tidal-heating deviation (LISA, percent level) | Untested at precision |
 | F4 | Exactly Planckian horizon noise with the D1–D2 spectra; O(ε) defect as in D11 under slow roll | D1, D2, D11 | A non-KMS detector response in a horizon analogue at the Planck-factor level | Analogue spectra thermal so far |
 | F5 | Im Π(s) = c_eff(s) G s² (graviton pair-production kernel) | D5 | Not accessible | — |
 | F6 | Einstein's equation holds only in local equilibrium (deviations where the area law fails at leading order) | P2 | Low-curvature deviations from GR without matter | Consistent |
+
+### The price of the "extra light field" escape from F1 (and of any added-field mechanism in `07` §4)
+
+An added scalar coupled to T_μν with gravitational strength is a conventional scalar–tensor EFT (the constructive
+branch's CP-05 is a worked example: F = M² + 2g_cφ, (□ − μ²)φ ∝ T, memory = the scalar's retarded propagator).
+Its price is set by existing tests, quoted with their confidence levels and not as headline tolerances:
+- **Cassini** (Bertotti–Iess–Tortora 2003): γ − 1 = (2.1 ± 2.3) × 10⁻⁵ — a measurement with a 1σ error, not by itself
+  a confidence-qualified upper bound; a long-range Brans–Dicke-like coupling must have |γ − 1| within this at the
+  stated confidence, i.e. gravitational-strength coupling is excluded unless the range is short or the field is screened.
+- **Eöt-Wash** (Lee et al. 2020): for a Yukawa coupling of gravitational strength (α = 1) the range is λ < 38.6 µm
+  at 95% confidence; for other strengths the published exclusion curve must be used — the headline number does not
+  transfer to η ≈ 1/3-type couplings directly.
+- Weak/long-range and strong/short-range are limiting cases, not a viability map; a construction must show its
+  (α, λ) point against the curves.
 
 ## Falsifiers of the framework itself
 

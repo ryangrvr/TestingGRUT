@@ -15,7 +15,7 @@ INCORRECT** for the reviewer's claim, followed by what changed. Nothing was argu
 | R6 | w ≡ −1 is ΛCDM's prediction too; extra light fields allowed; no DR3 | **CORRECT** | 03 F1 reframed as a falsifier of the *minimal* framework, shared with ΛCDM; DR2 numbers cited |
 | R7 | +16→+5 is reorganisation; tag imports as recovery | **CORRECT** (rule §13.6 not found here; principle adopted) | 01, 04 relabelled; "compression" withdrawn |
 | R8 | Type III algebras: no tensor factorisation; P1 needs modular form | **CORRECT** | P1 restated in Tomita–Takesaki terms; "influence functional" explicitly not supplied by P1 |
-| R9 | Priority: PNRV 2009, Cho–Hu 2014, SCH 2016, Hu–Verdaguer | **PARTLY** pending equation-level check (`08`) | "Not on the record" downgraded to "corollary of standard results; placement" |
+| R9 | Priority: PNRV 2009, Cho–Hu 2014, SCH 2016, Hu–Verdaguer | **CORRECT** (checked at equation level, `08`; PNRV is ξ = 0 only — the conformal kernel is Cho–Hu's) | "Not on the record" downgraded to "corollary of Cho–Hu (2014); placement" |
 | R10 | 0.0339 vs 0.0341 is 0.55%, and only an explanation if the record's precision is coarser | **CORRECT**, and the explanation is now proved | D1 rewritten with the proof |
 | R11 | N = ½coth(βω/2)ρ; Δρ is the decisive object | **CORRECT**; adopted with scope notes | New `07`; v8 implements it |
 | R12 | Gaussian-smeared free field: χ_L(t) = θ(t) t e^{−t²/4L²}/(8π^{3/2}L³); access geometry makes apparent memory | **CORRECT** (verified analytically; v7 numerically) | Theorem T3 in `07` |
@@ -81,10 +81,10 @@ register nodes were replaced by *imported theorems* (Bisognano–Wichmann/Kay–
 Jacobson's equation of state; Huygens for conformal fields; the membrane transport coefficients; the dS
 identities) — these earn GRUT **zero credit** and are now tagged IMPORTED; two became data (G, ħ) by the charter's
 own datum ruling; two became identifications (the split and the flow). GRUT III has *five framework postulates*,
-and the word "compression" is withdrawn. The reviewer's citation of a Stage-3 charter "§13.6" rule (thermality from
-causal structure = RECOVERY, zero credit) could not be located in any branch of this repository (searched
-`origin/codex/autonomous-reality-research` and all others); the principle is adopted regardless because it is the
-charter's own anti-laundering rule applied consistently.
+and the word "compression" is withdrawn. The reviewer's Stage-3 charter "§13.6" was not in this repository; the branch-digest agent located it in the
+owner's `vsctestinggrut` repository (`PROGRAM/STAGE3/STAGE3_CHARTER.md`, see `08`): §13.1 "relations implied by 𝒮 earn
+nothing", NR-12(b)/CT-75 on KMS/FDT premises, §13.6 RECOVERY, and **DEF-16** — KMS relative to a modular flow
+constructed from the state itself earns no credit — which is precisely the caveat revision 2 attaches to P1.
 
 ## R8 — type III and P1
 
@@ -99,12 +99,13 @@ probe coupling), after which the Feynman–Vernon functional is *computed*. This
 
 ## R9 — priority
 
-Partly correct pending the equation-level comparison in `08`. The position-space stress-tensor correlator of a
-conformal field in dS with the conformal factor is in Pérez-Nadal–Roura–Verdaguer (2009) and in Cho–Hu (2014); the
-worldline form [H/(2 sinh(HΔt/2))]⁸ is an immediate corollary of any such expression evaluated at coincident
-comoving points; the proper-time Fourier closed form G⁺_T(ω) may not be printed in those papers but is a corollary
-too. Revision 2 says "corollary of standard results; placement on the GRUT record", not "not on the record", and
-credits Hu–Verdaguer stochastic gravity for "memory lives in the noise kernel".
+Checked at equation level (`08`). Correction to my own first answer: Pérez-Nadal–Roura–Verdaguer (2009) treat only
+the **minimally coupled** scalar and do not contain the conformal case; the position-space conformal-field kernel in
+dS is **Cho–Hu (2014)**, eqs. (29)+(30), whose Minkowski coefficient at Δs = 0 is exactly 1/(4π⁴Δη⁸) — the same
+constant as `v1` — with the conformal rule due to Eftekharzadeh–Bates–Roura–Anderson–Hu (2012); Satin–Cho–Hu (2016)
+give the dissipation-kernel rule and the preservation of the FDR. GRUT III's worldline kernel is a two-line corollary
+of Cho–Hu and is not new; the proper-time spectrum G⁺_T(ω) and the odd-polynomial reading are not printed in any of
+these and are recorded as corollaries. "Memory lives in the noise kernel" is Hu–Verdaguer stochastic gravity.
 
 ## R10 — the record correction
 

@@ -68,8 +68,9 @@ future horizon, β > 0. This is the record's Past Hypothesis, located; it is not
 Outcome probabilities depend only on the effect measured (non-contextuality); Gleason (dim ≥ 3) and Busch (POVMs)
 then give Tr(ρE) — **IMPORTED**. Revision 1's suggestion that P5 might follow from P0 + P1 via
 Hughston–Jozsa–Wootters is **withdrawn** (R5): HJW presupposes the measurement framework. The reconstruction
-literature (Gleason; Zurek's envariance; Deutsch–Wallace; Masanes–Galley–Müller 2019, who derive the measurement
-postulates from the remaining quantum postulates plus operational assumptions) trades the postulate for other
+literature (Gleason; Zurek's envariance; Deutsch–Wallace; Masanes–Galley–Müller 2019, who derive POVMs, Born and
+state update from unitary quantum mechanics plus operational closure, associativity and finite state estimation —
+**without** assuming non-contextuality, i.e. a stronger result than P5's route) trades the postulate for other
 assumptions; GRUT III adds nothing here.
 
 ## Accounting

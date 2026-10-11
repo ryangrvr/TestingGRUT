@@ -33,9 +33,9 @@ Notes (revised).
    reorganisation of the accounting, not a derivation of eleven inputs; revision 1's word "compression" is withdrawn.
 2. **Where the gravitational coupling enters.** P2 (η = 1/4G) and P3 (κ). GRUT III does not derive G; `v9` shows
    the one-loop induced-gravity route fails with Standard-Model content (Σk₁ = +1/6 for ξ = 0, −1/2 for ξ = 1/6).
-3. **The reviewer's charter rule.** A "Stage-3 charter §13.6" classifying thermality-from-causal-structure as
-   RECOVERY (zero credit) was cited; it was not found in any branch of this repository. The rule is adopted anyway
-   as the charter's anti-laundering discipline applied to imports.
+3. **The reviewer's charter rule.** The "Stage-3 charter §13.6" is in the owner's `vsctestinggrut` repository
+   (`PROGRAM/STAGE3/STAGE3_CHARTER.md`; quotes in `08`): §13.1, NR-12(b), §13.6 RECOVERY, DEF-16 (self-referential
+   modular-flow KMS earns nothing), CT-75. This table applies those rules: every thermality/FDT item is IMPORTED.
 4. The Level-0 classical-substrate theorems of the record (P-06b, P-17, P-02, P-15, S6) stand as mathematics;
    P-15 is used in 07 and P-17's lesson ("reduced data identify the forcing law, not the ontology") is the ancestor
    of the Δρ framework.

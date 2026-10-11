@@ -20,16 +20,18 @@ completion: exact horizon thermality, an area law with finite coefficient, P0 be
 
 Integration constant (D3). Dead end recorded: the static-patch identity F = E − TS = 0 holds for every H and selects
 nothing. Position: Λ is a datum; the minimal framework predicts w ≡ −1, **shared with ΛCDM** (F1). If DESI's
-preference for evolving dark energy (DR2: ~2.8–4.2σ, compilation-dependent) reaches a model-independent ≥5σ, the
-minimal framework and ΛCDM fall together and an additional light field enters P0's content with a price.
+preference for evolving dark energy (DR2: 3.1σ with CMB; 2.8–4.2σ with CMB and supernovae, compilation-dependent;
+no combination above 4.2σ) reaches a model-independent ≥5σ, the minimal framework and ΛCDM fall together and an
+additional light field enters P0's content with a price (`03`: Cassini and Eöt-Wash).
 
 ## O3 — The outcome rule (corrected, R5)
 
 P5 (non-contextuality) buys Born via Gleason/Busch. The revision-1 route via Hughston–Jozsa–Wootters is withdrawn:
 HJW presupposes the measurement framework. The relevant literature: Gleason (1957); Busch (2003); Zurek's envariance
 (2003–05); Deutsch (1999) and Wallace (2012) decision-theoretic derivations; Masanes–Galley–Müller (2019), who derive
-the measurement postulates from the remaining quantum postulates plus operational assumptions (including finite-
-dimensional state characterisation). Each trades the postulate for other assumptions; none derives probabilities from
+POVMs, the Born rule and state update from unitary quantum mechanics plus operational closure, an associative
+composition of outcomes and finite-dimensional state estimation — without assuming non-contextuality, a stronger
+result than P5's Gleason route. Each trades the postulate for other assumptions; none derives probabilities from
 causality alone. **GRUT III adds nothing here; P5 stays a postulate.** No computation proposed.
 
 ## O4 — The arrow (P4)
@@ -47,6 +49,13 @@ locks need KMS-failing platforms. That ruling is not in this repository; the con
 
 **Baseline computed (`v11`, D11).** Quasi-de Sitter, conformal matter: the O(ε) KMS defect is fixed completely —
 an effective-temperature shift T_eff ≈ (H/2π)(1 − 1.01ε) plus a 1%-of-ε frequency dependence. No free function.
+
+**What the constructive branch's CP-05 settles for this program** (branch `codex/grut-causal-response-05`; review
+relayed by the owner): one specified local scalar, eliminated, produces a covariant gravitational memory with derived
+static range, slip and pole — a bounded physical answer, classified conventional scalar–tensor EFT. By `07` T6 the
+kernel does not select that scalar; by `07` §4 the mechanism is an added field with a displayed price (`03`). Any
+future construction's novelty claim must therefore be a *selection* statement forced by P0–P5, tested by connecting
+independently measured quantities without refitting — not another realization of a passive kernel.
 
 **Next computations, in order.**
 1. The gravitational sector's own quasi-dS baseline: the massless (ν = 3/2 + O(ε)) worldline two-time function in
