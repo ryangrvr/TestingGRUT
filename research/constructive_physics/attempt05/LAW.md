@@ -1,0 +1,15 @@
+# CP-05 / D006: covariant curvature response from one local scalar
+
+Authorization interpretation: owner's latest explicit instruction to start a new branch from latest work and develop a working theory authorizes ONE separately accounted construction. Branch codex/grut-causal-response-05 starts at ee6e21e299ce97a1b12f641ab970a7d24ea9b4d8. Separate GRUT III branch 862e666dcad9532d8f120fed01dae730136a9676 inspected as a conventional comparison; not merged or credited as discovery. No Stage-3 card, canonical change, CP-06 or unlimited hidden search.
+
+Units c=hbar=1, signature (-+++). Smooth four-dimensional Lorentzian manifold, local asymptotically flat weak-field patch with specified source and retarded initial data. Metric g, real scalar phi, ordinary matter psi minimally coupled to g. Constants M>0, m>0, g_c real of mass dimension one. F(phi)=M^2+2g_c phi. Domain F>0, positive-energy scalar, weak fields near phi=0. Action:
+
+S=integral sqrt(-g) [F(phi) R/2 - (partial phi)^2/2 - m^2 phi^2/2] + S_m[g,psi] + S_GHY.
+
+Einstein gravity, Lorentzian causal structure, matter inventory, universal metric coupling, quantum operations, asymptotic vacuum, retarded state preparation and parameter values are supplied. None is credited as emergent. This is a scalar-tensor EFT, not an original GRUT law by renaming it. Complete covariant EFT counterterms are admitted at a specified cutoff; their finite coefficients are independently matched. Leading tree/linear relations are not exact all-loop predictions. No cosmological constant cancellation or complete quantum gravity claim.
+
+Selected objective: derive a covariant physical memory response, and compare its static force, gravitational slip and dynamical pole using the SAME independently matched coefficients. No fluid velocity, thermostat, horizon temperature, phenomenological relaxation time or consciousness variable is introduced. A Lorentzian clock is already part of the supplied geometry.
+
+Predetermined tests: derive Jordan equations and Einstein-frame positive kinetic coefficient; independent linear trace/mixing route; scalar pole and retarded support; static source potentials and light response; inverse calibration and same-input prediction; demonstrate parameter freedom and conventional EFT equivalence; ghost/tachyon/domain and scalar-radiation checks; identify quantum matching limitations. Source-source wave equation conservation checked analytically. No parameter selection by fixtures. Reference software units M=1,g_c=1/2,m=1 and dimensionless wave number k=2; reference radius r=1/mu. Values are invented controls, not empirical fits. Numerical oscillator forcing fixture: zero initial scalar mode, constant source switched on at t=0, t samples 0,0.5,1,2,3. RK4 dt=0.001. Finite-difference scalar conformal coefficient not needed; exact algebra controls use Fraction.
+
+Freeze occurs after analytic selection and literature inspection, before executable scientific checks. One local action only; no failed-action repair permitted. Older frozen packets and accounting preserved. PR #12 stays draft.
