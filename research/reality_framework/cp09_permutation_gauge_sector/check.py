@@ -158,6 +158,16 @@ def analyze(n):
     assert np.linalg.norm(Q.conj().T@Q - np.eye(len(shell_indices))) < 1e-9
     invariant_overlap = float(np.linalg.norm(T.conj().T@Q))
     assert invariant_overlap < 1e-6
+    local_x0_shell_weight = None
+    if n in (3,4):
+        # Distinct from the raw shell sum in e135cef: complex ARPACK
+        # can return nonorthogonal vectors within a degenerate shell.
+        m = 1 << n
+        flipped = np.arange(m) ^ (1 << (n-1))
+        X0g = vf[:,0].reshape(-1,m)[:,flipped].reshape(-1)
+        local_x0_shell_weight = float(np.linalg.norm(Q.conj().T@X0g)**2)
+        assert abs(local_x0_shell_weight - {3:.0026001474526385,
+                                           4:.0049877636893803}[n]) < 2e-9
     character = None
     if n in (3,4):
         gmap, bmap = maps[0]
@@ -177,6 +187,7 @@ def analyze(n):
         initial_shell_modes_computed=len(shell_indices),
         first_shell_invariant_projection_norm=invariant_overlap,
         first_shell_adjacent_swap_character=character,
+        corrected_local_X0_first_shell_weight=local_x0_shell_weight,
         scalar_first_invariant_mode_weight=mode_weight,
         scalar_retarded_response_t04=response,
         scalar_independent_impulse_derivative_t04=derivative,
