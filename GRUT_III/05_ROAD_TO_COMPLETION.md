@@ -79,7 +79,8 @@ Narnhofer–Peter–Thirring/Deser–Levin temperature. Not pursued within GRUT 
 1. Equation-level comparison of D2's worldline polynomial with Pérez-Nadal–Roura–Verdaguer (2009) and Cho–Hu (2014)
    (`08` records what could be read).
 2. The massive-vector threshold polynomial for D5 (not computed; HLZ/GRW primary texts).
-3. Independent reruns of `v7`–`v11` (the slim verification workflow's three-lens pass covers v7–v10; v11 is author-level).
+3. Independent reruns and adversarial review of `v7`–`v11`: the scheduled three-lens pass on v7–v10 **did not run**
+   (usage limit); all five are author-level, with the author's own re-derivations recorded in `08`. First task of the next pass.
 4. The record correction in D1 by re-running `calc/worldline_reduction.py` with the one-sided/symmetrised
    distinction made explicit.
 5. The O(ε) defect of D11 by an independent method (e.g. adiabatic expansion of the conformal vacuum) and for the

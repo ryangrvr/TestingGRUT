@@ -8,10 +8,14 @@ following, none of it GRUT's.
 
 ## The physics that does involve a physical acceleration
 
-A detector with proper acceleration a in de Sitter sees T = (ħ/2πk_B c)√(a² + c²H²) (Narnhofer–Peter–Thirring 1996;
-Deser–Levin 1997). Milgrom (1999, "The modified dynamics as a vacuum effect") built MOND inertia on exactly this and
-obtained a₀ ∼ cH₀ up to an undetermined coefficient; Verlinde (2016) obtains cH₀/6 from a volume-law entropy
-contribution. GRUT III contains no mechanism for either.
+A detector with proper acceleration a in de Sitter sees 2πT = √(a² + Λ/3) = √(a² + H²) in natural units
+(Narnhofer–Peter–Thirring 1996, abstract; Deser–Levin 1997, eq. 8, who credit NPT and add the 5-acceleration
+reading). Milgrom (1999, "The modified dynamics as a vacuum effect", eqs. 6–11) reads ΔT = T(a) − T(0) as MOND inertia
+and obtains **definite** coefficients: a₀ = c√(Λ/3) (abstract, eq. 11) or â₀ = 2c√(Λ/3) (eq. 9) — the 2π of the Unruh
+temperature cancels — i.e. 5.4–5.9 × 10⁻¹⁰ or 1.1–1.2 × 10⁻⁹ m s⁻², **4.5–10 times the observed a₀**; the familiar
+a₀ ≈ cH₀/2π is his later canonical statement, not the 1999 result. He writes: "I can offer no specific mechanism that
+begets MOND inertia from vacuum effects." Verlinde (2016) obtains cH₀/6 from a volume-law entropy contribution. GRUT III
+contains no mechanism for either. (Revision 2's first text said "undetermined coefficient"; corrected from the paper.)
 
 ## The numbers (`calc/v6`)
 

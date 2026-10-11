@@ -105,8 +105,53 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
 - **Bearing:** data source for F1 only; GRUT III's revision-2 wording is accurate. Note that the favoured history
   *crosses* w = −1, which the record's own single-relaxor analysis already excluded for GRUT I.
 
-## Pending (appended when the agents report)
+## Milgrom (1999), "The modified dynamics as a vacuum effect", Phys. Lett. A 253, 273 — FULLTEXT
 
-Milgrom 1999 (vacuum-effect MOND, a₀ ∝ H(z));
-Han–Lykken–Zhang 1999 (graviton partial widths, prefactors); Jacobson 1995 / Eling–Guedens–Jacobson 2006 (κ cancellation,
-shear viscosity); Narnhofer–Peter–Thirring 1996 / Deser–Levin 1997 (T = √(a² + H²)/2π).
+- Takes T(a) = (1/2π)(a² + Λ/3)^{1/2} from Narnhofer–Peter–Thirring [27] and Deser–Levin [28] (eq. 6) and the
+  5-acceleration a₅ = (a² + Λ/3)^{1/2} (eq. 7); reads ΔT = T(a) − T_Λ as MOND inertia; derives 2πΔT = a·μ̂(a/â₀) with
+  μ̂(x) = [1 + (2x)⁻²]^{1/2} − (2x)⁻¹, **â₀ = 2(Λ/3)^{1/2}** (eqs. 8–9), and a variant with μ(x) = x/(1+x²)^{1/2},
+  **a₀ = (Λ/3)^{1/2}** (eqs. 10–11; abstract). "I can offer no specific mechanism that begets MOND inertia from vacuum
+  effects." Numerically c√(Λ/3) = 5.4–5.9 × 10⁻¹⁰ m s⁻² (4.5–4.9 × observed a₀); 2c√(Λ/3) is 9–10 ×.
+- **Bearing:** `06` corrected (coefficients are definite and overshoot; the cH₀/2π form is Milgrom's later canonical
+  statement). The a₀ ∝ H(z) test is implicit in any identification with the Hubble scale rather than Λ and has been
+  discussed in the MOND literature; `06` records it as context only. **Priority: Milgrom's, as revision 2 states.**
+
+## Han, Lykken, Zhang (1999), "On Kaluza–Klein states from large extra dimensions", PRD 59, 105006 — FULLTEXT
+
+- Conventions: ĝ = η + κ̂ĥ with κ̂² = 16πG (after eq. 2), kinetic coefficient 1/4 (eq. 2), polarisation sum without the
+  1/2 (eq. A.5; footnote [19] corrects an earlier version) — equivalent to the canonical convention of `v4`.
+- Widths (Sec. 3.1.1): massless vectors Γ = Nκ²m³/160π (eq. 46); massive vectors δκ²m³(1−4r)^{1/2}(13/12 + (14/39)r +
+  (4/13)r²)/80π (eq. 49); Dirac fermions N_cκ²m³(1−4r)^{3/2}(1+8r/3)/320π (eq. 52); complex scalar
+  κ²m³(1−4r)^{5/2}/960π (eq. 53) ⇒ real scalar 1/1920π. Ratios real scalar : Dirac : vector = 1 : 6 : 12.
+- **Bearing:** D5's threshold laws and weights are **contained** in HLZ; `v4` reproduces them from explicit amplitudes
+  (a verification, not a discovery, as `v4` and D5 say). The massive-vector polynomial is quoted above and not computed.
+
+## Jacobson (1995), PRL 75, 1260; Eling, Guedens, Jacobson (2006), PRL 96, 121301 — FULLTEXT
+
+- Jacobson: an arbitrary point p; a 2-surface element P whose null congruence has vanishing expansion and shear at p;
+  "Through any spacetime point there are local Rindler horizons in all null directions"; χ^a the approximate boost
+  Killing field, T = ħκ/2π "where κ is the acceleration of the Killing orbit on which the norm of χ^a is unity";
+  δQ = −κ∫λT_kk dλdA (eq. 2), δA = −∫λR_kk dλdA (eq. 5); "δQ = TdS … can only be valid if T_kk = (ħη/2π)R_kk for all
+  null k^a"; the κ scale ambiguity is explicitly noted as harmless. The **only** validity condition is curvature radius ≫
+  cutoff length; **no condition on any acceleration appears** — confirming R1.
+- **Bearing:** D3 is **entirely contained** in Jacobson 1995 and is labelled IMPORTED. EGJ 2006 (shear/viscosity) read;
+  the identification of the horizon shear viscosity underlies D4's membrane statement.
+
+## Narnhofer, Peter, Thirring (1996); Deser & Levin (1997) — FULLTEXT (Deser–Levin), abstract (NPT)
+
+- 2πT = (Λ/3 + a²)^{1/2} = (R⁻² + a²)^{1/2} (NPT abstract; Deser–Levin abstract and eq. 8, who write "For dS, this
+  recovers a known result" and credit [2] = NPT). Deser–Levin add the 5-acceleration reading, the Tagirov argument that
+  the conformally coupled massless Wightman function in dS equals the flat 5-space one, and the AdS extension
+  2πT = (a² − R⁻²)^{1/2}. **Bearing:** `06`'s formula is correct and correctly attributed; priority NPT 1996.
+
+## Verification status of the new scripts (honest record)
+
+The three-lens adversarial verification of `v7`–`v10` scheduled in the round-two workflow **did not run**: the four
+verifier agents failed at launch with a usage-limit error. In their place the author (i) re-ran every script
+(`RESULTS.md`), (ii) re-derived by hand the ρ_T polynomial expansion used in `v8` ((ω²+H²)(ω²+4H²)(ω²+9H²) =
+ω⁶ + 14H²ω⁴ + 49H⁴ω² + 36H⁶), the Maxwell heat-kernel coefficient k₁ = −2/3 (4·(1/6) − 1 − 2·(1/6)) and the species
+sums (4 + 45 − 48)/6 = 1/6 and (0 + 45 − 48)/6 = −1/2 used in `v9`, and the Gaussian-convolution and lens-volume
+steps of `v7` §A, and (iii) checked `v7` §B's two independent closed-form derivations against each other as the
+script reports (agreement to 1e-26). `v7`'s own caveats (the 1/t edge; L⁻⁸ scaling) were adopted into D9. `v10` and
+`v11` are author-written and author-verified. **Independent verification of v7–v11 is owed** (`05` O7 item 3) and
+should be the first task of the next pass.

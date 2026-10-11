@@ -46,7 +46,9 @@ normalised Gaussian profile of width L the doubly-smeared retarded kernel is exa
 
 a smooth function of support ∼ L/c, although the unsmeared response is on the light cone. For a profile supported in
 a ball of radius R the smeared response vanishes for t > 2R/c. For the conformal stress tensor the same smearing
-turns the pointwise polynomial ρ_T (no memory) into a kernel of support ∼ L (v7 §B). *Corollary:* an apparent
+turns the pointwise polynomial ρ_T (no memory) into a kernel of support ∼ L with a Gaussian tail (v7 §B), keeping a
+1/t edge at small t (spatial smearing bounds momentum, not energy); an integrable kernel needs temporal smearing too.
+*Corollary:* an apparent
 memory time can always be manufactured by the observer's access profile and can never be credited to the vacuum.
 
 **T4 (pointwise conformal response is local; v1, v8).** For a conformal field in dS along a geodesic,

@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 14:35 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 18:15 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -10,6 +10,11 @@ Generated 2026-10-11 14:35 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
 | `v4_medium_absorptive_kernel.py` | **PASS** |
 | `v5_anomaly_selfconsistency.py` | **PASS** |
 | `v6_low_acceleration_scale.py` | **INFO** |
+| `v7_access_geometry_memory.py` | **PASS** |
+| `v8_residual_framework.py` | **PASS** |
+| `v9_induced_gravity_matching.py` | **PASS** |
+| `v10_graviton_sector_memory.py` | **PASS** |
+| `v11_quasi_ds_kms_defect.py` | **PASS** |
 
 ---
 
@@ -195,4 +200,412 @@ H0 = 73.0 km/s/Mpc: cH0 = 7.092e-10 m/s^2;  a0_obs/cH0 = 0.169
 Status: numerical coincidence (Milgrom 1999, Verlinde 2016); no mechanism within GRUT III; the a0 ∝ H(z) test has been proposed before.
 
 V6 OVERALL: INFORMATIONAL (no pass/fail)
+```
+
+## `v7_access_geometry_memory.py`
+
+```text
+== A. free scalar: smeared retarded kernel is fixed by the access geometry ==
+-- A.1 convolution of Gaussians and radial integral against delta(t-r) (sympy) --
+  [PASS] f_L * f_L = f_{sqrt2 L} (per Cartesian factor; 3D Gaussian factorises): (f_L*f_L)(d) = exp(-d**2/(4*L**2))/(2*sqrt(pi)*L)
+  [PASS] chi_L(t) = int d^3r f_{sqrt2 L}(r) delta(t-r)/(4 pi r) = t exp(-t^2/4L^2)/(8 pi^{3/2} L^3): chi_L = t*exp(-t**2/(4*L**2))/(8*pi**(3/2)*L**3)
+  [PASS] direct 3D quadrature (f_L*f_L)(1.3 L) vs f_{sqrt2 L}(1.3 L): got 0.0147128153797  want 0.0147128153797  rel.err 1.18e-16
+-- A.2 normalisation, static limit, mean memory time (sympy) --
+  [PASS] int_0^oo chi_L dt = 1/(4 pi^{3/2} L): = 1/(4*pi**(3/2)*L) = (1/(4 pi L^2)) * (L/sqrt(pi))
+  [PASS] = smeared static Coulomb potential int d^3r f_{sqrt2 L}/(4 pi r) (independent integral): 1/(4*pi**(3/2)*L)
+  [PASS] mean memory time <t> = sqrt(pi) L: <t> = sqrt(pi)*L
+  [PASS] rho_L(w) = FT of <[F_L(t),F_L(0)]> = (w/2pi) exp(-w^2 L^2)  [= pointwise w/2pi x form factor]: rho_L = w*exp(-L**2*w**2)/(2*pi)
+-- A.3 compact support: top hat of radius R, chi vanishes for t > 2R --
+  [PASS] int d^3x (f_R*f_R) = 1 (lens-volume formula correctly normalised)
+  [PASS] int_0^{2R} chi_R dt = int_0^{2R} t (f_R*f_R)(t) dt = 3/(10 pi R): = 3/(10*pi*R)
+     d/R     numeric (f*f)(d)      analytic lens formula     chi_R(t=d) = d (f*f)(d)
+      0.5       0.151072856138       0.151072856138       0.075536428069
+  [PASS] top hat (f*f)(d=0.5R) vs lens volume: got 0.151072856138  want 0.151072856138  rel.err 0.0
+      1.0      0.0746038795743      0.0746038795743      0.0746038795743
+  [PASS] top hat (f*f)(d=1.0R) vs lens volume: got 0.0746038795743  want 0.0746038795743  rel.err 1.86e-16
+      1.5      0.0205160668829      0.0205160668829      0.0307741003244
+  [PASS] top hat (f*f)(d=1.5R) vs lens volume: got 0.0205160668829  want 0.0205160668829  rel.err 1.69e-16
+      1.9    0.000880325778977    0.000880325778977     0.00167261898006
+  [PASS] top hat (f*f)(d=1.9R) vs lens volume: got 0.000880325778977  want 0.000880325778977  rel.err 2.46e-16
+     1.99       8.937544773e-6       8.937544773e-6     1.77857140983e-5
+  [PASS] top hat (f*f)(d=1.99R) vs lens volume: got 8.937544773e-6  want 8.937544773e-6  rel.err 1.9e-16
+      2.0                  0.0                  0.0                  0.0
+  [PASS] top hat chi_R(t=2.0R) = 0 (t > 2R): got 0.0  want 0.0  abs.err 0.0
+      2.1                  0.0                  0.0                  0.0
+  [PASS] top hat chi_R(t=2.1R) = 0 (t > 2R): got 0.0  want 0.0  abs.err 0.0
+      3.0                  0.0                  0.0                  0.0
+  [PASS] top hat chi_R(t=3.0R) = 0 (t > 2R): got 0.0  want 0.0  abs.err 0.0
+
+== B. conformal scalar stress tensor: smeared response kernel ==
+-- B.0 conformal structure of <T00 T00> at a generic point (exact Wick contraction, xi=1/6) --
+  [PASS] <T00(x)T00(0)>_Wick = C_T (I_00^2 - 1/4)/(x^2)^4, C_T = 1/(3 pi^4), I_00 = 1 - 2 tau^2/x^2, all x
+  [PASS] time axis: I_00 = 1, I_{00,00} = 3/4, <T00 T00> = 1/(4 pi^4 t^8) (v1)
+-- B.1 closed form of chi_L(t) two ways (sympy) --
+  chi_L(t) = -(-120*L**6 + 180*L**4*t**2 - 30*L**2*t**4 + t**6)*exp(-t**2/(4*L**2))/(184320*pi**(7/2)*L**13*t)
+  [PASS] position-space (distributional) closed form == momentum-space (Ward/CFT) closed form
+  [PASS] small-t edge: t chi_L(t) -> 1/(1536 pi^{7/2} L^7) = rho_L(oo)/pi: series: 1/(1536*pi**(7/2)*L**7*t) - 7*t/(6144*pi**(7/2)*L**9)
+  [PASS] rho_L(oo) = (1/(1440 pi^3)) int_0^oo K^6 e^{-K^2 L^2} dK = sqrt(pi)/(1536 pi^3 L^7)
+-- B.2 quadrature on the rotated contour r = s e^{i pi/8} (eps -> 0 exactly) vs closed form --
+  [PASS] contour rotation valid at finite eps=0.2L, t=0.8L: Re W (rotated vs real axis): got -4.27643215421e-6  want -4.27643215421e-6  rel.err 4.29e-29
+  [PASS] contour rotation valid at finite eps=0.2L, t=0.8L: Im W (rotated vs real axis): got -1.87033777207e-6  want -1.87033777207e-6  rel.err 7.31e-29
+     t/L      L^8 chi_L (quadrature)      L^8 chi_L (closed form)    L^8 Re W_L     chi_L(t)/chi_L(L)
+     0.05      0.0002358912365475854      0.0002358912365475854   -1.067592e-5
+  [PASS] chi_L(t=0.05 L) quadrature vs closed form: got 0.000235891236548  want 0.000235891236548  rel.err 1.14e-26
+     0.25       4.232267927982421e-5       4.232267927982421e-5   -1.025506e-5
+  [PASS] chi_L(t=0.25 L) quadrature vs closed form: got 4.23226792798e-5  want 4.23226792798e-5  rel.err 1.51e-29
+      0.5        1.42556302650117e-5        1.42556302650117e-5   -9.0189526e-6
+  [PASS] chi_L(t=0.5 L) quadrature vs closed form: got 1.4255630265e-5  want 1.4255630265e-5  rel.err 1.37e-30
+     0.75       3.209385341224302e-6       3.209385341224302e-6   -7.2045739e-6
+  [PASS] chi_L(t=0.75 L) quadrature vs closed form: got 3.20938534122e-6  want 3.20938534122e-6  rel.err 1.64e-30
+        1      -2.383367742835294e-6      -2.383367742835294e-6   -5.1153059e-6
+  [PASS] chi_L(t=1 L) quadrature vs closed form: got -2.38336774284e-6  want -2.38336774284e-6  rel.err 1.58e-31
+      1.5      -5.419208795405391e-6      -5.419208795405391e-6   -1.3185309e-6
+  [PASS] chi_L(t=1.5 L) quadrature vs closed form: got -5.41920879541e-6  want -5.41920879541e-6  rel.err 0.0
+        2       -3.34115273622407e-6       -3.34115273622407e-6   7.5208761e-7
+  [PASS] chi_L(t=2 L) quadrature vs closed form: got -3.34115273622e-6  want -3.34115273622e-6  rel.err 1.13e-31
+        3       6.971322952178255e-7       6.971322952178255e-7    5.740814e-7
+  [PASS] chi_L(t=3 L) quadrature vs closed form: got 6.97132295218e-7  want 6.97132295218e-7  rel.err 0.0
+        4       3.724708384718247e-7       3.724708384718247e-7   -1.1563266e-7
+  [PASS] chi_L(t=4 L) quadrature vs closed form: got 3.72470838472e-7  want 3.72470838472e-7  rel.err 1.26e-31
+    chi_L(2L)/chi_L(L) = 1.40186;  Gaussian tail exp(-t^2/4L^2) x polynomial
+    chi_L(3L)/chi_L(L) = -0.292499;  Gaussian tail exp(-t^2/4L^2) x polynomial
+    chi_L(4L)/chi_L(L) = -0.156279;  Gaussian tail exp(-t^2/4L^2) x polynomial
+  [PASS] edge: t chi_L(t) at t = 0.05 L vs rho_L(oo)/pi (1/t law, 1 - 7 t^2/(4 L^2) correction): got 1.17945618274e-5  want 1.17945132611e-5  rel.err 4.12e-6
+-- B.3 scaling chi_L(t) = L^{-8} g(t/L) (numerical, L = 1/2, 1, 2 at t/L = 0.5 and 2) --
+  [PASS] L^8 chi_L at t/L=0.5: L=1/2 vs L=1: got 1.4255630265e-5  want 1.4255630265e-5  rel.err 0.0
+  [PASS] L^8 chi_L at t/L=0.5: L=2 vs L=1: got 1.4255630265e-5  want 1.4255630265e-5  rel.err 7.86e-28
+  [PASS] L^8 chi_L at t/L=2: L=1/2 vs L=1: got -3.34115273622e-6  want -3.34115273622e-6  rel.err 0.0
+  [PASS] L^8 chi_L at t/L=2: L=2 vs L=1: got -3.34115273622e-6  want -3.34115273622e-6  rel.err 0.0
+  (F_L = int d^3x f_L T00 has mass dimension 4 => <F_L F_L> ~ L^-8; the task text's L^-9 is corrected to L^-8)
+-- B.4 Fourier transform of the smeared Wightman function at T=0 (shifted line Im t = -L, numpy) --
+      w L      W~_L(w) [L^7]        rho_L^{(b)}(w)        |W~_L(-w)|/W~_L(w)    W~_L/(w^7/10080 pi^3)
+     0.25   1.8603091588e-10   1.8603091588e-10   2.01e-12            0.95261017
+  [PASS] W~_L(w=0.25/L) = rho_L^{(b)}(w) (Ward/CFT form): got 1.86030915881e-10  want 1.86030915879e-10  rel.err 1.04e-11
+  [PASS] positive frequency: |W~_L(-0.25/L)|/W~_L(0.25/L) < 1e-9: 2.01e-12
+      0.5   2.0599957730e-08   2.059995773e-8   2.64e-14            0.8241124
+  [PASS] W~_L(w=0.5/L) = rho_L^{(b)}(w) (Ward/CFT form): got 2.05999577304e-8  want 2.05999577304e-8  rel.err 1.49e-13
+  [PASS] positive frequency: |W~_L(-0.5/L)|/W~_L(0.5/L) < 1e-9: 2.64e-14
+      1.0   1.4945960123e-06   1.4945960123e-6   1.33e-17            0.46712592
+  [PASS] W~_L(w=1.0/L) = rho_L^{(b)}(w) (Ward/CFT form): got 1.49459601234e-6  want 1.49459601234e-6  rel.err 3.02e-13
+  [PASS] positive frequency: |W~_L(-1.0/L)|/W~_L(1.0/L) < 1e-9: 1.33e-17
+      2.0   2.4838437512e-05   2.4838437512e-5   1.24e-18            0.060649113
+  [PASS] W~_L(w=2.0/L) = rho_L^{(b)}(w) (Ward/CFT form): got 2.48384375116e-5  want 2.48384375116e-5  rel.err 2.55e-13
+  [PASS] positive frequency: |W~_L(-2.0/L)|/W~_L(2.0/L) < 1e-9: 1.24e-18
+      3.0   3.6770897736e-05   3.6770897736e-5   1.69e-18            0.0052549138
+  [PASS] W~_L(w=3.0/L) = rho_L^{(b)}(w) (Ward/CFT form): got 3.67708977363e-5  want 3.67708977363e-5  rel.err 5.22e-14
+  [PASS] positive frequency: |W~_L(-3.0/L)|/W~_L(3.0/L) < 1e-9: 1.69e-18
+      4.0   3.7214866290e-05   3.721486629e-5   3.82e-18            0.00070991553
+  [PASS] W~_L(w=4.0/L) = rho_L^{(b)}(w) (Ward/CFT form): got 3.72148662901e-5  want 3.72148662901e-5  rel.err 3.18e-13
+  [PASS] positive frequency: |W~_L(-4.0/L)|/W~_L(4.0/L) < 1e-9: 3.82e-18
+      6.0   3.7216377867e-05   3.7216377867e-5   4.45e-18            4.1551385e-5
+  [PASS] W~_L(w=6.0/L) = rho_L^{(b)}(w) (Ward/CFT form): got 3.72163778669e-5  want 3.7216377867e-5  rel.err 1.38e-12
+  [PASS] positive frequency: |W~_L(-6.0/L)|/W~_L(6.0/L) < 1e-9: 4.45e-18
+  [PASS] small-w limit W~_L(0.25/L)/(w^7/10080 pi^3) -> 1 - (7/9)(wL)^2 (pointwise v1 spectrum recovered): got 0.952610170026  want 0.951388888889  rel.err 0.00128
+  [PASS] large-w plateau W~_L(6/L) -> sqrt(pi)/(1536 pi^3 L^7): got 3.72163778669e-5  want 3.7216377867e-5  rel.err 1.96e-12
+
+== C. KMS for smeared observables: state x commutator = noise, for any smearing ==
+-- C.1 image sum closed form --
+  [PASS] sum_n 1/(4pi^2 (r^2-(t+i n beta)^2)) = [coth(pi(r-t)/beta)+coth(pi(r+t)/beta)]/(8 pi r beta) at a complex point: got 6.3526500706e-33  want 0.0  abs.err 6.35e-33
+-- C.2 smeared thermal Wightman spectrum, shifted line Im t = -beta/4 (generic: not the KMS-symmetric beta/2) --
+  beta = 6.283185, L = 1.0:
+      w        G+_L(w)            G+_L(-w)          G+/G- e^-bw - 1    rho_L/rho_A - 1    N_L/(coth rho/2) - 1
+     0.25   4.7187343013e-02   9.809285e-03   +1.33e-15          +2.29e-13          +2.29e-13
+  [PASS] KMS  G+_L(0.25)/G+_L(-0.25) = e^(beta w)  [beta=6.283, L=1.0]: 1.33e-15
+  [PASS] rho_L(0.25) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(0.25) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(0.25) = 0: 6.4e-19
+      0.5   6.4774141616e-02   2.799144e-03   +2.66e-15          +2.29e-13          +2.28e-13
+  [PASS] KMS  G+_L(0.5)/G+_L(-0.5) = e^(beta w)  [beta=6.283, L=1.0]: 2.66e-15
+  [PASS] rho_L(0.5) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(0.5) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.28e-13
+  [PASS] Im G+_L(0.5) = 0: 0.0e+00
+      1.0   5.8659374547e-02   1.095430e-04   +1.49e-14          +2.28e-13          +2.28e-13
+  [PASS] KMS  G+_L(1.0)/G+_L(-1.0) = e^(beta w)  [beta=6.283, L=1.0]: 1.49e-14
+  [PASS] rho_L(1.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.28e-13
+  [PASS] N_L(1.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.28e-13
+  [PASS] Im G+_L(1.0) = 0: 0.0e+00
+      2.0   5.8300692615e-03   2.033145e-08   +5.14e-11          +2.11e-13          +2.11e-13
+  [PASS] KMS  G+_L(2.0)/G+_L(-2.0) = e^(beta w)  [beta=6.283, L=1.0]: 5.14e-11
+  [PASS] rho_L(2.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.11e-13
+  [PASS] N_L(2.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.11e-13
+  [PASS] Im G+_L(2.0) = 0: 2.0e-17
+  beta = 6.283185, L = 0.5:
+      w        G+_L(w)            G+_L(-w)          G+/G- e^-bw - 1    rho_L/rho_A - 1    N_L/(coth rho/2) - 1
+     0.25   4.9451910886e-02   1.028004e-02   +1.11e-15          +2.29e-13          +2.28e-13
+  [PASS] KMS  G+_L(0.25)/G+_L(-0.25) = e^(beta w)  [beta=6.283, L=0.5]: 1.11e-15
+  [PASS] rho_L(0.25) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(0.25) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.28e-13
+  [PASS] Im G+_L(0.25) = 0: 2.6e-18
+      0.5   7.8132528998e-02   3.376413e-03   +2.66e-15          +2.29e-13          +2.28e-13
+  [PASS] KMS  G+_L(0.5)/G+_L(-0.5) = e^(beta w)  [beta=6.283, L=0.5]: 2.66e-15
+  [PASS] rho_L(0.5) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(0.5) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.28e-13
+  [PASS] Im G+_L(0.5) = 0: 9.5e-19
+      1.0   1.2418189689e-01   2.319026e-04   +1.33e-14          +2.28e-13          +2.28e-13
+  [PASS] KMS  G+_L(1.0)/G+_L(-1.0) = e^(beta w)  [beta=6.283, L=0.5]: 1.33e-14
+  [PASS] rho_L(1.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.28e-13
+  [PASS] N_L(1.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.28e-13
+  [PASS] Im G+_L(1.0) = 0: 4.2e-18
+      2.0   1.1710007142e-01   4.083680e-07   +2.66e-12          +2.27e-13          +2.27e-13
+  [PASS] KMS  G+_L(2.0)/G+_L(-2.0) = e^(beta w)  [beta=6.283, L=0.5]: 2.66e-12
+  [PASS] rho_L(2.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.27e-13
+  [PASS] N_L(2.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.27e-13
+  [PASS] Im G+_L(2.0) = 0: 2.0e-17
+  beta = 1.000000, L = 0.3:
+      w        G+_L(w)            G+_L(-w)          G+/G- e^-bw - 1    rho_L/rho_A - 1    N_L/(coth rho/2) - 1
+     0.25   1.7886841091e-01   1.393029e-01   +0.00e+00          +2.28e-13          +2.29e-13
+  [PASS] KMS  G+_L(0.25)/G+_L(-0.25) = e^(beta w)  [beta=1, L=0.3]: 0.00e+00
+  [PASS] rho_L(0.25) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.28e-13
+  [PASS] N_L(0.25) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(0.25) = 0: 3.7e-18
+      0.5   1.9774595703e-01   1.199390e-01   +4.44e-16          +2.30e-13          +2.29e-13
+  [PASS] KMS  G+_L(0.5)/G+_L(-0.5) = e^(beta w)  [beta=1, L=0.3]: 4.44e-16
+  [PASS] rho_L(0.5) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.30e-13
+  [PASS] N_L(0.5) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(0.5) = 0: 0.0e+00
+      1.0   2.3010905713e-01   8.465239e-02   +2.22e-16          +2.29e-13          +2.29e-13
+  [PASS] KMS  G+_L(1.0)/G+_L(-1.0) = e^(beta w)  [beta=1, L=0.3]: 2.22e-16
+  [PASS] rho_L(1.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(1.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(1.0) = 0: 2.8e-19
+      2.0   2.5683628306e-01   3.475901e-02   +2.00e-15          +2.29e-13          +2.29e-13
+  [PASS] KMS  G+_L(2.0)/G+_L(-2.0) = e^(beta w)  [beta=1, L=0.3]: 2.00e-15
+  [PASS] rho_L(2.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(2.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(2.0) = 0: 0.0e+00
+      3.0   2.2353314038e-01   1.112906e-02   +4.66e-15          +2.29e-13          +2.29e-13
+  [PASS] KMS  G+_L(3.0)/G+_L(-3.0) = e^(beta w)  [beta=1, L=0.3]: 4.66e-15
+  [PASS] rho_L(3.0) = G+ - G- = (w/2pi) e^(-w^2 L^2) (commutator from A): 2.29e-13
+  [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
+  [PASS] Im G+_L(3.0) = 0: 0.0e+00
+
+  (runtime 26.8 s)
+V7 OVERALL: PASS
+```
+
+## `v8_residual_framework.py`
+
+```text
+================================================================================================
+V8  residual framework:  Delta rho = rho_GRUT - rho_conventional is the decisive object   (H = 1, beta = 2 pi/H)
+================================================================================================
+
+== (A) helpers, tested on exact objects ==
+  [PASS] Planckian G+: rho(w) = w/2pi exactly at w in {0.1, 1, 3}  (rho(1) = 0.159154943091895 vs 1/2pi = 0.159154943091895)
+  [PASS] Planckian G+: N(w) = (w/4pi) coth(beta w/2)
+  [PASS] KMS defect of the Planckian spectrum = 0  (max defect 9.86e-32)
+  [PASS] mutation: G+ at temperature T/2 is flagged (defect > 1e-3)  (defect at w=0.5: 0.00344529  -- tester live)
+  [PASS] residual of a model against itself vanishes
+  [PASS] shape residual of w^3 against w^7 = -4  (got -4.0)
+
+== (B) FDT cancellation for G+_T (v1 closed form): rho_T is an odd polynomial ==
+  [PASS] sympy: G+_T(w) - G+_T(-w) == P7(w)/(10080 pi^3)  (P7 = 36*H**6*omega + 49*H**4*omega**3 + 14*H**2*omega**5 + omega**7)
+  [PASS] P7 coefficients (1, 0, 14H^2, 0, 49H^4, 0, 36H^6, 0): odd polynomial of degree 7  (coeffs = [1, 0, 14*H**2, 0, 49*H**4, 0, 36*H**6, 0])
+  [PASS] thermal denominators cancel: 1/(1-e^-x) + 1/(1-e^x) = 1
+  [PASS] sympy: N_T(w) == (1/2) coth(pi w/H) rho_T(w)
+  [PASS] N_T(0) = G+_T(0) = H^7/(560 pi^4)  (classical Nyquist floor)  (limit = H**7/(560*pi**4))
+  [PASS] numeric: rho_from_Gplus(G+_T) == P7/(10080 pi^3) at the table frequencies
+  [PASS] numeric: KMS defect of G+_T = 0  (max defect 2.41e-35)
+  [PASS] rho_T local exponent: 1 at w = 1e-3 H (IR, from 36 H^6 w) and 7 at w = 1e3 H (flat limit)  (slope(1e-3) = 1.000002722, slope(1e3) = 6.999972)
+  -> rho_T(t) = sum_k c_k delta^(k)(t): the dissipative kernel at a point is LOCAL (Huygens); all memory sits in
+     N_T = (1/2) coth(pi w/H) rho_T, which is fixed by rho_T and the temperature T = H/2pi -- nothing is left to supply.
+
+== (C) old GRUT kernels against the conformal medium  (normalised to agree with rho_T at w = 1) ==
+  Conformal medium reference: rho_T(w) = (w^7 + 14 w^5 + 49 w^3 + 36 w)/(10080 pi^3), slope 1 (w<<H) -> 7 (w>>H).
+
+  --- C1  rung-3 noise model  rho = J = w^3 exp(-(w/omega_c)^2), omega_c = 1  [calc/finite_T_exponent.py] ---   normalisation constant c = 0.00086972976 (the record left this amplitude free)
+       w |  rho_old/rho_T | Delta rho / rho_T |  slope_old |  slope_T | shape resid
+     0.1 |    0.073749826 |       -0.92625017 |       2.98 |  1.02701 |     1.95299
+     0.3 |     0.55174296 |       -0.44825704 |       2.82 |  1.22895 |     1.59105
+     1.0 |            1.0 |               0.0 |        1.0 |      2.6 |        -1.6
+     3.0 |  0.00012902409 |       -0.99987098 |      -15.0 |  5.18462 |    -20.1846
+    10.0 |  8.8321224e-46 |              -1.0 |     -197.0 |  6.73814 |    -203.738
+  IR exponent (w = 1e-3): old = 2.999998  vs conformal medium = 1.0000027;  UV exponent of the medium (w = 1e3) = 6.999972
+  [PASS] C1  rung-3 noise model  rho = J = w^3 exp(-(w/omega_c)^2), omega_c = 1  [calc/finite_T_exponent.py]: IR exponent = 3  (got 2.999998)
+  [PASS] C1  rung-3 noise model  rho = J = w^3 exp(-(w/omega_c)^2), omega_c = 1  [calc/finite_T_exponent.py]: Delta rho != 0 -- |Delta rho|/rho_T >= 10% at every tabulated w != 1  (min |Delta rho|/rho_T off w=1: 0.448257)
+  [PASS] C1  rung-3 noise model  rho = J = w^3 exp(-(w/omega_c)^2), omega_c = 1  [calc/finite_T_exponent.py]: shape residual |slope_old - slope_T| >= 0.5 at w = 0.1 and 10.0  (shape residual: at 0.1: 1.95299, at 10.0: -203.738)
+  (the record's S(w,T) = J coth(w/2T) is 2 N(w) for rho = J: KMS-locked by construction, so N adds no information)
+  UV: the Gaussian cutoff gives slope 3 - 2 (w/omega_c)^2 = -15.0 already at w = 3: no power law, vs 7 for the medium; the cutoff scale omega_c/H is a second free choice
+
+  --- C2  S5-1 Lorentzian, odd extension  rho = sgn(w) (w^2+kappa^2)^-1, kappa = 1/(2 sqrt 2.3)  [P06/P06B, p = 1] ---   normalisation constant c = 0.00035473349 (the record left this amplitude free)
+       w |  rho_old/rho_T | Delta rho / rho_T |  slope_old |  slope_T | shape resid
+     0.1 |      255.96878 |         254.96878 |  -0.168498 |  1.02701 |    -1.19551
+     0.3 |      45.897501 |         44.897501 |  -0.905908 |  1.22895 |    -2.13486
+     1.0 |            1.0 |               0.0 |   -1.80392 |      2.6 |    -4.40392
+     3.0 |     0.00173388 |       -0.99826612 |   -1.97613 |  5.18462 |    -7.16075
+    10.0 |   9.6729586e-8 |        -0.9999999 |   -1.99783 |  6.73814 |    -8.73597
+  IR exponent (w = 1e-3): old = -1.8399831e-5  vs conformal medium = 1.0000027;  UV exponent of the medium (w = 1e3) = 6.999972
+  [PASS] C2  S5-1 Lorentzian, odd extension  rho = sgn(w) (w^2+kappa^2)^-1, kappa = 1/(2 sqrt 2.3)  [P06/P06B, p = 1]: IR exponent = 0  (got -1.8399831e-5)
+  [PASS] C2  S5-1 Lorentzian, odd extension  rho = sgn(w) (w^2+kappa^2)^-1, kappa = 1/(2 sqrt 2.3)  [P06/P06B, p = 1]: Delta rho != 0 -- |Delta rho|/rho_T >= 10% at every tabulated w != 1  (min |Delta rho|/rho_T off w=1: 0.998266)
+  [PASS] C2  S5-1 Lorentzian, odd extension  rho = sgn(w) (w^2+kappa^2)^-1, kappa = 1/(2 sqrt 2.3)  [P06/P06B, p = 1]: shape residual |slope_old - slope_T| >= 0.5 at w = 0.1 and 10.0  (shape residual: at 0.1: -1.19551, at 10.0: -8.73597)
+  UV exponent of (w^2+kappa^2)^-p is -2p = -2 (p = 1): the family value;  kappa = 0.32969024
+  family member p = 0.5: IR exponent -9.19992e-6 (0 for every p), UV exponent -1.0 (= -2p)
+  family member p = 2.0: IR exponent -3.67997e-5 (0 for every p), UV exponent -4.0 (= -2p)
+
+  --- C2' S5-1 Lorentzian, Drude-friction reading  rho = w (w^2+kappa^2)^-1  (Ohmic-Drude) ---   normalisation constant c = 0.00035473349 (the record left this amplitude free)
+       w |  rho_old/rho_T | Delta rho / rho_T |  slope_old |  slope_T | shape resid
+     0.1 |      25.596878 |         24.596878 |   0.831502 |  1.02701 |   -0.195507
+     0.3 |       13.76925 |          12.76925 |  0.0940919 |  1.22895 |    -1.13486
+     1.0 |            1.0 |               0.0 |  -0.803922 |      2.6 |    -3.40392
+     3.0 |     0.00520164 |       -0.99479836 |  -0.976134 |  5.18462 |    -6.16075
+    10.0 |   9.6729586e-7 |       -0.99999903 |  -0.997828 |  6.73814 |    -7.73597
+  IR exponent (w = 1e-3): old = 0.9999816  vs conformal medium = 1.0000027;  UV exponent of the medium (w = 1e3) = 6.999972
+  [PASS] C2' S5-1 Lorentzian, Drude-friction reading  rho = w (w^2+kappa^2)^-1  (Ohmic-Drude): IR exponent = 1  (got 0.9999816)
+  [PASS] C2' S5-1 Lorentzian, Drude-friction reading  rho = w (w^2+kappa^2)^-1  (Ohmic-Drude): Delta rho != 0 -- |Delta rho|/rho_T >= 10% at every tabulated w != 1  (min |Delta rho|/rho_T off w=1: 0.994798)
+  [PASS] C2' S5-1 Lorentzian, Drude-friction reading  rho = w (w^2+kappa^2)^-1  (Ohmic-Drude): shape residual |slope_old - slope_T| >= 0.5 at w = 1.0 and 10.0  (shape residual: at 1.0: -3.40392, at 10.0: -7.73597)
+  NOTE: in the Drude reading the IR exponent 1 coincides with the medium's IR exponent 1 (w << H), so the shape residual
+        at w = 0.1 is only -0.1955 (tested at w = 1 and 10 instead); the amplitude residual there is still
+        24.6 x rho_T, and for w >= 1 Drude falls as 1/w while the medium rises as w^7: Delta rho != 0 regardless.
+
+  CONCLUSION (C): every registered GRUT kernel asserts Delta rho != 0 against the conformal vacuum medium of the
+  same (observable, state), with exponents 3 / 0 (or 1) in place of the medium's 1 -> 7, and gives no operator or state
+  that would produce the difference.  That is exactly what SCOUT_0 recorded as 'supplied' (noise profile, kernel class).
+
+== (D) residual_report template, demonstrated ==
+  residual_report: observable = T^00 at a point on a comoving worldline (one conformal scalar); state = Bunch-Davies / geodesic observer, KMS at T = H/2pi
+    max |Delta rho|/rho_ref = 0; max |shape residual| = 0; IR exponent model/ref = 1.0000/1.0000; KMS defect of implied N = 0.0e+00
+    VERDICT: EMPTY (Delta rho = 0)
+  [PASS] template on the conformal medium itself returns EMPTY (Delta rho = 0)
+  residual_report: observable = unspecified ('fast modes', rung 3); state = unspecified thermal state, T free
+    max |Delta rho|/rho_ref = 1; max |shape residual| = 203.7; IR exponent model/ref = 3.0000/1.0000; KMS defect of implied N = 0.0e+00
+    VERDICT: SUPPLIED (Delta rho != 0, no mechanism named)
+  [PASS] template on C1 returns SUPPLIED  (IR exponent 3.0000 vs ref 1.0000)
+  residual_report: observable = unspecified (S5-1 scaled-limit resolvent density); state = unspecified, kappa = 1/(2 sqrt 2.3)
+    max |Delta rho|/rho_ref = 255; max |shape residual| = 8.736; IR exponent model/ref = -0.0000/1.0000; KMS defect of implied N = 0.0e+00
+    VERDICT: SUPPLIED (Delta rho != 0, no mechanism named)
+  [PASS] template on C2 returns SUPPLIED  (IR exponent -0.0000 vs ref 1.0000)
+  residual_report: observable = unspecified; state = unspecified
+    max |Delta rho|/rho_ref = 1; max |shape residual| = 203.7; IR exponent model/ref = 3.0000/1.0000; KMS defect of implied N = 0.0e+00
+    VERDICT: TESTABLE (Delta rho != 0; mechanism: (hypothetical) named operator content)
+  [PASS] template on C1 with a named mechanism returns TESTABLE
+  [PASS] template: implied noise of every model is KMS-consistent by construction (defect < 1e-25)
+
+V8 OVERALL: PASS
+```
+
+## `v9_induced_gravity_matching.py`
+
+```text
+== A1. Flat-plane entanglement entropy from the cone heat kernel (Solodukhin eqs. 20, 26-28), d = 4 ==
+  W_area(alpha) = A*(alpha**2 - 1)/(96*pi*alpha*epsilon**2)
+  S = (alpha d/dalpha - 1) W |_1 = A/(48*pi*epsilon**2)   ->   S/A = 1/(48*pi) / eps^2
+  [PASS] S_scalar/A = 1/(48 pi eps^2)  [Solodukhin eq. 28 with d = 4]
+  [PASS] eq. (28) general-d formula 1/(6(d-2)(4 pi)^((d-2)/2)) reduces to 1/(48 pi) at d = 4
+  <phi^2>_eps = int_(eps^2)^inf ds (4 pi s)^-2 = 1/(16*pi**2*epsilon**2)
+  [PASS] <phi^2>_eps = 1/(16 pi^2 eps^2)
+
+== A2. One-loop delta(1/G) from a_1 per species (Solodukhin eqs. 112-115, 131-148; Kabat c_1 table) ==
+  W_div (int R part) = -IntR*k_1/(32*pi**2*epsilon**2)   =>   delta(1/G) = k_1/(2*pi*epsilon**2)
+  [PASS] delta(1/G) = k_1/(2 pi eps^2)
+  [PASS] minimal scalar: 1/G_ren = 1/G_B + 1/(12 pi eps^2)  [Solodukhin eq. 115]
+  species                 k_1            delta(1/G)         delta(1/(4G))               S_ent/A              mismatch
+  real scalar xi=0        1/6       1/(12 pi eps^2)       1/(48 pi eps^2)       1/(48 pi eps^2)                     0
+  real scalar xi=1/6        0                     0                     0       1/(48 pi eps^2)      -1/(48 pi eps^2)
+  Dirac fermion           1/3        1/(6 pi eps^2)       1/(24 pi eps^2)       1/(24 pi eps^2)                     0
+  Weyl fermion            1/6       1/(12 pi eps^2)       1/(48 pi eps^2)       1/(48 pi eps^2)                     0
+  Maxwell + ghosts       -2/3       -1/(3 pi eps^2)      -1/(12 pi eps^2)       1/(24 pi eps^2)       -1/(8 pi eps^2)
+  [PASS] k_1(scalar, xi) = 1/6 - xi  [Solodukhin eq. 141; Kabat c_1 = 1/6 at xi = 0]
+  [PASS] k_1(Dirac) = +1/3  [Solodukhin eq. 136 with D_1/2 = 2 and fermionic sign; Kabat c_1 = 2^[d/2]/12]
+  [PASS] k_1(Maxwell+ghosts) = D_1/6 - 1 = -2/3  [Solodukhin eq. 147; Kabat c_1 = (d-2)/6 - 1]
+  [PASS] Dirac delta(1/(4G)) = D_1/2/(48 pi eps^2) = 1/(24 pi eps^2)  [Solodukhin eq. 137]
+  [PASS] Maxwell delta(1/(4G)) = (D_1/6 - 1)/(8 pi eps^2) = -1/(12 pi eps^2)  [Solodukhin eq. 148]
+  [PASS] Kabat eq. (1.1): 2 pi c_1 A int ds/(4 pi s)^2 = c_1 A/(8 pi eps^2) = delta(1/(4G)) A
+  [PASS] 2D: Larsen-Wilczek c(fermion)/c(boson) = 1/2 per component -> Dirac(2 comp.) = scalar = D_1/2(d=2) = 1
+
+== B. Matching and mismatch, species by species; contact (Wald) terms ==
+  [PASS] minimal scalar: delta(1/(4G)) = S_ent/A = 1/(48 pi eps^2)
+  [PASS] Dirac fermion:  delta(1/(4G)) = S_ent/A = 1/(24 pi eps^2)
+  [PASS] Weyl fermion:   delta(1/(4G)) = S_ent/A = 1/(48 pi eps^2)
+  [PASS] conformal scalar xi=1/6: delta(1/(4G)) = 0 while S_ent/A = 1/(48 pi eps^2): MISMATCH = -1/(48 pi eps^2)
+  [PASS] generic xi: mismatch = -xi/(8 pi eps^2)  [Solodukhin eq. 142]
+  Wald contact term  -2 pi xi <phi^2>_eps = -xi/(8*pi*epsilon**2)   (xi = 1/6: -1/(48*pi*epsilon**2))
+  [PASS] -2 pi xi <phi^2>_eps = -xi/(8 pi eps^2) = the mismatch (eq. 142)
+  [PASS] S_ent + S_contact = (1/6 - xi)/(8 pi eps^2) = delta(1/(4G))  [Solodukhin eq. 144 = eq. 141]
+  [PASS] xi = 1/6: S_ent + S_contact = 1/(48 pi) - 1/(48 pi) = 0 = delta(1/(4G))
+  [PASS] replica trick on eq. (143) surface term gives the same -xi A/(8 pi eps^2)
+  Kabat contact entropy (beta d/dbeta - 1)[A (2 pi - beta) <phi^2>_eps]|_(2 pi) = -A/(8*pi*epsilon**2)
+  [PASS] Maxwell contact term = -A/(8 pi eps^2) = -2 pi <phi^2>_eps A  (Tr X^(1)/R = 1: 'xi_eff = 1')
+  [PASS] Maxwell: S_ent/A + S_contact/A = 1/(24 pi) - 1/(8 pi) = -1/(12 pi eps^2) = delta(1/(4G))  [Kabat sec. 1; Solodukhin eq. 148]
+  [PASS] bosonic rule  delta(1/(4G)) - S_ent/A = -(Tr X/R)/(8 pi eps^2)  for real scalar xi=0
+  [PASS] bosonic rule  delta(1/(4G)) - S_ent/A = -(Tr X/R)/(8 pi eps^2)  for real scalar xi=1/6
+  [PASS] bosonic rule  delta(1/(4G)) - S_ent/A = -(Tr X/R)/(8 pi eps^2)  for Maxwell + ghosts
+  (Fermions: Kabat shows no contact term for spin 1/2; the X = R/4 term is absorbed by the statistics sign, eq. 136.)
+
+== C. Species sums, Standard Model content; Sakharov 1/G_ind = (sum k_1) Lambda_UV^2/(2 pi), Lambda_UV = 1/eps ==
+  Minimal-scalar units: N_eff := 6 sum k_1, so 1/G_ind = N_eff Lambda^2/(12 pi) and Lambda = sqrt(12 pi/N_eff) M_P.
+  SM (N_s=4, N_W=45, N_V=12)   xi = 0   :  sum k_1 =   1/6  -> 1/G_ind = (1/12) Lambda^2/pi ;  N_eff = 1 ;  Lambda_UV = sqrt(12 pi/1) M_P = 6.140 M_P = 7.50e+19 GeV
+  SM (N_s=4, N_W=45, N_V=12)   xi = 1/6 :  sum k_1 =  -1/2  -> 1/G_ind = (-1/4) Lambda^2/pi ;  N_eff = -3 ;  1/G_ind < 0: SIGN PROBLEM, no real Lambda_UV (induced G would be negative)
+  SM (N_s=4, N_W=45, N_V=12)   entropy side: sum S_ent/A = 73/(48 pi eps^2)  (N_eff^(S) = 73, all species positive)  -> if matched alone: Lambda = sqrt(12 pi/73) M_P = 0.719 M_P = 8.77e+18 GeV
+  SM + 3 nu_R (N_W=48)         xi = 0   :  sum k_1 =   2/3  -> 1/G_ind =  (1/3) Lambda^2/pi ;  N_eff = 4 ;  Lambda_UV = sqrt(12 pi/4) M_P = 3.070 M_P = 3.75e+19 GeV
+  SM + 3 nu_R (N_W=48)         xi = 1/6 :  sum k_1 =     0  -> 1/G_ind =                  0 ;  N_eff = 0 ;  1/G_ind = 0 at one loop: NO induced G (Lambda undefined)
+  SM + 3 nu_R (N_W=48)         entropy side: sum S_ent/A = 19/(12 pi eps^2)  (N_eff^(S) = 76, all species positive)  -> if matched alone: Lambda = sqrt(12 pi/76) M_P = 0.704 M_P = 8.60e+18 GeV
+  [PASS] SM, xi = 0:   sum k_1 = (4 + 45 - 48)/6 = +1/6  -> 1/G_ind = Lambda^2/(12 pi), N_eff = 1
+  [PASS] SM, xi = 0:   Lambda_UV = sqrt(12 pi) M_P = 6.14 M_P  (above M_P: one-loop dominance fails)
+  [PASS] SM, xi = 1/6: sum k_1 = (0 + 45 - 48)/6 = -1/2 < 0  -> SIGN PROBLEM
+  [PASS] SM entropy side: sum S_ent/A = 73/(48 pi eps^2) > 0
+  [PASS] SM + 3 nu_R: xi = 0 gives N_eff = 4; xi = 1/6 gives sum k_1 = 0 exactly (vectors cancel 48 Weyl)
+  Reading: with the contact terms included (which is what renormalises G), the SM's 12 vectors (k_1 = -2/3 each, total -8)
+  nearly cancel its 45 Weyl fermions (+7.5) and 4 scalars (+2/3 at xi=0, 0 at xi=1/6). The induced 1/G is tiny or negative.
+  Sakharov's programme at one loop with SM content does NOT give G: either a bare 1/G_B, more species, or a UV completion.
+  (Visser gr-qc/0204062 secs. 3-5 reaches the same conclusion: one-loop induced gravity needs BSM content.)
+
+== D. Regulator dependence: the same scalar area law in a different cutoff ==
+  heat-kernel: S/A = 1/(48 pi eps^2);  Susskind-Uglum eq. (2.24): S/A = 1/(360 pi eps_SU^2);  ratio = 15/2 = (eps_SU/eps)^2 if identified
+  [PASS] both are area laws c A/eps^2 with c > 0; coefficients differ (48 vs 360) -> the COEFFICIENT is regulator-dependent
+  [PASS] Cooperman-Luty eq. (1.5): S_ent = -4 pi c_2 Lambda^2 A with EH coefficient -M_P^2/(16 pi) -> S_ent = (1/4) delta(M_P^2) A  [scheme-free statement]
+
+V9 OVERALL: PASS
+Verdict for O1: species-by-species matching delta(1/(4G)) = (S_ent + S_contact)/A holds in the heat-kernel scheme
+(theorem for free matter loops); the coefficients are scheme-dependent; the finite G is NOT determined. P2 is consistent, not derived.
+```
+
+## `v10_graviton_sector_memory.py`
+
+```text
+== 10.1 worldline invariant ==
+  (1-Z) - 2 sinh^2(H dt/2) = 0 -> PASS
+  flat limit coefficient of 1/dt^2: 1/(4*pi**2) -> PASS
+== 10.2 stationarity of the velocity correlator ==
+  d_t d_t' G depends on tbar? False -> PASS
+== 10.3 Brownian covariance at large separation ==
+  G - (H^2/8pi^2)(2H tbar - H dt) ->  H**2*log(2)/(8*pi**2)  as dt->oo (a constant: PASS)
+  => G ~ D * min(t,t') + const, D = H**3/(4*pi**2) -> PASS
+== 10.4 secular growth of the renormalised variance ==
+  d<phi^2>/dt = H**3/(4*pi**2) -> PASS
+== 10.5 tensor translation ==
+  d<h_ij h^ij>/dt = 2*H**3/(pi**2*M_P**2) ;  H*P_T = 2*H**3/(pi**2*M_P**2) -> PASS
+== 10.6 KMS periodicity of the stationary part ==
+  stationary part shifted by 2 pi i/H minus itself: 0 -> PASS
+
+V10 OVERALL: PASS
+```
+
+## `v11_quasi_ds_kms_defect.py`
+
+```text
+== 11.1 exact-dS limit (epsilon -> 0 realised as p -> large; compare with Planck) ==
+  [PASS] eps=0.0025 G+(w=0.5): got 0.08314213439 want 0.08317164418 rel 0.000355
+  [PASS] eps=0.0025 G+(w=2.0): got 0.3183109616 want 0.3183109962 rel 1.09e-7
+  [PASS] eps=0.000625 G+(w=0.5): got 0.08316426791 want 0.08317164418 rel 8.87e-5
+  [PASS] eps=0.000625 G+(w=2.0): got 0.3183109875 want 0.3183109962 rel 2.73e-8
+== 11.2 self-similarity ==
+  [PASS] G+(w=Hbar)/Hbar equal at two mean times: got 0.1594155722 want 0.1594155722 rel 0.0
+== 11.3 KMS defect D(w) = ln[G+(w)/G+(-w)] - 2 pi w/Hbar, scaling with epsilon ==
+  eps=0.04:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.39302', '7.06271', '14.5424', '22.0284']
+  eps=0.02:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.26051', '6.64931', '13.4971', '20.3485']
+  eps=0.01:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.1995', '6.46094', '13.0188', '19.5786']
+  eps=0.005:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.17017', '6.3708', '12.7895', '19.2092']
+  [PASS] D/eps converges (p=100 vs 200) at w/H=0.5: got 3.199495321 want 3.170171336 rel 0.00925
+  [PASS] D/eps converges (p=100 vs 200) at w/H=1.0: got 6.460942761 want 6.370803902 rel 0.0141
+  [PASS] D/eps converges (p=100 vs 200) at w/H=2.0: got 13.01883738 want 12.78953602 rel 0.0179
+  [PASS] D/eps converges (p=100 vs 200) at w/H=3.0: got 19.57860382 want 19.20922201 rel 0.0192
+  => f(w/H) = lim D/eps (from p=200): ['3.1702', '6.3708', '12.79', '19.209']
+  beta_eff(w)/beta_dS - 1, per unit eps (eps->0): ['1.0091', '1.0139', '1.0178', '1.0191']
+  => leading defect = effective-temperature shift T_eff ~ (H/2pi)(1 - c eps), c ~ 1.014  (= H one Hubble time after the mean time, to this order)
+  => CONVENTION-FREE violation: beta_eff varies with w; [beta_eff(3H) - beta_eff(0.5H)]/(eps beta_dS) = 0.009984 (no single temperature fits)
+== 11.4 oddness and vanishing at eps=0 ==
+  [PASS] D(-w) = -D(w): got -0.09739068296 want -0.09739068296 rel 0.0
+  [PASS] exact dS through the same pipeline: D = 0.0
+
+V11 OVERALL: PASS
 ```

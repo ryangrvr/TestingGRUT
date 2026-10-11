@@ -86,7 +86,12 @@ scalar **6.000000000**, law **β³(1 + 8r/3)** to 2e-16 (Han–Lykken–Zhang's 
 
     Im Π(s) = c_eff(s) · G s²,     c_eff(s) = (1/120) Σᵢ wᵢ Fᵢ(4mᵢ²/s),    w = 1 : 3 : 12 (real scalar : Weyl : vector),
 
-the frequency-resolved Weyl-anomaly coefficient (c_SM = 283/120 above 2m_t). **Scope (R4):** the variable is the
+the frequency-resolved Weyl-anomaly coefficient (c_SM = 283/120 above 2m_t). **Against the primary text (`08`):**
+Han–Lykken–Zhang (1999) eqs. (46), (52), (53) give Γ(h̃→VV) = Nκ²m³/160π, Γ(h̃→ff̄) = N_cκ²m³(1−4r)^{3/2}(1+8r/3)/320π,
+Γ(h̃→HH̄) = κ²m³(1−4r)^{5/2}/960π for a *complex* scalar (so 1/1920π per real scalar), with their κ² = 16πG and a
+non-canonical kinetic term (coefficient 1/4, |ε|² = 2) — physically identical to the canonical convention used here;
+the ratios 1 : 6 : 12 and the two threshold laws derived in `v4` agree. Their massive-vector factor is
+(1−4r)^{1/2}(13/12 + (14/39)r + (4/13)r²) (eq. 49), **not computed here**. **Scope (R4):** the variable is the
 timelike invariant mass √s, not a GW frequency — a free on-shell GW has s = 0 and *no* species is open at any
 frequency; the Standard-Model staircase in `v4` is **illustrative** (massive-vector threshold polynomial not computed,
 hadronic region 0.3–2 GeV schematic). The derived content is the weights, the two threshold laws, and the edge data:
@@ -121,8 +126,12 @@ at t/R = 0.5 … 3). For the conformal stress tensor the same smearing turns the
     χ_L(t) = −(t⁶ − 30L²t⁴ + 180L⁴t² − 120L⁶) e^{−t²/4L²} / (184320 π^{7/2} L¹³ t),
 
 obtained two independent ways (position-space distribution and momentum-space CFT form) and confirmed by
-quadrature to 1e-26 at eight values of t/L: a smooth kernel of support ∼ L with zero crossings, from an observable
-whose pointwise response has no memory at all. KMS for smeared observables, N_L = ½coth(βω/2)ρ_L, verified to
+quadrature to 1e-26 at nine values of t/L: a kernel of support ∼ L with zero crossings and a Gaussian tail, from an
+observable whose pointwise response has no memory at all. **Nuance found by `v7`:** spatial smearing alone leaves a
+1/t edge at small t (χ_L → 1/(1536π^{7/2}L⁷t), because the dissipative spectrum of a spatially smeared T₀₀ tends to the
+constant √π/(1536π³L⁷) at high frequency — pairs of arbitrarily high energy with bounded total momentum), so the static
+susceptibility ∫χ_L dt diverges logarithmically and an integrable kernel needs a *temporal* smearing as well; the
+scaling is χ_L = L⁻⁸g(t/L) (F_L has dimension 4). KMS for smeared observables, N_L = ½coth(βω/2)ρ_L, verified to
 1e-13 at two temperatures. *Corollary:* apparent memory of order L/c can always be manufactured by the access
 profile and is never evidence for a vacuum relaxation law.
 

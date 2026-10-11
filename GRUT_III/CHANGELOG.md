@@ -25,6 +25,10 @@ Additions:
 - `calc/v10`: gravitational sector = stationary thermal process + Brownian zero mode, D = H³/4π².
 - `calc/v11`: conventional O(ε) KMS defect under slow roll (the first non-KMS baseline).
 - `calc/requirements.txt`; `run_all.py` extended to v1–v11.
+- `08_PRIORITY_AND_SOURCES.md`: nine papers checked at equation level (PNRV is ξ = 0 only; conformal kernel is Cho–Hu's;
+  Milgrom's coefficients are definite and overshoot; HLZ widths contain D5's laws; Jacobson confirms R1; NPT/Deser–Levin
+  confirm the dS Unruh temperature); Stage-3 charter located (DEF-16, SCOPE-Q).
+- Verification status: the adversarial three-lens pass on v7–v10 did not run (usage limit); author-level only; owed.
 
 ## Revision 1 (2026-10-11, commit 862e666)
 
