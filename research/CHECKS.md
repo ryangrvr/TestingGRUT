@@ -36,3 +36,16 @@ The separate [Card-1 register](card01/CHECKS.md) and
 slots consumed; one is unconsumed. Stage 3 is inactive; Card 3 is unopened and
 unauthorized. No canonical T-3 final count or terminal has been issued.
 These registers confer no evaluator/CR-5 external clearance.
+
+## Separate constructive program: CP-01
+
+The owner correction resumes construction without opening Stage-3 Card 3.
+The law is frozen at `9ca24c0d987971bd466d40dd7f58b2657edcd674`;
+[the report](constructive_physics/attempt01/REPORT.md) derives the covariant
+dynamics, Einstein/Schrodinger limits, a full finite-angle tree amplitude,
+a stable matched-mass/force comparator, and the scalar-loop closure obstruction.
+Thirteen exact assertion groups pass. **Independent review is outstanding**,
+especially of the exchange-amplitude normalization, quantum scope and novelty.
+Remote freeze verification was completed before executable checks. The result
+is conditional author physics, not a kit-certified verdict or a validated law.
+No historical scientific packet or failed-card register is changed.

@@ -7,8 +7,11 @@ interaction mechanism; it does not resubmit the Stage-3 identity/interface
 challenge. [Authorization](constructive_physics/AUTHORIZATION.md) and the
 [two-draft selection log](constructive_physics/DRAFT_LOG.json) distinguish this
 first construction from historical card accounting. [CP-01](constructive_physics/attempt01/LAW.md)
-is frozen before executable checks. No scientific discovery or independent
-clearance is preclaimed. Closure of prior routes does not suspend this mission.
+was frozen before executable checks. The [construction and hostile test](constructive_physics/attempt01/REPORT.md)
+derive a conditional tree prediction, a conventional countermodel and a precise
+scalar-loop obstruction. [Exact results](constructive_physics/attempt01/results.json)
+reproduce the algebra. A fundamental GRUT law and independent clearance remain
+unestablished. Closure of prior routes does not suspend this mission.
 
 The following decisions and scientific packets are preserved as history.
 
