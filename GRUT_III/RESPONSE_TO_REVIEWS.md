@@ -218,3 +218,12 @@ for conformal fields in the conformal vacuum; the massless/graviton sector is th
 mode-equation identity of `v12` 12.4 as the tool. Attribution note: arXiv:0812.3006 is Jiang–Ke–Peng–Feng; the κ formula
 is Hayward's, used by Cai–Kim (2005), Akbar–Cai (2007) and Cai–Cao–Hu (2009); Tian–Booth (2014) is the "temperature
 confusion" reference, read at abstract level here.
+
+
+## R17 — Addendum (fourth round, 2026-10-11): revision 2.2 accepted; two cautions
+
+Accepted as stated: (1) the `v12` lemma identifies mode equations in conformal time only; comoving worldline spectra in
+power-law FRW require the power-law t(η) and cannot borrow de Sitter Wightman functions (`09` §4 amended); (2) item 1 of
+`05` O5 is likely textbook (Abbott–Wise 1984; Lucchin–Matarrese 1985; Garbrecht–Prokopec 2004), so the literature is
+checked first and effort moves to item 3 — whether the secular-infrared resummations disagree — which is the only item
+that can open a window rather than close one. `10_SECULAR_IR_SURVEY.md` records that check.

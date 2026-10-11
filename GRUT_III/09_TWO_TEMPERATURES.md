@@ -52,7 +52,12 @@ literature conventions.
   field of mass m in de Sitter with ν² = 9/4 − m²/H², with ν = 3/2 + ε/(1−ε) (the dS analogue is tachyonic, so the IR
   needs the usual care; the velocity correlator is IR-finite). The massless worldline correlator in power-law FRW is
   therefore the dS massive one times a ratio of scale factors, and the first-order temperature of its stationary part is
-  computable from known dS functions. That is the next computation.
+  computable from known dS functions — **with one caution (reviewer):** the lemma identifies the *mode equations in
+  conformal time*; a comoving detector's proper time maps to η differently in power-law FRW than in de Sitter, so the
+  worldline spectra must be built with the power-law t(η), not by transplanting de Sitter Wightman functions. And the
+  power-law massless modes are textbook (Abbott–Wise 1984; Lucchin–Matarrese 1985), with comoving-detector responses for
+  massless fields in dS in Garbrecht–Prokopec (2004): if the item is largely published, effort goes to `05` O5 item 3
+  instead.
 - Priority: the detector-vs-horizon distinction and the sign conventions are discussed in Tian & Booth,
   arXiv:1411.6547; the Kodama–Hayward temperature in FRW is Cai–Kim (2005), Akbar–Cai (2007), Cai–Cao–Hu (2009);
   the reviewer's arXiv:0812.3006 is Jiang–Ke–Peng–Feng (tunnelling and the unified first law), which uses the same

@@ -65,9 +65,10 @@ Kodama–Hayward temperature (H/2π)(1 − ε/2) differ at O(ε); P1 says only t
 horizon is not Killing for ε ≠ 0, so no KMS parameter exists for it), and the horizon first laws are identities of D3's
 Einstein equations, not inputs. No heat-flow law; no O(ε) non-thermal window for the conformal sector.
 
-**Next computations, in order.**
+**Next computations, in order (re-prioritised after the third review: item 3 first if item 1 is published).**
 1. The gravitational sector's own quasi-dS baseline (tool: the mode-equation identity of `v12` 12.4 — massless field in
-   power-law FRW ≡ massive field in dS with ν = 3/2 + ε/(1−ε)): the massless (ν = 3/2 + O(ε)) worldline two-time function in
+   power-law FRW ≡ massive field in dS with ν = 3/2 + ε/(1−ε), *in conformal time*; worldline spectra need the power-law
+   t(η); priority to check first: Abbott–Wise 1984, Lucchin–Matarrese 1985, Garbrecht–Prokopec 2004): the massless (ν = 3/2 + O(ε)) worldline two-time function in
    power-law inflation, its stationary part's KMS defect, and the O(ε) correction to the zero-mode diffusion
    constant D = H³/4π² (expected: D(t) = H(t)³/4π² with the spectral tilt n_T = −2ε encoded in the two-time
    structure). This fixes what conventional theory says for the free graviton sector.
