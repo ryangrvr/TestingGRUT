@@ -171,6 +171,19 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
 - The first-order detector temperature (ä/ȧ)/2π for conformal fields in the conformal vacuum (D11) — literature check
   owed.
 
+## Cho, Kim & Kitamoto (2015), "Stochastic dynamics of infrared fluctuations in accelerating universe", arXiv:1508.07877 — FULLTEXT (pdftotext)
+
+- Eq. (2.5): a = (1 + ε₀H₀t)^{1/ε₀}; eq. (2.13): ν₀ = (3−ε₀)/(2(1−ε₀)) = 3/2 + ε₀/(1−ε₀) — identical to the `v12` 12.4 lemma
+  index. Eq. (3.14): white noise ⟨φ̄̇₀φ̄̇₀⟩ = (2−2ε₀)^{2ν₀−3}Γ²(ν₀)(1−ε₀)³H³δ(t−t′)/π³. Eqs. (3.15)–(3.16): Fokker–Planck
+  ρ̇ = ½A₀H³∂²ρ + (1/((3−ε₀)H))∂(ρV′), A₀ = (2−2ε₀)^{2ν₀−3}Γ²(ν₀)(1−ε₀)³/π³. Eq. (3.21): at ε₀ = 0 the equilibrium
+  ρ∞ ∝ exp(−8π²V/3H₀⁴) (Starobinsky–Yokoyama). `v13` uses exactly these; it adds only the O(ε) expansion and the comparison
+  with horizon temperatures. The paper notes that for ε₀ ≠ 0 the equilibrium is reached only in a rescaled time variable —
+  the reason `05` calls T_zm(ε) an instantaneous weight.
+- Attribution: 1508.07877 is Cho, Kim & Kitamoto; the 2018/19 paper on derivative interactions, 1811.01830, is Kitamoto alone.
+  Both were misattributed in an earlier draft of `10` (fixed before commit).
+- The remaining sources of the fifth-round survey (30+ papers; what was read at full text vs abstract) are listed at the
+  end of `10_SECULAR_IR_SURVEY.md`.
+
 ## Verification status of the new scripts (honest record)
 
 The three-lens adversarial verification of `v7`–`v10` scheduled in the round-two workflow **did not run**: the four
@@ -182,4 +195,6 @@ steps of `v7` §A, and (iii) checked `v7` §B's two independent closed-form deri
 script reports (agreement to 1e-26). `v7`'s own caveats (the 1/t edge; L⁻⁸ scaling) were adopted into D9. `v10` and
 `v11` were author-written; `v11`'s revision-2 headline was then **refuted** by the independent reviewers and corrected
 (rev. 3). The reviewers' reruns cover v7, v9, v10 and the power-law part of v11; `v8` and the general-a(t) and ΛCDM
-parts of `v11` rev. 3 remain author-level.
+parts of `v11` rev. 3 remain author-level. `v12` (third round) and `v13` (fifth round) are author-written and author-run;
+`v13`'s input equations were checked against the Cho–Kim–Kitamoto full text at equation level, and its one derivative
+(c₁ = 1 − 2γ_E − 2 ln 2) is cross-checked numerically inside the script; independent review is owed (O7 item 3).

@@ -6,7 +6,8 @@ here = pathlib.Path(__file__).resolve().parent
 scripts = ["v1_ds_thermal_kernel.py", "v2_jacobson_eos.py", "v3_horizon_fluid.py",
            "v4_medium_absorptive_kernel.py", "v5_anomaly_selfconsistency.py", "v6_low_acceleration_scale.py",
            "v7_access_geometry_memory.py", "v8_residual_framework.py", "v9_induced_gravity_matching.py",
-           "v10_graviton_sector_memory.py", "v11_quasi_ds_kms_defect.py", "v12_two_temperatures.py"]
+           "v10_graviton_sector_memory.py", "v11_quasi_ds_kms_defect.py", "v12_two_temperatures.py",
+           "v13_zero_mode_temperature.py"]
 rows, logs, allok = [], [], True
 for s in scripts:
     r = subprocess.run([sys.executable, "-I", str(here/s)], capture_output=True, text=True)

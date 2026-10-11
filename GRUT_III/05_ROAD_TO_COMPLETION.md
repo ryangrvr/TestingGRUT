@@ -65,19 +65,44 @@ Kodama–Hayward temperature (H/2π)(1 − ε/2) differ at O(ε); P1 says only t
 horizon is not Killing for ε ≠ 0, so no KMS parameter exists for it), and the horizon first laws are identities of D3's
 Einstein equations, not inputs. No heat-flow law; no O(ε) non-thermal window for the conformal sector.
 
-**Next computations, in order (re-prioritised after the third review: item 3 first if item 1 is published).**
-1. The gravitational sector's own quasi-dS baseline (tool: the mode-equation identity of `v12` 12.4 — massless field in
-   power-law FRW ≡ massive field in dS with ν = 3/2 + ε/(1−ε), *in conformal time*; worldline spectra need the power-law
-   t(η); priority to check first: Abbott–Wise 1984, Lucchin–Matarrese 1985, Garbrecht–Prokopec 2004): the massless (ν = 3/2 + O(ε)) worldline two-time function in
-   power-law inflation, its stationary part's KMS defect, and the O(ε) correction to the zero-mode diffusion
-   constant D = H³/4π² (expected: D(t) = H(t)³/4π² with the spectral tilt n_T = −2ε encoded in the two-time
-   structure). This fixes what conventional theory says for the free graviton sector.
-2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer did
-   exact dS): the first *interacting* baseline.
-3. Only then: is there any ΔW(t,t′) in the interacting gravitational infrared that conventional stochastic gravity
-   leaves undetermined (the secular-growth problem)? If the literature's resummations disagree among themselves, that
-   disagreement is the exact size of the opening; a GRUT statement would be a *restriction* on it forced by P0–P5.
-   If they agree, the opening is closed and GRUT III is, finally and honestly, GR + QFT with a thermodynamic reading.
+**Literature verdict (`10`, fourth round).** Item 3: the scalar-sector resummations agree (stochastic = leading log, NLO
+consistent) — closed; the graviton-sector dispute is live but is about which quantities are observables in perturbative
+quantum gravity on dS, which P0–P5 do not address — not a GRUT opening. Item 1 is published except for the O(ε)
+worldline KMS defect of the massless sector; its O(ε) zero-mode Fokker–Planck coefficients are Cho–Kim–Kitamoto (2015).
+
+**The decisive cheap computation, done (`v13`, fifth round).** Question: does P1's thermal reading at any horizon
+temperature fix the published O(ε) Fokker–Planck coefficients of the massless minimally coupled zero mode in power-law
+FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16: noise A₀H³ with A₀ = (2−2ε)^{2ν₀−3}Γ²(ν₀)(1−ε)³/π³, ν₀ = 3/2 + ε/(1−ε),
+drift 1/((3−ε)H))? The stationary weight is exp(−V/T_zm) with T_zm = (3−ε)A₀H⁴/2 = 3H⁴/8π² = 1/Vol(S⁴) at ε = 0 (the
+Hartle–Hawking weight, the Euclidean face of KMS at β = 2π/H). At O(ε): d ln T_zm/dε = 2/3 − 2γ_E − 2 ln 2 = −1.874. Read as
+the Euclidean weight (H_X/H)⁴ of a rate H_X = H(1 − c_X ε) this needs c_X = 0.4685 — not the detector value 1 (D11), not
+the Kodama–Hayward value 1/2 (`09`), not 0. (Kodama–Hayward is numerically close, −1.50 vs −1.54 for the diffusion
+coefficient, but the gap 5/2 − 2γ_E − 2 ln 2 is exact and transcendental: a near-coincidence.) **Answer: no.** The O(ε)
+coefficients come from the Hankel normalisation (Γ(ν₀), 2^{2ν₀−3}) and carry γ_E and ln 2; no geometric horizon
+temperature reproduces them. P1 is consistent with this — for ε ≠ 0 the modular flow is not geometric and P1 assigns no
+temperature — and adds nothing: conventional theory fixes the coefficients completely. **O5 items 1 and 3 close.** Item 1
+closes as a GRUT question (there is nothing for P1 to add in the massless sector at first order); the O(ε) worldline KMS
+defect of the massless sector remains an unpublished but purely conventional calculation. Caveat on scope: with H(t)
+varying there is no stationary state for ε ≠ 0, so T_zm(ε) is the instantaneous Boltzmann weight — which is exactly the
+statement that the modular flow is non-geometric.
+
+**What remains, in order (after `v13`).**
+1. (closed) Items 1 and 3 — the massless-sector baseline and the secular-IR opening — close as above and in `10`.
+2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer 2012 did
+   exact dS): the last conventional baseline. Low priority: by the precedent of `v11` (conformal sector, O(ε²)) and `v13`
+   (massless sector, O(ε)), conventional theory fixes it and P1 adds nothing.
+3. The graviton infrared (which observables carry secular logs) is a question in perturbative quantum gravity on dS;
+   none of P0–P5 addresses it, and GRUT III does not claim it.
+4. Independent verification of `v8`, the general-a(t) and ΛCDM parts of `v11`, `v12`, `v13` (O7).
+
+**The honest closing line now applies.** GRUT III is GR + QFT with a thermodynamic reading. In every regime computed in
+this branch — exact dS (KMS by construction), quasi-dS conformal sector through O(ε²) (`v11`), quasi-dS massless sector
+at O(ε) (`v13`), the horizon first laws (`v12`) — the answer is fixed by conventional theory and P0–P5 add no selection.
+The program's genuine fork is therefore not another computation inside P0–P5 but a decision: either (a) GRUT III is
+accepted as the thermodynamic *reading* of GR + QFT, a consistent framework with no distinctive prediction (`03`), or
+(b) a sixth postulate is proposed that breaks KMS-by-construction in a controlled, parameter-free way — the only route to
+a distinctive prediction — and is tested with the Δρ instrument of `07` against the baselines fixed here, priced against
+the fifth-force bounds of `03`. Option (b) is the open road; nothing in this branch yet supplies such a postulate.
 
 ## O6 — a₀ (Milgrom's conjecture, not GRUT's; `06`)
 

@@ -227,3 +227,22 @@ power-law FRW require the power-law t(η) and cannot borrow de Sitter Wightman f
 `05` O5 is likely textbook (Abbott–Wise 1984; Lucchin–Matarrese 1985; Garbrecht–Prokopec 2004), so the literature is
 checked first and effort moves to item 3 — whether the secular-infrared resummations disagree — which is the only item
 that can open a window rather than close one. `10_SECULAR_IR_SURVEY.md` records that check.
+
+## R18 — Addendum (fifth round, 2026-10-11): the item-3 survey and the decisive `v13` computation
+
+The fourth-round reprioritisation (R17) was followed. **Survey (`10`):** the scalar-sector resummations agree at leading log
+(one Fokker–Planck equation and equilibrium from stochastic, diagrammatic, wavefunction, static-patch, soft-EFT and Euclidean
+methods) and at NLO; no opening. The graviton-sector disagreement is real but is a dispute over which quantities are
+gauge-invariant observables in perturbative quantum gravity on dS, not between competing resummations; none of P0–P5 speaks to
+it. Item 1 is published except for the O(ε) worldline KMS defect of the massless sector (conventional, small). **`v13`:** the
+published O(ε) Fokker–Planck coefficients of the massless zero mode in power-law FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16,
+confirmed at equation level) define T_zm = (3−ε)A₀H⁴/2 = 1/Vol(S⁴) + O(ε). Its O(ε) coefficient 2/3 − 2γ_E − 2 ln 2 = −1.874 is
+the Euclidean weight of no geometric horizon temperature: the required rate H_X = H(1 − 0.4685 ε) is neither the detector value
+(c = 1), nor Kodama–Hayward (c = 1/2), nor H. Kodama–Hayward is numerically close (diffusion coefficient −1.50 vs −1.54), but
+the gap 5/2 − 2γ_E − 2 ln 2 is exact and transcendental — a near-coincidence that the script now checks explicitly so that no
+later reader mistakes it for a match. **Consequence:** P1 assigns no temperature for ε ≠ 0 (non-geometric modular flow) and adds
+nothing; conventional theory fixes the coefficients. O5 items 1 and 3 close. With `v11` (conformal sector, O(ε²)), `v12`
+(horizon first laws are identities) and `v13` (massless sector, O(ε)), every regime computed on this branch is fixed by GR + QFT
+and P0–P5 add no selection. `05` O5 now states the fork this leaves: accept GRUT III as the thermodynamic reading of GR + QFT, or
+propose a sixth, parameter-free postulate that breaks KMS-by-construction and test it with the `07` instrument against the
+baselines fixed here. Owed: independent review of `v12` and `v13` (`08`, O7).

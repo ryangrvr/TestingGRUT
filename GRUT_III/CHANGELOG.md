@@ -1,5 +1,20 @@
 # GRUT III — changelog
 
+## Revision 2.3 (2026-10-11, fourth round)
+
+- `10_SECULAR_IR_SURVEY.md`: literature check for O5 item 3 (five agents; 30+ papers, most at full text). Scalars: all
+  resummations agree at leading log and NLO — closed. Gravitons: live dispute over which observables carry secular logs
+  (Tsamis–Woodard school vs Garriga–Tanaka/Tanaka–Urakawa/Fröb relational observables); a quantum-gravity question, not a
+  GRUT opening. Item 1 largely published (Abbott–Wise, Lucchin–Matarrese, Garbrecht–Prokopec, Cho–Kim–Kitamoto 2015 [arXiv:1508.07877]; the 2018 derivative-interaction paper 1811.01830 is Kitamoto alone).
+- `09` §4 and `05` O5: lemma scope (conformal-time mode equations only), item-1 priority, the decisive `v13` computation.
+- `calc/v13_zero_mode_temperature.py` (PASS): the published O(ε) Fokker–Planck coefficients of the massless zero mode in
+  power-law FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16; confirmed at equation level) define a zero-mode temperature
+  T_zm = (3−ε)A₀H⁴/2 = 3H⁴/8π² + O(ε) whose O(ε) coefficient (2/3 − 2γ_E − 2 ln 2) is the Euclidean weight of **no**
+  horizon temperature (detector c = 1, Kodama–Hayward c = 1/2, naive c = 0; required c_X = 0.4685). P1 assigns none and
+  adds nothing; conventional theory fixes the coefficients. **O5 items 1 and 3 close.** `05` O5, `08`, RESPONSE R18.
+- `run_all.py` now runs v1–v13; `08` gains the Cho–Kim–Kitamoto source entry and the survey's source list pointer;
+  verification status updated (v12, v13 author-level).
+
 ## Revision 2.2 (2026-10-11, third round)
 
 - `09_TWO_TEMPERATURES.md` + `calc/v12`: the reviewer's O(ε) question — detector temperature (ä/ȧ)/2π vs
