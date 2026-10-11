@@ -35,6 +35,24 @@ EFT already forces that relation: **conditional only; no new fundamental law**.
 [Executable results](constructive_physics/attempt02/results.json) record 21
 author check/reporting groups and 23 numerical comparisons. No experimental
 calibration or independent clearance is established.
+
+**Owner CP-02 disposition:** CONDITIONAL ONLY accepted. Retain the successful
+conditional EFT and its unsuccessful fundamental-theory status. The supplied
+protecting symmetry is not an explanation of its physical origin; the planar
+embedding has no linear spin-2 mode or Einstein/Newton limit. The factor-eight
+source discrepancy remains an independent-review obligation. The frozen packet
+is unchanged and its computations were not rerun for this disposition.
+
+**CP-03 is proposed, not authorized.** The proposed priority is the physical
+origin of an interacting, universally coupled massless spin-2 sector. A future
+authorized construction would have to derive its mode, physical helicities,
+constraints and gravitational response; audit quantum consistency and the
+precise Weinberg-Witten assumptions; and earn an observable distinction from
+complete conventional general relativity and gravitational EFT. Supplying an
+independent metric and Einstein-Hilbert action would not meet the origin target.
+No CP-03 law, candidate evaluation, freeze or research campaign is initiated.
+Separate explicit owner authorization and accounting are required. Card 3
+remains unopened, Stage 3 inactive, and the broader GRUT mission active.
 The [current state](REORIENTATION_STATE.json) records this boundary.
 
 The following decisions and scientific packets are preserved as history.
