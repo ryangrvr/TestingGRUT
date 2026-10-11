@@ -9,7 +9,8 @@ and define
     N(w)   = (G+(w) + G+(-w)) / 2               symmetrised noise spectrum, even.
 If the state is KMS at inverse temperature beta  (G+(w)/G+(-w) = e^{beta w})  then IDENTICALLY
     N(w) = (1/2) coth(beta w / 2) rho(w).                                             (FDT)
-So in any KMS state the noise carries NO information beyond rho: the only object that can
+So in any KMS state the two-point noise carries NO information beyond rho (at the Gaussian / two-point level; a claim
+about higher cumulants kappa_n is a separate, non-Gaussian claim and must be made as such): the only two-point object that can
 distinguish a 'GRUT' medium from the conventional one, for a given (observable, state), is the residual
     Delta rho(w) = rho_GRUT(w) - rho_conventional(w),
 and a claim of 'extra memory' with Delta rho = 0 is empty, while a claim with Delta rho != 0 must name
@@ -37,7 +38,8 @@ CHECKS (PASS/FAIL printed per check; exit status 0 iff all pass):
      and N_T(w) = (1/2) coth(pi w/H) rho_T(w) exactly (symbolically and numerically), with N_T(0) = H^7/(560 pi^4).
      Also recorded: the local log-log slope of rho_T is 7 for w >> H (flat limit) and 1 for w << H (the 36 H^6 w
      term): the dS conformal medium's commutator spectrum is Ohmic-like in the deep IR and w^7 in the UV; it is
-     NEVER w^3 (super-Ohmic s=3) and NEVER flat (s=0).
+     not a w^3 power law (super-Ohmic s=3) and not flat (s=0) in either limit; its local exponent runs from 1 to 7 and
+     passes through 3 once, near w = 1.2 H.
  (C) The OLD GRUT kernels as examples of Delta rho != 0 by fiat (beta = 2 pi/H, H = 1):
      (C1) calc/finite_T_exponent.py rung-3 noise model: rho_old1(w) = J(w) = w^3 exp(-(w/omega_c)^2),
           omega_c = 1 (record's unit; the cutoff location relative to H is itself a free choice).
@@ -112,7 +114,7 @@ def loglog_slope(f, w, h=mp.mpf('1e-8')):
     return (mp.log(abs(f(w * mp.e**h))) - mp.log(abs(f(w * mp.e**(-h))))) / (2 * h)
 
 def shape_residual(rho_model, rho_ref, w):
-    """Difference of local log-log slopes: zero iff the two spectra have the same local power law."""
+    """Difference of local log-log slopes at w: zero there iff the two spectra have the same log-derivative at that w."""
     return loglog_slope(rho_model, w) - loglog_slope(rho_ref, w)
 
 def normalise_at(rho, rho_ref, w0=mp.mpf(1)):
@@ -245,9 +247,10 @@ rho2d, res2d, sh2d = table("C2' S5-1 Lorentzian, Drude-friction reading  rho = w
 print(f"  NOTE: in the Drude reading the IR exponent 1 coincides with the medium's IR exponent 1 (w << H), so the shape residual")
 print(f"        at w = 0.1 is only {mp.nstr(sh2d[OMEGAS[0]], 4)} (tested at w = 1 and 10 instead); the amplitude residual there is still")
 print(f"        {mp.nstr(res2d[OMEGAS[0]], 4)} x rho_T, and for w >= 1 Drude falls as 1/w while the medium rises as w^7: Delta rho != 0 regardless.")
-print("\n  CONCLUSION (C): every registered GRUT kernel asserts Delta rho != 0 against the conformal vacuum medium of the")
-print("  same (observable, state), with exponents 3 / 0 (or 1) in place of the medium's 1 -> 7, and gives no operator or state")
-print("  that would produce the difference.  That is exactly what SCOUT_0 recorded as 'supplied' (noise profile, kernel class).")
+print("\n  CONCLUSION (C): the registered GRUT kernels specify neither an observable nor a state (the template labels both")
+print("  'unspecified'); read as rho-shapes for the vacuum medium they differ from the conformal medium's rho_T (IR exponents 3 / 0 (or 1)")
+print("  against the medium's 1, and no w^7 UV rise), and they name no operator content or state that would produce the difference.")
+print("  That is exactly what SCOUT_0 recorded as 'supplied' (noise profile, kernel class). C1's omega_c is set to H here by fiat.")
 
 # ---------------------------------------------------------------------------------------------
 # (D) the template a future claim must fill in
@@ -300,7 +303,7 @@ check("template on C2 returns SUPPLIED", r2['verdict'].startswith("SUPPLIED"),
       f"IR exponent {r2['ir_exponent']:.4f} vs ref {r2['ir_exponent_ref']:.4f}")
 r3 = residual_report(J_old, "unspecified", "unspecified", mechanism="(hypothetical) named operator content")
 check("template on C1 with a named mechanism returns TESTABLE", r3['verdict'].startswith("TESTABLE"))
-check("template: implied noise of every model is KMS-consistent by construction (defect < 1e-25)",
+check("template: implied noise is KMS-consistent by construction (helper self-consistency, NOT a test: N is built from rho by the same formula kms_defect checks)",
       max(r['kms_defect'] for r in (r0, r1, r2, r3)) < 1e-25)
 
 print("\nV8 OVERALL:", "PASS" if ok_all else "FAIL")

@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 20:05 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 21:23 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -17,6 +17,7 @@ Generated 2026-10-11 20:05 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
 | `v11_quasi_ds_kms_defect.py` | **PASS** |
 | `v12_two_temperatures.py` | **PASS** |
 | `v13_zero_mode_temperature.py` | **PASS** |
+| `v14_massless_sector_first_order.py` | **PASS** |
 
 ---
 
@@ -381,7 +382,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 25.7 s)
+  (runtime 51.7 s)
 V7 OVERALL: PASS
 ```
 
@@ -665,26 +666,122 @@ V12 OVERALL: PASS
 ```text
 == 13.0 checks of the input ==
   nu0 = 3/2 + eps/(1-eps): PASS
-  A0(0) = 1/(4*pi**2)  = 1/(4 pi^2): PASS
-== 13.1 first-order coefficient of the noise amplitude ==
-  c1 = d ln A0/d eps|0 = -log(4) - 2*EulerGamma + 1 = -1.5407257  vs 1 - 2 gamma_E - 2 ln 2: PASS
-  numerical central difference: -1.540725691 -> PASS
-== 13.2 zero-mode temperature T_zm = (3 - eps) A0 H^4 / 2 ==
-  T_zm(0) = 3*H**4/(8*pi**2)  = 3H^4/(8 pi^2) = 1/Vol(S^4): PASS
-  d ln T_zm/d eps|0 = -2*log(2) - 2*EulerGamma + 2/3 = -1.8740590  (= c1 - 1/3): PASS
-== 13.3 which horizon temperature would reproduce it as a Euclidean weight? ==
-  H_X = H(1 - c_X eps) with c_X = -(c1 - 1/3)/4 = -1/6 + EulerGamma/2 + log(2)/2 = 0.468515
-    vs detector (a''/a'): c = 1  -> no match (difference -0.53149)
-    vs Kodama-Hayward: c = 1/2  -> no match (difference -0.031485)
-    vs naive H: c = 0  -> no match (difference 0.46851)
-== 13.4 diffusion coefficient alone ==
-    (H_detector/H)^3 first-order coefficient = -3.0000  vs c1 = -1.5407  -> no match (difference 1.4593)
-    (H_Kodama-Hayward/H)^3 first-order coefficient = -1.5000  vs c1 = -1.5407  -> no match (difference -0.040726)
-    Kodama-Hayward near-coincidence is not an identity: c1 + 3/2 = -log(4) - 2*EulerGamma + 5/2 = -0.040726 (transcendental, nonzero): PASS
+  A0(0) = 1/(4 pi^2) (Starobinsky): PASS
+== 13.1 the coarse-graining scale: noise amplitude at k = sigma a H, derived from the mode function ==
+  a H (-eta) = 1/(1-eps): PASS
+  H = H0 a^(-eps): PASS
+  frozen: |phi_k|^2 is eta-independent (exponent 0): PASS
+  |phi_k|^2 k^(2nu0) = CKK (3.14) inner line: PASS
+  noise = A0(sigma) H^3 with A0(sigma) = (2(1-eps)/sigma)^(2nu0-3) Gamma^2(nu0) (1-eps)^3/pi^3 (eta-independent): PASS
+  sigma = 1 reproduces CKK (3.16): PASS
+  exact dS (eps = 0): sigma-independent, = 1/(4 pi^2): PASS
+  A0(sigma)/A0(1) = sigma^(-2 eps/(1-eps)): PASS
+== 13.2 first-order coefficient c1(sigma) = d ln A0(sigma)/d eps |0 ==
+  c1(sigma) = 1 - 2 gamma_E - 2 ln(2 sigma): PASS
+  c1(1) = -log(4) - 2*EulerGamma + 1 = -1.5407257  (rev. 1 value)
+  numerical central difference at sigma = 1: -1.540725691: PASS
+  numerical central difference at sigma = 0.1: 3.064444495: PASS
+== 13.3 the 'zero-mode temperature' and the horizon-temperature comparison, as a function of sigma ==
+  T_zm(0) = 3H^4/(8 pi^2) = 1/Vol(S^4), any sigma: PASS
+  d ln T_zm/d eps|0 = c1(sigma) - 1/3: PASS
+  c_X(sigma) = 0.4685 + (1/2) ln sigma: PASS
+  c_X(1) = 0.468515 (rev. 1 value);  c_X(sigma) = c_X(1) + 0.5 ln sigma
+  sigma      c_X(sigma)   diffusion coeff. c1(sigma)
+    0.010     -1.8341     +7.6696
+    0.100     -0.6828     +3.0644
+    0.390     -0.0023     +0.3425
+    1.000     +0.4685     -1.5407
+    1.070     +0.5023     -1.6760
+    3.000     +1.0178     -3.7380
+  sigma at which c_X equals each candidate:
+    naive H (c = 0): sigma = 0.3918
+      c_X(sigma) = 0 is attainable: PASS
+    Kodama-Hayward (c = 1/2): sigma = 1.065
+      c_X(sigma) = 1/2 is attainable: PASS
+    detector a''/a' (c = 1): sigma = 2.895
+      c_X(sigma) = 1 is attainable: PASS
+  no sigma -> 0 limit: c_X -> -infinity: PASS
+== 13.4 the rev.-1 near-coincidence, restated ==
+  at sigma = 1: c1 + 3/2 = -log(4) - 2*EulerGamma + 5/2 = -0.040726;  it vanishes at sigma = exp(5/4 - gamma_E - ln 2) = 0.9798
+  the 'transcendental gap' of rev. 1 is gamma_E + ln(2 sigma) at sigma = 1: a matching-scale artifact: PASS
 
-CONCLUSION: the O(eps) Fokker-Planck coefficients of the massless zero mode carry gamma_E and ln 2 from the Hankel normalisation
-and are not the Euclidean weight of any geometric horizon temperature; P1 assigns none (non-geometric modular flow) and adds
-nothing: conventional theory (Cho-Kim-Kitamoto 2015) fixes them. O5 items 1 and 3 close for GRUT III.
+CONCLUSION (rev. 2): the O(eps) Fokker-Planck coefficients of the massless zero mode depend on the coarse-graining scale sigma
+(c1 = 1 - 2 gamma_E - 2 ln(2 sigma); sigma-independent only at eps = 0). They are not a physical invariant and cannot test horizon
+temperatures; rev. 1's 'no temperature matches' is withdrawn as an inference (the arithmetic at sigma = 1 stands). O5 items 1 and 3
+still close: P1 assigns no temperature for non-geometric modular flow, and sigma-independent correlators are fixed by conventional
+QFT (CKK 2015). The sigma-independent test is the comoving detector's KMS ratio at omega != 0 (`v14`).
 
 V13 OVERALL: PASS
+```
+
+## `v14_massless_sector_first_order.py`
+
+```text
+== 14.A expansion of 2F1(3+d, -d; 2; w) around the massless pole ==
+  w=-0.7: -F'(0) = S1 and -F''(0)/2 = S2: PASS
+  w=0.3: -F'(0) = S1 and -F''(0)/2 = S2: PASS
+  w=(0.5 + 0.2j): -F'(0) = S1 and -F''(0)/2 = S2: PASS
+  w=(2.0 - 0.3j): -F'(0) = S1 and -F''(0)/2 = S2: PASS
+  Gamma(3+d)Gamma(-d) = -(2/d)(1 + (3/2) d + (1/2 + pi^2/6) d^2 + ...): PASS
+  zeroth order = Allen-Folacci (H^2/8pi^2)[1/(1-Z) - ln(1-Z)] up to a constant: PASS
+== 14.B the closed form vs a direct Bunch-Davies mode integral ==
+  eps=-0.25 (nu=1.3), t1=0.6, t2=0.0: closed form = mode integral (rel. 6.4e-11): PASS
+  eps=-0.25 (nu=1.3), t1=0.3, t2=-0.9: closed form = mode integral (rel. 8.3e-12): PASS
+  eps=0.2 (nu=1.75): closed-form difference = cutoff mode-integral difference (rel. 3.4e-6; C_IR drops out): PASS
+== 14.C first-order theorem: W_exact - [(1 + g1 eps) W_mmc(Delta; H_X) + eps (1/8pi^2) S2(w0) + c2 Delta^2] = O(eps^2) iff H_X = H_eff ==
+    H_eff = 1 - eps, with S2: D=(0.2 - 0.3j)  |R|/eps^2 = 0.017203, 0.017201, 0.0172, 0.0172   halving ratios 4.001, 4.0, 4.0
+    H_eff = 1 - eps, with S2: D=(0.9 - 0.3j)  |R|/eps^2 = 0.016183, 0.016153, 0.016139, 0.016131   halving ratios 4.007, 4.004, 4.002
+    H_eff = 1 - eps, with S2: D=(1.6 - 0.3j)  |R|/eps^2 = 0.038186, 0.038008, 0.037919, 0.037876   halving ratios 4.019, 4.009, 4.005
+    H_eff = 1 - eps, with S2: D=(2.5 - 0.3j)  |R|/eps^2 = 0.066363, 0.065732, 0.065419, 0.065263   halving ratios 4.038, 4.019, 4.01
+    H_eff = 1 - eps, with S2: D=(3.5 - 0.3j)  |R|/eps^2 = 0.14429, 0.14278, 0.14204, 0.14167   halving ratios 4.042, 4.021, 4.01
+  H_eff = 1 - eps, with S2: residual is O(eps^2) (halving ratios -> 4; worst |ratio-4| = 0.0423): PASS
+    H_eff, S2 dropped: D=(0.2 - 0.3j)  |R|/eps^2 = 30.182, 60.364, 120.73, 241.45   halving ratios 2.0, 2.0, 2.0
+    H_eff, S2 dropped: D=(0.9 - 0.3j)  |R|/eps^2 = 10.279, 20.565, 41.137, 82.282   halving ratios 1.999, 2.0, 2.0
+    H_eff, S2 dropped: D=(1.6 - 0.3j)  |R|/eps^2 = 15.515, 31.037, 62.083, 124.17   halving ratios 1.999, 2.0, 2.0
+    H_eff, S2 dropped: D=(2.5 - 0.3j)  |R|/eps^2 = 20.08, 40.131, 80.233, 160.44   halving ratios 2.001, 2.001, 2.0
+    H_eff, S2 dropped: D=(3.5 - 0.3j)  |R|/eps^2 = 25.591, 51.046, 101.96, 203.78   halving ratios 2.005, 2.003, 2.001
+  H_eff, S2 dropped: residual is O(eps), NOT O(eps^2) (ratios ~2; min ratio 1.999): PASS
+    Hbar (c = 0): D=(0.2 - 0.3j)  |R|/eps^2 = 4.1603, 8.3203, 16.64, 33.28   halving ratios 2.0, 2.0, 2.0
+    Hbar (c = 0): D=(0.9 - 0.3j)  |R|/eps^2 = 3.6269, 7.2541, 14.509, 29.018   halving ratios 2.0, 2.0, 2.0
+    Hbar (c = 0): D=(1.6 - 0.3j)  |R|/eps^2 = 8.0185, 16.042, 32.089, 64.183   halving ratios 1.999, 2.0, 2.0
+    Hbar (c = 0): D=(2.5 - 0.3j)  |R|/eps^2 = 12.589, 25.212, 50.459, 100.95   halving ratios 1.997, 1.999, 1.999
+    Hbar (c = 0): D=(3.5 - 0.3j)  |R|/eps^2 = 17.289, 34.708, 69.549, 139.23   halving ratios 1.992, 1.996, 1.998
+  Hbar (c = 0): residual is O(eps), NOT O(eps^2) (ratios ~2; min ratio 1.992): PASS
+    Kodama-Hayward 1 - eps/2: D=(0.2 - 0.3j)  |R|/eps^2 = 2.0846, 4.1646, 8.3246, 16.645   halving ratios 2.002, 2.001, 2.001
+    Kodama-Hayward 1 - eps/2: D=(0.9 - 0.3j)  |R|/eps^2 = 1.8174, 3.631, 7.2582, 14.513   halving ratios 2.002, 2.001, 2.001
+    Kodama-Hayward 1 - eps/2: D=(1.6 - 0.3j)  |R|/eps^2 = 4.017, 8.0286, 16.052, 32.099   halving ratios 2.001, 2.001, 2.0
+    Kodama-Hayward 1 - eps/2: D=(2.5 - 0.3j)  |R|/eps^2 = 6.296, 12.607, 25.23, 50.477   halving ratios 1.998, 1.999, 1.999
+    Kodama-Hayward 1 - eps/2: D=(3.5 - 0.3j)  |R|/eps^2 = 8.6067, 17.316, 34.736, 69.576   halving ratios 1.988, 1.994, 1.997
+  Kodama-Hayward 1 - eps/2: residual is O(eps), NOT O(eps^2) (ratios ~2; min ratio 1.988): PASS
+== 14.D KMS: the first-order shape f = 2 S2(w0) + 2 g1 S1(w0) is midline-symmetric (KMS at beta = 2pi/Hbar) ==
+  f(s - i beta/2) real and even in s (worst deviation 3.8e-30): PASS
+  boundary values: f(Delta - i beta) = f(-Delta) (worst 6.3e-30): PASS
+  => first-order KMS defect at beta_eff = 2pi/H_eff is O(eps^2); with beta_KH it would be (beta_KH - beta_eff) omega = pi eps omega/Hbar != 0.
+== 14.D' spectra via the midline, with the asymptotic polynomial removed analytically ==
+  asymptotic polynomials correct: h0(30), h1(30) decay (|h0|=5.3e-26, |h1|=1.5e-24): PASS
+  zeroth order: G0(omega) = (omega + Hbar^2/omega)/(2pi(1 - e^(-beta omega))) [massless dS detector spectrum] (worst rel. 2.6e-23): PASS
+  r(omega): rho(omega) = rho_mmc(omega; H_eff) [1 + eps r(omega)]
+    omega/Hbar = 0.05:  r = 0.6132137
+    omega/Hbar = 0.1:  r = 0.61174205
+    omega/Hbar = 0.25:  r = 0.60161273
+    omega/Hbar = 0.5:  r = 0.56774456
+    omega/Hbar = 1.0:  r = 0.46077899
+    omega/Hbar = 2.0:  r = 0.25358803
+    omega/Hbar = 4.0:  r = 0.085242243
+    omega/Hbar = 8.0:  r = 0.022893644
+  r(omega -> 0) -> B1/B0 = 2 - 2 ln 2 = 0.6137: PASS
+  r(omega) -> 0 in the UV: the S2 pole coefficient -3/2 cancels g1 = +3/2 (Hadamard coefficient unchanged): PASS
+  r(omega) is monotone decreasing from the IR to the UV: PASS
+== 14.E the sigma-free first-order diffusion coefficient of the zero mode (two-time function at fixed mean time) ==
+  D(tbar) = (Hbar^3/4pi^2)[1 + c_D eps], c_D = -3 + (2 - 2 ln 2) = -(1 + 2 ln 2) = -2.386: PASS
+  equals the stochastic c1(sigma) = 1 - 2 gamma_E - 2 ln(2 sigma) at sigma* = e^(1 - gamma_E) = 1.52621 (and at no other sigma): PASS
+  compare: naive H_eff^3 -> -3; stochastic at sigma = 1 -> -1.5407; exact -> -2.38629
+
+CONCLUSION: at first order in eps the massless minimally coupled sector seen by a comoving detector is KMS at
+T = (a''/a')/2pi + O(eps^2), the same temperature as the conformal sector (v11); the Kodama-Hayward rate is excluded at O(eps);
+the result is sigma-free. The O(eps) effect is a shape change of the spectral density, rho = rho_mmc(omega; H_eff)[1 + eps r(omega)],
+r(0) = 2 - 2 ln 2, r(inf) = 0, and the zero-mode diffusion coefficient is D = (Hbar^3/4pi^2)[1 - (1 + 2 ln 2) eps].
+P1 adds nothing: conventional QFT fixes all of it. O5 item 1 is now computed, not argued.
+
+V14 OVERALL: PASS
 ```

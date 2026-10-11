@@ -58,7 +58,8 @@ is 4H; it has no normalisable autocorrelation time (t⁻⁸ at short times).
 
 **T5 (the gravitational sector is a stationary thermal process plus a Brownian zero mode; v10).** For the
 massless minimally coupled sector (each graviton polarisation), the worldline two-point function is
-(H²/8π²)[1/(2 sinh²(HΔt/2)) − ln(2 sinh²(HΔt/2)) + H(t + t') + c]. Every derivative correlator and every commutator
+(H²/8π²)[−1/(2 sinh²(HΔt/2)) − ln(2 sinh²(HΔt/2)) + H(t + t') + c] (timelike: 1 − Z = −2 sinh²(HΔt/2), so the first
+term carries the sign that gives the Hadamard −1/(4π²Δt²); the sign was misprinted in revision 2.3). Every derivative correlator and every commutator
 is stationary and 2πi/H-periodic; the non-stationary part is, at large separation, the Brownian covariance
 D·min(t, t') with D = H³/4π² per canonically normalised field (asymptotic, not exact at all separations), i.e. d⟨h_{ij}h^{ij}⟩/dt = 2H³/(π²M̄_P²) = H·P_T.
 The record's "graviton channel has no stationary reduced object" is therefore: *all* its response data are
@@ -95,9 +96,11 @@ sector) — which is the distinction the CP-05 review drew.
 
 ## 4. What a distinctive GRUT claim must now be
 
-A **residual report** (template implemented in v8 §D): the observable f (with its support), the state ω and
-preparation, the conventional ρ_f^conv and N_f^conv, the proposed ρ_f^X (or state, or κ_n), the residual, and the
-*mechanism* that produces it. A residual with no mechanism is what SCOUT_0 called "supplied". A mechanism that is
+A **residual report**: the observable f (with its support), the state ω and preparation, the conventional ρ_f^conv and
+N_f^conv, the proposed ρ_f^X, the residual, and the *mechanism* that produces it. (The template implemented in v8 §D is
+the ρ-level version: it takes a model ρ_f and forces N by KMS at the reference temperature. A claim at the level of the
+state — T2 type (b), same ρ_f but non-KMS N_f — or of higher cumulants κ_n must supply its own N_f^X or κ_n^X; the
+ρ-level template does not cover it.) A residual with no mechanism is what SCOUT_0 called "supplied". A mechanism that is
 an additional field or operator in P0's content is conventional physics with a price, not GRUT. A mechanism that is
 *forced* by P0–P5 and excluded in the conventional comparison would be a GRUT result. **None exists at present.**
 
@@ -110,9 +113,13 @@ the existing fifth-force bounds apply (`03`, F1 note) and must be quoted with th
 ## 5. Applied to the record (v8 §C)
 
 The register's rung-3 noise model (J ∝ ω³ with a cutoff, times coth) and the S5-1 Lorentzian-exponent family are
-internally KMS-consistent, but their ρ differs in *shape* from the conformal medium's (low-frequency exponents 3 and
-0–1 against 7; a log-log slope residual of −4 for ω³): they assert Δρ ≠ 0 relative to the conventional vacuum
-with no mechanism. That is the precise content of the record's own verdict "supplied", now as a number.
+internally KMS-consistent, but — read as ρ-shapes for the vacuum medium, since they specify neither observable nor
+state — they differ from the conformal medium's ρ_T: infrared exponents 3 (rung-3 ω³) and 0 (Lorentzian) or 1 (Drude
+reading) against the medium's 1, no ω⁷ ultraviolet rise, amplitude residuals ≥ 10% off the normalisation point and
+local-slope residuals ≥ 0.5 at ω = 0.1H and 10H (Drude: at 1H and 10H, its infrared exponent coinciding with the
+medium's). They assert Δρ ≠ 0 relative to the conventional vacuum with no mechanism. That is the precise content of the
+record's own verdict "supplied", now as numbers. (Revision 2.3 misquoted these as "against 7" and "−4": 7 is the
+medium's ultraviolet exponent and −4 is only the helper's self-test; corrected after the sixth-round audit, `11`.)
 
 ## 6. Scope and the one live opening
 

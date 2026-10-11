@@ -41,8 +41,9 @@ state. No computation proposed.
 
 ## O5 — The residual program: the only place a distinctive result could come from (new; owner's note, R11)
 
-**The rule.** In any KMS state N_f = ½coth(βω/2)ρ_f (`07` T1), so GRUT III is standard wherever its principle
-applies. A distinctive residual must be computed in a state where KMS fails, as Δρ_f (or ΔW(t,t′) for non-stationary
+**The rule.** In any KMS state N_f = ½coth(βω/2)ρ_f (`07` T1), and P0's operator content is conventional, so ρ_f is the
+conventional spectrum; together these make GRUT III standard at the two-point level wherever its principle applies (the
+FDT alone fixes N given ρ; the second clause is what fixes ρ). A distinctive residual must be computed in a state where KMS fails, as Δρ_f (or ΔW(t,t′) for non-stationary
 states, or Δκ_n) against the conventional baseline for the same observable, state and preparation. (The record's
 G2-12 "Scope-Q" ruling, as the owner reports it, reached the same conclusion from the other direction: distinctive
 locks need KMS-failing platforms. That ruling is not in this repository; the convergence is noted.)
