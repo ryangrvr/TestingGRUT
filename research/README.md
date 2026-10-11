@@ -26,6 +26,15 @@ The [separate authorization](constructive_physics/attempt02/AUTHORIZATION.md),
 geometry mechanism. This openly supplies extra geometry and a physical symmetry;
 it is distinct from CP-01 and the Stage-3 identity/interface challenge.
 No CP-03, Card 3, canonical integration or independent clearance is authorized.
+The [CP-02 report](constructive_physics/attempt02/REPORT.md) derives the
+conditional relation C_7=3 kappa^2/(8 pi^3), its pure-scalar one-loop
+counterterm/RG behavior, and the failure to generate Einstein gravity from one
+embedding field. Higher geometric coefficients do not change the leading
+relation but defeat exact finite-energy rigidity. The full conventional brane
+EFT already forces that relation: **conditional only; no new fundamental law**.
+[Executable results](constructive_physics/attempt02/results.json) record 21
+author check/reporting groups and 23 numerical comparisons. No experimental
+calibration or independent clearance is established.
 The [current state](REORIENTATION_STATE.json) records this boundary.
 
 The following decisions and scientific packets are preserved as history.

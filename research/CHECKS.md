@@ -49,3 +49,19 @@ especially of the exchange-amplitude normalization, quantum scope and novelty.
 Remote freeze verification was completed before executable checks. The result
 is conditional author physics, not a kit-certified verdict or a validated law.
 No historical scientific packet or failed-card register is changed.
+
+## Separate constructive program: CP-02
+
+Frozen at `d88a1a0bb0d4edea54b075437f0edd0921381df2` before executable checks.
+[Report](constructive_physics/attempt02/REPORT.md),
+[results](constructive_physics/attempt02/results.json), and
+[disposition](constructive_physics/attempt02/DISPOSITION.json).
+21 author assertion/reporting groups; 23 numerical comparisons; no new data.
+**CONDITIONAL ONLY**: leading shared-geometry relation protected in its domain;
+no new restriction over the full same-premise conventional EFT; no Einstein
+gravity correspondence. Independent review remains pending, including the
+Ward/matching scope, source-force normalization, pure-pi UV-pole factor-eight
+source discrepancy, comparator completeness and the gravity obstruction.
+The execution log records routine fixtures not individually preregistered.
+PRs #10 and #12 had zero submitted reviews when inspected on 2026-10-11.
+No kit clearance, Card 3, CP-03, canonical banking or merge is asserted.

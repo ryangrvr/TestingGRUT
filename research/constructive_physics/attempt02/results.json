@@ -1,0 +1,352 @@
+{
+  "status": "CP02_GEOMETRIC_EFT_CHECKS_PASS",
+  "evidence_grade": "AUTHOR_EXACT_DERIVATIONS_AND_NUMERICAL_CROSS_CHECKS",
+  "experiment": false,
+  "independent_review": false,
+  "freeze_commit": "d88a1a0bb0d4edea54b075437f0edd0921381df2",
+  "groups_passed": 21,
+  "groups": [
+    {
+      "name": "freeze_bytes",
+      "status": "PASS",
+      "frozen_files": 3,
+      "freeze_commit": "d88a1a0bb0d4edea54b075437f0edd0921381df2"
+    },
+    {
+      "name": "nonlinear_boost_Ward_recursion",
+      "status": "PASS",
+      "volume_series": [
+        "-1",
+        "-1/2",
+        "1/8",
+        "-1/16",
+        "5/128"
+      ]
+    },
+    {
+      "name": "induced_metric_and_signature",
+      "status": "PASS",
+      "cases": 3
+    },
+    {
+      "name": "tree_LSZ_quartic_contraction",
+      "status": "PASS",
+      "kappa": "1/(4 T_R)"
+    },
+    {
+      "name": "same_symmetry_R_squared_countermodel",
+      "status": "PASS",
+      "amplitude_delta": "zeta (s^4+t^4+u^4)/(2 T_R^2)"
+    },
+    {
+      "name": "two_source_Wick_integral_exact",
+      "status": "PASS",
+      "moments_over_pi": [
+        "63/256",
+        "7/256",
+        "3/256"
+      ],
+      "C7": "3/(128 pi^3 T_R^2)"
+    },
+    {
+      "name": "two_source_integral_independent_quadrature",
+      "status": "PASS",
+      "cases": 3
+    },
+    {
+      "name": "joint_asymptotic_relation",
+      "status": "PASS",
+      "C7_over_kappa_squared": "3/(8 pi^3)"
+    },
+    {
+      "name": "ordinary_four_dimensional_countermodel",
+      "status": "PASS",
+      "cases": [
+        {
+          "b": "0",
+          "same_kappa": "1/4",
+          "C7_over_geometric_C7": "0",
+          "full_5D_symmetry": false
+        },
+        {
+          "b": "1",
+          "same_kappa": "1/4",
+          "C7_over_geometric_C7": "1",
+          "full_5D_symmetry": true
+        },
+        {
+          "b": "2",
+          "same_kappa": "1/4",
+          "C7_over_geometric_C7": "4",
+          "full_5D_symmetry": false
+        }
+      ]
+    },
+    {
+      "name": "finite_energy_rigidity_refuted",
+      "status": "PASS",
+      "cases": [
+        {
+          "E_over_T_quarter": "1/20",
+          "zeta": 1,
+          "relative_amplitude_change": "3/20000"
+        },
+        {
+          "E_over_T_quarter": "1/10",
+          "zeta": 1,
+          "relative_amplitude_change": "3/1250"
+        }
+      ]
+    },
+    {
+      "name": "one_loop_two_particle_cut_exact",
+      "status": "PASS",
+      "Im_Ms": "s^4 (83+z^2)/(15360 pi T_R^2)",
+      "identical_particle_phase_space_factor": "1/2"
+    },
+    {
+      "name": "one_loop_cut_independent_angular_quadrature",
+      "status": "PASS",
+      "cases": 5
+    },
+    {
+      "name": "one_loop_cut_partial_wave_unitarity",
+      "status": "PASS",
+      "waves": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "crossing_sum_and_UV_polynomial",
+      "status": "PASS",
+      "UV_pole_over_pi_squared": "7/1280"
+    },
+    {
+      "name": "covariant_heat_kernel_to_LSZ_amplitude",
+      "status": "PASS",
+      "contraction_factor": "1/4"
+    },
+    {
+      "name": "primary_paper_normalization_audit",
+      "status": "PASS",
+      "equations_agree": [
+        "our unitarity",
+        "our 4! contractions",
+        "source 4.17",
+        "source 5.20"
+      ],
+      "source_4_20_discrepancy_factor": "8",
+      "resolution": "Unresolved externally; no claim of author-confirmed erratum"
+    },
+    {
+      "name": "one_loop_RG_scale_cancellation",
+      "status": "PASS",
+      "beta_c8": "(-7/640)/pi^2",
+      "finite_c8_boundary": "independently matchable"
+    },
+    {
+      "name": "matter_heat_kernel_operator_inventory",
+      "status": "PASS",
+      "local_pole_integrand": "mu^4/2 - mu^2 R/6 + R^2/72 + (Riem^2-Ric^2)/180",
+      "beta_T_MS": "mu^4/(32 pi^2)",
+      "meaning": "Tension, induced curvature and higher curvature require matching; no finite family closure"
+    },
+    {
+      "name": "leading_classical_stability",
+      "status": "PASS",
+      "c_squared": "1-v^2 > 0 for |v|<1",
+      "vacuum_kinetic_sign": "positive",
+      "all_EFT_backgrounds_proved": false
+    },
+    {
+      "name": "induced_Einstein_Hilbert_quadratic_boundary_term",
+      "status": "PASS",
+      "linear_metric_modes": 0,
+      "embedding_transverse_modes": 1,
+      "Einstein_spin2_modes_supplied": 0,
+      "Newtonian_force_recovered": false
+    },
+    {
+      "name": "operational_mixture_boundary",
+      "status": "PASS",
+      "density_map": "rho -> U rho Udag",
+      "status_scope": "ordinary quantization postulated; QFT UV/no-signaling completion not proved by software"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "name": "determinant_lemma",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "determinant_lemma",
+      "actual": 0.9700000000000001,
+      "expected": 0.97,
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "determinant_lemma",
+      "actual": 1.3611111111111112,
+      "expected": 1.3611111111111112,
+      "absolute_error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Wick_integral_quadrature",
+      "actual": 0.003023581353112453,
+      "expected": 0.0030235813531124525,
+      "absolute_error": 4.336808689942018e-19,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Wick_integral_quadrature",
+      "actual": 2.3621729321191035e-05,
+      "expected": 2.3621729321191035e-05,
+      "absolute_error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "Wick_integral_quadrature",
+      "actual": 3.8701841319844786e-08,
+      "expected": 3.8701841319839386e-08,
+      "absolute_error": 5.399835038746165e-21,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "angular_cut_quadrature",
+      "actual": 11.200000000000005,
+      "expected": 11.2,
+      "absolute_error": 5.329070518200751e-15,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "angular_cut_quadrature",
+      "actual": 11.1,
+      "expected": 11.1,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "angular_cut_quadrature",
+      "actual": 11.066666666666666,
+      "expected": 11.066666666666666,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "angular_cut_quadrature",
+      "actual": 11.1,
+      "expected": 11.1,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "angular_cut_quadrature",
+      "actual": 11.200000000000005,
+      "expected": 11.2,
+      "absolute_error": 5.329070518200751e-15,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": 5.258142362538098e-05,
+      "expected": 5.258142362538107e-05,
+      "absolute_error": 8.809142651444724e-20,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.0017200338901858484,
+      "expected": -0.0017200338901858484,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": 5.258142362538107e-05,
+      "expected": 5.258142362538107e-05,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.0017200338901858484,
+      "expected": -0.0017200338901858484,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": 5.2581423625381305e-05,
+      "expected": 5.258142362538107e-05,
+      "absolute_error": 2.371692252312041e-19,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.0017200338901858484,
+      "expected": -0.0017200338901858484,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": -0.007214033996730224,
+      "expected": -0.007214033996730223,
+      "absolute_error": 1.734723475976807e-18,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.027603435442500598,
+      "expected": -0.027603435442500598,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": -0.007214033996730223,
+      "expected": -0.007214033996730223,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.027603435442500598,
+      "expected": -0.027603435442500598,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_real_amplitude",
+      "actual": -0.007214033996730219,
+      "expected": -0.007214033996730223,
+      "absolute_error": 3.469446951953614e-18,
+      "tolerance": 2e-13
+    },
+    {
+      "name": "RG_scale_independent_imaginary_amplitude",
+      "actual": -0.027603435442500598,
+      "expected": -0.027603435442500598,
+      "absolute_error": 0.0,
+      "tolerance": 2e-13
+    }
+  ],
+  "largest_numerical_absolute_error": 5.329070518200751e-15,
+  "joint_relation": "C7=3 kappa^2/(8 pi^3), leading weak-source asymptotic coefficient",
+  "fundamental_GRUT_restriction_beyond_full_symmetry_baseline": false,
+  "complete_gravity_or_reality_theory": false,
+  "stage3_card3_opened": false,
+  "cp03_opened": false,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "source_sha256": "e976aaca131312cb01f1b551bc63030f27f363a3c3c5f7e745fe514cf18cc002"
+}
