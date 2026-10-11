@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "measurement_id": "INVENTED-MEASUREMENT-CONTRACT-SOFTWARE-CONTROL",
+  "status": "SOFTWARE_CONTROL_ONLY",
+  "new_grut_law": false,
+  "card_2_opened": false,
+  "experimental_validation_performed": false,
+  "design_forecast_code_sha256": "512850098842b3465275f82940b501b4157694322daa2c16e70adaea26988733",
+  "joint_contract_code_sha256": "c871c47e97971f12377b8c26454fe1c29b6a7864bc7da7a32c3778067046f65e",
+  "certified_interval_arithmetic": false,
+  "joint_false_rejection_bound_conditional": 0.02,
+  "probability_allocations": {
+    "spin_sampling": 0.01,
+    "energy_sampling": 0.005,
+    "force_state_readout_calibration": 0.0,
+    "energy_certificate": 0.005
+  },
+  "energy_evidence_byte_identity_verified": {},
+  "physical_certificates_assessed_by_tool": false,
+  "spin_settings_accepting_all_bright_fractions": [],
+  "energy_tests": [
+    {
+      "id": "energy_constant",
+      "setting_id": "full_cycle_constant",
+      "mode_id": "mode_1",
+      "physical_uptake_prediction_phonons": 5.9990391306474315e-34,
+      "physical_uptake_prediction_interval_phonons": [
+        0.0,
+        1.0000489864718698e-24
+      ],
+      "reported_uptake_mean_interval_phonons": [
+        -0.009000000000000001,
+        0.009000000000000001
+      ],
+      "accepted_observed_estimator_uptake_phonons": [
+        -0.03973032932223747,
+        0.03973032932223747
+      ],
+      "measurement_support": [
+        -4.0,
+        4.0
+      ],
+      "accepts_entire_measurement_support": false,
+      "groups": [
+        {
+          "id": "baseline_constant",
+          "shots": 250000,
+          "range": [
+            0.0,
+            4.0
+          ],
+          "width": 4.0,
+          "mean_bias": 0.002,
+          "tail_mean_max": 0.003,
+          "sampling_allowance": 0.015365164661118732
+        },
+        {
+          "id": "driven_constant",
+          "shots": 250000,
+          "range": [
+            0.0,
+            4.0
+          ],
+          "width": 4.0,
+          "mean_bias": 0.002,
+          "tail_mean_max": 0.003,
+          "sampling_allowance": 0.015365164661118732
+        }
+      ]
+    },
+    {
+      "id": "energy_sign_reversal",
+      "setting_id": "full_cycle_sign_reversal",
+      "mode_id": "mode_1",
+      "physical_uptake_prediction_phonons": 0.16000000000000003,
+      "physical_uptake_prediction_interval_phonons": [
+        0.15999999999920003,
+        0.1600000000008
+      ],
+      "reported_uptake_mean_interval_phonons": [
+        0.15099999999920002,
+        0.1690000000008
+      ],
+      "accepted_observed_estimator_uptake_phonons": [
+        0.12026967067696256,
+        0.19973032932303747
+      ],
+      "measurement_support": [
+        -4.0,
+        4.0
+      ],
+      "accepts_entire_measurement_support": false,
+      "groups": [
+        {
+          "id": "baseline_sign_reversal",
+          "shots": 250000,
+          "range": [
+            0.0,
+            4.0
+          ],
+          "width": 4.0,
+          "mean_bias": 0.002,
+          "tail_mean_max": 0.003,
+          "sampling_allowance": 0.015365164661118732
+        },
+        {
+          "id": "driven_sign_reversal",
+          "shots": 250000,
+          "range": [
+            0.0,
+            4.0
+          ],
+          "width": 4.0,
+          "mean_bias": 0.002,
+          "tail_mean_max": 0.003,
+          "sampling_allowance": 0.015365164661118732
+        }
+      ]
+    }
+  ],
+  "spin_contrast_power": [
+    {
+      "operational_equality_null": true,
+      "minimum_admitted_mean_separation": 0.19434154289416983,
+      "null_sampling_threshold": 0.06675633167307267,
+      "alternative_sampling_allowance": 0.058167423960116066,
+      "requested_conditional_power": 0.975,
+      "status": "TARGET_CONTRAST_RESOLVABLE_CONDITIONAL",
+      "physical_certificates_assessed_by_tool": false,
+      "setting_a": "full_cycle_constant",
+      "setting_b": "full_cycle_sign_reversal"
+    }
+  ],
+  "energy_contrast_power": [
+    {
+      "operational_equality_null": true,
+      "minimum_admitted_mean_separation": 0.14199999999920002,
+      "null_sampling_threshold": 0.061460658644474926,
+      "alternative_sampling_allowance": 0.05434501218921946,
+      "requested_conditional_power": 0.975,
+      "status": "TARGET_CONTRAST_RESOLVABLE_CONDITIONAL",
+      "physical_certificates_assessed_by_tool": false,
+      "test_a": "energy_constant",
+      "test_b": "energy_sign_reversal"
+    }
+  ],
+  "requested_joint_conditional_power": 0.95,
+  "miss_probability_allocated_per_contrast": 0.025,
+  "target_contrasts_power_status": "ALL_TARGET_CONTRASTS_RESOLVABLE_CONDITIONAL",
+  "input_sha256": {
+    "calibration": "24635bed98886518df1e6e4865836a608040671326842650f420dd7333bceaa7",
+    "protocol": "0dcd67def85b2a384e2f57694d79f97c8ac17386136b07e57ae4882cfecfdc41",
+    "measurement": "0cbfb57e6ee6031ae3ee9af873fd09ebc1afe50d916b5ed7b7dd0dbb98633e25"
+  }
+}

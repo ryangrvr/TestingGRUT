@@ -1,0 +1,454 @@
+{
+  "status": "PUBLISHED_DISCRIMINATOR_AUDIT_PASS_NO_NEW_GRUT_LAW",
+  "scope": "Known GKSL model / NULL-PiT conventional comparator; no candidate law search",
+  "new_GRUT_candidate_formulations": 0,
+  "new_GRUT_candidate_evaluations": 0,
+  "frozen_slots_consumed_total": 1,
+  "remaining_slots": 2,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "counts": {
+    "published_model_fixtures": 8,
+    "matrix_unit_generator_cells": 128,
+    "matrix_unit_time_cells": 896,
+    "finite_horizon_trajectories": 56
+  },
+  "maximum_errors": {
+    "matrix_unit_ODE_error": 0.0,
+    "PT_generator_error": 0.0,
+    "kernel_projection_error": 0.0,
+    "expm_solution_error": 0.0,
+    "slope_estimate_error": 3.7506539812826034e-07,
+    "trace_error": 0.0
+  },
+  "minimum_Schur_eigenvalue": -5.660001591138239e-16,
+  "fixtures": [
+    {
+      "name": "coherent_only",
+      "a_s_minus_1": "0",
+      "b_s_minus_1": "0",
+      "c_s_minus_1": "0",
+      "g_s_minus_1": "1",
+      "CP_determinant": "0",
+      "PT_determinant": "-1",
+      "negativity_initial_slope": 1.0,
+      "slope_finite_step": 0.9999999999408642,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0009999993333334569
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.01999466709331705
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.09933466539753058
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.42073549240394825
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.4546487134128409
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.3784012476539642
+        }
+      ]
+    },
+    {
+      "name": "below_uncorrelated",
+      "a_s_minus_1": "3/4",
+      "b_s_minus_1": "3/4",
+      "c_s_minus_1": "0",
+      "g_s_minus_1": "1",
+      "CP_determinant": "9/16",
+      "PT_determinant": "-7/16",
+      "negativity_initial_slope": 0.25,
+      "slope_finite_step": 0.24999962493460187,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0002496243346137057
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.004844868771561061
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.02070269401359828
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.004523914199753833
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "boundary_uncorrelated",
+      "a_s_minus_1": "1",
+      "b_s_minus_1": "1",
+      "c_s_minus_1": "0",
+      "g_s_minus_1": "1",
+      "CP_determinant": "1",
+      "PT_determinant": "0",
+      "negativity_initial_slope": 0.0,
+      "slope_finite_step": 2.0399904065287503e-12,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "above_uncorrelated",
+      "a_s_minus_1": "3/2",
+      "b_s_minus_1": "3/2",
+      "c_s_minus_1": "0",
+      "g_s_minus_1": "1",
+      "CP_determinant": "9/4",
+      "PT_determinant": "5/4",
+      "negativity_initial_slope": 0.0,
+      "slope_finite_step": 0.0,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "correlation_active",
+      "a_s_minus_1": "1",
+      "b_s_minus_1": "1",
+      "c_s_minus_1": "3/4",
+      "g_s_minus_1": "1",
+      "CP_determinant": "7/16",
+      "PT_determinant": "-9/16",
+      "negativity_initial_slope": 0.25,
+      "slope_finite_step": 0.249999724950521,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0002497237528738067
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.004880309501157637
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.02119093942075588
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0003154320634357536
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "boundary_correlated",
+      "a_s_minus_1": "5/4",
+      "b_s_minus_1": "5/4",
+      "c_s_minus_1": "3/4",
+      "g_s_minus_1": "1",
+      "CP_determinant": "1",
+      "PT_determinant": "0",
+      "negativity_initial_slope": 0.0,
+      "slope_finite_step": 1.1854709187669226e-11,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "above_correlated",
+      "a_s_minus_1": "3/2",
+      "b_s_minus_1": "3/2",
+      "c_s_minus_1": "3/4",
+      "g_s_minus_1": "1",
+      "CP_determinant": "27/16",
+      "PT_determinant": "11/16",
+      "negativity_initial_slope": 0.0,
+      "slope_finite_step": 0.0,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    },
+    {
+      "name": "asymmetric_boundary",
+      "a_s_minus_1": "1/2",
+      "b_s_minus_1": "2",
+      "c_s_minus_1": "0",
+      "g_s_minus_1": "1",
+      "CP_determinant": "1",
+      "PT_determinant": "0",
+      "negativity_initial_slope": 0.0,
+      "slope_finite_step": 0.0,
+      "trajectory": [
+        {
+          "t_s": 0.0,
+          "negativity": 1.4150003977845598e-16
+        },
+        {
+          "t_s": 0.001,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.02,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.1,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 0.5,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 1.0,
+          "negativity": 0.0
+        },
+        {
+          "t_s": 2.0,
+          "negativity": 0.0
+        }
+      ]
+    }
+  ],
+  "SI_benchmark_audit": [
+    {
+      "mass_label": "10 femtograms",
+      "mass_kg": "1/100000000000000000",
+      "a_plus_b_threshold_s_minus_1": 6.328919370315394e-10,
+      "normalized_decay_sum_threshold_s_minus_1": 1.2657838740630787e-09,
+      "exact_point_geometry_threshold_s_minus_1": 6.392847848803427e-10,
+      "leading_geometry_relative_error": "1/99",
+      "paper_printed_6_divided_by_threshold": 9480291419.324873
+    },
+    {
+      "mass_label": "10 picograms",
+      "mass_kg": "1/100000000000000",
+      "a_plus_b_threshold_s_minus_1": 0.0006328919370315393,
+      "normalized_decay_sum_threshold_s_minus_1": 0.0012657838740630786,
+      "exact_point_geometry_threshold_s_minus_1": 0.0006392847848803427,
+      "leading_geometry_relative_error": "1/99",
+      "paper_printed_6_divided_by_threshold": 9480.291419324873
+    },
+    {
+      "mass_label": "1 nanogram",
+      "mass_kg": "1/1000000000000",
+      "a_plus_b_threshold_s_minus_1": 6.328919370315393,
+      "normalized_decay_sum_threshold_s_minus_1": 12.657838740630787,
+      "exact_point_geometry_threshold_s_minus_1": 6.392847848803427,
+      "leading_geometry_relative_error": "1/99",
+      "paper_printed_6_divided_by_threshold": 0.9480291419324873
+    }
+  ],
+  "memory_trace": [
+    {
+      "t": 0.0,
+      "q": 1.0,
+      "normalized_Choi_min_eigenvalue": 0.0,
+      "time_local_dephasing_rate": 0.0
+    },
+    {
+      "t": 1.0471975511965976,
+      "q": 0.2500000000000001,
+      "normalized_Choi_min_eigenvalue": 0.0,
+      "time_local_dephasing_rate": 1.7320508075688767
+    },
+    {
+      "t": 2.0943951023931953,
+      "q": 0.24999999999999978,
+      "normalized_Choi_min_eigenvalue": 0.0,
+      "time_local_dephasing_rate": -1.7320508075688783
+    },
+    {
+      "t": 2.6179938779914944,
+      "q": 0.75,
+      "normalized_Choi_min_eigenvalue": 0.0,
+      "time_local_dephasing_rate": -0.5773502691896257
+    },
+    {
+      "t": 3.141592653589793,
+      "q": 1.0,
+      "normalized_Choi_min_eigenvalue": 0.0,
+      "time_local_dephasing_rate": -1.2246467991473532e-16
+    }
+  ],
+  "memory_scope_witness": {
+    "q_at_2pi_over_3": "1/4",
+    "q_at_5pi_over_6": "3/4",
+    "intermediate_multiplier": "3",
+    "normalized_intermediate_Choi_eigenvalue": "-1",
+    "full_maps_CPTP": true,
+    "CP_divisible": false,
+    "scope": "A scope counterexample to time-local => GKSL with nonnegative rates; not a classical-gravity counterexample."
+  },
+  "interval_decisions": [
+    {
+      "name": "exclusion",
+      "status": "EXCLUDES_NONENTANGLING_GKSL_CLASS",
+      "certified_margin_s_minus_2": "3301/10000",
+      "data_kind": "synthetic; no experimental data"
+    },
+    {
+      "name": "uncertain",
+      "status": "WITHIN_OR_UNRESOLVED",
+      "certified_margin_s_minus_2": "-2399/10000",
+      "data_kind": "synthetic; no experimental data"
+    },
+    {
+      "name": "CP_inconsistent",
+      "status": "INCONSISTENT_CP_CALIBRATION",
+      "data_kind": "synthetic; no experimental data"
+    },
+    {
+      "name": "invalid",
+      "status": "INVALID_INPUT",
+      "data_kind": "synthetic; no experimental data"
+    }
+  ],
+  "uncertainty_note": "Numerical tolerances are diagnostics, not rigorous floating-point enclosures. Interval arithmetic is exact on supplied rational boxes; certification of physical boxes is external.",
+  "Card1_ledger_sha256": "ef4fc46ec5ae752ec3defd8aba9c8d6521dd23298b61ca966008e64ea064c5fb"
+}

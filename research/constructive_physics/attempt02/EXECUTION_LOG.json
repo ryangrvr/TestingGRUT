@@ -1,0 +1,59 @@
+{
+  "type": "CP02_EXECUTION_ACCOUNTING",
+  "freeze_commit": "d88a1a0bb0d4edea54b075437f0edd0921381df2",
+  "remote_freeze_tree_verified_before_scientific_execution": true,
+  "candidate_attempts_executed": 1,
+  "command": "python research/constructive_physics/attempt02/check.py",
+  "science_code_sha256": "e976aaca131312cb01f1b551bc63030f27f363a3c3c5f7e745fe514cf18cc002",
+  "candidate_parameter_assignments": "The b, zeta, T_R, E, s/t/u, scale, angular and determinant-gradient cases in LAW.md; no scan or survivor selection.",
+  "routine_implementation_details_not_individually_preregistered": {
+    "Fourier_kernel_diagnostic_vectors": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "2",
+        "3",
+        "0"
+      ]
+    ],
+    "RG_reference_matching_c8": 0,
+    "quadrature_Gauss_Legendre_nodes": 24,
+    "angular_azimuth_midpoints": 64
+  },
+  "accounting_qualification": "These routine proof/numerical controls were specified in check.py before its first run but were not individually enumerated in the frozen design log. They are recorded here after execution, not backdated. They select no new law or preferred successful parameter. The frozen LAW already requires the whole Fourier-kernel identity and RG scale cancellation.",
+  "first_run": {
+    "status": "CP02_GEOMETRIC_EFT_CHECKS_PASS",
+    "groups": 21,
+    "numeric_comparisons": 23,
+    "largest_absolute_error": 5.329070518200751e-15,
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "source_sha256": "d474ca3b39bde9c0691d9caa554ef1c302bcb147e0cf8f235bfd3ddd72b54603"
+  },
+  "post_freeze_law_changes": 0,
+  "unreported_candidate_replacements": 0,
+  "new_physical_calibration_or_measurement": false,
+  "stage3_card3_opened": false,
+  "cp03_opened": false,
+  "planned_second_run": {
+    "reason": "Add exact massive-matter tension running/finite volume scale cancellation after checking regulator-dependence against the primary source; law unchanged",
+    "new_candidate_or_physical_parameter_assignments": false,
+    "code_sha256": "e976aaca131312cb01f1b551bc63030f27f363a3c3c5f7e745fe514cf18cc002"
+  },
+  "second_run": {
+    "status": "CP02_GEOMETRIC_EFT_CHECKS_PASS",
+    "source_sha256": "e976aaca131312cb01f1b551bc63030f27f363a3c3c5f7e745fe514cf18cc002",
+    "groups": 21,
+    "numeric_comparisons": 23,
+    "largest_absolute_error": 5.329070518200751e-15
+  },
+  "total_scientific_script_runs": 2
+}

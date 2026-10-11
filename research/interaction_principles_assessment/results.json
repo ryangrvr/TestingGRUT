@@ -1,0 +1,785 @@
+{
+  "status": "EXACT_INTERACTION_CONSISTENCY_CONTROLS_PASS",
+  "scope": "Known Ward/Jacobi/moment/geometric-series controls; no GPI evaluation or GRUT candidate",
+  "soft_control": {
+    "momenta": [
+      [
+        5,
+        0,
+        0,
+        3
+      ],
+      [
+        5,
+        0,
+        0,
+        -3
+      ],
+      [
+        5,
+        3,
+        0,
+        0
+      ],
+      [
+        5,
+        -3,
+        0,
+        0
+      ]
+    ],
+    "signs": [
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "species": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "mass_squared": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "gravity_ward_matrix": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        -3,
+        3
+      ]
+    ],
+    "gravity_rank": 1,
+    "gravity_null_direction": [
+      1,
+      1
+    ],
+    "photon_fixtures": [
+      {
+        "charges": [
+          1,
+          2
+        ],
+        "ward_residual": 0
+      },
+      {
+        "charges": [
+          -1,
+          3
+        ],
+        "ward_residual": 0
+      },
+      {
+        "charges": [
+          0,
+          5
+        ],
+        "ward_residual": 0
+      },
+      {
+        "charges": [
+          7,
+          -2
+        ],
+        "ward_residual": 0
+      }
+    ],
+    "universal_coupling_fixtures": [
+      {
+        "coupling": "0",
+        "ward_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "coupling": "1/3",
+        "ward_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "coupling": "2",
+        "ward_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ]
+  },
+  "jacobi_control": {
+    "su2_fixtures": [
+      {
+        "scale": "0",
+        "cells": 81,
+        "nonzero_residuals": 0
+      },
+      {
+        "scale": "1/3",
+        "cells": 81,
+        "nonzero_residuals": 0
+      },
+      {
+        "scale": "2",
+        "cells": 81,
+        "nonzero_residuals": 0
+      }
+    ],
+    "antisymmetric_non_lie_cells": 625,
+    "antisymmetric_non_lie_nonzero_residuals": 24
+  },
+  "positive_moment_control": {
+    "two_point_fixtures": [
+      {
+        "mean": "1/2",
+        "variance": "0",
+        "positive_height": "1/2",
+        "height_probability": "1",
+        "third_cumulant": "0",
+        "moments_0_through_5": [
+          "1",
+          "1/2",
+          "1/4",
+          "1/8",
+          "1/16",
+          "1/32"
+        ],
+        "principal_minors": [
+          "1",
+          "1/4",
+          "1/16",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "1/8",
+          "1/32",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1/2",
+        "variance": "1/4",
+        "positive_height": "1",
+        "height_probability": "1/2",
+        "third_cumulant": "0",
+        "moments_0_through_5": [
+          "1",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ],
+        "principal_minors": [
+          "1",
+          "1/2",
+          "1/2",
+          "1/4",
+          "1/4",
+          "0",
+          "0",
+          "1/2",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1/2",
+        "variance": "1",
+        "positive_height": "5/2",
+        "height_probability": "1/5",
+        "third_cumulant": "3/2",
+        "moments_0_through_5": [
+          "1",
+          "1/2",
+          "5/4",
+          "25/8",
+          "125/16",
+          "625/32"
+        ],
+        "principal_minors": [
+          "1",
+          "5/4",
+          "125/16",
+          "1",
+          "25/4",
+          "0",
+          "0",
+          "1/2",
+          "25/8",
+          "625/32",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1/2",
+        "variance": "4",
+        "positive_height": "17/2",
+        "height_probability": "1/17",
+        "third_cumulant": "30",
+        "moments_0_through_5": [
+          "1",
+          "1/2",
+          "17/4",
+          "289/8",
+          "4913/16",
+          "83521/32"
+        ],
+        "principal_minors": [
+          "1",
+          "17/4",
+          "4913/16",
+          "4",
+          "289",
+          "0",
+          "0",
+          "1/2",
+          "289/8",
+          "83521/32",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1/2",
+        "variance": "100",
+        "positive_height": "401/2",
+        "height_probability": "1/401",
+        "third_cumulant": "19950",
+        "moments_0_through_5": [
+          "1",
+          "1/2",
+          "401/4",
+          "160801/8",
+          "64481201/16",
+          "25856961601/32"
+        ],
+        "principal_minors": [
+          "1",
+          "401/4",
+          "64481201/16",
+          "100",
+          "4020025",
+          "0",
+          "0",
+          "1/2",
+          "160801/8",
+          "25856961601/32",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "0",
+        "positive_height": "1",
+        "height_probability": "1",
+        "third_cumulant": "0",
+        "moments_0_through_5": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "principal_minors": [
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "1/4",
+        "positive_height": "5/4",
+        "height_probability": "4/5",
+        "third_cumulant": "-3/16",
+        "moments_0_through_5": [
+          "1",
+          "1",
+          "5/4",
+          "25/16",
+          "125/64",
+          "625/256"
+        ],
+        "principal_minors": [
+          "1",
+          "5/4",
+          "125/64",
+          "1/4",
+          "25/64",
+          "0",
+          "0",
+          "1",
+          "25/16",
+          "625/256",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "1",
+        "positive_height": "2",
+        "height_probability": "1/2",
+        "third_cumulant": "0",
+        "moments_0_through_5": [
+          "1",
+          "1",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "principal_minors": [
+          "1",
+          "2",
+          "8",
+          "1",
+          "4",
+          "0",
+          "0",
+          "1",
+          "4",
+          "16",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "4",
+        "positive_height": "5",
+        "height_probability": "1/5",
+        "third_cumulant": "12",
+        "moments_0_through_5": [
+          "1",
+          "1",
+          "5",
+          "25",
+          "125",
+          "625"
+        ],
+        "principal_minors": [
+          "1",
+          "5",
+          "125",
+          "4",
+          "100",
+          "0",
+          "0",
+          "1",
+          "25",
+          "625",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "100",
+        "positive_height": "101",
+        "height_probability": "1/101",
+        "third_cumulant": "9900",
+        "moments_0_through_5": [
+          "1",
+          "1",
+          "101",
+          "10201",
+          "1030301",
+          "104060401"
+        ],
+        "principal_minors": [
+          "1",
+          "101",
+          "1030301",
+          "100",
+          "1020100",
+          "0",
+          "0",
+          "1",
+          "10201",
+          "104060401",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "3",
+        "variance": "0",
+        "positive_height": "3",
+        "height_probability": "1",
+        "third_cumulant": "0",
+        "moments_0_through_5": [
+          "1",
+          "3",
+          "9",
+          "27",
+          "81",
+          "243"
+        ],
+        "principal_minors": [
+          "1",
+          "9",
+          "81",
+          "0",
+          "0",
+          "0",
+          "0",
+          "3",
+          "27",
+          "243",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "3",
+        "variance": "1/4",
+        "positive_height": "37/12",
+        "height_probability": "36/37",
+        "third_cumulant": "-35/48",
+        "moments_0_through_5": [
+          "1",
+          "3",
+          "37/4",
+          "1369/48",
+          "50653/576",
+          "1874161/6912"
+        ],
+        "principal_minors": [
+          "1",
+          "37/4",
+          "50653/576",
+          "1/4",
+          "1369/576",
+          "0",
+          "0",
+          "3",
+          "1369/48",
+          "1874161/6912",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "3",
+        "variance": "1",
+        "positive_height": "10/3",
+        "height_probability": "9/10",
+        "third_cumulant": "-8/3",
+        "moments_0_through_5": [
+          "1",
+          "3",
+          "10",
+          "100/3",
+          "1000/9",
+          "10000/27"
+        ],
+        "principal_minors": [
+          "1",
+          "10",
+          "1000/9",
+          "1",
+          "100/9",
+          "0",
+          "0",
+          "3",
+          "100/3",
+          "10000/27",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "3",
+        "variance": "4",
+        "positive_height": "13/3",
+        "height_probability": "9/13",
+        "third_cumulant": "-20/3",
+        "moments_0_through_5": [
+          "1",
+          "3",
+          "13",
+          "169/3",
+          "2197/9",
+          "28561/27"
+        ],
+        "principal_minors": [
+          "1",
+          "13",
+          "2197/9",
+          "4",
+          "676/9",
+          "0",
+          "0",
+          "3",
+          "169/3",
+          "28561/27",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "mean": "3",
+        "variance": "100",
+        "positive_height": "109/3",
+        "height_probability": "9/109",
+        "third_cumulant": "9100/3",
+        "moments_0_through_5": [
+          "1",
+          "3",
+          "109",
+          "11881/3",
+          "1295029/9",
+          "141158161/27"
+        ],
+        "principal_minors": [
+          "1",
+          "109",
+          "1295029/9",
+          "100",
+          "1188100/9",
+          "0",
+          "0",
+          "3",
+          "11881/3",
+          "141158161/27",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "strictly_positive_fixtures": [
+      {
+        "mean": "1",
+        "variance": "1/4",
+        "low": "1/2",
+        "high": "3/2",
+        "high_probability": "1/2",
+        "third_cumulant": "0",
+        "principal_minors": [
+          "1",
+          "5/4",
+          "41/16",
+          "1/4",
+          "1",
+          "9/64",
+          "0",
+          "1",
+          "7/4",
+          "61/16",
+          "3/16",
+          "3/4",
+          "27/256",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "1",
+        "low": "1/2",
+        "high": "3",
+        "high_probability": "1/5",
+        "third_cumulant": "3/2",
+        "principal_minors": [
+          "1",
+          "2",
+          "65/4",
+          "1",
+          "49/4",
+          "9/4",
+          "0",
+          "1",
+          "11/2",
+          "389/8",
+          "3/2",
+          "147/8",
+          "27/8",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "4",
+        "low": "1/2",
+        "high": "9",
+        "high_probability": "1/17",
+        "third_cumulant": "30",
+        "principal_minors": [
+          "1",
+          "5",
+          "386",
+          "4",
+          "361",
+          "81",
+          "0",
+          "1",
+          "43",
+          "6947/2",
+          "18",
+          "3249/2",
+          "729/2",
+          "0"
+        ]
+      },
+      {
+        "mean": "1",
+        "variance": "100",
+        "low": "1/2",
+        "high": "201",
+        "high_probability": "1/401",
+        "third_cumulant": "19950",
+        "principal_minors": [
+          "1",
+          "101",
+          "4070426",
+          "100",
+          "4060225",
+          "1010025",
+          "0",
+          "1",
+          "20251",
+          "1636311227/2",
+          "10050",
+          "816105225/2",
+          "203015025/2",
+          "0"
+        ]
+      }
+    ],
+    "principal_minors_checked": 266,
+    "gaussian_moment_proposals": [
+      {
+        "variance": "1/4",
+        "shifted_determinant": "3/16",
+        "nonnegative_support_moment_test_passes": true
+      },
+      {
+        "variance": "1",
+        "shifted_determinant": "0",
+        "nonnegative_support_moment_test_passes": true
+      },
+      {
+        "variance": "4",
+        "shifted_determinant": "-12",
+        "nonnegative_support_moment_test_passes": false
+      },
+      {
+        "variance": "100",
+        "shifted_determinant": "-9900",
+        "nonnegative_support_moment_test_passes": false
+      }
+    ]
+  },
+  "geometric_flux_proxy": [
+    {
+      "exp_minus_C": "1/4",
+      "exp_x": "1",
+      "both_geometric_tails_converge": true,
+      "closed_sum": "5/3"
+    },
+    {
+      "exp_minus_C": "1/4",
+      "exp_x": "2",
+      "both_geometric_tails_converge": true,
+      "closed_sum": "15/7"
+    },
+    {
+      "exp_minus_C": "1/4",
+      "exp_x": "3",
+      "both_geometric_tails_converge": true,
+      "closed_sum": "45/11"
+    },
+    {
+      "exp_minus_C": "1/4",
+      "exp_x": "4",
+      "both_geometric_tails_converge": false,
+      "closed_sum": null
+    },
+    {
+      "exp_minus_C": "1/4",
+      "exp_x": "5",
+      "both_geometric_tails_converge": false,
+      "closed_sum": null
+    }
+  ],
+  "four_dimensional_unit_charge_bound_coefficients": {
+    "ads_fS_over_reduced_Mpl": 1.282549830161864,
+    "flat_fS_over_reduced_Mpl": 1.923824745242796,
+    "kind": "Floating evaluation of published coefficients, not measured values or interval certificates"
+  },
+  "new_grut_law": false,
+  "card_2_opened": false,
+  "cards_remaining": 2,
+  "independent_review": "PENDING",
+  "experiment_performed": false
+}

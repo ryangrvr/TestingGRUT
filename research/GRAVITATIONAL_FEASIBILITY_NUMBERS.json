@@ -1,0 +1,82 @@
+{
+  "assessment_date_utc": "2026-10-11",
+  "verdict": "NOT YET FEASIBLE",
+  "scope": "Documented Leiden apparatus; gravity-mediated coherence/entanglement, not ordinary force detection",
+  "constants": {
+    "h_J_s": 6.62607015e-34,
+    "hbar_J_s": 1.0545718176461565e-34,
+    "k_B_J_per_K": 1.380649e-23
+  },
+  "formulas": {
+    "energy_equivalent_occupation": "k_B*T_mode/(h*f); does not certify a thermal quantum state",
+    "zero_point_motion": "sqrt(hbar/(2*m*2*pi*f))",
+    "bare_energy_ringdown": "Q/(2*pi*f); feedback damping excluded",
+    "linear_feedback_floor": "n_min=sqrt(S_F*S_x_det)/(2*hbar), one-sided PSDs, published model",
+    "classical_force_integration": "T=(z*noise_ASD/signal)^2 for known-phase sinusoid, one-sided locally white stationary noise"
+  },
+  "cooling_configuration_2026": [
+    {
+      "mode": "mode_3",
+      "source": "https://arxiv.org/pdf/2605.28479v2",
+      "source_locations": "pp. 3-5, Figs. 3-4, Eqs. (4)-(5)",
+      "input_frequency_Hz": 50.59,
+      "input_bare_Q": 3800000.0,
+      "input_feedback_mode_temperature_K": 0.0071,
+      "input_reported_feedback_floor_phonons_approximate": 270000.0,
+      "quantum_energy_temperature_scale_K": 2.4279370708159713e-09,
+      "energy_equivalent_occupation": 2924293.2551023085,
+      "bare_energy_damping_rate_s_inv": 8.364903807637244e-05,
+      "bare_energy_ringdown_s_NOT_quantum_coherence_time": 11954.71009585298,
+      "zero_point_motion_m_envelope": [
+        6.607071558699414e-16,
+        6.884410949192052e-16
+      ],
+      "mass_envelope_status": "Text reports 0.35 mg on p.2 and 0.38 mg on p.5; not a statistical confidence interval",
+      "noise_ASD_product_improvement_for_floor_1_with_same_linear_feedback_model": 270000.0,
+      "noise_PSD_product_improvement_for_floor_1_with_same_model": 72900000000.0
+    },
+    {
+      "mode": "mode_4",
+      "source": "https://arxiv.org/pdf/2605.28479v2",
+      "source_locations": "pp. 3-5, Figs. 3-4, Eqs. (4)-(5)",
+      "input_frequency_Hz": 67.98,
+      "input_bare_Q": 5500000.0,
+      "input_feedback_mode_temperature_K": 0.0066,
+      "input_reported_feedback_floor_phonons_approximate": 570000.0,
+      "quantum_energy_temperature_scale_K": 3.262525441274357e-09,
+      "energy_equivalent_occupation": 2022972.730420153,
+      "bare_energy_damping_rate_s_inv": 7.766017039673969e-05,
+      "bare_energy_ringdown_s_NOT_quantum_coherence_time": 12876.613518761758,
+      "zero_point_motion_m_envelope": [
+        5.699683891933034e-16,
+        5.938934646604833e-16
+      ],
+      "mass_envelope_status": "Text reports 0.35 mg on p.2 and 0.38 mg on p.5; not a statistical confidence interval",
+      "noise_ASD_product_improvement_for_floor_1_with_same_linear_feedback_model": 570000.0,
+      "noise_PSD_product_improvement_for_floor_1_with_same_model": 324900000000.0
+    }
+  ],
+  "gravity_configuration_2024": {
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10889343/",
+    "source_locations": "Results, Discussion, Fig.2; arXiv:2303.03545v2 includes supplements",
+    "input_test_mass_kg": 4.3e-07,
+    "input_resonance_Hz": 26.7,
+    "input_force_noise_ASD_N_per_sqrt_Hz": 5e-16,
+    "input_reported_gravitational_signal_N": 3e-17,
+    "conditional_white_noise_force_5sigma_integration_s": 6944.444444444446,
+    "integration_is_quantum_forecast": false,
+    "integration_has_stationarity_or_systematic_certificate": false
+  },
+  "missing_inputs": [
+    "prepared source coherence and branch geometry",
+    "protocol-specific coherence lifetime",
+    "second quantum-controlled mass",
+    "joint quantum readout with errors",
+    "background coupling limits in the intended geometry"
+  ],
+  "quantum_signature_shot_count": null,
+  "reason_shot_count_undefined": "No apparatus-specific signal contrast, prepared state or joint readout distribution established",
+  "independent_scientific_review": "PENDING",
+  "new_GRUT_law": false,
+  "card3_authorized": false
+}

@@ -1,0 +1,79 @@
+{
+  "status": "CP04_GLOBAL_CONSTRAINT_CHECKS_PASS",
+  "groups": [
+    {
+      "name": "global_variation_trace_control",
+      "status": "PASS",
+      "trace": "-3411/182"
+    },
+    {
+      "name": "exact_constant_shift_and_integrated_trace",
+      "status": "PASS",
+      "shifts": 3
+    },
+    {
+      "name": "projector_idempotence_and_nonretarded_support",
+      "status": "PASS",
+      "response": [
+        "-2",
+        "-2",
+        "-2",
+        "3"
+      ],
+      "interpretation": "fixed-metric off-shell functional, not an operational signaling result"
+    },
+    {
+      "name": "phase_history_weighting",
+      "status": "PASS",
+      "early": "-999",
+      "late": "1",
+      "interpretation": "algebraic contribution only; transition matter required for conserved physical solution"
+    },
+    {
+      "name": "full_global_equation_mass_sensitivity",
+      "status": "PASS",
+      "rows": [
+        {
+          "v": 0,
+          "lambda4": "1",
+          "Lambda": "0",
+          "physical_mass": 1.0
+        },
+        {
+          "v": 2,
+          "lambda4": "5",
+          "Lambda": "-10",
+          "physical_mass": 1.4953487812212205
+        },
+        {
+          "v": 10,
+          "lambda4": "101",
+          "Lambda": "-1010",
+          "physical_mass": 3.1701538797227005
+        }
+      ]
+    },
+    {
+      "name": "nonlinear_volume_root",
+      "status": "PASS",
+      "maximum_relative_residual": 5.800348863347756e-16
+    },
+    {
+      "name": "GR_constraint_count_and_nonzero_vacuum_counterexample",
+      "status": "PASS",
+      "dof": 2,
+      "deSitter_R": "3",
+      "scope": "standard Einstein action and constraint regularity supplied"
+    },
+    {
+      "name": "baseline_and_freeze_integrity",
+      "status": "PASS",
+      "preserved_files": 162
+    }
+  ],
+  "group_count": 8,
+  "python": "3.12.14",
+  "verdict": "CONDITIONAL_PUBLISHED_VACUUM_CONSTRAINT; NOT_A_GENERATED_SPACETIME_OR_NEW_GRUT_THEORY",
+  "scientific_evidence": "AUTHOR_ALGEBRA_AND_SOFTWARE_ONLY",
+  "code_sha256": "09b1347540b31e39faccb8ea5849bff849bcceaf690dbd421f0ecb304e73be83"
+}
