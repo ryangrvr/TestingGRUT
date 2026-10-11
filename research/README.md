@@ -7,6 +7,10 @@ Its local-unitary symmetry freezes every elementary local state; product blocks
 cannot bootstrap new interactions. See the exact proofs, conventional
 countermodels and reproducible controls in [the Card-2 result](card02/REPORT.md).
 Two slots are consumed; one remains; Card 3 is reserved and unopened.
+The [final-attempt decision memorandum](FINAL_ATTEMPT_DECISION.md) recommends
+**B — stop the present Stage-3 candidate route**, while preserving the unused
+slot and pending external checks. This is a recommendation under the owner's
+closeout assignment, not a canonical route terminal or a new law attempt.
 The earlier [authorization/intake](CARD02_AUTHORIZATION.md) is retained as
 historical metadata. The waiver did not certify the evaluation kit.
 
