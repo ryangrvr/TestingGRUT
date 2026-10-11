@@ -1,3 +1,7 @@
+## Current constructive checkpoint — CP-04
+
+[CP-04 report](constructive_physics/attempt04/REPORT.md): one separately authorized global vacuum-constraint construction, frozen before executable checks. Exact reduced vacuum cancellation and full-equation mass sensitivity derived; historic subtraction is not itself a retarded source response. Lorentzian spacetime, Einstein dynamics and universal coupling remain supplied. Eight author check groups pass; conditional published mechanism only, no new GRUT theory or experimental result. Stage 3 inactive, Card 3 unopened, PR #12 draft; no automatic CP-05. Previous frozen packets unchanged.
+
 # Authorized development research
 
 **Latest owner correction: fundamental-theory construction is active.**
