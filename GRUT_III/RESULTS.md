@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 18:15 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 19:00 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -379,7 +379,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 26.8 s)
+  (runtime 26.3 s)
 V7 OVERALL: PASS
 ```
 
@@ -583,29 +583,43 @@ V10 OVERALL: PASS
 ## `v11_quasi_ds_kms_defect.py`
 
 ```text
-== 11.1 exact-dS limit (epsilon -> 0 realised as p -> large; compare with Planck) ==
-  [PASS] eps=0.0025 G+(w=0.5): got 0.08314213439 want 0.08317164418 rel 0.000355
-  [PASS] eps=0.0025 G+(w=2.0): got 0.3183109616 want 0.3183109962 rel 1.09e-7
-  [PASS] eps=0.000625 G+(w=0.5): got 0.08316426791 want 0.08317164418 rel 8.87e-5
-  [PASS] eps=0.000625 G+(w=2.0): got 0.3183109875 want 0.3183109962 rel 2.73e-8
-== 11.2 self-similarity ==
-  [PASS] G+(w=Hbar)/Hbar equal at two mean times: got 0.1594155722 want 0.1594155722 rel 0.0
-== 11.3 KMS defect D(w) = ln[G+(w)/G+(-w)] - 2 pi w/Hbar, scaling with epsilon ==
-  eps=0.04:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.39302', '7.06271', '14.5424', '22.0284']
-  eps=0.02:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.26051', '6.64931', '13.4971', '20.3485']
-  eps=0.01:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.1995', '6.46094', '13.0188', '19.5786']
-  eps=0.005:  D/eps at w/H=['0.5', '1.0', '2.0', '3.0'] = ['3.17017', '6.3708', '12.7895', '19.2092']
-  [PASS] D/eps converges (p=100 vs 200) at w/H=0.5: got 3.199495321 want 3.170171336 rel 0.00925
-  [PASS] D/eps converges (p=100 vs 200) at w/H=1.0: got 6.460942761 want 6.370803902 rel 0.0141
-  [PASS] D/eps converges (p=100 vs 200) at w/H=2.0: got 13.01883738 want 12.78953602 rel 0.0179
-  [PASS] D/eps converges (p=100 vs 200) at w/H=3.0: got 19.57860382 want 19.20922201 rel 0.0192
-  => f(w/H) = lim D/eps (from p=200): ['3.1702', '6.3708', '12.79', '19.209']
-  beta_eff(w)/beta_dS - 1, per unit eps (eps->0): ['1.0091', '1.0139', '1.0178', '1.0191']
-  => leading defect = effective-temperature shift T_eff ~ (H/2pi)(1 - c eps), c ~ 1.014  (= H one Hubble time after the mean time, to this order)
-  => CONVENTION-FREE violation: beta_eff varies with w; [beta_eff(3H) - beta_eff(0.5H)]/(eps beta_dS) = 0.009984 (no single temperature fits)
-== 11.4 oddness and vanishing at eps=0 ==
-  [PASS] D(-w) = -D(w): got -0.09739068296 want -0.09739068296 rel 0.0
-  [PASS] exact dS through the same pipeline: D = 0.0
+== A. power law: exact first-order thermality and the second-order coefficient (sympy, explicit expansion) ==
+  O(1): 0   O(1/q): 0 -> PASS (no first-order term)
+  O(1/q^2): x**2*(x/tanh(x/2) - 3)/12  vs -x^2/4 + (x^3/12)coth(x/2): PASS
+  [PASS]   exact ln R * q^2 at q=1e5, x=0.7: got -0.0375255308 want -0.0375255308 rel 7.61e-12
+  [PASS]   exact ln R * q^2 at q=1e5, x=2.0: got -0.124643143 want -0.124643143 rel 4.43e-11
+  => W_eps/W_dS(H_eff) = 1 + eps^2 [x^2/4 - (x^3/12) coth(x/2)] + O(eps^3), H_eff = Hbar(1-eps).  Reviewers confirmed.
+  f2(x - 2 pi i) - f2(-x) = -(-x**3*(exp(x) + 1) + (x - 2*I*pi)**3*(exp(x) + 1) + 3*(x**2 - (x - 2*I*pi)**2)*(exp(x) - 1))/(12*exp(x) - 12)  (nonzero => KMS broken at O(eps^2))
+== B. general a(t) to second adiabatic order (sympy construction + numerical verification) ==
+  max |first-order difference from thermal form at H_eff = H(1-eps)| over random points: 2.17e-15 (float inputs; zero to machine precision) -> PASS
+  max |second-order (eta=0) - power-law coefficient| over random points: 9.02e-16 -> PASS
+  eps*eta term of the second-order relative remainder (general a(t)): epsilon*(x**2*(x + 6) - x**2*(x*exp(x) - 6*exp(x) + 12)*exp(x) - 24*x*exp(2*x) + 24*x + 48*(exp(x) - 2)*exp(x) + 48)*exp(-x)/(48*(cosh(x) - 1))
+  THEOREM (any a(t)): to first adiabatic order the comoving conformal vacuum is thermal at T_eff = (H + Hdot/H)/2pi = (d/dt ln a_dot)/2pi.
+== C. numerics: Richardson-extrapolated first- and second-order KMS defects (power law) ==
+  D/eps relative to Hbar, Richardson over p = [200, 400, 800, 1600]  (expected 2 pi w/Hbar, i.e. c = 1 exactly):
+  [PASS]    lim D/eps at w/H=0.5 = 2 pi w/H: got 3.141545863 want 3.141592654 rel 1.49e-5
+  [PASS]    lim D/eps at w/H=1.0 = 2 pi w/H: got 6.283026938 want 6.283185307 rel 2.52e-5
+  [PASS]    lim D/eps at w/H=2.0 = 2 pi w/H: got 12.56598506 want 12.56637061 rel 3.07e-5
+  [PASS]    lim D/eps at w/H=3.0 = 2 pi w/H: got 18.84894548 want 18.84955592 rel 3.24e-5
+  second-order defect D2(w) = lim [ln(G+/G-) - 2 pi w/H_eff]/eps^2  (the genuine non-thermal content):
+    w/H = 0.5:  D2 = 2.501512   (p=1600 raw 2.508621)   D2/(2 pi w/H) = 0.796256
+    w/H = 1.0:  D2 = 10.99629   (p=1600 raw 11.02289)   D2/(2 pi w/H) = 1.75011
+    w/H = 2.0:  D2 = 31.47169   (p=1600 raw 31.53821)   D2/(2 pi w/H) = 2.50444
+    w/H = 3.0:  D2 = 52.14107   (p=1600 raw 52.24711)   D2/(2 pi w/H) = 2.76617
+  non-linearity of D2 in w (beta_eff variation per eps^2 between w=0.5H and 3H): 1.96991  -> frequency-dependent KMS violation is O(eps^2)
+== D. the present universe: exact LambdaCDM worldline correlator vs the first-order thermal form (time domain) ==
+  t0 = 0.950985/H0 (a worldline exists only for |Delta| < 2 t0: no full Fourier spectrum at t0 without a window)
+  eps_0 = 0.4725, H_eff(t0) = H0 + Hdot/H0 = a''/a' = 0.5275 H0 -> T_eff = 0.08395 H0/2pi (first-order thermal form)
+  [PASS]   eps_0 from a(t) directly: got 0.4725 want 0.4725 rel 2.09e-31
+  Delta*H0   W_LCDM/W_dS(H_eff) - 1    eps0^2 f2(x_eff) [2nd-order prediction]   actual/2nd-order
+    0.25         0.0012174             0.00032262                  3.774
+     0.5          0.005563              0.0012792                  4.349
+     1.0          0.036387              0.0049379                  7.369
+     1.5            0.1916               0.010445                  18.34
+  => at eps_0 = 0.47 the deviation from the first-order thermal form is 0.1% (Delta=0.25/H0) to 19% (1.5/H0) and exceeds the
+     second-order prediction by factors 4-18: the adiabatic expansion has broken down; the present-day comoving vacuum is
+     not thermal at any single temperature and must be treated with the exact kernel (no eps-expansion).
+  (formal baseline for the vacuum medium; the physical photon field is dominated by the 2.7 K CMB bath at these scales)
 
 V11 OVERALL: PASS
 ```
