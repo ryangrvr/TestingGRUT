@@ -10,8 +10,12 @@ The owner accepted Recommendation B in the preserved
 procedural clarification, and directed evidence-led fundamental research to
 continue separately. The [bounded scientific decision](EVIDENCE_LED_DECISION.md)
 selects how coherent quantum matter sources gravity as an unresolved physical
-question. It identifies an existing conditional obstruction and its premise
-boundary, not a new GRUT law or an authorized candidate attempt.
+question. The owner now accepts that direction and sharpens it to information
+transfer, disturbance and complete-process reversibility. The
+[operational direction](GRAVITATIONAL_INFORMATION_DIRECTION.md) proves the
+probe-only comparison's limitation in a branch-preserving model and specifies
+a conventional joint measurement distinction. It is not a new GRUT law,
+apparatus certification or authorization for a candidate attempt.
 [REORIENTATION_STATE.json](REORIENTATION_STATE.json) records the current direction.
 
 The [limited Card-2 development waiver](card02/AUTHORIZATION.md) and earlier
