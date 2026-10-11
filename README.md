@@ -15,6 +15,10 @@
 > Every banner below this block is **historical**.
 <!-- CURRENT-STATE:END -->
 
+> **Proposal (2026-10-11, this experimental branch only): [`GRUT_III/`](GRUT_III/README.md) — a principle-first
+> reconstruction (horizon relationality; kernels derived; GR hosted; ledger +16 → +5) with a runnable
+> verification suite. Not canonical; subject to owner audit.**
+
 > **Public record (26 September 2026; historical banner — the current boundary is the block above).** The program's
 > consolidated statement is the paper *GRUT — Grand Responsive Universe
 > Theory: Consolidated Theory, Formal Architecture, Results, Limits, and
