@@ -19,11 +19,13 @@ countermodel and quantum obstruction are unchanged. Weak-coupling loop
 suppression can support a leading approximation under specified matching
 conditions; it does not fix independently allowed finite interaction terms.
 
-**CP-02 is proposed, not authorized.** The proposed scope is a quantum-stable
-physical mechanism constraining otherwise allowed interaction coefficients.
-No replacement potential, generating law or candidate evaluation may begin
-without separate explicit owner authorization. This preserves GRUT's active
-mission without opening Card 3 or creating an unlimited candidate queue.
+**CP-02 is now authorized once by the owner's submitted adoption prompt.**
+The [separate authorization](constructive_physics/attempt02/AUTHORIZATION.md),
+[design accounting](constructive_physics/attempt02/DESIGN_LOG.json) and
+[frozen action](constructive_physics/attempt02/LAW.md) record a shared induced
+geometry mechanism. This openly supplies extra geometry and a physical symmetry;
+it is distinct from CP-01 and the Stage-3 identity/interface challenge.
+No CP-03, Card 3, canonical integration or independent clearance is authorized.
 The [current state](REORIENTATION_STATE.json) records this boundary.
 
 The following decisions and scientific packets are preserved as history.
