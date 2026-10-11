@@ -1,0 +1,28 @@
+{
+  "type": "CP03_EXECUTION_ACCOUNTING",
+  "date_utc": "2026-10-11",
+  "freeze_commit": "d197e6ac8ad91e8d14ab82eca8c34b53add15017",
+  "law_unchanged": true,
+  "scientific_script_executions": [
+    {
+      "order": 1,
+      "result": "PASS",
+      "groups": 9,
+      "scope": "Initial independent bubble, classical metric/constraint, residue, tuning and integrity calculations"
+    },
+    {
+      "order": 2,
+      "result": "PASS",
+      "groups": 10,
+      "change": "Added explicit static-vertex/Born/Newton normalization implementing the frozen correspondence obligation; no change to action or candidate selection."
+    }
+  ],
+  "failed_scientific_fixtures": 0,
+  "fixed_implementation_choices": "Gradient recipe, finite-difference step=1e-5 and exact rational tensor representation are disclosed in check.py. They were implemented before their first execution but not individually enumerated in the action freeze. No hidden physical-law or parameter survivor search.",
+  "check_code_sha256": "6d3e3c62c58b9c2ae2f62f8b53de25336e8e808fe1216cf7b7ea75dfcdeafccd",
+  "results_sha256": "ce5a367af96980fd1f45dadf8e19b2352b5e0471434dd1d258f393f00df10fb7",
+  "independent_review": false,
+  "experiment": false,
+  "stage3_card3_consumed": false,
+  "cp04_opened": false
+}
