@@ -177,3 +177,26 @@ on the owner's word.
 
 **a₀.** Recorded as Milgrom's (1999) vacuum-effect conjecture with the Narnhofer–Peter–Thirring / Deser–Levin
 temperature √(a² + H²)/2π, not as GRUT's (`06`).
+
+
+## R15 — Addendum (second round of reviews, 2026-10-11): the v11 headline was wrong
+
+**Claim (two independent reviewers; one published with code on `codex/grut-causal-state-review`).** At first order in
+ε the exact power-law correlator equals the de Sitter correlator with H → H̄(1 − ε): W_ε = W_dS[1 + ε(x coth(x/2) − 2)]
++ O(ε²) = W_dS(Δ; H(1−ε)) + O(ε²); the first-order detailed-balance relation is thermal at T_eff = (H/2π)(1 − ε); v11's
+c ≈ 1.014 and its "1%-of-ε frequency dependence" were finite-ε (O(ε²)) contamination; the second-order coefficient is
+W_ε/W_dS(H_eff) = 1 + ε²[x²/4 − (x³/12)coth(x/2)]; Richardson extrapolation gives D/ε → 2πω/H̄ to 3e-5.
+
+**Verdict: CORRECT.** My convergence test accepted a 5% drift between p = 100 and 200 as "converged"; the drift was the
+O(ε²) term. `v11` rev. 3 now proves the first-order theorem symbolically for the power law (no 1/q term) and for
+general a(t) to second adiabatic order (η = ε̇/Hε counted as first-order small), confirms the reviewers' f₂(x) exactly
+and at q = 10⁵ numerically, extrapolates D/ε → 2πω/H̄ (c = 1 to 3e-5), and computes the true O(ε²) frequency-dependent
+defect D₂(ω). The physics consequence strengthens the framework's own conclusion: the conformal sector is KMS through
+first order, so the FDT boundary holds through O(ε). Also adopted: the late universe is not slow-roll (ε₀ = 0.47); the
+exact present-day kernel deviates from any thermal form by up to 19% at Δ = 1.5/H₀ (`v11` D).
+
+**Also accepted from this round:** T6's scope (a harmonic-bath or generalized-free-field representation is a
+mathematical representation, not an actual local field theory; Källén–Lehmann needs covariance and positivity) and
+T5's scope (the Brownian covariance is asymptotic; imaginary-time periodicity does not settle full KMS analyticity).
+Both reworded in `07` and D10. The reviewers' verification of v7, v9, v10 against the smeared-detector result,
+Solodukhin's coefficients and the standard D = H³/4π² is recorded in `08`.

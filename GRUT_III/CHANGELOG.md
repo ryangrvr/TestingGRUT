@@ -1,5 +1,14 @@
 # GRUT III — changelog
 
+## Revision 2.1 (2026-10-11, after the second round of reviews)
+
+- `v11` rev. 3: revision-2 headline (first-order c ≈ 1.01 plus 1%-of-ε frequency dependence) **retracted** — it was
+  O(ε²) contamination. Now proved: first-order exact thermality at T_eff = (ä/ȧ)/2π for any a(t); second-order
+  coefficient f₂(x) = x²/4 − (x³/12)coth(x/2) (reviewers') confirmed; Richardson D/ε → 2πω/H̄ (c = 1 to 3e-5); the true
+  O(ε²) frequency-dependent defect D₂(ω); present-day (ε₀ = 0.47) exact ΛCDM deviation 0.1–19% from any thermal form.
+- T5/T6 scopes tightened (asymptotic Brownian covariance; representation ≠ physical field theory).
+- `08`: the independent review (branch `codex/grut-causal-state-review`) recorded; RESPONSE R15.
+
 ## Revision 2 (2026-10-11, after three external reviews and an owner's note)
 
 Corrections (all accepted; see `RESPONSE_TO_REVIEWS.md`):

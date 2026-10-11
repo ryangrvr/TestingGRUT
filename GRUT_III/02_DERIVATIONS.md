@@ -143,22 +143,49 @@ Massless minimally coupled sector (each graviton polarisation) in the dS-breakin
     G(t,t′) = (H²/8π²)[ 1/(2 sinh²(HΔt/2)) − ln(2 sinh²(HΔt/2)) + H(t + t′) + c ],   1 − Z = 2 sinh²(HΔt/2) on the worldline.
 
 ∂_t∂_{t′}G depends on Δt only (every velocity correlator and commutator is stationary); the stationary part is
-KMS-periodic (period 2πi/H); the non-stationary part at large separation is exactly the Brownian covariance
-D·min(t, t′) with **D = H³/4π²**, i.e. d⟨φ²⟩/dt = H³/4π² (Vilenkin–Ford; Linde; Starobinsky), and for tensors
+periodic under Δt → Δt + 2πi/H (checked; full KMS analyticity in the strip is not verified here); the non-stationary
+part **at large separation** (HΔt ≫ 1) is the Brownian covariance D·min(t, t′) + const with **D = H³/4π²** — an
+asymptotic statement, not an exact covariance at all separations — i.e. d⟨φ²⟩/dt = H³/4π² (Vilenkin–Ford; Linde; Starobinsky), and for tensors
 d⟨h_{ij}h^{ij}⟩/dt = 2H³/(π²M̄_P²) = H·P_T. **RECORD CORRECTION:** the record's "graviton channel has no stationary
 reduced object / no derived memory time" (tt_worldline) becomes: all response data are stationary; the zero mode
 random-walks with a derived diffusion constant. "Infinite memory" is the random walk; "finite memory" is thermal.
 
-## D11 — The conventional KMS defect under slow roll (DERIVED baseline; `v11`)
+## D11 — The conventional KMS structure under slow roll: exact first-order thermality, O(ε²) defect, present-day baseline (DERIVED; `v11` rev. 3)
 
-For a conformal field in the conformal vacuum of a power-law FRW universe a ∝ t^p, ε = 1/p, the exact worldline
-Wightman function W = −1/(4π²a(t)a(t′)(Δη − i0)²) has mean-time Wigner spectrum G⁺(ω; t̄) = H̄·g(ω/H̄; ε)
-(self-similar), recovering the Planck spectrum as ε → 0. The KMS defect D(ω) = ln[G⁺(ω)/G⁺(−ω)] − 2πω/H̄ is odd,
-vanishes identically at ε = 0, and is O(ε) with D/ε → f(ω/H) = 3.17, 6.37, 12.79, 19.21 at ω/H = 0.5, 1, 2, 3:
-predominantly an **effective-temperature shift** T_eff ≈ (H̄/2π)(1 − 1.01ε) (the Hubble rate about one Hubble time
-after the mean time), plus a **convention-free** frequency dependence [β_eff(3H) − β_eff(0.5H)]/(εβ) ≈ 0.010 — no
-single temperature fits. This is conventional QFT in FRW and fixes the O(ε) violation completely for free conformal
-fields; it is the baseline against which any non-KMS GRUT residual must be reported (`07` §6, `05` O5).
+**Correction of revision 2.** The earlier D11 reported a first-order temperature-shift coefficient 1.01 and a
+"1%-of-ε frequency dependence" from finite-ε tables without extrapolating. Two independent reviewers (one with a
+published check, `research/reality_framework/grut_iii_independent_review/` on `codex/grut-causal-state-review`) showed
+that this was O(ε²) contamination. They were right; here is what is true.
+
+**Theorem (first order, any a(t)).** For a conformal field in the conformal vacuum along a comoving worldline,
+W = −1/(4π²a(t)a(t′)(Δη − i0)²) exactly. Expanding about the midpoint t̄ to first adiabatic order (ε = −Ḣ/H², with
+η = ε̇/Hε also first-order small), the correction to the de Sitter form is a **pure shift of the Hubble rate**:
+
+    W(t,t′) = W_dS(Δ; H_eff) + O(ε²),     H_eff = H̄ + Ḣ̄/H̄ = H̄(1 − ε̄) = (d/dt) ln ȧ |_{t̄},
+
+so the state is **exactly KMS to first order** at T_eff = (ä/ȧ)/2π (`v11` A: for the power law a ∝ t^p,
+ln[a₁a₂Δη²/(4 sinh²(x/2)/H_eff²)] has no 1/q term, q = p − 1; `v11` B: the general-a(t) construction to second order
+has vanishing first-order remainder at random parameter points, to 1e-15).
+
+**Second order.** For the power law, W/W_dS(H_eff) = 1 + ε²[x²/4 − (x³/12)coth(x/2)] + O(ε³) with x = H_effΔ
+(symbolic, and exact-expression check at q = 10⁵ to 1e-11); f₂(x − 2πi) ≠ f₂(−x), so **KMS is first broken at
+O(ε²)**. For general a(t) the second-order remainder has an additional εη term (printed by `v11` B).
+
+**Spectrum (Richardson-extrapolated, p = 200…1600).** The first-order defect relative to H̄ is exactly
+D/ε → 2πω/H̄ (c = 1 to 3e-5), i.e. a temperature shift and nothing else. The genuine second-order defect relative to
+the exact H_eff, D₂(ω) = lim[ln(G⁺(ω)/G⁺(−ω)) − 2πω/H_eff]/ε², is 2.50, 11.00, 31.47, 52.14 at ω/H = 0.5, 1, 2, 3;
+divided by 2πω/H it rises from 0.80 to 2.77: a **frequency-dependent** KMS violation at O(ε²), the first conventional
+one. Consequence for `03`/`07`: the conformal sector is KMS through O(ε), so the FDT boundary applies through first
+order; a distinctive residual in slow roll would have to be O(ε²) or live in a sector where this expansion does not
+hold.
+
+**The present universe is not slow-roll.** Today ε₀ = (3/2)Ω_m = 0.47, so H_eff(t₀) = 0.53 H₀ and no expansion applies.
+Along the comoving worldline a correlator exists only for |Δ| < 2t₀ = 1.9/H₀ (the big bang), so a Fourier spectrum at
+t₀ requires a window and is not computed. In the time domain the exact ΛCDM correlator deviates from the first-order
+thermal form W_dS(Δ; H_eff(t₀)) by 0.12%, 0.56%, 3.6% and 19% at ΔH₀ = 0.25, 0.5, 1, 1.5 — factors 4–18 above the
+second-order prediction: the present-day comoving conformal vacuum is **not thermal at any single temperature** and
+must be treated with the exact kernel. (A formal baseline for the vacuum medium; the physical photon field at these
+scales is dominated by the 2.7 K CMB bath.)
 
 ## D12 — The induced-gravity / entanglement matching behind P2 (IMPORTED theorems, numbers in `v9`) — O1 made precise
 

@@ -47,8 +47,11 @@ states, or Δκ_n) against the conventional baseline for the same observable, st
 G2-12 "Scope-Q" ruling, as the owner reports it, reached the same conclusion from the other direction: distinctive
 locks need KMS-failing platforms. That ruling is not in this repository; the convergence is noted.)
 
-**Baseline computed (`v11`, D11).** Quasi-de Sitter, conformal matter: the O(ε) KMS defect is fixed completely —
-an effective-temperature shift T_eff ≈ (H/2π)(1 − 1.01ε) plus a 1%-of-ε frequency dependence. No free function.
+**Baseline computed and corrected (`v11` rev. 3, D11).** Quasi-de Sitter, conformal matter: to first order the state
+is *exactly* thermal at T_eff = (ä/ȧ)/2π = (H/2π)(1 − ε) for any a(t) (the revision-2 claim of a first-order frequency
+dependence was a finite-ε artefact, caught by two reviewers); the first KMS violation is O(ε²) with the computed
+shape D₂(ω). No free function. Today ε₀ = 0.47: the exact kernel deviates from the thermal form by 0.1–19% over
+Δ = 0.25–1.5/H₀, and only the exact kernel may be used for any late-universe statement.
 
 **What the constructive branch's CP-05 settles for this program** (branch `codex/grut-causal-response-05`; review
 relayed by the owner): one specified local scalar, eliminated, produces a covariant gravitational memory with derived

@@ -59,8 +59,8 @@ is 4H; it has no normalisable autocorrelation time (t⁻⁸ at short times).
 **T5 (the gravitational sector is a stationary thermal process plus a Brownian zero mode; v10).** For the
 massless minimally coupled sector (each graviton polarisation), the worldline two-point function is
 (H²/8π²)[1/(2 sinh²(HΔt/2)) − ln(2 sinh²(HΔt/2)) + H(t + t') + c]. Every derivative correlator and every commutator
-is stationary and KMS-periodic (period 2πi/H); the non-stationary part is exactly the Brownian covariance
-D·min(t, t') with D = H³/4π² per canonically normalised field, i.e. d⟨h_{ij}h^{ij}⟩/dt = 2H³/(π²M̄_P²) = H·P_T.
+is stationary and 2πi/H-periodic; the non-stationary part is, at large separation, the Brownian covariance
+D·min(t, t') with D = H³/4π² per canonically normalised field (asymptotic, not exact at all separations), i.e. d⟨h_{ij}h^{ij}⟩/dt = 2H³/(π²M̄_P²) = H·P_T.
 The record's "graviton channel has no stationary reduced object" is therefore: *all* its response data are
 stationary; only the zero-mode position random-walks, with a derived diffusion constant (Starobinsky's stochastic
 inflation). "Infinite memory" is the random walk; "finite memory" is thermal.
@@ -74,7 +74,10 @@ P-17 is the converse: reduced data identify the forcing law, not the bath); (ii)
 two-point function with positive spectral measure dσ(s) is that of a *generalized free field*, a superposition of free
 fields of mass √s (Källén–Lehmann), so the kernel is literally "an integrated-out field". Scope: two-point/Gaussian
 level only; it says nothing about higher cumulants or back-reaction; and the realizing field content is **not unique**
-(many local Lagrangians give the same σ — P-17's non-identifiability). Consequence for constructions: eliminating one
+(many local Lagrangians give the same σ — P-17's non-identifiability); and both statements are *mathematical
+representations* — a harmonic bath for a passive temporal kernel, a generalized free field for a covariant positive
+spectral measure (Källén–Lehmann needs Lorentz covariance and spectral positivity, which an arbitrary causal kernel
+does not supply) — not the existence of an actual local field theory with those excitations. Consequence for constructions: eliminating one
 specified local field (the constructive branch's CP-05, with its massive retarded kernel and J₁ tail inside the light
 cone) exhibits *a* realization of a passive kernel; the kernel cannot *select* that field. "Every causal stable kernel
 is an integrated-out field" is therefore proved in this sense and false in the stronger sense (it does not single out a
@@ -115,7 +118,9 @@ with no mechanism. That is the precise content of the record's own verdict "supp
 
 T1–T2 are two-point, stationary statements. The non-stationary case is handled by two-time kernels (the Wigner
 mean-time form the record's dS paper already used), and T5 shows the only non-stationary object in the free
-gravitational sector is the zero-mode random walk. The genuinely open regime is the *interacting* gravitational
+gravitational sector is the zero-mode random walk. Under slow roll the conformal sector stays KMS **through first
+order** at T_eff = (ä/ȧ)/2π (D11, corrected after review); the first conventional violation is O(ε²) and frequency
+dependent, and today (ε₀ = 0.47) the exact kernel is needed. The genuinely open regime is the *interacting* gravitational
 infrared in de Sitter, where secular growth of loop corrections is unresolved in the literature and where a
 non-stationary residual (ΔW(t, t') beyond the Brownian term) would be the first place a "responsive" correction
 could appear without being inserted. That is a research problem in quantum gravity, stated here as the one opening;

@@ -144,6 +144,19 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
   the conformally coupled massless Wightman function in dS equals the flat 5-space one, and the AdS extension
   2πT = (a² − R⁻²)^{1/2}. **Bearing:** `06`'s formula is correct and correctly attributed; priority NPT 1996.
 
+## Independent review of revision 2 (owner's reviewers, 2026-10-11)
+
+- Published check: `research/reality_framework/grut_iii_independent_review/REVIEW_V11_R2.md` and
+  `check_v11_powerlaw_expansion.py` on branch `codex/grut-causal-state-review` (commit `0aca9229`). Result: at
+  x = 1 − i the exact power-law correlator differs from W_dS(H(1−ε)) by 2.77e-4, 6.93e-5, 1.74e-5, 4.34e-6 at
+  ε = 0.04, 0.02, 0.01, 0.005 (quartering with halving ε: second-order scaling); the leading coefficient
+  ε²[x²/4 − (x³/12)coth(x/2)] reproduced numerically. Second reviewer: an independent implementation reproduces
+  v11's p = 100, 200 values to all digits; p = 400, 800 + Richardson give D/ε → 2πω/H̄ to 3e-5.
+- Independent reruns: all eleven scripts pass; v7 matches the smeared-detector result; v9 reproduces Solodukhin's
+  k₁ (scalar 1/6 − ξ, Dirac +1/3); v10 reproduces D = H³/4π². The literature entries in this file were not
+  independently checked by them.
+- Accepted in full; `v11` rewritten (rev. 3); see RESPONSE R15.
+
 ## Verification status of the new scripts (honest record)
 
 The three-lens adversarial verification of `v7`–`v10` scheduled in the round-two workflow **did not run**: the four
@@ -153,5 +166,6 @@ verifier agents failed at launch with a usage-limit error. In their place the au
 sums (4 + 45 − 48)/6 = 1/6 and (0 + 45 − 48)/6 = −1/2 used in `v9`, and the Gaussian-convolution and lens-volume
 steps of `v7` §A, and (iii) checked `v7` §B's two independent closed-form derivations against each other as the
 script reports (agreement to 1e-26). `v7`'s own caveats (the 1/t edge; L⁻⁸ scaling) were adopted into D9. `v10` and
-`v11` are author-written and author-verified. **Independent verification of v7–v11 is owed** (`05` O7 item 3) and
-should be the first task of the next pass.
+`v11` were author-written; `v11`'s revision-2 headline was then **refuted** by the independent reviewers and corrected
+(rev. 3). The reviewers' reruns cover v7, v9, v10 and the power-law part of v11; `v8` and the general-a(t) and ΛCDM
+parts of `v11` rev. 3 remain author-level.
