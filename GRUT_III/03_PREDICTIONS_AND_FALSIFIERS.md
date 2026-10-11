@@ -1,41 +1,52 @@
-# 03 — What GRUT III predicts, what kills it, what it retracts
+# 03 — What GRUT III predicts, what refutes it, and what it cannot claim (revision 2)
 
-Honesty clause first: at every accessible scale the parameter-free predictions below coincide with those of
-general relativity plus quantum field theory in curved spacetime. They are listed because a theory is defined by
-what would refute it, and because several are *sharper* than what the record carried.
+## The structural fact first (R11, R13, and the owner's note)
 
-## Zero-free-parameter predictions (DERIVED)
+GRUT III builds the KMS state in by construction (P1 + Bisognano–Wichmann). In a KMS state
+N_f = ½coth(βω/2)ρ_f for every observable f (`07` T1), so any "extra noise" at the same temperature is forced to be
+extra dissipation, and extra dissipation at fixed state and coupling is a change of the theory's field content —
+conventional physics with a price. **In the regime its own principle defines, GRUT III can only be standard.**
+Therefore GRUT III makes **no prediction that distinguishes it from GR + QFT in curved spacetime**, and a
+distinctive residual, if one exists, must be computed in a state where KMS fails (non-stationary; quasi-de Sitter
+at O(ε), `v11`; the interacting gravitational infrared), as a residual against the conventional baseline (`07` §4).
 
-| # | Prediction | Source | What refutes it | Present status |
+## Falsifiers of the *minimal* framework (P0–P5 with the known field content, no additional light fields)
+
+These are shared with ΛCDM / GR + QFT. They refute the minimal framework; they do not single GRUT III out.
+
+| # | Statement | Source | Refuted by | Status |
 |---|---|---|---|---|
-| F1 | **w ≡ −1 exactly, at all z.** Λ is an integration constant of the equation of state (D3); it does not evolve. | P2 | A model-independent detection of w ≠ −1 (crossing or not) at ≥5σ. The record's sealed DESI falsifier (prereg 2026-08-18) applies, strengthened from "no crossing" to "no evolution". | DESI DR2 + CMB + SNe prefer evolving DE at ~3–4σ; DR3 decides. **This is the live risk.** |
-| F2 | **GW luminosity distance = EM luminosity distance** (Ξ = 1), tensor speed c_T = c, no tensor friction beyond ∼10⁻¹⁶⁰ s⁻¹. | D5 | Any detection of Ξ ≠ 1 or α_M ≠ 0 with standard sirens (LISA/ET reach ~1%). | Consistent (GW170817). |
-| F3 | **Horizon absorption of GWs is exactly GR's** (η/s = ħ/4πk_B; tidal heating per Hawking–Hartle). | D4 | Measured deviation of horizon absorption/tidal heating in EMRI waveforms (LISA, ~percent). | Untested at precision. |
-| F4 | **Exactly Planckian horizon noise** with the derived spectra of D1–D2, T = κ/2π. | D1–D2 | A non-thermal or non-KMS detector response in a horizon analogue at the level of the Planck factor. | Analogue Hawking spectra (BEC) are thermal to present precision. |
-| F5 | **Graviton pair-production kernel** Im Π(s) = c_eff(s) G s² with SM thresholds. | D5 | A measured graviton self-energy spectral function (not accessible). | — |
-| F6 | **Einstein's equation holds only in local equilibrium**: deviations appear where the Clausius relation fails, i.e. where entanglement entropy is not area-law to leading order (Planckian curvature). | P2 | Low-curvature deviations from GR with no matter source. | Consistent. |
+| F1 | w ≡ −1: Λ is an integration constant of the equation of state and does not evolve | D3 | Model-independent ≥5σ evolving dark energy. This would refute ΛCDM equally and would force an additional light field into P0's content (allowed, priced). | DESI DR2 (2025) prefers w₀w_aCDM over ΛCDM at roughly 2.8–4.2σ depending on the supernova compilation (checked against the paper in `08`); no DR3 release exists. **The live risk.** |
+| F2 | Ξ = d_L^GW/d_L^EM = 1, c_T = c, tensor friction below ∼10⁻¹⁶⁰ s⁻¹ | D5 | Standard-siren detection of Ξ ≠ 1 or α_M ≠ 0 | Consistent (GW170817) |
+| F3 | Horizon absorption/tidal heating exactly GR's (η_s/s = ħ/4πk_B) | D4 | EMRI tidal-heating deviation (LISA, percent level) | Untested at precision |
+| F4 | Exactly Planckian horizon noise with the D1–D2 spectra; O(ε) defect as in D11 under slow roll | D1, D2, D11 | A non-KMS detector response in a horizon analogue at the Planck-factor level | Analogue spectra thermal so far |
+| F5 | Im Π(s) = c_eff(s) G s² (graviton pair-production kernel) | D5 | Not accessible | — |
+| F6 | Einstein's equation holds only in local equilibrium (deviations where the area law fails at leading order) | P2 | Low-curvature deviations from GR without matter | Consistent |
 
-## Falsifiers of the *framework* (would refute GRUT III as an organisation of physics, not just a number)
+## Falsifiers of the framework itself
 
-- Violation of local Lorentz invariance of the vacuum at the level that breaks horizon thermality (P0/P1).
-- Failure of the area law for entanglement entropy across smooth surfaces at leading order (P2).
-- Outcome statistics that are contextual at the level of frequencies (P5).
-- A demonstration that the de Sitter vacuum's local response has memory (a non-polynomial dissipative kernel at a point) for conformal matter (D2).
+Violation of local Lorentz invariance of the vacuum at the horizon-thermality level (P0/P1); failure of the
+entanglement area law across smooth surfaces (P2); contextual outcome frequencies (P5); a non-polynomial pointwise
+dissipative kernel for conformal matter in dS (D2).
 
-## What GRUT III retracts from GRUT I/II (explicitly)
+## What a distinctive claim would have to be (`07` §4)
+
+A residual report: observable f, state ω, preparation; ρ_f^conv and N_f^conv; the proposed ρ_f, state, or
+cumulants; Δρ_f (or ΔW(t,t′) for non-stationary states, or Δκ_n); and a **mechanism forced by P0–P5 and excluded in
+the conventional comparison**. None exists at present. The first non-KMS baseline is D11; the one sector where
+conventional theory is not closed is the interacting gravitational infrared in (quasi-)de Sitter.
+
+## Retracted since revision 1
 
 | Retracted | Why |
 |---|---|
-| The single-pole, finite-memory vacuum as an axiom or a derived result | The local response of a conformal medium has no memory (odd polynomial, D2); the matter kernel has power-law threshold memory (D5); the "finite memory" that is real is the thermal correlation time of the *noise*, 1/(4H) for ⟨T̂T̂⟩ — none of it a single pole. |
-| "A white floor is zero memory" (RESULTS_worldline_reduction) | The floor is the classical Nyquist floor of a kernel with memory 1/H (D1). |
-| "dS forces infinite scale-free memory — the negation of the bet" (PROGRAM_FREEZE) | True of the homogeneous-mode response (light cone to the horizon), not of the medium's local kernels; both statements hold for different objects (D2 iv). |
-| The two-scale relaxor for w(z) (+3) | Λ is an integration constant; no relaxor is needed or allowed at zeroth order (D3). |
-| The energy-basis tabletop falsifier (+2), 689 Hz | Already retired by the record; GRUT III adds that the decoherence kernel is derived (D5) and Planck-suppressed, so no tabletop claim exists. |
-| Conformalon as the second dark-energy mode | Planckian self-consistent H (D6). |
-| The K1 lock Σ₀ = μ₀/2 as a GRUT signature | Already killed by SCOUT_0; GRUT III has μ = Σ = η = 1 at zeroth order (F2). |
+| "w ≡ −1 is a sharp GRUT prediction; DESI DR3 decides" | Shared with ΛCDM; extra light fields allowed; no DR3 (R6) |
+| The a₀ mechanism via Jacobson's construction | κ cancels; no observer acceleration enters (R1); see `06` |
+| "Memory time 1/(4H)" | A decay rate of a pointwise correlator; memory is a property of (observable, state) (R2, D9) |
+| "The vacuum medium is a perfect Planckian fluid" with η in Pa·s | Horizon surface viscosity, kg s⁻¹ (R3) |
+| "c_eff at LIGO frequencies" | √s ≠ frequency; on-shell s = 0 (R4) |
+| "The frontier question is dissolved"; "GR is hosted"; "+16 → +5 compression" | P1 names the bath algebra and supplies no dynamics; GR is recovered with G inserted; imports are imports (R7, R8, R13) |
+| P5 from P0 + P1 via HJW | Presupposes the measurement framework (R5) |
 
-## The conjecture (separately graded; see `06_CONJECTURE_A0.md`)
-
-Not a prediction of GRUT III. Carried because the responsive-horizon construction contains the acceleration scale
-cH₀ structurally and nature displays one of that order (a₀ = 1.20×10⁻¹⁰ m s⁻²; cH₀/2π = 1.04–1.13×10⁻¹⁰).
-Discriminating test: a₀ ∝ H(z) (apparent horizon) versus constant (Λ-horizon).
+Retracted from GRUT I/II (unchanged from revision 1): the single-pole finite-memory vacuum; the two-scale relaxor;
+the tabletop falsifiers; the conformalon; the K1 lock.

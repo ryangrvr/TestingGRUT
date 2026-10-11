@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 V1 -- The de Sitter medium seen by a geodesic (comoving) observer: the noise kernel is EXACTLY thermal,
-the local response is EXACTLY local (Huygens), and the memory time is derived, not supplied.
+the local response is EXACTLY local (Huygens), and the asymptotic decay rate of the noise correlator is derived, not supplied.
 
 Checks (all exact statements, verified numerically/symbolically here):
  1.1  a(eta)a(eta')(eta-eta')^2 = 4 sinh^2(H dt/2)/H^2  -- the identity that makes every conformal
@@ -21,8 +21,10 @@ Checks (all exact statements, verified numerically/symbolically here):
          G+_T(w) = w (w^2+H^2)(w^2+4H^2)(w^2+9H^2) / (10080 pi^3 (1 - exp(-2 pi w/H)))
       -> flat limit w^7/(10080 pi^3); KMS detailed balance G+(w)/G+(-w) = e^{beta w};
       dissipative part Im chi ~ odd POLYNOMIAL of degree 7 (=> local-in-time response, Huygens);
-      classical floor G+_T(0) = H^7/(560 pi^4);  time-domain decay e^{-4H|tau|} (poles at +-4iH, +-5iH, ...
-      after the polynomial cancels the Matsubara rungs n=1,2,3).
+      classical floor G+_T(0) = H^7/(560 pi^4);  asymptotic time-domain decay rate 4H, i.e. e^{-4H|tau|} for
+      H|tau| >> 1 (poles at +-4iH, +-5iH, ... after the polynomial cancels the Matsubara rungs n=1,2,3).
+      4H is a large-|tau| decay RATE, not a 'memory time': the pointwise correlator diverges as tau^-8 at short
+      times, so no finite normalised autocorrelation time exists without smearing (see V3, 3.2).
 """
 import mpmath as mp
 import sympy as sp
@@ -62,8 +64,14 @@ def planck_scalar(w):
 for w in [0.1, 0.5, 1, 2, 5, -0.5, -2]:
     report(f"G+(w={w})", Gplus_scalar(mp.mpf(w)), planck_scalar(w))
 S01 = planck_scalar(0.1) + planck_scalar(-0.1)
-print(f"  symmetrised S(0.1) [record normalisation, flat line w/2pi] = {mp.nstr(S01,8)}  "
-      f"(= (w/2pi) coth(pi w/H));  record's quadrature value 0.03393; exact floor S(0)=H/(2pi^2)={mp.nstr(H/(2*mp.pi**2),8)}")
+Gp01 = planck_scalar(0.1)
+record_val = mp.mpf('0.03393')
+gap = (Gp01 - record_val)/Gp01
+print(f"  symmetrised S(0.1) [flat line w/2pi] = {mp.nstr(S01,8)}  (= (w/2pi) coth(pi w/H));  exact floor S(0)=H/(2pi^2)={mp.nstr(H/(2*mp.pi**2),8)}")
+print(f"  one-sided G+(0.1) = {mp.nstr(Gp01,8)};  the record's calc/worldline_reduction.py 'S(w)' is 2 Re Int_0^inf e^(iw tau) g = G+(w),")
+print(f"  so its quadrature value 0.03393 is to be compared with G+(0.1): relative gap (G+ - record)/G+ = {mp.nstr(100*gap,3)}%.")
+print(f"  The identification 'record value = exact Planck G+' holds only if the record's eps-extrapolated quadrature precision")
+print(f"  is coarser than {mp.nstr(100*gap,3)}%; the record itself quotes <3% validation against the flat half-line result, so it is.")
 
 print("== 1.3 image-sum identity ==")
 z, b = mp.mpf('0.7'), beta
@@ -136,12 +144,14 @@ for w in [50, 200]:
     report(f"flat limit G+_T({w}) / (w^7/10080 pi^3) -> 1", closed_T(w)/(mp.mpf(w)**7/(10080*mp.pi**3)), 1, tol=1e-2 if w == 50 else 1e-3)
 floor = mp.limit(lambda w: closed_T(w), 0)
 report("classical floor G+_T(0) = H^7/(560 pi^4)", floor, H**7/(560*mp.pi**4))
-# time-domain decay rate of the noise kernel: K8(tau) ~ e^{-4 H tau}
+# asymptotic time-domain decay rate of the noise kernel: K8(tau) ~ e^{-4 H tau} for H tau >> 1
 K8 = lambda tau: (1/(4*mp.pi**4))*(H/(2*mp.sinh(H*tau/2)))**8
 rate = -mp.log(K8(12)/K8(10))/2
-report("noise-kernel decay rate (tau=10..12) -> 4H", rate, 4*H, tol=1e-3)
+report("noise-kernel asymptotic decay rate (tau=10..12) -> 4H", rate, 4*H, tol=1e-3)
 print("  dissipative part Im chi_T(w) propto G+(w)-G+(-w) = w(w^2+H^2)(w^2+4H^2)(w^2+9H^2)/(10080 pi^3): an odd polynomial")
 print("  -> the retarded response at a point is a finite sum of delta-function derivatives (no memory: Huygens);")
-print("  -> all memory sits in the NOISE, with derived correlation time 1/(4H) and Planckian occupation at T=H/2pi.")
+print("  -> all memory sits in the NOISE, with derived ASYMPTOTIC DECAY RATE 4H (large-|tau| tail e^{-4H|tau|}) and Planckian occupation at T=H/2pi.")
+print("  NOTE: 4H is a decay rate, not a 'memory time'. The pointwise <T00 T00> correlator diverges as tau^-8 as tau -> 0,")
+print("  so no finite normalised autocorrelation time Int K dtau / K(0) exists without smearing the operator over a finite region.")
 print("\nV1 OVERALL:", "PASS" if ok_all else "FAIL")
 raise SystemExit(0 if ok_all else 1)

@@ -1,91 +1,87 @@
-# 01 — Principles of GRUT III
+# 01 — Principles of GRUT III (revision 2)
 
-Every statement carries a tier: **THEOREM**, **DERIVED** (by a script in `calc/`), **POSTULATE** (counted),
-**DATUM** (measured constant, not counted), **CONJECTURE**. "Replaces" names the old register node(s) retired.
+Tiers: **POSTULATE** (assumed; counted), **IMPORTED** (an established theorem or result brought in; zero credit to
+GRUT), **DERIVED** (computed in `calc/` from the postulates plus imports), **DATUM** (measured constant; not
+counted), **CONJECTURE**. Revision 2 corrects revision 1 in two ways flagged by the reviews: imports are labelled
+as imports, and P1 is stated in the algebraic form that type III local algebras require.
 
-## Data (taken from nature; not postulates)
+## Data (taken from nature)
 
 ħ, c, G, k_B; the cosmological constant Λ; the particle spectrum (masses, spins, multiplicities, gauge group).
-Rationale: the charter's own ruling (2026-08-04) that "an observed value is a datum every candidate theory must
-reproduce, not a discretionary posit" — applied consistently. The record applied it to Λ and not to G or ħ; that
-inconsistency inflated its ledger by two.
+G and ħ are data by the charter's own ruling on Λ; **this is also where the gravitational coupling enters the
+framework** (through P2 and P3 below). GRUT III does not derive G and says so (05 O1).
 
-## P0 — Covariant quantum vacuum (POSTULATE, +1)
+## P0 — Covariant quantum field theory (POSTULATE, +1)
 
-Physics is a local relativistic quantum field theory on a Lorentzian manifold: a net of local operator algebras
-with Einstein causality, a Poincaré-covariant (locally) vacuum satisfying the spectrum condition, and states
-of Hadamard form. *Replaces* the record's rung-1 package (system/bath split, Gaussian truncation, Lorentzian
-causal structure, 4d-covariant gauge-orbit zero: +4) and rung 6's "quantization" (+1): the Hilbert-space
-structure, the causal structure, and the gauge-orbit statement are parts of one framework assumption; the
-Gaussian truncation is not assumed at all (linear response is a derived approximation).
+Physics is a local relativistic quantum field theory on a Lorentzian manifold: a net of von Neumann algebras A(O)
+obeying Einstein causality and covariance, with a vacuum satisfying the spectrum condition and states of Hadamard
+form. **This single postulate bundles a great deal**: Lorentzian signature, causal locality, the Hilbert-space
+structure, and the field content (the data). It is one assumption in the sense that it is one framework; it is not
+"less" than the record's rung-1 package, it is the same package named honestly. It replaces rung 1 (+4) and rung 6's
+"quantization" (+1) in the old ledger without earning anything.
 
-## P1 — Horizon relationality (IDENTIFICATION, 0)
+## P1 — Horizon relationality (IDENTIFICATION, 0; stated algebraically)
 
-For any observer, the **bath** is the algebra of the causal complement of the region they can access, and the
-**responsive medium** is the restriction of the global state to their accessible wedge. The system/bath split is
-the causal structure; it is observer-relative; nothing is "integrated out" by hand.
+For an observer whose accessible region is the causally complete O, the **medium** is the triple
+(A(O), ω|_{A(O)}, σ^ω_t): the local algebra, the restriction of the global state to it, and the Tomita–Takesaki
+modular flow of that restricted state. The **bath** is the commutant A(O)′ (= A(O′) where Haag duality holds).
 
-*Consequences (THEOREM):*
-- Wedge in the Minkowski vacuum: the restricted state is KMS at β = 2π/a with respect to the boost flow
-  (Bisognano–Wichmann 1975/76). This is the Unruh temperature as a theorem of P0.
-- Bifurcate Killing horizon: at most one Hadamard state invariant under the horizon Killing flow; it is KMS at
-  β = 2π/κ (Kay–Wald 1991).
-- De Sitter, geodesic observer: the Bunch–Davies state is thermal at T = H/2π in proper time
-  (Gibbons–Hawking 1977); verified in closed form in `v1` (§D1–D2).
-- The KMS/FDT lock (the record's rung 2, "−1 derived") is inherited: the noise kernel is coth(βω/2) × the
-  dissipative kernel, with β fixed by the horizon, not supplied.
+What P1 does *not* do (R8): local algebras are type III₁, so there is no tensor factorisation H = H_O ⊗ H_{O′},
+no reduced density matrix, and P1 supplies **no influence functional and no dynamics**. What it does: by
+Tomita–Takesaki the restricted state is KMS at β = 1 in the modular parameter automatically, so "the medium is
+thermal" is a tautology; the *physical* content is whether the modular flow is **geometric**, which is exactly when
+a temperature is a number:
 
-*Replaces* `rung1_ontology_finite_memory` (+1) and `background_time_translation_flow` (+1): the "time-translation
-flow" is the horizon's Killing flow; "finite memory" is no longer an axiom (see D2 for what is actually true).
+- Minkowski wedge: modular flow = boosts, β = 2π/a (Bisognano–Wichmann 1975/76) — **IMPORTED**.
+- Bifurcate Killing horizon: unique invariant Hadamard state, KMS at β = 2π/κ (Kay–Wald 1991) — **IMPORTED**.
+- De Sitter, geodesic observer: Bunch–Davies is thermal at T = H/2π (Gibbons–Hawking 1977) — **IMPORTED**;
+  worldline correlators in closed form in `v1` (D1–D2).
+- Double cones in a CFT (Hislop–Longo) — **IMPORTED**; generic regions: non-geometric, no temperature.
 
-## P2 — Local equilibrium of the medium (POSTULATE, +1)
+The influence functional for a probe coupled through P3 is then *computed* (Feynman–Vernon), and the record's
+Gaussian in-in action S_IF is its quadratic approximation. P1 replaces the record's `rung1_ontology_finite_memory`
+and `background_time_translation_flow` by naming the same objects; it earns nothing by itself.
 
-Across every local causal horizon the medium's entropy is proportional to area, S = η A, and energy flux through
-the horizon obeys Clausius, δQ = T δS, with T the KMS temperature of P1.
+## P2 — Local equilibrium of the medium (POSTULATE, +1; G enters here)
 
-*Status of the parts:* area-proportionality of the entanglement entropy of a region's complement is a theorem of
-quantum field theory (Bombelli–Koul–Lee–Sorkin 1986; Srednicki 1993) with a UV-sensitive coefficient; the
-coefficient η = 1/(4Għ) is the **datum** G. The Clausius relation — that the medium is in local equilibrium —
-is the one genuine structural postulate.
+Across every local causal horizon the medium's entropy is S = ηA and heat flux obeys Clausius δQ = T δS with T
+the KMS temperature of P1. Area-proportionality of the entanglement entropy is **IMPORTED** (Bombelli–Koul–Lee–
+Sorkin 1986; Srednicki 1993) with a UV-divergent coefficient; **η = 1/(4Għ) is inserted** (the datum G) — its
+finite value is the open problem O1, and `v9` shows that one-loop induced gravity with Standard-Model content does
+*not* supply it. The Clausius relation is the one structural postulate. Consequence (IMPORTED derivation, Jacobson
+1995, reproduced in `v2`): G_ab + Λg_ab = 8πG T_ab with Λ an integration constant. GR is **recovered**, not derived.
 
-*Consequence (DERIVED, `v2`):* G_ab + Λ g_ab = 8πG T_ab, with Λ an **integration constant** (D3).
-*Replaces* `rung5_gr_limit` (+2 assumed) → +1 postulate + 1 datum; closes NO_GO_LEDGER entry "GR borrowed".
+## P3 — Universal coupling (POSTULATE, +1; κ enters here)
 
-## P3 — Universal coupling (POSTULATE, +1)
-
-The medium couples to matter only through the stress tensor: the operational equivalence principle. In the
-fluctuation sector this fixes the vertex (κ/2) h_μν T^μν, κ² = 32πG, so that the medium's response kernels are
-the retarded and Hadamard ⟨T T⟩ functions and nothing else.
-
-*Consequence (DERIVED, `v4`):* Im Π(s) = c_eff(s) G s², the species-resolved Weyl-anomaly coefficient; all
-"spectral edge data" fixed by the spectrum (D5). *Replaces* `p_tt_ansatz` (+1): the tensor/scalar split of the
-kernel is computed from ⟨TT⟩, not chosen; for conformal matter the spin-0 part vanishes identically.
+The medium couples to matter only through T_μν: the vertex is (κ/2) h_μν T^μν with κ² = 32πG. The response
+kernels are then the ⟨TT⟩ functions and nothing else; the absorptive kernel Im Π(s) = c_eff(s) G s² is **DERIVED**
+from this vertex plus the spectrum (`v4`), as are the tensor/scalar parts of the kernel (no `p_tt` ansatz). The
+coupling itself is inserted; its universality is the operational equivalence principle.
 
 ## P4 — Time orientation (POSTULATE, +1)
 
-The Hadamard (positive-frequency) condition is imposed toward the future: the horizon traced out is the future
-horizon, β > 0, dissipation damps toward the future. This is the record's Past Hypothesis relocated to the one
-place it enters. It is still an input; GRUT III does not derive the arrow's direction and says so (D8).
-*Replaces* `arrow_of_time` (+1) at equal price, with the location now exact.
+The Hadamard condition is imposed with positive frequencies toward the future: the traced-out horizon is the
+future horizon, β > 0. This is the record's Past Hypothesis, located; it is not derived.
 
-## P5 — Non-contextual outcome statistics (POSTULATE, +1)
+## P5 — Outcome statistics (POSTULATE, +1)
 
-The probability of a measurement outcome depends only on the projector (effect) measured, not on which other
-compatible observables are co-measured. *Consequence (THEOREM):* for Hilbert spaces of dimension ≥ 3 the
-probability measure is Tr(ρP) — the Born rule (Gleason 1957; Busch 2003 for effects, all dimensions).
-*Replaces* the supplied `p = |α|²` of rung 6 (+1) by a principle at equal price, and discharges SCOUT_0's
-P-15 requirement for "an earned reason for a martingale branch coordinate": non-contextuality is exactly
-decomposition-independence of outcome statistics, which P-15 proved equivalent to the martingale property.
+Outcome probabilities depend only on the effect measured (non-contextuality); Gleason (dim ≥ 3) and Busch (POVMs)
+then give Tr(ρE) — **IMPORTED**. Revision 1's suggestion that P5 might follow from P0 + P1 via
+Hughston–Jozsa–Wootters is **withdrawn** (R5): HJW presupposes the measurement framework. The reconstruction
+literature (Gleason; Zurek's envariance; Deutsch–Wallace; Masanes–Galley–Müller 2019, who derive the measurement
+postulates from the remaining quantum postulates plus operational assumptions) trades the postulate for other
+assumptions; GRUT III adds nothing here.
 
-## Ledger
+## Accounting
 
-| | count |
+| | |
 |---|---|
-| GRUT register net (2026-09-30) | **+16** |
-| GRUT III structural postulates P0, P2, P3, P4, P5 | **+5** |
-| Data (not counted) | ħ, c, G, k_B, Λ, spectrum |
+| Framework postulates | P0, P2, P3, P4, P5 = **5** |
+| Identifications (no content by themselves) | P1 |
+| Imported theorems (zero credit) | Bisognano–Wichmann; Kay–Wald; Gibbons–Hawking; Hislop–Longo; entanglement area law; Jacobson EOS; Eling–Guedens–Jacobson membrane transport; Huygens for conformal fields; Gleason/Busch; Allen–Folacci dS propagator; Starobinsky–Yokoyama stochastic diffusion |
+| Derived in `calc/` | the closed-form dS worldline spectra; the species kernel; the smeared-response theorems; the gravitational-sector random walk; the quasi-dS KMS defect; the induced-gravity matching |
+| Data | ħ, c, G, k_B, Λ, spectrum |
 
-The derivation of the reduction, node by node, is `04_LEDGER_MIGRATION.md`. The reduction is not cosmetic:
-eleven units disappear because kernels, temperatures, memory times, the GR limit, the KMS lock, the TT
-structure and the two-scale dark-energy ansatz are **computed** from P0–P3 in `calc/`, and because two units
-were data all along.
+The record's +16 is not "compressed" to +5. Seven of its nodes are now imported theorems (zero credit), two are
+data, two are identifications; five framework postulates remain. **No kernel is supplied anywhere; nothing is
+earned by that fact alone**, because the kernels that replace it are standard physics.

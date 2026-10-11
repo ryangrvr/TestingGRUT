@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 13:51 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 14:35 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -26,7 +26,11 @@ Generated 2026-10-11 13:51 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
   [PASS] G+(w=5): got 0.795774715459  want 0.795774715459  rel.err 1.17e-17
   [PASS] G+(w=-0.5): got 0.00359417263343  want 0.00359417263343  rel.err 1.07e-31
   [PASS] G+(w=-2): got 1.11005941965e-6  want 1.11005941965e-6  rel.err 0.0
-  symmetrised S(0.1) [record normalisation, flat line w/2pi] = 0.052316394  (= (w/2pi) coth(pi w/H));  record's quadrature value 0.03393; exact floor S(0)=H/(2pi^2)=0.050660592
+  symmetrised S(0.1) [flat line w/2pi] = 0.052316394  (= (w/2pi) coth(pi w/H));  exact floor S(0)=H/(2pi^2)=0.050660592
+  one-sided G+(0.1) = 0.034115944;  the record's calc/worldline_reduction.py 'S(w)' is 2 Re Int_0^inf e^(iw tau) g = G+(w),
+  so its quadrature value 0.03393 is to be compared with G+(0.1): relative gap (G+ - record)/G+ = 0.545%.
+  The identification 'record value = exact Planck G+' holds only if the record's eps-extrapolated quadrature precision
+  is coarser than 0.545%; the record itself quotes <3% validation against the flat half-line result, so it is.
 == 1.3 image-sum identity ==
   [PASS] sum_n 1/(z+i n beta)^2 vs (pi/beta)^2/sinh^2(pi z/beta): got 1.95948563096  want 1.95948563096  rel.err 1.01e-31
 == 1.4 Wick contraction: <T00 T00>_c and tracelessness for the improved conformal scalar ==
@@ -46,10 +50,12 @@ Generated 2026-10-11 13:51 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
   [PASS] flat limit G+_T(50) / (w^7/10080 pi^3) -> 1: got 1.0056078423  want 1  rel.err 0.00561
   [PASS] flat limit G+_T(200) / (w^7/10080 pi^3) -> 1: got 1.00035003063  want 1  rel.err 0.00035
   [PASS] classical floor G+_T(0) = H^7/(560 pi^4): got 1.83321111691e-5  want 1.83321111691e-5  rel.err 1.64e-31
-  [PASS] noise-kernel decay rate (tau=10..12) -> 4H: got 4.00015702692  want 4.0  rel.err 3.93e-5
+  [PASS] noise-kernel asymptotic decay rate (tau=10..12) -> 4H: got 4.00015702692  want 4.0  rel.err 3.93e-5
   dissipative part Im chi_T(w) propto G+(w)-G+(-w) = w(w^2+H^2)(w^2+4H^2)(w^2+9H^2)/(10080 pi^3): an odd polynomial
   -> the retarded response at a point is a finite sum of delta-function derivatives (no memory: Huygens);
-  -> all memory sits in the NOISE, with derived correlation time 1/(4H) and Planckian occupation at T=H/2pi.
+  -> all memory sits in the NOISE, with derived ASYMPTOTIC DECAY RATE 4H (large-|tau| tail e^{-4H|tau|}) and Planckian occupation at T=H/2pi.
+  NOTE: 4H is a decay rate, not a 'memory time'. The pointwise <T00 T00> correlator diverges as tau^-8 as tau -> 0,
+  so no finite normalised autocorrelation time Int K dtau / K(0) exists without smearing the operator over a finite region.
 
 V1 OVERALL: PASS
 ```
@@ -80,15 +86,20 @@ V2 OVERALL: PASS
 ## `v3_horizon_fluid.py`
 
 ```text
-== 3.1 horizon fluid transport ==
-  eta  = c^3/(16 pi G) = 8.0313e+33 Pa s
-  s    = k_B c^3/(4 G hbar) = 1.3213e+46 J K^-1 m^-2
+== 3.1 horizon (membrane) fluid transport ==
+  eta  = c^3/(16 pi G) = 8.0313e+33 kg s^-1  (= Pa s m: membrane-paradigm SURFACE shear viscosity of the horizon, a 2D fluid;
+         not a bulk Pa s viscosity of empty space)
+  s    = k_B c^3/(4 G hbar) = 1.3213e+46 J K^-1 m^-2  (surface entropy density)
   eta/s = 6.0783e-13 K s   vs hbar/(4 pi k_B) = 6.0783e-13 K s  -> PASS
-== 3.2 Planckian memory time ==
-  T_dS(H0) = 2.655e-30 K ;  tau = hbar/(2 pi k_B T) = 4.5782e+17 s = 1/H0 = 4.5782e+17 s -> PASS
-  BH M=1 Msun: T_H=6.170e-08 K, memory time 1.9703e-05 s = 4GM/c^3 = 1.9703e-05 s
-  BH M=10 Msun: T_H=6.170e-09 K, memory time 1.9703e-04 s = 4GM/c^3 = 1.9703e-04 s
-  BH M=1e+06 Msun: T_H=6.170e-14 K, memory time 1.9703e+01 s = 4GM/c^3 = 1.9703e+01 s
+== 3.2 thermal (beta/2pi) time scale tau_thermal = hbar/(2 pi k_B T) = 1/kappa ==
+  T_dS(H0) = 2.655e-30 K ;  tau_thermal = hbar/(2 pi k_B T) = 4.5782e+17 s = 1/H0 = 4.5782e+17 s -> PASS
+  BH M=1 Msun: T_H=6.170e-08 K, tau_thermal 1.9703e-05 s = 4GM/c^3 = 1.9703e-05 s
+  BH M=10 Msun: T_H=6.170e-09 K, tau_thermal 1.9703e-04 s = 4GM/c^3 = 1.9703e-04 s
+  BH M=1e+06 Msun: T_H=6.170e-14 K, tau_thermal 1.9703e+01 s = 4GM/c^3 = 1.9703e+01 s
+  NOTE: tau_thermal = 1/kappa is the beta/2pi scale of the Planckian occupation. It is a DIFFERENT quantity from the
+  1/(4H) of V1, which is the asymptotic (large-|t|) decay rate of the pointwise <T00(t) T00(0)> correlator. That pointwise
+  correlator diverges as t^-8 as t -> 0, so no finite normalised autocorrelation time exists without smearing;
+  neither number is a 'memory time' of the medium in the usual sense.
 == 3.3 de Sitter static-patch identities (hbar=c=k_B=1, exact) ==
   E = rho_Lambda V = 1/(2*G*H),  T S = 1/(2*G*H),  F = E - TS = 0 -> PASS
   |E_Komar| = 1/(G*H),  (1/2) N T = 1/(G*H) -> PASS
@@ -117,7 +128,9 @@ V3 OVERALL: PASS
   max |numeric - beta^3(1+8r/3)| = 2.22e-16  [PASS]  (HLZ 1999 form reproduced from scratch)
 == 4.3 massless vector (photon pair) ==
   (1/2)Sum|M|^2_gamma / (1/2)Sum|M|^2_S = 12.0000000000  (expected 12)  [PASS]
-== 4.4 Im Pi(s) = c_eff(s) G s^2 : Standard-Model staircase ==
+== 4.4 Im Pi(s) = c_eff(s) G s^2 : Standard-Model staircase in the timelike invariant mass sqrt(s) ==
+  ILLUSTRATIVE ONLY: massive-vector (W, Z) threshold polynomial NOT computed (leading beta only);
+  hadronic region 0.3-2 GeV schematic (3 real pions as proxy, perturbative quarks+gluons above 2 GeV).
   sqrt(s)           c_eff      120 c_eff   (c_SM(45 Weyl) = 283/120 = 2.358 at high energy)
     1.0e-12 GeV     0.1000      12.00
     1.0e-10 GeV     0.1493      17.92
@@ -133,9 +146,11 @@ V3 OVERALL: PASS
     2.0e+02 GeV     2.0480     245.77
     1.0e+03 GeV     2.3363     280.35
     1.0e+04 GeV     2.3581     282.97
-  at LIGO frequencies (sqrt s ~ 4e-22 GeV): c_eff = 0.1000 (photon only; neutrinos closed by their masses)
-  on-shell flat-space absorption of a GW: Im Pi(s=0) = 0 exactly.  FRW estimate Gamma ~ c_eff t_P^2 H0^4/(2 omega) = 5.2e-162 s^-1 at 100 Hz
-  => the medium's absorptive response is derived, finite-memory-with-thresholds, and unobservably weak for GWs: consistent with GW170817 trivially.
+  for a timelike graviton of invariant mass sqrt(s) ~ 4e-22 GeV: c_eff = 0.1000 (photon only; neutrinos closed by their masses)
+  a free on-shell GW has s = 0, so no species is open regardless of frequency: the above is NOT a statement about LIGO-band GWs.
+  on-shell flat-space absorption of a GW: Im Pi(s=0) = 0 exactly.  FRW order-of-magnitude estimate (s ~ H0^2 off-shellness,
+  photon channel open) Gamma ~ c_eff t_P^2 H0^4/(2 omega) = 5.2e-162 s^-1 at omega = 2 pi x 100 Hz
+  => the medium's absorptive response in sqrt(s) is derived (thresholds fixed by masses/spins), and unobservably weak for GWs: consistent with GW170817 trivially.
 
 V4 OVERALL: PASS
 ```
@@ -159,6 +174,8 @@ V5 OVERALL: PASS
 ## `v6_low_acceleration_scale.py`
 
 ```text
+Status: numerical coincidence (Milgrom 1999, Verlinde 2016); no mechanism within GRUT III.
+== dimensional-coincidence table ==
 H0 = 67.4 km/s/Mpc: cH0 = 6.548e-10 m/s^2;  a0_obs/cH0 = 0.183
    cH0/(2 pi)                       = 1.042e-10  ratio to a0_obs = 0.868
    cH0/6 (Verlinde)                 = 1.091e-10  ratio to a0_obs = 0.909
@@ -169,12 +186,13 @@ H0 = 73.0 km/s/Mpc: cH0 = 7.092e-10 m/s^2;  a0_obs/cH0 = 0.169
    cH0/6 (Verlinde)                 = 1.182e-10  ratio to a0_obs = 0.985
    c sqrt(Lambda/3)/(2 pi)          = 9.342e-11  ratio to a0_obs = 0.779
    cH0/(2 pi) * sqrt(Omega_L)^-1    = 1.364e-10  ratio to a0_obs = 1.137
-Discriminating prediction if a0 is set by the apparent-horizon temperature: a0(z)/a0(0) = H(z)/H0
+== discriminator: a0 ∝ H(z) (apparent horizon) vs a0 = const (Lambda-horizon) ==
+  (this test has been proposed before; it is not a GRUT III prediction)
    z=0.5: H(z)/H0 = 1.322   (Lambda-horizon alternative: 1.000)
    z=1.0: H(z)/H0 = 1.790   (Lambda-horizon alternative: 1.000)
    z=2.0: H(z)/H0 = 3.032   (Lambda-horizon alternative: 1.000)
    z=3.0: H(z)/H0 = 4.566   (Lambda-horizon alternative: 1.000)
-Status: CONJECTURE. Must survive: CMB acoustic peaks, cluster masses, lensing, BBN (unaffected), the RAR scatter. Not derived here.
+Status: numerical coincidence (Milgrom 1999, Verlinde 2016); no mechanism within GRUT III; the a0 ∝ H(z) test has been proposed before.
 
 V6 OVERALL: INFORMATIONAL (no pass/fail)
 ```

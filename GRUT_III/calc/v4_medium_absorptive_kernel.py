@@ -17,8 +17,10 @@ Checks:
      (the C_T / Weyl-anomaly ratio);  threshold law beta^3 (1 + 8 r/3), r = m^2/s, extracted numerically.
  4.3 massless vector (two photons, physical polarisations): ratio vector/real-scalar = 12.
  4.4 Hence Im Pi(s) = c_eff(s) G s^2 with c_eff = (1/120) Sum_i w_i F_i(4 m_i^2/s): the Weyl-anomaly coefficient,
-     frequency-resolved.  Standard-Model staircase tabulated.  On-shell (s=0) absorption vanishes: a free GW is not
-     absorbed in flat space; in FRW the effect is O(c G H^2 omega), i.e. far below anything observable.
+     resolved in the timelike invariant mass sqrt(s) (NOT in the frequency of a propagating GW: a free on-shell GW
+     has s = 0, so no species is open regardless of its frequency).  Standard-Model staircase tabulated; it is
+     ILLUSTRATIVE: the massive-vector threshold polynomial is NOT computed (leading beta only), and the hadronic region
+     0.3-2 GeV is schematic.  In FRW the off-shell effect is O(c G H^2 omega), i.e. far below anything observable.
 """
 import numpy as np
 from math import pi, sqrt
@@ -104,7 +106,9 @@ ratio_v = (0.5*G0)/(0.5*S0)
 ok = abs(ratio_v - 12) < 1e-9; ok_all &= ok
 print(f"  (1/2)Sum|M|^2_gamma / (1/2)Sum|M|^2_S = {ratio_v:.10f}  (expected 12)  [{'PASS' if ok else 'FAIL'}]")
 
-print("== 4.4 Im Pi(s) = c_eff(s) G s^2 : Standard-Model staircase ==")
+print("== 4.4 Im Pi(s) = c_eff(s) G s^2 : Standard-Model staircase in the timelike invariant mass sqrt(s) ==")
+print("  ILLUSTRATIVE ONLY: massive-vector (W, Z) threshold polynomial NOT computed (leading beta only);")
+print("  hadronic region 0.3-2 GeV schematic (3 real pions as proxy, perturbative quarks+gluons above 2 GeV).")
 GeV = 1.0
 species = [  # name, weight w (120 c), mass [GeV], threshold exponent nu (F ~ beta^(2nu)), kind
     ("photon", 12, 0.0, 0.5), ("nu1", 3, 1e-12, 1.5), ("nu2", 3, 8.7e-12, 1.5), ("nu3", 3, 5.0e-11, 1.5),
@@ -128,16 +132,19 @@ def c_eff(sqrt_s):
 print("  sqrt(s)           c_eff      120 c_eff   (c_SM(45 Weyl) = 283/120 = 2.358 at high energy)")
 for sq in [1e-12, 1e-10, 1e-9, 1e-6, 1e-3, 2e-3, 1e-2, 0.3, 1.0, 3.0, 10., 200., 1e3, 1e4]:
     c = c_eff(sq); print(f"  {sq:9.1e} GeV   {c:8.4f}   {120*c:8.2f}")
-# GW-relevant frequencies: 100 Hz = 4.1e-13 eV = 4.1e-22 GeV -> only the photon (and a massless neutrino) is open
+# The threshold variable is the TIMELIKE invariant mass sqrt(s) of an off-shell graviton, not a GW frequency.
+# For scale: hbar * 2 pi * 100 Hz = 4.1e-13 eV = 4.1e-22 GeV.
 c_ligo = c_eff(4.1e-22)
-print(f"  at LIGO frequencies (sqrt s ~ 4e-22 GeV): c_eff = {c_ligo:.4f} (photon only; neutrinos closed by their masses)")
+print(f"  for a timelike graviton of invariant mass sqrt(s) ~ 4e-22 GeV: c_eff = {c_ligo:.4f} (photon only; neutrinos closed by their masses)")
+print("  a free on-shell GW has s = 0, so no species is open regardless of frequency: the above is NOT a statement about LIGO-band GWs.")
 G_SI = 6.67430e-11; hbar = 1.054571817e-34; c_l = 299792458.0
 H0 = 2.18e-18
 om = 2*pi*100.
 # order-of-magnitude FRW absorption: s ~ H0^2, Gamma ~ Im Pi/(2 omega) = c G hbar H0^4/(2 omega c^5)   [SI: G hbar/c^5 = t_P^2]
 tP2 = G_SI*hbar/c_l**5
 Gam = c_ligo*tP2*H0**4/(2*om)
-print(f"  on-shell flat-space absorption of a GW: Im Pi(s=0) = 0 exactly.  FRW estimate Gamma ~ c_eff t_P^2 H0^4/(2 omega) = {Gam:.1e} s^-1 at 100 Hz")
-print("  => the medium's absorptive response is derived, finite-memory-with-thresholds, and unobservably weak for GWs: consistent with GW170817 trivially.")
+print(f"  on-shell flat-space absorption of a GW: Im Pi(s=0) = 0 exactly.  FRW order-of-magnitude estimate (s ~ H0^2 off-shellness,")
+print(f"  photon channel open) Gamma ~ c_eff t_P^2 H0^4/(2 omega) = {Gam:.1e} s^-1 at omega = 2 pi x 100 Hz")
+print("  => the medium's absorptive response in sqrt(s) is derived (thresholds fixed by masses/spins), and unobservably weak for GWs: consistent with GW170817 trivially.")
 print("\nV4 OVERALL:", "PASS" if ok_all else "FAIL")
 raise SystemExit(0 if ok_all else 1)

@@ -1,84 +1,77 @@
-# 05 — The road to completion: what is actually open, posed sharply
+# 05 — The road to completion (revision 2): what is open, posed sharply, with the next computation
 
-GRUT III has five postulates and a list of data. A theory of everything would derive the postulates from fewer
-and the data from none. Here is the honest distance, item by item, with the next computation for each.
-Nothing below is a "ladder"; each item is a question with a definite form of answer.
+GRUT III has five framework postulates, a list of data, and — after the reviews — the admission that in its own
+(KMS) regime it is standard physics. A theory of reality would derive the postulates from fewer and the data from
+none, and would contain at least one statement conventional theory leaves free. Here is the distance, item by item.
 
-## O1 — The area-law coefficient: where G comes from (the central open problem)
+## O1 — The area-law coefficient: where G comes from (central; made precise in `v9`, D12)
 
-**Pose.** P2 uses S = ηA with η = 1/(4Għ). Area-proportionality is a theorem of P0 (entanglement entropy of a
-region's complement); the *coefficient* is UV-divergent in QFT, ∝ Σ_species Λ_UV². Newton's constant renormalises
-with the same species sum (Susskind–Uglum 1994; Jacobson 1994; Cooperman–Luty 2014 for the non-minimal
-subtleties). So "G from the medium" is Sakharov's induced gravity made exact: the finite value of η requires the
-UV completion in which S = A/4G is exact rather than leading-order.
-**Next computation (in reach).** Using the species table of D5, verify that the one-loop matter contribution to
-δ(1/G) and the entanglement-entropy area coefficient agree species-by-species in the same regularisation
-(scalars with the ξ = 1/6 contact term; Weyl fermions; vectors with the Kabat contact term). This is a consistency
-theorem for P2, not a derivation of G, and it is worth having in `calc/`.
-**Form of a real answer.** A UV-finite theory in which (i) horizon thermality is exact, (ii) the area law has a
-finite coefficient, (iii) P0 is recovered below the cutoff. AdS/CFT (Ryu–Takayanagi) satisfies all three in AdS;
-GRUT III is agnostic about the completion and demands only these three properties of it.
+**Status.** P2 inserts η = 1/4G. In the heat-kernel scheme the species-by-species matching δ(1/4G) = (S_ent +
+S_contact)/A is a theorem for free matter loops (minimal scalar 1/48πε², Dirac 1/24πε², conformal scalar 0 after the
+Wald term, Maxwell −1/12πε² after Kabat's term). The coefficients are scheme-dependent; the scheme-free statement is
+S_ent = ¼δ(M_P²)A (Cooperman–Luty). **With Standard-Model content the one-loop induced 1/G is +1/6 (ξ = 0) or
+−1/2 (ξ = 1/6) in units of Λ²/π: tiny or negative.** Sakharov's route does not give G from this field content; the
+finite G needs either a bare term, beyond-Standard-Model content (positive-k₁ species), or a UV completion in which
+S = A/4G is exact (as Ryu–Takayanagi in AdS).
+**Next computation.** None at one loop; the route is closed at this order. What remains is a demand on the UV
+completion: exact horizon thermality, an area law with finite coefficient, P0 below the cutoff.
 
 ## O2 — The value of Λ
 
-**Pose.** D3 leaves Λ as an integration constant: the equation of state is silent on it, as unimodular gravity is.
-**Dead end, recorded to prevent re-derivation.** The identity F = E − TS = 0 for the static patch (D4) looks like
-a selection principle ("the medium relaxes to zero free energy") but holds identically for every H; it selects
-nothing.
-**Position.** GRUT III treats Λ as a datum and makes the sharp prediction F1 (w ≡ −1). If DESI DR3 establishes
-evolution at ≥5σ, the equation-of-state reading of GR is incomplete at zeroth order and P2 must be extended (a
-second horizon scale, i.e. a relaxor, re-enters with a price). That is the one place GRUT III can lose soon.
+Integration constant (D3). Dead end recorded: the static-patch identity F = E − TS = 0 holds for every H and selects
+nothing. Position: Λ is a datum; the minimal framework predicts w ≡ −1, **shared with ΛCDM** (F1). If DESI's
+preference for evolving dark energy (DR2: ~2.8–4.2σ, compilation-dependent) reaches a model-independent ≥5σ, the
+minimal framework and ΛCDM fall together and an additional light field enters P0's content with a price.
 
-## O3 — The outcome rule: can P5 be derived from P0 + P1?
+## O3 — The outcome rule (corrected, R5)
 
-**Pose.** P5 (non-contextuality) buys Born via Gleason. In GRUT III an observer's statistics are functions of
-the state restricted to their wedge (P1), and Einstein causality (P0) forbids signalling from the causal
-complement. Any decomposition of the observer's reduced state that is *induced by an operation in the complement*
-therefore cannot change the observer's outcome frequencies — which is decomposition-independence for that class
-of decompositions, i.e. SCOUT_0 P-15's martingale condition, i.e. non-contextuality restricted to remotely
-induced decompositions.
-**Next computation (theoretical, high value).** Determine whether the remotely-inducible decompositions of a
-reduced state exhaust the projector lattice needed by Gleason (dimension ≥ 3). If yes, P5 follows from P0 + P1
-and the ledger falls to +4; if no, the residue is the precise content of the measurement postulate. Known
-partial results: Gisin 1990 (nonlinear evolution + collapse ⇒ signalling), Zurek's envariance argument, and
-the Hughston–Jozsa–Wootters theorem (every decomposition of ρ_W is remotely inducible given a purification) —
-the last suggests the answer is yes, and should be checked carefully for its assumptions.
+P5 (non-contextuality) buys Born via Gleason/Busch. The revision-1 route via Hughston–Jozsa–Wootters is withdrawn:
+HJW presupposes the measurement framework. The relevant literature: Gleason (1957); Busch (2003); Zurek's envariance
+(2003–05); Deutsch (1999) and Wallace (2012) decision-theoretic derivations; Masanes–Galley–Müller (2019), who derive
+the measurement postulates from the remaining quantum postulates plus operational assumptions (including finite-
+dimensional state characterisation). Each trades the postulate for other assumptions; none derives probabilities from
+causality alone. **GRUT III adds nothing here; P5 stays a postulate.** No computation proposed.
 
 ## O4 — The arrow (P4)
 
-Unchanged and honest: the direction is the choice of the future horizon as the traced-out one, equivalently the
-Hadamard condition with positive frequencies toward the future. The physics behind it is the cosmological
-initial state. GRUT III locates the input; it does not remove it. No computation proposed.
+Located, not derived: the choice of the future horizon as the traced-out one. The physics is the cosmological initial
+state. No computation proposed.
 
-## O5 — The memory dictionary (replaces the finite-memory axiom)
+## O5 — The residual program: the only place a distinctive result could come from (new; owner's note, R11)
 
-What "memory" means in GRUT III, so that the word is never again used for four different things:
+**The rule.** In any KMS state N_f = ½coth(βω/2)ρ_f (`07` T1), so GRUT III is standard wherever its principle
+applies. A distinctive residual must be computed in a state where KMS fails, as Δρ_f (or ΔW(t,t′) for non-stationary
+states, or Δκ_n) against the conventional baseline for the same observable, state and preparation. (The record's
+G2-12 "Scope-Q" ruling, as the owner reports it, reached the same conclusion from the other direction: distinctive
+locks need KMS-failing platforms. That ruling is not in this repository; the convergence is noted.)
 
-| object | memory | status |
-|---|---|---|
-| response of a conformal medium at a point | none (odd polynomial in ω) | THEOREM (D2) |
-| noise of operator of dimension Δ at a point, dS geodesic | exponential, rate (Δ−k)H after polynomial cancellations; 4H for T̂ | DERIVED (D2) |
-| response of a homogeneous/extended mode | power law, light cone to the horizon (48/πΔ⁵ …) | record T3 chain |
-| matter thresholds | power law × oscillation at 2mᵢ, exponents 7/2, 5/2, 3/2 | DERIVED (D5) |
-| gravitational (minimally coupled) sector in dS | non-stationary, secular IR growth | record (tt_worldline); the open quantum-gravity IR problem |
+**Baseline computed (`v11`, D11).** Quasi-de Sitter, conformal matter: the O(ε) KMS defect is fixed completely —
+an effective-temperature shift T_eff ≈ (H/2π)(1 − 1.01ε) plus a 1%-of-ε frequency dependence. No free function.
 
-**Next computation (in reach).** Generalise D1–D2 to any FRW a(t): for conformal matter along a comoving worldline
-G = 1/(4π² a a'(η−η')²) exactly; compute the (non-stationary) noise correlation time in the radiation and matter
-eras and show it tracks 1/H(t). This replaces "finite memory" by a derived, epoch-resolved function.
+**Next computations, in order.**
+1. The gravitational sector's own quasi-dS baseline: the massless (ν = 3/2 + O(ε)) worldline two-time function in
+   power-law inflation, its stationary part's KMS defect, and the O(ε) correction to the zero-mode diffusion
+   constant D = H³/4π² (expected: D(t) = H(t)³/4π² with the spectral tilt n_T = −2ε encoded in the two-time
+   structure). This fixes what conventional theory says for the free graviton sector.
+2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer did
+   exact dS): the first *interacting* baseline.
+3. Only then: is there any ΔW(t,t′) in the interacting gravitational infrared that conventional stochastic gravity
+   leaves undetermined (the secular-growth problem)? If the literature's resummations disagree among themselves, that
+   disagreement is the exact size of the opening; a GRUT statement would be a *restriction* on it forced by P0–P5.
+   If they agree, the opening is closed and GRUT III is, finally and honestly, GR + QFT with a thermodynamic reading.
 
-## O6 — The one risk taken: a₀ (see `06_CONJECTURE_A0.md`)
+## O6 — a₀ (Milgrom's conjecture, not GRUT's; `06`)
 
-Next computation: Jacobson's Clausius construction with the de Sitter–Unruh temperature √(a² + H²)/2π and a
-Rindler patch of finite size inside the cosmological horizon. Either an acceleration scale with a coefficient
-emerges, or the construction shows that no local-equilibrium correction appears at a ∼ cH₀ — both outcomes are
-informative and both are cheap relative to another audit wave.
+Dead as a Jacobson-route argument (κ cancels). Alive only as Milgrom's vacuum-effect proposal with the
+Narnhofer–Peter–Thirring/Deser–Levin temperature. Not pursued within GRUT III.
 
-## O7 — Owed independent verifications of this proposal
+## O7 — Owed independent verifications of revision 2
 
-1. The closed forms of D2 by a second method (explicit residue sum at the order-8 poles).
-2. The species kernel of D5 against Han–Lykken–Zhang (1999) and Giudice–Rattazzi–Wells (1999) primary texts,
-   including the massive-vector threshold polynomial, which is **not computed here**.
-3. The Clausius bookkeeping of D3 against Jacobson (1995) and Eling–Guedens–Jacobson (2006) with the
-   non-equilibrium (shear) term carried explicitly.
-4. The record correction in D1 (0.0339 vs 0.0341) by re-running `calc/worldline_reduction.py` with the
-   one-sided/symmetrised distinction made explicit.
+1. Equation-level comparison of D2's worldline polynomial with Pérez-Nadal–Roura–Verdaguer (2009) and Cho–Hu (2014)
+   (`08` records what could be read).
+2. The massive-vector threshold polynomial for D5 (not computed; HLZ/GRW primary texts).
+3. Independent reruns of `v7`–`v11` (the slim verification workflow's three-lens pass covers v7–v10; v11 is author-level).
+4. The record correction in D1 by re-running `calc/worldline_reduction.py` with the one-sided/symmetrised
+   distinction made explicit.
+5. The O(ε) defect of D11 by an independent method (e.g. adiabatic expansion of the conformal vacuum) and for the
+   massless sector (O5 item 1).
