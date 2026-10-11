@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 19:26 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 20:05 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -16,6 +16,7 @@ Generated 2026-10-11 19:26 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
 | `v10_graviton_sector_memory.py` | **PASS** |
 | `v11_quasi_ds_kms_defect.py` | **PASS** |
 | `v12_two_temperatures.py` | **PASS** |
+| `v13_zero_mode_temperature.py` | **PASS** |
 
 ---
 
@@ -380,7 +381,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 26.5 s)
+  (runtime 25.7 s)
 V7 OVERALL: PASS
 ```
 
@@ -657,4 +658,33 @@ CONCLUSION (GRUT III's answer to the two-temperature question):
   in the conformal vacuum thermalises (to first order) at (a''/a')/2pi, not at T_KH -- conventional QFT, checkable by anyone.
 
 V12 OVERALL: PASS
+```
+
+## `v13_zero_mode_temperature.py`
+
+```text
+== 13.0 checks of the input ==
+  nu0 = 3/2 + eps/(1-eps): PASS
+  A0(0) = 1/(4*pi**2)  = 1/(4 pi^2): PASS
+== 13.1 first-order coefficient of the noise amplitude ==
+  c1 = d ln A0/d eps|0 = -log(4) - 2*EulerGamma + 1 = -1.5407257  vs 1 - 2 gamma_E - 2 ln 2: PASS
+  numerical central difference: -1.540725691 -> PASS
+== 13.2 zero-mode temperature T_zm = (3 - eps) A0 H^4 / 2 ==
+  T_zm(0) = 3*H**4/(8*pi**2)  = 3H^4/(8 pi^2) = 1/Vol(S^4): PASS
+  d ln T_zm/d eps|0 = -2*log(2) - 2*EulerGamma + 2/3 = -1.8740590  (= c1 - 1/3): PASS
+== 13.3 which horizon temperature would reproduce it as a Euclidean weight? ==
+  H_X = H(1 - c_X eps) with c_X = -(c1 - 1/3)/4 = -1/6 + EulerGamma/2 + log(2)/2 = 0.468515
+    vs detector (a''/a'): c = 1  -> no match (difference -0.53149)
+    vs Kodama-Hayward: c = 1/2  -> no match (difference -0.031485)
+    vs naive H: c = 0  -> no match (difference 0.46851)
+== 13.4 diffusion coefficient alone ==
+    (H_detector/H)^3 first-order coefficient = -3.0000  vs c1 = -1.5407  -> no match (difference 1.4593)
+    (H_Kodama-Hayward/H)^3 first-order coefficient = -1.5000  vs c1 = -1.5407  -> no match (difference -0.040726)
+    Kodama-Hayward near-coincidence is not an identity: c1 + 3/2 = -log(4) - 2*EulerGamma + 5/2 = -0.040726 (transcendental, nonzero): PASS
+
+CONCLUSION: the O(eps) Fokker-Planck coefficients of the massless zero mode carry gamma_E and ln 2 from the Hankel normalisation
+and are not the Euclidean weight of any geometric horizon temperature; P1 assigns none (non-geometric modular flow) and adds
+nothing: conventional theory (Cho-Kim-Kitamoto 2015) fixes them. O5 items 1 and 3 close for GRUT III.
+
+V13 OVERALL: PASS
 ```
