@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "N": 3,
+      "posets": 19,
+      "Hilbert_dimension": 152,
+      "reversible_configuration_edges": 30,
+      "permutation_error": 0.0,
+      "norm_error": 4.440892098500626e-16,
+      "inverse_error": 1.0470908655298389e-15,
+      "energy_error": 2.7755575615628914e-17,
+      "pure_gradient_phase_error": 9.857914574850981e-16,
+      "geometry_TV_vs_gamma0_at_t1": 0.1637701823203367,
+      "t1_geometry": {
+        "mean_height": 2.38336539586329,
+        "mean_relations": 2.29111373485346,
+        "height_distribution": {
+          "1": 0.06789186381173105,
+          "2": 0.48085087651324615,
+          "3": 0.4512572596750224
+        }
+      },
+      "ground_energy": -3.952896883017136,
+      "ground_geometry": {
+        "mean_height": 1.8383798406470835,
+        "mean_relations": 1.1755895819980737,
+        "height_distribution": {
+          "1": 0.23323396117445108,
+          "2": 0.6951522370040134,
+          "3": 0.07161380182153518
+        }
+      }
+    },
+    {
+      "N": 4,
+      "posets": 219,
+      "Hilbert_dimension": 3504,
+      "reversible_configuration_edges": 588,
+      "permutation_error": 0.0,
+      "norm_error": 2.220446049250313e-16,
+      "inverse_error": 1.1302079785070725e-15,
+      "energy_error": 1.734723475976807e-16,
+      "pure_gradient_phase_error": 8.926065427398924e-16,
+      "geometry_TV_vs_gamma0_at_t1": 0.16757574198398867,
+      "t1_geometry": {
+        "mean_height": 2.640736542588946,
+        "mean_relations": 3.930510759966285,
+        "height_distribution": {
+          "1": 0.0030250362198617543,
+          "2": 0.41081792796105193,
+          "3": 0.5285524928293619,
+          "4": 0.057604542989724686
+        }
+      },
+      "ground_energy": -6.54596128019878,
+      "ground_geometry": {
+        "mean_height": 2.0444080214123868,
+        "mean_relations": 1.9969112168445844,
+        "height_distribution": {
+          "1": 0.0963191841707805,
+          "2": 0.7651783805175362,
+          "3": 0.13627766504020006,
+          "4": 0.0022247702714830457
+        }
+      }
+    }
+  ],
+  "same_endpoint_interference": {
+    "normalized_holonomy_trace": 0.5000000000000002,
+    "exact_short_time_probability_coefficient": 0.7500000000000001,
+    "gamma0_coefficient": 1.0,
+    "full_Hamiltonian_controls": [
+      {
+        "t": 0.04,
+        "probability_over_t4": 0.7467274738927019
+      },
+      {
+        "t": 0.02,
+        "probability_over_t4": 0.7487644415901628
+      },
+      {
+        "t": 0.01,
+        "probability_over_t4": 0.7494827014753082
+      }
+    ]
+  },
+  "spectral_response": {
+    "retarded_from_spectrum": 0.1884860703686756,
+    "connected_noise_from_spectrum": 0.11175942893211487,
+    "static_susceptibility": 0.24917976922989843,
+    "independent_ground_state_source_derivative": 0.2491797692322217,
+    "positive_spectral_weight_total": 0.1575424062968347,
+    "gap": 0.27117341219325786
+  },
+  "stationary_ground_probe": {
+    "retarded_response": 0.18848607036867582,
+    "independent_kick_derivative": 0.1884860703654789,
+    "eigenvector_residual": 1.0674117655788198e-14
+  },
+  "layered_variational_control": {
+    "N": 3,
+    "partition_sizes": [
+      1,
+      2
+    ],
+    "exact_hopping_expectation": -2.0,
+    "general_total_energy_upper_bound": "-J*floor(N^2/4)+N*abs(Omega)"
+  },
+  "response_records": {
+    "relation_mean_initial": 0.08002446864472729,
+    "relation_mean_final": 0.28054793358136554,
+    "retarded_impulse_response": -0.0,
+    "independent_kick_derivative": 0.0,
+    "symmetric_connected_noise": 0.11291575825082967,
+    "noise_matrix_min_eigenvalue": 0.007884317267572362,
+    "record_effect_on_later_joint_probabilities_TV": 0.1347702820990192,
+    "record_inverse_error": 0.0,
+    "mixture_error": 1.0004548136198505e-16
+  },
+  "verdict": "FINITE_RECOMBINING_MATTER_GEOMETRY_DYNAMICS_WORKS; CONTINUUM_GRAVITY_NOT_ESTABLISHED"
+}
