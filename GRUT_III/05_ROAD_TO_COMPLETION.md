@@ -70,24 +70,30 @@ consistent) — closed; the graviton-sector dispute is live but is about which q
 quantum gravity on dS, which P0–P5 do not address — not a GRUT opening. Item 1 is published except for the O(ε)
 worldline KMS defect of the massless sector; its O(ε) zero-mode Fokker–Planck coefficients are Cho–Kim–Kitamoto (2015).
 
-**The decisive cheap computation, done (`v13`, fifth round).** Question: does P1's thermal reading at any horizon
-temperature fix the published O(ε) Fokker–Planck coefficients of the massless minimally coupled zero mode in power-law
-FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16: noise A₀H³ with A₀ = (2−2ε)^{2ν₀−3}Γ²(ν₀)(1−ε)³/π³, ν₀ = 3/2 + ε/(1−ε),
-drift 1/((3−ε)H))? The stationary weight is exp(−V/T_zm) with T_zm = (3−ε)A₀H⁴/2 = 3H⁴/8π² = 1/Vol(S⁴) at ε = 0 (the
-Hartle–Hawking weight, the Euclidean face of KMS at β = 2π/H). At O(ε): d ln T_zm/dε = 2/3 − 2γ_E − 2 ln 2 = −1.874. Read as
-the Euclidean weight (H_X/H)⁴ of a rate H_X = H(1 − c_X ε) this needs c_X = 0.4685 — not the detector value 1 (D11), not
-the Kodama–Hayward value 1/2 (`09`), not 0. (Kodama–Hayward is numerically close, −1.50 vs −1.54 for the diffusion
-coefficient, but the gap 5/2 − 2γ_E − 2 ln 2 is exact and transcendental: a near-coincidence.) **Answer: no.** The O(ε)
-coefficients come from the Hankel normalisation (Γ(ν₀), 2^{2ν₀−3}) and carry γ_E and ln 2; no geometric horizon
-temperature reproduces them. P1 is consistent with this — for ε ≠ 0 the modular flow is not geometric and P1 assigns no
-temperature — and adds nothing: conventional theory fixes the coefficients completely. **O5 items 1 and 3 close.** Item 1
-closes as a GRUT question (there is nothing for P1 to add in the massless sector at first order); the O(ε) worldline KMS
-defect of the massless sector remains an unpublished but purely conventional calculation. Caveat on scope: with H(t)
-varying there is no stationary state for ε ≠ 0, so T_zm(ε) is the instantaneous Boltzmann weight — which is exactly the
-statement that the modular flow is non-geometric.
+**The decisive cheap computation, attempted and restated (`v13` rev. 2; fifth and sixth rounds).** Question: does P1's
+thermal reading at any horizon temperature fix the published O(ε) Fokker–Planck coefficients of the massless minimally
+coupled zero mode in power-law FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16)? Rev. 1 took the published coefficients, found
+that the implied zero-mode temperature T_zm = (3−ε)A₀H⁴/2 (= 1/Vol(S⁴) at ε = 0) has O(ε) coefficient 2/3 − 2γ_E − 2 ln 2,
+and concluded that no horizon temperature reproduces it (required c_X = 0.4685; detector 1, Kodama–Hayward 1/2, naive 0).
+The reviewer showed the inference is not established: the stochastic noise is evaluated at the coarse-graining scale
+k = σaH and σ is a choice. `v13` rev. 2 derives from the Bunch–Davies mode function that A₀(σ) = A₀(1)·σ^{−2ε/(1−ε)},
+σ-independent in exact dS (Starobinsky) and not at O(ε): c₁(σ) = 1 − 2γ_E − 2 ln(2σ), c_X(σ) = 0.4685 + ½ ln σ. So c_X = 0 at
+σ = 0.39, = 1/2 at σ = 1.07, = 1 at σ = 2.9, and c_X → −∞ as σ → 0, which is the regime the formalism needs. The γ_E and ln 2 of
+rev. 1 are γ_E + ln(2σ) at σ = 1: a matching-scale artifact. **The O(ε) zero-mode coefficient is not a physical invariant and
+cannot test horizon temperatures; rev. 1's inference is withdrawn** (its arithmetic at σ = 1 stands). No scale-fixed variant
+rescues it: the massless spectrum in power-law FRW is tilted and scale-free (n − 1 = −2ε/(1−ε)), so any dimensionless
+comparison between a zero-mode amplitude and an instantaneous H — including the equal-time correlator at a chosen physical
+separation — shifts its O(ε) coefficient by the logarithm of the chosen scale. The σ-independent object is
+frequency-resolved: the comoving detector's Wigner spectrum at ω ≠ 0 and its KMS ratio at O(ε), the quantity for which the
+conformal sector gave exact thermality at (ä/ȧ)/2π (`v11`). That computation is `v14`. **What stands:** O5 items 1 and 3
+close on other grounds — P1 assigns no temperature when the modular flow is not geometric, and the σ-independent
+correlators are fixed by conventional QFT.
 
 **What remains, in order (after `v13`).**
-1. (closed) Items 1 and 3 — the massless-sector baseline and the secular-IR opening — close as above and in `10`.
+1. (closed as GRUT questions) Items 1 and 3 — the massless-sector baseline and the secular-IR opening — close as above and
+   in `10`. The σ-independent first-order KMS defect of the massless sector for a comoving detector (`v14`) is the one
+   conventional number still worth having: it says whether the massless sector is thermal at (ä/ȧ)/2π at first order, as
+   the conformal sector is, or already non-thermal at O(ε).
 2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer 2012 did
    exact dS): the last conventional baseline. Low priority: by the precedent of `v11` (conformal sector, O(ε²)) and `v13`
    (massless sector, O(ε)), conventional theory fixes it and P1 adds nothing.
@@ -102,7 +108,11 @@ The program's genuine fork is therefore not another computation inside P0–P5 b
 accepted as the thermodynamic *reading* of GR + QFT, a consistent framework with no distinctive prediction (`03`), or
 (b) a sixth postulate is proposed that breaks KMS-by-construction in a controlled, parameter-free way — the only route to
 a distinctive prediction — and is tested with the Δρ instrument of `07` against the baselines fixed here, priced against
-the fifth-force bounds of `03`. Option (b) is the open road; nothing in this branch yet supplies such a postulate.
+the fifth-force bounds of `03`. Option (b) is the open road; nothing in this branch yet supplies such a postulate. A sixth
+postulate of that kind is exactly a Stage-3 𝒦 card: the frozen charter on `grut2-stage3` (c1275a8) already supplies the
+pricing, the relocation tests, the Scope-Q non-KMS requirement and the price list such a card must meet. If option (b) is
+taken, it is written as Card 1 under that charter — after the owner review its hard stop (§25, G2-11) requires — not as new
+governance here. That merges the two tracks instead of rebuilding one.
 
 ## O6 — a₀ (Milgrom's conjecture, not GRUT's; `06`)
 

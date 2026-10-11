@@ -178,7 +178,9 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
   ρ̇ = ½A₀H³∂²ρ + (1/((3−ε₀)H))∂(ρV′), A₀ = (2−2ε₀)^{2ν₀−3}Γ²(ν₀)(1−ε₀)³/π³. Eq. (3.21): at ε₀ = 0 the equilibrium
   ρ∞ ∝ exp(−8π²V/3H₀⁴) (Starobinsky–Yokoyama). `v13` uses exactly these; it adds only the O(ε) expansion and the comparison
   with horizon temperatures. The paper notes that for ε₀ ≠ 0 the equilibrium is reached only in a rescaled time variable —
-  the reason `05` calls T_zm(ε) an instantaneous weight.
+  the reason `05` calls T_zm(ε) an instantaneous weight. Eq. (3.14)'s δ(Ha − p) fixes the coarse-graining scale at σ = 1;
+  `v13` rev. 2 shows from the same mode function that a general σ multiplies A₀ by σ^{−2ε₀/(1−ε₀)}, which is what makes the
+  O(ε) coefficient non-invariant (reviewer, fifth round).
 - Attribution: 1508.07877 is Cho, Kim & Kitamoto; the 2018/19 paper on derivative interactions, 1811.01830, is Kitamoto alone.
   Both were misattributed in an earlier draft of `10` (fixed before commit).
 - The remaining sources of the fifth-round survey (30+ papers; what was read at full text vs abstract) are listed at the
@@ -197,4 +199,7 @@ script reports (agreement to 1e-26). `v7`'s own caveats (the 1/t edge; L⁻⁸ s
 (rev. 3). The reviewers' reruns cover v7, v9, v10 and the power-law part of v11; `v8` and the general-a(t) and ΛCDM
 parts of `v11` rev. 3 remain author-level. `v12` (third round) and `v13` (fifth round) are author-written and author-run;
 `v13`'s input equations were checked against the Cho–Kim–Kitamoto full text at equation level, and its one derivative
-(c₁ = 1 − 2γ_E − 2 ln 2) is cross-checked numerically inside the script; independent review is owed (O7 item 3).
+(c₁ = 1 − 2γ_E − 2 ln 2) is cross-checked numerically inside the script. `v13` rev. 1's *inference* was then **refuted** by the
+owner's reviewer (coarse-graining-scale dependence) and rev. 2 records the σ-dependence; a workflow of independent re-derivation
+and adversarial-audit agents over `v8`, `v11` (general a(t), ΛCDM), `v12` and `v13` rev. 2 was run in the sixth round — its
+report is `11_VERIFICATION_ROUND.md`.

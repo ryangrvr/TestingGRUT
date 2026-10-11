@@ -1,4 +1,4 @@
-# GRUT III — the responsive vacuum, principle-first (revision 2.3)
+# GRUT III — the responsive vacuum, principle-first (revision 2.4)
 
 **Status:** PROPOSAL on the experimental branch (`claude/friendly-hopper-7zkwf5`, branched from the SCOUT_0
 freeze `ab2da47`). Revision 2 (2026-10-11) incorporates three external reviews and an owner's note:
@@ -41,7 +41,8 @@ reality.
 | `08_PRIORITY_AND_SOURCES.md` | Literature priority checks (what PNRV 2009, Cho–Hu 2014, MGM 2019, DESI DR2, HLZ 1999 … actually contain) |
 | `09_TWO_TEMPERATURES.md` | Detector vs apparent-horizon temperature at O(ε): which one P1 calls a temperature |
 | `10_SECULAR_IR_SURVEY.md` | Literature check for O5 item 3: do the secular-IR resummations disagree? (scalars no; gravitons: a QG observables dispute); the `v13` result |
-| `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R18) |
+| `11_VERIFICATION_ROUND.md` | Sixth-round independent re-derivation and adversarial audit of `v8`, `v11`, `v12`, `v13` (workflow report) |
+| `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R19) |
 | `CHANGELOG.md` | Revision history |
 | `RESULTS.md` | Output of the verification suite (generated) |
 | `calc/` | `v1`–`v13` + `run_all.py` + `requirements.txt` (Python 3.13, numpy, sympy, mpmath) |

@@ -1,5 +1,14 @@
 # GRUT III — changelog
 
+## Revision 2.4 (2026-10-11, sixth round)
+
+- `v13` rev. 2: the reviewer's coarse-graining-scale objection accepted; the σ-dependence A₀(σ) = A₀(1)σ^{−2ε/(1−ε)} derived
+  from the mode function; c₁(σ) = 1 − 2γ_E − 2 ln(2σ), c_X(σ) = 0.4685 + ½ ln σ; rev. 1's inference ("no horizon temperature
+  matches") **withdrawn** — the O(ε) zero-mode coefficient is not a physical invariant. Items 1 and 3 still close on P1 and
+  conventional QFT. `05` O5, `10` §4, `08`, RESPONSE R19.
+- `05` O5: option (b) of the fork identified with a Stage-3 𝒦 card (Card 1 under the frozen charter on `grut2-stage3`).
+- Sixth-round verification workflow over `v8`, `v11` (general a(t), ΛCDM), `v12`, `v13` rev. 2: `11_VERIFICATION_ROUND.md`.
+
 ## Revision 2.3 (2026-10-11, fourth round)
 
 - `10_SECULAR_IR_SURVEY.md`: literature check for O5 item 3 (five agents; 30+ papers, most at full text). Scalars: all

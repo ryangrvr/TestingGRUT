@@ -246,3 +246,21 @@ nothing; conventional theory fixes the coefficients. O5 items 1 and 3 close. Wit
 and P0–P5 add no selection. `05` O5 now states the fork this leaves: accept GRUT III as the thermodynamic reading of GR + QFT, or
 propose a sixth, parameter-free postulate that breaks KMS-by-construction and test it with the `07` instrument against the
 baselines fixed here. Owed: independent review of `v12` and `v13` (`08`, O7).
+
+## R19 — Addendum (sixth round, 2026-10-11): `v13`'s inference refuted; restated
+
+The reviewer's point is accepted in full. The stochastic noise is evaluated at k = σaH; the published coefficients are at σ = 1;
+`v13` rev. 2 derives from the Bunch–Davies mode function that the white-noise amplitude at general σ is A₀(1)σ^{−2ε/(1−ε)}H³,
+so c₁(σ) = 1 − 2γ_E − 2 ln(2σ) and c_X(σ) = 0.4685 + ½ ln σ — σ-independent only in exact dS. The reviewer's table is reproduced
+(c_X = 0 at σ = 0.39, 1/2 at σ = 1.07, −0.68 at σ = 0.1, −1.83 at σ = 0.01) and the "transcendental gap" of rev. 1 is γ_E + ln(2σ)
+at σ = 1. The O(ε) zero-mode coefficient is not a physical invariant and cannot test horizon temperatures; rev. 1's inference
+is withdrawn, its arithmetic stands. **What survives:** items 1 and 3 close on P1 (no geometric modular flow → no P1
+temperature) and on conventional QFT fixing the σ-independent correlators — the grounds the reviewer named. **On the suggested
+σ-independent quantity:** the equal-time correlator at fixed physical separation is σ-free but, for a tilted scale-free
+spectrum, comparing it with an instantaneous H still requires choosing the separation, which shifts the O(ε) coefficient by
+the logarithm of that choice; the quantity without that ambiguity is frequency-resolved — the comoving detector's Wigner
+spectrum at ω ≠ 0 and its KMS ratio at O(ε), exactly what `v11` computed for the conformal sector. That is `v14` (via the `v12`
+12.4 lemma and the dS massive two-point function expanded around ν = 3/2). **Governance:** agreed that a sixth postulate
+breaking KMS is a Stage-3 𝒦 card, to be written as Card 1 under the frozen charter rather than as new governance; `05` O5 says
+so. **Owed verifications:** a workflow of independent re-derivation and adversarial-audit agents over `v8`, the general-a(t) and
+ΛCDM parts of `v11`, `v12` and `v13` rev. 2 was run this round (`11_VERIFICATION_ROUND.md`).
