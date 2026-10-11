@@ -1,5 +1,17 @@
 # Authorized development research
 
+**Latest owner correction: fundamental-theory construction is active.**
+The separate [constructive-physics program](constructive_physics/PROGRAM.md)
+openly supplies geometry and quantum operational structure and tests a physical
+interaction mechanism; it does not resubmit the Stage-3 identity/interface
+challenge. [Authorization](constructive_physics/AUTHORIZATION.md) and the
+[two-draft selection log](constructive_physics/DRAFT_LOG.json) distinguish this
+first construction from historical card accounting. [CP-01](constructive_physics/attempt01/LAW.md)
+is frozen before executable checks. No scientific discovery or independent
+clearance is preclaimed. Closure of prior routes does not suspend this mission.
+
+The following decisions and scientific packets are preserved as history.
+
 **Current owner direction: Stage 3 inactive; no canonical T-3 final count or
 terminal issued.** Cards 1 and 2 are consumed, author KILL, pending independent
 scientific review. Card 3 is unopened and unauthorized. One slot is unconsumed;
@@ -33,8 +45,9 @@ perfect detector cooling alone would not complete this test. The owner prioritiz
 independent scrutiny of existing theoretical results and broader evidence-led
 reassessment. Gravity is not designated the exclusive discovery path. Neither
 independent discriminating evidence nor a new principle imposing a restriction
-beyond established physics is presently established by this branch. This
-closeout authorizes no further calculation campaign or generating-law attempt.
+beyond established physics is presently established by this branch. That
+closeout did not authorize further work. The later owner correction above
+separately authorizes the present construction; the Leiden closeout is preserved.
 
 The [limited Card-2 development waiver](card02/AUTHORIZATION.md) and earlier
 [authorization/intake](CARD02_AUTHORIZATION.md) remain historical metadata.
