@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 19:00 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-11 19:26 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -15,6 +15,7 @@ Generated 2026-10-11 19:00 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
 | `v9_induced_gravity_matching.py` | **PASS** |
 | `v10_graviton_sector_memory.py` | **PASS** |
 | `v11_quasi_ds_kms_defect.py` | **PASS** |
+| `v12_two_temperatures.py` | **PASS** |
 
 ---
 
@@ -379,7 +380,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 26.3 s)
+  (runtime 26.5 s)
 V7 OVERALL: PASS
 ```
 
@@ -622,4 +623,38 @@ V10 OVERALL: PASS
   (formal baseline for the vacuum medium; the physical photon field is dominated by the 2.7 K CMB bath at these scales)
 
 V11 OVERALL: PASS
+```
+
+## `v12_two_temperatures.py`
+
+```text
+== 12.1 the two temperatures ==
+  T_KH  = H*(2 - epsilon)/(4*pi)    T_det = H*(1 - epsilon)/(2*pi)
+  T_KH = (H/2pi)(1 - eps/2), T_det = (H/2pi)(1 - eps): PASS
+  T_det/T_KH = -epsilon**2/4 - epsilon/2 + 1  -> equal iff eps = 0: PASS
+  a''/a' - (H + Hdot/H) = 0 -> PASS
+== 12.2 Killing character of the apparent horizon ==
+  R_A_dot = eps: the apparent horizon is stationary (Killing) iff eps = 0. For eps != 0 the modular flow of the
+  restricted state is not geometric, P1 assigns no temperature to the region inside R_A, and T_KH is a surface-gravity label.
+== 12.3 the apparent-horizon first law is an identity of the Einstein equations (flat FRW, perfect fluid) ==
+  Cai-Kim:  A(rho+p)H R_A - T0 dS/dt = 0 -> PASS (identity with T0 = 1/2 pi R_A)
+  Akbar-Cai: dE/dt - [(kappa/2pi) dS/dt + W dV/dt] = 0 -> PASS (identity with the signed Hayward kappa, |kappa|/2pi = T_KH)
+  => both horizon 'first laws' are identities of the Einstein equations GRUT III already has from D3; T_KH (with its sign)
+     is the bookkeeping temperature that makes Hayward's unified first law close, not a KMS parameter supplied by P1.
+     (The sign/'heat-out' convention is the 'temperature confusion' of Tian-Booth 2014.)
+== 12.4 lemma: massless field in power-law FRW == massive field in de Sitter (same nu) ==
+  a''/a = (nu**2 - 1/4)/etan**2  vs (nu^2-1/4)/eta^2: PASS
+  nu(eps) = (epsilon - 3)/(2*(epsilon - 1))  = 3/2 + eps/(1-eps): PASS
+  dS analogue mass: m^2/H^2 = 9/4 - nu^2 = epsilon*(2*epsilon - 3)/(epsilon**2 - 2*epsilon + 1)  (< 0: the dS analogue is tachyonic; the IR needs care, the velocity correlator does not)
+
+CONCLUSION (GRUT III's answer to the two-temperature question):
+  (b') They differ because they are different objects. P1's bath temperature is the KMS parameter of the restricted
+  state where the modular flow is geometric; for the comoving observer in the conformal vacuum that is T_det = (a''/a')/2pi
+  at first order (derived, v11). The apparent horizon is not a Killing horizon for eps != 0, so P1 assigns it no
+  temperature; T_KH is Hayward's dynamical surface gravity, used by Cai-Kim as the bookkeeping that turns the horizon
+  first law into an identity of the Einstein equations (12.3). No heat-flow law is implied; the O(eps) mismatch equals
+  the apparent horizon's expansion rate R_A_dot = eps. Testable statement: a comoving detector coupled to a conformal field
+  in the conformal vacuum thermalises (to first order) at (a''/a')/2pi, not at T_KH -- conventional QFT, checkable by anyone.
+
+V12 OVERALL: PASS
 ```
