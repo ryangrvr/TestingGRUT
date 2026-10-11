@@ -26,6 +26,16 @@ certificates are absent. The [arithmetic record](GRAVITATIONAL_FEASIBILITY_NUMBE
 quantifies the cooling/noise deficit and a separate ordinary-force averaging
 estimate. No new law, fixture campaign, experiment or follow-up queue is created.
 
+**Owner disposition: verdict accepted; Leiden investigation complete and stopped
+until new apparatus evidence emerges.** Near-ground-state cooling is a requirement
+of the assessed control route, not every conceivable quantum-gravity experiment;
+perfect detector cooling alone would not complete this test. The owner prioritizes
+independent scrutiny of existing theoretical results and broader evidence-led
+reassessment. Gravity is not designated the exclusive discovery path. Neither
+independent discriminating evidence nor a new principle imposing a restriction
+beyond established physics is presently established by this branch. This
+closeout authorizes no further calculation campaign or generating-law attempt.
+
 The [limited Card-2 development waiver](card02/AUTHORIZATION.md) and earlier
 [authorization/intake](CARD02_AUTHORIZATION.md) remain historical metadata.
 The waiver did not certify the evaluation kit and does not extend to Card 3.
