@@ -15,14 +15,16 @@ what is actually true.
  A. (sympy, exact) Power law: ln R := ln[a1 a2 (Delta eta)^2 / (4 sinh^2(x/2)/H_eff^2)] = [-x^2/4 + (x^3/12) coth(x/2)]/q^2 + O(q^-3)
     => W_eps / W_dS(H_eff) = 1 + eps^2 [x^2/4 - (x^3/12) coth(x/2)] + O(eps^3)   (reviewers' coefficient confirmed).
  B. (sympy, exact) GENERAL a(t) to second adiabatic order, with eps = -Hdot/H^2 and eta = eps_dot/(H eps):
-    the first-order correction is a pure shift H -> H_eff = H + Hdot/H = H(1-eps) = (d/dt) ln(a_dot)  (THEOREM, any a(t));
+    the first-order correction is a pure shift H -> H_eff = H + Hdot/H = H(1-eps) = (d/dt) ln(a_dot)  (THEOREM, any a(t) with eps AND eta = eps_dot/(H eps) first-order small; the eps*eta term below is why);
     the second-order non-thermal remainder depends on eps^2 and eps*eta with explicit coefficient functions of x.
  C. (mpmath) Numerics with Richardson extrapolation: D/eps -> 2 pi w/Hbar exactly (c = 1); the TRUE second-order
     KMS defect D2(w) := lim [ln(G+(w)/G+(-w)) - 2 pi w/H_eff]/eps^2, tabulated; its non-linearity in w is the
     convention-free violation.  It is O(eps^2), not O(eps).
  D. (mpmath) The present universe is NOT slow-roll: eps_0 = (3/2) Omega_m = 0.47.  Exact worldline Wightman function of a
-    conformal scalar in flat LambdaCDM, a(t) = (Om/OL)^(1/3) sinh^(2/3)(3 sqrt(OL) H0 t/2), Wigner spectrum at t0, and
-    the exact KMS defect today relative to H_eff(t0) = a''/a'|_0 = H0 (1 - eps_0).  (Formal baseline for the vacuum
+    conformal scalar in flat LambdaCDM, a(t) = (Om/OL)^(1/3) sinh^(2/3)(3 sqrt(OL) H0 t/2), compared in the TIME domain with
+    the first-order thermal form at H_eff(t0) = a''/a'|_0 = H0 (1 - eps_0) (no Fourier spectrum: the comoving worldline exists
+    only for |Delta| < 2 t0, so a spectrum at t0 needs a window and is not computed; the 'prediction' used for the ratio is the
+    eta = 0 second-order form, see 11_VERIFICATION_ROUND.md).  (Formal baseline for the vacuum
     medium's KMS structure; physically the CMB bath at 2.7 K dominates real photon correlators at these frequencies.)
 Conclusions: the conformal sector stays KMS through O(eps) -- the FDT boundary of 07 applies through first order; the
 first conventional KMS violation is O(eps^2); the present-day comoving vacuum is far from thermal because eps_0 ~ 0.5.

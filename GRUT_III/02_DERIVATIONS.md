@@ -36,7 +36,7 @@ and, by the contour shift plus the recursion F_{2n+2} = F_{2n}(4n²a² + ω²)/(
 
     G⁺_T(ω) = ω (ω² + H²)(ω² + 4H²)(ω² + 9H²) / ( 10080 π³ (1 − e^{−2πω/H}) ).
 
-Checks (`v1` 1.5; `v8` B): quadrature agreement ≤ 1e-16; KMS G⁺_T(ω)/G⁺_T(−ω) = e^{2πω/H}; flat limit
+Checks (`v1` 1.5: quadrature agreement ≤ 1e-16 and the 4H decay; `v8` B: FDT/KMS algebra on the closed form): KMS G⁺_T(ω)/G⁺_T(−ω) = e^{2πω/H}; flat limit
 ω⁷/(10080π³); G⁺_T(0) = H⁷/(560π⁴); asymptotic decay rate of the time-domain kernel 4H.
 
 **Reading, with the labels the reviews required.** (i) Occupation is Planckian at T = H/2π. (ii) The
@@ -157,7 +157,7 @@ random-walks with a derived diffusion constant. "Infinite memory" is the random 
 published check, `research/reality_framework/grut_iii_independent_review/` on `codex/grut-causal-state-review`) showed
 that this was O(ε²) contamination. They were right; here is what is true.
 
-**Theorem (first order, any a(t)).** For a conformal field in the conformal vacuum along a comoving worldline,
+**Theorem (first order; any a(t) whose slow-roll parameters ε = −Ḣ/H² and η = ε̇/Hε are both first-order small).** For a conformal field in the conformal vacuum along a comoving worldline,
 W = −1/(4π²a(t)a(t′)(Δη − i0)²) exactly. Expanding about the midpoint t̄ to first adiabatic order (ε = −Ḣ/H², with
 η = ε̇/Hε also first-order small), the correction to the de Sitter form is a **pure shift of the Hubble rate**:
 
@@ -183,7 +183,8 @@ hold.
 Along the comoving worldline a correlator exists only for |Δ| < 2t₀ = 1.9/H₀ (the big bang), so a Fourier spectrum at
 t₀ requires a window and is not computed. In the time domain the exact ΛCDM correlator deviates from the first-order
 thermal form W_dS(Δ; H_eff(t₀)) by 0.12%, 0.56%, 3.6% and 19% at ΔH₀ = 0.25, 0.5, 1, 1.5 — factors 4–18 above the
-second-order prediction: the present-day comoving conformal vacuum is **not thermal at any single temperature** and
+η = 0 second-order form ε₀²f₂ (the audit `11` notes that including the εη term of `v11` B, with η₀ = −2.06, makes it 4–22;
+the conclusion is unchanged): the present-day comoving conformal vacuum is **not thermal at any single temperature** and
 must be treated with the exact kernel. (A formal baseline for the vacuum medium; the physical photon field at these
 scales is dominated by the 2.7 K CMB bath.)
 

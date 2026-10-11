@@ -170,7 +170,8 @@ GRUT claim must be a restriction conventional theory leaves free.
 What was done about it: `v11` computes the conventional O(ε) KMS defect exactly for conformal matter in power-law
 inflation (contour-shifted Wigner spectrum of the exact worldline Wightman function). Result: the defect is odd,
 vanishes at ε = 0, scales as ε, and is predominantly an effective-temperature shift T_eff ≈ (H/2π)(1 − 1.01ε) with a
-convention-free frequency dependence of about 1% of ε. Conventional theory fixes it completely for free conformal
+convention-free frequency dependence of about 1% of ε. [**Superseded — see R15:** the coefficient is exactly 1 and the
+frequency dependence is O(ε²); the sentence is kept as the record of what revision 2 claimed.] Conventional theory fixes it completely for free conformal
 fields; the only sector it leaves open is the interacting gravitational infrared, which `05` O5 now sets out as the
 single remaining program. The "Scope-Q / G2-12" ruling was not found in this repository; the convergence is recorded
 on the owner's word.

@@ -14,7 +14,7 @@ temperature.
 
 - **T_det = (ä/ȧ)/2π** is the KMS parameter of the *state*: for a conformal field in the conformal vacuum, the comoving
   worldline's two-point functions are, to first adiabatic order, exactly those of a thermal state at this temperature
-  (D11, theorem; any a(t)). It is what an Unruh–DeWitt detector on the comoving worldline reads at first order.
+  (D11, theorem; any a(t) with ε and η first-order small — not the present universe, where η₀ ≈ −2). It is what an Unruh–DeWitt detector on the comoving worldline reads at first order.
 - **T_KH = |κ|/2π** is the surface gravity of the apparent horizon with Kodama normalisation. For ε ≠ 0 the apparent
   horizon is **not a Killing horizon** (Ṙ_A = ε ≠ 0; `v12` 12.2). P1 assigns a temperature only where the modular flow
   of the restricted state is geometric — Killing horizons and wedges — so for ε ≠ 0 **P1 assigns no temperature to the

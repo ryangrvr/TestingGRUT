@@ -49,7 +49,7 @@ G2-12 "Scope-Q" ruling, as the owner reports it, reached the same conclusion fro
 locks need KMS-failing platforms. That ruling is not in this repository; the convergence is noted.)
 
 **Baseline computed and corrected (`v11` rev. 3, D11).** Quasi-de Sitter, conformal matter: to first order the state
-is *exactly* thermal at T_eff = (ä/ȧ)/2π = (H/2π)(1 − ε) for any a(t) (the revision-2 claim of a first-order frequency
+is *exactly* thermal at T_eff = (ä/ȧ)/2π = (H/2π)(1 − ε) for any a(t) with ε and η = ε̇/Hε first-order small (the revision-2 claim of a first-order frequency
 dependence was a finite-ε artefact, caught by two reviewers); the first KMS violation is O(ε²) with the computed
 shape D₂(ω). No free function. Today ε₀ = 0.47: the exact kernel deviates from the thermal form by 0.1–19% over
 Δ = 0.25–1.5/H₀, and only the exact kernel may be used for any late-universe statement.
