@@ -39,13 +39,13 @@ reality.
 | `06_CONJECTURE_A0.md` | Appendix: the a₀ ∼ cH₀ coincidence (Milgrom's conjecture, not GRUT's) |
 | `07_ACCESS_RESOLVED_RESPONSE.md` | The Δρ residual framework: FDT identity, trichotomy, memory dictionary, what a GRUT claim must be |
 | `08_PRIORITY_AND_SOURCES.md` | Literature priority checks (what PNRV 2009, Cho–Hu 2014, MGM 2019, DESI DR2, HLZ 1999 … actually contain) |
-| `09_TWO_TEMPERATURES.md` | Detector vs apparent-horizon temperature at O(ε): which one P1 calls a temperature |
+| `09_TWO_TEMPERATURES.md` | Detector vs apparent-horizon temperature at O(ε): which one P1 calls a temperature; massless sector done (`v14`) |
 | `10_SECULAR_IR_SURVEY.md` | Literature check for O5 item 3: do the secular-IR resummations disagree? (scalars no; gravitons: a QG observables dispute); the `v13` result |
 | `11_VERIFICATION_ROUND.md` | Sixth-round independent re-derivation and adversarial audit of `v8`, `v11`, `v12`, `v13` (workflow report) |
-| `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R19) |
+| `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R20) |
 | `CHANGELOG.md` | Revision history |
 | `RESULTS.md` | Output of the verification suite (generated) |
-| `calc/` | `v1`–`v13` + `run_all.py` + `requirements.txt` (Python 3.13, numpy, sympy, mpmath) |
+| `calc/` | `v1`–`v14` + `run_all.py` + `requirements.txt` (Python 3.13, numpy, sympy, mpmath) |
 
 ## Run
 

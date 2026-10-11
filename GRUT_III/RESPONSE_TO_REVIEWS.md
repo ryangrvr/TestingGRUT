@@ -264,3 +264,20 @@ spectrum at ω ≠ 0 and its KMS ratio at O(ε), exactly what `v11` computed for
 breaking KMS is a Stage-3 𝒦 card, to be written as Card 1 under the frozen charter rather than as new governance; `05` O5 says
 so. **Owed verifications:** a workflow of independent re-derivation and adversarial-audit agents over `v8`, the general-a(t) and
 ΛCDM parts of `v11`, `v12` and `v13` rev. 2 was run this round (`11_VERIFICATION_ROUND.md`).
+
+## R20 — Addendum (sixth round, 2026-10-11): the σ-free computation (`v14`)
+
+Done the same round. The massless minimally coupled sector's comoving two-point function in power-law FRW is, by the `v12`
+lemma, the Bunch–Davies de Sitter function of index 3/2 + ε/(1−ε) times a ratio of scale factors (checked against a direct
+mode integral); expanding around the massless pole gives, at first order, (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)S₂(cosh²(H̄Δ/2))
++ ω = 0 terms, S₂ an explicit dilogarithm, verified by Richardson in ε. Any function of cosh²(H̄Δ/2) is KMS at 2π/H̄ by
+midline symmetry, so the first-order KMS defect at T = (ä/ȧ)/2π vanishes: **the massless sector is thermal at the detector
+temperature at first order, like the conformal sector; Kodama–Hayward is excluded at O(ε); nothing depends on a
+coarse-graining scale.** The first-order effect is a shape change of the spectral density (r(0) = 2 − 2 ln 2, r(∞) = 0: the
+Hadamard coefficient is unchanged), and the σ-free zero-mode diffusion coefficient is D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε], which
+the stochastic A₀(σ)H³ reproduces only at σ* = e^{1−γ_E} = 1.53 — the exact function calibrates σ for this observable. On the
+reviewer's proposed σ-free quantity (the equal-time correlator at fixed physical separation): the frequency-resolved
+Wightman function was used instead because the tilted spectrum leaves any single-separation comparison with a logarithm of
+the chosen separation; the two are the same information organised differently, and the frequency-domain version has the
+KMS structure in it directly. P1 adds nothing to any of this; D13 records it as conventional QFT. Owed: independent review
+of `v14` (next round), and a literature check for r(ω) and the −(1 + 2 ln 2) coefficient.

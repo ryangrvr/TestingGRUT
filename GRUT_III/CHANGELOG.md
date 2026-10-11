@@ -8,6 +8,12 @@
   conventional QFT. `05` O5, `10` §4, `08`, RESPONSE R19.
 - `05` O5: option (b) of the fork identified with a Stage-3 𝒦 card (Card 1 under the frozen charter on `grut2-stage3`).
 - Sixth-round verification workflow over `v8`, `v11` (general a(t), ΛCDM), `v12`, `v13` rev. 2: `11_VERIFICATION_ROUND.md`.
+- `calc/v14_massless_sector_first_order.py` (PASS) and D13: the σ-free computation. Closed form for the massless minimally
+  coupled comoving two-point function in power-law FRW (dS function of index 3/2 + ε/(1−ε) × scale-factor ratio; checked
+  against a mode integral); first-order theorem W = (1 + 3ε/2)W_mmc(Δ; ä/ȧ) + ε(H̄²/8π²)S₂(cosh²(H̄Δ/2)) + ω = 0 terms
+  (Richardson); midline KMS symmetry ⇒ **thermal at (ä/ȧ)/2π at first order, Kodama–Hayward excluded, no σ**; spectral
+  shape change r(ω) (r(0) = 2 − 2 ln 2, r(∞) = 0); σ-free diffusion coefficient D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε]
+  (= stochastic value at σ* = e^{1−γ_E}). `05` O5 item 1 computed; `09` §4; `08`; RESPONSE R20; `run_all` runs v1–v14.
 
 ## Revision 2.3 (2026-10-11, fourth round)
 

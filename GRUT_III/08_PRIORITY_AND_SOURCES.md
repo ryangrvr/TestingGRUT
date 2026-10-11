@@ -186,6 +186,23 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
 - The remaining sources of the fifth-round survey (30+ papers; what was read at full text vs abstract) are listed at the
   end of `10_SECULAR_IR_SURVEY.md`.
 
+## Sources behind `v14` (sixth round)
+
+- Bunch & Davies (1978), Proc. R. Soc. A 360, 117: the de Sitter two-point function of a field of index ν as
+  (H²/16π²)Γ(3/2+ν)Γ(3/2−ν)₂F₁(3/2+ν, 3/2−ν; 2; (1+Z)/2) — the closed form `v14` continues to ν > 3/2 (checked at ν = 1/2
+  against the conformal propagator and at ν → 3/2 against Allen–Folacci's massless function, and against a direct mode
+  integral in power-law FRW). Allen & Folacci (1987), PRD 35, 3771: the massless minimally coupled field has no dS-invariant
+  state; the Z-dependent part (H²/8π²)[1/(1−Z) − ln(1−Z)] is what `v14` A reproduces at zeroth order.
+- Garbrecht & Prokopec (2004), gr-qc/0404058: comoving-detector response to the massless minimally coupled field in de
+  Sitter, G⁺(ω) = (ω + H²/ω)/(2π(1 − e^{−2πω/H})) — `v14` D′ reproduces it to 1e-12 as the zeroth order of the midline
+  method. The O(ε) shape function r(ω) and the σ-free diffusion coefficient −(1 + 2 ln 2) are, to the author's knowledge, not
+  in the literature (a check is owed; the power-law mode functions themselves are Abbott–Wise 1984, Lucchin–Matarrese 1985).
+- Cho, Kim & Kitamoto (2015): the stochastic coefficient A₀(σ) of `v13`; `v14` E shows the exact two-time function matches
+  it at σ* = e^{1−γ_E} = 1.526 (a calibration, not a derivation of σ).
+- Scripts: `v14` is author-written and author-run (sixth round); its five links (hypergeometric expansion, mode-integral
+  identity, first-order Richardson theorem, midline KMS symmetry, Hadamard cancellation) are each checked inside the
+  script; independent review is owed and is the first task of the next verification round.
+
 ## Verification status of the new scripts (honest record)
 
 The three-lens adversarial verification of `v7`–`v10` scheduled in the round-two workflow **did not run**: the four

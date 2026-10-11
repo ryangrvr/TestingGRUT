@@ -198,3 +198,38 @@ contact term −1/(8πε²) gives δ(1/4G) = −1/(12πε²). Species sums for t
 does *not* give G (Visser 2002 reaches the same conclusion). Coefficients are scheme-dependent (heat-kernel 1/48π vs
 Susskind–Uglum 1/360π); the scheme-free statement is Cooperman–Luty's S_ent = ¼δ(M_P²)A. **P2 is consistent, not
 derived; the finite G needs the UV completion.**
+
+## D13 — The massless minimally coupled sector under slow roll: first-order thermality at (ä/ȧ)/2π, σ-free (DERIVED; `v14`)
+
+**Representation.** By the `v12` 12.4 lemma the power-law massless modes are the de Sitter modes of index
+ν = 3/2 + ε/(1−ε) ≡ 3/2 + δ up to a ratio of scale factors, so the comoving two-point function is the Bunch–Davies de Sitter
+function of index ν (continued to ν > 3/2) times that ratio: W(t,t′) = (1−ε)²H(t)H(t′)Γ(3+δ)Γ(−δ)₂F₁(3+δ, −δ; 2; w)/16π² + C_IR,
+w = 1 + (τ−τ′)²/4ττ′, τ = −1/((1−ε)aH); the IR-cutoff state differs from the continued function by the constant C_IR
+(frozen super-horizon modes). Checked against a direct mode integral (`v14` B: 1e-11 where the integral converges; the
+cutoff differences at ν = 1.75 to 1e-5). Around the pole, ₂F₁ = 1 − δS₁(w) − δ²S₂(w) + O(δ³) with S₁ = w/2(1−w) − ln(1−w)
+(Allen–Folacci's massless function) and S₂ = −½ln(1−w) + Li₂(w) + ln(1−w)/2w + ½ − ¾w/(1−w); Γ(3+δ)Γ(−δ) = −(2/δ)(1 + 3δ/2 + …).
+
+**First-order theorem** (Richardson in ε against the exact closed form, `v14` C): at fixed mean time t̄,
+W(t̄,Δ) = (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)S₂(cosh²(H̄Δ/2)) + c₀ + c₂Δ² + O(ε²), c₂ = −εH̄⁴/32π². The conformal-factor
+combination is D11's pure shift to H_eff = ä/ȧ; the only new first-order term is the dilogarithm on the zeroth-order
+argument. Using H̄ or the Kodama–Hayward rate H̄(1 − ε/2) instead, or dropping S₂, leaves an O(ε) residual.
+
+**KMS.** Any function of cosh²(H̄Δ/2) is symmetric about the strip midline Im Δ = −π/H̄ (its value there is a function of
+−sinh²(H̄s/2), even in s), hence KMS at 2π/H̄ by itself; c₀ and c₂Δ² live at ω = 0. So the first-order KMS defect of the
+full function at β = 2π/(ä/ȧ) is O(ε²): **the massless sector is thermal at T = (ä/ȧ)/2π + O(ε²), like the conformal
+sector, and the Kodama–Hayward rate is excluded at O(ε) — with no coarse-graining scale anywhere in the computation.**
+The O(ε) physics is a *shape* change of the detector's spectral density, not a temperature change:
+ρ(ω) = ρ_mmc(ω; H_eff)[1 + ε r(ω)], ρ_mmc = (ω² + H²)/2πω, with r(0) = 2 − 2 ln 2 = 0.614, r(H̄) = 0.461, r(4H̄) = 0.085, r → 0
+in the UV (the S₂ pole 3/8π²Δ² cancels the 3ε/2 amplitude exactly: the Hadamard coefficient is unchanged, as it must be).
+
+**Byproduct (σ-free diffusion coefficient).** From the |Δ| growth of the two-time function at fixed t̄, valid for
+1/H̄ ≪ Δ ≪ 1/(εH̄): ⟨(φ(t) − φ(t′))²⟩ ≈ D|Δ| with D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε] + O(ε²) = (H_eff³/4π²)[1 + (2 − 2 ln 2)ε].
+The stochastic formula A₀(σ)H³ of `v13` reproduces it only at σ* = e^{1−γ_E} = 1.526: the exact two-time function
+calibrates the coarse-graining scale for this observable at first order (no γ_E survives; one ln 2 does). This is the
+σ-free answer to the question `v13` posed badly.
+
+**Scope.** Comoving detector; massless minimally coupled scalar; power-law FRW with constant ε (the first-order statement
+holds for general a(t) by the D11 argument wherever ε and η are first-order small, but only the constant-ε case is
+computed here); ω ≠ 0 (the IR constant and the ω = 0 polynomial terms are not part of the thermal statement). Gravitons
+share the mode equation of this field at linear order in dS and power-law FRW, so the same first-order temperature holds
+for the free tensor sector; interacting (loop) corrections are O5 item 2.

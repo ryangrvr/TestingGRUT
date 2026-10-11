@@ -85,15 +85,24 @@ rescues it: the massless spectrum in power-law FRW is tilted and scale-free (n �
 comparison between a zero-mode amplitude and an instantaneous H — including the equal-time correlator at a chosen physical
 separation — shifts its O(ε) coefficient by the logarithm of the chosen scale. The σ-independent object is
 frequency-resolved: the comoving detector's Wigner spectrum at ω ≠ 0 and its KMS ratio at O(ε), the quantity for which the
-conformal sector gave exact thermality at (ä/ȧ)/2π (`v11`). That computation is `v14`. **What stands:** O5 items 1 and 3
-close on other grounds — P1 assigns no temperature when the modular flow is not geometric, and the σ-independent
+conformal sector gave exact thermality at (ä/ȧ)/2π (`v11`). That computation is `v14`, below. **What stands:** O5 items 1
+and 3 close on other grounds — P1 assigns no temperature when the modular flow is not geometric, and the σ-independent
 correlators are fixed by conventional QFT.
 
+**The σ-free computation, done (`v14`, sixth round; D13).** The massless minimally coupled sector's comoving two-point
+function in power-law FRW has a closed form (the de Sitter function of index 3/2 + ε/(1−ε) times a ratio of scale factors,
+checked against a direct mode integral). At first order in ε it is (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)·S₂(cosh²(H̄Δ/2))
++ ω = 0 terms, where S₂ is an explicit dilogarithm. Because any function of cosh²(H̄Δ/2) is KMS at 2π/H̄ by itself, the
+first-order KMS defect at T = (ä/ȧ)/2π vanishes: **the massless sector is thermal at the detector temperature (ä/ȧ)/2π to
+O(ε), exactly like the conformal sector, and the Kodama–Hayward rate is excluded at O(ε)** — no coarse-graining scale
+enters. The first-order effect is a shape change of the spectral density, ρ = ρ_mmc(ω; H_eff)[1 + ε r(ω)] with
+r(0) = 2 − 2 ln 2 and r(∞) = 0, and the σ-free zero-mode diffusion coefficient is D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε], which the
+stochastic formula reproduces only at σ* = e^{1−γ_E} = 1.53. **O5 item 1 is now computed, not argued.** P1 adds nothing
+to it; conventional QFT fixes all of it.
+
 **What remains, in order (after `v13`).**
-1. (closed as GRUT questions) Items 1 and 3 — the massless-sector baseline and the secular-IR opening — close as above and
-   in `10`. The σ-independent first-order KMS defect of the massless sector for a comoving detector (`v14`) is the one
-   conventional number still worth having: it says whether the massless sector is thermal at (ä/ȧ)/2π at first order, as
-   the conformal sector is, or already non-thermal at O(ε).
+1. (closed) Items 1 and 3 — the massless-sector baseline (`v14`: thermal at (ä/ȧ)/2π at first order; D13) and the
+   secular-IR opening (`10`).
 2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer 2012 did
    exact dS): the last conventional baseline. Low priority: by the precedent of `v11` (conformal sector, O(ε²)) and `v13`
    (massless sector, O(ε)), conventional theory fixes it and P1 adds nothing.
@@ -103,7 +112,7 @@ correlators are fixed by conventional QFT.
 
 **The honest closing line now applies.** GRUT III is GR + QFT with a thermodynamic reading. In every regime computed in
 this branch — exact dS (KMS by construction), quasi-dS conformal sector through O(ε²) (`v11`), quasi-dS massless sector
-at O(ε) (`v13`), the horizon first laws (`v12`) — the answer is fixed by conventional theory and P0–P5 add no selection.
+at O(ε) (`v14`, σ-free), the horizon first laws (`v12`) — the answer is fixed by conventional theory and P0–P5 add no selection.
 The program's genuine fork is therefore not another computation inside P0–P5 but a decision: either (a) GRUT III is
 accepted as the thermodynamic *reading* of GR + QFT, a consistent framework with no distinctive prediction (`03`), or
 (b) a sixth postulate is proposed that breaks KMS-by-construction in a controlled, parameter-free way — the only route to

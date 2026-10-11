@@ -44,7 +44,17 @@ the reviewer identified is not a non-thermal window for the conformal sector; th
 remains O(ε²) (D11), and the bath temperature's meaning in FRW is now fixed by P1 rather than left to a choice between
 literature conventions.
 
-## 4. Caveats and the next computation (feeds `05` O5 item 1)
+## 4. The massless sector, done (`v14`, D13)
+
+The caution below was followed: the worldline function was built with the power-law t(η), from the de Sitter function of
+index ν = 3/2 + ε/(1−ε) times the ratio of scale factors, and checked against a direct mode integral. Result: at first order
+the massless minimally coupled sector seen by a comoving detector is KMS at **T_det = (ä/ȧ)/2π + O(ε²)**, the same
+temperature as the conformal sector; the Kodama–Hayward rate (H/2π)(1 − ε/2) is excluded at O(ε). The computation contains
+no coarse-graining scale (contrast `v13`). So the answer (b′) of §3 is now established for both sectors at first order,
+not only for the conformal one. The first-order effect in the massless sector is a shape change of the spectral density
+(r(0) = 2 − 2 ln 2, r(∞) = 0), not a temperature change.
+
+## 5. Caveats and priority (historical; the computation is now `v14`)
 
 - T_det was derived for conformal fields in the conformal vacuum. For the massless minimally coupled sector (and
   gravitons) the state is not conformally related to Minkowski and the result is not yet known. **Tool (`v12` 12.4):**
