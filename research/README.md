@@ -18,6 +18,14 @@ a conventional joint measurement distinction. It is not a new GRUT law,
 apparatus certification or authorization for a candidate attempt.
 [REORIENTATION_STATE.json](REORIENTATION_STATE.json) records the current direction.
 
+The owner-requested [apparatus feasibility decision](GRAVITATIONAL_FEASIBILITY_DECISION.md)
+selects the Leiden magnetic-levitation apparatus and keeps its gravity and cooling
+configurations separate. **NOT YET FEASIBLE** for the gravitational quantum
+comparison: quantum preparation, lifetime, joint readout and background
+certificates are absent. The [arithmetic record](GRAVITATIONAL_FEASIBILITY_NUMBERS.json)
+quantifies the cooling/noise deficit and a separate ordinary-force averaging
+estimate. No new law, fixture campaign, experiment or follow-up queue is created.
+
 The [limited Card-2 development waiver](card02/AUTHORIZATION.md) and earlier
 [authorization/intake](CARD02_AUTHORIZATION.md) remain historical metadata.
 The waiver did not certify the evaluation kit and does not extend to Card 3.
