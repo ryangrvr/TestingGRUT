@@ -1,0 +1,83 @@
+{
+  "status": "CP05_COVARIANT_RESPONSE_CHECKS_PASS",
+  "groups": [
+    {
+      "name": "exact_frame_trace_and_inverse_calibration",
+      "status": "PASS",
+      "Z": "5/2",
+      "mu2": "2/5",
+      "eta": "1/5"
+    },
+    {
+      "name": "specified_kinetic_domain_and_strength_bound",
+      "status": "PASS",
+      "cases": 5,
+      "scope": "algebraic controls; no empirical parameter selection"
+    },
+    {
+      "name": "independent_RK4_retarded_mode_response",
+      "status": "PASS",
+      "maximum_absolute_error": 1.3289369604763124e-13,
+      "rows": [
+        {
+          "t": 0.0,
+          "computed": 0.0,
+          "exact": 0.0,
+          "error": 0.0
+        },
+        {
+          "t": 0.5,
+          "computed": 0.11395365285852685,
+          "exact": 0.11395365285856007,
+          "error": 3.322342401190781e-14
+        },
+        {
+          "t": 1.0,
+          "computed": 0.34154278343585265,
+          "exact": 0.34154278343591915,
+          "error": 6.650235917504688e-14
+        },
+        {
+          "t": 2.0,
+          "computed": 0.33963817207284386,
+          "exact": 0.33963817207271096,
+          "error": 1.3289369604763124e-13
+        },
+        {
+          "t": 3.0,
+          "computed": 1.0621054287000988e-05,
+          "exact": 1.0621054288915333e-05,
+          "error": 1.914345282771554e-15
+        }
+      ]
+    },
+    {
+      "name": "static_lensing_slip_joint_control",
+      "status": "PASS",
+      "r": 1.5811388300841895,
+      "slip": 0.8629330463907888,
+      "force_over_tensor_Newton": 1.147151776468577,
+      "scalar_potential_fraction": 0.07357588823428847
+    },
+    {
+      "name": "retarded_positive_pole_and_mass_threshold",
+      "status": "PASS",
+      "scope": "regulated frequency diagnostic; analytic light-cone support proved in report"
+    },
+    {
+      "name": "common_mass_dispersion_and_local_dof",
+      "status": "PASS",
+      "local_dof": 3,
+      "tensor": 2,
+      "scalar": 1
+    },
+    {
+      "name": "baseline_and_freeze_integrity",
+      "status": "PASS"
+    }
+  ],
+  "group_count": 7,
+  "python": "3.12.14",
+  "code_sha256": "abbabf56313067c74d7a854e2ef636a186c4d2d360f29e640fec5af1e9c15650",
+  "verdict": "WORKING_LEADING_SCALAR_TENSOR_MODEL; NO_NEW_GRUT_LAW_OR_EMPIRICAL_VALIDATION"
+}
