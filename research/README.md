@@ -1,18 +1,23 @@
 # Authorized development research
 
-The owner granted a [limited Card-2 development waiver](card02/AUTHORIZATION.md)
-of the pre-development external-kit requirement. One law was then frozen before
-numerical evaluation and is now **AUTHOR KILL — PENDING INDEPENDENT REVIEW**.
-Its local-unitary symmetry freezes every elementary local state; product blocks
-cannot bootstrap new interactions. See the exact proofs, conventional
-countermodels and reproducible controls in [the Card-2 result](card02/REPORT.md).
-Two slots are consumed; one remains; Card 3 is reserved and unopened.
-The [final-attempt decision memorandum](FINAL_ATTEMPT_DECISION.md) recommends
-**B — stop the present Stage-3 candidate route**, while preserving the unused
-slot and pending external checks. This is a recommendation under the owner's
-closeout assignment, not a canonical route terminal or a new law attempt.
-The earlier [authorization/intake](CARD02_AUTHORIZATION.md) is retained as
-historical metadata. The waiver did not certify the evaluation kit.
+**Current owner direction: Stage 3 inactive; no canonical T-3 final count or
+terminal issued.** Cards 1 and 2 are consumed, author KILL, pending independent
+scientific review. Card 3 is unopened and unauthorized. One slot is unconsumed;
+it is not immediately deployable under inactivity.
+
+The owner accepted Recommendation B in the preserved
+[final-attempt decision memorandum](FINAL_ATTEMPT_DECISION.md), with this
+procedural clarification, and directed evidence-led fundamental research to
+continue separately. The [bounded scientific decision](EVIDENCE_LED_DECISION.md)
+selects how coherent quantum matter sources gravity as an unresolved physical
+question. It identifies an existing conditional obstruction and its premise
+boundary, not a new GRUT law or an authorized candidate attempt.
+[REORIENTATION_STATE.json](REORIENTATION_STATE.json) records the current direction.
+
+The [limited Card-2 development waiver](card02/AUTHORIZATION.md) and earlier
+[authorization/intake](CARD02_AUTHORIZATION.md) remain historical metadata.
+The waiver did not certify the evaluation kit and does not extend to Card 3.
+PR #12 remains draft; all frozen scientific packets remain unchanged.
 
 | Packet | Result | Scientific status |
 |---|---|---|
@@ -37,7 +42,8 @@ that a family admitting specified memory-only controls and their resource costs
 cannot narrow local-record allocation at a surviving visibility. Its closure
 and spare-control assumptions are explicit; it is not an unconditional no-go.
 
-One card slot remains. No Card-3 law is formulated or evaluated. Earlier
+One card slot is unconsumed; Stage 3 is inactive. No Card-3 law is formulated
+or evaluated. Earlier
 reconnaissance rows describe their historical card state. The canonical state,
 evaluator/CR-5 external review and bank flags are not changed by these development
 packets. Source papers, reproducible
