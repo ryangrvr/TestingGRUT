@@ -121,13 +121,23 @@ def simulate(n):
     tv=.5*np.sum(abs(recorded_geom-orig_geom))
     origR=-2*np.vdot(base,Amat@(Ut@(Bmat@g))).imag
     recR=sum((-2*np.vdot(Ut@v,Amat@(Ut@(Bmat@v))).imag for v in groups))
+    impulse=1e-5
+    pulseplus=expm(1j*impulse*Bmat)
+    pulseminus=expm(-1j*impulse*Bmat)
+    def expected_A(v):
+        v=Ut@v
+        return np.vdot(v,Amat@v).real
+    impulse_original=(expected_A(pulseplus@g)-expected_A(pulseminus@g))/(2*impulse)
+    impulse_recorded=sum((expected_A(pulseplus@v)-expected_A(pulseminus@v))/(2*impulse) for v in groups)
+    assert abs(impulse_original-origR)<1e-8
+    assert abs(impulse_recorded-recR)<1e-8
     assert tv>1e-6
     assert abs(origR-recR)>1e-6
     assert abs(np.linalg.norm(base)-1)<1e-12
     print(f'N={n}: posets={G}, different role records={len(tags)}, ancilla bits={int(math.log2(rd))}')
     print(f' E0={E0:.10f}, gap={gap:.10f}, record_fidelity={record_fidelity:.10f}, gap_lower_bound={lower_bound:.10f}')
     print(f' record_energy_increase={deltaE:.10f}, geometry_TV_at_t.4={tv:.10f}')
-    print(f' unrecorded_relational_response={origR:.10f}, persistent_record_response={recR:.10f}, oracle_error={oracle_err:.3g}')
+    print(f' unrecorded_relational_response={origR:.10f}, persistent_record_response={recR:.10f}, oracle_error={oracle_err:.3g}, recorded_impulse_error={abs(impulse_recorded-recR):.3g}')
     assert abs(origR - {2:0.05258851,3:0.10919014}[n])<5e-7
     return dict(N=n, posets=G, roles=len(tags), bits=int(math.log2(rd)),E0=E0, record_energy=deltaE, recorded_geom_tv=tv, response_no_record=origR, response_record=recR)
 
