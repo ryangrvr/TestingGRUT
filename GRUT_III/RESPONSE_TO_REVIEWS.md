@@ -200,3 +200,21 @@ mathematical representation, not an actual local field theory; Källén–Lehman
 T5's scope (the Brownian covariance is asymptotic; imaginary-time periodicity does not settle full KMS analyticity).
 Both reworded in `07` and D10. The reviewers' verification of v7, v9, v10 against the smeared-detector result,
 Solodukhin's coefficients and the standard D = H³/4π² is recorded in `08`.
+
+
+## R16 — Addendum (third round, 2026-10-11): which temperature is the bath's?
+
+**Claim.** T_det = (ä/ȧ)/2π = (H/2π)(1 − ε) and the apparent-horizon T_KH = (H/2π)(1 − ε/2) differ at O(ε); GRUT III
+must choose (equal / different by a stated rule / silent); this is a first-order window in the non-thermal regime.
+
+**Verdict: the question is correct and answered — option (b′), rule derived (`09`, `v12`).** P1 assigns a temperature
+only where the restricted state's modular flow is geometric; the apparent horizon is not a Killing horizon for ε ≠ 0
+(Ṙ_A = ε), so P1 assigns it none; T_det is the state's KMS parameter and the detector reading; T_KH is Hayward's
+dynamical surface gravity, which makes the horizon first law an identity of the Einstein equations D3 already supplies
+(verified symbolically: Cai–Kim with T₀ = 1/2πR_A; Akbar–Cai with the signed κ). No heat-flow law is implied; the O(ε)
+mismatch is the apparent horizon's expansion rate. The definite statement — a comoving detector coupled to a conformal
+field thermalises at (ä/ȧ)/2π, not at T_KH — is conventional QFT and not a GRUT discriminator. Caveat accepted: this is
+for conformal fields in the conformal vacuum; the massless/graviton sector is the next computation, with the
+mode-equation identity of `v12` 12.4 as the tool. Attribution note: arXiv:0812.3006 is Jiang–Ke–Peng–Feng; the κ formula
+is Hayward's, used by Cai–Kim (2005), Akbar–Cai (2007) and Cai–Cao–Hu (2009); Tian–Booth (2014) is the "temperature
+confusion" reference, read at abstract level here.

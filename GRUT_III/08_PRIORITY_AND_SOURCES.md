@@ -157,6 +157,20 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
   independently checked by them.
 - Accepted in full; `v11` rewritten (rev. 3); see RESPONSE R15.
 
+## Apparent-horizon temperature sources (third round; abstracts fetched, formula checked symbolically)
+
+- Hayward's dynamical surface gravity κ = −(1/R_A)(1 − Ṙ_A/(2HR_A)) at the FRW apparent horizon: Cai & Kim (2005, JHEP
+  02, 050) use T = 1/(2πR_A); Akbar & Cai (2007, PRD 75, 084003) show the unified first law dE = (κ/2π)dS + WdV holds
+  with the full κ; Cai, Cao & Hu (2009, CQG 26, 155018) derive Hawking radiation of the apparent horizon with it;
+  arXiv:0812.3006 (Jiang, Ke, Peng, Feng) relates the tunnelling rate to the unified first law. `v12` 12.3 verifies
+  both identities symbolically for flat FRW with a perfect fluid.
+- Tian & Booth (2014, arXiv:1411.6547), "Apparent horizon and gravitational thermodynamics of the Universe: solutions
+  to the temperature and entropy confusions": abstract read; argues the Cai–Kim Clausius relation encodes a
+  positive-heat-out convention and abandons the local-equilibrium assumption in the generalised second law. Consistent
+  with `09`'s reading that T_KH is bookkeeping for an identity rather than a KMS parameter; full text not read here.
+- The first-order detector temperature (ä/ȧ)/2π for conformal fields in the conformal vacuum (D11) — literature check
+  owed.
+
 ## Verification status of the new scripts (honest record)
 
 The three-lens adversarial verification of `v7`–`v10` scheduled in the round-two workflow **did not run**: the four

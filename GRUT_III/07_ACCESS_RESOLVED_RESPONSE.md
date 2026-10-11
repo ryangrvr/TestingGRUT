@@ -120,7 +120,8 @@ T1–T2 are two-point, stationary statements. The non-stationary case is handled
 mean-time form the record's dS paper already used), and T5 shows the only non-stationary object in the free
 gravitational sector is the zero-mode random walk. Under slow roll the conformal sector stays KMS **through first
 order** at T_eff = (ä/ȧ)/2π (D11, corrected after review); the first conventional violation is O(ε²) and frequency
-dependent, and today (ε₀ = 0.47) the exact kernel is needed. The genuinely open regime is the *interacting* gravitational
+dependent, and today (ε₀ = 0.47) the exact kernel is needed. The apparent-horizon temperature (H/2π)(1 − ε/2) is
+not a bath temperature in P1's sense (`09`): it labels a non-Killing horizon and closes Hayward's first law as an identity. The genuinely open regime is the *interacting* gravitational
 infrared in de Sitter, where secular growth of loop corrections is unresolved in the literature and where a
 non-stationary residual (ΔW(t, t') beyond the Brownian term) would be the first place a "responsive" correction
 could appear without being inserted. That is a research problem in quantum gravity, stated here as the one opening;

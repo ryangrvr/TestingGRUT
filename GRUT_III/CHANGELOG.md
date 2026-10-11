@@ -1,5 +1,13 @@
 # GRUT III — changelog
 
+## Revision 2.2 (2026-10-11, third round)
+
+- `09_TWO_TEMPERATURES.md` + `calc/v12`: the reviewer's O(ε) question — detector temperature (ä/ȧ)/2π vs
+  apparent-horizon Kodama–Hayward temperature (H/2π)(1 − ε/2) — answered from P1: only the state's KMS parameter is a
+  bath temperature; the apparent horizon is non-Killing for ε ≠ 0; Cai–Kim and Akbar–Cai horizon first laws verified
+  to be identities of the Einstein equations (symbolic); no heat-flow law; no O(ε) non-thermal window for the conformal
+  sector. Lemma for the massless/graviton sector: power-law massless mode equation ≡ dS massive with ν = 3/2 + ε/(1−ε).
+
 ## Revision 2.1 (2026-10-11, after the second round of reviews)
 
 - `v11` rev. 3: revision-2 headline (first-order c ≈ 1.01 plus 1%-of-ε frequency dependence) **retracted** — it was

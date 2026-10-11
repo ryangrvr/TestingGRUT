@@ -60,8 +60,14 @@ kernel does not select that scalar; by `07` §4 the mechanism is an added field 
 future construction's novelty claim must therefore be a *selection* statement forced by P0–P5, tested by connecting
 independently measured quantities without refitting — not another realization of a passive kernel.
 
+**A first-order question answered (`09`, `v12`).** The comoving detector temperature (ä/ȧ)/2π and the apparent-horizon
+Kodama–Hayward temperature (H/2π)(1 − ε/2) differ at O(ε); P1 says only the former is a bath temperature (the apparent
+horizon is not Killing for ε ≠ 0, so no KMS parameter exists for it), and the horizon first laws are identities of D3's
+Einstein equations, not inputs. No heat-flow law; no O(ε) non-thermal window for the conformal sector.
+
 **Next computations, in order.**
-1. The gravitational sector's own quasi-dS baseline: the massless (ν = 3/2 + O(ε)) worldline two-time function in
+1. The gravitational sector's own quasi-dS baseline (tool: the mode-equation identity of `v12` 12.4 — massless field in
+   power-law FRW ≡ massive field in dS with ν = 3/2 + ε/(1−ε)): the massless (ν = 3/2 + O(ε)) worldline two-time function in
    power-law inflation, its stationary part's KMS defect, and the O(ε) correction to the zero-mode diffusion
    constant D = H³/4π² (expected: D(t) = H(t)³/4π² with the spectral tilt n_T = −2ε encoded in the two-time
    structure). This fixes what conventional theory says for the free graviton sector.
