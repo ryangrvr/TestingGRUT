@@ -23,7 +23,7 @@ The corresponding *same-coupling* fermionic energy is
 \[
 \boxed{U_\phi(G)=\kappa |E(G)|-\operatorname{Tr}\big[\sqrt{I+B_G(\phi)B_G(\phi)^\dagger}-I\big].}
 \]
-The one-body Dirac block structure and its singular-value derivation are unchanged. On a forest all phases can be removed by vertex gauge transformations, so \(U_\phi(G)\) is *identical* to \(U_0(G)\) for every phase assignment. Nontrivial magnetic flux is observable only on graph cycles. This is an exact algebraic distinction between a field that affects propagation and a hand-inserted local loop reward. We are nonetheless **supplying phase degrees of freedom** and must eventually explain their dynamics.
+The one-body Dirac block structure and its singular-value derivation are unchanged. An important exact stability bound also survives **all** phase assignments: since Tr(B_phi B_phi^dagger)=2|E|, concavity and Jensen give U_phi/N >= kappa e - sqrt(1+2e)+1, with e=|E|/N. At the frozen kappa=1/2 this is >= -1/4 for every graph, so the magnetic-phase comparator has not purchased its loop benefit by breaking the original conditional extensive lower bound. On a forest all phases can be removed by vertex gauge transformations, so \(U_\phi(G)\) is *identical* to \(U_0(G)\) for every phase assignment. Nontrivial magnetic flux is observable only on graph cycles. This is an exact algebraic distinction between a field that affects propagation and a hand-inserted local loop reward. We are nonetheless **supplying phase degrees of freedom** and must eventually explain their dynamics.
 
 ## 3. An exact four-cycle effect
 
