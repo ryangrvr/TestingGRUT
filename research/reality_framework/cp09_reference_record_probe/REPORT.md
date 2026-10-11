@@ -94,7 +94,7 @@ Uncomputing a coherent role tag *before CP-09 evolution* recovers the original p
 | Response following a retained role record | −0.0020149978 | 0.0467927797 |
 | Coherent oracle source-pulse error | 0 | 0 |
 
-The unrecorded responses match the previously published CP-09 disjoint role values without using their implementation. The *recorded response* means: apply the exact role-recording isometry at preparation time, keep the role reference inaccessible (trace it), then apply the same source impulse B and evolve under the same frozen H, measuring A at t=0.4. It is not a conditional response postselected on a particular record value. The geometry TV compares the recorded evolving mixture against the original stationary pure ground-state geometry distribution.
+The unrecorded responses match the previously published CP-09 disjoint role values without using their implementation. Both unrecorded and persistent-record Kubo responses were also cross-checked by independent finite source-pulse derivatives at ε=10^-5; the recorded-impulse discrepancies are 3.47e-12 (N=2) and 3.18e-12 (N=3). The *recorded response* means: apply the exact role-recording isometry at preparation time, keep the role reference inaccessible (trace it), then apply the same source impulse B and evolve under the same frozen H, measuring A at t=0.4. It is not a conditional response postselected on a particular record value. The geometry TV compares the recorded evolving mixture against the original stationary pure ground-state geometry distribution.
 
 These tests are exact small-Hilbert-space numerical checks of a stipulated ordinary quantum model, not evidence of physical observers, quantum collapse or spacetime emergence.
 
