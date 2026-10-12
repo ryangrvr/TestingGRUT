@@ -107,7 +107,23 @@ The calculation demonstrates an operationally meaningful distinction between one
 
 Executable: [relational_response.py](relational_response.py); source-sign finite impulse comparisons pass within \(10^{-8}\).
 
-## 5. What this construction genuinely resolves—and what it still does not
+## 5. Local conditional response does not erase the global reconnection shortcut
+
+An adversarial **operator-amplitude test** shows that this complete quantum model still cannot claim a physical light cone. Start with a single N-cycle and choose two occupied bonds whose endpoints are far apart by r≈N/2 *along the original ring*. The original fermion hopping Hamiltonian has no matrix element that moves an occupied fermion directly from one selected endpoint p to a distant endpoint q.
+
+But the graph reconnection Hamiltonian acts on **any pair of occupied bonds**. In one reconnection, it can replace their edges with a new bond \((p,q)\), and in a second operation the fermion can hop along that newly created bond. With a correctly chosen initial Fock state (p occupied, q empty) and final state (p empty, q occupied) we obtain
+\[
+\langle P',F'|H_{\rm joint}|P,F\rangle=0,
+\qquad
+\boxed{\bigl|\langle P',F'|H_{\rm joint}^2|P,F\rangle\bigr|=\Gamma t/N.}
+\]
+The corresponding second-order unitary amplitude has magnitude \(\Gamma t\,\tau^2/(2N)\), regardless of the chosen endpoints' **original graph distance**. The exact full N=4 joint sparse matrix gives a first-order element zero and the predicted \(H^2\) element **-0.025** at \(\Gamma=.1,t=1\), for originally distance-two vertices. [shortcut_control.py](shortcut_control.py) independently checks it, then records the exact large-N coefficient for ring distance r=N/2.
+
+This is a **microscopic nonlocal shortcut** relative to the pre-existing graph, not a demonstrated faster-than-light *physical signal*. It is 1/N-suppressed per selected remote channel; a continuum limit might suppress it, and physical observers/clocks have not been derived. Nevertheless **there is currently no established uniform locality/Lieb–Robinson or microcausal cone for the fully dynamical geometry**. The attractive conditional neighbor response is therefore insufficient to credit relativistic propagation.
+
+There is a structural reason that this is hard to repair: any reconnection rule acting *only within one currently disconnected component* cannot join it to another component. A dynamics that changes disconnected topology to connected topology must either have some pregeometric cross-component interaction, supply an independent mediator/reference, or treat connectivity classes as fixed superselection sectors. A microscopic epoch of nonlocality does not by itself rule out emergent low-energy locality, but its disappearance must be *dynamically demonstrated*.
+
+## 6. What this construction genuinely resolves—and what it still does not
 
 **New mathematical progress relative to the earlier SCOUT:** the mechanism now supports a fixed physical matter register and a fully coherent quantum geometry changing in time, with the same port pairing controlling fermionic hopping and the energy that favors connected cycles. It has an extensive lower bound and robust small finite-N connectedness, and explicitly exhibits matter–geometry entanglement. This addresses the Born–Oppenheimer and edge-register identification concerns left by the earlier conditional and quantum-effective benchmarks.
 
