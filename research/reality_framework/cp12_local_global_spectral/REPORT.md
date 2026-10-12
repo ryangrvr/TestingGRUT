@@ -144,7 +144,34 @@ The exact values were computed independently by enumerating all vertex/edge orie
 
 **Boundary:** averaging *minima* of charged conditional configurations does not imply the interacting CP-12 ground state prefers the square, because its vacuum, kinetic, gauge and charged-sector state multiplicities also determine the free energy. Indeed cheap charge separations might favor a random expander with short paths over any finite-dimensional manifold. A dynamical selection calculation would have to compare the full dressed energies/free energies and geometrical probabilities, not merely this bare electric excess.
 
-## 7. The physics consequence
+## 7. Cooling degree-four selection also fails an extensive spatial-family counting test
+
+The owner's earlier two-regular theorem shows that temperature reduction does not choose a spanning ring from equally weighted cycle partitions. There is a stronger higher-valence version using established **Bender–Canfield fixed-degree graph enumeration**, without claiming an original counting theorem.
+
+For N vertices and Q=2N simple undirected bonds, the degree-only energy \(\lambda W\), \(\lambda>0\), is minimized by **all** four-regular graphs, each with exactly \(W=6N\). The conditional distribution given perfect degree four is therefore uniform for *any* inverse-temperature sequence \(\beta_N\lambda_N\), including an idealized zero-temperature projection. The standard labelled count satisfies
+\[
+\boxed{
+R_{N,4}\sim
+\frac{(4N)!}{2^{2N}(2N)!(4!)^N}e^{-15/4}
+=\exp[2N\log N+O(N)].
+}
+\]
+If a specified spatial class contains at most \(e^{cN}\) unlabelled templates and counts every labelling of each, then \(|\mathcal S_N|\le N!e^{cN}\), while every member is four-regular. Therefore
+\[
+\boxed{
+P_{\rm degree\ only}(\mathcal S_N)
+\le P(\mathcal S_N\mid\mathrm{4\!-\!regular})
+\le \frac{N!e^{cN}}{R_{N,4}}
+=\exp[-N\log N+O(N)]\to0.
+}
+\]
+The same asymptotic suppression persists if we *condition on connectedness*, because fixed d>=3 random regular graphs are connected with probability approaching one (Wormald's classical result). For one **single** square-torus isomorphism orbit, its number of labelled realizations is at most N!, giving the stronger explicit upper bound \(N!/R_{N,4}\).
+
+This is only a **degree-energy Gibbs theorem** at Q=2N. Exact four-cycle density is a much stronger, separately imposed condition and could alter entropy at leading order; the local-indistinguishability counterexample above proves a distinct point, that bounded-radius diagnostics do not guarantee the macroscopic geometry even when some of them are fixed exactly. The full quantum CP-12 dynamics is not replaced by uniform labelled graph counting.
+
+Prior literature: [Wormald, Models of Random Regular Graphs](https://web.williams.edu/Mathematics/sjmiller/public_html/ntprob19/handouts/graphs/Womald_ModelsRandomGraphs.pdf), Theorem 2.2 and §2; [Wormald, asymptotic connectivity of labelled regular graphs (1981)](https://doi.org/10.1016/S0095-8956(81)80021-4); [Friedman, Alon's second eigenvalue conjecture](https://arxiv.org/abs/cs/0405020).
+
+## 8. The physics consequence
 
 There are **three logically separate properties** that CP-12 must obtain, not infer from one another:
 
