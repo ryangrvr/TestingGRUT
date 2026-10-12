@@ -42,9 +42,10 @@ def main():
         far=n//4
         assert abs(Lg[0,far])>1e-6
         assert abs(Ll[0,far])<1e-12
+        # Sorted spectra contain +/-k degeneracies: index 3 is k=2.
         rows.append(dict(N=n,
-            nearest_phase_spring_omega2_over_omega1=float(np.sqrt(localeig[2]/localeig[1])),
-            all_pairs_log_omega2_over_omega1=float(np.sqrt(logeig[2]/logeig[1])),
+            nearest_phase_spring_omega2_over_omega1=float(np.sqrt(localeig[3]/localeig[1])),
+            all_pairs_log_omega2_over_omega1=float(np.sqrt(logeig[3]/logeig[1])),
             distant_pair_hessian=float(Lg[0,far]),
             distant_nearest_gap_hessian=float(Ll[0,far])))
     # In the long-wave region, log all-pairs omega_k~sqrt(k),
