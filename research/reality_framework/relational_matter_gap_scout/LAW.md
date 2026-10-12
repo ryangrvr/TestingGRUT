@@ -12,6 +12,8 @@ H_L=\sum_i\frac{p_i^2}{2m}+g\sum_{i=1}^N \frac{1}{\ell_i}+PL,\quad g,P,m>0.
 \]
 For linearized dynamics, work at fixed L and small displacements of the ordered equilibrium. For the classical isothermal-isobaric ensemble, L varies and the overall phase rotation is gauge fixed, with flat measure \prod_i d\ell_i. A **single fully quantized, autonomous Hamiltonian for the dynamical circumference, its conjugate momentum and its boundary conditions is NOT yet constructed**. These two limits may not be conflated.
 
+The phase coordinate is a **physical global-relative S1 coordinate**, not an individually gauge-redundant phase at each site. Under independent local U(1) shifts the cyclic adjacency would change, so local gauge invariance is NOT earned. Only simultaneous global rotations preserve the ordering. A gauge-invariant realization would require additional connecting fields or physically prepared phase references.
+
 No pairwise graph qubits or arbitrary N choose 2 edge decisions are supplied. The adjacency is the cyclic successor relation induced by matter phase order. But this is *not* derivation of phase-space geometry or of the required interactions from a more primitive law.
 
 ## Mandatory tests
