@@ -64,6 +64,28 @@ def exact_spectral_dimension(a,b,time):
         return float(weight@lam/weight.sum())
     return 2*time*(mean_lambda(a)+mean_lambda(b))
 
+def incidence_distance_stats(a,b):
+    # CP12 incidence path from edge hole h={u,v} to a vertex x is
+    # 1+2 min(dist(u,x),dist(v,x)). Cartesian-cycle distances are exact.
+    def cd(x,side):
+        y=x%side
+        return min(y,side-y)
+    distances=[]
+    for orientation in (0,1):
+        for x in range(a):
+            for y in range(b):
+                d0=cd(x,a)+cd(y,b)
+                d1=(cd(x-1,a)+cd(y,b) if orientation==0
+                    else cd(x,a)+cd(y-1,b))
+                distances.append(1+2*min(d0,d1))
+    expected=(a+b)/2
+    mean=sum(distances)/len(distances)
+    assert abs(mean-expected)<1e-12
+    return dict(mean_incidence_distance=mean,
+                exact_formula=(a+b)/2,
+                max_incidence_distance=max(distances),
+                mean_bare_electric_energy_at_epsilon_quarter=mean/8)
+
 def random_gap(G):
     A=csr_matrix(nx.to_scipy_sparse_array(G,format="csr",dtype=float))
     Lap=4*eye(len(G),format="csr")-A
@@ -93,6 +115,8 @@ def main():
         exact.append(dict(N=N,square_dimensions=sq,
             thin_dimensions=thin,invariants=fa,square_gap=gap_a,
             thin_gap=gap_b,gap_ratio=gap_a/gap_b,diffusion=dims,
+            CP12_charge_hole_square=incidence_distance_stats(*sq),
+            CP12_charge_hole_thin=incidence_distance_stats(*thin),
             heat_return_t20_square=heat_return(*sq,20.),
             heat_return_t20_thin=heat_return(*thin,20.)))
         if k in (2,3):
@@ -112,6 +136,7 @@ def main():
         theorem="For any fixed radius r, sufficiently wide fixed strips and growing square tori have isomorphic rooted r-balls and identical sum-of-local-r-ball energies, yet differ in macroscopic spectral gap and diffusion.",
         exact_gaps="lambda2(C_a Cartesian C_b)=4 min(sin(pi/a)^2,sin(pi/b)^2)",
         asymptotics="Square gap ~4 pi^2/N. Fixed-width w strip gap ~4 pi^2 w^2/N^2.",
+        CP12_physical_distance_identity="Average incidence charge-hole distance on C_a Cartesian C_b is (a+b)/2; bare electric excess is epsilon_E*(a+b)/4. This is a fixed-charge conditional energy diagnostic, NOT evidence for quantum geometry selection.",
         data=exact,random_regular_controls=random,
         limitations=[
             "The graph geometries are mathematical hostile controls, not CP12-generated states.",
