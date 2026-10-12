@@ -7,8 +7,8 @@ physics/scope, numerics) on `v14`. Results are structured (verdict, checks, issu
 acted on by the author; this file is the record.
 
 **Status (2026-10-12).** First launch: 3 of 10 round-6 agents and 0 of 3 `v14` agents ran; the rest were refused at
-launch by a session usage limit. Both workflows were relaunched after the limit reset; the three `v14` agents have now
-reported (below); the remaining round-6 agents are recorded as they report.
+launch by a session usage limit. Both workflows were relaunched after the limit reset and all thirteen agents have reported.
+Every finding is recorded below with the fix made or the reason it was left.
 
 ## Completed audits
 
@@ -114,15 +114,75 @@ convention note. `05`, `09` §1 and §4 — "seen by a comoving detector" / "wha
 Wigner-spectrum statement, with the one-sided caveat. The headline survives in this form: the fixed-mean-time spectrum of
 the massless sector at ω ≠ 0 is KMS at (ä/ȧ)/2π to O(ε), Kodama–Hayward excluded, no coarse-graining scale.
 
-### `v11` Part D lens B, `v12` (both lenses), `v13` rev. 2 (both lenses)
+### `v11` Part B — lens B: CONFIRMED (with code fixes)
 
-Relaunched after the usage-limit refusal; this section is filled in when they report. Until then `v12` and `v13` rev. 2
-remain author-level, as `08` states.
+Could not break the headline: the Part B first-order remainder simplifies to zero symbolically (not merely small at points);
+a mutation that mis-shifts H_eff by 1e-6·εH fails the test, Kodama–Hayward fails by 11; an independent non-power-law family
+a = t^p e^{ct} (η/ε = −2, −6) gives (R−1)/ε → 0 to 3e-15. Found and **fixed**: `richardson()` applied the first-order weight 2 at
+every level (should be 2, 4/3, 8/7), leaving an ε²/8 artefact — exactly the "c = 1 to 3e-5" of D11/R15; with the correct
+weights c = 1 to 1e-9 (the D₂ digits were unaffected); the εη coefficient of the second-order remainder was printed but never
+checked — now checked against the auditor's closed form g(x) = 2 + x²/4 − (x + x³/24)coth(x/2) to 1e-16; the first-order
+identity is now also established symbolically in the script. Recorded, not changed: the second-order formula is complete
+only under the full adiabatic hierarchy (ε₃ = η̇/Hη also small) — added to the docstring; the scope is the conformally coupled
+massless scalar's worldline function in flat FRW (other scalar primaries by Weyl covariance; composite, higher-spin and
+smeared observables not computed) — added.
+
+### `v11` Part D (ΛCDM) — lens A: PARTIAL; lens B: PARTIAL (numbers right, framing wrong)
+
+Every number reproduced to all digits (ε₀ = 0.4725, H_eff = 0.5275H₀, t₀ = 0.951/H₀, deviations 0.1217%, 0.5563%, 3.639%,
+19.16%). What did not hold was the prose: (i) "deviates from any thermal form by up to 19%" — only the H_eff form was compared;
+the T = 0 (Minkowski) form is closer at every grid point, the deviation is unbounded as Δ → 2t₀ (1422% at Δ = 1.9/H₀), and the
+KMS defect at 2π/H_eff is O(1–100); (ii) "factors 4–18 above the second-order prediction" — the factor ≈ 4 at Δ ≤ 0.5/H₀ is exactly
+1/(1−ε₀)² from evaluating f₂ at x = H_effΔ rather than H̄Δ (an O(ε³) convention), so it carried no information; (iii) the small-Δ
+agreement is the universal Hadamard term — the local effective rate in the Δ² correction is H₀√(1 − 2ε₀) = 0.23H₀, not
+H_eff = 0.53H₀; (iv) the Δ = 1.5/H₀ pair samples z = 2.25 (ε = 1.4 there) and a point 10.9 Gyr in the future; (v) a unit label
+"T_eff = 0.084 H₀/2π" (should be 0.084 H₀); (vi) the printed conclusion was hard-coded text. Positive finding (lens B): in the
+midpoint convention the exact ΛCDM kernel has imaginary period 4π/(√Ω_Λ H₀) with a pole inside the strip, so it is KMS at no β
+— the conclusion "not thermal at any single temperature" is true, but was not what the script computed. **Fixed:** D11's last
+paragraph, `05`, R15 and the CHANGELOG reworded to what was computed; `v11` Part D now prints the T = 0 comparison, the local
+effective rate, both x conventions, and a computed (not hard-coded) summary.
+
+### `v12` — lens A: CONFIRMED; lens B: PARTIAL (computation right; attributions wrong)
+
+Independently reproduced: κ from its definition in flat FRW, T_KH, T_det, the exact ratio, the Cai–Kim and Akbar–Cai identities
+with exactly the temperature/sign each author uses, the lemma's exponent. Found and **fixed**: (i) 12.2 contained no
+computation — now the Kodama vector K = ∂_t − Hr∂_r is shown null on R_A = 1/H and its Lie derivative of the metric has the
+single component −a²rḢ (Killing iff ε = 0); (ii) 12.4's ν(ε) was typed in — the exponent −p/(p−1) is now derived from
+η = ∫dt/a; (iii) **source misattribution**: Cai–Kim 2005 and Cai–Cao–Hu 2009 use T₀ = 1/(2πR_A) = H/2π, not T_KH (Cai–Cao–Hu
+leave the |κ|/2π relation open); `08` said Cai–Cao–Hu derive Hawking radiation "with the full κ" — false; (iv) Tian–Booth 2014
+misdescribed: their "temperature confusion" is T₀ versus Hayward's κ/2π, resolved by adopting T₀; the positive-heat-out
+convention fixes the sign of the Gibbs relation, not the temperature; (v) "the mismatch is exactly the apparent horizon's
+expansion rate" — it is half of it relative to T_KH (and the full rate relative to T₀); (vi) "T_KH closes the unified first
+law" — only the signed κ/2π = −T_KH does; (vii) the step "not Killing ⇒ P1 assigns no temperature" is an application of P1's
+definition (whose geometric list in `01` includes conformal double cones), not a computation — now said so in `09` and `v12`;
+(viii) "thermalises" replaced by the `v11` statement in the fixed-mean-time convention; (ix) the velocity correlator is IR
+finite only for ε < 2/3 — added.
+
+### `v13` rev. 2 — lens A: CONFIRMED; lens B: PARTIAL (arithmetic right; the inference's reasons were the wrong ones)
+
+Every equation transcribed from Cho–Kim–Kitamoto verified against the paper; the σ-dependence, c₁(σ), c_X(σ) and the three σ
+values reproduced; ten mutations each break the right checks. Substantive findings: (i) **a σ-free invariant exists** — the
+zero-frequency noise strength D(t′) = lim_{t→∞}∂_{t′}W(t,t′) has the closed form D/H³ = (√π/2π³)(1−ε)³Γ(ν)Γ(5/2−ν)cos(πε/(1−ε))
+(auditor's derivation, checked against a direct mode integral to 15 digits at ε = 0, 0.05, 0.1, 0.3), whose O(ε) coefficient is
+exactly −(1 + 2 ln 2) — the number `v14` E found from the two-time function; so "not a physical invariant" and `05`'s "any
+dimensionless comparison shifts by a logarithm" were too strong (only the sharp-window σ = 1 value is scheme-dependent);
+(ii) the zero-mode-*temperature* route fails for a prior reason: Cho–Kim–Kitamoto's own late-time solution (3.27) for ε ≠ 0
+is exp(−V/T_zm) times an extra O(ε) Gaussian factor, so no stationary weight exp(−V/T) exists at O(ε); (iii) the published
+drift 1/((3−ε)H) is a leading-IR approximation — the exact k = 0 attractor gives 1/((3+ε)H); (iv) `08` misquoted the paper
+("rescaled time variable"); (v) a stale wrong coefficient in `10` ((1 − 2γ_E)ε; correct 1 − 2γ_E − 2 ln 2); (vi) R18 and the
+rev.-2.3 CHANGELOG entry still stated the withdrawn inference without a pointer; (vii) the "c_X → −∞ as σ → 0" clause is a
+formal limit outside the expansion's validity. **Fixed:** `v13` 13.5 now checks the invariant's ε = 0 value and its O(ε)
+coefficient symbolically and the σ* identification; the docstring and `05`, `08`, `10`, R18, CHANGELOG reworded as above.
+Still open: the invariant's closed form is the auditor's and is not re-derived in the repository.
 
 ## What the round changes
 
-Nothing in the physics of the branch was refuted: `v8`'s identities and spectra, `v11`'s first-order theorem and every link
-of `v14` were each re-derived independently and agree to all digits. What the audit corrected is the prose around them — four misquotations
+Nothing in the arithmetic of the branch was refuted: `v8`'s identities and spectra, `v11`'s first-order theorem, `v12`'s
+identities, `v13`'s σ-dependence and every link of `v14` were each re-derived independently and agree to all digits. Three
+things of substance did change: the thermal statements are now explicitly about the fixed-mean-time (Wigner) spectrum, not an
+instantaneous detector rate; `v11` Part D's ΛCDM comparison is now described as what it is (one time-domain comparison, not a
+thermality test); and `v13`'s "not a physical invariant" became "the sharp-window coefficient is scheme-dependent", because the
+audit produced the invariant in closed form and it agrees with `v14`. What the audit corrected is the prose around them — four misquotations
 or overstatements in `07`/`05`/`02`/`09`, one missing hypothesis in a theorem statement, one stale docstring — all now
 fixed. The pattern is the same as in rounds two to five: the computations hold; the claims made about them had to be cut
 back to what was computed.

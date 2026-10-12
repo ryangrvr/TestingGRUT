@@ -8,9 +8,17 @@ History.  Rev. 1 (revision 2.3, commit b6f0e19) took the published coefficients 
 eqs. 2.5, 2.13, 3.14-3.16), which are evaluated at the coarse-graining scale k = aH, found d ln A0/d eps = 1 - 2 gamma_E - 2 ln 2
 and concluded that the implied zero-mode temperature matches no horizon temperature (detector c = 1, Kodama-Hayward c = 1/2,
 naive c = 0; required c_X = 0.4685).  The arithmetic was right; the INFERENCE WAS NOT ESTABLISHED (reviewer, fifth round):
-the stochastic noise is evaluated at k = sigma a H and sigma is a choice.  In exact dS the noise H^3/(8 pi^2) is
-sigma-independent (why Starobinsky's formalism works); at O(eps) it is not.  This revision derives the sigma dependence from
-the mode function itself and records the consequence.
+the stochastic noise is evaluated at k = sigma a H and sigma is a choice.  In exact dS the white-noise amplitude H^3/(4 pi^2)
+(Fokker-Planck diffusion coefficient H^3/(8 pi^2)) is sigma-independent (why Starobinsky's formalism works); at O(eps) it is not.
+This revision derives the sigma dependence from the mode function itself and records the consequence.  SIXTH-ROUND AUDIT (11):
+(a) the sigma-dependence is confirmed, but 'not a physical invariant' was too strong -- the zero-frequency noise strength
+D(t') = lim_{t->inf} d_{t'} W(t,t') IS sigma-free, with the closed form D/H^3 = (sqrt(pi)/(2 pi^3)) (1-eps)^3 Gamma(nu0) Gamma(5/2-nu0)
+cos(pi eps/(1-eps)) (auditor's derivation, checked there against a direct mode integral to 15 digits), whose O(eps) coefficient is
+exactly -(1 + 2 ln 2) = v14 E's D (13.5 below checks the eps = 0 value and the O(eps) coefficient symbolically); what is
+scheme-dependent is CKK's sharp-window sigma = 1 value; (b) the 'zero-mode temperature' route fails for a prior reason: CKK's own
+late-time solution (3.27) for eps != 0 is exp(-V/T_zm) times an extra O(eps) Gaussian factor, so no stationary weight of the form
+exp(-V/T) exists at O(eps); (c) CKK's drift 1/((3-eps)H) is a leading-IR approximation (the exact k = 0 attractor drift is
+1/((3+eps)H)), so 'the published conventional answer' is itself approximate at O(eps).
 
 Conventional input (CKK 2015):  a = (1 + eps H0 t)^(1/eps) = (-(1-eps) H0 eta)^(-1/(1-eps)),  nu0 = (3-eps)/(2(1-eps)),
   phi_k(eta) = (sqrt(pi)/2) (-eta)^(1/2) H^(1)_nu0(-k eta) / a(eta)   (Bunch-Davies),
@@ -22,15 +30,17 @@ Derivation of the sigma dependence (13.1):  the coarse-grained field phibar coll
 so the white-noise amplitude is d<phibar^2>/dt = C (sigma a H)^(3-2nu0) H (1-eps) / (2 pi^2) = A0 sigma^(3-2nu0) H^3,
 i.e.  A0(sigma) = (2(1-eps)/sigma)^(2nu0-3) Gamma^2(nu0) (1-eps)^3 / pi^3,  with 3 - 2nu0 = -2 eps/(1-eps).
 Consequences:  c1(sigma) = d ln A0/d eps|0 = 1 - 2 gamma_E - 2 ln(2 sigma);  the "zero-mode temperature" T_zm = (3-eps) A0 H^4/2
-(stationary weight exp(-V/T_zm)) has d ln T_zm/d eps|0 = c1(sigma) - 1/3, and reading it as the Euclidean weight (H_X/H)^4 of a
+(the V-coefficient with H frozen; NOT a stationary weight for eps != 0, see above) has d ln T_zm/d eps|0 = c1(sigma) - 1/3, and reading it as the Euclidean weight (H_X/H)^4 of a
 rate H_X = H(1 - c_X eps) gives  c_X(sigma) = (2 gamma_E + 2 ln 2 - 2/3)/4 + (1/2) ln sigma = 0.4685 + 0.5 ln sigma.
 So c_X = 0 at sigma = 0.39, = 1/2 (Kodama-Hayward) at sigma = 1.07, = 1 (detector) at sigma = 2.9, and c_X -> -infinity as
-sigma -> 0, which is the regime the formalism needs.  The gamma_E and ln 2 of rev. 1 are the sigma = 1 value of gamma_E + ln(2 sigma):
-a matching-scale artifact.  The O(eps) zero-mode coefficient cannot test horizon temperatures.
+sigma -> 0 (a formal limit: the expansion needs eps |ln sigma| << 1; and CKK's sigma = 1 sits at -k eta = 1/(1-eps) ~ 1, at the edge of
+the small-argument form).  The gamma_E and ln 2 of rev. 1 are the sigma = 1 value of gamma_E + ln(2 sigma): a matching-scale
+artifact.  The sharp-window O(eps) zero-mode coefficient cannot test horizon temperatures; the invariant that exists (13.5) is a
+diffusion coefficient, not a temperature.
 
-What stands:  O5 items 1 and 3 close on other grounds -- P1 assigns no temperature when the modular flow is not geometric,
-and the sigma-independent correlators are fixed by conventional QFT.  The sigma-independent decisive object is the comoving
-detector's frequency-resolved KMS ratio for the massless sector at O(eps): `v14`.
+What stands:  the sigma-independent decisive object is the comoving worldline's fixed-mean-time spectrum at omega != 0 (`v14`),
+and the sigma-free diffusion coefficient of 13.5 agrees with v14 E.  (That O5 items 1 and 3 close is a GRUT-internal inference
+made in 05, not computed here.)
 """
 import sympy as sp
 import mpmath as mp
@@ -118,8 +128,16 @@ res = sp.simplify(c1 + sp.Rational(3, 2))
 print(f"  at sigma = 1: c1 + 3/2 = {res} = {sp.N(res, 5)};  it vanishes at sigma = exp(5/4 - gamma_E - ln 2) = {sp.N(sp.exp(sp.Rational(5,4) - sp.EulerGamma - sp.log(2)), 4)}")
 check("the 'transcendental gap' of rev. 1 is gamma_E + ln(2 sigma) at sigma = 1: a matching-scale artifact", sp.simplify(sp.expand_log(c1s - (1 - 2*(sp.EulerGamma + sp.log(2*sig))), force=True)) == 0)
 
+print("== 13.5 the sigma-free invariant (audit, 11): zero-frequency noise strength D/H^3 = A_inv(eps) ==")
+Ainv = sp.sqrt(sp.pi)/(2*sp.pi**3)*(1 - eps)**3*sp.gamma(nu0)*sp.gamma(sp.Rational(5, 2) - nu0)*sp.cos(sp.pi*eps/(1 - eps))
+check("A_inv(0) = 1/(4 pi^2) (= A0 in exact dS)", sp.simplify(Ainv.subs(eps, 0) - 1/(4*sp.pi**2)) == 0)
+cinv = sp.simplify(sp.diff(sp.log(Ainv), eps).subs(eps, 0))
+print("  d ln A_inv/d eps|0 =", cinv, "=", sp.N(cinv, 8))
+check("O(eps) coefficient of the invariant = -(1 + 2 ln 2) = v14 E's D coefficient (sigma-free)", sp.simplify(cinv + 1 + 2*sp.log(2)) == 0)
+check("A0(sigma) matches A_inv at O(eps) only at sigma* = e^(1 - gamma_E)", sp.simplify(c1s.subs(sig, sp.exp(1 - sp.EulerGamma)) - cinv) == 0)
+print("  (closed form from the sixth-round audit, verified there against a direct Bunch-Davies mode integral at eps = 0, 0.05, 0.1, 0.3; not re-derived here)")
 print("\nCONCLUSION (rev. 2): the O(eps) Fokker-Planck coefficients of the massless zero mode depend on the coarse-graining scale sigma")
-print("(c1 = 1 - 2 gamma_E - 2 ln(2 sigma); sigma-independent only at eps = 0). They are not a physical invariant and cannot test horizon")
+print("(c1 = 1 - 2 gamma_E - 2 ln(2 sigma); sigma-independent only at eps = 0). The sharp-window coefficient is scheme-dependent and cannot test horizon")
 print("temperatures; rev. 1's 'no temperature matches' is withdrawn as an inference (the arithmetic at sigma = 1 stands). O5 items 1 and 3")
 print("still close: P1 assigns no temperature for non-geometric modular flow, and sigma-independent correlators are fixed by conventional")
 print("QFT (CKK 2015). The sigma-independent test is the comoving detector's KMS ratio at omega != 0 (`v14`).")

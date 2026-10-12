@@ -19,6 +19,12 @@
   sectors and is non-thermal for the massless sector even in exact dS unless derivative-coupled); general-a(t) and graviton
   extensions marked not computed; D's Δ² companion term stated; sign slip fixed; exact-function KMS test and r asymptote
   check added to the script. D11, D13, `05`, `09` reworded.
+- Round-6 audit of `v8`, `v11`, `v12`, `v13` (ten agents, `11`): no arithmetic refuted; fixes — `v11` Richardson weights (c = 1 now
+  to 1e-9), symbolic first-order identity, εη closed-form check, Part D reworded and recomputed (T = 0 comparison, local rate,
+  both x conventions); `v12` 12.2 now a computation (Kodama vector), 12.4 exponent derived, attributions corrected (Cai–Kim and
+  Cai–Cao–Hu use T₀ = 1/2πR_A; Tian–Booth adopt it), "half the expansion rate"; `v13` 13.5 adds the σ-free invariant
+  D/H³ = (√π/2π³)(1−ε)³Γ(ν)Γ(5/2−ν)cos(πε/(1−ε)) with O(ε) coefficient −(1 + 2 ln 2) = `v14` E, and the no-stationary-weight
+  point; D11, `05`, `08`, `09`, `10`, R15, R18 reworded accordingly.
 
 ## Revision 2.3 (2026-10-11, fourth round)
 
@@ -32,6 +38,7 @@
   T_zm = (3−ε)A₀H⁴/2 = 3H⁴/8π² + O(ε) whose O(ε) coefficient (2/3 − 2γ_E − 2 ln 2) is the Euclidean weight of **no**
   horizon temperature (detector c = 1, Kodama–Hayward c = 1/2, naive c = 0; required c_X = 0.4685). P1 assigns none and
   adds nothing; conventional theory fixes the coefficients. **O5 items 1 and 3 close.** `05` O5, `08`, RESPONSE R18.
+  [Inference withdrawn in revision 2.4 (σ-dependence; no stationary weight at O(ε)); entry kept as the record.]
 - `run_all.py` now runs v1–v13; `08` gains the Cho–Kim–Kitamoto source entry and the survey's source list pointer;
   verification status updated (v12, v13 author-level).
 
@@ -48,7 +55,8 @@
 - `v11` rev. 3: revision-2 headline (first-order c ≈ 1.01 plus 1%-of-ε frequency dependence) **retracted** — it was
   O(ε²) contamination. Now proved: first-order exact thermality at T_eff = (ä/ȧ)/2π for any a(t); second-order
   coefficient f₂(x) = x²/4 − (x³/12)coth(x/2) (reviewers') confirmed; Richardson D/ε → 2πω/H̄ (c = 1 to 3e-5); the true
-  O(ε²) frequency-dependent defect D₂(ω); present-day (ε₀ = 0.47) exact ΛCDM deviation 0.1–19% from any thermal form.
+  O(ε²) frequency-dependent defect D₂(ω); present-day (ε₀ = 0.47) exact ΛCDM deviation 0.1–19% from the first-order thermal form at H_eff (time domain; what this
+  does and does not show is in `11`).
 - T5/T6 scopes tightened (asymptotic Brownian covariance; representation ≠ physical field theory).
 - `08`: the independent review (branch `codex/grut-causal-state-review`) recorded; RESPONSE R15.
 

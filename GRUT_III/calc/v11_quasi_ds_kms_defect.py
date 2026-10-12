@@ -16,18 +16,28 @@ what is actually true.
     => W_eps / W_dS(H_eff) = 1 + eps^2 [x^2/4 - (x^3/12) coth(x/2)] + O(eps^3)   (reviewers' coefficient confirmed).
  B. (sympy, exact) GENERAL a(t) to second adiabatic order, with eps = -Hdot/H^2 and eta = eps_dot/(H eps):
     the first-order correction is a pure shift H -> H_eff = H + Hdot/H = H(1-eps) = (d/dt) ln(a_dot)  (THEOREM, any a(t) with eps AND eta = eps_dot/(H eps) first-order small; the eps*eta term below is why);
-    the second-order non-thermal remainder depends on eps^2 and eps*eta with explicit coefficient functions of x.
+    the second-order non-thermal remainder depends on eps^2 and eps*eta with explicit coefficient functions of x (complete at
+    that order only if the third flow parameter eps3 = eta_dot/(H eta) is also first-order small -- the full adiabatic hierarchy;
+    the eps*eta coefficient is checked below against its closed form g(x) = 2 + x^2/4 - (x + x^3/24) coth(x/2)).
+    SCOPE: the conformally coupled massless scalar's worldline Wightman function in spatially flat FRW (other scalar conformal
+    primaries follow by Weyl covariance; composite, higher-spin and smeared observables are not computed).
  C. (mpmath) Numerics with Richardson extrapolation: D/eps -> 2 pi w/Hbar exactly (c = 1); the TRUE second-order
     KMS defect D2(w) := lim [ln(G+(w)/G+(-w)) - 2 pi w/H_eff]/eps^2, tabulated; its non-linearity in w is the
     convention-free violation.  It is O(eps^2), not O(eps).
- D. (mpmath) The present universe is NOT slow-roll: eps_0 = (3/2) Omega_m = 0.47.  Exact worldline Wightman function of a
-    conformal scalar in flat LambdaCDM, a(t) = (Om/OL)^(1/3) sinh^(2/3)(3 sqrt(OL) H0 t/2), compared in the TIME domain with
-    the first-order thermal form at H_eff(t0) = a''/a'|_0 = H0 (1 - eps_0) (no Fourier spectrum: the comoving worldline exists
-    only for |Delta| < 2 t0, so a spectrum at t0 needs a window and is not computed; the 'prediction' used for the ratio is the
-    eta = 0 second-order form, see 11_VERIFICATION_ROUND.md).  (Formal baseline for the vacuum
-    medium's KMS structure; physically the CMB bath at 2.7 K dominates real photon correlators at these frequencies.)
-Conclusions: the conformal sector stays KMS through O(eps) -- the FDT boundary of 07 applies through first order; the
-first conventional KMS violation is O(eps^2); the present-day comoving vacuum is far from thermal because eps_0 ~ 0.5.
+ D. (mpmath) The present universe is NOT slow-roll: eps_0 = (3/2) Omega_m = 0.4725 (Omega_m = 0.315), eta_0 = -3 Omega_L = -2.06.
+    Exact worldline Wightman function of a conformal scalar in flat LambdaCDM, a(t) = (Om/OL)^(1/3) sinh^(2/3)(3 sqrt(OL) H0 t/2),
+    for pairs symmetric about t0, compared in the TIME domain with the first-order thermal form at H_eff(t0) = a''/a'|_0 and
+    with the T = 0 (Minkowski) form.  No Fourier spectrum and no KMS test: the comoving worldline exists only for |Delta| < 2 t0.
+    What this part shows (audit, 11_VERIFICATION_ROUND.md): the present-day kernel is not described by the first-order thermal
+    form at H_eff -- the small-Delta agreement is the universal Hadamard term (the local effective rate in the Delta^2 correction
+    is H0 sqrt(1 - 2 eps_0) = 0.23 H0, not H_eff = 0.53 H0), the T = 0 form is closer at every grid point, and the ratio to the
+    truncated second-order form depends on an O(eps^3) convention (x = H_eff Delta vs x = H Delta) by a factor 1/(1-eps_0)^2 = 3.6,
+    so the eps-expansion is not quantitatively usable at eps_0 = 0.47.  The pairs are symmetric about t0, so Delta = 1.5/H0 pairs
+    z = 2.25 (eps = 1.4 there) with a point 10.9 Gyr in the future; the deviation grows without bound as Delta -> 2 t0.
+    (Formal baseline for the vacuum medium's KMS structure; physically the CMB bath at 2.7 K dominates real photon correlators.)
+Conclusions: the conformally coupled scalar's worldline function stays KMS through O(eps) (fixed-mean-time convention; omega >> eps H)
+-- the FDT boundary of 07 applies through first order; the first conventional KMS violation is O(eps^2); the present-day comoving
+vacuum is not described by the first-order thermal form, and the adiabatic expansion is not usable at eps_0 ~ 0.5, eta_0 ~ -2.
 """
 import sympy as sp
 import mpmath as mp
@@ -82,6 +92,9 @@ Heff = H*(1 - lam*eps)
 thermal = sp.series(4*sp.sinh(Heff*D/2)**2/Heff**2, lam, 0, 3).removeO()
 diff = sp.expand(ratio - thermal)
 first = diff.coeff(lam, 1); second = diff.coeff(lam, 2)
+first_sym = sp.simplify(first)
+print("  first-order remainder after the shift H -> H(1 - eps), simplified symbolically:", first_sym, "->", "PASS (identically zero)" if first_sym == 0 else "FAIL")
+ok_all &= (first_sym == 0)
 # numerical verification at random points (avoids heavy symbolic simplification)
 import random
 random.seed(3)
@@ -101,7 +114,12 @@ print(f"  max |second-order (eta=0) - power-law coefficient| over random points:
 ok_all &= (mx2 < 1e-10)
 sec_eta = sp.simplify(sp.expand(second).coeff(eta, 1)/(4*sp.sinh(H*D/2)**2/H**2))
 print("  eps*eta term of the second-order relative remainder (general a(t)):", sp.simplify(sec_eta.subs(D, x/H)))
-print("  THEOREM (any a(t)): to first adiabatic order the comoving conformal vacuum is thermal at T_eff = (H + Hdot/H)/2pi = (d/dt ln a_dot)/2pi.")
+g_closed = lambda xv: 2 + xv**2/4 - (xv + xv**3/24)*mp.coth(xv/2)
+mxg = max(abs(mp.mpf(sp.N((sec_eta/eps).subs({D: xv, H: 1}), 30)) - g_closed(mp.mpf(xv))) for xv in ['0.5', '1', '2', '3'])   # sec_eta = eps * g(x)
+print(f"  eps*eta coefficient vs closed form g(x) = 2 + x^2/4 - (x + x^3/24) coth(x/2) at x = 0.5, 1, 2, 3: max diff {mp.nstr(mxg, 3)} ->", "PASS" if mxg < 1e-12 else "FAIL")
+ok_all &= (mxg < 1e-12)
+print("  THEOREM (any a(t) with eps and eta first-order small): to first adiabatic order the comoving conformal vacuum's fixed-mean-time")
+print("  spectrum is thermal at T_eff = (H + Hdot/H)/2pi = (d/dt ln a_dot)/2pi (omega >> eps H; the eps^2 remainder is not uniform in Delta).")
 
 print("== C. numerics: Richardson-extrapolated first- and second-order KMS defects (power law) ==")
 def make_W(p, tbar):
@@ -127,10 +145,10 @@ for p in ps:
         lr = mp.log(gp/gm)
         D1[p].append((lr - 2*mp.pi*w/Hb)/e)            # first-order defect relative to Hbar
         D2[p].append((lr - 2*mp.pi*w/Heff)/e**2)       # second-order defect relative to the exact H_eff
-def richardson(seq):  # seq at eps, eps/2, eps/4, eps/8 ; error O(eps) -> successive elimination
-    s = list(seq)
+def richardson(seq):  # seq at eps, eps/2, eps/4, eps/8 ; error C1 eps + C2 eps^2 + C3 eps^3 -> eliminate successively with weights 2, 4/3, 8/7
+    s = list(seq); k = 1                              # (rev. 3 used weight 2 at every level, leaving an eps^2/8 artefact ~3e-5; audit 11)
     while len(s) > 1:
-        s = [2*s[i+1] - s[i] for i in range(len(s)-1)]
+        s = [(2**k*s[i+1] - s[i])/(2**k - 1) for i in range(len(s)-1)]; k += 1
     return s[0]
 print("  D/eps relative to Hbar, Richardson over p =", ps, " (expected 2 pi w/Hbar, i.e. c = 1 exactly):")
 for i, w in enumerate(ws):
@@ -152,25 +170,30 @@ a_L = lambda t: A*mp.sinh(B*t)**(mp.mpf(2)/3)
 t0 = mp.asinh(mp.sqrt(OL/Om))/B                       # a(t0) = 1
 eps0 = mp.mpf(3)/2*Om; Heff0 = H0*(1 - eps0)
 print(f"  t0 = {mp.nstr(t0,6)}/H0 (a worldline exists only for |Delta| < 2 t0: no full Fourier spectrum at t0 without a window)")
-print(f"  eps_0 = {mp.nstr(eps0,4)}, H_eff(t0) = H0 + Hdot/H0 = a''/a' = {mp.nstr(Heff0,4)} H0 -> T_eff = {mp.nstr(Heff0/(2*mp.pi),4)} H0/2pi (first-order thermal form)")
+eta0 = -3*OL
+print(f"  eps_0 = {mp.nstr(eps0,4)}, eta_0 = -3 Omega_L = {mp.nstr(eta0,4)}, H_eff(t0) = H0 + Hdot/H0 = a''/a' = {mp.nstr(Heff0,4)} H0 -> T_eff = H_eff/2pi = {mp.nstr(Heff0/(2*mp.pi),4)} H0")
+print(f"  local effective rate in the Delta^2 term of a1 a2 deta^2 = Delta^2 [1 + H^2 (1 - 2 eps) Delta^2/12 + ...]: H0 sqrt(1 - 2 eps_0) = {mp.nstr(mp.sqrt(1 - 2*eps0),4)} H0 (vs H_eff = {mp.nstr(Heff0,4)} H0)")
 Hnum = lambda t: mp.diff(lambda s_: mp.log(a_L(s_)), t)
 report("  eps_0 from a(t) directly", -mp.diff(Hnum, t0)/Hnum(t0)**2, eps0, tol=1e-8)
 def aadeta2(Delta):
     t1 = t0 + Delta/2; t2 = t0 - Delta/2
     de = mp.quad(lambda t: 1/a_L(t), [t2, t1])
     return a_L(t1)*a_L(t2)*de**2
-print("  Delta*H0   W_LCDM/W_dS(H_eff) - 1    eps0^2 f2(x_eff) [2nd-order prediction]   actual/2nd-order")
+print("  Delta*H0   W_dS(H_eff)/W_exact - 1   W_Mink/W_exact - 1   ratio to eps0^2 f2 at x = H_eff Delta   at x = H0 Delta")
+devs = []
 for Dv in ['0.25', '0.5', '1.0', '1.5']:
     Dv = mp.mpf(Dv)
     exact = aadeta2(Dv)
     therm = 4*mp.sinh(Heff0*Dv/2)**2/Heff0**2
-    xe = Heff0*Dv
-    f2v = xe**2/4 - xe**3*mp.coth(xe/2)/12
-    dev = therm/exact - 1
-    print(f"   {mp.nstr(Dv,3):>5}      {mp.nstr(dev, 5):>12}             {mp.nstr(eps0**2*f2v, 5):>10}                  {mp.nstr(dev/(eps0**2*f2v), 4)}")
-print("  => at eps_0 = 0.47 the deviation from the first-order thermal form is 0.1% (Delta=0.25/H0) to 19% (1.5/H0) and exceeds the")
-print("     second-order prediction by factors 4-18: the adiabatic expansion has broken down; the present-day comoving vacuum is")
-print("     not thermal at any single temperature and must be treated with the exact kernel (no eps-expansion).")
+    dev = therm/exact - 1; dev0 = Dv**2/exact - 1
+    f2 = lambda xv: xv**2/4 - xv**3*mp.coth(xv/2)/12
+    devs.append((Dv, dev, dev0))
+    print(f"   {mp.nstr(Dv,3):>5}      {mp.nstr(dev, 5):>12}          {mp.nstr(dev0, 5):>12}            {mp.nstr(dev/(eps0**2*f2(Heff0*Dv)), 4):>8}                      {mp.nstr(dev/(eps0**2*f2(H0*Dv)), 4)}")
+print(f"  => deviation from the first-order thermal form at H_eff: {mp.nstr(100*devs[0][1],2)}% (Delta = 0.25/H0) to {mp.nstr(100*devs[-1][1],3)}% (1.5/H0);")
+print(f"     the T = 0 (Minkowski) form is closer at every grid point ({mp.nstr(100*abs(devs[0][2]),2)}% to {mp.nstr(100*abs(devs[-1][2]),3)}%): the small-Delta agreement is the")
+print("     universal Hadamard term, not thermality at H_eff. The ratio to the truncated second-order form depends on the x convention by")
+print("     1/(1-eps_0)^2 = 3.6, so the eps-expansion is not quantitatively usable today (eps_0 = 0.47, eta_0 = -2.06). The exact kernel is needed.")
+print("     (Pairs are symmetric about t0: Delta = 1.5/H0 pairs z = 2.25 with a point 10.9 Gyr in the future; the deviation is unbounded as Delta -> 2 t0.)")
 print("  (formal baseline for the vacuum medium; the physical photon field is dominated by the 2.7 K CMB bath at these scales)")
 
 print("\nV11 OVERALL:", "PASS" if ok_all else "FAIL")

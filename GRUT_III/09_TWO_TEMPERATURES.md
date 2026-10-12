@@ -7,7 +7,7 @@ They agree in de Sitter and differ at O(ε). A principle that makes the bath the
 gravity from horizon thermodynamics must say which is the bath temperature: (a) equal, (b) different by a stated rule,
 or (c) silent.
 
-**Answer: (b′), with the rule derived, not stated.** The two numbers are different objects, and P1 says which is a
+**Answer: (b′), with the temperature derived (`v11`, `v14`) and the exclusion of the horizon labels following from P1's definition.** The two numbers are different objects, and P1 says which is a
 temperature.
 
 ## 1. What each quantity is (`calc/v12`)
@@ -19,11 +19,14 @@ temperature.
   and differs at O(ε) by a frequency-dependent term from Ḣ (audit, `11`; D13 "Convention"), so "what the detector reads" is
   convention-laden at this order; the Wigner convention is the record's.
 - **T_KH = |κ|/2π** is the surface gravity of the apparent horizon with Kodama normalisation. For ε ≠ 0 the apparent
-  horizon is **not a Killing horizon** (Ṙ_A = ε ≠ 0; `v12` 12.2). P1 assigns a temperature only where the modular flow
-  of the restricted state is geometric — Killing horizons and wedges — so for ε ≠ 0 **P1 assigns no temperature to the
-  region inside R_A**. T_KH is a geometric label.
-- The first-order mismatch is exactly the apparent horizon's expansion rate: T_det/T_KH = 1 − ε/2 + O(ε²) with
-  Ṙ_A = ε. Equal iff ε = 0.
+  horizon is **not a Killing horizon** (the Kodama vector's Lie derivative of the metric is −a²rḢ; `v12` 12.2, now
+  computed). P1 assigns a temperature only where the modular flow of the restricted state is geometric (the list in `01`:
+  wedges, Killing horizons, conformal double cones); the apparent-horizon region for ε ≠ 0 is in none of these classes, so
+  for ε ≠ 0 **P1 assigns no temperature to the region inside R_A** — an application of P1's definition, not a computation.
+  T_KH is a geometric label. The literature's own candidate, T₀ = 1/(2πR_A) = H/2π (Cai–Kim 2005; Cai–Cao–Hu 2009;
+  adopted by Tian–Booth 2014), is likewise a geometric label; revision 2.3 misattributed T_KH to the first two (audit, `11`).
+- The first-order mismatch is half the apparent horizon's expansion rate relative to T_KH, T_det/T_KH − 1 = −Ṙ_A/2 + O(ε²),
+  and the full rate relative to T₀, T_det/T₀ − 1 = −Ṙ_A = −ε exactly. Equal iff ε = 0.
 
 ## 2. Why no heat-flow law is implied
 
@@ -33,16 +36,19 @@ apparent-horizon "first laws" are then **identities** of those equations, not in
 with a perfect fluid):
 - Cai–Kim: the energy flux through the apparent horizon in dt equals T₀ dS with T₀ = 1/(2πR_A) — identity;
 - Akbar–Cai / Hayward: dE_MS = (κ/2π) dS + W dV with the **signed** κ, E_MS = ρV, W = (ρ − p)/2 — identity.
-T_KH is the bookkeeping temperature that closes Hayward's unified first law; its sign convention is the "temperature
-confusion" that Tian–Booth (2014) resolve by a positive-heat-out convention. Option (b) in the reviewer's list — a
+The *signed* κ/2π = −T_KH is the bookkeeping temperature that closes Hayward's unified first law (with +T_KH it does not
+close); Tian–Booth (2014) compare T₀ with Hayward's κ/2π and adopt T₀, their positive-heat-out convention fixing the sign of
+the Gibbs relation, not the temperature (corrected after the audit, `11`). Option (b) in the reviewer's list — a
 non-equilibrium horizon–bath heat-flow law at O(ε) — would be needed only if T_KH were a bath temperature. It is not.
 
 ## 3. What is testable, and what it is not
 
-The definite first-order statement is: **a comoving detector coupled to a conformal field in the conformal vacuum
-thermalises, to first order, at (ä/ȧ)/2π, not at the apparent-horizon temperature.** This is conventional quantum
-field theory in FRW, checkable by anyone, and it is not a GRUT discriminator — it is GR + QFT read correctly. Its
-magnitude today (T ∼ 10⁻³⁰ K) is unobservable. Its value for this program is that it closes a door: the O(ε) window
+The definite first-order statement is: **for a conformal field in the conformal vacuum, the comoving worldline's
+fixed-mean-time two-point spectrum is KMS, to first adiabatic order, at (ä/ȧ)/2π, not at either apparent-horizon label**
+(and, by `v14`, the same holds for the massless sector's ω ≠ 0 spectrum). This is conventional quantum field theory in FRW,
+checkable by anyone, and it is not a GRUT discriminator — it is GR + QFT read correctly. It does not apply to the present
+universe (ε₀ = 0.47, η₀ = −2; D11); the order of magnitude of any such temperature today, H₀/2π ∼ 10⁻³⁰ K, is unobservable
+regardless. Its value for this program is that it closes a door: the O(ε) window
 the reviewer identified is not a non-thermal window for the conformal sector; the first conventional non-thermality
 remains O(ε²) (D11), and the bath temperature's meaning in FRW is now fixed by P1 rather than left to a choice between
 literature conventions.

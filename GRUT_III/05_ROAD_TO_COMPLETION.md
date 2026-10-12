@@ -51,8 +51,9 @@ locks need KMS-failing platforms. That ruling is not in this repository; the con
 **Baseline computed and corrected (`v11` rev. 3, D11).** Quasi-de Sitter, conformal matter: to first order the state
 is *exactly* thermal at T_eff = (ä/ȧ)/2π = (H/2π)(1 − ε) for any a(t) with ε and η = ε̇/Hε first-order small (the revision-2 claim of a first-order frequency
 dependence was a finite-ε artefact, caught by two reviewers); the first KMS violation is O(ε²) with the computed
-shape D₂(ω). No free function. Today ε₀ = 0.47: the exact kernel deviates from the thermal form by 0.1–19% over
-Δ = 0.25–1.5/H₀, and only the exact kernel may be used for any late-universe statement.
+shape D₂(ω). No free function. Today ε₀ = 0.47, η₀ = −2.1: the first-order form does not apply (D11; the ΛCDM kernel
+differs from it by 0.1–19% over Δ = 0.25–1.5/H₀ in a grid-limited time-domain comparison that is neither a KMS test nor a
+temperature scan, `11`), and only the exact kernel may be used for any late-universe statement.
 
 **What the constructive branch's CP-05 settles for this program** (branch `codex/grut-causal-response-05`; review
 relayed by the owner): one specified local scalar, eliminated, produces a covariant gravitational memory with derived
@@ -79,12 +80,17 @@ and concluded that no horizon temperature reproduces it (required c_X = 0.4685; 
 The reviewer showed the inference is not established: the stochastic noise is evaluated at the coarse-graining scale
 k = σaH and σ is a choice. `v13` rev. 2 derives from the Bunch–Davies mode function that A₀(σ) = A₀(1)·σ^{−2ε/(1−ε)},
 σ-independent in exact dS (Starobinsky) and not at O(ε): c₁(σ) = 1 − 2γ_E − 2 ln(2σ), c_X(σ) = 0.4685 + ½ ln σ. So c_X = 0 at
-σ = 0.39, = 1/2 at σ = 1.07, = 1 at σ = 2.9, and c_X → −∞ as σ → 0, which is the regime the formalism needs. The γ_E and ln 2 of
-rev. 1 are γ_E + ln(2σ) at σ = 1: a matching-scale artifact. **The O(ε) zero-mode coefficient is not a physical invariant and
-cannot test horizon temperatures; rev. 1's inference is withdrawn** (its arithmetic at σ = 1 stands). No scale-fixed variant
-rescues it: the massless spectrum in power-law FRW is tilted and scale-free (n − 1 = −2ε/(1−ε)), so any dimensionless
-comparison between a zero-mode amplitude and an instantaneous H — including the equal-time correlator at a chosen physical
-separation — shifts its O(ε) coefficient by the logarithm of the chosen scale. The σ-independent object is
+σ = 0.39, = 1/2 at σ = 1.07, = 1 at σ = 2.9, and c_X → −∞ as σ → 0 (a formal limit: the expansion needs ε|ln σ| ≪ 1). The γ_E and ln 2 of
+rev. 1 are γ_E + ln(2σ) at σ = 1: a matching-scale artifact. **The sharp-window O(ε) zero-mode coefficient is scheme-dependent and cannot test horizon temperatures; rev. 1's
+inference is withdrawn** (its arithmetic at σ = 1 stands). Two corrections from the sixth-round audit (`11`): (i) a σ-free
+invariant *does* exist — the zero-frequency noise strength D(t′) = lim_{t→∞}∂_{t′}W(t,t′), with the closed form
+D/H³ = (√π/2π³)(1−ε)³Γ(ν)Γ(5/2−ν)cos(πε/(1−ε)), whose O(ε) coefficient is exactly −(1 + 2 ln 2), the number `v14` E finds from
+the two-time function (`v13` 13.5 checks the coefficient symbolically). So "any dimensionless comparison shifts by a
+logarithm" was too strong: a diffusion coefficient is invariant; a *temperature* read off the zero mode is not. (ii) The
+zero-mode-temperature route fails for a prior reason: Cho–Kim–Kitamoto's own late-time solution for ε ≠ 0 (their eq. 3.27) is
+exp(−V/T_zm) times an extra O(ε) Gaussian factor, so no stationary weight exp(−V/T) exists at O(ε); and their drift
+1/((3−ε)H) is a leading-IR approximation (the exact k = 0 attractor gives 1/((3+ε)H)), so the "published conventional
+answer" is itself approximate at this order. The σ-independent object for the *temperature* question is
 frequency-resolved: the comoving detector's Wigner spectrum at ω ≠ 0 and its KMS ratio at O(ε), the quantity for which the
 conformal sector gave exact thermality at (ä/ȧ)/2π (`v11`). That computation is `v14`, below. **What stands:** O5 items 1
 and 3 close on other grounds — P1 assigns no temperature when the modular flow is not geometric, and the σ-independent

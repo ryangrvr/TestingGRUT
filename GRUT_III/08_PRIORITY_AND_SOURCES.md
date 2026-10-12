@@ -161,13 +161,16 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
 
 - Hayward's dynamical surface gravity κ = −(1/R_A)(1 − Ṙ_A/(2HR_A)) at the FRW apparent horizon: Cai & Kim (2005, JHEP
   02, 050) use T = 1/(2πR_A); Akbar & Cai (2007, PRD 75, 084003) show the unified first law dE = (κ/2π)dS + WdV holds
-  with the full κ; Cai, Cao & Hu (2009, CQG 26, 155018) derive Hawking radiation of the apparent horizon with it;
+  with the full *signed* κ; Cai, Cao & Hu (2009, CQG 26, 155018; arXiv:0809.1554) derive Hawking radiation of the apparent
+  horizon by tunnelling at T = 1/(2πR_A) (their eq. 13, with Ṙ_A = 0) and explicitly leave the |κ|/2π relation open — revision
+  2.3 misstated this, and `09`/`v12` misattributed T_KH to Cai–Kim and Cai–Cao–Hu, who both use T₀ = 1/(2πR_A) (audit, `11`);
   arXiv:0812.3006 (Jiang, Ke, Peng, Feng) relates the tunnelling rate to the unified first law. `v12` 12.3 verifies
   both identities symbolically for flat FRW with a perfect fluid.
 - Tian & Booth (2014, arXiv:1411.6547), "Apparent horizon and gravitational thermodynamics of the Universe: solutions
-  to the temperature and entropy confusions": abstract read; argues the Cai–Kim Clausius relation encodes a
-  positive-heat-out convention and abandons the local-equilibrium assumption in the generalised second law. Consistent
-  with `09`'s reading that T_KH is bookkeeping for an identity rather than a KMS parameter; full text not read here.
+  to the temperature and entropy confusions": abstract and §IV read by the auditor (`11`): their "temperature confusion" is Cai–Kim's 1/(2πR_A) versus Hayward's
+  κ/2π (which vanishes at w = 1/3 and violates the third law), and they adopt the Cai–Kim temperature; their positive-heat-out
+  convention fixes the sign of the Gibbs relation (the "entropy confusion"), not the temperature. Revision 2.3 misdescribed
+  this. Neither candidate is a KMS parameter of a state (`09`).
 - The first-order detector temperature (ä/ȧ)/2π for conformal fields in the conformal vacuum (D11) — literature check
   owed.
 
@@ -177,10 +180,13 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
   index. Eq. (3.14): white noise ⟨φ̄̇₀φ̄̇₀⟩ = (2−2ε₀)^{2ν₀−3}Γ²(ν₀)(1−ε₀)³H³δ(t−t′)/π³. Eqs. (3.15)–(3.16): Fokker–Planck
   ρ̇ = ½A₀H³∂²ρ + (1/((3−ε₀)H))∂(ρV′), A₀ = (2−2ε₀)^{2ν₀−3}Γ²(ν₀)(1−ε₀)³/π³. Eq. (3.21): at ε₀ = 0 the equilibrium
   ρ∞ ∝ exp(−8π²V/3H₀⁴) (Starobinsky–Yokoyama). `v13` uses exactly these; it adds only the O(ε) expansion and the comparison
-  with horizon temperatures. The paper notes that for ε₀ ≠ 0 the equilibrium is reached only in a rescaled time variable —
-  the reason `05` calls T_zm(ε) an instantaneous weight. Eq. (3.14)'s δ(Ha − p) fixes the coarse-graining scale at σ = 1;
-  `v13` rev. 2 shows from the same mode function that a general σ multiplies A₀ by σ^{−2ε₀/(1−ε₀)}, which is what makes the
-  O(ε) coefficient non-invariant (reviewer, fifth round).
+  with horizon temperatures. The paper states that for ε₀ ≠ 0 the time-independence of the final state fails and uses the scaling ansatz
+  ρ∞(t,φ) = ρ̃∞(φ/H)/H; its late-time solution (3.27) is exp(−V/T_zm) times an extra O(ε₀) Gaussian factor, so T_zm is the
+  V-coefficient with H frozen, not the parameter of a stationary weight (revision 2.3 misquoted this as "a rescaled time
+  variable"; audit `11`). The drift 1/((3−ε₀)H) is their leading-IR approximation (exact k = 0 attractor: 1/((3+ε₀)H)). Eq. (3.14)'s δ(Ha − p) fixes the coarse-graining scale at σ = 1;
+  `v13` rev. 2 shows from the same mode function that a general σ multiplies A₀ by σ^{−2ε₀/(1−ε₀)}, which makes the sharp-window
+  O(ε) coefficient scheme-dependent (reviewer, fifth round); the σ-free zero-frequency noise strength has the closed form given
+  in `v13` 13.5 (audit, `11`), with O(ε) coefficient −(1 + 2 ln 2) = `v14` E.
 - Attribution: 1508.07877 is Cho, Kim & Kitamoto; the 2018/19 paper on derivative interactions, 1811.01830, is Kitamoto alone.
   Both were misattributed in an earlier draft of `10` (fixed before commit).
 - The remaining sources of the fifth-round survey (30+ papers; what was read at full text vs abstract) are listed at the
@@ -221,4 +227,5 @@ parts of `v11` rev. 3 remain author-level. `v12` (third round) and `v13` (fifth 
 (c₁ = 1 − 2γ_E − 2 ln 2) is cross-checked numerically inside the script. `v13` rev. 1's *inference* was then **refuted** by the
 owner's reviewer (coarse-graining-scale dependence) and rev. 2 records the σ-dependence; a workflow of independent re-derivation
 and adversarial-audit agents over `v8`, `v11` (general a(t), ΛCDM), `v12` and `v13` rev. 2 was run in the sixth round — its
-report is `11_VERIFICATION_ROUND.md`.
+report is `11_VERIFICATION_ROUND.md`: all thirteen agents (ten on `v8`/`v11`/`v12`/`v13`, three on `v14`) reported; no arithmetic
+was refuted; the prose corrections they forced are listed there and applied. Independent of the author's agents: none yet.

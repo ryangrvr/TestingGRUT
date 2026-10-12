@@ -181,14 +181,20 @@ one. Consequence for `03`/`07`: the conformal sector is KMS through O(ε), so th
 order; a distinctive residual in slow roll would have to be O(ε²) or live in a sector where this expansion does not
 hold.
 
-**The present universe is not slow-roll.** Today ε₀ = (3/2)Ω_m = 0.47, so H_eff(t₀) = 0.53 H₀ and no expansion applies.
-Along the comoving worldline a correlator exists only for |Δ| < 2t₀ = 1.9/H₀ (the big bang), so a Fourier spectrum at
-t₀ requires a window and is not computed. In the time domain the exact ΛCDM correlator deviates from the first-order
-thermal form W_dS(Δ; H_eff(t₀)) by 0.12%, 0.56%, 3.6% and 19% at ΔH₀ = 0.25, 0.5, 1, 1.5 — factors 4–18 above the
-η = 0 second-order form ε₀²f₂ (the audit `11` notes that including the εη term of `v11` B, with η₀ = −2.06, makes it 4–22;
-the conclusion is unchanged): the present-day comoving conformal vacuum is **not thermal at any single temperature** and
-must be treated with the exact kernel. (A formal baseline for the vacuum medium; the physical photon field at these
-scales is dominated by the 2.7 K CMB bath.)
+**The present universe is not slow-roll.** Today ε₀ = (3/2)Ω_m = 0.47 (Ω_m = 0.315) and η₀ = −3Ω_Λ = −2.06, so the
+first-order theorem's hypothesis fails and no expansion applies. Along the comoving worldline a correlator exists only for
+|Δ| < 2t₀ = 1.9/H₀ (the big bang), so a Fourier spectrum at t₀ requires a window and is not computed. What `v11` D does
+compute is a time-domain comparison, for pairs symmetric about t₀, of the exact ΛCDM correlator with the first-order thermal
+form W_dS(Δ; H_eff(t₀)): they differ by 0.12%, 0.56%, 3.6% and 19% at ΔH₀ = 0.25, 0.5, 1, 1.5. The sixth-round audit (`11`)
+established what this does and does not show: the small-Δ agreement is the universal Hadamard term, not thermality at H_eff
+(the local effective rate in the Δ² correction is H₀√(1 − 2ε₀) = 0.23H₀, against H_eff = 0.53H₀); the T = 0 (Minkowski) form is
+closer than the H_eff form at every grid point; the deviation is unbounded as Δ → 2t₀ and the Δ = 1.5/H₀ pair samples the
+matter era (ε = 1.4 at the earlier point); and the ratio to the truncated second-order form depends on an O(ε³) convention
+(x = H_effΔ versus H̄Δ) by 1/(1−ε₀)² = 3.6, so the earlier "factors 4–18" carried no information and is dropped. What stands:
+the present-day comoving conformal vacuum is not described by the first-order thermal form, the adiabatic expansion is not
+quantitatively usable at ε₀ = 0.47, η₀ = −2, and (auditor's computation) in the midpoint convention the exact kernel is KMS at
+no β — it has imaginary period 4π/(√Ω_Λ H₀) with a pole inside the strip. The exact kernel is needed. (A formal baseline for
+the vacuum medium; the physical photon field at these scales is dominated by the 2.7 K CMB bath.)
 
 ## D12 — The induced-gravity / entanglement matching behind P2 (IMPORTED theorems, numbers in `v9`) — O1 made precise
 

@@ -194,7 +194,9 @@ general a(t) to second adiabatic order (η = ε̇/Hε counted as first-order sma
 and at q = 10⁵ numerically, extrapolates D/ε → 2πω/H̄ (c = 1 to 3e-5), and computes the true O(ε²) frequency-dependent
 defect D₂(ω). The physics consequence strengthens the framework's own conclusion: the conformal sector is KMS through
 first order, so the FDT boundary holds through O(ε). Also adopted: the late universe is not slow-roll (ε₀ = 0.47); the
-exact present-day kernel deviates from any thermal form by up to 19% at Δ = 1.5/H₀ (`v11` D).
+exact present-day kernel deviates from the first-order thermal form at H_eff by up to 19% at Δ = 1.5/H₀ (`v11` D — a
+time-domain comparison with one form, not a KMS test or a temperature scan; the audit `11` finds the T = 0 form closer at
+every grid point and, in the midpoint convention, no β at which the kernel is KMS).
 
 **Also accepted from this round:** T6's scope (a harmonic-bath or generalized-free-field representation is a
 mathematical representation, not an actual local field theory; Källén–Lehmann needs covariance and positivity) and
@@ -235,8 +237,9 @@ The fourth-round reprioritisation (R17) was followed. **Survey (`10`):** the sca
 (one Fokker–Planck equation and equilibrium from stochastic, diagrammatic, wavefunction, static-patch, soft-EFT and Euclidean
 methods) and at NLO; no opening. The graviton-sector disagreement is real but is a dispute over which quantities are
 gauge-invariant observables in perturbative quantum gravity on dS, not between competing resummations; none of P0–P5 speaks to
-it. Item 1 is published except for the O(ε) worldline KMS defect of the massless sector (conventional, small). **`v13`:** the
-published O(ε) Fokker–Planck coefficients of the massless zero mode in power-law FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16,
+it. Item 1 is published except for the O(ε) worldline KMS defect of the massless sector (conventional, small). **`v13`:**
+[**superseded — see R19 and `11`:** the inference in the rest of this paragraph was withdrawn (coarse-graining-scale dependence;
+no stationary weight exists at O(ε)); it is kept as the record of revision 2.3] the published O(ε) Fokker–Planck coefficients of the massless zero mode in power-law FRW (Cho–Kim–Kitamoto 2015, eqs. 3.14–3.16,
 confirmed at equation level) define T_zm = (3−ε)A₀H⁴/2 = 1/Vol(S⁴) + O(ε). Its O(ε) coefficient 2/3 − 2γ_E − 2 ln 2 = −1.874 is
 the Euclidean weight of no geometric horizon temperature: the required rate H_X = H(1 − 0.4685 ε) is neither the detector value
 (c = 1), nor Kodama–Hayward (c = 1/2), nor H. Kodama–Hayward is numerically close (diffusion coefficient −1.50 vs −1.54), but
