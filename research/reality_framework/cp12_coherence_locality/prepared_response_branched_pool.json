@@ -1,0 +1,620 @@
+{
+  "name": "branched_pool",
+  "N": 4,
+  "Q": 3,
+  "S": 4,
+  "L": 3,
+  "dimension": 1032,
+  "pool_dimension": 223,
+  "host_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "initial_coherent_graphs": 4,
+  "source_global_operator_norm": 1.0000000000000004,
+  "source_prepared_sector_norm": 1.0000000000000009,
+  "source_rule": "All frozen hopping terms at vertex0, regardless of edge or pool membership; normalization alone is calibrated.",
+  "crossing_norm_square": 0.003333333333333333,
+  "internal_offdiagonal_norm": 0.05,
+  "rows": [
+    {
+      "T": 0.01,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 4.329536179818769e-07,
+      "pool_compressed_response": 4.3295361931843983e-07,
+      "graph_block_response": 4.329538672091273e-07,
+      "full_pool_error": 1.3365629336257144e-15,
+      "pool_error_bound": 1.3333333333333334e-06,
+      "full_fixed_error": 2.4922725041975273e-13,
+      "total_error_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 4.329536179818773e-07,
+      "pool_compressed_response": 4.3295361931843856e-07,
+      "graph_block_response": 4.329538672091273e-07,
+      "full_pool_error": 1.3365612395598199e-15,
+      "pool_error_bound": 1.3333333333333334e-06,
+      "full_fixed_error": 2.4922724999623625e-13,
+      "total_error_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 4.329608441714191e-07,
+      "pool_compressed_response": 4.329608314779261e-07,
+      "graph_block_response": 4.329610833793925e-07,
+      "full_pool_error": 1.2693493022501333e-14,
+      "pool_error_bound": 1.3333333333333334e-06,
+      "full_fixed_error": 2.3920797339590594e-13,
+      "total_error_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.05,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 5.3942190001139896e-05,
+      "pool_compressed_response": 5.394219418590311e-05,
+      "graph_block_response": 5.39429671615792e-05,
+      "full_pool_error": 4.1847632130387336e-12,
+      "pool_error_bound": 3.3333333333333335e-05,
+      "full_fixed_error": 7.7716043930115e-10,
+      "total_error_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 5.394219000114006e-05,
+      "pool_compressed_response": 5.3942194185903e-05,
+      "graph_block_response": 5.3942967161579034e-05,
+      "full_pool_error": 4.1847629419881904e-12,
+      "pool_error_bound": 3.3333333333333335e-05,
+      "full_fixed_error": 7.771604389758893e-10,
+      "total_error_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 5.396471847430765e-05,
+      "pool_compressed_response": 5.3964679021739864e-05,
+      "graph_block_response": 5.396546463633307e-05,
+      "full_pool_error": 3.945256778605313e-11,
+      "pool_error_bound": 3.3333333333333335e-05,
+      "full_fixed_error": 7.461620254230628e-10,
+      "total_error_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.1,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.0004271358556210427,
+      "pool_compressed_response": 0.000427135990277066,
+      "graph_block_response": 0.0004271605575818199,
+      "full_pool_error": 1.3465602331091953e-10,
+      "pool_error_bound": 0.00013333333333333334,
+      "full_fixed_error": 2.4701960777209764e-08,
+      "total_error_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.0004271358556210414,
+      "pool_compressed_response": 0.0004271359902770673,
+      "graph_block_response": 0.00042716055758182077,
+      "full_pool_error": 1.3465602591300474e-10,
+      "pool_error_bound": 0.00013333333333333334,
+      "full_fixed_error": 2.4701960779378168e-08,
+      "total_error_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.0004278514497572548,
+      "pool_compressed_response": 0.00042785020851232526,
+      "graph_block_response": 0.00042787519085702363,
+      "full_pool_error": 1.2412449295392397e-09,
+      "pool_error_bound": 0.00013333333333333334,
+      "full_fixed_error": 2.374109976882935e-08,
+      "total_error_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.4,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.022162660055829397,
+      "pool_compressed_response": 0.02216279798434867,
+      "graph_block_response": 0.022184639113907653,
+      "full_pool_error": 1.3792851927263428e-07,
+      "pool_error_bound": 0.0021333333333333334,
+      "full_fixed_error": 2.1979058078255842e-05,
+      "total_error_bound": 0.08213333333333335,
+      "independent_impulse_derivative": 0.0221626599412883,
+      "impulse_error": 1.1454109882791386e-10
+    },
+    {
+      "T": 0.4,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.02216266005582944,
+      "pool_compressed_response": 0.02216279798434867,
+      "graph_block_response": 0.02218463911390764,
+      "full_pool_error": 1.379285192310009e-07,
+      "pool_error_bound": 0.0021333333333333334,
+      "full_fixed_error": 2.197905807820033e-05,
+      "total_error_bound": 0.08213333333333335,
+      "independent_impulse_derivative": 0.022162659941010743,
+      "impulse_error": 1.1481869621743357e-10
+    },
+    {
+      "T": 0.4,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.02279284648230582,
+      "pool_compressed_response": 0.022791944788872184,
+      "graph_block_response": 0.022814444056948935,
+      "full_pool_error": 9.016934336344984e-07,
+      "pool_error_bound": 0.0021333333333333334,
+      "full_fixed_error": 2.1597574643116013e-05,
+      "total_error_bound": 0.08213333333333335,
+      "independent_impulse_derivative": 0.022792846364749764,
+      "impulse_error": 1.1755605516805545e-10
+    },
+    {
+      "T": 1.0,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.0842813456781361,
+      "pool_compressed_response": 0.08427869024822987,
+      "graph_block_response": 0.08507933617870922,
+      "full_pool_error": 2.6554299062259146e-06,
+      "pool_error_bound": 0.013333333333333332,
+      "full_fixed_error": 0.000797990500573123,
+      "total_error_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.08428134567813612,
+      "pool_compressed_response": 0.08427869024822984,
+      "graph_block_response": 0.08507933617870925,
+      "full_pool_error": 2.6554299062814257e-06,
+      "pool_error_bound": 0.013333333333333332,
+      "full_fixed_error": 0.000797990500573123,
+      "total_error_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.10775372124340246,
+      "pool_compressed_response": 0.1077399836602561,
+      "graph_block_response": 0.10870324906856753,
+      "full_pool_error": 1.3737583146364307e-05,
+      "pool_error_bound": 0.013333333333333332,
+      "full_fixed_error": 0.0009495278251650668,
+      "total_error_bound": 0.21333333333333335
+    },
+    {
+      "T": 2.0,
+      "detector": 1,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.050089370905963125,
+      "pool_compressed_response": 0.050106045007025105,
+      "graph_block_response": 0.04881804696610201,
+      "full_pool_error": 1.6674101061979474e-05,
+      "pool_error_bound": 0.05333333333333333,
+      "full_fixed_error": 0.0012713239398611173,
+      "total_error_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "detector": 2,
+      "independently_declared_incidence_distance": 1,
+      "full_response": 0.05008937090596295,
+      "pool_compressed_response": 0.05010604500702521,
+      "graph_block_response": 0.04881804696610184,
+      "full_pool_error": 1.667410106225703e-05,
+      "pool_error_bound": 0.05333333333333333,
+      "full_fixed_error": 0.0012713239398611104,
+      "total_error_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "detector": 3,
+      "independently_declared_incidence_distance": 1,
+      "full_response": -0.0020857881145212934,
+      "pool_compressed_response": -0.0022810875299849563,
+      "graph_block_response": -0.003952773353108396,
+      "full_pool_error": 0.00019529941546366295,
+      "pool_error_bound": 0.05333333333333333,
+      "full_fixed_error": 0.001866985238587103,
+      "total_error_bound": 0.45333333333333337
+    }
+  ],
+  "connectivity_response_controls": [
+    {
+      "T": 0.01,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -2.184863685805727e-09,
+      "exact_block_connectivity_response": -3.469446951953614e-18,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -2.184863685805727e-09,
+      "exact_block_connectivity_response": -3.469446951953614e-18,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": -2.184863675397386e-09,
+      "exact_block_connectivity_response": -3.469446951953614e-18,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": 5.111429394327738e-09,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 7.215808618753231e-10,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.01,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 7.215808618753231e-10,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.0020013333333333333
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -2.7236867211621885e-07,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -2.7236867211621885e-07,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": -2.723688219546938e-07,
+      "exact_block_connectivity_response": 1.3877787807814457e-17,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": 6.373516479446506e-07,
+      "exact_block_connectivity_response": -1.3877787807814457e-17,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 8.987725878928151e-08,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.05,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 8.98772587892812e-08,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.010033333333333335
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -2.1605459599449706e-06,
+      "exact_block_connectivity_response": 1.1102230246251565e-16,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -2.1605459599449706e-06,
+      "exact_block_connectivity_response": 1.1102230246251565e-16,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": -2.1605649433431573e-06,
+      "exact_block_connectivity_response": 1.3877787807814457e-16,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": 5.059524911005253e-06,
+      "exact_block_connectivity_response": 5.551115123125783e-17,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 7.110659762321587e-07,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.1,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 7.110659762321621e-07,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.020133333333333336
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -0.00011628673925384494,
+      "exact_block_connectivity_response": 7.827939685345342e-17,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -0.00011628673925386402,
+      "exact_block_connectivity_response": 1.1600963245594897e-16,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": -0.0001165330049296455,
+      "exact_block_connectivity_response": 7.45931094670027e-17,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": 0.00027631446425773615,
+      "exact_block_connectivity_response": 1.9081958235744878e-16,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 3.639600959081259e-05,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 0.4,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 3.639600959081255e-05,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.08213333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -0.0006086787608775013,
+      "exact_block_connectivity_response": -5.551115123125783e-17,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -0.0006086787608773903,
+      "exact_block_connectivity_response": -1.6653345369377348e-16,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": -0.0006356465541469403,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": 0.0015489813724866575,
+      "exact_block_connectivity_response": -8.326672684688674e-17,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 0.00015201135170782445,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 1.0,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 0.0001520113517078245,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.21333333333333335
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        0,
+        1
+      ],
+      "full_connectivity_response": -0.00046814411229403885,
+      "exact_block_connectivity_response": -1.1102230246251565e-16,
+      "proven_response_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        0,
+        2
+      ],
+      "full_connectivity_response": -0.00046814411229403885,
+      "exact_block_connectivity_response": -3.191891195797325e-16,
+      "proven_response_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        0,
+        3
+      ],
+      "full_connectivity_response": 0.0007393813647418035,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        1,
+        2
+      ],
+      "full_connectivity_response": -0.00015306981909410378,
+      "exact_block_connectivity_response": 2.220446049250313e-16,
+      "proven_response_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        1,
+        3
+      ],
+      "full_connectivity_response": 0.00017498833947055502,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.45333333333333337
+    },
+    {
+      "T": 2.0,
+      "edge": [
+        2,
+        3
+      ],
+      "full_connectivity_response": 0.0001749883394705535,
+      "exact_block_connectivity_response": -0.0,
+      "proven_response_bound": 0.45333333333333337
+    }
+  ],
+  "scope": "Prepared and independently calibrated host. Gauge-invariant local source/detectors; no emergent dimension, physical clock, or Lorentz cone is claimed."
+}

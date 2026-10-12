@@ -1,0 +1,136 @@
+{
+  "parent_commit": "d2fbd05c420a209faae618c88fbe4d1902bc999c",
+  "branch": "codex/grut-cp12-coherence-locality",
+  "dependencies": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "networkx": "3.7"
+  },
+  "executed_commands": [
+    "python research/reality_framework/cp12_coherence_locality/full_ground_records.py --n 4 --q 3 --L 3",
+    "python research/reality_framework/cp12_coherence_locality/full_ground_records.py --n 5 --q 5 --L 2",
+    "python research/reality_framework/cp12_coherence_locality/full_ground_records.py --n 5 --q 5 --L 3",
+    "python research/reality_framework/cp12_coherence_locality/locality_pool.py",
+    "python research/reality_framework/cp12_coherence_locality/prepared_response.py",
+    "python research/reality_framework/cp12_coherence_locality/light_cone_control.py",
+    "python research/reality_framework/cp12_coherence_locality/three_dimensional_host.py",
+    "python research/reality_framework/cp12_coherence_locality/verify.py"
+  ],
+  "verification": {
+    "status": "CP12_COHERENCE_LOCALITY_CHECKS_PASS",
+    "group_count": 9,
+    "groups": [
+      "pinned frozen law and inherited analytical dependency hashes",
+      "joint system-reference energy and exact single-edge record sum rule",
+      "complete graph distributions, exact uniform baseline and electric cutoff controls",
+      "exact neighborhood quotient and complete physical mixing norms",
+      "full-law coherent preparation moments and outside-bond time bound",
+      "gauge-invariant source impulse, detector response and suppressed connectivity response",
+      "conditional fermionic commutator cone and exact integer support-order zeros",
+      "independent supplied 3D spectra and exact macroscopic response/energy fractions",
+      "outward ground coherence and fixed-calibration probability certificates"
+    ],
+    "dependencies": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "networkx": "3.7"
+    },
+    "scope": "Executed frozen-model controls, supplied-host locality and analytical certificates; no host formation, Lorentz invariance or gravity established."
+  },
+  "files": [
+    {
+      "name": "DERIVATION.md",
+      "bytes": 17497,
+      "sha256": "148f505aa7c9d7fec0cf0acad390c1bc2c525c3a2e0497d3cbbbad11dc34c4a6"
+    },
+    {
+      "name": "REPORT.md",
+      "bytes": 11841,
+      "sha256": "306ff6a11edfa25c58b69c0eaf29b046f540bc76b7511bef309cdedfc887f6f8"
+    },
+    {
+      "name": "full_ground_N4_Q3_L3.json",
+      "bytes": 6998,
+      "sha256": "44a302e9128e0a60d3f5df4673aa56a17ec8edb7728ef72079a9d2fb2ab637f9"
+    },
+    {
+      "name": "full_ground_N5_Q5_L2.json",
+      "bytes": 68081,
+      "sha256": "0454abf4bd2dcd413b45b31d7a9dfaf87e880412b8cb99a589d9245748057ca9"
+    },
+    {
+      "name": "full_ground_N5_Q5_L3.json",
+      "bytes": 68064,
+      "sha256": "2ead96cab6953e6ec154f54bd41b8e4c33862c64f9ee1e8346d91be7ec4c9d4b"
+    },
+    {
+      "name": "full_ground_records.py",
+      "bytes": 5311,
+      "sha256": "a41ec561ad60b27399b3bdc0045f6df2621fb30e26989d339d1db738b9112015"
+    },
+    {
+      "name": "light_cone_control.py",
+      "bytes": 4015,
+      "sha256": "f58d5d4ddde9f216ce8014dbb8a2cfe309db9c0b12cc07561960d51d72a4c54e"
+    },
+    {
+      "name": "light_cone_results.json",
+      "bytes": 12102,
+      "sha256": "6423bf9d2f185b33569305504f85040b7506f670f35e67b1cc33be26a9d45726"
+    },
+    {
+      "name": "locality_pool.py",
+      "bytes": 8255,
+      "sha256": "29b71be00a84eae90e0e62c50b4c5ee4ad22207564dee90643e94c0d0ec98634"
+    },
+    {
+      "name": "locality_pool_results.json",
+      "bytes": 19167,
+      "sha256": "cd69531bf399baa319862412cf0210bc45053d66e97c8165cfb200520aa38c90"
+    },
+    {
+      "name": "parent_sources.json",
+      "bytes": 749,
+      "sha256": "437bc242bf5f54c299951883696bc00df77999491faa4a5586db46d984cc4602"
+    },
+    {
+      "name": "prepared_response.py",
+      "bytes": 5955,
+      "sha256": "6d945e1835a9e80859dee982a83562c76d6d18aee0c50eb8b8b9663a8cbd3206"
+    },
+    {
+      "name": "prepared_response_branched_pool.json",
+      "bytes": 18140,
+      "sha256": "9de3295ce424b0f824cd3b6617dc39051e46ae4c7f3f4c11535bc685e68b6454"
+    },
+    {
+      "name": "prepared_response_cycle_pool.json",
+      "bytes": 18163,
+      "sha256": "7bf076d320230edec2bf957ba93b875f8433ab6c91cde4fd520f4f8b2a4a4892"
+    },
+    {
+      "name": "three_dimensional_host.py",
+      "bytes": 3581,
+      "sha256": "74c6d0336b4f7847caf987ec02c1679766c3dbb58a1290737f41fa7007875212"
+    },
+    {
+      "name": "three_dimensional_host_results.json",
+      "bytes": 12555,
+      "sha256": "72467322a2b6bd4bad0f392265d43b996f3e962477e2d092cec48cc9dcd4947d"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 1087,
+      "sha256": "ba1177d47bf8a36e7743e7891fc578b854f2d2b78448e149a3bc221ab5415ab9"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 6393,
+      "sha256": "fcf3edc7ecbd8d9e2bd04cbcc78d75756430e9d7607d76628f5090a620f9c755"
+    }
+  ],
+  "scope": "Prepared calibrated-host locality and full-H coherence/record bounds. Large tables are analytical certificates, not many-body simulations. No host formation, Lorentz invariance or gravitational response derived.",
+  "frozen_laws": "Unchanged; publish only this new directory. No canonical GRUT-RAI or Stage-3 card changes."
+}
