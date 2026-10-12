@@ -105,7 +105,46 @@ All these sampled graphs are connected and have the exact same N,Q,W as the bala
 
 A sparse eigensolver using only k=3 smallest-magnitude eigenvalues initially **missed degenerate low eigenmodes** in a different 4-regular clique-necklace diagnostic; that preliminary result was discarded. The published random-graph script requests k=10, checks residuals and never relies on sparse diagonalization to compute the torus gaps, which are analytic.
 
-## 6. The physics consequence
+## 6. A frozen-CP-12 *physical* diagnostic distinguishes these otherwise locally identical geometries
+
+The graph Laplacian above is a geometry diagnostic; it is not automatically CP-12's fermion/gauge propagation operator. However **CP-12 itself supplies a different conditional, gauge-respecting distance-energy measurement**: for a charge at vertex v and a hole on occupied edge e={u,w}, the least bare electric flux energy is
+\[
+E_{\min}(v,e;G)=\kappa Q+2m+\frac{\epsilon_E}{2}d_{\rm inc}^G(v,e),
+\quad
+\boxed{d_{\rm inc}^G(v,e)=1+2\min[d_G(v,u),d_G(v,w)]}.
+\]
+This follows from the bipartite incidence path and the owner's frozen-law Gauss constraints; it does NOT account for flux-screening or interacting-dressed charge energies.
+
+For a Cartesian cycle graph \(C_a\square C_b\), average uniformly over vertices v and occupied edges e. Let \(D_v(\ell)\) be the mean cycle distance from a fixed vertex to a uniform vertex and \(D_e(\ell)\) the mean minimum distance from the endpoints of a fixed edge to a uniform vertex. An elementary exact counting identity for every cycle length \(\ell\ge5\) is
+\[
+D_v(\ell)+D_e(\ell)=\frac{\ell-1}{2}.
+\]
+Half the Cartesian-product edges run along each axis. Inserting the incidence distance formula therefore gives the **exact finite-N identity**
+\[
+\boxed{
+\langle d_{\rm inc}\rangle_{v,e;C_a\square C_b}
+=\frac{a+b}{2}.
+}
+\]
+So CP-12's average bare electric-field excess for a *single fixed charge/hole pair* over uniform placements is
+\[
+\boxed{\langle E_{\rm electric}\rangle_{\min}
+=\frac{\epsilon_E}{4}(a+b).}
+\]
+
+At frozen \(\epsilon_E=1/4\):
+
+| N | Square mean incidence distance | Thin mean distance | Square bare electric excess | Thin bare electric excess |
+|---:|---:|---:|---:|---:|
+| 324 | 18 | 22.5 | 2.2500 | 2.8125 |
+| 729 | 27 | 45 | 3.3750 | 5.6250 |
+| 2,916 | 54 | 166.5 | 6.7500 | 20.8125 |
+
+The exact values were computed independently by enumerating all vertex/edge orientations on both cycle factors, rather than inferred from the Laplacian. They demonstrate a **genuinely model-grounded physical energy diagnostic** distinguishing global aspect ratio despite identical local motif data.
+
+**Boundary:** averaging *minima* of charged conditional configurations does not imply the interacting CP-12 ground state prefers the square, because its vacuum, kinetic, gauge and charged-sector state multiplicities also determine the free energy. Indeed cheap charge separations might favor a random expander with short paths over any finite-dimensional manifold. A dynamical selection calculation would have to compare the full dressed energies/free energies and geometrical probabilities, not merely this bare electric excess.
+
+## 7. The physics consequence
 
 There are **three logically separate properties** that CP-12 must obtain, not infer from one another:
 
@@ -126,4 +165,4 @@ This gives a concrete **unfitted** large-N falsifier for frozen CP-12:
 
 ## Reproduction
 
-[check.py](check.py), Python with NumPy/SciPy/NetworkX, builds the exact competing graphs at N=324,729,2916, verifies graph isomorphism of radius-3 neighborhoods and exact motif equality, computes all exact torus Laplacian gaps and heat-return dimensions, and supplies seeded 4-regular adversarial samples with checked sparse eigenpair residuals. It writes [results.json](results.json) when run. An equivalent independent local script with these same formulas passed; **verbatim execution of the committed script remains a separate audit step**.
+[check.py](check.py), Python with NumPy/SciPy/NetworkX, builds the exact competing graphs at N=324,729,2916, verifies graph isomorphism of radius-3 neighborhoods and exact motif equality, computes all exact torus Laplacian gaps and heat-return dimensions, enumerates the **CP-12 bare charge/hole incidence-distance identity**, and supplies seeded 4-regular adversarial samples with checked sparse eigenpair residuals. It writes [results.json](results.json) when run. An equivalent independent local script with these same formulas passed; **verbatim execution of the committed script remains a separate audit step**.
