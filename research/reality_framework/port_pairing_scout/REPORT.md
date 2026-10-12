@@ -100,6 +100,29 @@ This explicitly demonstrates a potentially misleading finite-size success: even 
 
 Typical configurations retain cycles whose sizes are O(N): a giant component can exist without the complete geometry being one connected component. Do not equate these claims.
 
+### Robustness check: positive fermion mass
+
+The exact **massless** cotangent theorem does not require retuning any parameters. However CP-11's original fermion mass was m=1, so a separate, explicitly **non-frozen diagnostic** checks whether a positive mass invalidates the loop-energy mechanism.
+
+For an l-cycle define
+\[
+\delta_l(m)=l\int_{0}^{2\pi}\frac{dq}{2\pi}
+\sqrt{m^2+4t^2\sin^2(q/2)}
+-\sum_{k=0}^{l-1}\sqrt{m^2+4t^2\sin^2(\pi k/l)}.
+\]
+A Bernstein/Laplace integral representation of the square root together with the **positive** modified-Bessel coefficients of the ring's heat kernel establishes \(\delta_l(m)>0\) for finite l and m>=0: its Fourier coefficients away from the zeroth mode are negative and the finite ring samples extra negative harmonics. For m>0 the analyticity strip makes \(\delta_l(m)\) **exponentially small** for large l; hence the same fixed-beta cycle-counting argument still drives one-cycle probability to zero in this *conditional* geometry ensemble.
+
+An independent numerical Laplacian-integral control (not a new complete m>0 quantum simulation) gives:
+
+| l | delta_l(m=0) | delta_l(m=0.25) | delta_l(m=1) | delta_l(m=2) |
+|---:|---:|---:|---:|---:|
+| 2 | .546479 | .359705 | .119152 | .035600 |
+| 4 | .264531 | .112694 | .010270 | .000647 |
+| 8 | .131237 | .023720 | .00014395 | .000000375 |
+| 12 | .087366 | .006605 | .000002449 | .000000000261 |
+
+This is a robustness check of the **finite-size penalty and thermal asymptotic**, not an analytical proof that single-ring minimization under arbitrary m>0 or all fluctuating quantum states follows from the exact m=0 theorem. In fact, gapping the fermions makes the energetic distinction between large competing loops decay even faster.
+
 ## 4. Quantum reconnection test through N=36
 
 Supply, without any favored cycle or global connectivity projector, a **positive** geometry reconnection Hamiltonian on perfect matchings:
