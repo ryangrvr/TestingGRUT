@@ -186,15 +186,35 @@ These probability numbers belong to **the quantum ground of H_eff with Γ=.1**, 
 
 The ground state is invariant under all simultaneous relabellings. Fixed labelled probes i,j therefore yield the same average response for every distinct pair, unless a physical identifying reference is included. Conditional graph-distance propagation on one ring is not, by itself, an operational separation-dependent law in the fully fluctuating ground state. The actual reference system and local coupling are still unconstructed. Port roles that carry true physical reference records have energetic and accessibility costs.
 
-## 5. What this actually contributes
+## 5. Stronger follow-up: complete joint fermions, thermal control and relational response
+
+The initial \`H_eff\` above contains an explicitly adiabatic filled-band approximation. This limitation motivated a separate **fully non-adiabatic microscopic candidate** [FULL_JOINT.md](FULL_JOINT.md) with [full_joint.py](full_joint.py): fixed port-fermion modes (2N total, N occupied), graph-dependent hopping, **all pairings retained**, and the same positive quantum reconnection operator. The relative sign s of within-site and bond hoppings is supplied. The s=-1 sign has the same conditional filled-band energy **without needing to eliminate the fermions**, while the opposite sign s=+1 is a decisive short-loop counterexample.
+
+| N | Complete geometry × fermion states | P(connected), s=-1 | P(connected), s=+1 | Geometry purity at s=-1 |
+|---:|---:|---:|---:|---:|
+| 3 | 300 | 0.995021 | 0.000004128 | 0.772249 |
+| 4 | 7,350 | 0.985453 | 0.000000010 | 0.561881 |
+| 5 | 238,140 | 0.968941 | not run | 0.404441 |
+
+These are actual **joint quantum ground states**, not the effective \`H_eff\` predictions; the nonzero geometry–matter entanglement entropies are 0.529, 1.174, 1.869 nats. The exact signed fermion-wedge representation makes the full Hamiltonian commute with a vertex transposition at N=3,4. For s=-1, \(H_{\rm joint}\ge0\) after the constant \(4tN/\pi\) shift.
+
+An exact 300-state **full canonical thermal trace** at N=3 gives P(connected)=0.53333 at beta=0, 0.69210 at beta=1, 0.99702 at beta=5, for s=-1. This is finite-system thermal evidence only; the **full** quantum thermodynamic limit is not proved by the earlier conditional Gibbs no-go, whose scope remains explicit. Reversing sign gives 0.000380 connected at beta=5.
+
+The same ground state has a true *relational detector hierarchy*: source occupancy \(n_0\), one-link detector occupancy at \(\mathrm{mate}_P(0)\), and two-link detector occupation after following two bonds across the intervening vertex. At N=4, t=0.4 the Kubo responses are **-0.266133** and **-0.00381282**, respectively, and agree with independent finite source impulses. At t≈0 the one-link slope is -0.852627 while the two-link linear coefficient vanishes within numerical precision and its first visible term scales approximately as \(-0.0591t^3\). This is stronger than just finding a low energy gap; it links the same evolving connections to actual fermionic detector response. The readout operations remain mathematically bond-controlled and a physical apparatus must still earn access to the mate map.
+
+The crucial **hostile locality control** is [shortcut_control.py](shortcut_control.py). Any two originally distant ring bonds can be reconnected in one quantum geometry operation. A fermion can then hop over the newly created bond in the next operation, giving a second-order matrix amplitude magnitude \(\Gamma t/N\) in \(H^2\) independent of the original ring distance; for N=4 this is exactly **0.025**. Consequently a robust dynamical physical light cone is **not derived**, notwithstanding the relational detector hierarchy and small-N connectedness.
+
+This separate fully joint extension genuinely addresses the original *adiabatic fermion* limitation for N<=5; it does **not** establish a selected 3D spatial phase, a thermally stable complete quantum universe, a dynamically chosen sign/flux sector, local graph reconnection, Einstein's equations, or any empirical novelty.
+
+## 6. What this actually contributes
 
 **Positive:** one connected, gapless 1D geometry is favored by fermion binding across every finite-N pairing in the declared all-pairings state space. Unlike SCOUT-RG01, the cyclic ordering is NOT supplied by the initial kinematics; a single cycle competes with all partitions. Exact conditional energy, a thermal theorem and coherent reconnection ground states were tested, rather than assuming any one from pictures.
 
-**Negative:** two ports per vertex build 1D **valence** into the microscopic law; zero-mode filled-band physics has degeneracy, the strict energetic preference softens as 1/N, fixed-beta conditional Gibbs connectedness vanishes as N^-1/2, quantum reconnection appears to fragment the ground with increasing N, labels are not physical localized references, there is no dynamically recovered 3D topology, Lorentz cone, spin-2 sector, universal gravity coupling or experimental prediction. The reconnection is a global all-pairs operation and the fermionic potential is adiabatic, not a complete joint Hamiltonian.
+**Negative:** two ports per vertex build 1D **valence** into the microscopic law; zero-mode filled-band physics has degeneracy, the strict energetic preference softens as 1/N, fixed-beta conditional Gibbs connectedness vanishes as N^-1/2, quantum effective reconnection appears to fragment the ground with increasing N, labels are not physical localized references, there is no dynamically recovered 3D topology, Lorentz cone, spin-2 sector, universal gravity coupling or experimental prediction. The original `H_eff` fermionic potential is adiabatic; the separate full joint extension removes that shortcut only for the finite sizes tested, and its nonlocal reconnection and full thermodynamic limit remain unresolved.
 
 These negative results are **part of the result**. It would be false to claim we have derived physical spacetime or a thermal quantum gravity theory.
 
-## 6. Next physical obstruction and falsifier
+## 7. Next physical obstruction and falsifier
 
 The next successor must NOT fix this by commanding “one component” or by assuming an R³ embedding. It must justify microscopic interaction resources and local reconnection rules which constrain the real accessible matching space, and it must show robust spacetime connectivity at fixed physical temperature or explain its non-equilibrium/cosmological preparation without hiding a temperature that scales with system size. If it changes the number of ports per particle, prove dimensional geometry selection rather than choosing valence to fit a target dimension. An apparently connected small universe at very low temperature is not a valid substitute for those tests.
 
