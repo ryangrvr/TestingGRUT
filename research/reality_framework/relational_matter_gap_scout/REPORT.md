@@ -113,6 +113,31 @@ Both positive and inverse gap moments are finite for every fixed beta>0 and g,P>
 
 This does not imply an ordered crystal persists at positive T: cumulative position fluctuations in 1D can be unbounded, and the quantum finite-T ensemble has not been solved. It demonstrates a well-defined local gap fluid, **rather than selecting a spatial ring from competing graph topologies**.
 
+## Additional result — full finite quantum matter dynamics, without edge qubits
+
+The harmonic calculation is now supplemented by an independent **FULL quantum hard-core occupancy Hamiltonian**, specified in [full_quantum.py](full_quantum.py). Discretize the SAME supplied cyclic phase manifold into q=2N bins and occupy exactly N with indistinguishable hard-core particles. With the circumference set at the separately derived classical equilibrium L=Na_* (not itself quantized), a particle configuration determines its own cyclic gaps \ell_i. The full Hamiltonian on the \(\binom{2N}{N}\) occupancy basis is
+\[
+\boxed{H_q=J\sum_{s=0}^{q-1}(2n_s-b_s^\dagger b_{s+1}-b_{s+1}^\dagger b_s)
+     +g\sum_{\rm occupied\,neighbor\,gaps}\frac{1}{\ell_i}+PL .}
+\]
+The hopping term is the positive second-quantized discrete single-particle Laplacian. The gap potential acts on the **current matter configuration**. Neighbors are inferred from occupied phases, **not stored in independent link registers**. A one-bin global shift commutes with H exactly, and a unique positive ground state is invariant under it. **Whether the global shift should be gauged or treated as a physical symmetry is NOT derived.**
+
+Independent controls choose g=P=a_*=1 and hopping J=0.2, with **no parameter scan**. This J corresponds to an effective discrete single-particle mass around \(m_{\rm lattice}\simeq1/(2J(a_*/2)^2)=10\), **not** the m=100 used in the separate semiclassical harmonic benchmark. The results are demonstrations of closely related supplied microscopic laws; the full quantum calculation does not directly validate the harmonic speed at identical parameters.
+
+All microscopic matter configurations (without selecting a graph) are included for N=3,4,5,6,7. The exact translation commutator norm is <1e-10, ground-state eigenvector residual <1e-8 and positive ground energy per particle approaches around 2.29 over these sizes.
+
+| N | Full quantum states | Lowest gap | First gap coupled to \(n_{k=1}\) |
+|---:|---:|---:|---:|
+| 3 | 20 | 0.193160 | 0.784716 |
+| 4 | 70 | 0.131790 | 0.628406 |
+| 5 | 252 | 0.096512 | 0.520607 |
+| 6 | 924 | 0.073882 | 0.444141 |
+| 7 | 3,432 | 0.058301 | 0.387762 |
+
+**A crucial mode-identity result:** the lowest nonzero eigenstate at every size is *odd under a global one-bin phase translation* (translation character -1), and its squared transition amplitude from the ground state under the longest-wavelength **density mode \(n_{k=1}\)** is numerically below \(10^{-30}\). It is not the density-propagating excitation; it is the tunnel-splitting partner of the two approximately alternating particle patterns. The first density-coupled excitation is a higher, doubly degenerate sector. Its first-mode transition weight is strictly nonzero; the script finds its threshold from the actual matrix element rather than naming an eigenvalue as propagation after observing that it decreases.
+
+These facts are finite quantum claims, not a proven infinite-volume acoustic phase or a relativistic continuum. As N increases, the probability of occupying one of the two perfectly uniform discrete patterns actually decreases (0.6063 at N=3 to 0.2929 at N=7); quantum fluctuations are not being hidden. The expected neighbor gap stays exactly 1 at fixed circumference, by cyclic translation/counting, and the computed gap variance stays about 0.07. This is a **positive quantum geometry–matter benchmark** in a restricted 1D state space, but the topology and the coupling rule that makes phase neighbors special remain supplied.
+
 ## Result 5 — actual configuration-space size changes
 
 If the compact phase is discretized into q=2N available phase bins and the N particles are identical and hard-core, the number of configurations is
