@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-11",
+  "state": "Equivalent independent local numerics executed; exact committed scripts still require verbatim partner execution",
+  "base": "SCOUT-RG01 8813abc0228ee572f9d2a580776eb0e55355af5b",
+  "t": 1,
+  "gamma": 0.1,
+  "exact_theorems": {
+    "ring_energy": "U_l=kappa*l-2*t*cot(pi/(2*l))",
+    "ring_excess": "delta_l=4*t*l/pi-2*t*cot(pi/(2*l))>0, strictly decreasing",
+    "finite_N_static_minimum": "connected N-ring among all pairings",
+    "macroscopic_split_gap": "for even N: 2delta_(N/2)-delta_N = pi*t/N + O(N^-3)",
+    "fixed_positive_temperature": "P(single ring) ~ sqrt(pi)/(2 F_beta(1) sqrt(N)) -> 0",
+    "fermion_zero_modes": "c cycles => 2c one-body zero modes, binomial(2c,c) N-fermion ground fillings"
+  },
+  "quantum_reconnection": [
+    {
+      "N": 3,
+      "full_matching_states": 15,
+      "orbit_states": 3,
+      "connected": 0.994388878017,
+      "largest_cycle_fraction": 0.998128649669,
+      "ground_energy": 0.446945349642
+    },
+    {
+      "N": 4,
+      "full_matching_states": 105,
+      "orbit_states": 5,
+      "connected": 0.982037359137,
+      "largest_cycle_fraction": 0.992763996114,
+      "ground_energy": 0.393643091761
+    },
+    {
+      "N": 5,
+      "full_matching_states": 945,
+      "orbit_states": 7,
+      "connected": 0.959993500509,
+      "largest_cycle_fraction": 0.985483281217,
+      "ground_energy": 0.371194767829
+    },
+    {
+      "N": 6,
+      "full_matching_states": 10395,
+      "orbit_states": 11,
+      "connected": 0.929347198099,
+      "largest_cycle_fraction": 0.973393416013,
+      "ground_energy": 0.360744770274
+    },
+    {
+      "N": 12,
+      "orbit_states": 77,
+      "connected": 0.719329818957,
+      "largest_cycle_fraction": 0.903414840103,
+      "ground_energy": 0.345043811611
+    },
+    {
+      "N": 20,
+      "orbit_states": 627,
+      "connected": 0.553832600034,
+      "largest_cycle_fraction": 0.854251259805,
+      "ground_energy": 0.338363309787
+    },
+    {
+      "N": 24,
+      "orbit_states": 1575,
+      "connected": 0.502504091603,
+      "largest_cycle_fraction": 0.840038361232,
+      "ground_energy": 0.336196409771
+    },
+    {
+      "N": 30,
+      "orbit_states": 5604,
+      "connected": 0.44582354581,
+      "largest_cycle_fraction": 0.825017392976,
+      "ground_energy": 0.333678936899
+    },
+    {
+      "N": 36,
+      "orbit_states": 17977,
+      "connected": 0.404312060748,
+      "largest_cycle_fraction": 0.814552992717,
+      "ground_energy": 0.331738516394
+    }
+  ],
+  "conditional_gibbs": [
+    {
+      "N": 16,
+      "beta0": 0.223294,
+      "beta1": 0.423471,
+      "beta5": 0.792106,
+      "beta20": 0.992893
+    },
+    {
+      "N": 64,
+      "beta0": 0.110995,
+      "beta1": 0.213897,
+      "beta5": 0.44814,
+      "beta20": 0.787488
+    },
+    {
+      "N": 256,
+      "beta0": 0.055416,
+      "beta1": 0.106785,
+      "beta5": 0.227865,
+      "beta20": 0.445593
+    },
+    {
+      "N": 1024,
+      "beta0": 0.027698,
+      "beta1": 0.053314,
+      "beta5": 0.113845,
+      "beta20": 0.226588
+    }
+  ],
+  "zero_mode_ground_manifold_only": [
+    {
+      "N": 16,
+      "beta0": 0.01416963478,
+      "beta1": 0.09652200452,
+      "beta5": 0.53131857176,
+      "beta20": 0.9789694024
+    },
+    {
+      "N": 32,
+      "beta0": 0.00409771948,
+      "beta1": 0.03422786313,
+      "beta5": 0.26722803009,
+      "beta20": 0.8205771001
+    },
+    {
+      "N": 64,
+      "beta0": 0.00114739148,
+      "beta1": 0.01103023917,
+      "beta5": 0.11219247837,
+      "beta20": 0.5224175776
+    },
+    {
+      "N": 128,
+      "beta0": 0.00031440459,
+      "beta1": 0.00331989237,
+      "beta5": 0.04100833177,
+      "beta20": 0.2624862838
+    }
+  ],
+  "disclaimers": [
+    "Two ports per vertex is an input giving effectively 1D valence.",
+    "Finite-temperature analytic theorem uses conditional filled-band minimum, not full fermion thermal trace.",
+    "Coherent reconnection simulation uses an effective Born-Oppenheimer potential, not a complete joint matter-geometry Hamiltonian.",
+    "Quantum connected probability limit is NOT proved from N<=36.",
+    "Observed conditional dispersion does not derive an operational light cone or gravity.",
+    "Novelty and empirical prediction not established."
+  ]
+}
