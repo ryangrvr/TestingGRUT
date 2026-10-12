@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-V15 -- The Sorkin-Johnston (SJ) state in an inflationary de Sitter slab: the one known parameter-free, temperature-free
-state-selection rule, tested against GRUT III's own P2 and against the CMB.
+V15 -- The Sorkin-Johnston (SJ) state in an inflationary de Sitter slab: a temperature-free state-selection rule whose only
+input is the region, tested against GRUT III's own P2 and against the CMB.
 
 WHY.  The baseline (12) says a distinctive GRUT claim needs a rule that selects a non-equilibrium state without assuming a
-temperature.  The SJ prescription (Johnston 2009; Sorkin; Afshordi, Aslanbeigi & Sorkin 2012) is exactly such a rule: in a
+temperature.  The SJ prescription (Johnston 2009; Sorkin; Afshordi, Aslanbeigi & Sorkin 2012) is such a rule: in a
 bounded region O, take the Pauli-Jordan function iDelta as an operator on L^2(O, sqrt(-g) d^4x) and keep its positive
-spectral part as the two-point function.  No Killing field, no temperature, no free parameter beyond the region.
+spectral part as the two-point function.  No Killing field, no temperature, no test function; its one input is the region
+(including the region's future boundary).  The other unique rule, the Dappiaggi-Moretti-Pinamonti horizon state, avoids the
+region choice but is not proven Hadamard at nu = 3/2 (synthesis 13 Sec. 5).  The slab here has R^3 sections, so the
+construction is done mode by mode, as in AAS 2012 (Fewster-Verch's rigorous setting is relatively compact regions).
 
 MODE REDUCTION (spatially flat FRW, region = slab eta_i < eta < eta_e).  Per comoving mode k, with u_k the Bunch-Davies
 mode (Wronskian-normalised) and v_k = alpha u_k + beta u_k* the SJ mode, the SJ conditions are
@@ -19,21 +22,26 @@ Fields: conformally coupled massless (u = -eta e^{-ik eta}/sqrt(2k)) and massles
 
 RESULTS (checked below).
  15.1 closed forms of A, B (incomplete gamma) agree with quadrature; Wronskians; the SJ conditions hold to 1e-150; the
-      mode-reduced SJ two-point function equals the positive part of the discretised Pauli-Jordan operator (independent check).
- 15.2 ULTRAVIOLET: |beta_k|^2 -> (a_e H)^2/(16 k^2) for both fields -- a power law, not faster than any power, so the SJ state
-      in a sharp slab is not Hadamard (Fewster-Verch 2012), and the |beta|^2 part of its energy density grows like
-      Lambda^2 with the cutoff: infinite.  This violates GRUT III's P2 (local equilibrium = Minkowski-like short distances).
- 15.3 INFRARED: modes outside the horizon at the slab's END are suppressed: R_k = |v_k|^2/|u_k|^2 at eta_e behaves as
-      (k/a_e H)^{1/2} (conformal) and (k/a_e H)^{3/2} (massless minimally coupled).  If the SJ region is the inflationary
-      slab, every observable mode (exited ~50-60 e-folds before the end) has its power multiplied by ~(k/a_e H)^{3/2}: a
-      spectral-tilt shift of +3/2 against Planck 2018's n_s - 1 = -0.035 +- 0.004.  Excluded.
- 15.4 TELEOLOGY: at fixed comoving k the state depends on where the region ends in the FUTURE (through k s_e): moving the end
-      of the slab changes the state of modes long before it.
-CONCLUSION: the only known temperature-free, parameter-free selection rule fails GRUT III's P2 in a sharp region and, over
-the inflationary slab, contradicts the CMB.  Smoothing it (Brum-Fredenhagen) restores Hadamard at the price of a free
-function; choosing a region that ends today moves the IR suppression to the largest observable scales (k <~ a_0 H_0), where
-cosmic variance hides it, but leaves the region choice and the teleology as inputs.  A parameter-free, Hadamard,
-causal state-selection rule is exactly what is missing (12 Sec. 3, 13).
+      mode-reduced SJ two-point function equals the positive part of the discretised Pauli-Jordan operator (conformal field at
+      k = a_e H, and the massless field in the IR regime).
+ 15.2 ULTRAVIOLET: |beta_k|^2 -> (a_e H)^2/(16 k^2) for both fields (from the eta_e boundary term of B) -- a power law, not
+      faster than any power, so the SJ state in a sharp slab is not Hadamard (a direct computation; cf. Fewster-Verch 2012 for
+      massive fields on compact ultrastatic slabs), and the |beta|^2 part of its energy density grows like Lambda^2 with the
+      cutoff (the per-mode energy is k(|alpha|^2 + |beta|^2)/a^4; cross terms cancel): infinite.  This violates GRUT III's P2.
+ 15.3 INFRARED: modes outside the horizon at the slab's END are suppressed.  To leading order for a_i H << k << a_e H,
+      R_k = |v_k|^2/|u_k|^2 at eta_e ~ sqrt(pi/2)(k/a_e H)^{1/2} (conformal) and ~ sqrt(pi/2)(k/a_e H)^{3/2} (massless minimally
+      coupled); analytically R ~ [(A - |B|)/(2A)]^{1/2} with A - |B| -> int sin^2 x/x^2 = pi/2 or int j_1^2 = pi/6.  The same
+      power counting gives R ~ (k s_e)^nu for a light field of index nu.  If the SJ region is the inflationary slab, every
+      observable mode (k/a_e H ~ e^-50..e^-60) has its power multiplied by ~10^-33..10^-39 and its tilt shifted by +nu ~ +1.5,
+      against Planck 2018's n_s - 1 = -0.035 +- 0.004.  Excluded, in amplitude and in tilt, for any light inflaton.
+ 15.4 REGION DEPENDENCE: moving the region's future boundary changes the two-point function on the common earlier region (the
+      known non-local covariance of SJ; Fewster-Verch 2012 Sec. 5; AAS 2012 Sec. 6).  A rule that is causal in GRUT's sense must
+      not depend on a future boundary.
+CONCLUSION: the region-based SJ rule fails GRUT III's P2 in a sharp region and, over the inflationary slab, contradicts the
+CMB.  Smoothing it (Brum-Fredenhagen) restores Hadamard at the price of a free function.  Whether a region ending TODAY is
+compatible with the large-angle CMB has NOT been computed: it needs the SJ reduction through reheating and the radiation and
+matter eras, and the UV tail would then sit at (a_0 H_0)^2/(16 k^2).  A Hadamard, causal state-selection rule free of
+arbitrary functions is what is missing (12 Sec. 3, 13).
 """
 import mpmath as mp
 import numpy as np
@@ -98,7 +106,26 @@ mp.mp.dps = 40
 A, B, lam, al, be = sj('conf', mp.mpf(k0), mp.mpf(se), mp.mpf(si))
 vv = complex(al)*uu + complex(be)*uu.conj()
 err = np.linalg.norm(Wsj - np.outer(vv, vv.conj()))/np.linalg.norm(np.outer(vv, vv.conj()))
-check(f"mode-reduced SJ two-point function = positive part of the discretised Pauli-Jordan operator (rel. {err:.1e})", err < 1e-8)
+check(f"mode-reduced SJ two-point function = positive part of the discretised Pauli-Jordan operator, conformal, k = a_e H (rel. {err:.1e})", err < 1e-8)
+# massless field in the IR regime: k = 1e-3, s in [1, 1e4], Gauss nodes in log s; compare R at eta_e
+k1, se1, si1 = 1e-3, 1.0, 1e4
+x, w = np.polynomial.legendre.leggauss(4000)
+ls = np.log(se1) + (x + 1)*(np.log(si1) - np.log(se1))/2; sg = np.exp(ls)
+wq = w*(np.log(si1) - np.log(se1))/2*sg*sg**-4.0                          # ds = s dlog s, measure a^4 = s^-4
+etag = -sg
+um = (1 + 1j*k1*etag)*np.exp(-1j*k1*etag)/np.sqrt(2*k1**3)
+iD = np.outer(um, um.conj()) - np.outer(um.conj(), um)
+S = np.sqrt(wq); M = S[:, None]*iD*S[None, :]
+ev, V = np.linalg.eigh(M)
+top = np.argmax(ev); e = V[:, top]/S; vmode = np.sqrt(ev[top])*e                 # v = sqrt(lam) e, e normalised in L^2
+i_end = np.argmin(sg)                                                            # node closest to eta_e
+u_end = um[i_end]
+Rdisc = abs(vmode[i_end])**2/abs(u_end)**2
+mp.mp.dps = 60
+A, B, lam, al, be = sj('mmc', mp.mpf(k1), mp.mpf(se1), mp.mpf(si1))
+uq = u('mmc', mp.mpf(k1), -mp.mpf(sg[i_end]))
+Rcl = float(abs(al*uq + be*mp.conj(uq))**2/abs(uq)**2)
+check(f"massless field, IR (k = 1e-3, s in [1, 1e4]): discretised R = {Rdisc:.6e} vs closed form {Rcl:.6e}", abs(Rdisc/Rcl - 1) < 1e-4)
 mp.mp.dps = 160
 
 print("== 15.2 ultraviolet: |beta_k|^2 tail and the Hadamard condition ==")
@@ -128,22 +155,24 @@ for field, expo in [('conf', 0.5), ('mmc', 1.5)]:
     sl = [float(mp.log(Rs[i + 1]/Rs[i])/mp.log(mp.mpf(1000))) for i in range(len(Rs) - 1)]
     print(f"    {field}: local slopes d ln R/d ln k = {', '.join(f'{x:.4f}' for x in sl)}")
     check(f"{field}: R_k ~ (k/a_e H)^{expo} for k << a_e H", all(abs(x - expo) < 0.01 for x in sl))
-print("    => SJ over the inflationary slab multiplies the power of every observable mode (k/a_e H ~ e^-50..e^-60) by ~(k/a_e H)^{3/2}:")
-print("       a tilt shift of +1.5 against Planck 2018 n_s - 1 = -0.035 +- 0.004 (some 370 sigma). Excluded.")
+fac = [float(mp.sqrt(mp.pi/2)*mp.e**(-mp.mpf(n)*mp.mpf(3)/2)) for n in (50, 60)]
+print(f"    => if the SJ region is the inflationary slab (and k >> a_i H), every observable mode (k/a_e H ~ e^-50..e^-60) has its power")
+print(f"       multiplied by {fac[0]:.1e}..{fac[1]:.1e} and its tilt shifted by +nu ~ +1.5 (light inflaton), against Planck 2018")
+print("       n_s - 1 = -0.035 +- 0.004 (some 365 sigma). Excluded in amplitude and in tilt.")
 check("tilt shift 1.5 is incompatible with |n_s - 1 - (-0.035)| < 5 x 0.0042", 1.5 + 0.035 > 5*0.0042)
 
-print("== 15.4 dependence on the region's future boundary ==")
+print("== 15.4 region dependence (the known non-local covariance of SJ) ==")
 k = mp.mpf('1e-3')
 for se in ['1', '1e-1', '1e-2']:
     R, b2 = R_end('mmc', k, mp.mpf(se), mp.mpf('1e20'))
     Ru = abs(sj('mmc', k, mp.mpf(se), mp.mpf('1e20'))[3]*u('mmc', k, mp.mpf(-1)) + sj('mmc', k, mp.mpf(se), mp.mpf('1e20'))[4]*mp.conj(u('mmc', k, mp.mpf(-1))))**2/abs(u('mmc', k, mp.mpf(-1)))**2
     print(f"    mmc, k = 1e-3: slab ends at s_e = {se:>5} (a_e H = {mp.nstr(1/mp.mpf(se),3)}): R at the FIXED time eta = -1 is {mp.nstr(Ru, 6)}")
 Rs = [abs(sj('mmc', k, mp.mpf(se), mp.mpf('1e20'))[3]*u('mmc', k, mp.mpf(-1)) + sj('mmc', k, mp.mpf(se), mp.mpf('1e20'))[4]*mp.conj(u('mmc', k, mp.mpf(-1))))**2/abs(u('mmc', k, mp.mpf(-1)))**2 for se in ['1', '1e-2']]
-check("extending the region into the future changes the state at an earlier fixed time (teleology)", abs(Rs[0]/Rs[1] - 1) > 0.5)
+check("extending the region's future boundary changes the two-point function on the common earlier region (region dependence)", abs(Rs[0]/Rs[1] - 1) > 0.5)
 
-print("\nCONCLUSION: the SJ state -- the only known parameter-free, temperature-free selection rule -- is not Hadamard in a sharp")
-print("region (|beta_k|^2 ~ (a_e H)^2/16k^2, divergent energy density: violates P2), suppresses modes that are superhorizon at the")
-print("region's end by (k/a_e H)^{3/2} (massless field; over the inflationary slab this contradicts n_s), and depends on the")
-print("region's future boundary. A parameter-free, Hadamard, causal state-selection rule is what is missing.")
+print("\nCONCLUSION: the region-based SJ state is not Hadamard in a sharp region (|beta_k|^2 ~ (a_e H)^2/16k^2, divergent energy")
+print("density: violates P2), suppresses modes that are superhorizon at the region's end by ~(k/a_e H)^nu (over the inflationary slab")
+print("this contradicts the CMB in amplitude and tilt), and depends on the region's future boundary. A region ending today is not")
+print("computed here. A Hadamard, causal state-selection rule free of arbitrary functions is what is missing.")
 print("\nV15 OVERALL:", "PASS" if ok_all else "FAIL")
 raise SystemExit(0 if ok_all else 1)

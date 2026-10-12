@@ -64,34 +64,43 @@ spends budget:
    must either reproduce the relation or predict a definite deviation (a genuine falsifier once r is measured; a pointer,
    not a result).
 8. **The state must be Hadamard** (added in `13`). The Hadamard condition is the standard formal statement of Jacobson's
-   "usual short-distance vacuum fluctuations", i.e. of P2's state content; it is necessary for finite renormalised
-   stress-tensor fluctuations. Exact thermality at κ/2π follows from it only at bifurcate Killing horizons (Kay–Wald), and
+   "usual short-distance vacuum fluctuations", i.e. of P2's state content; it is necessary for finite Wick-square
+   fluctuations (Fewster–Verch 2013, ultrastatic slabs) and is the standard condition for a finite renormalised stress tensor. Exact thermality at κ/2π follows from it only at bifurcate Killing horizons (Kay–Wald), and
    otherwise in a near-horizon scaling limit (Kurpicz–Pinamonti–Verch 2021 for trapping horizons). A card that selects a
    non-Hadamard state (the sharp Sorkin–Johnston state, any non-Bunch–Davies α-vacuum) violates GRUT's own P2 (`v15`).
-9. **Any discrete microstructure meets Lorentz-invariance data** (added in `13`). A bounded-degree or lattice
-   kinematics picks a frame (Bombelli–Henson–Sorkin), and a Planck-scale frame feeds O(0.1–10%) species-dependent limiting
-   speeds into low energies through loops (Collins et al. 2004) unless a custodial symmetry is supplied, against bounds of
-   ~10⁻²⁰. A card with such kinematics must name the mechanism that protects the dimension-4 operators.
+9. **Any discrete microstructure meets Lorentz-invariance data** (added in `13`). A spatial graph evolved in an external
+   time has a frame by construction (and for discreteness meant to be Lorentz invariant, Bombelli–Henson–Sorkin forbid an
+   equivariant finite-valency structure on a sprinkling). In an effective theory, a Planck-scale frame feeds O(0.1–10%)
+   species-dependent limiting speeds into low energies through loops (Collins et al. 2004) unless a protecting mechanism is
+   supplied, against one-sided astrophysical bounds of ~10⁻²⁰. A card with such kinematics must name the mechanism that
+   protects the dimension-4 operators.
 10. **Entropy–action budget** (added in `13`, `v16`). A card that generates geometry must show that its weights can vary
    across the competing configurations by at least their excess log-count: an exponentially bounded configuration space, or
-   an action with a matching (e.g. N²) budget. Gibbs weights with extensive energies over all graphs cannot (codex theorem),
-   and neither can a local action's phase.
+   an action with a matching (e.g. N²) budget. Gibbs weights at a fixed temperature with extensive energies over all graphs
+   cannot (codex theorem), and — heuristically and generically — neither can a local action's phase (`v16`).
 
 ## 3. The candidate space, as the baseline leaves it
 
-There are exactly three ways to get Δρ ≠ 0 for a fixed observable, and the baseline prices each:
+There are four ways to get a distinctive result (the original text said three; `13` added the fourth), and the baseline
+prices each:
 
 - **Change the state** (same operators). This is conventional non-equilibrium QFT unless the card supplies a *selection
   rule* for the state that P0–P5 do not — and that rule must be parameter-free and must not be "the state is thermal at X"
-  (constraint 3). No such rule has been proposed on this branch. In FRW the comoving frame is a natural preferred frame,
-  so a state-selection rule is not forbidden by symmetry; it is simply absent.
+  (constraint 3). [Corrected in `13`: rules do exist — Sorkin–Johnston, states of low energy, smoothed SJ, adiabatic vacua,
+  the Dappiaggi–Moretti–Pinamonti horizon state — but each buys uniqueness with an extra input (a region, a test function,
+  an initial time, a past horizon), and Fewster–Verch 2012 forbid a covariant choice. `v15` computes the SJ case.] In FRW the
+  comoving frame is a natural preferred frame, so a state-selection rule is not forbidden by symmetry.
 - **Change the operator content** (new field or coupling). Conventional, priced (constraint 4), and the price list is
   already written; the one historical attempt (CP-05's light field) answered a bounded physical question and did not
   select a hidden sector.
 - **Change the identification** (replace P1's "the bath is the causal complement, read by its modular flow"). Then the
   theory is no longer GRUT III; it is a different theory that must be stated from scratch and priced from scratch.
+- **Fix a constant that local covariance leaves free** (added in `13`). Locally covariant renormalisation fixes the stress
+  tensor only up to finitely many local curvature terms, whose coefficients include Λ and G (Hollands–Wald). A principle that
+  fixed one of them without a fit would be distinctive without changing the state, the operators or the identification. None
+  has been proposed.
 
-I do not have a candidate that passes all seven lines. That is the honest position to hand to the charter: the constraints
+I do not have a candidate that passes all ten lines. That is the honest position to hand to the charter: the constraints
 are concrete, the baseline is in place, and the next physics step is a *principle* that selects a non-equilibrium state
 without a hidden temperature — not another computation inside P0–P5.
 
