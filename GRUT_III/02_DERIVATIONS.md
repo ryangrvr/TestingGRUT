@@ -163,7 +163,8 @@ W = −1/(4π²a(t)a(t′)(Δη − i0)²) exactly. Expanding about the midpoint
 
     W(t,t′) = W_dS(Δ; H_eff) + O(ε²),     H_eff = H̄ + Ḣ̄/H̄ = H̄(1 − ε̄) = (d/dt) ln ȧ |_{t̄},
 
-so the state is **exactly KMS to first order** at T_eff = (ä/ȧ)/2π (`v11` A: for the power law a ∝ t^p,
+so the state is **exactly KMS to first order** at T_eff = (ä/ȧ)/2π (a statement at fixed x = HΔ, i.e. for ω ≫ εH; the
+expansion is not uniform in Δ) (`v11` A: for the power law a ∝ t^p,
 ln[a₁a₂Δη²/(4 sinh²(x/2)/H_eff²)] has no 1/q term, q = p − 1; `v11` B: the general-a(t) construction to second order
 has vanishing first-order remainder at random parameter points, to 1e-15).
 

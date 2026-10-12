@@ -188,6 +188,8 @@ check("rho_T local exponent: 1 at w = 1e-3 H (IR, from 36 H^6 w) and 7 at w = 1e
       f"slope(1e-3) = {mp.nstr(sIR, 10)}, slope(1e3) = {mp.nstr(sUV, 10)}")
 print("  -> rho_T(t) = sum_k c_k delta^(k)(t): the dissipative kernel at a point is LOCAL (Huygens); all memory sits in")
 print("     N_T = (1/2) coth(pi w/H) rho_T, which is fixed by rho_T and the temperature T = H/2pi -- nothing is left to supply.")
+print("     (scope: two-point level, pointwise T00 of one conformally coupled scalar in Bunch-Davies; says nothing about non-conformal matter,")
+print("      higher cumulants, or other states)")
 
 # ---------------------------------------------------------------------------------------------
 # (C) the old GRUT kernels: Delta rho != 0 by fiat
@@ -268,7 +270,7 @@ def residual_report(model_rho, observable_label, state_label, *, reference_rho=r
       reference_rho    : rho_conventional for that observable/state (default: the dS conformal medium rho_T of v1).
       mechanism        : the operator/state content that produces Delta rho != 0, or None.
     Returns a dict with the residual table, local exponents, and a verdict:
-      'EMPTY'    if Delta rho = 0 (nothing beyond the conventional medium is being claimed),
+      'EMPTY'    if Delta rho = 0 on the test grid omegas (default 0.1H..10H, five points; a difference outside the grid is not seen),
       'SUPPLIED' if Delta rho != 0 and mechanism is None (the record's situation),
       'TESTABLE' if Delta rho != 0 and a mechanism is named (then Delta rho is the prediction to falsify).
     """
