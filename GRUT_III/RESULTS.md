@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-11 21:23 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-12 01:53 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -382,7 +382,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 51.7 s)
+  (runtime 25.1 s)
 V7 OVERALL: PASS
 ```
 
@@ -412,6 +412,8 @@ V8  residual framework:  Delta rho = rho_GRUT - rho_conventional is the decisive
   [PASS] rho_T local exponent: 1 at w = 1e-3 H (IR, from 36 H^6 w) and 7 at w = 1e3 H (flat limit)  (slope(1e-3) = 1.000002722, slope(1e3) = 6.999972)
   -> rho_T(t) = sum_k c_k delta^(k)(t): the dissipative kernel at a point is LOCAL (Huygens); all memory sits in
      N_T = (1/2) coth(pi w/H) rho_T, which is fixed by rho_T and the temperature T = H/2pi -- nothing is left to supply.
+     (scope: two-point level, pointwise T00 of one conformally coupled scalar in Bunch-Davies; says nothing about non-conformal matter,
+      higher cumulants, or other states)
 
 == (C) old GRUT kernels against the conformal medium  (normalised to agree with rho_T at w = 1) ==
   Conformal medium reference: rho_T(w) = (w^7 + 14 w^5 + 49 w^3 + 36 w)/(10080 pi^3), slope 1 (w<<H) -> 7 (w>>H).
@@ -460,9 +462,10 @@ V8  residual framework:  Delta rho = rho_GRUT - rho_conventional is the decisive
         at w = 0.1 is only -0.1955 (tested at w = 1 and 10 instead); the amplitude residual there is still
         24.6 x rho_T, and for w >= 1 Drude falls as 1/w while the medium rises as w^7: Delta rho != 0 regardless.
 
-  CONCLUSION (C): every registered GRUT kernel asserts Delta rho != 0 against the conformal vacuum medium of the
-  same (observable, state), with exponents 3 / 0 (or 1) in place of the medium's 1 -> 7, and gives no operator or state
-  that would produce the difference.  That is exactly what SCOUT_0 recorded as 'supplied' (noise profile, kernel class).
+  CONCLUSION (C): the registered GRUT kernels specify neither an observable nor a state (the template labels both
+  'unspecified'); read as rho-shapes for the vacuum medium they differ from the conformal medium's rho_T (IR exponents 3 / 0 (or 1)
+  against the medium's 1, and no w^7 UV rise), and they name no operator content or state that would produce the difference.
+  That is exactly what SCOUT_0 recorded as 'supplied' (noise profile, kernel class). C1's omega_c is set to H here by fiat.
 
 == (D) residual_report template, demonstrated ==
   residual_report: observable = T^00 at a point on a comoving worldline (one conformal scalar); state = Bunch-Davies / geodesic observer, KMS at T = H/2pi
@@ -481,7 +484,7 @@ V8  residual framework:  Delta rho = rho_GRUT - rho_conventional is the decisive
     max |Delta rho|/rho_ref = 1; max |shape residual| = 203.7; IR exponent model/ref = 3.0000/1.0000; KMS defect of implied N = 0.0e+00
     VERDICT: TESTABLE (Delta rho != 0; mechanism: (hypothetical) named operator content)
   [PASS] template on C1 with a named mechanism returns TESTABLE
-  [PASS] template: implied noise of every model is KMS-consistent by construction (defect < 1e-25)
+  [PASS] template: implied noise is KMS-consistent by construction (helper self-consistency, NOT a test: N is built from rho by the same formula kms_defect checks)
 
 V8 OVERALL: PASS
 ```
@@ -594,34 +597,40 @@ V10 OVERALL: PASS
   => W_eps/W_dS(H_eff) = 1 + eps^2 [x^2/4 - (x^3/12) coth(x/2)] + O(eps^3), H_eff = Hbar(1-eps).  Reviewers confirmed.
   f2(x - 2 pi i) - f2(-x) = -(-x**3*(exp(x) + 1) + (x - 2*I*pi)**3*(exp(x) + 1) + 3*(x**2 - (x - 2*I*pi)**2)*(exp(x) - 1))/(12*exp(x) - 12)  (nonzero => KMS broken at O(eps^2))
 == B. general a(t) to second adiabatic order (sympy construction + numerical verification) ==
+  first-order remainder after the shift H -> H(1 - eps), simplified symbolically: 0 -> PASS (identically zero)
   max |first-order difference from thermal form at H_eff = H(1-eps)| over random points: 2.17e-15 (float inputs; zero to machine precision) -> PASS
   max |second-order (eta=0) - power-law coefficient| over random points: 9.02e-16 -> PASS
   eps*eta term of the second-order relative remainder (general a(t)): epsilon*(x**2*(x + 6) - x**2*(x*exp(x) - 6*exp(x) + 12)*exp(x) - 24*x*exp(2*x) + 24*x + 48*(exp(x) - 2)*exp(x) + 48)*exp(-x)/(48*(cosh(x) - 1))
-  THEOREM (any a(t)): to first adiabatic order the comoving conformal vacuum is thermal at T_eff = (H + Hdot/H)/2pi = (d/dt ln a_dot)/2pi.
+  eps*eta coefficient vs closed form g(x) = 2 + x^2/4 - (x + x^3/24) coth(x/2) at x = 0.5, 1, 2, 3: max diff 2.82e-16 -> PASS
+  THEOREM (any a(t) with eps and eta first-order small): to first adiabatic order the comoving conformal vacuum's fixed-mean-time
+  spectrum is thermal at T_eff = (H + Hdot/H)/2pi = (d/dt ln a_dot)/2pi (omega >> eps H; the eps^2 remainder is not uniform in Delta).
 == C. numerics: Richardson-extrapolated first- and second-order KMS defects (power law) ==
   D/eps relative to Hbar, Richardson over p = [200, 400, 800, 1600]  (expected 2 pi w/Hbar, i.e. c = 1 exactly):
-  [PASS]    lim D/eps at w/H=0.5 = 2 pi w/H: got 3.141545863 want 3.141592654 rel 1.49e-5
-  [PASS]    lim D/eps at w/H=1.0 = 2 pi w/H: got 6.283026938 want 6.283185307 rel 2.52e-5
-  [PASS]    lim D/eps at w/H=2.0 = 2 pi w/H: got 12.56598506 want 12.56637061 rel 3.07e-5
-  [PASS]    lim D/eps at w/H=3.0 = 2 pi w/H: got 18.84894548 want 18.84955592 rel 3.24e-5
+  [PASS]    lim D/eps at w/H=0.5 = 2 pi w/H: got 3.141592652 want 3.141592654 rel 3.76e-10
+  [PASS]    lim D/eps at w/H=1.0 = 2 pi w/H: got 6.283185302 want 6.283185307 rel 8.2e-10
+  [PASS]    lim D/eps at w/H=2.0 = 2 pi w/H: got 12.5663706 want 12.56637061 rel 9.1e-10
+  [PASS]    lim D/eps at w/H=3.0 = 2 pi w/H: got 18.8495559 want 18.84955592 rel 9.38e-10
   second-order defect D2(w) = lim [ln(G+/G-) - 2 pi w/H_eff]/eps^2  (the genuine non-thermal content):
-    w/H = 0.5:  D2 = 2.501512   (p=1600 raw 2.508621)   D2/(2 pi w/H) = 0.796256
-    w/H = 1.0:  D2 = 10.99629   (p=1600 raw 11.02289)   D2/(2 pi w/H) = 1.75011
-    w/H = 2.0:  D2 = 31.47169   (p=1600 raw 31.53821)   D2/(2 pi w/H) = 2.50444
-    w/H = 3.0:  D2 = 52.14107   (p=1600 raw 52.24711)   D2/(2 pi w/H) = 2.76617
-  non-linearity of D2 in w (beta_eff variation per eps^2 between w=0.5H and 3H): 1.96991  -> frequency-dependent KMS violation is O(eps^2)
+    w/H = 0.5:  D2 = 2.501629   (p=1600 raw 2.508621)   D2/(2 pi w/H) = 0.796293
+    w/H = 1.0:  D2 = 10.99679   (p=1600 raw 11.02289)   D2/(2 pi w/H) = 1.75019
+    w/H = 2.0:  D2 = 31.47289   (p=1600 raw 31.53821)   D2/(2 pi w/H) = 2.50453
+    w/H = 3.0:  D2 = 52.14295   (p=1600 raw 52.24711)   D2/(2 pi w/H) = 2.76627
+  non-linearity of D2 in w (beta_eff variation per eps^2 between w=0.5H and 3H): 1.96998  -> frequency-dependent KMS violation is O(eps^2)
 == D. the present universe: exact LambdaCDM worldline correlator vs the first-order thermal form (time domain) ==
   t0 = 0.950985/H0 (a worldline exists only for |Delta| < 2 t0: no full Fourier spectrum at t0 without a window)
-  eps_0 = 0.4725, H_eff(t0) = H0 + Hdot/H0 = a''/a' = 0.5275 H0 -> T_eff = 0.08395 H0/2pi (first-order thermal form)
+  eps_0 = 0.4725, eta_0 = -3 Omega_L = -2.055, H_eff(t0) = H0 + Hdot/H0 = a''/a' = 0.5275 H0 -> T_eff = H_eff/2pi = 0.08395 H0
+  local effective rate in the Delta^2 term of a1 a2 deta^2 = Delta^2 [1 + H^2 (1 - 2 eps) Delta^2/12 + ...]: H0 sqrt(1 - 2 eps_0) = 0.2345 H0 (vs H_eff = 0.5275 H0)
   [PASS]   eps_0 from a(t) directly: got 0.4725 want 0.4725 rel 2.09e-31
-  Delta*H0   W_LCDM/W_dS(H_eff) - 1    eps0^2 f2(x_eff) [2nd-order prediction]   actual/2nd-order
-    0.25         0.0012174             0.00032262                  3.774
-     0.5          0.005563              0.0012792                  4.349
-     1.0          0.036387              0.0049379                  7.369
-     1.5            0.1916               0.010445                  18.34
-  => at eps_0 = 0.47 the deviation from the first-order thermal form is 0.1% (Delta=0.25/H0) to 19% (1.5/H0) and exceeds the
-     second-order prediction by factors 4-18: the adiabatic expansion has broken down; the present-day comoving vacuum is
-     not thermal at any single temperature and must be treated with the exact kernel (no eps-expansion).
+  Delta*H0   W_dS(H_eff)/W_exact - 1   W_Mink/W_exact - 1   ratio to eps0^2 f2 at x = H_eff Delta   at x = H0 Delta
+    0.25         0.0012174           -0.00023234               3.774                      1.058
+     0.5          0.005563           -0.00024605               4.349                      1.248
+     1.0          0.036387              0.012686               7.369                      2.339
+     1.5            0.1916               0.13133               18.34                      7.17
+  => deviation from the first-order thermal form at H_eff: 0.12% (Delta = 0.25/H0) to 19.2% (1.5/H0);
+     the T = 0 (Minkowski) form is closer at every grid point (0.023% to 13.1%): the small-Delta agreement is the
+     universal Hadamard term, not thermality at H_eff. The ratio to the truncated second-order form depends on the x convention by
+     1/(1-eps_0)^2 = 3.6, so the eps-expansion is not quantitatively usable today (eps_0 = 0.47, eta_0 = -2.06). The exact kernel is needed.
+     (Pairs are symmetric about t0: Delta = 1.5/H0 pairs z = 2.25 with a point 10.9 Gyr in the future; the deviation is unbounded as Delta -> 2 t0.)
   (formal baseline for the vacuum medium; the physical photon field is dominated by the 2.7 K CMB bath at these scales)
 
 V11 OVERALL: PASS
@@ -635,28 +644,38 @@ V11 OVERALL: PASS
   T_KH = (H/2pi)(1 - eps/2), T_det = (H/2pi)(1 - eps): PASS
   T_det/T_KH = -epsilon**2/4 - epsilon/2 + 1  -> equal iff eps = 0: PASS
   a''/a' - (H + Hdot/H) = 0 -> PASS
-== 12.2 Killing character of the apparent horizon ==
-  R_A_dot = eps: the apparent horizon is stationary (Killing) iff eps = 0. For eps != 0 the modular flow of the
-  restricted state is not geometric, P1 assigns no temperature to the region inside R_A, and T_KH is a surface-gravity label.
+== 12.2 Killing character of the apparent horizon (Kodama vector; sympy) ==
+  K.K = r**2*Derivative(a(t), t)**2 - 1 -> null on a r = 1/H (the apparent horizon): PASS
+  (L_K h)_tt, (L_K h)_rr = 0 , 0 ;  (L_K h)_tr = -r*(a(t)*Derivative(a(t), (t, 2)) - Derivative(a(t), t)**2)
+  (L_K h)_tr = -a^2 r Hdot: K is Killing iff Hdot = 0 iff eps = 0: PASS
+  => the apparent horizon is a Killing horizon only in de Sitter; for eps != 0 it is a trapping horizon with a non-Killing
+     Kodama vector. P1 (01) assigns a KMS temperature only to regions whose modular flow is geometric; the inference that
+     none exists here is P1's definition applied (09), not computed.
 == 12.3 the apparent-horizon first law is an identity of the Einstein equations (flat FRW, perfect fluid) ==
   Cai-Kim:  A(rho+p)H R_A - T0 dS/dt = 0 -> PASS (identity with T0 = 1/2 pi R_A)
   Akbar-Cai: dE/dt - [(kappa/2pi) dS/dt + W dV/dt] = 0 -> PASS (identity with the signed Hayward kappa, |kappa|/2pi = T_KH)
   => both horizon 'first laws' are identities of the Einstein equations GRUT III already has from D3; T_KH (with its sign)
      is the bookkeeping temperature that makes Hayward's unified first law close, not a KMS parameter supplied by P1.
-     (The sign/'heat-out' convention is the 'temperature confusion' of Tian-Booth 2014.)
+     (Tian-Booth 2014 compare the Cai-Kim T0 = 1/(2 pi R_A) with Hayward's kappa/2pi and adopt T0; their positive-heat-out
+      convention fixes the sign of the Gibbs relation, not the temperature. With +|kappa|/2pi the Akbar-Cai law does NOT close;
+      it closes with the signed kappa.)
 == 12.4 lemma: massless field in power-law FRW == massive field in de Sitter (same nu) ==
   a''/a = (nu**2 - 1/4)/etan**2  vs (nu^2-1/4)/eta^2: PASS
+  a ∝ t^p: d ln a/d ln(-eta) = -p/(p - 1) = -p/(p-1): PASS
   nu(eps) = (epsilon - 3)/(2*(epsilon - 1))  = 3/2 + eps/(1-eps): PASS
-  dS analogue mass: m^2/H^2 = 9/4 - nu^2 = epsilon*(2*epsilon - 3)/(epsilon**2 - 2*epsilon + 1)  (< 0: the dS analogue is tachyonic; the IR needs care, the velocity correlator does not)
+  dS analogue mass: m^2/H^2 = 9/4 - nu^2 = epsilon*(2*epsilon - 3)/(epsilon**2 - 2*epsilon + 1)  (< 0: the dS analogue is tachyonic; the position correlator is IR divergent for every eps > 0,
+   the velocity correlator is IR finite for nu < 7/2, i.e. eps < 2/3)
 
 CONCLUSION (GRUT III's answer to the two-temperature question):
   (b') They differ because they are different objects. P1's bath temperature is the KMS parameter of the restricted
   state where the modular flow is geometric; for the comoving observer in the conformal vacuum that is T_det = (a''/a')/2pi
   at first order (derived, v11). The apparent horizon is not a Killing horizon for eps != 0, so P1 assigns it no
-  temperature; T_KH is Hayward's dynamical surface gravity, used by Cai-Kim as the bookkeeping that turns the horizon
-  first law into an identity of the Einstein equations (12.3). No heat-flow law is implied; the O(eps) mismatch equals
-  the apparent horizon's expansion rate R_A_dot = eps. Testable statement: a comoving detector coupled to a conformal field
-  in the conformal vacuum thermalises (to first order) at (a''/a')/2pi, not at T_KH -- conventional QFT, checkable by anyone.
+  temperature; T_KH is Hayward's dynamical surface gravity, used with its sign by Akbar-Cai as the bookkeeping that turns the
+  unified first law into an identity of the Einstein equations (12.3); Cai-Kim and Cai-Cao-Hu use T0 = 1/(2 pi R_A) instead. No
+  heat-flow law is implied; the O(eps) mismatch is HALF the apparent horizon's expansion rate relative to T_KH (T_det/T_KH - 1 =
+  -R_A_dot/2) and the full rate relative to T0 (T_det/T0 - 1 = -eps exactly). Conventional statement (v11, fixed-mean-time
+  convention): the comoving worldline's two-point spectrum for a conformal field is KMS at first adiabatic order at (a''/a')/2pi,
+  not at T_KH or T0 -- conventional QFT, checkable by anyone.
 
 V12 OVERALL: PASS
 ```
@@ -704,9 +723,15 @@ V12 OVERALL: PASS
 == 13.4 the rev.-1 near-coincidence, restated ==
   at sigma = 1: c1 + 3/2 = -log(4) - 2*EulerGamma + 5/2 = -0.040726;  it vanishes at sigma = exp(5/4 - gamma_E - ln 2) = 0.9798
   the 'transcendental gap' of rev. 1 is gamma_E + ln(2 sigma) at sigma = 1: a matching-scale artifact: PASS
+== 13.5 the sigma-free invariant (audit, 11): zero-frequency noise strength D/H^3 = A_inv(eps) ==
+  A_inv(0) = 1/(4 pi^2) (= A0 in exact dS): PASS
+  d ln A_inv/d eps|0 = -log(4) - 1 = -2.3862944
+  O(eps) coefficient of the invariant = -(1 + 2 ln 2) = v14 E's D coefficient (sigma-free): PASS
+  A0(sigma) matches A_inv at O(eps) only at sigma* = e^(1 - gamma_E): PASS
+  (closed form from the sixth-round audit, verified there against a direct Bunch-Davies mode integral at eps = 0, 0.05, 0.1, 0.3; not re-derived here)
 
 CONCLUSION (rev. 2): the O(eps) Fokker-Planck coefficients of the massless zero mode depend on the coarse-graining scale sigma
-(c1 = 1 - 2 gamma_E - 2 ln(2 sigma); sigma-independent only at eps = 0). They are not a physical invariant and cannot test horizon
+(c1 = 1 - 2 gamma_E - 2 ln(2 sigma); sigma-independent only at eps = 0). The sharp-window coefficient is scheme-dependent and cannot test horizon
 temperatures; rev. 1's 'no temperature matches' is withdrawn as an inference (the arithmetic at sigma = 1 stands). O5 items 1 and 3
 still close: P1 assigns no temperature for non-geometric modular flow, and sigma-independent correlators are fixed by conventional
 QFT (CKK 2015). The sigma-independent test is the comoving detector's KMS ratio at omega != 0 (`v14`).
@@ -727,7 +752,7 @@ V13 OVERALL: PASS
 == 14.B the closed form vs a direct Bunch-Davies mode integral ==
   eps=-0.25 (nu=1.3), t1=0.6, t2=0.0: closed form = mode integral (rel. 6.4e-11): PASS
   eps=-0.25 (nu=1.3), t1=0.3, t2=-0.9: closed form = mode integral (rel. 8.3e-12): PASS
-  eps=0.2 (nu=1.75): closed-form difference = cutoff mode-integral difference (rel. 3.4e-6; C_IR drops out): PASS
+  eps=0.2 (nu=1.75): closed-form difference = cutoff mode-integral difference (rel. 1.2e-10; C_IR drops out; the remainder scales as k_IR^(5-2nu)): PASS
 == 14.C first-order theorem: W_exact - [(1 + g1 eps) W_mmc(Delta; H_X) + eps (1/8pi^2) S2(w0) + c2 Delta^2] = O(eps^2) iff H_X = H_eff ==
     H_eff = 1 - eps, with S2: D=(0.2 - 0.3j)  |R|/eps^2 = 0.017203, 0.017201, 0.0172, 0.0172   halving ratios 4.001, 4.0, 4.0
     H_eff = 1 - eps, with S2: D=(0.9 - 0.3j)  |R|/eps^2 = 0.016183, 0.016153, 0.016139, 0.016131   halving ratios 4.007, 4.004, 4.002
@@ -753,10 +778,22 @@ V13 OVERALL: PASS
     Kodama-Hayward 1 - eps/2: D=(2.5 - 0.3j)  |R|/eps^2 = 6.296, 12.607, 25.23, 50.477   halving ratios 1.998, 1.999, 1.999
     Kodama-Hayward 1 - eps/2: D=(3.5 - 0.3j)  |R|/eps^2 = 8.6067, 17.316, 34.736, 69.576   halving ratios 1.988, 1.994, 1.997
   Kodama-Hayward 1 - eps/2: residual is O(eps), NOT O(eps^2) (ratios ~2; min ratio 1.988): PASS
-== 14.D KMS: the first-order shape f = 2 S2(w0) + 2 g1 S1(w0) is midline-symmetric (KMS at beta = 2pi/Hbar) ==
+== 14.D KMS, implementation check: the first-order shape f = 2 S2(w0) + 2 g1 S1(w0) is midline-symmetric (automatic for any function of w0) ==
   f(s - i beta/2) real and even in s (worst deviation 3.8e-30): PASS
   boundary values: f(Delta - i beta) = f(-Delta) (worst 6.3e-30): PASS
-  => first-order KMS defect at beta_eff = 2pi/H_eff is O(eps^2); with beta_KH it would be (beta_KH - beta_eff) omega = pi eps omega/Hbar != 0.
+  (these two checks verify the implementation of f, not the physics; the evidence is 14.C and 14.D'' below)
+== 14.D'' KMS of the EXACT closed form: K(Delta) = [W(Delta - i beta + i d) - c2 (.)^2] - [W(-Delta - i d) - c2 (.)^2], d = 0.1 ==
+    beta_eff = 2pi/(Hbar(1-eps)), Delta=0.8: |K| = 4.65e-6, 1.16e-6, 2.9e-7   halving ratios 4.008, 4.004
+    beta_eff = 2pi/(Hbar(1-eps)), Delta=2.0: |K| = 3.33e-6, 8.32e-7, 2.08e-7   halving ratios 4.005, 4.002
+  beta_eff = 2pi/(Hbar(1-eps)): exact-function KMS defect is O(eps^2): PASS
+    beta_KH = 2pi/(Hbar(1-eps/2)), Delta=0.8: |K| = 0.000415, 0.000206, 0.000103   halving ratios 2.014, 2.007
+    beta_KH = 2pi/(Hbar(1-eps/2)), Delta=2.0: |K| = 6.86e-5, 3.39e-5, 1.69e-5   halving ratios 2.023, 2.011
+  beta_KH = 2pi/(Hbar(1-eps/2)): exact-function KMS defect is O(eps^1): PASS
+    beta_bar = 2pi/Hbar, Delta=0.8: |K| = 0.000825, 0.000411, 0.000205   halving ratios 2.007, 2.004
+    beta_bar = 2pi/Hbar, Delta=2.0: |K| = 0.000136, 6.75e-5, 3.37e-5   halving ratios 2.011, 2.006
+  beta_bar = 2pi/Hbar: exact-function KMS defect is O(eps^1): PASS
+  => the first-order KMS defect of the exact function (omega != 0 part) vanishes at beta_eff and not at beta_KH or beta_bar;
+     beta_KH - beta_eff = -pi eps/Hbar + O(eps^2), so the KH defect would be -(pi eps omega/Hbar) != 0.
 == 14.D' spectra via the midline, with the asymptotic polynomial removed analytically ==
   asymptotic polynomials correct: h0(30), h1(30) decay (|h0|=5.3e-26, |h1|=1.5e-24): PASS
   zeroth order: G0(omega) = (omega + Hbar^2/omega)/(2pi(1 - e^(-beta omega))) [massless dS detector spectrum] (worst rel. 2.6e-23): PASS
@@ -772,16 +809,19 @@ V13 OVERALL: PASS
   r(omega -> 0) -> B1/B0 = 2 - 2 ln 2 = 0.6137: PASS
   r(omega) -> 0 in the UV: the S2 pole coefficient -3/2 cancels g1 = +3/2 (Hadamard coefficient unchanged): PASS
   r(omega) is monotone decreasing from the IR to the UV: PASS
+  large-omega asymptote r -> 3(2w^4 - w^2 - 1)/(4 w^4 (w^2+1)) ~ 3/(2w^2): r(8) = 0.022893644 vs 0.022893818: PASS
 == 14.E the sigma-free first-order diffusion coefficient of the zero mode (two-time function at fixed mean time) ==
   D(tbar) = (Hbar^3/4pi^2)[1 + c_D eps], c_D = -3 + (2 - 2 ln 2) = -(1 + 2 ln 2) = -2.386: PASS
   equals the stochastic c1(sigma) = 1 - 2 gamma_E - 2 ln(2 sigma) at sigma* = e^(1 - gamma_E) = 1.52621 (and at no other sigma): PASS
   compare: naive H_eff^3 -> -3; stochastic at sigma = 1 -> -1.5407; exact -> -2.38629
 
-CONCLUSION: at first order in eps the massless minimally coupled sector seen by a comoving detector is KMS at
-T = (a''/a')/2pi + O(eps^2), the same temperature as the conformal sector (v11); the Kodama-Hayward rate is excluded at O(eps);
+CONCLUSION: at first order in eps the fixed-mean-time (Wigner) two-point spectrum of the massless minimally coupled sector along a
+comoving worldline is, at omega != 0, KMS at T = (a''/a')/2pi + O(eps^2) -- the same statement, in the same convention, as v11's for the
+conformal sector; the Kodama-Hayward rate is excluded at O(eps). (An instantaneous one-sided detector rate is a different convention;
+see the docstring.)
 the result is sigma-free. The O(eps) effect is a shape change of the spectral density, rho = rho_mmc(omega; H_eff)[1 + eps r(omega)],
 r(0) = 2 - 2 ln 2, r(inf) = 0, and the zero-mode diffusion coefficient is D = (Hbar^3/4pi^2)[1 - (1 + 2 ln 2) eps].
-P1 adds nothing: conventional QFT fixes all of it. O5 item 1 is now computed, not argued.
+This is conventional QFT; it establishes nothing about P1 beyond consistency. O5 item 1 is now computed, not argued.
 
 V14 OVERALL: PASS
 ```
