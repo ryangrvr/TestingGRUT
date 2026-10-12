@@ -1,7 +1,9 @@
 # GRUT III — the responsive vacuum, principle-first (revision 2.4)
 
-**Status:** PROPOSAL on the experimental branch (`claude/friendly-hopper-7zkwf5`, branched from the SCOUT_0
-freeze `ab2da47`). Revision 2 (2026-10-11) incorporates three external reviews and an owner's note:
+**Status:** BANKED BASELINE (revision 2.4 final, 2026-10-12) on the experimental branch (`claude/friendly-hopper-7zkwf5`,
+branched from the SCOUT_0 freeze `ab2da47`). Verification rounds stopped on the reviewer's recommendation; what is new, what
+is rediscovery, and what a Stage-3 Card 1 must satisfy are in `12_BASELINE_AND_HANDOFF.md`. GRUT III has **no distinctive
+prediction**: it is GR + QFT with a thermodynamic reading, and it is the reference any future residual is measured against. Revision 2 (2026-10-11) incorporates three external reviews and an owner's note:
 `RESPONSE_TO_REVIEWS.md` is the point-by-point record, `CHANGELOG.md` the diff. Nothing here alters the canonical
 record; every claim is tiered and every computation is runnable.
 
@@ -42,6 +44,7 @@ reality.
 | `09_TWO_TEMPERATURES.md` | Detector vs apparent-horizon temperature at O(ε): which one P1 calls a temperature; massless sector done (`v14`) |
 | `10_SECULAR_IR_SURVEY.md` | Literature check for O5 item 3: do the secular-IR resummations disagree? (scalars no; gravitons: a QG observables dispute); the `v13` result |
 | `11_VERIFICATION_ROUND.md` | Sixth-round independent re-derivation and adversarial audit of `v8`, `v11`, `v12`, `v13` (workflow report) |
+| `12_BASELINE_AND_HANDOFF.md` | Baseline banked: the honest ledger (new vs known), the Card-1 constraint sheet, the candidate space |
 | `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R20) |
 | `CHANGELOG.md` | Revision history |
 | `RESULTS.md` | Output of the verification suite (generated) |

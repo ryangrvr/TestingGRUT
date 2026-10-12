@@ -138,7 +138,11 @@ governance here. That merges the two tracks instead of rebuilding one.
 Dead as a Jacobson-route argument (κ cancels). Alive only as Milgrom's vacuum-effect proposal with the
 Narnhofer–Peter–Thirring/Deser–Levin temperature. Not pursued within GRUT III.
 
-## O7 — Owed independent verifications of revision 2
+## O7 — Owed independent verifications of revision 2 (closed as a list on 2026-10-12; see `12`)
+
+Items 3 and 5 were done in the sixth round (`11`): `v7`–`v14` audited, the massless sector computed (`v14`). Items 1, 2 and 4
+remain as conventional bookkeeping and do not affect the banked status. The original list, kept for the record:
+
 
 1. Equation-level comparison of D2's worldline polynomial with Pérez-Nadal–Roura–Verdaguer (2009) and Cho–Hu (2014)
    (`08` records what could be read).

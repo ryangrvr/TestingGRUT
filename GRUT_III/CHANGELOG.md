@@ -1,7 +1,11 @@
 # GRUT III — changelog
 
-## Revision 2.4 (2026-10-11, sixth round)
+## Revision 2.4 (2026-10-11, sixth round) — final; baseline banked 2026-10-12
 
+- `12_BASELINE_AND_HANDOFF.md`: verification rounds stopped on the reviewer's recommendation; the honest ledger of what is
+  new (two or three candidate conventional results) versus rediscovery; the seven constraints a Stage-3 Card 1 must meet,
+  derived from the baseline; the three-way candidate space with each route priced; the handoff. README status → BANKED
+  BASELINE; `05` O7 closed as a list.
 - `v13` rev. 2: the reviewer's coarse-graining-scale objection accepted; the σ-dependence A₀(σ) = A₀(1)σ^{−2ε/(1−ε)} derived
   from the mode function; c₁(σ) = 1 − 2γ_E − 2 ln(2σ), c_X(σ) = 0.4685 + ½ ln σ; rev. 1's inference ("no horizon temperature
   matches") **withdrawn** — the O(ε) zero-mode coefficient is not a physical invariant. Items 1 and 3 still close on P1 and
