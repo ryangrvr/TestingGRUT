@@ -142,6 +142,17 @@ At frozen \(\epsilon_E=1/4\):
 
 The exact values were computed independently by enumerating all vertex/edge orientations on both cycle factors, rather than inferred from the Laplacian. They demonstrate a **genuinely model-grounded physical energy diagnostic** distinguishing global aspect ratio despite identical local motif data.
 
+### Adversarial physical-distance control: connected nonspatial graphs can be cheaper
+
+The charge/hole incidence-distance relation is also calculated by full BFS averaging on independently seeded, connected random four-regular graphs with the SAME \(N,Q,W\). For seed 11222026:
+
+| N | Mean incidence distance: square | Thin strip | Random 4-regular |
+|---:|---:|---:|---:|
+| 324 | 18 | 22.5 | **9.43936** |
+| 729 | 27 | 45 | **10.97167** |
+
+The random network has fewer local plaquette squares and is not claimed to be spatial. Its shorter paths make *uniformly placed separated-charge bare excitations* cheaper on average than either torus. This is an adverse check on any inference “distance-sensitive electric energy alone selects a spatial metric.” It is not a comparison of total physical ground-state energies and does not imply random expanders actually dominate CP-12.
+
 **Boundary:** averaging *minima* of charged conditional configurations does not imply the interacting CP-12 ground state prefers the square, because its vacuum, kinetic, gauge and charged-sector state multiplicities also determine the free energy. Indeed cheap charge separations might favor a random expander with short paths over any finite-dimensional manifold. A dynamical selection calculation would have to compare the full dressed energies/free energies and geometrical probabilities, not merely this bare electric excess.
 
 ## 7. Cooling degree-four selection also fails an extensive spatial-family counting test
@@ -192,4 +203,4 @@ This gives a concrete **unfitted** large-N falsifier for frozen CP-12:
 
 ## Reproduction
 
-[check.py](check.py), Python with NumPy/SciPy/NetworkX, builds the exact competing graphs at N=324,729,2916, verifies graph isomorphism of radius-3 neighborhoods and exact motif equality, computes all exact torus Laplacian gaps and heat-return dimensions, enumerates the **CP-12 bare charge/hole incidence-distance identity**, and supplies seeded 4-regular adversarial samples with checked sparse eigenpair residuals. It writes [results.json](results.json) when run. An equivalent independent local script with these same formulas passed; **verbatim execution of the committed script remains a separate audit step**.
+[check.py](check.py), Python with NumPy/SciPy/NetworkX, builds the exact competing graphs at N=324,729,2916, verifies graph isomorphism of radius-3 neighborhoods and exact motif equality, computes all exact torus Laplacian gaps and heat-return dimensions, enumerates the **CP-12 bare charge/hole incidence-distance identity**, and supplies seeded 4-regular adversarial samples with checked sparse eigenpair residuals **and average bare CP-12 charge/hole incidence distances**. It writes [results.json](results.json) when run. An equivalent independent local script with these same formulas passed; **verbatim execution of the committed script remains a separate audit step**.
