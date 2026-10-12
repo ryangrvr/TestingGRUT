@@ -62,6 +62,15 @@ The finite-N ring response is its periodic-image sum. The Bessel function \(J_{2
 
 The adversarial control is a permutation-symmetric **all-pairs** logarithmic phase repulsion on a *supplied fixed circle*. It also favors regular angular separation, but its Hessian couples any two sites immediately: the momentum-kick response has a nonzero offsite t³ term for every separation, whereas the nearest-gap Hamiltonian first couples hop distance r at order t^(2r+1). Its long-wave oscillator spectrum at that fixed circle scales as \omega_k²∝k(N-k)/N, giving \omega∝sqrt(k) rather than k for k≪N. This comparator does **not** keep the same thermodynamic pressure law; it isolates the role of microscopic interaction locality, not a universal superiority of this specific inverse-gap potential.
 
+### Independent propagation-derived spectral dimension
+
+Using the same induced-neighbor Laplacian, define the heat-return probability
+\[
+P_N(s)=\frac1N\sum_{k=0}^{N-1}\exp[-4s\sin^2(\pi k/N)],
+\qquad d_s(s)=-2\,\frac{d\ln P_N}{d\ln s}.
+\]
+For N=256, evaluated at diffusion time s=5, 20, 80 (well before finite-ring saturation), the numerical spectral dimensions are approximately **1.0280, 1.0064, 1.0016**, respectively. Thus the transport operator correctly reconstructs the same **one-dimensional** local geometry selected as a cyclic phase ordering. This is an **operational correspondence test**, not a derived spatial dimension: the underlying S1 cyclic topology and nearest-phase-neighbor interaction were already supplied.
+
 ## Result 3 — harmonic quantum energy is extensive
 
 At fixed equilibrium a*, quantizing the N−1 nonzero harmonic normal modes gives
@@ -112,7 +121,7 @@ Each configuration induces cyclic predecessor/successor relations; independent c
 
 ## Executable results
 
-[check.py](check.py) tests N=8,16,32,64,128: variational energies, independent finite-difference force-Hessian residual (<1e-8), exact Fourier modes and finite-size errors (<1.1e-4 for the N=128 k=1 acoustic comparator), finite quantum zero-point sum and local variance, and 15 independent Bessel versus full-mode impulse responses. It checks the classical isobaric one-gap integral at four temperatures against K_1 and the phase-space versus unrestricted graph state count. It also checks the one-loop static equilibrium shift. Equivalent independent standalone calculations passed before committing. The exact committed script should be run for repository confirmation; its output file results.json is generated locally.
+[check.py](check.py) tests N=8,16,32,64,128: variational energies, independent finite-difference force-Hessian residual (<1e-8), exact Fourier modes and finite-size errors (<1.1e-4 for the N=128 k=1 acoustic comparator), finite quantum zero-point sum and local variance, and 15 independent Bessel versus full-mode impulse responses, plus three propagation-derived spectral-dimension checks. It checks the classical isobaric one-gap integral at four temperatures against K_1 and the phase-space versus unrestricted graph state count. It also checks the one-loop static equilibrium shift. Equivalent independent standalone calculations passed before committing. The exact committed script should be run for repository confirmation; its output file results.json is generated locally.
 
 This is a new **model-specific constructive demonstration** assembled from known 1D mechanics, 1D phonon chains and exact nearest-neighbor fluid thermodynamics. No claim of literature priority or new empirical prediction is made.
 
