@@ -33,6 +33,15 @@ Set t=1 and Gamma=.1 as a fixed scout benchmark, not an optimized physical coupl
 
 IMPORTANT: This is a **Born–Oppenheimer / integrated-out filled-band EFFECTIVE** geometry quantum Hamiltonian, *not* a complete joint graph+fermion quantum Hamiltonian including nonadiabatic fermionic backreaction. The conditional band-minimizing energy is exact, but replacing the original matter Hilbert space by U(G) is an additional approximation/assumption. Reconnection itself is nonlocal in the emergent graph and requires global access to port identities.
 
+## Distinct fully joint microscopic follow-up (not silently the same law)
+
+The original H_eff above integrates out fermions and is an adiabatic effective toy. A **separately declared non-adiabatic follow-up** is built in [full_joint.py](full_joint.py) and documented in [FULL_JOINT.md](FULL_JOINT.md): persistent canonical fermionic modes \(c_{i,a}\) reside on the two ports of each vertex, and
+\[
+H_f(P)=t\sum_i(c_{i,0}^\dagger c_{i,1}+{\rm h.c.})+
+ts\sum_{(p,q)\in P}(c_p^\dagger c_q+{\rm h.c.}),\quad s=\pm1,
+\]
+is coupled to the **same** positive two-bond reconnection Laplacian while keeping N fermions. At s=-1 its fixed-graph filled-band energy agrees exactly with the massless incidence U(P), but the joint dynamics need not agree with H_eff. This is a different microscopic candidate within the unfrozen scout, not a retroactive edit to CP-11. In finite joint quantum tests through N=5, s=-1 strongly favors connected loops; s=+1 favors isolated loops. The relative gauge-invariant cycle flux is a supplied physical choice. It is not derived from GRUT, and the thermodynamic behavior of the fully joint Hamiltonian remains open.
+
 ## Scientific tests
 
 1. Prove exact finite-N cycle energy with no preferred graph: for a cycle of length l, U_l = kappa*l - 2t*cot(pi/(2l)).
