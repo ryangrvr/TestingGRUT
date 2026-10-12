@@ -39,9 +39,12 @@ A distinctive GRUT claim is, by `07` T2, a Δρ_f ≠ 0 or a non-KMS N_f for a *
 mechanism and no refitting. The baseline turns that into a checklist. A Card 1 that fails any line is dead before a builder
 spends budget:
 
-1. **It cannot break the vacuum's KMS.** In Minkowski and exact de Sitter the restricted vacuum is KMS by
-   Bisognano–Wichmann / Gibbons–Hawking — a theorem from Lorentz (de Sitter) invariance and positivity, not an assumption of
-   GRUT. So no card can give a Lorentz-invariant vacuum a viscosity or a memory (w = 0 is the sharp form of this; `03`).
+1. **It cannot break the vacuum's KMS.** In Minkowski the restricted vacuum is KMS by Bisognano–Wichmann — a theorem from
+   Lorentz invariance and positivity of energy. In de Sitter the statement needs one more input (corrected in `13`): de Sitter
+   invariance alone allows the Mottola–Allen α-vacua, which are not KMS for geodesic observers; the Bunch–Davies state is the
+   unique de Sitter-invariant pure Gaussian *Hadamard* state (m² > 0), and it is KMS at H/2π. So no card can give a
+   Lorentz-invariant (or de Sitter-invariant Hadamard) vacuum a viscosity or a memory (w = 0 is the sharp form; `03`); an
+   α-vacuum "breaks KMS" only by giving up Hadamard, which P2 forbids (constraint 8).
    KMS can only be broken where it already fails conventionally: in a non-equilibrium state or a time-dependent background.
 2. **In those regimes it must beat a computed conventional answer, not silence.** The baseline fixes the conventional
    non-KMS structure the card competes with: O(ε²) with f₂(x) and D₂(ω) in the conformal sector (`v11`); the shape function
@@ -60,6 +63,19 @@ spends budget:
    relation n_t = −r/8, fixed by the free tensor sector's first-order structure. A card that modifies that sector at O(ε)
    must either reproduce the relation or predict a definite deviation (a genuine falsifier once r is measured; a pointer,
    not a result).
+8. **The state must be Hadamard** (added in `13`). The Hadamard condition is the standard formal statement of Jacobson's
+   "usual short-distance vacuum fluctuations", i.e. of P2's state content; it is necessary for finite renormalised
+   stress-tensor fluctuations. Exact thermality at κ/2π follows from it only at bifurcate Killing horizons (Kay–Wald), and
+   otherwise in a near-horizon scaling limit (Kurpicz–Pinamonti–Verch 2021 for trapping horizons). A card that selects a
+   non-Hadamard state (the sharp Sorkin–Johnston state, any non-Bunch–Davies α-vacuum) violates GRUT's own P2 (`v15`).
+9. **Any discrete microstructure meets Lorentz-invariance data** (added in `13`). A bounded-degree or lattice
+   kinematics picks a frame (Bombelli–Henson–Sorkin), and a Planck-scale frame feeds O(0.1–10%) species-dependent limiting
+   speeds into low energies through loops (Collins et al. 2004) unless a custodial symmetry is supplied, against bounds of
+   ~10⁻²⁰. A card with such kinematics must name the mechanism that protects the dimension-4 operators.
+10. **Entropy–action budget** (added in `13`, `v16`). A card that generates geometry must show that its weights can vary
+   across the competing configurations by at least their excess log-count: an exponentially bounded configuration space, or
+   an action with a matching (e.g. N²) budget. Gibbs weights with extensive energies over all graphs cannot (codex theorem),
+   and neither can a local action's phase.
 
 ## 3. The candidate space, as the baseline leaves it
 

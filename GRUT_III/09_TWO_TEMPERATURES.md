@@ -23,7 +23,11 @@ temperature.
   computed). P1 assigns a temperature only where the modular flow of the restricted state is geometric (the list in `01`:
   wedges, Killing horizons, conformal double cones); the apparent-horizon region for ε ≠ 0 is in none of these classes, so
   for ε ≠ 0 **P1 assigns no temperature to the region inside R_A** — an application of P1's definition, not a computation.
-  T_KH is a geometric label. The literature's own candidate, T₀ = 1/(2πR_A) = H/2π (Cai–Kim 2005; Cai–Cao–Hu 2009;
+  T_KH is a geometric label *for the comoving bath*. [Correction, `13`: it is more than a label at the horizon itself.
+  Kurpicz, Pinamonti & Verch (Lett. Math. Phys. 111 (2021) 110) prove that Hadamard states become KMS with respect to the
+  Kodama flow at the Hayward surface gravity in a near-horizon scaling limit, for spherically symmetric outer trapping
+  horizons. Whether this extends to the cosmological apparent horizon is open. So T_KH is the near-horizon scaling-limit
+  temperature and T_det the comoving detector's bath temperature: different observables, both conventional.] The literature's own candidate, T₀ = 1/(2πR_A) = H/2π (Cai–Kim 2005; Cai–Cao–Hu 2009;
   adopted by Tian–Booth 2014), is likewise a geometric label; revision 2.3 misattributed T_KH to the first two (audit, `11`).
 - The first-order mismatch is half the apparent horizon's expansion rate relative to T_KH, T_det/T_KH − 1 = −Ṙ_A/2 + O(ε²),
   and the full rate relative to T₀, T_det/T₀ − 1 = −Ṙ_A = −ε exactly. Equal iff ε = 0.
