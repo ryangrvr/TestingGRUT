@@ -100,6 +100,36 @@ This explicitly demonstrates a potentially misleading finite-size success: even 
 
 Typical configurations retain cycles whose sizes are O(N): a giant component can exist without the complete geometry being one connected component. Do not equate these claims.
 
+### An additional adversarial factor: exact massless-fermion zero-mode degeneracy
+
+The conditional energy calculation fills all negative one-body levels. For a graph with c disjoint cycles, the incidence matrix rank is N-c. Its 2N-dimensional massless Dirac operator therefore has N-c negative eigenvalues and **2c exact zero eigenvalues**. At fixed N fermions, filling the negative levels requires filling c of these 2c zero-energy states. Consequently the minimum-energy fermionic sector has
+\[
+\boxed{d_{\mathrm{zero}}(c)=\binom{2c}{c}}
+\]
+distinct Fock-state fillings, even before dynamical graph reconnection. This degeneracy grows rapidly with c; **an energy-only geometry partition undercounts fragmented states**.
+
+As a deliberately restricted **ground-manifold thermal control**, multiply every graph partition's statistical weight by \(\binom{2c}{c}\), retaining its exact filled-band energy but ignoring all nonzero-energy fermionic excitations. Define \(Q_{n,c}\) by
+\[
+\sum_{n,c}Q_{n,c}z^nu^c=
+\exp\left[\frac u2\sum_{l\ge1}e^{-\beta\delta_l}z^l/l\right].
+\]
+The recurrence
+\[
+nQ_{n,c}=\frac12\sum_{l=1}^n e^{-\beta\delta_l}Q_{n-l,c-1}
+\]
+gives the exact low-energy manifold weight \(Z_n^{\rm zero}=\sum_c\binom{2c}{c}Q_{n,c}\). The one-cycle probability is \(e^{-\beta\delta_n}/(nZ_n^{\rm zero})\), since \(\binom21=2\). Independent direct fermionic incidence-rank controls verify the zero-mode count.
+
+| N | beta=0, ground manifold | beta=1 | beta=5 | beta=20 |
+|---:|---:|---:|---:|---:|
+| 16 | 0.014170 | 0.096522 | 0.531319 | 0.978969 |
+| 32 | 0.004098 | 0.034228 | 0.267228 | 0.820577 |
+| 64 | 0.001147 | 0.011030 | 0.112192 | 0.522418 |
+| 128 | 0.000314 | 0.003320 | 0.041008 | 0.262486 |
+
+These are **NOT probabilities from the complete canonical fermion Gibbs trace**; nonzero-energy excitations can modify them. The important physical lesson is unambiguous: exactly degenerate matter fillings are another state-counting obligation that a model claiming thermal connectivity cannot hide. The strict finite-N energy selection remains true but need not imply a unique ground *state* or thermodynamic dominance.
+
+The independent verification is [zero_mode_control.py](zero_mode_control.py).
+
 ### Robustness check: positive fermion mass
 
 The exact **massless** cotangent theorem does not require retuning any parameters. However CP-11's original fermion mass was m=1, so a separate, explicitly **non-frozen diagnostic** checks whether a positive mass invalidates the loop-energy mechanism.
