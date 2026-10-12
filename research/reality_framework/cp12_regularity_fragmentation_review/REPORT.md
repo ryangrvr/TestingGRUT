@@ -37,6 +37,13 @@ For Q=N, convexity gives \(W(G)\ge N\), with equality if and only if **every ver
 
 **Elementary proof:** For each G in \(\mathcal R_N\), choose an edge (a,b), designate one end b (2N oriented choices), and choose one vertex c different from a,b and from the other neighbor of a (N−3 choices). Replace (a,b) by (a,c), maintaining Q=N and simplicity. Exactly one vertex (b) now has degree1, one (c) has degree3, and the other N−2 vertices have degree2, increasing W from N to N+1. There are exactly \(2N(N-3)\) directed construction choices per G. Any output graph H has uniquely identifiable defective vertices b (degree1) and c (degree3). Its only possible 2-regular precursors remove one of the three edges (a,c) touching c and insert (a,b); hence **at most three preimages**. Thus \(\#\mathcal D_N\ge [2N(N-3)/3]\#\mathcal R_N\) for the class of these one-pair defects. Every G in \(\mathcal R_N\) has weight e^{-aN}; every H in \(\mathcal D_N\) weight e^{-a(N+1)}. Bounding the partition function below by these two disjoint classes proves the inequality. QED.
 
+A necessary (not sufficient) size-dependent condition for \(P_{N,a}(\mathcal R_N)\ge p_*>0\) is
+\[
+\boxed{a\ge \log\!\left[\frac{2N(N-3)}{3}\frac{p_*}{1-p_*}\right]
+=2\log N+O(1).}
+\]
+This follows directly by requiring our *upper bound* to be at least \(p_*\). The frozen CP-12 coefficient does not come with an \(N\)-dependent reinforcement of this kind.
+
 This theorem does **not** mean a spatial phase can tolerate no defects. Real extended phases may be robust to a positive defect density. It establishes that *perfect* degree regularity cannot become typical at fixed positive temperature solely from any N-independent local energy coefficient of this form.
 
 ### Exhaustive controls
@@ -112,6 +119,19 @@ P_{\beta,\Delta_c}(\mathrm{one\ ring})
 \qquad(\beta\Delta_c\ \mathrm{fixed}).
 }
 \]
+There is also a simple **uniform finite-\(N\) bound** requiring no singularity analysis. Keeping just one-cycle and two-cycle terms in the positive partition sum, the ratio of *two-cycle weight* to *one-cycle weight* is exactly
+\[
+\frac{Z_{N,\mathrm{two\ cycles}}}{Z_{N,\mathrm{one\ cycle}}}
+=\theta\sum_{\ell=3}^{N-3}\frac1\ell,\qquad N\ge6.
+\]
+Therefore
+\[
+\boxed{P_{\beta,\Delta_c}(\mathrm{one\ ring})
+\le\left[1+\theta\sum_{\ell=3}^{N-3}\frac1\ell\right]^{-1}.}
+\]
+To keep one-ring probability at least \(p_*>0\), this *necessitates*
+\(\theta\lesssim 1/\log N\), or \(\beta\Delta_c\gtrsim\log\log N+O(1)\). This is a rigorous necessary condition for the **hypothetically supplied** cycle-penalty model, not a viable CP-12 repair. The exact coefficient asymptotic above proves the stronger \(N^{-\theta}\) decline at any fixed \(\theta>0\).
+
 Finite energy penalties per component only **slow** the algebraic decline; they do not make one connected ring thermodynamically typical at arbitrarily large N. The limit is subtle: with βΔ_c=4, one ring remains ~94.7% probable even at N=1000, but its asymptotic probability must eventually fall. This helps explain why strong finite-system loop preference can mislead.
 
 This classical no-go can be evaded by a growing effective penalty, a fundamentally restricted configuration space, non-Gibbs states, or richer nonadditive many-body correlations. In particular it is **not** a no-go for full noncommuting CP-12.
