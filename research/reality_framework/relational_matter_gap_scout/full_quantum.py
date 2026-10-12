@@ -36,8 +36,9 @@ def build(n):
                         row.append(lookup[new]);col.append(i);data.append(-J)
     H=coo_matrix((data,(row,col)),shape=(len(masks),len(masks))).tocsr()
     assert np.linalg.norm((H-H.conj().T).data)<1e-12
-    # Simultaneous rotation is physical/global gauge redundancy;
-    # microscopic hopping and gap potential commute with this shift.
+    # Simultaneous rotation is an exact global symmetry. Calling it a
+    # gauge redundancy would be an ADDITIONAL physical identification;
+    # microscopic hopping and gap potential commute with the shift.
     permutation=[]
     for mask in masks:
         shifted=((mask<<1)&((1<<q)-1))|(mask>>(q-1))
