@@ -77,7 +77,37 @@ The state is **not** a product of a chosen geometry with a passive matter state.
 
 We tested signed vertex transposition covariance at N=3,4. The permutation of fermion port modes acts with the correct wedge sign on each occupied Fock string, and the exact **full-Hamiltonian commutator** vanishes within numerical precision (Frobenius norm 0). Eigenstate residual norms are below 6e-15 for the above tests.
 
-## 4. What this construction genuinely resolves—and what it still does not
+## 4. Complete quantum finite-temperature and relational detector controls
+
+The full-Hilbert-space Gibbs trace at **N=3** can be computed exactly from all 300 joint eigenstates, with no BO elimination. [full_joint_thermal_n3.py](full_joint_thermal_n3.py) produces:
+
+| Inverse temperature beta | P(connected), s=-1 | P(connected), s=+1 |
+|---:|---:|---:|
+| 0 | 0.533333 | 0.533333 |
+| 1 | 0.692101 | 0.369106 |
+| 5 | 0.997022 | 0.000380 |
+| 20 | 0.997740 | 0.000004128 |
+
+These are actual canonical quantum thermal probabilities for **one small N**. There is no controlled large-N joint-Gibbs extrapolation and no proof that finite positive temperature sustains global connectivity.
+
+A more operational test is available without projecting the graph onto a chosen classical ring. Anchor a source to an actual physical fermion port 0: \(B=n_0\). In each matching P, define the detector \(A_1(P)=n_{\mathrm{mate}_P(0)}\). For the two-link detector, follow the first port bond, cross its vertex to the other port, and follow the second port bond; \(A_2(P)=n_{\mathrm{mate}_P(\mathrm{mate}_P(0)\oplus1)}\). These probes are diagonal in graph and fermion occupation, commute at equal time with B, and depend on **local bond traversals**, not a postselected classical graph. Their realization by a physical moving/readout apparatus is not derived—following an actual edge still requires a prepared local reference.
+
+The full joint ground-state Kubo response \(R_{AB}(t)=i\langle[A(t),B]\rangle\) was calculated with the entire matrix exponential and checked by independent source kicks \(\exp(\pm i10^{-5}B)\):
+
+| N | t | one-link response | two-link response | fixed other-vertex port response |
+|---:|---:|---:|---:|---:|
+| 3 | 0.4 | -0.038040 | -0.000829 | -0.017842 |
+| 4 | 0.1 | -0.083989 | -0.0000592 | -0.014136 |
+| 4 | 0.2 | -0.160504 | -0.0004745 | -0.027532 |
+| 4 | 0.4 | **-0.266133** | **-0.00381282** | -0.049455 |
+
+At N=4, an independently evaluated **exact first-time derivative** gives one-link \(R_1'(0)=-0.85262727\), while the two-link derivative vanishes numerically below \(10^{-9}\); the two-link response is consistent with leading **cubic** time dependence, \(R_2(t)/t^3\simeq-0.0591\) at t=.02,.04,.08. This is a finite-ground-state selection result, **not** a universal graph light cone: short loops/shortcuts, reconnection, changing preparations and longer times need not preserve that hierarchy.
+
+The calculation demonstrates an operationally meaningful distinction between one- and two-step **relational** detector observables while every geometry fluctuates and is coupled to fermions. It improves on CP-09's label-only and globally determined role probes. It does NOT prove that a laboratory observer can implement these graph-controlled readouts without a supplied access mechanism, and does not fix any physical distance/time units.
+
+Executable: [relational_response.py](relational_response.py); source-sign finite impulse comparisons pass within \(10^{-8}\).
+
+## 5. What this construction genuinely resolves—and what it still does not
 
 **New mathematical progress relative to the earlier SCOUT:** the mechanism now supports a fixed physical matter register and a fully coherent quantum geometry changing in time, with the same port pairing controlling fermionic hopping and the energy that favors connected cycles. It has an extensive lower bound and robust small finite-N connectedness, and explicitly exhibits matter–geometry entanglement. This addresses the Born–Oppenheimer and edge-register identification concerns left by the earlier conditional and quantum-effective benchmarks.
 
