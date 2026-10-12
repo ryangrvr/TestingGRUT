@@ -121,7 +121,86 @@ P_{\rm attach}(T)\longrightarrow
 \]
 For ν=1 and Γ=.1: \(P_{\rm attach}(10)=0.840990412\), \(P_{\rm attach}(\pi/\Gamma)=0.999664537\), and \(P_{\rm attach}(2\pi/\Gamma)=0\). The finite-N reduced calculations approach these limits; the return at \(2\pi/\Gamma\) becomes sharper as N grows. **This is coherent reversible attachment with near-revival, not stable geometrogenesis or relaxation.**
 
-## 5. Full-CP-12 microscopic matter coupling makes the neutral-only approximation nonuniform
+## 5. Crucial stronger test: vertex attachment is NOT global connectivity
+
+The neutral model's impressive single-vertex attachment must confront actual **full connectedness**, not merely k>=1. For Q=N-1, a globally connected graph is exactly a labelled spanning **tree**. Prüfer's theorem gives the number of such trees with reference vertex degree k:
+\[
+\#\mathrm{trees}(N,k)=
+\binom{N-2}{k-1}(N-1)^{N-k-1},
+\quad k\ge1.
+\]
+Because the quantum state is **uniform inside each |k> orbit**, its *exact* conditional global-connectivity probability is
+\[
+\boxed{
+f_{N,k}
+=\frac{\binom{N-2}{k-1}(N-1)^{N-k-1}}
+{\binom{N-1}{k}
+ \binom{(N-1)(N-2)/2}{N-1-k}},
+\quad
+P_{\rm conn}(T)=\sum_k |c_k(T)|^2 f_{N,k}.
+}
+\]
+This is exact finite-N probability for the coherent neutral-only graph walk. An independent full enumeration of every Q=N-1 graph through N=7 verified the Prüfer sector counts, including the Cayley sum N^(N-2). It does **not** assume that attachment is connectivity.
+
+| N | \(P_{\rm attach}(T=10)\) | \(P_{\rm globally\ connected}(T=10)\) |
+|---:|---:|---:|
+| 4 | 0.21422594 | 0.20652398 |
+| 5 | 0.38241522 | 0.28773132 |
+| 6 | 0.49497073 | 0.27228435 |
+| 8 | 0.62131131 | 0.17427045 |
+| 12 | 0.72146393 | 0.05184259 |
+| 20 | 0.78086067 | 0.00391106 |
+| 40 | 0.81467460 | 0.000006430 |
+| 80 | 0.82866778 | 2.19032e-11 |
+| 160 | 0.83502540 | 3.42751e-22 |
+| 320 | 0.83805546 | 1.16168e-43 |
+
+The apparent N-independent **attachment** channel does NOT assemble a connected macroscopic universe. At N=320 the reference vertex attaches with ~84% probability, but global connectedness is about \(10^{-43}\).
+
+### Uniform-in-time **large-system no-assembly bound** for this prepared neutral walk
+
+There is also a mathematical limit, independent of extrapolating the table. The reduced off-diagonal coefficients obey
+\[
+ |(H_J)_{k,k+1}|
+ \le g_N\sqrt{k+1},\qquad
+ g_N=\Gamma\sqrt{\frac{QS}{M}}.
+\]
+Writing \(m(T)=\langle k\rangle_T\), the Heisenberg commutator and Cauchy–Schwarz give
+\[
+ |\dot m(T)|\le 2g_N\sqrt{m(T)},\qquad m(0)=0.
+\]
+Hence for **all T at finite N**:
+\[
+\boxed{\langle k\rangle_T\le
+   \Gamma^2\frac{Q(N-1)}{M}T^2.}
+\]
+This operator bound was tested on every reduced curve at the numerical times.
+
+Conditioned on a reference degree k, the remaining Q-k edges are **uniformly sampled** among the A potential edges joining the other N-1 vertices. For Q/N->ν>0, the number I of vertices isolated within that remaining graph has
+\[
+E[I\mid k]=(N-1)
+\frac{\binom{A-(N-2)}{Q-k}}{\binom A{Q-k}}
+\ge c_\nu N,\quad
+\operatorname{Var}(I\mid k)=O_\nu(N)
+\]
+uniformly in allowable k, with \(c_\nu>0\). (The variance follows from the analogous two-vertex hypergeometric probability.) If k is less than \(c_\nu N/2\), the probability of having I<=k is O(1/N) by Chebyshev. If k is greater, Markov and the above moment bound give probability O(Γ²T²/N). Every globally connected graph must have I<=k, since the new edges to the reference vertex can cover at most k otherwise isolated vertices.
+
+Therefore:
+\[
+\boxed{
+P_{\rm conn}^{\rm neutral\ walker}(T)
+=O_\nu\left(\frac{1+\Gamma^2T^2}{N}\right),
+\qquad
+T=o(\sqrt N)
+\Longrightarrow P_{\rm conn}(T)\to0.
+}
+\]
+
+**Scientific consequence:** Within this specific fully coherent initial state and neutral rewiring comparator, there is **NO macroscopic globally connected formation during the growing-time propagation window** of the previous CP-12 operational theorem. Coherence can improve attachment but does not solve spatial selection. The result does **not** extend to the full matter/gauge Hamiltonian, to an alternative physically prepared coherent state, or to arbitrary initial graph classes without fresh proof.
+
+The independent runnable test is [global_connectivity.py](global_connectivity.py).
+
+## 6. Full-CP-12 microscopic matter coupling makes the neutral-only approximation nonuniform
 
 Now restore the exact frozen CP-12 matter/gauge Hamiltonian, with t_hop=1 and both U(1) half-links. On each neutral filled-edge graph, one matter hop moves an edge fermion to either endpoint and creates a distinct gauge-invariant edge hole, vertex charge, and unit half-link electric field. The \(2Q\) outputs are mutually orthogonal and orthogonal to all neutral configurations, for any coherent superposition over different neutral graphs. Thus exactly
 \[
@@ -165,7 +244,7 @@ The graph-only coherent preparation \(|\Phi_0\rangle\) has reconnection energy \
 \]
 This holds for the same **neutral** full-CP-12 states because fermion/electric diagonal expectations do not change. A long-range graph-coherent state is not an innocuous substitute for an incoherent ensemble: its relative phases and referencing of v are physical resources, and its preparation is not supplied by CP-12's small-N assembly result.
 
-## 6. Scientific verdict
+## 7. Scientific verdict
 
 **What is earned:** the exact neutral-reconnection dynamics has an analytically solvable **coherence-assisted attachment channel**; the effect has an \(N\)-independent leading coefficient and nontrivial finite-time large-N neutral-only limit. The short-time coefficient and full-law spectral variance follow from frozen CP-12 without modifying its Hamiltonian. This makes the distinction between *formed by dynamics* and *prepared with extensive graph coherence* explicit and quantitative.
 
@@ -181,4 +260,4 @@ If connectivity accelerates but graph structure remains random/nonspatial, the f
 
 ## Reproducibility and scientific priority
 
-[check.py](check.py) is self-contained (NumPy/SciPy), does not import the CP-12 code, constructs the EXACT Johnson graph for N<=6, compares entire time evolution with the exact 1D coherent quotient, and records N up to 320. [full_law_moments.py](full_law_moments.py) independently verifies the full-law Taylor coefficients and spectral moments by explicit one-application state enumeration without requiring SciPy. Independent local equivalent algorithms passed; the verbatim committed script should also be run by a partner. The graph-only full-sector comparison and the exact full-law derivative/variance identities should not be mislabeled as a full-CP-12 numerical evolution. Standard quantum walks on Johnson graphs, collective spin contractions and coherent-state oscillator revivals have prior art. A publication-level originality search is still needed; no discovery of a new force, gravity or experimental prediction is asserted.
+[check.py](check.py) is self-contained (NumPy/SciPy), does not import the CP-12 code, constructs the EXACT Johnson graph for N<=6, compares entire time evolution with the exact 1D coherent quotient, and records N up to 320. [full_law_moments.py](full_law_moments.py) independently verifies the full-law Taylor coefficients and spectral moments by explicit one-application state enumeration without requiring SciPy. Independent local equivalent algorithms passed; the verbatim committed script should also be run by a partner. The exact tree-degree formula and global-connectivity probability are independently checked by [global_connectivity.py](global_connectivity.py), including direct enumeration through N=7 and the finite-N expected-reference-degree bound. The graph-only full-sector comparison and the exact full-law derivative/variance identities should not be mislabeled as a full-CP-12 numerical evolution. Standard quantum walks on Johnson graphs, collective spin contractions and coherent-state oscillator revivals have prior art. A publication-level originality search is still needed; no discovery of a new force, gravity or experimental prediction is asserted.
