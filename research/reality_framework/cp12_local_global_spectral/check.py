@@ -97,6 +97,17 @@ def random_gap(G):
     assert abs(E[0])<1e-8 and res<1e-7
     return float(E[1])
 
+def mean_incidence_general(G):
+    # Every vertex is a possible referenced charge and every existing
+    # edge a possible hole location. Uniform-placement bare energy only.
+    edges=list(G.edges())
+    accum=0
+    for v in G:
+        distances=nx.single_source_shortest_path_length(G,v)
+        for a,b in edges:
+            accum+=1+2*min(distances[a],distances[b])
+    return accum/(len(G)*len(edges))
+
 def main():
     exact=[];random=[]
     for k in (2,3,6):
@@ -124,6 +135,7 @@ def main():
                 G=nx.random_regular_graph(4,N,seed=11222026+seed)
                 f=graph_features(G)
                 random.append(dict(N=N,seed=seed,gap=random_gap(G),
+                    mean_CP12_incidence_distance=mean_incidence_general(G),
                     triangles=f["triangles"],squares=f["squares"],
                     radius3_vertices=f["radius3_vertices"]))
     assert exact[1]["gap_ratio"]>8
@@ -131,6 +143,8 @@ def main():
     assert exact[2]["diffusion"][3]["square"]>1.6
     assert .95<exact[2]["diffusion"][3]["thin"]<1.10
     assert min(v["gap"] for v in random if v["N"]==729)>.35
+    assert max(v["mean_CP12_incidence_distance"] for v in random
+               if v["N"]==729)<15.
     output=dict(
         scope="Pure graph and Laplacian comparator, NOT full CP12 quantum thermal state",
         theorem="For any fixed radius r, sufficiently wide fixed strips and growing square tori have isomorphic rooted r-balls and identical sum-of-local-r-ball energies, yet differ in macroscopic spectral gap and diffusion.",
