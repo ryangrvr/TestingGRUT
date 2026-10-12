@@ -104,6 +104,21 @@ def main():
             finite_bessel.append(dict(t=t,relational_hops=distance,
                 full_mode_velocity_amplitude=finite,
                 infinite_ring_bessel=analytic))
+    # Operational spectral dimension using the HEAT return on the same
+    # neighbor Laplacian that defines the phonon stiffness. This is a
+    # correspondence control, not independent selection of spatial dimension.
+    Nk=256
+    modes=4*np.sin(pi*np.arange(Nk)/Nk)**2
+    spectral_dimension=[]
+    for diffusion_time in (5.,20.,80.):
+        h=0.01
+        pplus=np.exp(-diffusion_time*(1+h)*modes).mean()
+        pminus=np.exp(-diffusion_time/(1+h)*modes).mean()
+        dspec=-2*(np.log(pplus)-np.log(pminus))/(2*np.log(1+h))
+        assert .99<dspec<1.04
+        spectral_dimension.append(dict(time=diffusion_time,
+            heat_return_probability=float(np.exp(-diffusion_time*modes).mean()),
+            effective_spectral_dimension=float(dspec)))
     # Exact discrete config-count comparison with q=2N physical phase bins.
     counts=[]
     for n in (16,32,64,128,256):
@@ -135,6 +150,7 @@ def main():
        harmonic_corrected_energy_per_site=float(opt.fun),
        phase_graph_entropy_comparison=counts,
        impulse_velocity_bessel_controls=finite_bessel,
+       induced_geometry_spectral_dimension=spectral_dimension,
        pairwise_log_nonlocal_hessian_example=float(pairwise_offsite),
        limits=["S1 topology and cyclic interaction supplied",
           "quantum modes only harmonic; no exact full quantum thermal state",
