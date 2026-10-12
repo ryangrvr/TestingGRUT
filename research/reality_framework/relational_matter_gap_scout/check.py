@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from math import pi, sqrt, log
 import numpy as np
-from scipy.special import kv, gammaln
+from scipy.special import kv, gammaln, jv
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar
 
@@ -89,6 +89,21 @@ def main():
     opt=minimize_scalar(e_density,bounds=(0.5,2.),method='bounded',
         options={'xatol':1e-12})
     assert opt.success and 1.06<opt.x<1.07
+    # Exact impulse-velocity Green function: in the N->infinity ring limit,
+    # v_r(t) = (p_impulse/m) J_{2r}(omega_max*t). Cyclic images vanish
+    # for a sufficiently large ring at finite time.
+    Nimp=128
+    q=np.arange(Nimp)
+    finite_bessel=[]
+    for t in (2.,10.,25.):
+        for distance in (0,1,2,5,10):
+            finite=float(np.mean(np.cos(dispersion(Nimp)*t)*
+                       np.cos(2*pi*q*distance/Nimp)))
+            analytic=float(jv(2*distance,wmax*t))
+            assert abs(finite-analytic)<1e-11
+            finite_bessel.append(dict(t=t,relational_hops=distance,
+                full_mode_velocity_amplitude=finite,
+                infinite_ring_bessel=analytic))
     # Exact discrete config-count comparison with q=2N physical phase bins.
     counts=[]
     for n in (16,32,64,128,256):
@@ -119,6 +134,7 @@ def main():
        harmonic_corrected_equilibrium_gap=float(opt.x),
        harmonic_corrected_energy_per_site=float(opt.fun),
        phase_graph_entropy_comparison=counts,
+       impulse_velocity_bessel_controls=finite_bessel,
        pairwise_log_nonlocal_hessian_example=float(pairwise_offsite),
        limits=["S1 topology and cyclic interaction supplied",
           "quantum modes only harmonic; no exact full quantum thermal state",
