@@ -1,5 +1,25 @@
 # GRUT III — changelog
 
+## Revision 2.5 (2026-10-12) — synthesis of all guidance
+
+- `13_SYNTHESIS.md`: the GRUT III baseline, the reviewer's fork, ChatGPT's self-assessment and the codex graph line (fixed-bond
+  entropy, SCOUT-RG01/02, CP-12 and three audits) synthesised and checked. Verdicts: the codex mathematics is correct within
+  its scope; its premise (undirected adjacency, Gibbs weights, external time, bounded degree) is unexplained, with two known
+  obstructions (entropy–action budget; Lorentz-invariance debt against ~10⁻²⁰ species-speed bounds). Two places a principle
+  could act: the quantum state (Fewster–Verch: no covariant choice) and the renormalisation constants (Λ, G). Every known
+  state rule buys uniqueness with an extra input; the unresolved freedom is the infrared of massless fields in an
+  accelerating universe. Pre-registered N1 (scale-free state on the derivative algebra or a unique IR completion) and N2 (a
+  principle fixing a renormalisation constant). Seven-agent verification record and a two-critic adversarial review, all
+  fixes applied.
+- `calc/v15_sj_state_ds_slab.py` (PASS): the Sorkin–Johnston state in a de Sitter slab, reduced exactly mode by mode; not
+  Hadamard (|β_k|² → (a_eH)²/16k²); infrared suppression ≈ √(π/2)(k/a_eH)^ν; over the inflationary slab excluded by the CMB in
+  amplitude and tilt; region dependence.
+- `calc/v16_entropy_action_budget.py` (PASS): sparse-graph entropy excess (α−1)N ln N versus the O(N) budget of a local
+  action (heuristic; weak- and strong-coupling behaviour); balanced bilayer orders versus an N² nonlocal budget.
+- `12`: constraint 1 corrected (de Sitter KMS needs Hadamard); constraints 8–10 added (Hadamard; Lorentz-invariance data;
+  entropy–action budget); a fourth route (fix a free constant). `09`: T_KH is a near-horizon scaling-limit KMS temperature
+  (Kurpicz–Pinamonti–Verch 2021), not only a label. `run_all.py` runs v1–v16.
+
 ## Revision 2.4 (2026-10-11, sixth round) — final; baseline banked 2026-10-12
 
 - `12_BASELINE_AND_HANDOFF.md`: verification rounds stopped on the reviewer's recommendation; the honest ledger of what is
