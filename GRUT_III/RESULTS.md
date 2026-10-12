@@ -1,6 +1,6 @@
 # GRUT III — verification results
 
-Generated 2026-10-12 01:53 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
+Generated 2026-10-12 11:50 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; numpy, sympy, mpmath).
 
 | script | status |
 |---|---|
@@ -18,6 +18,8 @@ Generated 2026-10-12 01:53 UTC by `GRUT_III/calc/run_all.py` (Python 3.13.16; nu
 | `v12_two_temperatures.py` | **PASS** |
 | `v13_zero_mode_temperature.py` | **PASS** |
 | `v14_massless_sector_first_order.py` | **PASS** |
+| `v15_sj_state_ds_slab.py` | **PASS** |
+| `v16_entropy_action_budget.py` | **PASS** |
 
 ---
 
@@ -382,7 +384,7 @@ V6 OVERALL: INFORMATIONAL (no pass/fail)
   [PASS] N_L(3.0) = (G+ + G-)/2 = (1/2) coth(beta w/2) rho_L: 2.29e-13
   [PASS] Im G+_L(3.0) = 0: 0.0e+00
 
-  (runtime 25.1 s)
+  (runtime 26.1 s)
 V7 OVERALL: PASS
 ```
 
@@ -824,4 +826,107 @@ r(0) = 2 - 2 ln 2, r(inf) = 0, and the zero-mode diffusion coefficient is D = (H
 This is conventional QFT; it establishes nothing about P1 beyond consistency. O5 item 1 is now computed, not argued.
 
 V14 OVERALL: PASS
+```
+
+## `v15_sj_state_ds_slab.py`
+
+```text
+== 15.1 construction checks ==
+  incomplete-gamma closed forms = quadrature (worst rel. 2.1e-41): PASS
+  conf: Wronskian a^2 (u u*' - u* u') = i: PASS
+  mmc: Wronskian a^2 (u u*' - u* u') = i: PASS
+  SJ conditions |alpha|^2 - |beta|^2 = 1 and int v^2 a^4 = 0 (worst 4.7e-156): PASS
+  mode-reduced SJ two-point function = positive part of the discretised Pauli-Jordan operator, conformal, k = a_e H (rel. 3.7e-12): PASS
+  massless field, IR (k = 1e-3, s in [1, 1e4]): discretised R = 3.778194e-05 vs closed form 3.778194e-05: PASS
+== 15.2 ultraviolet: |beta_k|^2 tail and the Hadamard condition ==
+    conf: k/(a_e H) =    100:  |beta|^2 = 6.248868e-6   16 k^2 |beta|^2 (a_e H)^-2 = 0.99981888
+    conf: k/(a_e H) =   1000:  |beta|^2 = 6.2499888e-8   16 k^2 |beta|^2 (a_e H)^-2 = 0.99999821
+    conf: k/(a_e H) =  10000:  |beta|^2 = 6.25e-10   16 k^2 |beta|^2 (a_e H)^-2 = 1.0
+  conf: |beta_k|^2 -> (a_e H)^2/(16 k^2) (power law: not Hadamard): PASS
+    mmc: k/(a_e H) =    100:  |beta|^2 = 6.2509502e-6   16 k^2 |beta|^2 (a_e H)^-2 = 1.000152
+    mmc: k/(a_e H) =   1000:  |beta|^2 = 6.2500096e-8   16 k^2 |beta|^2 (a_e H)^-2 = 1.0000015
+    mmc: k/(a_e H) =  10000:  |beta|^2 = 6.2500002e-10   16 k^2 |beta|^2 (a_e H)^-2 = 1.0
+  mmc: |beta_k|^2 -> (a_e H)^2/(16 k^2) (power law: not Hadamard): PASS
+    conformal: int_10^Lambda k^3 |beta|^2 dk/2pi^2: Lambda = 1000 -> 1582.96, 4000 -> 25330.1; growth exponent 2.0
+  the |beta|^2 part of the SJ energy density diverges like Lambda^2 (exponent -> 2): PASS
+== 15.3 infrared: modes outside the horizon at the slab's end ==
+    conf: k/(a_e H) =  1e-12:  R_k = |v_k|^2/|u_k|^2 at eta_e = 1.25331e-6
+    conf: k/(a_e H) =   1e-9:  R_k = |v_k|^2/|u_k|^2 at eta_e = 3.96333e-5
+    conf: k/(a_e H) =   1e-6:  R_k = |v_k|^2/|u_k|^2 at eta_e = 0.00125337
+    conf: k/(a_e H) =   1e-3:  R_k = |v_k|^2/|u_k|^2 at eta_e = 0.0399065
+    conf: local slopes d ln R/d ln k = 0.5000, 0.5000, 0.5010
+  conf: R_k ~ (k/a_e H)^0.5 for k << a_e H: PASS
+    mmc: k/(a_e H) =  1e-12:  R_k = |v_k|^2/|u_k|^2 at eta_e = 1.25331e-18
+    mmc: k/(a_e H) =   1e-9:  R_k = |v_k|^2/|u_k|^2 at eta_e = 3.96333e-14
+    mmc: k/(a_e H) =   1e-6:  R_k = |v_k|^2/|u_k|^2 at eta_e = 1.25331e-9
+    mmc: k/(a_e H) =   1e-3:  R_k = |v_k|^2/|u_k|^2 at eta_e = 3.96332e-5
+    mmc: local slopes d ln R/d ln k = 1.5000, 1.5000, 1.5000
+  mmc: R_k ~ (k/a_e H)^1.5 for k << a_e H: PASS
+    => if the SJ region is the inflationary slab (and k >> a_i H), every observable mode (k/a_e H ~ e^-50..e^-60) has its power
+       multiplied by 3.4e-33..1.0e-39 and its tilt shifted by +nu ~ +1.5 (light inflaton), against Planck 2018
+       n_s - 1 = -0.035 +- 0.004 (some 365 sigma). Excluded in amplitude and in tilt.
+  tilt shift 1.5 is incompatible with |n_s - 1 - (-0.035)| < 5 x 0.0042: PASS
+== 15.4 region dependence (the known non-local covariance of SJ) ==
+    mmc, k = 1e-3: slab ends at s_e =     1 (a_e H = 1.0): R at the FIXED time eta = -1 is 3.96332e-5
+    mmc, k = 1e-3: slab ends at s_e =  1e-1 (a_e H = 10.0): R at the FIXED time eta = -1 is 1.25331e-6
+    mmc, k = 1e-3: slab ends at s_e =  1e-2 (a_e H = 100.0): R at the FIXED time eta = -1 is 3.96361e-8
+  extending the region's future boundary changes the two-point function on the common earlier region (region dependence): PASS
+
+CONCLUSION: the region-based SJ state is not Hadamard in a sharp region (|beta_k|^2 ~ (a_e H)^2/16k^2, divergent energy
+density: violates P2), suppresses modes that are superhorizon at the region's end by ~(k/a_e H)^nu (over the inflationary slab
+this contradicts the CMB in amplitude and tilt), and depends on the region's future boundary. A region ending today is not
+computed here. A Hadamard, causal state-selection rule free of arbitrary functions is what is missing.
+
+V15 OVERALL: PASS
+```
+
+## `v16_entropy_action_budget.py`
+
+```text
+== 16.1 excess log-count of sparse graphs over any N! e^{O(N)} family ==
+    N =      100:  [ln C(M, 2N) - ln N!]/(N ln N) = 1.02142   (-> alpha - 1 = 1 as N -> inf; O(N)/(N ln N) corrections)
+    N =     1000:  [ln C(M, 2N) - ln N!]/(N ln N) = 1.03074   (-> alpha - 1 = 1 as N -> inf; O(N)/(N ln N) corrections)
+    N =    10000:  [ln C(M, 2N) - ln N!]/(N ln N) = 1.02450   (-> alpha - 1 = 1 as N -> inf; O(N)/(N ln N) corrections)
+    N =   100000:  [ln C(M, 2N) - ln N!]/(N ln N) = 1.01974   (-> alpha - 1 = 1 as N -> inf; O(N)/(N ln N) corrections)
+    N =  1000000:  [ln C(M, 2N) - ln N!]/(N ln N) = 1.01646   (-> alpha - 1 = 1 as N -> inf; O(N)/(N ln N) corrections)
+    (excess/(N ln N) - 1) x ln N = 0.0986, 0.2123, 0.2257, 0.2272, 0.2274  -> constant: the O(N) term
+  excess = (alpha - 1) N ln N + c N with c constant (residual x ln N stable to 2% for N >= 10^4): PASS
+== 16.2 a local action on sparse graphs has only O(N) fluctuation budget ==
+    N =   100: <S> =      374.4   Var(S)/N =  27.858   entropy excess / Var(S) =   0.165
+    N =   400: <S> =     1576.4   Var(S)/N =  32.070   entropy excess / Var(S) =   0.187
+    N =  1600: <S> =     6380.7   Var(S)/N =  31.438   entropy excess / Var(S) =   0.235
+    N =  6400: <S> =    25584.4   Var(S)/N =  34.480   entropy excess / Var(S) =   0.254
+    (independent-Poisson reference: Var((d-4)^2) = 2*4^2 + 4 = 36 per vertex; the fixed-K constraint lowers it slightly)
+  Var(S)/N converges to an N-independent value below the Poisson bound 36 (N >= 400 within 15%): PASS
+  entropy excess / Var(S) grows with N (like ln N): PASS
+    N =  20: ln|<exp(i 0.05 S)>| =  -0.3728   -lambda^2 Var_N(S)/2 =  -0.3829   ratio 0.974   (MC noise floor ln(1/200) = -5.30)
+    N =  40: ln|<exp(i 0.05 S)>| =  -1.0520   -lambda^2 Var_N(S)/2 =  -1.1080   ratio 0.949   (MC noise floor ln(1/200) = -5.30)
+    N =  80: ln|<exp(i 0.05 S)>| =  -2.4743   -lambda^2 Var_N(S)/2 =  -2.6907   ratio 0.920   (MC noise floor ln(1/200) = -5.30)
+  weak coupling (lambda = 0.05): ln|<e^{i lambda S}>| = -lambda^2 Var(S)/2 to 10% at each N (Gaussian regime; Var = O(N)): PASS
+  S is always even, so <e^{i pi S}> = 1 exactly: no suppression at lambda = pi (the Gaussian law fails at strong coupling): PASS
+    independent Poisson(4): per-vertex suppression rate g(0.050) =   0.0379   Gaussian lambda^2*36/2 =    0.045
+    independent Poisson(4): per-vertex suppression rate g(1.000) =   1.8682   Gaussian lambda^2*36/2 =   18.000
+    independent Poisson(4): per-vertex suppression rate g(1.571) =   0.3466   Gaussian lambda^2*36/2 =   44.413
+    independent Poisson(4): per-vertex suppression rate g(3.142) =   8.0000   Gaussian lambda^2*36/2 =  177.653
+  strong coupling: the per-vertex rate is O(1) and below the Gaussian value (g(1) = 1.87 < 18): PASS
+    note: independent Poisson degrees give g(pi) = 8 (each vertex contributes (-1)^d, E = e^-8), but the true fixed-K ensemble has
+    sum d = 2K even, so its phase at lambda = pi is exactly 1: a global constraint the per-vertex approximation misses. Strong-
+    coupling suppression rates therefore need the true ensemble; the O(N)-not-O(N ln N) conclusion is unaffected.
+== 16.3 balanced bilayer (two-level) orders: an N^2 action budget ==
+    N =    20, lambda = 1.5708: ln|<e^(i lambda S)>| = -34.7   vs entropy of the class ln 2^(N^2/4) = 69.3
+    N =    20, lambda = 3.1416: ln|<e^(i lambda S)>| = -3733.2   vs entropy of the class ln 2^(N^2/4) = 69.3
+    N =   100, lambda = 1.5708: ln|<e^(i lambda S)>| = -866.4   vs entropy of the class ln 2^(N^2/4) = 1732.9
+    N =   100, lambda = 3.1416: ln|<e^(i lambda S)>| = -93329.6   vs entropy of the class ln 2^(N^2/4) = 1732.9
+    N =  1000, lambda = 1.5708: ln|<e^(i lambda S)>| = -86643.4   vs entropy of the class ln 2^(N^2/4) = 173286.8
+    N =  1000, lambda = 3.1416: ln|<e^(i lambda S)>| = -9332964.0   vs entropy of the class ln 2^(N^2/4) = 173286.8
+  brute force over all relation sets of a fixed balanced bipartition (N = 4, 6): sum e^{i theta N0} = (1 + e^{i theta})^{N^2/4}: PASS
+  absolute suppression (|class sum| < 1) requires |cos(theta/2)| < 1/2: true at theta = pi (exact zero), false at theta = pi/2: PASS
+
+CONCLUSION (heuristic, not a theorem): on sparse graphs with alpha > 1 the entropy excess of non-geometric configurations is
+(alpha - 1) N ln N, while a fixed-strength local action suppresses a class sum by at most exp(-O(N)) generically (Gaussian at weak
+coupling, weaker or none at strong coupling). Boltzmann energy cannot select a lattice family (theorem); a local action's phase
+is not expected to. An exponentially bounded configuration space, or a nonlocal action with an N^2 budget against N^2 entropy
+(causal sets: balanced layered orders), is what a geometry-selection mechanism needs.
+
+V16 OVERALL: PASS
 ```
