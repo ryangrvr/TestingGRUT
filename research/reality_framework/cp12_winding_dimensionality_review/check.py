@@ -99,8 +99,17 @@ def main():
         'thin':heat_dims(9,1296,200), 'balanced':heat_dims(108,108,200)}}
     assert .999<late['s_200']['thin']['spectral_dimension']<1.002
     assert 2.<late['s_200']['balanced']['spectral_dimension']<2.005
+    # The physically decisive THREE-family discriminator at fixed N=2916:
+    # thin 9x324, fixed-aspect 27x108, and balanced 54x54.
+    # The intermediate aspect ratio 4 can be held constant as N grows.
+    triple={str(s):{f'{a}x{b}':heat_dims(a,b,s)
+             for a,b in ((9,324),(27,108),(54,54))}
+             for s in (20.,30.,50.,80.,100.)}
+    assert abs(triple['50.0']['27x108']['spectral_dimension']-1.644687)<1e-5
+    assert abs(triple['50.0']['54x54']['spectral_dimension']-2.004984)<1e-5
     result={'base_commit':SOURCE, 'scaling_families':x,
       'exact_closed_walk_moments_729':moments,'late_dimension_crosscheck':late,
+      'three_family_diagnostic_N2916':triple,
       'derivation':{'isolated_flux_level':'d=ell*(epsilon_E-a)',
        'minimal_vertex':'K_ell(a)*t_hop^(2ell)',
        'isolated_channel_ground_shift':'-2*(number_of_cycles)*K_ell(a)^2/d * t_hop^(4ell)',
