@@ -1,0 +1,140 @@
+{
+  "status": "Equivalent standalone controls executed locally. The exact GitHub-committed scripts remain to be rerun independently.",
+  "date": "2026-10-11",
+  "conditions": {
+    "topology": "supplied S1",
+    "excluded": "No dynamic 3D spatial selection; no full dynamical length quantum operator",
+    "pressure_model": {
+      "g": 1,
+      "P": 1,
+      "m": 100,
+      "hbar": 1
+    },
+    "full_quantum": {
+      "g": 1,
+      "P": 1,
+      "J": 0.2,
+      "q": "2N",
+      "L": "N"
+    }
+  },
+  "pressure_model": {
+    "L_star_over_N": 1,
+    "E_min_over_N": 2,
+    "a_star": 1,
+    "sound_speed": 0.1414213562373095,
+    "quantum_harmonic_zpe_density_limit": 0.09003163161571061,
+    "harmonic_corrected_a": 1.0634640866765332,
+    "harmonic_corrected_energy_density": 2.0858812289822812,
+    "acoustic_modes": [
+      {
+        "N": 8,
+        "gap": 0.1082392200292394,
+        "zpe_density": 0.08887164615522802
+      },
+      {
+        "N": 16,
+        "gap": 0.055179875856588595,
+        "zpe_density": 0.0897421953952584
+      },
+      {
+        "N": 32,
+        "gap": 0.027723433839818293,
+        "zpe_density": 0.08995930744907293
+      },
+      {
+        "N": 64,
+        "gap": 0.013878434101588137,
+        "zpe_density": 0.0900135527527042
+      },
+      {
+        "N": 128,
+        "gap": 0.006941307642879999,
+        "zpe_density": 0.09002711203609552
+      }
+    ],
+    "isobaric_mean_gaps": [
+      {
+        "beta": 0.5,
+        "mean": 2.699483935593772
+      },
+      {
+        "beta": 1,
+        "mean": 1.8143077587637892
+      },
+      {
+        "beta": 3,
+        "mean": 1.2589796435974918
+      },
+      {
+        "beta": 10,
+        "mean": 1.0758934630672707
+      }
+    ],
+    "operational_spectral_dimension": [
+      {
+        "time": 5,
+        "dimension": 1.028004155005425
+      },
+      {
+        "time": 20,
+        "dimension": 1.0064128075403804
+      },
+      {
+        "time": 80,
+        "dimension": 1.0015723886954595
+      }
+    ]
+  },
+  "full_quantum": [
+    {
+      "N": 3,
+      "states": 20,
+      "E0": 6.809597490386196,
+      "lowest_gap": 0.1931596738569068,
+      "first_density_gap": 0.784716,
+      "lowest_mode_translation": -1
+    },
+    {
+      "N": 4,
+      "states": 70,
+      "E0": 9.120090331899982,
+      "lowest_gap": 0.13178960979013077,
+      "first_density_gap": 0.628406,
+      "lowest_mode_translation": -1
+    },
+    {
+      "N": 5,
+      "states": 252,
+      "E0": 11.422633634557274,
+      "lowest_gap": 0.09651213134939063,
+      "first_density_gap": 0.520607,
+      "lowest_mode_translation": -1
+    },
+    {
+      "N": 6,
+      "states": 924,
+      "E0": 13.72138269839797,
+      "lowest_gap": 0.07388197649052408,
+      "first_density_gap": 0.444141,
+      "lowest_mode_translation": -1
+    },
+    {
+      "N": 7,
+      "states": 3432,
+      "E0": 16.01800783469375,
+      "lowest_gap": 0.058301422313356,
+      "first_density_gap": 0.387762,
+      "lowest_mode_translation": -1
+    }
+  ],
+  "independent_controls": {
+    "finite_difference_hessian_max_error": 8.255653938249452e-10,
+    "bessel_vs_fourier_max_error": "<1e-11",
+    "stationary_translation_commutator": "<1e-10",
+    "full_quantum_ground_residual": "<1e-8",
+    "lowest_quantum_mode_density_k1_weights": "<1e-30 for N=3..7",
+    "fixed_phase_log_pairwise_control": "nonlocal Hessian, sqrt(k) low-k spectrum",
+    "interpretation": "Mathematical consistency of a pregeometric S1-constrained matter-only toy, not an emergent 3D reality theory."
+  }
+}
