@@ -1,0 +1,19 @@
+--- pinned/e7a6535/check.py
++++ followup/even_width_repaired.py
+@@ -144,11 +144,11 @@
+       comparison_width9_at_9_edges_L4=1.0414431046e-9,
+       comparison_width9_through_10_edges_L4=-5.85430687e-9,
+       graph_mixing_operator_schur_bound={
+-        N:n,Q:Q,M:M,Gamma:gamma,
+-        upper_full_offdiag_operator_norm:offdiag_norm_bound,
+-        upper_full_offdiag_norm_per_vertex:offdiag_norm_bound/n,
+-        general_formula="Gamma Q(M-Q)/M, fixed-Q full graph-changing block",
+-        caveat="Vastly loose maximum-norm control; not actual mixing energy or geometry comparison."},
++        "N":n,"Q":Q,"M":M,"Gamma":gamma,
++        "upper_full_offdiag_operator_norm":offdiag_norm_bound,
++        "upper_full_offdiag_norm_per_vertex":offdiag_norm_bound/n,
++        "general_formula":"Gamma Q(M-Q)/M, fixed-Q full graph-changing block",
++        "caveat":"Vastly loose maximum-norm control; not actual mixing energy or geometry comparison."},
+       caution=[
+        "The width9 tube is non-bipartite; the width8 tube remains bipartite.",
+        "A positive first boundary coefficient is NOT a final thermodynamic energy ordering.",

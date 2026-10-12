@@ -1,0 +1,101 @@
+{
+  "model": "Frozen CP12 t=1 graph-block expansion, no full graph mixing",
+  "geometry": "width8 bipartite tube versus even square-lattice host",
+  "results": [
+    {
+      "cutoff_L": 3,
+      "clusters_tested": 136,
+      "host_comparison": "square 18x18 versus even width8 x length36",
+      "control": "even width10 x length36 shows no differences <=8 edges",
+      "contributing_clusters": [
+        {
+          "key": "GhCK?K",
+          "edges": 8,
+          "vertices": 8,
+          "aut": 16,
+          "rooted_square": 112,
+          "rooted_width8": 114,
+          "embedding_density_difference": 0.125,
+          "cluster_weight": 6.52818096469332e-07,
+          "energy": -5.383379590363609
+        },
+        {
+          "key": "HhCK?GA",
+          "edges": 8,
+          "vertices": 9,
+          "aut": 2,
+          "rooted_square": 5916,
+          "rooted_width8": 5914,
+          "embedding_density_difference": -1.0,
+          "cluster_weight": 7.305553140213306e-08,
+          "energy": -5.44211940772916
+        }
+      ],
+      "E_cycle8": -5.383379590363609,
+      "E_path8": -4.769196950386977,
+      "E_path9": -5.44211940772916,
+      "exact_embedding_weight_method": 8.546730656533441e-09,
+      "independent_energy_telescoping_method": 8.546731322667256e-09,
+      "formula": "delta_e8=w(C8)/8-w(P9)=E(C8)/8-[E(P9)-E(P8)]",
+      "delta_e8_sign": "positive: extended square lower AT EDGE ORDER 8 only",
+      "no_thermodynamic_remainder_bound": true
+    },
+    {
+      "cutoff_L": 4,
+      "clusters_tested": 124,
+      "host_comparison": "square 18x18 versus even width8 x length36",
+      "control": "even width10 x length36 shows no differences <=8 edges",
+      "contributing_clusters": [
+        {
+          "key": "GhCK?K",
+          "edges": 8,
+          "vertices": 8,
+          "aut": 16,
+          "rooted_square": 112,
+          "rooted_width8": 114,
+          "embedding_density_difference": 0.125,
+          "cluster_weight": 6.528180529485894e-07,
+          "energy": -5.383379590363596
+        },
+        {
+          "key": "HhCK?GA",
+          "edges": 8,
+          "vertices": 9,
+          "aut": 2,
+          "rooted_square": 5916,
+          "rooted_width8": 5914,
+          "embedding_density_difference": -1.0,
+          "cluster_weight": 7.305551630309992e-08,
+          "energy": -5.442119407729161
+        }
+      ],
+      "E_cycle8": -5.383379590363596,
+      "E_path8": -4.76919695038697,
+      "E_path9": -5.442119407729161,
+      "exact_embedding_weight_method": 8.546740315473755e-09,
+      "independent_energy_telescoping_method": 8.546741092629873e-09,
+      "formula": "delta_e8=w(C8)/8-w(P9)=E(C8)/8-[E(P9)-E(P8)]",
+      "delta_e8_sign": "positive: extended square lower AT EDGE ORDER 8 only",
+      "no_thermodynamic_remainder_bound": true
+    }
+  ],
+  "comparison_width9_at_9_edges_L4": 1.0414431046e-09,
+  "comparison_width9_through_10_edges_L4": -5.85430687e-09,
+  "graph_mixing_operator_schur_bound": {
+    "N": 200,
+    "Q": 400,
+    "M": 19900,
+    "Gamma": 0.1,
+    "upper_full_offdiag_operator_norm": 39.19597989949749,
+    "upper_full_offdiag_norm_per_vertex": 0.19597989949748743,
+    "general_formula": "Gamma Q(M-Q)/M, fixed-Q full graph-changing block",
+    "caveat": "Vastly loose maximum-norm control; not actual mixing energy or geometry comparison."
+  },
+  "caution": [
+    "The width9 tube is non-bipartite; the width8 tube remains bipartite.",
+    "A positive first boundary coefficient is NOT a final thermodynamic energy ordering.",
+    "All source finite-block energies from the owner's pinned 27010b8 dataset; not independently diagonalized here.",
+    "Finite electric regulator agreement is not an edge-cluster remainder certificate.",
+    "Quantum off-diagonal geometry mixing is not evaluated in linked graph-block energies."
+  ]
+}

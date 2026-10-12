@@ -1,0 +1,234 @@
+{
+  "parent_commit": "e7a6535e849d876a0f7b4611c0a2d98ae6437148",
+  "branch": "codex/grut-cp12-regular-sector-exclusion",
+  "dependencies": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "networkx": "3.7"
+  },
+  "executed_commands": [
+    "python research/reality_framework/cp12_remainder_and_mixing/even_width_repaired.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/mixing_fibers.py --n 4 --q 3 --L 2",
+    "python research/reality_framework/cp12_remainder_and_mixing/mixing_fibers.py --n 4 --q 3 --L 3",
+    "python research/reality_framework/cp12_remainder_and_mixing/mixing_fibers.py --n 4 --q 4 --L 2",
+    "python research/reality_framework/cp12_remainder_and_mixing/regular_graph_bound.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/regular_full.py --n 4 --d 2 --L 2",
+    "python research/reality_framework/cp12_remainder_and_mixing/regular_full.py --n 4 --d 2 --L 3",
+    "python research/reality_framework/cp12_remainder_and_mixing/regular_full.py --n 5 --d 2 --L 2",
+    "python research/reality_framework/cp12_remainder_and_mixing/regular_full.py --n 5 --d 2 --L 3 --no-response",
+    "python research/reality_framework/cp12_remainder_and_mixing/schur_remainder.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/finite_host_tail.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/star_bound_check.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/variational_exclusion.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/near_regular_exclusion.py",
+    "python research/reality_framework/cp12_remainder_and_mixing/verify.py"
+  ],
+  "verification": {
+    "status": "CP12_REMAINDER_AND_MIXING_CHECKS_PASS",
+    "group_count": 9,
+    "groups": [
+      "pinned sources, execution failure and repaired even-width control",
+      "complete regular graph transition counts and operator norms",
+      "exact Johnson fibers and independent projected hopping matrix",
+      "full-law sector reversal and coherent prepared response",
+      "Gauss-law star lower bound and complete block decomposition",
+      "coherent matching trial and exact-regular outward certificates",
+      "nearly regular weighted mixing bounds and positive defect-density corollary",
+      "independent complete periodic hosts and finite remainders",
+      "finite full-geometry Schur root and conditional polynomial remainder"
+    ],
+    "dependencies": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "networkx": "3.7"
+    },
+    "scope": "Executed model controls and analytical certificate checks; not empirical validation or a completed theory of spacetime."
+  },
+  "files": [
+    {
+      "name": "DERIVATION.md",
+      "bytes": 16970,
+      "sha256": "bb9b2d6680a0a439f36223f37aa58e4cbfd2593f1a4a24dff8e43334bbe3fe30"
+    },
+    {
+      "name": "REPORT.md",
+      "bytes": 10139,
+      "sha256": "771736ab27c2260d2b2f9bca34e1ed36d6fa56c4f07db2cf3e9d5e07cc1eb452"
+    },
+    {
+      "name": "even_width_execution_account.json",
+      "bytes": 490,
+      "sha256": "25b30797631d2bcd7fae19fe727330318db5f3de64b59df314815fd78df49a7c"
+    },
+    {
+      "name": "even_width_repair.diff",
+      "bytes": 1142,
+      "sha256": "4d8cd5507b95935e93740620ed518796383ba1ee7fc765d60669d74637c256bf"
+    },
+    {
+      "name": "even_width_repaired.py",
+      "bytes": 7039,
+      "sha256": "f4a421112fe446ebface08a6b7049ec0c6e19fdfcd838129bdfc36d0bbb42944"
+    },
+    {
+      "name": "finite_host_tail.py",
+      "bytes": 2529,
+      "sha256": "1b1d4c1763d4f9ffdfaabef7b2cff0c25b0516f576868cf93cdf8ac27f03438f"
+    },
+    {
+      "name": "finite_host_tail_results.json",
+      "bytes": 6629,
+      "sha256": "7125bae5ad2343ac4fd0a5d9f8fd90b996d782da59e7b8ab5963efdc30ff7d57"
+    },
+    {
+      "name": "mixing_N4_Q3_L2.json",
+      "bytes": 1095,
+      "sha256": "b98c32e7eb242e1622e0094343ccbe9454d13f9f1913a413145eb9cac1c35ba7"
+    },
+    {
+      "name": "mixing_N4_Q3_L3.json",
+      "bytes": 1096,
+      "sha256": "0856b921d9ae17d9a94903b53f8bb7be2340b0eab843553924d46c6d914ea0a5"
+    },
+    {
+      "name": "mixing_N4_Q4_L2.json",
+      "bytes": 1085,
+      "sha256": "af62c9f83a1c81001bbaac915e2fa57f27f4ac553c19822c392c56e7313efd9e"
+    },
+    {
+      "name": "mixing_fibers.py",
+      "bytes": 6130,
+      "sha256": "5307846dea04bfa746beec3bd18f9535a5237e524292f53b925d8d95711a0d75"
+    },
+    {
+      "name": "near_regular_exclusion.py",
+      "bytes": 8207,
+      "sha256": "cc765bc68f0cd46f73452962be88984e1effb63cb742844186509c5d940dce95"
+    },
+    {
+      "name": "near_regular_results.json",
+      "bytes": 9535,
+      "sha256": "4ff202183ab7309a5704198ca2e4d86fd3d789f85fdcd4074d28efda3ed6769f"
+    },
+    {
+      "name": "parent_sources.json",
+      "bytes": 861,
+      "sha256": "d179c4e35ef235d0e486ee4eed525d10a3198c2cae227fc6e473b3991f2f294e"
+    },
+    {
+      "name": "regular_bound_N4_d2.json",
+      "bytes": 507,
+      "sha256": "4ee13a908fac605259b6ff167c37bc77ab67f873d67aba9454d7dd38e5fea45c"
+    },
+    {
+      "name": "regular_bound_N5_d2.json",
+      "bytes": 497,
+      "sha256": "486f4515d0314527e0cec2ef600c60bf8e3cf7731889c1b2afd787ef5c1d9a29"
+    },
+    {
+      "name": "regular_bound_N6_d2.json",
+      "bytes": 514,
+      "sha256": "d831b04e5194c999305a7f429e827d13ae25dd20625b823f5a452dd12fd6b5bd"
+    },
+    {
+      "name": "regular_bound_N6_d4.json",
+      "bytes": 513,
+      "sha256": "8469fe2a8c674c1ce289fe067a9592290ecfa6a35ab9d73b85031eb96d7c593b"
+    },
+    {
+      "name": "regular_bound_N7_d2.json",
+      "bytes": 517,
+      "sha256": "68ec9391b9032ee89e07590280dbcb5f97f679ad617092ac1661d65f5ec123f0"
+    },
+    {
+      "name": "regular_bound_N7_d4.json",
+      "bytes": 517,
+      "sha256": "9366140da04a7013b8ad73285f029952c74f4e4b8387b77e597890e024ff072f"
+    },
+    {
+      "name": "regular_bound_N8_d2.json",
+      "bytes": 520,
+      "sha256": "e8c67e674b8e0d297b7dcc4a5e54053c7cf7e12665311f54bae70955da7065c2"
+    },
+    {
+      "name": "regular_full.py",
+      "bytes": 4291,
+      "sha256": "8b8917f3eb5163a59c2b64bbb1b2d74c9a56e5ae0918734915aa6d89cf1a1c76"
+    },
+    {
+      "name": "regular_full_N4_d2_L2.json",
+      "bytes": 2100,
+      "sha256": "cf872a9d12a06c9bd1daea38ba086601f398de49f21a3e974652f7540995a06d"
+    },
+    {
+      "name": "regular_full_N4_d2_L3.json",
+      "bytes": 2103,
+      "sha256": "2376d69fbc748df655d2a886c0518e8cb6a5f52b701f7e3765953eb3343a9652"
+    },
+    {
+      "name": "regular_full_N5_d2_L2.json",
+      "bytes": 687,
+      "sha256": "8076cf0b8e16a61f05fc4f1f1fa82de8284992797c3364ac603b36fb8179da17"
+    },
+    {
+      "name": "regular_full_N5_d2_L3.json",
+      "bytes": 741,
+      "sha256": "04ba76ea6a2e58ada8628795d10e9c6cc931ce33e11d3d7b6c72cf12e28b3b4b"
+    },
+    {
+      "name": "regular_graph_bound.py",
+      "bytes": 2765,
+      "sha256": "7936e467331b60b8a4f08c9004a6f9e3f7b048dac61368c080830ab86e237fed"
+    },
+    {
+      "name": "results.json",
+      "bytes": 3820,
+      "sha256": "b14862b8801fa9b15acbf8b37c150ab7b223bfcff0a49f2d5af797c12b52f192"
+    },
+    {
+      "name": "schur_N4_Q3_L3.json",
+      "bytes": 2898,
+      "sha256": "a1a890e3981a110c984867fd0990d1e1357f92148147be00ddce93e4d038cdfe"
+    },
+    {
+      "name": "schur_remainder.py",
+      "bytes": 3606,
+      "sha256": "dcf10e54e5c1d502329d970331de80c1c0753e5f30648e3511f29c73747d3d9a"
+    },
+    {
+      "name": "star_bound_check.py",
+      "bytes": 4059,
+      "sha256": "1abe504b1be11d99a511ddfd451031d3b9505b8cc01832e328df6dbd5401b338"
+    },
+    {
+      "name": "star_bound_results.json",
+      "bytes": 4836,
+      "sha256": "44c94ca5f9bc69b4495451167faff8985ca6555350794f6afe70f997151136d4"
+    },
+    {
+      "name": "variational_exclusion.py",
+      "bytes": 5781,
+      "sha256": "0cb83d4fe47a12b2efffb14af97456a3fabb7eb4dd39d416db01ae91e98a6faf"
+    },
+    {
+      "name": "variational_exclusion_results.json",
+      "bytes": 9008,
+      "sha256": "6324945c5e0713ce0714602cbca32d6a00ec23958d4936bb0500b0c2dd59b852"
+    },
+    {
+      "name": "verification.json",
+      "bytes": 978,
+      "sha256": "312b7c7b5d499e78d4398f9ea7443a2ff8ae2906b10d95306db70f4cded45466"
+    },
+    {
+      "name": "verify.py",
+      "bytes": 7895,
+      "sha256": "f36196fc81c826fe0c52d9da3c8965d1eda7ae7828e4dde315351c46f2f210b6"
+    }
+  ],
+  "source_scope": "Frozen model and inherited cluster datasets verified against the parent commit. Only this new directory is to be published.",
+  "proof_scope": "Full-H zero-temperature bounds for Q=2N; no integer electric or cluster cutoff in the analytical exclusion. Numerical matrix controls use declared finite cutoffs.",
+  "exclusions": "No CP13, frozen-model mutation, Stage-3 card, canonical GRUT-RAI or PR12 change."
+}
