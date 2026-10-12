@@ -63,12 +63,14 @@ not what quantum gravity sums. Two corollaries follow, and they organise everyth
 
 ## 3. The graph line: what is right, what cannot be right
 
-**Right, and worth keeping.** The codex theorems are correct as stated (independently re-derived in the workflow, §8):
+**Right, and worth keeping.** The codex theorems are correct as stated (independently re-derived, §8), with their scope limits:
 conserving the number of connections removes the dense-edge failure, but at fixed positive temperature a family of lattice
 templates (at most N!·e^{O(N)} labelled members) has probability at most exp[−(ν−1)N ln N + O(N)] among graphs with
 Q = νN connections, even with the full non-commuting gauge–fermion–rewiring Hamiltonian (relative-entropy bound). The CP-12
 back-reaction (a charged connection is removed at order T⁴ instead of T²), the Gauss-law distance diagnostic, the
-O(T²/N) operational window and the coherent no-assembly bound are sound model-specific results.
+O(T²/N) operational window and the coherent no-assembly bound are sound model-specific results. Two qualifications
+from the audit: the CP-12 thermal exclusion is an O(1/ln N) upper bound that is vacuous below N ≈ 10⁷–10⁸ at the frozen
+couplings, and the operational window fails for coherent superpositions of graphs.
 
 **Rediscovered, not discovered.** The central obstruction is thirty years old in other notation. Chen & Plotkin (Phys. Rev.
 D 87, 084011, 2013) found numerically that the transition temperature of fixed-edge graph models goes to zero as N grows;
@@ -247,7 +249,55 @@ to layer 1, where causal-set theory has the right kinematics and GRUT has no dyn
 
 ## 8. Verification record
 
-CODEX_PLACEHOLDER
+Seven verification agents (2026-10-12) checked every claim above against primary sources or by independent computation.
+Read levels are given because this project has misattributed sources before. Full structured output is kept in the session
+scratchpad; the verdicts that change or qualify the text are listed here.
+
+**Codex mathematics (one agent, independent re-derivations and reruns of copies).**
+- Fixed-bond Gibbs class bound, and its (α−1)N ln N consequence: *correct as written.* It needs an extensive operator-norm
+  remainder, so it does not apply directly to unbounded rotors. It describes a counterfactual swap model, not frozen CP-11.
+- CP-12 relative-entropy theorem, P_β = O(1/ln N) for ν > 1: *correct, but an upper bound set by the method, not a sharp
+  rate.* At the frozen couplings it is vacuous (≥ 1) until N ≈ 10⁷–10⁸ at β = 1. It gives no exclusion for ν = 1.
+- RG02 thermal single-ring probability ~ C_β N^{−1/2}: *consistent.* At β = 0 it is exactly the uniform perfect-matching
+  fraction √π/(2√N); C_β = 0.886, 1.70, 3.63, 7.23 at β = 0, 1, 5, 20. It covers only the conditional ensemble.
+- Uniform single-cycle fraction π e² (2/e²)^N: *correct.*
+- Coherent-assembly limit 1 − exp[−4ν(1 − cos ΓT)] and the no-assembly bound O((1 + Γ²T²)/N): *correct.* They hold for the
+  neutral comparator only, not for full CP-12 evolution.
+- Operational window |R_full − R_fixed| ≤ 4Γ²T²Q(M−Q)/M²: *correct* for graph-diagonal sources and detectors and for
+  graph-dephased states. It fails for coherent graph superpositions, which pick up O(T) terms.
+- Structural survey: every model has an external time and a Hamiltonian bounded below. None has a causal order as a primitive.
+  Every "cone" is a propagation bound in external time on supplied or prepared adjacency.
+- Overstatements found: the committed `cp12_dynamic_distance_audit/check.py` crashes (only a repaired copy runs); the CP-12
+  distance relation is for the bare electric energy (the full diagonal has slope (ε_E − a_N)/2); the RG02 detector hierarchy
+  is an N ≤ 4 observation; the CP-12 Lieb–Robinson cone cites theorems whose constants were not computed. The largest CP-12
+  eigensolver runs (up to 2.9 million states) were not rerun.
+
+**Literature (six agents).**
+
+| Claim used here | Verdict | Read level |
+|---|---|---|
+| Kleitman–Rothschild: almost all orders are 3-layer, log₂ count n²/4 + 3n/2 + O(log n) | confirmed | abstract + restatement |
+| Loomis–Carlip suppress Kleitman–Rothschild orders | **refuted** — they suppress two-level orders; KR came later (Mathur–Singh–Surya 2021; Carlip–Carlip–Surya 2023–24) | full text |
+| Suppression scales like the entropy (N² against N²) | confirmed for the balanced subclass; the full two-level sum is not exponentially small | full text + computed |
+| Bombelli–Henson–Sorkin: no Lorentz-equivariant direction for sprinklings; corollary for finite-valency graphs | confirmed (corollary argued informally in the paper) | full text |
+| Collins et al. 2004: Planck-scale frame gives O(0.1–10%) species speed differences | confirmed, with its assumptions (explicit Lorentz-violating regulator, no custodial symmetry) | full text |
+| Species speed-difference bounds ~10⁻²⁰–10⁻²¹ (one-sided astrophysical), ~10⁻¹⁵ (two-sided lab) | confirmed, Kostelecký–Russell 2026 edition | full text |
+| Fermi GRB 090510: E_QG,1 > 1.2 E_Pl; Vasileiou et al.: robust ≳ 2 E_Pl | confirmed | full text |
+| "No natural state" | **re-attributed** to Fewster–Verch 2012, Thm 6.13 | full text |
+| Sorkin–Johnston: not Hadamard on ultrastatic slabs (a.e. width), not locally covariant | confirmed | full text |
+| SJ in de Sitter is an α-vacuum; Bunch–Davies only for m ≥ 3/(2ℓ) on the global patch | confirmed (Aslanbeigi–Buck 2013) | full text |
+| DMP horizon state: unique, Bunch–Davies in dS, Hadamard for Re ν < 3/2 | confirmed; excludes the massless minimally coupled field | full text |
+| Hadamard ⇔ microlocal spectrum condition | confirmed (Radzikowski 1996) | abstract |
+| P2's state content is Hadamard | **partly correct**: as the formal statement of Jacobson's assumption, with KMS exact only at Killing horizons and otherwise in a scaling limit | full text |
+| Bunch–Davies is the unique dS-invariant pure Gaussian Hadamard state (m² > 0); α-vacua not KMS | confirmed | full text |
+| Planck: non-Bunch–Davies bispectrum templates consistent with zero; oscillation modulation ≲ 3% | confirmed | full text |
+| Chen–Plotkin: T_c → 0 with N in fixed-edge graph models | confirmed (numerical, heuristic counting) | full text |
+| Trugenberger / Kelly–Trugenberger–Biancalana: geometry by restricting to regular graphs and rescaling the coupling with N | confirmed | full text |
+| Exponential bound on triangulations: 2D proven; 3D locally constructible and 3D causal proven; general 3D and 4D open | confirmed | full text |
+| CDT 4D de Sitter phase | confirmed; the 2008 paper is Ambjørn, Görlich, Jurkiewicz & Loll | full text |
+| Unlabelled graphs with αN edges ≥ exp((α−1)N ln N + O(N)); with all edges on few vertices ≥ exp(αN ln N − 2αN ln ln N) for every α > 0 | confirmed (computed) | computed |
+
+Where a read level is "abstract", the claim rests on the abstract plus a full-text restatement in a later source.
 
 ## 9. What is not claimed, and the next pre-registered computations
 
