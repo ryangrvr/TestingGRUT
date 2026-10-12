@@ -7,8 +7,8 @@ physics/scope, numerics) on `v14`. Results are structured (verdict, checks, issu
 acted on by the author; this file is the record.
 
 **Status (2026-10-12).** First launch: 3 of 10 round-6 agents and 0 of 3 `v14` agents ran; the rest were refused at
-launch by a session usage limit. Both workflows were relaunched after the limit reset (completed agents replay from
-cache). This file records the three completed audits and the fixes made; it is updated when the relaunch reports.
+launch by a session usage limit. Both workflows were relaunched after the limit reset; the three `v14` agents have now
+reported (below); the remaining round-6 agents are recorded as they report.
 
 ## Completed audits
 
@@ -64,15 +64,65 @@ Issues found and **fixed** (commit 958bdb7):
 - "Exactly KMS to first order" is a statement at fixed x = HΔ, not uniform for ω ≲ εH; the clause was added to D11.
 Open (minor): Part B's first-order identity is checked at random parameter points rather than simplified symbolically.
 
-### `v11` Part D lens B, `v12` (both lenses), `v13` rev. 2 (both lenses), `v14` (three lenses)
+### `v14_massless_sector_first_order.py` — mathematics: CONFIRMED; numerics: CONFIRMED; physics/scope: PARTIAL
 
-Not yet run (refused at launch; relaunched). Until they report, `v12`, `v13` rev. 2 and `v14` remain author-level, as
-`08` states.
+**Mathematics lens** (own derivations before reading the code): the de Sitter propagator normalisation (Hadamard
+coefficient universal in ν; ν = 1/2 gives the conformal propagator; ν → 3/2 gives Allen–Folacci's Z-dependent part); the
+Pochhammer-series derivation of S₁ and S₂ (match hyp2f1 derivatives to 1e-31); g₁ = 3/2, g₂ = 1/2 + π²/6; the `v12` lemma
+with normalisation (Wronskian +i; mode-equation residuals 1e-21); the closed form against a power-law mode integral at
+ν = 1.75 with an explicitly derived IR term — and the proof that the IR term X(ττ′)^{−δ} is *exactly* constant in t and t′,
+so "C_IR constant" is right; the first-order algebra and c₂; the Richardson theorem (halving ratios 3.994–4.004, variants
+O(ε)); the KMS defect of the *exact* closed form (∝ ε² at β_eff, ∝ ε at β_KH and β̄); analyticity of S₂(cosh²) in the strip
+(w = 0 removable; the cuts meet the strip only on its edges); A₁ = −1, B₁ = 4 ln 2 − 4; r(ω) digit for digit; r → 3/2ω²;
+the UV pole cancellation; D from B₁ and from a direct polynomial fit of the exact function (0.99761073 vs 0.99761371 at
+ε = 1e-3). Caveat found: the fixed-mean-time function in the window also carries an O(ε)Δ² term, −(3εH̄⁴/32π²)Δ² in W,
+which exceeds the O(ε) correction to the |Δ| term for H̄Δ ≳ 3; D is correct as the |Δ| coefficient, but "≈ D|Δ|" and the
+σ calibration were stated more loosely than computed.
+
+**Numerics lens** (mutation-tested): Part C fails under c₂ × 1.1 (worst |ratio − 4| = 1.99), c₂ × 0.9 (2.52), g₁ = 1.4 (2.18),
+c₂ = 0 (2.08); the reference subtraction hides only a Δ-independent constant (the IR pole plus O(1), O(ε) constants —
+harmless for ω ≠ 0); the ε² scaling persists at Im Δ = −0.05 and −1.0 and hyp2f1 and the closed forms are on the same branch;
+the mode integral converges to the closed form 6e-11 → 7e-23 as grid and precision are tightened, and the cutoff case's
+remainder scales as k_IR^{5−2ν} (a finite-cutoff effect, not quadrature); r(0.5), r(1), r(2) stable to 18 digits; r(12),
+r(16) continue to decay once dps ≥ 50 (at dps 30 the e^{βω/2} amplification destroys ω = 16: precision, not physics); the
+analytic large-ω form r = 3(2ω⁴ − ω² − 1)/(4ω⁴(ω² + 1)) reproduces r(8), r(12), r(16) to 1.7e-7, 6e-9, 7e-10; the asymptotic
+polynomial is reproduced by a fit on s = 20…40 to 1e-15; the first light-cone image of the exact function sits at
+|Im Δ| = β_eff + 20.9ε², O(ε) away from β_KH and β̄, and the exact function's nonlinear KMS defect is 3.4ε² at β_eff versus
+0.51ε at β_KH and 1.01ε at β̄.
+
+**Physics/scope lens** (accepted the computation; corrected the framing): (i) "KMS at fixed mean time t̄" is a convention,
+and it is doing work: the massless function is non-stationary at zeroth order (W = F(Δ) + (H³/4π²)t̄ + const), so c₀ is the
+O(1) secular growth, not an O(ε) constant; in the detector's own time (instantaneous one-sided Unruh–DeWitt rate) the same
+term becomes a −(H³/8π²)|s| kernel and the massless detector rate in exact de Sitter is Ḟ(E) = G₀(−E) + H³/4π²E² — not KMS at
+any temperature (Garbrecht–Prokopec; the auditor validated the formula to 1e-21). (ii) Even for the conformal sector the
+first-order temperature depends on the time-reference convention: the Wigner kernel gives the pure shift to ä/ȧ (D11
+reproduced, c = 1.000), the one-sided rate gives a frequency-dependent c(E) = 0.24, 0.93, 3.97 at E/H = 0.25, 0.5, 1,
+tending to the bare H̄ as E → 0 (auditor's numbers; the structure — a term s·∂_H W, not a temperature shift — is confirmed
+analytically by the author; the numbers are not re-derived). (iii) The general-a(t) extension asserted in D13's scope is not
+a corollary: the S₂ term comes from the constant index shift and has no direct analogue for varying ε. (iv) The graviton
+remark is an inference, not a computation. (v) The σ calibration is an interpretive identification; "and at no other σ" is
+monotonicity. (vi) A stale reference to `v13` as the massless precedent in `05`.
+
+**Fixes made (this commit):** `v14` — sign slip in the printed β_KH − β_eff; Part D relabelled as an implementation check and
+Part D″ added (the exact-function KMS defect test, ratios 4.00/2.01/2.01); the r → 3(2ω⁴ − ω² − 1)/(4ω⁴(ω² + 1)) check at ω = 8;
+Part B's cutoff comparison as one well-conditioned difference integral with a larger regulator (3.4e-6 → 1.2e-10, tolerance
+1e-7); the docstring carries the convention, the Δ² companion term, the c₂ factor and the precision note on the r table.
+D13 — a "Convention" paragraph; the KMS statement restricted to the ω ≠ 0 part of the fixed-mean-time spectrum; the
+byproduct restated with the Δ² term and the interpretive step; the scope paragraph no longer asserts the general-a(t) or
+graviton results; "P1 adds nothing" replaced by "establishes nothing about P1 beyond consistency". D11 — the same
+convention note. `05`, `09` §1 and §4 — "seen by a comoving detector" / "what an Unruh–DeWitt detector reads" replaced by the
+Wigner-spectrum statement, with the one-sided caveat. The headline survives in this form: the fixed-mean-time spectrum of
+the massless sector at ω ≠ 0 is KMS at (ä/ȧ)/2π to O(ε), Kodama–Hayward excluded, no coarse-graining scale.
+
+### `v11` Part D lens B, `v12` (both lenses), `v13` rev. 2 (both lenses)
+
+Relaunched after the usage-limit refusal; this section is filled in when they report. Until then `v12` and `v13` rev. 2
+remain author-level, as `08` states.
 
 ## What the round changes
 
-Nothing in the physics of the branch was refuted: `v8`'s identities and spectra and `v11`'s first-order theorem were each
-re-derived independently and agree to all digits. What the audit corrected is the prose around them — four misquotations
+Nothing in the physics of the branch was refuted: `v8`'s identities and spectra, `v11`'s first-order theorem and every link
+of `v14` were each re-derived independently and agree to all digits. What the audit corrected is the prose around them — four misquotations
 or overstatements in `07`/`05`/`02`/`09`, one missing hypothesis in a theorem statement, one stale docstring — all now
 fixed. The pattern is the same as in rounds two to five: the computations hold; the claims made about them had to be cut
 back to what was computed.

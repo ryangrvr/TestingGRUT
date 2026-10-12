@@ -164,7 +164,8 @@ W = −1/(4π²a(t)a(t′)(Δη − i0)²) exactly. Expanding about the midpoint
     W(t,t′) = W_dS(Δ; H_eff) + O(ε²),     H_eff = H̄ + Ḣ̄/H̄ = H̄(1 − ε̄) = (d/dt) ln ȧ |_{t̄},
 
 so the state is **exactly KMS to first order** at T_eff = (ä/ȧ)/2π (a statement at fixed x = HΔ, i.e. for ω ≫ εH; the
-expansion is not uniform in Δ) (`v11` A: for the power law a ∝ t^p,
+expansion is not uniform in Δ; and a statement about the fixed-mean-time Wigner spectrum — an instantaneous one-sided
+Unruh–DeWitt rate differs at O(ε) by a frequency-dependent Ḣ term, see D13 "Convention" and `11`) (`v11` A: for the power law a ∝ t^p,
 ln[a₁a₂Δη²/(4 sinh²(x/2)/H_eff²)] has no 1/q term, q = p − 1; `v11` B: the general-a(t) construction to second order
 has vanishing first-order remainder at random parameter points, to 1e-15).
 
@@ -201,37 +202,59 @@ does *not* give G (Visser 2002 reaches the same conclusion). Coefficients are sc
 Susskind–Uglum 1/360π); the scheme-free statement is Cooperman–Luty's S_ent = ¼δ(M_P²)A. **P2 is consistent, not
 derived; the finite G needs the UV completion.**
 
-## D13 — The massless minimally coupled sector under slow roll: first-order thermality at (ä/ȧ)/2π, σ-free (DERIVED; `v14`)
+## D13 — The massless minimally coupled sector under slow roll: first-order thermality of the fixed-mean-time spectrum at (ä/ȧ)/2π, σ-free (DERIVED; `v14`; audited, `11`)
+
+**Convention (from the audit).** Every statement here is about the fixed-mean-time (Wigner) two-point function W(t̄, Δ)
+Fourier-transformed in Δ at ω ≠ 0 — the same convention D11 uses for the conformal sector. It is not a statement about an
+instantaneous Unruh–DeWitt rate: that rate is one-sided in time, W(τ, τ−s) = W(t̄ = τ − s/2, s), and differs from the Wigner
+spectrum at O(ε) by a frequency-dependent term proportional to Ḣ (in both sectors; structurally it is s·∂_H W, not a
+temperature shift; the auditor's one-sided numbers for the conformal sector are c(E) = 0.24, 0.93, 3.97 at E/H = 0.25, 0.5, 1,
+tending to the bare H̄ reading as E → 0 — not re-derived by the author). For this sector a linearly coupled detector is
+non-thermal already at ε = 0 because of the secular zero-mode growth (Garbrecht–Prokopec 2004), which the Wigner convention
+places at ω = 0 (a derivative-coupled detector removes it). "Which temperature at first order" is therefore a question with
+a convention in it; the Wigner convention is the one the record's two-time kernels use (`07` §6), and it is the one answered.
 
 **Representation.** By the `v12` 12.4 lemma the power-law massless modes are the de Sitter modes of index
 ν = 3/2 + ε/(1−ε) ≡ 3/2 + δ up to a ratio of scale factors, so the comoving two-point function is the Bunch–Davies de Sitter
 function of index ν (continued to ν > 3/2) times that ratio: W(t,t′) = (1−ε)²H(t)H(t′)Γ(3+δ)Γ(−δ)₂F₁(3+δ, −δ; 2; w)/16π² + C_IR,
 w = 1 + (τ−τ′)²/4ττ′, τ = −1/((1−ε)aH); the IR-cutoff state differs from the continued function by the constant C_IR
 (frozen super-horizon modes). Checked against a direct mode integral (`v14` B: 1e-11 where the integral converges; the
-cutoff differences at ν = 1.75 to 1e-5). Around the pole, ₂F₁ = 1 − δS₁(w) − δ²S₂(w) + O(δ³) with S₁ = w/2(1−w) − ln(1−w)
+cutoff differences at ν = 1.75 to 1e-10, the remainder scaling as k_IR^{5−2ν}). Around the pole, ₂F₁ = 1 − δS₁(w) − δ²S₂(w) + O(δ³) with S₁ = w/2(1−w) − ln(1−w)
 (Allen–Folacci's massless function) and S₂ = −½ln(1−w) + Li₂(w) + ln(1−w)/2w + ½ − ¾w/(1−w); Γ(3+δ)Γ(−δ) = −(2/δ)(1 + 3δ/2 + …).
 
 **First-order theorem** (Richardson in ε against the exact closed form, `v14` C): at fixed mean time t̄,
-W(t̄,Δ) = (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)S₂(cosh²(H̄Δ/2)) + c₀ + c₂Δ² + O(ε²), c₂ = −εH̄⁴/32π². The conformal-factor
+W(t̄,Δ) = (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)S₂(cosh²(H̄Δ/2)) + c₀ + c₂Δ² + O(ε²), c₂ = −(1−ε)³εH̄⁴/32π² (c₀ depends on t̄:
+it is the O(1) secular growth of the equal-time variance, (H̄³/4π²)t̄ + C_IR, Δ-independent at fixed t̄). The conformal-factor
 combination is D11's pure shift to H_eff = ä/ȧ; the only new first-order term is the dilogarithm on the zeroth-order
 argument. Using H̄ or the Kodama–Hayward rate H̄(1 − ε/2) instead, or dropping S₂, leaves an O(ε) residual.
 
 **KMS.** Any function of cosh²(H̄Δ/2) is symmetric about the strip midline Im Δ = −π/H̄ (its value there is a function of
 −sinh²(H̄s/2), even in s), hence KMS at 2π/H̄ by itself; c₀ and c₂Δ² live at ω = 0. So the first-order KMS defect of the
-full function at β = 2π/(ä/ȧ) is O(ε²): **the massless sector is thermal at T = (ä/ȧ)/2π + O(ε²), like the conformal
-sector, and the Kodama–Hayward rate is excluded at O(ε) — with no coarse-graining scale anywhere in the computation.**
-The O(ε) physics is a *shape* change of the detector's spectral density, not a temperature change:
+ω ≠ 0 part at β = 2π/(ä/ȧ) is O(ε²), non-uniformly in Δ (for Δ ≪ 1/(εH̄)); `v14` D″ checks this on the exact closed form,
+whose defect after removal of the ω = 0 polynomial scales as ε² at β_eff and as ε at the Kodama–Hayward and bare rates:
+**the fixed-mean-time spectrum of the massless sector is thermal at T = (ä/ȧ)/2π + O(ε²), like the conformal sector's,
+and the Kodama–Hayward rate is excluded at O(ε) — with no coarse-graining scale anywhere in the computation** (the
+fixed-mean-time convention is a choice, but not a free parameter).
+The O(ε) physics is a *shape* change of the Wigner spectral density, not a temperature change:
 ρ(ω) = ρ_mmc(ω; H_eff)[1 + ε r(ω)], ρ_mmc = (ω² + H²)/2πω, with r(0) = 2 − 2 ln 2 = 0.614, r(H̄) = 0.461, r(4H̄) = 0.085, r → 0
-in the UV (the S₂ pole 3/8π²Δ² cancels the 3ε/2 amplitude exactly: the Hadamard coefficient is unchanged, as it must be).
+in the UV (the S₂ pole 3/8π²Δ² cancels the 3ε/2 amplitude exactly: the Hadamard coefficient is unchanged, as it must be);
+large-ω asymptote r → 3(2ω⁴ − ω² − 1)/(4ω⁴(ω² + 1)) ≈ 3/2ω² (auditor's derivation, checked in `v14` at ω = 8 to 1e-5).
 
-**Byproduct (σ-free diffusion coefficient).** From the |Δ| growth of the two-time function at fixed t̄, valid for
-1/H̄ ≪ Δ ≪ 1/(εH̄): ⟨(φ(t) − φ(t′))²⟩ ≈ D|Δ| with D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε] + O(ε²) = (H_eff³/4π²)[1 + (2 − 2 ln 2)ε].
-The stochastic formula A₀(σ)H³ of `v13` reproduces it only at σ* = e^{1−γ_E} = 1.526: the exact two-time function
-calibrates the coarse-graining scale for this observable at first order (no γ_E survives; one ln 2 does). This is the
-σ-free answer to the question `v13` posed badly.
+**Byproduct (σ-free diffusion coefficient).** The large-Δ expansion of the fixed-mean-time function in 1/H̄ ≪ Δ ≪ 1/(εH̄) is
+W = const − (D/2)|Δ| − (3εH̄⁴/32π²)Δ² + …, with D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε] + O(ε²) = (H_eff³/4π²)[1 + (2 − 2 ln 2)ε]; D is
+equivalently the coefficient of the 1/ω² Brownian tail of the Wigner spectrum. The Δ² term is the expansion of the secular
+growth of the equal-time variance (ω = 0) and exceeds the O(ε) correction to the |Δ| term for H̄Δ ≳ 3, so D is extracted by
+analytic separation, not from a plateau; reading D as "the zero-mode diffusion coefficient" is the usual stochastic
+identification and is an interpretive step (a Markovian walk with slowly varying D has no such Δ² term). With that step, the
+stochastic A₀(σ)H³ of `v13` reproduces D at σ* = e^{1−γ_E} = 1.526 (one value, by monotonicity): a calibration of the
+coarse-graining scale for this observable at first order, not a derivation of σ (no γ_E survives; one ln 2 does). This is
+the σ-free answer to the question `v13` posed badly.
 
-**Scope.** Comoving detector; massless minimally coupled scalar; power-law FRW with constant ε (the first-order statement
-holds for general a(t) by the D11 argument wherever ε and η are first-order small, but only the constant-ε case is
-computed here); ω ≠ 0 (the IR constant and the ω = 0 polynomial terms are not part of the thermal statement). Gravitons
-share the mode equation of this field at linear order in dS and power-law FRW, so the same first-order temperature holds
-for the free tensor sector; interacting (loop) corrections are O5 item 2.
+**Scope.** Comoving worldline, fixed-mean-time spectrum at ω ≠ 0; massless minimally coupled scalar; power-law FRW with
+constant ε. The extension to general slow-roll a(t) is **not** established here: the D11 argument covers only the
+conformal-factor combination, and the new S₂ term comes from the constant index shift δ = ε/(1−ε), which has no direct
+analogue when ε varies (the modes are then not Hankel functions of a fixed index). Gravitons share this field's mode equation
+at linear order in dS and power-law FRW, so the same statement follows for the TT-gauge tensor two-point function in the same
+convention; no tensor computation was done, and the question of a physical (Riemann-coupled) detector is not addressed.
+Interacting (loop) corrections are O5 item 2. All of this is conventional QFT; it establishes nothing about P1 beyond
+consistency.

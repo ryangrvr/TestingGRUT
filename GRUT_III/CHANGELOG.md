@@ -14,6 +14,11 @@
   (Richardson); midline KMS symmetry ⇒ **thermal at (ä/ȧ)/2π at first order, Kodama–Hayward excluded, no σ**; spectral
   shape change r(ω) (r(0) = 2 − 2 ln 2, r(∞) = 0); σ-free diffusion coefficient D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε]
   (= stochastic value at σ* = e^{1−γ_E}). `05` O5 item 1 computed; `09` §4; `08`; RESPONSE R20; `run_all` runs v1–v14.
+- `v14` audited (three lenses, `11`): mathematics and numerics confirmed; framing corrected — the thermal statement is about
+  the fixed-mean-time (Wigner) spectrum at ω ≠ 0, not an instantaneous one-sided detector rate (which differs at O(ε) in both
+  sectors and is non-thermal for the massless sector even in exact dS unless derivative-coupled); general-a(t) and graviton
+  extensions marked not computed; D's Δ² companion term stated; sign slip fixed; exact-function KMS test and r asymptote
+  check added to the script. D11, D13, `05`, `09` reworded.
 
 ## Revision 2.3 (2026-10-11, fourth round)
 

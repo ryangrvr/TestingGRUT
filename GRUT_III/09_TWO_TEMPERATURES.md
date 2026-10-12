@@ -14,7 +14,10 @@ temperature.
 
 - **T_det = (ä/ȧ)/2π** is the KMS parameter of the *state*: for a conformal field in the conformal vacuum, the comoving
   worldline's two-point functions are, to first adiabatic order, exactly those of a thermal state at this temperature
-  (D11, theorem; any a(t) with ε and η first-order small — not the present universe, where η₀ ≈ −2). It is what an Unruh–DeWitt detector on the comoving worldline reads at first order.
+  (D11, theorem; any a(t) with ε and η first-order small — not the present universe, where η₀ ≈ −2). It is the KMS parameter
+  of the fixed-mean-time (Wigner) spectrum at first order. An Unruh–DeWitt detector's *instantaneous* rate is one-sided in time
+  and differs at O(ε) by a frequency-dependent term from Ḣ (audit, `11`; D13 "Convention"), so "what the detector reads" is
+  convention-laden at this order; the Wigner convention is the record's.
 - **T_KH = |κ|/2π** is the surface gravity of the apparent horizon with Kodama normalisation. For ε ≠ 0 the apparent
   horizon is **not a Killing horizon** (Ṙ_A = ε ≠ 0; `v12` 12.2). P1 assigns a temperature only where the modular flow
   of the restricted state is geometric — Killing horizons and wedges — so for ε ≠ 0 **P1 assigns no temperature to the
@@ -48,10 +51,13 @@ literature conventions.
 
 The caution below was followed: the worldline function was built with the power-law t(η), from the de Sitter function of
 index ν = 3/2 + ε/(1−ε) times the ratio of scale factors, and checked against a direct mode integral. Result: at first order
-the massless minimally coupled sector seen by a comoving detector is KMS at **T_det = (ä/ȧ)/2π + O(ε²)**, the same
-temperature as the conformal sector; the Kodama–Hayward rate (H/2π)(1 − ε/2) is excluded at O(ε). The computation contains
-no coarse-graining scale (contrast `v13`). So the answer (b′) of §3 is now established for both sectors at first order,
-not only for the conformal one. The first-order effect in the massless sector is a shape change of the spectral density
+the fixed-mean-time (Wigner) spectrum of the massless minimally coupled sector along a comoving worldline is, at ω ≠ 0, KMS
+at **T_det = (ä/ȧ)/2π + O(ε²)**, the same temperature as the conformal sector's in the same convention; the Kodama–Hayward
+rate (H/2π)(1 − ε/2) is excluded at O(ε). The computation contains no coarse-graining scale (contrast `v13`). So the answer
+(b′) of §3 is now established for both sectors at first order in the Wigner convention (constant ε). Caveat from the audit:
+a linearly coupled Unruh–DeWitt detector's instantaneous rate for this sector is non-thermal already in exact de Sitter
+(the secular zero mode gives it an H³/4π²E² term; Garbrecht–Prokopec), so "the detector temperature" of the massless sector
+is a statement about the Wigner spectrum or a derivative-coupled detector, not about the linear instantaneous rate. The first-order effect in the massless sector is a shape change of the spectral density
 (r(0) = 2 − 2 ln 2, r(∞) = 0), not a temperature change.
 
 ## 5. Caveats and priority (historical; the computation is now `v14`)

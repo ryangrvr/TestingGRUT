@@ -94,18 +94,21 @@ correlators are fixed by conventional QFT.
 function in power-law FRW has a closed form (the de Sitter function of index 3/2 + ε/(1−ε) times a ratio of scale factors,
 checked against a direct mode integral). At first order in ε it is (1 + 3ε/2)·W_mmc^{dS}(Δ; ä/ȧ) + ε(H̄²/8π²)·S₂(cosh²(H̄Δ/2))
 + ω = 0 terms, where S₂ is an explicit dilogarithm. Because any function of cosh²(H̄Δ/2) is KMS at 2π/H̄ by itself, the
-first-order KMS defect at T = (ä/ȧ)/2π vanishes: **the massless sector is thermal at the detector temperature (ä/ȧ)/2π to
-O(ε), exactly like the conformal sector, and the Kodama–Hayward rate is excluded at O(ε)** — no coarse-graining scale
-enters. The first-order effect is a shape change of the spectral density, ρ = ρ_mmc(ω; H_eff)[1 + ε r(ω)] with
+first-order KMS defect of the ω ≠ 0 part at T = (ä/ȧ)/2π vanishes (checked on the exact closed form): **the fixed-mean-time
+(Wigner) spectrum of the massless sector is thermal at (ä/ȧ)/2π to O(ε), exactly like the conformal sector's, and the
+Kodama–Hayward rate is excluded at O(ε)** — no coarse-graining scale enters. (Convention, from the audit: this is the Wigner
+spectrum, not an instantaneous one-sided detector rate, which differs at O(ε) by a frequency-dependent Ḣ term and, for this
+sector, is non-thermal already in exact dS unless derivative-coupled; D13.) The first-order effect is a shape change of the spectral density, ρ = ρ_mmc(ω; H_eff)[1 + ε r(ω)] with
 r(0) = 2 − 2 ln 2 and r(∞) = 0, and the σ-free zero-mode diffusion coefficient is D = (H̄³/4π²)[1 − (1 + 2 ln 2)ε], which the
-stochastic formula reproduces only at σ* = e^{1−γ_E} = 1.53. **O5 item 1 is now computed, not argued.** P1 adds nothing
-to it; conventional QFT fixes all of it.
+stochastic formula reproduces at σ* = e^{1−γ_E} = 1.53 (a calibration). **O5 item 1 is now computed, not argued** — for
+constant ε and in the Wigner convention; the general slow-roll extension is open (D13 Scope). It is conventional QFT and
+establishes nothing about P1 beyond consistency.
 
 **What remains, in order (after `v13`).**
 1. (closed) Items 1 and 3 — the massless-sector baseline (`v14`: thermal at (ä/ȧ)/2π at first order; D13) and the
    secular-IR opening (`10`).
 2. The one-loop conformal-matter correction to the tensor two-time function in quasi-dS (Fröb–Roura–Verdaguer 2012 did
-   exact dS): the last conventional baseline. Low priority: by the precedent of `v11` (conformal sector, O(ε²)) and `v13`
+   exact dS): the last conventional baseline. Low priority: by the precedent of `v11` (conformal sector, O(ε²)) and `v14`
    (massless sector, O(ε)), conventional theory fixes it and P1 adds nothing.
 3. The graviton infrared (which observables carry secular logs) is a question in perturbative quantum gravity on dS;
    none of P0–P5 addresses it, and GRUT III does not claim it.

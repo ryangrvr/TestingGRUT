@@ -199,9 +199,11 @@ three qualifications (Cassini as a measurement not a tolerance; Eöt-Wash 38.6 �
   in the literature (a check is owed; the power-law mode functions themselves are Abbott–Wise 1984, Lucchin–Matarrese 1985).
 - Cho, Kim & Kitamoto (2015): the stochastic coefficient A₀(σ) of `v13`; `v14` E shows the exact two-time function matches
   it at σ* = e^{1−γ_E} = 1.526 (a calibration, not a derivation of σ).
-- Scripts: `v14` is author-written and author-run (sixth round); its five links (hypergeometric expansion, mode-integral
-  identity, first-order Richardson theorem, midline KMS symmetry, Hadamard cancellation) are each checked inside the
-  script; independent review is owed and is the first task of the next verification round.
+- Scripts: `v14` was audited by three independent agents (`11`): mathematics and numerics CONFIRMED every link (own
+  re-derivations of S₁, S₂, g₁, g₂, the lemma with normalisation, the first-order theorem, the exact-strip KMS defect, r(ω)
+  digit for digit, the large-ω asymptote; mutation tests break the checks as they should); the physics lens accepted the
+  computation and corrected the framing (fixed-mean-time convention vs instantaneous detector rate; general-a(t) and graviton
+  extensions not computed; D as an interpretive identification). All of it is recorded in D13 and `11`.
 
 ## Verification status of the new scripts (honest record)
 
