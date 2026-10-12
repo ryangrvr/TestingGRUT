@@ -144,7 +144,18 @@ One can express the same issue as an **exact spectral-variance identity** for th
   +\frac{\Gamma^2}{M^2}QS(A-Q+1).
 \end{split}}
 \]
-The microscopic fermion sector has norm of order \(\sqrt N\) on that state, even though the neutral-only graph attachment scale is O(1). This is a **nonuniform expansion warning**, not a demonstration that the full theory suppresses formation. It means the favorable neutral oscillator curve has **not** been validated as a finite-time result of the full coupled theory.
+The microscopic fermion sector has norm of order \(\sqrt N\) on that state, even though the neutral-only graph attachment scale is O(1). This is a **nonuniform expansion warning**, not a demonstration that the full theory suppresses formation.
+
+**Independent actual-law operator verification:** [full_law_moments.py](full_law_moments.py) constructs \(H_{12}|\Phi_0\rangle\) *directly* from the frozen Gauss-law fermion hopping and neutral-rewiring matrix elements, without constructing the full many-body matrix or importing its solver. It checks Gauss at **every generated output**, keeps the exact CAR fermion signs and incidence orientations, and compares \(\langle H\rangle\), \(\mathrm{Var}(H)\), the attachment coefficient, and the matter-excitation coefficient with the above formulas.
+
+| N | Coherent initial graph states | Distinct \(H_{12}|\Phi_0\rangle\) output states | Exact full variance | Coherent attachment curvature |
+|---:|---:|---:|---:|---:|
+| 4 | 1 | 16 | 6.0025000000 | 0.0025000000 |
+| 5 | 15 | 215 | 8.0048000000 | 0.0048000000 |
+| 6 | 252 | 3,822 | 10.0066666667 | 0.0066666667 |
+| 7 | 5,005 | 83,083 | 12.0081632653 | 0.0081632653 |
+
+All algebraic moment and Gauss checks passed in a standalone local implementation. This independent full-law result is still a **one-step Hamiltonian/spectral moment computation**, not later-time full coupled quantum evolution. The exact committed script should be rerun verbatim by a partner. It means the favorable neutral oscillator curve has **not** been validated as a finite-time result of the full coupled theory.
 
 The graph-only coherent preparation \(|\Phi_0\rangle\) has reconnection energy \(\Gamma QS/M\sim2\nu\Gamma\), while dephasing it into the equal classical mixture over the same isolated-vertex graphs increases the initial energy by
 \[
@@ -170,4 +181,4 @@ If connectivity accelerates but graph structure remains random/nonspatial, the f
 
 ## Reproducibility and scientific priority
 
-[check.py](check.py) is self-contained (NumPy/SciPy), does not import the CP-12 code, constructs the EXACT Johnson graph for N<=6, compares entire time evolution with the exact 1D coherent quotient, records N up to 320, and checks full-law Taylor coefficients/spectral moments algebraically. Independent local equivalent algorithms passed; the verbatim committed script should also be run by a partner. The graph-only full-sector comparison and the exact full-law derivative/variance identities should not be mislabeled as a full-CP-12 numerical evolution. Standard quantum walks on Johnson graphs, collective spin contractions and coherent-state oscillator revivals have prior art. A publication-level originality search is still needed; no discovery of a new force, gravity or experimental prediction is asserted.
+[check.py](check.py) is self-contained (NumPy/SciPy), does not import the CP-12 code, constructs the EXACT Johnson graph for N<=6, compares entire time evolution with the exact 1D coherent quotient, and records N up to 320. [full_law_moments.py](full_law_moments.py) independently verifies the full-law Taylor coefficients and spectral moments by explicit one-application state enumeration without requiring SciPy. Independent local equivalent algorithms passed; the verbatim committed script should also be run by a partner. The graph-only full-sector comparison and the exact full-law derivative/variance identities should not be mislabeled as a full-CP-12 numerical evolution. Standard quantum walks on Johnson graphs, collective spin contractions and coherent-state oscillator revivals have prior art. A publication-level originality search is still needed; no discovery of a new force, gravity or experimental prediction is asserted.
