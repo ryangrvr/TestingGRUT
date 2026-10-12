@@ -65,6 +65,20 @@ P_{\rm balanced}(s)\to p_\infty(s)^2.
 
 By the positive image representation p_9(s)=e^{-2s}\sum_{j\in\mathbb Z}I_{9j}(2s)>p_\infty(s) for s>0. Thus the two candidate families have provably different finite-scale transport spectra in their thermodynamic limits. Their large-s (but below the long-axis saturation scale) spectral dimensions approach one and two. **The dimensionality difference was already encoded by selecting the competitor families, not derived by CP-12 dynamics.**
 
+### Third-family control: distinguish fixed width from fixed aspect ratio
+
+At N=2,916 we also compared **three** 4-regular, Q=2N, equal-square-count tori: thin 9x324, intermediate 27x108 (aspect ratio 4), and balanced 54x54. For this finite N, the physically derived static heat operator gives:
+
+| Diffusion scale s | 9x324 | 27x108 | 54x54 |
+|---:|---:|---:|---:|
+| 20 | 1.009641 | 2.008241 | 2.012825 |
+| 50 | **1.002525** | **1.644687** | **2.004984** |
+| 80 | 1.001572 | 1.226638 | 1.994821 |
+
+A fixed aspect-ratio sequence can be built as N=36k², dimensions 3k x 12k versus 6k x 6k. **Both widths diverge**, so their finite-scale spectral dimension converges to two at every fixed s as k grows. By contrast 9 x (N/9) retains a finite transverse compactification with a stable one-dimensional intermediate-scale propagation regime.
+
+This three-family comparison is a stricter physical test than merely observing a shorter winding channel on a narrow torus: it separates a *finite-width* competitor from two legitimate two-dimensional large-system candidates. The 27x108 winding length is 27 (first offdiagonal flux matrix element at t^54) versus 54 (order t^108) for balanced; these are channel **onset orders**, not thermodynamic preference rankings. The numbers above are strictly for the supplied graph Laplacian, not full CP-12 detector evolution.
+
 ## 3. Which way does the newly induced flux channel push?
 
 The pinned owner's conditional Feshbach calculation gives a **positive** offdiagonal coupling for each simple length-ell cycle,
