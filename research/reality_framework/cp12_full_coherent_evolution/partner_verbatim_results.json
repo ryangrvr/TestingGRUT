@@ -1,0 +1,1148 @@
+{
+  "source_commit": "7452a462ba787e5b04e01a4ca4b92dc68a84fb6e",
+  "scripts": [
+    {
+      "name": "check.py",
+      "sha256": "a096151d802c4d0be07662b864d1214a060d52a035b88793f80d0f1c8843a533",
+      "exit_code": 0
+    },
+    {
+      "name": "full_law_moments.py",
+      "sha256": "da194bf149d8e4eddc49e14b0aaff5ff0e11bcc2b721a467e52b1574035673ea",
+      "exit_code": 0
+    },
+    {
+      "name": "global_connectivity.py",
+      "sha256": "6042153192abd07ccc205f7d75c3977782b7a61f00ee3a06d38a4139fae6799c",
+      "exit_code": 0
+    }
+  ],
+  "verbatim_execution": "all three scripts passed without edits",
+  "results": {
+    "results.json": {
+      "status": "Neutral-rewiring exact quotient + full-law t2 identities",
+      "background_CP12_commit": "0014d6153a03a27cd1212ac176b77ceb67a07830",
+      "gamma": 0.1,
+      "hop_full_CP12": 1.0,
+      "asymptotic_Q_over_N_one": "P(attached,T) -> 1-exp[-4(1-cos(GAMMA*T))]",
+      "scope": "Full neutral-only graph dynamics tested. Full CP12 later-time quantum dynamics NOT simulated.",
+      "N4_assembly_source_exact_initial_t2": 0.0020833333333333333,
+      "rows": [
+        {
+          "N": 4,
+          "Q": 3,
+          "initial_coherent_graphs": 1,
+          "exact_sector_dimension": 4,
+          "direct_graph_space_dimension": 20,
+          "direct_vs_reduced_max_difference": 2.1094237467877974e-14,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.0025000000000000005,
+            "coherent_isolate_attach_t2": 0.0025000000000000005,
+            "enhancement": 1,
+            "coherent_graph_kinetic_energy": 0.15000000000000002,
+            "graph_dephasing_energy_increase": 0.0,
+            "full_CP12_hopping_neutral_exit_t2": 6,
+            "full_CP12_initial_energy_expectation": 1.65,
+            "full_CP12_initial_energy_variance": 6.0025,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 2.4999606484721326e-05,
+              "mean_incident_edges": 2.4999884259542165e-05,
+              "zero_incident": 0.9999750003935153
+            },
+            {
+              "time": 1.0,
+              "attached": 0.002496068610535307,
+              "mean_incident_edges": 0.002498842875471368,
+              "zero_incident": 0.9975039313894647
+            },
+            {
+              "time": 10.0,
+              "attached": 0.2142259380984748,
+              "mean_incident_edges": 0.23870458791755675,
+              "zero_incident": 0.7857740619015252
+            },
+            {
+              "time": 20.0,
+              "attached": 0.5631853585476736,
+              "mean_incident_edges": 0.8318640359175659,
+              "zero_incident": 0.43681464145232635
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.7724999999999993,
+              "mean_incident_edges": 1.5749999999999984,
+              "zero_incident": 0.22750000000000076
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.7424999999999995,
+              "mean_incident_edges": 2.0249999999999977,
+              "zero_incident": 0.25750000000000045
+            }
+          ]
+        },
+        {
+          "N": 5,
+          "Q": 4,
+          "initial_coherent_graphs": 15,
+          "exact_sector_dimension": 5,
+          "direct_graph_space_dimension": 210,
+          "direct_vs_reduced_max_difference": 4.884981308350689e-15,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.0016000000000000003,
+            "coherent_isolate_attach_t2": 0.0048000000000000004,
+            "enhancement": 3,
+            "coherent_graph_kinetic_energy": 0.16,
+            "graph_dephasing_energy_increase": 0.08,
+            "full_CP12_hopping_neutral_exit_t2": 8,
+            "full_CP12_initial_energy_expectation": 2.16,
+            "full_CP12_initial_energy_variance": 8.0048,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 4.799888001605357e-05,
+              "mean_incident_edges": 4.79997440006229e-05,
+              "zero_incident": 0.999952001119984
+            },
+            {
+              "time": 1.0,
+              "attached": 0.004788815776278987,
+              "mean_incident_edges": 0.004797440622844041,
+              "zero_incident": 0.995211184223721
+            },
+            {
+              "time": 10.0,
+              "attached": 0.3824152168224364,
+              "mean_incident_edges": 0.455014088500747,
+              "zero_incident": 0.6175847831775636
+            },
+            {
+              "time": 20.0,
+              "attached": 0.8444670675212821,
+              "mean_incident_edges": 1.5480667538967479,
+              "zero_incident": 0.1555329324787179
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9765559507538051,
+              "mean_incident_edges": 2.7653637359463628,
+              "zero_incident": 0.023444049246194976
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.8206841937053556,
+              "mean_incident_edges": 2.044145284910707,
+              "zero_incident": 0.17931580629464436
+            }
+          ]
+        },
+        {
+          "N": 6,
+          "Q": 5,
+          "initial_coherent_graphs": 252,
+          "exact_sector_dimension": 6,
+          "direct_graph_space_dimension": 3003,
+          "direct_vs_reduced_max_difference": 2.3314683517128287e-14,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.0011111111111111113,
+            "coherent_isolate_attach_t2": 0.006666666666666668,
+            "enhancement": 6,
+            "coherent_graph_kinetic_energy": 0.16666666666666666,
+            "graph_dephasing_energy_increase": 0.16666666666666666,
+            "full_CP12_hopping_neutral_exit_t2": 10,
+            "full_CP12_initial_energy_expectation": 2.6666666666666665,
+            "full_CP12_initial_energy_variance": 10.006666666666666,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 6.666460991422429e-05,
+              "mean_incident_edges": 6.666626913681624e-05,
+              "zero_incident": 0.9999333353900858
+            },
+            {
+              "time": 1.0,
+              "attached": 0.006646137135765895,
+              "mean_incident_edges": 0.006662692371614136,
+              "zero_incident": 0.9933538628642341
+            },
+            {
+              "time": 10.0,
+              "attached": 0.4949707328468226,
+              "mean_incident_edges": 0.627912823905602,
+              "zero_incident": 0.5050292671531774
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9435917335061337,
+              "mean_incident_edges": 2.091888450099603,
+              "zero_incident": 0.05640826649386632
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.998622945347043,
+              "mean_incident_edges": 3.5552745711526557,
+              "zero_incident": 0.0013770546529570601
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.6468934296166736,
+              "mean_incident_edges": 1.5058038292605367,
+              "zero_incident": 0.3531065703833264
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "Q": 7,
+          "initial_coherent_graphs": 116280,
+          "exact_sector_dimension": 8,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.000625,
+            "coherent_isolate_attach_t2": 0.009375,
+            "enhancement": 15,
+            "coherent_graph_kinetic_energy": 0.17500000000000002,
+            "graph_dephasing_energy_increase": 0.35000000000000003,
+            "full_CP12_hopping_neutral_exit_t2": 14,
+            "full_CP12_initial_energy_expectation": 3.675,
+            "full_CP12_initial_energy_variance": 14.009375,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 9.374591847777225e-05,
+              "mean_incident_edges": 9.374936224667242e-05,
+              "zero_incident": 0.9999062540815222
+            },
+            {
+              "time": 1.0,
+              "attached": 0.009334293545440353,
+              "mean_incident_edges": 0.009368624223144014,
+              "zero_incident": 0.9906657064545596
+            },
+            {
+              "time": 10.0,
+              "attached": 0.6213113099484275,
+              "mean_incident_edges": 0.8754721954316457,
+              "zero_incident": 0.37868869005157246
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9881236975022492,
+              "mean_incident_edges": 2.836506304670652,
+              "zero_incident": 0.011876302497750874
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9999837132186523,
+              "mean_incident_edges": 4.513119968649495,
+              "zero_incident": 1.6286781347656714e-05
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.3912663051243742,
+              "mean_incident_edges": 0.7101551426272065,
+              "zero_incident": 0.6087336948756258
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "Q": 11,
+          "initial_coherent_graphs": 119653565850,
+          "exact_sector_dimension": 12,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.00027777777777777783,
+            "coherent_isolate_attach_t2": 0.012500000000000002,
+            "enhancement": 45,
+            "coherent_graph_kinetic_energy": 0.18333333333333335,
+            "graph_dephasing_energy_increase": 0.7333333333333334,
+            "full_CP12_hopping_neutral_exit_t2": 22,
+            "full_CP12_initial_energy_expectation": 5.683333333333334,
+            "full_CP12_initial_energy_variance": 22.0125,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.00012499245418873262,
+              "mean_incident_edges": 0.00012499905398971544,
+              "zero_incident": 0.9998750075458113
+            },
+            {
+              "time": 1.0,
+              "attached": 0.012424831794745295,
+              "mean_incident_edges": 0.012490542745188996,
+              "zero_incident": 0.9875751682052547
+            },
+            {
+              "time": 10.0,
+              "attached": 0.7214639299233296,
+              "mean_incident_edges": 1.1582293484358837,
+              "zero_incident": 0.27853607007667036
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9961543126026333,
+              "mean_incident_edges": 3.65894874047926,
+              "zero_incident": 0.003845687397366636
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9999755132317859,
+              "mean_incident_edges": 5.483461681676108,
+              "zero_incident": 2.4486768214141923e-05
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.1372159301041982,
+              "mean_incident_edges": 0.19231908955622734,
+              "zero_incident": 0.8627840698958018
+            }
+          ]
+        },
+        {
+          "N": 20,
+          "Q": 19,
+          "initial_coherent_graphs": 7779819801401934344268210,
+          "exact_sector_dimension": 20,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 0.00010000000000000002,
+            "coherent_isolate_attach_t2": 0.015300000000000003,
+            "enhancement": 153,
+            "coherent_graph_kinetic_energy": 0.19,
+            "graph_dephasing_energy_increase": 1.52,
+            "full_CP12_hopping_neutral_exit_t2": 38,
+            "full_CP12_initial_energy_expectation": 9.69,
+            "full_CP12_initial_energy_variance": 38.0153,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.00015298819785436457,
+              "mean_incident_edges": 0.00015299877077680612,
+              "zero_incident": 0.9998470118021456
+            },
+            {
+              "time": 1.0,
+              "attached": 0.015182580102761745,
+              "mean_incident_edges": 0.015287711680779187,
+              "zero_incident": 0.9848174198972383
+            },
+            {
+              "time": 10.0,
+              "attached": 0.7808606668658719,
+              "mean_incident_edges": 1.410962797148522,
+              "zero_incident": 0.21913933313412817
+            },
+            {
+              "time": 20.0,
+              "attached": 0.996894464772473,
+              "mean_incident_edges": 4.389506873935327,
+              "zero_incident": 0.0031055352275270085
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9999260879954912,
+              "mean_incident_edges": 6.344223791981854,
+              "zero_incident": 7.391200450876332e-05
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.02549519042374082,
+              "mean_incident_edges": 0.03157228561806928,
+              "zero_incident": 0.9745048095762592
+            }
+          ]
+        },
+        {
+          "N": 40,
+          "Q": 39,
+          "initial_coherent_graphs": 148356767154260525948815134188345921415998631236954380865556912480,
+          "exact_sector_dimension": 40,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 2.5000000000000005e-05,
+            "coherent_isolate_attach_t2": 0.017575000000000004,
+            "enhancement": 703,
+            "coherent_graph_kinetic_energy": 0.19500000000000003,
+            "graph_dephasing_energy_increase": 3.5100000000000002,
+            "full_CP12_hopping_neutral_exit_t2": 78,
+            "full_CP12_initial_energy_expectation": 19.695,
+            "full_CP12_initial_energy_variance": 78.017575,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.00017573386730518337,
+              "mean_incident_edges": 0.0001757485493258506,
+              "zero_incident": 0.9998242661326948
+            },
+            {
+              "time": 1.0,
+              "attached": 0.017414680915880165,
+              "mean_incident_edges": 0.017560497999662878,
+              "zero_incident": 0.9825853190841198
+            },
+            {
+              "time": 10.0,
+              "attached": 0.8146746022188384,
+              "mean_incident_edges": 1.6171382052418184,
+              "zero_incident": 0.18532539778116167
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9968050468128872,
+              "mean_incident_edges": 4.994703687450456,
+              "zero_incident": 0.003194953187112792
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9998285938142826,
+              "mean_incident_edges": 7.097103429349335,
+              "zero_incident": 0.00017140618571737264
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.0019857841622060723,
+              "mean_incident_edges": 0.002385953647446767,
+              "zero_incident": 0.9980142158377939
+            }
+          ]
+        },
+        {
+          "N": 80,
+          "Q": 79,
+          "initial_coherent_graphs": 164807058137046861745215721153908621999556964204815559510109333213334210197010690466721309686969268920433045541254363825250596562635591620449420986142155671040,
+          "exact_sector_dimension": 80,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 6.250000000000001e-06,
+            "coherent_isolate_attach_t2": 0.018768750000000004,
+            "enhancement": 3003,
+            "coherent_graph_kinetic_energy": 0.1975,
+            "graph_dephasing_energy_increase": 7.505,
+            "full_CP12_hopping_neutral_exit_t2": 158,
+            "full_CP12_initial_energy_expectation": 39.6975,
+            "full_CP12_initial_energy_variance": 158.01876875,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.00018766876512821273,
+              "mean_incident_edges": 0.00018768593975447957,
+              "zero_incident": 0.9998123312348718
+            },
+            {
+              "time": 1.0,
+              "attached": 0.018582693124009286,
+              "mean_incident_edges": 0.018753152680166668,
+              "zero_incident": 0.9814173068759907
+            },
+            {
+              "time": 10.0,
+              "attached": 0.8286677799718893,
+              "mean_incident_edges": 1.7259467010753202,
+              "zero_incident": 0.17133222002811066
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9966843149371175,
+              "mean_incident_edges": 5.3205003783130245,
+              "zero_incident": 0.0033156850628824476
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9997556302891922,
+              "mean_incident_edges": 7.5258221418693365,
+              "zero_incident": 0.0002443697108077315
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 0.00013800500041771802,
+              "mean_incident_edges": 0.00016544262943655482,
+              "zero_incident": 0.9998619949995823
+            }
+          ]
+        },
+        {
+          "N": 160,
+          "Q": 159,
+          "initial_coherent_graphs": 690845965317998626494137277659380964294203943228394804944493648194859765484374598820479680729574080913337422663899501061450939199125918590504017000201701485976209782620403054221532954539115228488664924959290125589826776713784977617496760847090923099429361124207272852721039740838976897303579667370232969440337924495748635762466784818100021585379025865246965125003696000,
+          "exact_sector_dimension": 160,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 1.5625000000000003e-06,
+            "coherent_isolate_attach_t2": 0.019379687500000003,
+            "enhancement": 12403,
+            "coherent_graph_kinetic_energy": 0.19874999999999998,
+            "graph_dephasing_energy_increase": 15.502500000000001,
+            "full_CP12_hopping_neutral_exit_t2": 318,
+            "full_CP12_initial_energy_expectation": 79.69875,
+            "full_CP12_initial_energy_variance": 318.0193796875,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.0001937767178628036,
+              "mean_incident_edges": 0.00019379526102812015,
+              "zero_incident": 0.9998062232821372
+            },
+            {
+              "time": 1.0,
+              "attached": 0.01917957515880442,
+              "mean_incident_edges": 0.019363553103085258,
+              "zero_incident": 0.9808204248411956
+            },
+            {
+              "time": 10.0,
+              "attached": 0.8350254044759667,
+              "mean_incident_edges": 1.7818527351775137,
+              "zero_incident": 0.16497459552403326
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9966120723099193,
+              "mean_incident_edges": 5.490109214339963,
+              "zero_incident": 0.003387927690080705
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.9997124404365142,
+              "mean_incident_edges": 7.756660864881271,
+              "zero_incident": 0.00028755956348584035
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 9.109358594550088e-06,
+              "mean_incident_edges": 1.0923597249333842e-05,
+              "zero_incident": 0.9999908906414054
+            }
+          ]
+        },
+        {
+          "N": 320,
+          "Q": 319,
+          "initial_coherent_graphs": 50039996108594657701681819306974562012029220484623246162894110892127514292996095204783420238903723442963416410540840835725017778427947310705436898980347660479067069545372227719786368527912992485662689131004212495580624014622493454381318471666506000777530416772475373802272835903599724926476139850321731627684158135925672178284733521201101064557183130148122951852806863696121350506978133368778141686970621548541281829179861409751596153778078553811116184221566170912709577090558021412206920636322235383581821990136248349209410655433628595801164074847470172248881982546350780947566692673363399925294024459646451993059173033673407784403953088019506095489678852717527919211053004482144825978880849313333091079943103023729638418930312591687159502198351872265202796637062413721630029365819056307718390757560810800099904740749803386437539521900800,
+          "exact_sector_dimension": 320,
+          "direct_graph_space_dimension": null,
+          "direct_vs_reduced_max_difference": null,
+          "short_time": {
+            "fixed_graph_attach_t2": 3.9062500000000007e-07,
+            "coherent_isolate_attach_t2": 0.019688671875000004,
+            "enhancement": 50403,
+            "coherent_graph_kinetic_energy": 0.199375,
+            "graph_dephasing_energy_increase": 31.501250000000002,
+            "full_CP12_hopping_neutral_exit_t2": 638,
+            "full_CP12_initial_energy_expectation": 159.699375,
+            "full_CP12_initial_energy_variance": 638.019688671875,
+            "caveat": "Full-law equalities are exact derivatives/moments at T=0 only."
+          },
+          "neutral_only_curve": [
+            {
+              "time": 0.1,
+              "attached": 0.00019686581861355634,
+              "mean_incident_edges": 0.00019688507828756913,
+              "zero_incident": 0.9998031341813864
+            },
+            {
+              "time": 1.0,
+              "attached": 0.01948122017822007,
+              "mean_incident_edges": 0.019672272662420196,
+              "zero_incident": 0.9805187798217799
+            },
+            {
+              "time": 10.0,
+              "attached": 0.8380554564281016,
+              "mean_incident_edges": 1.810191234730097,
+              "zero_incident": 0.16194454357189836
+            },
+            {
+              "time": 20.0,
+              "attached": 0.9965734921670514,
+              "mean_incident_edges": 5.576719986118755,
+              "zero_incident": 0.003426507832948673
+            },
+            {
+              "time": 31.41592653589793,
+              "attached": 0.999689089264594,
+              "mean_incident_edges": 7.876691698104635,
+              "zero_incident": 0.00031091073540605345
+            },
+            {
+              "time": 62.83185307179586,
+              "attached": 5.85479480452733e-07,
+              "mean_incident_edges": 7.023047755466326e-07,
+              "zero_incident": 0.9999994145205195
+            }
+          ]
+        }
+      ],
+      "decisive_qualification": "Uniform disconnected graph coherence gives O(1) neutral-only attachment; full CP12 hopping has 2Q initial excitation curvature, so this is NOT an N-independent full-model geometry formation theorem."
+    },
+    "full_law_moments_results.json": [
+      {
+        "N": 4,
+        "Q": 3,
+        "initial_graph_states": 1,
+        "nonzero_Hpsi_states": 16,
+        "expectation_full_H": 1.65,
+        "variance_full_H": 6.0024999999999995,
+        "T_squared_attachment_coefficient": 0.0025,
+        "T_squared_fermion_excitation_coefficient": 6.0,
+        "analytic_expectation": 1.65,
+        "analytic_variance": 6.0025,
+        "gauss_constraints": "verified for every output state"
+      },
+      {
+        "N": 5,
+        "Q": 4,
+        "initial_graph_states": 15,
+        "nonzero_Hpsi_states": 215,
+        "expectation_full_H": 2.16,
+        "variance_full_H": 8.004800000000003,
+        "T_squared_attachment_coefficient": 0.004800000000000002,
+        "T_squared_fermion_excitation_coefficient": 8.000000000000002,
+        "analytic_expectation": 2.16,
+        "analytic_variance": 8.0048,
+        "gauss_constraints": "verified for every output state"
+      },
+      {
+        "N": 6,
+        "Q": 5,
+        "initial_graph_states": 252,
+        "nonzero_Hpsi_states": 3822,
+        "expectation_full_H": 2.666666666666667,
+        "variance_full_H": 10.006666666666666,
+        "T_squared_attachment_coefficient": 0.006666666666666668,
+        "T_squared_fermion_excitation_coefficient": 10.000000000000002,
+        "analytic_expectation": 2.6666666666666665,
+        "analytic_variance": 10.006666666666666,
+        "gauss_constraints": "verified for every output state"
+      },
+      {
+        "N": 7,
+        "Q": 6,
+        "initial_graph_states": 5005,
+        "nonzero_Hpsi_states": 83083,
+        "expectation_full_H": 3.171428571428565,
+        "variance_full_H": 12.008163265306123,
+        "T_squared_attachment_coefficient": 0.008163265306122448,
+        "T_squared_fermion_excitation_coefficient": 12.000000000000002,
+        "analytic_expectation": 3.1714285714285713,
+        "analytic_variance": 12.008163265306122,
+        "gauss_constraints": "verified for every output state"
+      }
+    ],
+    "global_connectivity_results.json": {
+      "model": "Exact neutral CP12 graph-Laplacian comparator, Q=N-1",
+      "theorem": "For reference degree k, connected class fraction = binom(N-2,k-1)*(N-1)^(N-k-1) / [binom(N-1,k)*binom((N-1)(N-2)/2,N-1-k)]. Since expected reference degree <=Gamma^2*Q*(N-1)*T^2/M and the other N-1-vertex random graph has Theta(N) isolated vertices with O(N) variance, global connected probability is O((1+Gamma^2*T^2)/N) for Q/N->nu>0 on this preparation.",
+      "direct_tree_checks": [
+        {
+          "N": 4,
+          "total_graphs": 20,
+          "exact_connected_spanning_trees": 16,
+          "counts_by_reference_degree": [
+            1,
+            9,
+            9,
+            1
+          ],
+          "tree_counts_by_reference_degree": [
+            0,
+            9,
+            6,
+            1
+          ]
+        },
+        {
+          "N": 5,
+          "total_graphs": 210,
+          "exact_connected_spanning_trees": 125,
+          "counts_by_reference_degree": [
+            15,
+            80,
+            90,
+            24,
+            1
+          ],
+          "tree_counts_by_reference_degree": [
+            0,
+            64,
+            48,
+            12,
+            1
+          ]
+        },
+        {
+          "N": 6,
+          "total_graphs": 3003,
+          "exact_connected_spanning_trees": 1296,
+          "counts_by_reference_degree": [
+            252,
+            1050,
+            1200,
+            450,
+            50,
+            1
+          ],
+          "tree_counts_by_reference_degree": [
+            0,
+            625,
+            500,
+            150,
+            20,
+            1
+          ]
+        },
+        {
+          "N": 7,
+          "total_graphs": 54264,
+          "exact_connected_spanning_trees": 16807,
+          "counts_by_reference_degree": [
+            5005,
+            18018,
+            20475,
+            9100,
+            1575,
+            90,
+            1
+          ],
+          "tree_counts_by_reference_degree": [
+            0,
+            7776,
+            6480,
+            2160,
+            360,
+            30,
+            1
+          ]
+        }
+      ],
+      "quantum_reconnection": [
+        {
+          "N": 4,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.002496068610535307,
+              "globally_connected": 0.002495144369360401,
+              "mean_links_to_reference": 0.002498842875471368,
+              "rigorous_mean_links_upper": 0.015000000000000005
+            },
+            {
+              "T": 10.0,
+              "attached": 0.2142259380984748,
+              "globally_connected": 0.20652398498825839,
+              "mean_links_to_reference": 0.23870458791755675,
+              "rigorous_mean_links_upper": 1.5000000000000004
+            },
+            {
+              "T": 20.0,
+              "attached": 0.5631853585476736,
+              "globally_connected": 0.49415779208230337,
+              "mean_links_to_reference": 0.8318640359175659,
+              "rigorous_mean_links_upper": 6.000000000000002
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.7724999999999993,
+              "globally_connected": 0.6566666666666656,
+              "mean_links_to_reference": 1.5749999999999984,
+              "rigorous_mean_links_upper": 14.804406601634042
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.7424999999999995,
+              "globally_connected": 0.7199999999999993,
+              "mean_links_to_reference": 2.0249999999999977,
+              "rigorous_mean_links_upper": 59.21762640653617
+            }
+          ]
+        },
+        {
+          "N": 5,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.004788815776278987,
+              "globally_connected": 0.0038287540039551042,
+              "mean_links_to_reference": 0.004797440622844041,
+              "rigorous_mean_links_upper": 0.016000000000000004
+            },
+            {
+              "T": 10.0,
+              "attached": 0.3824152168224364,
+              "globally_connected": 0.28773131832955995,
+              "mean_links_to_reference": 0.455014088500747,
+              "rigorous_mean_links_upper": 1.6000000000000003
+            },
+            {
+              "T": 20.0,
+              "attached": 0.8444670675212821,
+              "globally_connected": 0.5352151687675722,
+              "mean_links_to_reference": 1.5480667538967479,
+              "rigorous_mean_links_upper": 6.400000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9765559507538051,
+              "globally_connected": 0.5927210068392733,
+              "mean_links_to_reference": 2.7653637359463628,
+              "rigorous_mean_links_upper": 15.791367041742978
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.8206841937053556,
+              "globally_connected": 0.6706390432236364,
+              "mean_links_to_reference": 2.044145284910707,
+              "rigorous_mean_links_upper": 63.16546816697191
+            }
+          ]
+        },
+        {
+          "N": 6,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.006646137135765895,
+              "globally_connected": 0.003953079399702135,
+              "mean_links_to_reference": 0.006662692371614136,
+              "rigorous_mean_links_upper": 0.01666666666666667
+            },
+            {
+              "T": 10.0,
+              "attached": 0.4949707328468226,
+              "globally_connected": 0.27228434523405926,
+              "mean_links_to_reference": 0.627912823905602,
+              "rigorous_mean_links_upper": 1.666666666666667
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9435917335061337,
+              "globally_connected": 0.40835109525330343,
+              "mean_links_to_reference": 2.091888450099603,
+              "rigorous_mean_links_upper": 6.666666666666668
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.998622945347043,
+              "globally_connected": 0.4107546141758834,
+              "mean_links_to_reference": 3.5552745711526557,
+              "rigorous_mean_links_upper": 16.449340668482265
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.6468934296166736,
+              "globally_connected": 0.3487907432801834,
+              "mean_links_to_reference": 1.5058038292605367,
+              "rigorous_mean_links_upper": 65.79736267392906
+            }
+          ]
+        },
+        {
+          "N": 8,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.009334293545440353,
+              "globally_connected": 0.0028885471844432857,
+              "mean_links_to_reference": 0.009368624223144014,
+              "rigorous_mean_links_upper": 0.0175
+            },
+            {
+              "T": 10.0,
+              "attached": 0.6213113099484275,
+              "globally_connected": 0.17427045303193,
+              "mean_links_to_reference": 0.8754721954316457,
+              "rigorous_mean_links_upper": 1.7500000000000002
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9881236975022492,
+              "globally_connected": 0.194770001285293,
+              "mean_links_to_reference": 2.836506304670652,
+              "rigorous_mean_links_upper": 7.000000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9999837132186523,
+              "globally_connected": 0.17370397134226787,
+              "mean_links_to_reference": 4.513119968649495,
+              "rigorous_mean_links_upper": 17.271807701906376
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.3912663051243742,
+              "globally_connected": 0.10344770671299681,
+              "mean_links_to_reference": 0.7101551426272065,
+              "rigorous_mean_links_upper": 69.0872308076255
+            }
+          ]
+        },
+        {
+          "N": 12,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.012424831794745295,
+              "globally_connected": 0.0010007885832829357,
+              "mean_links_to_reference": 0.012490542745188996,
+              "rigorous_mean_links_upper": 0.018333333333333337
+            },
+            {
+              "T": 10.0,
+              "attached": 0.7214639299233296,
+              "globally_connected": 0.05184259389691887,
+              "mean_links_to_reference": 1.1582293484358837,
+              "rigorous_mean_links_upper": 1.8333333333333337
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9961543126026333,
+              "globally_connected": 0.042745731081313236,
+              "mean_links_to_reference": 3.65894874047926,
+              "rigorous_mean_links_upper": 7.333333333333335
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9999755132317859,
+              "globally_connected": 0.02979219203806282,
+              "mean_links_to_reference": 5.483461681676108,
+              "rigorous_mean_links_upper": 18.094274735330494
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.1372159301041982,
+              "globally_connected": 0.010262749602302628,
+              "mean_links_to_reference": 0.19231908955622734,
+              "rigorous_mean_links_upper": 72.37709894132198
+            }
+          ]
+        },
+        {
+          "N": 20,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.015182580102761745,
+              "globally_connected": 8.606451402175492e-05,
+              "mean_links_to_reference": 0.015287711680779187,
+              "rigorous_mean_links_upper": 0.019000000000000003
+            },
+            {
+              "T": 10.0,
+              "attached": 0.7808606668658719,
+              "globally_connected": 0.003911056398840012,
+              "mean_links_to_reference": 1.410962797148522,
+              "rigorous_mean_links_upper": 1.9000000000000004
+            },
+            {
+              "T": 20.0,
+              "attached": 0.996894464772473,
+              "globally_connected": 0.0025112848203640834,
+              "mean_links_to_reference": 4.389506873935327,
+              "rigorous_mean_links_upper": 7.600000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9999260879954912,
+              "globally_connected": 0.0013685525116220883,
+              "mean_links_to_reference": 6.344223791981854,
+              "rigorous_mean_links_upper": 18.752248362069782
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.02549519042374082,
+              "globally_connected": 0.0001407085708515483,
+              "mean_links_to_reference": 0.03157228561806928,
+              "rigorous_mean_links_upper": 75.00899344827913
+            }
+          ]
+        },
+        {
+          "N": 40,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.017414680915880165,
+              "globally_connected": 1.5656829242221686e-07,
+              "mean_links_to_reference": 0.017560497999662878,
+              "rigorous_mean_links_upper": 0.019500000000000003
+            },
+            {
+              "T": 10.0,
+              "attached": 0.8146746022188384,
+              "globally_connected": 6.42995749095751e-06,
+              "mean_links_to_reference": 1.6171382052418184,
+              "rigorous_mean_links_upper": 1.9500000000000004
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9968050468128872,
+              "globally_connected": 3.441886168575442e-06,
+              "mean_links_to_reference": 4.994703687450456,
+              "rigorous_mean_links_upper": 7.800000000000002
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9998285938142826,
+              "globally_connected": 1.6321704325333586e-06,
+              "mean_links_to_reference": 7.097103429349335,
+              "rigorous_mean_links_upper": 19.24572858212425
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.0019857841622060723,
+              "globally_connected": 1.7674053887827537e-08,
+              "mean_links_to_reference": 0.002385953647446767,
+              "rigorous_mean_links_upper": 76.982914328497
+            }
+          ]
+        },
+        {
+          "N": 80,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.018582693124009286,
+              "globally_connected": 5.613609161637035e-13,
+              "mean_links_to_reference": 0.018753152680166668,
+              "rigorous_mean_links_upper": 0.019750000000000004
+            },
+            {
+              "T": 10.0,
+              "attached": 0.8286677799718893,
+              "globally_connected": 2.190315993351755e-11,
+              "mean_links_to_reference": 1.7259467010753202,
+              "rigorous_mean_links_upper": 1.9750000000000003
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9966843149371175,
+              "globally_connected": 1.077370464937461e-11,
+              "mean_links_to_reference": 5.3205003783130245,
+              "rigorous_mean_links_upper": 7.900000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9997556302891922,
+              "globally_connected": 4.879460369388668e-12,
+              "mean_links_to_reference": 7.5258221418693365,
+              "rigorous_mean_links_upper": 19.492468692151487
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 0.00013800500041771802,
+              "globally_connected": 4.149110859427816e-15,
+              "mean_links_to_reference": 0.00016544262943655482,
+              "rigorous_mean_links_upper": 77.96987476860595
+            }
+          ]
+        },
+        {
+          "N": 160,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.01917957515880442,
+              "globally_connected": 9.013170289664157e-24,
+              "mean_links_to_reference": 0.019363553103085258,
+              "rigorous_mean_links_upper": 0.019875000000000004
+            },
+            {
+              "T": 10.0,
+              "attached": 0.8350254044759667,
+              "globally_connected": 3.427508682912782e-22,
+              "mean_links_to_reference": 1.7818527351775137,
+              "rigorous_mean_links_upper": 1.9875000000000003
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9966120723099193,
+              "globally_connected": 1.6198272544019358e-22,
+              "mean_links_to_reference": 5.490109214339963,
+              "rigorous_mean_links_upper": 7.950000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.9997124404365142,
+              "globally_connected": 7.212070093288756e-23,
+              "mean_links_to_reference": 7.756660864881271,
+              "rigorous_mean_links_upper": 19.615838747165103
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 9.109358594550088e-06,
+              "globally_connected": 4.270720774662299e-27,
+              "mean_links_to_reference": 1.0923597249333842e-05,
+              "rigorous_mean_links_upper": 78.46335498866041
+            }
+          ]
+        },
+        {
+          "N": 320,
+          "values": [
+            {
+              "T": 1.0,
+              "attached": 0.01948122017822007,
+              "globally_connected": 3.094409447163921e-45,
+              "mean_links_to_reference": 0.019672272662420196,
+              "rigorous_mean_links_upper": 0.019937500000000004
+            },
+            {
+              "T": 10.0,
+              "attached": 0.8380554564281016,
+              "globally_connected": 1.1616848861293227e-43,
+              "mean_links_to_reference": 1.810191234730097,
+              "rigorous_mean_links_upper": 1.9937500000000004
+            },
+            {
+              "T": 20.0,
+              "attached": 0.9965734921670514,
+              "globally_connected": 5.384846238540823e-44,
+              "mean_links_to_reference": 5.576719986118755,
+              "rigorous_mean_links_upper": 7.975000000000001
+            },
+            {
+              "T": 31.41592653589793,
+              "attached": 0.999689089264594,
+              "globally_connected": 2.3805046563850585e-44,
+              "mean_links_to_reference": 7.876691698104635,
+              "rigorous_mean_links_upper": 19.67752377467191
+            },
+            {
+              "T": 62.83185307179586,
+              "attached": 5.85479480452733e-07,
+              "globally_connected": 9.28890732446219e-50,
+              "mean_links_to_reference": 7.023047755466326e-07,
+              "rigorous_mean_links_upper": 78.71009509868765
+            }
+          ]
+        }
+      ],
+      "caveat": "A vertex becoming non-isolated is not a connected universe; asymptotic no-assembly is proven for neutral-only quantum walk and this coherent initial state, not for full dynamical fermion/gauge CP12."
+    }
+  }
+}
