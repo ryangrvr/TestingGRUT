@@ -1,0 +1,194 @@
+{
+  "pinned_commit": "bbac3f19ddf7cca12393cc158aad40380b4e969d",
+  "verbatim_scripts": {
+    "full_joint.py": "ef0f94ef42174744c74b6f4c869032d334fd891584df0379f644a653534e9f6d",
+    "shortcut_control.py": "335ae26304edbd0b6c6e8106df82addbbf4617c46ecb312b3259d78bbf5f04de"
+  },
+  "full_joint": [
+    {
+      "N": 3,
+      "relative_sign": -1.0,
+      "dimension": 300,
+      "graph_pairings": 15,
+      "fermion_states": 20,
+      "lowest_energies": [
+        0.45674976281224433,
+        0.5247484590640407,
+        0.5309049490236029,
+        0.5406294198629319
+      ],
+      "connected_probability": 0.9950208291528391,
+      "largest_component_fraction": 0.9983394053378529,
+      "geometry_matter_entanglement_nats": 0.5290229788573839,
+      "reduced_geometry_purity": 0.7722485791183087,
+      "schmidt_rank": 7,
+      "vertex_swap_commutator": 0.0,
+      "eigen_residual": 2.0226915660200392e-15
+    },
+    {
+      "N": 3,
+      "relative_sign": 1.0,
+      "dimension": 300,
+      "graph_pairings": 15,
+      "fermion_states": 20,
+      "lowest_energies": [
+        -1.983674562465487,
+        -0.11992869000864943,
+        -0.013614699127844394,
+        -0.004767313859712033
+      ],
+      "connected_probability": 4.128127236850321e-06,
+      "largest_component_fraction": 0.3339107796891986,
+      "geometry_matter_entanglement_nats": 7.379889712964923e-06,
+      "reduced_geometry_purity": 0.9999991298180936,
+      "schmidt_rank": 7,
+      "vertex_swap_commutator": 0.0,
+      "eigen_residual": 2.4238078000222485e-15
+    },
+    {
+      "N": 4,
+      "relative_sign": -1.0,
+      "dimension": 7350,
+      "graph_pairings": 105,
+      "fermion_states": 70,
+      "lowest_energies": [
+        0.4193561260055379,
+        0.4966567695149084,
+        0.4977842411452116,
+        0.5178285616238057
+      ],
+      "connected_probability": 0.9854526207322818,
+      "largest_component_fraction": 0.9942034444058548,
+      "geometry_matter_entanglement_nats": 1.173878783552984,
+      "reduced_geometry_purity": 0.561881005483426,
+      "schmidt_rank": 27,
+      "vertex_swap_commutator": 0.0,
+      "eigen_residual": 4.575484871355848e-15
+    },
+    {
+      "N": 4,
+      "relative_sign": 1.0,
+      "dimension": 7350,
+      "graph_pairings": 105,
+      "fermion_states": 70,
+      "lowest_energies": [
+        -2.6108446716930627,
+        -0.7441631597215774,
+        -0.7006438707856215,
+        -0.7006438707856183
+      ],
+      "connected_probability": 9.996519557163468e-09,
+      "largest_component_fraction": 0.25048375970582487,
+      "geometry_matter_entanglement_nats": 9.537564625533836e-06,
+      "reduced_geometry_purity": 0.9999989254561004,
+      "schmidt_rank": 21,
+      "vertex_swap_commutator": 0.0,
+      "eigen_residual": 3.586989298480063e-15
+    },
+    {
+      "N": 5,
+      "relative_sign": -1.0,
+      "dimension": 238140,
+      "graph_pairings": 945,
+      "fermion_states": 252,
+      "lowest_energies": [
+        0.4178961473235005,
+        0.5021286136578826,
+        0.5047844633444517,
+        0.5213136410070093
+      ],
+      "connected_probability": 0.9689408974885542,
+      "largest_component_fraction": 0.9888135556191302,
+      "geometry_matter_entanglement_nats": 1.869060755011506,
+      "reduced_geometry_purity": 0.4044409274250008,
+      "schmidt_rank": 111,
+      "vertex_swap_commutator": null,
+      "eigen_residual": 5.383882539864924e-15
+    }
+  ],
+  "shortcut": {
+    "full_joint_matrix_control": {
+      "N": 4,
+      "original_vertex_distance": 2,
+      "source_port": 0,
+      "target_port": 4,
+      "Hamiltonian_direct_amplitude": [
+        0.0,
+        0.0
+      ],
+      "H_squared_amplitude": [
+        -0.025,
+        0.0
+      ],
+      "unitary_t_squared_coefficient": [
+        0.0125,
+        -0.0
+      ]
+    },
+    "algebraic_largeN_examples": [
+      {
+        "N": 4,
+        "original_graph_vertex_distance": 2,
+        "predicted_abs_H_squared": 0.025,
+        "predicted_abs_time_squared_unitary_amplitude": 0.0125
+      },
+      {
+        "N": 8,
+        "original_graph_vertex_distance": 4,
+        "predicted_abs_H_squared": 0.0125,
+        "predicted_abs_time_squared_unitary_amplitude": 0.00625
+      },
+      {
+        "N": 16,
+        "original_graph_vertex_distance": 8,
+        "predicted_abs_H_squared": 0.00625,
+        "predicted_abs_time_squared_unitary_amplitude": 0.003125
+      },
+      {
+        "N": 32,
+        "original_graph_vertex_distance": 16,
+        "predicted_abs_H_squared": 0.003125,
+        "predicted_abs_time_squared_unitary_amplitude": 0.0015625
+      },
+      {
+        "N": 64,
+        "original_graph_vertex_distance": 32,
+        "predicted_abs_H_squared": 0.0015625,
+        "predicted_abs_time_squared_unitary_amplitude": 0.00078125
+      },
+      {
+        "N": 128,
+        "original_graph_vertex_distance": 64,
+        "predicted_abs_H_squared": 0.00078125,
+        "predicted_abs_time_squared_unitary_amplitude": 0.000390625
+      }
+    ],
+    "limitation": "No pre-existing graph metric cone at finite N; per-remote-channel shortcut suppressed by 1/N. Continuum signal and actual experimental clock/locality must still be analyzed; not a superluminality claim."
+  },
+  "independent_random_start": [
+    {
+      "N": 3,
+      "random_start_energies": [
+        0.45674976281224455,
+        0.5247484590640401,
+        0.5309049490236017,
+        0.540629419862931
+      ],
+      "dense_lowest": [
+        0.45674976281225743,
+        0.524748459064032,
+        0.5247484590640341,
+        0.5247484590640388
+      ]
+    },
+    {
+      "N": 4,
+      "random_start_energies": [
+        0.4193561260055392,
+        0.49665676951491095,
+        0.4966567695149111,
+        0.4977842411452117
+      ]
+    }
+  ]
+}
