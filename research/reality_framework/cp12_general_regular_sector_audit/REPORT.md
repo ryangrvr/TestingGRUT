@@ -73,3 +73,11 @@ A separate controlled geometry comparison at N=343 and k=6, all Q=1029: the 7x7x
 Prior art: N. Wormald, JCT B 31 (1981), https://doi.org/10.1016/S0095-8956(81)80021-4 ; McKay and Wormald, Combinatorica 11 (1991), https://doi.org/10.1007/BF01275671 ; Wilkinson and Greentree, PRD 92 (2015), https://doi.org/10.1103/PhysRevD.92.084007 .
 
 **Verdict: new conditional, model-specific analytical bounds and exact counting controls; no selection of physical spacetime, no Einstein gravity, no observational prediction.**
+
+## Result E — exact conserved connection-density obstruction
+
+The frozen `attempt12/model.py` constructs the Hamiltonian separately for each fixed `q`. All matter hops preserve the occupied-edge mask; each allowed neutral rewire removes **one** occupied connection and creates **one** new connection. The diagonal electric/mass/cost terms also preserve Q. Thus **exactly** `[H_12, Qhat]=0`, and for every closed-system initial state the probabilities in distinct Q sectors obey `Pr_t(Q=q)=Pr_0(Q=q)`.
+
+Therefore a state starting with **Q=N** cannot dynamically reach the usual cubic lattice's **Q=3N** six-neighbor coordination sector. Even perfect selection within fixed Q=N can never become an ordinary connected cubic lattice of edge-neighbor relations: a connected N-vertex graph with Q=N has cycle rank `Q-N+1=1` rather than the extensive independent cycle structure of a 3D cubic lattice. This is a **restricted-graph incidence claim**, not a no-go for every imaginable relational definition of dimension or for a state originally prepared at a different Q.
+
+Any claimed derivation of physical three-dimensional neighbor geometry must therefore *also* explain the initial Q sector or its statistical selection through explicitly justified extra physics. Unit-only CP-12 dynamics cannot change it. Comparing Q=3N candidate graphs is scientifically meaningful as a separate frozen-law sector test but must not be represented as spontaneous emergence from a Q=N initial condition.
