@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-13",
+  "repository": "ryangrvr/TestingGRUT",
+  "branch": "codex/grut-cp12-coherent-destination-response",
+  "parent_commit": "8cd95db20f18764eed12f1868f2da54b13131a3f",
+  "reviewed_gibbs_commit": "4bb0fa5a2835a698168230e5000f31ca0cf880ca",
+  "frozen_model_source": {
+    "commit": "11fbaec7b28a1bbe88e6ec54808829ebbc804c48",
+    "path": "research/constructive_physics/attempt12/model.py",
+    "local_copy": "frozen_model.py",
+    "sha256": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "compute_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "executed_reproduction_commands": [
+    "python -I research/reality_framework/cp12_coherent_destinations/verify.py --execute-small",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --check",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --exact",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --exact-n 7",
+    "python -I research/reality_framework/cp12_coherent_destinations/finite_evolution.py --cutoff 2",
+    "python -I research/reality_framework/cp12_coherent_destinations/finite_evolution.py --cutoff 3",
+    "python -I research/reality_framework/cp12_coherent_destinations/finite_evolution.py --cutoff 4",
+    "python -I research/reality_framework/cp12_coherent_destinations/finite_evolution.py --cutoff 5",
+    "python -I research/reality_framework/cp12_coherent_destinations/finite_evolution.py --cutoff 6",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 6 --cutoff 2",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 6 --cutoff 3",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 6 --cutoff 4",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 6 --cutoff 5",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 6 --cutoff 6",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 7 --cutoff 2",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 7 --cutoff 3",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 7 --cutoff 4",
+    "python -I research/reality_framework/cp12_coherent_destinations/invariant_evolution.py --n 7 --cutoff 5"
+  ],
+  "validation": {
+    "status": "CP12_COHERENT_FORMATION_AND_ENTROPY_CHECKS_PASS",
+    "groups": [
+      "byte_exact_pinned_frozen_model",
+      "coherent_charged_and_complex_phase_common_vacancy_coefficients",
+      "unregulated_higher_order_destination_and_record_controls",
+      "fresh_exact_coherent_ring_and_locking_counts",
+      "complete_five_event_evolution_cutoffs_records_and_sign_reversal",
+      "full_builder_signed_invariant_intertwiners_and_dynamics",
+      "exact_unordered_degree_bias_for_every_graph_class_N4_to_N7",
+      "complete_invariant_formation_N6_N7_and_observed_cutoff_stability",
+      "finite_entropy_data_processing_unitary_rank_and_noncommuting_adversary",
+      "separately_defined_invariant_Gibbs_ensemble_controls"
+    ],
+    "count": 10,
+    "small_scripts_freshly_executed": [
+      "exact_destination.py",
+      "coherent_ring.py",
+      "entropy_control.py"
+    ],
+    "five_event_cutoff_max_occupation_difference": 7.077671781985373e-16,
+    "large_invariant_controls": [
+      {
+        "N": 6,
+        "cutoff_pair": [
+          5,
+          6
+        ],
+        "maximum_shape_difference": 3.6194158781199803e-11,
+        "T16_connected": 0.5832773161070652,
+        "T16_path": 0.23196971192301064
+      },
+      {
+        "N": 7,
+        "cutoff_pair": [
+          4,
+          5
+        ],
+        "maximum_shape_difference": 1.4394755609714593e-08,
+        "T16_connected": 0.4710426040884625,
+        "T16_path": 0.12064183663133879
+      }
+    ],
+    "scope": "Recorded larger evolutions plus fresh exact ring checks and optional small scripts; not a rerun of every large calculation or a certified continuum limit."
+  },
+  "limitations": [
+    "All formation experiments use the Q=N-1 sector family and supplied pure initial coherence; the entropy rarity theorem targets nu>1.",
+    "Graph pool references are supplied in the destination experiment; no physical metric or clock is derived.",
+    "Largest evolution is complete only in the symmetry sector of the prepared state, not a full-spectrum solve.",
+    "Cutoff differences and residuals are numerical controls, not rigorous continuum or unregulated finite-time error bars.",
+    "The proposed closed expression for the sixth-order degree coefficient is verified at N=4 through 7, not proven for all N.",
+    "Unregulated entropy proofs require independent mathematical adjudication; finite matrices test identities only.",
+    "An initial N7 cutoff-five launch was interrupted before completion; only its subsequently completed restart is recorded.",
+    "No frozen law, canonical branch, or Stage-3 card was changed."
+  ],
+  "sha256": {
+    "DERIVATION.md": "22336dc73bfc0c680834885644f372e711efebace39f696b6ee70bf3ad976366",
+    "GIBBS_AND_PREPARATION.md": "d8d6b6905dd3260d8e67153e6ab9c90100d44d4b3701e124978a1b53219cc3b1",
+    "REPORT.md": "e327784e2d7a8ba2b5e6c84bed09fe586e55e34f47adafc9621950eaf03b3721",
+    "coherent_ring.py": "689ccf5241e57980d82d8eb82a23452ca337d3ef7a38c3233babfa88608bdc46",
+    "entropy_control.py": "09926821a419c9be5801645aa243a4ff9334cee2192c0008e5ca6c6f75e621f0",
+    "entropy_results.json": "2490354e927086744994a4cacdc02e35c62fd2e1bdfa3ce0f81d82724fbb2ffd",
+    "exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b",
+    "exact_results.json": "aeddf29cb5ac6809fbc2599b6b8a58f858824e64e93bdfb11746ae9ad6fe9c43",
+    "finite_L2.json": "3a7e122069ae418809414a19b0f5adf6d2c5f97c624f8d9dfc88271cefd667c5",
+    "finite_L3.json": "6c721b1f2cd454353ca9f4c161a315073c44ef2a652e6bd291b8738650c9a269",
+    "finite_L4.json": "2b8f281d3d9b6f00a2e609e043664528b5fbd2d63f0389ffbc8b3d38c479c798",
+    "finite_L5.json": "30b778f67c572f80409e67f8572a407434cf39f527a911d9302c7d9574cf88cd",
+    "finite_L6.json": "f2e732692fd9c04002f1bfcd48922d69d93d3f861aa1aba551b23d879dfe1317",
+    "finite_evolution.py": "ebb8ecdcf1db7408f4b0b5921d7976163f1e36108c697c2c93b27e11594cbe33",
+    "frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "input_audit.json": "20b1c7ae562fb42bd67e28046cda5b88c47ef73ec88b45328627138af2572c7d",
+    "invariant_N6_L2.json": "c2652eb0dfa831b5b86882c4fad30c5c3751e9269ad6ad1fcf70eb5ece7b3e06",
+    "invariant_N6_L3.json": "726e5f585ca5cb21739e4ce5b4dab84e74887e83ab3390c060c3f19a23da367d",
+    "invariant_N6_L4.json": "ed5f01b72a3950081361245d9c927b0bda89dcf22a8d3c8f63128c761f174707",
+    "invariant_N6_L5.json": "97a9eb933f2c009095a0138498adc6f24344663482a1697548d6f58119ccb4c1",
+    "invariant_N6_L6.json": "18b46fd56249e9bd7f4b21ab99e272e7f919b66d0cd9fc9e7294f858bdb1a702",
+    "invariant_N7_L2.json": "6b827a7dad4741b706beea04f8711ac884c3aabfb327902bc80af3670ff9fd43",
+    "invariant_N7_L3.json": "2bcff8b06bce02d230ef0bc13697f19001d80ab57c760a79d71414ce49b52f78",
+    "invariant_N7_L4.json": "f07d720ebed210ebcf9988a65a5fa60dd91ff4790e9242139c4dfc01ea21ff26",
+    "invariant_N7_L5.json": "4aa17b31041c742b064c3f183b84c3ebdddf63c2caaddc9a20ffec94db742812",
+    "invariant_evolution.py": "8161d7c895beed7c54f6e2e439495edd0a63389db8c24b713e2a3cc0c27ff626",
+    "invariant_intertwiner_results.json": "48fc62e583e955ee546786d9993aa426bb9779e673cb820035f1fe59284bd543",
+    "requirements.txt": "1668a3152e33680d94637b13421c15e68bd97cd8701f7f555c691f5bc5c0b9f3",
+    "ring_results.json": "45c55652a18c949f7907ea2baf7b9482f709c1139cbd5bfe0a3880bb8a000a28",
+    "unordered_exact_N7.json": "7d36c023ed9c6c85a8006e8b9ad28db274c53e8ce91256def3cbfdad2e36ff54",
+    "unordered_exact_results.json": "24288f1f6f77928a900276391434a4ab9a9075d4ea91daf679995e311bf8afee",
+    "verification.json": "fb78738fb38aa8e6a780aa3d77b108d32a14a0210deb2f56ac54ac3e932cc82f",
+    "verify.py": "d5f21b2abc5e3892eff96c9bdce326dbf0a0d4453b70d586b4c0deb91890aa97"
+  }
+}
