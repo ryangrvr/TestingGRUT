@@ -1,6 +1,6 @@
 # CP-12 general regular-sector audit — new conditional theorem
 
-**Date:** 2026-10-13. **Scope:** independent additive math and numerical adversaries only. Based on the *unchanged* CP-12 Hamiltonian; no modification to canonical GRUT-RAI, Stage-3 Card 3 or other frozen branches. Parent: \`0463ec1\` (classical degree-two fragmentation theorem); companion comparison: \`43d706b\` (exact ring-sector graph cut). **Not peer-reviewed or partner-audited.**
+**Date:** 2026-10-13. **Scope:** independent additive math and numerical adversaries only. Based on the *unchanged* CP-12 Hamiltonian; no modification to canonical GRUT-RAI, Stage-3 Card 3 or other frozen branches. Parent: `0463ec1` (classical degree-two fragmentation theorem); companion comparison: `43d706b` (exact ring-sector graph cut). **Not peer-reviewed or partner-audited.**
 
 ## Result A — exact switching bound for *any* fixed degree k
 
@@ -16,7 +16,7 @@ For fixed k and fixed finite a, exact regularity tends to zero at least as N^-2.
 
 ## Result B — *actual neutral graph-swap* quantum block-cut bound
 
-Let P_k project onto all k-regular graph configurations, retaining all their fermion/U(1) gauge states, and C_k=I-P_k within Q=kN/2. Under CP-12's frozen neutral occupied-to-empty edge-swap off-diagonal \`-Gamma/M\`, with M=binom(N,2), every k-regular graph has D=Q(M-Q) distinct external graph-swap neighbors. A single swap **never** maps between distinct k-regular graphs. Every external neighbor has at most k+1 k-regular predecessors. The unrestricted scalar graph-cut adjacency therefore has squared norm <=(k+1)D by a nonnegative matrix row-sum bound.
+Let P_k project onto all k-regular graph configurations, retaining all their fermion/U(1) gauge states, and C_k=I-P_k within Q=kN/2. Under CP-12's frozen neutral occupied-to-empty edge-swap off-diagonal `-Gamma/M`, with M=binom(N,2), every k-regular graph has D=Q(M-Q) distinct external graph-swap neighbors. A single swap **never** maps between distinct k-regular graphs. Every external neighbor has at most k+1 k-regular predecessors. The unrestricted scalar graph-cut adjacency therefore has squared norm <=(k+1)D by a nonnegative matrix row-sum bound.
 
 Matter and electric neutrality constraints delete graph-changing matrix elements; graph-preserving matter hopping adds none. In the common universal occupation basis, this bounds the physical cross-sector operator at every cutoff:
 
@@ -66,7 +66,7 @@ A separate controlled geometry comparison at N=343 and k=6, all Q=1029: the 7x7x
 
 ## Verification, interpretation and required next test
 
-\`check.py\` exhaustively enumerates all labelled graphs at (N,k)=(6,2),(6,3),(6,4),(7,2),(7,4), confirms defect counts and the <=k+1 reverse bound; verifies the three exact spatial adversaries and the fixed-k asymptotic formula's leading log coefficient. It does **not** diagonalize full CP-12, independently prove the McKay–Wormald enumeration, or check gauge fiber block matrices. The latter require a separate partner code audit.
+`check.py` exhaustively enumerates all labelled graphs at (N,k)=(6,2),(6,3),(6,4),(7,2),(7,4), confirms defect counts and the <=k+1 reverse bound; verifies the three exact spatial adversaries and the fixed-k asymptotic formula's leading log coefficient. It does **not** diagonalize full CP-12, independently prove the McKay–Wormald enumeration, or check gauge fiber block matrices. The latter require a separate partner code audit.
 
 **Primary next calculation:** compare the full *frozen-coupling*, rewiring-diagonal-retaining, gauge-constrained conditional energy density of connected low-dimensional lattice families against equal-degree disconnected cliques **and connected nonspatial high-girth regular graphs**; track spectral dimension and gauge-invariant relational responses only on backgrounds whose geometry is actually supported by CP-12. Pay the energy cost of state preparation. Preserve all regulators, controls and negative results. Do not insert a geometric selection reward.
 
