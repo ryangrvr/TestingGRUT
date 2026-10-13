@@ -55,3 +55,22 @@ The full local reproducibility packet `GRUT_CP12_Quantum_Gibbs_Entropy_Audit_202
 - The entropy/geometry competition has significant prior art, especially Konopka (2008), Phys. Rev. D 78 044032 and Wilkinson/Greentree (2015), Phys. Rev. D 92 084007. Novelty has not been established.
 
 **Adjudication request:** Claude Code and Work should independently verify the mass/electric positivity, hopping operator norm, neutral-sea partition lower bound and graph-fiber count. Then try to generalize to unregulated rotors or exhibit an operationally spatial family whose cardinality violates the low-complexity premise. Keep all full-law calculations in the same Q sector and state; do not retune H to rescue a desired phase.
+
+## Extended scaling window: growing cutoff and falling temperature
+
+The same exact finite-N inequality permits a cutoff and inverse temperature that vary with N, although it does not establish any **uniform approximation** to the unregulated rotor theory. Write `Q=nu N`, `L_N=N^(alpha+o(1))`, and `beta_N=b log N+o(log N)` with fixed nonnegative `alpha,b`; take `|S_N|<=N! exp(aN)`. Then straightforward Stirling analysis gives
+
+```text
+limsup_{N->infty} log Pr(S_N)/(N log N)
+  <= -(nu-1)+2 nu alpha + b nu (2|t|+Gamma).
+```
+
+Hence the specified spatial family is still asymptotically excluded whenever
+
+```text
+2 nu alpha + b nu (2|t|+Gamma) < nu-1.
+```
+
+At fixed temperature (`b=0`), a slowly increasing cutoff `L_N=N^alpha` cannot rescue the family for `alpha < (nu-1)/(2nu)`: thresholds are `alpha<1/4` for `nu=2` and `alpha<1/3` for `nu=3`. With fixed cutoff (`alpha=0`), `beta_N=b log N` still cannot rescue it for `b < (nu-1)/(nu(2|t|+Gamma))`. For frozen `|t|=1,Gamma=0.1` these bounds read `b<0.238095...` (nu=2) and `b<0.317460...` (nu=3).
+
+These are **sufficient suppression conditions** derived from a loose upper bound, not phase transition points or guarantees of selection on the other side. Taking `L_N->infty` in a slow joint scaling does not establish the physical `L=infty` Gibbs trace at each N. The regulator-removal order remains an independent obligation.
