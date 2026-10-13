@@ -74,6 +74,7 @@ def tt_3d_rank():
             .5*(P[i,k]*P[j,l]+P[i,l]*P[j,k])
             -.5*P[i,j]*P[k,l])
     assert np.linalg.norm(TT@TT-TT)<1e-12
+    assert np.linalg.norm(TT-TT.T)<1e-12
     assert abs(np.trace(TT)-2)<1e-12
     return float(np.trace(TT))
 
