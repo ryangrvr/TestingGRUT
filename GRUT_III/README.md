@@ -45,6 +45,7 @@ reality.
 | `09_TWO_TEMPERATURES.md` | Detector vs apparent-horizon temperature at O(ε): which one P1 calls a temperature; massless sector done (`v14`) |
 | `10_SECULAR_IR_SURVEY.md` | Literature check for O5 item 3: do the secular-IR resummations disagree? (scalars no; gravitons: a QG observables dispute); the `v13` result |
 | `11_VERIFICATION_ROUND.md` | Sixth-round independent re-derivation and adversarial audit of `v8`, `v11`, `v12`, `v13` (workflow report) |
+| `14_CP12_GRAVITY_ADJUDICATION.md` | Adjudication of the CP-12 gravity-response report, the pair-tensor audit and the proposed relational tensor charter: verdicts, two understated points, four constraints (Weinberg–Witten, Marolf, GW170817, lattice-graviton prior art), paste-ready amendments |
 | `13_SYNTHESIS.md` | Synthesis of all guidance (GRUT III, reviewer, ChatGPT, codex graph line): what is right, what cannot be right, the two places a principle could act, pre-registered next computations; verified and adversarially reviewed |
 | `12_BASELINE_AND_HANDOFF.md` | Baseline banked: the honest ledger (new vs known), the Card-1 constraint sheet, the candidate space |
 | `RESPONSE_TO_REVIEWS.md` | Point-by-point response to the reviews (R1–R20) |
