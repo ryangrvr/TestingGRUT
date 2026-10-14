@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 256,
+      "exact_formulas": {
+        "protected_triangle_T6": "8/5",
+        "occupied_flux_triangle_T12": "8/1125",
+        "occupied_flux_fraction_T6": "4/15"
+      },
+      "numerical_matrix_coefficients": {
+        "protected_triangle_T6": 1.5999999999999999,
+        "occupied_flux_triangle_T12": 0.007111111111111111,
+        "occupied_flux_fraction_T6": 0.2666666666666667
+      },
+      "maximum_formula_difference": 2.220446049250313e-16
+    },
+    {
+      "N": 5,
+      "Q": 5,
+      "budget": 128,
+      "exact_formulas": {
+        "protected_triangle_T6": "5/3",
+        "occupied_flux_triangle_T12": "1/135",
+        "occupied_flux_fraction_T6": "8/27"
+      },
+      "numerical_matrix_coefficients": {
+        "protected_triangle_T6": 1.666666666666667,
+        "occupied_flux_triangle_T12": 0.007407407407407409,
+        "occupied_flux_fraction_T6": 0.2962962962962964
+      },
+      "maximum_formula_difference": 2.220446049250313e-16
+    },
+    {
+      "N": 6,
+      "Q": 6,
+      "budget": 128,
+      "exact_formulas": {
+        "protected_triangle_T6": "160/91",
+        "occupied_flux_triangle_T12": "32/4095",
+        "occupied_flux_fraction_T6": "20/63"
+      },
+      "numerical_matrix_coefficients": {
+        "protected_triangle_T6": 1.7582417582417587,
+        "occupied_flux_triangle_T12": 0.007814407814407818,
+        "occupied_flux_fraction_T6": 0.3174603174603176
+      },
+      "maximum_formula_difference": 4.440892098500626e-16
+    },
+    {
+      "N": 6,
+      "Q": 12,
+      "budget": 10,
+      "exact_formulas": {
+        "protected_triangle_T6": "1760/91",
+        "occupied_flux_triangle_T12": "352/4095",
+        "occupied_flux_fraction_T6": "44/63"
+      },
+      "numerical_matrix_coefficients": {
+        "protected_triangle_T6": 19.34065934065935,
+        "occupied_flux_triangle_T12": 0.08595848595848599,
+        "occupied_flux_fraction_T6": 0.6984126984126987
+      },
+      "maximum_formula_difference": 1.0658141036401503e-14
+    }
+  ],
+  "seconds": 5.224826576999931,
+  "scope": "Exact leading formulas derived from minimal hopping paths; matrix checks use existing projected Hamiltonians. Minimal triangle-flux paths have six distinct unit-field changes, so their electric-square support never exceeds six and all retained budgets include them. No long-time Taylor extrapolation."
+}

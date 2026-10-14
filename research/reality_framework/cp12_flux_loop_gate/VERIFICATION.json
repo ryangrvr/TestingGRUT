@@ -1,0 +1,67 @@
+{
+  "status": "CP12_FLUX_LOOP_GATE_VERIFIED",
+  "fresh": [
+    {
+      "script": "fresh N4 matrix and snapshot reconstruction",
+      "returncode": 0
+    },
+    {
+      "script": "onset_exact.py",
+      "returncode": 0,
+      "stdout_sha256": "58e6400dcb393e540f5aa388bba0ded0d26c2fef3f9340ce3d93b80b3215c3eb"
+    },
+    {
+      "script": "controls.py",
+      "returncode": 0,
+      "stdout_sha256": "8fe312bf534e9ce936fbd901256b9e4031ff8b05afcd96697c1096e0f0a7570c"
+    },
+    {
+      "script": "references.py",
+      "returncode": 0,
+      "stdout_sha256": "9217728c6ddb26d08be18190742d4046ce895ab448a959598da7905f429601da"
+    },
+    {
+      "script": "early_time.py",
+      "returncode": 0,
+      "stdout_sha256": "967d04a5afe33bc5170b32b29a896ba16c7a5c432055420f78559397858172cd"
+    },
+    {
+      "script": "populations.py",
+      "returncode": 0,
+      "stdout_sha256": "185c8cebcdab785f8a01aa8bb39c0b8afb670d72b1eca29155d99b512c3d6cf4"
+    },
+    {
+      "script": "persistence.py",
+      "returncode": 0,
+      "stdout_sha256": "eb20a5fae0b0cce3ad47b59dc537cb6cdd111066aeae707b895cace1d17b1201"
+    },
+    {
+      "script": "measurement_controls.py",
+      "returncode": 0,
+      "stdout_sha256": "a26661444260fd07cbdcc1260d603faa9f5730dee9b86ee8fbecfad207808b2d"
+    },
+    {
+      "script": "transport.py",
+      "returncode": 0,
+      "stdout_sha256": "f70472f3e51d2222c7db57b19956e99343aa2551d231c11ce77455fede222ff1"
+    }
+  ],
+  "saved_N5_N6_and_dense_dual_hash_validated": true,
+  "all_mixed_state_persistence_curves_silently_rerun": false,
+  "main_same_branch_density_interval": [
+    -0.01566438359687039,
+    -0.015664380733583616
+  ],
+  "main_final_circulation_conditioned_density_interval": [
+    -0.016020063939909773,
+    -0.01602005821116209
+  ],
+  "ruling": "Finite circulation, protection transfer and conditional compatibility with matter-density response established in the stated tests. Autonomous persistent three-dimensional geometry and causal propagation are not established.",
+  "qualification": "Exact rational onset controls are unregulated. Dynamical full-law cutoff bounds are analytically justified and numerically evaluated in ordinary floating point, without a formal roundoff interval certificate.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seconds": 10.342185200999666
+}
