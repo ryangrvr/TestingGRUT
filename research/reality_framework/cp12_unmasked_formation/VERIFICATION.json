@@ -1,0 +1,34 @@
+{
+  "status": "CP12_UNMASKED_BENCHMARK_CHECKS_PASS_FORMATION_GATE_NOT_PASSED",
+  "fresh": [
+    {
+      "script": "cp12_topology_sensitive_preparation/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "bb5e7a3d60593e8e108729dd74ea16538c697a4a03bb0cb3e24e6d63aa323cc9"
+    },
+    {
+      "script": "cp12_unmasked_formation/check.py",
+      "returncode": 0,
+      "stdout_sha256": "a633fda70f3ec0a08292bae9d23a1bbb17a620207485f514ab12bbe8620ca941"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "saved_pilot_checks": {
+    "five_event_control_sign_resolved": true,
+    "six_event_distance_two_error_contains_zero": true,
+    "seven_event_time_two_error_inconclusive": true,
+    "six_event_intrinsic_ball_saturation": true
+  },
+  "expensive_pilots_rerun_by_this_verifier": false,
+  "prototype_records_without_later_joint_fields": [
+    "probe_N5_Q10_B8.json",
+    "probe_N6_Q12_B6.json",
+    "N7_Q14_B3.json"
+  ],
+  "gate": "Size and regulator controls unresolved; no autonomous preparation or spacetime formation derived.",
+  "seconds": 5.005288158999974
+}
