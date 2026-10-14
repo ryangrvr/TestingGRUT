@@ -1,0 +1,103 @@
+{
+  "status": "CP12_AUTONOMOUS_FLUX_GATE_VERIFIED",
+  "fresh": [
+    {
+      "script": "cp12_flux_protection_tradeoff/check.py",
+      "returncode": 0,
+      "stdout_sha256": "04ffc526b2ac9e37851933a082227658797f9362bc2294596abc2cbc88b9f948"
+    },
+    {
+      "script": "exact_controls.py",
+      "returncode": 0,
+      "stdout_sha256": "91f8f5deb5a23a46928848c79b4c29046c4fb29bd9c3b1f23cf47c1706a7edbd"
+    },
+    {
+      "script": "leakage_controls.py",
+      "returncode": 0,
+      "stdout_sha256": "e14451adf90870f19d7cdd0dc02fb0f19c60708276eafc9a0a374e3d401fb6e5"
+    },
+    {
+      "script": "mobility.py",
+      "returncode": 0,
+      "stdout_sha256": "11497b14dd487e51c7345efb0b692bae4f6073dcb7f384595bf200a2597e5fc4"
+    },
+    {
+      "script": "records.py",
+      "returncode": 0,
+      "stdout_sha256": "7fa046080a6560691c2d83ec874d4863970c8a93fcbb97225621fa93254b7401"
+    },
+    {
+      "script": "dynamics.py",
+      "returncode": 0,
+      "stdout_sha256": "7eafc2987a861bafdcc75c4abe24cc4450bd6dfa9b518ab43d4cc2d504407bab"
+    }
+  ],
+  "continuous_time_summaries": [
+    {
+      "file": "N4_Q4_B256_T20.json",
+      "removable_fraction_continuous_lower": 0.37276180222883604,
+      "persistent_flux_fraction_continuous_lower": 0.03955284909578152,
+      "final_state_error": 4.5630679959202276e-11
+    },
+    {
+      "file": "N5_Q5_B128_T10.json",
+      "removable_fraction_continuous_lower": 0.3813262633226657,
+      "persistent_flux_fraction_continuous_lower": 0.06114620723121872,
+      "final_state_error": 9.711547017722499e-05
+    },
+    {
+      "file": "N5_Q6_B128_T10.json",
+      "removable_fraction_continuous_lower": 0.37555422130448235,
+      "persistent_flux_fraction_continuous_lower": 0.07626755544297525,
+      "final_state_error": 0.00020541998003997954
+    },
+    {
+      "file": "N6_Q6_B128_T10.json",
+      "removable_fraction_continuous_lower": 0.3893120035665586,
+      "persistent_flux_fraction_continuous_lower": 0.061080734077981785,
+      "final_state_error": 0.00021725371662309546
+    }
+  ],
+  "regulator_convergence": [
+    {
+      "low": "N4_Q4_B32_T20.json",
+      "high": "N4_Q4_B256_T20.json",
+      "maximum_normalized_count_difference": 0.02953257302933021
+    },
+    {
+      "low": "N4_Q4_B128_T20.json",
+      "high": "N4_Q4_B256_T20.json",
+      "maximum_normalized_count_difference": 1.1863027227221323e-10
+    },
+    {
+      "low": "N5_Q6_B12_T4.json",
+      "high": "N5_Q6_B128_T10.json",
+      "maximum_normalized_count_difference": 0.017477876337674225
+    },
+    {
+      "low": "N5_Q6_B32_T10.json",
+      "high": "N5_Q6_B128_T10.json",
+      "maximum_normalized_count_difference": 0.001180377820743178
+    },
+    {
+      "low": "N6_Q6_B48_T4.json",
+      "high": "N6_Q6_B128_T10.json",
+      "maximum_normalized_count_difference": 5.126220503637313e-07
+    },
+    {
+      "low": "N6_Q12_B6_T0.4.json",
+      "high": "N6_Q12_B10_T1.json",
+      "maximum_normalized_count_difference": 2.299218091926969e-05
+    }
+  ],
+  "larger_N5_N6_evolutions_rerun_by_this_verifier": false,
+  "N5_record_unfolding_rerun_by_this_verifier": false,
+  "ruling": "Autonomous internal graph records and sustained partial protection established in tested finite preparations; low mean removability, spatial selection and emergent spacetime not established.",
+  "floating_point_qualification": "Analytic truncation and continuity bounds numerically evaluated; no interval-arithmetic certificate of roundoff.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seconds": 16.894453425999018
+}

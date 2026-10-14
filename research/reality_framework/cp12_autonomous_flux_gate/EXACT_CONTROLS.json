@@ -1,0 +1,129 @@
+{
+  "status": "CP12_AUTONOMOUS_FLUX_EXACT_CONTROLS_PASS",
+  "exact_frozen_density_threshold": "49/2",
+  "energy_envelopes": [
+    {
+      "N": 200,
+      "Q": 200,
+      "density": 1.0,
+      "negative_kinetic_mass_allowance_per_vertex": 0.7592339950622784,
+      "neutral_energy_removable_fraction_lower": 0.0,
+      "general_removable_per_vertex_lower": -2.0369359802491136
+    },
+    {
+      "N": 200,
+      "Q": 400,
+      "density": 2.0,
+      "negative_kinetic_mass_allowance_per_vertex": 1.2713246308840365,
+      "neutral_energy_removable_fraction_lower": 0.0,
+      "general_removable_per_vertex_lower": -3.085298523536146
+    },
+    {
+      "N": 200,
+      "Q": 600,
+      "density": 3.0,
+      "negative_kinetic_mass_allowance_per_vertex": 1.6852669072946607,
+      "neutral_energy_removable_fraction_lower": 0.0,
+      "general_removable_per_vertex_lower": -3.7410676291786427
+    },
+    {
+      "N": 200,
+      "Q": 2000,
+      "density": 10.0,
+      "negative_kinetic_mass_allowance_per_vertex": 3.6318441816085603,
+      "neutral_energy_removable_fraction_lower": 0.0,
+      "general_removable_per_vertex_lower": -4.527376726434241
+    },
+    {
+      "N": 200,
+      "Q": 4900,
+      "density": 24.5,
+      "negative_kinetic_mass_allowance_per_vertex": 6.125,
+      "neutral_energy_removable_fraction_lower": 0.0,
+      "general_removable_per_vertex_lower": 0.0
+    },
+    {
+      "N": 200,
+      "Q": 6000,
+      "density": 30.0,
+      "negative_kinetic_mass_allowance_per_vertex": 6.864993591794869,
+      "neutral_energy_removable_fraction_lower": 0.08466752109401743,
+      "general_removable_per_vertex_lower": 2.540025632820523
+    },
+    {
+      "N": 200,
+      "Q": 10000,
+      "density": 50.0,
+      "negative_kinetic_mass_allowance_per_vertex": 9.106349174992623,
+      "neutral_energy_removable_fraction_lower": 0.27149206600059017,
+      "general_removable_per_vertex_lower": 13.574603300029509
+    }
+  ],
+  "destination_control": {
+    "N": 6,
+    "Q": 6,
+    "prepared_comparator_only": true,
+    "flux_protected_triangle": true,
+    "removable_edges": 3,
+    "rows": [
+      {
+        "candidate": [
+          0,
+          3
+        ],
+        "initial_distance": 2,
+        "edge_creation_coupling_square": "1/7500"
+      },
+      {
+        "candidate": [
+          0,
+          4
+        ],
+        "initial_distance": 3,
+        "edge_creation_coupling_square": "1/7500"
+      },
+      {
+        "candidate": [
+          0,
+          5
+        ],
+        "initial_distance": 4,
+        "edge_creation_coupling_square": "1/7500"
+      }
+    ],
+    "scope": "Exact instantaneous cross coupling only; finite-time higher-order topology dependence is not excluded. Supplied comparator, not an autonomous spatial state."
+  },
+  "physical_matrix_control": {
+    "N": 4,
+    "Q": 4,
+    "L": 3,
+    "electric_budget": 8,
+    "full_dimension": 6075,
+    "invariant_dimension": 91,
+    "vacuum_states_checked": 105,
+    "kinetic_envelope_smallest_eigenvalue": 0.2575846942263735,
+    "isometry_residual": 3.0485681130056856e-15,
+    "Hamiltonian_intertwiner_residual": 2.7012892057857038e-15,
+    "outgoing_Gram_residual": 5.373984062320568e-15,
+    "rate_difference": 3.552713678800501e-15,
+    "independent_graph_trace_spectrum_difference": 8.881784197001252e-16,
+    "independent_electric_energy_difference": 7.277235758440526e-11,
+    "electric_energy_inferred_error_upper": 0.0005287294108018796,
+    "detector_specific_count_actual_errors": [
+      5.310973882899361e-12,
+      7.15859408155408e-11
+    ],
+    "detector_specific_count_error_bounds": [
+      5.427558566596158e-10,
+      9.357964525545398e-10
+    ],
+    "normalized_count_commutator_Schur_bounds": [
+      2.0,
+      2.0
+    ],
+    "full_physical_deletion_rewiring_identity_residual": 0.0,
+    "fast_rewiring_versus_transition_assembly_residual": 0.0,
+    "fast_rewiring_versus_full_physical_residual": 1.9732004867433007e-15
+  },
+  "qualification": "Full-law algebraic proofs are in DERIVATION.md; matrix evaluations use ordinary floating point."
+}

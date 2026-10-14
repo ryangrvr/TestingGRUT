@@ -1,0 +1,70 @@
+{
+  "status": "CP12_DENSE_AUTONOMOUS_COUNT_REFINEMENT_PASS",
+  "models": [
+    {
+      "N": 6,
+      "Q": 12,
+      "budget": 6,
+      "T": 0.4,
+      "dimension": 24830,
+      "forward_error": 0.031133058640830158,
+      "leakage_subintervals": 8,
+      "rows": [
+        {
+          "detector": "removable_fraction",
+          "value": 0.7706534536100348,
+          "backward_error": 0.017050256157720944,
+          "expectation_error_upper": 0.0020309205899323723,
+          "interval": [
+            0.7686225330201024,
+            0.7726843741999672
+          ]
+        },
+        {
+          "detector": "flux_protected_fraction",
+          "value": 0.001949788085037552,
+          "backward_error": 0.003141818391004848,
+          "expectation_error_upper": 0.0011648961727453546,
+          "interval": [
+            0.0007848919122921973,
+            0.0031146842577829065
+          ]
+        },
+        {
+          "detector": "hole_protected_fraction",
+          "value": 0.22739675830492828,
+          "backward_error": 0.012165771990117018,
+          "expectation_error_upper": 0.0017267827258919336,
+          "interval": [
+            0.22566997557903634,
+            0.22912354103082022
+          ]
+        }
+      ],
+      "seconds": 11.055463609000071
+    },
+    {
+      "N": 6,
+      "Q": 12,
+      "budget": 10,
+      "T": 1.0,
+      "dimension": 304613,
+      "forward_error": 0.10974807840881003,
+      "leakage_subintervals": 2,
+      "rows": [
+        {
+          "detector": "flux_protected_fraction",
+          "value": 0.07411658318745355,
+          "backward_error": 0.03660036458287929,
+          "expectation_error_upper": 0.020078280078492054,
+          "interval": [
+            0.054038303108961495,
+            0.09419486326594562
+          ]
+        }
+      ],
+      "seconds": 102.50260862199957
+    }
+  ],
+  "scope": "Unforced state, no external graph record. Analytically justified forward/backward detector bounds evaluated in ordinary floating point; no formal roundoff certificate and no long-time phase claim."
+}
