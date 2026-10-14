@@ -1,0 +1,121 @@
+{
+  "status": "CP12_GROUND_CONNECTIVITY_VERIFIED",
+  "groups": [
+    {
+      "name": "frozen_law_fidelity",
+      "kind": "source hash and declared constants",
+      "details": "Frozen implementation hash matches."
+    },
+    {
+      "name": "complete_small_spectra",
+      "kind": "fresh full-matrix eigensolves",
+      "details": [
+        {
+          "N": 3,
+          "dimension": 78,
+          "max_error": 1.2434497875801753e-14
+        },
+        {
+          "N": 4,
+          "dimension": 1875,
+          "max_error": 8.459899447643693e-14
+        }
+      ]
+    },
+    {
+      "name": "unbounded_rotor_certificates",
+      "kind": "fresh exact rational LDL and trial energies",
+      "details": [
+        {
+          "N": 3,
+          "Q": 3,
+          "L": 2,
+          "dimension": 78,
+          "boundary_states": 12,
+          "tail_lower_rational": "928847/1000000",
+          "lower_rational": "-4673/10000",
+          "upper_rational": "-6230660655089029/13333333230875460",
+          "lower": -0.4673,
+          "upper": -0.46729955272256607,
+          "interval_width": 4.472774339463821e-07,
+          "all_rational_pivots_positive": true,
+          "minimum_pivot": 0.00032310185325472795,
+          "unique_outside_predecessor": true,
+          "scope": "Unregulated infinite-rotor ground energy at this N; exact rational certificate"
+        },
+        {
+          "N": 3,
+          "Q": 3,
+          "L": 3,
+          "dimension": 118,
+          "boundary_states": 12,
+          "tail_lower_rational": "2428847/1000000",
+          "lower_rational": "-11682489/25000000",
+          "upper_rational": "-18691982041980411/39999999816851996",
+          "lower": -0.46729956,
+          "upper": -0.4672995531891348,
+          "interval_width": 6.810865214082953e-09,
+          "all_rational_pivots_positive": true,
+          "minimum_pivot": 4.9294614075659414e-05,
+          "unique_outside_predecessor": true,
+          "scope": "Unregulated infinite-rotor ground energy at this N; exact rational certificate"
+        }
+      ]
+    },
+    {
+      "name": "all_sector_large_ground",
+      "kind": "saved numerical records and independent-builder cross-agreement",
+      "details": [
+        {
+          "N": 5,
+          "sectors": 7,
+          "full_dimension": 427986,
+          "global_gap": 0.07087073125188259
+        },
+        {
+          "N": 6,
+          "sectors": 11,
+          "full_dimension": 36801265,
+          "global_gap": 0.07111492454690826
+        }
+      ]
+    },
+    {
+      "name": "regulator_checks",
+      "kind": "saved refinements and all-sector floating comparison minima",
+      "details": [
+        {
+          "N": 4,
+          "energy_difference": 4.440892098500626e-15,
+          "connected_difference": 7.771561172376096e-16
+        },
+        {
+          "N": 5,
+          "energy_difference": 3.885780586188048e-15,
+          "connected_difference": 3.1086244689504383e-15
+        },
+        {
+          "N": 6,
+          "energy_difference": 3.885780586188048e-15,
+          "connected_difference": 5.551115123125783e-15
+        }
+      ]
+    },
+    {
+      "name": "graph_counts_and_shapes",
+      "kind": "fresh uniform enumeration and saved-state projector accounting",
+      "details": "N=4..7 counts; N=7 remains explicitly provisional."
+    },
+    {
+      "name": "projector_and_coherence_bounds",
+      "kind": "recomputed algebra from saved eigensolve certificates",
+      "details": "Two projected eigen-equations and complete energy decomposition."
+    }
+  ],
+  "timestamp_utc": "2026-10-14T02:33:22.210046+00:00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "large_eigensolves_rerun_by_this_verifier": false,
+  "scientific_limit": "Finite Q=N ground diagnostics; no thermodynamic geometry or gravity claim."
+}
