@@ -1,0 +1,67 @@
+{
+  "status": "CP12_ENERGY_MATCHED_PREPARATION_VERIFIED",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "steps": [
+    {
+      "script": "../cp12_preparation_minentropy_audit/check.py",
+      "status": "PASS",
+      "seconds": 0.14047179999988657,
+      "stdout_sha256": "a32be3fbdee7b678ee94997553bed697a079fbe971f625bde524b94324d98887"
+    },
+    {
+      "script": "exact_check.py",
+      "status": "PASS",
+      "seconds": 0.32282056800022474,
+      "stdout_sha256": "070be0047e2a3dbd371121292889a07e0e9fbc35d709c0db07d87abe548f81fa"
+    },
+    {
+      "script": "preparation.py",
+      "status": "PASS",
+      "seconds": 0.5726249180002014,
+      "stdout_sha256": "212de512ff5cf57d62d5523f1a71c402776027ff1ea259d55873765149091256"
+    },
+    {
+      "script": "quantum_check.py",
+      "status": "PASS",
+      "seconds": 22.494519534999654,
+      "stdout_sha256": "7a78653d8373cb76840f2f0cfe9256a88a67327245ab0839bfc3dcce4cd1690e"
+    }
+  ],
+  "checks": [
+    "Pinned parent checker executed verbatim",
+    "Exact unregulated full-H certificates",
+    "Independent rational and quotient high-density derivatives",
+    "Full coupled pure/mixed evolution at five cutoffs",
+    "Observable-specific cutoff convergence",
+    "Exact-versus-matrix coefficient agreement"
+  ],
+  "seconds": 23.5393663320001,
+  "regenerated_sha256": {
+    "exact_results.json": "070be0047e2a3dbd371121292889a07e0e9fbc35d709c0db07d87abe548f81fa",
+    "preparation_results.json": "bc4eeb98246d587d7b33a8e9d9f1fbcae3843e358df6f08f80090ce32b3d0e3c",
+    "quantum_L1.json": "58095a0183e1a4a9036e62f4872df385185c5ed50c7361fba427a697c044f584",
+    "quantum_L2.json": "a9d520e744d945bf77ee43e17b95416a0e24288103dbcd28b9d1ace55696e2fd",
+    "quantum_L3.json": "83229c90dee48c32fc9ae17b6aaa34c7b75ca76809643572555c47c4ddca40a3",
+    "quantum_L4.json": "fea8472388ffe0c59befa33a21f13069046150964fcda3e978e58eb26eff8592",
+    "quantum_L5.json": "291876aee60a74197424475a502324bdac76d63344fef8a45e813f63bba9b39b",
+    "quantum_results.json": "02d7cd49603c8e02bd1d4b6f27596c4f6ac3cf74d2240f1d1c009ff6e7ba7b25"
+  },
+  "source_sha256": {
+    "preparation.py": "def88f44d6ab15a23f585eabf448352887de355b23b66adcfab31b6fc267feef",
+    "exact_check.py": "5bc0c63f49ec76fec5ee9887b4055ec88c7011916beca5b02e811b9f12bd842b",
+    "quantum_check.py": "d5f35f16a4495af342016851d8f88800027e8a5d1120000ade3bf36104048683",
+    "verify.py": "7e578d587a7c1d6be0f25f7112bd4de6dccbcd5ddfcf932b52b49503227ca9a1",
+    "REPORT.md": "a415533467ca5b4095c97c284f8beaa37fb3c4ec586bc4eac919f44a86cb87d6",
+    "DERIVATION.md": "4c15c46057ce44e5d28b103b5e5b52957963bce44de5999a15aa8aacd72f631c",
+    "README.md": "7075cdce45671e336959786b6287a7297de46e618ba145352ef57120b173b431",
+    "requirements.txt": "5b2cb9b4f90d42c6319a111084c13e0e9f6d310863a9633be50af2e8d07a3e95"
+  },
+  "limits": [
+    "No full Q=3N finite-time propagation",
+    "No infinite-cutoff finite-time enclosure",
+    "No controller dynamics or state selection",
+    "Square counts are not disjoint packing or spatial volume growth"
+  ]
+}
