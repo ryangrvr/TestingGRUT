@@ -1,0 +1,115 @@
+{
+  "status": "CP12_DISTANCE_HISTORY_CHECKS_PASS",
+  "fresh": [
+    {
+      "script": "cp12_response_error_gate/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "782dcde883880d50db1bd5d4a5b63dd20ca9698fb5bd763cfee1686f8dbeadef"
+    },
+    {
+      "script": "cp12_distance_history/check.py",
+      "returncode": 0,
+      "stdout_sha256": "ae0edd22227b89331d950cef53a689f3ea2c4d1e0efbad352c2dfab4081ea022"
+    },
+    {
+      "script": "cp12_distance_history/edge_speed.py",
+      "returncode": 0,
+      "stdout_sha256": "7f44e9951b3240d65388ce968cad96df93a9a321f1d08a824ae9dabc4275248a"
+    },
+    {
+      "script": "cp12_distance_history/attribution.py",
+      "returncode": 0,
+      "stdout_sha256": "7b3dbe060669bef36e18375d3994a6da0e740123a70384a9562cea0e68a173df"
+    },
+    {
+      "script": "cp12_distance_history/pulse.py",
+      "returncode": 0,
+      "stdout_sha256": "daee41868f6fde4483ee425e0e28af0c903b23c588a4e680e09ad453e7ad9200"
+    }
+  ],
+  "finite_size_history_summary": [
+    {
+      "file": "N4_Q3_B10_W0.1_T0.1.json",
+      "N": 4,
+      "lag": 0.1,
+      "disconnected_response": 1.940393446481149e-12,
+      "analytic_truncation_bound": 5.688186685193552e-17,
+      "conditional_interval": [
+        1.9403365676073277e-11,
+        1.9404503343602135e-11
+      ],
+      "record_work_error_upper": 2.3337415051567432e-11
+    },
+    {
+      "file": "N4_Q3_B10_W0.1_T0.3.json",
+      "N": 4,
+      "lag": 0.3,
+      "disconnected_response": 6.583295360454515e-10,
+      "analytic_truncation_bound": 3.547296722699296e-12,
+      "conditional_interval": [
+        6.547822403327746e-09,
+        6.618768348188831e-09
+      ],
+      "record_work_error_upper": 2.3337415051567432e-11
+    },
+    {
+      "file": "N5_Q4_B10_W0.1_T0.1.json",
+      "N": 5,
+      "lag": 0.1,
+      "disconnected_response": -4.560623707954286e-09,
+      "analytic_truncation_bound": 8.245976555737325e-17,
+      "conditional_interval": [
+        -2.660363884853487e-08,
+        -2.660363785516664e-08
+      ],
+      "record_work_error_upper": 4.846402664530954e-11
+    },
+    {
+      "file": "N5_Q4_B10_W0.1_T0.3.json",
+      "N": 5,
+      "lag": 0.3,
+      "disconnected_response": -2.178965246096246e-07,
+      "analytic_truncation_bound": 5.647047245107423e-12,
+      "conditional_interval": [
+        -1.2710960047297639e-06,
+        -1.2710301210145244e-06
+      ],
+      "record_work_error_upper": 4.846402664530954e-11
+    },
+    {
+      "file": "N6_Q5_B8_W0.1_T0.1.json",
+      "N": 6,
+      "lag": 0.1,
+      "disconnected_response": -9.140767475305568e-09,
+      "analytic_truncation_bound": 9.774810193068157e-13,
+      "conditional_interval": [
+        -4.1976549353306506e-08,
+        -4.196756313024773e-08
+      ],
+      "record_work_error_upper": 1.6499428326701096e-08
+    },
+    {
+      "file": "N6_Q5_B8_W0.1_T0.3.json",
+      "N": 6,
+      "lag": 0.3,
+      "disconnected_response": -4.3227826784894736e-07,
+      "analytic_truncation_bound": 8.089445671170812e-09,
+      "conditional_interval": [
+        -2.0220556522298e-06,
+        -1.9477658879493175e-06
+      ],
+      "record_work_error_upper": 1.6499428326701096e-08
+    }
+  ],
+  "large_evolutions_rerun_by_this_verifier": false,
+  "state_coupling_evolutions_rerun_by_this_verifier": false,
+  "floating_point_qualification": "Analytically justified error bounds numerically evaluated; no interval-arithmetic certificate of roundoff.",
+  "locality_ruling": "Resolved rewiring-mediated response between initially disconnected components in the tested auxiliary preparation. No growing intrinsic causal cone or state-selected spacetime established.",
+  "pool_norm_scope": "Exact full-Hamiltonian collective capacity; not a proof every state realizes it or a uniform finite-time large-N extrapolation.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seconds": 25.31154823899942
+}

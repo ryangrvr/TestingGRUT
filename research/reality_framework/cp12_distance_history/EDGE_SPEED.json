@@ -1,0 +1,385 @@
+{
+  "status": "CP12_POOL_SPEED_EXACT_COUNTS_PASS",
+  "incidence_controls": [
+    {
+      "M": 6,
+      "Q": 3,
+      "L": 1,
+      "zero_pool_graphs": 10,
+      "one_pool_graphs": 10,
+      "cross_entries": 30,
+      "source_degree": 3,
+      "target_degree": 3,
+      "exact_cross_norm_square": "1/400"
+    },
+    {
+      "M": 6,
+      "Q": 3,
+      "L": 3,
+      "zero_pool_graphs": 1,
+      "one_pool_graphs": 9,
+      "cross_entries": 9,
+      "source_degree": 9,
+      "target_degree": 1,
+      "exact_cross_norm_square": "1/400"
+    },
+    {
+      "M": 10,
+      "Q": 4,
+      "L": 1,
+      "zero_pool_graphs": 126,
+      "one_pool_graphs": 84,
+      "cross_entries": 504,
+      "source_degree": 4,
+      "target_degree": 6,
+      "exact_cross_norm_square": "3/1250"
+    },
+    {
+      "M": 10,
+      "Q": 4,
+      "L": 4,
+      "zero_pool_graphs": 15,
+      "one_pool_graphs": 80,
+      "cross_entries": 240,
+      "source_degree": 16,
+      "target_degree": 3,
+      "exact_cross_norm_square": "3/625"
+    },
+    {
+      "M": 15,
+      "Q": 5,
+      "L": 1,
+      "zero_pool_graphs": 2002,
+      "one_pool_graphs": 1001,
+      "cross_entries": 10010,
+      "source_degree": 5,
+      "target_degree": 10,
+      "exact_cross_norm_square": "1/450"
+    },
+    {
+      "M": 15,
+      "Q": 5,
+      "L": 5,
+      "zero_pool_graphs": 252,
+      "one_pool_graphs": 1050,
+      "cross_entries": 6300,
+      "source_degree": 25,
+      "target_degree": 6,
+      "exact_cross_norm_square": "1/150"
+    },
+    {
+      "M": 21,
+      "Q": 6,
+      "L": 1,
+      "zero_pool_graphs": 38760,
+      "one_pool_graphs": 15504,
+      "cross_entries": 232560,
+      "source_degree": 6,
+      "target_degree": 15,
+      "exact_cross_norm_square": "1/490"
+    },
+    {
+      "M": 21,
+      "Q": 6,
+      "L": 6,
+      "zero_pool_graphs": 5005,
+      "one_pool_graphs": 18018,
+      "cross_entries": 180180,
+      "source_degree": 36,
+      "target_degree": 10,
+      "exact_cross_norm_square": "2/245"
+    },
+    {
+      "M": 21,
+      "Q": 14,
+      "L": 6,
+      "zero_pool_graphs": 15,
+      "one_pool_graphs": 630,
+      "cross_entries": 1260,
+      "source_degree": 84,
+      "target_degree": 2,
+      "exact_cross_norm_square": "2/525"
+    }
+  ],
+  "asymptotic_formula_evaluations": [
+    {
+      "N": 8,
+      "Q": 7,
+      "single_edge_cross_norm_square": "3/1600",
+      "star_pool_cross_norm_square": "3/320",
+      "single_edge_N_scaled": 0.015,
+      "star_pool_norm": 0.09682458365518543
+    },
+    {
+      "N": 16,
+      "Q": 15,
+      "single_edge_cross_norm_square": "7/6400",
+      "star_pool_cross_norm_square": "91/6400",
+      "single_edge_N_scaled": 0.0175,
+      "star_pool_norm": 0.11924240017711821
+    },
+    {
+      "N": 32,
+      "Q": 31,
+      "single_edge_cross_norm_square": "3/5120",
+      "star_pool_cross_norm_square": "87/5120",
+      "single_edge_N_scaled": 0.01875,
+      "star_pool_norm": 0.1303540850913388
+    },
+    {
+      "N": 64,
+      "Q": 63,
+      "single_edge_cross_norm_square": "31/102400",
+      "star_pool_cross_norm_square": "1891/102400",
+      "single_edge_N_scaled": 0.019375,
+      "star_pool_norm": 0.1358925931572431
+    },
+    {
+      "N": 128,
+      "Q": 127,
+      "single_edge_cross_norm_square": "63/409600",
+      "star_pool_cross_norm_square": "315/16384",
+      "single_edge_N_scaled": 0.0196875,
+      "star_pool_norm": 0.13865811991639726
+    },
+    {
+      "N": 256,
+      "Q": 255,
+      "single_edge_cross_norm_square": "127/1638400",
+      "star_pool_cross_norm_square": "32131/1638400",
+      "single_edge_N_scaled": 0.01984375,
+      "star_pool_norm": 0.14004001590505302
+    },
+    {
+      "N": 512,
+      "Q": 511,
+      "single_edge_cross_norm_square": "51/1310720",
+      "star_pool_cross_norm_square": "25959/1310720",
+      "single_edge_N_scaled": 0.019921875,
+      "star_pool_norm": 0.14073075450544517
+    },
+    {
+      "N": 1024,
+      "Q": 1023,
+      "single_edge_cross_norm_square": "511/26214400",
+      "star_pool_cross_norm_square": "521731/26214400",
+      "single_edge_N_scaled": 0.0199609375,
+      "star_pool_norm": 0.14107607235430808
+    }
+  ],
+  "history_speed_checks": [
+    {
+      "file": "N4_Q3_B10_W0.1_T0.1.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 1.1567527802180955e-05,
+          "conditional_speed_upper": 2.4999791667361118e-05,
+          "weighted_upper": 1.2499895833680557e-05
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 5.031128024384446e-06,
+          "conditional_speed_upper": 2.4999791667361118e-05,
+          "weighted_upper": 7.499937502147702e-06
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 7.94359531983979e-07,
+          "conditional_speed_upper": 2.4999791667361118e-05,
+          "weighted_upper": 2.499979170597814e-06
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 7.944699733906879e-07,
+          "conditional_speed_upper": 2.4999791667361118e-05,
+          "weighted_upper": 2.499979160935046e-06
+        }
+      ]
+    },
+    {
+      "file": "N4_Q3_B10_W0.1_T0.3.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 8.974162362629379e-05,
+          "conditional_speed_upper": 0.00022498312550624182,
+          "weighted_upper": 0.0001124915627531209
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 4.0972353802081294e-05,
+          "conditional_speed_upper": 0.00022498312550624182,
+          "weighted_upper": 6.749493766932569e-05
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 6.465975448272188e-06,
+          "conditional_speed_upper": 0.00022498312550624182,
+          "weighted_upper": 2.2498312585377186e-05
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 6.4758246689556065e-06,
+          "conditional_speed_upper": 0.00022498312550624182,
+          "weighted_upper": 2.2498312498418073e-05
+        }
+      ]
+    },
+    {
+      "file": "N5_Q4_B10_W0.1_T0.1.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 8.852181769547496e-06,
+          "conditional_speed_upper": 2.3999808000614396e-05,
+          "weighted_upper": 9.599923200245679e-06
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 4.494433716086864e-06,
+          "conditional_speed_upper": 2.3999808000614396e-05,
+          "weighted_upper": 6.857088000182874e-06
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 9.805550739285291e-07,
+          "conditional_speed_upper": 2.3999808000614396e-05,
+          "weighted_upper": 2.7428352057834796e-06
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 1.0894495695836246e-07,
+          "conditional_speed_upper": 2.3999808000614396e-05,
+          "weighted_upper": 6.857088028723375e-07
+        },
+        {
+          "initial_distance": 5,
+          "measured_weight": 1.9885350645400693e-06,
+          "conditional_speed_upper": 2.3999808000614396e-05,
+          "weighted_upper": 4.114252791529865e-06
+        }
+      ]
+    },
+    {
+      "file": "N5_Q4_B10_W0.1_T0.3.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 6.835674838495676e-05,
+          "conditional_speed_upper": 0.00021598444844789068,
+          "weighted_upper": 8.639377937915556e-05
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 3.664308715462413e-05,
+          "conditional_speed_upper": 0.00021598444844789068,
+          "weighted_upper": 6.170984241374904e-05
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 7.989531318049423e-06,
+          "conditional_speed_upper": 0.00021598444844789068,
+          "weighted_upper": 2.4683937016889295e-05
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 8.871648420586327e-07,
+          "conditional_speed_upper": 0.00021598444844789068,
+          "weighted_upper": 6.170984267059711e-06
+        },
+        {
+          "initial_distance": 5,
+          "measured_weight": 1.6215527250807853e-05,
+          "conditional_speed_upper": 0.00021598444844789068,
+          "weighted_upper": 3.7025905371035635e-05
+        }
+      ]
+    },
+    {
+      "file": "N6_Q5_B8_W0.1_T0.1.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 6.815957191985689e-06,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 7.40735253788557e-06
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 4.146316309563215e-06,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 6.0679611188585585e-06
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 1.2292878547211825e-06,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 2.8415817976828906e-06
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 1.930168684148081e-07,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 8.879943145053209e-07
+        },
+        {
+          "initial_distance": 5,
+          "measured_weight": 1.693044839044306e-08,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 1.7759886336050543e-07
+        },
+        {
+          "initial_distance": 6,
+          "measured_weight": 2.7889293416816503e-06,
+          "conditional_speed_upper": 2.222205761365646e-05,
+          "weighted_upper": 4.8395689813634926e-06
+        }
+      ]
+    },
+    {
+      "file": "N6_Q5_B8_W0.1_T0.3.json",
+      "tests": [
+        {
+          "initial_distance": 1,
+          "measured_weight": 5.249900350651204e-05,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 6.666222234073979e-05
+        },
+        {
+          "initial_distance": 2,
+          "measured_weight": 3.383058189227324e-05,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 5.460841389571274e-05
+        },
+        {
+          "initial_distance": 3,
+          "measured_weight": 1.0025067782293855e-05,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 2.557272070253155e-05
+        },
+        {
+          "initial_distance": 4,
+          "measured_weight": 1.5730198974963597e-06,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 7.991475244104412e-06
+        },
+        {
+          "initial_distance": 5,
+          "measured_weight": 1.3790209431862048e-07,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 1.5982950529556084e-06
+        },
+        {
+          "initial_distance": 6,
+          "measured_weight": 2.275385772800709e-05,
+          "conditional_speed_upper": 0.00019998666702221712,
+          "weighted_upper": 4.3553539786171925e-05
+        }
+      ]
+    }
+  ],
+  "theorem": "g_L^2 = Gamma^2 Q L (M-L-Q+1)/M^2 for a nonempty zero-pool subspace; one-edge L=1. Uniform neutral strata attain the Schur upper bound, including in the unbounded physical Hilbert space.",
+  "limit": "Q~nu*N, L~lambda*N: g_L -> Gamma*sqrt(2*nu*lambda); L=1: g_1^2~2*nu*Gamma^2/N.",
+  "limit_scope": "Operator capacity, not actual long-time response, a uniform Taylor extrapolation, or a no-go for state-dependent emergent locality."
+}
