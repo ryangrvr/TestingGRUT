@@ -94,3 +94,15 @@ Examples: at N=6, a pure cycle has 0 outgoing disconnection swaps and a triangle
 ## Next genuinely open step
 
 Use this connected-sector inequality together with the exact degree-two exclusion and full-H coherent variational methods to attempt a **controlled projector bound for actual ground-state connectedness**, including the negative hopping term and non-negligible graph mixing. If no bound can be earned, study gauge-invariant relational geometry and propagation in a *specified same-sector state*, distinguishing ground states from supplied preparations. Do not infer that an energy witness is the ground state or claim emergence of Einstein gravity from topology alone.
+
+
+## Independent connected-sector matrix spectrum control
+
+An additional verifier, dirichlet_spectrum_check.py, assembles the complete scalar neutral-fiber Johnson graph Laplacian on **all** connected labelled Q=N graphs at N=5 (222 graphs) and N=6 (3,660 graphs). It computes the minimal eigenvalue of the compressed rewiring operator minus the uniform bridge-penalty diagonal:
+
+| N | Connected graphs | Minimum of R_connected − w_N bridge-count |
+|--:|--:|--:|
+| 5 | 222 | 0.0263068312 |
+| 6 | 3,660 | 0.0502375193 |
+
+The internal Laplacian obtained by subtracting the exact connected-to-disconnected boundary diagonal has smallest eigenvalue numerically zero (roundoff at ~2e−17), as expected from its sum-of-squares construction. These finite floating-point checks do not establish a thermodynamic phase; the full rotor/matter result relies on the exact fiberwise positive-Laplacian proof.
