@@ -1,0 +1,73 @@
+{
+  "status": "CP12_CUBIC_TOPOLOGY_VERIFIED",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "steps": [
+    {
+      "script": "../cp12_phase_motif_indistinguishability/check.py",
+      "status": "PASS",
+      "seconds": 0.7474088719998235,
+      "stdout_sha256": "a9df8870424582562c5a70f7b826628dd16707c88d72682dea4cfbf59446295c"
+    },
+    {
+      "script": "symbolic_check.py",
+      "status": "PASS",
+      "seconds": 0.05190852500004439,
+      "stdout_sha256": "fa467b8252ad041def0339c6f77e6d7b4300905facdde8349cda496b45ef891f"
+    },
+    {
+      "script": "full_moments.py",
+      "status": "PASS",
+      "seconds": 3.132307632999982,
+      "stdout_sha256": "49b9cf6ec39b8d76859edbb521ec47d46c156e09623e83ad96850fd09eb7c482"
+    },
+    {
+      "script": "topology.py",
+      "status": "PASS",
+      "seconds": 0.182456011000113,
+      "stdout_sha256": "227446902bd78970b6e91c6fb0d86fcd5698c15a558abf9e35bff0e11ae93095"
+    },
+    {
+      "script": "asymptotic_check.py",
+      "status": "PASS",
+      "seconds": 0.09214817800011588,
+      "stdout_sha256": "227b23ea5d1b6070abbf3b8abaf80ba2c29c2b93d2527321db934113cfc61674"
+    }
+  ],
+  "checks": [
+    "Byte-identical parent checker run",
+    "Formal cubic polynomial identity",
+    "Independent full unregulated Hamiltonian moments",
+    "Non-invariant hopping correction",
+    "Matched degrees and energy moments",
+    "Independent factorial and overlap formulas",
+    "Same Q=3N sector",
+    "Controlled N^-5 and N^-6 derivative asymptotics",
+    "Full-H conjugation covariance"
+  ],
+  "seconds": 4.20822444800001,
+  "regenerated_sha256": {
+    "asymptotic_results.json": "227b23ea5d1b6070abbf3b8abaf80ba2c29c2b93d2527321db934113cfc61674",
+    "full_moments_results.json": "3b8ff47059f8cb3bb695f16c1e130e36343775f814bf471c1cbccef8d713d863",
+    "symbolic_results.json": "fa467b8252ad041def0339c6f77e6d7b4300905facdde8349cda496b45ef891f",
+    "topology_results.json": "7b4687fd4ad60cd45249588b326e4be16931d46f34f7090470a3614c27143d26"
+  },
+  "source_sha256": {
+    "REPORT.md": "05e9bcabc10e1f4c443a161504bc19068441c890aae6126e4aef5c01e6f3d130",
+    "DERIVATION.md": "32c53bac8ece9dc7a41587bb021a5cb90325db260d4e00e89dee8b0ddbff6b1a",
+    "README.md": "eaaeb8525cc53dece97a576c0a218e424e78fa8bb849766509811a64f1639195",
+    "requirements.txt": "23bf63c77db7c14b9e04f686f9cb9c319c5067d5e6935299b6dcb1ca521f4a7d",
+    "topology.py": "33139785a95fcd652689070a74aee9638287909601122ecb78903498164fa51d",
+    "full_moments.py": "dcd7ffe72f9f934792c8d9fe2096dbc8baec7b3ff71d8016f1f33f0bf56f5908",
+    "symbolic_check.py": "aae71588500f632ca6a206a4f83eb6427cfc9df59f169999fb3117e86a7e51bb",
+    "asymptotic_check.py": "f30e93dc41326cfb4ccda305b34690d0c42d45bc0fdf8ae60a87e0f2c0cb1a42",
+    "verify.py": "7e9fab60da3b10213c5f90f304ea914084c42e26d2aac92ce1ec93295ca8ccd3"
+  },
+  "limits": [
+    "No high-density finite-time dynamics",
+    "No uniform Taylor remainder",
+    "No disjoint-loop packing, dimension or propagation test",
+    "No autonomous preparation or state-selection mechanism",
+    "Auxiliary Q=2N is not main Q=3N"
+  ]
+}
