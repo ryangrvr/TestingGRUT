@@ -104,3 +104,56 @@ Other essential limits:
 - No new conceptual principle is asserted: the proof combines unitary invariance of operator norm, Markov's inequality and the parent's cycle counting. Independent scientific novelty is not established.
 
 **Next Work test:** In the same Q=3N state, calculate how candidate low-min-entropy and coherent preparations differ in *dynamically generated* loop packing, graph distance/volume growth, and relational source–detector response; do not infer formation from the mere ability to evade an entropy obstruction.
+
+
+## General all-time min-entropy threshold — 14 October 2026 follow-up
+
+The earlier "general min-entropy/energy variant" above used the sufficient bound \(\|\rho_0\|_\infty\le e^{cN}/D\). The following exact spectral-norm formulation works for **arbitrary initial density-matrix spectra** and quantifies how much initial specialness is necessary to evade the loop-rich obstruction. This is a sharpening of the same proof, not a new dynamical state-selection principle.
+
+Let \(Q=\nu N+O(1)\), \(M=\binom N2\), \(D_N=\binom M Q\), \(S_N=\{G:K_R(G)\ge\lceil\alpha N\rceil\}\), with fixed \(\nu,\alpha>0\) and fixed microscopic \(R\). Define \(H_\infty(\rho_0)=-\log_2\|\rho_0\|_\infty\) **in bits**. Assume finite initial total energy satisfying
+
+\[
+\langle H-\kappa Q\rangle_{\rho_0}\le cN
+\]
+
+for a constant \(c\) independent of \(N\). This energy condition is essential for the electric-field Markov tail. For every fixed \(0<\delta<\alpha/\nu\), the same low-electric-field rank estimate and conserved energy imply
+
+\[
+\boxed{
+\sup_{T\in\mathbb R}P_T(S_N)
+\le 2^{-H_\infty(\rho_0)}
+\exp[(\nu-\alpha+\nu\delta)N\ln N+O(N)]
++C N^{-\delta}
+}
+\]
+
+where \(C\) depends on the fixed energy-density bound and frozen couplings, **not** on evolution time \(T\). The power \(N^{-\delta}\) comes from the cutoff \(F\le N^{1+\delta}\), while the first term uses \(\|\rho_T\|_\infty=\|\rho_0\|_\infty\) and the exact labelled-graph cycle-packing bound. The natural logarithm \(\ln\) is used in the exponential; \(H_\infty\) uses base-2 logarithms.
+
+**Proof:** As above, energy conservation and \(R\ge0\) give \(\langle F\rangle_T\le cN+2|t_{\rm hop}|Q=O(N)\), so \(\Pr(F>N^{1+\delta})\le CN^{-\delta}\). Uniformly in \(T\), \(\rho_T\) has operator norm \(2^{-H_\infty(\rho_0)}\). The spectral rank of \(\Pi_{S_N}P_{\le N^{1+\delta}}\) is bounded by
+\[
+\exp[(\nu-\alpha+\nu\delta)N\ln N+O(N)],
+\]
+via disjoint short-cycle counting, \(\binom{N+Q}{Q}\) fermion states and Gaussian integer electric-field counting with \(s=N^{-\delta}\). Since graph and electric-energy projectors commute, splitting at the threshold proves the formula.
+
+Define the *neutral-graph reference min-entropy deficit*
+\[
+\Delta H_\infty(N)=\log_2 D_N-H_\infty(\rho_0).
+\]
+This is relative to the dimension \(D_N\) of the **neutral labelled graph subspace**; because unbounded U(1) rotors give an infinite-dimensional physical Hilbert space, this is **not** entropy relative to an absolute maximally mixed physical state. The deficit can be negative for some physical preparations.
+
+If a series of preparations, with \(O(N)\) excess energy, succeeds with nonvanishing probability \(\Pr_T(S_N)\ge p_*>0\) at some (possibly \(N\)-dependent and arbitrarily late) time, then for every fixed \(\delta\in(0,\alpha/\nu)\), the inequality forces
+\[
+\Delta H_\infty(N)\ge(\alpha-\nu\delta)N\log_2 N-O(N).
+\]
+Because the argument holds for every such fixed \(\delta\), this establishes the asymptotic necessary threshold
+\[
+\boxed{
+\liminf_{N\to\infty}
+\frac{\Delta H_\infty(N)}{N\log_2 N}\ge\alpha
+}
+\]
+along any sequence with a uniform nonzero success probability and energy bound. In other words, assembly of this **microscopic loop-rich graph class** requires roughly \(\alpha N\log_2 N\) bits of initial **min-entropy deficit relative to the flat neutral-graph mixture**, at leading order.
+
+The incoherent neutral-graph mixture has \(H_\infty=\log_2D_N\), deficit zero and fails the test for all time. Its coherent pure equal superposition has \(H_\infty=0\), deficit \(\log_2D_N=\nu N\log_2N+O(N)\) and *escapes this necessary-condition obstruction*, **without any proof that it assembles geometry**. Other low-min-entropy initial states also evade it; coherence is not uniquely required.
+
+**Interpretation / theory-program boundary:** This mathematically quantifies an initial-state-selection obligation for closed CP-12. It resembles the broad idea of a specially prepared, low-entropy cosmological beginning, sometimes associated with Penrose's past hypothesis, but it is **not** a derivation of gravitational initial entropy, Weyl curvature, cosmological boundary conditions, or an independent physical state-selection law. It echoes the earlier GRUT III N1 and CP-04 \(\sigma\) underdetermination concerns without establishing that they are mathematically equivalent. Closed unitary dynamics preserves the density-matrix eigenvalues and cannot generate the missing spectral purity from the stated high-min-entropy preparations; open-system entropy export, postselection, and a justified initial-condition theory lie outside this no-go's assumptions.
