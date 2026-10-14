@@ -1,0 +1,41 @@
+{
+  "status": "CP12_OBSERVABLE_ERROR_CHECKS_PASS",
+  "fresh": [
+    {
+      "script": "cp12_unmasked_formation/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "0f959b052ffe248975fe2f4f0572c9bf781bf87e050fc1ebc19d5634aeb297f2"
+    },
+    {
+      "script": "cp12_response_error_gate/check.py",
+      "returncode": 0,
+      "stdout_sha256": "dd139ccf3a934c8202dcafb9ba9eb6dfa67654f14f4687f5c5c1c1926ab8d7df"
+    }
+  ],
+  "saved_expensive_runs": [
+    {
+      "N": 5,
+      "resolved_channels": [
+        "final_distance_1",
+        "mean_other_vertex_density"
+      ]
+    },
+    {
+      "N": 6,
+      "resolved_channels": [
+        "final_distance_1",
+        "final_distance_2",
+        "mean_other_vertex_density"
+      ]
+    }
+  ],
+  "expensive_runs_rerun_by_this_verifier": false,
+  "bounds_evaluated_in_ordinary_floating_point": true,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "formation_gate": "Not established; diameter-two controls do not give extended volume growth, a causal cone, or autonomous state selection.",
+  "seconds": 18.575095992999877
+}
