@@ -1,0 +1,54 @@
+{
+  "status": "CP12_LOCAL_CIRCULATION_RESOURCE_VERIFIED",
+  "fresh_checkers": 4,
+  "checks": [
+    {
+      "script": "cp12_holonomy_locality_gate/check.py",
+      "returncode": 0,
+      "marker": "CP12_HOLONOMY_LOCALITY_GRAPH_CHECK_PASS",
+      "fresh_execution": true,
+      "saved_result_comparison": false,
+      "stdout_sha256": "e67d0543e6122415e8e0b63bbf2b3cd28c47cf6049b15cf95cf6b25447533b53",
+      "seconds": 0.4961753289999251
+    },
+    {
+      "script": "cp12_local_circulation_resource/check.py",
+      "returncode": 0,
+      "marker": "CP12_LOCAL_CIRCULATION_GRAPH_CONTROLS_PASS",
+      "fresh_execution": true,
+      "saved_result_comparison": true,
+      "stdout_sha256": "ea9426c10ab9074a430ddc142dd1d24a367317c1a4d293d7efd7129e6ab56dd1",
+      "seconds": 9.852403943999889
+    },
+    {
+      "script": "cp12_local_circulation_resource/wilson_check.py",
+      "returncode": 0,
+      "marker": "CP12_HIGHER_DENSITY_WILSON_MOMENTS_PASS",
+      "fresh_execution": true,
+      "saved_result_comparison": true,
+      "stdout_sha256": "7de819009748eaf9c403b0e99d3fc08d66c22ff873a5617f3e1e4356fbcf14a2",
+      "seconds": 7.285322557999962
+    },
+    {
+      "script": "cp12_local_circulation_resource/quantum_check.py",
+      "returncode": 0,
+      "marker": "CP12_LOCAL_CIRCULATION_QUANTUM_CONTROLS_PASS",
+      "fresh_execution": true,
+      "saved_result_comparison": true,
+      "stdout_sha256": "a33971a951bed7c1a0ad608f2b7156fc95ba88de29e2f86b4753b7b60983bd58",
+      "seconds": 6.198652655999922
+    }
+  ],
+  "parent_commit": "ae91c9beb0d8dda0f7692ea8bab0c5f808355530",
+  "dependency_sha256": {
+    "cp12_ground_connectivity/frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "cp12_ground_connectivity/exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b",
+    "cp12_holonomy_locality_gate/check.py": "77e89f7240638107f04d013d42cb61dd50fcbde62c637260a1e1122f16282263"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "floating_record_tolerance": "5e-10 * max(1,abs(a),abs(b)); elapsed time excluded",
+  "seconds": 23.834686962999967,
+  "scope": "Fresh numerical/algebraic checks. Analytical infinite-rotor and large-N proof requires mathematical audit."
+}
