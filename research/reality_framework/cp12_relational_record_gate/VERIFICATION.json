@@ -1,0 +1,70 @@
+{
+  "status": "CP12_RELATIONAL_RECORD_GATE_VERIFIED",
+  "fresh": [
+    {
+      "script": "checks.py",
+      "returncode": 0,
+      "stdout_sha256": "7332f04e928c178d89616f4fd88e04b79f456d2cd863765bc25d02090492336c"
+    },
+    {
+      "script": "analyze.py",
+      "returncode": 0,
+      "stdout_sha256": "1652eb463dcb3adb8bf79a43f7fa68894609b98d37e5781ce2668096be3f2b35"
+    },
+    {
+      "script": "energy_control.py",
+      "returncode": 0,
+      "stdout_sha256": "a8a83086c449a33508243040876dd0adbbac5407e78bb0b6c7be4c68c2b85a17"
+    }
+  ],
+  "saved_larger_results_hash_validated": true,
+  "larger_replay_or_dense_dual_silently_rerun": false,
+  "finite_relational_summaries": [
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 128,
+      "T": 10.0,
+      "gauss_parent_core_TV": 0.02128897648546313,
+      "core_TV_lower": 0.02121178467181871,
+      "core_connected_probability": 0.2660516961182579
+    },
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 256,
+      "T": 10.0,
+      "gauss_parent_core_TV": 0.021288976485447156,
+      "core_TV_lower": 0.021288976439819182,
+      "core_connected_probability": 0.26605169612097956
+    },
+    {
+      "N": 5,
+      "Q": 5,
+      "budget": 128,
+      "T": 10.0,
+      "gauss_parent_core_TV": 0.023242466824637584,
+      "core_TV_lower": 0.023048226452868584,
+      "core_connected_probability": 0.16118242767832683
+    },
+    {
+      "N": 6,
+      "Q": 6,
+      "budget": 128,
+      "T": 10.0,
+      "gauss_parent_core_TV": 0.0245912513817266,
+      "core_TV_lower": 0.02415669674930302,
+      "core_connected_probability": 0.09222741915439345
+    }
+  ],
+  "N4_core_TV_cutoff_comparison_max_difference": 1.597333376679444e-14,
+  "dense_core_TV_witness_lower": 0.014437904805030918,
+  "ruling": "Finite relational shape correlations differ from the specified controls. Extended persistent local geometry, a causal cone and spacetime formation are not established. This is not a theory-wide no-go result.",
+  "qualification": "Analytic full-law cutoff and operator bounds evaluated in ordinary floating point. No formal interval-arithmetic certificate for roundoff.",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seconds": 6.076512677999972
+}
