@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 10,
+  "electric_square_budget": 50,
+  "source_invariant_dimension": 810377,
+  "full_orbit_dimension": 19423728,
+  "wait": 2.0,
+  "lag": 0.25,
+  "charged_event_probability": 0.0596299728817511,
+  "charged_event_probability_interval": [
+    0.059616159286639034,
+    0.0596437880770443
+  ],
+  "charged_initial_event_response": {
+    "joint_susceptibility": 5.726245391506535e-05,
+    "absolute_error_upper": 3.8714884249727804e-05,
+    "joint_interval": [
+      1.8547569665337543e-05,
+      9.597733816479314e-05
+    ],
+    "zero_excluded": true,
+    "conditional_susceptibility": 0.0009602964943254184,
+    "conditional_interval": [
+      0.000310972362140696,
+      0.0016099215265332138
+    ]
+  },
+  "unfiltered_response": {
+    "joint_susceptibility": 0.0012370551633666905,
+    "absolute_error_upper": 0.00012733025381443273,
+    "joint_interval": [
+      0.0011097249095522578,
+      0.0013643854171811233
+    ],
+    "zero_excluded": true
+  },
+  "finite_pulse_controls": [
+    {
+      "theta": 0.001,
+      "susceptibility": 5.726244462454788e-05,
+      "difference_from_commutator": -9.290517465586345e-12
+    },
+    {
+      "theta": 0.0005,
+      "susceptibility": 5.7262451922529545e-05,
+      "difference_from_commutator": -1.992535802151918e-12
+    }
+  ],
+  "wait_state_error_upper": 2.8285372183184246e-05,
+  "lag_column_error_upper": [
+    8.668735947141464e-05,
+    5.9154571616332674e-05,
+    9.466817610266649e-05,
+    6.0306734814528684e-05
+  ],
+  "source": "exp(-i theta n0) at wait, after the optional initial charged-event projection.",
+  "detector": "Any fixed receiver j != 0. Exact source-stabilizer symmetry permits its density expectation to be evaluated as the average over those vertices. No final graph-distance bin is used.",
+  "conditioning": "Initial event only; n0 commutes with its projector, so its probability has zero source derivative. No final-event quotient derivative is omitted.",
+  "interpretation": "Joint charged-density/matter-response control from the original neutral ray, with explicit diagnostic projection. K5 has only distance-one receivers: this is not a growing spatial propagation test or autonomous classical geometry.",
+  "error_scope": "Full outgoing residuals and analytical Duhamel upper sums, ordinary floating point plus5e-10 reporting allowance; not formal outward-rounded certification.",
+  "seconds": 147.081913903
+}

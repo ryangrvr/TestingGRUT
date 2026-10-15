@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "parent": "1e68b1a7d29f3f7b36350aaf7d72700175ad6182",
+  "timestamp_utc": "2026-10-15T16:32:44.895073+00:00",
+  "frozen_law_changed": false,
+  "original_neutral_ray": true,
+  "initial_topology_filter": false,
+  "executed_science": [
+    {
+      "output": "N4_Q4_B12_A1_V0.25.json",
+      "status": "PASS",
+      "seconds": 0.13385587299944746,
+      "dimension": 116
+    },
+    {
+      "output": "N4_Q4_B256_A1_V0.25.json",
+      "status": "PASS",
+      "seconds": 0.6702260249994652,
+      "dimension": 577
+    },
+    {
+      "output": "N5_Q10_B30_A0.25_V0.25.json",
+      "status": "PASS",
+      "seconds": 7.837301318000755,
+      "dimension": 32577
+    },
+    {
+      "output": "N5_Q10_B50_A0.25_V0.25.json",
+      "status": "PASS",
+      "seconds": 105.23498350400041,
+      "dimension": 162191
+    },
+    {
+      "output": "N6_Q12_B8_A0.25_V0.25.json",
+      "status": "PASS",
+      "seconds": 34.35915124799976,
+      "dimension": 102902
+    },
+    {
+      "output": "N6_Q12_B12_A0.25_V0.25.json",
+      "status": "PASS",
+      "seconds": 519.1825496430001,
+      "dimension": 715985
+    },
+    {
+      "output": "RESPONSE_N5_B50.json",
+      "status": "PASS",
+      "seconds": 147.081913903,
+      "dimension": 810377
+    },
+    {
+      "output": "RAW_ONSET_N5_PYTHON.json",
+      "status": "PASS",
+      "seconds": 0.4095765689999098,
+      "dimension": null
+    },
+    {
+      "output": "RAW_ONSET_N6.json",
+      "status": "PASS",
+      "seconds": 7.480206570000519,
+      "dimension": null
+    }
+  ],
+  "independent_checks": [
+    "Legacy-Python complete small Hamiltonian and outgoing Gram comparisons",
+    "Explicit directed-cycle enumeration versus SCC",
+    "N6 legacy canonicalization of 7174 unregulated destinations, including12 cancelled orbits",
+    "Streaming versus inherited full-grid propagation",
+    "N4 graph-record energy/entropy versus earlier full physical-basis experiment",
+    "Small/high-budget full observable-action current enclosures",
+    "Weighted integer matrix, independent monotone recurrence, and local signed motif onset agreement",
+    "Independent finite difference of probability current and finite physical source pulses",
+    "All declared cutoff probability intervals overlap"
+  ],
+  "basis_construction": {
+    "N6_budget12_seconds": 657.6223986750001,
+    "N6_dimension": 715985,
+    "N6_outgoing_orbits": 705212,
+    "N6_nnz": 18098633,
+    "N5_source_budget50_seconds": 286.02750377400025,
+    "N5_source_dimension": 810377,
+    "optional_basis_matrix_caches_used": true,
+    "scientific_trajectories_recomputed": true,
+    "cached_scientific_results_used": false
+  },
+  "limitations": {
+    "formal_interval_arithmetic": false,
+    "external_certification": false,
+    "large_N_phase": false,
+    "N6_time2_formation_interval_contains_zero": true,
+    "N6_history_interference_sign_unresolved": true,
+    "N7_N8_finite_time_evolution_performed": false
+  },
+  "execution_repairs": [
+    {
+      "component": "response.py",
+      "earlier_attempt": "Evolution completed, but JSON export failed on a NumPy boolean.",
+      "repair": "Explicit bool conversion, then complete fresh propagation from the saved constructed basis.",
+      "final_execution": "PASS"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+  }
+}

@@ -5,7 +5,9 @@
 
 ## 1. A physically meaningful target without a preferred lattice
 
-At fixed N,Q=2N, for each physical basis configuration define its active graph g, its integer half-leg fields E, and vertex occupations. Define the directed **through-flow subgraph** F(g,E) to contain an active edge e=(i,j) if E_ie=-E_je is nonzero, oriented according to its sign. This is a graph-and-field diagnostic; no Euclidean embedding or chosen dimension enters.
+At fixed N,Q=2N, for each physical basis configuration define its active graph g, its integer half-leg fields E, and vertex occupations. Define the directed **through-flow subgraph** F(g,E) to contain an active edge e=(i,j) if E_ie*E_je<0, oriented from its positive-field endpoint to its negative-field endpoint. Its common through-flow magnitude is min(|E_ie|,|E_je|). This is a graph-and-field diagnostic; no Euclidean embedding or chosen dimension enters.
+
+**Builder correction after `1e68b1a`:** the original equality `E_ie=-E_je` excluded every edge hole, because the edge Gauss law is `E_ie+E_je=1-n_be`. It therefore made the all-edge, nonzero-matter event empty and could not recover the published charged-circulation prototype. Equal-and-opposite circulation remains a separate observable `c_bal`, with the exact bound `c_bal<=Q-n_v`. The primary definition above restores the published opposite-sign convention and permits a hole to carry `(q+1,-q)` with integer q>=1. The frozen Hamiltonian is unchanged.
 
 Define C(g,E) as the subset of through-flow edges belonging to at least one directed cycle. A concrete finite algorithm computes it by strongly connected components: retain an edge (u,v) if u and v lie in the same nontrivial strongly connected component of F. Let `c=|C|`, `rho_c=c/Q`, `rho_v=n_v/N`. These are diagonal, gauge-invariant physical observables; the cycle test depends on electric flux, not on a choice of gauge potential.
 
@@ -82,7 +84,7 @@ Do not interpret a diameter-two N4 graph as evidence for a spatial dimension. A 
 1. First implement the circulation-density projector on existing N4,Q4 full-basis data and verify that threshold a=1 with b>0 recovers the published charged-circulation event. This is an equivalence check, not new large-N physics.
 2. On N5,Q10, compare full-circulation and intermediate loop-density thresholds. Record p(t), source current, return current and probability conservation over t=0..10; verify current by independent finite difference.
 3. For N5,Q10 and N6,Q12, use orbit symmetry and charged-port Krylov spaces seeded by both psi_0 and C†; check all outgoing electric-budget residuals. Do not infer scaling speedup from seven ports at N4.
-4. Use early-time exact coefficients as checks only for matching target definitions. Benchmark a=1 and b>=1/N against prior N5/N6 results.
+4. Use early-time exact coefficients as checks only for matching target definitions. The previous N5/N6 target additionally requires a connected four-regular host and `n_v>=ceil(N/4)`. Benchmark those exact projectors as auxiliary controls; `b>=1/N` alone does not reproduce their threshold or graph restriction. Neither condition is a filter on the primary dimension-neutral formation test.
 5. Define a persistent-event correlator `S_P(t,tau)=||P exp(-iH tau) P exp(-iHt) psi_0||²` and the conditional ratio S_P/p(t), explicitly noting this is a two-time sequential-projection diagnostic and changes the unmeasured history. Separately measure the unmeasured one-time probability p(t+tau). Never conflate the two.
 6. Compare dimensionally different graph families and random degree-matched controls, and report formation probabilities rather than only conditioned responses.
 7. Acceptance: publish a reproducible code path, finite-size and electric-cutoff convergence, conservative full-law residuals, and at least one nontrivial finite-time lower bound for an extensive loop-density event. If not achieved, publish an explicit numerical obstruction, not a selected spatial phase.
