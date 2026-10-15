@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "parent": "3538c9a44afa34a7d8e5ce94d620b00328c3b2df",
+  "timestamp_utc": "2026-10-15T15:35:39.750625+00:00",
+  "frozen_law_changed": false,
+  "prior_source_hashes_match": true,
+  "cache_used": false,
+  "external_review": false,
+  "formal_interval_arithmetic": false,
+  "executed": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python research/reality_framework/charged_memory_bridge_20261015/run.py",
+      "exit_code": 0,
+      "seconds": 10.741893460000028,
+      "scope": "Fresh two-cutoff direct evolution; four Volterra grids; Rabi and complex-rank-two controls; three reservoir reductions with full outgoing-residual estimates."
+    },
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python research/reality_framework/charged_memory_bridge_20261015/exact_onset.py",
+      "exit_code": 0,
+      "scope": "Full unregulated integer recurrence through amplitude order 11; independent event predicate; exact first-return norm identity."
+    }
+  ],
+  "numerical_allowance": 5e-10,
+  "limitations": "Analytic Duhamel upper sums evaluated in ordinary floating point, not outward-rounded intervals. The Volterra discretization is checked by convergence and direct comparison, not certified by a rigorous quadrature bound. Reservoir bounds include full outgoing electric residuals."
+}
