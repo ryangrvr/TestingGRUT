@@ -1,0 +1,175 @@
+{
+  "status": "CP12_CIRCULATION_CAPACITY_PASS",
+  "independent_physical_check": {
+    "configurations_checked": 6075,
+    "minimum_inequality_margin": 0,
+    "spanning_circulation_configurations": 702,
+    "maximum_cycle_rank": 1,
+    "maximum_spanning_cycle_rank": 1
+  },
+  "cases": [
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 256,
+      "T": 10,
+      "controls": {
+        "configurations_checked": 577,
+        "minimum_inequality_margin": 0,
+        "spanning_circulation_configurations": 91,
+        "maximum_cycle_rank": 1,
+        "maximum_spanning_cycle_rank": 1
+      },
+      "probabilities": {
+        "circulation_any": {
+          "projected": 0.12266521187593324,
+          "full_law_interval": [
+            0.12266521185995267,
+            0.12266521189191378
+          ]
+        },
+        "circulation_spanning": {
+          "projected": 0.03240560032504492,
+          "full_law_interval": [
+            0.03240560031683118,
+            0.032405600333258656
+          ]
+        },
+        "circulation_spanning_cycle_rank_at_least_2": {
+          "projected": 0.0,
+          "full_law_interval": [
+            0.0,
+            5.2047798993129895e-22
+          ]
+        }
+      },
+      "input_state_error_upper": 2.2813986717171967e-11,
+      "necessary_neutral_spanning_circulation_budget_lower_bound": 8,
+      "necessary_neutral_spanning_rank_2_budget_lower_bound": 10,
+      "necessary_neutral_full_degree_4_budget_lower_bound": 16
+    },
+    {
+      "N": 5,
+      "Q": 5,
+      "budget": 128,
+      "T": 10,
+      "controls": {
+        "configurations_checked": 6386,
+        "minimum_inequality_margin": 0,
+        "spanning_circulation_configurations": 119,
+        "maximum_cycle_rank": 2,
+        "maximum_spanning_cycle_rank": 1
+      },
+      "probabilities": {
+        "circulation_any": {
+          "projected": 0.16068485162043902,
+          "full_law_interval": [
+            0.16060700257904106,
+            0.1607627195246661
+          ]
+        },
+        "circulation_spanning": {
+          "projected": 0.006863703973048815,
+          "full_law_interval": [
+            0.0068476218616532,
+            0.006879804947273524
+          ]
+        },
+        "circulation_spanning_cycle_rank_at_least_2": {
+          "projected": 0.0,
+          "full_law_interval": [
+            0.0,
+            9.431414547743475e-09
+          ]
+        }
+      },
+      "input_state_error_upper": 9.711547017722499e-05,
+      "necessary_neutral_spanning_circulation_budget_lower_bound": 10,
+      "necessary_neutral_spanning_rank_2_budget_lower_bound": 12,
+      "necessary_neutral_full_degree_4_budget_lower_bound": 20
+    },
+    {
+      "N": 6,
+      "Q": 6,
+      "budget": 128,
+      "T": 10,
+      "controls": {
+        "configurations_checked": 102992,
+        "minimum_inequality_margin": 0,
+        "spanning_circulation_configurations": 298,
+        "maximum_cycle_rank": 3,
+        "maximum_spanning_cycle_rank": 1
+      },
+      "probabilities": {
+        "circulation_any": {
+          "projected": 0.15868582627562813,
+          "full_law_interval": [
+            0.1585127857460306,
+            0.15885896120358048
+          ]
+        },
+        "circulation_spanning": {
+          "projected": 0.002062215870274225,
+          "full_law_interval": [
+            0.002042531379947626,
+            0.002081994758955598
+          ]
+        },
+        "circulation_spanning_cycle_rank_at_least_2": {
+          "projected": 0.0,
+          "full_law_interval": [
+            0.0,
+            4.719917738654827e-08
+          ]
+        }
+      },
+      "input_state_error_upper": 0.00021725371662309546,
+      "necessary_neutral_spanning_circulation_budget_lower_bound": 12,
+      "necessary_neutral_spanning_rank_2_budget_lower_bound": 14,
+      "necessary_neutral_full_degree_4_budget_lower_bound": 24
+    },
+    {
+      "N": 6,
+      "Q": 12,
+      "budget": 10,
+      "T": 1,
+      "controls": {
+        "configurations_checked": 304613,
+        "minimum_inequality_margin": 0,
+        "spanning_circulation_configurations": 0,
+        "maximum_cycle_rank": 1,
+        "maximum_spanning_cycle_rank": 0
+      },
+      "probabilities": {
+        "circulation_any": {
+          "projected": 0.006355974879509797,
+          "full_law_interval": [
+            0.0,
+            0.03323076310895391
+          ]
+        },
+        "circulation_spanning": {
+          "projected": 0.0,
+          "full_law_interval": [
+            0.0,
+            0.010520338448964365
+          ]
+        },
+        "circulation_spanning_cycle_rank_at_least_2": {
+          "projected": 0.0,
+          "full_law_interval": [
+            0.0,
+            0.010520338448964365
+          ]
+        }
+      },
+      "input_state_error_upper": 0.10256870111766242,
+      "necessary_neutral_spanning_circulation_budget_lower_bound": 12,
+      "necessary_neutral_spanning_rank_2_budget_lower_bound": 14,
+      "necessary_neutral_full_degree_4_budget_lower_bound": 24
+    }
+  ],
+  "seconds": 2.0828080159999445,
+  "exact_inequality": "E_squared >= 2*e_C + n_v + 2*h_C, where C is the union of all directed circulation cycles and h_C counts its hole edges. For a connected spanning C, beta_C <= E_squared/2 - N + 1 - n_v/2 - h_C.",
+  "scope": "Necessary resource and numerical-representation conditions, not a proof that degree four is sufficient or necessary for three dimensions. A degree-four 3D network is an example with extensive cycle rank. Q=N spanning circulation still has only one independent cycle. Numerical projected zeros outside the budget are not full-law absences."
+}

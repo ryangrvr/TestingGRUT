@@ -1,0 +1,81 @@
+{
+  "status": "CP12_UNFILTERED_RECORD_GATE_PASS",
+  "fresh_model_cache": true,
+  "fresh_snapshot_reconstruction": true,
+  "freshly_replayed_cases": [
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 256,
+      "wait": 5.0,
+      "lag": 0.5,
+      "response_dimension": 2242,
+      "maximum_saved_difference": 5.218048215738236e-15
+    },
+    {
+      "N": 4,
+      "Q": 4,
+      "budget": 256,
+      "wait": 10.0,
+      "lag": 0.5,
+      "response_dimension": 2242,
+      "maximum_saved_difference": 2.6867397195928788e-14
+    },
+    {
+      "N": 5,
+      "Q": 5,
+      "budget": 128,
+      "wait": 10.0,
+      "lag": 0.5,
+      "response_dimension": 31648,
+      "maximum_saved_difference": 1.525446435834965e-13
+    }
+  ],
+  "maximum_main_saved_difference": 1.525446435834965e-13,
+  "independent_physical_control": {
+    "physical_dimension": 6075,
+    "safe_interior_columns": 1875,
+    "first_order_remote_response_operator_norm": 0.0,
+    "dressed_transfer_second_order_residual": 5.438959822042073e-16,
+    "circulation_second_order_response_operator_norm": 0.0,
+    "circulation_weighted_second_order_residual": 0.0,
+    "leading_response_record_commutator_norms": {
+      "occupied_flux": 0.0,
+      "electric_circulation": 0.0
+    },
+    "dressed_transfer_operator_norm": 0.28867513459481364,
+    "unregulated_global_coefficient_norm_bound": 0.2886751345948129,
+    "operator_square_degree_bound_maximum_violation": 3.780411855456923e-18,
+    "no_hopping_source_commutator_norm": 0.0,
+    "quotient_dimension": 343,
+    "isometry_error": 4.112323632166545e-15,
+    "H_intertwiner_error": 3.011959563148489e-15,
+    "outgoing_Gram_error": 3.76822190084106e-15,
+    "readout_intertwiner_error": 0.0,
+    "independent_response_comparisons": 18,
+    "maximum_response_difference": 1.942890293094024e-16,
+    "discarded_transfer_targets_at_regulator_boundary": 150,
+    "seconds": 0.3009685949998584
+  },
+  "fresh_weighted_coefficient_maximum_difference": 6.919920365888732e-17,
+  "dense_unitary_dilations": {
+    "status": "CP12_UNFILTERED_DILATIONS_PASS",
+    "unitary_dilation_cases": 24,
+    "maximum_interval_violation": 0.0,
+    "maximum_exact_phase_derivative_discrepancy": 3.608224830031759e-16,
+    "maximum_pinching_trace_distance_discrepancy": 2.7755575615628914e-16,
+    "seconds": 0.9361148310001681,
+    "scope": "Seeded independent finite unitary dilations, with pure and mixed inputs. Tests the full-path positive-observable intervals, exact phase derivative, derivative of conditional density, and offdiagonal history interference bounds. It does not replace the unbounded-H analytic proof or provide interval-arithmetic roundoff certification."
+  },
+  "hash_validated_without_default_rerun": [
+    "Both N4 mixed-reference finite-lag evolutions",
+    "All four larger capacity scans, including N6_Q6 and N6_Q12",
+    "Saved N4 short-lag display samples"
+  ],
+  "source_and_input_hashes_checked": true,
+  "Python": "3.12.14",
+  "NumPy": "2.3.5",
+  "SciPy": "1.17.0",
+  "seconds": 15.428840387999799,
+  "scope": "Fresh main-state and independent checks plus explicitly separate saved-file validation. Analytic full-law electric bounds evaluated in ordinary floating point; no formal roundoff interval certificate. No test of a macroscopic geometry or a causal cone."
+}
