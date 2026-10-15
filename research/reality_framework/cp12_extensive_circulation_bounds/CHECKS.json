@@ -1,0 +1,49 @@
+{
+  "status": "CP12_EXTENSIVE_BOUND_CHECKS_PASS",
+  "exact_algebra": {
+    "quadratic_field": "Q(sqrt(2))",
+    "neutral_mean_energy_identity_exact": true,
+    "local_second_moment_exact": "13/16",
+    "local_variance_exact": "9/16",
+    "polynomial_identity_exact": true,
+    "two_orientation_variance_match_exact": "31/16 + (N-1) * 33/[16(N-1)] = 4",
+    "phase_cosines_valid_for_all_N_at_least_128_by_rational_inequalities": true
+  },
+  "physical": {
+    "raw_physical_dimension": 6075,
+    "raising_blocks": [
+      {
+        "vertex_fermions": 0,
+        "raising_block_norm": 2.8284271247461903,
+        "global_unregulated_norm_bound": 2.8284271247461903
+      },
+      {
+        "vertex_fermions": 1,
+        "raising_block_norm": 3.2875450464741243,
+        "global_unregulated_norm_bound": 4.0
+      },
+      {
+        "vertex_fermions": 2,
+        "raising_block_norm": 3.2870675438134245,
+        "global_unregulated_norm_bound": 4.898979485566356
+      },
+      {
+        "vertex_fermions": 3,
+        "raising_block_norm": 2.8284271247461894,
+        "global_unregulated_norm_bound": 5.656854249492381
+      }
+    ],
+    "unregulated_vacuum_parent_columns": 105,
+    "unregulated_distinct_hopping_targets": 840,
+    "exact_vacuum_hopping_Gram": "8 I",
+    "vacuum_columns_have_unique_targets": true
+  },
+  "residual_probability": {
+    "independent_matrices": 24,
+    "time_evolution_cases": 120,
+    "matrices_with_nonvacuous_bound": 24,
+    "maximum_probability_bound_violation": 0.0
+  },
+  "seconds": 0.23078904399994826,
+  "scope": "Exact rational identities and unregulated vacuum hopping columns; finite-matrix numerical norm and residual-bound checks independently test analytic steps, not the large-N theorem by numerical extrapolation."
+}

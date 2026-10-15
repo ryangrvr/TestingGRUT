@@ -1,0 +1,178 @@
+{
+  "frozen_couplings": {
+    "m": 1,
+    "t": 1,
+    "epsilon_E": 0.25,
+    "kappa": 0.5,
+    "Gamma": 0.1
+  },
+  "all_time_bounds": [
+    {
+      "N": 32,
+      "Q": 64,
+      "vacuum_spanning": 1.0,
+      "vacuum_fully_circulating": 0.8888888888888886,
+      "full_circulation_nv_le_1": 1.0,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 64,
+      "Q": 128,
+      "vacuum_spanning": 1.0,
+      "vacuum_fully_circulating": 0.6400000000000001,
+      "full_circulation_nv_le_1": 1.0,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 128,
+      "Q": 256,
+      "vacuum_spanning": 0.8888888888888886,
+      "vacuum_fully_circulating": 0.3950617283950618,
+      "full_circulation_nv_le_1": 1.0,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 256,
+      "Q": 512,
+      "vacuum_spanning": 0.6400000000000001,
+      "vacuum_fully_circulating": 0.22145328719723184,
+      "full_circulation_nv_le_1": 0.7285533905932737,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 512,
+      "Q": 1024,
+      "vacuum_spanning": 0.3950617283950618,
+      "vacuum_fully_circulating": 0.11753902662993575,
+      "full_circulation_nv_le_1": 0.36427669529663687,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 1024,
+      "Q": 2048,
+      "vacuum_spanning": 0.22145328719723184,
+      "vacuum_fully_circulating": 0.06059171597633137,
+      "full_circulation_nv_le_1": 0.18213834764831843,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 4096,
+      "Q": 8192,
+      "vacuum_spanning": 0.06059171597633137,
+      "vacuum_fully_circulating": 0.015503641236052022,
+      "full_circulation_nv_le_1": 0.04553458691207961,
+      "full_circulation_nv_le_sqrt_N": 1.0
+    },
+    {
+      "N": 16384,
+      "Q": 32768,
+      "vacuum_spanning": 0.015503641236052022,
+      "vacuum_fully_circulating": 0.003898631766805473,
+      "full_circulation_nv_le_1": 0.011383646728019902,
+      "full_circulation_nv_le_sqrt_N": 0.5472081102036277
+    },
+    {
+      "N": 65536,
+      "Q": 131072,
+      "vacuum_spanning": 0.003898631766805473,
+      "vacuum_fully_circulating": 0.0009760858374079535,
+      "full_circulation_nv_le_1": 0.0028459116820049755,
+      "full_circulation_nv_le_sqrt_N": 0.26637242783788273
+    },
+    {
+      "N": 1048576,
+      "Q": 2097152,
+      "vacuum_spanning": 0.00024411082540587437,
+      "vacuum_fully_circulating": 6.1033293647482466e-05,
+      "full_circulation_nv_le_1": 0.00017786948012531097,
+      "full_circulation_nv_le_sqrt_N": 0.06449937436451476
+    }
+  ],
+  "energy_probability_tradeoff": [
+    {
+      "probability": 0.1,
+      "necessary_mean_matter_density": 0.00015836030041329425
+    },
+    {
+      "probability": 0.5,
+      "necessary_mean_matter_density": 0.004189406145180379
+    },
+    {
+      "probability": 0.9,
+      "necessary_mean_matter_density": 0.014441294627618402
+    },
+    {
+      "probability": 1.0,
+      "necessary_mean_matter_density": 0.018124932783159787
+    }
+  ],
+  "charged_comparators": {
+    "ground_band": {
+      "matter_density": 0.178473714374354,
+      "electric_square_per_vertex": 4.535421143123062,
+      "mean_energy_per_vertex": 0.8408391621632304,
+      "variance_per_vertex": 1.5282845903220952,
+      "local_band_variance": 2.220446049250313e-16,
+      "outside_band_residual_per_vertex": 1.528284590322095,
+      "full_circulation_loss_T2_per_vertex": 1.4964317235995166,
+      "full_protection_loss_T2_per_vertex": 0.0
+    },
+    "neutral_mean_matched": {
+      "matter_density": 0.05067067355347407,
+      "electric_square_per_vertex": 4.152012020660422,
+      "mean_energy_per_vertex": 1.0,
+      "variance_per_vertex": 2.4156230136563037,
+      "local_band_variance": 0.5625000000000006,
+      "outside_band_residual_per_vertex": 1.8531230136563033,
+      "full_circulation_loss_T2_per_vertex": 1.8505554964979405,
+      "full_protection_loss_T2_per_vertex": 0.0
+    },
+    "eta_neutral_exact": "(60 - 32 sqrt(2))/291",
+    "eta_neutral_polynomial": "873 eta^2 - 360 eta + 16 = 0"
+  },
+  "mean_and_variance_matched_supplied_pairs": [
+    {
+      "N": 128,
+      "Q": 256,
+      "matter_density": 0.25,
+      "h": 0.12743687645385443,
+      "phase_cosines": [
+        0.7889913614810192,
+        0.9970949092983816
+      ],
+      "full_mean_energy": 128,
+      "full_variance": 512,
+      "full_circulation_probability": 1,
+      "construction": "Pure superposition of opposite Euler-flow branches on a supplied graph. Not claimed dynamically reachable from the neutral ray or in its same pure symmetry sector."
+    },
+    {
+      "N": 1024,
+      "Q": 2048,
+      "matter_density": 0.25,
+      "h": 0.04490132550669373,
+      "phase_cosines": [
+        0.8563813566343621,
+        0.9297049141450388
+      ],
+      "full_mean_energy": 1024,
+      "full_variance": 4096,
+      "full_circulation_probability": 1,
+      "construction": "Pure superposition of opposite Euler-flow branches on a supplied graph. Not claimed dynamically reachable from the neutral ray or in its same pure symmetry sector."
+    },
+    {
+      "N": 11664,
+      "Q": 23328,
+      "matter_density": 0.25,
+      "h": 0.013298168782873565,
+      "phase_cosines": [
+        0.8821852260458845,
+        0.9039010447335164
+      ],
+      "full_mean_energy": 11664,
+      "full_variance": 46656,
+      "full_circulation_probability": 1,
+      "construction": "Pure superposition of opposite Euler-flow branches on a supplied graph. Not claimed dynamically reachable from the neutral ray or in its same pure symmetry sector."
+    }
+  ],
+  "scope": "Probability bounds hold uniformly in evolution time for the specified neutral input energy and variance and full unbounded frozen CP12. They constrain low-matter circulation sectors, not unrestricted charged phases. Charged comparators are supplied states, not autonomously formed geometries. Tables are floating evaluations of analytic formulas."
+}
