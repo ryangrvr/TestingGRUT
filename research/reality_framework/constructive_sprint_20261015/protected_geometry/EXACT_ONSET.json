@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "zero_edge_target_configurations": 93,
+  "target_catalog_completeness": "A zero half-leg pair fixes the only cycle-flow variable. Following the alternating vertex and edge Gauss equations around four vertices changes the field by at most one at each step, so |E|<=4 contains every target; finite Fock occupancy is exhaustively enumerated.",
+  "maximum_absolute_target_field": 2,
+  "all_integer_flux_distance_formula": "For every integer L>=1: d_min=8L-5. L=1 checked directly. All target fields satisfy |E|<=2; for L>=2 each target's L1 distance is an affine function of slope8, so L=2 fixes the entire remaining range.",
+  "minimum_field_distances": [
+    {
+      "flux": 1,
+      "minimum_electric_L1_distance_to_zero_edge": 3
+    },
+    {
+      "flux": 2,
+      "minimum_electric_L1_distance_to_zero_edge": 11
+    },
+    {
+      "flux": 3,
+      "minimum_electric_L1_distance_to_zero_edge": 19
+    },
+    {
+      "flux": 4,
+      "minimum_electric_L1_distance_to_zero_edge": 27
+    },
+    {
+      "flux": 5,
+      "minimum_electric_L1_distance_to_zero_edge": 35
+    },
+    {
+      "flux": 6,
+      "minimum_electric_L1_distance_to_zero_edge": 43
+    },
+    {
+      "flux": 7,
+      "minimum_electric_L1_distance_to_zero_edge": 51
+    },
+    {
+      "flux": 8,
+      "minimum_electric_L1_distance_to_zero_edge": 59
+    },
+    {
+      "flux": 9,
+      "minimum_electric_L1_distance_to_zero_edge": 67
+    },
+    {
+      "flux": 10,
+      "minimum_electric_L1_distance_to_zero_edge": 75
+    },
+    {
+      "flux": 11,
+      "minimum_electric_L1_distance_to_zero_edge": 83
+    },
+    {
+      "flux": 12,
+      "minimum_electric_L1_distance_to_zero_edge": 91
+    }
+  ],
+  "exact_unregulated_onsets": [
+    {
+      "flux": 1,
+      "first_zero_edge_H_power": 3,
+      "first_changed_graph_H_power": 4,
+      "graph_change_probability_leading_power": 8,
+      "signed_leading_target_configurations": 2,
+      "graph_change_probability_coefficient": "1/259200",
+      "coefficient_float": 3.858024691358025e-06,
+      "reachable_support_counts": [
+        1,
+        7,
+        22,
+        47,
+        72
+      ]
+    },
+    {
+      "flux": 2,
+      "first_zero_edge_H_power": 11,
+      "first_changed_graph_H_power": 12,
+      "graph_change_probability_leading_power": 24,
+      "signed_leading_target_configurations": 8,
+      "graph_change_probability_coefficient": "216017/12906142470144000000",
+      "coefficient_float": 1.673753412374889e-14,
+      "reachable_support_counts": [
+        1,
+        7,
+        22,
+        47,
+        70,
+        95,
+        112,
+        132,
+        148,
+        167,
+        183,
+        202,
+        226
+      ]
+    },
+    {
+      "flux": 3,
+      "first_zero_edge_H_power": 19,
+      "first_changed_graph_H_power": 20,
+      "graph_change_probability_leading_power": 40,
+      "signed_leading_target_configurations": 8,
+      "graph_change_probability_coefficient": "978240049/320138880003060992600702976000000000",
+      "coefficient_float": 3.0556739905838573e-27,
+      "reachable_support_counts": [
+        1,
+        7,
+        22,
+        47,
+        70,
+        95,
+        112,
+        132,
+        148,
+        167,
+        183,
+        202,
+        218,
+        237,
+        253,
+        272,
+        288,
+        307,
+        323,
+        342,
+        366
+      ]
+    },
+    {
+      "flux": 4,
+      "first_zero_edge_H_power": 27,
+      "first_changed_graph_H_power": 28,
+      "graph_change_probability_leading_power": 56,
+      "signed_leading_target_configurations": 8,
+      "graph_change_probability_coefficient": "1707674401817227/1856827335139916313277820439931750399239782400000000000000",
+      "coefficient_float": 9.19673234823716e-43,
+      "reachable_support_counts": [
+        1,
+        7,
+        22,
+        47,
+        70,
+        95,
+        112,
+        132,
+        148,
+        167,
+        183,
+        202,
+        218,
+        237,
+        253,
+        272,
+        288,
+        307,
+        323,
+        342,
+        358,
+        377,
+        393,
+        412,
+        428,
+        447,
+        463,
+        482,
+        506
+      ]
+    }
+  ],
+  "interpretation": "Prepared charged four-cycles only. Powers use the complete frozen Hamiltonian, integer signed amplitudes, no electric cutoff and no path-count substitution. These calculations certify nonzero leading loss coefficients, not macroscopic survival or autonomous preparation."
+}

@@ -1,0 +1,919 @@
+{
+  "status": "PASS",
+  "local_hopping_norm_checks": [
+    {
+      "rotor_angles": [
+        0.0,
+        0.0
+      ],
+      "operator_norm": 1.4142135623730954
+    },
+    {
+      "rotor_angles": [
+        0.3,
+        -0.8
+      ],
+      "operator_norm": 1.4142135623730958
+    },
+    {
+      "rotor_angles": [
+        1.7,
+        2.4
+      ],
+      "operator_norm": 1.4142135623730958
+    }
+  ],
+  "truncation_error_method": "Full outgoing residual; fifth-order midpoint upper sums for leakage, unitary Duhamel norm error; ordinary floating-point evaluation, not formal interval arithmetic.",
+  "source": "Gauge-invariant phase kick exp(-i theta n_0) after unforced waiting time.",
+  "supplied_structure": "Directed four-vertex square with integer flux L, plus one initially localized Gauss-admissible vertex fermion and matching edge hole. This is neither formation from the original neutral ray nor an emergent-dimension calculation.",
+  "same_state": "Host persistence, protected edges, circulation and receiver density responses are measured on the same evolved preparation at each L and time. Responses are unconditional, with no loop filter.",
+  "hopping_off_control": "Exactly zero response: all vertex densities commute with H_diagonal+H_rewire. This control is an operator identity, not a numerical subtraction.",
+  "boxes": [
+    {
+      "cutoff": 6,
+      "dimension": 12375,
+      "nonzeros": 77847,
+      "outgoing_dimension": 600,
+      "outgoing_nonzeros": 600,
+      "independent_H_column_maximum_error": 0.0,
+      "seconds": 48.1816311959999,
+      "results": [
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 1,
+          "cutoff": 6,
+          "wait": 0.25,
+          "lag": 0.25,
+          "time": 0.5,
+          "initial_energy": 5.375,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 11,
+          "forward_state_error": 2.6651475525668676e-16,
+          "perturbed_path_error": 2.6441301530485475e-16,
+          "graph_change_probability_upper": 0.2500000000000001,
+          "final_density": [
+            0.8045399757894947,
+            0.18374450566182393,
+            0.3504962818065706,
+            0.36289854669846555
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.05826489249315053,
+              "error_bound": 1.0618555411230832e-15,
+              "interval": [
+                0.05826489248814947,
+                0.058264892498151595
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.05826489182471045,
+              "escaped_host_response": 6.684400810641478e-10,
+              "exact_phase_shift_formula_difference": 1.1102230246251565e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.0015978112647503633,
+              "error_bound": 1.0618555411230832e-15,
+              "interval": [
+                -0.0015978112697514252,
+                -0.0015978112597493015
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0015978112302746858,
+              "escaped_host_response": -3.447567752112857e-11,
+              "exact_phase_shift_formula_difference": 1.214306433183765e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -4.2431590470404235e-07,
+              "error_bound": 1.0618555411230832e-15,
+              "interval": [
+                -4.2432090576589786e-07,
+                -4.2431090364218683e-07
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -4.242968260625979e-07,
+              "escaped_host_response": -1.907864144445881e-11,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.0008253420937654882,
+              "error_bound": 1.0618555411230832e-15,
+              "interval": [
+                -0.00082534209876655,
+                -0.0008253420887644263
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0008253420880116255,
+              "escaped_host_response": -5.753862664104048e-12,
+              "exact_phase_shift_formula_difference": 6.938893903907228e-17,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999999873883663,
+            "interval": [
+              0.9999999873783658,
+              0.9999999873983667
+            ]
+          },
+          "protection": {
+            "value": 0.9986553663074993,
+            "interval": [
+              0.9986553662975055,
+              0.998655366317493
+            ]
+          },
+          "original_circulation": {
+            "value": 0.6601690449208313,
+            "interval": [
+              0.6601690449127059,
+              0.6601690449289568
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 1,
+          "cutoff": 6,
+          "wait": 0.5,
+          "lag": 0.5,
+          "time": 1.0,
+          "initial_energy": 5.375,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 11,
+          "forward_state_error": 3.411388867285594e-14,
+          "perturbed_path_error": 3.267459953714074e-14,
+          "graph_change_probability_upper": 1.0,
+          "final_density": [
+            0.636202060255632,
+            0.2895780322363707,
+            0.4183719130453173,
+            0.5140440742776257
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.2084170819840519,
+              "error_bound": 1.335769764199956e-13,
+              "interval": [
+                0.2084170819789183,
+                0.2084170819891855
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.20841680618485164,
+              "escaped_host_response": 2.757992002555554e-07,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.03056888576144392,
+              "error_bound": 1.335769764199956e-13,
+              "interval": [
+                -0.030568885766577496,
+                -0.03056888575631034
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.030568820501663527,
+              "escaped_host_response": -6.525978039212399e-08,
+              "exact_phase_shift_formula_difference": 6.938893903907228e-18,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -0.00015675148283947338,
+              "error_bound": 1.335769764199956e-13,
+              "interval": [
+                -0.00015675148797305034,
+                -0.0001567514777058964
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0001567311127123605,
+              "escaped_host_response": -2.0370127112867564e-08,
+              "exact_phase_shift_formula_difference": 4.163336342344337e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.013641728084194227,
+              "error_bound": 1.335769764199956e-13,
+              "interval": [
+                -0.013641728089327804,
+                -0.01364172807906065
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.013641722280005236,
+              "escaped_host_response": -5.8041889905435795e-09,
+              "exact_phase_shift_formula_difference": 2.220446049250313e-16,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999981066159143,
+            "interval": [
+              0.9999981066058462,
+              0.9999981066259824
+            ]
+          },
+          "protection": {
+            "value": 0.9618237568580412,
+            "interval": [
+              0.9618237568481671,
+              0.9618237568679153
+            ]
+          },
+          "original_circulation": {
+            "value": 0.4999978262830856,
+            "interval": [
+              0.4999978262759663,
+              0.49999782629020484
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 2,
+          "cutoff": 6,
+          "wait": 0.25,
+          "lag": 0.25,
+          "time": 0.5,
+          "initial_energy": 8.625,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 37,
+          "forward_state_error": 3.207260958981282e-16,
+          "perturbed_path_error": 3.193068387463165e-16,
+          "graph_change_probability_upper": 0.000434027777777778,
+          "final_density": [
+            0.8094986449315708,
+            0.17893331216216435,
+            0.34970547244663386,
+            0.36204069093071245
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.06267327253363086,
+              "error_bound": 1.2800658692888897e-15,
+              "interval": [
+                0.06267327252862959,
+                0.06267327253863214
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.06267327253363086,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 1.1102230246251565e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.001990021992192944,
+              "error_bound": 1.2800658692888897e-15,
+              "interval": [
+                -0.001990021997194224,
+                -0.0019900219871916637
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.001990021992192944,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 1.734723475976807e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -6.391390165311206e-07,
+              "error_bound": 1.2800658692888897e-15,
+              "interval": [
+                -6.391440178111865e-07,
+                -6.391340152510547e-07
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -6.391390165311206e-07,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.000973667711104409,
+              "error_bound": 1.2800658692888897e-15,
+              "interval": [
+                -0.0009736677161056891,
+                -0.0009736677061031289
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.000973667711104409,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999999999999999,
+            "interval": [
+              0.9999999999899991,
+              1.0
+            ]
+          },
+          "protection": {
+            "value": 0.9999999999999992,
+            "interval": [
+              0.9999999999899984,
+              1.0
+            ]
+          },
+          "original_circulation": {
+            "value": 0.9999999943011075,
+            "interval": [
+              0.9999999942911069,
+              0.9999999943111082
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 2,
+          "cutoff": 6,
+          "wait": 0.5,
+          "lag": 0.5,
+          "time": 1.0,
+          "initial_energy": 8.625,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 37,
+          "forward_state_error": 4.1052943103490744e-14,
+          "perturbed_path_error": 3.969411932567999e-14,
+          "graph_change_probability_upper": 0.11111111111111117,
+          "final_density": [
+            0.6671225018990394,
+            0.2614850083310257,
+            0.4281629267535423,
+            0.5236734334546719
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.2033007952970402,
+              "error_bound": 1.6149412485834472e-13,
+              "interval": [
+                0.20330079529187872,
+                0.2033007953022017
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.20330079529704037,
+              "escaped_host_response": -1.6653345369377348e-16,
+              "exact_phase_shift_formula_difference": 5.551115123125783e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.036847245399429615,
+              "error_bound": 1.6149412485834472e-13,
+              "interval": [
+                -0.03684724540459111,
+                -0.03684724539426812
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.03684724539942928,
+              "escaped_host_response": -3.3306690738754696e-16,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -0.000206033144050502,
+              "error_bound": 1.6149412485834472e-13,
+              "interval": [
+                -0.0002060331492119961,
+                -0.00020603313888900788
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.00020603314405008566,
+              "escaped_host_response": -4.163336342344337e-16,
+              "exact_phase_shift_formula_difference": 4.163336342344337e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.013080361607718624,
+              "error_bound": 1.6149412485834472e-13,
+              "interval": [
+                -0.013080361612880119,
+                -0.01308036160255713
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.013080361607718333,
+              "escaped_host_response": -2.914335439641036e-16,
+              "exact_phase_shift_formula_difference": 6.938893903907228e-17,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.999999999999994,
+            "interval": [
+              0.9999999999899118,
+              1.0
+            ]
+          },
+          "protection": {
+            "value": 0.9999999986780396,
+            "interval": [
+              0.9999999986679573,
+              0.9999999986881216
+            ]
+          },
+          "original_circulation": {
+            "value": 0.9999657895983731,
+            "interval": [
+              0.9999657895882912,
+              0.9999657896084552
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cutoff": 10,
+      "dimension": 20775,
+      "nonzeros": 128487,
+      "outgoing_dimension": 600,
+      "outgoing_nonzeros": 600,
+      "independent_H_column_maximum_error": 0.0,
+      "seconds": 123.20901770299997,
+      "results": [
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 1,
+          "cutoff": 10,
+          "wait": 0.25,
+          "lag": 0.25,
+          "time": 0.5,
+          "initial_energy": 5.375,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 11,
+          "forward_state_error": 2.6651475525668705e-16,
+          "perturbed_path_error": 2.644130153048551e-16,
+          "graph_change_probability_upper": 0.2500000000000001,
+          "final_density": [
+            0.8045399757894943,
+            0.1837445056618238,
+            0.35049628180657044,
+            0.36289854669846533
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.05826489249315148,
+              "error_bound": 1.0618555411230844e-15,
+              "interval": [
+                0.058264892488150415,
+                0.05826489249815254
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.058264891824711396,
+              "escaped_host_response": 6.684400810641478e-10,
+              "exact_phase_shift_formula_difference": 2.220446049250313e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.0015978112647501413,
+              "error_bound": 1.0618555411230844e-15,
+              "interval": [
+                -0.0015978112697512031,
+                -0.0015978112597490794
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0015978112302744638,
+              "escaped_host_response": -3.447567752112857e-11,
+              "exact_phase_shift_formula_difference": 1.734723475976807e-18,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -4.2431590414893083e-07,
+              "error_bound": 1.0618555411230844e-15,
+              "interval": [
+                -4.2432090521078635e-07,
+                -4.243109030870753e-07
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -4.242968255074864e-07,
+              "escaped_host_response": -1.907864144445881e-11,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.0008253420937655714,
+              "error_bound": 1.0618555411230844e-15,
+              "interval": [
+                -0.0008253420987666333,
+                -0.0008253420887645096
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0008253420880116949,
+              "escaped_host_response": -5.753876541891856e-12,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999999873883658,
+            "interval": [
+              0.9999999873783654,
+              0.9999999873983663
+            ]
+          },
+          "protection": {
+            "value": 0.9986553663074986,
+            "interval": [
+              0.9986553662975048,
+              0.9986553663174923
+            ]
+          },
+          "original_circulation": {
+            "value": 0.6601690449208311,
+            "interval": [
+              0.6601690449127056,
+              0.6601690449289564
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 1,
+          "cutoff": 10,
+          "wait": 0.5,
+          "lag": 0.5,
+          "time": 1.0,
+          "initial_energy": 5.375,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 11,
+          "forward_state_error": 3.411388867285594e-14,
+          "perturbed_path_error": 3.267459953714077e-14,
+          "graph_change_probability_upper": 1.0,
+          "final_density": [
+            0.6362020602556315,
+            0.2895780322363706,
+            0.4183719130453174,
+            0.5140440742776258
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.20841708198405146,
+              "error_bound": 1.3357697641999564e-13,
+              "interval": [
+                0.20841708197891787,
+                0.20841708198918504
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.20841680618485117,
+              "escaped_host_response": 2.7579920028331095e-07,
+              "exact_phase_shift_formula_difference": 5.551115123125783e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.030568885761444217,
+              "error_bound": 1.3357697641999564e-13,
+              "interval": [
+                -0.030568885766577795,
+                -0.03056888575631064
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.030568820501663825,
+              "escaped_host_response": -6.525978039212399e-08,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -0.00015675148283997298,
+              "error_bound": 1.3357697641999564e-13,
+              "interval": [
+                -0.00015675148797354994,
+                -0.000156751477706396
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.00015673111271291562,
+              "escaped_host_response": -2.0370127057356413e-08,
+              "exact_phase_shift_formula_difference": 6.661338147750939e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.013641728084194393,
+              "error_bound": 1.3357697641999564e-13,
+              "interval": [
+                -0.013641728089327971,
+                -0.013641728079060816
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.01364172228000543,
+              "escaped_host_response": -5.804188962788004e-09,
+              "exact_phase_shift_formula_difference": 3.885780586188048e-16,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999981066159136,
+            "interval": [
+              0.9999981066058455,
+              0.9999981066259818
+            ]
+          },
+          "protection": {
+            "value": 0.9618237568580406,
+            "interval": [
+              0.9618237568481665,
+              0.9618237568679147
+            ]
+          },
+          "original_circulation": {
+            "value": 0.4999978262830854,
+            "interval": [
+              0.4999978262759662,
+              0.49999782629020467
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 2,
+          "cutoff": 10,
+          "wait": 0.25,
+          "lag": 0.25,
+          "time": 0.5,
+          "initial_energy": 8.625,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 37,
+          "forward_state_error": 3.2072609589811425e-16,
+          "perturbed_path_error": 3.1930683874631014e-16,
+          "graph_change_probability_upper": 0.000434027777777778,
+          "final_density": [
+            0.8094986449315722,
+            0.17893331216216452,
+            0.34970547244663397,
+            0.36204069093071245
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.06267327253362903,
+              "error_bound": 1.280065869288849e-15,
+              "interval": [
+                0.06267327252862775,
+                0.06267327253863031
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.06267327253362903,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 1.6653345369377348e-16,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.0019900219921930584,
+              "error_bound": 1.280065869288849e-15,
+              "interval": [
+                -0.0019900219971943386,
+                -0.001990021987191778
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0019900219921930584,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -6.391390172111322e-07,
+              "error_bound": 1.280065869288849e-15,
+              "interval": [
+                -6.391440184911981e-07,
+                -6.391340159310663e-07
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -6.391390172111322e-07,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.0009736677111047698,
+              "error_bound": 1.280065869288849e-15,
+              "interval": [
+                -0.0009736677161060499,
+                -0.0009736677061034897
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.0009736677111047698,
+              "escaped_host_response": 0.0,
+              "exact_phase_shift_formula_difference": 2.7755575615628914e-17,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 1.0000000000000016,
+            "interval": [
+              0.9999999999900007,
+              1.0
+            ]
+          },
+          "protection": {
+            "value": 1.0000000000000007,
+            "interval": [
+              0.9999999999899998,
+              1.0
+            ]
+          },
+          "original_circulation": {
+            "value": 0.9999999943011092,
+            "interval": [
+              0.9999999942911084,
+              0.9999999943111098
+            ]
+          }
+        },
+        {
+          "N": 4,
+          "Q": 4,
+          "flux": 2,
+          "cutoff": 10,
+          "wait": 0.5,
+          "lag": 0.5,
+          "time": 1.0,
+          "initial_energy": 8.625,
+          "initial_energy_variance": 5.999999999999999,
+          "initial_electric_square": 37,
+          "forward_state_error": 4.105294027495863e-14,
+          "perturbed_path_error": 3.969411833006612e-14,
+          "graph_change_probability_upper": 0.11111111111111117,
+          "final_density": [
+            0.6671225018990404,
+            0.26148500833102634,
+            0.4281629267535434,
+            0.5236734334546728
+          ],
+          "detector_responses": [
+            {
+              "receiver": 0,
+              "initial_host_distance": 0,
+              "response": 0.20330079529704015,
+              "error_bound": 1.6149411721005277e-13,
+              "interval": [
+                0.20330079529187867,
+                0.20330079530220163
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": 0.2033007952970403,
+              "escaped_host_response": -1.3877787807814457e-16,
+              "exact_phase_shift_formula_difference": 0.0,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 1,
+              "initial_host_distance": 1,
+              "response": -0.03684724539942957,
+              "error_bound": 1.6149411721005277e-13,
+              "interval": [
+                -0.03684724540459107,
+                -0.03684724539426808
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.03684724539942924,
+              "escaped_host_response": -3.3306690738754696e-16,
+              "exact_phase_shift_formula_difference": 2.7755575615628914e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 2,
+              "initial_host_distance": 2,
+              "response": -0.0002060331440505575,
+              "error_bound": 1.6149411721005277e-13,
+              "interval": [
+                -0.00020603314921205162,
+                -0.0002060331388890634
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.00020603314405014117,
+              "escaped_host_response": -4.163336342344337e-16,
+              "exact_phase_shift_formula_difference": 1.3877787807814457e-17,
+              "floating_point_allowance": 5e-12
+            },
+            {
+              "receiver": 3,
+              "initial_host_distance": 1,
+              "response": -0.013080361607718388,
+              "error_bound": 1.6149411721005277e-13,
+              "interval": [
+                -0.013080361612879883,
+                -0.013080361602556894
+              ],
+              "zero_excluded": true,
+              "same_host_joint_response": -0.013080361607718125,
+              "escaped_host_response": -2.636779683484747e-16,
+              "exact_phase_shift_formula_difference": 2.7755575615628914e-17,
+              "floating_point_allowance": 5e-12
+            }
+          ],
+          "host": {
+            "value": 0.9999999999999958,
+            "interval": [
+              0.9999999999899136,
+              1.0
+            ]
+          },
+          "protection": {
+            "value": 0.9999999986780415,
+            "interval": [
+              0.9999999986679593,
+              0.9999999986881236
+            ]
+          },
+          "original_circulation": {
+            "value": 0.999965789598375,
+            "interval": [
+              0.999965789588293,
+              0.999965789608457
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "cutoff_comparisons": [
+    {
+      "flux": 1,
+      "time": 0.5,
+      "maximum_detector_difference": 9.43689570931383e-16,
+      "analytic_allowance": 2.1237110822461676e-15,
+      "floating_point_tolerance": 5e-12
+    },
+    {
+      "flux": 1,
+      "time": 1.0,
+      "maximum_detector_difference": 4.996003610813204e-16,
+      "analytic_allowance": 2.6715395283999123e-13,
+      "floating_point_tolerance": 5e-12
+    },
+    {
+      "flux": 2,
+      "time": 0.5,
+      "maximum_detector_difference": 1.8318679906315083e-15,
+      "analytic_allowance": 2.5601317385777387e-15,
+      "floating_point_tolerance": 5e-12
+    },
+    {
+      "flux": 2,
+      "time": 1.0,
+      "maximum_detector_difference": 2.3592239273284576e-16,
+      "analytic_allowance": 3.2298824206839747e-13,
+      "floating_point_tolerance": 5e-12
+    }
+  ],
+  "reported_floating_point_allowance": 5e-12,
+  "reported_floating_point_allowance_scope": "A conservative numerical reporting tolerance added to probability amplitudes and response intervals. It exceeds the observed cutoff discrepancies; it is not a mathematically certified roundoff bound. error_bound fields separately report the analytic electric-truncation estimate."
+}
