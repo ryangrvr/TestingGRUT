@@ -1,11 +1,155 @@
 {
-  "status": "INDIVIDUAL_CHECKS_PASS_COMBINED_RERUN_PENDING",
+  "status": "PASS",
   "baseline": "a2f447dc37ea0a71f62c6e990a4630d727ebd85e",
   "parent": "1801afee27096c03c2a3b64cc811ac0be0d2a4a7",
   "law_changed": false,
+  "new_candidate_hamiltonian": false,
+  "cache_used": false,
+  "fresh_new_calculation_reproduction": true,
+  "fresh_parent_reproduction_this_invocation": false,
   "parent_reproduction_completed_during_sprint": true,
-  "individual_results": "All component calculations completed during the sprint and passed their internal controls; see their saved outputs. The baseline Node/Python reproduction passed all65 comparisons.",
-  "combined_rerun": "A concurrent final rerun was interrupted by compute-service disconnect after seven programs wrote fresh outputs. A sequential complete rerun is now running. No combined-pass claim is made in this checkpoint.",
-  "formal_interval_arithmetic": false,
-  "external_certification": false
+  "saved_assertions": [
+    {
+      "script": "protected_geometry/verify.py",
+      "exit_code": 0,
+      "seconds": 0.23436367800013613,
+      "stdout_sha256": "bce64d993db012cab6e988f4d531018fe2a058eabb4b577db5e63f4f7b76759c",
+      "stderr": ""
+    },
+    {
+      "script": "reproduction/compare_results.py",
+      "exit_code": 0,
+      "seconds": 2.0394194139998945,
+      "stdout_sha256": "021fe04fab582cc84e0874176a21fb08aecfcbb73eb17a256e688af8d9d62fb4",
+      "stderr": ""
+    }
+  ],
+  "fresh_executions": [
+    {
+      "script": "charged_access/run.py",
+      "exit_code": 0,
+      "seconds": 67.36345465500017,
+      "stdout_sha256": "cff8c23604af5713725c6c2e92d3efa515d345e0f00e393d78493e714cf93094",
+      "stderr": ""
+    },
+    {
+      "script": "induced_gauge/run.py",
+      "exit_code": 0,
+      "seconds": 2.724019562000194,
+      "stdout_sha256": "28d3cf1a5609ff99b8e50a8bf637b869976e18a7e8af43b9b1abf8cad6701fc0",
+      "stderr": ""
+    },
+    {
+      "script": "protected_geometry/run.py",
+      "exit_code": 0,
+      "seconds": 213.55169385,
+      "stdout_sha256": "4110df8445549dec2fbfb8931431b83061416a40489f656bf3733f2c3a5418bd",
+      "stderr": ""
+    },
+    {
+      "script": "protected_geometry/exact_onset.py",
+      "exit_code": 0,
+      "seconds": 1.373441124999772,
+      "stdout_sha256": "6e763155cba7cce1b8134a415b1ac41551c9560b5af094bc3fe1613863f83a61",
+      "stderr": ""
+    },
+    {
+      "script": "protected_geometry/neutral_record.py",
+      "exit_code": 0,
+      "seconds": 11.30405080499986,
+      "stdout_sha256": "23d9826cb1a98f32281b40dc612a6c20628e0b3f2d13bfc7c0d3147ed78d31eb",
+      "stderr": ""
+    },
+    {
+      "script": "theory_context/locality_bridge_check.py",
+      "exit_code": 0,
+      "seconds": 3.5621840479998355,
+      "stdout_sha256": "c133adb69bd410795ead6430a72ae2ef19f63846ebf62316b12bbbbcbe4a5793",
+      "stderr": ""
+    },
+    {
+      "script": "independent_review/algebra_check.py",
+      "exit_code": 0,
+      "seconds": 0.6681151980001232,
+      "stdout_sha256": "c43109b4abdca42730a8d447fe293fd528422c4c419140e86e70943b6b5ca614",
+      "stderr": ""
+    },
+    {
+      "script": "preparation.py",
+      "exit_code": 0,
+      "seconds": 0.12360587200009832,
+      "stdout_sha256": "5164588dca85263d2e2a718e06502951b7b7923c9e1f2afaa57287a08079edf4",
+      "stderr": ""
+    },
+    {
+      "script": "protected_geometry/verify.py",
+      "exit_code": 0,
+      "seconds": 0.13065518799976417,
+      "stdout_sha256": "bce64d993db012cab6e988f4d531018fe2a058eabb4b577db5e63f4f7b76759c",
+      "stderr": ""
+    }
+  ],
+  "scientific_output_comparisons": {
+    "charged_access/RESULTS.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "induced_gauge/RESULTS.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "protected_geometry/RESULTS.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 6,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "protected_geometry/EXACT_ONSET.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "protected_geometry/NEUTRAL_RECORD.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "theory_context/LOCALITY_BRIDGE_CHECK.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "independent_review/ALGEBRA_CHECK.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    },
+    "PREPARATION.json": {
+      "status": "PASS",
+      "nonbitwise_float_entries": 0,
+      "comparison_rtol": 2e-08,
+      "comparison_atol": 2e-12
+    }
+  },
+  "frozen_source_sha256": {
+    "cp12_ground_connectivity/frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "cp12_ground_connectivity/exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b",
+    "cp12_distance_history/evolution.py": "672233f2d9a934af047cfb3a9c5a24a2eaf35469584a4c761e43febddc3bc578"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "seconds": 303.316724882,
+  "limitations": "Ordinary floating-point evaluation of analytical bounds; no formal outward-rounding or external certification. See individual derivations for approximation scopes."
 }

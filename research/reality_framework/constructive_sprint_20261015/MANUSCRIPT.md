@@ -101,6 +101,15 @@ It has no preferred labelled host, spatial lattice or loop phase mask. It is
 nevertheless a special coherent preparation, not a state-selection principle
 derived from H. Its energy is kappa*Q and its variance is 2Q*t^2.
 
+An explicit count-register preparation implements this uniform fixed-Q state
+without inspecting graph motifs: at each of M occupation stages, a controlled
+rotation uses the ratio of remaining occupied modes to remaining positions.
+An elementary construction uses O(MQ) count-controlled angles plus reversible
+arithmetic and precision overhead. This is an externally controlled circuit,
+not autonomous preparation by H; it also supplies a clock and gate model.
+Exact small-system branch checks and record-memory accounting are provided in
+[PREPARATION.md](PREPARATION.md).
+
 Complex Hilbert space, composition of systems, Fermi statistics, compact U(1),
 unitary evolution, the Born rule and external time T are explicit inputs. The
 model makes predictions once these structures and its state are supplied; it
@@ -394,6 +403,11 @@ host identity, protection and original directed circulation together.
 |---:|---:|---:|---:|---:|
 | 1 | 5.375 | 0.999998106616 | 0.961823756858 | -0.000156751483 |
 | 2 | 8.625 | approximately1 | 0.999999998678 | -0.000206033144 |
+
+![Receiver-density response on the same supplied protected square](protected_geometry/same_state_response.png)
+
+The figure shows response magnitudes. This finite supplied-host comparison is
+not a macroscopic causal-cone test.
 
 At L2 the original circulation probability is0.999965789598. The response
 restricted jointly to the original host differs from the unrestricted

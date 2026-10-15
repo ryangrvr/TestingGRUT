@@ -10,7 +10,7 @@ def packet_files():
     for path in sorted(P.rglob("*")):
         if not path.is_file() or any(x in path.parts for x in ["__pycache__", "unpublished_local_backup"]):
             continue
-        if path.name not in {"MANIFEST.json", "VERIFICATION.json"}:
+        if str(path.relative_to(P)) not in {"MANIFEST.json", "VERIFICATION.json"}:
             yield path
 
 
