@@ -1,0 +1,419 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 10,
+  "budget": 50,
+  "dimension": 810377,
+  "outgoing_dimension": 274334,
+  "wait": 2.0,
+  "wait_state_error": 2.8285372183184236e-05,
+  "model_checks": {
+    "H_hermiticity": 2.175583928816829e-15,
+    "V_hermiticity": 2.175583928816829e-15,
+    "neutral_mean_energy": 5.0,
+    "neutral_variance": 20.00000000000001,
+    "neutral_core_generator_residual": 0.0,
+    "neutral_outside_hopping_square": 20.00000000000001
+  },
+  "preparation": "Original unfiltered coherent neutral ray, evolved under the full frozen H up to the waiting time. The same waiting vector then initializes both diagnostic evolutions.",
+  "source": "Local gauge-invariant exp(-i theta n_0).",
+  "receiver": "ANY fixed j!=0. The operator (n_v-n_0)/(N-1) has exactly its expectation by S_(N-1) symmetry, including the source pulse and both evolutions.",
+  "comparison": "Same Hermitian moving-core split as run_split.py. No distance metric or final graph filter is used in this response experiment.",
+  "initial_event": "c/Q>=1/4 and nv/N>=1/4. Its separate branch is an explicitly recorded diagnostic, not a change in the original preparation.",
+  "initial_binary_record_energy_change": 0.11271104391612985,
+  "initial_binary_record_energy_error_bound": 0.0011314313885729603,
+  "results": [
+    {
+      "lag": 0.125,
+      "preparation": "unfiltered_waiting_state",
+      "initial_probability": 0.9999999999994551,
+      "initial_interval": [
+        0.9999434290551793,
+        1.0
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 0.00019025650528577479,
+            "joint_interval": [
+              0.00011394986049098118,
+              0.0002665631500805684
+            ],
+            "error_bound": 7.63066447947936e-05,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.6818824938601438e-15,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.00019025647493564612,
+            "finite_pulse_difference": -3.035012866026143e-11,
+            "conditional_value": 0.00019025650528587846,
+            "conditional_interval": [
+              0.00011394986049098118,
+              0.0002665782306629456
+            ]
+          },
+          "X_state_error": 6.227636658874041e-05,
+          "Y_state_error": 5.100508835998231e-05
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 5.589938105577882e-06,
+            "joint_interval": [
+              -7.515325406842674e-05,
+              8.63331302795825e-05
+            ],
+            "error_bound": 8.074319217400462e-05,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 8.448103328007051e-16,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 5.589936596939182e-06,
+            "finite_pulse_difference": -1.5086387000762258e-12,
+            "conditional_value": 5.589938105580928e-06,
+            "conditional_interval": [
+              -7.515750579954019e-05,
+              8.633801450263687e-05
+            ]
+          },
+          "X_state_error": 5.865475185753634e-05,
+          "Y_state_error": 4.978644366237977e-05
+        }
+      },
+      "response_change_joint": 0.0001846665671801969,
+      "response_change_joint_interval": [
+        2.7616730211398673e-05,
+        0.00034171640414899513
+      ],
+      "response_change_conditional": 0.00018466656718029752,
+      "response_change_conditional_interval": [
+        2.7616730211398673e-05,
+        0.0003417357364624858
+      ]
+    },
+    {
+      "lag": 0.125,
+      "preparation": "initial_event_branch",
+      "initial_probability": 0.05962997288175113,
+      "initial_interval": [
+        0.05961615928663906,
+        0.059643788077044325
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 8.30820053319117e-06,
+            "joint_interval": [
+              -1.423850444364712e-05,
+              3.085490551002946e-05
+            ],
+            "error_bound": 2.254670497683829e-05,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 2.2219368272374806e-16,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 8.308199021117568e-06,
+            "finite_pulse_difference": -1.5120736016364586e-12,
+            "conditional_value": 0.00013932926901822845,
+            "conditional_interval": [
+              -0.0002388363258221198,
+              0.0005175594315238711
+            ]
+          },
+          "X_state_error": 6.0406048945967156e-05,
+          "Y_state_error": 5.0696689583123504e-05
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 3.2536792867598075e-06,
+            "joint_interval": [
+              -1.9655152716734956e-05,
+              2.616251129025457e-05
+            ],
+            "error_bound": 2.2908832003494764e-05,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 2.0014372104082412e-16,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 3.2536786286063712e-06,
+            "finite_pulse_difference": -6.581534362642971e-13,
+            "conditional_value": 5.4564493819442065e-05,
+            "conditional_interval": [
+              -0.00032969505167603093,
+              0.0004388493254733706
+            ]
+          },
+          "X_state_error": 5.759802367817342e-05,
+          "Y_state_error": 4.954927664797376e-05
+        }
+      },
+      "response_change_joint": 5.054521246431362e-06,
+      "response_change_joint_interval": [
+        -4.040101573390169e-05,
+        5.0510058226764416e-05
+      ],
+      "response_change_conditional": 8.476477519878638e-05,
+      "response_change_conditional_interval": [
+        -0.0006776856512954904,
+        0.0008472544831999019
+      ]
+    },
+    {
+      "lag": 0.25,
+      "preparation": "unfiltered_waiting_state",
+      "initial_probability": 0.9999999999994551,
+      "initial_interval": [
+        0.9999434290551793,
+        1.0
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 0.001237055163366694,
+            "joint_interval": [
+              0.0011097249095522613,
+              0.0013643854171811267
+            ],
+            "error_bound": 0.00012733025381443273,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.1074721828773235e-15,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.0012370549573037515,
+            "finite_pulse_difference": -2.0606294253398827e-10,
+            "conditional_value": 0.0012370551633673682,
+            "conditional_interval": [
+              0.0011097249095522613,
+              0.0013644626061199276
+            ]
+          },
+          "X_state_error": 0.00012295354828585072,
+          "Y_state_error": 8.859210699771292e-05
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 4.183249990359281e-05,
+            "joint_interval": [
+              -0.00010851831515649432,
+              0.00019218331496367993
+            ],
+            "error_bound": 0.00015035081506008713,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 1.4536982728685643e-15,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 4.183249205369499e-05,
+            "finite_pulse_difference": -7.849897815104256e-12,
+            "conditional_value": 4.18324999036156e-05,
+            "conditional_interval": [
+              -0.00010852445448742082,
+              0.00019219418757045984
+            ]
+          },
+          "X_state_error": 0.00011637053992208092,
+          "Y_state_error": 8.860870962282558e-05
+        }
+      },
+      "response_change_joint": 0.0011952226634631012,
+      "response_change_joint_interval": [
+        0.0009175415945885813,
+        0.0014729037323376211
+      ],
+      "response_change_conditional": 0.0011952226634637524,
+      "response_change_conditional_interval": [
+        0.0009175415945885813,
+        0.0014729870606073484
+      ]
+    },
+    {
+      "lag": 0.25,
+      "preparation": "initial_event_branch",
+      "initial_probability": 0.05962997288175113,
+      "initial_interval": [
+        0.05961615928663906,
+        0.059643788077044325
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 5.7262453915065455e-05,
+            "joint_interval": [
+              1.854756966533765e-05,
+              9.597733816479325e-05
+            ],
+            "error_bound": 3.8714884249727804e-05,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.3722343533982837e-16,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 5.7262444466688045e-05,
+            "finite_pulse_difference": -9.448377410320452e-12,
+            "conditional_value": 0.0009602964943254198,
+            "conditional_interval": [
+              0.00031097236214069765,
+              0.0016099215265332149
+            ]
+          },
+          "X_state_error": 0.00011497273165459888,
+          "Y_state_error": 8.743994379951692e-05
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 2.495336079401519e-05,
+            "joint_interval": [
+              -1.7400898719244298e-05,
+              6.730762030727469e-05
+            ],
+            "error_bound": 4.235425951325949e-05,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 2.1120258320017626e-16,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 2.4953356676099547e-05,
+            "finite_pulse_difference": -4.117915643891967e-12,
+            "conditional_value": 0.0004184701013280487,
+            "conditional_interval": [
+              -0.00029188225017280037,
+              0.001129016379328539
+            ]
+          },
+          "X_state_error": 0.00011194679174641569,
+          "Y_state_error": 8.769524165874535e-05
+        }
+      },
+      "response_change_joint": 3.2309093121050264e-05,
+      "response_change_joint_interval": [
+        -4.876005064193703e-05,
+        0.00011337823688403756
+      ],
+      "response_change_conditional": 0.000541826392997371,
+      "response_change_conditional_interval": [
+        -0.0008178998987085861,
+        0.0019018037767060153
+      ]
+    },
+    {
+      "lag": 0.5,
+      "preparation": "unfiltered_waiting_state",
+      "initial_probability": 0.9999999999994551,
+      "initial_interval": [
+        0.9999434290551793,
+        1.0
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 0.0044913316461730815,
+            "joint_interval": [
+              0.004112872413091847,
+              0.004869790879254316
+            ],
+            "error_bound": 0.0003784592330812345,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.700029006457271e-15,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.00449133089719389,
+            "finite_pulse_difference": -7.489791911674537e-10,
+            "conditional_value": 0.004491331646175529,
+            "conditional_interval": [
+              0.004112872413091847,
+              0.0048700663835109705
+            ]
+          },
+          "X_state_error": 0.00038075144472090103,
+          "Y_state_error": 0.0002329757916669431
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 0.0002568492420779669,
+            "joint_interval": [
+              -0.00022166263115568253,
+              0.0007353611153116163
+            ],
+            "error_bound": 0.00047851187323364944,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 1.0771548583643487e-15,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.0002568491993260036,
+            "finite_pulse_difference": -4.27519633193138e-11,
+            "conditional_value": 0.0002568492420781069,
+            "conditional_interval": [
+              -0.00022167517152957926,
+              0.0007354027177381825
+            ]
+          },
+          "X_state_error": 0.0003998840063286744,
+          "Y_state_error": 0.0002608722349357704
+        }
+      },
+      "response_change_joint": 0.0042344824040951145,
+      "response_change_joint_interval": [
+        0.0033775112977802307,
+        0.005091453510409998
+      ],
+      "response_change_conditional": 0.004234482404097422,
+      "response_change_conditional_interval": [
+        0.0033775112977802307,
+        0.0050917415550405494
+      ]
+    },
+    {
+      "lag": 0.5,
+      "preparation": "initial_event_branch",
+      "initial_probability": 0.05962997288175113,
+      "initial_interval": [
+        0.05961615928663906,
+        0.059643788077044325
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 0.00025700496926184203,
+            "joint_interval": [
+              0.00015137937047596706,
+              0.000362630568047717
+            ],
+            "error_bound": 0.00010562559878587497,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.8297676701871666e-17,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.00025700492631980376,
+            "finite_pulse_difference": -4.294203827161919e-11,
+            "conditional_value": 0.004309996413573661,
+            "conditional_interval": [
+              0.0025380576143222847,
+              0.006082756292705161
+            ]
+          },
+          "X_state_error": 0.00033620186337698303,
+          "Y_state_error": 0.0002258918518996114
+        },
+        "moving_core_comparison": {
+          "receiver_response": {
+            "joint_value": 0.00016857998251180913,
+            "joint_interval": [
+              3.179764415620271e-05,
+              0.00030536232086741553
+            ],
+            "error_bound": 0.00013678233835560642,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.6024382222009663e-17,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.00016857995454103158,
+            "finite_pulse_difference": -2.7970777549592846e-11,
+            "conditional_value": 0.002827101445209621,
+            "conditional_interval": [
+              0.0005331258322346727,
+              0.005122140113038985
+            ]
+          },
+          "X_state_error": 0.00036392180631932166,
+          "Y_state_error": 0.000253982730548044
+        }
+      },
+      "response_change_joint": 8.84249867500329e-05,
+      "response_change_joint_interval": [
+        -0.0001539829503914485,
+        0.00033083292389151427
+      ],
+      "response_change_conditional": 0.00148289496836404,
+      "response_change_conditional_interval": [
+        -0.002582906249479888,
+        0.005549383386152808
+      ]
+    }
+  ],
+  "error_scope": "All outgoing electric rows; analytic Duhamel state error and bilinear response intervals, with5e-10 floating allowance. No outward rounding or large-distance scaling.",
+  "seconds": 570.0688836209999
+}

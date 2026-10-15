@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "integer_CAR_identity_all_eight_states": true,
+  "recorded_physical_states_checked": 48,
+  "nonzero_direct_transfer_states": 24,
+  "unregulated_destinations_outside_check_basis": 24,
+  "transfer_operator": "T_ji=a_j^dagger U_je U_ie^dagger a_i",
+  "exact_identity": "K_e^2=2n_b+(1-2n_b)(n_i+n_j-T_ji-T_ij), on an active edge, t=1",
+  "neutral_edge_action": "||K_e v||^2=<v,(2-n_i-n_j)v> for b_e=1,E_e=0",
+  "diagonal_energy_change_checks": [
+    {
+      "N": 4,
+      "Q": 5,
+      "first_hop_diagonal_energy_change": "253/120",
+      "completed_transfer_diagonal_energy_change": "7/30"
+    },
+    {
+      "N": 5,
+      "Q": 10,
+      "first_hop_diagonal_energy_change": "17/8",
+      "completed_transfer_diagonal_energy_change": "1/4"
+    },
+    {
+      "N": 6,
+      "Q": 12,
+      "first_hop_diagonal_energy_change": "421/200",
+      "completed_transfer_diagonal_energy_change": "23/100"
+    }
+  ],
+  "energy_scope": "Exact changes of the physical diagonal energy on supplied algebra-check basis states, including the rewiring escape diagonal; not eigenvalue gaps, effective couplings or a formation preparation.",
+  "exact_probability_onset": "lag^4/4 * <n_i(1-n_j)+n_j(1-n_i)> + O(lag^5)",
+  "scope": "Exact integer CAR and raw Gauss-state recurrence, independent of floating matrix exponentials. The prepared-state expectation in this coefficient is measured numerically with a separate waiting-state error interval."
+}

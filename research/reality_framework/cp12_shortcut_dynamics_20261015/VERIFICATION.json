@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "frozen_sources": {
+    "frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b"
+  },
+  "independent_controls_status": "PASS",
+  "exact_transfer_algebra_status": "PASS",
+  "resolved_shortcut_response_sign_reversals": 3,
+  "N4_electric_budget_comparisons": [
+    {
+      "lag": 0.125,
+      "direct_shortcut": true,
+      "absolute_full_response_cutoff_difference": 7.426784881525705e-18
+    },
+    {
+      "lag": 0.125,
+      "direct_shortcut": false,
+      "absolute_full_response_cutoff_difference": 3.469446951953614e-18
+    },
+    {
+      "lag": 0.25,
+      "direct_shortcut": true,
+      "absolute_full_response_cutoff_difference": 1.3617579286417936e-16
+    },
+    {
+      "lag": 0.25,
+      "direct_shortcut": false,
+      "absolute_full_response_cutoff_difference": 3.4954678040932663e-16
+    },
+    {
+      "lag": 0.5,
+      "direct_shortcut": true,
+      "absolute_full_response_cutoff_difference": 5.479666199958988e-15
+    },
+    {
+      "lag": 0.5,
+      "direct_shortcut": false,
+      "absolute_full_response_cutoff_difference": 1.0443252165814876e-14
+    },
+    {
+      "lag": 1.0,
+      "direct_shortcut": true,
+      "absolute_full_response_cutoff_difference": 2.055304711146011e-13
+    },
+    {
+      "lag": 1.0,
+      "direct_shortcut": false,
+      "absolute_full_response_cutoff_difference": 5.5948599702801416e-14
+    }
+  ],
+  "previous_full_N5_response_reproduction": [
+    {
+      "preparation": "unfiltered_waiting_state",
+      "absolute_difference": 3.469446951953614e-18
+    },
+    {
+      "preparation": "initial_event_branch",
+      "absolute_difference": 1.0842021724855044e-19
+    }
+  ],
+  "full_reproduction": "Commands in README.md rebuild the matrices and repeat all propagations. This verifier checks saved evidence and integrity only.",
+  "limitation": "Internal analytic/numerical verification using ordinary floating point; no outward rounding, external peer review, continuum limit or autonomous geometric record."
+}

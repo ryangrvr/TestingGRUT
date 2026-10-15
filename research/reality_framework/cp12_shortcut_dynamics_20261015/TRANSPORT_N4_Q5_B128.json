@@ -1,0 +1,1576 @@
+{
+  "status": "PASS",
+  "N": 4,
+  "Q": 5,
+  "electric_budget": 128,
+  "dimension": 53178,
+  "outgoing_dimension": 3816,
+  "H_nonzeros": 359952,
+  "wait": 5.0,
+  "wait_state_error": 1.232319272791552e-06,
+  "initial_energy": 2.5,
+  "initial_variance": 10.0,
+  "neutral_energy_check": 2.5000000000000004,
+  "neutral_variance_check": 10.000000000000002,
+  "initial_preparation": "Original coherent neutral ray over all SIX labelled Q5 hosts. No supplied loop, flux, matter or host.",
+  "complete_record": "Twelve projectors {P_g G_g, P_g (1-G_g)}. G_g requires a directed four-cycle, nv>=1 and a neutral fifth edge. Every Q5 host has a unique spanning four-cycle.",
+  "record_labels": [
+    {
+      "graph_mask": 31,
+      "ring_mask": 30,
+      "chord_edge": 0,
+      "receiver": 1,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "shortcut": true,
+      "initial_probability": 0.00859654177751104
+    },
+    {
+      "graph_mask": 47,
+      "ring_mask": 45,
+      "chord_edge": 1,
+      "receiver": 2,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "shortcut": true,
+      "initial_probability": 0.008596541777511044
+    },
+    {
+      "graph_mask": 55,
+      "ring_mask": 51,
+      "chord_edge": 2,
+      "receiver": 3,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "shortcut": true,
+      "initial_probability": 0.00859654177751105
+    },
+    {
+      "graph_mask": 59,
+      "ring_mask": 51,
+      "chord_edge": 3,
+      "receiver": 3,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "shortcut": false,
+      "initial_probability": 0.008596541777511048
+    },
+    {
+      "graph_mask": 61,
+      "ring_mask": 45,
+      "chord_edge": 4,
+      "receiver": 2,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "shortcut": false,
+      "initial_probability": 0.008596541777511055
+    },
+    {
+      "graph_mask": 62,
+      "ring_mask": 30,
+      "chord_edge": 5,
+      "receiver": 1,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "shortcut": false,
+      "initial_probability": 0.008596541777511055
+    }
+  ],
+  "record_outcome_probabilities": [
+    0.15807012488915573,
+    0.008596541777511044,
+    0.15807012488915584,
+    0.008596541777511044,
+    0.15807012488915573,
+    0.008596541777511053,
+    0.15807012488915573,
+    0.00859654177751105,
+    0.15807012488915553,
+    0.008596541777511055,
+    0.15807012488915537,
+    0.008596541777511058
+  ],
+  "event_probability": 0.05157925066506629,
+  "event_probability_interval": [
+    0.05157869069379535,
+    0.0515798106393769
+  ],
+  "complete_record_energy_change": 0.08703484625404556,
+  "complete_record_energy_interval": [
+    0.0870032594758401,
+    0.08706643303225102
+  ],
+  "complete_record_entropy_bits": 2.8780304970518094,
+  "complete_record_entropy_error_bits": 5.7998689999956554e-05,
+  "comparison": "For each recorded ring C, V_C=sum_{e not in C} K_e on the FULL physical Hilbert space; H_C=H-V_C. The pointer C stays fixed, all graph rewiring and all electric/mass terms remain. This is an external diagnostic intervention, not a changed GRUT law.",
+  "direct_charge_transfer": "For e=(i,j), T_ji=a_j^dagger U_je U_ie^dagger a_i is gauge invariant. K_e^2 contains (2n_b,e-1)(T_ji+T_ij). On the recorded neutral fifth edge n_b=1,E=0, the two-hop transfer amplitude has magnitude lag^2/2 with no gauge cancellation. Its final fields are (-1,+1) or (+1,-1), while the original ring fields are unchanged.",
+  "exact_shortcut_onset": "For each recorded branch, Pr(new fifth-edge through-flow AND original ring) = lag^4 <n_i(1-n_j)+n_j(1-n_i)>/4 + O(lag^5). The measured finite-wait state fixes the expectation; its coefficient interval includes waiting-state error. This finite derivative does not assert a long-time rate. The corresponding probability is exactly zero under H_C because all non-C half-leg fields stay zero.",
+  "source": "Gauge-invariant exp(-i theta n_0) immediately after the record. It commutes with all twelve projectors, so the initial event probability has zero derivative.",
+  "receiver": "The vertex opposite source0 on the initial recorded ring, fixed before the lag, independent of the final graph. A joint classical record stores its label.",
+  "density_contrast_limit": "Shortcut and no-shortcut categories have source/receiver degree3 and degree2 respectively. Their direct comparison is not a degree-matched scaling test. Within each full-versus-core comparison the initial state and recorded host are identical.",
+  "hopping_off_response": "Exactly zero for all receivers: [n_j,H_diagonal+H_rewire]=0 for every j.",
+  "results": [
+    {
+      "lag": 0.125,
+      "shortcut_present_at_record": true,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "initial_joint_probability": 0.025789625332533147,
+      "initial_joint_probability_interval": [
+        0.02578922937349535,
+        0.025790021294610627
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367316,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658197,
+        0.17933009379076434
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.116654242577405,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.0033889943622869823,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.003388922594006816,
+        0.0033890661313270704
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.1314092127585827,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.13141401327835536
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": -4.42391598180227e-08,
+            "joint_interval": [
+              -4.178976129821195e-07,
+              3.294192933460741e-07
+            ],
+            "error_bound": 3.736584531640968e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 2.5478751053409354e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -4.4239151404668053e-08,
+            "finite_pulse_difference": 8.41335464837889e-15,
+            "conditional_value": -1.7153859060610624e-06,
+            "conditional_interval": [
+              -1.6204346664643266e-05,
+              1.277352217762008e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -2.564856159068538e-06,
+            "joint_interval": [
+              -2.9354514605262986e-06,
+              -2.1942608576107778e-06
+            ],
+            "error_bound": 3.7059530145776037e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.2468324983583301e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -2.564855731447546e-06,
+            "finite_pulse_difference": 4.2762099200163717e-13,
+            "conditional_value": -9.945302136022187e-05,
+            "conditional_interval": [
+              -0.00011382470635369907,
+              -8.508177765907138e-05
+            ]
+          },
+          "initial_ring_survival_joint": 0.025483083930264588,
+          "initial_ring_survival_conditional": 0.9881137706222562,
+          "initial_ring_survival_conditional_interval": [
+            0.9880820162485082,
+            0.9881455259938032
+          ],
+          "host_survival_joint": 0.02578951425350307,
+          "host_survival_conditional": 0.9999956928792626,
+          "host_survival_conditional_interval": [
+            0.9999636566688301,
+            1.000027730094748
+          ],
+          "new_chord_and_ring_joint_probability": 8.372312163384792e-07,
+          "new_chord_and_ring_joint_interval": [
+            8.34781532688028e-07,
+            8.396844890484105e-07
+          ],
+          "new_chord_and_ring_conditional_probability": 3.246387667688709e-05,
+          "new_chord_and_ring_conditional_interval": [
+            3.2368392532598384e-05,
+            3.255950291835353e-05
+          ],
+          "full_X_state_error": 1.3391005897338153e-06,
+          "full_Y_state_error": 1.2884555979989163e-06,
+          "final_receiver_density_joint": 0.009128358018896394
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 4.93558889038629e-09,
+            "joint_interval": [
+              -3.6183265247783674e-07,
+              3.717038302586093e-07
+            ],
+            "error_bound": 3.6676824136822303e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 2.0599841277224584e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 4.935589263677098e-09,
+            "finite_pulse_difference": 3.732908079867592e-16,
+            "conditional_value": 1.9137885202853776e-07,
+            "conditional_interval": [
+              -1.403037862192606e-05,
+              1.4413142202714464e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -2.422163198501667e-06,
+            "joint_interval": [
+              -2.7858549247569233e-06,
+              -2.058471472246411e-06
+            ],
+            "error_bound": 3.636917262552562e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.6263032587282567e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -2.4221627932530243e-06,
+            "finite_pulse_difference": 4.0524864280272466e-13,
+            "conditional_value": -9.392006154684814e-05,
+            "conditional_interval": [
+              -0.0001080239694025158,
+              -7.981658676166243e-05
+            ]
+          },
+          "initial_ring_survival_joint": 0.025482326404703114,
+          "initial_ring_survival_conditional": 0.9880843973548394,
+          "initial_ring_survival_conditional_interval": [
+            0.9880526710422103,
+            0.9881161246639504
+          ],
+          "host_survival_joint": 0.025789513398556573,
+          "host_survival_conditional": 0.999995659728471,
+          "host_survival_conditional_interval": [
+            0.9999636510469172,
+            1.0000276694137735
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            1.7886123969441028e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            6.935501526782081e-11
+          ],
+          "full_X_state_error": 1.3368901438787795e-06,
+          "full_Y_state_error": 1.2882013317997593e-06,
+          "final_receiver_density_joint": 0.008875475889344703
+        }
+      },
+      "response_change_joint": -4.917474870840899e-08,
+      "response_change_joint_interval": [
+        -7.896014432407287e-07,
+        6.912519458239108e-07
+      ],
+      "response_change_conditional": -1.9067647580896002e-06,
+      "response_change_conditional_interval": [
+        -3.061748886735773e-05,
+        2.6803900799546138e-05
+      ],
+      "state_distance": 0.022558235860499404,
+      "state_distance_interval": [
+        0.02255555936976579,
+        0.022560912351233017
+      ],
+      "phase_optimized_state_distance": 0.022557527609514592,
+      "phase_optimized_state_distance_interval": [
+        0.02255485111878098,
+        0.022560204100248206
+      ],
+      "normalized_state_distance": 0.14046968766061052,
+      "normalized_state_distance_interval": [
+        0.14045194342993078,
+        0.1404874321636176
+      ],
+      "outside_hopping_integral_upper_sum": 0.023273478564808055,
+      "full_law_Duhamel_upper": 0.023274147009879995
+    },
+    {
+      "lag": 0.125,
+      "shortcut_present_at_record": false,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "initial_joint_probability": 0.025789625332533164,
+      "initial_joint_probability_interval": [
+        0.025789229373495367,
+        0.025790021294610645
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367324,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658205,
+        0.17933009379076442
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.1166542425774053,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.003388994362286985,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.0033889225940068185,
+        0.003389066131327073
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.13140921275858272,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.1314140132783554
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 3.0720945206133554e-09,
+            "joint_interval": [
+              -5.493031875238334e-07,
+              5.554473765650602e-07
+            ],
+            "error_bound": 5.523752820444468e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 3.469446951953614e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 3.0720920599081047e-09,
+            "finite_pulse_difference": -2.460705250673101e-15,
+            "conditional_value": 1.1912133196979646e-07,
+            "conditional_interval": [
+              -2.129971313095437e-05,
+              2.1537959452790624e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -1.4645631620653979e-05,
+            "joint_interval": [
+              -1.5195102067038987e-05,
+              -1.4096161174268971e-05
+            ],
+            "error_bound": 5.49470446385008e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 8.673617379884035e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -1.4645629182498399e-05,
+            "finite_pulse_difference": 2.4381555802088783e-12,
+            "conditional_value": -0.0005678884990306071,
+            "conditional_interval": [
+              -0.0005892034169371345,
+              -0.0005465742355635299
+            ]
+          },
+          "initial_ring_survival_joint": 0.025483083930264713,
+          "initial_ring_survival_conditional": 0.9881137706222605,
+          "initial_ring_survival_conditional_interval": [
+            0.9880820162485124,
+            0.9881455259938074
+          ],
+          "host_survival_joint": 0.025789514253503086,
+          "host_survival_conditional": 0.9999956928792626,
+          "host_survival_conditional_interval": [
+            0.9999636566688301,
+            1.000027730094748
+          ],
+          "new_chord_and_ring_joint_probability": 8.372312163384805e-07,
+          "new_chord_and_ring_joint_interval": [
+            8.347815326880292e-07,
+            8.396844890484117e-07
+          ],
+          "new_chord_and_ring_conditional_probability": 3.2463876676887115e-05,
+          "new_chord_and_ring_conditional_interval": [
+            3.236839253259841e-05,
+            3.255950291835356e-05
+          ],
+          "full_X_state_error": 1.3391005897338161e-06,
+          "full_Y_state_error": 1.2883505376673263e-06,
+          "final_receiver_density_joint": 0.014796161797499263
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 3.07382364353459e-09,
+            "joint_interval": [
+              -5.488142540750008e-07,
+              5.5496190136207e-07
+            ],
+            "error_bound": 5.518880777185354e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 1.734723475976807e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 3.0738233139371296e-09,
+            "finite_pulse_difference": -3.2959746043559335e-16,
+            "conditional_value": 1.1918837919901903e-07,
+            "conditional_interval": [
+              -2.1280754307417942e-05,
+              2.151913472577148e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -1.4694064289428807e-05,
+            "joint_interval": [
+              -1.5243046548589125e-05,
+              -1.4145082030268489e-05
+            ],
+            "error_bound": 5.489822591603186e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 8.673617379884035e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -1.4694061838821382e-05,
+            "finite_pulse_difference": 2.45060742531944e-12,
+            "conditional_value": -0.00056976648942986,
+            "conditional_interval": [
+              -0.0005910625062823715,
+              -0.0005484711264361924
+            ]
+          },
+          "initial_ring_survival_joint": 0.025482326404703153,
+          "initial_ring_survival_conditional": 0.9880843973548402,
+          "initial_ring_survival_conditional_interval": [
+            0.9880526710422111,
+            0.9881161246639512
+          ],
+          "host_survival_joint": 0.025789513398556608,
+          "host_survival_conditional": 0.9999956597284717,
+          "host_survival_conditional_interval": [
+            0.999963651046918,
+            1.0000276694137742
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            1.788612396944105e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            6.935501526782085e-11
+          ],
+          "full_X_state_error": 1.3368901438787804e-06,
+          "full_Y_state_error": 1.2879568967171336e-06,
+          "final_receiver_density_joint": 0.014796273180049361
+        }
+      },
+      "response_change_joint": -1.729122921234616e-12,
+      "response_change_joint_interval": [
+        -1.1042650888859034e-06,
+        1.104261630640061e-06
+      ],
+      "response_change_conditional": -6.704722922257259e-11,
+      "response_change_conditional_interval": [
+        -4.281884785672585e-05,
+        4.2818713760208566e-05
+      ],
+      "state_distance": 0.022558235860499442,
+      "state_distance_interval": [
+        0.02255555936976583,
+        0.022560912351233055
+      ],
+      "phase_optimized_state_distance": 0.022557527609516206,
+      "phase_optimized_state_distance_interval": [
+        0.022554851118782592,
+        0.02256020410024982
+      ],
+      "normalized_state_distance": 0.14046968766061071,
+      "normalized_state_distance_interval": [
+        0.14045194342993098,
+        0.14048743216361778
+      ],
+      "outside_hopping_integral_upper_sum": 0.02327347856480806,
+      "full_law_Duhamel_upper": 0.02327414700988
+    },
+    {
+      "lag": 0.25,
+      "shortcut_present_at_record": true,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "initial_joint_probability": 0.025789625332533147,
+      "initial_joint_probability_interval": [
+        0.02578922937349535,
+        0.025790021294610627
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367316,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658197,
+        0.17933009379076434
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.116654242577405,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.0033889943622869823,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.003388922594006816,
+        0.0033890661313270704
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.1314092127585827,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.13141401327835536
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": -1.3195307230844631e-06,
+            "joint_interval": [
+              -1.7088816136061727e-06,
+              -9.301798325627536e-07
+            ],
+            "error_bound": 3.8935089052170954e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.336808689942018e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -1.3195305074292785e-06,
+            "finite_pulse_difference": 2.1565518468213973e-13,
+            "conditional_value": -5.1165176153990065e-05,
+            "conditional_interval": [
+              -6.626338417705729e-05,
+              -3.606743173791541e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -1.872781656919514e-05,
+            "joint_interval": [
+              -1.9103608148492394e-05,
+              -1.8352024989897887e-05
+            ],
+            "error_bound": 3.7579157929725506e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.3010426069826053e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -1.8727813450199193e-05,
+            "finite_pulse_difference": 3.1189959469324346e-12,
+            "conditional_value": -0.0007261763723868581,
+            "conditional_interval": [
+              -0.000740759170110215,
+              -0.0007115940223644923
+            ]
+          },
+          "initial_ring_survival_joint": 0.024620428168438978,
+          "initial_ring_survival_conditional": 0.9546640500193988,
+          "initial_ring_survival_conditional_interval": [
+            0.9546316148463528,
+            0.9546964862414641
+          ],
+          "host_survival_joint": 0.025789191115075407,
+          "host_survival_conditional": 0.9999831630955417,
+          "host_survival_conditional_interval": [
+            0.9999496150444753,
+            1.0000167122244592
+          ],
+          "new_chord_and_ring_joint_probability": 1.2666718551621805e-05,
+          "new_chord_and_ring_joint_interval": [
+            1.265632102882125e-05,
+            1.2677120343597262e-05
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0004911555863373854,
+          "new_chord_and_ring_conditional_interval": [
+            0.0004907448847848008,
+            0.0004915664659846742
+          ],
+          "full_X_state_error": 1.460522740933963e-06,
+          "full_Y_state_error": 1.3576018493650468e-06,
+          "final_receiver_density_joint": 0.009069079486045684
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 1.5525346784002025e-07,
+            "joint_interval": [
+              -2.0290627631018378e-07,
+              5.134132119902243e-07
+            ],
+            "error_bound": 3.5815974415020403e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 3.9302328752599536e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 1.5525344031208643e-07,
+            "finite_pulse_difference": -2.7527933816988426e-14,
+            "conditional_value": 6.019997027415936e-06,
+            "conditional_interval": [
+              -7.867868922005049e-06,
+              1.9908047834801925e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -1.4405094509027803e-05,
+            "joint_interval": [
+              -1.4749255425527116e-05,
+              -1.406093359252849e-05
+            ],
+            "error_bound": 3.4416091649931377e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 7.250602028496811e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -1.4405092109166101e-05,
+            "finite_pulse_difference": 2.3998617017782255e-12,
+            "conditional_value": -0.0005585616046486739,
+            "conditional_interval": [
+              -0.0005719153221649009,
+              -0.0005452082971124502
+            ]
+          },
+          "initial_ring_survival_joint": 0.0246090588255191,
+          "initial_ring_survival_conditional": 0.9542232005392965,
+          "initial_ring_survival_conditional_interval": [
+            0.9541909422674385,
+            0.9542554598517154
+          ],
+          "host_survival_joint": 0.025789177598380078,
+          "host_survival_conditional": 0.9999826389818659,
+          "host_survival_conditional_interval": [
+            0.999949260905339,
+            1.0000160181279465
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.0948946407678905e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            8.123137804656155e-11
+          ],
+          "full_X_state_error": 1.4468750864126032e-06,
+          "full_Y_state_error": 1.3552933144015216e-06,
+          "final_receiver_density_joint": 0.008105922644885365
+        }
+      },
+      "response_change_joint": -1.4747841909244834e-06,
+      "response_change_joint_interval": [
+        -2.222294825596397e-06,
+        -7.272735562525698e-07
+      ],
+      "response_change_conditional": -5.7185173181406006e-05,
+      "response_change_conditional_interval": [
+        -8.61714320118592e-05,
+        -2.8199804410574452e-05
+      ],
+      "state_distance": 0.04481955354587787,
+      "state_distance_interval": [
+        0.044816645648050525,
+        0.04482246144370521
+      ],
+      "phase_optimized_state_distance": 0.04479696236821854,
+      "phase_optimized_state_distance_interval": [
+        0.0447940544703912,
+        0.044799870266045885
+      ],
+      "normalized_state_distance": 0.2790904717288515,
+      "normalized_state_distance_interval": [
+        0.27907022282571775,
+        0.2791107209427527
+      ],
+      "outside_hopping_integral_upper_sum": 0.04712221519777658,
+      "full_law_Duhamel_upper": 0.047123662072863
+    },
+    {
+      "lag": 0.25,
+      "shortcut_present_at_record": false,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "initial_joint_probability": 0.025789625332533164,
+      "initial_joint_probability_interval": [
+        0.025789229373495367,
+        0.025790021294610645
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367324,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658205,
+        0.17933009379076442
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.1166542425774053,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.003388994362286985,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.0033889225940068185,
+        0.003389066131327073
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.13140921275858272,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.1314140132783554
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 1.0835691838500389e-07,
+            "joint_interval": [
+              -4.6645740630756134e-07,
+              6.831712430775691e-07
+            ],
+            "error_bound": 5.748143246925652e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 8.673617379884035e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 1.0835690331112424e-07,
+            "finite_pulse_difference": -1.5073879644500465e-14,
+            "conditional_value": 4.2015700882755174e-06,
+            "conditional_interval": [
+              -1.8087295263927445e-05,
+              2.6490564459428626e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.00010464518180284101,
+            "joint_interval": [
+              -0.00010520800325322234,
+              -0.00010408236035245967
+            ],
+            "error_bound": 5.628214503813284e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.336808689942018e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.00010464516435847171,
+            "finite_pulse_difference": 1.7444369299762785e-11,
+            "conditional_value": -0.00405764645486466,
+            "conditional_interval": [
+              -0.004079532650221369,
+              -0.004035760931078014
+            ]
+          },
+          "initial_ring_survival_joint": 0.024620428168438995,
+          "initial_ring_survival_conditional": 0.9546640500193988,
+          "initial_ring_survival_conditional_interval": [
+            0.9546316148463528,
+            0.9546964862414641
+          ],
+          "host_survival_joint": 0.025789191115075452,
+          "host_survival_conditional": 0.9999831630955428,
+          "host_survival_conditional_interval": [
+            0.9999496150444763,
+            1.0000167122244603
+          ],
+          "new_chord_and_ring_joint_probability": 1.2666718551621834e-05,
+          "new_chord_and_ring_joint_interval": [
+            1.2656321028821277e-05,
+            1.267712034359729e-05
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0004911555863373862,
+          "new_chord_and_ring_conditional_interval": [
+            0.0004907448847848015,
+            0.0004915664659846749
+          ],
+          "full_X_state_error": 1.4605227409339651e-06,
+          "full_Y_state_error": 1.356936019879479e-06,
+          "final_receiver_density_joint": 0.014074902993356342
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 1.0863300954535443e-07,
+            "joint_interval": [
+              -4.631257413508252e-07,
+              6.803917604415341e-07
+            ],
+            "error_bound": 5.717587508961796e-07,
+            "zero_excluded": false,
+            "phase_shift_identity_error": 1.734723475976807e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 1.0863299149121985e-07,
+            "finite_pulse_difference": -1.805413457622862e-14,
+            "conditional_value": 4.2122756009299514e-06,
+            "conditional_interval": [
+              -1.7958107031565597e-05,
+              2.638278758111323e-05
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.00010601204552556417,
+            "joint_interval": [
+              -0.00010657181917778491,
+              -0.00010545227187334342
+            ],
+            "error_bound": 5.597736522207454e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 0.0,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.00010601202785759378,
+            "finite_pulse_difference": 1.7667970385326637e-11,
+            "conditional_value": -0.004110646981436827,
+            "conditional_interval": [
+              -0.004132415809497319,
+              -0.004088878821336214
+            ]
+          },
+          "initial_ring_survival_joint": 0.024609058825519135,
+          "initial_ring_survival_conditional": 0.9542232005392973,
+          "initial_ring_survival_conditional_interval": [
+            0.9541909422674392,
+            0.9542554598517161
+          ],
+          "host_survival_joint": 0.025789177598380113,
+          "host_survival_conditional": 0.9999826389818666,
+          "host_survival_conditional_interval": [
+            0.9999492609053396,
+            1.0000160181279472
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.094894640767897e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            8.123137804656175e-11
+          ],
+          "full_X_state_error": 1.4468750864126053e-06,
+          "full_Y_state_error": 1.3538560645592386e-06,
+          "final_receiver_density_joint": 0.014076479689397875
+        }
+      },
+      "response_change_joint": -2.760911603505445e-10,
+      "response_change_joint_interval": [
+        -1.1468491667490954e-06,
+        1.1462969844283943e-06
+      ],
+      "response_change_conditional": -1.0705512654433962e-08,
+      "response_change_conditional_interval": [
+        -4.4470082845040675e-05,
+        4.444867149099422e-05
+      ],
+      "state_distance": 0.04481955354587787,
+      "state_distance_interval": [
+        0.044816645648050525,
+        0.04482246144370521
+      ],
+      "phase_optimized_state_distance": 0.04479696236821866,
+      "phase_optimized_state_distance_interval": [
+        0.044794054470391316,
+        0.044799870266046
+      ],
+      "normalized_state_distance": 0.27909047172885143,
+      "normalized_state_distance_interval": [
+        0.2790702228257177,
+        0.2791107209427526
+      ],
+      "outside_hopping_integral_upper_sum": 0.04712221519777661,
+      "full_law_Duhamel_upper": 0.047123662072863025
+    },
+    {
+      "lag": 0.5,
+      "shortcut_present_at_record": true,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "initial_joint_probability": 0.025789625332533147,
+      "initial_joint_probability_interval": [
+        0.02578922937349535,
+        0.025790021294610627
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367316,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658197,
+        0.17933009379076434
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.116654242577405,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.0033889943622869823,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.003388922594006816,
+        0.0033890661313270704
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.1314092127585827,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.13141401327835536
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": -3.21865307115355e-05,
+            "joint_interval": [
+              -3.2697288287434366e-05,
+              -3.167577313563664e-05
+            ],
+            "error_bound": 5.107575758988661e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 6.071532165918825e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -3.2186525345152817e-05,
+            "finite_pulse_difference": 5.3663826854455365e-12,
+            "conditional_value": -0.0012480418112524021,
+            "conditional_interval": [
+              -0.0012678660464759258,
+              -0.0012282181846145262
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.00014531170029403822,
+            "joint_interval": [
+              -0.0001457651063515839,
+              -0.00014485829423649253
+            ],
+            "error_bound": 4.534060575456814e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 5.854691731421724e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0001453116760755796,
+            "finite_pulse_difference": 2.4218458618760486e-11,
+            "conditional_value": -0.005634502185292709,
+            "conditional_interval": [
+              -0.005652169913281422,
+              -0.005616834999153868
+            ]
+          },
+          "initial_ring_survival_joint": 0.02178247376389269,
+          "initial_ring_survival_conditional": 0.8446215671235243,
+          "initial_ring_survival_conditional_interval": [
+            0.8445881539459755,
+            0.8446549814750257
+          ],
+          "host_survival_joint": 0.02578803401215124,
+          "host_survival_conditional": 0.9999382961031272,
+          "host_survival_conditional_interval": [
+            0.9999006977267372,
+            0.9999758957636801
+          ],
+          "new_chord_and_ring_joint_probability": 0.0001494482632382612,
+          "new_chord_and_ring_joint_interval": [
+            0.00014940459044280994,
+            0.0001494919424158268
+          ],
+          "new_chord_and_ring_conditional_probability": 0.00579489858077678,
+          "new_chord_and_ring_conditional_interval": [
+            0.005793116210959903,
+            0.005796681252114722
+          ],
+          "full_X_state_error": 1.7858530313858007e-06,
+          "full_Y_state_error": 1.597344987259991e-06,
+          "final_receiver_density_joint": 0.01016999240468476
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 4.862945951791624e-06,
+            "joint_interval": [
+              4.472066707045589e-06,
+              5.253825196537659e-06
+            ],
+            "error_bound": 3.908792447460352e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.6263032587282567e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 4.8629451420562075e-06,
+            "finite_pulse_difference": -8.097354167388437e-13,
+            "conditional_value": 0.0001885621015849775,
+            "conditional_interval": [
+              0.00017340298621545237,
+              0.00020372168242984535
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -4.66271653348691e-05,
+            "joint_interval": [
+              -4.695378832169522e-05,
+              -4.630054234804298e-05
+            ],
+            "error_bound": 3.266229868261179e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.336808689942018e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -4.6627157562501714e-05,
+            "finite_pulse_difference": 7.772367385111556e-12,
+            "conditional_value": -0.0018079814938625639,
+            "conditional_interval": [
+              -0.0018206743459326302,
+              -0.0017952890313323805
+            ]
+          },
+          "initial_ring_survival_joint": 0.021636543441777616,
+          "initial_ring_survival_conditional": 0.8389630777025483,
+          "initial_ring_survival_conditional_interval": [
+            0.838930542432957,
+            0.8389956141025646
+          ],
+          "host_survival_joint": 0.02578783438270015,
+          "host_survival_conditional": 0.9999305554148264,
+          "host_survival_conditional_interval": [
+            0.9998937459388995,
+            0.9999673661334555
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.9687988710434705e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            1.1511778146014038e-10
+          ],
+          "full_X_state_error": 1.7225202758654555e-06,
+          "full_Y_state_error": 1.5709122314289365e-06,
+          "final_receiver_density_joint": 0.007246656720058826
+        }
+      },
+      "response_change_joint": -3.7049476663327126e-05,
+      "response_change_joint_interval": [
+        -3.7951113483972026e-05,
+        -3.614783984268223e-05
+      ],
+      "response_change_conditional": -0.0014366039128373795,
+      "response_change_conditional_interval": [
+        -0.0014715877289057711,
+        -0.0014016211708299784
+      ],
+      "state_distance": 0.08508328733212647,
+      "state_distance_interval": [
+        0.08507977845881923,
+        0.08508679620543372
+      ],
+      "phase_optimized_state_distance": 0.08438556474507294,
+      "phase_optimized_state_distance_interval": [
+        0.0843820558717657,
+        0.08438907361838019
+      ],
+      "normalized_state_distance": 0.5298119440984157,
+      "normalized_state_distance_interval": [
+        0.5297860290331253,
+        0.5298378595614341
+      ],
+      "outside_hopping_integral_upper_sum": 0.09605114906518986,
+      "full_law_Duhamel_upper": 0.09605459410574159
+    },
+    {
+      "lag": 0.5,
+      "shortcut_present_at_record": false,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "initial_joint_probability": 0.025789625332533164,
+      "initial_joint_probability_interval": [
+        0.025789229373495367,
+        0.025790021294610645
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367324,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658205,
+        0.17933009379076442
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.1166542425774053,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.003388994362286985,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.0033889225940068185,
+        0.003389066131327073
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.13140921275858272,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.1314140132783554
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 4.162546485071868e-06,
+            "joint_interval": [
+              3.5424795186555946e-06,
+              4.782613451488141e-06
+            ],
+            "error_bound": 6.200669664162732e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 8.673617379884035e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 4.16254579155978e-06,
+            "finite_pulse_difference": -6.935120880346979e-13,
+            "conditional_value": 0.00016140391461293886,
+            "conditional_interval": [
+              0.00013735853406975933,
+              0.00018545003350908291
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.0004899196519995333,
+            "joint_interval": [
+              -0.0004904864228798565,
+              -0.00048935288111921
+            ],
+            "error_bound": 5.667708803232675e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.168404344971009e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0004899195703471707,
+            "finite_pulse_difference": 8.165236260564146e-11,
+            "conditional_value": -0.018996772759684418,
+            "conditional_interval": [
+              -0.019019041467906336,
+              -0.01897450473301743
+            ]
+          },
+          "initial_ring_survival_joint": 0.02178247376389299,
+          "initial_ring_survival_conditional": 0.8446215671235354,
+          "initial_ring_survival_conditional_interval": [
+            0.8445881539459866,
+            0.8446549814750368
+          ],
+          "host_survival_joint": 0.025788034012151267,
+          "host_survival_conditional": 0.9999382961031276,
+          "host_survival_conditional_interval": [
+            0.9999006977267376,
+            0.9999758957636803
+          ],
+          "new_chord_and_ring_joint_probability": 0.00014944826323826143,
+          "new_chord_and_ring_joint_interval": [
+            0.00014940459044281016,
+            0.000149491942415827
+          ],
+          "new_chord_and_ring_conditional_probability": 0.005794898580776784,
+          "new_chord_and_ring_conditional_interval": [
+            0.005793116210959908,
+            0.005796681252114726
+          ],
+          "full_X_state_error": 1.7858530313858058e-06,
+          "full_Y_state_error": 1.5953470780054073e-06,
+          "final_receiver_density_joint": 0.01158220238831334
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 4.21686127056683e-06,
+            "joint_interval": [
+              3.612310359777371e-06,
+              4.821412181356289e-06
+            ],
+            "error_bound": 6.045509107894591e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.0842021724855044e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 4.216860567327063e-06,
+            "finite_pulse_difference": -7.032397667666723e-13,
+            "conditional_value": 0.00016350998574792526,
+            "conditional_interval": [
+              0.00014006620306793765,
+              0.00018695448830710116
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.0005145792799402405,
+            "joint_interval": [
+              -0.0005151311865330313,
+              -0.0005140273733474498
+            ],
+            "error_bound": 5.51906592790802e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 8.673617379884035e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0005145791941779318,
+            "finite_pulse_difference": 8.576230871304436e-11,
+            "conditional_value": -0.019952956791935542,
+            "conditional_interval": [
+              -0.019974663805288125,
+              -0.019931250442777507
+            ]
+          },
+          "initial_ring_survival_joint": 0.02163654344177761,
+          "initial_ring_survival_conditional": 0.8389630777025475,
+          "initial_ring_survival_conditional_interval": [
+            0.8389305424329561,
+            0.8389956141025637
+          ],
+          "host_survival_joint": 0.025787834382700166,
+          "host_survival_conditional": 0.9999305554148264,
+          "host_survival_conditional_interval": [
+            0.9998937459388996,
+            0.9999673661334555
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.9687988710434834e-12
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            1.151177814601408e-10
+          ],
+          "full_X_state_error": 1.7225202758654593e-06,
+          "full_Y_state_error": 1.567323125600538e-06,
+          "final_receiver_density_joint": 0.011594425561457174
+        }
+      },
+      "response_change_joint": -5.431478549496223e-08,
+      "response_change_joint_interval": [
+        -1.2789326627006945e-06,
+        1.17030309171077e-06
+      ],
+      "response_change_conditional": -2.1060711349864035e-06,
+      "response_change_conditional_interval": [
+        -4.9591736308922254e-05,
+        4.53795293671527e-05
+      ],
+      "state_distance": 0.08508328733212649,
+      "state_distance_interval": [
+        0.08507977845881924,
+        0.08508679620543373
+      ],
+      "phase_optimized_state_distance": 0.08438556474507329,
+      "phase_optimized_state_distance_interval": [
+        0.08438205587176605,
+        0.08438907361838054
+      ],
+      "normalized_state_distance": 0.5298119440984156,
+      "normalized_state_distance_interval": [
+        0.5297860290331252,
+        0.529837859561434
+      ],
+      "outside_hopping_integral_upper_sum": 0.0960511490651899,
+      "full_law_Duhamel_upper": 0.09605459410574163
+    },
+    {
+      "lag": 1.0,
+      "shortcut_present_at_record": true,
+      "ring_distance": 2,
+      "active_graph_distance": 1,
+      "initial_joint_probability": 0.025789625332533147,
+      "initial_joint_probability_interval": [
+        0.02578922937349535,
+        0.025790021294610627
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367316,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658197,
+        0.17933009379076434
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.116654242577405,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.0033889943622869823,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.003388922594006816,
+        0.0033890661313270704
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.1314092127585827,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.13141401327835536
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": -0.00027522954064984487,
+            "joint_interval": [
+              -0.00027646760785252414,
+              -0.0002739914734471656
+            ],
+            "error_bound": 1.2380672026792746e-06,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.3010426069826053e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0002752294947817868,
+            "finite_pulse_difference": 4.586805804965288e-11,
+            "conditional_value": -0.010672103107393645,
+            "conditional_interval": [
+              -0.01072027410546285,
+              -0.010623933587229024
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.00039532850368559184,
+            "joint_interval": [
+              -0.0003962848796756431,
+              -0.0003943721276955406
+            ],
+            "error_bound": 9.563759900512711e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.336808689942018e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0003953284377924103,
+            "finite_pulse_difference": 6.589318153615853e-11,
+            "conditional_value": -0.015328974290560633,
+            "conditional_interval": [
+              -0.01536629396467819,
+              -0.015291655760592684
+            ]
+          },
+          "initial_ring_survival_joint": 0.01612479632632496,
+          "initial_ring_survival_conditional": 0.625243527907473,
+          "initial_ring_survival_conditional_interval": [
+            0.6251889230263106,
+            0.6252981360116013
+          ],
+          "host_survival_joint": 0.02578462487393073,
+          "host_survival_conditional": 0.9998061058065815,
+          "host_survival_conditional_interval": [
+            0.9997338441343157,
+            0.9998783711998599
+          ],
+          "new_chord_and_ring_joint_probability": 0.0007646875271460727,
+          "new_chord_and_ring_joint_interval": [
+            0.0007644347822324218,
+            0.0007649403138353171
+          ],
+          "new_chord_and_ring_conditional_probability": 0.029650974656907216,
+          "new_chord_and_ring_conditional_interval": [
+            0.02964071931154887,
+            0.029661231933571373
+          ],
+          "full_X_state_error": 4.569816913085988e-06,
+          "full_Y_state_error": 2.832547758273255e-06,
+          "final_receiver_density_joint": 0.011321690209820108
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 0.0001486438556233126,
+            "joint_interval": [
+              0.00014761975440073062,
+              0.0001496679568458946
+            ],
+            "error_bound": 1.0241012225819886e-06,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 2.168404344971009e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.0001486438308481719,
+            "finite_pulse_difference": -2.4775140706340126e-11,
+            "conditional_value": 0.005763707448506476,
+            "conditional_interval": [
+              0.005723909752318773,
+              0.005803506366100047
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": 8.760209117132927e-05,
+            "joint_interval": [
+              8.686035308491041e-05,
+              8.834382925774813e-05
+            ],
+            "error_bound": 7.417380864188656e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 1.1926223897340549e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 8.760207657106805e-05,
+            "finite_pulse_difference": -1.4600261212700805e-11,
+            "conditional_value": 0.003396795806134524,
+            "conditional_interval": [
+              0.003367982992052113,
+              0.0034256095045842165
+            ]
+          },
+          "initial_ring_survival_joint": 0.015349088862121201,
+          "initial_ring_survival_conditional": 0.5951652520813709,
+          "initial_ring_survival_conditional_interval": [
+            0.5951124405516715,
+            0.5952180667651709
+          ],
+          "host_survival_joint": 0.02578245272251959,
+          "host_survival_conditional": 0.999721880022642,
+          "host_survival_conditional_interval": [
+            0.9996499274756248,
+            0.9997938362638473
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.0664182272171454e-11
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            8.012718012198101e-10
+          ],
+          "full_X_state_error": 4.54528731048555e-06,
+          "full_Y_state_error": 2.705012599616425e-06,
+          "final_receiver_density_joint": 0.009030321639844047
+        }
+      },
+      "response_change_joint": -0.0004238733962731575,
+      "response_change_joint_interval": [
+        -0.00042613556469841873,
+        -0.0004216112278478962
+      ],
+      "response_change_conditional": -0.016435810555900123,
+      "response_change_conditional_interval": [
+        -0.016523780471562898,
+        -0.016347843339547797
+      ],
+      "state_distance": 0.13212832045654022,
+      "state_distance_interval": [
+        0.13211920485231662,
+        0.1321374360607638
+      ],
+      "phase_optimized_state_distance": 0.11668572062652394,
+      "phase_optimized_state_distance_interval": [
+        0.11667660502230036,
+        0.11669483623074751
+      ],
+      "normalized_state_distance": 0.8227604330598736,
+      "normalized_state_distance_interval": [
+        0.8226973572997979,
+        0.8228235097879966
+      ],
+      "outside_hopping_integral_upper_sum": 0.19319432910170467,
+      "full_law_Duhamel_upper": 0.1932125102509466
+    },
+    {
+      "lag": 1.0,
+      "shortcut_present_at_record": false,
+      "ring_distance": 2,
+      "active_graph_distance": 2,
+      "initial_joint_probability": 0.025789625332533164,
+      "initial_joint_probability_interval": [
+        0.025789229373495367,
+        0.025790021294610645
+      ],
+      "exact_initial_outside_action_norm": 0.17932516401367324,
+      "exact_initial_outside_action_norm_interval": [
+        0.17932023423658205,
+        0.17933009379076442
+      ],
+      "initial_outside_action_norm_per_initial_norm": 1.1166542425774053,
+      "new_chord_and_ring_probability_T4_coefficient_joint": 0.003388994362286985,
+      "new_chord_and_ring_probability_T4_coefficient_joint_interval": [
+        0.0033889225940068185,
+        0.003389066131327073
+      ],
+      "new_chord_and_ring_probability_T4_coefficient_conditional": 0.13140921275858272,
+      "new_chord_and_ring_probability_T4_coefficient_conditional_interval": [
+        0.13140441240019463,
+        0.1314140132783554
+      ],
+      "models": {
+        "full_frozen": {
+          "receiver_response": {
+            "joint_value": 0.00014605655303948637,
+            "joint_interval": [
+              0.00014488829253522497,
+              0.00014722481354374778
+            ],
+            "error_bound": 1.1682605042613952e-06,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.0115480381963664e-18,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.00014605652869700142,
+            "finite_pulse_difference": -2.434248495050001e-11,
+            "conditional_value": 0.005663384060691978,
+            "conditional_interval": [
+              0.005617998173793767,
+              0.005708771340606891
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.0005555884280109238,
+            "joint_interval": [
+              -0.0005564148869922242,
+              -0.0005547619690296233
+            ],
+            "error_bound": 8.264589813004279e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 9.75781955236954e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0005555883354126795,
+            "finite_pulse_difference": 9.259824428498736e-11,
+            "conditional_value": -0.021543098080996883,
+            "conditional_interval": [
+              -0.0215754755186316,
+              -0.021510721635020606
+            ]
+          },
+          "initial_ring_survival_joint": 0.016124796326325123,
+          "initial_ring_survival_conditional": 0.6252435279074788,
+          "initial_ring_survival_conditional_interval": [
+            0.6251889230263163,
+            0.6252981360116072
+          ],
+          "host_survival_joint": 0.02578462487393074,
+          "host_survival_conditional": 0.9998061058065811,
+          "host_survival_conditional_interval": [
+            0.9997338441343152,
+            0.9998783711998595
+          ],
+          "new_chord_and_ring_joint_probability": 0.0007646875271460744,
+          "new_chord_and_ring_joint_interval": [
+            0.0007644347822324234,
+            0.0007649403138353188
+          ],
+          "new_chord_and_ring_conditional_probability": 0.029650974656907265,
+          "new_chord_and_ring_conditional_interval": [
+            0.02964071931154891,
+            0.029661231933571418
+          ],
+          "full_X_state_error": 4.5698169130860015e-06,
+          "full_Y_state_error": 2.7201037922301107e-06,
+          "final_receiver_density_joint": 0.009720491168794986
+        },
+        "recorded_ring_hopping_only": {
+          "receiver_response": {
+            "joint_value": 0.00015661966478678875,
+            "joint_interval": [
+              0.0001555082878228785,
+              0.00015773104175069902
+            ],
+            "error_bound": 1.1113769639102667e-06,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 4.336808689942018e-19,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": 0.0001566196386844007,
+            "finite_pulse_difference": -2.6102388046150837e-11,
+            "conditional_value": 0.006072971699562295,
+            "conditional_interval": [
+              0.006029785165604929,
+              0.006116159558951598
+            ]
+          },
+          "receiver_and_initial_ring_joint_response": {
+            "joint_value": -0.0006286313840856415,
+            "joint_interval": [
+              -0.0006294081227529944,
+              -0.0006278546454182885
+            ],
+            "error_bound": 7.767386673529461e-07,
+            "zero_excluded": true,
+            "phase_shift_identity_error": 0.0,
+            "finite_theta": 0.001,
+            "finite_pulse_susceptibility": -0.0006286312793134588,
+            "finite_pulse_difference": 1.0477218268314936e-10,
+            "conditional_value": -0.02437535931522952,
+            "conditional_interval": [
+              -0.024405852289633073,
+              -0.024344867274285333
+            ]
+          },
+          "initial_ring_survival_joint": 0.015349088862121302,
+          "initial_ring_survival_conditional": 0.5951652520813745,
+          "initial_ring_survival_conditional_interval": [
+            0.5951124405516749,
+            0.5952180667651743
+          ],
+          "host_survival_joint": 0.025782452722519625,
+          "host_survival_conditional": 0.9997218800226426,
+          "host_survival_conditional_interval": [
+            0.9996499274756254,
+            0.999793836263848
+          ],
+          "new_chord_and_ring_joint_probability": 0.0,
+          "new_chord_and_ring_joint_interval": [
+            0.0,
+            2.0664182272171554e-11
+          ],
+          "new_chord_and_ring_conditional_probability": 0.0,
+          "new_chord_and_ring_conditional_interval": [
+            0.0,
+            8.012718012198135e-10
+          ],
+          "full_X_state_error": 4.545287310485561e-06,
+          "full_Y_state_error": 2.5431490198163046e-06,
+          "final_receiver_density_joint": 0.009488099762573091
+        }
+      },
+      "response_change_joint": -1.0563111747302384e-05,
+      "response_change_joint_interval": [
+        -1.2842749215474046e-05,
+        -8.283474279130723e-06
+      ],
+      "response_change_conditional": -0.00040958763887031743,
+      "response_change_conditional_interval": [
+        -0.0004979888708374148,
+        -0.0003211891213467794
+      ],
+      "state_distance": 0.13212832045654047,
+      "state_distance_interval": [
+        0.13211920485231687,
+        0.13213743606076406
+      ],
+      "phase_optimized_state_distance": 0.11668572062652442,
+      "phase_optimized_state_distance_interval": [
+        0.11667660502230084,
+        0.116694836230748
+      ],
+      "normalized_state_distance": 0.8227604330598749,
+      "normalized_state_distance_interval": [
+        0.8226973572997991,
+        0.8228235097879978
+      ],
+      "outside_hopping_integral_upper_sum": 0.19319432910170484,
+      "full_law_Duhamel_upper": 0.19321251025094677
+    }
+  ],
+  "error_method": "Full physical electric-budget basis and ALL outgoing rows. Analytic midpoint residual upper sums, Duhamel state bounds, and bilinear response intervals. Errors for orthogonal record branches combine in Frobenius norm; waiting-state error enters each direct-sum group once. Ordinary floating point plus5e-10 reporting allowance, not outward rounding.",
+  "frozen_sources": {
+    "frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b"
+  },
+  "seconds": 57.260414702999924
+}

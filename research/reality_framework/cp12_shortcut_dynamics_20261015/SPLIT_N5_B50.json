@@ -1,0 +1,381 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 10,
+  "electric_budget": 50,
+  "dimension": 162191,
+  "outgoing_dimension": 54890,
+  "H_nonzeros": 1583919,
+  "V_nonzeros": 782286,
+  "construction_seconds": 51.00786404899998,
+  "model_checks": {
+    "H_hermiticity": 3.2023728339893768e-15,
+    "V_hermiticity": 3.2023728339893768e-15,
+    "neutral_mean_energy": 5.0,
+    "neutral_variance": 20.000000000000018,
+    "neutral_core_generator_residual": 0.0,
+    "neutral_outside_hopping_square": 20.000000000000018
+  },
+  "operator": "chi_e is the directed-cycle indicator. K_inside=sum_e(chi_e K_e+K_e chi_e)/2; V=K-K_inside; H_core=H-V. All mass, electric and graph-rewiring terms are retained.",
+  "comparison_scope": "H_core is a diagnostic intervention, not the frozen law or an emergent effective Hamiltonian. It freezes the neutral ray, so its neutral-origin divergence includes inhibited formation and is not by itself a transport test.",
+  "initial_state": "Original equal coherent neutral ray over ALL labelled Q-edge graphs.",
+  "primary_event": "circulating_edges/Q >= 1/4 and n_v/N >= 1/4",
+  "trajectory": [
+    {
+      "time": 0.25,
+      "event_probability": 2.4417470093181813e-10,
+      "event_interval": [
+        2.439828764748621e-10,
+        2.443666007673515e-10
+      ],
+      "full_state_error": 5.639160258079704e-09,
+      "moving_core_only_event_probability": 0.0,
+      "full_vs_moving_core_state_distance": 0.9777570819808609,
+      "state_distance_interval": [
+        0.9777570758417006,
+        0.9777570881200212
+      ],
+      "outside_hopping_action_norm": 4.911753764798548,
+      "outside_hopping_action_norm_interval": [
+        4.911753651515343,
+        4.911753878081753
+      ],
+      "neutral_origin_exact_Duhamel_upper": 1.118033988749895
+    },
+    {
+      "time": 0.5,
+      "event_probability": 4.825151538123921e-06,
+      "event_interval": [
+        4.8250997931755494e-06,
+        4.825203283349751e-06
+      ],
+      "full_state_error": 1.1278328100980148e-08,
+      "moving_core_only_event_probability": 0.0,
+      "full_vs_moving_core_state_distance": 1.410207269304449,
+      "state_distance_interval": [
+        1.4102072575261209,
+        1.410207281082777
+      ],
+      "outside_hopping_action_norm": 7.102105664139991,
+      "outside_hopping_action_norm_interval": [
+        7.102105438073429,
+        7.102105890206553
+      ],
+      "neutral_origin_exact_Duhamel_upper": 2.23606797749979
+    },
+    {
+      "time": 1.0,
+      "event_probability": 0.0026430833938947107,
+      "event_interval": [
+        0.0026430809678095065,
+        0.0026430858199810287
+      ],
+      "full_state_error": 2.309504012654007e-08,
+      "moving_core_only_event_probability": 0.0,
+      "full_vs_moving_core_state_distance": 1.2488183773495465,
+      "state_distance_interval": [
+        1.2488183537545063,
+        1.2488184009445866
+      ],
+      "outside_hopping_action_norm": 5.824868377774883,
+      "outside_hopping_action_norm_interval": [
+        5.82486791537408,
+        5.824868840175686
+      ],
+      "neutral_origin_exact_Duhamel_upper": 4.47213595499958
+    },
+    {
+      "time": 2.0,
+      "event_probability": 0.05962997288176584,
+      "event_interval": [
+        0.05961615928665377,
+        0.05964378807705903
+      ],
+      "full_state_error": 2.8285372183184236e-05,
+      "moving_core_only_event_probability": 0.0,
+      "full_vs_moving_core_state_distance": 1.3167570940993496,
+      "state_distance_interval": [
+        1.3167288082271664,
+        1.3167853799715328
+      ],
+      "outside_hopping_action_norm": 5.976554637666777,
+      "outside_hopping_action_norm_interval": [
+        5.975988929723114,
+        5.977120345610441
+      ],
+      "neutral_origin_exact_Duhamel_upper": 8.94427190999916
+    },
+    {
+      "time": 3.0,
+      "event_probability": 0.26794386049077984,
+      "event_interval": [
+        0.26577409876886604,
+        0.2701224431363675
+      ],
+      "full_state_error": 0.0021001094583079916,
+      "moving_core_only_event_probability": 0.0,
+      "full_vs_moving_core_state_distance": 1.3843533418162288,
+      "state_distance_interval": [
+        1.3822532318579208,
+        1.3864534517745368
+      ],
+      "outside_hopping_action_norm": 6.147919298430633,
+      "outside_hopping_action_norm_interval": [
+        6.105917108764473,
+        6.189921488096793
+      ],
+      "neutral_origin_exact_Duhamel_upper": 13.416407864998739
+    }
+  ],
+  "wait": 2.0,
+  "wait_state_error": 2.8285372183184236e-05,
+  "initial_event_probability": 0.05962997288176584,
+  "initial_event_interval": [
+    0.05961615928665377,
+    0.05964378807705903
+  ],
+  "initial_event_record_energy_change": 0.11271104391613018,
+  "initial_event_record_energy_interval": [
+    0.11157961202755723,
+    0.11384247580470314
+  ],
+  "initial_event_record_entropy_bits": 0.3259742951876585,
+  "initial_event_record_entropy_error_bits": 0.000879812999984044,
+  "wait_action_norms": [
+    {
+      "preparation": "unfiltered_waiting_state",
+      "outside_action_norm": 5.976554637666777,
+      "outside_action_norm_interval": [
+        5.975988929723114,
+        5.977120345610441
+      ],
+      "total_hopping_action_norm": 6.037335573611684,
+      "inside_hopping_action_norm": 0.5853291588732702,
+      "outside_action_norm_per_initial_norm": 5.9765546376675855
+    },
+    {
+      "preparation": "initial_event_branch",
+      "outside_action_norm": 1.0916417297096903,
+      "outside_action_norm_interval": [
+        1.0910760217660267,
+        1.092207437653354
+      ],
+      "total_hopping_action_norm": 1.3766587941815915,
+      "inside_hopping_action_norm": 0.4725821097977069,
+      "outside_action_norm_per_initial_norm": 4.470414807665105
+    }
+  ],
+  "post_formation_comparisons": [
+    {
+      "preparation": "unfiltered_waiting_state",
+      "lag": 0.125,
+      "initial_norm": 0.9999999999998648,
+      "full_lag_electric_error": 3.399099440555568e-05,
+      "core_lag_electric_error": 3.0369353180025858e-05,
+      "state_distance": 0.7006968433031131,
+      "state_distance_interval": [
+        0.7005759117111611,
+        0.7008177748950651
+      ],
+      "phase_optimized_state_distance": 0.43953033825110494,
+      "phase_optimized_state_distance_interval": [
+        0.439409406659153,
+        0.43965126984305686
+      ],
+      "normalized_state_distance_interval": [
+        0.700556096221339,
+        0.7008375983474691
+      ],
+      "outside_hopping_integral_upper_sum": 0.7575499938782436,
+      "exact_full_vs_exact_core_Duhamel_upper": 0.7576966306916516,
+      "exact_full_vs_exact_core_combined_driver_upper": 0.7576369347490997,
+      "full_final_event_probability": 0.07109142905811024,
+      "full_final_event_interval": [
+        0.07105822320450134,
+        0.07112464266853535
+      ],
+      "core_final_event_probability": 0.06580056801135178,
+      "core_final_event_interval": [
+        0.06577047941911195,
+        0.06583066348446254
+      ]
+    },
+    {
+      "preparation": "initial_event_branch",
+      "lag": 0.125,
+      "initial_norm": 0.2441924914524552,
+      "full_lag_electric_error": 3.212067676278351e-05,
+      "core_lag_electric_error": 2.931263303472529e-05,
+      "state_distance": 0.1310222038188902,
+      "state_distance_interval": [
+        0.13090419926472632,
+        0.1311402083730541
+      ],
+      "phase_optimized_state_distance": 0.10577349980773414,
+      "phase_optimized_state_distance_interval": [
+        0.10565549525357026,
+        0.10589150436189801
+      ],
+      "normalized_state_distance_interval": [
+        0.5360076278797585,
+        0.537098416177923
+      ],
+      "outside_hopping_integral_upper_sum": 0.1412610450214152,
+      "exact_full_vs_exact_core_Duhamel_upper": 0.14140504003445997,
+      "exact_full_vs_exact_core_combined_driver_upper": 0.14134693213402444,
+      "full_final_event_probability": 0.054146750349888466,
+      "full_final_event_interval": [
+        0.0541186414502352,
+        0.05417486654744405
+      ],
+      "core_final_event_probability": 0.05903882090096752,
+      "core_final_event_interval": [
+        0.05901083375788427,
+        0.059066814679226386
+      ]
+    },
+    {
+      "preparation": "unfiltered_waiting_state",
+      "lag": 0.25,
+      "initial_norm": 0.9999999999998648,
+      "full_lag_electric_error": 9.46681761026654e-05,
+      "core_lag_electric_error": 8.808511475024396e-05,
+      "state_distance": 1.1992387544498566,
+      "state_distance_interval": [
+        1.1989994299146374,
+        1.1994780789850759
+      ],
+      "phase_optimized_state_distance": 0.8316463606400385,
+      "phase_optimized_state_distance_interval": [
+        0.8314070361048191,
+        0.8318856851752578
+      ],
+      "normalized_state_distance_interval": [
+        1.1989655167289242,
+        1.199512007628812
+      ],
+      "outside_hopping_integral_upper_sum": 1.4599567473755437,
+      "exact_full_vs_exact_core_Duhamel_upper": 1.460538599810211,
+      "exact_full_vs_exact_core_combined_driver_upper": 1.4601014068130587,
+      "full_final_event_probability": 0.08429069342099722,
+      "full_final_event_interval": [
+        0.08421931438637177,
+        0.08436210269101865
+      ],
+      "core_final_event_probability": 0.07407581820631363,
+      "core_final_event_interval": [
+        0.07401248666081162,
+        0.07413917683622885
+      ]
+    },
+    {
+      "preparation": "initial_event_branch",
+      "lag": 0.25,
+      "initial_norm": 0.2441924914524552,
+      "full_lag_electric_error": 8.668735947141478e-05,
+      "core_lag_electric_error": 8.366138264270436e-05,
+      "state_distance": 0.23575978847140402,
+      "state_distance_interval": [
+        0.23553286848492352,
+        0.23598670845788453
+      ],
+      "phase_optimized_state_distance": 0.19765447417412307,
+      "phase_optimized_state_distance_interval": [
+        0.19742755418764257,
+        0.19788139416060357
+      ],
+      "normalized_state_distance_interval": [
+        0.9644260064492663,
+        0.9665082046477401
+      ],
+      "outside_hopping_integral_upper_sum": 0.2764810949595046,
+      "exact_full_vs_exact_core_Duhamel_upper": 0.27704082873363406,
+      "exact_full_vs_exact_core_combined_driver_upper": 0.27662134333449717,
+      "full_final_event_probability": 0.043836388105481496,
+      "full_final_event_interval": [
+        0.04378825710864955,
+        0.04388454554000143
+      ],
+      "core_final_event_probability": 0.05743082436457901,
+      "core_final_event_interval": [
+        0.05737718118392782,
+        0.057484492609605926
+      ]
+    },
+    {
+      "preparation": "unfiltered_waiting_state",
+      "lag": 0.5,
+      "initial_norm": 0.9999999999998648,
+      "full_lag_electric_error": 0.00035246607253771483,
+      "core_lag_electric_error": 0.0003715985281681905,
+      "state_distance": 1.453350241637702,
+      "state_distance_interval": [
+        1.4525696057926296,
+        1.4541308774827744
+      ],
+      "phase_optimized_state_distance": 1.3162953448420893,
+      "phase_optimized_state_distance_interval": [
+        1.315514708997017,
+        1.3170759806871617
+      ],
+      "normalized_state_distance_interval": [
+        1.4525285204830176,
+        1.4541720092794719
+      ],
+      "outside_hopping_integral_upper_sum": 2.633977958209826,
+      "exact_full_vs_exact_core_Duhamel_upper": 2.63797679721334,
+      "exact_full_vs_exact_core_combined_driver_upper": 2.634406170675249,
+      "full_final_event_probability": 0.13301360888596614,
+      "full_final_event_interval": [
+        0.13273602553981803,
+        0.13329148217620107
+      ],
+      "core_final_event_probability": 0.09387363336707291,
+      "core_final_event_interval": [
+        0.09362875367628852,
+        0.09411883287292458
+      ]
+    },
+    {
+      "preparation": "initial_event_branch",
+      "lag": 0.5,
+      "initial_norm": 0.2441924914524552,
+      "full_lag_electric_error": 0.0003079164911937982,
+      "core_lag_electric_error": 0.00033563636029508435,
+      "state_distance": 0.3304645871495775,
+      "state_distance_interval": [
+        0.32976446305372226,
+        0.33116471124543273
+      ],
+      "phase_optimized_state_distance": 0.3127934492014105,
+      "phase_optimized_state_distance_interval": [
+        0.31209332510555526,
+        0.31349357329726574
+      ],
+      "normalized_state_distance_interval": [
+        1.3502719438588475,
+        1.3563196529165222
+      ],
+      "outside_hopping_integral_upper_sum": 0.5219998155206788,
+      "exact_full_vs_exact_core_Duhamel_upper": 0.5256390328454614,
+      "exact_full_vs_exact_core_combined_driver_upper": 0.5223921832969638,
+      "full_final_event_probability": 0.02985888384429138,
+      "full_final_event_interval": [
+        0.029742807199863722,
+        0.029975186552777314
+      ],
+      "core_final_event_probability": 0.0531420548220582,
+      "core_final_event_interval": [
+        0.052974400475406754,
+        0.053309974047492235
+      ]
+    }
+  ],
+  "V_norm_bound": 20,
+  "error_method": "All outgoing electric rows; analytic midpoint norm upper sums through order five plus sixth-derivative remainder. Duhamel bounds include comparison-law leakage and waiting-state error. Ordinary floating point with separate 5e-10 reporting allowance, not outward rounding.",
+  "frozen_sources": {
+    "frozen_model.py": "e896fce8a3e61948ff41891576b4c3ac028ad26785cafabb30bddef93c5adb9a",
+    "exact_destination.py": "1a1ccb4f06602179f14c2834dea3566fada022ca6a23f58370abe0d4f1e5b35b"
+  },
+  "seconds": 46.78405000099997
+}
