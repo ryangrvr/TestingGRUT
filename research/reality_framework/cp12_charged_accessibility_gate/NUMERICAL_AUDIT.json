@@ -1,0 +1,122 @@
+{
+  "spectral": {
+    "N": 4,
+    "Q": 4,
+    "budget": 256,
+    "signed_permutation_sector": "S_4",
+    "retained_dimension": 577,
+    "outside_orbits": 13,
+    "target_orbits": 86,
+    "target": "All four graph edges circulate, n_v>=1 (a spanning ring; not the degree-four large-N family)",
+    "actual_initial_energy_mean": 2,
+    "actual_initial_energy_variance": 8,
+    "trial_modes": 577,
+    "coefficient_pruning": false,
+    "initial_reconstruction_norm": 4.100982338017993e-14,
+    "full_H_weighted_trial_eigenvector_residual": 1.4352906680026263e-13,
+    "boundary_weighted_residual": 9.9732642927623e-15,
+    "internal_weighted_residual": 1.3748489501585186e-13,
+    "absolute_weighted_target_Gram_sum": 0.14752894104361644,
+    "projected_infinite_time_average_non_degenerate": 0.019573059768313174,
+    "rows": [
+      {
+        "T": 1,
+        "p": 0.000005779284062618532,
+        "full_state_error_bound": 1.8453889018044255e-13,
+        "full_probability_interval": [
+          0.000005779284061731263,
+          0.000005779284063505801
+        ],
+        "full_spectral_envelope_upper": 0.1475289410437582
+      },
+      {
+        "T": 2,
+        "p": 0.002036660073938228,
+        "full_state_error_bound": 3.280679569807052e-13,
+        "full_probability_interval": [
+          0.0020366600739086167,
+          0.0020366600739678393
+        ],
+        "full_spectral_envelope_upper": 0.14752894104386846
+      },
+      {
+        "T": 5,
+        "p": 0.05502210766596675,
+        "full_state_error_bound": 7.586551573814932e-13,
+        "full_probability_interval": [
+          0.05502210766561084,
+          0.05502210766632265
+        ],
+        "full_spectral_envelope_upper": 0.14752894104419925
+      },
+      {
+        "T": 10,
+        "p": 0.021947331541267736,
+        "full_state_error_bound": 1.4763004913828064e-12,
+        "full_probability_interval": [
+          0.021947331540830322,
+          0.021947331541705153
+        ],
+        "full_spectral_envelope_upper": 0.14752894104475053
+      }
+    ],
+    "bound_scope": "Analytically derived full unbounded-H residual bounds evaluated in floating point; not formal outward-rounded interval arithmetic. The all-time Gram envelope applies to the finite trial signal; the full-law bound retains its stated time-dependent defect."
+  },
+  "capacity": {
+    "N": 5,
+    "Q": 10,
+    "budget": 32,
+    "signed_permutation_sector": "S_5",
+    "retained_dimension": 39969,
+    "outside_orbits": 17418,
+    "nnz": 382071,
+    "boundary_nnz": 39829,
+    "target": "All ten edges circulate, n_v>=2",
+    "target_orbits_by_vertex_fermions": [
+      0,
+      0,
+      34,
+      16,
+      16,
+      0
+    ],
+    "minimum_target_electric_square": 26,
+    "electric_capacity_note": "Budget32 includes all 960 minimum-order targets. Higher charged targets outside the retained space, including n_v=5 requiring at least35, are covered by the full-state error; they are not declared absent.",
+    "source_intervention": false,
+    "initial_loop_filter": false,
+    "time_steps": 32,
+    "rows": [
+      {
+        "T": 1,
+        "projected_probability": 2.1256306851140608e-19,
+        "full_state_error_bound": 8.539230599708589e-7,
+        "full_probability_interval": [
+          0,
+          7.299721998951689e-13
+        ]
+      },
+      {
+        "T": 2,
+        "projected_probability": 2.2586580273902814e-9,
+        "full_state_error_bound": 0.0031639514844265656,
+        "full_probability_interval": [
+          0,
+          0.000010313583399591289
+        ]
+      },
+      {
+        "T": 3,
+        "projected_probability": 3.744554469770909e-7,
+        "full_state_error_bound": 0.04976675079508443,
+        "full_probability_interval": [
+          0,
+          0.0025380112417202954
+        ]
+      }
+    ],
+    "error_method": "Full outgoing residual B and fifth-order midpoint leakage bound from the parent cp12_distance_history/evolution.py; floating-point evaluation.",
+    "positive_finite_time_interval_resolved": false
+  },
+  "execution": "The numerical commands constructing these quantities completed in this session before the container disconnected. The reusable audit.py wrapper was assembled afterward and has not been independently rerun; no full-suite PASS is claimed.",
+  "runtime_status": "Container environment_offline confirmed after numerical calculations; exact complete-sector arithmetic subsequently independently executed in the orchestration JavaScript runtime."
+}
