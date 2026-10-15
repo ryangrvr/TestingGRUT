@@ -1,0 +1,919 @@
+{
+  "status": "PASS",
+  "N": 4,
+  "Q": 5,
+  "budget": 256,
+  "wait": 5.0,
+  "dimension": 106914,
+  "waiting_state_error": 6.546972592241432e-09,
+  "record_labels": [
+    {
+      "graph_mask": 31,
+      "ring_mask": 30,
+      "neighbors": [
+        2,
+        3
+      ],
+      "opposite": 1,
+      "opposite_has_active_shortcut": true
+    },
+    {
+      "graph_mask": 47,
+      "ring_mask": 45,
+      "neighbors": [
+        1,
+        3
+      ],
+      "opposite": 2,
+      "opposite_has_active_shortcut": true
+    },
+    {
+      "graph_mask": 55,
+      "ring_mask": 51,
+      "neighbors": [
+        1,
+        2
+      ],
+      "opposite": 3,
+      "opposite_has_active_shortcut": true
+    },
+    {
+      "graph_mask": 59,
+      "ring_mask": 51,
+      "neighbors": [
+        1,
+        2
+      ],
+      "opposite": 3,
+      "opposite_has_active_shortcut": false
+    },
+    {
+      "graph_mask": 61,
+      "ring_mask": 45,
+      "neighbors": [
+        1,
+        3
+      ],
+      "opposite": 2,
+      "opposite_has_active_shortcut": false
+    },
+    {
+      "graph_mask": 62,
+      "ring_mask": 30,
+      "neighbors": [
+        2,
+        3
+      ],
+      "opposite": 1,
+      "opposite_has_active_shortcut": false
+    }
+  ],
+  "record_probabilities": [
+    0.15807012488918903,
+    0.008596541777480204,
+    0.15807012488918903,
+    0.008596541777480194,
+    0.15807012488918934,
+    0.00859654177748021,
+    0.1580701248891891,
+    0.008596541777480204,
+    0.15807012488918865,
+    0.0085965417774802,
+    0.15807012488918878,
+    0.008596541777480224
+  ],
+  "complete_record_energy_change": 0.08703484625428182,
+  "complete_record_energy_interval": [
+    0.0870346779451957,
+    0.08703501456336793
+  ],
+  "complete_record_entropy_bits": 2.8780304970510504,
+  "complete_record_entropy_error_bits": 4.070731007677453e-07,
+  "source": "exp(-i theta n0) immediately after the complete twelve-outcome host/ring record.",
+  "receivers": "Average density at the two fixed recorded-ring neighbours (distance1), and density at the fixed opposite vertex (distance2). Receiver labels and the ring pointer are fixed before evolution.",
+  "evolution": "Full frozen H only, including all active off-ring hopping and graph rewiring.",
+  "scope": "Auxiliary N4,Q5 recorded-ring control, not a Q=2N scaling point. Nonzero distance1 response with ring retention demonstrates finite conditional matter response, not that the ring alone controls it or that a local metric has emerged.",
+  "error_method": "All outgoing full-H residuals; direct-sum Frobenius state error and bilinear response intervals. Complete record work/entropy included. Ordinary floating point plus5e-10 reporting allowance, not outward rounding.",
+  "rows": [
+    {
+      "lag": 0.125,
+      "group": "all",
+      "initial_probability": 0.05157925066488129,
+      "initial_probability_interval": [
+        0.05157924746399618,
+        0.05157925386576649
+      ],
+      "state_errors": [
+        6.617384790199163e-09,
+        6.628144129489209e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 2.605939852501349e-05,
+          "joint_interval": [
+            2.605612125912919e-05,
+            2.6062675790897785e-05
+          ],
+          "error_bound": 3.2772658842976686e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.5612511283791264e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 2.6059394163391314e-05,
+          "finite_pulse_difference": -4.36162217454239e-12,
+          "conditional_value": 0.0005052302658354927,
+          "conditional_interval": [
+            0.0005051666960313053,
+            0.0005052938356475691
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 1.0210623910792901e-05,
+          "joint_interval": [
+            1.0207365685210902e-05,
+            1.0213882136374901e-05
+          ],
+          "error_bound": 3.2582255819995354e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.0408340855860843e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 1.0210622194972707e-05,
+          "finite_pulse_difference": -1.7158201942590878e-12,
+          "conditional_value": 0.00019795991177019945,
+          "conditional_interval": [
+            0.00019789673018100017,
+            0.00019802309336724015
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -4.116706529052466e-08,
+          "joint_interval": [
+            -4.505239353064114e-08,
+            -3.728173705040818e-08
+          ],
+          "error_bound": 3.885328240116478e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 8.673617379884035e-19,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -4.1167055875313e-08,
+          "finite_pulse_difference": 9.41521166586412e-15,
+          "conditional_value": -7.98132286915018e-07,
+          "conditional_interval": [
+            -8.734596905875571e-07,
+            -7.228048925917544e-07
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -1.7210487779712597e-05,
+          "joint_interval": [
+            -1.7214352175406772e-05,
+            -1.720662338401842e-05
+          ],
+          "error_bound": 3.864395694175352e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 5.204170427930421e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -1.7210484908741774e-05,
+          "finite_pulse_difference": 2.8709708221885677e-12,
+          "conditional_value": -0.00033367076019641916,
+          "conditional_interval": [
+            -0.00033374570242466003,
+            -0.00033359581797747905
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.988113646998167,
+        0.9881138942462658
+      ]
+    },
+    {
+      "lag": 0.125,
+      "group": "opposite_shortcut",
+      "initial_probability": 0.025789625332440586,
+      "initial_probability_interval": [
+        0.025789623069073037,
+        0.02578962759580823
+      ],
+      "state_errors": [
+        6.596761534895593e-09,
+        6.601539191932918e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 8.126939440293145e-06,
+          "joint_interval": [
+            8.124237083334781e-06,
+            8.12964179725151e-06
+          ],
+          "error_bound": 2.7023569583644297e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 4.7704895589362195e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 8.126938079965063e-06,
+          "finite_pulse_difference": -1.3603280828167197e-12,
+          "conditional_value": 0.00031512437018890407,
+          "conditional_interval": [
+            0.0003150195578882756,
+            0.00031522918250792857
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 2.4337860677031524e-06,
+          "joint_interval": [
+            2.431096753275398e-06,
+            2.436475382130907e-06
+          ],
+          "error_bound": 2.6893144277543864e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 3.0357660829594124e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 2.4337856573825034e-06,
+          "finite_pulse_difference": -4.103206489858291e-13,
+          "conditional_value": 9.437074158040249e-05,
+          "conditional_interval": [
+            9.42664543814716e-05,
+            9.44750287976381e-05
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -4.423915981059592e-08,
+          "joint_interval": [
+            -4.662600634556756e-08,
+            -4.1852313275624277e-08
+          ],
+          "error_bound": 2.3868465349716404e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.0599841277224584e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -4.423915313939153e-08,
+          "finite_pulse_difference": 6.671204387520557e-15,
+          "conditional_value": -1.7153859057792436e-06,
+          "conditional_interval": [
+            -1.8079367124012584e-06,
+            -1.6228351154022413e-06
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -2.5648561590608946e-06,
+          "joint_interval": [
+            -2.5672275016723983e-06,
+            -2.562484816449391e-06
+          ],
+          "error_bound": 2.3713426115037764e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.4094628242311558e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -2.564855732314908e-06,
+          "finite_pulse_difference": 4.2674598663833274e-13,
+          "conditional_value": -9.945302136028244e-05,
+          "conditional_interval": [
+            -9.954497957556512e-05,
+            -9.936106316114038e-05
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.9881135960467357,
+        0.9881139451977301
+      ]
+    },
+    {
+      "lag": 0.125,
+      "group": "opposite_no_shortcut",
+      "initial_probability": 0.02578962533244062,
+      "initial_probability_interval": [
+        0.02578962306907307,
+        0.02578962759580827
+      ],
+      "state_errors": [
+        6.596761534895593e-09,
+        6.607066723879026e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 1.793245908473422e-05,
+          "joint_interval": [
+            1.793028996705717e-05,
+            1.793462820241127e-05
+          ],
+          "error_bound": 2.169117677051991e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 3.0357660829594124e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 1.7932456095569316e-05,
+          "finite_pulse_difference": -2.9891649051816405e-12,
+          "conditional_value": 0.0006953361614826209,
+          "conditional_interval": [
+            0.000695251992315371,
+            0.0006954203306646419
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 7.77683784309929e-06,
+          "joint_interval": [
+            7.774683008206152e-06,
+            7.778992677992428e-06
+          ],
+          "error_bound": 2.1548348931381195e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.168404344971009e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 7.776836547998545e-06,
+          "finite_pulse_difference": -1.2951007453965158e-12,
+          "conditional_value": 0.00030154908196036685,
+          "conditional_interval": [
+            0.00030146550117186703,
+            0.0003016326627635361
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": 3.0720945171439085e-09,
+          "joint_interval": [
+            -2.0990003433065178e-10,
+            6.354089068618469e-09
+          ],
+          "error_bound": 3.2819945514745602e-09,
+          "zero_excluded": false,
+          "phase_shift_identity_error": 7.806255641895632e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 3.0720937946315807e-09,
+          "finite_pulse_difference": -7.225123277443402e-16,
+          "conditional_value": 1.1912133183569513e-07,
+          "conditional_interval": [
+            -8.138933778460842e-09,
+            2.4638161835867605e-07
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -1.4645631620652244e-05,
+          "joint_interval": [
+            -1.4648898893920933e-05,
+            -1.4642364347383555e-05
+          ],
+          "error_bound": 3.2672732686885253e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.734723475976807e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -1.4645629179028952e-05,
+          "finite_pulse_difference": 2.441623292437356e-12,
+          "conditional_value": -0.0005678884990325776,
+          "conditional_interval": [
+            -0.0005680152383261428,
+            -0.000567761759761256
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.9881135960467349,
+        0.9881139451977295
+      ]
+    },
+    {
+      "lag": 0.25,
+      "group": "all",
+      "initial_probability": 0.05157925066488129,
+      "initial_probability_interval": [
+        0.05157924746399618,
+        0.05157925386576649
+      ],
+      "state_errors": [
+        6.687797038866038e-09,
+        6.709315683012677e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 0.00019609875742691114,
+          "joint_interval": [
+            0.00019609554851118474,
+            0.00019610196634263754
+          ],
+          "error_bound": 3.2089157263932096e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.8648277366750676e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.00019609872472202416,
+          "finite_pulse_difference": -3.270488697568186e-11,
+          "conditional_value": 0.0038018923287776395,
+          "conditional_interval": [
+            0.0038018298795387327,
+            0.00380195477802429
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 7.28041145708503e-05,
+          "joint_interval": [
+            7.280098348607525e-05,
+            7.280724565562535e-05
+          ],
+          "error_bound": 3.1310847750535213e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.3877787807814457e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 7.28041024307402e-05,
+          "finite_pulse_difference": -1.2140110097758061e-11,
+          "conditional_value": 0.0014115000437650864,
+          "conditional_interval": [
+            0.0014114392518266683,
+            0.001411560835711047
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -1.2111738051860492e-06,
+          "joint_interval": [
+            -1.2150155857162647e-06,
+            -1.2073320246558337e-06
+          ],
+          "error_bound": 3.841780530215621e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.431146867680866e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -1.2111736110570481e-06,
+          "finite_pulse_difference": 1.9412900106874353e-13,
+          "conditional_value": -2.3481803042375328e-05,
+          "conditional_interval": [
+            -2.355628756631979e-05,
+            -2.340731852767549e-05
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -0.00012337299837252534,
+          "joint_interval": [
+            -0.00012337675592770467,
+            -0.000123369240817346
+          ],
+          "error_bound": 3.757555179339884e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.0408340855860843e-17,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -0.00012337297781647716,
+          "finite_pulse_difference": 2.055604818307355e-11,
+          "conditional_value": -0.0023919114136438237,
+          "conditional_interval": [
+            -0.0023919844122158866,
+            -0.002391838415080817
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.9546639289287862,
+        0.9546641711096867
+      ]
+    },
+    {
+      "lag": 0.25,
+      "group": "opposite_shortcut",
+      "initial_probability": 0.025789625332440586,
+      "initial_probability_interval": [
+        0.025789623069073037,
+        0.02578962759580823
+      ],
+      "state_errors": [
+        6.646550513406534e-09,
+        6.656105803005128e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 7.383965233710211e-05,
+          "joint_interval": [
+            7.383703540747737e-05,
+            7.384226926672685e-05
+          ],
+          "error_bound": 2.616929624744582e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 3.686287386450715e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 7.383964002478233e-05,
+          "finite_pulse_difference": -1.2312319783505665e-11,
+          "conditional_value": 0.0028631533566414297,
+          "conditional_interval": [
+            0.0028630516331875464,
+            0.0028632550801131573
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 3.111296437572448e-05,
+          "joint_interval": [
+            3.111039907690593e-05,
+            3.111552967454303e-05
+          ],
+          "error_bound": 2.5652988185478538e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 4.7704895589362195e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 3.111295918990786e-05,
+          "finite_pulse_difference": -5.185816619873718e-12,
+          "conditional_value": 0.0012064139736294543,
+          "conditional_interval": [
+            0.0012063143975744157,
+            0.0012065135497019664
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -1.319530723220639e-06,
+          "joint_interval": [
+            -1.3218913166539582e-06,
+            -1.3171701297873197e-06
+          ],
+          "error_bound": 2.3605934333193507e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.168404344971009e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -1.3195305074292785e-06,
+          "finite_pulse_difference": 2.1579136047500391e-13,
+          "conditional_value": -5.116517615945396e-05,
+          "conditional_interval": [
+            -5.125671333440979e-05,
+            -5.107363900056504e-05
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -1.8727816569330882e-05,
+          "joint_interval": [
+            -1.873011235770058e-05,
+            -1.8725520780961186e-05
+          ],
+          "error_bound": 2.2957883696977382e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.6020852139652106e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -1.872781345366864e-05,
+          "finite_pulse_difference": 3.1156622420924762e-12,
+          "conditional_value": -0.0007261763723947278,
+          "conditional_interval": [
+            -0.0007262654559756542,
+            -0.0007260872888294352
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.9546638792733969,
+        0.9546642207651039
+      ]
+    },
+    {
+      "lag": 0.25,
+      "group": "opposite_no_shortcut",
+      "initial_probability": 0.02578962533244062,
+      "initial_probability_interval": [
+        0.02578962306907307,
+        0.02578962759580827
+      ],
+      "state_errors": [
+        6.646550513406534e-09,
+        6.667160867166931e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 0.0001222591050898062,
+          "joint_interval": [
+            0.00012225695250078617,
+            0.00012226125767882625
+          ],
+          "error_bound": 2.1525890200472503e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.734723475976807e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.00012225908471545643,
+          "finite_pulse_difference": -2.0374349776752787e-11,
+          "conditional_value": 0.004740631300913751,
+          "conditional_interval": [
+            0.004740547417623715,
+            0.004740715184218493
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 4.169115019512365e-05,
+          "joint_interval": [
+            4.168905750814521e-05,
+            4.169324288210209e-05
+          ],
+          "error_bound": 2.092686978434636e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 8.673617379884035e-19,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 4.1691143247771234e-05,
+          "finite_pulse_difference": -6.947352415576091e-12,
+          "conditional_value": 0.0016165861139006386,
+          "conditional_interval": [
+            0.001616504827503642,
+            0.001616667400311897
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": 1.083569180354571e-07,
+          "joint_interval": [
+            1.0512660233862891e-07,
+            1.115872337322853e-07
+          ],
+          "error_bound": 3.230315696828202e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 0.0,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 1.0835690331112424e-07,
+          "finite_pulse_difference": -1.472433286409114e-14,
+          "conditional_value": 4.201570074736819e-06,
+          "conditional_interval": [
+            4.0763133142611064e-06,
+            4.326826857198265e-06
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -0.00010464518180319316,
+          "joint_interval": [
+            -0.00010464835459988593,
+            -0.00010464200900650038
+          ],
+          "error_bound": 3.1727966927716767e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 4.336808689942018e-19,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -0.0001046451643610738,
+          "finite_pulse_difference": 1.7442119363414443e-11,
+          "conditional_value": -0.004057646454892875,
+          "conditional_interval": [
+            -0.004057769837100888,
+            -0.004057523072706503
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.9546638792733972,
+        0.9546642207651045
+      ]
+    },
+    {
+      "lag": 0.5,
+      "group": "all",
+      "initial_probability": 0.05157925066488129,
+      "initial_probability_interval": [
+        0.05157924746399618,
+        0.05157925386576649
+      ],
+      "state_errors": [
+        6.8286235496254644e-09,
+        6.871659213163079e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 0.0012208640021926186,
+          "joint_interval": [
+            0.0012208608461277404,
+            0.0012208671582574968
+          ],
+          "error_bound": 3.1560648781540627e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 5.854691731421724e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.001220863798711072,
+          "finite_pulse_difference": -2.034815464995593e-10,
+          "conditional_value": 0.023669673104108644,
+          "conditional_interval": [
+            0.023669610446575968,
+            0.023669735761649054
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 0.0004141558227304448,
+          "joint_interval": [
+            0.0004141529449415771,
+            0.00041415870051931245
+          ],
+          "error_bound": 2.8777888676729676e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.6020852139652106e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.0004141557536970625,
+          "finite_pulse_difference": -6.903338230918044e-11,
+          "conditional_value": 0.008029504449788966,
+          "conditional_interval": [
+            0.008029448157962853,
+            0.00802956074162205
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -2.80239842423833e-05,
+          "joint_interval": [
+            -2.8027788841876112e-05,
+            -2.8020179642890488e-05
+          ],
+          "error_bound": 3.804599492812368e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 7.914675859144182e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -2.8023979572674995e-05,
+          "finite_pulse_difference": 4.66970830493435e-12,
+          "conditional_value": -0.0005433189486303251,
+          "conditional_interval": [
+            -0.0005433927445614697,
+            -0.0005432451527083387
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -0.0006352313523094958,
+          "joint_interval": [
+            -0.0006352348381816477,
+            -0.0006352278664373439
+          ],
+          "error_bound": 3.485872151934085e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 8.673617379884035e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -0.0006352312464357607,
+          "finite_pulse_difference": 1.0587373512616072e-10,
+          "conditional_value": -0.01231563747284148,
+          "conditional_interval": [
+            -0.012315705819962964,
+            -0.012315569125728456
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.8446214553953111,
+        0.8446216788506383
+      ]
+    },
+    {
+      "lag": 0.5,
+      "group": "opposite_shortcut",
+      "initial_probability": 0.025789625332440586,
+      "initial_probability_interval": [
+        0.025789623069073037,
+        0.02578962759580823
+      ],
+      "state_errors": [
+        6.746129894135365e-09,
+        6.7652393149457366e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 0.0005061776463374723,
+          "joint_interval": [
+            0.0005061753184781919,
+            0.0005061799741967526
+          ],
+          "error_bound": 2.3278592803245612e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 4.336808689942018e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.0005061775619728814,
+          "finite_pulse_difference": -8.43645908341073e-11,
+          "conditional_value": 0.01962718107815064,
+          "conditional_interval": [
+            0.019627089092223424,
+            0.01962727306409393
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 0.00024047841263910943,
+          "joint_interval": [
+            0.00024047627120284755,
+            0.0002404805540753713
+          ],
+          "error_bound": 2.141436261879507e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.951563910473908e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.00024047837255541937,
+          "finite_pulse_difference": -4.008369005638335e-11,
+          "conditional_value": 0.009324618312178942,
+          "conditional_interval": [
+            0.009324534459037083,
+            0.009324702165335484
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": -3.218653071701517e-05,
+          "joint_interval": [
+            -3.218910569251485e-05,
+            -3.2183955741515484e-05
+          ],
+          "error_bound": 2.5749754996833047e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 4.0115480381963664e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -3.218652534688754e-05,
+          "finite_pulse_difference": 5.370127628169519e-12,
+          "conditional_value": -0.001248041811469357,
+          "conditional_interval": [
+            -0.0012481417664113163,
+            -0.0012479418565449376
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -0.00014531170029951626,
+          "joint_interval": [
+            -0.00014531404253211733,
+            -0.0001453093580669152
+          ],
+          "error_bound": 2.3422326010743464e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 5.637851296924623e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -0.00014531167607904905,
+          "finite_pulse_difference": 2.4220467211705232e-11,
+          "conditional_value": -0.005634502185525344,
+          "conditional_interval": [
+            -0.005634593500762646,
+            -0.00563441087030405
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.8446214100603959,
+        0.8446217241855715
+      ]
+    },
+    {
+      "lag": 0.5,
+      "group": "opposite_no_shortcut",
+      "initial_probability": 0.02578962533244062,
+      "initial_probability_interval": [
+        0.02578962306907307,
+        0.02578962759580827
+      ],
+      "state_errors": [
+        6.746129894135365e-09,
+        6.787349462105068e-09
+      ],
+      "responses": {
+        "core_neighbors_distance1": {
+          "joint_value": 0.0007146863558551453,
+          "joint_interval": [
+            0.0007146839885881787,
+            0.000714688723122112
+          ],
+          "error_bound": 2.3672669666873122e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 7.26415455565288e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.000714686236739058,
+          "finite_pulse_difference": -1.1911608732793205e-10,
+          "conditional_value": 0.027712165130066684,
+          "conditional_interval": [
+            0.027712070906535317,
+            0.02771225935361448
+          ]
+        },
+        "core_neighbors_distance1_and_same_ring": {
+          "joint_value": 0.0001736774100913345,
+          "joint_interval": [
+            0.00017367524649953924,
+            0.00017367957368312974
+          ],
+          "error_bound": 2.163591795257798e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 2.8189256484623115e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 0.00017367738114597991,
+          "finite_pulse_difference": -2.8945354576745408e-11,
+          "conditional_value": 0.0067343905873989834,
+          "conditional_interval": [
+            0.006734306102495549,
+            0.006734475072317221
+          ]
+        },
+        "opposite_distance2": {
+          "joint_value": 4.1625464746286155e-06,
+          "joint_interval": [
+            4.159542288349237e-06,
+            4.1655506609079945e-06
+          ],
+          "error_bound": 3.00418627937877e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.5178830414797062e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": 4.162545780284077e-06,
+          "finite_pulse_difference": -6.943445384627323e-13,
+          "conditional_value": 0.000161403914208578,
+          "conditional_interval": [
+            0.00016128741188280323,
+            0.00016152041655480124
+          ]
+        },
+        "opposite_distance2_and_same_ring": {
+          "joint_value": -0.0004899196520099802,
+          "joint_interval": [
+            -0.0004899224393843151,
+            -0.0004899168646356453
+          ],
+          "error_bound": 2.787374334911515e-09,
+          "zero_excluded": true,
+          "phase_shift_identity_error": 1.0842021724855044e-18,
+          "finite_theta": 0.001,
+          "finite_pulse_susceptibility": -0.0004899195703558443,
+          "finite_pulse_difference": 8.165413592671478e-11,
+          "conditional_value": -0.01899677276015767,
+          "conditional_interval": [
+            -0.018996882508602087,
+            -0.018996663011732445
+          ]
+        }
+      },
+      "same_ring_survival_interval": [
+        0.8446214100603998,
+        0.8446217241855755
+      ]
+    }
+  ],
+  "seconds": 47.21211554299953
+}

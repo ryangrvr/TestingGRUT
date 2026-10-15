@@ -1,0 +1,2036 @@
+{
+  "status": "PASS",
+  "N": 6,
+  "Q": 12,
+  "model": "N6_SHELL2",
+  "base_budget": 12,
+  "dimension": 2477611,
+  "outside_dimension": 1658455,
+  "H_nnz": 59215219,
+  "initial_state": "Original equal coherent neutral ray over every labelled fixed-Q graph.",
+  "formed_state": "X=P exp(-iH wait)psi0, with P={c/Q>=1/4,nv/N>=1/4}; normalized psi_formed=X/sqrt(p). The same event and full H are used at every N. This is an explicitly recorded conditional diagnostic, not autonomous state selection.",
+  "evolution": "Full frozen H only. No outside hopping is removed.",
+  "eta_scope": "Ratio of hopping-action-square integrals; homogeneous in X. Not a probability, transport speed, fixed-core metric or a locality certificate.",
+  "interference_scope": "Coherent ||L psi||\u00b2 divided by <psi,diag_physical(L^dagger L)psi>. The reference is diagonal in the full labelled physical electric/Fock basis, not the orbit basis; no dephasing is applied to the evolved state.",
+  "Pauli_scope": "Fraction of empty endpoints on neutral active edges, weighted by their integrated count. Neutral edges are outside every instantaneous through-flow core. This availability statistic is not a coherent transport rate.",
+  "detuning_scope": "Allowed-hop physical diagonal-energy differences, with the full rewiring escape diagonal. Fractions at |Delta D|>=4 and>=8 and RMS capped at8 are bounded observables; no eigenvalue gap or unbounded energy moment is inferred from norm error.",
+  "extension": {
+    "base_dimension": 1421197,
+    "added_dimension": 1056414,
+    "dimension": 2477611,
+    "outside": 1658455,
+    "H_nnz": 59215219,
+    "base_cross_H_error": 9.930136612989092e-16,
+    "base_cross_V_error": 9.930136612989092e-16,
+    "H_hermiticity": 4.742864688555398e-15,
+    "V_hermiticity": 4.6470493090159045e-15,
+    "seconds": 1156.2755559119996,
+    "minimum_added_electric_square": 14,
+    "maximum_added_electric_square": 20
+  },
+  "rows": [
+    {
+      "wait": 0.5,
+      "formation_probability": 7.183126998141159e-06,
+      "formation_interval": [
+        7.170346606512836e-06,
+        7.195918769484736e-06
+      ],
+      "waiting_state_error": 2.3848422454087237e-06,
+      "record_energy_change": -6.750054174705386e-06,
+      "record_energy_interval": [
+        -0.00012122311845366497,
+        0.0001077230101042542
+      ],
+      "probes": [
+        {
+          "lag": 0.125,
+          "joint_integrals": {
+            "outside": {
+              "value": 2.6560056888920607e-05,
+              "quadrature_error": 6.072746663095259e-11,
+              "retained_quadrature_interval": [
+                2.6559496161453974e-05,
+                2.656061761638724e-05
+              ],
+              "full_law_interval": [
+                2.5765261566227558e-05,
+                2.7366925444037607e-05
+              ],
+              "action_L2_error_radius": 7.764128203755065e-05
+            },
+            "inside": {
+              "value": 3.2167849094835466e-06,
+              "quadrature_error": 6.072746663095259e-11,
+              "retained_quadrature_interval": [
+                3.2162241820169157e-06,
+                3.2173456369501775e-06
+              ],
+              "full_law_interval": [
+                2.943771170931231e-06,
+                3.501903532513537e-06
+              ],
+              "action_L2_error_radius": 7.764128203755065e-05
+            },
+            "dephased_outside_action": {
+              "value": 9.639659140802871e-06,
+              "quadrature_error": 5.0431114157192475e-12,
+              "retained_quadrature_interval": [
+                9.639154097691456e-06,
+                9.640164183914286e-06
+              ],
+              "full_law_interval": [
+                9.500721610974742e-06,
+                9.779605200015694e-06
+              ],
+              "action_L2_error_radius": 2.237465284972291e-05
+            },
+            "dephased_inside_action": {
+              "value": 3.1187961135319023e-06,
+              "quadrature_error": 5.0431114157192475e-12,
+              "retained_quadrature_interval": [
+                3.1182910704204865e-06,
+                3.119301156643318e-06
+              ],
+              "full_law_interval": [
+                3.0397703123734195e-06,
+                3.1988359622564727e-06
+              ],
+              "action_L2_error_radius": 2.237465284972291e-05
+            },
+            "neutral_edges": {
+              "value": 5.834288383666603e-06,
+              "quadrature_error": 2.5215557078596238e-12,
+              "retained_quadrature_interval": [
+                5.833785862110895e-06,
+                5.834790905222311e-06
+              ],
+              "full_law_interval": [
+                5.757608518849299e-06,
+                5.9114754660271896e-06
+              ],
+              "action_L2_error_radius": 1.5821415203343386e-05
+            },
+            "neutral_edge_vacancies": {
+              "value": 6.089887711812217e-06,
+              "quadrature_error": 5.0431114157192475e-12,
+              "retained_quadrature_interval": [
+                6.089382668700802e-06,
+                6.090392754923633e-06
+              ],
+              "full_law_interval": [
+                5.979456888480451e-06,
+                6.2013289435240134e-06
+              ],
+              "action_L2_error_radius": 2.237465284972291e-05
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 5.0431114157192475e-12,
+              "retained_quadrature_interval": [
+                0.0,
+                5.050431114157193e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                2.0113266986266445e-09
+              ],
+              "action_L2_error_radius": 2.237465284972291e-05
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 5.0431114157192475e-12,
+              "retained_quadrature_interval": [
+                0.0,
+                5.050431114157193e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                2.0113266986266445e-09
+              ],
+              "action_L2_error_radius": 2.237465284972291e-05
+            },
+            "outside_detuning_square_capped8": {
+              "value": 4.1500907761265623e-05,
+              "quadrature_error": 3.2275913060603184e-10,
+              "retained_quadrature_interval": [
+                4.1500085002135016e-05,
+                4.150173052039623e-05
+              ],
+              "full_law_interval": [
+                3.922594859714398e-05,
+                4.383999015156696e-05
+              ],
+              "action_L2_error_radius": 0.00017899372279778328
+            },
+            "circulation_fraction": {
+              "value": 2.2194750477746078e-07,
+              "quadrature_error": 2.101296423216353e-13,
+              "retained_quadrature_interval": [
+                2.2144729464781847e-07,
+                2.224477149071031e-07
+              ],
+              "full_law_interval": [
+                2.1716929363777085e-07,
+                2.2677714137328117e-07
+              ],
+              "action_L2_error_radius": 4.567604825738273e-06
+            },
+            "matter_fraction": {
+              "value": 3.8564207910810864e-07,
+              "quadrature_error": 2.101296423216353e-13,
+              "retained_quadrature_interval": [
+                3.8514186897846633e-07,
+                3.8614228923775096e-07
+              ],
+              "full_law_interval": [
+                3.7949343921650734e-07,
+                3.9183980335102413e-07
+              ],
+              "action_L2_error_radius": 4.567604825738273e-06
+            },
+            "charged_event": {
+              "value": 8.488429850227435e-07,
+              "quadrature_error": 2.101296423216353e-13,
+              "retained_quadrature_interval": [
+                8.483427748931011e-07,
+                8.493431951523858e-07
+              ],
+              "full_law_interval": [
+                8.399496050909543e-07,
+                8.577830507042627e-07
+              ],
+              "action_L2_error_radius": 4.567604825738273e-06
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              3.580538134405939,
+              3.8166809703704128
+            ],
+            "inside": [
+              0.40908899408574334,
+              0.4883869253032696
+            ],
+            "dephased_outside_action": [
+              1.3202930599027651,
+              1.3638957412648456
+            ],
+            "dephased_inside_action": [
+              0.42242977022808753,
+              0.4461201302808661
+            ],
+            "neutral_edges": [
+              0.8001213887051107,
+              0.8244337115667167
+            ],
+            "neutral_edge_vacancies": [
+              0.8309511377250594,
+              0.8648576259746409
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.0002805062026987306
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.0002805062026987306
+            ],
+            "outside_detuning_square_capped8": [
+              5.451138326281129,
+              6.11406847637561
+            ],
+            "circulation_fraction": [
+              0.03017950877359907,
+              0.03162708217860754
+            ],
+            "matter_fraction": [
+              0.052737315605312335,
+              0.054647261123348695
+            ],
+            "charged_event": [
+              0.11672583196087119,
+              0.11962923102282631
+            ]
+          },
+          "eta": 8.256708992453216,
+          "eta_interval": [
+            7.357501806377346,
+            9.296553249205294
+          ],
+          "interference_outside_ratio": 2.755290047186094,
+          "interference_outside_interval": [
+            2.6345911761536356,
+            2.880510193291502
+          ],
+          "interference_inside_ratio": 1.0314187886558177,
+          "interference_inside_interval": [
+            0.9202632475266666,
+            1.1520289931969527
+          ],
+          "neutral_edge_vacancy_fraction": 0.521904927502485,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.505749953868873,
+            0.538533396567521
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.00021170251913320604
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.00021170251913320604
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            2.00274689018102,
+            2.1481120317861495
+          ],
+          "charged_event_survival_conditional": 0.8617525571715442,
+          "charged_event_survival_interval": [
+            0.846037502665039,
+            0.8776406090592904
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 7.634260077839919e-05,
+              "interval": [
+                7.458961422248654e-05,
+                7.811594790149337e-05
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 2.3301017402701716e-05,
+              "interval": [
+                2.233711151944072e-05,
+                2.428528385314426e-05
+              ]
+            },
+            "neutral_edges": {
+              "value": 4.562328653134e-05,
+              "interval": [
+                4.466457183621984e-05,
+                4.659218155184406e-05
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 4.54149505503022e-05,
+              "interval": [
+                4.4065223372537e-05,
+                4.6785038295248964e-05
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                1.0180283590771133e-08
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                1.0180283590771133e-08
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.00032739187550745165,
+              "interval": [
+                0.0002988333791136737,
+                0.00035725343690036504
+              ]
+            },
+            "circulation_fraction": {
+              "value": 1.7275402623158477e-06,
+              "interval": [
+                1.6738233923685378e-06,
+                1.7821055220124433e-06
+              ]
+            },
+            "matter_fraction": {
+              "value": 3.345212339261616e-06,
+              "interval": [
+                3.2702967191933716e-06,
+                3.4209763490791468e-06
+              ]
+            },
+            "charged_event": {
+              "value": 6.190078059136102e-06,
+              "interval": [
+                6.088017145115346e-06,
+                6.292987362906142e-06
+              ]
+            }
+          },
+          "lag_state_error": 1.8210649467615247e-05,
+          "total_state_error": 2.059549171302397e-05,
+          "integrated_state_error_square_upper": 2.0858446489281824e-11
+        },
+        {
+          "lag": 0.25,
+          "joint_integrals": {
+            "outside": {
+              "value": 5.340924837859884e-05,
+              "quadrature_error": 1.2145493326190516e-10,
+              "retained_quadrature_interval": [
+                5.3408626923665577e-05,
+                5.34098698335321e-05
+              ],
+              "full_law_interval": [
+                4.803655323531218e-05,
+                5.906668790853728e-05
+              ],
+              "action_L2_error_radius": 0.0003772798842481449
+            },
+            "inside": {
+              "value": 6.27453605893991e-06,
+              "quadrature_error": 1.2145493326190516e-10,
+              "retained_quadrature_interval": [
+                6.273914604006648e-06,
+                6.275157513873172e-06
+              ],
+              "full_law_interval": [
+                4.526249739934391e-06,
+                8.30768980292078e-06
+              ],
+              "action_L2_error_radius": 0.0003772798842481449
+            },
+            "dephased_outside_action": {
+              "value": 1.9284504629652284e-05,
+              "quadrature_error": 1.0086222831438493e-11,
+              "retained_quadrature_interval": [
+                1.928399454342945e-05,
+                1.9285014715875117e-05
+              ],
+              "full_law_interval": [
+                1.8340932021131744e-05,
+                2.0251743914620476e-05
+              ],
+              "action_L2_error_radius": 0.00010872308610345696
+            },
+            "dephased_inside_action": {
+              "value": 5.762120979277751e-06,
+              "quadrature_error": 1.0086222831438493e-11,
+              "retained_quadrature_interval": [
+                5.7616108930549195e-06,
+                5.762631065500582e-06
+              ],
+              "full_law_interval": [
+                5.251487818784922e-06,
+                6.296441765291503e-06
+              ],
+              "action_L2_error_radius": 0.00010872308610345696
+            },
+            "neutral_edges": {
+              "value": 1.1462652992577082e-05,
+              "quadrature_error": 5.043111415719247e-12,
+              "retained_quadrature_interval": [
+                1.1462147949465667e-05,
+                1.1463158035688497e-05
+              ],
+              "full_law_interval": [
+                1.0947498557233131e-05,
+                1.1989651118713608e-05
+              ],
+              "action_L2_error_radius": 7.687897790189271e-05
+            },
+            "neutral_edge_vacancies": {
+              "value": 1.1612961573315169e-05,
+              "quadrature_error": 1.0086222831438493e-11,
+              "retained_quadrature_interval": [
+                1.1612451487092338e-05,
+                1.1613471659538e-05
+              ],
+              "full_law_interval": [
+                1.0883279848263231e-05,
+                1.2366317265237768e-05
+              ],
+              "action_L2_error_radius": 0.00010872308610345696
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 1.0086222831438493e-11,
+              "retained_quadrature_interval": [
+                0.0,
+                5.100862228314386e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                1.7241836719311738e-08
+              ],
+              "action_L2_error_radius": 0.00010872308610345696
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 1.0086222831438493e-11,
+              "retained_quadrature_interval": [
+                0.0,
+                5.100862228314386e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                1.7241836719311738e-08
+              ],
+              "action_L2_error_radius": 0.00010872308610345696
+            },
+            "outside_detuning_square_capped8": {
+              "value": 8.274314025757598e-05,
+              "quadrature_error": 6.455182612120636e-10,
+              "retained_quadrature_interval": [
+                8.274199473931478e-05,
+                8.274428577583719e-05
+              ],
+              "full_law_interval": [
+                6.767499772076116e-05,
+                9.932454049379496e-05
+              ],
+              "action_L2_error_radius": 0.0008697811888276557
+            },
+            "circulation_fraction": {
+              "value": 4.2766235077551214e-07,
+              "quadrature_error": 4.202592846432705e-13,
+              "retained_quadrature_interval": [
+                4.271619305162275e-07,
+                4.281627710347968e-07
+              ],
+              "full_law_interval": [
+                3.986443124266214e-07,
+                4.576994491003759e-07
+              ],
+              "action_L2_error_radius": 2.219340495577323e-05
+            },
+            "matter_fraction": {
+              "value": 8.30398109045057e-07,
+              "quadrature_error": 4.202592846432705e-13,
+              "retained_quadrature_interval": [
+                8.298976887857724e-07,
+                8.308985293043416e-07
+              ],
+              "full_law_interval": [
+                7.899544200820254e-07,
+                8.718512675133237e-07
+              ],
+              "action_L2_error_radius": 2.219340495577323e-05
+            },
+            "charged_event": {
+              "value": 1.5589124481528844e-06,
+              "quadrature_error": 4.202592846432705e-13,
+              "retained_quadrature_interval": [
+                1.5584120278935997e-06,
+                1.5594128684121691e-06
+              ],
+              "full_law_interval": [
+                1.5034936910795618e-06,
+                1.615334089755684e-06
+              ],
+              "action_L2_error_radius": 2.219340495577323e-05
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              6.675527444670118,
+              8.237633569189937
+            ],
+            "inside": [
+              0.6290023393716676,
+              1.1586176036978315
+            ],
+            "dephased_outside_action": [
+              2.5487964231765563,
+              2.824374472529095
+            ],
+            "dephased_inside_action": [
+              0.7297869788434194,
+              0.8781223713191824
+            ],
+            "neutral_edges": [
+              1.5213482680846084,
+              1.6721159766284368
+            ],
+            "neutral_edge_vacancies": [
+              1.5124239443078826,
+              1.7246470699206402
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.002404602966284915
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.002404602966284915
+            ],
+            "outside_detuning_square_capped8": [
+              9.404636140105708,
+              13.852125419373499
+            ],
+            "circulation_fraction": [
+              0.05539866766105342,
+              0.06383226282041189
+            ],
+            "matter_fraction": [
+              0.10977811803989973,
+              0.1215912305719531
+            ],
+            "charged_event": [
+              0.20893700154806213,
+              0.22527977772908128
+            ]
+          },
+          "eta": 8.512063342516258,
+          "eta_interval": [
+            5.782179447579243,
+            13.049807523301503
+          ],
+          "interference_outside_ratio": 2.7695421481802334,
+          "interference_outside_interval": [
+            2.371971196052545,
+            3.2204845337457675
+          ],
+          "interference_inside_ratio": 1.0889282056910905,
+          "interference_inside_interval": [
+            0.7188583502645707,
+            1.5819687847705977
+          ],
+          "neutral_edge_vacancy_fraction": 0.5065564481815608,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.45386140682928056,
+            0.5648010456720822
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.0009400741848585629
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.0009400741848585629
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            1.8280282854772678,
+            2.327113586186039
+          ],
+          "charged_event_survival_conditional": 0.7356712593801437,
+          "charged_event_survival_interval": [
+            0.6790782253947879,
+            0.7946359254396038
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 7.846312904254108e-05,
+              "interval": [
+                7.099311049551625e-05,
+                8.630674236573361e-05
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 1.8936999060835555e-05,
+              "interval": [
+                1.536221063295796e-05,
+                2.2885382264880877e-05
+              ]
+            },
+            "neutral_edges": {
+              "value": 4.467008453698431e-05,
+              "interval": [
+                4.067832405461338e-05,
+                4.884864258646251e-05
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 4.392429789872462e-05,
+              "interval": [
+                3.8382240559762525e-05,
+                4.983995001385442e-05
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                1.8679738808386066e-07
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                1.8679738808386066e-07
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.00033483911412289486,
+              "interval": [
+                0.0002202555199452757,
+                0.00047333272556880163
+              ]
+            },
+            "circulation_fraction": {
+              "value": 1.554094199643616e-06,
+              "interval": [
+                1.3419141049061515e-06,
+                1.781840883816836e-06
+              ]
+            },
+            "matter_fraction": {
+              "value": 3.7353123828173663e-06,
+              "interval": [
+                3.402079331071877e-06,
+                4.0841120239986126e-06
+              ]
+            },
+            "charged_event": {
+              "value": 5.284420085010017e-06,
+              "interval": [
+                4.88659174806674e-06,
+                5.69781501138905e-06
+              ]
+            }
+          },
+          "lag_state_error": 8.583764068918602e-05,
+          "total_state_error": 8.822248293459474e-05,
+          "integrated_state_error_square_upper": 4.925250303759839e-10
+        },
+        {
+          "lag": 0.5,
+          "joint_integrals": {
+            "outside": {
+              "value": 9.766475936639864e-05,
+              "quadrature_error": 2.429098665238103e-10,
+              "retained_quadrature_interval": [
+                9.766401645653212e-05,
+                9.766550227626516e-05
+              ],
+              "full_law_interval": [
+                5.6207603695984606e-05,
+                0.0001505019444877634
+              ],
+              "action_L2_error_radius": 0.0023853375883308168
+            },
+            "inside": {
+              "value": 1.2433437439416806e-05,
+              "quadrature_error": 2.429098665238103e-10,
+              "retained_quadrature_interval": [
+                1.2432694529550283e-05,
+                1.243418034928333e-05
+              ],
+              "full_law_interval": [
+                1.301116731716563e-06,
+                3.49464340934008e-05
+              ],
+              "action_L2_error_radius": 0.0023853375883308168
+            },
+            "dephased_outside_action": {
+              "value": 3.973661911385383e-05,
+              "quadrature_error": 2.0172445662876984e-11,
+              "retained_quadrature_interval": [
+                3.973609894140817e-05,
+                3.97371392862995e-05
+              ],
+              "full_law_interval": [
+                3.1542398174045456e-05,
+                4.8875979044551385e-05
+              ],
+              "action_L2_error_radius": 0.0006873956448172502
+            },
+            "dephased_inside_action": {
+              "value": 9.617523609436018e-06,
+              "quadrature_error": 2.0172445662876984e-11,
+              "retained_quadrature_interval": [
+                9.617003436990355e-06,
+                9.618043781881681e-06
+              ],
+              "full_law_interval": [
+                5.826110548633266e-06,
+                1.4354192811645917e-05
+              ],
+              "action_L2_error_radius": 0.0006873956448172502
+            },
+            "neutral_edges": {
+              "value": 2.276521296989479e-05,
+              "quadrature_error": 1.0086222831438492e-11,
+              "retained_quadrature_interval": [
+                2.276470288367196e-05,
+                2.2765723056117624e-05
+              ],
+              "full_law_interval": [
+                1.836272281703888e-05,
+                2.7640320107291924e-05
+              ],
+              "action_L2_error_radius": 0.0004860622682549865
+            },
+            "neutral_edge_vacancies": {
+              "value": 2.3564623010292444e-05,
+              "quadrature_error": 2.0172445662876984e-11,
+              "retained_quadrature_interval": [
+                2.3564102837846783e-05,
+                2.3565143182738105e-05
+              ],
+              "full_law_interval": [
+                1.7362984046149166e-05,
+                3.071143483680265e-05
+              ],
+              "action_L2_error_radius": 0.0006873956448172502
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 2.0172445662876984e-11,
+              "retained_quadrature_interval": [
+                0.0,
+                5.20172445662877e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                5.043882076427322e-07
+              ],
+              "action_L2_error_radius": 0.0006873956448172502
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 2.0172445662876984e-11,
+              "retained_quadrature_interval": [
+                0.0,
+                5.20172445662877e-10
+              ],
+              "full_law_interval": [
+                0.0,
+                5.043882076427322e-07
+              ],
+              "action_L2_error_radius": 0.0006873956448172502
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.00017015384101682593,
+              "quadrature_error": 1.291036522424127e-09,
+              "retained_quadrature_interval": [
+                0.0001701520499803035,
+                0.00017015563205334837
+              ],
+              "full_law_interval": [
+                5.6928122036624405e-05,
+                0.0003438626280055811
+              ],
+              "action_L2_error_radius": 0.005499161658538002
+            },
+            "circulation_fraction": {
+              "value": 7.707784734354075e-07,
+              "quadrature_error": 8.405185692865409e-13,
+              "retained_quadrature_interval": [
+                7.702776329168382e-07,
+                7.712793139539767e-07
+              ],
+              "full_law_interval": [
+                5.43670532409267e-07,
+                1.0374227932407246e-06
+              ],
+              "action_L2_error_radius": 0.00014031444637240098
+            },
+            "matter_fraction": {
+              "value": 1.786814481580621e-06,
+              "quadrature_error": 8.405185692865409e-13,
+              "retained_quadrature_interval": [
+                1.7863136410620517e-06,
+                1.7873153220991904e-06
+              ],
+              "full_law_interval": [
+                1.4309327249046812e-06,
+                2.182177671822216e-06
+              ],
+              "action_L2_error_radius": 0.00014031444637240098
+            },
+            "charged_event": {
+              "value": 2.7248007033899492e-06,
+              "quadrature_error": 8.405185692865409e-13,
+              "retained_quadrature_interval": [
+                2.72429986287138e-06,
+                2.7253015439085184e-06
+              ],
+              "full_law_interval": [
+                2.2807973003480693e-06,
+                3.208265540196408e-06
+              ],
+              "action_L2_error_radius": 0.00014031444637240098
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              7.811039214942299,
+              20.98949363913068
+            ],
+            "inside": [
+              0.18081314886906782,
+              4.873744047694836
+            ],
+            "dephased_outside_action": [
+              4.383373295958433,
+              6.816403965766072
+            ],
+            "dephased_inside_action": [
+              0.809640955556596,
+              2.001882698195926
+            ],
+            "neutral_edges": [
+              2.5518246391146717,
+              3.854809484688813
+            ],
+            "neutral_edge_vacancies": [
+              2.412893280532743,
+              4.28311719393138
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.07034362985808743
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.07034362985808743
+            ],
+            "outside_detuning_square_capped8": [
+              7.911167963434465,
+              47.95620726245649
+            ],
+            "circulation_fraction": [
+              0.07555262223286555,
+              0.14468237732028633
+            ],
+            "matter_fraction": [
+              0.1988533738002636,
+              0.3043336384659761
+            ],
+            "charged_event": [
+              0.3169570659997022,
+              0.44743521007510795
+            ]
+          },
+          "eta": 7.85500870875654,
+          "eta_interval": [
+            1.6083931065973542,
+            115.67136200700935
+          ],
+          "interference_outside_ratio": 2.457802438767335,
+          "interference_outside_interval": [
+            1.1500046606687981,
+            4.77141730496584
+          ],
+          "interference_inside_ratio": 1.2927899056278913,
+          "interference_inside_interval": [
+            0.09064367107155857,
+            5.998244249175602
+          ],
+          "neutral_edge_vacancy_fraction": 0.5175577105616102,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.3140879696535887,
+            0.8362440347981871
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.015990800853492686
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.015990800853492686
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            1.079234186172383,
+            3.3017572043278776
+          ],
+          "charged_event_survival_conditional": 0.5765306518113195,
+          "charged_event_survival_interval": [
+            0.3614714631912097,
+            0.8420796176414869
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 8.495303085838007e-05,
+              "interval": [
+                5.1101924701931126e-05,
+                0.00012736099052083693
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 1.2938228848748945e-05,
+              "interval": [
+                2.336431887980987e-06,
+                3.2096879315524784e-05
+              ]
+            },
+            "neutral_edges": {
+              "value": 4.635243378626897e-05,
+              "interval": [
+                2.8576049056763604e-05,
+                6.840724612555249e-05
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 5.358281858326792e-05,
+              "interval": [
+                2.757922661043323e-05,
+                8.81432640621105e-05
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                4.278426753003947e-06
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                4.278426753003947e-06
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.0003646326765806105,
+              "interval": [
+                6.491663851805018e-06,
+                0.0012704120820291335
+              ]
+            },
+            "circulation_fraction": {
+              "value": 1.2230557488218068e-06,
+              "interval": [
+                4.674462600572642e-07,
+                2.3352014724027323e-06
+              ]
+            },
+            "matter_fraction": {
+              "value": 3.738383298771347e-06,
+              "interval": [
+                2.2839425593135125e-06,
+                5.549360273045564e-06
+              ]
+            },
+            "charged_event": {
+              "value": 4.141292890281809e-06,
+              "interval": [
+                2.601119286610737e-06,
+                6.038002728769262e-06
+              ]
+            }
+          },
+          "lag_state_error": 0.0004198327499867825,
+          "total_state_error": 0.00042221759223219125,
+          "integrated_state_error_square_upper": 1.9688003546597016e-08
+        }
+      ],
+      "record_entropy_bits": 0.00013310080336476616,
+      "record_entropy_interval_bits": [
+        0.00013288240908809548,
+        0.0001333193592509698
+      ]
+    },
+    {
+      "wait": 1.0,
+      "formation_probability": 0.0035905609631644857,
+      "formation_interval": [
+        0.003318980663367409,
+        0.0038728198826813317
+      ],
+      "waiting_state_error": 0.0023106941704150725,
+      "record_energy_change": 0.0005246010560422882,
+      "record_energy_interval": [
+        -0.11051686300506176,
+        0.11156606511714633
+      ],
+      "probes": [
+        {
+          "lag": 0.125,
+          "joint_integrals": {
+            "outside": {
+              "value": 0.00894185201958056,
+              "quadrature_error": 1.294471857333287e-08,
+              "retained_quadrature_interval": [
+                0.008941838574861987,
+                0.008941865464299132
+              ],
+              "full_law_interval": [
+                0.005087597337387772,
+                0.013875741518805489
+              ],
+              "action_L2_error_radius": 0.02323389991207322
+            },
+            "inside": {
+              "value": 0.0016165593060034388,
+              "quadrature_error": 1.294471857333287e-08,
+              "retained_quadrature_interval": [
+                0.0016165458612848655,
+                0.001616572750722012
+              ],
+              "full_law_interval": [
+                0.00028806206992494914,
+                0.004024700290791496
+              ],
+              "action_L2_error_radius": 0.02323389991207322
+            },
+            "dephased_outside_action": {
+              "value": 0.005093028219304531,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.005093026644310601,
+                0.00509302979429846
+              ],
+              "full_law_interval": [
+                0.004182210029881678,
+                0.006093504419829439
+              ],
+              "action_L2_error_radius": 0.006695435593497584
+            },
+            "dephased_inside_action": {
+              "value": 0.0013662387703746932,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.0013662371953807632,
+                0.0013662403453686231
+              ],
+              "full_law_interval": [
+                0.0009161040225647295,
+                0.0019060318043483447
+              ],
+              "action_L2_error_radius": 0.006695435593497584
+            },
+            "neutral_edges": {
+              "value": 0.002915073540560446,
+              "quadrature_error": 5.374969649826799e-10,
+              "retained_quadrature_interval": [
+                0.002915072503063481,
+                0.002915074578057411
+              ],
+              "full_law_interval": [
+                0.002426254346819183,
+                0.0034487217768133433
+              ],
+              "action_L2_error_radius": 0.004734388057606527
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.0035724454847853716,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.0035724439097914416,
+                0.0035724470597793016
+              ],
+              "full_law_interval": [
+                0.00281690140381524,
+                0.0044176476341908685
+              ],
+              "action_L2_error_radius": 0.006695435593497584
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                1.5749939299653598e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                4.536186548152247e-05
+              ],
+              "action_L2_error_radius": 0.006695435593497584
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                1.5749939299653598e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                4.536186548152247e-05
+              ],
+              "action_L2_error_radius": 0.006695435593497584
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.022006377754847997,
+              "quadrature_error": 6.879961151778302e-08,
+              "retained_quadrature_interval": [
+                0.02200630845523648,
+                0.022006447054459515
+              ],
+              "full_law_interval": [
+                0.00898358065776176,
+                0.040767317943119344
+              ],
+              "action_L2_error_radius": 0.053563481247980674
+            },
+            "circulation_fraction": {
+              "value": 0.0001148266749848199,
+              "quadrature_error": 4.4791413748556646e-11,
+              "retained_quadrature_interval": [
+                0.00011482613019340615,
+                0.00011482721977623365
+              ],
+              "full_law_interval": [
+                8.740370828290733e-05,
+                0.0001459855209782344
+              ],
+              "action_L2_error_radius": 0.0013667004654160718
+            },
+            "matter_fraction": {
+              "value": 0.0001901351030526591,
+              "quadrature_error": 4.4791413748556646e-11,
+              "retained_quadrature_interval": [
+                0.00019013455826124534,
+                0.00019013564784407284
+              ],
+              "full_law_interval": [
+                0.00015431175752605409,
+                0.00022969429689830053
+              ],
+              "action_L2_error_radius": 0.0013667004654160718
+            },
+            "charged_event": {
+              "value": 0.0004373757671122287,
+              "quadrature_error": 4.4791413748556646e-11,
+              "retained_quadrature_interval": [
+                0.00043737522232081496,
+                0.00043737631190364246
+              ],
+              "full_law_interval": [
+                0.00038207806375230345,
+                0.0004964092820007929
+              ],
+              "action_L2_error_radius": 0.0013667004654160718
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              1.3136674287742487,
+              4.180723820405534
+            ],
+            "inside": [
+              0.07438044594150103,
+              1.2126314368785955
+            ],
+            "dephased_outside_action": [
+              1.0798875642484416,
+              1.8359565896497336
+            ],
+            "dephased_inside_action": [
+              0.23654702524674825,
+              0.5742822865423088
+            ],
+            "neutral_edges": [
+              0.6264826199816386,
+              1.0390906505958066
+            ],
+            "neutral_edge_vacancies": [
+              0.727351513663726,
+              1.3310254208316963
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.01366740878673837
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.01366740878673837
+            ],
+            "outside_detuning_square_capped8": [
+              2.319648455105021,
+              12.28308389774021
+            ],
+            "circulation_fraction": [
+              0.022568492966523843,
+              0.04398504715303727
+            ],
+            "matter_fraction": [
+              0.039844806162071485,
+              0.06920627752776802
+            ],
+            "charged_event": [
+              0.09865629575516772,
+              0.14956678943020424
+            ]
+          },
+          "eta": 5.531409819839631,
+          "eta_interval": [
+            1.264093465301797,
+            48.169276581330664
+          ],
+          "interference_outside_ratio": 1.7557043932502692,
+          "interference_outside_interval": [
+            0.834921415800036,
+            3.3178012150666802
+          ],
+          "interference_inside_ratio": 1.1832187323743526,
+          "interference_inside_interval": [
+            0.151131827531826,
+            4.393278701608496
+          ],
+          "neutral_edge_vacancy_fraction": 0.6127539211409638,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.4083978914672102,
+            0.910384280193542
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.010846386278406452
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.010846386278406452
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            1.2142026334445206,
+            3.122145587440805
+          ],
+          "charged_event_survival_conditional": 0.9302894992906423,
+          "charged_event_survival_interval": [
+            0.7236150983212646,
+            1.0
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 0.0410195356649298,
+              "interval": [
+                0.03194743524491634,
+                0.05122397794486267
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 0.01022296572664347,
+              "interval": [
+                0.005977506574229894,
+                0.015600766738976441
+              ]
+            },
+            "neutral_edges": {
+              "value": 0.023374155567439575,
+              "interval": [
+                0.018512580188464495,
+                0.028801901886230295
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.0290433382530606,
+              "interval": [
+                0.021499393566613973,
+                0.03771962479942663
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.0005661709299596989
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.0005661709299596989
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.1774181845975324,
+              "interval": [
+                0.05329431321124114,
+                0.37401193235369834
+              ]
+            },
+            "circulation_fraction": {
+              "value": 0.0009010806402875119,
+              "interval": [
+                0.0006330761328543006,
+                0.0012162660662818374
+              ]
+            },
+            "matter_fraction": {
+              "value": 0.0015575958179389175,
+              "interval": [
+                0.0011978096961994332,
+                0.0019645628582395163
+              ]
+            },
+            "charged_event": {
+              "value": 0.003340261160594816,
+              "interval": [
+                0.002802430940187,
+                0.003925272299563745
+              ]
+            }
+          },
+          "lag_state_error": 0.002546306387908589,
+          "total_state_error": 0.004857000558323662,
+          "integrated_state_error_square_upper": 1.8678687954682918e-06
+        },
+        {
+          "lag": 0.25,
+          "joint_integrals": {
+            "outside": {
+              "value": 0.01759005130577,
+              "quadrature_error": 2.588943714666574e-08,
+              "retained_quadrature_interval": [
+                0.017590024916332853,
+                0.017590077695207144
+              ],
+              "full_law_interval": [
+                0.006843825234080846,
+                0.03331631244943483
+              ],
+              "action_L2_error_radius": 0.04989997602388642
+            },
+            "inside": {
+              "value": 0.0032695249208417832,
+              "quadrature_error": 2.588943714666574e-08,
+              "retained_quadrature_interval": [
+                0.0032694985314046365,
+                0.00326955131027893
+              ],
+              "full_law_interval": [
+                5.2991890862746854e-05,
+                0.011466119224574611
+              ],
+              "action_L2_error_radius": 0.04989997602388642
+            },
+            "dephased_outside_action": {
+              "value": 0.010239681496545493,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.010239678846557633,
+                0.010239684146533352
+              ],
+              "full_law_interval": [
+                0.007536212079526561,
+                0.013356716964515038
+              ],
+              "action_L2_error_radius": 0.014379939113046051
+            },
+            "dephased_inside_action": {
+              "value": 0.00255318231851613,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.00255317966852827,
+                0.0025531849685039897
+              ],
+              "full_law_interval": [
+                0.0013067544796203322,
+                0.004213176963509676
+              ],
+              "action_L2_error_radius": 0.014379939113046051
+            },
+            "neutral_edges": {
+              "value": 0.005842493663187969,
+              "quadrature_error": 1.0749939299653597e-09,
+              "retained_quadrature_interval": [
+                0.005842492088194039,
+                0.005842495238181898
+              ],
+              "full_law_interval": [
+                0.0043914536005785825,
+                0.00750031679968509
+              ],
+              "action_L2_error_radius": 0.01016815260633114
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.007233076125108724,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.007233073475120864,
+                0.0072330787750965846
+              ],
+              "full_law_interval": [
+                0.004993901019900399,
+                0.009885817424233556
+              ],
+              "action_L2_error_radius": 0.014379939113046051
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                2.6499878599307193e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                0.00020826580083713143
+              ],
+              "action_L2_error_radius": 0.014379939113046051
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                2.6499878599307193e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                0.00020826580083713143
+              ],
+              "action_L2_error_radius": 0.014379939113046051
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.044288418305298144,
+              "quadrature_error": 1.3759922303556604e-07,
+              "retained_quadrature_interval": [
+                0.04428828020607511,
+                0.04428855640452118
+              ],
+              "full_law_interval": [
+                0.009102743583299605,
+                0.10594242145659435
+              ],
+              "action_L2_error_radius": 0.11503950940436841
+            },
+            "circulation_fraction": {
+              "value": 0.00022389645059581352,
+              "quadrature_error": 8.958282749711329e-11,
+              "retained_quadrature_interval": [
+                0.00022389586101298603,
+                0.00022389704017864101
+              ],
+              "full_law_interval": [
+                0.00014466934221775394,
+                0.00032035568236845724
+              ],
+              "action_L2_error_radius": 0.002935293177875672
+            },
+            "matter_fraction": {
+              "value": 0.00039015505612980273,
+              "quadrature_error": 8.958282749711329e-11,
+              "retained_quadrature_interval": [
+                0.00039015446654697524,
+                0.0003901556457126302
+              ],
+              "full_law_interval": [
+                0.0002828126645739779,
+                0.000514729514995482
+              ],
+              "action_L2_error_radius": 0.002935293177875672
+            },
+            "charged_event": {
+              "value": 0.0008309184501793448,
+              "quadrature_error": 8.958282749711329e-11,
+              "retained_quadrature_interval": [
+                0.0008309178605965173,
+                0.0008309190397621723
+              ],
+              "full_law_interval": [
+                0.0006703103632176562,
+                0.0010087585492946824
+              ],
+              "action_L2_error_radius": 0.002935293177875672
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              1.7671426612648329,
+              10.038115864053388
+            ],
+            "inside": [
+              0.013683024893493918,
+              3.4547110656984623
+            ],
+            "dephased_outside_action": [
+              1.9459237216859397,
+              4.0243431099003235
+            ],
+            "dephased_inside_action": [
+              0.33741679685748927,
+              1.269418954443387
+            ],
+            "neutral_edges": [
+              1.1339163022314833,
+              2.2598253983424335
+            ],
+            "neutral_edge_vacancies": [
+              1.2894741225204853,
+              2.978570358467678
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.06274992895735244
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.06274992895735244
+            ],
+            "outside_detuning_square_capped8": [
+              2.3504174888188594,
+              31.920168329364742
+            ],
+            "circulation_fraction": [
+              0.03735504015167178,
+              0.09652231057092907
+            ],
+            "matter_fraction": [
+              0.07302499809987902,
+              0.15508662664917183
+            ],
+            "charged_event": [
+              0.1730806966301695,
+              0.30393625381089284
+            ]
+          },
+          "eta": 5.380002211832416,
+          "eta_interval": [
+            0.5968737198731465,
+            628.705862482369
+          ],
+          "interference_outside_ratio": 1.7178318790193094,
+          "interference_outside_interval": [
+            0.5123882801636753,
+            4.420830000252304
+          ],
+          "interference_inside_ratio": 1.2805685270223792,
+          "interference_inside_interval": [
+            0.012577656082739844,
+            8.774501563527073
+          ],
+          "neutral_edge_vacancy_fraction": 0.6190059024524454,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.332912672442721,
+            1.1255746187243194
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.02763534234962972
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.02763534234962972
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            0.8255365251693595,
+            3.7493707909669705
+          ],
+          "charged_event_survival_conditional": 0.8283466557191362,
+          "charged_event_survival_interval": [
+            0.5386227658172171,
+            1.0
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 0.04126118457990653,
+              "interval": [
+                0.025505558625685567,
+                0.060788079808393784
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 0.00880610443107201,
+              "interval": [
+                0.0025418689996847843,
+                0.018841609136725536
+              ]
+            },
+            "neutral_edges": {
+              "value": 0.023456259947809133,
+              "interval": [
+                0.014993766367473476,
+                0.033804388183264714
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.02941740038499832,
+              "interval": [
+                0.016407335092236693,
+                0.046198734952026255
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.0018856346371331468
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.0018856346371331468
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.17879444363506514,
+              "interval": [
+                0.005692667089493058,
+                0.5932574488702039
+              ]
+            },
+            "circulation_fraction": {
+              "value": 0.0008413152544142954,
+              "interval": [
+                0.0004056828062462572,
+                0.0014340839364525026
+              ]
+            },
+            "matter_fraction": {
+              "value": 0.0016423972278146737,
+              "interval": [
+                0.001002522424403815,
+                0.0024394082650957007
+              ]
+            },
+            "charged_event": {
+              "value": 0.0029742291659929825,
+              "interval": [
+                0.002085988956721729,
+                0.004019605609134406
+              ]
+            }
+          },
+          "lag_state_error": 0.006553171130412714,
+          "total_state_error": 0.008863865300827787,
+          "integrated_state_error_square_upper": 8.615943104790533e-06
+        },
+        {
+          "lag": 0.5,
+          "joint_integrals": {
+            "outside": {
+              "value": 0.03273105076844264,
+              "quadrature_error": 5.17788742933315e-08,
+              "retained_quadrature_interval": [
+                0.03273099848956835,
+                0.03273110304731693
+              ],
+              "full_law_interval": [
+                0.0019210721470152591,
+                0.10112683642589215
+              ],
+              "action_L2_error_radius": 0.13708706687559785
+            },
+            "inside": {
+              "value": 0.006596146139977593,
+              "quadrature_error": 5.17788742933315e-08,
+              "retained_quadrature_interval": [
+                0.0065960938611033,
+                0.006596198418851886
+              ],
+              "full_law_interval": [
+                0.0,
+                0.047656658437304586
+              ],
+              "action_L2_error_radius": 0.13708706687559785
+            },
+            "dephased_outside_action": {
+              "value": 0.020553187007311083,
+              "quadrature_error": 4.299975719861439e-09,
+              "retained_quadrature_interval": [
+                0.020553182207335364,
+                0.020553191807286802
+              ],
+              "full_law_interval": [
+                0.010786631359781246,
+                0.033441051472064644
+              ],
+              "action_L2_error_radius": 0.03950510202414866
+            },
+            "dephased_inside_action": {
+              "value": 0.0045210265416561835,
+              "quadrature_error": 4.299975719861439e-09,
+              "retained_quadrature_interval": [
+                0.004521021741680464,
+                0.004521031341631903
+              ],
+              "full_law_interval": [
+                0.0007691437800867344,
+                0.01139422111542179
+              ],
+              "action_L2_error_radius": 0.03950510202414866
+            },
+            "neutral_edges": {
+              "value": 0.011711571025597587,
+              "quadrature_error": 2.1499878599307194e-09,
+              "retained_quadrature_interval": [
+                0.011711568375609728,
+                0.011711573675585446
+              ],
+              "full_law_interval": [
+                0.006445789483052881,
+                0.018538007038502183
+              ],
+              "action_L2_error_radius": 0.02793432567918853
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.014548588099183529,
+              "quadrature_error": 4.299975719861439e-09,
+              "retained_quadrature_interval": [
+                0.014548583299207808,
+                0.01454859289915925
+              ],
+              "full_law_interval": [
+                0.006579222445609608,
+                0.025639263068846084
+              ],
+              "action_L2_error_radius": 0.03950510202414866
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "quadrature_error": 4.299975719861439e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                4.799975719861439e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                0.0015661318595785129
+              ],
+              "action_L2_error_radius": 0.03950510202414866
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "quadrature_error": 4.299975719861439e-09,
+              "retained_quadrature_interval": [
+                0.0,
+                4.799975719861439e-09
+              ],
+              "full_law_interval": [
+                0.0,
+                0.0015661318595785129
+              ],
+              "action_L2_error_radius": 0.03950510202414866
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.08900967449719979,
+              "quadrature_error": 2.751984460711321e-07,
+              "retained_quadrature_interval": [
+                0.08900939879875372,
+                0.08900995019564586
+              ],
+              "full_law_interval": [
+                0.0,
+                0.3774703617050479
+              ],
+              "action_L2_error_radius": 0.3160408126931893
+            },
+            "circulation_fraction": {
+              "value": 0.000419580820084422,
+              "quadrature_error": 1.7916565499422653e-10,
+              "retained_quadrature_interval": [
+                0.000419580140918767,
+                0.00041958149925007697
+              ],
+              "full_law_interval": [
+                0.00015424919342890762,
+                0.0008149674181474
+              ],
+              "action_L2_error_radius": 0.00806394558091752
+            },
+            "matter_fraction": {
+              "value": 0.0008143168326797829,
+              "quadrature_error": 1.7916565499422653e-10,
+              "retained_quadrature_interval": [
+                0.0008143161535141279,
+                0.0008143175118454379
+              ],
+              "full_law_interval": [
+                0.00041911423628064826,
+                0.0013395742495885398
+              ],
+              "action_L2_error_radius": 0.00806394558091752
+            },
+            "charged_event": {
+              "value": 0.0015132178441987882,
+              "quadrature_error": 1.7916565499422653e-10,
+              "retained_quadrature_interval": [
+                0.0015132171650331333,
+                0.0015132185233644431
+              ],
+              "full_law_interval": [
+                0.000950867931864637,
+                0.002205622474777436
+              ],
+              "action_L2_error_radius": 0.00806394558091752
+            }
+          },
+          "conditional_integrals": {
+            "outside": [
+              0.496039631382292,
+              30.469245434919085
+            ],
+            "inside": [
+              0.0,
+              14.358823768787056
+            ],
+            "dephased_outside_action": [
+              2.7852137942219932,
+              10.075699398060259
+            ],
+            "dephased_inside_action": [
+              0.19860045222506467,
+              3.4330483576428286
+            ],
+            "neutral_edges": [
+              1.6643659344648283,
+              5.585451956111633
+            ],
+            "neutral_edge_vacancies": [
+              1.698819631408861,
+              7.725041411610006
+            ],
+            "outside_detuning_ge4": [
+              0.0,
+              0.47187134196483355
+            ],
+            "outside_detuning_ge8": [
+              0.0,
+              0.47187134196483355
+            ],
+            "outside_detuning_square_capped8": [
+              0.0,
+              113.7308107490056
+            ],
+            "circulation_fraction": [
+              0.03982865149982493,
+              0.24554750413054263
+            ],
+            "matter_fraction": [
+              0.10821939800372957,
+              0.4036101398160661
+            ],
+            "charged_event": [
+              0.2455234068893251,
+              0.6645481545347813
+            ]
+          },
+          "eta": 4.962147604654773,
+          "eta_interval": [
+            0.0,
+            null
+          ],
+          "interference_outside_ratio": 1.5925048877723784,
+          "interference_outside_interval": [
+            0.057446523433034045,
+            9.375200936499143
+          ],
+          "interference_inside_ratio": 1.4589930139098968,
+          "interference_inside_interval": [
+            0.0,
+            61.9606628450281
+          ],
+          "neutral_edge_vacancy_fraction": 0.6211202607824846,
+          "neutral_edge_vacancy_fraction_interval": [
+            0.17745225880929405,
+            1.9888380729975927
+          ],
+          "outside_detuning_ge4_fraction_interval": [
+            0.0,
+            0.14519193317553722
+          ],
+          "outside_detuning_ge8_fraction_interval": [
+            0.0,
+            0.14519193317553722
+          ],
+          "outside_diagonal_detuning_RMS_capped8_interval": [
+            0.0,
+            5.915596050233589
+          ],
+          "charged_event_survival_conditional": 0.7017918589179323,
+          "charged_event_survival_interval": [
+            0.2431277926546066,
+            1.0
+          ],
+          "final_joint_observables": {
+            "dephased_outside_action": {
+              "value": 0.04128802258811615,
+              "interval": [
+                0.011578416687527921,
+                0.08927309525763764
+              ]
+            },
+            "dephased_inside_action": {
+              "value": 0.0072964040142514,
+              "interval": [
+                0.0,
+                0.03276479501530917
+              ]
+            },
+            "neutral_edges": {
+              "value": 0.023468262098771703,
+              "interval": [
+                0.0073273860318789266,
+                0.048746871589726425
+              ]
+            },
+            "neutral_edge_vacancies": {
+              "value": 0.029015392827036954,
+              "interval": [
+                0.005587197777078174,
+                0.070719054645929
+              ]
+            },
+            "outside_detuning_ge4": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.009137733384466643
+              ]
+            },
+            "outside_detuning_ge8": {
+              "value": 0.0,
+              "interval": [
+                0.0,
+                0.009137733384466643
+              ]
+            },
+            "outside_detuning_square_capped8": {
+              "value": 0.17899408010632606,
+              "interval": [
+                0.0,
+                1.4108898738547182
+              ]
+            },
+            "circulation_fraction": {
+              "value": 0.0007361600626883398,
+              "interval": [
+                5.806040304700489e-05,
+                0.0021757375354276676
+              ]
+            },
+            "matter_fraction": {
+              "value": 0.0017165125380655133,
+              "interval": [
+                0.00048041118432816203,
+                0.003714091704900858
+              ]
+            },
+            "charged_event": {
+              "value": 0.0025198264528973656,
+              "interval": [
+                0.0009415901494251846,
+                0.004859540569467541
+              ]
+            }
+          },
+          "lag_state_error": 0.01720183736796981,
+          "total_state_error": 0.01951253153838488,
+          "integrated_state_error_square_upper": 6.502721026805388e-05
+        }
+      ],
+      "record_entropy_bits": 0.03433178389124658,
+      "record_entropy_interval_bits": [
+        0.032112274037636765,
+        0.03660704630348499
+      ]
+    }
+  ],
+  "dt": 0.03125,
+  "hopping_norm_bound": 17,
+  "Jacobi_offdiagonal_squares": [
+    24,
+    63,
+    96,
+    96,
+    90,
+    60
+  ],
+  "Jacobi_positive_leading_minors": [
+    1,
+    17,
+    265,
+    3434,
+    32938,
+    230282,
+    950374,
+    2339438
+  ],
+  "sparse_implementation": "Real-H LinearOperator with exact adjoint",
+  "error_method": "Midpoint integration of squared actions through fourth derivative with a sixth-derivative remainder. Full outgoing residual upper sums bound state error and its integrated square; Minkowski controls full-H action integrals. Ordinary floating point plus5e-10 reporting allowance, not outward rounding.",
+  "seconds": 1435.000233312
+}

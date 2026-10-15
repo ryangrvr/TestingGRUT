@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "N": 6,
+  "Q": 12,
+  "model": "N6_ADAPT225K",
+  "base_budget": 12,
+  "dimension": 940985,
+  "outside_dimension": 975025,
+  "H_nnz": 23309209,
+  "initial_state": "Original equal coherent neutral ray over every labelled fixed-Q graph.",
+  "formed_state": "X=P exp(-iH wait)psi0, with P={c/Q>=1/4,nv/N>=1/4}; normalized psi_formed=X/sqrt(p). The same event and full H are used at every N. This is an explicitly recorded conditional diagnostic, not autonomous state selection.",
+  "evolution": "Full frozen H only. No outside hopping is removed.",
+  "eta_scope": "Ratio of hopping-action-square integrals; homogeneous in X. Not a probability, transport speed, fixed-core metric or a locality certificate.",
+  "interference_scope": "Coherent ||L psi||\u00b2 divided by <psi,diag_physical(L^dagger L)psi>. The reference is diagonal in the full labelled physical electric/Fock basis, not the orbit basis; no dephasing is applied to the evolved state.",
+  "Pauli_scope": "Fraction of empty endpoints on neutral active edges, weighted by their integrated count. Neutral edges are outside every instantaneous through-flow core. This availability statistic is not a coherent transport rate.",
+  "detuning_scope": "Allowed-hop physical diagonal-energy differences, with the full rewiring escape diagonal. Fractions at |Delta D|>=4 and>=8 and RMS capped at8 are bounded observables; no eigenvalue gap or unbounded energy moment is inferred from norm error.",
+  "extension": {
+    "base_dimension": 715985,
+    "added_dimension": 225000,
+    "dimension": 940985,
+    "outside": 975025,
+    "H_nnz": 23309209,
+    "base_cross_H_error": 1.472877282518059e-15,
+    "base_cross_V_error": 1.3322676295501878e-15,
+    "H_hermiticity": 4.742765708223189e-15,
+    "V_hermiticity": 4.6470493090159045e-15,
+    "seconds": 235.67990276599994,
+    "minimum_added_electric_square": 13,
+    "maximum_added_electric_square": 15
+  },
+  "rows": [
+    {
+      "wait": 0.5,
+      "formation_probability": 7.1831084960180835e-06,
+      "formation_interval": [
+        6.701825001190871e-06,
+        7.681079389438716e-06
+      ],
+      "waiting_state_error": 9.134335199185442e-05,
+      "record_energy_change": -6.750857951113665e-06,
+      "record_energy_interval": [
+        -0.004391432500151,
+        0.004377930784248773
+      ],
+      "record_entropy_bits": 0.00013310048722,
+      "record_entropy_interval_bits": [
+        0.00012485302112963165,
+        0.00014158494471556044
+      ]
+    },
+    {
+      "wait": 1.0,
+      "formation_probability": 0.00358971530547473,
+      "formation_interval": [
+        0.0014752886807925369,
+        0.006629050135771303
+      ],
+      "waiting_state_error": 0.021504745553073717,
+      "record_energy_change": 0.0005131218305788211,
+      "record_energy_interval": [
+        -1.0428135631682185,
+        1.043839806829376
+      ],
+      "record_entropy_bits": 0.03432492006313299,
+      "record_entropy_interval_bits": [
+        0.016001596700752282,
+        0.05750624567173784
+      ]
+    },
+    {
+      "wait": 2.0,
+      "formation_probability": 0.05077285609562038,
+      "formation_interval": [
+        0.0,
+        0.39857227960928127
+      ],
+      "waiting_state_error": 0.40599748093460536,
+      "record_energy_change": 0.09311202724725223,
+      "record_energy_interval": [
+        -23.35078196671969,
+        23.537006021214193
+      ],
+      "record_entropy_bits": 0.28967096687042393,
+      "record_entropy_interval_bits": [
+        0.0,
+        0.9701093025233078
+      ]
+    }
+  ],
+  "dt": 0.03125,
+  "error_method": "Midpoint integration of squared actions through fourth derivative with a sixth-derivative remainder. Full outgoing residual upper sums bound state error and its integrated square; Minkowski controls full-H action integrals. Ordinary floating point plus5e-10 reporting allowance, not outward rounding.",
+  "seconds": 305.1548601730001
+}
