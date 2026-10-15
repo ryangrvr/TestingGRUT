@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "N": 6,
+  "Q": 7,
+  "budget": 192,
+  "wait": 5,
+  "state_error": 2.161384806422297e-09,
+  "all_cycle_probability": 0.003446609617588391,
+  "all_cycle_probability_interval": [
+    0.00344660930510013,
+    0.0034466099300766656
+  ],
+  "classes": [
+    {
+      "chord_core_distance": 2,
+      "class_probability": 0.0022883097841510927,
+      "class_probability_interval": [
+        0.0022883095295295965,
+        0.0022883100387726027
+      ],
+      "equivalent_records": 360,
+      "probability_one_labelled_record": 6.356416067086368e-06,
+      "probability_one_labelled_record_interval": [
+        6.356415359804435e-06,
+        6.356416774368341e-06
+      ],
+      "fixed_source_is_chord_endpoint_probability": 0.0007627699280503643,
+      "fixed_source_is_chord_endpoint_probability_interval": [
+        0.0007627698431765321,
+        0.000762770012924201
+      ]
+    },
+    {
+      "chord_core_distance": 3,
+      "class_probability": 0.0011582998334373079,
+      "class_probability_interval": [
+        0.0011582996522832157,
+        0.0011583000145914144
+      ],
+      "equivalent_records": 180,
+      "probability_one_labelled_record": 6.434999074651711e-06,
+      "probability_one_labelled_record_interval": [
+        6.434998068240088e-06,
+        6.435000081063413e-06
+      ],
+      "fixed_source_is_chord_endpoint_probability": 0.0003860999444791026,
+      "fixed_source_is_chord_endpoint_probability_interval": [
+        0.00038609988409440526,
+        0.0003861000048638048
+      ]
+    }
+  ],
+  "total_successful_records": 540,
+  "failure_probability": 0.9965533903824116,
+  "complete_outcomes": 541,
+  "core_only_record_work": 0.0014119088511238254,
+  "additional_host_record_work": 0.00010522675817200612,
+  "additional_host_record_work_interval": [
+    0.00010522464433801558,
+    0.00010522887200599666
+  ],
+  "complete_record_work": 0.0015171356092958314,
+  "complete_record_work_interval": [
+    0.0015170537577859045,
+    0.0015172174608057583
+  ],
+  "complete_record_entropy_bits": 0.06444334070949168,
+  "complete_record_entropy_interval_bits": [
+    0.06444333336917668,
+    0.06444334804980703
+  ],
+  "raw_rewiring_transition_count": 29080,
+  "instrument": "All projectors P_(C,g) for exact spanning-cycle cores and their complete initial active hosts, plus one aggregate failure projector. No matter or electric-state outcome is selected.",
+  "work_derivation": "Core-only work plus minus the original expectation of rewiring between different hosts within successful cores. K preserves g, R preserves C, and distinct exact spanning cycle masks have no one-step coupling. Raw transitions retain rewiring terms even when a permutation quotient maps them to the same orbit.",
+  "entropy_derivation": "-(1-p) log2(1-p) - sum_r p_r log2(p_r/M_r); M_r counts all equivalent core-host records. This is record entropy, not a dissipated-heat claim.",
+  "error_scope": "Analytic full-state norm bound, hopping norm and complete rewiring degree bound; ordinary floating point with5e-10 allowance for each work contribution.",
+  "seconds": 2.8838103739999497
+}

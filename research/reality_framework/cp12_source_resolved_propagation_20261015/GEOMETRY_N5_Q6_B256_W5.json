@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 6,
+  "budget": 256,
+  "wait": 5,
+  "state_error": 2.80405313016727e-10,
+  "any_circulation_probability": 0.237005225116074,
+  "any_circulation_probability_interval": [
+    0.23700522435622173,
+    0.23700522587592626
+  ],
+  "all_vertices_covered_probability": 0.026613844687043253,
+  "all_vertices_covered_interval": [
+    0.026613844432416503,
+    0.026613844941670007
+  ],
+  "connected_spanning_circulation_probability": 0.026613844687043253,
+  "connected_spanning_circulation_interval": [
+    0.026613844432416503,
+    0.026613844941670007
+  ],
+  "exact_spanning_cycle_probability": 0.017530428043215186,
+  "circulation_edge_count_distribution": {
+    "0": {
+      "probability": 0.7629947748839292,
+      "interval": [
+        0.7629947735205679,
+        0.7629947762472906
+      ]
+    },
+    "3": {
+      "probability": 0.14093823850421783,
+      "interval": [
+        0.14093823791826235,
+        0.14093823909017333
+      ]
+    },
+    "4": {
+      "probability": 0.05044760359168941,
+      "interval": [
+        0.05044760324112285,
+        0.050447603942255975
+      ]
+    },
+    "5": {
+      "probability": 0.036286528601699536,
+      "interval": [
+        0.03628652830438035,
+        0.03628652889901872
+      ]
+    },
+    "6": {
+      "probability": 0.009332854418467196,
+      "interval": [
+        0.009332854267682435,
+        0.00933285456925196
+      ]
+    }
+  },
+  "all_root_mean_balls_given_spanning_connected_circulation": [
+    {
+      "radius": 0,
+      "conditional_mean": 1.0,
+      "conditional_mean_interval": [
+        0.9999999827457129,
+        1.0000000172542876
+      ]
+    },
+    {
+      "radius": 1,
+      "conditional_mean": 3.136521675100182,
+      "conditional_mean_interval": [
+        3.1365216314780975,
+        3.1365217187222667
+      ]
+    },
+    {
+      "radius": 2,
+      "conditional_mean": 5.0,
+      "conditional_mean_interval": [
+        4.999999934974447,
+        5.0
+      ]
+    },
+    {
+      "radius": 3,
+      "conditional_mean": 5.0,
+      "conditional_mean_interval": [
+        4.999999934974447,
+        5.0
+      ]
+    },
+    {
+      "radius": 4,
+      "conditional_mean": 5.0,
+      "conditional_mean_interval": [
+        4.999999934974447,
+        5.0
+      ]
+    }
+  ],
+  "interpretation": "All original-neutral amplitudes are retained. Connectivity and balls use the entire directed-cycle edge mask, without selecting rings. Conditional ball averages explicitly condition on spanning connected circulation. These few small finite graphs do not define a continuum dimension; coordination is not converted to dimension.",
+  "seconds": 0.0173772199996165
+}

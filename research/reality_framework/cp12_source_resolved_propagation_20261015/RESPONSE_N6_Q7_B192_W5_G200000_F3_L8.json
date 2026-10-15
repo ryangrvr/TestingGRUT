@@ -1,0 +1,1494 @@
+{
+  "status": "PASS",
+  "N": 6,
+  "Q": 7,
+  "level": 8,
+  "dimension": 513066,
+  "outside_dimension": 331974,
+  "H_nnz": 6184430,
+  "initial": {
+    "neutral_cache": "N6_Q7_B192_W5",
+    "neutral_state_error": 2.161384806422297e-09,
+    "core_mask": 21041,
+    "cycle_records": 180,
+    "rooted_group_order": 2,
+    "initial_untrimmed_orbits": 6420,
+    "record_type": "core_and_initial_host",
+    "initial_host_mask": 21045,
+    "recorded_chord_core_distance": 3,
+    "all_spanning_cycle_probability": 0.003446609617588391,
+    "equivalent_record_count": 180,
+    "fixed_source_endpoint_class_probability": 0.0003860999444791026,
+    "initial_retained_orbits": 6415,
+    "discarded_initial_norm": 1.8754660357027272e-14,
+    "original_total_formation_probability": 0.0011582998334373079,
+    "original_total_formation_interval": [
+      0.0011582996522832157,
+      0.0011583000145914144
+    ],
+    "probability_per_core": 6.434999074651711e-06,
+    "original_projected_error_per_core": 1.61100111756516e-10,
+    "total_unnormalized_initial_error": 1.6111886641687304e-10,
+    "normalized_phase_aligned_initial_error": 6.351439319333254e-08,
+    "initial_approximate_norm": 0.0025367299964031884,
+    "lift_probability_error": 9.317362419797304e-21,
+    "seconds": 2.270229994001056
+  },
+  "source_mean": 0.3607128695332756,
+  "source_mean_interval": [
+    0.3607127926399889,
+    0.3607129464265705
+  ],
+  "source_variance": 0.2305990952863457,
+  "source_variance_interval": [
+    0.23059907386584927,
+    0.23059911670683259
+  ],
+  "fixed_core_mask": 21041,
+  "fixed_core_distances": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+  ],
+  "fixed_core_ball_volumes": [
+    1,
+    3,
+    5,
+    6
+  ],
+  "initial_mean_active_host_ball_volumes": [
+    0.9999999999999984,
+    3.999999999999994,
+    5.999999999999989,
+    5.999999999999989
+  ],
+  "initial_active_host_ball_intervals": [
+    [
+      0.9999996888443135,
+      1.000000311155732
+    ],
+    [
+      3.9999993776886,
+      4.000000622311437
+    ],
+    [
+      5.999999237827296,
+      6.0
+    ],
+    [
+      5.999999237827296,
+      6.0
+    ]
+  ],
+  "build_checks": {
+    "H_hermiticity": 0.0,
+    "independent_new_to_old_error": 0.0,
+    "old_dimension": 325548,
+    "added": 187518,
+    "dimension": 513066,
+    "outside": 331974,
+    "seconds": 36.55793599500066
+  },
+  "source": "Gauge-invariant exp(-i theta n0), applied after recording the core; variance demonstrably nonzero.",
+  "receivers": "Distance-shell means and separately fixed receivers. For each fixed receiver, average only over its exact initial-core/host/source stabilizer orbit, which has identical response by symmetry. No final-distance binning.",
+  "evolution": "Complete frozen Hamiltonian including all active external hopping and all graph rewiring.",
+  "conditioning": "All quantities are conditional on the initial core record, with separately reported original formation probability, complete record work/entropy and normalized state error. No final-core selection is hidden: both joint and final-conditional responses are reported, and the final-conditional derivative subtracts its survival-denominator response.",
+  "error_scope": "All outgoing physical rows, including rewiring; analytic residual upper sums; phase-aligned conditional initial-state bound; bilinear response intervals. Ordinary floating point with5e-10 reporting allowance, not outward rounding.",
+  "rows": [
+    {
+      "lag": 0.0625,
+      "shells": {
+        "1": {
+          "vertices": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": -3.345639141973458e-05,
+            "interval": [
+              -3.357734740016513e-05,
+              -3.333543543930404e-05
+            ],
+            "absolute_interval": [
+              3.333543543930404e-05,
+              3.357734740016513e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2095598043054742e-07,
+            "exact_finite_phase_identity_error": 1.016547956922409e-15
+          },
+          "density_and_same_core_response": {
+            "value": -7.096154538052332e-05,
+            "interval": [
+              -7.108219280491633e-05,
+              -7.084089795613032e-05
+            ],
+            "absolute_interval": [
+              7.084089795613032e-05,
+              7.108219280491633e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2064742439301194e-07,
+            "exact_finite_phase_identity_error": 6.349087922075114e-16
+          },
+          "density_given_same_core_response": -2.781637481680567e-05,
+          "density_given_same_core_response_interval": [
+            -2.803214572613757e-05,
+            -2.7600603854579722e-05
+          ],
+          "final_density_and_core": 0.4566781198154436,
+          "final_density_and_core_interval": [
+            0.4566780332767331,
+            0.4566782063541624
+          ]
+        },
+        "2": {
+          "vertices": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 5.638000635799223e-09,
+            "interval": [
+              -1.1730627412371821e-07,
+              1.2858227539531665e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              1.2858227539531665e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2294427475951743e-07,
+            "exact_finite_phase_identity_error": 7.077671781985373e-16
+          },
+          "density_and_same_core_response": {
+            "value": -3.623796038196986e-05,
+            "interval": [
+              -3.636059458158154e-05,
+              -3.611532618235818e-05
+            ],
+            "absolute_interval": [
+              3.611532618235818e-05,
+              3.636059458158154e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.226341996116798e-07,
+            "exact_finite_phase_identity_error": 5.898059818321144e-16
+          },
+          "density_given_same_core_response": 7.164896716303202e-06,
+          "density_given_same_core_response_interval": [
+            6.9471287836846574e-06,
+            7.382664701302136e-06
+          ],
+          "final_density_and_core": 0.45667811981544365,
+          "final_density_and_core_interval": [
+            0.4566780332767331,
+            0.4566782063541624
+          ]
+        },
+        "3": {
+          "vertices": [
+            3
+          ],
+          "density_response": {
+            "value": 3.551701897624299e-05,
+            "interval": [
+              3.539172253971737e-05,
+              3.5642315412768605e-05
+            ],
+            "absolute_interval": [
+              3.539172253971737e-05,
+              3.5642315412768605e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2529643652562132e-07,
+            "exact_finite_phase_identity_error": 2.2273849431542203e-15
+          },
+          "density_and_same_core_response": {
+            "value": 7.123754793808557e-06,
+            "interval": [
+              6.998867196732253e-06,
+              7.24864239088486e-06
+            ],
+            "absolute_interval": [
+              6.998867196732253e-06,
+              7.24864239088486e-06
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2488759707630332e-07,
+            "exact_finite_phase_identity_error": 1.4710455076283324e-15
+          },
+          "density_given_same_core_response": 4.12209994585392e-05,
+          "density_given_same_core_response_interval": [
+            4.102173483221744e-05,
+            4.142026418648597e-05
+          ],
+          "final_density_and_core": 0.35600385804875123,
+          "final_density_and_core_interval": [
+            0.3560037816418358,
+            0.3560039344556748
+          ]
+        }
+      },
+      "fixed_receiver_pairs": {
+        "1": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": -3.345639141973458e-05,
+            "interval": [
+              -3.357734740016513e-05,
+              -3.333543543930404e-05
+            ],
+            "absolute_interval": [
+              3.333543543930404e-05,
+              3.357734740016513e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2095598043054742e-07,
+            "exact_finite_phase_identity_error": 1.016547956922409e-15
+          },
+          "density_and_same_core_response": {
+            "value": -7.096154538052332e-05,
+            "interval": [
+              -7.108219280491633e-05,
+              -7.084089795613032e-05
+            ],
+            "absolute_interval": [
+              7.084089795613032e-05,
+              7.108219280491633e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2064742439301194e-07,
+            "exact_finite_phase_identity_error": 6.349087922075114e-16
+          }
+        },
+        "2": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 5.638000635799223e-09,
+            "interval": [
+              -1.1730627412371821e-07,
+              1.2858227539531665e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              1.2858227539531665e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2294427475951743e-07,
+            "exact_finite_phase_identity_error": 7.077671781985373e-16
+          },
+          "density_and_same_core_response": {
+            "value": -3.623796038196986e-05,
+            "interval": [
+              -3.636059458158154e-05,
+              -3.611532618235818e-05
+            ],
+            "absolute_interval": [
+              3.611532618235818e-05,
+              3.636059458158154e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.226341996116798e-07,
+            "exact_finite_phase_identity_error": 5.898059818321144e-16
+          }
+        },
+        "3": {
+          "core_distance": 3,
+          "symmetry_orbit": [
+            3
+          ],
+          "density_response": {
+            "value": 3.551701897624299e-05,
+            "interval": [
+              3.539172253971737e-05,
+              3.5642315412768605e-05
+            ],
+            "absolute_interval": [
+              3.539172253971737e-05,
+              3.5642315412768605e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2529643652562132e-07,
+            "exact_finite_phase_identity_error": 2.2273849431542203e-15
+          },
+          "density_and_same_core_response": {
+            "value": 7.123754793808557e-06,
+            "interval": [
+              6.998867196732253e-06,
+              7.24864239088486e-06
+            ],
+            "absolute_interval": [
+              6.998867196732253e-06,
+              7.24864239088486e-06
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2488759707630332e-07,
+            "exact_finite_phase_identity_error": 1.4710455076283324e-15
+          }
+        },
+        "4": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 5.638000635799223e-09,
+            "interval": [
+              -1.1730627412371821e-07,
+              1.2858227539531665e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              1.2858227539531665e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2294427475951743e-07,
+            "exact_finite_phase_identity_error": 7.077671781985373e-16
+          },
+          "density_and_same_core_response": {
+            "value": -3.623796038196986e-05,
+            "interval": [
+              -3.636059458158154e-05,
+              -3.611532618235818e-05
+            ],
+            "absolute_interval": [
+              3.611532618235818e-05,
+              3.636059458158154e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.226341996116798e-07,
+            "exact_finite_phase_identity_error": 5.898059818321144e-16
+          }
+        },
+        "5": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": -3.345639141973458e-05,
+            "interval": [
+              -3.357734740016513e-05,
+              -3.333543543930404e-05
+            ],
+            "absolute_interval": [
+              3.333543543930404e-05,
+              3.357734740016513e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2095598043054742e-07,
+            "exact_finite_phase_identity_error": 1.016547956922409e-15
+          },
+          "density_and_same_core_response": {
+            "value": -7.096154538052332e-05,
+            "interval": [
+              -7.108219280491633e-05,
+              -7.084089795613032e-05
+            ],
+            "absolute_interval": [
+              7.084089795613032e-05,
+              7.108219280491633e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2064742439301194e-07,
+            "exact_finite_phase_identity_error": 6.349087922075114e-16
+          }
+        }
+      },
+      "same_core_probability": 0.9926335858228736,
+      "same_core_probability_interval": [
+        0.992633458237818,
+        0.9926337134079373
+      ],
+      "same_core_response": {
+        "value": -9.422554094211388e-05,
+        "interval": [
+          -9.442878425346876e-05,
+          -9.4022297630759e-05
+        ],
+        "absolute_interval": [
+          9.4022297630759e-05,
+          9.442878425346876e-05
+        ],
+        "zero_excluded": true,
+        "error_bound": 2.0324331135488487e-07,
+        "exact_finite_phase_identity_error": 1.3183898417423734e-15
+      },
+      "far_to_neighbor_absolute_response_intervals": {
+        "2": [
+          0.0,
+          0.003857225012987595
+        ],
+        "3": [
+          1.054035690131476,
+          1.0692020351036018
+        ]
+      },
+      "state_error_X": 6.352879707751293e-08,
+      "state_error_source": 6.353196938992635e-08,
+      "lag_errors": [
+        1.4403884180387134e-11,
+        1.7576196593810476e-11
+      ]
+    },
+    {
+      "lag": 0.125,
+      "shells": {
+        "1": {
+          "vertices": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 8.800183669512018e-05,
+            "interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "absolute_interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.231011953798939e-07,
+            "exact_finite_phase_identity_error": 2.0122792321330962e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00020764660616662614,
+            "interval": [
+              -0.00020776847719568837,
+              -0.00020752473513756392
+            ],
+            "absolute_interval": [
+              0.00020752473513756392,
+              0.00020776847719568837
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2187102906221258e-07,
+            "exact_finite_phase_identity_error": 1.2802259252708836e-15
+          },
+          "density_given_same_core_response": 0.00013527834634979296,
+          "density_given_same_core_response_interval": [
+            0.00013505371428785586,
+            0.00013550297846861656
+          ],
+          "final_density_and_core": 0.4621877313324543,
+          "final_density_and_core_interval": [
+            0.46218764337036655,
+            0.4621878192945505
+          ]
+        },
+        "2": {
+          "vertices": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 1.2434598819013876e-07,
+            "interval": [
+              -7.957609089485731e-10,
+              2.4948773728922606e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              2.4948773728922606e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2514174909908733e-07,
+            "exact_finite_phase_identity_error": 2.869232629265639e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.0002880118302455402,
+            "interval": [
+              -0.0002881357268479173,
+              -0.00028788793364316307
+            ],
+            "absolute_interval": [
+              0.00028788793364316307,
+              0.0002881357268479173
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2389660237713816e-07,
+            "exact_finite_phase_identity_error": 1.4398204850607499e-15
+          },
+          "density_given_same_core_response": 5.260980902219826e-05,
+          "density_given_same_core_response_interval": [
+            5.2383082484259037e-05,
+            5.2836535616474845e-05
+          ],
+          "final_density_and_core": 0.46218773133245433,
+          "final_density_and_core_interval": [
+            0.46218764337036655,
+            0.4621878192945505
+          ]
+        },
+        "3": {
+          "vertices": [
+            3
+          ],
+          "density_response": {
+            "value": 0.0002777595346376352,
+            "interval": [
+              0.0002776354849070883,
+              0.0002778835843681821
+            ],
+            "absolute_interval": [
+              0.0002776354849070883,
+              0.0002778835843681821
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2404973054685728e-07,
+            "exact_finite_phase_identity_error": 3.2404634531246757e-15
+          },
+          "density_and_same_core_response": {
+            "value": 6.024198453310342e-05,
+            "interval": [
+              6.011956015557924e-05,
+              6.03644089106276e-05
+            ],
+            "absolute_interval": [
+              6.011956015557924e-05,
+              6.03644089106276e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2242437752417713e-07,
+            "exact_finite_phase_identity_error": 2.033095913844818e-15
+          },
+          "density_given_same_core_response": 0.00032239025528317696,
+          "density_given_same_core_response_interval": [
+            0.0003221902276032099,
+            0.00032259028306766256
+          ],
+          "final_density_and_core": 0.34500406531370886,
+          "final_density_and_core_interval": [
+            0.345003989316363,
+            0.3450041413110631
+          ]
+        }
+      },
+      "fixed_receiver_pairs": {
+        "1": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 8.800183669512018e-05,
+            "interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "absolute_interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.231011953798939e-07,
+            "exact_finite_phase_identity_error": 2.0122792321330962e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00020764660616662614,
+            "interval": [
+              -0.00020776847719568837,
+              -0.00020752473513756392
+            ],
+            "absolute_interval": [
+              0.00020752473513756392,
+              0.00020776847719568837
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2187102906221258e-07,
+            "exact_finite_phase_identity_error": 1.2802259252708836e-15
+          }
+        },
+        "2": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 1.2434598819013876e-07,
+            "interval": [
+              -7.957609089485731e-10,
+              2.4948773728922606e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              2.4948773728922606e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2514174909908733e-07,
+            "exact_finite_phase_identity_error": 2.869232629265639e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.0002880118302455402,
+            "interval": [
+              -0.0002881357268479173,
+              -0.00028788793364316307
+            ],
+            "absolute_interval": [
+              0.00028788793364316307,
+              0.0002881357268479173
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2389660237713816e-07,
+            "exact_finite_phase_identity_error": 1.4398204850607499e-15
+          }
+        },
+        "3": {
+          "core_distance": 3,
+          "symmetry_orbit": [
+            3
+          ],
+          "density_response": {
+            "value": 0.0002777595346376352,
+            "interval": [
+              0.0002776354849070883,
+              0.0002778835843681821
+            ],
+            "absolute_interval": [
+              0.0002776354849070883,
+              0.0002778835843681821
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2404973054685728e-07,
+            "exact_finite_phase_identity_error": 3.2404634531246757e-15
+          },
+          "density_and_same_core_response": {
+            "value": 6.024198453310342e-05,
+            "interval": [
+              6.011956015557924e-05,
+              6.03644089106276e-05
+            ],
+            "absolute_interval": [
+              6.011956015557924e-05,
+              6.03644089106276e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2242437752417713e-07,
+            "exact_finite_phase_identity_error": 2.033095913844818e-15
+          }
+        },
+        "4": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 1.2434598819013876e-07,
+            "interval": [
+              -7.957609089485731e-10,
+              2.4948773728922606e-07
+            ],
+            "absolute_interval": [
+              0.0,
+              2.4948773728922606e-07
+            ],
+            "zero_excluded": false,
+            "error_bound": 1.2514174909908733e-07,
+            "exact_finite_phase_identity_error": 2.869232629265639e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.0002880118302455402,
+            "interval": [
+              -0.0002881357268479173,
+              -0.00028788793364316307
+            ],
+            "absolute_interval": [
+              0.00028788793364316307,
+              0.0002881357268479173
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2389660237713816e-07,
+            "exact_finite_phase_identity_error": 1.4398204850607499e-15
+          }
+        },
+        "5": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 8.800183669512018e-05,
+            "interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "absolute_interval": [
+              8.78787354997403e-05,
+              8.812493789050007e-05
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.231011953798939e-07,
+            "exact_finite_phase_identity_error": 2.0122792321330962e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00020764660616662614,
+            "interval": [
+              -0.00020776847719568837,
+              -0.00020752473513756392
+            ],
+            "absolute_interval": [
+              0.00020752473513756392,
+              0.00020776847719568837
+            ],
+            "zero_excluded": true,
+            "error_bound": 1.2187102906221258e-07,
+            "exact_finite_phase_identity_error": 1.2802259252708836e-15
+          }
+        }
+      },
+      "same_core_probability": 0.9721379702225372,
+      "same_core_probability_interval": [
+        0.9721378426520302,
+        0.9721380977930527
+      ],
+      "same_core_response": {
+        "value": -0.0007133600292816011,
+        "interval": [
+          -0.000713562626249659,
+          -0.0007131574323135433
+        ],
+        "absolute_interval": [
+          0.0007131574323135433,
+          0.000713562626249659
+        ],
+        "zero_excluded": true,
+        "error_bound": 2.0259696805786592e-07,
+        "exact_finite_phase_identity_error": 2.1371793224034263e-15
+      },
+      "far_to_neighbor_absolute_response_intervals": {
+        "2": [
+          0.0,
+          0.0028390000819932524
+        ],
+        "3": [
+          3.150475808017762,
+          3.1621254310037643
+        ]
+      },
+      "state_error_X": 6.419285942769992e-08,
+      "state_error_source": 6.370481291759764e-08,
+      "lag_errors": [
+        6.784662343673789e-10,
+        1.9041972426510404e-10
+      ]
+    },
+    {
+      "lag": 0.25,
+      "shells": {
+        "1": {
+          "vertices": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.0019677013320389264,
+            "interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "absolute_interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.871731838514419e-07,
+            "exact_finite_phase_identity_error": 5.065392549852277e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00024429718130652284,
+            "interval": [
+              -0.00024467093735769575,
+              -0.00024392342525534992
+            ],
+            "absolute_interval": [
+              0.00024392342525534992,
+              0.00024467093735769575
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.737560511729152e-07,
+            "exact_finite_phase_identity_error": 1.547373340571312e-15
+          },
+          "density_given_same_core_response": 0.002369041943135593,
+          "density_given_same_core_response_interval": [
+            0.0023682824564584992,
+            0.0023698014308479215
+          ],
+          "final_density_and_core": 0.44634747534300734,
+          "final_density_and_core_interval": [
+            0.4463470426529245,
+            0.4463479080332998
+          ]
+        },
+        "2": {
+          "vertices": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 3.2526995443482587e-06,
+            "interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "absolute_interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "zero_excluded": true,
+            "error_bound": 4.001989309291069e-07,
+            "exact_finite_phase_identity_error": 4.690692279041286e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.002112474189431529,
+            "interval": [
+              -0.0021128603203422964,
+              -0.002112088058520762
+            ],
+            "absolute_interval": [
+              0.002112088058520762,
+              0.0021128603203422964
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.861309107672738e-07,
+            "exact_finite_phase_identity_error": 1.8318679906315083e-15
+          },
+          "density_given_same_core_response": 0.000302607272714181,
+          "density_given_same_core_response_interval": [
+            0.00030183269035225727,
+            0.000303381856091254
+          ],
+          "final_density_and_core": 0.44634747534300734,
+          "final_density_and_core_interval": [
+            0.4463470426529245,
+            0.4463479080332998
+          ]
+        },
+        "3": {
+          "vertices": [
+            3
+          ],
+          "density_response": {
+            "value": 0.0020202285605550527,
+            "interval": [
+              0.002019854960485754,
+              0.0020206021606243513
+            ],
+            "absolute_interval": [
+              0.002019854960485754,
+              0.0020206021606243513
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.736000692987209e-07,
+            "exact_finite_phase_identity_error": 4.78089789979208e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.0004664432753188272,
+            "interval": [
+              0.0004660874651185445,
+              0.00046679908551910986
+            ],
+            "absolute_interval": [
+              0.0004660874651185445,
+              0.00046679908551910986
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.5581020028266616e-07,
+            "exact_finite_phase_identity_error": 1.5890067039947553e-15
+          },
+          "density_given_same_core_response": 0.002334295829668706,
+          "density_given_same_core_response_interval": [
+            0.002333663248194884,
+            0.0023349284128747296
+          ],
+          "final_density_and_core": 0.3075162375334455,
+          "final_density_and_core_interval": [
+            0.30751587838465794,
+            0.3075165966824428
+          ]
+        }
+      },
+      "fixed_receiver_pairs": {
+        "1": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.0019677013320389264,
+            "interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "absolute_interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.871731838514419e-07,
+            "exact_finite_phase_identity_error": 5.065392549852277e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00024429718130652284,
+            "interval": [
+              -0.00024467093735769575,
+              -0.00024392342525534992
+            ],
+            "absolute_interval": [
+              0.00024392342525534992,
+              0.00024467093735769575
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.737560511729152e-07,
+            "exact_finite_phase_identity_error": 1.547373340571312e-15
+          }
+        },
+        "2": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 3.2526995443482587e-06,
+            "interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "absolute_interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "zero_excluded": true,
+            "error_bound": 4.001989309291069e-07,
+            "exact_finite_phase_identity_error": 4.690692279041286e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.002112474189431529,
+            "interval": [
+              -0.0021128603203422964,
+              -0.002112088058520762
+            ],
+            "absolute_interval": [
+              0.002112088058520762,
+              0.0021128603203422964
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.861309107672738e-07,
+            "exact_finite_phase_identity_error": 1.8318679906315083e-15
+          }
+        },
+        "3": {
+          "core_distance": 3,
+          "symmetry_orbit": [
+            3
+          ],
+          "density_response": {
+            "value": 0.0020202285605550527,
+            "interval": [
+              0.002019854960485754,
+              0.0020206021606243513
+            ],
+            "absolute_interval": [
+              0.002019854960485754,
+              0.0020206021606243513
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.736000692987209e-07,
+            "exact_finite_phase_identity_error": 4.78089789979208e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.0004664432753188272,
+            "interval": [
+              0.0004660874651185445,
+              0.00046679908551910986
+            ],
+            "absolute_interval": [
+              0.0004660874651185445,
+              0.00046679908551910986
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.5581020028266616e-07,
+            "exact_finite_phase_identity_error": 1.5890067039947553e-15
+          }
+        },
+        "4": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 3.2526995443482587e-06,
+            "interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "absolute_interval": [
+              2.852500613419152e-06,
+              3.6528984752773655e-06
+            ],
+            "zero_excluded": true,
+            "error_bound": 4.001989309291069e-07,
+            "exact_finite_phase_identity_error": 4.690692279041286e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.002112474189431529,
+            "interval": [
+              -0.0021128603203422964,
+              -0.002112088058520762
+            ],
+            "absolute_interval": [
+              0.002112088058520762,
+              0.0021128603203422964
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.861309107672738e-07,
+            "exact_finite_phase_identity_error": 1.8318679906315083e-15
+          }
+        },
+        "5": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.0019677013320389264,
+            "interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "absolute_interval": [
+              0.001967314158855075,
+              0.001968088505222778
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.871731838514419e-07,
+            "exact_finite_phase_identity_error": 5.065392549852277e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.00024429718130652284,
+            "interval": [
+              -0.00024467093735769575,
+              -0.00024392342525534992
+            ],
+            "absolute_interval": [
+              0.00024392342525534992,
+              0.00024467093735769575
+            ],
+            "zero_excluded": true,
+            "error_bound": 3.737560511729152e-07,
+            "exact_finite_phase_identity_error": 1.547373340571312e-15
+          }
+        }
+      },
+      "same_core_probability": 0.9040581030050301,
+      "same_core_probability_interval": [
+        0.9040574872065639,
+        0.904058718803706
+      ],
+      "same_core_response": {
+        "value": -0.004832841726395726,
+        "interval": [
+          -0.0048334638145468775,
+          -0.004832219638244574
+        ],
+        "absolute_interval": [
+          0.004832219638244574,
+          0.0048334638145468775
+        ],
+        "zero_excluded": true,
+        "error_bound": 6.220881511518008e-07,
+        "exact_finite_phase_identity_error": 3.58046925441613e-15
+      },
+      "far_to_neighbor_absolute_response_intervals": {
+        "2": [
+          0.0014493761870207472,
+          0.0018567946857065555
+        ],
+        "3": [
+          1.026302910222585,
+          1.027086676283715
+        ]
+      },
+      "state_error_X": 3.233251009251358e-07,
+      "state_error_source": 1.2881751828174082e-07,
+      "lag_errors": [
+        2.5981070773180324e-07,
+        6.530312508840829e-08
+      ]
+    },
+    {
+      "lag": 0.5,
+      "shells": {
+        "1": {
+          "vertices": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.01591835241297242,
+            "interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "absolute_interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.661466421284196e-05,
+            "exact_finite_phase_identity_error": 6.699502064222429e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.00272474221521676,
+            "interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "absolute_interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "zero_excluded": true,
+            "error_bound": 6.674067231106946e-05,
+            "exact_finite_phase_identity_error": 3.0878077872387166e-16
+          },
+          "density_given_same_core_response": 0.018414271403574482,
+          "density_given_same_core_response_interval": [
+            0.01823641063346017,
+            0.018592270842284497
+          ],
+          "final_density_and_core": 0.3359800602011619,
+          "final_density_and_core_interval": [
+            0.3358883811553795,
+            0.3360717517569044
+          ]
+        },
+        "2": {
+          "vertices": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 0.00010587965227449453,
+            "interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "absolute_interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "zero_excluded": true,
+            "error_bound": 8.231550623675808e-05,
+            "exact_finite_phase_identity_error": 5.904998712225051e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.010429204109230372,
+            "interval": [
+              -0.010500673554645882,
+              -0.010357734663814863
+            ],
+            "absolute_interval": [
+              0.010357734663814863,
+              0.010500673554645882
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.146944541551e-05,
+            "exact_finite_phase_identity_error": 8.326672684688674e-16
+          },
+          "density_given_same_core_response": 0.0005693186583523684,
+          "density_given_same_core_response_interval": [
+            0.0003830820887273795,
+            0.0007556239001459616
+          ],
+          "final_density_and_core": 0.33598006020116195,
+          "final_density_and_core_interval": [
+            0.3358883811553796,
+            0.33607175175690457
+          ]
+        },
+        "3": {
+          "vertices": [
+            3
+          ],
+          "density_response": {
+            "value": 0.010674782297149375,
+            "interval": [
+              0.010601304660613264,
+              0.010748259933685486
+            ],
+            "absolute_interval": [
+              0.010601304660613264,
+              0.010748259933685486
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.347763653611147e-05,
+            "exact_finite_phase_identity_error": 1.949829186997931e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.0020398727920381797,
+            "interval": [
+              0.0019789482677412488,
+              0.0021007973163351106
+            ],
+            "absolute_interval": [
+              0.0019789482677412488,
+              0.0021007973163351106
+            ],
+            "zero_excluded": true,
+            "error_bound": 6.092452429693086e-05,
+            "exact_finite_phase_identity_error": 2.42861286636753e-17
+          },
+          "density_given_same_core_response": 0.01203694983185503,
+          "density_given_same_core_response_interval": [
+            0.011898572636777837,
+            0.012175431423277833
+          ],
+          "final_density_and_core": 0.21160768653194306,
+          "final_density_and_core_interval": [
+            0.21153493010774158,
+            0.21168045546610476
+          ]
+        }
+      },
+      "fixed_receiver_pairs": {
+        "1": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.01591835241297242,
+            "interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "absolute_interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.661466421284196e-05,
+            "exact_finite_phase_identity_error": 6.699502064222429e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.00272474221521676,
+            "interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "absolute_interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "zero_excluded": true,
+            "error_bound": 6.674067231106946e-05,
+            "exact_finite_phase_identity_error": 3.0878077872387166e-16
+          }
+        },
+        "2": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 0.00010587965227449453,
+            "interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "absolute_interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "zero_excluded": true,
+            "error_bound": 8.231550623675808e-05,
+            "exact_finite_phase_identity_error": 5.904998712225051e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.010429204109230372,
+            "interval": [
+              -0.010500673554645882,
+              -0.010357734663814863
+            ],
+            "absolute_interval": [
+              0.010357734663814863,
+              0.010500673554645882
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.146944541551e-05,
+            "exact_finite_phase_identity_error": 8.326672684688674e-16
+          }
+        },
+        "3": {
+          "core_distance": 3,
+          "symmetry_orbit": [
+            3
+          ],
+          "density_response": {
+            "value": 0.010674782297149375,
+            "interval": [
+              0.010601304660613264,
+              0.010748259933685486
+            ],
+            "absolute_interval": [
+              0.010601304660613264,
+              0.010748259933685486
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.347763653611147e-05,
+            "exact_finite_phase_identity_error": 1.949829186997931e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.0020398727920381797,
+            "interval": [
+              0.0019789482677412488,
+              0.0021007973163351106
+            ],
+            "absolute_interval": [
+              0.0019789482677412488,
+              0.0021007973163351106
+            ],
+            "zero_excluded": true,
+            "error_bound": 6.092452429693086e-05,
+            "exact_finite_phase_identity_error": 2.42861286636753e-17
+          }
+        },
+        "4": {
+          "core_distance": 2,
+          "symmetry_orbit": [
+            2,
+            4
+          ],
+          "density_response": {
+            "value": 0.00010587965227449453,
+            "interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "absolute_interval": [
+              2.356414603773645e-05,
+              0.00018819515851125262
+            ],
+            "zero_excluded": true,
+            "error_bound": 8.231550623675808e-05,
+            "exact_finite_phase_identity_error": 5.904998712225051e-15
+          },
+          "density_and_same_core_response": {
+            "value": -0.010429204109230372,
+            "interval": [
+              -0.010500673554645882,
+              -0.010357734663814863
+            ],
+            "absolute_interval": [
+              0.010357734663814863,
+              0.010500673554645882
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.146944541551e-05,
+            "exact_finite_phase_identity_error": 8.326672684688674e-16
+          }
+        },
+        "5": {
+          "core_distance": 1,
+          "symmetry_orbit": [
+            1,
+            5
+          ],
+          "density_response": {
+            "value": 0.01591835241297242,
+            "interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "absolute_interval": [
+              0.015841737748759577,
+              0.015994967077185264
+            ],
+            "zero_excluded": true,
+            "error_bound": 7.661466421284196e-05,
+            "exact_finite_phase_identity_error": 6.699502064222429e-15
+          },
+          "density_and_same_core_response": {
+            "value": 0.00272474221521676,
+            "interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "absolute_interval": [
+              0.0026580015429056906,
+              0.002791482887527829
+            ],
+            "zero_excluded": true,
+            "error_bound": 6.674067231106946e-05,
+            "exact_finite_phase_identity_error": 3.0878077872387166e-16
+          }
+        }
+      },
+      "same_core_probability": 0.7371241892455572,
+      "same_core_probability_interval": [
+        0.7369883912717009,
+        0.7372599997293738
+      ],
+      "same_core_response": {
+        "value": -0.023801886011989497,
+        "interval": [
+          -0.023926844496083666,
+          -0.02367692752789533
+        ],
+        "absolute_interval": [
+          0.02367692752789533,
+          0.023926844496083666
+        ],
+        "zero_excluded": true,
+        "error_bound": 0.00012495848409416988,
+        "exact_finite_phase_identity_error": 1.2038980923279041e-15
+      },
+      "far_to_neighbor_absolute_response_intervals": {
+        "2": [
+          0.0014732225408170818,
+          0.011879704202652167
+        ],
+        "3": [
+          0.6627900269788392,
+          0.6784773302112697
+        ]
+      },
+      "state_error_X": 7.908793221475145e-05,
+      "state_error_source": 2.2951074454125442e-05,
+      "lag_errors": [
+        7.902441782155812e-05,
+        2.288756006093211e-05
+      ]
+    }
+  ],
+  "dt": 0.015625,
+  "wait": 5.0,
+  "neutral_budget": 192,
+  "seconds": 185.90354860200023
+}

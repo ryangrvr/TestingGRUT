@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "N": 6,
+  "Q": 7,
+  "budget": 192,
+  "dimension": 1980546,
+  "outside_dimension": 133348,
+  "neutral_preparation": "Original equal coherent neutral sea over all labelled fixed-Q hosts.",
+  "core_event": "The entire directed-cycle edge mask is exactly one spanning simple cycle. Outside active connections, including one-leg charged ones, are not removed or filtered.",
+  "complete_record": "One projector for each spanning core mask, plus a single failure projector. The core pointer is fixed before transport; the host is not separately measured.",
+  "record_work_identity": "Different exact spanning-cycle records have no one-step H matrix element. Rewiring changes zero-field edges and preserves the cycle; a physical hop can preserve the core, destroy its cycle, or add an extra cyclic chord, but cannot change one spanning simple cycle directly into another. Complete-record work therefore equals binary success/failure work.",
+  "source": "Gauge-invariant exp(-i theta n0). The rooted cycle symmetry makes the conditional source mean <nv>/N. Variance intervals include original waiting error.",
+  "rows": [
+    {
+      "wait": 5.0,
+      "cache_key": "N6_Q7_B192_W5",
+      "formation_probability": 0.003446609617588391,
+      "formation_interval": [
+        0.00344660930510013,
+        0.0034466099300766656
+      ],
+      "state_error": 2.161384806422297e-09,
+      "source_mean": 0.4092648741907258,
+      "source_mean_interval": [
+        0.4092647790824502,
+        0.40926496929902123
+      ],
+      "source_variance": 0.24176713694437516,
+      "source_variance_interval": [
+        0.24176711968504344,
+        0.24176715420369244
+      ],
+      "selected_parent_orbits": 9659,
+      "physical_states_per_fixed_core": 115560,
+      "complete_record_outcomes": 61,
+      "record_energy_change": 0.0014119088511238254,
+      "record_energy_interval": [
+        0.001411829113447889,
+        0.0014119885887997619
+      ],
+      "record_entropy_bits": 0.05351793034860515,
+      "record_entropy_interval_bits": [
+        0.053517925947984206,
+        0.053517934749226226
+      ]
+    }
+  ],
+  "backend": "real full-H Galerkin/Krylov, two-pass reorthogonalization",
+  "krylov": {
+    "krylov_dimension": 128,
+    "orthogonality_error": 2.0110687611843278e-13,
+    "projected_H_asymmetry": 2.1392530693558823e-13,
+    "full_finite_H_relation_defect_frobenius": 4.614061878824046e-12,
+    "last_column_residual_norm": 10.698773815557809,
+    "seconds": 53.71897297999931
+  },
+  "krylov_bounds": [
+    {
+      "wait": 5.0,
+      "electric_boundary": 8.646983211076213e-10,
+      "last_column": 7.736161759205552e-10,
+      "relation_defect": 2.307030939412023e-11,
+      "total": 2.161384806422297e-09
+    }
+  ],
+  "dt": 0.015625,
+  "bound": "Duhamel bound from complete electric boundary B V, last Arnoldi column, and full finite-H relation defect; thin QR preserves the boundary action norm. Projection changes no physical Hamiltonian term.",
+  "seconds": 68.86062923999998
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 6,
+  "budget": 256,
+  "wait": 5,
+  "state_error": 2.80405313016727e-10,
+  "all_cycle_probability": 0.017530428043215234,
+  "all_cycle_probability_interval": [
+    0.01753042783655997,
+    0.017530428249870503
+  ],
+  "classes": [
+    {
+      "chord_core_distance": 2,
+      "class_probability": 0.017530428043215234,
+      "class_probability_interval": [
+        0.01753042783655997,
+        0.017530428249870503
+      ],
+      "equivalent_records": 60,
+      "probability_one_labelled_record": 0.0002921738007202539,
+      "probability_one_labelled_record_interval": [
+        0.00029217379727599946,
+        0.0002921738041645084
+      ],
+      "fixed_source_is_chord_endpoint_probability": 0.007012171217286094,
+      "fixed_source_is_chord_endpoint_probability_interval": [
+        0.0070121711346239875,
+        0.007012171299948201
+      ]
+    }
+  ],
+  "total_successful_records": 60,
+  "failure_probability": 0.9824695719567847,
+  "complete_outcomes": 61,
+  "core_only_record_work": 0.004963680156651178,
+  "additional_host_record_work": 0.0003920740211657231,
+  "additional_host_record_work_interval": [
+    0.00039207338657117286,
+    0.00039207465576027335
+  ],
+  "complete_record_work": 0.005355754177816901,
+  "complete_record_work_interval": [
+    0.005355744355181489,
+    0.0053557640004523125
+  ],
+  "complete_record_entropy_bits": 0.23089082268298347,
+  "complete_record_entropy_interval_bits": [
+    0.23089082026194058,
+    0.23089082510402642
+  ],
+  "raw_rewiring_transition_count": 3816,
+  "instrument": "All projectors P_(C,g) for exact spanning-cycle cores and their complete initial active hosts, plus one aggregate failure projector. No matter or electric-state outcome is selected.",
+  "work_derivation": "Core-only work plus minus the original expectation of rewiring between different hosts within successful cores. K preserves g, R preserves C, and distinct exact spanning cycle masks have no one-step coupling. Raw transitions retain rewiring terms even when a permutation quotient maps them to the same orbit.",
+  "entropy_derivation": "-(1-p) log2(1-p) - sum_r p_r log2(p_r/M_r); M_r counts all equivalent core-host records. This is record entropy, not a dissipated-heat claim.",
+  "error_scope": "Analytic full-state norm bound, hopping norm and complete rewiring degree bound; ordinary floating point with5e-10 allowance for each work contribution.",
+  "seconds": 0.22565404899978603
+}

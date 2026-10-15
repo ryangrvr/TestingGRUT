@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "N": 4,
+  "Q": 5,
+  "budget": 256,
+  "wait": 5,
+  "state_error": 5.855790313251706e-09,
+  "any_circulation_probability": 0.2733441749717053,
+  "any_circulation_probability_interval": [
+    0.27334416832579517,
+    0.2733441816176156
+  ],
+  "all_vertices_covered_probability": 0.12587610005133065,
+  "all_vertices_covered_interval": [
+    0.1258760955413862,
+    0.1258761045612752
+  ],
+  "connected_spanning_circulation_probability": 0.12587610005133065,
+  "connected_spanning_circulation_interval": [
+    0.1258760955413862,
+    0.1258761045612752
+  ],
+  "exact_spanning_cycle_probability": 0.08025916396920438,
+  "circulation_edge_count_distribution": {
+    "0": {
+      "probability": 0.726655825028306,
+      "interval": [
+        0.7266558141924323,
+        0.7266558358641798
+      ]
+    },
+    "3": {
+      "probability": 0.14746807492037467,
+      "interval": [
+        0.1474680700389279,
+        0.14746807980182156
+      ]
+    },
+    "4": {
+      "probability": 0.08025916396920438,
+      "interval": [
+        0.08025916036800747,
+        0.08025916757040137
+      ]
+    },
+    "5": {
+      "probability": 0.04561693608212628,
+      "interval": [
+        0.045616933367171465,
+        0.045616938797081175
+      ]
+    }
+  },
+  "all_root_mean_balls_given_spanning_connected_circulation": [
+    {
+      "radius": 0,
+      "conditional_mean": 1.0,
+      "conditional_mean_interval": [
+        0.9999998981518136,
+        1.000000101848195
+      ]
+    },
+    {
+      "radius": 1,
+      "conditional_mean": 3.1811977653562686,
+      "conditional_mean_interval": [
+        3.1811975336266722,
+        3.181197997085882
+      ]
+    },
+    {
+      "radius": 2,
+      "conditional_mean": 4.0,
+      "conditional_mean_interval": [
+        3.999999724646745,
+        4.0
+      ]
+    },
+    {
+      "radius": 3,
+      "conditional_mean": 4.0,
+      "conditional_mean_interval": [
+        3.999999724646745,
+        4.0
+      ]
+    }
+  ],
+  "interpretation": "All original-neutral amplitudes are retained. Connectivity and balls use the entire directed-cycle edge mask, without selecting rings. Conditional ball averages explicitly condition on spanning connected circulation. These few small finite graphs do not define a continuum dimension; coordination is not converted to dimension.",
+  "seconds": 0.0016929720004554838
+}
