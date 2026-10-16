@@ -1,0 +1,3241 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "constants": {
+    "z": 4,
+    "Delta": 8.0,
+    "v": 1.0,
+    "g": 0.25,
+    "mu": 0.4054651081081644,
+    "xi": 2.4663034623764317,
+    "Q_gap_lower": 4.0,
+    "low_band_bottom_lower": -0.015625,
+    "spectral_gap_lower": 4.0,
+    "projector_distance_upper": 0.0625,
+    "bare_high_probability_upper": 0.015625,
+    "feshbach_E0_C": 0.015625,
+    "feshbach_E0_ratio": 0.5,
+    "dressed_C": 0.03175416344814578,
+    "dressed_near_lower": 0.0009150457984429435,
+    "dressing_L_minus_identity_weighted_upper": 0.00816555163044641,
+    "dressing_H_weighted_upper": 0.128053814837053,
+    "microscopic_propagation_exponent_rate": 1.6666666666666667
+  },
+  "modules": [
+    {
+      "kind": "cycle",
+      "size": 8,
+      "N": 8,
+      "max_degree": 2,
+      "diameter": 4,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196433,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.001021516442116452,
+      "far_receiver": 4,
+      "far_E0_Feshbach_coupling": 4.200268817204301e-06,
+      "far_E0_Feshbach_bound": 0.0009765625,
+      "far_dressed_entry_float": -4.1340164151820245e-06,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 2.43610385170907e-16,
+      "orthogonality_Frobenius_error": 1.0389763949274505e-14,
+      "max_Feshbach_bound_excess": -0.0009723622311827957,
+      "max_dressed_bound_excess": -0.0062682933313667,
+      "cycle_Green_function_max_error": 1.734723475976807e-18,
+      "localized_dressing_check": {
+        "L_minus_I": 0.0010867464106065203,
+        "H": 0.047308303971610496
+      }
+    },
+    {
+      "kind": "cycle",
+      "size": 16,
+      "N": 16,
+      "max_degree": 2,
+      "diameter": 8,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196433,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.001021512233232304,
+      "far_receiver": 8,
+      "far_E0_Feshbach_coupling": 1.0932506031244927e-09,
+      "far_E0_Feshbach_bound": 6.103515625e-05,
+      "far_dressed_entry_float": -1.042640489825418e-09,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 4.96592799151964e-16,
+      "orthogonality_Frobenius_error": 7.334703222118228e-15,
+      "max_Feshbach_bound_excess": -6.1034062999396876e-05,
+      "max_dressed_bound_excess": -0.001238996951983092,
+      "cycle_Green_function_max_error": 1.734723475976807e-18,
+      "localized_dressing_check": {
+        "L_minus_I": 0.0010879535250966316,
+        "H": 0.047319997132851524
+      }
+    },
+    {
+      "kind": "cycle",
+      "size": 32,
+      "N": 32,
+      "max_degree": 2,
+      "diameter": 16,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196431,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.0010215122332320472,
+      "far_receiver": 16,
+      "far_E0_Feshbach_coupling": 7.406364186321275e-17,
+      "far_E0_Feshbach_bound": 2.384185791015625e-07,
+      "far_dressed_entry_float": -5.851433649322473e-17,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 7.093110597284912e-16,
+      "orthogonality_Frobenius_error": 3.8020500962324164e-14,
+      "max_Feshbach_bound_excess": -2.3841857902749887e-07,
+      "max_dressed_bound_excess": -4.834377177613976e-05,
+      "cycle_Green_function_max_error": 2.168404344971009e-19,
+      "localized_dressing_check": {
+        "L_minus_I": 0.0010879560258241694,
+        "H": 0.04732001171660701
+      }
+    },
+    {
+      "kind": "cycle",
+      "size": 64,
+      "N": 64,
+      "max_degree": 2,
+      "diameter": 32,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196431,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.0010215122332320476,
+      "far_receiver": 32,
+      "far_E0_Feshbach_coupling": 3.3991923366758353e-31,
+      "far_E0_Feshbach_bound": 3.637978807091713e-12,
+      "far_dressed_entry_float": -4.0409978274085874e-18,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 1.4097359416962677e-15,
+      "orthogonality_Frobenius_error": 2.141909228676025e-13,
+      "max_Feshbach_bound_excess": -3.637978807091713e-12,
+      "max_dressed_bound_excess": -7.360043583693584e-08,
+      "cycle_Green_function_max_error": 2.168404344971009e-19,
+      "localized_dressing_check": null
+    },
+    {
+      "kind": "cycle",
+      "size": 128,
+      "N": 128,
+      "max_degree": 2,
+      "diameter": 64,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196431,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.0010215122332320537,
+      "far_receiver": 64,
+      "far_E0_Feshbach_coupling": 7.160067064908219e-60,
+      "far_E0_Feshbach_bound": 8.470329472543003e-22,
+      "far_dressed_entry_float": -2.0837676529362224e-19,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 2.9083340720132536e-15,
+      "orthogonality_Frobenius_error": 6.298858888072843e-13,
+      "max_Feshbach_bound_excess": -8.470329472543003e-22,
+      "max_dressed_bound_excess": -1.7059235548742508e-13,
+      "cycle_Green_function_max_error": 2.168404344971009e-19,
+      "localized_dressing_check": null
+    },
+    {
+      "kind": "cycle",
+      "size": 256,
+      "N": 256,
+      "max_degree": 2,
+      "diameter": 128,
+      "spectrum": {
+        "low_min": -0.01039864469807387,
+        "low_max": -0.006246098625196431,
+        "high_min": 6.010398644698074,
+        "exact_projector_distance": 0.041558643836874506
+      },
+      "near_dressed_coupling": 0.0010215122332320476,
+      "far_receiver": 128,
+      "far_E0_Feshbach_coupling": 3.176872552732397e-117,
+      "far_E0_Feshbach_bound": 4.591774807899561e-41,
+      "far_dressed_entry_float": -2.968362979958158e-18,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 6.4486730499725936e-15,
+      "orthogonality_Frobenius_error": 1.6310386827032872e-12,
+      "max_Feshbach_bound_excess": -4.591774807899561e-41,
+      "max_dressed_bound_excess": 3.4270412285861686e-17,
+      "cycle_Green_function_max_error": 2.168404344971009e-19,
+      "localized_dressing_check": null
+    },
+    {
+      "kind": "torus",
+      "size": 4,
+      "N": 16,
+      "max_degree": 4,
+      "diameter": 4,
+      "spectrum": {
+        "low_min": -0.015564437074637413,
+        "low_max": -0.005206074732156937,
+        "high_min": 4.015564437074637,
+        "exact_projector_distance": 0.0621374415563288
+      },
+      "near_dressed_coupling": 0.0011664659055147094,
+      "far_receiver": 10,
+      "far_E0_Feshbach_coupling": 6.510416666666665e-05,
+      "far_E0_Feshbach_bound": 0.0009765625,
+      "far_dressed_entry_float": -6.38032084880753e-05,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 4.757405102717145e-16,
+      "orthogonality_Frobenius_error": 4.316168956090705e-15,
+      "max_Feshbach_bound_excess": -0.0009114583333333333,
+      "max_dressed_bound_excess": -0.006208624139293807,
+      "cycle_Green_function_max_error": null,
+      "localized_dressing_check": {
+        "L_minus_I": 0.003292208763062069,
+        "H": 0.08694733457292836
+      }
+    },
+    {
+      "kind": "torus",
+      "size": 6,
+      "N": 36,
+      "max_degree": 4,
+      "diameter": 6,
+      "spectrum": {
+        "low_min": -0.015564437074637413,
+        "low_max": -0.005206074732156935,
+        "high_min": 4.015564437074637,
+        "exact_projector_distance": 0.0621374415563288
+      },
+      "near_dressed_coupling": 0.0011392119095704378,
+      "far_receiver": 21,
+      "far_E0_Feshbach_coupling": 3.883076799743467e-06,
+      "far_E0_Feshbach_bound": 0.000244140625,
+      "far_dressed_entry_float": -3.7413518999379602e-06,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 1.1248084320667398e-15,
+      "orthogonality_Frobenius_error": 2.1955534877104317e-14,
+      "max_Feshbach_bound_excess": -0.00024025754820025652,
+      "max_dressed_bound_excess": -0.0027840041360031207,
+      "cycle_Green_function_max_error": null,
+      "localized_dressing_check": {
+        "L_minus_I": 0.0035389690181917848,
+        "H": 0.08951342884587593
+      }
+    },
+    {
+      "kind": "torus",
+      "size": 8,
+      "N": 64,
+      "max_degree": 4,
+      "diameter": 8,
+      "spectrum": {
+        "low_min": -0.015564437074637413,
+        "low_max": -0.005206074732156934,
+        "high_min": 4.015564437074637,
+        "exact_projector_distance": 0.0621374415563288
+      },
+      "near_dressed_coupling": 0.0011385913156785677,
+      "far_receiver": 36,
+      "far_E0_Feshbach_coupling": 2.43923174108353e-07,
+      "far_E0_Feshbach_bound": 6.103515625e-05,
+      "far_dressed_entry_float": -2.2981654409798775e-07,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 1.4585535090544474e-15,
+      "orthogonality_Frobenius_error": 4.4254191481826374e-14,
+      "max_Feshbach_bound_excess": -6.079123307589165e-05,
+      "max_dressed_bound_excess": -0.0012387681780794838,
+      "cycle_Green_function_max_error": null,
+      "localized_dressing_check": {
+        "L_minus_I": 0.0036263830811575823,
+        "H": 0.09023452008059829
+      }
+    },
+    {
+      "kind": "torus",
+      "size": 12,
+      "N": 144,
+      "max_degree": 4,
+      "diameter": 12,
+      "spectrum": {
+        "low_min": -0.015564437074637413,
+        "low_max": -0.0052060747321569355,
+        "high_min": 4.015564437074637,
+        "exact_projector_distance": 0.0621374415563288
+      },
+      "near_dressed_coupling": 0.001138575886637969,
+      "far_receiver": 78,
+      "far_E0_Feshbach_coupling": 1.0373990567696737e-09,
+      "far_E0_Feshbach_bound": 3.814697265625e-06,
+      "far_dressed_entry_float": -9.195364656204909e-10,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 2.7079048133926908e-15,
+      "orthogonality_Frobenius_error": 4.810076251769258e-14,
+      "max_Feshbach_bound_excess": -3.8136598665682303e-06,
+      "max_dressed_bound_excess": -0.00024473942508053815,
+      "cycle_Green_function_max_error": null,
+      "localized_dressing_check": {
+        "L_minus_I": 0.003663880689300049,
+        "H": 0.0904826554935664
+      }
+    },
+    {
+      "kind": "torus",
+      "size": 16,
+      "N": 256,
+      "max_degree": 4,
+      "diameter": 16,
+      "spectrum": {
+        "low_min": -0.015564437074637413,
+        "low_max": -0.005206074732156935,
+        "high_min": 4.015564437074637,
+        "exact_projector_distance": 0.0621374415563288
+      },
+      "near_dressed_coupling": 0.0011385758767876093,
+      "far_receiver": 136,
+      "far_E0_Feshbach_coupling": 4.655433050098437e-12,
+      "far_E0_Feshbach_bound": 2.384185791015625e-07,
+      "far_dressed_entry_float": -3.795388116325113e-12,
+      "roundoff_notice": "Dressed entries at the numerical noise floor are not resolved signals.",
+      "intertwining_Frobenius_error": 3.989056674438806e-15,
+      "orthogonality_Frobenius_error": 1.2833440662729287e-13,
+      "max_Feshbach_bound_excess": -2.384139236685124e-07,
+      "max_dressed_bound_excess": -4.834376798081016e-05,
+      "cycle_Green_function_max_error": null,
+      "localized_dressing_check": {
+        "L_minus_I": 0.003667404270195538,
+        "H": 0.09050015393623302
+      }
+    }
+  ],
+  "latch": [
+    {
+      "N": 8,
+      "distance": 4,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 8,
+        "distance": 4
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279834547295922,
+          "far": 5.249292707404381e-06,
+          "far_near": 0.0051063980487752025,
+          "linear_solve_residual": 5.775636540013746e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.0010205160318208588,
+          "far": 5.1627425489800894e-06,
+          "far_near": 0.005058952910096327,
+          "linear_solve_residual": 3.990110664405845e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.018203978964307255,
+        "low_max": -0.014051146094046865,
+        "high_min": 6.002322980367875,
+        "Q_min": 5.991891360536346,
+        "actual_gap": 6.016374126461922,
+        "canonical_dressed_far": 5.148947844353252e-06,
+        "canonical_dressed_near": 0.001021526685107565,
+        "canonical_isometry_error": 4.243288011741793e-15,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.005503057279233635,
+            "geometry_one_probability": 0.0027620436584925787,
+            "receiver_L0_probability": 7.865124759043704e-15
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.0038585958503741325,
+            "geometry_one_probability": 0.0022579182144358417,
+            "receiver_L0_probability": 4.18843881059351e-09
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.00594805090622136,
+            "geometry_one_probability": 0.0033468098046584628,
+            "receiver_L0_probability": 2.0523299566170275e-07
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0032298706364642963,
+            "geometry_one_probability": 0.001106863574304315,
+            "receiver_L0_probability": 1.119304494017091e-07
+          }
+        ]
+      }
+    },
+    {
+      "N": 16,
+      "distance": 8,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 16,
+        "distance": 8
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768365102394,
+          "far": 1.0245492483958626e-06,
+          "far_near": 0.0009966656951862721,
+          "linear_solve_residual": 5.015368804824231e-18
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.0010205095837835228,
+          "far": 1.0135155211702392e-06,
+          "far_near": 0.0009931464998228108,
+          "linear_solve_residual": 5.224961595320042e-18
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.018203754641255974,
+        "low_max": -0.014051065064653392,
+        "high_min": 6.002458322316141,
+        "Q_min": 5.992027975243116,
+        "actual_gap": 6.016509387380794,
+        "canonical_dressed_far": 1.0159063138439421e-06,
+        "canonical_dressed_near": 0.001021520325900756,
+        "canonical_isometry_error": 1.4436599244572802e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.005503057281335965,
+            "geometry_one_probability": 0.0027620436509792497,
+            "receiver_L0_probability": 1.0696309116025403e-14
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.00385855962454582,
+            "geometry_one_probability": 0.0022579068670304276,
+            "receiver_L0_probability": 7.192399857194437e-12
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0050351234241132106,
+            "geometry_one_probability": 0.003349062721356014,
+            "receiver_L0_probability": 4.330934313156342e-07
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.00335368354470208,
+            "geometry_one_probability": 0.0011013359168932074,
+            "receiver_L0_probability": 1.40191947725764e-07
+          }
+        ]
+      }
+    },
+    {
+      "N": 32,
+      "distance": 16,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 32,
+        "distance": 16
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448920709399e-06,
+          "far_near": 0.0009955913949573764,
+          "linear_solve_residual": 5.720539415234082e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436711594e-06,
+          "far_near": 0.0009920988105474313,
+          "linear_solve_residual": 3.333105941014053e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.01820364248204983,
+        "low_max": -0.014051024551599815,
+        "high_min": 6.002525991318079,
+        "Q_min": 5.9920962806833895,
+        "actual_gap": 6.016577015869679,
+        "canonical_dressed_far": 1.0148636570398895e-06,
+        "canonical_dressed_near": 0.0010215203253588995,
+        "canonical_isometry_error": 2.0931820552932143e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.005503057281335967,
+            "geometry_one_probability": 0.0027620436509792454,
+            "receiver_L0_probability": 1.0696311428663147e-14
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.00385855962648151,
+            "geometry_one_probability": 0.0022579068637252416,
+            "receiver_L0_probability": 7.294106261192348e-12
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.005032268763923686,
+            "geometry_one_probability": 0.0033500573875991074,
+            "receiver_L0_probability": 4.0005703576328725e-12
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.003193677120751158,
+            "geometry_one_probability": 0.0010962162212732954,
+            "receiver_L0_probability": 3.870488715842856e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448919955175e-06,
+          "far_near": 0.0009955913948840067,
+          "linear_solve_residual": 5.695655165097678e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436002032e-06,
+          "far_near": 0.0009920988104779012,
+          "linear_solve_residual": 3.407744182153706e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.018203586403033545,
+        "low_max": -0.0140510042954833,
+        "high_min": 6.002559826062863,
+        "Q_min": 5.992130433663369,
+        "actual_gap": 6.0166108303583465,
+        "canonical_dressed_far": 1.0148636569663425e-06,
+        "canonical_dressed_near": 0.001021520325358907,
+        "canonical_isometry_error": 7.861118413646484e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.005503057281335967,
+            "geometry_one_probability": 0.0027620436509792454,
+            "receiver_L0_probability": 1.0696311428663147e-14
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.00385855962648151,
+            "geometry_one_probability": 0.002257906863725241,
+            "receiver_L0_probability": 7.29410626123484e-12
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.005032270061012455,
+            "geometry_one_probability": 0.003350056559972328,
+            "receiver_L0_probability": 2.2668998127680227e-11
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.002918633143628597,
+            "geometry_one_probability": 0.0010938388296601598,
+            "receiver_L0_probability": 3.0940643644409386e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 128,
+      "distance": 64,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 128,
+        "distance": 64
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448919955175e-06,
+          "far_near": 0.0009955913948840067,
+          "linear_solve_residual": 5.695655165097678e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436002032e-06,
+          "far_near": 0.0009920988104779012,
+          "linear_solve_residual": 3.407744182153706e-17
+        }
+      ],
+      "spectrum": null
+    },
+    {
+      "N": 256,
+      "distance": 128,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 256,
+        "distance": 128
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448919955175e-06,
+          "far_near": 0.0009955913948840067,
+          "linear_solve_residual": 5.695655165097678e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436002032e-06,
+          "far_near": 0.0009920988104779012,
+          "linear_solve_residual": 3.407744182153706e-17
+        }
+      ],
+      "spectrum": null
+    },
+    {
+      "N": 512,
+      "distance": 256,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 512,
+        "distance": 256
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448919955175e-06,
+          "far_near": 0.0009955913948840067,
+          "linear_solve_residual": 5.695655165097678e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436002032e-06,
+          "far_near": 0.0009920988104779012,
+          "linear_solve_residual": 3.407744182153706e-17
+        }
+      ],
+      "spectrum": null
+    }
+  ],
+  "robustness": [
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.0,
+      "constants": {
+        "Q_gap_lower": 4.75,
+        "full_spectral_gap_lower": 4.75,
+        "low_bottom_lower": -0.013157894736842105,
+        "shortcut_floor_all_low_energies": 0.0,
+        "bare_P0_total_Q_probability_upper": 0.010958904109589041,
+        "shortcut_five_edge_lower_E0": 0.0,
+        "nearest_lower_all_low_energies": 0.0009733580312822712,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.001024861218395141,
+          "far": 3.3991923366758353e-31,
+          "far_near": 3.3167342813485777e-28,
+          "linear_solve_residual": 9.689036957412495e-18
+        },
+        {
+          "E": -0.013157894736842105,
+          "near": 0.0010213315990203668,
+          "far": 3.2138675820673802e-31,
+          "far_near": 3.146742532151197e-28,
+          "linear_solve_residual": 5.626305432359359e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.01039864469807435,
+        "low_max": -0.006246098625196449,
+        "high_min": 6.010398644698078,
+        "Q_min": 5.999999999999999,
+        "actual_gap": 6.016644743323275,
+        "canonical_dressed_far": 1.2999433780725328e-18,
+        "canonical_dressed_near": 0.0010215122332320112,
+        "canonical_isometry_error": 1.3090649151176e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.002748607872172445,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 0.0
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.0016048655555390137,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 1.5404499979196995e-79
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0016876075943048374,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 2.5371661821733206e-33
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0018264260456332298,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 2.7382569706766355e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.125,
+      "constants": {
+        "Q_gap_lower": 4.625,
+        "full_spectral_gap_lower": 4.625,
+        "low_bottom_lower": -0.016891891891891893,
+        "shortcut_floor_all_low_energies": 2.3691441815440024e-07,
+        "bare_P0_total_Q_probability_upper": 0.014398848092152628,
+        "shortcut_five_edge_lower_E0": 2.384185791015625e-07,
+        "nearest_lower_all_low_energies": 0.0009724515279262828,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.001025639502159927,
+          "far": 2.5565244046983276e-07,
+          "far_near": 0.00024926149970964077,
+          "linear_solve_residual": 2.1250283160533283e-17
+        },
+        {
+          "E": -0.016891891891891893,
+          "near": 0.0010211058939629473,
+          "far": 2.539779024846388e-07,
+          "far_near": 0.00024872826999258795,
+          "linear_solve_residual": 2.856911203877057e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.012351307155213983,
+        "low_max": -0.008198752092783198,
+        "high_min": 6.008437510890863,
+        "Q_min": 5.998031139730597,
+        "actual_gap": 6.016636262983646,
+        "canonical_dressed_far": 2.5427272096253783e-07,
+        "canonical_dressed_near": 0.0010215142606671075,
+        "canonical_isometry_error": 1.493640311249219e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0034379427873560313,
+            "geometry_one_probability": 0.0006912354667086159,
+            "receiver_L0_probability": 6.689018020107447e-16
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.002164304994378127,
+            "geometry_one_probability": 0.0005604894242320095,
+            "receiver_L0_probability": 4.625614033009595e-13
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0025059355577047933,
+            "geometry_one_probability": 0.0008196452542839561,
+            "receiver_L0_probability": 1.6175358186756073e-12
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0022749250275878614,
+            "geometry_one_probability": 0.0004492732207787292,
+            "receiver_L0_probability": 2.837470354552714e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 4.5,
+        "full_spectral_gap_lower": 4.5,
+        "low_bottom_lower": -0.027777777777777776,
+        "shortcut_floor_all_low_energies": 9.438059637757367e-07,
+        "bare_P0_total_Q_probability_upper": 0.024096385542168676,
+        "shortcut_five_edge_lower_E0": 9.5367431640625e-07,
+        "nearest_lower_all_low_energies": 0.0009698159744255934,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010279768359335367,
+          "far": 1.0234448919955175e-06,
+          "far_near": 0.0009955913948840067,
+          "linear_solve_residual": 5.695655165097678e-17
+        },
+        {
+          "E": -0.027777777777777776,
+          "near": 0.001020509583226393,
+          "far": 1.0124463436002032e-06,
+          "far_near": 0.0009920988104779012,
+          "linear_solve_residual": 3.407744182153706e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.018203586403033545,
+        "low_max": -0.0140510042954833,
+        "high_min": 6.002559826062863,
+        "Q_min": 5.992130433663369,
+        "actual_gap": 6.0166108303583465,
+        "canonical_dressed_far": 1.0148636569663425e-06,
+        "canonical_dressed_near": 0.001021520325358907,
+        "canonical_isometry_error": 7.861118413646484e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.005503057281335967,
+            "geometry_one_probability": 0.0027620436509792454,
+            "receiver_L0_probability": 1.0696311428663147e-14
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.00385855962648151,
+            "geometry_one_probability": 0.002257906863725241,
+            "receiver_L0_probability": 7.29410626123484e-12
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.005032270061012455,
+            "geometry_one_probability": 0.003350056559972328,
+            "receiver_L0_probability": 2.2668998127680227e-11
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.002918633143628597,
+            "geometry_one_probability": 0.0010938388296601598,
+            "receiver_L0_probability": 3.0940643644409386e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 8.0,
+      "delta": 8.0,
+      "lam": 0.5,
+      "constants": {
+        "Q_gap_lower": 4.25,
+        "full_spectral_gap_lower": 4.25,
+        "low_bottom_lower": -0.07352941176470588,
+        "shortcut_floor_all_low_energies": 3.7113392564908743e-06,
+        "bare_P0_total_Q_probability_upper": 0.06472491909385113,
+        "shortcut_five_edge_lower_E0": 3.814697265625e-06,
+        "nearest_lower_all_low_energies": 0.000958855478249906,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0010373635318908446,
+          "far": 4.107184547898813e-06,
+          "far_near": 0.003959252876773566,
+          "linear_solve_residual": 3.679484539931417e-17
+        },
+        {
+          "E": -0.07352941176470588,
+          "near": 0.0010174802387437716,
+          "far": 3.991473216112975e-06,
+          "far_near": 0.003922899987759009,
+          "linear_solve_residual": 3.44565936906663e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.0415277435949166,
+        "low_max": -0.03737505219132008,
+        "high_min": 5.979134174327039,
+        "Q_min": 5.968615014270063,
+        "actual_gap": 6.016509226518359,
+        "canonical_dressed_far": 4.024248036585797e-06,
+        "canonical_dressed_near": 0.0010215443233044946,
+        "canonical_isometry_error": 1.2002425402150602e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.013720256899096919,
+            "geometry_one_probability": 0.011001898828498764,
+            "receiver_L0_probability": 1.707499505039834e-13
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.010867856897168182,
+            "geometry_one_probability": 0.009280042120512054,
+            "receiver_L0_probability": 1.1006440840171262e-10
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.015988295244918547,
+            "geometry_one_probability": 0.01432392116706865,
+            "receiver_L0_probability": 1.917597740535186e-10
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0023853010979606798,
+            "geometry_one_probability": 0.000550797828261627,
+            "receiver_L0_probability": 3.744861000804721e-08
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 12.0,
+      "delta": 12.0,
+      "lam": 0.0,
+      "constants": {
+        "Q_gap_lower": 8.75,
+        "full_spectral_gap_lower": 8.75,
+        "low_bottom_lower": -0.007142857142857143,
+        "shortcut_floor_all_low_energies": 0.0,
+        "bare_P0_total_Q_probability_upper": 0.0032546786004882017,
+        "shortcut_five_edge_lower_E0": 0.0,
+        "nearest_lower_all_low_energies": 0.00043351153901550766,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00044328455231937156,
+          "far": 3.868807494359046e-37,
+          "far_near": 8.727593763681846e-34,
+          "linear_solve_residual": 5.292086889923992e-18
+        },
+        {
+          "E": -0.007142857142857143,
+          "near": 0.00044274604547615414,
+          "far": 3.792488370710109e-37,
+          "far_near": 8.56583228571009e-34,
+          "linear_solve_residual": 2.799303951525632e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.006246098625196299,
+        "low_max": -0.004462863060950431,
+        "high_min": 10.0062460986252,
+        "Q_min": 10.000000000000002,
+        "actual_gap": 10.01070896168615,
+        "canonical_dressed_far": 8.083306139930248e-18,
+        "canonical_dressed_near": 0.00044267912157204824,
+        "canonical_isometry_error": 1.1700842294655646e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0017326771691202343,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 0.0
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.000833646320254874,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 1.3749695815652925e-79
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0006920825307219258,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 8.093445856967494e-34
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0007712994766166581,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 4.355831501752686e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 12.0,
+      "delta": 12.0,
+      "lam": 0.125,
+      "constants": {
+        "Q_gap_lower": 8.625,
+        "full_spectral_gap_lower": 8.625,
+        "low_bottom_lower": -0.009057971014492754,
+        "shortcut_floor_all_low_energies": 4.698853573060174e-08,
+        "bare_P0_total_Q_probability_upper": 0.00418322526668061,
+        "shortcut_five_edge_lower_E0": 4.709502797067901e-08,
+        "nearest_lower_all_low_energies": 0.00043337328374769854,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0004434311368018285,
+          "far": 4.855228694487907e-08,
+          "far_near": 0.00010949228169914763,
+          "linear_solve_residual": 3.150459328378803e-17
+        },
+        {
+          "E": -0.009057971014492754,
+          "near": 0.0004427480398869147,
+          "far": 4.84407020695259e-08,
+          "far_near": 0.00010940918469542739,
+          "linear_solve_residual": 1.1162532748054549e-16
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.007548042911632022,
+        "low_max": -0.005764806266501437,
+        "high_min": 10.00494050359271,
+        "Q_min": 9.99869098736304,
+        "actual_gap": 10.010705309859212,
+        "canonical_dressed_far": 4.844223313333391e-08,
+        "canonical_dressed_near": 0.000442679291300436,
+        "canonical_isometry_error": 2.461335841492479e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0021636160563896353,
+            "geometry_one_probability": 0.0004316898674153183,
+            "receiver_L0_probability": 4.0784973744101727e-16
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.000867220715764378,
+            "geometry_one_probability": 3.3601297790104904e-05,
+            "receiver_L0_probability": 4.119283376598156e-14
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0011144306389391915,
+            "geometry_one_probability": 0.00042261201774113153,
+            "receiver_L0_probability": 1.2453695856275676e-14
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0008380844301408307,
+            "geometry_one_probability": 6.701456810004658e-05,
+            "receiver_L0_probability": 4.687144858231235e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 12.0,
+      "delta": 12.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 8.5,
+        "full_spectral_gap_lower": 8.5,
+        "low_bottom_lower": -0.014705882352941176,
+        "shortcut_floor_all_low_energies": 1.8768916158352387e-07,
+        "bare_P0_total_Q_probability_upper": 0.006872852233676976,
+        "shortcut_five_edge_lower_E0": 1.8838011188271604e-07,
+        "nearest_lower_all_low_energies": 0.0004329659365173058,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00044387108834127395,
+          "far": 1.9427546366442516e-07,
+          "far_near": 0.00043768442858133365,
+          "linear_solve_residual": 7.333738256133695e-18
+        },
+        {
+          "E": -0.014705882352941176,
+          "near": 0.0004427610350139695,
+          "far": 1.9355110942259097e-07,
+          "far_near": 0.0004371457606166366,
+          "linear_solve_residual": 7.855764760671023e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.011452182186632295,
+        "low_max": -0.009668942291129912,
+        "high_min": 10.001025413722584,
+        "Q_min": 9.994765684759484,
+        "actual_gap": 10.010694356013714,
+        "canonical_dressed_far": 1.9357998783489057e-07,
+        "canonical_dressed_near": 0.00044267979982599024,
+        "canonical_isometry_error": 7.590086481376048e-14,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.003454427713998206,
+            "geometry_one_probability": 0.0017247509737664285,
+            "receiver_L0_probability": 6.5217451795509614e-15
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.0009641793832626601,
+            "geometry_one_probability": 0.00013063662771550138,
+            "receiver_L0_probability": 6.579559252298861e-13
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.002367945207963773,
+            "geometry_one_probability": 0.0016769069182488254,
+            "receiver_L0_probability": 2.318357361144112e-13
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0012112905871206594,
+            "geometry_one_probability": 0.00044098342123062,
+            "receiver_L0_probability": 5.577197487037042e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 12.0,
+      "delta": 12.0,
+      "lam": 0.5,
+      "constants": {
+        "Q_gap_lower": 8.25,
+        "full_spectral_gap_lower": 8.25,
+        "low_bottom_lower": -0.03787878787878788,
+        "shortcut_floor_all_low_energies": 7.46427795915509e-07,
+        "bare_P0_total_Q_probability_upper": 0.018034265103697024,
+        "shortcut_five_edge_lower_E0": 7.535204475308642e-07,
+        "nearest_lower_all_low_energies": 0.0004313006228709731,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00044563386996890276,
+          "far": 7.781642972216963e-07,
+          "far_near": 0.0017461964847420555,
+          "linear_solve_residual": 3.169470398249354e-17
+        },
+        {
+          "E": -0.03787878787878788,
+          "near": 0.0004427643146156842,
+          "far": 7.707139222008333e-07,
+          "far_near": 0.001740686628889247,
+          "linear_solve_residual": 1.0008742990318108e-16
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.02704342332442818,
+        "low_max": -0.025260170313140907,
+        "high_min": 9.98539039490047,
+        "Q_min": 9.979090408126517,
+        "actual_gap": 10.010650565213611,
+        "canonical_dressed_far": 7.713131369856549e-07,
+        "canonical_dressed_near": 0.0004426818240900854,
+        "canonical_isometry_error": 1.260193119012043e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.008587671055413179,
+            "geometry_one_probability": 0.006866939859629741,
+            "receiver_L0_probability": 1.04101794301657e-13
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.0012978156609539486,
+            "geometry_one_probability": 0.00046452089584105374,
+            "receiver_L0_probability": 1.045319995289918e-11
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0071325689655977595,
+            "geometry_one_probability": 0.006444456717011438,
+            "receiver_L0_probability": 6.321160195522264e-12
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.005817923789085302,
+            "geometry_one_probability": 0.005051283579101314,
+            "receiver_L0_probability": 6.229403127962427e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 16.0,
+      "delta": 16.0,
+      "lam": 0.0,
+      "constants": {
+        "Q_gap_lower": 12.75,
+        "full_spectral_gap_lower": 12.75,
+        "low_bottom_lower": -0.004901960784313725,
+        "shortcut_floor_all_low_energies": 0.0,
+        "bare_P0_total_Q_probability_upper": 0.0015355086372360845,
+        "shortcut_five_edge_lower_E0": 0.0,
+        "nearest_lower_all_low_energies": 0.00024399109774887496,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00024703941743560226,
+          "far": 2.6240855180891276e-41,
+          "far_near": 1.0622132877937055e-37,
+          "linear_solve_residual": 1.8179689333532594e-18
+        },
+        {
+          "E": -0.004901960784313725,
+          "near": 0.0002468863170376061,
+          "far": 2.597479074994418e-41,
+          "far_near": 1.0520951935132015e-37,
+          "linear_solve_residual": 5.551129191215688e-17
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.004462863060949765,
+        "low_max": -0.0034715526845556367,
+        "high_min": 14.004462863060953,
+        "Q_min": 13.999999999999993,
+        "actual_gap": 14.007934415745508,
+        "canonical_dressed_far": 1.3955793799006957e-18,
+        "canonical_dressed_near": 0.00024685358090697156,
+        "canonical_isometry_error": 1.2109886588411605e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0008277896066735659,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 0.0
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.0006238186735187528,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 1.1816421589134944e-79
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0004960339806711779,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 3.097549338177514e-34
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0006530938062261744,
+            "geometry_one_probability": 0.0,
+            "receiver_L0_probability": 1.2754136332681584e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 16.0,
+      "delta": 16.0,
+      "lam": 0.125,
+      "constants": {
+        "Q_gap_lower": 12.625,
+        "full_spectral_gap_lower": 12.625,
+        "low_bottom_lower": -0.006188118811881188,
+        "shortcut_floor_all_low_energies": 1.4883884598238758e-08,
+        "bare_P0_total_Q_probability_upper": 0.0019567556990509735,
+        "shortcut_five_edge_lower_E0": 1.4901161193847656e-08,
+        "nearest_lower_all_low_energies": 0.00024395188810086402,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00024708505031142627,
+          "far": 1.515721856941429e-08,
+          "far_near": 6.134413454116352e-05,
+          "linear_solve_residual": 5.748342270102067e-17
+        },
+        {
+          "E": -0.006188118811881188,
+          "near": 0.0002468917442183799,
+          "far": 1.5139485333511282e-08,
+          "far_near": 6.132033852100032e-05,
+          "linear_solve_residual": 5.551246292854649e-18
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.005439366590828791,
+        "low_max": -0.004448055966643573,
+        "high_min": 14.003484340317312,
+        "Q_min": 13.999019558939041,
+        "actual_gap": 14.007932396283955,
+        "canonical_dressed_far": 1.513826086184692e-08,
+        "canonical_dressed_near": 0.00024685361062426925,
+        "canonical_isometry_error": 1.9246198599566044e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0010293888882540324,
+            "geometry_one_probability": 0.0002017681001376088,
+            "receiver_L0_probability": 1.9842413611496148e-16
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.00086252214869651,
+            "geometry_one_probability": 0.00023884060266619756,
+            "receiver_L0_probability": 6.113577759085312e-16
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0006303157638941148,
+            "geometry_one_probability": 0.00013433894885327968,
+            "receiver_L0_probability": 1.32797273872025e-14
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0008970163419422115,
+            "geometry_one_probability": 0.00024403146851667575,
+            "receiver_L0_probability": 1.2764094028742514e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 16.0,
+      "delta": 16.0,
+      "lam": 0.25,
+      "constants": {
+        "Q_gap_lower": 12.5,
+        "full_spectral_gap_lower": 12.5,
+        "low_bottom_lower": -0.01,
+        "shortcut_floor_all_low_energies": 5.949301981320379e-08,
+        "bare_P0_total_Q_probability_upper": 0.003189792663476874,
+        "shortcut_five_edge_lower_E0": 5.960464477539063e-08,
+        "nearest_lower_all_low_energies": 0.00024383573508281244,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.00024722198306339533,
+          "far": 6.06402772147142e-08,
+          "far_near": 0.0002452867518628558,
+          "linear_solve_residual": 6.633617390398205e-19
+        },
+        {
+          "E": -0.01,
+          "near": 0.00024690942557204485,
+          "far": 6.05256699431006e-08,
+          "far_near": 0.00024513308798509206,
+          "linear_solve_residual": 8.433274047326736e-18
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.008368162360892996,
+        "low_max": -0.007376850991870958,
+        "high_min": 14.000549487417931,
+        "Q_min": 13.996078966563415,
+        "actual_gap": 14.007926338409803,
+        "canonical_dressed_far": 6.051980851961635e-08,
+        "canonical_dressed_near": 0.0002468536997112273,
+        "canonical_isometry_error": 1.6573298658840993e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0016330559550283537,
+            "geometry_one_probability": 0.0008059406752764012,
+            "receiver_L0_probability": 3.172821727006978e-15
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.001577098359819443,
+            "geometry_one_probability": 0.0009538274876617158,
+            "receiver_L0_probability": 9.788089067791562e-15
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.001018541664847923,
+            "geometry_one_probability": 0.00052273109111512,
+            "receiver_L0_probability": 2.1856003679672624e-13
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0016211502807599526,
+            "geometry_one_probability": 0.0009684693057572584,
+            "receiver_L0_probability": 1.2547304398664932e-09
+          }
+        ]
+      }
+    },
+    {
+      "N": 64,
+      "distance": 32,
+      "Delta": 16.0,
+      "delta": 16.0,
+      "lam": 0.5,
+      "constants": {
+        "Q_gap_lower": 12.25,
+        "full_spectral_gap_lower": 12.25,
+        "low_bottom_lower": -0.025510204081632654,
+        "shortcut_floor_all_low_energies": 2.3728166037894942e-07,
+        "bare_P0_total_Q_probability_upper": 0.008261049153242462,
+        "shortcut_five_edge_lower_E0": 2.384185791015625e-07,
+        "nearest_lower_all_low_energies": 0.00024336397327314203,
+        "N": 64,
+        "distance": 32
+      },
+      "Schur": [
+        {
+          "E": 0.0,
+          "near": 0.0002477702263254225,
+          "far": 2.4274368612452135e-07,
+          "far_near": 0.0009797128966000164,
+          "linear_solve_residual": 6.218872738748706e-17
+        },
+        {
+          "E": -0.025510204081632654,
+          "near": 0.0002469711233198545,
+          "far": 2.4157509148462673e-07,
+          "far_near": 0.0009781511629266904,
+          "linear_solve_residual": 4.862703788136631e-18
+        }
+      ],
+      "spectrum": {
+        "low_min": -0.020072644034887604,
+        "low_max": -0.01908132966460631,
+        "high_min": 13.988820784913553,
+        "Q_min": 13.984327536111335,
+        "actual_gap": 14.00790211457816,
+        "canonical_dressed_far": 2.415490926576383e-07,
+        "canonical_dressed_near": 0.0002468540550851327,
+        "canonical_isometry_error": 1.0012716996428219e-13,
+        "full_dynamics_checks": [
+          {
+            "t": 0.25,
+            "Q_probability": 0.0040308093358934,
+            "geometry_one_probability": 0.0032057019191150094,
+            "receiver_L0_probability": 5.06395877417818e-14
+          },
+          {
+            "t": 1.0,
+            "Q_probability": 0.004411856548084918,
+            "geometry_one_probability": 0.0037902174433984354,
+            "receiver_L0_probability": 1.5701802218196097e-13
+          },
+          {
+            "t": 5.0,
+            "Q_probability": 0.0023525073755535832,
+            "geometry_one_probability": 0.001857284086445755,
+            "receiver_L0_probability": 3.883105840827613e-12
+          },
+          {
+            "t": 32.0,
+            "Q_probability": 0.0037774645662944388,
+            "geometry_one_probability": 0.0031255312700901984,
+            "receiver_L0_probability": 8.309858878397348e-10
+          }
+        ]
+      }
+    }
+  ],
+  "dense": [
+    {
+      "N": 8,
+      "reference_ring_distance": 4,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 0.00015664160401002505,
+      "N_minus_1_times_far": 0.0010964912280701754,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 16,
+      "reference_ring_distance": 8,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 7.378984651711924e-05,
+      "N_minus_1_times_far": 0.0011068476977567885,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 32,
+      "reference_ring_distance": 16,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 3.5857716580608144e-05,
+      "N_minus_1_times_far": 0.0011115892139988526,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 64,
+      "reference_ring_distance": 32,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 1.768033946251768e-05,
+      "N_minus_1_times_far": 0.0011138613861386138,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 128,
+      "reference_ring_distance": 64,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 8.779322938614974e-06,
+      "N_minus_1_times_far": 0.0011149740132041016,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 256,
+      "reference_ring_distance": 128,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 4.374606285434311e-06,
+      "N_minus_1_times_far": 0.0011155246027857494,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 512,
+      "reference_ring_distance": 256,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 2.183558676588757e-06,
+      "N_minus_1_times_far": 0.001115798483736855,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 1024,
+      "reference_ring_distance": 512,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 1.0908456235273583e-06,
+      "N_minus_1_times_far": 0.0011159350728684875,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    },
+    {
+      "N": 4096,
+      "reference_ring_distance": 2048,
+      "normalized_full_degree_rate": 1.0,
+      "Q_gap": 7.0,
+      "far_Feshbach_E0": 2.7253659621413963e-07,
+      "N_minus_1_times_far": 0.0011160373614969017,
+      "meaning": "A size-stable gap and bounded total hopping still give a 1/N tail in the independently fixed ring metric."
+    }
+  ],
+  "source": [
+    {
+      "N": 16,
+      "variance": 0.24999955170484553,
+      "preparation": "Supplied dressed (|0>+|1>)/sqrt(2) fixture. NOT the CP-12 neutral preparation.",
+      "physical_source": "Bare local neutral-probe L-number phase; full two-band H retained.",
+      "rows": [
+        {
+          "t": 0.25,
+          "norm_error": 2.220446049250313e-16,
+          "finite_pulse_error": 6.72069821669452e-17,
+          "bare_source_high_probability": 0.0027486078721724446,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012181162987173065
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": -7.870768639571753e-05
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 4.1820028049755314e-10
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": -1.9963052635813417e-11
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -8.475952583219883e-14
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 4.532181974589111e-16
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": 2.6196901622278403e-18
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -5.455647454401061e-21
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -9.154894367359613e-23
+            }
+          ]
+        },
+        {
+          "t": 1.0,
+          "norm_error": 1.2212453270876722e-15,
+          "finite_pulse_error": 3.6505087147586934e-16,
+          "bare_source_high_probability": 0.0016048655555390408,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012719229668077298
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.0009513797719067949
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": -2.2533584683040532e-07
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 1.1256268386570277e-08
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 6.387422801560973e-10
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 3.059725188745175e-12
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -2.3078010205012576e-13
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -2.5617659752443538e-15
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": 8.249865721690434e-17
+            }
+          ]
+        },
+        {
+          "t": 32.0,
+          "norm_error": 1.7985612998927536e-14,
+          "finite_pulse_error": 3.7143899067615394e-14,
+          "bare_source_high_probability": 0.0022440669605845857,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.03226073336851002
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.03273722226309729
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 2.9173590818008327e-05
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 1.0860761767072143e-06
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -4.627212238774228e-08
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": -1.7405607592913846e-08
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -2.1739513761988795e-09
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -3.914565820078536e-11
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -5.131490631803023e-11
+            }
+          ]
+        },
+        {
+          "t": 128.0,
+          "norm_error": 6.151745779447992e-13,
+          "finite_pulse_error": 1.0122458427019865e-13,
+          "bare_source_high_probability": 0.0022256790235080336,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.12668745105961982
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.1274007076096972
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 0.0011066999223882572
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 1.9053597199530505e-05
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 4.624944508790508e-07
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": -7.62076841441087e-09
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -1.1534722375460087e-08
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -9.16175610572109e-11
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": 4.6177025331358397e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 32,
+      "variance": 0.24999955170484547,
+      "preparation": "Supplied dressed (|0>+|1>)/sqrt(2) fixture. NOT the CP-12 neutral preparation.",
+      "physical_source": "Bare local neutral-probe L-number phase; full two-band H retained.",
+      "rows": [
+        {
+          "t": 0.25,
+          "norm_error": 2.220446049250313e-16,
+          "finite_pulse_error": 6.709856194969666e-17,
+          "bare_source_high_probability": 0.0027486078721724446,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012181162987170654
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": -7.870768639571764e-05
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 4.1820028047845866e-10
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": -1.9963052632030142e-11
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -8.475952349222221e-14
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 4.532179528109231e-16
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": 2.6195390624082388e-18
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -5.447951098657984e-21
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -4.0127126942118827e-23
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": 3.9608867641872455e-26
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": 3.7983889573023257e-28
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -1.8346124744794586e-31
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": -2.466831007087076e-33
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 5.261483434744482e-37
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 1.176830591996362e-38
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -3.916621678665744e-43
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -9.184673698984642e-44
+            }
+          ]
+        },
+        {
+          "t": 1.0,
+          "norm_error": 1.5543122344752192e-15,
+          "finite_pulse_error": 4.1405680967221414e-16,
+          "bare_source_high_probability": 0.001604865555539021,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012719229668059467
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.0009513797719067051
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": -2.2533584682735928e-07
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 1.1256268382292806e-08
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 6.387422684479823e-10
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 3.0597352034816574e-12
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -2.3075646958193286e-13
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -2.5890217840567e-15
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": 3.6798731026814365e-17
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": 6.075700823127936e-19
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -3.1349169893268144e-21
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -7.98631998578278e-23
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 1.2681071460778726e-25
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 7.001071261655869e-27
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 2.3771436949744116e-30
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -4.4428314153725055e-31
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -1.1231942856904131e-33
+            }
+          ]
+        },
+        {
+          "t": 32.0,
+          "norm_error": 1.9539925233402755e-14,
+          "finite_pulse_error": 5.1784965204859645e-14,
+          "bare_source_high_probability": 0.002095931479358704,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.032375053435431365
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.03263543789784215
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 2.4180999936434712e-05
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 8.130269313141848e-07
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -1.5789635989706497e-07
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": -1.801308860093214e-08
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -1.8668941328353555e-09
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -9.123589847194919e-11
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -2.2494704670137158e-11
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": -2.2083961745752898e-13
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -1.6120215530468316e-13
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": 2.060071397984753e-14
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 1.4082576523820586e-14
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 7.027955748595435e-16
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 1.2392487486108967e-16
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -9.819569262822199e-18
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -1.952862694158597e-18
+            }
+          ]
+        },
+        {
+          "t": 128.0,
+          "norm_error": 5.947464742916964e-13,
+          "finite_pulse_error": 1.4094281297616362e-13,
+          "bare_source_high_probability": 0.002521159101969817,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.1270303411674076
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.12726851791251886
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 0.0011152120790480495
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 2.0013299181849687e-05
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 9.796341191828517e-07
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 5.45252771332024e-09
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -1.5570230816364442e-08
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -1.8413770579344587e-10
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": 2.1577100579018038e-10
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": -1.3146638255406927e-11
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -7.752027997022242e-13
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -7.492721329730209e-14
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 4.531799378354134e-14
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 2.7999321491032424e-15
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 1.90428756895912e-15
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": 2.15235847916464e-16
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": 1.4280893235258617e-16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 64,
+      "variance": 0.2499995517048455,
+      "preparation": "Supplied dressed (|0>+|1>)/sqrt(2) fixture. NOT the CP-12 neutral preparation.",
+      "physical_source": "Bare local neutral-probe L-number phase; full two-band H retained.",
+      "rows": [
+        {
+          "t": 0.25,
+          "norm_error": 0.0,
+          "finite_pulse_error": 6.705790436822845e-17,
+          "bare_source_high_probability": 0.0027486078721724446,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012181162987170654
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": -7.870768639571768e-05
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 4.182002804770236e-10
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": -1.996305263204182e-11
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -8.475952348958447e-14
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 4.532179527860369e-16
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": 2.6195390762112015e-18
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -5.447951099000319e-21
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -4.012713389833543e-23
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": 3.960887185810078e-26
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": 3.798383663625302e-28
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -1.8346174787088364e-31
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": -2.465863805184042e-33
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 5.227939247671548e-37
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 1.1450369247990305e-38
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -1.294160661062981e-44
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -6.78639569990897e-44
+            },
+            {
+              "j": 17,
+              "distance": 17,
+              "chi": 1.6624784909545785e-46
+            },
+            {
+              "j": 18,
+              "distance": 18,
+              "chi": 2.4890956700946307e-47
+            },
+            {
+              "j": 19,
+              "distance": 19,
+              "chi": 0.0
+            },
+            {
+              "j": 20,
+              "distance": 20,
+              "chi": 0.0
+            },
+            {
+              "j": 21,
+              "distance": 21,
+              "chi": 0.0
+            },
+            {
+              "j": 22,
+              "distance": 22,
+              "chi": 0.0
+            },
+            {
+              "j": 23,
+              "distance": 23,
+              "chi": 0.0
+            },
+            {
+              "j": 24,
+              "distance": 24,
+              "chi": 0.0
+            },
+            {
+              "j": 25,
+              "distance": 25,
+              "chi": 0.0
+            },
+            {
+              "j": 26,
+              "distance": 26,
+              "chi": 0.0
+            },
+            {
+              "j": 27,
+              "distance": 27,
+              "chi": 0.0
+            },
+            {
+              "j": 28,
+              "distance": 28,
+              "chi": 0.0
+            },
+            {
+              "j": 29,
+              "distance": 29,
+              "chi": 0.0
+            },
+            {
+              "j": 30,
+              "distance": 30,
+              "chi": 0.0
+            },
+            {
+              "j": 31,
+              "distance": 31,
+              "chi": 0.0
+            },
+            {
+              "j": 32,
+              "distance": 32,
+              "chi": 0.0
+            }
+          ]
+        },
+        {
+          "t": 1.0,
+          "norm_error": 7.771561172376096e-16,
+          "finite_pulse_error": 5.241033301794928e-16,
+          "bare_source_high_probability": 0.001604865555539021,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.0012719229668071675
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.0009513797719067056
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": -2.2533584682728225e-07
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 1.1256268382280553e-08
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 6.387422684463874e-10
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 3.0597352005190996e-12
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -2.30756469542852e-13
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -2.589021781755424e-15
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": 3.679872935582002e-17
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": 6.075699718356577e-19
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -3.1349203926094084e-21
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -7.986306378183901e-23
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 1.2694121211720564e-25
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 7.012421060933388e-27
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 1.561011754540657e-30
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -4.608638550345174e-31
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -1.7060456300499033e-33
+            },
+            {
+              "j": 17,
+              "distance": 17,
+              "chi": -1.345879045372415e-34
+            },
+            {
+              "j": 18,
+              "distance": 18,
+              "chi": 2.282528535245511e-35
+            },
+            {
+              "j": 19,
+              "distance": 19,
+              "chi": 4.012042389789931e-37
+            },
+            {
+              "j": 20,
+              "distance": 20,
+              "chi": -5.190023108992995e-39
+            },
+            {
+              "j": 21,
+              "distance": 21,
+              "chi": 9.112217544836313e-40
+            },
+            {
+              "j": 22,
+              "distance": 22,
+              "chi": -5.821828476800079e-41
+            },
+            {
+              "j": 23,
+              "distance": 23,
+              "chi": -2.563602958800136e-43
+            },
+            {
+              "j": 24,
+              "distance": 24,
+              "chi": 5.402358190424896e-44
+            },
+            {
+              "j": 25,
+              "distance": 25,
+              "chi": 4.614988365066133e-46
+            },
+            {
+              "j": 26,
+              "distance": 26,
+              "chi": 6.728046291792833e-48
+            },
+            {
+              "j": 27,
+              "distance": 27,
+              "chi": 4.773711319905854e-50
+            },
+            {
+              "j": 28,
+              "distance": 28,
+              "chi": -1.1523487558884499e-49
+            },
+            {
+              "j": 29,
+              "distance": 29,
+              "chi": -5.437133179789049e-51
+            },
+            {
+              "j": 30,
+              "distance": 30,
+              "chi": 3.8270610912712703e-53
+            },
+            {
+              "j": 31,
+              "distance": 31,
+              "chi": -8.911644511764362e-54
+            },
+            {
+              "j": 32,
+              "distance": 32,
+              "chi": 9.080617062353235e-55
+            }
+          ]
+        },
+        {
+          "t": 32.0,
+          "norm_error": 8.104628079763643e-14,
+          "finite_pulse_error": 4.874572967494828e-14,
+          "bare_source_high_probability": 0.001826426045634903,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.032286552007631676
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.032601218211971685
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 2.1576171970950214e-05
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 8.242718821759098e-07
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": -1.080788849414164e-07
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": -7.337452920207818e-09
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": 1.2253103212697718e-10
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": 4.688725319157199e-11
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -3.575861489485127e-12
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": -3.489403515660438e-13
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -5.30062193622032e-13
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": -1.1732553715678642e-14
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 2.844905230620193e-15
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": 9.149038854536379e-17
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": 7.01237581459958e-17
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -9.214136015015185e-18
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": -8.675430858271813e-19
+            },
+            {
+              "j": 17,
+              "distance": 17,
+              "chi": -1.5354648443666982e-20
+            },
+            {
+              "j": 18,
+              "distance": 18,
+              "chi": 9.407630487645718e-20
+            },
+            {
+              "j": 19,
+              "distance": 19,
+              "chi": -7.501310573791816e-20
+            },
+            {
+              "j": 20,
+              "distance": 20,
+              "chi": 2.995429810502509e-20
+            },
+            {
+              "j": 21,
+              "distance": 21,
+              "chi": 8.38899205906886e-20
+            },
+            {
+              "j": 22,
+              "distance": 22,
+              "chi": -8.967284795574868e-20
+            },
+            {
+              "j": 23,
+              "distance": 23,
+              "chi": 4.263602191128096e-22
+            },
+            {
+              "j": 24,
+              "distance": 24,
+              "chi": 3.755109001327607e-20
+            },
+            {
+              "j": 25,
+              "distance": 25,
+              "chi": -6.401451217517114e-21
+            },
+            {
+              "j": 26,
+              "distance": 26,
+              "chi": -5.014775966369958e-21
+            },
+            {
+              "j": 27,
+              "distance": 27,
+              "chi": 2.0202953698093415e-21
+            },
+            {
+              "j": 28,
+              "distance": 28,
+              "chi": -2.134549414648257e-20
+            },
+            {
+              "j": 29,
+              "distance": 29,
+              "chi": 3.805785879542036e-22
+            },
+            {
+              "j": 30,
+              "distance": 30,
+              "chi": -2.680287641587823e-21
+            },
+            {
+              "j": 31,
+              "distance": 31,
+              "chi": 7.529249004821442e-21
+            },
+            {
+              "j": 32,
+              "distance": 32,
+              "chi": -2.876009154164896e-20
+            }
+          ]
+        },
+        {
+          "t": 128.0,
+          "norm_error": 7.308598171107406e-13,
+          "finite_pulse_error": 1.912359159916832e-14,
+          "bare_source_high_probability": 0.0024554930601771835,
+          "receiver_response": [
+            {
+              "j": 0,
+              "distance": 0,
+              "chi": -0.1271499317994949
+            },
+            {
+              "j": 1,
+              "distance": 1,
+              "chi": 0.12719240505939455
+            },
+            {
+              "j": 2,
+              "distance": 2,
+              "chi": 0.0011061880322783843
+            },
+            {
+              "j": 3,
+              "distance": 3,
+              "chi": 2.0038935107367614e-05
+            },
+            {
+              "j": 4,
+              "distance": 4,
+              "chi": 7.772633314191451e-07
+            },
+            {
+              "j": 5,
+              "distance": 5,
+              "chi": 6.756165330265459e-10
+            },
+            {
+              "j": 6,
+              "distance": 6,
+              "chi": -1.3517232443073914e-08
+            },
+            {
+              "j": 7,
+              "distance": 7,
+              "chi": -1.2368368062614267e-10
+            },
+            {
+              "j": 8,
+              "distance": 8,
+              "chi": -1.4192427715979195e-11
+            },
+            {
+              "j": 9,
+              "distance": 9,
+              "chi": -1.982978494448165e-11
+            },
+            {
+              "j": 10,
+              "distance": 10,
+              "chi": -1.6868429279779975e-13
+            },
+            {
+              "j": 11,
+              "distance": 11,
+              "chi": 5.292730280555084e-13
+            },
+            {
+              "j": 12,
+              "distance": 12,
+              "chi": 3.7605668898607734e-14
+            },
+            {
+              "j": 13,
+              "distance": 13,
+              "chi": -2.344627301894559e-15
+            },
+            {
+              "j": 14,
+              "distance": 14,
+              "chi": -4.551127930837622e-16
+            },
+            {
+              "j": 15,
+              "distance": 15,
+              "chi": -1.583729518528229e-16
+            },
+            {
+              "j": 16,
+              "distance": 16,
+              "chi": 6.182959390404052e-17
+            },
+            {
+              "j": 17,
+              "distance": 17,
+              "chi": 5.780334958773858e-18
+            },
+            {
+              "j": 18,
+              "distance": 18,
+              "chi": 9.603155628758907e-19
+            },
+            {
+              "j": 19,
+              "distance": 19,
+              "chi": 9.596493658615773e-20
+            },
+            {
+              "j": 20,
+              "distance": 20,
+              "chi": 3.62119197573348e-21
+            },
+            {
+              "j": 21,
+              "distance": 21,
+              "chi": 8.901888938963018e-21
+            },
+            {
+              "j": 22,
+              "distance": 22,
+              "chi": -1.69983116431559e-19
+            },
+            {
+              "j": 23,
+              "distance": 23,
+              "chi": 2.706596004673803e-20
+            },
+            {
+              "j": 24,
+              "distance": 24,
+              "chi": -1.1239917426636293e-19
+            },
+            {
+              "j": 25,
+              "distance": 25,
+              "chi": 8.592369045145169e-21
+            },
+            {
+              "j": 26,
+              "distance": 26,
+              "chi": -2.1582231126839902e-21
+            },
+            {
+              "j": 27,
+              "distance": 27,
+              "chi": -1.652506530691809e-21
+            },
+            {
+              "j": 28,
+              "distance": 28,
+              "chi": 2.5633648668366394e-20
+            },
+            {
+              "j": 29,
+              "distance": 29,
+              "chi": -2.038074257960555e-20
+            },
+            {
+              "j": 30,
+              "distance": 30,
+              "chi": -3.551835297067684e-21
+            },
+            {
+              "j": 31,
+              "distance": 31,
+              "chi": 1.7512031400222088e-20
+            },
+            {
+              "j": 32,
+              "distance": 32,
+              "chi": 3.632345274419453e-20
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "CP12_activation": {
+    "status": "PASS",
+    "rows": [
+      {
+        "N": 8,
+        "ring_flux": 1,
+        "distance": 4,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 140,
+          "target_second_power_states": 140,
+          "Gauss_checks": 140,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 8,
+        "ring_flux": 3,
+        "distance": 4,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 140,
+          "target_second_power_states": 140,
+          "Gauss_checks": 140,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 8,
+        "ring_flux": 8,
+        "distance": 4,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 140,
+          "target_second_power_states": 140,
+          "Gauss_checks": 140,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 12,
+        "ring_flux": 1,
+        "distance": 6,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 322,
+          "target_second_power_states": 322,
+          "Gauss_checks": 322,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 12,
+        "ring_flux": 3,
+        "distance": 6,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 322,
+          "target_second_power_states": 322,
+          "Gauss_checks": 322,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 12,
+        "ring_flux": 8,
+        "distance": 6,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 322,
+          "target_second_power_states": 322,
+          "Gauss_checks": 322,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 16,
+        "ring_flux": 1,
+        "distance": 8,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 584,
+          "target_second_power_states": 584,
+          "Gauss_checks": 584,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 16,
+        "ring_flux": 3,
+        "distance": 8,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 584,
+          "target_second_power_states": 584,
+          "Gauss_checks": 584,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 16,
+        "ring_flux": 8,
+        "distance": 8,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 584,
+          "target_second_power_states": 584,
+          "Gauss_checks": 584,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 24,
+        "ring_flux": 1,
+        "distance": 12,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 1348,
+          "target_second_power_states": 1348,
+          "Gauss_checks": 1348,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 24,
+        "ring_flux": 3,
+        "distance": 12,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 1348,
+          "target_second_power_states": 1348,
+          "Gauss_checks": 1348,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      },
+      {
+        "N": 24,
+        "ring_flux": 8,
+        "distance": 12,
+        "all_30_word_sum": "-4",
+        "nonzero_words": {
+          "CGTCG": "-1",
+          "CGTGC": "-1",
+          "GCTCG": "-1",
+          "GCTGC": "-1"
+        },
+        "independent_full_H5": {
+          "value": "-4",
+          "lower_powers_zero_through": 4,
+          "method": "Full-H meet-in-the-middle <H^2 target|H|H^2 source>; all diagonals, rewiring and high-band hops retained.",
+          "source_second_power_states": 1348,
+          "target_second_power_states": 1348,
+          "Gauss_checks": 1348,
+          "vacuum_full_operator_identity_checked": true
+        },
+        "bare_Feshbach_CGTGC_word": "-1",
+        "probe_vacuum_added_terms_zero": true,
+        "meaning": "H_WM1^5 coefficient = -4*g^2*v; no diagonal term or other five-step word can reach this receiver with restored geometry."
+      }
+    ],
+    "amplitude_leading": "i*g^2*v*t^5/30",
+    "probability_leading": "g^4*v^2*t^10/900",
+    "limits": "Fixed-N exact Taylor coefficients on supplied charged states. Not a uniform finite-time large-N estimate, not an original-neutral source experiment, and not an all-orders CP-12 Schur-complement bound."
+  },
+  "interpretation": "Conditional all-orders transport module: proved. Complete WM1 architecture: not accepted. Coupled original-neutral spatial phase and universal protected matter: not established.",
+  "arithmetic": "Analytic all-size bounds and exact rational CP-12 words; ordinary floating-point matrix controls, not outward-rounded numerical certificates."
+}
