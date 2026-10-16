@@ -1,0 +1,871 @@
+{
+  "status": "PASS",
+  "N": 5,
+  "Q": 6,
+  "budget": 256,
+  "dimension": 118056,
+  "outside": 6303,
+  "krylov": {
+    "krylov_dimension": 128,
+    "orthogonality_error": 1.1732538184622961e-14,
+    "projected_H_asymmetry": 8.693962703827627e-14,
+    "full_finite_H_relation_defect_frobenius": 2.302475786722627e-13,
+    "last_column_residual_norm": 11.475912757076149,
+    "boundary_QR_relative_norm_check": 1.6653345369377348e-16,
+    "seconds": 2.873206492999998
+  },
+  "rows": [
+    {
+      "time": 0.0,
+      "state_error": 0.0,
+      "error_channels": {},
+      "geometry": {
+        "connectivity_probability": 0.9761904761904763,
+        "disconnected_probability": 0.023809523809523725,
+        "diameter_distribution": {
+          "2": 0.6904761904761906,
+          "3": 0.28571428571428575
+        },
+        "mean_balls": [
+          1.0000000000000002,
+          3.4000000000000004,
+          4.847619047619048,
+          4.961904761904762,
+          4.961904761904762
+        ],
+        "mean_balls_given_connected": [
+          1.0,
+          3.4,
+          4.8829268292682935,
+          5.0,
+          5.0
+        ],
+        "mean_pair_distance_given_connected": 1.4292682926829265,
+        "disconnected_pair_probability": 0.009523809523809525,
+        "degree_distribution": [
+          0.004761904761904762,
+          0.1142857142857143,
+          0.42857142857142866,
+          0.380952380952381,
+          0.07142857142857144
+        ]
+      },
+      "connectivity_interval": [
+        0.9761904752024527,
+        0.9761904771784998
+      ],
+      "diameter_intervals": {
+        "2": [
+          0.6904761896452415,
+          0.6904761913071396
+        ],
+        "3": [
+          0.2857142851797632,
+          0.2857142862488083
+        ]
+      },
+      "mean_ball_intervals": [
+        [
+          0.9999999977639323,
+          1.000000002236068
+        ],
+        [
+          3.3999999958768945,
+          3.4000000041231058
+        ],
+        [
+          4.847619042695827,
+          4.847619052542268
+        ],
+        [
+          4.961904756923846,
+          4.961904766885678
+        ],
+        [
+          4.961904756923846,
+          4.961904766885678
+        ]
+      ],
+      "host_classes": [
+        {
+          "mask": 63,
+          "labelled_count": 60,
+          "probability": 0.28571428571428575,
+          "interval": [
+            0.2857142851797632,
+            0.2857142862488083
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.0000000000000002,
+          "probability_per_labelled_host": 0.004761904761904762
+        },
+        {
+          "mask": 126,
+          "labelled_count": 10,
+          "probability": 0.04761904761904761,
+          "interval": [
+            0.047619047400829714,
+            0.047619047837265505
+          ],
+          "uniform_probability": 0.047619047619047616,
+          "selection_ratio": 0.9999999999999999,
+          "probability_per_labelled_host": 0.004761904761904761
+        },
+        {
+          "mask": 183,
+          "labelled_count": 5,
+          "probability": 0.02380952380952381,
+          "interval": [
+            0.023809523655220457,
+            0.023809523963827163
+          ],
+          "uniform_probability": 0.023809523809523808,
+          "selection_ratio": 1.0000000000000002,
+          "probability_per_labelled_host": 0.004761904761904762
+        },
+        {
+          "mask": 187,
+          "labelled_count": 60,
+          "probability": 0.28571428571428575,
+          "interval": [
+            0.2857142851797632,
+            0.2857142862488083
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.0000000000000002,
+          "probability_per_labelled_host": 0.004761904761904762
+        },
+        {
+          "mask": 207,
+          "labelled_count": 15,
+          "probability": 0.07142857142857144,
+          "interval": [
+            0.0714285711613102,
+            0.07142857169583267
+          ],
+          "uniform_probability": 0.07142857142857142,
+          "selection_ratio": 1.0000000000000002,
+          "probability_per_labelled_host": 0.004761904761904762
+        },
+        {
+          "mask": 221,
+          "labelled_count": 60,
+          "probability": 0.28571428571428575,
+          "interval": [
+            0.2857142851797632,
+            0.2857142862488083
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.0000000000000002,
+          "probability_per_labelled_host": 0.004761904761904762
+        }
+      ],
+      "total_variation_from_uniform": 9.540979117872439e-17,
+      "total_variation_interval": [
+        0.0,
+        5.000000954097912e-10
+      ],
+      "complete_record_work": 0.23999999999999977,
+      "complete_record_work_interval": [
+        0.23999999949999976,
+        0.24000000049999978
+      ],
+      "complete_record_entropy_bits": 7.714245517666123,
+      "complete_record_entropy_interval_bits": [
+        7.714245503596841,
+        7.714245517666122
+      ],
+      "source_class_probability": 0.28571428571428575,
+      "source_class_probability_interval": [
+        0.2857142851797632,
+        0.2857142862488083
+      ],
+      "fixed_source_peripheral_class_probability": 0.05714285714285715
+    },
+    {
+      "time": 0.5,
+      "state_error": 5.811751422013968e-10,
+      "error_channels": {
+        "electric_boundary": 3.1406740328407114e-11,
+        "last_column": 4.965327808365349e-11
+      },
+      "geometry": {
+        "connectivity_probability": 0.9761936101885716,
+        "disconnected_probability": 0.023806389811428352,
+        "diameter_distribution": {
+          "2": 0.6904796414850578,
+          "3": 0.2857139687035138
+        },
+        "mean_balls": [
+          0.9999999999999855,
+          3.39999999999995,
+          4.847624188820259,
+          4.961909776301664,
+          4.961909776301664
+        ],
+        "mean_balls_given_connected": [
+          1.0,
+          3.3999999999999995,
+          4.882927335019812,
+          4.999999999999999,
+          4.999999999999999
+        ],
+        "mean_pair_distance_given_connected": 1.4292681662450464,
+        "disconnected_pair_probability": 0.009522555924565522,
+        "degree_distribution": [
+          0.00476127796228276,
+          0.11428214876995063,
+          0.4285769698334983,
+          0.3809545021739974,
+          0.07142510126025647
+        ]
+      },
+      "connectivity_interval": [
+        0.9761936080521152,
+        0.976193612325028
+      ],
+      "diameter_intervals": {
+        "2": [
+          0.6904796396882505,
+          0.6904796432818651
+        ],
+        "3": [
+          0.28571396754768963,
+          0.28571396985933806
+        ]
+      },
+      "mean_ball_intervals": [
+        [
+          0.9999999951648233,
+          1.0000000048351478
+        ],
+        [
+          3.3999999910843517,
+          3.4000000089155487
+        ],
+        [
+          4.847624178174527,
+          4.847624199465991
+        ],
+        [
+          4.961909765531173,
+          4.9619097870721545
+        ],
+        [
+          4.961909765531173,
+          4.9619097870721545
+        ]
+      ],
+      "host_classes": [
+        {
+          "mask": 63,
+          "labelled_count": 60,
+          "probability": 0.2856967751462393,
+          "interval": [
+            0.28569677399044985,
+            0.28569677630202867
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9999387130118377,
+          "probability_per_labelled_host": 0.004761612919103988
+        },
+        {
+          "mask": 126,
+          "labelled_count": 10,
+          "probability": 0.047622018806927145,
+          "interval": [
+            0.047622018335048914,
+            0.04762201927880539
+          ],
+          "uniform_probability": 0.047619047619047616,
+          "selection_ratio": 1.0000623949454701,
+          "probability_per_labelled_host": 0.004762201880692715
+        },
+        {
+          "mask": 183,
+          "labelled_count": 5,
+          "probability": 0.0238063898114138,
+          "interval": [
+            0.023806389477777867,
+            0.023806390145049736
+          ],
+          "uniform_probability": 0.023809523809523808,
+          "selection_ratio": 0.9998683720793797,
+          "probability_per_labelled_host": 0.00476127796228276
+        },
+        {
+          "mask": 187,
+          "labelled_count": 60,
+          "probability": 0.2857139687035138,
+          "interval": [
+            0.28571396754768963,
+            0.28571396985933806
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9999988904622983,
+          "probability_per_labelled_host": 0.004761899478391896
+        },
+        {
+          "mask": 207,
+          "labelled_count": 15,
+          "probability": 0.07142873115504308,
+          "interval": [
+            0.07142873057713,
+            0.07142873173295615
+          ],
+          "uniform_probability": 0.07142857142857142,
+          "selection_ratio": 1.0000022361706034,
+          "probability_per_labelled_host": 0.004761915410336205
+        },
+        {
+          "mask": 221,
+          "labelled_count": 60,
+          "probability": 0.28573211637684826,
+          "interval": [
+            0.28573211522098735,
+            0.28573211753270916
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.000062407318969,
+          "probability_per_labelled_host": 0.004762201939614138
+        }
+      ],
+      "total_variation_from_uniform": 2.0961576921024738e-05,
+      "total_variation_interval": [
+        2.095991457074e-05,
+        2.0963239271309477e-05
+      ],
+      "complete_record_work": 0.1587596347784732,
+      "complete_record_work_interval": [
+        0.15875963399950915,
+        0.15875963555743727
+      ],
+      "complete_record_entropy_bits": 7.714245515657392,
+      "complete_record_entropy_interval_bits": [
+        7.714245485234697,
+        7.714245517666122
+      ],
+      "source_class_probability": 0.2857139687035138,
+      "source_class_probability_interval": [
+        0.28571396754768963,
+        0.28571396985933806
+      ],
+      "fixed_source_peripheral_class_probability": 0.05714279374070276
+    },
+    {
+      "time": 1.0,
+      "state_error": 6.623502947180675e-10,
+      "error_channels": {
+        "electric_boundary": 6.28134815603987e-11,
+        "last_column": 9.93065655789965e-11
+      },
+      "geometry": {
+        "connectivity_probability": 0.9763574760518482,
+        "disconnected_probability": 0.023642523948151806,
+        "diameter_distribution": {
+          "2": 0.6907065838731061,
+          "3": 0.285650892178742
+        },
+        "mean_balls": [
+          0.9999999999999866,
+          3.399999999999954,
+          4.847911604811414,
+          4.962171961682911,
+          4.962171961682911
+        ],
+        "mean_balls_given_connected": [
+          1.0,
+          3.4,
+          4.882972825349238,
+          4.999999999999999,
+          4.999999999999999
+        ],
+        "mean_pair_distance_given_connected": 1.4292567936626903,
+        "disconnected_pair_probability": 0.009457009579255335,
+        "degree_distribution": [
+          0.004728504789627668,
+          0.11412760037123804,
+          0.4288487522913352,
+          0.3810056751450835,
+          0.07128946740270226
+        ]
+      },
+      "connectivity_interval": [
+        0.9763574737547928,
+        0.9763574783489035
+      ],
+      "diameter_intervals": {
+        "2": [
+          0.6907065819410761,
+          0.6907065858051359
+        ],
+        "3": [
+          0.2856508909362751,
+          0.2856508934212089
+        ]
+      },
+      "mean_ball_intervals": [
+        [
+          0.999999994801798,
+          1.000000005198175
+        ],
+        [
+          3.399999990414968,
+          3.4000000095849408
+        ],
+        [
+          4.847911593366057,
+          4.847911616256773
+        ],
+        [
+          4.9621719501034605,
+          4.962171973262361
+        ],
+        [
+          4.9621719501034605,
+          4.962171973262361
+        ]
+      ],
+      "host_classes": [
+        {
+          "mask": 63,
+          "labelled_count": 60,
+          "probability": 0.28498710967744817,
+          "interval": [
+            0.28498710843642566,
+            0.28498711091847057
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9974548838710686,
+          "probability_per_labelled_host": 0.004749785161290803
+        },
+        {
+          "mask": 126,
+          "labelled_count": 10,
+          "probability": 0.04775139640306527,
+          "interval": [
+            0.047751395895069534,
+            0.047751396911061006
+          ],
+          "uniform_probability": 0.047619047619047616,
+          "selection_ratio": 1.0027793244643708,
+          "probability_per_labelled_host": 0.004775139640306527
+        },
+        {
+          "mask": 183,
+          "labelled_count": 5,
+          "probability": 0.023642523948138337,
+          "interval": [
+            0.023642523590689458,
+            0.023642524305587227
+          ],
+          "uniform_probability": 0.023809523809523808,
+          "selection_ratio": 0.9929860058218102,
+          "probability_per_labelled_host": 0.004728504789627668
+        },
+        {
+          "mask": 187,
+          "labelled_count": 60,
+          "probability": 0.285650892178742,
+          "interval": [
+            0.2856508909362751,
+            0.2856508934212089
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9997781226255971,
+          "probability_per_labelled_host": 0.004760848202979034
+        },
+        {
+          "mask": 207,
+          "labelled_count": 15,
+          "probability": 0.07146022733606312,
+          "interval": [
+            0.07146022671462313,
+            0.07146022795750315
+          ],
+          "uniform_probability": 0.07142857142857142,
+          "selection_ratio": 1.0004431827048839,
+          "probability_per_labelled_host": 0.004764015155737542
+        },
+        {
+          "mask": 221,
+          "labelled_count": 60,
+          "probability": 0.2865078504565296,
+          "interval": [
+            0.2865078492122004,
+            0.28650785170085885
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.0027774765978537,
+          "probability_per_labelled_host": 0.00477513084094216
+        }
+      ],
+      "total_variation_from_uniform": 0.0009575694337599708,
+      "total_variation_interval": [
+        0.0009575676090593809,
+        0.0009575712584605606
+      ],
+      "complete_record_work": 0.1291277317122983,
+      "complete_record_work_interval": [
+        0.12912773089437016,
+        0.12912773253022644
+      ],
+      "complete_record_entropy_bits": 7.714241460758972,
+      "complete_record_entropy_interval_bits": [
+        7.714241428053517,
+        7.714241493464426
+      ],
+      "source_class_probability": 0.285650892178742,
+      "source_class_probability_interval": [
+        0.2856508909362751,
+        0.2856508934212089
+      ],
+      "fixed_source_peripheral_class_probability": 0.0571301784357484
+    },
+    {
+      "time": 2.0,
+      "state_error": 8.247007945414338e-10,
+      "error_channels": {
+        "electric_boundary": 1.2562696805985165e-10,
+        "last_column": 1.9861333132423757e-10
+      },
+      "geometry": {
+        "connectivity_probability": 0.9783758575834125,
+        "disconnected_probability": 0.0216241424165875,
+        "diameter_distribution": {
+          "2": 0.6940912212531714,
+          "3": 0.2842846363302411
+        },
+        "mean_balls": [
+          0.999999999999974,
+          3.3999999999999115,
+          4.851687517601275,
+          4.965401372133371,
+          4.965401372133371
+        ],
+        "mean_balls_given_connected": [
+          1.0,
+          3.4,
+          4.8837728326484156,
+          5.000000000000001,
+          5.000000000000001
+        ],
+        "mean_pair_distance_given_connected": 1.429056791837896,
+        "disconnected_pair_probability": 0.008649656966624576,
+        "degree_distribution": [
+          0.004324828483312288,
+          0.11320827018544528,
+          0.4313936680130769,
+          0.38028853948421953,
+          0.07078469383391996
+        ]
+      },
+      "connectivity_interval": [
+        0.978375854962813,
+        0.978375860204012
+      ],
+      "diameter_intervals": {
+        "2": [
+          0.6940912190458982,
+          0.6940912234604444
+        ],
+        "3": [
+          0.2842846349176239,
+          0.2842846377428583
+        ]
+      },
+      "mean_ball_intervals": [
+        [
+          0.9999999940757319,
+          1.0000000059242158
+        ],
+        [
+          3.399999989076149,
+          3.400000010923674
+        ],
+        [
+          4.851687504552216,
+          4.851687530650334
+        ],
+        [
+          4.965401358932276,
+          4.9654013853344665
+        ],
+        [
+          4.965401358932276,
+          4.9654013853344665
+        ]
+      ],
+      "host_classes": [
+        {
+          "mask": 63,
+          "labelled_count": 60,
+          "probability": 0.2817567145969853,
+          "interval": [
+            0.28175671319066276,
+            0.2817567160033078
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9861485010894486,
+          "probability_per_labelled_host": 0.004695945243283089
+        },
+        {
+          "mask": 126,
+          "labelled_count": 10,
+          "probability": 0.04861798302607498,
+          "interval": [
+            0.048617982441895545,
+            0.048617983610254406
+          ],
+          "uniform_probability": 0.047619047619047616,
+          "selection_ratio": 1.0209776435475746,
+          "probability_per_labelled_host": 0.004861798302607498
+        },
+        {
+          "mask": 183,
+          "labelled_count": 5,
+          "probability": 0.02162414241656144,
+          "interval": [
+            0.021624142026962972,
+            0.021624142806159905
+          ],
+          "uniform_probability": 0.023809523809523808,
+          "selection_ratio": 0.9082139814955805,
+          "probability_per_labelled_host": 0.004324828483312288
+        },
+        {
+          "mask": 187,
+          "labelled_count": 60,
+          "probability": 0.2842846363302411,
+          "interval": [
+            0.2842846349176239,
+            0.2842846377428583
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9949962271558439,
+          "probability_per_labelled_host": 0.004738077272170685
+        },
+        {
+          "mask": 207,
+          "labelled_count": 15,
+          "probability": 0.07216675457261448,
+          "interval": [
+            0.07216675386088268,
+            0.07216675528434631
+          ],
+          "uniform_probability": 0.07142857142857142,
+          "selection_ratio": 1.0103345640166028,
+          "probability_per_labelled_host": 0.004811116971507632
+        },
+        {
+          "mask": 221,
+          "labelled_count": 60,
+          "probability": 0.2915497690574967,
+          "interval": [
+            0.291549767626943,
+            0.2915497704880503
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.0204241917012384,
+          "probability_per_labelled_host": 0.0048591628176249445
+        }
+      ],
+      "total_variation_from_uniform": 0.007572601894294385,
+      "total_variation_interval": [
+        0.007572599744892795,
+        0.007572604043695975
+      ],
+      "complete_record_work": 0.1320140048240912,
+      "complete_record_work_interval": [
+        0.1320140039282348,
+        0.1320140057199476
+      ],
+      "complete_record_entropy_bits": 7.71394539656462,
+      "complete_record_entropy_interval_bits": [
+        7.713945359320093,
+        7.713945433809146
+      ],
+      "source_class_probability": 0.2842846363302411,
+      "source_class_probability_interval": [
+        0.2842846349176239,
+        0.2842846377428583
+      ],
+      "fixed_source_peripheral_class_probability": 0.05685692726604822
+    },
+    {
+      "time": 5.0,
+      "state_error": 1.3117572103650216e-09,
+      "error_channels": {
+        "electric_boundary": 3.140681008335852e-10,
+        "last_column": 4.96537871638075e-10
+      },
+      "geometry": {
+        "connectivity_probability": 0.9836610774503143,
+        "disconnected_probability": 0.01633892254968572,
+        "diameter_distribution": {
+          "2": 0.7005608571816977,
+          "3": 0.2831002202686164
+        },
+        "mean_balls": [
+          0.9999999999999518,
+          3.399999999999836,
+          4.8606176358128925,
+          4.973857723920339,
+          4.973857723920339
+        ],
+        "mean_balls_given_connected": [
+          1.0,
+          3.3999999999999995,
+          4.884878958105195,
+          5.0,
+          5.0
+        ],
+        "mean_pair_distance_given_connected": 1.428780260473701,
+        "disconnected_pair_probability": 0.006535569019855046,
+        "degree_distribution": [
+          0.003267784509927523,
+          0.10951359556853482,
+          0.43893121577702093,
+          0.3805256437005663,
+          0.06776176044390216
+        ]
+      },
+      "connectivity_interval": [
+        0.983661073856524,
+        0.9836610810441047
+      ],
+      "diameter_intervals": {
+        "2": [
+          0.7005608541488337,
+          0.7005608602145615
+        ],
+        "3": [
+          0.28310021834064725,
+          0.28310022219658565
+        ]
+      },
+      "mean_ball_intervals": [
+        [
+          0.9999999918975273,
+          1.0000000081023763
+        ],
+        [
+          3.3999999850597042,
+          3.4000000149399687
+        ],
+        [
+          4.860617617949633,
+          4.860617653676153
+        ],
+        [
+          4.973857705850193,
+          4.973857741990486
+        ],
+        [
+          4.973857705850193,
+          4.973857741990486
+        ]
+      ],
+      "host_classes": [
+        {
+          "mask": 63,
+          "labelled_count": 60,
+          "probability": 0.2644677575740577,
+          "interval": [
+            0.26446775571061365,
+            0.2644677594375017
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.925637151509202,
+          "probability_per_labelled_host": 0.004407795959567628
+        },
+        {
+          "mask": 126,
+          "labelled_count": 10,
+          "probability": 0.05106389335390507,
+          "interval": [
+            0.051063892535087876,
+            0.05106389417272228
+          ],
+          "uniform_probability": 0.047619047619047616,
+          "selection_ratio": 1.0723417604320065,
+          "probability_per_labelled_host": 0.005106389335390507
+        },
+        {
+          "mask": 183,
+          "labelled_count": 5,
+          "probability": 0.016338922549637615,
+          "interval": [
+            0.01633892208646625,
+            0.01633892301280898
+          ],
+          "uniform_probability": 0.023809523809523808,
+          "selection_ratio": 0.6862347470847799,
+          "probability_per_labelled_host": 0.003267784509927523
+        },
+        {
+          "mask": 187,
+          "labelled_count": 60,
+          "probability": 0.2831002202686164,
+          "interval": [
+            0.28310021834064725,
+            0.28310022219658565
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 0.9908507709401575,
+          "probability_per_labelled_host": 0.00471833700447694
+        },
+        {
+          "mask": 207,
+          "labelled_count": 15,
+          "probability": 0.07434104464545306,
+          "interval": [
+            0.0743410436574818,
+            0.07434104563342436
+          ],
+          "uniform_probability": 0.07142857142857142,
+          "selection_ratio": 1.040774625036343,
+          "probability_per_labelled_host": 0.004956069643030204
+        },
+        {
+          "mask": 221,
+          "labelled_count": 60,
+          "probability": 0.31068816160828194,
+          "interval": [
+            0.3106881595885565,
+            0.31068816362800744
+          ],
+          "uniform_probability": 0.2857142857142857,
+          "selection_ratio": 1.087408565628987,
+          "probability_per_labelled_host": 0.005178136026804699
+        }
+      ],
+      "total_variation_from_uniform": 0.03133119484575939,
+      "total_variation_interval": [
+        0.03133119172224497,
+        0.03133119796927381
+      ],
+      "complete_record_work": 0.08707779244538028,
+      "complete_record_work_interval": [
+        0.08707779131573681,
+        0.08707779357502374
+      ],
+      "complete_record_entropy_bits": 7.709366314362807,
+      "complete_record_entropy_interval_bits": [
+        7.709366263580525,
+        7.709366365145092
+      ],
+      "source_class_probability": 0.2831002202686164,
+      "source_class_probability_interval": [
+        0.28310021834064725,
+        0.28310022219658565
+      ],
+      "fixed_source_peripheral_class_probability": 0.056620044053723284
+    }
+  ],
+  "preparation": "Original coherent neutral ray over all labelled fixed-Q hosts; no circulation, matter or electric filter.",
+  "record": "Every labelled-host projector P_g, all outcomes retained.",
+  "work_identity": "K flips vertex-number parity P; R preserves it. Complete host record work is <D_phys+D_R>-1/2(<H>+<P H P>), retaining raw rewiring hidden on quotient diagonals.",
+  "error_scope": "Full electric boundary, Krylov last column and explicit relation defect; ordinary floating point with reporting allowances.",
+  "seconds": 23.690149115999986
+}
