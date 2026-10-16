@@ -1,0 +1,1647 @@
+{
+  "plan": {
+    "base_commit": "c6ac0c68480d4164ad620bbf2a4b3d8c65ac85b1",
+    "frozen_charter_commit": "64378573e8251224dd563928667e961a0effb3da",
+    "observation": "4*N^2",
+    "strang_budget": 0.04,
+    "projection_budget": 0.15,
+    "rank_ceiling": 24,
+    "coefficient_ceiling": 2000000,
+    "per_instance_wall_seconds": 120,
+    "degree": 8,
+    "root_weights": "original global class count / N",
+    "families": [
+      {
+        "name": "balanced_N4_bar0.0",
+        "role": "PRIMARY",
+        "N": 4,
+        "values": [
+          -0.25,
+          0.25
+        ],
+        "global_counts": [
+          2,
+          2
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "balanced_N4_bar0.5",
+        "role": "PRIMARY",
+        "N": 4,
+        "values": [
+          0.25,
+          0.75
+        ],
+        "global_counts": [
+          2,
+          2
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "balanced_N5_bar0.0",
+        "role": "PRIMARY",
+        "N": 5,
+        "values": [
+          -0.25,
+          0.25
+        ],
+        "global_counts": [
+          3,
+          2
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "balanced_N5_bar0.5",
+        "role": "PRIMARY",
+        "N": 5,
+        "values": [
+          0.25,
+          0.75
+        ],
+        "global_counts": [
+          3,
+          2
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "balanced_N6_bar0.0",
+        "role": "PRIMARY",
+        "N": 6,
+        "values": [
+          -0.25,
+          0.25
+        ],
+        "global_counts": [
+          3,
+          3
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "balanced_N6_bar0.5",
+        "role": "PRIMARY",
+        "N": 6,
+        "values": [
+          0.25,
+          0.75
+        ],
+        "global_counts": [
+          3,
+          3
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "outlier_N5",
+        "role": "SECONDARY",
+        "N": 5,
+        "values": [
+          -0.25,
+          0.25
+        ],
+        "global_counts": [
+          4,
+          1
+        ],
+        "g": 0.9
+      },
+      {
+        "name": "ramp_N4",
+        "role": "SECONDARY",
+        "N": 4,
+        "values": [
+          -0.25,
+          -0.08333333333333333,
+          0.08333333333333333,
+          0.25
+        ],
+        "global_counts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "g": 0.9
+      }
+    ]
+  },
+  "checks": {
+    "algebra_checks": [
+      {
+        "rank": 2,
+        "maximum_photons": 1,
+        "unitary_Fock_transform_error": 0.0,
+        "one_body_trace": 0.3307689056915036
+      },
+      {
+        "rank": 3,
+        "maximum_photons": 2,
+        "unitary_Fock_transform_error": 4.163336342344337e-17,
+        "one_body_trace": 1.5408250821488805
+      },
+      {
+        "rank": 4,
+        "maximum_photons": 3,
+        "unitary_Fock_transform_error": 9.944066853261404e-17,
+        "one_body_trace": 2.2787300663422005
+      }
+    ],
+    "commutator_checks": [
+      {
+        "N": 3,
+        "receiver_modes": 4,
+        "dimension": 29,
+        "g": 0.9,
+        "emission_norm": 0.6,
+        "AAB_norm": 1.1920596940181836,
+        "BBA_norm": 0.36498214104090815,
+        "bounds": {
+          "AAB": 3.1290422061357854,
+          "BBA": 2.835,
+          "strang_constant": 0.3666267585889911
+        }
+      },
+      {
+        "N": 4,
+        "receiver_modes": 4,
+        "dimension": 99,
+        "g": 1.1,
+        "emission_norm": 0.8250000000000002,
+        "AAB_norm": 1.229835466187108,
+        "BBA_norm": 0.3088005305269799,
+        "bounds": {
+          "AAB": 3.824384918610405,
+          "BBA": 4.235,
+          "strang_constant": 0.5122660382754336
+        }
+      }
+    ],
+    "complete_wavefunction_checks": [
+      {
+        "N": 3,
+        "modes": 5,
+        "time": 0.5,
+        "full_dimension": 41,
+        "complete_wavefunction_error": 0.001082817291630599,
+        "analytic_state_error_account": 0.001999189045242355,
+        "maximum_active_rank": 2,
+        "projections": 6
+      },
+      {
+        "N": 3,
+        "modes": 5,
+        "time": 2,
+        "full_dimension": 41,
+        "complete_wavefunction_error": 0.0023854774407816724,
+        "analytic_state_error_account": 0.003810404825727735,
+        "maximum_active_rank": 3,
+        "projections": 53
+      },
+      {
+        "N": 3,
+        "modes": 5,
+        "time": 8,
+        "full_dimension": 41,
+        "complete_wavefunction_error": 0.008214503578565315,
+        "analytic_state_error_account": 0.010821275756916436,
+        "maximum_active_rank": 5,
+        "projections": 322
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "time": 0.5,
+        "full_dimension": 99,
+        "complete_wavefunction_error": 0.0009397699333838568,
+        "analytic_state_error_account": 0.0018582424129327767,
+        "maximum_active_rank": 2,
+        "projections": 6
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "time": 2,
+        "full_dimension": 99,
+        "complete_wavefunction_error": 0.001928912113140389,
+        "analytic_state_error_account": 0.0033784237198139517,
+        "maximum_active_rank": 3,
+        "projections": 53
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "time": 8,
+        "full_dimension": 99,
+        "complete_wavefunction_error": 0.008525859000252116,
+        "analytic_state_error_account": 0.010819415296628962,
+        "maximum_active_rank": 4,
+        "projections": 236
+      }
+    ]
+  },
+  "controls": [
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        3
+      ],
+      "detuning_values": [
+        0.0
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 1,
+      "maximum_active_rank": 2,
+      "maximum_coefficient_dimension": 10,
+      "populations": [
+        2.538942759988307e-09,
+        5.57566899729793e-06,
+        0.004081500019095847,
+        0.9959129217729642
+      ],
+      "macro_probability_estimate": 0.9999999974610574,
+      "full_assembly_probability_estimate": 0.9959129217729642,
+      "analytic_state_error_account": 0.03995218035189609,
+      "analytic_probability_lower": 0.921691813573572,
+      "analytic_full_assembly_lower": 0.9177681926546908,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 9.11227936425088e-14,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 4.699574063238288e-13,
+        "polar_basis_change_upper": 7.474021401776911e-13
+      },
+      "maximum_observed_gram_error": 1.887379141862766e-14,
+      "projections": 1550,
+      "elapsed_seconds": 0.6134681920000276,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "quadratic_reference": {
+        "state_error": 2.839327110617055e-05,
+        "exact_pump_survival": 0.0013643084938887583,
+        "exact_macro_probability": 0.9999999974605612
+      }
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        4
+      ],
+      "detuning_values": [
+        0.5
+      ],
+      "g": 1.1,
+      "observation_time": 100,
+      "completed_physical_steps_time": 100.0,
+      "steps": 3579,
+      "completed_steps": 3579,
+      "dt": 0.02794076557697681,
+      "exponential_degree": 8,
+      "final_active_rank": 1,
+      "maximum_active_rank": 2,
+      "maximum_coefficient_dimension": 15,
+      "populations": [
+        2.6504085436499992e-17,
+        1.4774518833677395e-12,
+        3.088483354451806e-08,
+        0.00028694236551620036,
+        0.9997130267481728
+      ],
+      "macro_probability_estimate": 0.9999999999985225,
+      "full_assembly_probability_estimate": 0.9997130267481728,
+      "analytic_state_error_account": 0.03999191195867487,
+      "analytic_probability_lower": 0.9216155291033422,
+      "analytic_full_assembly_lower": 0.921340033285443,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039991911954458004,
+        "orbital_projection": 6.662326598304553e-13,
+        "exponential_tail": 2.489003565684195e-16,
+        "observed_normalization_change": 1.43651757156249e-12,
+        "polar_basis_change_upper": 2.113864638886422e-12
+      },
+      "maximum_observed_gram_error": 1.9984014443252818e-14,
+      "projections": 3578,
+      "elapsed_seconds": 1.612388264999936,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "quadratic_reference": {
+        "state_error": 7.665939174611229e-05,
+        "exact_pump_survival": 7.175396434540365e-05,
+        "exact_macro_probability": 0.9999999999985223
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        1,
+        2
+      ],
+      "detuning_values": [
+        -0.25,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 20,
+      "maximum_active_rank": 21,
+      "maximum_coefficient_dimension": 6049,
+      "populations": [
+        5.533072942737922e-09,
+        2.436237294069182e-06,
+        0.004438065082767614,
+        0.9955594931468644
+      ],
+      "macro_probability_estimate": 0.9999999944669261,
+      "full_assembly_probability_estimate": 0.9955594931468644,
+      "analytic_state_error_account": 0.1232430613684058,
+      "analytic_probability_lower": 0.768702724587484,
+      "analytic_full_assembly_lower": 0.7648100931265289,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 0.08329088101673589,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 7.213118990989642e-13,
+        "polar_basis_change_upper": 3.6098645993445045e-13
+      },
+      "maximum_observed_gram_error": 1.769289172128932e-14,
+      "projections": 1531,
+      "elapsed_seconds": 7.602286693999986,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 0
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        1,
+        2
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 18,
+      "maximum_active_rank": 19,
+      "maximum_coefficient_dimension": 4599,
+      "populations": [
+        3.3702329992549934e-08,
+        1.271401721629663e-05,
+        0.006129939483343923,
+        0.9938573127971106
+      ],
+      "macro_probability_estimate": 0.9999999662976709,
+      "full_assembly_probability_estimate": 0.9938573127971106,
+      "analytic_state_error_account": 0.14030813963660763,
+      "analytic_probability_lower": 0.7390700658014526,
+      "analytic_full_assembly_lower": 0.7337906042146731,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 0.10035595928496609,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 6.589173651150304e-13,
+        "polar_basis_change_upper": 3.95029257313192e-13
+      },
+      "maximum_observed_gram_error": 1.4631184359166532e-14,
+      "projections": 1533,
+      "elapsed_seconds": 6.809941913000102,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 1
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        2,
+        1
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 18,
+      "maximum_active_rank": 19,
+      "maximum_coefficient_dimension": 4599,
+      "populations": [
+        2.9069798126358737e-08,
+        9.43540778980698e-06,
+        0.005296144712610251,
+        0.9946943908098012
+      ],
+      "macro_probability_estimate": 0.9999999709302012,
+      "full_assembly_probability_estimate": 0.9946943908098012,
+      "analytic_state_error_account": 0.13979435150752942,
+      "analytic_probability_lower": 0.7399537326923468,
+      "analytic_full_assembly_lower": 0.7353908291076104,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 0.09984217115585226,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 6.59916565837193e-13,
+        "polar_basis_change_upper": 4.296430011468651e-13
+      },
+      "maximum_observed_gram_error": 1.791932671108259e-14,
+      "projections": 1533,
+      "elapsed_seconds": 6.633627760999843,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 2
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "active rank would exceed 24",
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        2,
+        2
+      ],
+      "detuning_values": [
+        -0.25,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 100,
+      "steps": 3028,
+      "completed_steps": 1973,
+      "dt": 0.03302509907529723,
+      "final_active_rank": 24,
+      "maximum_active_rank": 24,
+      "maximum_coefficient_dimension": 122149,
+      "populations": [
+        4.792292485498064e-08,
+        1.0962630378019508e-05,
+        0.0012288758348051746,
+        0.057153978520786575,
+        0.9416061350911074
+      ],
+      "macro_probability_estimate": 0.9999889894466991,
+      "full_assembly_probability_estimate": 0.9416061350911074,
+      "analytic_state_error_account": 0.18983098736624962,
+      "analytic_probability_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03998641025778239,
+        "orbital_projection": 0.1498445771038908,
+        "exponential_tail": 1.0140331581403066e-16,
+        "observed_normalization_change": 3.909428336612564e-12,
+        "polar_basis_change_upper": 6.668696730350507e-13
+      },
+      "maximum_observed_gram_error": 1.6347409385221345e-14,
+      "projections": 1949,
+      "elapsed_seconds": 98.43560326900001,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "roundoff_certified": false,
+      "completed_physical_steps_time": 65.15852047556143,
+      "exponential_degree": 8,
+      "analytic_full_assembly_lower": null,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "execution_note": "Reused earlier bounded S5 pilot; numerical routine unchanged, metadata added",
+      "case_index": 3
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "active rank would exceed 24",
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        3,
+        1
+      ],
+      "detuning_values": [
+        -0.25,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 100,
+      "completed_physical_steps_time": 69.48480845442538,
+      "steps": 3028,
+      "completed_steps": 2104,
+      "dt": 0.03302509907529723,
+      "exponential_degree": 8,
+      "final_active_rank": 24,
+      "maximum_active_rank": 24,
+      "maximum_coefficient_dimension": 81549,
+      "populations": [
+        1.4748483064743853e-08,
+        4.513174946722704e-06,
+        0.0006891294838897322,
+        0.043556475137204065,
+        0.9557498674554763
+      ],
+      "macro_probability_estimate": 0.9999954720765701,
+      "full_assembly_probability_estimate": 0.9557498674554763,
+      "analytic_state_error_account": 0.18987288651661424,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03998641025778239,
+        "orbital_projection": 0.1498864762549229,
+        "exponential_tail": 1.0813612593650271e-16,
+        "observed_normalization_change": 3.2610580902314723e-12,
+        "polar_basis_change_upper": 6.477891515175389e-13
+      },
+      "maximum_observed_gram_error": 1.7283245343949993e-14,
+      "projections": 2080,
+      "elapsed_seconds": 73.77091895700005,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 4
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "active rank would exceed 24",
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        2,
+        2
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 100,
+      "completed_physical_steps_time": 72.78731836195509,
+      "steps": 3028,
+      "completed_steps": 2204,
+      "dt": 0.03302509907529723,
+      "exponential_degree": 8,
+      "final_active_rank": 24,
+      "maximum_active_rank": 24,
+      "maximum_coefficient_dimension": 122149,
+      "populations": [
+        1.2480142620342063e-08,
+        4.790370760275477e-06,
+        0.000664620615262704,
+        0.04181206402226577,
+        0.9575185125115667
+      ],
+      "macro_probability_estimate": 0.9999951971490952,
+      "full_assembly_probability_estimate": 0.9575185125115667,
+      "analytic_state_error_account": 0.18985783927794775,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03998641025778239,
+        "orbital_projection": 0.14987142901526504,
+        "exponential_tail": 1.1327567564831397e-16,
+        "observed_normalization_change": 4.178879464689089e-12,
+        "polar_basis_change_upper": 7.213032644812608e-13
+      },
+      "maximum_observed_gram_error": 1.6559476717990816e-14,
+      "projections": 2180,
+      "elapsed_seconds": 102.06802191600013,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 5
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "active rank would exceed 24",
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        3,
+        1
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 100,
+      "completed_physical_steps_time": 77.11360634081903,
+      "steps": 3028,
+      "completed_steps": 2335,
+      "dt": 0.03302509907529723,
+      "exponential_degree": 8,
+      "final_active_rank": 24,
+      "maximum_active_rank": 24,
+      "maximum_coefficient_dimension": 81549,
+      "populations": [
+        4.518007535696071e-09,
+        1.715619613577003e-06,
+        0.00031568989383688175,
+        0.029521974878118907,
+        0.9701606150904244
+      ],
+      "macro_probability_estimate": 0.9999982798623802,
+      "full_assembly_probability_estimate": 0.9701606150904244,
+      "analytic_state_error_account": 0.18992327626126027,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03998641025778239,
+        "orbital_projection": 0.14993686599896341,
+        "exponential_tail": 1.2000848577078764e-16,
+        "observed_normalization_change": 3.731459585765151e-12,
+        "polar_basis_change_upper": 7.828847477488826e-13
+      },
+      "maximum_observed_gram_error": 1.669149839946089e-14,
+      "projections": 2311,
+      "elapsed_seconds": 79.13585318700007,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 6
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "per-instance wall-time budget",
+      "N": 6,
+      "receiver_modes": 2304,
+      "nonroot_type_counts": [
+        2,
+        3
+      ],
+      "detuning_values": [
+        -0.25,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 144,
+      "completed_physical_steps_time": 29.47706422018349,
+      "steps": 5232,
+      "completed_steps": 1071,
+      "dt": 0.027522935779816515,
+      "exponential_degree": 8,
+      "final_active_rank": 20,
+      "maximum_active_rank": 21,
+      "maximum_coefficient_dimension": 650924,
+      "populations": [
+        0.0014417285323052665,
+        0.019464074143360245,
+        0.10511369088158308,
+        0.28382834322660305,
+        0.3832018865562452,
+        0.20695027665991272
+      ],
+      "macro_probability_estimate": 0.9790941973243441,
+      "full_assembly_probability_estimate": 0.20695027665991272,
+      "analytic_state_error_account": 0.04603711367461685,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03999228003798775,
+        "orbital_projection": 0.006044833631711881,
+        "exponential_tail": 1.0622325054010611e-17,
+        "observed_normalization_change": 4.711342427299314e-12,
+        "polar_basis_change_upper": 2.058628755811738e-13
+      },
+      "maximum_observed_gram_error": 1.0699701529012096e-14,
+      "projections": 1051,
+      "elapsed_seconds": 120.399210541,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 7
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "per-instance wall-time budget",
+      "N": 6,
+      "receiver_modes": 2304,
+      "nonroot_type_counts": [
+        2,
+        3
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 144,
+      "completed_physical_steps_time": 30.63302752293578,
+      "steps": 5232,
+      "completed_steps": 1113,
+      "dt": 0.027522935779816515,
+      "exponential_degree": 8,
+      "final_active_rank": 19,
+      "maximum_active_rank": 20,
+      "maximum_coefficient_dimension": 525251,
+      "populations": [
+        0.0014676785974705995,
+        0.019746736832725847,
+        0.10616321510584811,
+        0.2850991381601591,
+        0.38246567288672456,
+        0.20505755841706563
+      ],
+      "macro_probability_estimate": 0.9787855845697974,
+      "full_assembly_probability_estimate": 0.20505755841706563,
+      "analytic_state_error_account": 0.04722472533571025,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03999228003798775,
+        "orbital_projection": 0.007232445292781148,
+        "exponential_tail": 1.1038886820834551e-17,
+        "observed_normalization_change": 4.723776925175116e-12,
+        "polar_basis_change_upper": 2.1756071764064548e-13
+      },
+      "maximum_observed_gram_error": 1.2705568023418972e-14,
+      "projections": 1094,
+      "elapsed_seconds": 120.13227587699998,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 8
+    },
+    {
+      "status": "UNRESOLVED",
+      "stop_reason": "per-instance wall-time budget",
+      "N": 6,
+      "receiver_modes": 2304,
+      "nonroot_type_counts": [
+        3,
+        2
+      ],
+      "detuning_values": [
+        0.25,
+        0.75
+      ],
+      "g": 0.9,
+      "observation_time": 144,
+      "completed_physical_steps_time": 30.55045871559633,
+      "steps": 5232,
+      "completed_steps": 1110,
+      "dt": 0.027522935779816515,
+      "exponential_degree": 8,
+      "final_active_rank": 20,
+      "maximum_active_rank": 21,
+      "maximum_coefficient_dimension": 650924,
+      "populations": [
+        0.0013617475501953907,
+        0.018700605926122566,
+        0.10262240788003815,
+        0.28130800342435947,
+        0.3852061738369681,
+        0.21080106138232008
+      ],
+      "macro_probability_estimate": 0.9799376465236858,
+      "full_assembly_probability_estimate": 0.21080106138232008,
+      "analytic_state_error_account": 0.04713448159556157,
+      "analytic_probability_lower": null,
+      "analytic_full_assembly_lower": null,
+      "finite_instance_gate": false,
+      "error_components": {
+        "strang": 0.03999228003798775,
+        "orbital_projection": 0.007142201552653023,
+        "exponential_tail": 1.1009132408918556e-17,
+        "observed_normalization_change": 4.695133171139787e-12,
+        "polar_basis_change_upper": 2.256539711588407e-13
+      },
+      "maximum_observed_gram_error": 1.1846568971893663e-14,
+      "projections": 1090,
+      "elapsed_seconds": 124.1640319029998,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": "Populations are intermediate only, not observations at the frozen target time",
+      "roundoff_certified": false,
+      "case_index": 9
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 5,
+      "receiver_modes": 1600,
+      "nonroot_type_counts": [
+        4
+      ],
+      "detuning_values": [
+        -0.25
+      ],
+      "g": 0.9,
+      "observation_time": 100,
+      "completed_physical_steps_time": 100.00000000000001,
+      "steps": 3028,
+      "completed_steps": 3028,
+      "dt": 0.03302509907529723,
+      "exponential_degree": 8,
+      "final_active_rank": 1,
+      "maximum_active_rank": 2,
+      "maximum_coefficient_dimension": 15,
+      "populations": [
+        5.083879457004718e-12,
+        1.3522400874875554e-08,
+        1.3487878211321947e-05,
+        0.005979308304248245,
+        0.9940071902900558
+      ],
+      "macro_probability_estimate": 0.9999999864725153,
+      "full_assembly_probability_estimate": 0.9940071902900558,
+      "analytic_state_error_account": 0.03998641026123747,
+      "analytic_probability_lower": 0.9216260794965359,
+      "analytic_full_assembly_lower": 0.9158732738163101,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.03998641025778239,
+        "orbital_projection": 5.103876673975106e-13,
+        "exponential_tail": 1.556255652736445e-16,
+        "observed_normalization_change": 1.1681766665105897e-12,
+        "polar_basis_change_upper": 1.7763568394003539e-12
+      },
+      "maximum_observed_gram_error": 1.8207657603852567e-14,
+      "projections": 3027,
+      "elapsed_seconds": 1.5735907739999675,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 10
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        1,
+        1,
+        1
+      ],
+      "detuning_values": [
+        -0.08333333333333333,
+        0.08333333333333333,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 18,
+      "maximum_active_rank": 19,
+      "maximum_coefficient_dimension": 9178,
+      "populations": [
+        8.0070592209768e-09,
+        8.28387521455596e-06,
+        0.004338876097268593,
+        0.9956528320204572
+      ],
+      "macro_probability_estimate": 0.9999999919929403,
+      "full_assembly_probability_estimate": 0.9956528320204572,
+      "analytic_state_error_account": 0.12954865852489036,
+      "analytic_probability_lower": 0.757685530906062,
+      "analytic_full_assembly_lower": 0.7539021530587803,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 0.08959647817299846,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 8.83182416089312e-13,
+        "polar_basis_change_upper": 4.2113575331379497e-13
+      },
+      "maximum_observed_gram_error": 1.5151529360798775e-14,
+      "projections": 1533,
+      "elapsed_seconds": 9.145503799999915,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 11
+    },
+    {
+      "status": "COMPLETE",
+      "stop_reason": null,
+      "N": 4,
+      "receiver_modes": 1024,
+      "nonroot_type_counts": [
+        1,
+        1,
+        1
+      ],
+      "detuning_values": [
+        -0.25,
+        0.08333333333333333,
+        0.25
+      ],
+      "g": 0.9,
+      "observation_time": 64,
+      "completed_physical_steps_time": 64.0,
+      "steps": 1551,
+      "completed_steps": 1551,
+      "dt": 0.041263700838168924,
+      "exponential_degree": 8,
+      "final_active_rank": 20,
+      "maximum_active_rank": 21,
+      "maximum_coefficient_dimension": 12076,
+      "populations": [
+        7.117942379535493e-09,
+        8.34881951533359e-06,
+        0.004450250302018601,
+        0.9955413937605232
+      ],
+      "macro_probability_estimate": 0.9999999928820571,
+      "full_assembly_probability_estimate": 0.9955413937605232,
+      "analytic_state_error_account": 0.13420651658905258,
+      "analytic_probability_lower": 0.7495983497541939,
+      "analytic_full_assembly_lower": 0.7457387921592079,
+      "finite_instance_gate": true,
+      "error_components": {
+        "strang": 0.039952180350587015,
+        "orbital_projection": 0.09425433623712934,
+        "exponential_tail": 5.960373473672864e-16,
+        "observed_normalization_change": 9.413581025796702e-13,
+        "polar_basis_change_upper": 3.9430617875622996e-13
+      },
+      "maximum_observed_gram_error": 1.7949924609103887e-14,
+      "projections": 1531,
+      "elapsed_seconds": 10.343546567999965,
+      "exact_history_retained": true,
+      "extra_photon_cutoff": false,
+      "incomplete_population_notice": null,
+      "roundoff_certified": false,
+      "case_index": 12
+    }
+  ],
+  "families": [
+    {
+      "name": "balanced_N4_bar0.0",
+      "role": "PRIMARY",
+      "N": 4,
+      "values": [
+        -0.25,
+        0.25
+      ],
+      "global_counts": [
+        2,
+        2
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.5,
+          "counts": [
+            1,
+            2
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 0,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.5,
+          "counts": [
+            2,
+            1
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 0,
+          "relation": "proved global-sign/type-relabeling identity"
+        }
+      ],
+      "root_averaged_formation_lower": 0.768702724587484,
+      "root_averaged_full_assembly_lower": 0.7648100931265289,
+      "unresolved_root_weight": 0.0,
+      "complete_root_ensemble": true,
+      "primary_gate_pass": true,
+      "status": "COMPLETE",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.7687015108003533,
+        "near_response_per_original_trial_lower": 0.0007901867069670476,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "balanced_N4_bar0.5",
+      "role": "PRIMARY",
+      "N": 4,
+      "values": [
+        0.25,
+        0.75
+      ],
+      "global_counts": [
+        2,
+        2
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.5,
+          "counts": [
+            1,
+            2
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 1,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.5,
+          "counts": [
+            2,
+            1
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 2,
+          "relation": "direct"
+        }
+      ],
+      "root_averaged_formation_lower": 0.7395118992468996,
+      "root_averaged_full_assembly_lower": 0.7345907166611418,
+      "unresolved_root_weight": 0.0,
+      "complete_root_ensemble": true,
+      "primary_gate_pass": true,
+      "status": "COMPLETE",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.7395107315522921,
+        "near_response_per_original_trial_lower": 0.0007601800458590037,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "balanced_N5_bar0.0",
+      "role": "PRIMARY",
+      "N": 5,
+      "values": [
+        -0.25,
+        0.25
+      ],
+      "global_counts": [
+        3,
+        2
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.6,
+          "counts": [
+            2,
+            2
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 3,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.4,
+          "counts": [
+            3,
+            1
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 4,
+          "relation": "direct"
+        }
+      ],
+      "root_averaged_formation_lower": 0.0,
+      "root_averaged_full_assembly_lower": 0.0,
+      "unresolved_root_weight": 1.0,
+      "complete_root_ensemble": false,
+      "primary_gate_pass": false,
+      "status": "UNRESOLVED",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.0,
+        "near_response_per_original_trial_lower": 0.0,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "balanced_N5_bar0.5",
+      "role": "PRIMARY",
+      "N": 5,
+      "values": [
+        0.25,
+        0.75
+      ],
+      "global_counts": [
+        3,
+        2
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.6,
+          "counts": [
+            2,
+            2
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 5,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.4,
+          "counts": [
+            3,
+            1
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 6,
+          "relation": "direct"
+        }
+      ],
+      "root_averaged_formation_lower": 0.0,
+      "root_averaged_full_assembly_lower": 0.0,
+      "unresolved_root_weight": 1.0,
+      "complete_root_ensemble": false,
+      "primary_gate_pass": false,
+      "status": "UNRESOLVED",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.0,
+        "near_response_per_original_trial_lower": 0.0,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "balanced_N6_bar0.0",
+      "role": "PRIMARY",
+      "N": 6,
+      "values": [
+        -0.25,
+        0.25
+      ],
+      "global_counts": [
+        3,
+        3
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.5,
+          "counts": [
+            2,
+            3
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 7,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.5,
+          "counts": [
+            3,
+            2
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 7,
+          "relation": "proved global-sign/type-relabeling identity"
+        }
+      ],
+      "root_averaged_formation_lower": 0.0,
+      "root_averaged_full_assembly_lower": 0.0,
+      "unresolved_root_weight": 1.0,
+      "complete_root_ensemble": false,
+      "primary_gate_pass": false,
+      "status": "UNRESOLVED",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.0,
+        "near_response_per_original_trial_lower": 0.0,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "balanced_N6_bar0.5",
+      "role": "PRIMARY",
+      "N": 6,
+      "values": [
+        0.25,
+        0.75
+      ],
+      "global_counts": [
+        3,
+        3
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.5,
+          "counts": [
+            2,
+            3
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 8,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.5,
+          "counts": [
+            3,
+            2
+          ],
+          "values": [
+            0.25,
+            0.75
+          ],
+          "g": 0.9,
+          "case_index": 9,
+          "relation": "direct"
+        }
+      ],
+      "root_averaged_formation_lower": 0.0,
+      "root_averaged_full_assembly_lower": 0.0,
+      "unresolved_root_weight": 1.0,
+      "complete_root_ensemble": false,
+      "primary_gate_pass": false,
+      "status": "UNRESOLVED",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.0,
+        "near_response_per_original_trial_lower": 0.0,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "outlier_N5",
+      "role": "SECONDARY",
+      "N": 5,
+      "values": [
+        -0.25,
+        0.25
+      ],
+      "global_counts": [
+        4,
+        1
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.8,
+          "counts": [
+            3,
+            1
+          ],
+          "values": [
+            -0.25,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 4,
+          "relation": "same root component reused"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.2,
+          "counts": [
+            4
+          ],
+          "values": [
+            -0.25
+          ],
+          "g": 0.9,
+          "case_index": 10,
+          "relation": "direct"
+        }
+      ],
+      "root_averaged_formation_lower": 0.18432521589930717,
+      "root_averaged_full_assembly_lower": 0.18317465476326203,
+      "unresolved_root_weight": 0.8,
+      "complete_root_ensemble": false,
+      "primary_gate_pass": false,
+      "status": "UNRESOLVED",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.18432492484846558,
+        "near_response_per_original_trial_lower": 0.00018947680384588962,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    },
+    {
+      "name": "ramp_N4",
+      "role": "SECONDARY",
+      "N": 4,
+      "values": [
+        -0.25,
+        -0.08333333333333333,
+        0.08333333333333333,
+        0.25
+      ],
+      "global_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "g": 0.9,
+      "components": [
+        {
+          "root_type": 0,
+          "weight": 0.25,
+          "counts": [
+            1,
+            1,
+            1
+          ],
+          "values": [
+            -0.08333333333333333,
+            0.08333333333333333,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 11,
+          "relation": "direct"
+        },
+        {
+          "root_type": 1,
+          "weight": 0.25,
+          "counts": [
+            1,
+            1,
+            1
+          ],
+          "values": [
+            -0.25,
+            0.08333333333333333,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 12,
+          "relation": "direct"
+        },
+        {
+          "root_type": 2,
+          "weight": 0.25,
+          "counts": [
+            1,
+            1,
+            1
+          ],
+          "values": [
+            -0.25,
+            -0.08333333333333333,
+            0.25
+          ],
+          "g": 0.9,
+          "case_index": 12,
+          "relation": "proved global-sign/type-relabeling identity"
+        },
+        {
+          "root_type": 3,
+          "weight": 0.25,
+          "counts": [
+            1,
+            1,
+            1
+          ],
+          "values": [
+            -0.25,
+            -0.08333333333333333,
+            0.08333333333333333
+          ],
+          "g": 0.9,
+          "case_index": 11,
+          "relation": "proved global-sign/type-relabeling identity"
+        }
+      ],
+      "root_averaged_formation_lower": 0.753641940330128,
+      "root_averaged_full_assembly_lower": 0.7498204726089941,
+      "unresolved_root_weight": 0.0,
+      "complete_root_ensemble": true,
+      "primary_gate_pass": true,
+      "status": "COMPLETE",
+      "unknown_root_lower_bound_used": 0.0,
+      "joined_protocol": {
+        "probe_time": 0.005,
+        "source_variance": 0.25,
+        "all_macro_records_accepted": true,
+        "actual_receiver_retained": true,
+        "r_min": 1,
+        "S4_leakage_amplitude_upper": 0.001256585529169806,
+        "joint_accept_and_consistent_probability_lower": 0.753640750324084,
+        "near_response_per_original_trial_lower": 0.0007747049984521627,
+        "scope": "finite family only; no all-size independent-disorder inference"
+      }
+    }
+  ],
+  "all_size_formation_proved": false,
+  "external_validation": false,
+  "roundoff_certified": false,
+  "extra_checks": {
+    "sign_symmetry": [
+      {
+        "N": 3,
+        "modes": 4,
+        "t": 0.5,
+        "complete_basis_population_difference": 0.0
+      },
+      {
+        "N": 3,
+        "modes": 4,
+        "t": 2,
+        "complete_basis_population_difference": 0.0
+      },
+      {
+        "N": 3,
+        "modes": 4,
+        "t": 8,
+        "complete_basis_population_difference": 0.0
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 0.5,
+        "complete_basis_population_difference": 0.0
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 2,
+        "complete_basis_population_difference": 0.0
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 8,
+        "complete_basis_population_difference": 0.0
+      }
+    ],
+    "physical_receiver_reference": {
+      "N": 3,
+      "physical_receiver_modes": 576,
+      "time": 36,
+      "complete_physical_matrix_dimension": 333505,
+      "complete_wavefunction_error": 0.016917693597535276,
+      "analytic_state_error_account": 0.11335932119750275,
+      "maximum_active_rank": 12,
+      "maximum_coefficient_dimension": 181,
+      "complete_reference_norm_error": 0.0,
+      "comparison_uses_full_two_photon_tensor": true
+    },
+    "probability_bound": {
+      "analytic_two_dimensional_controls": 10201,
+      "maximum_violation": 2.220446049250313e-16
+    }
+  }
+}
