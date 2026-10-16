@@ -1,0 +1,5623 @@
+{
+  "base_commit": "80f5d6ab2e5d74307a9445cbbe9182ba2d4c4131",
+  "charter_commit": "4c4d7a8d590b1f8587a571ece32bf0709ff06d9b",
+  "executed_at_utc": "2026-10-16T19:58:06.174299+00:00",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "arithmetic": "IEEE-754 ordinary double precision; analytic cut errors exclude roundoff",
+  "external_independent_validation": false,
+  "S3_Node": {
+    "node_version": "v24.19.0",
+    "saved_evidence_driver": "PASS",
+    "complete_recomputation": "PASS",
+    "archived_packet_unchanged": true,
+    "numeric_leaves_compared": 5230,
+    "largest_numeric_difference": 4.121147867408581e-13,
+    "changed_numeric_leaves": 698,
+    "recomputed_verification": {
+      "numerical_consistency": "PASS",
+      "physical_acceptance": "Restricted operational stability interval PASS; isolated real-energy consistency-band gate FAIL; full WM2 NOT ESTABLISHED",
+      "complete_register_configuration_states": 1487,
+      "reverse_primitive_checks": 5806,
+      "virtual_exit_distance_checks": 4634,
+      "largest_full_one_probe_matrix": 1280,
+      "full_wavefunction_reduction_checks": 36,
+      "largest_full_vacuum_matrix": 261,
+      "continuum_parameter_sets": 90,
+      "continuum_observations": 270,
+      "finite_resource_scaled_parameter_sets": 27,
+      "finite_resource_scaled_observations": 81,
+      "largest_finite_resource_scaled_one_particle_matrix": 1025,
+      "complex_Schur_blocks": 132,
+      "finite_phase_pulse_checks": 15,
+      "full_H_propagation_blocks": 8,
+      "Q_packet_formula_checks": 18,
+      "Q_packet_direct_checks": 2,
+      "largest_direct_receiver_modes": 1048576,
+      "max_full_wavefunction_error": 2.176604567024382e-15,
+      "max_finite_continuum_amplitude_difference": 7.822994735950826e-16,
+      "max_quadrature_refinement_difference": 8.24620138776423e-15,
+      "max_complex_solve_residual": 9.866391150712473e-17,
+      "max_pulse_identity_error": 1.4918621893400541e-15,
+      "max_complete_energy_ledger_error": 6.40939666791962e-15,
+      "execution": "Node.js v24.19.0; recomputed from published source",
+      "arithmetic": "IEEE-754 doubles; no outward-rounded numerical certificate",
+      "external_independent_validation": false,
+      "packet_files_hashed": 15,
+      "manifest_sha256": "35b5fe6fec40dbb31711539dc4b4bbe7b053bb2de8b66c67a83eb8820d5a31ee"
+    },
+    "independent_external_validation": false
+  },
+  "independent_matrix_construction": [
+    {
+      "N": 2,
+      "modes": 2,
+      "complete_probe_dimension": 12,
+      "entries_compared": 42,
+      "maximum_matrix_entry_difference": 0
+    },
+    {
+      "N": 3,
+      "modes": 2,
+      "complete_probe_dimension": 120,
+      "entries_compared": 536,
+      "maximum_matrix_entry_difference": 0
+    },
+    {
+      "N": 4,
+      "modes": 2,
+      "complete_probe_dimension": 1280,
+      "entries_compared": 6296,
+      "maximum_matrix_entry_difference": 0
+    }
+  ],
+  "reduction": {
+    "exact_type_word_checks": [
+      {
+        "N": 3,
+        "modes": 3,
+        "t": 0.25,
+        "full_dimension": 19,
+        "exact_type_word_dimension": 19,
+        "isometry_wavefunction_error": 0.0
+      },
+      {
+        "N": 3,
+        "modes": 3,
+        "t": 1.0,
+        "full_dimension": 19,
+        "exact_type_word_dimension": 19,
+        "isometry_wavefunction_error": 0.0
+      },
+      {
+        "N": 3,
+        "modes": 3,
+        "t": 4.0,
+        "full_dimension": 19,
+        "exact_type_word_dimension": 19,
+        "isometry_wavefunction_error": 0.0
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 0.25,
+        "full_dimension": 106,
+        "exact_type_word_dimension": 55,
+        "isometry_wavefunction_error": 1.0288700065950637e-17
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 1.0,
+        "full_dimension": 106,
+        "exact_type_word_dimension": 55,
+        "isometry_wavefunction_error": 1.4614011134437574e-16
+      },
+      {
+        "N": 4,
+        "modes": 3,
+        "t": 4.0,
+        "full_dimension": 106,
+        "exact_type_word_dimension": 55,
+        "isometry_wavefunction_error": 5.070882436911243e-16
+      },
+      {
+        "N": 5,
+        "modes": 2,
+        "t": 0.25,
+        "full_dimension": 261,
+        "exact_type_word_dimension": 71,
+        "isometry_wavefunction_error": 3.526445099569634e-18
+      },
+      {
+        "N": 5,
+        "modes": 2,
+        "t": 1.0,
+        "full_dimension": 261,
+        "exact_type_word_dimension": 71,
+        "isometry_wavefunction_error": 3.210010409796734e-17
+      },
+      {
+        "N": 5,
+        "modes": 2,
+        "t": 4.0,
+        "full_dimension": 261,
+        "exact_type_word_dimension": 71,
+        "isometry_wavefunction_error": 3.2926873359091033e-16
+      },
+      {
+        "N": 6,
+        "modes": 2,
+        "t": 0.25,
+        "full_dimension": 1631,
+        "exact_type_word_dimension": 155,
+        "isometry_wavefunction_error": 1.14044610990914e-16
+      },
+      {
+        "N": 6,
+        "modes": 2,
+        "t": 1.0,
+        "full_dimension": 1631,
+        "exact_type_word_dimension": 155,
+        "isometry_wavefunction_error": 1.2700920521720872e-16
+      },
+      {
+        "N": 6,
+        "modes": 2,
+        "t": 4.0,
+        "full_dimension": 1631,
+        "exact_type_word_dimension": 155,
+        "isometry_wavefunction_error": 6.046930050896405e-16
+      }
+    ],
+    "radial_invariance_counterexample": {
+      "N": 4,
+      "delta": [
+        0,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      "leakage_norm": 0.23570226039551587,
+      "detuning_standard_deviation": 0.23570226039551584,
+      "ordered_word_H3_difference": -0.04419417382415922,
+      "exact_predicted_difference": -0.04419417382415922
+    }
+  },
+  "first_error": [
+    {
+      "N": 2,
+      "modes": 2,
+      "full_dimension": 12,
+      "complete_consistent_sources_checked": 5,
+      "minimum_measured_minus_claimed": 0,
+      "receiver_moves_cost": 0
+    },
+    {
+      "N": 3,
+      "modes": 2,
+      "full_dimension": 120,
+      "complete_consistent_sources_checked": 27,
+      "minimum_measured_minus_claimed": 0,
+      "receiver_moves_cost": 0
+    },
+    {
+      "N": 4,
+      "modes": 2,
+      "full_dimension": 1280,
+      "complete_consistent_sources_checked": 163,
+      "minimum_measured_minus_claimed": 0,
+      "receiver_moves_cost": 0
+    }
+  ],
+  "physical_receiver_formation": {
+    "cases": [
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.75
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9982984415515244,
+            "unitary_norm_error": 7.771561172376096e-15,
+            "assembly_size_probabilities": [
+              0.0017015584484679352,
+              0.9982984415515244
+            ],
+            "full_assembly_probability": 0.9982984415515244,
+            "relative_total_energy": -1.6514567491299204e-15,
+            "conserved_energy_variance": 0.20249999999999604,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -0.00023042716436705649,
+            "word_record_entropy_given_root_bits": 0.01810525316527046,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999287710971009,
+            "unitary_norm_error": 7.993605777301127e-15,
+            "assembly_size_probabilities": [
+              7.122890289091648e-05,
+              0.9999287710971009
+            ],
+            "full_assembly_probability": 0.9999287710971009,
+            "relative_total_energy": -2.130240428499519e-15,
+            "conserved_energy_variance": 0.20249999999999546,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -2.5760442029788844e-05,
+            "word_record_entropy_given_root_bits": 0.0010840911779713158,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999982825236997,
+            "unitary_norm_error": 9.325873406851315e-15,
+            "assembly_size_probabilities": [
+              1.7174762908751018e-06,
+              0.9999982825236997
+            ],
+            "full_assembly_probability": 0.9999982825236997,
+            "relative_total_energy": -2.7547408798511697e-15,
+            "conserved_energy_variance": 0.20249999999999496,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 8.526686715978475e-07,
+            "word_record_entropy_given_root_bits": 3.536965898142267e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9990256723249247,
+            "unitary_norm_error": 2.4424906541753444e-15,
+            "assembly_size_probabilities": [
+              0.0009743276750777541,
+              0.9990256723249247
+            ],
+            "full_assembly_probability": 0.9990256723249247,
+            "relative_total_energy": -3.5735303605122226e-16,
+            "conserved_energy_variance": 0.2024999999999987,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -0.00012715587402287957,
+            "word_record_entropy_given_root_bits": 0.011151469926518486,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999731792380209,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              2.6820761981334625e-05,
+              0.9999731792380209
+            ],
+            "full_assembly_probability": 0.9999731792380209,
+            "relative_total_energy": -2.5673907444456745e-16,
+            "conserved_energy_variance": 0.20249999999999765,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -4.778346084359932e-06,
+            "word_record_entropy_given_root_bits": 0.00044600153755200406,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999994073715932,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              5.926284089031285e-07,
+              0.9999994073715932
+            ],
+            "full_assembly_probability": 0.9999994073715932,
+            "relative_total_energy": -3.5735303605122226e-16,
+            "conserved_energy_variance": 0.20249999999999727,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 2.0276444437575194e-07,
+            "word_record_entropy_given_root_bits": 1.3114311684141221e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.75
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.999963000701806,
+            "unitary_norm_error": 5.329070518200751e-15,
+            "assembly_size_probabilities": [
+              3.6999298188228926e-05,
+              0.999963000701806
+            ],
+            "full_assembly_probability": 0.999963000701806,
+            "relative_total_energy": -5.717648576819556e-15,
+            "conserved_energy_variance": 0.30249999999999966,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 5.035350958382134e-06,
+            "word_record_entropy_given_root_bits": 0.0005980866593951308,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999991413974997,
+            "unitary_norm_error": 7.216449660063518e-15,
+            "assembly_size_probabilities": [
+              8.586024926022673e-07,
+              0.9999991413974997
+            ],
+            "full_assembly_probability": 0.9999991413974997,
+            "relative_total_energy": -6.4254157550180935e-15,
+            "conserved_energy_variance": 0.3024999999999979,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -1.970478052543322e-06,
+            "word_record_entropy_given_root_bits": 1.854083457909886e-05,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999997685900543,
+            "unitary_norm_error": 9.658940314238862e-15,
+            "assembly_size_probabilities": [
+              2.3140993627570177e-07,
+              0.9999997685900543
+            ],
+            "full_assembly_probability": 0.9999997685900543,
+            "relative_total_energy": -7.445433158892456e-15,
+            "conserved_energy_variance": 0.30249999999999566,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -8.011915397994455e-07,
+            "word_record_entropy_given_root_bits": 5.4348337783121956e-06,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9999824136107243,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              1.7586389274248155e-05,
+              0.9999824136107243
+            ],
+            "full_assembly_probability": 0.9999824136107243,
+            "relative_total_energy": 5.342948306008566e-16,
+            "conserved_energy_variance": 0.3024999999999978,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -1.63605244938794e-05,
+            "word_record_entropy_given_root_bits": 0.0003031517781409775,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.999999871512859,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              1.2848713964395132e-07,
+              0.999999871512859
+            ],
+            "full_assembly_probability": 0.999999871512859,
+            "relative_total_energy": 3.2959746043559335e-16,
+            "conserved_energy_variance": 0.30249999999999855,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -7.315224047214054e-07,
+            "word_record_entropy_given_root_bits": 3.1266789933173222e-06,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999999793668669,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              2.0633131748068585e-08,
+              0.9999999793668669
+            ],
+            "full_assembly_probability": 0.9999999793668669,
+            "relative_total_energy": 5.48172618408671e-16,
+            "conserved_energy_variance": 0.30249999999999755,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -1.3344611589207052e-07,
+            "word_record_entropy_given_root_bits": 5.565407033899915e-07,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9990256723249247,
+            "unitary_norm_error": 2.4424906541753444e-15,
+            "assembly_size_probabilities": [
+              0.0009743276750777541,
+              0.9990256723249247
+            ],
+            "full_assembly_probability": 0.9990256723249247,
+            "relative_total_energy": -3.5735303605122226e-16,
+            "conserved_energy_variance": 0.2024999999999987,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -0.00012715587402287957,
+            "word_record_entropy_given_root_bits": 0.011151469926518486,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999731792380209,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              2.6820761981334625e-05,
+              0.9999731792380209
+            ],
+            "full_assembly_probability": 0.9999731792380209,
+            "relative_total_energy": -2.5673907444456745e-16,
+            "conserved_energy_variance": 0.20249999999999765,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -4.778346084359932e-06,
+            "word_record_entropy_given_root_bits": 0.00044600153755200406,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999994073715932,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              5.926284089031285e-07,
+              0.9999994073715932
+            ],
+            "full_assembly_probability": 0.9999994073715932,
+            "relative_total_energy": -3.5735303605122226e-16,
+            "conserved_energy_variance": 0.20249999999999727,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 2.0276444437575194e-07,
+            "word_record_entropy_given_root_bits": 1.3114311684141221e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9990256723249247,
+            "unitary_norm_error": 2.4424906541753444e-15,
+            "assembly_size_probabilities": [
+              0.0009743276750777541,
+              0.9990256723249247
+            ],
+            "full_assembly_probability": 0.9990256723249247,
+            "relative_total_energy": 3.5735303605122226e-16,
+            "conserved_energy_variance": 0.2024999999999987,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 0.00012715587402287957,
+            "word_record_entropy_given_root_bits": 0.011151469926518486,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999731792380209,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              2.6820761981334625e-05,
+              0.9999731792380209
+            ],
+            "full_assembly_probability": 0.9999731792380209,
+            "relative_total_energy": 2.5673907444456745e-16,
+            "conserved_energy_variance": 0.20249999999999765,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 4.778346084359932e-06,
+            "word_record_entropy_given_root_bits": 0.00044600153755200406,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999994073715932,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              5.926284089031285e-07,
+              0.9999994073715932
+            ],
+            "full_assembly_probability": 0.9999994073715932,
+            "relative_total_energy": 3.5735303605122226e-16,
+            "conserved_energy_variance": 0.20249999999999727,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -2.0276444437575194e-07,
+            "word_record_entropy_given_root_bits": 1.3114311684141221e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9999824136107243,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              1.7586389274248155e-05,
+              0.9999824136107243
+            ],
+            "full_assembly_probability": 0.9999824136107243,
+            "relative_total_energy": 5.342948306008566e-16,
+            "conserved_energy_variance": 0.3024999999999978,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -1.63605244938794e-05,
+            "word_record_entropy_given_root_bits": 0.0003031517781409775,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.999999871512859,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              1.2848713964395132e-07,
+              0.999999871512859
+            ],
+            "full_assembly_probability": 0.999999871512859,
+            "relative_total_energy": 3.2959746043559335e-16,
+            "conserved_energy_variance": 0.30249999999999855,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -7.315224047214054e-07,
+            "word_record_entropy_given_root_bits": 3.1266789933173222e-06,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999999793668669,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              2.0633131748068585e-08,
+              0.9999999793668669
+            ],
+            "full_assembly_probability": 0.9999999793668669,
+            "relative_total_energy": 5.48172618408671e-16,
+            "conserved_energy_variance": 0.30249999999999755,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -1.3344611589207052e-07,
+            "word_record_entropy_given_root_bits": 5.565407033899915e-07,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9999824136107243,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              1.7586389274248155e-05,
+              0.9999824136107243
+            ],
+            "full_assembly_probability": 0.9999824136107243,
+            "relative_total_energy": -5.342948306008566e-16,
+            "conserved_energy_variance": 0.3024999999999978,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 1.63605244938794e-05,
+            "word_record_entropy_given_root_bits": 0.0003031517781409775,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.999999871512859,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              1.2848713964395132e-07,
+              0.999999871512859
+            ],
+            "full_assembly_probability": 0.999999871512859,
+            "relative_total_energy": -3.2959746043559335e-16,
+            "conserved_energy_variance": 0.30249999999999855,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 7.315224047214054e-07,
+            "word_record_entropy_given_root_bits": 3.1266789933173222e-06,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999999793668669,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              2.0633131748068585e-08,
+              0.9999999793668669
+            ],
+            "full_assembly_probability": 0.9999999793668669,
+            "relative_total_energy": -5.48172618408671e-16,
+            "conserved_energy_variance": 0.30249999999999755,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 1.3344611589207052e-07,
+            "word_record_entropy_given_root_bits": 5.565407033899915e-07,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9990256723249247,
+            "unitary_norm_error": 2.4424906541753444e-15,
+            "assembly_size_probabilities": [
+              0.0009743276750777541,
+              0.9990256723249247
+            ],
+            "full_assembly_probability": 0.9990256723249247,
+            "relative_total_energy": 3.5735303605122226e-16,
+            "conserved_energy_variance": 0.2024999999999987,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 0.00012715587402287957,
+            "word_record_entropy_given_root_bits": 0.011151469926518486,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999731792380209,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              2.6820761981334625e-05,
+              0.9999731792380209
+            ],
+            "full_assembly_probability": 0.9999731792380209,
+            "relative_total_energy": 2.5673907444456745e-16,
+            "conserved_energy_variance": 0.20249999999999765,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 4.778346084359932e-06,
+            "word_record_entropy_given_root_bits": 0.00044600153755200406,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999994073715932,
+            "unitary_norm_error": 1.9984014443252818e-15,
+            "assembly_size_probabilities": [
+              5.926284089031285e-07,
+              0.9999994073715932
+            ],
+            "full_assembly_probability": 0.9999994073715932,
+            "relative_total_energy": 3.5735303605122226e-16,
+            "conserved_energy_variance": 0.20249999999999727,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -2.0276444437575194e-07,
+            "word_record_entropy_given_root_bits": 1.3114311684141221e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.75
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9982984415515244,
+            "unitary_norm_error": 7.771561172376096e-15,
+            "assembly_size_probabilities": [
+              0.0017015584484679352,
+              0.9982984415515244
+            ],
+            "full_assembly_probability": 0.9982984415515244,
+            "relative_total_energy": 1.6514567491299204e-15,
+            "conserved_energy_variance": 0.20249999999999604,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 0.00023042716436705649,
+            "word_record_entropy_given_root_bits": 0.01810525316527046,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999287710971009,
+            "unitary_norm_error": 7.993605777301127e-15,
+            "assembly_size_probabilities": [
+              7.122890289091648e-05,
+              0.9999287710971009
+            ],
+            "full_assembly_probability": 0.9999287710971009,
+            "relative_total_energy": 2.130240428499519e-15,
+            "conserved_energy_variance": 0.20249999999999546,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": 2.5760442029788844e-05,
+            "word_record_entropy_given_root_bits": 0.0010840911779713158,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999982825236997,
+            "unitary_norm_error": 9.325873406851315e-15,
+            "assembly_size_probabilities": [
+              1.7174762908751018e-06,
+              0.9999982825236997
+            ],
+            "full_assembly_probability": 0.9999982825236997,
+            "relative_total_energy": 2.7547408798511697e-15,
+            "conserved_energy_variance": 0.20249999999999496,
+            "expected_energy_variance": 0.2025,
+            "mean_geometry_record_work": -8.526686715978475e-07,
+            "word_record_entropy_given_root_bits": 3.536965898142267e-05,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.25
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.9999824136107243,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              1.7586389274248155e-05,
+              0.9999824136107243
+            ],
+            "full_assembly_probability": 0.9999824136107243,
+            "relative_total_energy": -5.342948306008566e-16,
+            "conserved_energy_variance": 0.3024999999999978,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 1.63605244938794e-05,
+            "word_record_entropy_given_root_bits": 0.0003031517781409775,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.999999871512859,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              1.2848713964395132e-07,
+              0.999999871512859
+            ],
+            "full_assembly_probability": 0.999999871512859,
+            "relative_total_energy": -3.2959746043559335e-16,
+            "conserved_energy_variance": 0.30249999999999855,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 7.315224047214054e-07,
+            "word_record_entropy_given_root_bits": 3.1266789933173222e-06,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999999793668669,
+            "unitary_norm_error": 1.5543122344752192e-15,
+            "assembly_size_probabilities": [
+              2.0633131748068585e-08,
+              0.9999999793668669
+            ],
+            "full_assembly_probability": 0.9999999793668669,
+            "relative_total_energy": -5.48172618408671e-16,
+            "conserved_energy_variance": 0.30249999999999755,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 1.3344611589207052e-07,
+            "word_record_entropy_given_root_bits": 5.565407033899915e-07,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 2,
+        "physical_receiver_modes": 256,
+        "retained_receiver_modes": 128,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.75
+        ],
+        "exact_type_word_dimension": 129,
+        "rows": [
+          {
+            "t": 16,
+            "macro_probability": 0.999963000701806,
+            "unitary_norm_error": 5.329070518200751e-15,
+            "assembly_size_probabilities": [
+              3.6999298188228926e-05,
+              0.999963000701806
+            ],
+            "full_assembly_probability": 0.999963000701806,
+            "relative_total_energy": 5.717648576819556e-15,
+            "conserved_energy_variance": 0.30249999999999966,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": -5.035350958382134e-06,
+            "word_record_entropy_given_root_bits": 0.0005980866593951308,
+            "physical_receiver_probability_error_upper": 1.2786661468186348e-39,
+            "receiver_state_norm_error_upper": 6.393330734093174e-40
+          },
+          {
+            "t": 24,
+            "macro_probability": 0.9999991413974997,
+            "unitary_norm_error": 7.216449660063518e-15,
+            "assembly_size_probabilities": [
+              8.586024926022673e-07,
+              0.9999991413974997
+            ],
+            "full_assembly_probability": 0.9999991413974997,
+            "relative_total_energy": 6.4254157550180935e-15,
+            "conserved_energy_variance": 0.3024999999999979,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 1.970478052543322e-06,
+            "word_record_entropy_given_root_bits": 1.854083457909886e-05,
+            "physical_receiver_probability_error_upper": 1.8745259787871493e-31,
+            "receiver_state_norm_error_upper": 9.372629893935747e-32
+          },
+          {
+            "t": 32,
+            "macro_probability": 0.9999997685900543,
+            "unitary_norm_error": 9.658940314238862e-15,
+            "assembly_size_probabilities": [
+              2.3140993627570177e-07,
+              0.9999997685900543
+            ],
+            "full_assembly_probability": 0.9999997685900543,
+            "relative_total_energy": 7.445433158892456e-15,
+            "conserved_energy_variance": 0.30249999999999566,
+            "expected_energy_variance": 0.30250000000000005,
+            "mean_geometry_record_work": 8.011915397994455e-07,
+            "word_record_entropy_given_root_bits": 5.4348337783121956e-06,
+            "physical_receiver_probability_error_upper": 2.7480571483733214e-23,
+            "receiver_state_norm_error_upper": 1.3740285741866607e-23
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.75,
+          -0.75
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999995476584363,
+            "unitary_norm_error": 2.220446049250313e-16,
+            "assembly_size_probabilities": [
+              4.523415636490208e-06,
+              0.004244617770686803,
+              0.9957508588136762
+            ],
+            "full_assembly_probability": 0.9957508588136762,
+            "relative_total_energy": 6.754579534584693e-16,
+            "conserved_energy_variance": 0.17999999999999747,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -0.0003048272729207953,
+            "word_record_entropy_given_root_bits": 1.0396411815666926,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999910242465,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              8.975751955094672e-09,
+              0.00018946293887967168,
+              0.9998105280853669
+            ],
+            "full_assembly_probability": 0.9998105280853669,
+            "relative_total_energy": -1.8431436932253575e-15,
+            "conserved_energy_variance": 0.17999999999999614,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -1.7128000209065955e-05,
+            "word_record_entropy_given_root_bits": 1.0026164154383432,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999840463,
+            "unitary_norm_error": 3.4416913763379853e-15,
+            "assembly_size_probabilities": [
+              1.594811633386684e-11,
+              7.986986655147525e-06,
+              0.9999920129973912
+            ],
+            "full_assembly_probability": 0.9999920129973912,
+            "relative_total_energy": -4.105656786768108e-15,
+            "conserved_energy_variance": 0.17999999999999466,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.1734441697681087e-07,
+            "word_record_entropy_given_root_bits": 1.0001467742903334,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.75,
+          -0.25
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999972452465717,
+            "unitary_norm_error": 6.661338147750939e-16,
+            "assembly_size_probabilities": [
+              2.754753425297663e-06,
+              0.0034345995117580986,
+              0.996562645734814
+            ],
+            "full_assembly_probability": 0.996562645734814,
+            "relative_total_energy": -2.6020852139652106e-17,
+            "conserved_energy_variance": 0.1799999999999991,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -0.00019018240847828907,
+            "word_record_entropy_given_root_bits": 1.0318473710752754,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999957826698,
+            "unitary_norm_error": 6.661338147750939e-16,
+            "assembly_size_probabilities": [
+              4.217325312207349e-09,
+              0.00013886954711972492,
+              0.9998611262355498
+            ],
+            "full_assembly_probability": 0.9998611262355498,
+            "relative_total_energy": -6.716090357461457e-16,
+            "conserved_energy_variance": 0.17999999999999808,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -8.090155940922371e-06,
+            "word_record_entropy_given_root_bits": 1.0008051755139662,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999940896,
+            "unitary_norm_error": 4.440892098500626e-16,
+            "assembly_size_probabilities": [
+              5.906412763350386e-12,
+              5.676807176822746e-06,
+              0.9999943231869131
+            ],
+            "full_assembly_probability": 0.9999943231869131,
+            "relative_total_energy": -1.2705765259357626e-15,
+            "conserved_energy_variance": 0.17999999999999694,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -3.433664042117434e-07,
+            "word_record_entropy_given_root_bits": 0.9989416133295392,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.25,
+          -0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999998295279234,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.704720763464412e-06,
+              0.0026078896707650533,
+              0.9973904056084689
+            ],
+            "full_assembly_probability": 0.9973904056084689,
+            "relative_total_energy": 5.637851296924623e-17,
+            "conserved_energy_variance": 0.17999999999999966,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -6.216213729163037e-05,
+            "word_record_entropy_given_root_bits": 1.026174153471841,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999979700954,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              2.0299074225234987e-09,
+              9.010492802831601e-05,
+              0.999909893042067
+            ],
+            "full_assembly_probability": 0.999909893042067,
+            "relative_total_energy": -1.3986208025063007e-17,
+            "conserved_energy_variance": 0.1799999999999994,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.207001993158206e-07,
+            "word_record_entropy_given_root_bits": 1.0013408807180102,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999977498,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              2.251692979128033e-12,
+              3.001123937110296e-06,
+              0.9999969988738127
+            ],
+            "full_assembly_probability": 0.9999969988738127,
+            "relative_total_energy": -6.960577947356938e-17,
+            "conserved_energy_variance": 0.17999999999999924,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.319257935651816e-08,
+            "word_record_entropy_given_root_bits": 1.0000593886050781,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.75,
+          -0.75
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999999931838087,
+            "unitary_norm_error": 3.774758283725532e-15,
+            "assembly_size_probabilities": [
+              6.816185265679078e-09,
+              0.00016510675117606868,
+              0.9998348864326329
+            ],
+            "full_assembly_probability": 0.9998348864326329,
+            "relative_total_energy": -2.8449465006019636e-16,
+            "conserved_energy_variance": 0.2688888888888855,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.4397549318814643e-05,
+            "word_record_entropy_given_root_bits": 1.0023128198981537,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999993203,
+            "unitary_norm_error": 7.438494264988549e-15,
+            "assembly_size_probabilities": [
+              6.727799337754482e-13,
+              1.6404619233074607e-06,
+              0.999998359537397
+            ],
+            "full_assembly_probability": 0.999998359537397,
+            "relative_total_energy": -3.78690134805737e-15,
+            "conserved_energy_variance": 0.26888888888888274,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -4.119349195203725e-07,
+            "word_record_entropy_given_root_bits": 1.0000338922338372,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999999859,
+            "unitary_norm_error": 1.0880185641326534e-14,
+            "assembly_size_probabilities": [
+              7.182727501905264e-17,
+              1.6950194329856472e-08,
+              0.9999999830497915
+            ],
+            "full_assembly_probability": 0.9999999830497915,
+            "relative_total_energy": -7.522628353573424e-15,
+            "conserved_energy_variance": 0.2688888888888803,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -6.274460205128434e-09,
+            "word_record_entropy_given_root_bits": 1.0000004620083718,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.75,
+          -0.25
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999999969599295,
+            "unitary_norm_error": 2.3314683517128287e-15,
+            "assembly_size_probabilities": [
+              3.0400666879407555e-09,
+              0.0001225922957983247,
+              0.9998774046641314
+            ],
+            "full_assembly_probability": 0.9998774046641314,
+            "relative_total_energy": -6.503044630568056e-16,
+            "conserved_energy_variance": 0.2688888888888867,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.0894931690246276e-05,
+            "word_record_entropy_given_root_bits": 1.0004297734738994,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999998311,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              1.660065259110563e-13,
+              9.619282522186044e-07,
+              0.999999038071579
+            ],
+            "full_assembly_probability": 0.999999038071579,
+            "relative_total_energy": -1.75619067899202e-15,
+            "conserved_energy_variance": 0.2688888888888849,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.8167827773965148e-07,
+            "word_record_entropy_given_root_bits": 0.9986903210776366,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.999999999999995,
+            "unitary_norm_error": 2.886579864025407e-15,
+            "assembly_size_probabilities": [
+              2.0345102451652755e-18,
+              8.981856248458235e-09,
+              0.9999999910181386
+            ],
+            "full_assembly_probability": 0.9999999910181386,
+            "relative_total_energy": -2.8768220444730375e-15,
+            "conserved_energy_variance": 0.26888888888888307,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -4.5674406930152525e-09,
+            "word_record_entropy_given_root_bits": 0.9986701540055762,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.25,
+          -0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.99999999859344,
+            "unitary_norm_error": 1.1102230246251565e-15,
+            "assembly_size_probabilities": [
+              1.4065614376987076e-09,
+              7.500549142269218e-05,
+              0.9999249931020173
+            ],
+            "full_assembly_probability": 0.9999249931020173,
+            "relative_total_energy": 1.3942839938163587e-16,
+            "conserved_energy_variance": 0.2688888888888889,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.7370356203708095e-06,
+            "word_record_entropy_given_root_bits": 1.0011360215407226,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999999581,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              4.1407541899258365e-14,
+              4.06976780646361e-07,
+              0.9999995930231774
+            ],
+            "full_assembly_probability": 0.9999995930231774,
+            "relative_total_energy": -7.090682208055199e-17,
+            "conserved_energy_variance": 0.2688888888888883,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.6550667068495933e-07,
+            "word_record_entropy_given_root_bits": 1.000009226672132,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 1.0000000000000018,
+            "unitary_norm_error": 3.3306690738754696e-15,
+            "assembly_size_probabilities": [
+              8.323292987967336e-20,
+              5.770022947807798e-10,
+              0.9999999994229997
+            ],
+            "full_assembly_probability": 0.9999999994229997,
+            "relative_total_energy": -3.413068438984368e-16,
+            "conserved_energy_variance": 0.2688888888888878,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 6.383614509306958e-10,
+            "word_record_entropy_given_root_bits": 1.0000000185410438,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.25,
+          -0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999998295279234,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.704720763464412e-06,
+              0.0026078896707650533,
+              0.9973904056084689
+            ],
+            "full_assembly_probability": 0.9973904056084689,
+            "relative_total_energy": 5.637851296924623e-17,
+            "conserved_energy_variance": 0.17999999999999966,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -6.216213729163037e-05,
+            "word_record_entropy_given_root_bits": 1.026174153471841,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999979700954,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              2.0299074225234987e-09,
+              9.010492802831601e-05,
+              0.999909893042067
+            ],
+            "full_assembly_probability": 0.999909893042067,
+            "relative_total_energy": -1.3986208025063007e-17,
+            "conserved_energy_variance": 0.1799999999999994,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.207001993158206e-07,
+            "word_record_entropy_given_root_bits": 1.0013408807180102,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999977498,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              2.251692979128033e-12,
+              3.001123937110296e-06,
+              0.9999969988738127
+            ],
+            "full_assembly_probability": 0.9999969988738127,
+            "relative_total_energy": -6.960577947356938e-17,
+            "conserved_energy_variance": 0.17999999999999924,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.319257935651816e-08,
+            "word_record_entropy_given_root_bits": 1.0000593886050781,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          -0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.99999831151206,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.688487936961458e-06,
+              0.0026122666380251802,
+              0.9973860448740356
+            ],
+            "full_assembly_probability": 0.9973860448740356,
+            "relative_total_energy": -5.13746411941989e-18,
+            "conserved_energy_variance": 0.18000000000000005,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -5.800930584937639e-21,
+            "word_record_entropy_given_root_bits": 1.0262114038686336,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999980016911,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.9983010291832756e-09,
+              9.03424816774084e-05,
+              0.999909655520013
+            ],
+            "full_assembly_probability": 0.999909655520013,
+            "relative_total_energy": -4.4175053826522875e-18,
+            "conserved_energy_variance": 0.17999999999999972,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 3.3179307666742593e-22,
+            "word_record_entropy_given_root_bits": 1.0013440716084263,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999977999,
+            "unitary_norm_error": 1.1102230246251565e-16,
+            "assembly_size_probabilities": [
+              2.199599419160331e-12,
+              3.1029779295542984e-06,
+              0.9999968970198719
+            ],
+            "full_assembly_probability": 0.9999968970198719,
+            "relative_total_energy": -4.481393245305878e-18,
+            "conserved_energy_variance": 0.17999999999999933,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": -4.5771817553736726e-24,
+            "word_record_entropy_given_root_bits": 1.0000612547568979,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999998295279234,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.704720763464412e-06,
+              0.0026078896707650533,
+              0.9973904056084689
+            ],
+            "full_assembly_probability": 0.9973904056084689,
+            "relative_total_energy": -5.637851296924623e-17,
+            "conserved_energy_variance": 0.17999999999999966,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 6.216213729163037e-05,
+            "word_record_entropy_given_root_bits": 1.026174153471841,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999979700954,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              2.0299074225234987e-09,
+              9.010492802831601e-05,
+              0.999909893042067
+            ],
+            "full_assembly_probability": 0.999909893042067,
+            "relative_total_energy": 1.3986208025063007e-17,
+            "conserved_energy_variance": 0.1799999999999994,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 4.207001993158206e-07,
+            "word_record_entropy_given_root_bits": 1.0013408807180102,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999977498,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              2.251692979128033e-12,
+              3.001123937110296e-06,
+              0.9999969988738127
+            ],
+            "full_assembly_probability": 0.9999969988738127,
+            "relative_total_energy": 6.960577947356938e-17,
+            "conserved_energy_variance": 0.17999999999999924,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 4.319257935651816e-08,
+            "word_record_entropy_given_root_bits": 1.0000593886050781,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.25,
+          -0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.99999999859344,
+            "unitary_norm_error": 1.1102230246251565e-15,
+            "assembly_size_probabilities": [
+              1.4065614376987076e-09,
+              7.500549142269218e-05,
+              0.9999249931020173
+            ],
+            "full_assembly_probability": 0.9999249931020173,
+            "relative_total_energy": 1.3942839938163587e-16,
+            "conserved_energy_variance": 0.2688888888888889,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.7370356203708095e-06,
+            "word_record_entropy_given_root_bits": 1.0011360215407226,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999999581,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              4.1407541899258365e-14,
+              4.06976780646361e-07,
+              0.9999995930231774
+            ],
+            "full_assembly_probability": 0.9999995930231774,
+            "relative_total_energy": -7.090682208055199e-17,
+            "conserved_energy_variance": 0.2688888888888883,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.6550667068495933e-07,
+            "word_record_entropy_given_root_bits": 1.000009226672132,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 1.0000000000000018,
+            "unitary_norm_error": 3.3306690738754696e-15,
+            "assembly_size_probabilities": [
+              8.323292987967336e-20,
+              5.770022947807798e-10,
+              0.9999999994229997
+            ],
+            "full_assembly_probability": 0.9999999994229997,
+            "relative_total_energy": -3.413068438984368e-16,
+            "conserved_energy_variance": 0.2688888888888878,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 6.383614509306958e-10,
+            "word_record_entropy_given_root_bits": 1.0000000185410438,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          -0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999999986282895,
+            "unitary_norm_error": 4.440892098500626e-16,
+            "assembly_size_probabilities": [
+              1.3717066495196014e-09,
+              7.653302762165101e-05,
+              0.9999234656006679
+            ],
+            "full_assembly_probability": 0.9999234656006679,
+            "relative_total_energy": -5.336883966795486e-18,
+            "conserved_energy_variance": 0.2688888888888878,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 3.2478521761765613e-22,
+            "word_record_entropy_given_root_bits": 1.0011569293783733,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999999712,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              3.528021791063629e-14,
+              4.5924783011695434e-07,
+              0.9999995407521426
+            ],
+            "full_assembly_probability": 0.9999995407521426,
+            "relative_total_energy": 1.156273240829774e-17,
+            "conserved_energy_variance": 0.2688888888888871,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -2.101538074072664e-24,
+            "word_record_entropy_given_root_bits": 1.0000103316625835,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999999838,
+            "unitary_norm_error": 4.440892098500626e-16,
+            "assembly_size_probabilities": [
+              9.58013973605511e-18,
+              3.159520244732468e-09,
+              0.9999999968404638
+            ],
+            "full_assembly_probability": 0.9999999968404638,
+            "relative_total_energy": 8.014589195217023e-18,
+            "conserved_energy_variance": 0.2688888888888864,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 3.8850814143094075e-26,
+            "word_record_entropy_given_root_bits": 1.0000000937756437,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.99999999859344,
+            "unitary_norm_error": 1.1102230246251565e-15,
+            "assembly_size_probabilities": [
+              1.4065614376987076e-09,
+              7.500549142269218e-05,
+              0.9999249931020173
+            ],
+            "full_assembly_probability": 0.9999249931020173,
+            "relative_total_energy": -1.3942839938163587e-16,
+            "conserved_energy_variance": 0.2688888888888889,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.7370356203708095e-06,
+            "word_record_entropy_given_root_bits": 1.0011360215407226,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999999581,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              4.1407541899258365e-14,
+              4.06976780646361e-07,
+              0.9999995930231774
+            ],
+            "full_assembly_probability": 0.9999995930231774,
+            "relative_total_energy": 7.090682208055199e-17,
+            "conserved_energy_variance": 0.2688888888888883,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.6550667068495933e-07,
+            "word_record_entropy_given_root_bits": 1.000009226672132,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 1.0000000000000018,
+            "unitary_norm_error": 3.3306690738754696e-15,
+            "assembly_size_probabilities": [
+              8.323292987967336e-20,
+              5.770022947807798e-10,
+              0.9999999994229997
+            ],
+            "full_assembly_probability": 0.9999999994229997,
+            "relative_total_energy": 3.413068438984368e-16,
+            "conserved_energy_variance": 0.2688888888888878,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -6.383614509306958e-10,
+            "word_record_entropy_given_root_bits": 1.0000000185410438,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999998295279234,
+            "unitary_norm_error": 0.0,
+            "assembly_size_probabilities": [
+              1.704720763464412e-06,
+              0.0026078896707650533,
+              0.9973904056084689
+            ],
+            "full_assembly_probability": 0.9973904056084689,
+            "relative_total_energy": -5.637851296924623e-17,
+            "conserved_energy_variance": 0.17999999999999966,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 6.216213729163037e-05,
+            "word_record_entropy_given_root_bits": 1.026174153471841,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999979700954,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              2.0299074225234987e-09,
+              9.010492802831601e-05,
+              0.999909893042067
+            ],
+            "full_assembly_probability": 0.999909893042067,
+            "relative_total_energy": 1.3986208025063007e-17,
+            "conserved_energy_variance": 0.1799999999999994,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 4.207001993158206e-07,
+            "word_record_entropy_given_root_bits": 1.0013408807180102,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999977498,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              2.251692979128033e-12,
+              3.001123937110296e-06,
+              0.9999969988738127
+            ],
+            "full_assembly_probability": 0.9999969988738127,
+            "relative_total_energy": 6.960577947356938e-17,
+            "conserved_energy_variance": 0.17999999999999924,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 4.319257935651816e-08,
+            "word_record_entropy_given_root_bits": 1.0000593886050781,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.25,
+          0.75
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999972452465705,
+            "unitary_norm_error": 1.4432899320127035e-15,
+            "assembly_size_probabilities": [
+              2.7547534252972965e-06,
+              0.0034345995117580873,
+              0.9965626457348128
+            ],
+            "full_assembly_probability": 0.9965626457348128,
+            "relative_total_energy": 3.599551212651875e-17,
+            "conserved_energy_variance": 0.17999999999999927,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 0.00019018240847828795,
+            "word_record_entropy_given_root_bits": 1.0318473710752756,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999957826708,
+            "unitary_norm_error": 1.3322676295501878e-15,
+            "assembly_size_probabilities": [
+              4.217325312196099e-09,
+              0.00013886954711971863,
+              0.9998611262355501
+            ],
+            "full_assembly_probability": 0.9998611262355501,
+            "relative_total_energy": 6.079121581126223e-16,
+            "conserved_energy_variance": 0.17999999999999838,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 8.090155940922334e-06,
+            "word_record_entropy_given_root_bits": 1.000805175513966,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999940833,
+            "unitary_norm_error": 7.771561172376096e-16,
+            "assembly_size_probabilities": [
+              5.906412762926452e-12,
+              5.676807176823158e-06,
+              0.9999943231869056
+            ],
+            "full_assembly_probability": 0.9999943231869056,
+            "relative_total_energy": 1.1105482852769022e-15,
+            "conserved_energy_variance": 0.17999999999999727,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 3.433664042114502e-07,
+            "word_record_entropy_given_root_bits": 0.9989416133295399,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 0.9,
+        "nonroot_detunings": [
+          0.75,
+          0.75
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.999995476584363,
+            "unitary_norm_error": 2.220446049250313e-16,
+            "assembly_size_probabilities": [
+              4.523415636490208e-06,
+              0.004244617770686803,
+              0.9957508588136762
+            ],
+            "full_assembly_probability": 0.9957508588136762,
+            "relative_total_energy": -6.754579534584693e-16,
+            "conserved_energy_variance": 0.17999999999999747,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 0.0003048272729207953,
+            "word_record_entropy_given_root_bits": 1.0396411815666926,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999910242465,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              8.975751955094672e-09,
+              0.00018946293887967168,
+              0.9998105280853669
+            ],
+            "full_assembly_probability": 0.9998105280853669,
+            "relative_total_energy": 1.8431436932253575e-15,
+            "conserved_energy_variance": 0.17999999999999614,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 1.7128000209065955e-05,
+            "word_record_entropy_given_root_bits": 1.0026164154383432,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999840463,
+            "unitary_norm_error": 3.4416913763379853e-15,
+            "assembly_size_probabilities": [
+              1.594811633386684e-11,
+              7.986986655147525e-06,
+              0.9999920129973912
+            ],
+            "full_assembly_probability": 0.9999920129973912,
+            "relative_total_energy": 4.105656786768108e-15,
+            "conserved_energy_variance": 0.17999999999999466,
+            "expected_energy_variance": 0.18,
+            "mean_geometry_record_work": 4.1734441697681087e-07,
+            "word_record_entropy_given_root_bits": 1.0001467742903334,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.25,
+          0.25
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.99999999859344,
+            "unitary_norm_error": 1.1102230246251565e-15,
+            "assembly_size_probabilities": [
+              1.4065614376987076e-09,
+              7.500549142269218e-05,
+              0.9999249931020173
+            ],
+            "full_assembly_probability": 0.9999249931020173,
+            "relative_total_energy": -1.3942839938163587e-16,
+            "conserved_energy_variance": 0.2688888888888889,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.7370356203708095e-06,
+            "word_record_entropy_given_root_bits": 1.0011360215407226,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999999581,
+            "unitary_norm_error": 2.220446049250313e-15,
+            "assembly_size_probabilities": [
+              4.1407541899258365e-14,
+              4.06976780646361e-07,
+              0.9999995930231774
+            ],
+            "full_assembly_probability": 0.9999995930231774,
+            "relative_total_energy": 7.090682208055199e-17,
+            "conserved_energy_variance": 0.2688888888888883,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -1.6550667068495933e-07,
+            "word_record_entropy_given_root_bits": 1.000009226672132,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 1.0000000000000018,
+            "unitary_norm_error": 3.3306690738754696e-15,
+            "assembly_size_probabilities": [
+              8.323292987967336e-20,
+              5.770022947807798e-10,
+              0.9999999994229997
+            ],
+            "full_assembly_probability": 0.9999999994229997,
+            "relative_total_energy": 3.413068438984368e-16,
+            "conserved_energy_variance": 0.2688888888888878,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": -6.383614509306958e-10,
+            "word_record_entropy_given_root_bits": 1.0000000185410438,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.25,
+          0.75
+        ],
+        "exact_type_word_dimension": 50849,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999999969599296,
+            "unitary_norm_error": 3.1086244689504383e-15,
+            "assembly_size_probabilities": [
+              3.0400666879651963e-09,
+              0.0001225922957983209,
+              0.9998774046641317
+            ],
+            "full_assembly_probability": 0.9998774046641317,
+            "relative_total_energy": 3.913969842672671e-16,
+            "conserved_energy_variance": 0.2688888888888868,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.0894931690245364e-05,
+            "word_record_entropy_given_root_bits": 1.0004297734738996,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999998231,
+            "unitary_norm_error": 3.4416913763379853e-15,
+            "assembly_size_probabilities": [
+              1.6600652598683163e-13,
+              9.619282522184522e-07,
+              0.999999038071571
+            ],
+            "full_assembly_probability": 0.999999038071571,
+            "relative_total_energy": 1.4256174366011898e-15,
+            "conserved_energy_variance": 0.26888888888888485,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.8167827773956018e-07,
+            "word_record_entropy_given_root_bits": 0.9986903210776372,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.999999999999991,
+            "unitary_norm_error": 3.774758283725532e-15,
+            "assembly_size_probabilities": [
+              2.0345099729287643e-18,
+              8.981856248435913e-09,
+              0.9999999910181344
+            ],
+            "full_assembly_probability": 0.9999999910181344,
+            "relative_total_energy": 2.447694824603275e-15,
+            "conserved_energy_variance": 0.26888888888888307,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 4.5674406930292955e-09,
+            "word_record_entropy_given_root_bits": 0.9986701540055762,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      },
+      {
+        "N": 3,
+        "physical_receiver_modes": 576,
+        "retained_receiver_modes": 224,
+        "g": 1.1,
+        "nonroot_detunings": [
+          0.75,
+          0.75
+        ],
+        "exact_type_word_dimension": 25425,
+        "rows": [
+          {
+            "t": 36,
+            "macro_probability": 0.9999999931838087,
+            "unitary_norm_error": 3.774758283725532e-15,
+            "assembly_size_probabilities": [
+              6.816185265679078e-09,
+              0.00016510675117606868,
+              0.9998348864326329
+            ],
+            "full_assembly_probability": 0.9998348864326329,
+            "relative_total_energy": 2.8449465006019636e-16,
+            "conserved_energy_variance": 0.2688888888888855,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 1.4397549318814643e-05,
+            "word_record_entropy_given_root_bits": 1.0023128198981537,
+            "physical_receiver_probability_error_upper": 9.557353361461677e-61,
+            "receiver_state_norm_error_upper": 4.7786766807308385e-61
+          },
+          {
+            "t": 54,
+            "macro_probability": 0.9999999999993203,
+            "unitary_norm_error": 7.438494264988549e-15,
+            "assembly_size_probabilities": [
+              6.727799337754482e-13,
+              1.6404619233074607e-06,
+              0.999998359537397
+            ],
+            "full_assembly_probability": 0.999998359537397,
+            "relative_total_energy": 3.78690134805737e-15,
+            "conserved_energy_variance": 0.26888888888888274,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 4.119349195203725e-07,
+            "word_record_entropy_given_root_bits": 1.0000338922338372,
+            "physical_receiver_probability_error_upper": 2.260163256329717e-42,
+            "receiver_state_norm_error_upper": 1.1300816281648585e-42
+          },
+          {
+            "t": 72,
+            "macro_probability": 0.9999999999999859,
+            "unitary_norm_error": 1.0880185641326534e-14,
+            "assembly_size_probabilities": [
+              7.182727501905264e-17,
+              1.6950194329856472e-08,
+              0.9999999830497915
+            ],
+            "full_assembly_probability": 0.9999999830497915,
+            "relative_total_energy": 7.522628353573424e-15,
+            "conserved_energy_variance": 0.2688888888888803,
+            "expected_energy_variance": 0.26888888888888896,
+            "mean_geometry_record_work": 6.274460205128434e-09,
+            "word_record_entropy_given_root_bits": 1.0000004620083718,
+            "physical_receiver_probability_error_upper": 5.344929450721588e-24,
+            "receiver_state_norm_error_upper": 2.672464725360794e-24
+          }
+        ]
+      }
+    ],
+    "all_binary_corner_root_averages": [
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9982984415515244,
+          0.9999287710971009,
+          0.9999982825236997
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0181052531652703,
+          1.0010840911779715,
+          1.0000353696589812
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9986620569382245,
+          0.9999509751675608,
+          0.9999988449476465
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0146283615458944,
+          1.0007650463577618,
+          1.0000242419853327
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9986620569382245,
+          0.9999509751675608,
+          0.9999988449476465
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0146283615458944,
+          1.0007650463577618,
+          1.0000242419853327
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.999963000701806,
+          0.9999991413974997,
+          0.9999997685900543
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0005980866593953,
+          1.0000185408345792,
+          1.0000054348337781
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999727071562652,
+          0.9999995064551793,
+          0.9999998739784606
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.000450619218768,
+          1.0000108337567863,
+          1.0000029956872407
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999727071562652,
+          0.9999995064551793,
+          0.9999998739784606
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.000450619218768,
+          1.0000108337567863,
+          1.0000029956872407
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9990256723249247,
+          0.9999731792380209,
+          0.9999994073715932
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0111514699265185,
+          1.000446001537552,
+          1.0000131143116842
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9986620569382245,
+          0.9999509751675608,
+          0.9999988449476465
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0146283615458944,
+          1.0007650463577618,
+          1.0000242419853327
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9986620569382245,
+          0.9999509751675608,
+          0.9999988449476465
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0146283615458944,
+          1.0007650463577618,
+          1.0000242419853327
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9982984415515244,
+          0.9999287710971009,
+          0.9999982825236997
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0181052531652703,
+          1.0010840911779715,
+          1.0000353696589812
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999824136107243,
+          0.999999871512859,
+          0.9999999793668669
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0003031517781409,
+          1.0000031266789935,
+          1.0000005565407033
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999727071562652,
+          0.9999995064551793,
+          0.9999998739784606
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.000450619218768,
+          1.0000108337567863,
+          1.0000029956872407
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999727071562652,
+          0.9999995064551793,
+          0.9999998739784606
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.000450619218768,
+          1.0000108337567863,
+          1.0000029956872407
+        ]
+      },
+      {
+        "N": 2,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.999963000701806,
+          0.9999991413974997,
+          0.9999997685900543
+        ],
+        "complete_geometry_record_entropy_bits": [
+          1.0005980866593953,
+          1.0000185408345792,
+          1.0000054348337781
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.999995476584363,
+          0.9999999910242465,
+          0.9999999999840463
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.624603682287849,
+          2.5875789161594995,
+          2.5851092750114892
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925022,
+          0.9999999941965287,
+          0.9999999999907419
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.5863714228765815,
+          2.5843058343709604
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925022,
+          0.9999999941965287,
+          0.9999999999907419
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.586371422876581,
+          2.5843058343709604
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.75,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574591,
+          0.9999999965118116,
+          0.9999999999953098
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.58594624463647,
+          2.5842767058092084
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925022,
+          0.9999999941965287,
+          0.9999999999907419
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.586371422876581,
+          2.58430583437096
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574591,
+          0.9999999965118116,
+          0.9999999999953098
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.58594624463647,
+          2.5842767058092084
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574591,
+          0.9999999965118116,
+          0.9999999999953098
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.5859462446364705,
+          2.5842767058092084
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999982952792341,
+          0.9999999979700953,
+          0.9999999999977498
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6111366541929972,
+          2.5863033814391665,
+          2.5850218893262342
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999931838086,
+          0.9999999999993203,
+          0.999999999999986
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5872753206193098,
+          2.5849963929549933,
+          2.584962962729528
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012224,
+          0.9999999999996608,
+          0.999999999999992
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5860199563364734,
+          2.5841006788508594,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012224,
+          0.9999999999996609,
+          0.999999999999992
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5860199563364734,
+          2.5841006788508594,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.75,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044329,
+          0.9999999999998734,
+          0.9999999999999973
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.5840924569969577,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.75,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012224,
+          0.9999999999996609,
+          0.999999999999992
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5860199563364734,
+          2.5841006788508594,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.75,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044329,
+          0.9999999999998734,
+          0.9999999999999973
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.5840924569969577,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044329,
+          0.9999999999998734,
+          0.9999999999999972
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.5840924569969577,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": -0.5,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.99999999859344,
+          0.9999999999999581,
+          1.0000000000000018
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586098522261879,
+          2.584971727393288,
+          2.5849625192622
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999982952792341,
+          0.9999999979700953,
+          0.9999999999977498
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6111366541929972,
+          2.5863033814391665,
+          2.5850218893262342
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999998306101118,
+          0.9999999979911591,
+          0.9999999999977831
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999983061011181,
+          0.9999999979911591,
+          0.9999999999977832
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          -0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999983061011181,
+          0.9999999979911591,
+          0.9999999999977832
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999983061011181,
+          0.9999999979911591,
+          0.9999999999977832
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999983061011181,
+          0.9999999979911591,
+          0.9999999999977832
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999998306101118,
+          0.9999999979911591,
+          0.9999999999977831
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.611161487790859,
+          2.5863055086994438,
+          2.5850231334274474
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999982952792341,
+          0.9999999979700953,
+          0.9999999999977498
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6111366541929972,
+          2.5863033814391665,
+          2.5850218893262342
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.99999999859344,
+          0.9999999999999581,
+          1.0000000000000018
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586098522261879,
+          2.584971727393288,
+          2.5849625192622
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          -0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          -0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          -0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25,
+          -0.25
+        ],
+        "root_averaged_probabilities": [
+          0.999999998616673,
+          0.9999999999999669,
+          0.9999999999999898
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5861124608203125,
+          2.584972464053589,
+          2.5849625694186
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.0,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.99999999859344,
+          0.9999999999999581,
+          1.0000000000000018
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586098522261879,
+          2.584971727393288,
+          2.5849625192622
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999982952792341,
+          0.9999999979700953,
+          0.9999999999977498
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6111366541929972,
+          2.5863033814391665,
+          2.5850218893262342
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574585,
+          0.9999999965118123,
+          0.9999999999953055
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.58594624463647,
+          2.584276705809209
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574585,
+          0.9999999965118123,
+          0.9999999999953055
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.58594624463647,
+          2.5842767058092084
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.25,
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925013,
+          0.9999999941965294,
+          0.9999999999907376
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.586371422876581,
+          2.5843058343709604
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999975952574585,
+          0.9999999965118123,
+          0.9999999999953055
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.6149187992619534,
+          2.58594624463647,
+          2.5842767058092084
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925013,
+          0.9999999941965294,
+          0.9999999999907376
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.586371422876581,
+          2.5843058343709604
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999966556925014,
+          0.9999999941965294,
+          0.9999999999907376
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.619407808626904,
+          2.586371422876581,
+          2.5843058343709604
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 0.9,
+        "pattern": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.999995476584363,
+          0.9999999910242465,
+          0.9999999999840463
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.624603682287849,
+          2.5875789161594995,
+          2.5851092750114892
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.99999999859344,
+          0.9999999999999581,
+          1.0000000000000018
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586098522261879,
+          2.584971727393288,
+          2.5849625192622
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044331,
+          0.9999999999998681,
+          0.9999999999999946
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.584092456996958,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044331,
+          0.9999999999998681,
+          0.9999999999999947
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.584092456996958,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.25,
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012227,
+          0.9999999999996556,
+          0.9999999999999893
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586019956336474,
+          2.5841006788508603,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.25,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999975044331,
+          0.9999999999998681,
+          0.9999999999999947
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.58562769021733,
+          2.5840924569969586,
+          2.5840759429052214
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.25,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012227,
+          0.9999999999996556,
+          0.9999999999999893
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.586019956336474,
+          2.58410067885086,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.75,
+          0.25
+        ],
+        "root_averaged_probabilities": [
+          0.9999999957012227,
+          0.9999999999996555,
+          0.9999999999999893
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5860199563364734,
+          2.58410067885086,
+          2.584076090727664
+        ]
+      },
+      {
+        "N": 3,
+        "bar_delta": 0.5,
+        "g": 1.1,
+        "pattern": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "root_averaged_probabilities": [
+          0.9999999931838086,
+          0.9999999999993203,
+          0.999999999999986
+        ],
+        "complete_geometry_record_entropy_bits": [
+          2.5872753206193098,
+          2.5849963929549933,
+          2.584962962729528
+        ]
+      }
+    ],
+    "all_continuous_patterns_proved": false,
+    "finite_N_not_a_scaling_or_nonshrinking_formation_theorem": true
+  },
+  "direct_receiver_cut_comparison": {
+    "N": 3,
+    "retained_modes": 224,
+    "physical_modes": 576,
+    "retained_dimension": 50849,
+    "physical_dimension": 333505,
+    "note": "observed floating-point discrepancy includes roundoff; the analytic cut error does not",
+    "rows": [
+      {
+        "t": 36,
+        "directly_observed_state_difference": 1.6062192563761189e-86,
+        "analytic_receiver_cut_error_excluding_roundoff": 4.7786766807308385e-61,
+        "observed_probability_difference": 0.0
+      },
+      {
+        "t": 72,
+        "directly_observed_state_difference": 1.0925960751062595e-26,
+        "analytic_receiver_cut_error_excluding_roundoff": 2.672464725360794e-24,
+        "observed_probability_difference": 0.0
+      }
+    ]
+  },
+  "small_mode_controls": [
+    {
+      "N": 3,
+      "receiver_modes": 2,
+      "pattern_name": "common",
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.012203255832163317,
+        0.027126719778285298,
+        0.04741919866926167
+      ],
+      "complete_word_record_entropy_bits": [
+        1.6926012207623748,
+        1.7934684662206208,
+        1.912203170704464
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 3,
+      "receiver_modes": 2,
+      "pattern_name": "balanced",
+      "delta": [
+        0.25,
+        -0.25,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.6913664912771537,
+        0.775404745500027,
+        0.8424852520000672
+      ],
+      "complete_word_record_entropy_bits": [
+        3.278319123265552,
+        3.208869863695212,
+        3.5406111557621225
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 3,
+      "receiver_modes": 2,
+      "pattern_name": "outlier",
+      "delta": [
+        0.25,
+        -0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.6913664912771537,
+        0.775404745500027,
+        0.8424852520000672
+      ],
+      "complete_word_record_entropy_bits": [
+        3.278319123265552,
+        3.208869863695212,
+        3.540611155762123
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 3,
+      "receiver_modes": 2,
+      "pattern_name": "ramp",
+      "delta": [
+        -0.25,
+        0.0,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.5377590697916709,
+        0.706439763838941,
+        0.6093900567088611
+      ],
+      "complete_word_record_entropy_bits": [
+        3.229432789008251,
+        3.412116132413618,
+        3.2061842605837247
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 3,
+      "receiver_modes": 2,
+      "pattern_name": "iid_uniform",
+      "delta": [
+        -0.07742756177691551,
+        0.02835748209769401,
+        0.06288858805059361
+      ],
+      "g": 1.0,
+      "seed": 20261016,
+      "root_averaged_macro_probabilities": [
+        0.2981525227426247,
+        0.4265518599809041,
+        0.5559228971725185
+      ],
+      "complete_word_record_entropy_bits": [
+        2.9548411074004246,
+        3.3295950054437915,
+        3.565965436988492
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 4,
+      "receiver_modes": 2,
+      "pattern_name": "common",
+      "delta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.5280942693996211,
+        0.3064005744266523,
+        9.956664071914614e-06
+      ],
+      "complete_word_record_entropy_bits": [
+        4.4310491792815245,
+        3.5816889896355075,
+        2.000195584975158
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 4,
+      "receiver_modes": 2,
+      "pattern_name": "balanced",
+      "delta": [
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.9985733126499297,
+        0.9657762963942813,
+        0.9218900434696582
+      ],
+      "complete_word_record_entropy_bits": [
+        5.064138695187401,
+        5.224751930447946,
+        5.450770666400621
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 4,
+      "receiver_modes": 2,
+      "pattern_name": "outlier",
+      "delta": [
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.8089079937391689,
+        0.8286588768994704,
+        0.8264850880062824
+      ],
+      "complete_word_record_entropy_bits": [
+        4.62452032653238,
+        4.922633557140349,
+        5.207057992019815
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 4,
+      "receiver_modes": 2,
+      "pattern_name": "ramp",
+      "delta": [
+        -0.25,
+        -0.08333333333333334,
+        0.08333333333333331,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.7136661025275922,
+        0.7547785059791847,
+        0.8310341096133352
+      ],
+      "complete_word_record_entropy_bits": [
+        4.475376245303042,
+        4.484920396928953,
+        4.728166524484299
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 4,
+      "receiver_modes": 2,
+      "pattern_name": "iid_uniform",
+      "delta": [
+        -0.001226119025878325,
+        0.11133310666497725,
+        -0.12162562425392348,
+        -0.1503257804363206
+      ],
+      "g": 1.0,
+      "seed": 20261016,
+      "root_averaged_macro_probabilities": [
+        0.40800330297477894,
+        0.5749881870675224,
+        0.5171471944087744
+      ],
+      "complete_word_record_entropy_bits": [
+        4.084598685427579,
+        4.438177470454246,
+        4.052637533496085
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 5,
+      "receiver_modes": 2,
+      "pattern_name": "common",
+      "delta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.024216577452130544,
+        0.0698119079416173,
+        0.10416533433361178
+      ],
+      "complete_word_record_entropy_bits": [
+        3.758346983674485,
+        4.483303525420203,
+        4.8419013345707
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 5,
+      "receiver_modes": 2,
+      "pattern_name": "balanced",
+      "delta": [
+        0.25,
+        -0.25,
+        0.25,
+        -0.25,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.8909686553987362,
+        0.8877663752400096,
+        0.4620726197910774
+      ],
+      "complete_word_record_entropy_bits": [
+        7.0769282066368095,
+        6.960611463573981,
+        6.293200213095792
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 5,
+      "receiver_modes": 2,
+      "pattern_name": "outlier",
+      "delta": [
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.6784434930294932,
+        0.6437426529393324,
+        0.10245137771465525
+      ],
+      "complete_word_record_entropy_bits": [
+        6.166132516416832,
+        5.913175050659287,
+        4.434408612544691
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 5,
+      "receiver_modes": 2,
+      "pattern_name": "ramp",
+      "delta": [
+        -0.25,
+        -0.125,
+        0.0,
+        0.125,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.6474371104958799,
+        0.7245338004276248,
+        0.7597929147473634
+      ],
+      "complete_word_record_entropy_bits": [
+        5.614781392237525,
+        5.566434643173362,
+        5.668530106330003
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 5,
+      "receiver_modes": 2,
+      "pattern_name": "iid_uniform",
+      "delta": [
+        0.02497885877708711,
+        0.09376625601462923,
+        0.16293131109926984,
+        -0.19258470611548317,
+        0.1206535795734297
+      ],
+      "g": 1.0,
+      "seed": 20261016,
+      "root_averaged_macro_probabilities": [
+        0.26263277005417857,
+        0.2519346970454874,
+        0.1692094634865664
+      ],
+      "complete_word_record_entropy_bits": [
+        4.595188659266485,
+        4.776062531040976,
+        4.479742137533268
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 6,
+      "receiver_modes": 2,
+      "pattern_name": "common",
+      "delta": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.02105895351443135,
+        0.004511022938081673,
+        0.08768596817023727
+      ],
+      "complete_word_record_entropy_bits": [
+        4.00086940419197,
+        3.344257820469111,
+        5.100040253391834
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 6,
+      "receiver_modes": 2,
+      "pattern_name": "balanced",
+      "delta": [
+        0.25,
+        -0.25,
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.9565000110170552,
+        0.6447068502737399,
+        0.9649116103740875
+      ],
+      "complete_word_record_entropy_bits": [
+        9.516440533350618,
+        8.45702717937422,
+        9.366169134735044
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 6,
+      "receiver_modes": 2,
+      "pattern_name": "outlier",
+      "delta": [
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.7361477141907128,
+        0.21632044331456982,
+        0.4527778038550138
+      ],
+      "complete_word_record_entropy_bits": [
+        6.720732042692275,
+        5.503708907053181,
+        6.263555699974704
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 6,
+      "receiver_modes": 2,
+      "pattern_name": "ramp",
+      "delta": [
+        -0.25,
+        -0.15,
+        -0.04999999999999999,
+        0.050000000000000044,
+        0.15000000000000002,
+        0.25
+      ],
+      "g": 1.0,
+      "seed": null,
+      "root_averaged_macro_probabilities": [
+        0.7634908069362989,
+        0.8175418810267119,
+        0.8437316333803128
+      ],
+      "complete_word_record_entropy_bits": [
+        6.681135927965068,
+        6.840161833239157,
+        6.981325230497976
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    },
+    {
+      "N": 6,
+      "receiver_modes": 2,
+      "pattern_name": "iid_uniform",
+      "delta": [
+        -0.24271607181022214,
+        -0.17511824776755652,
+        -0.0006644263595622646,
+        0.21988822162018312,
+        0.24477716599698884,
+        -0.052060107074481776
+      ],
+      "g": 1.0,
+      "seed": 20261016,
+      "root_averaged_macro_probabilities": [
+        0.6430036802840176,
+        0.6583982881498757,
+        0.6584350912226286
+      ],
+      "complete_word_record_entropy_bits": [
+        6.3980272640039235,
+        6.20360159180662,
+        6.15761371751349
+      ],
+      "physical_L_N_comparison_bound": null,
+      "interpretation": "different finite receiver control; not primary formation evidence"
+    }
+  ],
+  "independent_detuning_Q_packets": [
+    {
+      "N": 128,
+      "receiver_modes": 1048576,
+      "independent_detuning_pattern": "signed_ramp",
+      "sign": -1,
+      "target_energy": -0.6240157480314961,
+      "direct_many_boson_Q_residual": 0.00012831290532437932,
+      "residual_upper": 0.001521993660007758,
+      "coupled_pole_window_radius": 0.03443878521326139,
+      "inverse_norm_lower_if_invertible": 657.0329603047774,
+      "preparation_overlap_claimed": false
+    },
+    {
+      "N": 128,
+      "receiver_modes": 1048576,
+      "independent_detuning_pattern": "signed_ramp",
+      "sign": 1,
+      "target_energy": -0.6358267716535433,
+      "direct_many_boson_Q_residual": 0.0001280482309292591,
+      "residual_upper": 0.001521993660007758,
+      "coupled_pole_window_radius": 0.03443878521326139,
+      "inverse_norm_lower_if_invertible": 657.0329603047774,
+      "preparation_overlap_claimed": false
+    },
+    {
+      "N": 256,
+      "receiver_modes": 4194304,
+      "independent_detuning_pattern": "signed_ramp",
+      "sign": -1,
+      "target_energy": -0.3107843137254902,
+      "direct_many_boson_Q_residual": 4.726198426168427e-05,
+      "residual_upper": 0.0007639939734157663,
+      "coupled_pole_window_radius": 0.024447807149304522,
+      "inverse_norm_lower_if_invertible": 1308.9108485097945,
+      "preparation_overlap_claimed": false
+    },
+    {
+      "N": 256,
+      "receiver_modes": 4194304,
+      "independent_detuning_pattern": "signed_ramp",
+      "sign": 1,
+      "target_energy": -0.31666666666666665,
+      "direct_many_boson_Q_residual": 4.723963461299018e-05,
+      "residual_upper": 0.0007639939734157663,
+      "coupled_pole_window_radius": 0.024447807149304522,
+      "inverse_norm_lower_if_invertible": 1308.9108485097945,
+      "preparation_overlap_claimed": false
+    }
+  ],
+  "conditional_probes": [
+    {
+      "N": 3,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25
+      ],
+      "word": [
+        0,
+        1,
+        2
+      ],
+      "source_placement": "interior",
+      "source_labels": [
+        0,
+        1
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 1,
+      "initial_complement_driving_norm": 0.14433756729740646,
+      "full_dimension": 120,
+      "conditional_word_probability_given_root": 0.36800084056791454,
+      "receiver_conditioned_from_time": 36,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -0.001249998264754263,
+            0.0012499972881942515,
+            9.76560011449584e-10
+          ],
+          "chi_consistent": [
+            -0.0012499982647540037,
+            0.0012499969669908682,
+            9.76559927354148e-10
+          ],
+          "chi_inconsistent": [
+            -2.5945026302412624e-16,
+            3.2120338352316225e-10,
+            8.409543605014692e-17
+          ],
+          "chi_P_only_comparison": [
+            -0.0012499983723964232,
+            0.0012499973958362432,
+            9.765601798647446e-10
+          ],
+          "pulse_identity_error": 6.873841773558098e-17,
+          "Q_probabilities": [
+            6.132798520123369e-13,
+            5.139254569042966e-07
+          ],
+          "complete_feedback_state_norm_differences": [
+            7.83121885537774e-07,
+            0.0007168859910199843
+          ],
+          "feedback_state_norm_upper": 0.0012565855291698047,
+          "first_error_Dyson_amplitude_upper": 0.01055531844502636,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              9.898480355278394e-08,
+              0.02083336721390182
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -0.012498324064785763,
+            0.012497347742280101,
+            9.763225056565334e-07
+          ],
+          "chi_consistent": [
+            -0.01249832405191292,
+            0.01249728042949257,
+            9.763187250077928e-07
+          ],
+          "chi_inconsistent": [
+            -1.2872843457660725e-11,
+            6.731278753123336e-08,
+            3.780648740513193e-12
+          ],
+          "chi_P_only_comparison": [
+            -0.012498372455034651,
+            0.01249739612370808,
+            9.763313265692123e-07
+          ],
+          "pulse_identity_error": 2.6020852139652106e-17,
+          "Q_probabilities": [
+            2.448808599705898e-09,
+            1.0770537887848435e-05
+          ],
+          "complete_feedback_state_norm_differences": [
+            4.948563800565553e-05,
+            0.0032818907173558878
+          ],
+          "feedback_state_norm_upper": 0.013179834566155381,
+          "first_error_Dyson_amplitude_upper": 0.1107106103557052,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              9.855282347517572e-06,
+              0.0208366775232182
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.06229654525766248,
+            0.06217518264297778,
+            0.00012136261468481949
+          ],
+          "chi_consistent": [
+            -0.06229654373990098,
+            0.06217505817761151,
+            0.00012136223618919748
+          ],
+          "chi_inconsistent": [
+            -1.5177615135470448e-09,
+            1.244653662768872e-07,
+            3.784956220112814e-10
+          ],
+          "chi_P_only_comparison": [
+            -0.06229673917834726,
+            0.06217537540755121,
+            0.0001213637707960376
+          ],
+          "pulse_identity_error": 2.942091015256665e-15,
+          "Q_probabilities": [
+            3.4605787987413895e-08,
+            3.937880912154132e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.00018605999465044315,
+            0.001985398193111352
+          ],
+          "feedback_state_norm_upper": 0.0821974819498918,
+          "first_error_Dyson_amplitude_upper": 0.6904588483790912,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.00023990433959747057,
+              0.020910094553868597
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.23720096966280918,
+            0.23000663497057255,
+            0.007194334692238432
+          ],
+          "chi_consistent": [
+            -0.23720089476696185,
+            0.23000560615378274,
+            0.0071943103195250485
+          ],
+          "chi_inconsistent": [
+            -7.489584736794224e-08,
+            1.028816789824381e-06,
+            2.4372713383327203e-08
+          ],
+          "chi_P_only_comparison": [
+            -0.23720174782376002,
+            0.23000735186706583,
+            0.007194395956694287
+          ],
+          "pulse_identity_error": 4.6629367034256575e-15,
+          "Q_probabilities": [
+            5.651411043837896e-07,
+            7.78720956483987e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0007539035496775373,
+            0.0028047592661666486
+          ],
+          "feedback_state_norm_upper": 0.8531154657818633,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.003180451516097013,
+              0.021374164322645987
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    },
+    {
+      "N": 3,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25
+      ],
+      "word": [
+        0,
+        1,
+        2
+      ],
+      "source_placement": "end",
+      "source_labels": [
+        1,
+        2
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 1,
+      "initial_complement_driving_norm": 0.20412414523193156,
+      "full_dimension": 120,
+      "conditional_word_probability_given_root": 0.36800084056791454,
+      "receiver_conditioned_from_time": 36,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -9.765611333712363e-10,
+            -0.001249995851677327,
+            0.0012499968282384604
+          ],
+          "chi_consistent": [
+            -9.76561049500576e-10,
+            -0.0012499955304740443,
+            0.0012499965070351267
+          ],
+          "chi_inconsistent": [
+            -8.387066022392005e-17,
+            -3.21203282838462e-10,
+            3.212033335076399e-10
+          ],
+          "chi_P_only_comparison": [
+            -9.765612179161714e-10,
+            -0.001249996066960769,
+            0.0012499970435219869
+          ],
+          "pulse_identity_error": 6.266688556966216e-17,
+          "Q_probabilities": [
+            5.139254569042966e-07,
+            5.139253995458405e-07
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0007168859910199843,
+            0.0007168859510146892
+          ],
+          "feedback_state_norm_upper": 0.0012565855291698047,
+          "first_error_Dyson_amplitude_upper": 0.01055531844502636,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.02083336721390182,
+              0.020833333333346655
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -9.764281871200194e-07,
+            -0.012495977079438827,
+            0.012496953507625953
+          ],
+          "chi_consistent": [
+            -9.764256695475491e-07,
+            -0.012495909775108668,
+            0.012496886207647839
+          ],
+          "chi_inconsistent": [
+            -2.5175724704415675e-12,
+            -6.730433016010689e-08,
+            6.72999781145722e-08
+          ],
+          "chi_P_only_comparison": [
+            -9.764344934415076e-07,
+            -0.012496073808324324,
+            0.012497050242817765
+          ],
+          "pulse_identity_error": 4.787836793695988e-16,
+          "Q_probabilities": [
+            1.0770537887848435e-05,
+            1.0768861254009878e-05
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0032818907173558878,
+            0.0032816352654213565
+          ],
+          "feedback_state_norm_upper": 0.013179834566155381,
+          "first_error_Dyson_amplitude_upper": 0.1107106103557052,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.0208366775232182,
+              0.020833333463412138
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.00012167286582344766,
+            -0.062014810222893915,
+            0.06213648308871743
+          ],
+          "chi_consistent": [
+            -0.00012167289727404734,
+            -0.062014688355353995,
+            0.0621363616874247
+          ],
+          "chi_inconsistent": [
+            3.1450599677965995e-11,
+            -1.2186753993256047e-07,
+            1.2140129272925354e-07
+          ],
+          "chi_P_only_comparison": [
+            -0.00012167406578262642,
+            -0.06201519028415217,
+            0.06213686434993479
+          ],
+          "pulse_identity_error": 7.28583859910259e-15,
+          "Q_probabilities": [
+            3.937880912154132e-06,
+            3.92149236760902e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.001985398193111352,
+            0.001981257479200514
+          ],
+          "feedback_state_norm_upper": 0.0821974819498918,
+          "first_error_Dyson_amplitude_upper": 0.6904588483790912,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.020910094553868597,
+              0.020833406852725462
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.007433255462722473,
+            -0.22196360650774039,
+            0.22939686197046227
+          ],
+          "chi_consistent": [
+            -0.007433253421953109,
+            -0.22196270237972932,
+            0.22939596152901665
+          ],
+          "chi_inconsistent": [
+            -2.0407693650077934e-09,
+            -9.041280110566217e-07,
+            9.004414456205192e-07
+          ],
+          "chi_P_only_comparison": [
+            -0.007433325141860542,
+            -0.221964750066374,
+            0.22939807520823446
+          ],
+          "pulse_identity_error": 6.855627177060342e-15,
+          "Q_probabilities": [
+            7.78720956483987e-06,
+            7.756317225956002e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0028047592661666486,
+            0.0027981264144320535
+          ],
+          "feedback_state_norm_upper": 0.8531154657818633,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              46.35734118448027,
+              162.00052084904604
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.021374164322645987,
+              0.020841910969318388
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_placement": "interior",
+      "source_labels": [
+        0,
+        1
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 2,
+      "initial_complement_driving_norm": 0.0,
+      "full_dimension": 1280,
+      "conditional_word_probability_given_root": 0.015388172497564287,
+      "receiver_conditioned_from_time": 64,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -0.0012499983723966905,
+            0.0012499973958351122,
+            9.76561323971041e-10,
+            2.543124753109772e-16
+          ],
+          "chi_consistent": [
+            -0.0012499983723966905,
+            0.0012499973958348483,
+            9.7656126089942e-10,
+            2.543124670765647e-16
+          ],
+          "chi_inconsistent": [
+            -5.786757291392425e-23,
+            2.6375441406023813e-16,
+            6.30716211055599e-17,
+            8.234412471426596e-24
+          ],
+          "chi_P_only_comparison": [
+            -0.0012499983723967237,
+            0.0012499973958351135,
+            9.765613555911656e-10,
+            2.5431249344164253e-16
+          ],
+          "pulse_identity_error": 9.172350379227368e-17,
+          "Q_probabilities": [
+            3.448630007803158e-19,
+            4.674355388323765e-13
+          ],
+          "complete_feedback_state_norm_differences": [
+            5.872503803424012e-10,
+            6.836925911366933e-07
+          ],
+          "feedback_state_norm_upper": 6.585529169805886e-06,
+          "first_error_Dyson_amplitude_upper": 5.531844502636945e-05,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              1.249527876483572e-13,
+              7.548968299751246e-08
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 6.963421717244607e-06
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -0.01249837248315187,
+            0.012497396011556541,
+            9.76446170790171e-07,
+            2.5424554551029176e-11
+          ],
+          "chi_consistent": [
+            -0.012498372483151459,
+            0.01249739599957548,
+            9.7644333482627e-07,
+            2.5424505284189448e-11
+          ],
+          "chi_inconsistent": [
+            -4.1138995924539826e-16,
+            1.1981059958271598e-11,
+            2.8359639012188795e-12,
+            4.9266839723729275e-17
+          ],
+          "chi_P_only_comparison": [
+            -0.012498372484840195,
+            0.012497396011353034,
+            9.764480624909114e-07,
+            2.5424672549619066e-11
+          ],
+          "pulse_identity_error": 8.743006318923108e-16,
+          "Q_probabilities": [
+            1.9402689170893e-13,
+            1.8809239515195467e-09
+          ],
+          "complete_feedback_state_norm_differences": [
+            4.4048547834913184e-07,
+            4.3369751272858334e-05
+          ],
+          "feedback_state_norm_upper": 0.0006798345661553845,
+          "first_error_Dyson_amplitude_upper": 0.0057106103557052305,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              1.2681701215373082e-09,
+              7.628254297901522e-06
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0007660524528332988
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.062296827295670876,
+            0.06217503571754684,
+            0.00012171264279590421,
+            7.893532796868095e-08
+          ],
+          "chi_consistent": [
+            -0.0622968272933629,
+            0.062175034440292896,
+            0.00012171235187865968,
+            7.893513507424715e-08
+          ],
+          "chi_inconsistent": [
+            -2.3079779815397873e-12,
+            1.2772539465136801e-09,
+            2.909172445279278e-10,
+            1.9289443378753938e-13
+          ],
+          "chi_P_only_comparison": [
+            -0.06229682741975525,
+            0.06217503554140396,
+            0.00012171294245527662,
+            7.893589600693124e-08
+          ],
+          "pulse_identity_error": 8.049116928532385e-16,
+          "Q_probabilities": [
+            1.3086541695209362e-10,
+            2.8440106942651217e-08
+          ],
+          "complete_feedback_state_norm_differences": [
+            1.1440253932082405e-05,
+            0.00016866434705743516
+          ],
+          "feedback_state_norm_upper": 0.019697481949891828,
+          "first_error_Dyson_amplitude_upper": 0.16545884837909136,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              8.313584881059702e-07,
+              0.00019728900191649188
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.029795838831561304
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.2372605684943507,
+            0.2297363887900851,
+            0.007451358004052118,
+            7.282170021218419e-05
+          ],
+          "chi_consistent": [
+            -0.2372605664683688,
+            0.22973630327356975,
+            0.007451332968021347,
+            7.282151857763542e-05
+          ],
+          "chi_inconsistent": [
+            -2.0259818951673688e-09,
+            8.551651534878794e-08,
+            2.5036030771075714e-08,
+            1.8163454876474092e-10
+          ],
+          "chi_P_only_comparison": [
+            -0.2372605753540841,
+            0.2297363738969365,
+            0.007451379256025575,
+            7.282220112213493e-05
+          ],
+          "pulse_identity_error": 3.524958103184872e-15,
+          "Q_probabilities": [
+            3.3349331814004253e-08,
+            5.331103268199863e-07
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.00018280234346590768,
+            0.0007317280974652139
+          ],
+          "feedback_state_norm_upper": 0.6031154657818634,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.00019699611481617624,
+              0.0029690206018279184
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_placement": "end",
+      "source_labels": [
+        2,
+        3
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 1,
+      "initial_complement_driving_norm": 0.1767766952966369,
+      "full_dimension": 1280,
+      "conditional_word_probability_given_root": 0.015388172497564287,
+      "receiver_conditioned_from_time": 64,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -2.543128991217633e-16,
+            -9.765607605288936e-10,
+            -0.0012499958729721278,
+            0.001249996849533143
+          ],
+          "chi_consistent": [
+            -2.5431289090934477e-16,
+            -9.765606976259077e-10,
+            -0.001249995632069651,
+            0.001249996608630634
+          ],
+          "chi_inconsistent": [
+            -8.212418477816038e-24,
+            -6.290298569836648e-17,
+            -2.409024766722778e-10,
+            2.4090250900766324e-10
+          ],
+          "chi_P_only_comparison": [
+            -2.5431290904008176e-16,
+            -9.76560823937575e-10,
+            -0.0012499960344347048,
+            0.0012499970109957834
+          ],
+          "pulse_identity_error": 8.174884380540703e-17,
+          "Q_probabilities": [
+            3.8544411586419816e-07,
+            3.854440613759439e-07
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0006208414883635193,
+            0.000620841444480929
+          ],
+          "feedback_state_norm_upper": 0.0012565855291698047,
+          "first_error_Dyson_amplitude_upper": 0.01055531844502636,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.01562502666156158,
+              0.01562500000001043
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -2.542880579677132e-11,
+            -9.763896667860162e-07,
+            -0.012495946278633069,
+            0.012496922693728672
+          ],
+          "chi_consistent": [
+            -2.5428770485396305e-11,
+            -9.763877786227175e-07,
+            -0.01249589579946068,
+            0.012496872217925656
+          ],
+          "chi_inconsistent": [
+            -3.5311375015748153e-17,
+            -1.888163298507283e-12,
+            -5.0479172387510466e-08,
+            5.047580301592367e-08
+          ],
+          "chi_P_only_comparison": [
+            -2.542888853704267e-11,
+            -9.763943963735048e-07,
+            -0.012496018824718786,
+            0.012496995244544049
+          ],
+          "pulse_identity_error": 1.186550857568136e-15,
+          "Q_probabilities": [
+            8.078053437172864e-06,
+            8.076771338509818e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.002842218259477409,
+            0.0028419927018515003
+          ],
+          "feedback_state_norm_upper": 0.013179834566155381,
+          "first_error_Dyson_amplitude_upper": 0.1107106103557052,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.015627745466434965,
+              0.01562500010843698
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -7.928082513040567e-08,
+            -0.00012153874622792461,
+            -0.06199622109994545,
+            0.062117839126998746
+          ],
+          "chi_consistent": [
+            -7.928082150451309e-08,
+            -0.00012153876953681058,
+            -0.06199612943856407,
+            0.062117747905896414
+          ],
+          "chi_inconsistent": [
+            -3.6258925631502014e-15,
+            2.3308885960311362e-11,
+            -9.166138139175477e-08,
+            9.122110232484253e-08
+          ],
+          "chi_P_only_comparison": [
+            -7.928139638732363e-08,
+            -0.00012153964528538485,
+            -0.06199650586481128,
+            0.06211812479149305
+          ],
+          "pulse_identity_error": 1.6583956430338276e-15,
+          "Q_probabilities": [
+            2.9630349632611887e-06,
+            2.94822697508345e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0017219891696795505,
+            0.0017176774568105496
+          ],
+          "feedback_state_norm_upper": 0.0821974819498918,
+          "first_error_Dyson_amplitude_upper": 0.6904588483790912,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.01570021567659638,
+              0.01562507689648966
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -7.822934102568016e-05,
+            -0.00727430970277269,
+            -0.21916111382365913,
+            0.22651365286745928
+          ],
+          "chi_consistent": [
+            -7.822934054034644e-05,
+            -0.007274307657343008,
+            -0.21916041541023246,
+            0.22651296923043113
+          ],
+          "chi_inconsistent": [
+            -4.853337049331287e-13,
+            -2.0454296810123978e-09,
+            -6.984134266340139e-07,
+            6.836370281493533e-07
+          ],
+          "chi_P_only_comparison": [
+            -7.822991882457715e-05,
+            -0.0072743617847729055,
+            -0.21916199679843024,
+            0.22651458850202771
+          ],
+          "pulse_identity_error": 4.690692279041286e-15,
+          "Q_probabilities": [
+            6.026465940234306e-06,
+            5.910015394938389e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.002464442681747702,
+            0.0024396536890430166
+          ],
+          "feedback_state_norm_upper": 0.8531154657818633,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": {
+            "Q_eigenvalue_range": [
+              45.04935853245105,
+              242.7505859502777
+            ],
+            "seed_window": [
+              -2.5,
+              2.5
+            ],
+            "seed_window_drive_weights": [
+              0.0,
+              0.0
+            ],
+            "full_complement_drive_weights": [
+              0.016667108876761226,
+              0.015642704310229332
+            ],
+            "seed_window_eigenvalues": 0
+          },
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25,
+        -0.25,
+        0.25
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_placement": "interior",
+      "source_labels": [
+        0,
+        1
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 3,
+      "initial_complement_driving_norm": 0.0,
+      "full_dimension": 15600,
+      "conditional_word_probability_given_root": 0.05542308780622589,
+      "receiver_conditioned_from_time": 100,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -0.001249998372396723,
+            0.0012499973958351128,
+            9.765613555913456e-10,
+            2.5431293515547743e-16,
+            3.311362606440992e-23
+          ],
+          "chi_consistent": [
+            -0.0012499983723967228,
+            0.0012499973958351128,
+            9.765613555912918e-10,
+            2.5431292856795664e-16,
+            3.311362554897296e-23
+          ],
+          "chi_inconsistent": [
+            -1.883798869463643e-30,
+            4.366111489514415e-23,
+            5.388645094309936e-23,
+            6.587520778879747e-24,
+            5.154369521567711e-31
+          ],
+          "chi_P_only_comparison": [
+            -0.0012499983723967233,
+            0.0012499973958351135,
+            9.765613555913567e-10,
+            2.5431293911402193e-16,
+            3.3113627267740977e-23
+          ],
+          "pulse_identity_error": 7.958043946043603e-17,
+          "Q_probabilities": [
+            7.361328745562931e-26,
+            1.824863627434541e-19
+          ],
+          "complete_feedback_state_norm_differences": [
+            2.713178542502059e-13,
+            4.2718422994501466e-10
+          ],
+          "feedback_state_norm_upper": 2.302916980589381e-08,
+          "first_error_Dyson_amplitude_upper": 1.9344502636950802e-07,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 1.9125814750846618e-10
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -0.012498372484840143,
+            0.012497396011346256,
+            9.764480643746958e-07,
+            2.5429168283799278e-11,
+            3.310716394449282e-16
+          ],
+          "chi_consistent": [
+            -0.012498372484840141,
+            0.012497396011345998,
+            9.764480640510494e-07,
+            2.5429128875499935e-11,
+            3.3107128094442037e-16
+          ],
+          "chi_inconsistent": [
+            -1.8603021234452998e-21,
+            2.616796479138666e-16,
+            3.2364635149340437e-16,
+            3.9408299343979087e-17,
+            3.5850050780337115e-22
+          ],
+          "chi_P_only_comparison": [
+            -0.012498372484840153,
+            0.012497396011346178,
+            9.764480644464003e-07,
+            2.5429195808748693e-11,
+            3.3107252127892725e-16
+          ],
+          "pulse_identity_error": 1.43982048506075e-16,
+          "Q_probabilities": [
+            4.900607325412824e-18,
+            1.0181700649898821e-13
+          ],
+          "complete_feedback_state_norm_differences": [
+            2.2137330785897683e-09,
+            3.190881446285045e-07
+          ],
+          "feedback_state_norm_upper": 2.358456615538477e-05,
+          "first_error_Dyson_amplitude_upper": 0.0001981103557052321,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 2.0381919146679887e-06
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.062296827416948176,
+            0.06217503498077717,
+            0.00012171310332794824,
+            7.930709923098833e-08,
+            2.574389484305884e-11
+          ],
+          "chi_consistent": [
+            -0.06229682741694768,
+            0.06217503497974878,
+            0.00012171310204106023,
+            7.930694254750105e-08,
+            2.5743844997352627e-11
+          ],
+          "chi_inconsistent": [
+            -5.024464473284636e-16,
+            1.0284057223672368e-12,
+            1.2868880148303037e-12,
+            1.5668348728143397e-13,
+            4.9845706211506437e-17
+          ],
+          "chi_P_only_comparison": [
+            -0.06229682741698065,
+            0.06217503498035142,
+            0.00012171310363164819,
+            7.930725354194834e-08,
+            2.574404119947434e-11
+          ],
+          "pulse_identity_error": 1.3530843112619095e-15,
+          "Q_probabilities": [
+            1.1589978545119933e-13,
+            6.54899639525998e-11
+          ],
+          "complete_feedback_state_norm_differences": [
+            3.404488353106372e-07,
+            8.092937391946805e-06
+          ],
+          "feedback_state_norm_upper": 0.003291231949891829,
+          "first_error_Dyson_amplitude_upper": 0.027646348379091367,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0017110394066834466
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.23726046650495386,
+            0.22972828110190666,
+            0.007453125278996766,
+            7.866673771999098e-05,
+            3.933863295607953e-07
+          ],
+          "chi_consistent": [
+            -0.2372604664986709,
+            0.22972828025407743,
+            0.0074531240152048905,
+            7.866655135319026e-05,
+            3.9338555048163623e-07
+          ],
+          "chi_inconsistent": [
+            -6.282897793672881e-12,
+            8.478291629194592e-10,
+            1.2637918762372474e-09,
+            1.8636680071875968e-10,
+            7.790791590042869e-13
+          ],
+          "chi_P_only_comparison": [
+            -0.2372604665211241,
+            0.22972828066738626,
+            0.007453125550331687,
+            7.866691495265979e-05,
+            3.9338845345078575e-07
+          ],
+          "pulse_identity_error": 5.689893001203927e-15,
+          "Q_probabilities": [
+            4.2218605508385427e-10,
+            1.5444844418715832e-08
+          ],
+          "complete_feedback_state_norm_differences": [
+            2.055666310542113e-05,
+            0.00012437838170364931
+          ],
+          "feedback_state_norm_upper": 0.3406154657818633,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "modes": 2,
+      "delta": [
+        0,
+        -0.25,
+        0.25,
+        -0.25,
+        0.25
+      ],
+      "word": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_placement": "end",
+      "source_labels": [
+        3,
+        4
+      ],
+      "number_variance": 0.25,
+      "minimum_first_error_operations": 1,
+      "initial_complement_driving_norm": 0.15811388300841894,
+      "full_dimension": 15600,
+      "conditional_word_probability_given_root": 0.05542308780622589,
+      "receiver_conditioned_from_time": 100,
+      "receiver_reset": false,
+      "note": "small-mode physical control; no assertion that its field equals the L_N field",
+      "rows": [
+        {
+          "t": 0.005,
+          "chi": [
+            -3.3113668904126724e-23,
+            -2.5431287701136443e-16,
+            -9.765609581757077e-10,
+            -0.001249996379093529,
+            0.0012499973556547414
+          ],
+          "chi_consistent": [
+            -3.311366838987047e-23,
+            -2.543128704414308e-16,
+            -9.765609078533256e-10,
+            -0.0012499961863715607,
+            0.001249997162932712
+          ],
+          "chi_inconsistent": [
+            -5.142562573616689e-31,
+            -6.569933662853091e-24,
+            -5.0322382165323634e-17,
+            -1.9272196819023663e-10,
+            1.9272202959196096e-10
+          ],
+          "chi_P_only_comparison": [
+            -3.3113669593206367e-23,
+            -2.5431288494601692e-16,
+            -9.765610089026512e-10,
+            -0.0012499965082636924,
+            0.0012499974848249559
+          ],
+          "pulse_identity_error": 1.218643241873707e-16,
+          "Q_probabilities": [
+            3.083552715912464e-07,
+            3.083553140968846e-07
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0005552974840472002,
+            0.0005552975223200536
+          ],
+          "feedback_state_norm_upper": 0.0012565855291698047,
+          "first_error_Dyson_amplitude_upper": 0.01055531844502636,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.05,
+          "chi": [
+            -3.311143552003159e-16,
+            -2.542858719926743e-11,
+            -9.764095494060652e-07,
+            -0.012496448552223495,
+            0.012497424987201812
+          ],
+          "chi_consistent": [
+            -3.311140786252864e-16,
+            -2.5428558951334378e-11,
+            -9.764080390136128e-07,
+            -0.012496408174706259,
+            0.012497384610633556
+          ],
+          "chi_inconsistent": [
+            -2.7657502970875403e-22,
+            -2.8247933049458765e-17,
+            -1.5103924524516076e-12,
+            -4.037751723535176e-08,
+            4.037656825345596e-08
+          ],
+          "chi_P_only_comparison": [
+            -3.3111496083520167e-16,
+            -2.542865338978606e-11,
+            -9.764133330825572e-07,
+            -0.012496506594407904,
+            0.012497483033169977
+          ],
+          "pulse_identity_error": 1.5612511283791264e-17,
+          "Q_probabilities": [
+            6.4614804126692945e-06,
+            6.460821996912956e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.0025419632512968175,
+            0.002541833737489973
+          ],
+          "feedback_state_norm_upper": 0.013179834566155381,
+          "first_error_Dyson_amplitude_upper": 0.1107106103557052,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -2.5827031802435373e-11,
+            -7.926445125033607e-08,
+            -0.00012160350943529958,
+            -0.0620636677636215,
+            0.06218535056333524
+          ],
+          "chi_consistent": [
+            -2.5827030132973482e-11,
+            -7.926444836567446e-08,
+            -0.00012160352871723928,
+            -0.0620635950334143,
+            0.0621852779902847
+          ],
+          "chi_inconsistent": [
+            -1.6694618919380467e-18,
+            -2.884661594398377e-15,
+            1.9281939711138664e-11,
+            -7.273020720311183e-08,
+            7.257305055394215e-08
+          ],
+          "chi_P_only_comparison": [
+            -2.5827177751469807e-11,
+            -7.926490798678963e-08,
+            -0.00012160422912941067,
+            -0.06206389664860498,
+            0.06218558016846956
+          ],
+          "pulse_identity_error": 1.2906342661267445e-15,
+          "Q_probabilities": [
+            2.3473095493105254e-06,
+            2.3413034774775057e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.001532551921655497,
+            0.0015305884040550477
+          ],
+          "feedback_state_norm_upper": 0.0821974819498918,
+          "first_error_Dyson_amplitude_upper": 0.6904588483790912,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0625
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -4.127398246447902e-07,
+            -7.803417643954627e-05,
+            -0.007348238384224178,
+            -0.22356466610716372,
+            0.23099135140765217
+          ],
+          "chi_consistent": [
+            -4.1273982308865446e-07,
+            -7.80341761724446e-05,
+            -0.007348237271096413,
+            -0.2235641271455373,
+            0.23099081262983345
+          ],
+          "chi_inconsistent": [
+            -1.5561357652652837e-15,
+            -2.6710169983890104e-13,
+            -1.1131277632461965e-09,
+            -5.389616264323381e-07,
+            5.387778187370869e-07
+          ],
+          "chi_P_only_comparison": [
+            -4.1274223130909987e-07,
+            -7.80346306211717e-05,
+            -0.007348279939604105,
+            -0.2235653824751685,
+            0.23099210978762508
+          ],
+          "pulse_identity_error": 5.079270337660091e-15,
+          "Q_probabilities": [
+            4.604019819849326e-06,
+            4.60777967890616e-06
+          ],
+          "complete_feedback_state_norm_differences": [
+            0.002152150592538889,
+            0.0021526390982807616
+          ],
+          "feedback_state_norm_upper": 0.8531154657818633,
+          "first_error_Dyson_amplitude_upper": 1.0,
+          "spectral_driving_measure": null,
+          "all_window_drive_mass_upper": 0.0625
+        }
+      ]
+    }
+  ]
+}
