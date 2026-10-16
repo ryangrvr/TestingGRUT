@@ -1,0 +1,159 @@
+{
+  "fock_checks": [
+    {
+      "destination_rank": 2,
+      "source_rank": 3,
+      "photons": 1,
+      "lifted_dense_error": 0.0,
+      "matrix_free_error": 1.4946834900704541e-16
+    },
+    {
+      "destination_rank": 3,
+      "source_rank": 2,
+      "photons": 2,
+      "lifted_dense_error": 2.758646700705597e-16,
+      "matrix_free_error": 4.542723781401334e-16
+    },
+    {
+      "destination_rank": 3,
+      "source_rank": 4,
+      "photons": 3,
+      "lifted_dense_error": 8.125996281880319e-16,
+      "matrix_free_error": 4.0700989988837524e-16
+    },
+    {
+      "destination_rank": 4,
+      "source_rank": 3,
+      "photons": 3,
+      "lifted_dense_error": 7.643852687522185e-16,
+      "matrix_free_error": 4.257876585269639e-16
+    },
+    {
+      "destination_rank": 4,
+      "source_rank": 4,
+      "photons": 4,
+      "lifted_dense_error": 1.9215752250034923e-15,
+      "matrix_free_error": 1.3779209653282369e-15
+    }
+  ],
+  "cross_history_checks": [
+    {
+      "N": 3,
+      "modes": 4,
+      "histories": 5,
+      "coefficient_dimension": 10,
+      "projected_append_pop_error": 7.005791955695905e-17,
+      "full_action_norm_squared_error": 1.3877787807814457e-17,
+      "full_residual_direct": 0.21494400164256872,
+      "full_residual_formula": 0.21494400164256877,
+      "adjoint_error": 6.938893903907228e-18,
+      "interference_change": -0.013222578749158831
+    },
+    {
+      "N": 4,
+      "modes": 4,
+      "histories": 9,
+      "coefficient_dimension": 31,
+      "projected_append_pop_error": 5.979156269203726e-17,
+      "full_action_norm_squared_error": 0.0,
+      "full_residual_direct": 0.21613190739423743,
+      "full_residual_formula": 0.21613190739423743,
+      "adjoint_error": 6.206335383118183e-17,
+      "interference_change": -0.009035015978651847
+    },
+    {
+      "N": 4,
+      "modes": 3,
+      "histories": 16,
+      "coefficient_dimension": 33,
+      "projected_append_pop_error": 9.621345938936518e-17,
+      "full_action_norm_squared_error": 1.3877787807814457e-17,
+      "full_residual_direct": 0.2312662795458128,
+      "full_residual_formula": 0.23126627954581286,
+      "adjoint_error": 1.214306433183765e-17,
+      "interference_change": 0.0066772925204042766
+    }
+  ],
+  "emission_step_checks": [
+    {
+      "time": 0.02,
+      "state_error": 0.004173072669579948,
+      "residual_integral_upper": 0.004183029836956737,
+      "polynomial_tail": 5.565533660594423e-22
+    },
+    {
+      "time": 0.1,
+      "state_error": 0.02580076930404141,
+      "residual_integral_upper": 0.02611027918108696,
+      "polynomial_tail": 1.1681700177587572e-15
+    },
+    {
+      "time": 0.3,
+      "state_error": 0.08414944835262396,
+      "residual_integral_upper": 0.08704617443999683,
+      "polynomial_tail": 2.752772712999844e-11
+    }
+  ],
+  "dynamics_checks": [
+    {
+      "N": 3,
+      "modes": 5,
+      "time": 0.5,
+      "full_dimension": 41,
+      "full_wavefunction_error": 0.00013655963080026003,
+      "analytic_state_error_account": 0.0018482530553050962,
+      "maximum_word_rank": 5,
+      "projections": 20
+    },
+    {
+      "N": 3,
+      "modes": 5,
+      "time": 2,
+      "full_dimension": 41,
+      "full_wavefunction_error": 8.58951687128071e-05,
+      "analytic_state_error_account": 0.0019361001437512653,
+      "maximum_word_rank": 5,
+      "projections": 156
+    },
+    {
+      "N": 3,
+      "modes": 5,
+      "time": 8,
+      "full_dimension": 41,
+      "full_wavefunction_error": 0.0030236452088122246,
+      "analytic_state_error_account": 0.0068804673974757515,
+      "maximum_word_rank": 5,
+      "projections": 1108
+    },
+    {
+      "N": 4,
+      "modes": 4,
+      "time": 0.5,
+      "full_dimension": 99,
+      "full_wavefunction_error": 0.00012487496976861388,
+      "analytic_state_error_account": 0.0018482196699291717,
+      "maximum_word_rank": 4,
+      "projections": 40
+    },
+    {
+      "N": 4,
+      "modes": 4,
+      "time": 2,
+      "full_dimension": 99,
+      "full_wavefunction_error": 7.861429527253214e-05,
+      "analytic_state_error_account": 0.0019428542972782963,
+      "maximum_word_rank": 4,
+      "projections": 312
+    },
+    {
+      "N": 4,
+      "modes": 4,
+      "time": 8,
+      "full_dimension": 99,
+      "full_wavefunction_error": 0.002046386614008758,
+      "analytic_state_error_account": 0.006990179621964137,
+      "maximum_word_rank": 4,
+      "projections": 1643
+    }
+  ]
+}
