@@ -27,7 +27,7 @@ def run(n,q,b,k):
     physical=[(0.,m['psi'],0.,{})]
     for t,(c,er) in trajectory.items():
         e=float(sum(v[0] for v in er.values())+t*info['full_finite_H_relation_defect_frobenius']+ALLOWANCE)
-        physical.append((t,V@c,e,{key:float(v[0]) for key,v in er.items()}))
+        physical.append((t,V@c.real+1j*(V@c.imag),e,{key:float(v[0]) for key,v in er.items()}))
     del V
     for t,w,e,errors in physical:
         probs=np.bincount(gi,weights=abs(w)**2,minlength=len(classes));assert abs(probs.sum()-1)<1e-10

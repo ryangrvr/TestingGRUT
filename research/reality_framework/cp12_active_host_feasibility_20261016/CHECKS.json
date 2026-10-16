@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "labelled_dimension": 12798,
+  "raw_rewiring_checks": 1525,
+  "exact_cross_host_norm_square": "1/720",
+  "host_record_work_identity_difference": 7.105427357601002e-15,
+  "persistence_controls": [
+    {
+      "lag": 0.125,
+      "retention": 0.9999785773564841,
+      "universal_retention_lower": 0.9999782986111111,
+      "full_vs_frozen_state_difference": 0.004628472595258635,
+      "state_difference_bound": 0.004658474953124562,
+      "combined_electric_error": 5.800042763806975e-12
+    },
+    {
+      "lag": 0.25,
+      "retention": 0.9999174645703521,
+      "universal_retention_lower": 0.9999131944444445,
+      "full_vs_frozen_state_difference": 0.009084995911281039,
+      "state_difference_bound": 0.009316949906249124,
+      "combined_electric_error": 1.1602988928280546e-11
+    },
+    {
+      "lag": 0.5,
+      "retention": 0.9997105137605651,
+      "universal_retention_lower": 0.9996527777777777,
+      "full_vs_frozen_state_difference": 0.017014932895199314,
+      "state_difference_bound": 0.018633899812498248,
+      "combined_electric_error": 6.445289095380963e-11
+    }
+  ],
+  "primary_fixed_edge_constraints": [
+    {
+      "N": 5,
+      "Q": 10,
+      "hosts": 1,
+      "diameters": [
+        1
+      ],
+      "mean_balls": [
+        1.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "mean_pair_distance": 1.0
+    },
+    {
+      "N": 6,
+      "Q": 12,
+      "hosts": 455,
+      "diameters": [
+        2
+      ],
+      "mean_balls": [
+        1.0,
+        5.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "mean_pair_distance": 1.2
+    }
+  ],
+  "equal_degree_counterexamples": {
+    "N": 64,
+    "Q": 128,
+    "ring_next_neighbor_balls": [
+      1.0,
+      5.0,
+      9.0,
+      13.0
+    ],
+    "square_balls": [
+      1.0,
+      5.0,
+      13.0,
+      25.0
+    ]
+  },
+  "interpretation": "Supplied labelled control states and frozen-host comparisons verify bounds only; they do not count as formed spatial phases or full-law locality successes.",
+  "seconds": 0.8959204699999646
+}

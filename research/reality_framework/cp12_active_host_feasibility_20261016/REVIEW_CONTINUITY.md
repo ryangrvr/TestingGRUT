@@ -35,3 +35,11 @@ postulate would be a new input, even if mathematically consistent.
 This packet does not alter SCOUT-0, SCOUT-1, canonical GRUT, Stage3 or
 PR12. It continues the authorized bounded full-host experiment and
 records the quotient-value boundary alongside its results.
+
+The archived SCOUT-1 floor and the later CP-12 construction have different
+premise envelopes. CP-12 supplies a quantum Hilbert space, gauge/Fock
+structure, Hamiltonian and external time; this packet does not derive
+those from the older classical Gaussian/dissipative floor. Its charged
+memory reduction represents the existing unitary dynamics. These tracks
+must not be stitched into a single earned derivation of quantum physics
+or absolute geometry.

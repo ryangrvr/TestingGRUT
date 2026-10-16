@@ -95,7 +95,7 @@ def measure(model,n,q,lags):
     result=dict(status='PASS',N=n,Q=q,dimension=H.shape[0],outside=B.shape[0],level=model['level'],
         initial=model['initial'],source_mean=mu,source_variance=var,source_variance_interval=varI,
         initial_host_distances=ds,initial_host_balls=metrics(n,host)['balls'],rows=rows,
-        build_checks=model['build_checks'],
+        build_checks=model['build_checks'],initial_boundary_closure=model.get('initial_boundary_closure'),
         evolution='Complete frozen H: all hopping, escape diagonals and graph rewiring retained. No circulating-core condition.',
         interpretation='All results condition on one host record chosen by the state-independent protocol; complete record work/entropy and original class probabilities are separate. Initial-host distances are fixed. Sampled retention is not first-passage survival.',
         error_scope='Every unretained physical row in all_outgoing; normalized initial error and analytic residual upper sums; ordinary floating point with reporting allowances.')
@@ -106,6 +106,7 @@ if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--n',type=int,required=True);ap.add_argument('--q',type=int,required=True)
     ap.add_argument('--budget',type=int,required=True);ap.add_argument('--wait',type=float,default=5)
     ap.add_argument('--level',type=int,default=6);ap.add_argument('--growth',type=int,default=100000)
+    ap.add_argument('--close-initial',action='store_true',help='Within the existing orbit cap, close every outgoing row of the initial numerical support once.')
     ap.add_argument('--lags',default='.125,.25,.5');a=ap.parse_args();start=time.monotonic()
     tag=f'HOST_N{a.n}_Q{a.q}_B{a.budget}_W{a.wait:g}_G{a.growth}'
     lags=sorted(float(t) for t in a.lags.split(','));model=seed(a.n,a.q,a.budget,a.wait,tag)
@@ -119,5 +120,23 @@ if __name__=='__main__':
         if count<=0:break
         selected=np.arange(count) if count==len(model['outer_states']) else np.argsort(-importance(model,a.n,max(lags)),kind='stable')[:count]
         model=extend(model,a.n,a.q,selected,tag)
+    if a.close_initial:
+        with (cache_root()/f'{tag}_L0.pkl').open('rb') as f:original=pickle.load(f)
+        initial_outside=set(original['outer_states']);del original;gc.collect()
+        missing=initial_outside-set(model['states']);del initial_outside
+        remaining=1200000-len(model['states'])
+        assert len(missing)<=remaining,'Initial-boundary closure would exceed the declared cap.'
+        X=model['X'];Y=np.array([s[1]&1 for s in model['states']])*X
+        before=[float(np.linalg.norm(model['B']@v)) for v in [X,Y]]
+        selected=np.array([i for i,s in enumerate(model['outer_states']) if s in missing],int)
+        assert len(selected)==len(missing)
+        old_dimension=len(model['states']);model=extend(model,a.n,a.q,selected,tag)
+        X=model['X'];Y=np.array([s[1]&1 for s in model['states']])*X
+        after=[float(np.linalg.norm(model['B']@v)) for v in [X,Y]];assert max(after)<1e-12
+        model['initial_boundary_closure']=dict(added_initial_rows=len(selected),old_dimension=old_dimension,
+            new_dimension=len(model['states']),initial_residual_norms_before=before,
+            initial_residual_norms_after=after,physical_law_changed=False)
+        save_cache(cache_root()/f'{tag}_L{model["level"]}.pkl',model)
+        print(json.dumps(dict(stage='initial_host_boundary_closed',**model['initial_boundary_closure'])),flush=True)
     result=measure(model,a.n,a.q,lags);result.update(wait=a.wait,budget=a.budget,seconds=time.monotonic()-start)
     (P/f'HOST_RESPONSE_N{a.n}_Q{a.q}_B{a.budget}_L{model["level"]}.json').write_text(json.dumps(result,indent=2)+'\n')
