@@ -1,0 +1,3163 @@
+{
+  "status": "PASS",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "constants": {
+    "N": 2,
+    "U": 16.0,
+    "epsilon": 1.0,
+    "J": 0.25,
+    "E_max": 0.5,
+    "geometry_kinetic_norm_upper": 2.0,
+    "all_offdiagonal_norm_upper": 2.5,
+    "PQ_norm": 0.7071067811865475,
+    "Q_energy_lower": 13.5,
+    "protected_spectral_gap_lower": 13.0,
+    "spectral_projector_distance_upper": 0.05439282932204211,
+    "bare_defect_probability_all_times_upper": 0.011834319526627219,
+    "Sigma_prefactor": 0.038461538461538464,
+    "Sigma_ratio": 0.16129032258064516,
+    "xi": 0.5480805612414349,
+    "nearest_coupling_lower": 0.25,
+    "minimum_virtual_word": "at least d_op+2",
+    "source_phase_variance": 0.25
+  },
+  "Schur": [
+    {
+      "N": 2,
+      "dimension": 4,
+      "protected_dimension": 2,
+      "Q_dimension": 2,
+      "full_matrix_hermiticity_error": 0.0,
+      "constants": {
+        "N": 2,
+        "U": 16.0,
+        "epsilon": 1.0,
+        "J": 0.25,
+        "E_max": 0.5,
+        "geometry_kinetic_norm_upper": 2.0,
+        "all_offdiagonal_norm_upper": 2.5,
+        "PQ_norm": 0.7071067811865475,
+        "Q_energy_lower": 13.5,
+        "protected_spectral_gap_lower": 13.0,
+        "spectral_projector_distance_upper": 0.05439282932204211,
+        "bare_defect_probability_all_times_upper": 0.011834319526627219,
+        "Sigma_prefactor": 0.038461538461538464,
+        "Sigma_ratio": 0.16129032258064516,
+        "xi": 0.5480805612414349,
+        "nearest_coupling_lower": 0.25,
+        "minimum_virtual_word": "at least d_op+2",
+        "source_phase_variance": 0.25
+      },
+      "spectral": {
+        "low_max": 0.2183176995657714,
+        "high_min": 16.03071118909933,
+        "actual_gap": 15.812393489533557,
+        "projector_distance": 0.04476063219051675
+      },
+      "rows": [
+        {
+          "E": -0.5,
+          "source": 0,
+          "max_bound_excess": -0.005411255411255411,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.0303030303030303,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        },
+        {
+          "E": -0.5,
+          "source": 1,
+          "max_bound_excess": -0.005411255411255411,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.0303030303030303,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        },
+        {
+          "E": 0.0,
+          "source": 0,
+          "max_bound_excess": -0.005787037037037037,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.031249999999999993,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        },
+        {
+          "E": 0.0,
+          "source": 1,
+          "max_bound_excess": -0.005787037037037037,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.031249999999999993,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        },
+        {
+          "E": 0.5,
+          "source": 0,
+          "max_bound_excess": -0.00620347394540943,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.032258064516129024,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        },
+        {
+          "E": 0.5,
+          "source": 1,
+          "max_bound_excess": -0.00620347394540943,
+          "linear_solve_residual": 0.0,
+          "max_abs_Sigma_by_d": {
+            "0": 0.032258064516129024,
+            "1": 0.0
+          },
+          "near_min": 0.25
+        }
+      ],
+      "all_geometry_receiver_blocks": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 1,
+          "operator_norm": 0.0,
+          "bound": 0.005787037037037037
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 1,
+          "operator_norm": 0.0,
+          "bound": 0.005787037037037037
+        }
+      ],
+      "arbitrary_near_geometry_packets": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.25,
+          "uniform_lower": 0.21296296296296297
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25,
+          "uniform_lower": 0.21296296296296297
+        }
+      ],
+      "full_propagation_blocks": [
+        {
+          "t": 0.1,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.02497430205878536,
+          "Dyson_tail_bound": 0.28402541668774145
+        },
+        {
+          "t": 0.25,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.06226670110655121,
+          "Dyson_tail_bound": 0.8682459574322224
+        },
+        {
+          "t": 1.0,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.24668645234663866,
+          "Dyson_tail_bound": 11.182493960703473
+        }
+      ]
+    },
+    {
+      "N": 3,
+      "dimension": 15,
+      "protected_dimension": 6,
+      "Q_dimension": 9,
+      "full_matrix_hermiticity_error": 0.0,
+      "constants": {
+        "N": 3,
+        "U": 16.0,
+        "epsilon": 1.0,
+        "J": 0.25,
+        "E_max": 0.5,
+        "geometry_kinetic_norm_upper": 2.0,
+        "all_offdiagonal_norm_upper": 2.5,
+        "PQ_norm": 0.5773502691896258,
+        "Q_energy_lower": 13.5,
+        "protected_spectral_gap_lower": 13.0,
+        "spectral_projector_distance_upper": 0.04441155916843276,
+        "bare_defect_probability_all_times_upper": 0.007889546351084813,
+        "Sigma_prefactor": 0.02564102564102564,
+        "Sigma_ratio": 0.16129032258064516,
+        "xi": 0.5480805612414349,
+        "nearest_coupling_lower": 0.25,
+        "minimum_virtual_word": "at least d_op+2",
+        "source_phase_variance": 0.25
+      },
+      "spectral": {
+        "low_max": 0.33250662619989796,
+        "high_min": 15.739094919804044,
+        "actual_gap": 15.406588293604147,
+        "projector_distance": 0.03664437551744179
+      },
+      "rows": [
+        {
+          "E": -0.5,
+          "source": 0,
+          "max_bound_excess": -0.0005464007461336617,
+          "linear_solve_residual": 1.1110269972836933e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.02021924090173579,
+            "1": 0.0003065428005881033,
+            "2": 1.9070954870301362e-07
+          },
+          "near_min": 0.2503065428005881
+        },
+        {
+          "E": -0.5,
+          "source": 1,
+          "max_bound_excess": -0.0033009608069155044,
+          "linear_solve_residual": 5.8142917727484864e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.020219240899937412,
+            "1": 0.00030654280058810333
+          },
+          "near_min": 0.2500000000017984
+        },
+        {
+          "E": -0.5,
+          "source": 2,
+          "max_bound_excess": -0.0005464007899690462,
+          "linear_solve_residual": 2.3428931322549686e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.020214593423175272,
+            "1": 1.798374742002382e-12,
+            "2": 1.9066571331867723e-07
+          },
+          "near_min": 0.2500000000017984
+        },
+        {
+          "E": 0.0,
+          "source": 0,
+          "max_bound_excess": -0.0006026039119018421,
+          "linear_solve_residual": 1.0709999105579228e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.020852011849901247,
+            "1": 0.0003260250793432042,
+            "2": 2.12446122849267e-07
+          },
+          "near_min": 0.2503260250793432
+        },
+        {
+          "E": 0.0,
+          "source": 1,
+          "max_bound_excess": -0.0035319996120148204,
+          "linear_solve_residual": 4.661280873866e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.020852011847737318,
+            "1": 0.00032602507934320423
+          },
+          "near_min": 0.25000000000216394
+        },
+        {
+          "E": 0.0,
+          "source": 2,
+          "max_bound_excess": -0.0006026039638361941,
+          "linear_solve_residual": 4.673288884732975e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.020846914387213387,
+            "1": 2.16393133606245e-12,
+            "2": 2.1239418849720155e-07
+          },
+          "near_min": 0.25000000000216394
+        },
+        {
+          "E": 0.5,
+          "source": 0,
+          "max_bound_excess": -0.0006668027940767182,
+          "linear_solve_residual": 2.5711266135539657e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.02152568583775977,
+            "1": 0.0003474258345143193,
+            "2": 2.374151070913139e-07
+          },
+          "near_min": 0.2503474258345143
+        },
+        {
+          "E": 0.5,
+          "source": 1,
+          "max_bound_excess": -0.0037882234624253,
+          "linear_solve_residual": 1.1137114466335037e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.021525685835141913,
+            "1": 0.0003474258345143193
+          },
+          "near_min": 0.25000000000261785
+        },
+        {
+          "E": 0.5,
+          "source": 2,
+          "max_bound_excess": -0.0006668028559236802,
+          "linear_solve_residual": 1.110364697310774e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.021520078364371354,
+            "1": 2.6178608243566195e-12,
+            "2": 2.3735326012933853e-07
+          },
+          "near_min": 0.25000000000261785
+        }
+      ],
+      "all_geometry_receiver_blocks": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 0.0003260252177445913,
+          "bound": 0.0038580246913580245
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 2.124461679311459e-07,
+          "bound": 0.0006028163580246913
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 0.0003260252177445914,
+          "bound": 0.0038580246913580245
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 2.1244616793114593e-07,
+          "bound": 0.0006028163580246913
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 0.0003260252177445913,
+          "bound": 0.0038580246913580245
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 2.1239423359010378e-07,
+          "bound": 0.0006028163580246913
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 3.3216360105831143e-09,
+          "bound": 0.0038580246913580245
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 0.0003260252177445914,
+          "bound": 0.0038580246913580245
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 1,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 2.1239423359010383e-07,
+          "bound": 0.0006028163580246913
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 2,
+          "operator_norm": 3.3216360105831155e-09,
+          "bound": 0.0038580246913580245
+        }
+      ],
+      "arbitrary_near_geometry_packets": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.2503260250794333,
+          "uniform_lower": 0.22530864197530864
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.2503260250794333,
+          "uniform_lower": 0.22530864197530864
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25032602507943336,
+          "uniform_lower": 0.22530864197530864
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.24999999834134595,
+          "uniform_lower": 0.22530864197530864
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25032602507943336,
+          "uniform_lower": 0.22530864197530864
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.24999999834134595,
+          "uniform_lower": 0.22530864197530864
+        }
+      ],
+      "full_propagation_blocks": [
+        {
+          "t": 0.1,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.024994788283173024,
+          "Dyson_tail_bound": 0.28402541668774145
+        },
+        {
+          "t": 0.1,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.00031221481086067743,
+          "Dyson_tail_bound": 0.03402541668774148
+        },
+        {
+          "t": 0.25,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.062418671173175067,
+          "Dyson_tail_bound": 0.8682459574322224
+        },
+        {
+          "t": 0.25,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.0019470750290288235,
+          "Dyson_tail_bound": 0.24324595743222238
+        },
+        {
+          "t": 1.0,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.24483375220174652,
+          "Dyson_tail_bound": 11.182493960703473
+        },
+        {
+          "t": 1.0,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.030864293253521004,
+          "Dyson_tail_bound": 8.682493960703473
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "dimension": 64,
+      "protected_dimension": 24,
+      "Q_dimension": 40,
+      "full_matrix_hermiticity_error": 0.0,
+      "constants": {
+        "N": 4,
+        "U": 16.0,
+        "epsilon": 1.0,
+        "J": 0.25,
+        "E_max": 0.5,
+        "geometry_kinetic_norm_upper": 2.0,
+        "all_offdiagonal_norm_upper": 2.5,
+        "PQ_norm": 0.5,
+        "Q_energy_lower": 13.5,
+        "protected_spectral_gap_lower": 13.0,
+        "spectral_projector_distance_upper": 0.038461538461538464,
+        "bare_defect_probability_all_times_upper": 0.005917159763313609,
+        "Sigma_prefactor": 0.019230769230769232,
+        "Sigma_ratio": 0.16129032258064516,
+        "xi": 0.5480805612414349,
+        "nearest_coupling_lower": 0.25,
+        "minimum_virtual_word": "at least d_op+2",
+        "source_phase_variance": 0.25
+      },
+      "spectral": {
+        "low_max": 0.3887804541164184,
+        "high_min": 15.63471740741814,
+        "actual_gap": 15.245936953301722,
+        "projector_distance": 0.03173778014312123
+      },
+      "rows": [
+        {
+          "E": -0.5,
+          "source": 0,
+          "max_bound_excess": -6.210858659452288e-05,
+          "linear_solve_residual": 1.995658299353856e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01516207336813631,
+            "1": 0.00022994296444103077,
+            "2": 3.4856103202648836e-06,
+            "3": 4.078823927661916e-09
+          },
+          "near_min": 0.250229942964441
+        },
+        {
+          "E": -0.5,
+          "source": 1,
+          "max_bound_excess": -0.0004098362452889308,
+          "linear_solve_residual": 1.8167195822564477e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.015165558152573292,
+            "1": 0.0002299429644410308,
+            "2": 1.0734647284283448e-07
+          },
+          "near_min": 0.2502298884252311
+        },
+        {
+          "E": -0.5,
+          "source": 2,
+          "max_bound_excess": -0.0004064579814415087,
+          "linear_solve_residual": 1.1104338473930894e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.015162071293769399,
+            "1": 0.00022988842523109944,
+            "2": 3.4856103202648836e-06
+          },
+          "near_min": 0.2500000000007591
+        },
+        {
+          "E": -0.5,
+          "source": 3,
+          "max_bound_excess": -6.211103940789825e-05,
+          "linear_solve_residual": 1.48750277992295e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01515858651094618,
+            "1": 1.703318615210936e-11,
+            "2": 1.0724110120108177e-07,
+            "3": 1.626010552295997e-09
+          },
+          "near_min": 0.2500000000007591
+        },
+        {
+          "E": 0.0,
+          "source": 0,
+          "max_bound_excess": -7.063787046715193e-05,
+          "linear_solve_residual": 1.110276445321733e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.015636462600198374,
+            "1": 0.00024455875079772474,
+            "2": 3.823098446313759e-06,
+            "3": 4.671488866596157e-09
+          },
+          "near_min": 0.2502445587507977
+        },
+        {
+          "E": 0.0,
+          "source": 1,
+          "max_bound_excess": -0.00045199268233890274,
+          "linear_solve_residual": 8.357049821289733e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.015640284764223907,
+            "1": 0.00024455875079772474,
+            "2": 1.1958617961573777e-07
+          },
+          "near_min": 0.2502444989114562
+        },
+        {
+          "E": 0.0,
+          "source": 2,
+          "max_bound_excess": -0.0004482891700722047,
+          "linear_solve_residual": 1.7421731657682473e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.0156364602601936,
+            "1": 0.00024449891145623417,
+            "2": 3.823098446313759e-06
+          },
+          "near_min": 0.25000000000091344
+        },
+        {
+          "E": 0.0,
+          "source": 3,
+          "max_bound_excess": -7.064067399091922e-05,
+          "linear_solve_residual": 3.626053816774933e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01563263809810811,
+            "1": 1.9472620963906277e-11,
+            "2": 1.1946201523559646e-07,
+            "3": 1.867965099309626e-09
+          },
+          "near_min": 0.25000000000091344
+        },
+        {
+          "E": 0.5,
+          "source": 0,
+          "max_bound_excess": -8.0684975864556e-05,
+          "linear_solve_residual": 2.970594498408606e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01614150789393859,
+            "1": 0.000260614032827142,
+            "2": 4.205607016357994e-06,
+            "3": 5.372020582257393e-09
+          },
+          "near_min": 0.2502606140328271
+        },
+        {
+          "E": 0.5,
+          "source": 1,
+          "max_bound_excess": -0.000500146509955459,
+          "linear_solve_residual": 1.1108406697489538e-16,
+          "max_abs_Sigma_by_d": {
+            "0": 0.016145712440098974,
+            "1": 0.00026061403282714204,
+            "2": 1.3364693239818608e-07
+          },
+          "near_min": 0.2502605482166705
+        },
+        {
+          "E": 0.5,
+          "source": 2,
+          "max_bound_excess": -0.0004960745498714991,
+          "linear_solve_residual": 1.695841120296165e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.016141505245466894,
+            "1": 0.0002605482166704938,
+            "2": 4.2056070163579935e-06
+          },
+          "near_min": 0.25000000000110506
+        },
+        {
+          "E": 0.5,
+          "source": 3,
+          "max_bound_excess": -8.068819301115351e-05,
+          "linear_solve_residual": 5.163781115016528e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.016137300701651328,
+            "1": 2.2340373855352574e-11,
+            "2": 1.334998947039644e-07,
+            "3": 2.1548739847366822e-09
+          },
+          "near_min": 0.25000000000110506
+        }
+      ],
+      "all_geometry_receiver_blocks": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024485757990432385,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.8231025210125615e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 4.672324801817403e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024485757990432396,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.823102521012562e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 4.672324801817402e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024485757990432385,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.823102521012562e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 4.672324801817403e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024485757990432396,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.823102521009344e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.869186465165386e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024449900920796676,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675295e-07,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024449900920796687,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675295e-07,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024485757990432385,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.823102521009346e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.869186465165386e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024449900920796687,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675295e-07,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.00024449900920796676,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675293e-07,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.0002448575799043239,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 3.823102521009345e-06,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.869186465165386e-09,
+          "bound": 7.064254195601852e-05
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.0002444990092079668,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675293e-07,
+          "bound": 0.00045211226851851847
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 0.0002444990092079668,
+          "bound": 0.0028935185185185184
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 2,
+          "all_geometry_receiver_rows": 6,
+          "operator_norm": 1.1958928405675295e-07,
+          "bound": 0.00045211226851851847
+        }
+      ],
+      "arbitrary_near_geometry_packets": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.2502442599216911,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.25024425992169114,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.25024425992169114,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.2502442599216911,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.2499999990661895,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.24999999906618953,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25024425992169114,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.24999999906618947,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.24999999906618942,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25024425992169114,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.24999999906618953,
+          "uniform_lower": 0.23148148148148148
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.24999999906618947,
+          "uniform_lower": 0.23148148148148148
+        }
+      ],
+      "full_propagation_blocks": [
+        {
+          "t": 0.1,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.024994792073907614,
+          "Dyson_tail_bound": 0.28402541668774145
+        },
+        {
+          "t": 0.1,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.0003124511194608756,
+          "Dyson_tail_bound": 0.03402541668774148
+        },
+        {
+          "t": 0.1,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 2.602133962680623e-06,
+          "Dyson_tail_bound": 0.002775416687741484
+        },
+        {
+          "t": 0.25,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.06241865965807633,
+          "Dyson_tail_bound": 0.8682459574322224
+        },
+        {
+          "t": 0.25,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.0019512168374014817,
+          "Dyson_tail_bound": 0.24324595743222238
+        },
+        {
+          "t": 0.25,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 4.058869055483147e-05,
+          "Dyson_tail_bound": 0.047933457432222396
+        },
+        {
+          "t": 1.0,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.2448321883177018,
+          "Dyson_tail_bound": 11.182493960703473
+        },
+        {
+          "t": 1.0,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.030764855896799188,
+          "Dyson_tail_bound": 8.682493960703473
+        },
+        {
+          "t": 1.0,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 0.002575957311378456,
+          "Dyson_tail_bound": 5.5574939607034715
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "dimension": 325,
+      "protected_dimension": 120,
+      "Q_dimension": 205,
+      "full_matrix_hermiticity_error": 0.0,
+      "constants": {
+        "N": 5,
+        "U": 16.0,
+        "epsilon": 1.0,
+        "J": 0.25,
+        "E_max": 0.5,
+        "geometry_kinetic_norm_upper": 2.0,
+        "all_offdiagonal_norm_upper": 2.5,
+        "PQ_norm": 0.4472135954999579,
+        "Q_energy_lower": 13.5,
+        "protected_spectral_gap_lower": 13.0,
+        "spectral_projector_distance_upper": 0.034401045807689073,
+        "bare_defect_probability_all_times_upper": 0.004733727810650888,
+        "Sigma_prefactor": 0.015384615384615385,
+        "Sigma_ratio": 0.16129032258064516,
+        "xi": 0.5480805612414349,
+        "nearest_coupling_lower": 0.25,
+        "minimum_virtual_word": "at least d_op+2",
+        "source_phase_variance": 0.25
+      },
+      "spectral": {
+        "low_max": 0.42046203488151385,
+        "high_min": 15.584750158607394,
+        "actual_gap": 15.16428812372588,
+        "projector_distance": 0.028388633475103387
+      },
+      "rows": [
+        {
+          "E": -0.5,
+          "source": 0,
+          "max_bound_excess": -7.52874050535915e-06,
+          "linear_solve_residual": 9.508543663721767e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012128525175263253,
+            "1": 0.00018391129620875445,
+            "2": 2.7890135792934475e-06,
+            "3": 4.227355577101109e-08,
+            "4": 6.74241500080262e-11
+          },
+          "near_min": 0.25018391129620876
+        },
+        {
+          "E": -0.5,
+          "source": 1,
+          "max_bound_excess": -4.968752153577461e-05,
+          "linear_solve_residual": 2.587716089954288e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012131314188713072,
+            "1": 0.00018395355471468648,
+            "2": 2.7882154859720317e-06,
+            "3": 2.6107989858295836e-09
+          },
+          "near_min": 0.25018391129620876
+        },
+        {
+          "E": -0.5,
+          "source": 2,
+          "max_bound_excess": -0.00032516585983012543,
+          "linear_solve_residual": 5.554446189107041e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012131312862037329,
+            "1": 0.0001839535547146865,
+            "2": 2.7890135792934475e-06
+          },
+          "near_min": 0.25018387638354
+        },
+        {
+          "E": -0.5,
+          "source": 3,
+          "max_bound_excess": -4.964785877898943e-05,
+          "linear_solve_residual": 1.9401584220116518e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012128523848137441,
+            "1": 0.00018387638354002895,
+            "2": 2.7882154859720326e-06,
+            "3": 4.2273555771011104e-08
+          },
+          "near_min": 0.25000000000038847
+        },
+        {
+          "E": -0.5,
+          "source": 4,
+          "max_bound_excess": -7.528792155242592e-06,
+          "linear_solve_residual": 8.665149395598687e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012125736802736788,
+            "1": 8.71664724001726e-12,
+            "2": 6.861290309966326e-08,
+            "3": 1.0404145373876835e-09,
+            "4": 1.5774266564920765e-11
+          },
+          "near_min": 0.25000000000038847
+        },
+        {
+          "E": 0.0,
+          "source": 0,
+          "max_bound_excess": -8.830238296113738e-06,
+          "linear_solve_residual": 9.1723980823609e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012507945597355971,
+            "1": 0.0001955991614122214,
+            "2": 3.0590774425658724e-06,
+            "3": 4.7816773225120997e-08,
+            "4": 7.944838857683942e-11
+          },
+          "near_min": 0.2501955991614122
+        },
+        {
+          "E": 0.0,
+          "source": 1,
+          "max_bound_excess": -5.651104336691599e-05,
+          "linear_solve_residual": 4.167353665542929e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01251100467464753,
+            "1": 0.00019564696083562095,
+            "2": 3.0581789874376517e-06,
+            "3": 2.9901978988254234e-09
+          },
+          "near_min": 0.2501955991614122
+        },
+        {
+          "E": 0.0,
+          "source": 2,
+          "max_bound_excess": -0.00035863073737224895,
+          "linear_solve_residual": 2.5163748556491585e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01251100317814359,
+            "1": 0.00019564696083562092,
+            "2": 3.0590774425658724e-06
+          },
+          "near_min": 0.2501955608554286
+        },
+        {
+          "E": 0.0,
+          "source": 3,
+          "max_bound_excess": -5.6466216791589696e-05,
+          "linear_solve_residual": 3.3076649240671912e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012507944100311598,
+            "1": 0.00019556085542859678,
+            "2": 3.0581789874376517e-06,
+            "3": 4.7816773225120997e-08
+          },
+          "near_min": 0.2500000000004674
+        },
+        {
+          "E": 0.0,
+          "source": 4,
+          "max_bound_excess": -8.830299056317286e-06,
+          "linear_solve_residual": 1.5730204632361128e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012504887267714742,
+            "1": 9.964781760140744e-12,
+            "2": 7.643077010317496e-08,
+            "3": 1.195224381074444e-09,
+            "4": 1.8688185029238632e-11
+          },
+          "near_min": 0.2500000000004674
+        },
+        {
+          "E": 0.5,
+          "source": 0,
+          "max_bound_excess": -1.0411563708258689e-05,
+          "linear_solve_residual": 1.5990778936703493e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012911880642801654,
+            "1": 0.00020843793244699736,
+            "2": 3.365171133166344e-06,
+            "3": 5.429920825984701e-08,
+            "4": 9.40833720536735e-11
+          },
+          "near_min": 0.250208437932447
+        },
+        {
+          "E": 0.5,
+          "source": 1,
+          "max_bound_excess": -6.454883964860231e-05,
+          "linear_solve_residual": 5.551502111083808e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012915245813757944,
+            "1": 0.00020849221157117183,
+            "2": 3.3641564025514756e-06,
+            "3": 3.4386595082888742e-09
+          },
+          "near_min": 0.250208437932447
+        },
+        {
+          "E": 0.5,
+          "source": 2,
+          "max_bound_excess": -0.0003968589543771194,
+          "linear_solve_residual": 5.551819017950948e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012915244120057037,
+            "1": 0.0002084922115711718,
+            "2": 3.365171133166344e-06
+          },
+          "near_min": 0.25020839579982307
+        },
+        {
+          "E": 0.5,
+          "source": 3,
+          "max_bound_excess": -6.449797909985074e-05,
+          "linear_solve_residual": 8.8128174611728e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012911878948448342,
+            "1": 0.00020839579982308355,
+            "2": 3.364156402551475e-06,
+            "3": 5.4299208259847e-08
+          },
+          "near_min": 0.25000000000056544
+        },
+        {
+          "E": 0.5,
+          "source": 4,
+          "max_bound_excess": -1.0411635537131643e-05,
+          "linear_solve_residual": 1.5782727119521432e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.012908516348277166,
+            "1": 1.1432017014312208e-11,
+            "2": 8.541078990555773e-08,
+            "3": 1.3787965648332912e-09,
+            "4": 2.2254499099523728e-11
+          },
+          "near_min": 0.25000000000056544
+        }
+      ],
+      "all_geometry_receiver_blocks": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019579053015164136,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0641601508688863e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.781685639460679e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 7.947195989180824e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.0001957905301516414,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0641601508688863e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.7816856394606794e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 7.947195989180823e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019579053015164136,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0641601508688876e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.7816856394606794e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 7.947195989180824e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 4,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019579053015164139,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 4,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0641601508688867e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 4,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.781685639460681e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 4,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 7.94719598918082e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.0001957905301516413,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.064160150868887e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.7816856377022125e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 1.8698645808279e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952283,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487785e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.990587954319844e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952297,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487785e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 4,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.000195838258669523,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 4,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487785e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 4,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.990587954319844e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019579053015164128,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.064160150868887e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.781685637702213e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 1.869864580827899e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952289,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.058181074048779e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952289,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.058181074048779e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.990587954319844e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 4,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952286,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 4,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487793e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 4,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019579053015164133,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.064160150868887e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.781685637702211e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 1.8698645808278993e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952294,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.058181074048778e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952289,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.058181074048778e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.990587954319843e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 4,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.0001958382586695229,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 4,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487797e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 4,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 0,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.0001957905301516413,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 0,
+          "min_distance": 2,
+          "source_columns": 18,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0641601508688867e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 0,
+          "min_distance": 3,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 4.7816856377022125e-08,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 0,
+          "min_distance": 4,
+          "source_columns": 6,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 1.869864580827899e-11,
+          "bound": 8.830317744502315e-06
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952289,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.058181074048778e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198443e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 2,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.000195838258669523,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 2,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487797e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 2,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.9905879543198435e-09,
+          "bound": 5.6514033564814815e-05
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 3,
+          "min_distance": 1,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 0.00019583825866952283,
+          "bound": 0.0023148148148148147
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 3,
+          "min_distance": 2,
+          "source_columns": 12,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 3.0581810740487776e-06,
+          "bound": 0.00036168981481481485
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 3,
+          "min_distance": 3,
+          "source_columns": 4,
+          "all_geometry_receiver_rows": 24,
+          "operator_norm": 2.990587954319843e-09,
+          "bound": 5.6514033564814815e-05
+        }
+      ],
+      "arbitrary_near_geometry_packets": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.25019540792568074,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 4,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.25019540792568074,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.24999999940249748,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.24999999940249745,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 1,
+          "receiver_event": 4,
+          "minimum_receiver_action": 0.24999999940249754,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.2499999994024975,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.24999999940249745,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 2,
+          "receiver_event": 4,
+          "minimum_receiver_action": 0.2499999994024975,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.24999999940249745,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.24999999940249742,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 3,
+          "receiver_event": 4,
+          "minimum_receiver_action": 0.24999999940249745,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 0,
+          "minimum_receiver_action": 0.2501954079256808,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.24999999940249742,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 2,
+          "minimum_receiver_action": 0.24999999940249737,
+          "uniform_lower": 0.2351851851851852
+        },
+        {
+          "source_event": 4,
+          "receiver_event": 3,
+          "minimum_receiver_action": 0.24999999940249742,
+          "uniform_lower": 0.2351851851851852
+        }
+      ],
+      "full_propagation_blocks": [
+        {
+          "t": 0.1,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.02499479207355089,
+          "Dyson_tail_bound": 0.28402541668774145
+        },
+        {
+          "t": 0.1,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.00031245117493172513,
+          "Dyson_tail_bound": 0.03402541668774148
+        },
+        {
+          "t": 0.1,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 2.603840777485312e-06,
+          "Dyson_tail_bound": 0.002775416687741484
+        },
+        {
+          "t": 0.1,
+          "min_distance": 4,
+          "full_receiver_operator_norm": 1.6265074492800477e-08,
+          "Dyson_tail_bound": 0.00017125002107481736
+        },
+        {
+          "t": 0.25,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.06241865951784621,
+          "Dyson_tail_bound": 0.8682459574322224
+        },
+        {
+          "t": 0.25,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.00195121839699221,
+          "Dyson_tail_bound": 0.24324595743222238
+        },
+        {
+          "t": 0.25,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 4.065829504321248e-05,
+          "Dyson_tail_bound": 0.047933457432222396
+        },
+        {
+          "t": 0.25,
+          "min_distance": 4,
+          "full_receiver_operator_norm": 6.344811698088562e-07,
+          "Dyson_tail_bound": 0.007243353265555739
+        },
+        {
+          "t": 1.0,
+          "min_distance": 1,
+          "full_receiver_operator_norm": 0.24483218768000853,
+          "Dyson_tail_bound": 11.182493960703473
+        },
+        {
+          "t": 1.0,
+          "min_distance": 2,
+          "full_receiver_operator_norm": 0.030764760008948417,
+          "Dyson_tail_bound": 8.682493960703473
+        },
+        {
+          "t": 1.0,
+          "min_distance": 3,
+          "full_receiver_operator_norm": 0.0025717882270004395,
+          "Dyson_tail_bound": 5.5574939607034715
+        },
+        {
+          "t": 1.0,
+          "min_distance": 4,
+          "full_receiver_operator_norm": 0.00016121116620563286,
+          "Dyson_tail_bound": 2.953327294036805
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "dimension": 1956,
+      "protected_dimension": 720,
+      "Q_dimension": 1236,
+      "full_matrix_hermiticity_error": 0.0,
+      "constants": {
+        "N": 6,
+        "U": 16.0,
+        "epsilon": 1.0,
+        "J": 0.25,
+        "E_max": 0.5,
+        "geometry_kinetic_norm_upper": 2.0,
+        "all_offdiagonal_norm_upper": 2.5,
+        "PQ_norm": 0.4082482904638631,
+        "Q_energy_lower": 13.5,
+        "protected_spectral_gap_lower": 13.0,
+        "spectral_projector_distance_upper": 0.03140371465106639,
+        "bare_defect_probability_all_times_upper": 0.0039447731755424065,
+        "Sigma_prefactor": 0.01282051282051282,
+        "Sigma_ratio": 0.16129032258064516,
+        "xi": 0.5480805612414349,
+        "nearest_coupling_lower": 0.25,
+        "minimum_virtual_word": "at least d_op+2",
+        "source_phase_variance": 0.25
+      },
+      "spectral": null,
+      "rows": [
+        {
+          "E": -0.5,
+          "source": 0,
+          "max_bound_excess": -9.50606037175796e-07,
+          "linear_solve_residual": 1.1822877830046966e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010106474808683413,
+            "1": 0.00015323547016386364,
+            "2": 2.323559625282051e-06,
+            "3": 3.523433123121663e-08,
+            "4": 5.340195463362543e-10,
+            "5": 1.024630915750054e-12
+          },
+          "near_min": 0.2501532354701639
+        },
+        {
+          "E": -0.5,
+          "source": 1,
+          "max_bound_excess": -6.273959782900269e-06,
+          "linear_solve_residual": 5.553122995112347e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010108798368308677,
+            "1": 0.00015327070449294806,
+            "2": 2.32409344777175e-06,
+            "3": 3.522448944178139e-08,
+            "4": 4.6825024028133283e-11
+          },
+          "near_min": 0.2501532354701639
+        },
+        {
+          "E": -0.5,
+          "source": 2,
+          "max_bound_excess": -4.140663107784016e-05,
+          "linear_solve_residual": 5.560910406459391e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010108798902049111,
+            "1": 0.00015327070449294808,
+            "2": 2.323559625282052e-06,
+            "3": 1.8125344602028592e-09
+          },
+          "near_min": 0.25015327068454496
+        },
+        {
+          "E": -0.5,
+          "source": 3,
+          "max_bound_excess": -4.1373209281069144e-05,
+          "linear_solve_residual": 1.5489829750304795e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010108797447060842,
+            "1": 0.00015327068454498203,
+            "2": 2.3240934477717507e-06,
+            "3": 3.523433123121662e-08
+          },
+          "near_min": 0.25015321123562667
+        },
+        {
+          "E": -0.5,
+          "source": 4,
+          "max_bound_excess": -6.273472588377962e-06,
+          "linear_solve_residual": 8.075110181304198e-20,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010106473887607548,
+            "1": 0.00015321123562667433,
+            "2": 2.323005391116498e-06,
+            "3": 3.52244894417814e-08,
+            "4": 5.340195463362542e-10
+          },
+          "near_min": 0.2500000000002247
+        },
+        {
+          "E": -0.5,
+          "source": 5,
+          "max_bound_excess": -9.506068957638788e-07,
+          "linear_solve_residual": 5.553640648836732e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01010415178346254,
+            "1": 5.0424120254624215e-12,
+            "2": 4.7637943934286e-08,
+            "3": 7.222919501037981e-10,
+            "4": 1.095235433063427e-11,
+            "5": 1.6604283297204681e-13
+          },
+          "near_min": 0.2500000000002247
+        },
+        {
+          "E": 0.0,
+          "source": 0,
+          "max_bound_excess": -1.1497797134406504e-06,
+          "linear_solve_residual": 2.6362000631171484e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.01042260798775989,
+            "1": 0.0001629727090990472,
+            "2": 2.548524636978137e-06,
+            "3": 3.9854786998369075e-08,
+            "4": 6.229339131426848e-10,
+            "5": 1.242874755033138e-12
+          },
+          "near_min": 0.25016297270909904
+        },
+        {
+          "E": 0.0,
+          "source": 1,
+          "max_bound_excess": -7.3585429442164845e-06,
+          "linear_solve_residual": 5.561457470126538e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010425156512396852,
+            "1": 0.0001630125638834847,
+            "2": 2.5491473380941353e-06,
+            "3": 3.9843402658920155e-08,
+            "4": 5.51762021104498e-11
+          },
+          "near_min": 0.25016297270909904
+        },
+        {
+          "E": 0.0,
+          "source": 2,
+          "max_bound_excess": -4.7092952067057545e-05,
+          "linear_solve_residual": 2.4870124632011364e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010425157135002125,
+            "1": 0.00016301256388348467,
+            "2": 2.548524636978137e-06,
+            "3": 2.0759036214681888e-09
+          },
+          "near_min": 0.25016301254083734
+        },
+        {
+          "E": 0.0,
+          "source": 3,
+          "max_bound_excess": -4.705517318368064e-05,
+          "linear_solve_residual": 5.551829444844638e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010425155473222753,
+            "1": 0.00016301254083731678,
+            "2": 2.5491473380941353e-06,
+            "3": 3.985478699836907e-08
+          },
+          "near_min": 0.25016294611965917
+        },
+        {
+          "E": 0.0,
+          "source": 4,
+          "max_bound_excess": -7.357975186505453e-06,
+          "linear_solve_residual": 5.553938630944778e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010422606948784162,
+            "1": 0.0001629461196591896,
+            "2": 2.5479007058189014e-06,
+            "3": 3.984340265892015e-08,
+            "4": 6.229339131426846e-10
+          },
+          "near_min": 0.2500000000002704
+        },
+        {
+          "E": 0.0,
+          "source": 5,
+          "max_bound_excess": -1.1497807534491125e-06,
+          "linear_solve_residual": 3.547654220995601e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010420060086517767,
+            "1": 5.7643378698235195e-12,
+            "2": 5.306539008407024e-08,
+            "3": 8.297552358272524e-10,
+            "4": 1.2975501199289726e-11,
+            "5": 2.0286629316804684e-13
+          },
+          "near_min": 0.2500000000002704
+        },
+        {
+          "E": 0.5,
+          "source": 0,
+          "max_bound_excess": -1.3994148533042704e-06,
+          "linear_solve_residual": 1.7542801508335274e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010759164343257181,
+            "1": 0.00017366865204675663,
+            "2": 2.8034986921381374e-06,
+            "3": 4.525816892741826e-08,
+            "4": 7.302198441386187e-10,
+            "5": 1.516538571272482e-12
+          },
+          "near_min": 0.25017366865204677
+        },
+        {
+          "E": 0.5,
+          "source": 1,
+          "max_bound_excess": -8.676316152242165e-06,
+          "linear_solve_residual": 5.552991188847812e-17,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010761967841949296,
+            "1": 0.0001737139102126137,
+            "2": 2.804228635585652e-06,
+            "3": 4.5244945728628685e-08,
+            "4": 6.534078345323704e-11
+          },
+          "near_min": 0.25017366865204677
+        },
+        {
+          "E": 0.5,
+          "source": 2,
+          "max_bound_excess": -5.379117804778051e-05,
+          "linear_solve_residual": 3.05123664213881e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010761968571780323,
+            "1": 0.00017371391021261373,
+            "2": 2.8034986921381386e-06,
+            "3": 2.387208978316371e-09
+          },
+          "near_min": 0.25017371388347653
+        },
+        {
+          "E": 0.5,
+          "source": 3,
+          "max_bound_excess": -5.3748307087831415e-05,
+          "linear_solve_residual": 2.6131273072021236e-18,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010761966665844908,
+            "1": 0.0001737138834765298,
+            "2": 2.8042286355856517e-06,
+            "3": 4.525816892741825e-08
+          },
+          "near_min": 0.2501736394070741
+        },
+        {
+          "E": 0.5,
+          "source": 4,
+          "max_bound_excess": -8.67565127318148e-06,
+          "linear_solve_residual": 1.3765938612358467e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010759163167382367,
+            "1": 0.0001736394070741084,
+            "2": 2.8027940122736268e-06,
+            "3": 4.524494572862868e-08,
+            "4": 7.302198441386183e-10
+          },
+          "near_min": 0.2500000000003271
+        },
+        {
+          "E": 0.5,
+          "source": 5,
+          "max_bound_excess": -1.3994161204652743e-06,
+          "linear_solve_residual": 1.27429219791103e-19,
+          "max_abs_Sigma_by_d": {
+            "0": 0.010756361575339875,
+            "1": 6.612973139117604e-12,
+            "2": 5.929956048088277e-08,
+            "3": 9.571820070175716e-10,
+            "4": 1.5451606279459072e-11,
+            "5": 2.493775673563184e-13
+          },
+          "near_min": 0.2500000000003271
+        }
+      ],
+      "all_geometry_receiver_blocks": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 1,
+          "source_columns": 120,
+          "all_geometry_receiver_rows": 120,
+          "operator_norm": 0.00016310555711478847,
+          "bound": 0.0019290123456790122
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 2,
+          "source_columns": 96,
+          "all_geometry_receiver_rows": 120,
+          "operator_norm": 2.5520562299741824e-06,
+          "bound": 0.00030140817901234566
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 3,
+          "source_columns": 72,
+          "all_geometry_receiver_rows": 120,
+          "operator_norm": 3.993430506406697e-08,
+          "bound": 4.709502797067901e-05
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 4,
+          "source_columns": 48,
+          "all_geometry_receiver_rows": 120,
+          "operator_norm": 6.229353999304418e-10,
+          "bound": 7.358598120418595e-06
+        },
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "min_distance": 5,
+          "source_columns": 24,
+          "all_geometry_receiver_rows": 120,
+          "operator_norm": 1.2433054761141809e-12,
+          "bound": 1.1497809563154056e-06
+        }
+      ],
+      "arbitrary_near_geometry_packets": [
+        {
+          "source_event": 0,
+          "receiver_event": 1,
+          "minimum_receiver_action": 0.2501628399380658,
+          "uniform_lower": 0.23765432098765432
+        }
+      ],
+      "full_propagation_blocks": []
+    }
+  ],
+  "source": [
+    {
+      "N": 3,
+      "source_variance": 0.25,
+      "preparation": "A recorded, fully assembled branch with probe (|root>+|next>)/sqrt(2); NOT claimed produced with appreciable original-neutral probability.",
+      "rows": [
+        {
+          "t": 0.01,
+          "chi": [
+            -0.002499986979077565,
+            0.002499979166732009,
+            7.812345545682945e-09
+          ],
+          "finite_pulse_error": 1.1709383462843448e-16,
+          "defect_probability": 3.326181278508409e-05,
+          "original_geometry_probability": 0.9999667381872147,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.1,
+          "chi": [
+            -0.024986973708584676,
+            0.024979175089578625,
+            7.798619006072078e-06
+          ],
+          "finite_pulse_error": 2.42861286636753e-17,
+          "defect_probability": 0.002676812552808395,
+          "original_geometry_probability": 0.9973231874470231,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.062296741132653974,
+            0.06217547306633555,
+            0.00012126806631845811
+          ],
+          "finite_pulse_error": 1.1102230246251565e-16,
+          "defect_probability": 0.0042818620521202335,
+          "original_geometry_probability": 0.9957181378779727,
+          "formation_preparation": false
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.23726152134616407,
+            0.22971987117841264,
+            0.00754165016774489
+          ],
+          "finite_pulse_error": 8.1601392309949e-15,
+          "defect_probability": 0.005026273030815065,
+          "original_geometry_probability": 0.9949737266897981,
+          "formation_preparation": false
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "source_variance": 0.25,
+      "preparation": "A recorded, fully assembled branch with probe (|root>+|next>)/sqrt(2); NOT claimed produced with appreciable original-neutral probability.",
+      "rows": [
+        {
+          "t": 0.01,
+          "chi": [
+            -0.002499986979195138,
+            0.0024999791667236326,
+            7.812463378684415e-09,
+            8.137878590875878e-15
+          ],
+          "finite_pulse_error": 2.2768245622195593e-16,
+          "defect_probability": 2.4946452584906216e-05,
+          "original_geometry_probability": 0.9999750535474149,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.1,
+          "chi": [
+            -0.024986982014038664,
+            0.024979172364884485,
+            7.808836613982278e-06,
+            8.125400735444192e-10
+          ],
+          "finite_pulse_error": 2.0122792321330962e-16,
+          "defect_probability": 0.0020082705132509465,
+          "original_geometry_probability": 0.9979917294866957,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.06229682743680854,
+            0.06217503531887291,
+            0.00012171306860431673,
+            7.904933052314682e-08
+          ],
+          "finite_pulse_error": 9.506284648352903e-16,
+          "defect_probability": 0.0032151175301887015,
+          "original_geometry_probability": 0.9967848824474517,
+          "formation_preparation": false
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.23726046118115232,
+            0.2297282482034546,
+            0.007453083823490189,
+            7.912915420549419e-05
+          ],
+          "finite_pulse_error": 1.970645868709653e-15,
+          "defect_probability": 0.0038028823520818017,
+          "original_geometry_probability": 0.9961971175606739,
+          "formation_preparation": false
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "source_variance": 0.25,
+      "preparation": "A recorded, fully assembled branch with probe (|root>+|next>)/sqrt(2); NOT claimed produced with appreciable original-neutral probability.",
+      "rows": [
+        {
+          "t": 0.01,
+          "chi": [
+            -0.002499986979195135,
+            0.0024999791667236326,
+            7.812463378974913e-09,
+            8.1379937063395e-15,
+            4.2384872591601135e-21
+          ],
+          "finite_pulse_error": 6.678685382510707e-17,
+          "defect_probability": 1.9957203599260937e-05,
+          "original_geometry_probability": 0.9999800427964005,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.1,
+          "chi": [
+            -0.024986982014617937,
+            0.024979172362467755,
+            7.808838577200745e-06,
+            8.135306468868949e-10,
+            4.232823483126729e-14
+          ],
+          "finite_pulse_error": 1.3530843112619095e-16,
+          "defect_probability": 0.001606917854248709,
+          "original_geometry_probability": 0.9983930821457292,
+          "formation_preparation": false
+        },
+        {
+          "t": 0.25,
+          "chi": [
+            -0.06229682741698237,
+            0.06217503498029579,
+            0.000121713103578087,
+            7.930735120774896e-08,
+            2.575708929430754e-11
+          ],
+          "finite_pulse_error": 2.706168622523819e-16,
+          "defect_probability": 0.002574433767994586,
+          "original_geometry_probability": 0.9974255662228375,
+          "formation_preparation": false
+        },
+        {
+          "t": 1.0,
+          "chi": [
+            -0.23726046598748018,
+            0.22972826254160372,
+            0.007453083104638945,
+            7.870624535811088e-05,
+            4.140958779957575e-07
+          ],
+          "finite_pulse_error": 2.1094237467877974e-15,
+          "defect_probability": 0.003045907212175572,
+          "original_geometry_probability": 0.9969540927520164,
+          "formation_preparation": false
+        }
+      ]
+    }
+  ],
+  "formation": [
+    {
+      "N": 2,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 16.0,
+      "initial_energy_standard_deviation": 0.7071067811865476,
+      "extensive_length_threshold": 2,
+      "extensive_assembly_probability_upper_all_times": 0.010204081632653062,
+      "full_assembly_probability_upper_all_times": 0.007812499999999998,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 0.00775164726566099,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 0.00775164726566099,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.12402635625057584,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.06548878627495536,
+      "extra_uniform_root_record_entropy_bits": 1.0,
+      "auxiliary_energy_check": 15.999999999999991,
+      "exact_radial_intertwining_error": 1.5700924586837752e-16
+    },
+    {
+      "N": 3,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 32.0,
+      "initial_energy_standard_deviation": 0.816496580927726,
+      "extensive_length_threshold": 2,
+      "extensive_assembly_probability_upper_all_times": 0.013605442176870748,
+      "full_assembly_probability_upper_all_times": 0.0018972744546699842,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 1.3457779332574191e-05,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 0.010322142167857767,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.16536959915504548,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.09339176091218362,
+      "extra_uniform_root_record_entropy_bits": 1.584962500721156,
+      "auxiliary_energy_check": 31.999999999999993,
+      "exact_radial_intertwining_error": 1.9229626863835638e-16
+    },
+    {
+      "N": 4,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 48.0,
+      "initial_energy_standard_deviation": 0.8660254037844386,
+      "extensive_length_threshold": 2,
+      "extensive_assembly_probability_upper_all_times": 0.015306122448979591,
+      "full_assembly_probability_upper_all_times": 0.0008099068592814404,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 9.869647154890713e-09,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 0.01160488923227369,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.18604143076976623,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.10990706686038633,
+      "extra_uniform_root_record_entropy_bits": 2.0,
+      "auxiliary_energy_check": 47.99999999999998,
+      "exact_radial_intertwining_error": 2.220446049250313e-16
+    },
+    {
+      "N": 5,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 64.0,
+      "initial_energy_standard_deviation": 0.8944271909999159,
+      "extensive_length_threshold": 3,
+      "extensive_assembly_probability_upper_all_times": 0.003095156273394557,
+      "full_assembly_probability_upper_all_times": 0.000439453125,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 3.953006065629069e-12,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 2.902850758467375e-05,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.1984445969118854,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.12123690608920451,
+      "extra_uniform_root_record_entropy_bits": 2.321928094887362,
+      "auxiliary_energy_check": 63.99999999999997,
+      "exact_radial_intertwining_error": 2.1499376424746292e-16
+    },
+    {
+      "N": 6,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 80.0,
+      "initial_energy_standard_deviation": 0.9128709291752769,
+      "extensive_length_threshold": 3,
+      "extensive_assembly_probability_upper_all_times": 0.0033230133166665104,
+      "full_assembly_probability_upper_all_times": 0.0002727118738281141,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 9.93924888416978e-16,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 3.3586161428333517e-05,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.20671340231063656,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.12969361635202992,
+      "extra_uniform_root_record_entropy_bits": 2.584962500721156,
+      "auxiliary_energy_check": 79.99999999999999,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 8,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 112.0,
+      "initial_energy_standard_deviation": 0.9354143466934853,
+      "extensive_length_threshold": 4,
+      "extensive_assembly_probability_upper_all_times": 0.0014078544167178187,
+      "full_assembly_probability_upper_all_times": 0.000132448806422684,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 2.1451618137407146e-23,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 4.311650086227482e-08,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.21704944051073097,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.14181755565388532,
+      "extra_uniform_root_record_entropy_bits": 3.0,
+      "auxiliary_energy_check": 112.00000000000001,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 12,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 176.0,
+      "initial_energy_standard_deviation": 0.9574271077563381,
+      "extensive_length_threshold": 6,
+      "extensive_assembly_probability_upper_all_times": 0.0004869319632750417,
+      "full_assembly_probability_upper_all_times": 5.012818951422284e-05,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 3.9933093917088205e-40,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 1.433422070826555e-14,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.22738551364120407,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.1568934907120222,
+      "extra_uniform_root_record_entropy_bits": 3.584962500721156,
+      "auxiliary_energy_check": 176.00000000000003,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 16,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 240.0,
+      "initial_energy_standard_deviation": 0.9682458365518543,
+      "extensive_length_threshold": 8,
+      "extensive_assembly_probability_upper_all_times": 0.00024399741775436214,
+      "full_assembly_probability_upper_all_times": 2.576602288673485e-05,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 2.0655818948237383e-59,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 1.0775250972628572e-21,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.2325535633000084,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.16649650319218434,
+      "extra_uniform_root_record_entropy_bits": 4.0,
+      "auxiliary_energy_check": 240.00000000000009,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 32,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 496.0,
+      "initial_energy_standard_deviation": 0.9842509842514764,
+      "extensive_length_threshold": 16,
+      "extensive_assembly_probability_upper_all_times": 5.181096030305284e-05,
+      "full_assembly_probability_upper_all_times": 5.479258555040632e-06,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 2.3179649878780407e-155,
+      "time_of_sampled_max": 0.6902913545485385,
+      "sampled_max_extensive_probability": 7.570527810038092e-55,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.10912028011578581,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.09271022426224243,
+      "extra_uniform_root_record_entropy_bits": 5.0,
+      "auxiliary_energy_check": 496.0000000000001,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 64,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 1008.0,
+      "initial_energy_standard_deviation": 0.9921567416492215,
+      "extensive_length_threshold": 32,
+      "extensive_assembly_probability_upper_all_times": 1.1985430999513393e-05,
+      "full_assembly_probability_upper_all_times": 1.2283076513017935e-06,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 0.0,
+      "time_of_sampled_max": 0.0,
+      "sampled_max_extensive_probability": 2.434055322673862e-147,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": 5.4912678979515826e-17,
+      "complete_geometry_record_entropy_bits_fixed_root": 8.913521385594407e-32,
+      "extra_uniform_root_record_entropy_bits": 6.0,
+      "auxiliary_energy_check": 1008.0,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 128,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 2032.0,
+      "initial_energy_standard_deviation": 0.9960860906568267,
+      "extensive_length_threshold": 64,
+      "extensive_assembly_probability_upper_all_times": 2.884918226537872e-06,
+      "full_assembly_probability_upper_all_times": 2.848336089442106e-07,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 0.0,
+      "time_of_sampled_max": 0.0,
+      "sampled_max_extensive_probability": 0.0,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -2.5595074624255938e-17,
+      "complete_geometry_record_entropy_bits_fixed_root": -6.406853007629837e-16,
+      "extra_uniform_root_record_entropy_bits": 7.0,
+      "auxiliary_energy_check": 2032.000000000001,
+      "exact_radial_intertwining_error": null
+    }
+  ],
+  "formation_robustness": [
+    {
+      "N": 16,
+      "U": 4.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 60.0,
+      "initial_energy_standard_deviation": 0.9682458365518543,
+      "extensive_length_threshold": 8,
+      "extensive_assembly_probability_upper_all_times": 0.004367409400632813,
+      "full_assembly_probability_upper_all_times": 0.0004122563661877576,
+      "sample_time_window": [
+        0.0,
+        3.141592653589793
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 5.1761054112740765e-40,
+      "time_of_sampled_max": 0.7853981633974483,
+      "sampled_max_extensive_probability": 2.737831223552275e-13,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.8296411053345464,
+      "complete_geometry_record_entropy_bits_fixed_root": 1.58589258639871,
+      "extra_uniform_root_record_entropy_bits": 4.0,
+      "auxiliary_energy_check": 59.99999999999999,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 16,
+      "U": 8.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 120.0,
+      "initial_energy_standard_deviation": 0.9682458365518543,
+      "extensive_length_threshold": 8,
+      "extensive_assembly_probability_upper_all_times": 0.0010124721381439578,
+      "full_assembly_probability_upper_all_times": 0.0001030640915469394,
+      "sample_time_window": [
+        0.0,
+        1.5707963267948966
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 3.575241616429048e-49,
+      "time_of_sampled_max": 0.39269908169872414,
+      "sampled_max_extensive_probability": 1.7461226151249504e-17,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.4544059817658997,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.5392018223298869,
+      "extra_uniform_root_record_entropy_bits": 4.0,
+      "auxiliary_energy_check": 119.99999999999994,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 16,
+      "U": 16.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 240.0,
+      "initial_energy_standard_deviation": 0.9682458365518543,
+      "extensive_length_threshold": 8,
+      "extensive_assembly_probability_upper_all_times": 0.00024399741775436214,
+      "full_assembly_probability_upper_all_times": 2.576602288673485e-05,
+      "sample_time_window": [
+        0.0,
+        0.7853981633974483
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 2.0655818948237383e-59,
+      "time_of_sampled_max": 0.19634954084936207,
+      "sampled_max_extensive_probability": 1.0775250972628572e-21,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.2325535633000084,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.16649650319218434,
+      "extra_uniform_root_record_entropy_bits": 4.0,
+      "auxiliary_energy_check": 240.00000000000009,
+      "exact_radial_intertwining_error": null
+    },
+    {
+      "N": 16,
+      "U": 32.0,
+      "epsilon": 1.0,
+      "initial_auxiliary_energy": 480.0,
+      "initial_energy_standard_deviation": 0.9682458365518543,
+      "extensive_length_threshold": 8,
+      "extensive_assembly_probability_upper_all_times": 5.9905217815676116e-05,
+      "full_assembly_probability_upper_all_times": 6.441505721683712e-06,
+      "sample_time_window": [
+        0.0,
+        0.39269908169872414
+      ],
+      "sample_points": 257,
+      "sampled_max_probability": 1.8527931622898895e-75,
+      "time_of_sampled_max": 0.09817477042468103,
+      "sampled_max_extensive_probability": 6.59478977814253e-26,
+      "probability_notice": "Tiny sampled probabilities can be an unresolved double-precision floor; the all-time analytic bound decides the formation gate.",
+      "complete_geometry_record_work": -0.11695891955386,
+      "complete_geometry_record_entropy_bits_fixed_root": 0.04914399641105827,
+      "extra_uniform_root_record_entropy_bits": 4.0,
+      "auxiliary_energy_check": 479.9999999999999,
+      "exact_radial_intertwining_error": null
+    }
+  ],
+  "bad_reconnection": [
+    {
+      "N": 8,
+      "reference_S1_distance": 4,
+      "new_word_length": 3,
+      "removed_bonds": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "added_bonds": [
+        [
+          0,
+          4
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "changed_head": [
+        7,
+        3
+      ],
+      "term_qubit_support": 6,
+      "status": "EXCLUDED from S1 by its end-defect grammar; adding this move collapses the original protected event metric and requires recomputing d_op."
+    },
+    {
+      "N": 16,
+      "reference_S1_distance": 8,
+      "new_word_length": 3,
+      "removed_bonds": [
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "added_bonds": [
+        [
+          0,
+          8
+        ],
+        [
+          15,
+          1
+        ]
+      ],
+      "changed_head": [
+        15,
+        7
+      ],
+      "term_qubit_support": 6,
+      "status": "EXCLUDED from S1 by its end-defect grammar; adding this move collapses the original protected event metric and requires recomputing d_op."
+    },
+    {
+      "N": 32,
+      "reference_S1_distance": 16,
+      "new_word_length": 3,
+      "removed_bonds": [
+        [
+          0,
+          1
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "added_bonds": [
+        [
+          0,
+          16
+        ],
+        [
+          31,
+          1
+        ]
+      ],
+      "changed_head": [
+        31,
+        15
+      ],
+      "term_qubit_support": 6,
+      "status": "EXCLUDED from S1 by its end-defect grammar; adding this move collapses the original protected event metric and requires recomputing d_op."
+    },
+    {
+      "N": 64,
+      "reference_S1_distance": 32,
+      "new_word_length": 3,
+      "removed_bonds": [
+        [
+          0,
+          1
+        ],
+        [
+          31,
+          32
+        ]
+      ],
+      "added_bonds": [
+        [
+          0,
+          32
+        ],
+        [
+          63,
+          1
+        ]
+      ],
+      "changed_head": [
+        63,
+        31
+      ],
+      "term_qubit_support": 6,
+      "status": "EXCLUDED from S1 by its end-defect grammar; adding this move collapses the original protected event metric and requires recomputing d_op."
+    },
+    {
+      "N": 128,
+      "reference_S1_distance": 64,
+      "new_word_length": 3,
+      "removed_bonds": [
+        [
+          0,
+          1
+        ],
+        [
+          63,
+          64
+        ]
+      ],
+      "added_bonds": [
+        [
+          0,
+          64
+        ],
+        [
+          127,
+          1
+        ]
+      ],
+      "changed_head": [
+        127,
+        63
+      ],
+      "term_qubit_support": 6,
+      "status": "EXCLUDED from S1 by its end-defect grammar; adding this move collapses the original protected event metric and requires recomputing d_op."
+    }
+  ],
+  "acceptance": "S1 has generated event adjacency and protected conditional transport. Its one-dimensional class is supplied by the grammar and appreciable closed-system formation fails. Full WM2 NOT established.",
+  "arithmetic": "Exact combinatorial graph/word enumeration; analytic all-N proofs; ordinary floating-point finite matrices and radial checks, not outward-rounded certificates."
+}
