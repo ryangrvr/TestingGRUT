@@ -1,8 +1,10 @@
 # WM2-S8 — coherent Schmidt receiver and charge-rank allocation
 
-**Interim checkpoint:** original S8 recovery failed its numerical limits;
-the separately frozen S8-G1 allocation variant is under evaluation. No
-six-event formation result is asserted by this checkpoint.
+**Completed campaign:** both original S8 recovery components stop before
+the target. The separately frozen S8-G1 global allocation completes one
+component, while the other stops on the Schmidt allowance. Neither method
+passes the two-component recovery gate; the six-event target is not run.
+These are numerical-method outcomes, not evidence against physical formation.
 
 S8 implements a charge-conserving MPS for the complete history register
 and receiver chain. It retains emitted photons and their correlations,
@@ -80,6 +82,11 @@ The per-charge ceiling becomes 96 instead of 16. Error, memory, time,
 operator audits, physical law, targets and root weights stay fixed.
 This is a different numerical protocol, not a pass under original S8.
 
+At N=5 the original five charge blocks also imply an effective total
+maximum 5*16=80, whereas G1 can use 96. Thus G1 changes both the admissible
+distribution and usable total rank at this size; it is not an equal-rank
+comparison. PROTOCOL_CLARIFICATIONS.md records this without changing a gate.
+
 Its source is checked to differ from original S8 only at this allocation
 rule/default and its import. G1 reruns the full controls, including the
 576-mode physical reference. It also checks an exact rank-capacity witness
@@ -88,9 +95,73 @@ joint Schmidt vectors in one charge while each conditional history needs
 one. Those packets are allowed states, not demonstrated neutral-seed
 outputs or a no-go for a physical phase.
 
-G1 target-time outcomes, fresh S7 whole-worker costs and any gated six-event
-result will be evaluated with their actual completed/stopped status.
-No additional numerical variant is permitted by this packet's charter.
+The first G1 component stops at completed-step time **88.34422658** rather
+than 100, after **839.938 seconds**, with **90.102 MiB** peak RSS. It reaches
+global rank 96, a charge rank of 50, and 996,160 retained tensor entries.
+Its Schmidt ledger is **0.3499998723** of .35; the next truncation cannot
+fit. Runtime and memory caps do not cause this stop. Its accumulated ledger
+totals about .464346, but this mid-sweep number is not a certificate for
+physical evolution at the last whole-step time. No target-time interval is
+reported. Failure of this component keeps G1's six-event gate closed,
+regardless of its other component.
+
+The second G1 component, remaining counts (3,1), completes T=100 in
+**778.287 seconds**, at **72.445 MiB** peak RSS. Its maximum bond rank is
+88, maximum charge rank 35, and maximum retained tensor count 503,999.
+Its state-error account is .33527211, including Schmidt .20583146,
+Strang .11219854 and field factorization .01701847. The paid probability
+lower bounds, rounded downward, are **88.7514%** for m>=3 and **82.9695%**
+for m=5 under the declared arithmetic model.
+
+This is a completed root component of weight 2/5, not the original
+root-weighted family. The unresolved component has weight 3/5. Its missing
+target-time result prevents G1 recovery and keeps the six-event gate closed.
+No favorable roots from different numerical methods are combined to pass
+either charter. No extra numerical allocation/rank/budget variant is run.
+
+RESULT_TABLES.md and the raw JSON give every component's status, costs,
+error accounts and probability intervals. The fresh immutable S7 workers
+provide the completed reference family. The methods differ in integration,
+rank constraints, error allocation and time ceilings: this is not an
+equal-error or equal-rank speed comparison. A stopped run is not a cheaper
+solution of the target. G1 improves the reached time in its harder component
+but does not solve the receiver-retention problem within its frozen limits.
+
+| Recorded two-component protocol | Complete components | Sequential wall s | Maximum worker peak MiB | Weighted macro/full lower bounds |
+|---|---:|---:|---:|---|
+| Original S8 | 0/2 | 238.421 | 58.746 | No target-time family bound |
+| S8-G1 | 1/2 | 1618.225 | 90.102 | No target-time family bound |
+| Fresh S7 reference | 2/2 | 220.482 | 86.496 | 69.8713% / 57.9462% |
+
+Displayed probability lower bounds are rounded downward. Wall sums include
+each worker's imports, setup, operator audits and propagation, but not the
+separate controls. Peak RSS is the maximum of sequential workers, not their
+sum. Timers stop before final result serialization/printing. The reference
+agrees in scope with S7's earlier result; small differences in evaluated
+endpoints are retained rather than replacing the fresh observations with
+archived favorable numbers.
+
+## Separate analytical construction for projection accounting
+
+SWEEP_BOUND.md states a conditional error lemma for a single one-way
+sweep: when kept prefix ranges are nested and later gates commute with
+earlier prefix projectors, transported orthogonal losses are pairwise
+orthogonal. Their norm can be square-summed; numerical in-range defects
+must still be added linearly. The document specifies a direct prefix-Gram
+residual for that missing numerical defect.
+
+Dense controls check the nested-projector identity and a nonorthogonal
+prefix metric. A two-step rotation/projection counterexample gives actual
+error about .198919 versus an invalid all-time square-sum .140834: returns
+can add coherently. Consequently the tighter account applies only to an
+individually certified monotone sweep, not across reversals or all steps.
+This adapts a standard tensor-SVD orthogonality principle; it is not a
+new quantum law, a production numerical certificate or a physical prediction.
+
+**Neither S8 nor G1 uses this lemma.** No stopped ledger is lowered, no
+extra primary family is run and no target completion is inferred from it.
+The next constructive task is to bound the in-range projection defect
+in production arithmetic before a new recovery-first campaign.
 
 ## Scope
 

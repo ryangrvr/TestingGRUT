@@ -22,6 +22,11 @@
 * Nicholas J. Higham, [The Accuracy of Floating Point Summation](https://nhigham.com/wp-content/uploads/2023/10/high93s.pdf)
   (1993): standard floating-point/reduction model, used with its stated
   assumptions and underflow qualifications. It does not verify this code.
+* I. V. Oseledets, [Tensor-Train Decomposition](https://epubs.siam.org/doi/10.1137/090752286)
+  (2011), Theorem 2.2; [original paper mirror](https://users.math.msu.edu/users/iwenmark/Teaching/CMSE890/TENSOR_oseledets2011.pdf):
+  standard nested-discard orthogonality and tensor-train SVD error control.
+  SWEEP_BOUND.md states the extra commuting-gate conditions needed for
+  interleaved evolution and a counterexample across coherent returns.
 
 The user's supplied S7 assessment defines the continuation request. No claim
 is made to have inspected `reviews/grut_review_report.md`, independently

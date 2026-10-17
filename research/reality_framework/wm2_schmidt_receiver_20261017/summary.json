@@ -1,0 +1,144 @@
+{
+  "parent": "a1dd220ee28cf8fd985a7c144922e0bb6c299902",
+  "original_charter": "0e42a5d3023c7ec45029f38ef918c47f62b6c603",
+  "G1_charter": "b15fcf0618ac53e2a5a69f216ac346e16fa3f6ff",
+  "original_S8": {
+    "gate_pass": false,
+    "event_intervals": null,
+    "original_root_weights": [
+      "3/5",
+      "2/5"
+    ],
+    "completed_components": 0,
+    "endpoint_times": [
+      30.065359477124186,
+      57.314410480349345
+    ],
+    "statuses": [
+      "UNRESOLVED",
+      "UNRESOLVED"
+    ],
+    "resources": {
+      "total_sequential_worker_wall_seconds": 238.4214662229997,
+      "total_sequential_worker_CPU_seconds": 238.391016967,
+      "maximum_worker_peak_MiB": 58.74609375
+    },
+    "components": [
+      {
+        "counts": [
+          2,
+          2
+        ],
+        "status": "UNRESOLVED",
+        "stop_reason": "Schmidt cap cannot fit remaining truncation allowance",
+        "whole_step_state": false,
+        "physical_probability_intervals": null
+      },
+      {
+        "counts": [
+          3,
+          1
+        ],
+        "status": "UNRESOLVED",
+        "stop_reason": "Schmidt cap cannot fit remaining truncation allowance",
+        "whole_step_state": false,
+        "physical_probability_intervals": null
+      }
+    ]
+  },
+  "G1": {
+    "gate_pass": false,
+    "event_intervals": null,
+    "original_root_weights": [
+      "3/5",
+      "2/5"
+    ],
+    "completed_components": 1,
+    "endpoint_times": [
+      88.34422657952071,
+      100.0
+    ],
+    "statuses": [
+      "UNRESOLVED",
+      "COMPLETE"
+    ],
+    "resources": {
+      "total_sequential_worker_wall_seconds": 1618.2253393729998,
+      "total_sequential_worker_CPU_seconds": 1618.138492554,
+      "maximum_worker_peak_MiB": 90.1015625
+    },
+    "components": [
+      {
+        "counts": [
+          2,
+          2
+        ],
+        "status": "UNRESOLVED",
+        "stop_reason": "Schmidt cap cannot fit remaining truncation allowance",
+        "whole_step_state": false,
+        "physical_probability_intervals": null
+      },
+      {
+        "counts": [
+          3,
+          1
+        ],
+        "status": "COMPLETE",
+        "stop_reason": null,
+        "whole_step_state": true,
+        "physical_probability_intervals": {
+          "macro": [
+            0.8875141153503986,
+            1.0
+          ],
+          "full": [
+            0.8296954684234005,
+            1.0
+          ]
+        }
+      }
+    ]
+  },
+  "fresh_S7": {
+    "event_intervals": {
+      "macro": [
+        0.6987136199960323,
+        1.0
+      ],
+      "full": [
+        0.5794627882241372,
+        1.0
+      ]
+    },
+    "resources": {
+      "total_sequential_worker_wall_seconds": 220.4820300980009,
+      "total_sequential_worker_CPU_seconds": 220.459123626,
+      "maximum_worker_peak_MiB": 86.49609375
+    },
+    "completed_components": 2,
+    "equal_error_speed_claim": false,
+    "worker_wall_budget_seconds": 600
+  },
+  "six_event": {
+    "status": "NOT_RUN",
+    "reason": "Frozen G1 recovery gate not passed; no six-event target launched"
+  },
+  "full_independent_disorder_scaling_proved": false,
+  "dimension_dynamically_selected": false,
+  "original_CP12_matter_universality_established": false,
+  "distinctive_empirical_prediction": false,
+  "external_independent_validation": false,
+  "arithmetic": "roundoff-aware under declared IEEE/reduction model; not formal software certification",
+  "rank_comparison": {
+    "original_S8_nominal_total": 96,
+    "original_S8_N5_effective_total": 80,
+    "original_S8_per_charge": 16,
+    "G1_global_total": 96,
+    "equal_rank_comparison": false
+  },
+  "separate_sweep_lemma": {
+    "controls": "PASS",
+    "applied_to_primary_accounts": false,
+    "new_primary_variant_launched": false
+  }
+}

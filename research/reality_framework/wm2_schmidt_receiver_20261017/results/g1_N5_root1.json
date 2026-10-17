@@ -1,0 +1,199 @@
+{
+  "status": "COMPLETE",
+  "stop_reason": null,
+  "stop_detail": null,
+  "N": 5,
+  "physical_receiver_modes": 1600,
+  "computational_receiver_sites": 272,
+  "nonroot_type_counts": [
+    3,
+    1
+  ],
+  "detuning_values": [
+    -0.25,
+    0.25
+  ],
+  "g": 0.9,
+  "observation_time": 100,
+  "steps": 916,
+  "completed_steps": 916,
+  "dt": 0.1091703056768559,
+  "completed_physical_steps_time": 100.0,
+  "whole_step_state": true,
+  "maximum_bond_rank": 88,
+  "maximum_charge_rank": 35,
+  "maximum_tensor_entries": 503999,
+  "maximum_active_receiver_site": 219,
+  "two_site_gates": 653710,
+  "SVDs": 3041651,
+  "truncations": 605396,
+  "maximum_isometry_sum_upper": 3.221820012705654e-10,
+  "maximum_observed_SVD_residual": 6.014599007629054e-15,
+  "error_components": {
+    "strang": 0.11219853504461184,
+    "schmidt_truncation": 0.20583145618933657,
+    "field_factorization": 0.017018460916851753,
+    "gate_matrix": 1.7789639224245542e-05,
+    "arithmetic": 0.00020511694128871145,
+    "svd_reconstruction": 5.669295861699459e-10,
+    "normalization": 7.424779227162328e-07,
+    "receiver_cut": 4.656612873077395e-10,
+    "time_grid": 4.2865710980777606e-14,
+    "final_normalization": 8.771805504181886e-11
+  },
+  "analytic_state_error_account": 0.3352721023295901,
+  "computed_normalized_event_intervals": {
+    "macro": [
+      0.9999999862988964,
+      0.9999999870006375
+    ],
+    "full": [
+      0.9940080644260354,
+      0.9940080651235701
+    ]
+  },
+  "physical_probability_intervals": {
+    "macro": [
+      0.8875141153503986,
+      1.0
+    ],
+    "full": [
+      0.8296954684234005,
+      1.0
+    ]
+  },
+  "finite_instance_gate": true,
+  "operator_audits": {
+    "R": 272,
+    "physical_modes": 1600,
+    "steps": 916,
+    "dt": 0.1091703056768559,
+    "receiver_cut_error": 4.656612873077394e-10,
+    "commutator_certificate": {
+      "GGF_upper": 0.22291285359160987,
+      "FFG_upper": 1.0182338213613276,
+      "Strang_constant_upper": 0.0941408540130944,
+      "blocks": [
+        {
+          "spectator_photons": 0,
+          "dimension": 125,
+          "GGF": {
+            "observed_maximum_eigenvalue": 0.22291279716982573,
+            "Gram_upper": 1.4115170133131754e-11,
+            "eigenvector_residual_upper": 1.580821171626506e-11,
+            "construction_upper": 5.6402829401051116e-08,
+            "norm_upper": 0.22291285359160987
+          },
+          "FFG": {
+            "observed_maximum_eigenvalue": 1.0182337649086284,
+            "Gram_upper": 1.41152341072705e-11,
+            "eigenvector_residual_upper": 3.5496818317164885e-11,
+            "construction_upper": 5.6402829401051116e-08,
+            "norm_upper": 1.0182338213613276
+          }
+        },
+        {
+          "spectator_photons": 1,
+          "dimension": 75,
+          "GGF": {
+            "observed_maximum_eigenvalue": 0.16635155544809296,
+            "Gram_upper": 5.142191293236813e-12,
+            "eigenvector_residual_upper": 6.562789402542092e-12,
+            "construction_upper": 1.7517768234817545e-08,
+            "norm_upper": 0.1663515729732795
+          },
+          "FFG": {
+            "observed_maximum_eigenvalue": 0.7636753236814715,
+            "Gram_upper": 5.141074417114079e-12,
+            "eigenvector_residual_upper": 1.3507174237035197e-11,
+            "construction_upper": 1.7517768234817545e-08,
+            "norm_upper": 0.7636753412166734
+          }
+        },
+        {
+          "spectator_photons": 2,
+          "dimension": 39,
+          "GGF": {
+            "observed_maximum_eigenvalue": 0.1109010369653956,
+            "Gram_upper": 1.42920725957604e-12,
+            "eigenvector_residual_upper": 2.255642323186441e-12,
+            "construction_upper": 3.954582617869017e-09,
+            "norm_upper": 0.11090104092239242
+          },
+          "FFG": {
+            "observed_maximum_eigenvalue": 0.5091168824543147,
+            "Gram_upper": 1.4291795622921538e-12,
+            "eigenvector_residual_upper": 3.958346670240136e-12,
+            "construction_upper": 3.954582617869017e-09,
+            "norm_upper": 0.5091168864135838
+          }
+        },
+        {
+          "spectator_photons": 3,
+          "dimension": 16,
+          "GGF": {
+            "observed_maximum_eigenvalue": 0.055450518482697754,
+            "Gram_upper": 2.6158476293008697e-13,
+            "eigenvector_residual_upper": 5.474585884716978e-13,
+            "construction_upper": 4.692418629056088e-10,
+            "norm_upper": 0.0554505189525016
+          },
+          "FFG": {
+            "observed_maximum_eigenvalue": 0.2545584412271571,
+            "Gram_upper": 2.606563848568393e-13,
+            "eigenvector_residual_upper": 7.8047116768144e-13,
+            "construction_upper": 4.692418629056088e-10,
+            "norm_upper": 0.25455844169724595
+          }
+        },
+        {
+          "spectator_photons": 4,
+          "dimension": 4,
+          "GGF": {
+            "observed_maximum_eigenvalue": 0.0,
+            "Gram_upper": 2.4868995751603844e-14,
+            "eigenvector_residual_upper": 7.105427357601257e-14,
+            "construction_upper": 7.673861546226534e-12,
+            "norm_upper": 7.744915819802548e-12
+          },
+          "FFG": {
+            "observed_maximum_eigenvalue": 0.0,
+            "Gram_upper": 2.4868995751603844e-14,
+            "eigenvector_residual_upper": 7.105427357601257e-14,
+            "construction_upper": 7.673861546226534e-12,
+            "norm_upper": 7.744915819802548e-12
+          }
+        }
+      ]
+    },
+    "field_audit": {
+      "one_particle_error_upper": 4.598725120340988e-06,
+      "computed_difference_bound": 4.598716398038066e-06,
+      "reference_arithmetic_upper": 1.2927524607528275e-12,
+      "product_arithmetic_upper": 6.892996498433308e-12,
+      "subtraction_arithmetic_upper": 1.0781358472840736e-13,
+      "ideal_unitary_phase_upper": 4.2874037653480395e-13,
+      "R": 272,
+      "dt": 0.1091703056768559
+    },
+    "field_step_error": 1.83951542618038e-05,
+    "field_total_allocated_upper": 0.017018460916850404,
+    "preprocessing_refinements": 3,
+    "boundary_error": 5.121518874789912e-13
+  },
+  "operator_preprocessing_seconds": 0.14843756800019037,
+  "elapsed_seconds": 778.2871443280001,
+  "exact_history_retained": true,
+  "extra_photon_cutoff": false,
+  "emission_action_projection": false,
+  "arithmetic_status": "roundoff-aware under declared IEEE/reduction model; not formal software certification",
+  "incomplete_population_notice": null,
+  "method": "S8-G1",
+  "whole_worker_wall_seconds": 778.287164798,
+  "whole_worker_cpu_seconds": 778.2381660149999,
+  "peak_resident_MiB": 72.4453125,
+  "wall_limit_seconds": 900,
+  "wall_overshoot_seconds": 0,
+  "imports_setup_and_operator_preprocessing_included": true,
+  "retained_tensor_count_is_not_total_memory": true
+}

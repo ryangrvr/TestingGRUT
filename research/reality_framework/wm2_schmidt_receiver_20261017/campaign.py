@@ -27,9 +27,13 @@ def recovery(prefix):
     rows=root_rows(prefix);bounds=combined(rows,[Q(3,5),Q(2,5)])
     gate=bool(bounds and all(r['finite_instance_gate'] for r in rows) and bounds['macro'][0]>=.5)
     return dict(gate_pass=gate,event_intervals=bounds,
+        original_root_weights=['3/5','2/5'],
         completed_components=sum(r['status']=='COMPLETE' for r in rows),
         endpoint_times=[r['completed_physical_steps_time'] for r in rows],
-        statuses=[r['status'] for r in rows],resources=resources(rows))
+        statuses=[r['status'] for r in rows],resources=resources(rows),
+        components=[dict(counts=r['nonroot_type_counts'],status=r['status'],
+            stop_reason=r['stop_reason'],whole_step_state=r.get('whole_step_state',True),
+            physical_probability_intervals=r['physical_probability_intervals']) for r in rows])
 
 
 def resources(rows):
@@ -54,8 +58,8 @@ def launch(kind,counts,name):
 def gate_six(directory='results'):
     rows=[read(directory+'/g1_N5_root'+str(i)+'.json') for i in range(2)]
     interval=combined(rows,[Q(3,5),Q(2,5)])
-    assert interval and interval['macro'][0]>=.5
-    assert all(r['finite_instance_gate'] and r['analytic_state_error_account']<=.60 for r in rows)
+    assert interval and interval['macro'][0]>=.5,'G1 recovery incomplete or below probability gate'
+    assert all(r['finite_instance_gate'] and r['analytic_state_error_account']<=.60 for r in rows),'G1 component gate failed'
     return True
 
 
@@ -76,11 +80,15 @@ def summary():
             completed_physical_steps_time=r['completed_physical_steps_time'],
             stop_reason=r['stop_reason'],event_intervals=r['physical_probability_intervals'],
             resources=resources([r]),original_equal_root_weights_and_proved_mirror=True)
-    else:result['six_event']=dict(status='NOT_RUN',reason='Requires completed G1 recovery')
-    result.update(full_independent_disorder_scaling=False,dimension_selected=False,
-        original_CP12_matter_universality=False,distinctive_empirical_prediction=False,
+    else:result['six_event']=dict(status='NOT_RUN',reason='Frozen G1 recovery gate not passed; no six-event target launched')
+    result.update(full_independent_disorder_scaling_proved=False,dimension_dynamically_selected=False,
+        original_CP12_matter_universality_established=False,distinctive_empirical_prediction=False,
         external_independent_validation=False,
         arithmetic='roundoff-aware under declared IEEE/reduction model; not formal software certification')
+    result['rank_comparison']=dict(original_S8_nominal_total=96,original_S8_N5_effective_total=80,
+        original_S8_per_charge=16,G1_global_total=96,equal_rank_comparison=False)
+    result['separate_sweep_lemma']=dict(controls=read('SWEEP_CONTROLS.json')['status'],
+        applied_to_primary_accounts=False,new_primary_variant_launched=False)
     (BASE/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
     return result
 

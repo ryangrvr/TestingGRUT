@@ -5,6 +5,12 @@ separately frozen [G1 allocation charter](GLOBAL_ALLOCATION_CHARTER.md).
 [MATHEMATICS.md](MATHEMATICS.md), [ARITHMETIC.md](ARITHMETIC.md) and
 [RANK_ALLOCATION.md](RANK_ALLOCATION.md) distinguish the numerical tools
 from the unchanged microscopic model and the actual prepared state.
+Read [HANDOFF.md](HANDOFF.md) for the frozen conclusions and
+[SWEEP_BOUND.md](SWEEP_BOUND.md) for the separate analytical next step.
+
+Both original S8 components stop; G1 completes one component and stops on
+the other. Neither passes full recovery, and no six-event target is run.
+See [RESULT_TABLES.md](RESULT_TABLES.md) and [summary.json](summary.json).
 
 From this directory, with Python, NumPy, SciPy and a C++ compiler available:
 
