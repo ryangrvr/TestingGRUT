@@ -1,0 +1,334 @@
+{
+  "source": {
+    "status": "PASS",
+    "only_rank_allocation_differs": true,
+    "arithmetic_and_integration_unchanged": true
+  },
+  "allocation": {
+    "witnesses": [
+      {
+        "counts": [
+          2,
+          2
+        ],
+        "nonempty_histories": 18,
+        "single_charge": 3,
+        "conditional_history_Schmidt_rank": 1,
+        "joint_Schmidt_rank": 18,
+        "original_16_discarded_weight": "1/9",
+        "original_16_discarded_norm_display": 0.3333333333333333,
+        "G1_kept": 18,
+        "G1_discarded_weight": "0",
+        "actual_prepared_state_claim": false
+      },
+      {
+        "counts": [
+          2,
+          3
+        ],
+        "nonempty_histories": 33,
+        "single_charge": 4,
+        "conditional_history_Schmidt_rank": 1,
+        "joint_Schmidt_rank": 33,
+        "original_16_discarded_weight": "17/33",
+        "original_16_discarded_norm_display": 0.7177405625652734,
+        "G1_kept": 33,
+        "G1_discarded_weight": "0",
+        "actual_prepared_state_claim": false
+      }
+    ],
+    "global_optimal_proposals": [
+      {
+        "charges": 3,
+        "total_cap": 17,
+        "retained": 17,
+        "actual_tail_squared": 25.166794727700452,
+        "global_sorted_tail_squared": 25.166794727700456
+      },
+      {
+        "charges": 6,
+        "total_cap": 96,
+        "retained": 96,
+        "actual_tail_squared": 24.250124892139834,
+        "global_sorted_tail_squared": 24.250124892139834
+      },
+      {
+        "charges": 5,
+        "total_cap": 31,
+        "retained": 31,
+        "actual_tail_squared": 48.310868723053495,
+        "global_sorted_tail_squared": 48.31086872305349
+      }
+    ],
+    "scope": "rank-capacity controls, not formation observations"
+  },
+  "physical_and_arithmetic": {
+    "arithmetic": [
+      {
+        "entries": 1,
+        "norm_interval": [
+          1.1830245053252944,
+          1.1830245053252952
+        ],
+        "observed_Gram_error": 2.220446049250313e-16,
+        "Gram_upper": 9.103828801926385e-15
+      },
+      {
+        "entries": 17,
+        "norm_interval": [
+          29.464579106266708,
+          29.46457910626673
+        ],
+        "observed_Gram_error": 6.086234577345499e-16,
+        "Gram_upper": 1.2183303557574006e-13
+      },
+      {
+        "entries": 200,
+        "norm_interval": [
+          397.4891910479409,
+          397.48919104794123
+        ],
+        "observed_Gram_error": 4.67594165095208e-16,
+        "Gram_upper": 1.0966248722654778e-12
+      }
+    ],
+    "operator_controls": {
+      "field": [
+        {
+          "R": 4,
+          "dt": 0.03,
+          "one_particle_error": 1.9009049362251927e-09,
+          "certificate": {
+            "one_particle_error_upper": 2.468345351994182e-09,
+            "computed_difference_bound": 2.4677823089322046e-09,
+            "reference_arithmetic_upper": 1.243316877999519e-13,
+            "product_arithmetic_upper": 4.2618862016218737e-13,
+            "subtraction_arithmetic_upper": 8.338600991212642e-15,
+            "ideal_unitary_phase_upper": 4.184153024056079e-15,
+            "R": 4,
+            "dt": 0.03
+          }
+        },
+        {
+          "R": 8,
+          "dt": 0.1,
+          "one_particle_error": 1.3599363780129904e-06,
+          "certificate": {
+            "one_particle_error_upper": 2.6402100810943025e-06,
+            "computed_difference_bound": 2.6402087377914667e-06,
+            "reference_arithmetic_upper": 2.15896502038462e-13,
+            "product_arithmetic_upper": 1.098792291341424e-12,
+            "subtraction_arithmetic_upper": 1.7539567679269883e-14,
+            "ideal_unitary_phase_upper": 1.1074474670636069e-14,
+            "R": 8,
+            "dt": 0.1
+          }
+        },
+        {
+          "R": 16,
+          "dt": 0.2,
+          "one_particle_error": 6.183165220954212e-05,
+          "certificate": {
+            "one_particle_error_upper": 0.00010430465700803029,
+            "computed_difference_bound": 0.00010430465329343473,
+            "reference_arithmetic_upper": 4.0629660139764347e-13,
+            "product_arithmetic_upper": 3.237148787298791e-12,
+            "subtraction_arithmetic_upper": 4.367213434031735e-14,
+            "ideal_unitary_phase_upper": 2.74780198594734e-14,
+            "R": 16,
+            "dt": 0.2
+          }
+        }
+      ],
+      "complete_physical_commutators": [
+        {
+          "N": 3,
+          "physical_modes": 4,
+          "full_dimension": 29,
+          "GGF": 0.2258022024969922,
+          "FFG": 0.8485281374238571,
+          "GGF_upper": 0.22580220427504255,
+          "FFG_upper": 0.8485281392030602
+        },
+        {
+          "N": 4,
+          "physical_modes": 4,
+          "full_dimension": 99,
+          "GGF": 0.21775697461436444,
+          "FFG": 0.9545941546018393,
+          "GGF_upper": 0.21775698700788457,
+          "FFG_upper": 0.9545941670028245
+        }
+      ]
+    },
+    "full_wavefunctions": [
+      {
+        "N": 3,
+        "modes": 5,
+        "T": 0.5,
+        "physical_dimension": 41,
+        "full_wavefunction_error": 0.009299080691730638,
+        "complete_error_account": 0.05003235798139841,
+        "error_components": {
+          "strang": 0.0006259304956644475,
+          "schmidt_truncation": 0.04930039189746179,
+          "field_factorization": 4.690240741016408e-05,
+          "gate_matrix": 2.432286780821134e-10,
+          "arithmetic": 1.0324542798938452e-08,
+          "svd_reconstruction": 4.4432330497212746e-15,
+          "normalization": 5.912261307351935e-05,
+          "receiver_cut": 5e-324,
+          "time_grid": 5e-324,
+          "final_normalization": 1.2212453270876724e-14
+        },
+        "maximum_charge_rank": 1,
+        "maximum_bond_rank": 3,
+        "gates": 52
+      },
+      {
+        "N": 3,
+        "modes": 5,
+        "T": 2,
+        "physical_dimension": 41,
+        "full_wavefunction_error": 0.019361220706503254,
+        "complete_error_account": 0.10296875881902448,
+        "error_components": {
+          "strang": 0.0009481550703556273,
+          "schmidt_truncation": 0.10194570036168417,
+          "field_factorization": 2.634352343190553e-05,
+          "gate_matrix": 3.182940435884236e-09,
+          "arithmetic": 1.2578668618035156e-07,
+          "svd_reconstruction": 8.104464027569301e-14,
+          "normalization": 4.8430893816464014e-05,
+          "receiver_cut": 5e-324,
+          "time_grid": 5.995204332975889e-16,
+          "final_normalization": 2.7311486405778854e-14
+        },
+        "maximum_charge_rank": 2,
+        "maximum_bond_rank": 4,
+        "gates": 632
+      },
+      {
+        "N": 3,
+        "modes": 5,
+        "T": 8,
+        "physical_dimension": 41,
+        "full_wavefunction_error": 0.002787202162617681,
+        "complete_error_account": 0.03405790524583427,
+        "error_components": {
+          "strang": 0.000995437427840204,
+          "schmidt_truncation": 0.0330537415053371,
+          "field_factorization": 7.112597194368221e-06,
+          "gate_matrix": 2.6426539963526958e-08,
+          "arithmetic": 1.059954228675904e-06,
+          "svd_reconstruction": 1.1984938742129713e-12,
+          "normalization": 5.273334531994643e-07,
+          "receiver_cut": 5e-324,
+          "time_grid": 4.87110352054291e-16,
+          "final_normalization": 4.152234112098086e-14
+        },
+        "maximum_charge_rank": 4,
+        "maximum_bond_rank": 7,
+        "gates": 5226
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "T": 0.5,
+        "physical_dimension": 99,
+        "full_wavefunction_error": 0.02364567640299421,
+        "complete_error_account": 0.059434459710076354,
+        "error_components": {
+          "strang": 0.0006923650133507661,
+          "schmidt_truncation": 0.05862304798959139,
+          "field_factorization": 3.956970383388065e-05,
+          "gate_matrix": 5.073594183361869e-10,
+          "arithmetic": 1.160146164848169e-08,
+          "svd_reconstruction": 6.0714541620076704e-15,
+          "normalization": 7.946489446075638e-05,
+          "receiver_cut": 5e-324,
+          "time_grid": 5e-324,
+          "final_normalization": 1.1990408665951692e-14
+        },
+        "maximum_charge_rank": 1,
+        "maximum_bond_rank": 2,
+        "gates": 54
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "T": 2,
+        "physical_dimension": 99,
+        "full_wavefunction_error": 0.028540089081079766,
+        "complete_error_account": 0.1792267683666601,
+        "error_components": {
+          "strang": 0.0009725401559275646,
+          "schmidt_truncation": 0.17814147614871456,
+          "field_factorization": 1.9026812023070906e-05,
+          "gate_matrix": 5.1803143254779876e-09,
+          "arithmetic": 1.1327018667214954e-07,
+          "svd_reconstruction": 7.913149292396247e-14,
+          "normalization": 9.360679938642298e-05,
+          "receiver_cut": 5e-324,
+          "time_grid": 8.493206138382509e-16,
+          "final_normalization": 2.6201263381153698e-14
+        },
+        "maximum_charge_rank": 2,
+        "maximum_bond_rank": 5,
+        "gates": 526
+      },
+      {
+        "N": 4,
+        "modes": 4,
+        "T": 8,
+        "physical_dimension": 99,
+        "full_wavefunction_error": 0.004869570241471833,
+        "complete_error_account": 0.07171875060942867,
+        "error_components": {
+          "strang": 0.0009908034220228444,
+          "schmidt_truncation": 0.07071707901874852,
+          "field_factorization": 4.830956921763059e-06,
+          "gate_matrix": 4.207762452315505e-08,
+          "arithmetic": 9.564173440839334e-07,
+          "svd_reconstruction": 1.0252716242993856e-12,
+          "normalization": 5.038715678619869e-06,
+          "receiver_cut": 5e-324,
+          "time_grid": 4.5650982993805985e-15,
+          "final_normalization": 5.795364188543318e-14
+        },
+        "maximum_charge_rank": 5,
+        "maximum_bond_rank": 12,
+        "gates": 4266
+      }
+    ],
+    "physical_576_reference": {
+      "N": 3,
+      "L": 576,
+      "T": 36,
+      "physical_dimension": 333505,
+      "computational_sites": 119,
+      "full_wavefunction_error": 0.0023466300204576023,
+      "complete_error_account": 0.14468293724401718,
+      "error_components": {
+        "strang": 0.07449850307589283,
+        "schmidt_truncation": 0.0548928106150019,
+        "field_factorization": 0.01527711352935113,
+        "gate_matrix": 3.53185694634063e-07,
+        "arithmetic": 1.3396347618125142e-05,
+        "svd_reconstruction": 2.3122119409818113e-11,
+        "normalization": 7.601366863880755e-07,
+        "receiver_cut": 3.2927225399135975e-10,
+        "time_grid": 1.4388490399142135e-14,
+        "final_normalization": 1.3623546735175298e-12
+      },
+      "maximum_charge_rank": 7,
+      "maximum_bond_rank": 10,
+      "two_site_gates": 65122,
+      "elapsed_seconds": 24.642653199999586,
+      "vector_comparison": "all physical amplitudes, including outside the computational prefix"
+    },
+    "elapsed_seconds": 27.946468950000053,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}
