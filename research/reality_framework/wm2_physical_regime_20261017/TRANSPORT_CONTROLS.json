@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "primitive_support": [
+    {
+      "N": 12,
+      "initial_length": 6,
+      "prefix_length": 3,
+      "q": 1,
+      "states_checked": 17,
+      "layer_sizes": [
+        2,
+        15
+      ],
+      "first_difference_order": 2,
+      "scope": "exact support overapproximation; contact occupations not suppressed"
+    },
+    {
+      "N": 16,
+      "initial_length": 8,
+      "prefix_length": 4,
+      "q": 2,
+      "states_checked": 161,
+      "layer_sizes": [
+        2,
+        19,
+        140
+      ],
+      "first_difference_order": 3,
+      "scope": "exact support overapproximation; contact occupations not suppressed"
+    },
+    {
+      "N": 20,
+      "initial_length": 10,
+      "prefix_length": 5,
+      "q": 3,
+      "states_checked": 2016,
+      "layer_sizes": [
+        2,
+        23,
+        214,
+        1777
+      ],
+      "first_difference_order": 4,
+      "scope": "exact support overapproximation; contact occupations not suppressed"
+    }
+  ],
+  "reference": {
+    "finite_matrix_acceleration_identity_error": 0.0,
+    "walks": [
+      {
+        "t": 4.0,
+        "comparison_sites": 2048,
+        "mean": 0.9932107737159438,
+        "second_moment": 2.0135784525681126,
+        "distance_threshold": 1,
+        "arrival_probability": 0.5847105445606172,
+        "upper_end_probability": 0.0,
+        "physical_formation_run": false
+      },
+      {
+        "t": 16.0,
+        "comparison_sites": 2048,
+        "mean": 5.2116629870054645,
+        "second_moment": 31.076674025989092,
+        "distance_threshold": 1,
+        "arrival_probability": 0.9966836646624182,
+        "upper_end_probability": 0.0,
+        "physical_formation_run": false
+      },
+      {
+        "t": 64.0,
+        "comparison_sites": 2048,
+        "mean": 23.471066718438564,
+        "second_moment": 594.5578665631195,
+        "distance_threshold": 1,
+        "arrival_probability": 0.9998460606093013,
+        "upper_end_probability": 0.0,
+        "physical_formation_run": false
+      },
+      {
+        "t": 256.0,
+        "comparison_sites": 2048,
+        "mean": 96.79101423908305,
+        "second_moment": 10047.917971523006,
+        "distance_threshold": 1,
+        "arrival_probability": 0.9999993929663774,
+        "upper_end_probability": 0.0,
+        "physical_formation_run": false
+      },
+      {
+        "t": 1024.0,
+        "comparison_sites": 2048,
+        "mean": 390.1407423922541,
+        "second_moment": 163061.218515286,
+        "distance_threshold": 2,
+        "arrival_probability": 0.9999998753749128,
+        "upper_end_probability": 0.0,
+        "physical_formation_run": false
+      }
+    ],
+    "conditional_arrival_lower": "1/294912",
+    "original_trial_joint_lower": "1/589824"
+  },
+  "elapsed_seconds": 0.6154916549999143,
+  "scope": "analytic-comparison controls, not a full probe simulation or external validation"
+}
