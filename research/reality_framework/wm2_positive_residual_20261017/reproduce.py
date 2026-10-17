@@ -43,6 +43,13 @@ def verify():
     assert passed==summary['recovery']['gate_pass']
     six=BASE/'results/s7_N6_root0.json'
     if six.exists():assert passed,'Six-event experiment requires completed recovery'
+    weighted=read('WEIGHTED_CONTROLS.json')
+    assert weighted['status']=='PASS' and not weighted['used_in_S7_trajectories']
+    for row in weighted['checks']:
+        assert row['weighted_residual_identity_error']<2e-14
+        assert row['commutator_norm']<=row['commutator_upper']
+        for packet in row['packets']:
+            assert packet['full_emission_wavefunction_error']<=packet['weighted_bound']
     print(json.dumps(dict(status='PASS',verified_files=len(manifest['sha256']),
         recovery_gate=passed,saved_results_only=True),indent=2))
 
@@ -59,8 +66,10 @@ def main():
     p.add_argument('--six',action='store_true');args=p.parse_args()
     if args.controls:
         import controls
+        import weighted_control
         (BASE/'replay').mkdir(exist_ok=True)
         (BASE/'replay/controls.json').write_text(json.dumps(controls.all_checks(),indent=2)+'\n')
+        (BASE/'replay/WEIGHTED_CONTROLS.json').write_text(json.dumps(weighted_control.run(),indent=2)+'\n')
     if args.recovery:
         run('s7','2,2','s7_N5_root0.json');run('s7','3,1','s7_N5_root1.json')
     if args.baselines:

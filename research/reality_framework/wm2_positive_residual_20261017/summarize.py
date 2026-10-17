@@ -64,6 +64,11 @@ def main():
         selected_dimension=False,original_matter_universality=False,
         real_energy_gap_restored=False,distinctive_empirical_prediction=False,
         external_independent_validation=False)
+    if (BASE/'WEIGHTED_CONTROLS.json').exists():
+        weighted=read('WEIGHTED_CONTROLS.json')
+        result['post_campaign_weighted_residual']=dict(small_controls=weighted['status'],
+            used_in_S7_trajectories=False,retrospective_gate_change=False,
+            six_event_completion_demonstrated=False)
     (BASE/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 

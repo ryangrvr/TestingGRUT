@@ -9,6 +9,11 @@ Read [REPORT.md](REPORT.md) for the result and its scope,
 [HANDOFF.md](HANDOFF.md) for the next boundary. The charter is preserved
 verbatim. No prior CP-12 or WM2 Hamiltonian is changed.
 
+[EXECUTION.md](EXECUTION.md) discloses the exact run sequence and numerical
+assumptions. [RESOURCE_MODEL.md](RESOURCE_MODEL.md) distinguishes exact
+array counts from measured whole-process memory. The separate post-campaign
+[weighted residual derivation](NEXT_RESIDUAL.md) was not applied to S7 runs.
+
 ## Reproduce
 
 Python 3.12, NumPy, SciPy and a C++17 compiler are needed. No package install

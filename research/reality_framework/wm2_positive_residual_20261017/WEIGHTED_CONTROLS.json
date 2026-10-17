@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "post_campaign": true,
+  "used_in_S7_trajectories": false,
+  "primary_formation_runs": false,
+  "physical_B_implementation": "immutable S5 Python full-Fock operator",
+  "arithmetic": "ordinary double diagnostics",
+  "checks": [
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "physical_modes": 5,
+      "physical_dimension": 41,
+      "protected_dimension": 11,
+      "weighted_residual_identity_error": 2.2263333457804415e-17,
+      "commutator_norm": 0.3892287362344445,
+      "commutator_upper": 0.7628277774443413,
+      "packets": [
+        {
+          "packet": "random",
+          "h": 0.02,
+          "full_emission_wavefunction_error": 0.0027362393483390222,
+          "weighted_bound": 0.0027610867147027716,
+          "S7_operator_bound": 0.004502777236420768
+        },
+        {
+          "packet": "random",
+          "h": 0.1,
+          "full_emission_wavefunction_error": 0.013668349690065178,
+          "weighted_bound": 0.014291193807042102,
+          "S7_operator_bound": 0.02251388618210384
+        },
+        {
+          "packet": "fully_assembled",
+          "h": 0.02,
+          "full_emission_wavefunction_error": 9.1148681454737e-06,
+          "weighted_bound": 2.4288011676412236e-05,
+          "S7_operator_bound": 0.004502777236420768
+        },
+        {
+          "packet": "fully_assembled",
+          "h": 0.1,
+          "full_emission_wavefunction_error": 0.0002278518693478075,
+          "weighted_bound": 0.0006072002919103059,
+          "S7_operator_bound": 0.02251388618210384
+        }
+      ]
+    },
+    {
+      "counts": [
+        2,
+        1
+      ],
+      "physical_modes": 5,
+      "physical_dimension": 161,
+      "protected_dimension": 26,
+      "weighted_residual_identity_error": 4.202869408951337e-17,
+      "commutator_norm": 0.2769942113901162,
+      "commutator_upper": 0.5724094930639427,
+      "packets": [
+        {
+          "packet": "random",
+          "h": 0.02,
+          "full_emission_wavefunction_error": 0.002859277763121301,
+          "weighted_bound": 0.0028787375004363453,
+          "S7_operator_bound": 0.006014653183581829
+        },
+        {
+          "packet": "random",
+          "h": 0.1,
+          "full_emission_wavefunction_error": 0.01430428386341902,
+          "weighted_bound": 0.014791232951163325,
+          "S7_operator_bound": 0.030073265917909143
+        },
+        {
+          "packet": "fully_assembled",
+          "h": 0.02,
+          "full_emission_wavefunction_error": 6.971914562426016e-06,
+          "weighted_bound": 1.9877272449079678e-05,
+          "S7_operator_bound": 0.006014653183581829
+        },
+        {
+          "packet": "fully_assembled",
+          "h": 0.1,
+          "full_emission_wavefunction_error": 0.00017429217966991172,
+          "weighted_bound": 0.000496931811226992,
+          "S7_operator_bound": 0.030073265917909143
+        }
+      ]
+    }
+  ]
+}

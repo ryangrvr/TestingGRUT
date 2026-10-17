@@ -1,8 +1,11 @@
 # WM2-S7 — positive full-action residuals and measured recovery
 
-**Interim research packet; six-event outcome and completed cost table are
-added only after the frozen workers finish.** The five-event recovery below
-is complete. No six-event formation result is implied by this interim state.
+**Result: five-event recovery passes; the six-event target remains
+computationally unresolved.** The new method avoids cancellation-prone
+residual evaluation and uses less peak memory than fresh S5 recovery, but
+is slower and returns wider probability bounds. At six events the rank and
+error allowances bind before the required observation time; the stop is not
+a negative formation result.
 
 S7 implements an exactly closable special case of S6 action enrichment. A
 shared receiver frame containing the physical contact orbital captures the
@@ -160,6 +163,71 @@ variance is .25; rejected formation trials contribute zero. All accepted
 records retain their actual conditional receiver state. This is an analytic
 composition with S4, not a new 1600-mode probe propagation, an improvement on
 S5's sharper joined bound or evidence for an all-size spatial phase.
+
+## Six-event result: rank/error stop before the target
+
+After completed controls, five-event recovery and fresh baselines, the
+frozen six-event root component ran with counts (2,3), offsets +/-1/4,
+g=.9, L=2304 and required T=144. The other equally weighted root is its
+proved S5 sign/relabel mirror. It would reuse a completed result, not turn
+an incomplete result into a completed one.
+
+The run stopped after **905 of 2340** physical steps at
+**t=55.6923076923**, with reason **contact action cannot fit remaining
+residual allowance**. It reached rank **28** and **2,358,511** coefficients.
+Projection cost was **0.34994075** of .35; complete-emission residual cost
+was **0.01889162** of .02. Seven steps paid appreciable uncaptured action
+after the rank cap. The next attempted contact action could not fit the
+remaining allowance; silently dropping that action is prohibited.
+
+The ledger at the stopped endpoint totals about .446527, including .077324
+of incurred splitting error. This does **not** fit the missing evolution to
+T=144 into the envelope: no target-time probability interval is reported.
+Raw intermediate populations are archived only as diagnostics with the
+explicit incomplete-target notice. They are not a formation success or a
+low-formation result.
+
+Whole-worker cost was **227.232 wall seconds**, **227.168 CPU seconds**,
+and **716.684 MiB** peak RSS. The 600-second and 2048-MiB soft limits were
+not reached. The binding constraints were rank and cumulative error, not
+the wall budget. No budget extension, easier observation time or additional
+favorable family was launched.
+
+At rank 28 the density workspace alone contains 10,029,768 complex entries;
+RESOURCE_MODEL.md derives its count and the full coefficient count. These
+explain a cost mechanism but do not replace the measured whole-process
+peak. Exact action closure is available when the frame contains contact;
+at a fixed rank, repeated mode projection can exhaust its allowance. S7
+therefore demonstrates neither affordable general action enclosure nor a
+new completed six-event formation target.
+
+## Verdict and next boundary
+
+S5 remains the sharpest completed formation frontier. S7 adds a positive
+residual oracle and a checked shared-frame action-enclosure implementation,
+recovers a solved target under an explicit arithmetic model, and measures
+its real tradeoffs. It moves the bottleneck from a cancellation-prone
+residual to preserving useful receiver information at affordable rank/error.
+
+The next construction should test a grouped/history-conditioned or other
+receiver representation against this positive reference, while keeping all
+histories, reverse amplitudes and returns. Its first gate should again be
+the solved target, with total error, time and memory measured. Enlarging
+rank or silently relaxing projection tolerance is not the earned result
+of this campaign. The whole compiler/BLAS arithmetic contract and the
+mathematical bounds still invite independent review.
+
+A separate **post-campaign** derivation in NEXT_RESIDUAL.md provides a
+concrete refinement before another large run. With R=sqrt(M-k), the exact
+shared-frame residual obeys `D*D=(g*sigma/N)^2 R^2`. The resulting step bound
+uses the positive remaining-free-event weight and an h^2 commutator term,
+rather than charging the worst assembly size throughout the step. It is
+checked against two independent small full-Fock matrices, with eight
+propagated packets, in WEIGHTED_CONTROLS.json. It was not used in S7's
+trajectories or substituted into their accounts. Neither this refinement
+nor its small controls proves that rank 28 or the projection budget suffices
+at T=144. EXECUTION.md records the separate control-harness correction;
+the primary source and outputs are unchanged.
 
 ## Scientific scope
 

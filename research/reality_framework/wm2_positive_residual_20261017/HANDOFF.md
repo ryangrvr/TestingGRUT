@@ -1,9 +1,11 @@
 # Builder / GRUT-RAI handoff — S7
 
-This interim checkpoint preserves completed five-event recovery and the
-fresh resource comparison while the frozen six-event worker is pending.
-It does not claim a six-event target-time formation estimate. The completed
-packet will replace this paragraph with the worker's actual outcome.
+Five-event recovery and fresh cost comparison are complete. The frozen
+six-event worker stopped at t=55.6923 rather than T=144: rank 28,
+2,358,511 coefficients, .34994075 projection cost and .01889162 residual
+cost. The next contact action did not fit the remaining allowance. Its
+227.232 seconds and 716.684 MiB did not hit the wall or memory caps.
+This is a computationally unresolved target, not failed physical formation.
 
 Preserve S6 `b4c7902` and S7's pre-trajectory charter `4bf1448`. All S4-S6,
 frozen CP-12, SCOUT-1 and canonical files are unchanged. The reviewer's
@@ -22,6 +24,9 @@ What is earned:
 * A fresh S5 comparison shows the actual tradeoff: S7 uses less memory but
   takes longer and has wider probability bounds. It is not an equal-error
   speedup and not a general solution of per-history action enrichment.
+* Six-event formation remains open at its required time. Raw intermediate
+  populations are retained with no target-time probability bound. S5 remains
+  the completed formation frontier.
 
 The arithmetic contract is in ARITHMETIC.md. Its compiler/BLAS assumptions
 need independent review; passing controls is not that review. If any norm
@@ -40,3 +45,11 @@ Do not infer all-size independent-disorder formation, selected dimension,
 original CP-12 matter universality, spectral isolation, a robust spatial
 phase or a distinctive empirical prediction. This remains a separately
 named finite construction/methods campaign.
+
+NEXT_RESIDUAL.md adds a post-campaign state-weighted positive residual
+identity and step bound, checked separately in small independent matrices.
+It retains the h^2 cost of detaching/reappending during a step, even when
+the initial state is fully assembled. A useful next gate is to implement
+that bound conservatively and repeat recovery before another six-event
+attempt. It changes none of the S7 accounts or stops, and does not by itself
+solve the projection/rank problem. Do not claim it already completed a run.
