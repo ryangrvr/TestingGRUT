@@ -1,0 +1,127 @@
+{
+  "arithmetic": "ordinary numpy/scipy double precision, not outward rounded",
+  "tensor": {
+    "ambient_dimension": 96,
+    "physical_dimension": 12,
+    "constraint_commutator_max": 0.0,
+    "matrix_entry_max": 0.0,
+    "partial_shift_identity_exact": true
+  },
+  "pulses": {
+    "parameter_combinations": 27,
+    "pair_probability_corner_min": 0.83343915837211,
+    "uniform_analytic_pair_lower": 0.765625,
+    "rabi_max_error": 1.1102230246251565e-15,
+    "energy_ledger_max_error": 3.552713678800501e-15,
+    "single_stage_rational_lower": "738720/837949",
+    "reverse_pulse_matter_probability": 8.936314941956779e-32
+  },
+  "fixed_path": {
+    "dimension": 272,
+    "full_state_error": 8.223598208455121e-15,
+    "macro_P_at_least_2": 0.9950062767622494,
+    "pair_probabilities": [
+      0.9498725733302711,
+      0.9003794216159418
+    ],
+    "load_energy": 5.6926632704287305,
+    "post_conversion_energy": 5.767853267076018,
+    "field_energy": 1.8502519949461975,
+    "operating_switch_work": 0.6763744282825364,
+    "near_responses": [
+      {
+        "species": "+",
+        "response": -1.4841758957898388e-07,
+        "variance": 0.2374681433325661,
+        "taylor_lower_magnitude": 1.4201758958285487e-07
+      },
+      {
+        "species": "-",
+        "response": -9.894505971830415e-08,
+        "variance": 0.2374681433325661,
+        "taylor_lower_magnitude": 9.254505972190323e-08
+      }
+    ]
+  },
+  "complete_small_geometry": {
+    "events": 4,
+    "receiver_modes": 2,
+    "physical_receiver_modes_would_be": 1024,
+    "dimension": 21920,
+    "operation_nonzeros": 130447,
+    "short_pulses_time_each": 0.02,
+    "preparation_state_error": 3.285978359828935e-05,
+    "preparation_bound": 0.0009823548884437797,
+    "operation_time": 0.02,
+    "operation_state_error": 9.033078783987871e-06,
+    "operation_bound": 0.1909243944834794,
+    "prefix_loss_probability": 8.154033672774594e-11,
+    "storage_error_probability": 1.5069609843867773e-11,
+    "constraint_max": 0,
+    "neutral_head_blocked_controls": 6480,
+    "vacuum_matrix_entry_error": 1.1102230246251565e-16,
+    "all_physical_number_sectors_retained": true
+  },
+  "formulas": {
+    "evaluations_not_simulations": [
+      {
+        "N": 256,
+        "conditional_matter_lower": 0.6766132326624952,
+        "operating_error_at_window_end": 2.191632845941961e-12,
+        "coarse_operating_error": 1.6299425882750613e-09,
+        "near_response_correction": 1.1071580964463525e-14
+      },
+      {
+        "N": 512,
+        "conditional_matter_lower": 0.8954209987109986,
+        "operating_error_at_window_end": 1.6772560344282388e-22,
+        "coarse_operating_error": 8.855709470242054e-19,
+        "near_response_correction": 4.179670775872794e-25
+      },
+      {
+        "N": 1024,
+        "conditional_matter_lower": 0.989063232489395,
+        "operating_error_at_window_end": 4.912592471112368e-43,
+        "coarse_operating_error": 2.614119674044494e-37,
+        "near_response_correction": 5.956716667455842e-46
+      }
+    ],
+    "neutrality_alone_counterexample": [
+      {
+        "pairs": 1,
+        "neutral_segregated_field_energy": 1,
+        "local_dipole_cost": 1
+      },
+      {
+        "pairs": 2,
+        "neutral_segregated_field_energy": 6,
+        "local_dipole_cost": 2
+      },
+      {
+        "pairs": 4,
+        "neutral_segregated_field_energy": 44,
+        "local_dipole_cost": 4
+      },
+      {
+        "pairs": 8,
+        "neutral_segregated_field_energy": 344,
+        "local_dipole_cost": 8
+      },
+      {
+        "pairs": 16,
+        "neutral_segregated_field_energy": 2736,
+        "local_dipole_cost": 16
+      }
+    ],
+    "inherited_S9_threshold": 268435456,
+    "receiver_modes_at_threshold": 4611686018427387904,
+    "formation_time_at_threshold": 288230376151711744,
+    "original_trial_lower_target": "1/4",
+    "independent_validation": false
+  },
+  "source_pins_unchanged": 7,
+  "resources": {
+    "wall_seconds": 2.459034583000175,
+    "peak_rss_MiB": 117.38671875
+  }
+}

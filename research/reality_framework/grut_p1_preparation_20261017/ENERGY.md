@@ -34,11 +34,32 @@ conservation of bare matter/fuel energies while an interaction is on.
 
 ## Exact per-bond reference ledger (not only scaling)
 
+The initial word recording is also a supplied intervention. An explicit
+ideal instrument uses a degenerate pointer, initially blank, with controlled
+unitary sum_w Pi_w tensor X_(code(w)); X writes the word code reversibly.
+Reading/dephasing that pointer produces the declared word instrument. All
+pre-record matter/fuel/fields are vacuum. Every diagonal and receiver-only
+term commutes with the word projectors, while nonselective recording removes
+the assisted word-changing expectation. Its mean system-energy change is
+-<H_assisted>, of magnitude <=g_max=1.1. Conditional record energies can
+differ; the per-branch pulse ledger below uses each actual conditional state.
+The blank pointer, O(N log N) record memory and ideal measurement/control
+capability are supplied. No cyclic memory erasure or zero apparatus cost is
+claimed. The record can be kept; its reset work is outside this one-shot
+protocol. Ideal intervention time is an assumption, not a hardware result.
+
 Write p_L from (6), p=p_L p_C. At the end of loading, fuel has mean energy
 Omega p_L. In its rotating frame the conserved energy is initially zero,
 so the drive expectation just before turn-off is -Delta p_L. The continuous
 drive has delivered 3p_L; its switch-off adds Delta p_L. Total loading work
 is therefore Omega p_L, without retuning the drive frequency.
+
+The continuous drive's positive work is at most three per addressed bond:
+over this interval the two-level population crosses at most its first peak.
+Its positive switch-off contribution is at most 1/2. Thus the 3.5K load
+bound also controls positive supplied system work, not just its signed net.
+These are ideal system-energy transfers, not a bound on an apparatus's
+wall-plug consumption, controller dissipation or memory erasure.
 
 Conversion switch-on has zero mean work because matter is vacuum. During
 the conversion pulse,
@@ -79,7 +100,9 @@ has magnitude <=lambda_max K<=1.1K. At operation start N_+=N_-<=K, and
 The density norm uses at most two opposite-species neighbors per carrier;
 the hopping norm uses at most two moves per carrier and partial-shift norm
 one. Thus the net additional work and the sum of positive switch/load work
-are each bounded by 6K, independent of N. There is no missing extensive root
+are each bounded by 6K, independent of N. Including nonselective recording,
+mean supplied system work per original trial is bounded by 1.1+6K (rejected
+trials receive no subsequent pulses). There is no missing extensive root
 charge. Actual-reference differences in an extensive energy can cost O(N e_p),
 not just e_p; (12) and the bounds above do not require suppressing that term.
 
@@ -142,3 +165,8 @@ law. It does not produce an unconstrained charged plasma or 3D electromagnetism.
 * Keeping conversion on would permit fuel return and matter depletion. Turning
   it off is a physical intervention whose work is (13), not an autonomous
   stabilization theorem. The controls must test this reverse channel explicitly.
+* The optional weak bond-source pulse used for response is a further supplied
+  local intervention. In the retained-prefix channel its work is O(|theta|),
+  bounded using only terms touching its two cells, not the extensive total
+  norm. It inserts no particles. Readout calibration and apparatus reliability
+  remain separate implementation obligations; no experiment has been performed.

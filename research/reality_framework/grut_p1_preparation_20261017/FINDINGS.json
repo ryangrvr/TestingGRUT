@@ -1,0 +1,69 @@
+{
+  "campaign": "GRUT-P1",
+  "baseline": "830746b180ac8af6d5dc40a9e7777740981ceee7",
+  "charter_freeze": "44f8e82d046c141713e6cc6d61698d06c2abc88e",
+  "analytic_source_freeze": "44b2748390c2e0113be29d090669bd1bd6f91f36",
+  "primary_architecture": "explicit post-formation control with external work source",
+  "verdict": "controlled charge-balanced preparation and finite-time operation, author-derived; independent proof review pending",
+  "independent_validation": false,
+  "autonomous_preparation": false,
+  "experimental_observations": 0,
+  "electric_energy_coefficient": 1,
+  "electric_levels": [
+    -1,
+    0,
+    1
+  ],
+  "root_countercharge": false,
+  "matter_source": "fixed-frequency work drive -> local fuel -> reversible opposite-charge pairs",
+  "regime": {
+    "N_multiple": 64,
+    "conditional_min_N": 256,
+    "pulses": [
+      {
+        "stage": "fuel loading",
+        "duration": "pi/2"
+      },
+      {
+        "stage": "reversible conversion",
+        "duration": "pi/2"
+      }
+    ],
+    "rho": "1/32",
+    "conditional_probability_lower": "1-exp(-289*N/65536)-2*exp(-N/4)",
+    "original_trial_min_N": 268435456,
+    "original_trial_probability_lower_target": "1/4",
+    "original_trial_dependency": "S9 author-derived formation theorem; independent review pending",
+    "operation_window": "0<=|t|<=N/65536",
+    "preparation_state_error": "exp(-N/4)",
+    "operation_state_error": "exp(-N/5)+3*exp(-N/12)",
+    "near_response": "both species >7.3e-8 in magnitude at t=1e-5 using local bond sources",
+    "field_energy_operator_upper": "N-1",
+    "reference_field_energy_expectation_upper": "149*K/96",
+    "work_upper": "6*K additional pulse/switch work; <=1.1 mean system energy from ideal nonselective recording",
+    "K": "N/32"
+  },
+  "new_supplied_structure": [
+    "opposite-charge hard-core slots",
+    "fixed three-level electric links with positive unit field energy",
+    "matter-support constraint and empty-head gate",
+    "work drive, selected recorded matching, classical feed-forward and explicit switches"
+  ],
+  "preserved_open": [
+    "independent all-size proof review",
+    "S9 receiver/time resource dependence",
+    "autonomous preparation and always-on conversion stability",
+    "dimension selection",
+    "original CP-12 matter universality",
+    "gravity",
+    "distinctive empirical prediction"
+  ],
+  "execution": {
+    "suite": "CHECKS.json",
+    "first_failure": "FIRST_RUN.txt",
+    "first_failure_scope": "formula factorial conversion overflow only",
+    "physical_protocol_changed": false,
+    "large_formation_simulation": false,
+    "closed_solver_reopened": false
+  }
+}

@@ -1,0 +1,20 @@
+Primary control execution 1, source commit 44b2748390c2e0113be29d090669bd1bd6f91f36:
+
+tensor_control, pulse_control, fixed_control and geometry_control returned
+without an assertion failure. The last formula-evaluation routine failed at
+N=1024, before CHECKS.json was written:
+
+  File "checks.py", line 244, in formulas
+    d=operation_bound(n//4,3*n/16-1,n/65536)
+  File "checks.py", line 47, in operation_bound
+    return min(2., tail(a+1, 1.1*t)
+  File "checks.py", line 35, in tail
+    term = x**k/math.factorial(k)
+OverflowError: int too large to convert to float
+
+Correction: evaluate the initial tail term by log-gamma for k>170, with
+a conservative positive floor exp(-700) rather than an apparent exact zero
+below floating range. Small-k entries and every physical control are unchanged.
+This formula evaluation is not an outward-rounded arithmetic certificate.
+No model coefficient, time, size, error gate, parameter class or resource
+budget was changed. The entire bounded suite is rerun after this correction.

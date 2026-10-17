@@ -80,6 +80,14 @@ vanish, and the empty-child gate equals one. The formation embedding is
 exactly the archived WM2 vacuum law. It inherits S9's author-derived status,
 not independent validation.
 
+The complete original auxiliary seed is
+N^(-1/2) sum_r |w=(r),q_i=1_(i=r),receiver vacuum,matter vacuum,E=0,fuel vacuum>.
+Root components are orthogonal and retain these original uniform weights;
+all conditional bounds are root-uniform before averaging. An optional old
+CP-12 benchmark factor is an inert tensor factor, not a source of energy
+or a claimed common matter sector. The finite code uses the root-0 component
+only, with relabeling handled by the analytic uniformity, not numerical sampling.
+
 ## One fixed control schedule
 
 At T_f=4N^2 measure the word, retaining the actual conditional receiver

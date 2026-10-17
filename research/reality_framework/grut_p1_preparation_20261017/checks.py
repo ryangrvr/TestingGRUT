@@ -32,7 +32,13 @@ def rabi(d, a, t=math.pi/2):
 
 def tail(k, x):
     # Positive series; sufficient for these small diagnostic arguments.
-    term = x**k/math.factorial(k)
+    if x == 0:
+        return float(k == 0)
+    # Avoid converting a huge integer factorial to float. A positive
+    # floor overestimates terms below floating range instead of reporting
+    # an apparent exact zero. This remains an ordinary-double evaluation.
+    term = (x**k/math.factorial(k) if k <= 170 else
+            math.exp(max(-700., k*math.log(x)-math.lgamma(k+1))))
     total = term
     for n in range(k+1, max(k+500, 1000)):
         term *= x/n

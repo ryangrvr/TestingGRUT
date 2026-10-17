@@ -28,6 +28,11 @@ by J_0=4, range R=1, uniformly over all particle sectors. Conserved mass
 and passive fuel energies commute with the operating dynamics and can be
 removed exactly from the propagation calculation.
 
+If an observable itself changes particle or fuel number, this removal rotates
+that observable by the corresponding on-site unitary. Its support and norm
+are unchanged. No common scalar phase across different number sectors is
+assumed; the information bound still applies to the full declared local algebra.
+
 For K_xy=sum_(I contains x,y)||h_I||, weighted row sum at mu>0 is at most
 kappa_mu=2e^mu J_0. Summing connected overlapping-support chains with their
 time simplex factors gives, for disjoint bounded local physical S,O,
@@ -182,3 +187,10 @@ correction in (25) less than 2e-14. Thus both created species have
 |chi(t_0)|>7.3e-8. This is an analytic, conservative local-response bound;
 there is no claim of finite-density ballistic lower propagation over O(N)
 distance, universal speed, free plasma, or new empirical law.
+
+All accepted records have the same negative response sign under the declared
+relationally addressed source. Rejected trials have zero source/readout signal.
+If S9's formation theorem is valid, its p_form>1/2 therefore gives an
+original-trial signed response magnitude >3.65e-8 at N>=2^28, without
+renormalizing away failed formation or conversion. This corollary inherits
+S9's proof-review dependency and every supplied controller assumption.
