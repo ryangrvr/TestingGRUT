@@ -1,0 +1,165 @@
+{
+  "status": "PASS_FINITE_DIAGNOSTICS",
+  "precision": "ordinary complex128, no outward rounding",
+  "receiver_scope": "two-mode diagnostic models only; no physical-L formation computation",
+  "qubits": {
+    "internal_X": {
+      "maximum_exact_response_error": 2.220446049250313e-16,
+      "normalized_double_commutator_norm": 1.0,
+      "commuting_readout_response": 0.0
+    },
+    "diagonal_Z": {
+      "maximum_exact_response_error": 3.3306690738754696e-16,
+      "normalized_double_commutator_norm": 1.0,
+      "commuting_readout_response": -3.1116426608676556e-19
+    },
+    "source_variance": 0.25
+  },
+  "physical_kernel": {
+    "2": {
+      "dimension": 141,
+      "nonzeros": 514,
+      "vacuum_difference_from_frozen_UC1": 0.0,
+      "single_species_bond_action": 0.0
+    },
+    "3": {
+      "dimension": 1776,
+      "nonzeros": 9131,
+      "vacuum_difference_from_frozen_UC1": 0.0,
+      "single_species_bond_action": 0.0,
+      "nearby_A": {
+        "chi": 1.5624999999406608e-06,
+        "analytic_lower": 1.5046934487764888e-06,
+        "source_variance": 0.25
+      },
+      "nearby_B": {
+        "chi": 1.0416666666289907e-06,
+        "analytic_lower": 9.838601154431554e-07,
+        "source_variance": 0.25
+      }
+    },
+    "4": {
+      "dimension": 24780,
+      "nonzeros": 147003,
+      "vacuum_difference_from_frozen_UC1": 0.0,
+      "single_species_bond_action": 0.0,
+      "common_space_reference": {
+        "prefix": [
+          0,
+          1,
+          2
+        ],
+        "m": 4,
+        "b": 0,
+        "R": 1,
+        "k": 1,
+        "removed_bare_matrix_entries": 1400,
+        "first_drive_norm": 0.0,
+        "next_drive_norm": 0.15309310892394862,
+        "time": 0.02,
+        "state_error": 3.061405909959097e-05,
+        "state_error_bound": 0.0020269354809705673,
+        "full_chi": -1.5698285978589836e-18,
+        "reference_chi": -1.5698290692545777e-18,
+        "response_bound": 0.004255210988696944,
+        "K_loss_probability": 9.372154078796867e-10,
+        "K_loss_probability_bound": 4.108467444017385e-06
+      }
+    }
+  },
+  "independent_prefix": [
+    {
+      "length": 7,
+      "R": 1,
+      "dimension": 294,
+      "changing_norm": 0.12874020827267255,
+      "first_permitted_commutator_order": 6,
+      "low_order_max_entry_norms": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "time": 0.03,
+      "complete_commutator_norm": 2.474248278868719e-20,
+      "Dyson_bound": 2.9535184428876125e-16,
+      "floating_comparison_tolerance": 1e-13,
+      "forbidden_product_double_commutator": 0.5,
+      "forbidden_product_evolved_commutator": 0.014999437184007234
+    },
+    {
+      "length": 8,
+      "R": 2,
+      "dimension": 384,
+      "changing_norm": 0.13669930910384465,
+      "first_permitted_commutator_order": 4,
+      "low_order_max_entry_norms": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "time": 0.03,
+      "complete_commutator_norm": 8.6527797153024905e-16,
+      "Dyson_bound": 1.8887385344891018e-10,
+      "floating_comparison_tolerance": 1e-13,
+      "forbidden_product_double_commutator": 0.5,
+      "forbidden_product_evolved_commutator": 0.014999437345167663
+    }
+  ],
+  "configuration_counts": [
+    {
+      "N": 7,
+      "m": 6,
+      "ell": 4,
+      "b": 0,
+      "R": 1,
+      "k": 2,
+      "layer_sizes": [
+        1,
+        6,
+        19
+      ],
+      "visited_configurations": 19,
+      "first_possible_omitted_support": 2
+    },
+    {
+      "N": 9,
+      "m": 8,
+      "ell": 5,
+      "b": 0,
+      "R": 2,
+      "k": 2,
+      "layer_sizes": [
+        1,
+        11,
+        45
+      ],
+      "visited_configurations": 45,
+      "first_possible_omitted_support": 2
+    },
+    {
+      "N": 11,
+      "m": 10,
+      "ell": 7,
+      "b": 1,
+      "R": 2,
+      "k": 2,
+      "layer_sizes": [
+        1,
+        12,
+        48
+      ],
+      "visited_configurations": 48,
+      "first_possible_omitted_support": 2
+    }
+  ],
+  "elapsed_seconds": 1.588330032000158,
+  "peak_resident_MiB": 89.96875,
+  "mathematical_review": "AUTHOR_DERIVED_INDEPENDENT_REVIEW_PENDING",
+  "derived_universal_locality": "NOT_ESTABLISHED",
+  "inherited_formation": "UNCHANGED_AUTHOR_DERIVED_S9",
+  "new_formation_trajectories": 0
+}
