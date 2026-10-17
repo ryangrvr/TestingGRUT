@@ -1,0 +1,119 @@
+{
+  "status": "CALCULATED_NOT_MEASURED",
+  "target_time_tau": 32,
+  "prediction_charter_commit": "907272a7720a7fd8e99eb5b1fc5f67e77cf58e17",
+  "certificate": "exact rational alternating-series bounds, 25 terms, outward decimal endpoints",
+  "independent_controls": "ordinary double spectral quadrature and 64-site matrix propagation",
+  "experimental_observations": 0,
+  "species": {
+    "A": {
+      "hopping": "1/64",
+      "z": "1",
+      "probabilities": [
+        {
+          "recorded_position": "0",
+          "probability_lower": "0.77457807205783633809302369408499786677357348235202",
+          "probability_upper": "0.77457807205783633809302369408499786677357348235203",
+          "rounded_probability": 0.774578072,
+          "finite_chain_probability": 0.7745780720578365,
+          "spectral_integral_probability": 0.7745780720578365
+        },
+        {
+          "recorded_position": "1",
+          "probability_lower": "0.21124497359192769220658034127758620581364671036683",
+          "probability_upper": "0.21124497359192769220658034127758620581364671036684",
+          "rounded_probability": 0.211244974,
+          "finite_chain_probability": 0.21124497359192762,
+          "spectral_integral_probability": 0.21124497359192768
+        },
+        {
+          "recorded_position": "2",
+          "probability_lower": "0.01377809348584276006253511667675897683725535615181",
+          "probability_upper": "0.01377809348584276006253511667675897683725535615182",
+          "rounded_probability": 0.013778093,
+          "finite_chain_probability": 0.013778093485842753,
+          "spectral_integral_probability": 0.0137780934858428
+        },
+        {
+          "recorded_position": "3_or_more",
+          "probability_lower": "0.00039886086439320963786084796065695057552445112932",
+          "probability_upper": "0.00039886086439320963786084796065695057552445112933",
+          "rounded_probability": 0.000398861,
+          "finite_chain_probability": 0.00039886086439320975,
+          "spectral_integral_probability": 0.0003988608643931135
+        }
+      ],
+      "finite_chain_length": 64,
+      "probability_boundary_error_upper": "1E-50",
+      "boundary_error_upper_scientific": 8.004173341602671e-90,
+      "quadrature_estimated_amplitude_errors": [
+        1.4112218418490656e-14,
+        1.2598351621903968e-14,
+        8.108677859410278e-14
+      ]
+    },
+    "B": {
+      "hopping": "1/96",
+      "z": "2/3",
+      "probabilities": [
+        {
+          "recorded_position": "0",
+          "probability_lower": "0.89390175507242215083026720408323689030363095355640",
+          "probability_upper": "0.89390175507242215083026720408323689030363095355641",
+          "rounded_probability": 0.893901755,
+          "finite_chain_probability": 0.8939017550724221,
+          "spectral_integral_probability": 0.8939017550724225
+        },
+        {
+          "recorded_position": "1",
+          "probability_lower": "0.10314236963636915821116365726650425925063910097559",
+          "probability_upper": "0.10314236963636915821116365726650425925063910097560",
+          "rounded_probability": 0.10314237,
+          "finite_chain_probability": 0.10314236963636907,
+          "spectral_integral_probability": 0.10314236963636914
+        },
+        {
+          "recorded_position": "2",
+          "probability_lower": "0.00291917466283454117394303554999468775360477916756",
+          "probability_upper": "0.00291917466283454117394303554999468775360477916757",
+          "rounded_probability": 0.002919175,
+          "finite_chain_probability": 0.00291917466283454,
+          "spectral_integral_probability": 0.002919174662834563
+        },
+        {
+          "recorded_position": "3_or_more",
+          "probability_lower": "0.00003670062837414978462610310026416269212516630043",
+          "probability_upper": "0.00003670062837414978462610310026416269212516630044",
+          "rounded_probability": 3.6701e-05,
+          "finite_chain_probability": 3.6700628374149776e-05,
+          "spectral_integral_probability": 3.670062837379806e-05
+        }
+      ],
+      "finite_chain_length": 64,
+      "probability_boundary_error_upper": "1E-50",
+      "boundary_error_upper_scientific": 4.277793590767575e-101,
+      "quadrature_estimated_amplitude_errors": [
+        1.3502496487624845e-14,
+        1.2038258893503782e-14,
+        1.1362375868893215e-14
+      ]
+    }
+  },
+  "future_test_rule": {
+    "independent_trials_per_species": 10000,
+    "family_error_alpha": 0.01,
+    "channels": 8,
+    "Hoeffding_radius": 0.019206455826398416,
+    "required_pretest_relative_time_scale_error": 0.001,
+    "required_pretest_dimensionless_Hamiltonian_norm_error": 1e-05,
+    "required_pretest_preparation_trace_distance": 0.001,
+    "required_pretest_readout_operator_error": 0.001,
+    "calibration_values_are_measurements": false,
+    "Hamiltonian_error_coefficient_with_time_calibration": 66,
+    "A_maximum_systematic_budget_without_geometry": 0.00466,
+    "B_maximum_systematic_budget_without_geometry": 0.003993333333333333,
+    "decision": "Reject if any heldout probability exceeds its fixed systematic plus family-wise statistical allowance; do not refit."
+  },
+  "elapsed_seconds": 0.0050885369998923125,
+  "peak_resident_MiB": 59.81640625
+}

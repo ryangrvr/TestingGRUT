@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 60s python checks.py",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 60s python predictions.py"
+  ],
+  "sha256": {
+    "model.py": "c46c0f9feb80e825892424724ec634fe5e2f0b546ca1bec2a5dfe39f8b101b35",
+    "checks.py": "732bf525f697500865684d88dbf2f31b24fecff24d4ef7fc645d36c3b0aa833c",
+    "predictions.py": "924f6d6051939dc5ef0994caf60fefc11b250fa11d8210e5cd81421527b36764"
+  },
+  "predictivity_charter_sha256": "e47723d1457e3af378cccf66edd55cc412cd88fa14be2f01c859c8cd97e5e969"
+}

@@ -1,0 +1,236 @@
+{
+  "status": "PASS_FINITE_DIAGNOSTICS",
+  "precision": "ordinary complex128; no outward rounding",
+  "formation_trajectories": 0,
+  "capacity": {
+    "exhaustive": [
+      {
+        "N": 2,
+        "configurations": 16,
+        "hops_checked": 16,
+        "C3_accepted": 16,
+        "C3_max_particles": 4
+      },
+      {
+        "N": 3,
+        "configurations": 64,
+        "hops_checked": 128,
+        "C3_accepted": 40,
+        "C3_max_particles": 4
+      },
+      {
+        "N": 4,
+        "configurations": 256,
+        "hops_checked": 768,
+        "C3_accepted": 80,
+        "C3_max_particles": 5
+      },
+      {
+        "N": 5,
+        "configurations": 1024,
+        "hops_checked": 4096,
+        "C3_accepted": 140,
+        "C3_max_particles": 5
+      }
+    ],
+    "density_resource_prices": [
+      {
+        "N": 32,
+        "particles": 2,
+        "largest_flux": 2,
+        "sum_abs_E": 4,
+        "sum_E_squared": 8
+      },
+      {
+        "N": 64,
+        "particles": 4,
+        "largest_flux": 5,
+        "sum_abs_E": 20,
+        "sum_E_squared": 76
+      },
+      {
+        "N": 128,
+        "particles": 8,
+        "largest_flux": 11,
+        "sum_abs_E": 88,
+        "sum_E_squared": 680
+      },
+      {
+        "N": 256,
+        "particles": 16,
+        "largest_flux": 23,
+        "sum_abs_E": 368,
+        "sum_E_squared": 5776
+      },
+      {
+        "N": 512,
+        "particles": 32,
+        "largest_flux": 47,
+        "sum_abs_E": 1504,
+        "sum_E_squared": 47648
+      }
+    ]
+  },
+  "local_Fock": {
+    "independent_two_site_matrix_max_error": 0.0,
+    "maximum_full_bond_norm": 0.5,
+    "analytic_bond_bound": 0.5260416666666666,
+    "per_site_upper": 1.0520833333333333,
+    "global_norm_scaling": [
+      {
+        "each_species": 1,
+        "dimension": 24,
+        "actual_changing_norm": 0.25268386116803404,
+        "linear_lower": 0.25,
+        "linear_upper": 0.5520833333333334
+      },
+      {
+        "each_species": 2,
+        "dimension": 1296,
+        "actual_changing_norm": 0.7528431949563889,
+        "linear_lower": 0.75,
+        "linear_upper": 1.1041666666666667
+      }
+    ],
+    "many_background_nearby": [
+      {
+        "species": "A",
+        "time": 5e-05,
+        "carriers": 3,
+        "source_variance": 0.25,
+        "first_response_coefficient": 0.015624999999999997,
+        "full_Fock_response": 7.812499999993639e-07,
+        "local_analytic_lower": 6.0125e-07
+      },
+      {
+        "species": "B",
+        "time": 5e-05,
+        "carriers": 3,
+        "source_variance": 0.25,
+        "first_response_coefficient": 0.010416666666666664,
+        "full_Fock_response": 5.208333333331448e-07,
+        "local_analytic_lower": 3.4083333333333333e-07
+      }
+    ],
+    "weighted_form": [
+      {
+        "mu": 0.25,
+        "quadratic_form_rate_norm": 0.0051164666546772205,
+        "density_independent_bound": 1.1361016667509656
+      },
+      {
+        "mu": 1.0,
+        "quadratic_form_rate_norm": 0.023340226977496385,
+        "density_independent_bound": 6.87312731383618
+      }
+    ],
+    "connected": {
+      "dimension": 600,
+      "distance": 4,
+      "time": 0.01,
+      "low_order_commutator_entries": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_commutator_norm": 4.725842201419034e-16,
+      "local_bound": 0.0044492144248261135
+    }
+  },
+  "full_geometry": {
+    "vacuum_isometry": [
+      {
+        "N": 2,
+        "full_vacuum_dimension": 6,
+        "maximum_difference": 0.0
+      },
+      {
+        "N": 3,
+        "full_vacuum_dimension": 40,
+        "maximum_difference": 0.0
+      }
+    ],
+    "complete_many_carrier_controls": [
+      {
+        "N": 3,
+        "N_A": 2,
+        "N_B": 1,
+        "dimension": 2112,
+        "nonzeros": 11424,
+        "audit": {
+          "geometry_entries": 1056,
+          "hopping_entries": 4992,
+          "blocked_charged_pops": 1728,
+          "largest_electric_magnitude": 4
+        }
+      },
+      {
+        "N": 4,
+        "N_A": 2,
+        "N_B": 1,
+        "dimension": 48960,
+        "nonzeros": 326304,
+        "audit": {
+          "geometry_entries": 38592,
+          "hopping_entries": 156960,
+          "blocked_charged_pops": 33120,
+          "largest_electric_magnitude": 4
+        },
+        "common_reference": {
+          "time": 0.02,
+          "a": 1,
+          "L": 0,
+          "scope": "small no-macroscopic-buffer diagnostic, not the all-size density sequence",
+          "state_error": 3.2233285493056165e-05,
+          "state_error_bound": 0.11072198120244185,
+          "prefix_loss_probability": 1.0388454140428713e-09,
+          "storage_error_probability": 1.017607958022492e-10,
+          "probability_error_bound": 0.012259357121393887
+        }
+      }
+    ]
+  },
+  "all_size_constants": [
+    {
+      "N": 256,
+      "particles": 16,
+      "window": 0.0625,
+      "evaluated_state_bound": 6.902816693857642e-08,
+      "coarse_state_bound": 8.652812479321745e-07,
+      "nearby_state_bound": 4.950842862617272e-11,
+      "both_species_response_lower": 3.4063529961882867e-07
+    },
+    {
+      "N": 512,
+      "particles": 32,
+      "window": 0.125,
+      "evaluated_state_bound": 1.7397395774175482e-14,
+      "coarse_state_bound": 2.4957054600768697e-13,
+      "nearby_state_bound": 5.571439665522317e-18,
+      "both_species_response_lower": 3.4083333331104763e-07
+    },
+    {
+      "N": 1024,
+      "particles": 64,
+      "window": 0.25,
+      "evaluated_state_bound": 5.5887200617656685e-28,
+      "coarse_state_bound": 2.0761819144858332e-26,
+      "nearby_state_bound": 7.055763427096449e-32,
+      "both_species_response_lower": 3.408333333333334e-07
+    },
+    {
+      "N": 2048,
+      "particles": 128,
+      "window": 0.5,
+      "evaluated_state_bound": 3.0126661424418154e-55,
+      "coarse_state_bound": 1.436843780679353e-52,
+      "nearby_state_bound": 1.1316110225512067e-59,
+      "both_species_response_lower": 3.408333333333334e-07
+    }
+  ],
+  "elapsed_seconds": 3.1778451250002036,
+  "peak_resident_MiB": 121.9921875,
+  "all_size_proof": "AUTHOR_DERIVED_INDEPENDENT_REVIEW_PENDING",
+  "populated_seed_formation": "NOT_DERIVED_NUMBER_CONSERVATION_OBSTRUCTION"
+}
