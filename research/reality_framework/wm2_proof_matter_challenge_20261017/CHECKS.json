@@ -1,0 +1,388 @@
+{
+  "base_commit": "82bcab3b86bfee15b86e988f67269f884e86085a",
+  "charter_commit": "a0c53ef6df3667036e160202b8da76d80e5e49c1",
+  "provenance": "same Builder; fresh code, not independent external review",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "charge_blocks": {
+    "status": "PASS",
+    "charge_block_checks": [
+      {
+        "N": 3,
+        "L": 4,
+        "charge_dimensions": {
+          "-1": 10,
+          "0": 29,
+          "1": 64
+        },
+        "t": 0.23,
+        "intertwiner_error": 6.473657049138938e-16,
+        "retarded_vector_error": 2.6071154697900896e-16,
+        "current_error": 1.3877787807814457e-17,
+        "vacuum_plus_one_error": 0.0
+      },
+      {
+        "N": 3,
+        "L": 4,
+        "charge_dimensions": {
+          "-1": 10,
+          "0": 29,
+          "1": 64
+        },
+        "t": 1.7,
+        "intertwiner_error": 6.473657049138938e-16,
+        "retarded_vector_error": 5.153851477462821e-16,
+        "current_error": 5.551115123125783e-17,
+        "vacuum_plus_one_error": 2.220446049250313e-16
+      },
+      {
+        "N": 3,
+        "L": 4,
+        "charge_dimensions": {
+          "-1": 10,
+          "0": 29,
+          "1": 64
+        },
+        "t": 5.3,
+        "intertwiner_error": 6.473657049138938e-16,
+        "retarded_vector_error": 1.7157934527941678e-15,
+        "current_error": 2.7755575615628914e-17,
+        "vacuum_plus_one_error": 5.551115123125783e-16
+      },
+      {
+        "N": 3,
+        "omitted_creation_commutator_norm": 1.472349863694927,
+        "commuting_append_mutation_rejected": true
+      },
+      {
+        "N": 4,
+        "L": 3,
+        "charge_dimensions": {
+          "-1": 57,
+          "0": 106,
+          "1": 171
+        },
+        "t": 0.23,
+        "intertwiner_error": 2.9666023450863638e-15,
+        "retarded_vector_error": 9.56599100989834e-16,
+        "current_error": 0.0,
+        "vacuum_plus_one_error": 7.771561172376096e-16
+      },
+      {
+        "N": 4,
+        "L": 3,
+        "charge_dimensions": {
+          "-1": 57,
+          "0": 106,
+          "1": 171
+        },
+        "t": 1.7,
+        "intertwiner_error": 2.9666023450863638e-15,
+        "retarded_vector_error": 1.3000204830013238e-15,
+        "current_error": 5.551115123125783e-17,
+        "vacuum_plus_one_error": 5.551115123125783e-16
+      },
+      {
+        "N": 4,
+        "L": 3,
+        "charge_dimensions": {
+          "-1": 57,
+          "0": 106,
+          "1": 171
+        },
+        "t": 5.3,
+        "intertwiner_error": 2.9666023450863638e-15,
+        "retarded_vector_error": 3.586105768734449e-15,
+        "current_error": 5.551115123125783e-17,
+        "vacuum_plus_one_error": 1.4432899320127035e-15
+      },
+      {
+        "N": 4,
+        "omitted_creation_commutator_norm": 1.6369694443095522,
+        "commuting_append_mutation_rejected": true
+      }
+    ],
+    "closed_walk_checks": [
+      {
+        "L": 1,
+        "first_boundary_difference": 2,
+        "exact_integer": true
+      },
+      {
+        "L": 2,
+        "first_boundary_difference": 4,
+        "exact_integer": true
+      },
+      {
+        "L": 4,
+        "first_boundary_difference": 8,
+        "exact_integer": true
+      },
+      {
+        "L": 7,
+        "first_boundary_difference": 14,
+        "exact_integer": true
+      },
+      {
+        "L": 12,
+        "first_boundary_difference": 24,
+        "exact_integer": true
+      }
+    ],
+    "kernel_grid_max_ratio": 0.99999999995,
+    "formation_lower_exact": "5773746138037455111415704584183/11408855402054064613470328848384",
+    "scope": "fresh implementation diagnostics and exact rational constants; not external review or all-N numerical certification",
+    "elapsed_seconds": 0.03387990600003832
+  },
+  "interaction_words": {
+    "status": "PASS",
+    "tests": [
+      {
+        "N": 12,
+        "initial_word_length": 6,
+        "prefix": 3,
+        "S9_q": 1,
+        "actual_S9_size_sequence": true,
+        "complex_word_image_errors": [
+          0.0,
+          0.06250000000000007
+        ],
+        "image_sizes": [
+          [
+            112,
+            112
+          ],
+          [
+            725,
+            725
+          ]
+        ],
+        "first_difference_order": 2,
+        "shared_edge_deletion_detected_at_order_one": true,
+        "receiver_modes": 2,
+        "contact_occupations": "all in each charge sector"
+      },
+      {
+        "N": 16,
+        "initial_word_length": 8,
+        "prefix": 4,
+        "S9_q": 2,
+        "actual_S9_size_sequence": true,
+        "complex_word_image_errors": [
+          0.0,
+          0.0,
+          0.015624999999999986
+        ],
+        "image_sizes": [
+          [
+            182,
+            182
+          ],
+          [
+            1529,
+            1529
+          ],
+          [
+            10926,
+            10926
+          ]
+        ],
+        "first_difference_order": 3,
+        "shared_edge_deletion_detected_at_order_one": true,
+        "receiver_modes": 2,
+        "contact_occupations": "all in each charge sector"
+      },
+      {
+        "N": 12,
+        "initial_word_length": 10,
+        "prefix": 5,
+        "S9_q": 3,
+        "actual_S9_size_sequence": false,
+        "complex_word_image_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.003906250000000012
+        ],
+        "image_sizes": [
+          [
+            92,
+            92
+          ],
+          [
+            237,
+            237
+          ],
+          [
+            486,
+            486
+          ],
+          [
+            1009,
+            1009
+          ]
+        ],
+        "first_difference_order": 4,
+        "shared_edge_deletion_detected_at_order_one": true,
+        "receiver_modes": 2,
+        "contact_occupations": "all in each charge sector"
+      }
+    ],
+    "scope": "amplitude/phase diagnostic for full changing interactions and exact configuration-preserving field evolution; no formation trajectory",
+    "elapsed_seconds": 0.15525307500001873
+  },
+  "distinct_matter": {
+    "status": "PASS",
+    "matrices": [
+      {
+        "N": 8,
+        "recorded_length": 4,
+        "prefix_length": 2,
+        "minimum_recorded_distance": 1,
+        "star_norm": 0.24999999999999997,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.4387755102040814,
+        "star_plus_local_far_probability": 0.43814181406509173,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.0017585798913222676,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.13520855333970785,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      },
+      {
+        "N": 16,
+        "recorded_length": 8,
+        "prefix_length": 4,
+        "minimum_recorded_distance": 2,
+        "star_norm": 0.24999999999999997,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.07111111111111107,
+        "star_plus_local_far_probability": 0.07151311630620215,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.001862018435516927,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.06355081886641269,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      },
+      {
+        "N": 32,
+        "recorded_length": 16,
+        "prefix_length": 8,
+        "minimum_recorded_distance": 4,
+        "star_norm": 0.25000000000000006,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.06659729448491149,
+        "star_plus_local_far_probability": 0.066600588353321,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.001904233158477465,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.030844820216520467,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      },
+      {
+        "N": 64,
+        "recorded_length": 32,
+        "prefix_length": 16,
+        "minimum_recorded_distance": 8,
+        "star_norm": 0.25000000000000006,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.0644998740236835,
+        "star_plus_local_far_probability": 0.06450215832954508,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.0019234375900840357,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.015199228358346738,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      },
+      {
+        "N": 128,
+        "recorded_length": 64,
+        "prefix_length": 32,
+        "minimum_recorded_distance": 16,
+        "star_norm": 0.25000000000000006,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.06348812697625392,
+        "star_plus_local_far_probability": 0.06348973376012196,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.00193260894744205,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.0075449509935054965,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      },
+      {
+        "N": 256,
+        "recorded_length": 128,
+        "prefix_length": 64,
+        "minimum_recorded_distance": 32,
+        "star_norm": 0.25,
+        "relabel_covariance_error": 0.0,
+        "fixed_probe_time": 6.283185307179586,
+        "star_far_set_probability": 0.06299115724721259,
+        "star_plus_local_far_probability": 0.06299229736644232,
+        "local_hopping": 0.000244140625,
+        "state_deviation": 0.0019370910391997922,
+        "state_deviation_bound": 0.0030679615757712823,
+        "root_blind_offdiagonal_amplitude": 0.0037589481719180434,
+        "all_size_geometry_motion_included": "analytic Duhamel/prefix-tail bound, not this frozen-word matrix"
+      }
+    ],
+    "pure_state_source_number_variance": 0.25,
+    "scope": "new distinct-sector diagnostics; hypotheses and all-size proofs are separate; no WM2 Hamiltonian changed",
+    "elapsed_seconds": 0.06789097000000766
+  },
+  "receiver_dependence": {
+    "status": "PASS",
+    "finite_tail_constant_exact": true,
+    "uniform_rate_bound_exact": "6/5",
+    "sampled_minimum_rate": 1.6194973506004482,
+    "flat_receiver_operator_checks": [
+      {
+        "N": 3,
+        "dimension": 5,
+        "interaction_norm": 0.7333333333333335,
+        "norm_bound": 1.1,
+        "diagonal_lower_per_attachment": 1.25,
+        "initial_mean_energy": 0,
+        "evolution": "not run; energy inequality is analytic"
+      },
+      {
+        "N": 4,
+        "dimension": 16,
+        "interaction_norm": 0.8250000000000003,
+        "norm_bound": 1.1,
+        "diagonal_lower_per_attachment": 1.25,
+        "initial_mean_energy": 0,
+        "evolution": "not run; energy inequality is analytic"
+      },
+      {
+        "N": 5,
+        "dimension": 65,
+        "interaction_norm": 0.8800000000000004,
+        "norm_bound": 1.1,
+        "diagonal_lower_per_attachment": 1.25,
+        "initial_mean_energy": 0,
+        "evolution": "not run; energy inequality is analytic"
+      },
+      {
+        "N": 6,
+        "dimension": 326,
+        "interaction_norm": 0.9166666666666669,
+        "norm_bound": 1.1,
+        "diagonal_lower_per_attachment": 1.25,
+        "initial_mean_energy": 0,
+        "evolution": "not run; energy inequality is analytic"
+      }
+    ],
+    "scope": "sufficient-criterion diagnostics; no physical-L trajectory or reduced receiver claim",
+    "elapsed_seconds": 0.029573115999937727
+  },
+  "status": "PASS_DIAGNOSTICS_NOT_EXTERNAL_PROOF_REVIEW"
+}
