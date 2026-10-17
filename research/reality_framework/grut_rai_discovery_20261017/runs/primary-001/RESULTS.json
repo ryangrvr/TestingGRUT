@@ -1,0 +1,737 @@
+{
+  "candidate": "GRUT-A1 always-on P1 successor diagnostic",
+  "decision": "refuted finite persistence target",
+  "dimension": 864,
+  "scope": [
+    "supplied fuel and recorded geometry",
+    "tiny two-mode receiver, not physical S9 receiver",
+    "ordinary floating point",
+    "no independent validation",
+    "no all-size theorem",
+    "no empirical observations"
+  ],
+  "audit": {
+    "passed": true,
+    "warnings": [
+      "a1-law: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation",
+      "supplied-seed: recovery-with-imports (tier assumed, +1) - must be labeled a RECOVERY, not a derivation"
+    ],
+    "net_supplied_inputs": 2,
+    "certifies_physical_truth": false
+  },
+  "structural_checks": {
+    "hermiticity_max": 0.0,
+    "conserved_commutator_max": 0.0,
+    "norm_max_error": 3.086420008457935e-14,
+    "energy_max_error": 4.551914400963142e-14,
+    "fuel_plus_pair_max_error": 3.086420008457935e-14,
+    "dense_sparse_state_errors": [
+      2.5781336883623884e-13,
+      4.940131180497229e-13
+    ],
+    "vacuum_pairs_at_pi": 0.0,
+    "no_conversion_pairs_at_pi": 0.0,
+    "initial_supplied_fuel_energy": 2.9999999999999996,
+    "geometry_action_norm": 1.7689809109842638,
+    "hopping_action_norm": 0.020660664596573106
+  },
+  "persistence_witness": {
+    "time": 3.141592653589793,
+    "expected_pairs": 0.0016998777260556846,
+    "threshold": 0.5,
+    "refuted": true
+  },
+  "peak_sampled_expected_pairs": 0.983228168960443,
+  "isolated_rabi_controls": [
+    {
+      "detuning": -0.5,
+      "time": 1.5707963267948966,
+      "probability": 0.9389785688277057,
+      "formula": 0.9389785688277067
+    },
+    {
+      "detuning": -0.5,
+      "time": 3.141592653589793,
+      "probability": 0.008771076260480952,
+      "formula": 0.008771076260480955
+    },
+    {
+      "detuning": 0.0,
+      "time": 1.5707963267948966,
+      "probability": 1.0000000000000009,
+      "formula": 1.0
+    },
+    {
+      "detuning": 0.0,
+      "time": 3.141592653589793,
+      "probability": 8.936314941956782e-32,
+      "formula": 1.4997597826618576e-32
+    },
+    {
+      "detuning": 0.5,
+      "time": 1.5707963267948966,
+      "probability": 0.9389785688277072,
+      "formula": 0.9389785688277067
+    },
+    {
+      "detuning": 0.5,
+      "time": 3.141592653589793,
+      "probability": 0.00877107626048107,
+      "formula": 0.008771076260480955
+    }
+  ],
+  "series": [
+    {
+      "time": 0.0,
+      "expected_pairs": 0.0,
+      "expected_fuel": 0.9999999999999999
+    },
+    {
+      "time": 0.09817477042468103,
+      "expected_pairs": 0.009606844395005237,
+      "expected_fuel": 0.9903931556049957
+    },
+    {
+      "time": 0.19634954084936207,
+      "expected_pairs": 0.038052405552925994,
+      "expected_fuel": 0.961947594447076
+    },
+    {
+      "time": 0.2945243112740431,
+      "expected_pairs": 0.08422637377218938,
+      "expected_fuel": 0.9157736262278116
+    },
+    {
+      "time": 0.39269908169872414,
+      "expected_pairs": 0.14632633896932423,
+      "expected_fuel": 0.8536736610306773
+    },
+    {
+      "time": 0.4908738521234052,
+      "expected_pairs": 0.22192796289128514,
+      "expected_fuel": 0.7780720371087172
+    },
+    {
+      "time": 0.5890486225480862,
+      "expected_pairs": 0.3080793597429198,
+      "expected_fuel": 0.6919206402570829
+    },
+    {
+      "time": 0.6872233929727672,
+      "expected_pairs": 0.4014160081060803,
+      "expected_fuel": 0.5985839918939233
+    },
+    {
+      "time": 0.7853981633974483,
+      "expected_pairs": 0.4982916977275032,
+      "expected_fuel": 0.5017083022724997
+    },
+    {
+      "time": 0.8835729338221293,
+      "expected_pairs": 0.594920408798691,
+      "expected_fuel": 0.4050795912013127
+    },
+    {
+      "time": 0.9817477042468103,
+      "expected_pairs": 0.6875236548405088,
+      "expected_fuel": 0.3124763451594947
+    },
+    {
+      "time": 1.0799224746714913,
+      "expected_pairs": 0.7724776667236855,
+      "expected_fuel": 0.22752233327631857
+    },
+    {
+      "time": 1.1780972450961724,
+      "expected_pairs": 0.8464548436762529,
+      "expected_fuel": 0.15354515632375143
+    },
+    {
+      "time": 1.2762720155208536,
+      "expected_pairs": 0.9065541433104006,
+      "expected_fuel": 0.09344585668960452
+    },
+    {
+      "time": 1.3744467859455345,
+      "expected_pairs": 0.9504154788942927,
+      "expected_fuel": 0.04958452110571167
+    },
+    {
+      "time": 1.4726215563702154,
+      "expected_pairs": 0.9763136810851554,
+      "expected_fuel": 0.023686318914848133
+    },
+    {
+      "time": 1.5707963267948966,
+      "expected_pairs": 0.983228168960443,
+      "expected_fuel": 0.01677183103956067
+    },
+    {
+      "time": 1.6689710972195777,
+      "expected_pairs": 0.9708852137528698,
+      "expected_fuel": 0.0291147862471338
+    },
+    {
+      "time": 1.7671458676442586,
+      "expected_pairs": 0.9397706002673804,
+      "expected_fuel": 0.06022939973262411
+    },
+    {
+      "time": 1.8653206380689396,
+      "expected_pairs": 0.8911116020979167,
+      "expected_fuel": 0.10888839790208801
+    },
+    {
+      "time": 1.9634954084936207,
+      "expected_pairs": 0.8268284931960974,
+      "expected_fuel": 0.1731715068039075
+    },
+    {
+      "time": 2.061670178918302,
+      "expected_pairs": 0.7494572907541729,
+      "expected_fuel": 0.25054270924583255
+    },
+    {
+      "time": 2.1598449493429825,
+      "expected_pairs": 0.6620469474291543,
+      "expected_fuel": 0.33795305257085184
+    },
+    {
+      "time": 2.2580197197676637,
+      "expected_pairs": 0.568035608699774,
+      "expected_fuel": 0.43196439130023184
+    },
+    {
+      "time": 2.356194490192345,
+      "expected_pairs": 0.47111166005575517,
+      "expected_fuel": 0.5288883399442513
+    },
+    {
+      "time": 2.454369260617026,
+      "expected_pairs": 0.3750659886502894,
+      "expected_fuel": 0.6249340113497173
+    },
+    {
+      "time": 2.552544031041707,
+      "expected_pairs": 0.28364209502949994,
+      "expected_fuel": 0.7163579049705068
+    },
+    {
+      "time": 2.650718801466388,
+      "expected_pairs": 0.20039040096636315,
+      "expected_fuel": 0.7996095990336436
+    },
+    {
+      "time": 2.748893571891069,
+      "expected_pairs": 0.12853240547473102,
+      "expected_fuel": 0.8714675945252753
+    },
+    {
+      "time": 2.84706834231575,
+      "expected_pairs": 0.0708394196759187,
+      "expected_fuel": 0.929160580324088
+    },
+    {
+      "time": 2.945243112740431,
+      "expected_pairs": 0.029529638746583074,
+      "expected_fuel": 0.970470361253424
+    },
+    {
+      "time": 3.043417883165112,
+      "expected_pairs": 0.006186416131729444,
+      "expected_fuel": 0.9938135838682779
+    },
+    {
+      "time": 3.141592653589793,
+      "expected_pairs": 0.0016998777260556846,
+      "expected_fuel": 0.9983001222739522
+    },
+    {
+      "time": 3.2397674240144743,
+      "expected_pairs": 0.016233473171114954,
+      "expected_fuel": 0.9837665268288925
+    },
+    {
+      "time": 3.3379421944391554,
+      "expected_pairs": 0.04921662904357678,
+      "expected_fuel": 0.9507833709564313
+    },
+    {
+      "time": 3.436116964863836,
+      "expected_pairs": 0.09936419920031934,
+      "expected_fuel": 0.9006358007996886
+    },
+    {
+      "time": 3.5342917352885173,
+      "expected_pairs": 0.1647227783170209,
+      "expected_fuel": 0.8352772216829871
+    },
+    {
+      "time": 3.6324665057131984,
+      "expected_pairs": 0.2427430962013535,
+      "expected_fuel": 0.7572569037986547
+    },
+    {
+      "time": 3.730641276137879,
+      "expected_pairs": 0.33037663173152076,
+      "expected_fuel": 0.6696233682684878
+    },
+    {
+      "time": 3.8288160465625602,
+      "expected_pairs": 0.42419333035301476,
+      "expected_fuel": 0.5758066696469939
+    },
+    {
+      "time": 3.9269908169872414,
+      "expected_pairs": 0.5205160283716801,
+      "expected_fuel": 0.47948397162832873
+    },
+    {
+      "time": 4.025165587411922,
+      "expected_pairs": 0.615566079598237,
+      "expected_fuel": 0.38443392040177254
+    },
+    {
+      "time": 4.123340357836604,
+      "expected_pairs": 0.7056139001319295,
+      "expected_fuel": 0.29438609986808056
+    },
+    {
+      "time": 4.221515128261284,
+      "expected_pairs": 0.7871277836859796,
+      "expected_fuel": 0.2128722163140311
+    },
+    {
+      "time": 4.319689898685965,
+      "expected_pairs": 0.8569144392616054,
+      "expected_fuel": 0.1430855607384049
+    },
+    {
+      "time": 4.417864669110647,
+      "expected_pairs": 0.9122452467242746,
+      "expected_fuel": 0.08775475327573586
+    },
+    {
+      "time": 4.516039439535327,
+      "expected_pairs": 0.9509631034468906,
+      "expected_fuel": 0.04903689655312125
+    },
+    {
+      "time": 4.614214209960009,
+      "expected_pairs": 0.9715658000061198,
+      "expected_fuel": 0.028434199993892583
+    },
+    {
+      "time": 4.71238898038469,
+      "expected_pairs": 0.9732630068889571,
+      "expected_fuel": 0.026736993111055693
+    },
+    {
+      "time": 4.81056375080937,
+      "expected_pairs": 0.9560051048663541,
+      "expected_fuel": 0.043994895133660304
+    },
+    {
+      "time": 4.908738521234052,
+      "expected_pairs": 0.9204831859182925,
+      "expected_fuel": 0.07951681408172188
+    },
+    {
+      "time": 5.006913291658733,
+      "expected_pairs": 0.8681005603933778,
+      "expected_fuel": 0.13189943960663722
+    },
+    {
+      "time": 5.105088062083414,
+      "expected_pairs": 0.8009170517894283,
+      "expected_fuel": 0.19908294821058717
+    },
+    {
+      "time": 5.203262832508095,
+      "expected_pairs": 0.7215682694590679,
+      "expected_fuel": 0.2784317305409478
+    },
+    {
+      "time": 5.301437602932776,
+      "expected_pairs": 0.6331629098389397,
+      "expected_fuel": 0.36683709016107674
+    },
+    {
+      "time": 5.399612373357457,
+      "expected_pairs": 0.5391619181203268,
+      "expected_fuel": 0.46083808187968933
+    },
+    {
+      "time": 5.497787143782138,
+      "expected_pairs": 0.4432440214131406,
+      "expected_fuel": 0.5567559785868748
+    },
+    {
+      "time": 5.595961914206819,
+      "expected_pairs": 0.3491626922373494,
+      "expected_fuel": 0.6508373077626669
+    },
+    {
+      "time": 5.6941366846315,
+      "expected_pairs": 0.2605999737551677,
+      "expected_fuel": 0.7394000262448488
+    },
+    {
+      "time": 5.792311455056181,
+      "expected_pairs": 0.18102276343960766,
+      "expected_fuel": 0.8189772365604084
+    },
+    {
+      "time": 5.890486225480862,
+      "expected_pairs": 0.11354710977172354,
+      "expected_fuel": 0.8864528902282914
+    },
+    {
+      "time": 5.988660995905543,
+      "expected_pairs": 0.06081583979377979,
+      "expected_fuel": 0.9391841602062359
+    },
+    {
+      "time": 6.086835766330224,
+      "expected_pairs": 0.024894403649477613,
+      "expected_fuel": 0.9751055963505372
+    },
+    {
+      "time": 6.1850105367549055,
+      "expected_pairs": 0.0071891893921963955,
+      "expected_fuel": 0.9928108106078197
+    },
+    {
+      "time": 6.283185307179586,
+      "expected_pairs": 0.00839173545173954,
+      "expected_fuel": 0.9916082645482756
+    },
+    {
+      "time": 6.381360077604267,
+      "expected_pairs": 0.028451267243898973,
+      "expected_fuel": 0.9715487327561153
+    },
+    {
+      "time": 6.4795348480289485,
+      "expected_pairs": 0.06657682491639226,
+      "expected_fuel": 0.9334231750836217
+    },
+    {
+      "time": 6.577709618453629,
+      "expected_pairs": 0.1212689664698917,
+      "expected_fuel": 0.8787310335301224
+    },
+    {
+      "time": 6.675884388878311,
+      "expected_pairs": 0.19037970552983854,
+      "expected_fuel": 0.8096202944701758
+    },
+    {
+      "time": 6.7740591593029915,
+      "expected_pairs": 0.2711980837912153,
+      "expected_fuel": 0.7288019162087995
+    },
+    {
+      "time": 6.872233929727672,
+      "expected_pairs": 0.3605576786260554,
+      "expected_fuel": 0.6394423213739597
+    },
+    {
+      "time": 6.970408700152354,
+      "expected_pairs": 0.4549614799362934,
+      "expected_fuel": 0.5450385200637213
+    },
+    {
+      "time": 7.0685834705770345,
+      "expected_pairs": 0.5507189944656788,
+      "expected_fuel": 0.4492810055343358
+    },
+    {
+      "time": 7.166758241001715,
+      "expected_pairs": 0.6440901621808668,
+      "expected_fuel": 0.35590983781914803
+    },
+    {
+      "time": 7.264933011426397,
+      "expected_pairs": 0.7314306423026181,
+      "expected_fuel": 0.26856935769739765
+    },
+    {
+      "time": 7.3631077818510775,
+      "expected_pairs": 0.809333161509855,
+      "expected_fuel": 0.19066683849016144
+    },
+    {
+      "time": 7.461282552275758,
+      "expected_pairs": 0.8747598492836814,
+      "expected_fuel": 0.12524015071633446
+    },
+    {
+      "time": 7.55945732270044,
+      "expected_pairs": 0.9251607742895057,
+      "expected_fuel": 0.0748392257105103
+    },
+    {
+      "time": 7.6576320931251205,
+      "expected_pairs": 0.9585742235664885,
+      "expected_fuel": 0.04142577643352772
+    },
+    {
+      "time": 7.755806863549802,
+      "expected_pairs": 0.9737046692305159,
+      "expected_fuel": 0.02629533076950118
+    },
+    {
+      "time": 7.853981633974483,
+      "expected_pairs": 0.969974935304686,
+      "expected_fuel": 0.030025064695330596
+    },
+    {
+      "time": 7.9521564043991635,
+      "expected_pairs": 0.9475498951246387,
+      "expected_fuel": 0.05245010487537974
+    },
+    {
+      "time": 8.050331174823844,
+      "expected_pairs": 0.9073301302480503,
+      "expected_fuel": 0.09266986975196813
+    },
+    {
+      "time": 8.148505945248527,
+      "expected_pairs": 0.8509153447615252,
+      "expected_fuel": 0.1490846552384923
+    },
+    {
+      "time": 8.246680715673207,
+      "expected_pairs": 0.7805388767023129,
+      "expected_fuel": 0.21946112329770434
+    },
+    {
+      "time": 8.344855486097888,
+      "expected_pairs": 0.6989762290606587,
+      "expected_fuel": 0.3010237709393591
+    },
+    {
+      "time": 8.443030256522569,
+      "expected_pairs": 0.6094319577695068,
+      "expected_fuel": 0.3905680422305111
+    },
+    {
+      "time": 8.54120502694725,
+      "expected_pairs": 0.5154103267969963,
+      "expected_fuel": 0.48458967320302165
+    },
+    {
+      "time": 8.63937979737193,
+      "expected_pairs": 0.4205757615599251,
+      "expected_fuel": 0.5794242384400929
+    },
+    {
+      "time": 8.737554567796613,
+      "expected_pairs": 0.32860926657306083,
+      "expected_fuel": 0.6713907334269575
+    },
+    {
+      "time": 8.835729338221293,
+      "expected_pairs": 0.24306666837552948,
+      "expected_fuel": 0.7569333316244895
+    },
+    {
+      "time": 8.933904108645974,
+      "expected_pairs": 0.16724392916554706,
+      "expected_fuel": 0.8327560708344711
+    },
+    {
+      "time": 9.032078879070655,
+      "expected_pairs": 0.1040540218720601,
+      "expected_fuel": 0.8959459781279586
+    },
+    {
+      "time": 9.130253649495335,
+      "expected_pairs": 0.055919115954698125,
+      "expected_fuel": 0.944080884045322
+    },
+    {
+      "time": 9.228428419920018,
+      "expected_pairs": 0.024681188197823056,
+      "expected_fuel": 0.975318811802197
+    },
+    {
+      "time": 9.326603190344699,
+      "expected_pairs": 0.011533668500983429,
+      "expected_fuel": 0.9884663314990375
+    },
+    {
+      "time": 9.42477796076938,
+      "expected_pairs": 0.016976314832096773,
+      "expected_fuel": 0.9830236851679244
+    },
+    {
+      "time": 9.52295273119406,
+      "expected_pairs": 0.04079508806787966,
+      "expected_fuel": 0.9592049119321415
+    },
+    {
+      "time": 9.62112750161874,
+      "expected_pairs": 0.08206825228459592,
+      "expected_fuel": 0.9179317477154264
+    },
+    {
+      "time": 9.719302272043423,
+      "expected_pairs": 0.13919917672076124,
+      "expected_fuel": 0.8608008232792616
+    },
+    {
+      "time": 9.817477042468104,
+      "expected_pairs": 0.20997534529876177,
+      "expected_fuel": 0.7900246547012606
+    },
+    {
+      "time": 9.915651812892785,
+      "expected_pairs": 0.2916519377130228,
+      "expected_fuel": 0.7083480622869995
+    },
+    {
+      "time": 10.013826583317465,
+      "expected_pairs": 0.3810571309967801,
+      "expected_fuel": 0.6189428690032426
+    },
+    {
+      "time": 10.112001353742146,
+      "expected_pairs": 0.4747151134857791,
+      "expected_fuel": 0.5252848865142437
+    },
+    {
+      "time": 10.210176124166829,
+      "expected_pairs": 0.5689818435571637,
+      "expected_fuel": 0.4310181564428609
+    },
+    {
+      "time": 10.30835089459151,
+      "expected_pairs": 0.660187927531684,
+      "expected_fuel": 0.33981207246834144
+    },
+    {
+      "time": 10.40652566501619,
+      "expected_pairs": 0.7447826751781648,
+      "expected_fuel": 0.25521732482186027
+    },
+    {
+      "time": 10.50470043544087,
+      "expected_pairs": 0.8194734082510836,
+      "expected_fuel": 0.18052659174894228
+    },
+    {
+      "time": 10.602875205865551,
+      "expected_pairs": 0.8813544119351203,
+      "expected_fuel": 0.11864558806490642
+    },
+    {
+      "time": 10.701049976290232,
+      "expected_pairs": 0.9280204700653137,
+      "expected_fuel": 0.07197952993471364
+    },
+    {
+      "time": 10.799224746714915,
+      "expected_pairs": 0.9576606360851809,
+      "expected_fuel": 0.042339363914846294
+    },
+    {
+      "time": 10.897399517139595,
+      "expected_pairs": 0.9691287076672985,
+      "expected_fuel": 0.030871292332729186
+    },
+    {
+      "time": 10.995574287564276,
+      "expected_pairs": 0.9619877738873042,
+      "expected_fuel": 0.03801222611272406
+    },
+    {
+      "time": 11.093749057988957,
+      "expected_pairs": 0.9365271753616865,
+      "expected_fuel": 0.06347282463834192
+    },
+    {
+      "time": 11.191923828413637,
+      "expected_pairs": 0.8937512327732324,
+      "expected_fuel": 0.10624876722679537
+    },
+    {
+      "time": 11.29009859883832,
+      "expected_pairs": 0.8353401354238162,
+      "expected_fuel": 0.16465986457621193
+    },
+    {
+      "time": 11.388273369263,
+      "expected_pairs": 0.7635844227161903,
+      "expected_fuel": 0.23641557728383947
+    },
+    {
+      "time": 11.486448139687681,
+      "expected_pairs": 0.6812955016119214,
+      "expected_fuel": 0.318704498388108
+    },
+    {
+      "time": 11.584622910112362,
+      "expected_pairs": 0.591695568225791,
+      "expected_fuel": 0.4083044317742385
+    },
+    {
+      "time": 11.682797680537043,
+      "expected_pairs": 0.4982911053805737,
+      "expected_fuel": 0.5017088946194557
+    },
+    {
+      "time": 11.780972450961723,
+      "expected_pairs": 0.40473479830795467,
+      "expected_fuel": 0.5952652016920741
+    },
+    {
+      "time": 11.879147221386406,
+      "expected_pairs": 0.3146812325664919,
+      "expected_fuel": 0.685318767433537
+    },
+    {
+      "time": 11.977321991811086,
+      "expected_pairs": 0.23164208584671556,
+      "expected_fuel": 0.7683579141533138
+    },
+    {
+      "time": 12.075496762235767,
+      "expected_pairs": 0.15884667969687316,
+      "expected_fuel": 0.8411533203031567
+    },
+    {
+      "time": 12.173671532660448,
+      "expected_pairs": 0.09911370073625855,
+      "expected_fuel": 0.9008862992637717
+    },
+    {
+      "time": 12.271846303085129,
+      "expected_pairs": 0.054739594546229044,
+      "expected_fuel": 0.9452604054538019
+    },
+    {
+      "time": 12.370021073509811,
+      "expected_pairs": 0.027408530168654917,
+      "expected_fuel": 0.972591469831375
+    },
+    {
+      "time": 12.468195843934492,
+      "expected_pairs": 0.018127911073553132,
+      "expected_fuel": 0.9818720889264764
+    },
+    {
+      "time": 12.566370614359172,
+      "expected_pairs": 0.02719219950000004,
+      "expected_fuel": 0.9728078005000295
+    }
+  ],
+  "resources": {
+    "wall_seconds": 0.9357923530000107,
+    "peak_rss_MiB": 122.859375
+  },
+  "independent_validation": false,
+  "experimental_observations": 0,
+  "next_decision": "stop; seek a separately frozen mechanism with a persistence bound, not another tuned pulse"
+}
