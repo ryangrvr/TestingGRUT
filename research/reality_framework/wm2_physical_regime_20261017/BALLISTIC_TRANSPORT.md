@@ -43,6 +43,8 @@ give, uniformly over the actual conditional receiver and disorder,
 The ideal probe tail at positions >=ell is at most
 tail_(ell-1)(2J|s|)^2<=exp(-3q/2). Geometry remains unrestricted outside
 the protected prefix in the reference and wholly unrestricted physically.
+Processes that leave and later restore the prefix are included in (B1);
+this is not merely a bound on inconsistent final records.
 
 ## 2. An elementary half-line ballistic lower bound
 

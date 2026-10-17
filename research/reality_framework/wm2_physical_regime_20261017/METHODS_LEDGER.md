@@ -1,14 +1,19 @@
 # Numerical-method ledger
 
-Production monotone-sweep certificate implemented and all predeclared
-controls pass. Full physical reference error .01359811 is inside .19647972.
-This is a methods result, not the formation theorem's premise.
+Production monotone-sweep residual implemented; all prerecovery controls pass.
+Full physical reference error .01359811 is inside .19647972.
 
-Exactly two frozen N=5/T=100 root components run sequentially with rank 96,
-1200 seconds each and unchanged error gates. EXECUTED_SOURCES.json pins
-the implementation after controls. Results, whole-worker cost and final
-decision will appear in RESULT_TABLES.md and summary.json.
+The bounded recovery **fails** and this numerical branch is closed.
+Exactly the two frozen workers ran; no fallback, new allocation, larger
+budget or six-event trajectory follows. No target-time interval is
+inferred from a stopped state. See RESULT_TABLES.md and summary.json.
 
-No fallback, new allocation, enlarged budget or six-event trajectory is
-authorized within S9. A failure closes this numerical branch. The B theorem
-does not retrospectively pass A or reinterpret S8's stopped trajectories.
+* Counts [2, 2]: UNRESOLVED, model t=65.032680, wall 1202.430s, peak 68.305 MiB; whole-worker wall-time ceiling.
+* Counts [3, 1]: UNRESOLVED, model t=76.746725, wall 1208.667s, peak 59.840 MiB; whole-worker wall-time ceiling.
+
+The new account is mathematically checked and small-state validated,
+but the direct residual implementation is too costly for this frozen
+finite benchmark. Source pins, costs and failures are preserved.
+The separate all-N analytic proof neither validates the numerical
+method nor fills the missing five-event target. S5 remains the completed
+finite-formation frontier; S9 adds a distinct asymptotic derivation.

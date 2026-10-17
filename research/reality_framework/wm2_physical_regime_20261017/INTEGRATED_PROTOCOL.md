@@ -81,6 +81,9 @@ energy ledger, not zero-cost recording. Conditional accepted energy need
 not obey that same bound; both outcomes and their field energies remain
 in the aggregate ledger. At most log_2(e*N!) geometry-label bits suffice,
 apart from measurement hardware and later record processing.
+The bound concerns the model system's mean-energy change only. It is not
+an upper bound on apparatus implementation/reset work; that hardware,
+temperature and erasure protocol remain unspecified external resources.
 
 Neutral probe injection is supplied and changes particle number. In S4's
 relative single-probe Hamiltonian its initial pair has hopping energy -J;

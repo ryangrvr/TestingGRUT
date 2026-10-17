@@ -24,6 +24,20 @@ lower bound at five or six events, or uniformly over 6<N<2^28. It is a
 conservative asymptotic theorem, not a tractable experiment or an efficient
 simulation claim. It concerns a connected macroscopic partial path, not
 full-N assembly, permanent locking, selected dimension or spacetime.
+The proof only needs |delta_v|<=3/4, so it also covers that larger absolute
+box. This strengthens the frozen target; no observation protocol is changed.
+Some small algebra diagnostics use that larger box, not additional primary
+formation families. The sufficient threshold is not a predicted transition.
+
+For perspective, these are conservative **proof lower bounds from (16),
+not simulation observations** (displayed downward):
+
+| N | Macro lower guarantee | Receiver modes | Earliest model time |
+|---|---:|---|---|
+| 2^20 | 0 (vacuous) | 2^46 | 2^42 |
+| 2^28 | .5060 | 2^62 | 2^58 |
+| 2^32 | .7491 | 2^70 | 2^66 |
+| 2^40 | .9314 | 2^86 | 2^82 |
 
 ## 1. Exact word algebra and physical energy convention
 
@@ -58,6 +72,9 @@ frequencies are 4+sigma(h_L) in [2,6]; (4) subtracts the conserved
 charge sector n_R=K. To use creation/annihilation identities, extend (4) to
 the ordinary full Fock space; all vectors used lie in finitely many adjacent
 charge sectors. This introduces no additional bath, energy, or cutoff.
+Each fixed-charge block is finite-dimensional; define the ambient H by
+their orthogonal direct sum. The identities can thus be checked between
+adjacent finite blocks, without an unbounded-operator domain assumption.
 The decoupled CP-12 benchmark factor remains inert. All reverse terms stay.
 
 ## 2. A uniform correlation bound for the physical receiver
@@ -129,9 +146,9 @@ By (2),(8), throughout the full observation horizon,
 
 The field has not been reset; remote quanta and coherent returns are present.
 Moreover ||a_0^dagger(t)psi_0||=sqrt(1+<n_0(t)>), which is **not** small.
-For fixed u<=t differentiate [A_(u-v)](t-v), 0<=v<=u. The D commutator
+For fixed u<=t differentiate `[A_(u-v)](t-v)`, 0<=v<=u. The D commutator
 cancels its explicit phase derivative, and dGamma(h_L) commutes with A.
-The remaining derivative is -i[V,A_(u-v)](t-v). At equal times geometry
+The remaining derivative is `-i[V,A_(u-v)](t-v)`. At equal times geometry
 and receiver operators commute. Equations (3),(10) imply
 
 \[
@@ -200,6 +217,8 @@ sqrt(4-delta_v^2)>=sqrt(55)/4>gamma_0=9/5. Equations (14) give
 
 Gronwall, retaining damping on the constant first remainder and bounding
 only the other two integrals by their absolute values, yields
+the following. The t^(-1/2) initial-slip bound is integrable: apply from
+an initial eta>0 and let eta decrease to zero using continuity of f.
 
 \[
  f(t)\le M e^{-\gamma_0(g/N)^2t}

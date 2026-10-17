@@ -1,6 +1,6 @@
 # WM2-S9 — a bounded methods test and an analytic operational regime
 
-**Analytic result; primary numerical workers still pending at this checkpoint.**
+**Completed S9: an analytic operational regime is derived; the bounded finite recovery fails.**
 The unchanged model admits a Builder-derived, nonshrinking-disorder formation
 bound at sufficiently large size. The finite threshold is extremely conservative:
 
@@ -61,11 +61,24 @@ sweeps and linear sums across reversals/returns. Full physical controls
 pass; the 333,505-amplitude N=3/L=576/T=36 error is .01359811 inside
 .19647972. The arithmetic claim retains the declared IEEE/BLAS assumptions.
 
-Exactly the two original five-event root components run at T=100, with
-rank 96 and a predeclared 1200 seconds each. No fallback or N=6 run is
-authorized. The new worker limit differs from S8's 900 and S7's 600;
-no equal-budget or equal-error superiority claim is made. A completion
-or stop will be recorded separately and cannot pass the physical ledger.
+Exactly the two original five-event root components were run at T=100,
+with rank 96 and a predeclared 1200 seconds each. Full original-weight
+recovery fails. No fallback or N=6 trajectory is launched; this numerical
+branch is closed. The worker limit differs from S8's 900 and S7's 600;
+no equal-budget or equal-error superiority claim is made.
+
+| Remaining counts | Status | Completed / target model time | Wall s | Peak MiB |
+|---|---|---:|---:|---:|
+| [2, 2] | UNRESOLVED | 65.032680 / 100 | 1202.430 | 68.305 |
+| [3, 1] | UNRESOLVED | 76.746725 / 100 | 1208.667 | 59.840 |
+
+All stop reasons and distinct error components are in RESULT_TABLES.md and
+the raw JSON. The recorded stops are runtime limits, not exhausted
+projection/error allowances. Neither is a negative formation observation.
+The production certificate passes its controls but its evaluated cost
+does not complete this finite recovery protocol. Another solver revision
+is not opened. The analytic theorem does not apply at N=5 and cannot
+substitute for the missing target-time numerical result.
 
 ## Validation and remaining architecture
 

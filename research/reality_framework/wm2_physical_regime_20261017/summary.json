@@ -2,7 +2,7 @@
   "parent": "cb361f8f230371515f1806ab50ca62657a3088be",
   "freeze": "85fc1bd2c4592a57c814bc5b2879aab65fdb85aa",
   "A": {
-    "status": "PENDING",
+    "status": "FAIL",
     "gate_pass": false,
     "original_root_weights": [
       "3/5",
@@ -10,9 +10,38 @@
     ],
     "event_intervals": null,
     "components": [
-      null,
-      null
-    ]
+      {
+        "status": "UNRESOLVED",
+        "counts": [
+          2,
+          2
+        ],
+        "target_time": 100,
+        "completed_step_time": 65.0326797385621,
+        "whole_step_state": true,
+        "stop_reason": "whole-worker wall-time ceiling",
+        "physical_probability_intervals": null
+      },
+      {
+        "status": "UNRESOLVED",
+        "counts": [
+          3,
+          1
+        ],
+        "target_time": 100,
+        "completed_step_time": 76.7467248908297,
+        "whole_step_state": true,
+        "stop_reason": "whole-worker wall-time ceiling",
+        "physical_probability_intervals": null
+      }
+    ],
+    "resources": {
+      "sequential_wall_seconds": 2411.0974633680003,
+      "sequential_CPU_seconds": 2407.3597986659997,
+      "maximum_worker_peak_MiB": 68.3046875,
+      "worker_limit_seconds": 1200,
+      "equal_error_or_budget_speed_claim": false
+    }
   },
   "B": {
     "status": "BUILDER_DERIVED_NOT_EXTERNALLY_REVIEWED",
@@ -31,7 +60,7 @@
     "integrated_original_trial_joint_arrival_lower": "1/589824",
     "arrival_is_receiver_set_not_far_single_site_phase_derivative": true
   },
-  "numerical_branch_closed": false,
+  "numerical_branch_closed": true,
   "no_fallback": true,
   "six_event": "NOT_RUN_NOT_IN_S9",
   "selected_dimension": false,

@@ -49,6 +49,7 @@ def main():
     p=argparse.ArgumentParser()
     for name in ['sweep-controls','analytic-controls','primary']:p.add_argument('--'+name,action='store_true')
     args=p.parse_args();replay=BASE/'replay';replay.mkdir(exist_ok=True)
+    if any(vars(args).values()):verify()
     if args.sweep_controls:
         import sweep_controls
         (replay/'SWEEP_CONTROLS.json').write_text(json.dumps(sweep_controls.run(),indent=2)+'\n')
