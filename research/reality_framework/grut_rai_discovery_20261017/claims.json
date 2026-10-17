@@ -1,0 +1,13 @@
+{
+  "sources": ["protocol", "P1-model", "exact-algebra", "new-code"],
+  "claims": [
+    {"id": "a1-law", "tier": "assumed", "sources": ["protocol", "P1-model"], "ledger_delta": 1, "overturning_computation": "Reject non-Hermitian or constraint-violating assembled Hamiltonian", "statement": "A1 supplies an always-on sum of P1 terms; prior theorems do not automatically transfer"},
+    {"id": "supplied-seed", "tier": "assumed", "sources": ["protocol"], "ledger_delta": 1, "overturning_computation": "Account for supplied fuel occupation and recorded geometry before attributing autonomous preparation", "statement": "Prepared fuel, recorded geometry and a coherent diagnostic receiver state are resources"},
+    {"id": "pair-conservation", "tier": "derived-pending", "sources": ["P1-model", "exact-algebra"], "ledger_delta": 0, "overturning_computation": "Find a nonzero commutator with F+N_plus or F+N_minus", "statement": "H_A1 preserves fuel plus each matter-species number; zero-resource seed cannot produce matter"},
+    {"id": "rabi-control", "tier": "derived-pending", "sources": ["exact-algebra"], "ledger_delta": 0, "overturning_computation": "Compare exact 2x2 exponential with the specified Rabi formula", "statement": "A resonant isolated fuel-pair conversion block returns all matter to fuel at t=pi"},
+    {"id": "finite-persistence", "tier": "to-derive", "sources": ["protocol", "new-code"], "ledger_delta": 0, "overturning_computation": "Exhibit expected pair number below 0.5 inside the frozen interval", "statement": "The full A1 finite persistence target is unresolved until execution"},
+    {"id": "autonomous-world", "tier": "to-derive", "sources": ["protocol"], "ledger_delta": 0, "overturning_computation": "Require an explicit common preparation evolution measurement law and controlled size scaling", "statement": "Autonomous matter-bearing geometry remains open"}
+  ],
+  "independent_review": false,
+  "experimental_observations": 0
+}

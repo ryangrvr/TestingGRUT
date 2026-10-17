@@ -1,0 +1,21 @@
+{
+  "candidate": "GRUT-A1 always-on P1 successor diagnostic",
+  "base_commit": "643ec7f9af41ec5d8d7816a5dcddbe24de2de7a7",
+  "question": "Does the specified continuously converting finite model keep expected pair number >= 0.5 throughout [pi/2, 3pi/2] after a supplied one-fuel seed?",
+  "law": "H_A1 = P1.Model.H0 + P1.Model.C + P1.Model.V, time independent, with all reverse terms retained",
+  "state_space": "Complete root-0 physical-kernel basis from unchanged P1.Model(n=3, matching=((0,1),), modes=2); all rooted words, storage, receiver, matter and fuel sectors retained",
+  "seed": "Recorded word (0,1,2), matching storage; P1 coherent two-mode receiver seed; matter and field vacuum; fuel (0,1) occupied",
+  "parameters": {"n": 3, "receiver_modes": 2, "g": 1, "fuel_delta": 0, "lambda": 1, "j_plus": 0.015625, "j_minus": 0.010416666666666666, "kappa": 0.25},
+  "sample_count": 129,
+  "time_max": 12.566370614359172,
+  "persistence_window": [1.5707963267948966, 4.71238898038469],
+  "pair_threshold": 0.5,
+  "numerical_tolerance": 1e-9,
+  "checks": ["Hermiticity", "norm and energy conservation", "F+N_plus and F+N_minus operator conservation", "vacuum invariance", "nonzero conversion hopping and geometry", "dense versus sparse independent evolution at two times"],
+  "diagnostic_control": "Fixed bond, hopping and density absent: exact two-state P1 conversion with detunings -0.5,0,0.5 and lambda=1; not the full A1 law",
+  "baseline": "Same supplied fuel seed and full H0+V with conversion absent: pair number remains zero",
+  "acceptance": "Numerical samples may support only the sampled target; continuous-window acceptance requires an analytic interval bound. Any robust sampled violation refutes the continuous finite target.",
+  "budgets": {"wall_seconds": 60, "cpu_seconds": 55, "address_space_MiB": 2048, "output_file_MiB": 4, "max_primary_runs": 1, "max_variants": 1, "max_matrix_dimension": 4096},
+  "stop": "Stop after one cycle, on a structural check failure, budget exhaustion, or a decision; no tuning or revision",
+  "scope_limits": ["supplied fuel and recorded geometry", "tiny two-mode receiver, not physical S9 receiver", "ordinary floating point", "no independent validation", "no all-size theorem", "no empirical observations"]
+}
