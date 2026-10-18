@@ -1,0 +1,82 @@
+{
+  "actual_operating_violation": null,
+  "background_work_running": false,
+  "campaign": "B2-BB",
+  "charter_commit": "ecff27de1be31a3a383b89ea63dfdee271f91d67",
+  "claims": [
+    {
+      "artifact": "BOUNDS.md",
+      "id": "user_derivative_and_tail_bounds",
+      "result": "valid; stronger existing high tail retained",
+      "tier": "derived"
+    },
+    {
+      "artifact": "BULK_BOUNDARY.md",
+      "id": "actual_bulk_symbol",
+      "result": "actual continued fraction and unique low bulk branch; source launch not inferred",
+      "tier": "derived"
+    },
+    {
+      "artifact": "BULK_BOUNDARY.md",
+      "id": "actual_bulk_boundary_split",
+      "result": "exact Toeplitz bulk plus exponentially localized trace-class boundary; all words retained",
+      "tier": "derived"
+    },
+    {
+      "artifact": "BULK_BOUNDARY.md",
+      "bound_over_J": "1506254603/840983040000",
+      "fuel_coupling_separate": true,
+      "id": "copair_boundary_trace_norm",
+      "scope": "real E in [2-5J,2], covering known first bulk band only",
+      "tier": "derived",
+      "upper_target": "1/500"
+    },
+    {
+      "artifact": "SOURCE_KERNEL.md",
+      "id": "offreal_spatial_source_inverse",
+      "scope": "fixed Im z>0 and Re z<=2.5; no uniform real-axis constants established",
+      "tier": "derived"
+    },
+    {
+      "artifact": "REVIEW_PROBLEM.md",
+      "id": "real_axis_source_scattering_and_operating_gate",
+      "sub_status": "unresolved",
+      "tier": "to-derive"
+    },
+    {
+      "id": "historical_B2_endpoint_operating_claim",
+      "reopened": false,
+      "source_commit": "d6fc811690372342ac0ab54e453c81b427fe6b37",
+      "sub_status": "refuted",
+      "tier": "derived"
+    }
+  ],
+  "decision": "stop_at_named_unproved_real_axis_scattering_theorem; preserve_original_gates",
+  "input_sha256": {
+    "research/reality_framework/grut_b2_actual_source_20261018/ACTUAL_RESOLVENT.md": "838006e47aa07079e553cb0940ff8cc1d915418321fae57ce6248e4c28f168ed",
+    "research/reality_framework/grut_b2_actual_source_20261018/PROOF_DEPENDENCY.md": "2dad3efdd2bbfdf3475b5e0b1030f9022bc36c5de6787abc94f5e318a8d71ed2",
+    "research/reality_framework/grut_b2_kernel_note_20261018/KERNEL_NOTE.md": "8ed20f7f2e57f5007a4656a6556def231c2267541fb7778e2dd434668ed0449c",
+    "research/reality_framework/grut_b2_source_output_20261018/PROOF.md": "b6b4188b9c9fb103321ca49efa4a7a06f77d1ee84e11eb0c2be5867e5b7e3dc6",
+    "research/reality_framework/grut_b2_source_spectrum_20261018/SOURCE_PROOF.md": "ee6224a842f328d8dfcfc90e0d6cfd0b251af5b37d09282a25f08a98a0bd2588"
+  },
+  "operating_gate": "unresolved",
+  "parent": "9ef64dc21987a845c900a686f8b86846a21e2cfa",
+  "review": {
+    "independent_external_validation": false,
+    "one_assistant_this_cycle": true,
+    "reviewers_contacted": false,
+    "shared_theory_code_ancestry": true
+  },
+  "source_freeze_commit": "ca9ce9a00f834e686a7c68e74883b876517670f7",
+  "source_hamiltonian_changed": false,
+  "status": "author_derived_pending_independent_external_review",
+  "verification": {
+    "byte_identical_output": true,
+    "exact_rational_checks": 66,
+    "output_sha256": "df0f895600d8a3318b7e25355a094d80467c72d8f5ab9d87f68f47a29a4cc91e",
+    "primary_runs": 1,
+    "replays": 1,
+    "source_dynamics_runs": 0,
+    "word_tables": 4
+  }
+}
