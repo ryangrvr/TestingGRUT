@@ -1,0 +1,779 @@
+{
+  "configuration": {
+    "a": 1.0,
+    "b": 0.1,
+    "F0": 1.979050307129842,
+    "g": 0.1,
+    "v_over_reduced_Mpl": 1e-05,
+    "Gv2": 3.978873577297384e-12,
+    "boundary_conditions": "Fprime(0)=Sprime(0)=0,F(L)=0,S(L)=1,F(0)=1.979050307129842",
+    "bvp_runs": [
+      {
+        "name": "base",
+        "L": 30.0,
+        "nodes": 301,
+        "tol": 1e-05
+      },
+      {
+        "name": "grid_refinement",
+        "L": 30.0,
+        "nodes": 601,
+        "tol": 1e-07
+      },
+      {
+        "name": "domain_refinement",
+        "L": 40.0,
+        "nodes": 801,
+        "tol": 1e-08
+      },
+      {
+        "name": "domain_confirmation",
+        "L": 50.0,
+        "nodes": 1001,
+        "tol": 1e-09
+      }
+    ],
+    "initial_guesses": [
+      {
+        "width": 3.0,
+        "Omega": 0.8,
+        "from_preparation_seed": true
+      }
+    ],
+    "eigen_grids": [
+      {
+        "L": 30.0,
+        "N": 1200
+      },
+      {
+        "L": 40.0,
+        "N": 2000
+      },
+      {
+        "L": 40.0,
+        "N": 3200
+      }
+    ],
+    "eigen_l": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "architecture": "Einstein + one complex X + one real phi, exact global U(1)",
+    "physical_couplings_frozen_before_results": true,
+    "preparation_frozen_before_verification": true,
+    "preparation_selection": "Six failed high-central-amplitude BVP starts archived. First fixed-frequency Omega=0.8 bag seed converged, then central F0 was frozen for the verification runs."
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "command": "python GRUT_Candidate_1/code/qball.py",
+  "attempts": [
+    {
+      "name": "base",
+      "L": 30.0,
+      "nodes": 301,
+      "tol": 1e-05,
+      "guess": {
+        "width": 3.0,
+        "Omega": 0.8,
+        "from_preparation_seed": true
+      },
+      "status": 0,
+      "message": "The algorithm converged to the desired accuracy.",
+      "Omega": 0.7999999545410641,
+      "mesh_nodes": 301,
+      "max_rms_residual": 4.384718506639796e-06,
+      "boundary_max_abs": 1.7377018696717515e-31,
+      "min_F": -1.4701842918422953e-25,
+      "min_S": 0.049079958372667036,
+      "F0": 1.979050307129842,
+      "S0": 0.049079958372667036,
+      "seconds": 0.04453564799996457
+    },
+    {
+      "name": "grid_refinement",
+      "L": 30.0,
+      "nodes": 601,
+      "tol": 1e-07,
+      "guess": null,
+      "status": 0,
+      "message": "The algorithm converged to the desired accuracy.",
+      "Omega": 0.8000000014123095,
+      "mesh_nodes": 686,
+      "max_rms_residual": 9.676322636840552e-08,
+      "boundary_max_abs": 5.634287893495097e-33,
+      "min_F": -8.456588903969247e-27,
+      "min_S": 0.04907997892807584,
+      "F0": 1.979050307129842,
+      "S0": 0.04907997892807584,
+      "seconds": 0.012526581999964037
+    },
+    {
+      "name": "domain_refinement",
+      "L": 40.0,
+      "nodes": 801,
+      "tol": 1e-08,
+      "guess": null,
+      "status": 0,
+      "message": "The algorithm converged to the desired accuracy.",
+      "Omega": 0.8000000019465161,
+      "mesh_nodes": 1148,
+      "max_rms_residual": 9.85621091651774e-09,
+      "boundary_max_abs": 5.021112086307228e-37,
+      "min_F": -1.9356674461860577e-28,
+      "min_S": 0.04907997887352745,
+      "F0": 1.979050307129842,
+      "S0": 0.04907997887352745,
+      "seconds": 0.041198592000000644
+    },
+    {
+      "name": "domain_confirmation",
+      "L": 50.0,
+      "nodes": 1001,
+      "tol": 1e-09,
+      "guess": null,
+      "status": 0,
+      "message": "The algorithm converged to the desired accuracy.",
+      "Omega": 0.8000000019763136,
+      "mesh_nodes": 2102,
+      "max_rms_residual": 9.997029605687416e-10,
+      "boundary_max_abs": 8.385807916289807e-41,
+      "min_F": -1.645707137478893e-31,
+      "min_S": 0.04907997887061572,
+      "F0": 1.979050307129842,
+      "S0": 0.04907997887061572,
+      "seconds": 0.05180304700002125
+    }
+  ],
+  "preliminary_failure_archives": [
+    "results_initial_failure.json",
+    "results_gaussian_failure.json"
+  ],
+  "preparation_search": "results_preparation_search.json",
+  "convergence": [
+    {
+      "L": 30.0,
+      "Omega": 0.7999999545410641,
+      "S0": 0.049079958372667036,
+      "Ibar": 499.29824331983235,
+      "Qbar": 399.43857195829906,
+      "Ebar": 363.9230877703247,
+      "Ebar_over_Qbar": 0.9110864931900413,
+      "R90_bar": 5.1034322419777425,
+      "Egrad_bar": 66.55835634108469,
+      "Etime_bar": 159.77541970429337,
+      "EU_bar": 137.58931172494655,
+      "integrated_pressure_bar": -3.240304425923486e-05,
+      "active_mass_bar": 363.92305536728037,
+      "Q_at_g_0p1": 39943.8571958299,
+      "E_over_v_at_g_0p1": 3639.2308777032467,
+      "R90_times_v_at_g_0p1": 51.034322419777425,
+      "Schwarzschild_radius_over_R90": 5.674627934461119e-10,
+      "maximum_compactness": 5.209813908796661e-10,
+      "central_energy_density_over_g2v4": 1.8903407544446726,
+      "central_pressure_over_g2v4": 0.6163086362977301
+    },
+    {
+      "L": 30.0,
+      "Omega": 0.8000000014123095,
+      "S0": 0.04907997892807584,
+      "Ibar": 499.29807897136163,
+      "Qbar": 399.43846388225273,
+      "Ebar": 363.92299970862,
+      "Ebar_over_Qbar": 0.9110865192389133,
+      "R90_bar": 5.103432053036437,
+      "Egrad_bar": 66.55834191168402,
+      "Etime_bar": 159.77538583496647,
+      "EU_bar": 137.58927196196956,
+      "integrated_pressure_bar": -2.9269324540329174e-07,
+      "active_mass_bar": 363.92299941592677,
+      "Q_at_g_0p1": 39943.84638822527,
+      "E_over_v_at_g_0p1": 3639.2299970862,
+      "R90_times_v_at_g_0p1": 51.03432053036437,
+      "Schwarzschild_radius_over_R90": 5.674626771409249e-10,
+      "maximum_compactness": 5.209812978537939e-10,
+      "central_energy_density_over_g2v4": 1.8903409042518171,
+      "central_pressure_over_g2v4": 0.616308780215058
+    },
+    {
+      "L": 40.0,
+      "Omega": 0.8000000019465161,
+      "S0": 0.04907997887352745,
+      "Ibar": 499.29807690656884,
+      "Qbar": 399.4384624971468,
+      "Ebar": 363.9229986103419,
+      "Ebar_over_Qbar": 0.9110865196486715,
+      "R90_bar": 5.103432140858587,
+      "Egrad_bar": 66.55834174514982,
+      "Etime_bar": 159.77538538761542,
+      "EU_bar": 137.58927147757657,
+      "integrated_pressure_bar": -1.50332746339859e-08,
+      "active_mass_bar": 363.9229985953085,
+      "Q_at_g_0p1": 39943.846249714676,
+      "E_over_v_at_g_0p1": 3639.229986103419,
+      "R90_times_v_at_g_0p1": 51.03432140858587,
+      "Schwarzschild_radius_over_R90": 5.67462665663235e-10,
+      "maximum_compactness": 5.209812911517163e-10,
+      "central_energy_density_over_g2v4": 1.890340905917838,
+      "central_pressure_over_g2v4": 0.6163087818967086
+    },
+    {
+      "L": 50.0,
+      "Omega": 0.8000000019763136,
+      "S0": 0.04907997887061572,
+      "Ibar": 499.29807679441456,
+      "Qbar": 399.4384624223012,
+      "Ebar": 363.9229985516867,
+      "Ebar_over_Qbar": 0.9110865196725442,
+      "R90_bar": 5.103432213468092,
+      "Egrad_bar": 66.558341736314,
+      "Etime_bar": 159.77538536362835,
+      "EU_bar": 137.5892714517444,
+      "integrated_pressure_bar": -6.621704695389985e-10,
+      "active_mass_bar": 363.92299855102453,
+      "Q_at_g_0p1": 39943.84624223011,
+      "E_over_v_at_g_0p1": 3639.2299855168667,
+      "R90_times_v_at_g_0p1": 51.03432213468091,
+      "Schwarzschild_radius_over_R90": 5.674626574981522e-10,
+      "maximum_compactness": 5.209812867777971e-10,
+      "central_energy_density_over_g2v4": 1.8903409060107859,
+      "central_pressure_over_g2v4": 0.6163087819904909
+    }
+  ],
+  "observables": {
+    "L": 50.0,
+    "Omega": 0.8000000019763136,
+    "S0": 0.04907997887061572,
+    "Ibar": 499.29807679441456,
+    "Qbar": 399.4384624223012,
+    "Ebar": 363.9229985516867,
+    "Ebar_over_Qbar": 0.9110865196725442,
+    "R90_bar": 5.103432213468092,
+    "Egrad_bar": 66.558341736314,
+    "Etime_bar": 159.77538536362835,
+    "EU_bar": 137.5892714517444,
+    "integrated_pressure_bar": -6.621704695389985e-10,
+    "active_mass_bar": 363.92299855102453,
+    "Q_at_g_0p1": 39943.84624223011,
+    "E_over_v_at_g_0p1": 3639.2299855168667,
+    "R90_times_v_at_g_0p1": 51.03432213468091,
+    "Schwarzschild_radius_over_R90": 5.674626574981522e-10,
+    "maximum_compactness": 5.209812867777971e-10,
+    "central_energy_density_over_g2v4": 1.8903409060107859,
+    "central_pressure_over_g2v4": 0.6163087819904909
+  },
+  "spectra": [
+    {
+      "L": 30.0,
+      "N": 1200,
+      "h": 0.02497918401332223,
+      "ell": 0,
+      "lowest_eigenvalues": [
+        0.37291656049778676,
+        0.41141622083491103,
+        0.4734612262888138,
+        0.5521728851011278,
+        0.6389933719175452
+      ],
+      "seconds": 1.2740061409999726,
+      "rank_one_applied": true
+    },
+    {
+      "L": 30.0,
+      "N": 1200,
+      "h": 0.02497918401332223,
+      "ell": 1,
+      "lowest_eigenvalues": [
+        -1.063763250082729e-05,
+        0.38315347488448315,
+        0.4308027979379235,
+        0.5047074268365255,
+        0.6046932527726089
+      ],
+      "seconds": 0.9015627029999678,
+      "rank_one_applied": false,
+      "lowest_translation_overlap_abs": 0.99999999978497,
+      "translation_Rayleigh": -1.063684894013546e-05
+    },
+    {
+      "L": 30.0,
+      "N": 1200,
+      "h": 0.02497918401332223,
+      "ell": 2,
+      "lowest_eigenvalues": [
+        0.2854833653617964,
+        0.39744949817556524,
+        0.4557121828388593,
+        0.5398512516371703,
+        0.649733268647032
+      ],
+      "seconds": 0.9786497960000133,
+      "rank_one_applied": false
+    },
+    {
+      "L": 30.0,
+      "N": 1200,
+      "h": 0.02497918401332223,
+      "ell": 3,
+      "lowest_eigenvalues": [
+        0.414179530488036,
+        0.47885395510586276,
+        0.5517007671382067,
+        0.6169155538830174,
+        0.7181092262859682
+      ],
+      "seconds": 1.1134923879999405,
+      "rank_one_applied": false
+    },
+    {
+      "L": 40.0,
+      "N": 2000,
+      "h": 0.01999000499750125,
+      "ell": 0,
+      "lowest_eigenvalues": [
+        0.366966495705373,
+        0.3878371748947554,
+        0.42235616244696345,
+        0.4696069741836086,
+        0.5273162244835867
+      ],
+      "seconds": 3.6575875720000113,
+      "rank_one_applied": true
+    },
+    {
+      "L": 40.0,
+      "N": 2000,
+      "h": 0.01999000499750125,
+      "ell": 1,
+      "lowest_eigenvalues": [
+        -6.812524439314978e-06,
+        0.3728028485376486,
+        0.39856824264314156,
+        0.4382229550429398,
+        0.4920073104550693
+      ],
+      "seconds": 2.97402136900007,
+      "rank_one_applied": false,
+      "lowest_translation_overlap_abs": 0.999999999911849,
+      "translation_Rayleigh": -6.812203761349741e-06
+    },
+    {
+      "L": 40.0,
+      "N": 2000,
+      "h": 0.01999000499750125,
+      "ell": 2,
+      "lowest_eigenvalues": [
+        0.2854864777568113,
+        0.3808550039336928,
+        0.4125345422047771,
+        0.4578407522368462,
+        0.5171334206722503
+      ],
+      "seconds": 3.1730357189999268,
+      "rank_one_applied": false
+    },
+    {
+      "L": 40.0,
+      "N": 2000,
+      "h": 0.01999000499750125,
+      "ell": 3,
+      "lowest_eigenvalues": [
+        0.3905134329975618,
+        0.4276931751358009,
+        0.47613417289458027,
+        0.5320615184675886,
+        0.5847387416232533
+      ],
+      "seconds": 4.357794502000047,
+      "rank_one_applied": false
+    },
+    {
+      "L": 40.0,
+      "N": 3200,
+      "h": 0.012496094970321775,
+      "ell": 0,
+      "lowest_eigenvalues": [
+        0.36696654078632995,
+        0.3878373594433894,
+        0.4223566138049426,
+        0.46960793450420685,
+        0.5273182146318868
+      ],
+      "seconds": 12.589815148999946,
+      "rank_one_applied": true
+    },
+    {
+      "L": 40.0,
+      "N": 3200,
+      "h": 0.012496094970321775,
+      "ell": 1,
+      "lowest_eigenvalues": [
+        -2.6621109886146778e-06,
+        0.3728028584743886,
+        0.3985683169063765,
+        0.43822320852392993,
+        0.4920079278314128
+      ],
+      "seconds": 11.533094307999932,
+      "rank_one_applied": false,
+      "lowest_translation_overlap_abs": 0.9999999999866642,
+      "translation_Rayleigh": -2.6620505312737485e-06
+    },
+    {
+      "L": 40.0,
+      "N": 3200,
+      "h": 0.012496094970321775,
+      "ell": 2,
+      "lowest_eigenvalues": [
+        0.28548987423686534,
+        0.3808550115763132,
+        0.4125346053432917,
+        0.45784097684928865,
+        0.5171339844312659
+      ],
+      "seconds": 13.259482610999953,
+      "rank_one_applied": false
+    },
+    {
+      "L": 40.0,
+      "N": 3200,
+      "h": 0.012496094970321775,
+      "ell": 3,
+      "lowest_eigenvalues": [
+        0.3905134379657175,
+        0.42769321548284656,
+        0.4761343243891962,
+        0.532061950808323,
+        0.5847398351486319
+      ],
+      "seconds": 14.429220669000074,
+      "rank_one_applied": false
+    }
+  ],
+  "checks": {
+    "stress_conservation_max_abs": 4.69436461925099e-10,
+    "stress_conservation_max_relative": 2.102901772609712e-09,
+    "virial_Tgrad_plus_3_U_minus_Ttime": 6.640590299866744e-10,
+    "virial_relative_to_E": 1.8247240010371526e-12,
+    "active_mass_over_energy": 0.9999999999981751,
+    "central_Phi": -6.688125569491571e-10,
+    "central_Psi": -5.239115498041904e-10,
+    "central_gravitational_redshift_to_infinity_first_order": 6.688125569491571e-10,
+    "Phi_at_R90": -2.828221589026688e-10,
+    "Psi_at_R90": -2.8007319338068276e-10,
+    "phase_sector_spectrum": [
+      {
+        "ell": 0,
+        "N": 1200,
+        "h": 0.02497918401332223,
+        "L": 30.0,
+        "lowest_eigenvalues": [
+          -4.049433521547888e-06,
+          0.37293470034609344,
+          0.41147656689768086,
+          0.475128970976803
+        ]
+      },
+      {
+        "ell": 1,
+        "N": 1200,
+        "h": 0.02497918401332223,
+        "L": 30.0,
+        "lowest_eigenvalues": [
+          0.27172642407737013,
+          0.3843164829513912,
+          0.4355786118236121,
+          0.5135954649827381
+        ]
+      },
+      {
+        "ell": 2,
+        "N": 1200,
+        "h": 0.02497918401332223,
+        "L": 30.0,
+        "lowest_eigenvalues": [
+          0.3965349000566287,
+          0.4465558968002829,
+          0.5034121720253237,
+          0.5775372864358639
+        ]
+      },
+      {
+        "ell": 0,
+        "N": 2000,
+        "h": 0.01999000499750125,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          -2.593352932607252e-06,
+          0.36697730061628014,
+          0.38784665038006644,
+          0.42246371090502893
+        ]
+      },
+      {
+        "ell": 1,
+        "N": 2000,
+        "h": 0.01999000499750125,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          0.2717280557097228,
+          0.3731326276359322,
+          0.4002584637347947,
+          0.4420363374180788
+        ]
+      },
+      {
+        "ell": 2,
+        "N": 2000,
+        "h": 0.01999000499750125,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          0.38071054116239605,
+          0.4109641037754455,
+          0.45037859110102213,
+          0.4946473889233351
+        ]
+      },
+      {
+        "ell": 0,
+        "N": 3200,
+        "h": 0.012496094970321775,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          -1.0134037564148466e-06,
+          0.36697733750317557,
+          0.3878468074345577,
+          0.4224640984840286
+        ]
+      },
+      {
+        "ell": 1,
+        "N": 3200,
+        "h": 0.012496094970321775,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          0.27172984785075116,
+          0.3731326408654465,
+          0.4002585439867645,
+          0.44203658145318003
+        ]
+      },
+      {
+        "ell": 2,
+        "N": 3200,
+        "h": 0.012496094970321775,
+        "L": 40.0,
+        "lowest_eigenvalues": [
+          0.38071054442127106,
+          0.4109641331312388,
+          0.4503787083190721,
+          0.4946477206292462
+        ]
+      }
+    ],
+    "light_bending": [
+      {
+        "impact_bar": 10.0,
+        "deflection_rad": 5.791670807741334e-10,
+        "point_mass_4GME_over_b": 5.792014412432585e-10,
+        "ratio_to_point_mass": 0.9999406761332442
+      },
+      {
+        "impact_bar": 20.0,
+        "deflection_rad": 2.896007205454365e-10,
+        "point_mass_4GME_over_b": 2.8960072062162924e-10,
+        "ratio_to_point_mass": 0.9999999997369041
+      },
+      {
+        "impact_bar": 50.0,
+        "deflection_rad": 1.1584028824854602e-10,
+        "point_mass_4GME_over_b": 1.1584028824865169e-10,
+        "ratio_to_point_mass": 0.9999999999990877
+      },
+      {
+        "impact_bar": 100.0,
+        "deflection_rad": 5.792014412427301e-11,
+        "point_mass_4GME_over_b": 5.7920144124325845e-11,
+        "ratio_to_point_mass": 0.9999999999990877
+      }
+    ],
+    "asymptotic_F_mass": 0.5999999973649152,
+    "asymptotic_S_mass": 1.4142135623730951,
+    "exterior_Phi_at_L": -2.896007206210922e-11,
+    "exterior_Psi_at_L": -2.8960072062161947e-11,
+    "poisson_active_mass_bar": 363.92299855101334,
+    "poisson_energy_mass_bar": 363.9229985516759
+  },
+  "additional_diagnostics": {
+    "unconstrained_local_l0_lowest": [
+      -0.18885498735925402,
+      0.36697874228724225,
+      0.38795386624719524
+    ],
+    "local_l0_grid": {
+      "N": 2000,
+      "L": 40.0,
+      "h": 0.01999000499750125
+    },
+    "checks": {
+      "stress_conservation_max_abs": 4.69436461925099e-10,
+      "stress_conservation_max_relative": 2.102901772609712e-09,
+      "virial_Tgrad_plus_3_U_minus_Ttime": 6.640590299866744e-10,
+      "virial_relative_to_E": 1.8247240010371526e-12,
+      "active_mass_over_energy": 0.9999999999981751,
+      "central_Phi": -6.688125569491571e-10,
+      "central_Psi": -5.239115498041904e-10,
+      "central_gravitational_redshift_to_infinity_first_order": 6.688125569491571e-10,
+      "Phi_at_R90": -2.828221589026688e-10,
+      "Psi_at_R90": -2.8007319338068276e-10,
+      "phase_sector_spectrum": [
+        {
+          "ell": 0,
+          "N": 1200,
+          "h": 0.02497918401332223,
+          "L": 30.0,
+          "lowest_eigenvalues": [
+            -4.049433521547888e-06,
+            0.37293470034609344,
+            0.41147656689768086,
+            0.475128970976803
+          ]
+        },
+        {
+          "ell": 1,
+          "N": 1200,
+          "h": 0.02497918401332223,
+          "L": 30.0,
+          "lowest_eigenvalues": [
+            0.27172642407737013,
+            0.3843164829513912,
+            0.4355786118236121,
+            0.5135954649827381
+          ]
+        },
+        {
+          "ell": 2,
+          "N": 1200,
+          "h": 0.02497918401332223,
+          "L": 30.0,
+          "lowest_eigenvalues": [
+            0.3965349000566287,
+            0.4465558968002829,
+            0.5034121720253237,
+            0.5775372864358639
+          ]
+        },
+        {
+          "ell": 0,
+          "N": 2000,
+          "h": 0.01999000499750125,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            -2.593352932607252e-06,
+            0.36697730061628014,
+            0.38784665038006644,
+            0.42246371090502893
+          ]
+        },
+        {
+          "ell": 1,
+          "N": 2000,
+          "h": 0.01999000499750125,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            0.2717280557097228,
+            0.3731326276359322,
+            0.4002584637347947,
+            0.4420363374180788
+          ]
+        },
+        {
+          "ell": 2,
+          "N": 2000,
+          "h": 0.01999000499750125,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            0.38071054116239605,
+            0.4109641037754455,
+            0.45037859110102213,
+            0.4946473889233351
+          ]
+        },
+        {
+          "ell": 0,
+          "N": 3200,
+          "h": 0.012496094970321775,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            -1.0134037564148466e-06,
+            0.36697733750317557,
+            0.3878468074345577,
+            0.4224640984840286
+          ]
+        },
+        {
+          "ell": 1,
+          "N": 3200,
+          "h": 0.012496094970321775,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            0.27172984785075116,
+            0.3731326408654465,
+            0.4002585439867645,
+            0.44203658145318003
+          ]
+        },
+        {
+          "ell": 2,
+          "N": 3200,
+          "h": 0.012496094970321775,
+          "L": 40.0,
+          "lowest_eigenvalues": [
+            0.38071054442127106,
+            0.4109641331312388,
+            0.4503787083190721,
+            0.4946477206292462
+          ]
+        }
+      ],
+      "light_bending": [
+        {
+          "impact_bar": 10.0,
+          "deflection_rad": 5.791670807741334e-10,
+          "point_mass_4GME_over_b": 5.792014412432585e-10,
+          "ratio_to_point_mass": 0.9999406761332442
+        },
+        {
+          "impact_bar": 20.0,
+          "deflection_rad": 2.896007205454365e-10,
+          "point_mass_4GME_over_b": 2.8960072062162924e-10,
+          "ratio_to_point_mass": 0.9999999997369041
+        },
+        {
+          "impact_bar": 50.0,
+          "deflection_rad": 1.1584028824854602e-10,
+          "point_mass_4GME_over_b": 1.1584028824865169e-10,
+          "ratio_to_point_mass": 0.9999999999990877
+        },
+        {
+          "impact_bar": 100.0,
+          "deflection_rad": 5.792014412427301e-11,
+          "point_mass_4GME_over_b": 5.7920144124325845e-11,
+          "ratio_to_point_mass": 0.9999999999990877
+        }
+      ],
+      "asymptotic_F_mass": 0.5999999973649152,
+      "asymptotic_S_mass": 1.4142135623730951,
+      "exterior_Phi_at_L": -2.896007206210922e-11,
+      "exterior_Psi_at_L": -2.8960072062161947e-11,
+      "poisson_active_mass_bar": 363.92299855101334,
+      "poisson_energy_mass_bar": 363.9229985516759
+    },
+    "note": "Local l0 excludes the fixed-charge rank-one term; it is diagnostic, not the physical fixed-Q Hessian."
+  }
+}

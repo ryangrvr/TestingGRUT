@@ -1,0 +1,522 @@
+{
+  "configuration": {
+    "a_D": 0.01,
+    "m_D0_over_gv": 1.0,
+    "momenta_over_gv": [
+      3.0,
+      5.0,
+      7.0
+    ],
+    "radial_domain": 50.0,
+    "solver_tolerances": [
+      1e-08,
+      1e-10,
+      1e-12
+    ],
+    "packet": {
+      "k": 5.0,
+      "center": 22.0,
+      "sigma": 3.0,
+      "domain": 80.0,
+      "grid_points": 1400,
+      "refinement_grids": [
+        700,
+        1400,
+        2800
+      ],
+      "times": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0
+      ]
+    },
+    "scope": "classical linear test field and its ideal elastic-mode interferometer"
+  },
+  "profile_sha256": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3",
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "disclaimer": "No full coupled quantum or empirical claim.",
+  "potential_integral_abs": 0.040668499375869076,
+  "phase_results": [
+    {
+      "k_over_gv": 3.0,
+      "energy_over_gv": 3.163858403911275,
+      "phase_delta_s_wave": 0.006776510977783381,
+      "S_phase": 0.013553021955566761,
+      "born_delta": 0.006778078901574645,
+      "actual_born_difference": 1.5679237912640323e-06,
+      "analytic_born_remainder_bound_for_exact_profile": 9.188482452694797e-05,
+      "P_plus_reference_phase_pi_over_2": 0.4932236964768748,
+      "convergence": [
+        {
+          "tolerance": 1e-08,
+          "delta": 0.00677651097791716,
+          "delta_wave_fit": 0.006776494924276122,
+          "method_difference": 1.6053641038044075e-08
+        },
+        {
+          "tolerance": 1e-10,
+          "delta": 0.006776510977748755,
+          "delta_wave_fit": 0.006776509858406499,
+          "method_difference": 1.119342256036826e-09
+        },
+        {
+          "tolerance": 1e-12,
+          "delta": 0.006776510977783381,
+          "delta_wave_fit": 0.006776510966796323,
+          "method_difference": 1.0987057617872775e-11
+        }
+      ]
+    },
+    {
+      "k_over_gv": 5.0,
+      "energy_over_gv": 5.1000000000000005,
+      "phase_delta_s_wave": 0.004066511575054998,
+      "S_phase": 0.008133023150109995,
+      "born_delta": 0.004066849937536937,
+      "actual_born_difference": 3.383624819393305e-07,
+      "analytic_born_remainder_bound_for_exact_profile": 3.307853682970127e-05,
+      "P_plus_reference_phase_pi_over_2": 0.4959335332554203,
+      "convergence": [
+        {
+          "tolerance": 1e-08,
+          "delta": 0.0040665115760323,
+          "delta_wave_fit": 0.0040663211017264445,
+          "method_difference": 1.9047430585561465e-07
+        },
+        {
+          "tolerance": 1e-10,
+          "delta": 0.004066511575045949,
+          "delta_wave_fit": 0.004066509681473818,
+          "method_difference": 1.893572131560217e-09
+        },
+        {
+          "tolerance": 1e-12,
+          "delta": 0.004066511575054998,
+          "delta_wave_fit": 0.004066511556453989,
+          "method_difference": 1.8601008754115522e-11
+        }
+      ]
+    },
+    {
+      "k_over_gv": 7.0,
+      "energy_over_gv": 7.071774883294857,
+      "phase_delta_s_wave": 0.002904769535213676,
+      "S_phase": 0.005809539070427352,
+      "born_delta": 0.0029048928125616903,
+      "actual_born_difference": 1.232773480142231e-07,
+      "analytic_born_remainder_bound_for_exact_profile": 1.6876804504949627e-05,
+      "P_plus_reference_phase_pi_over_2": 0.49709524680444767,
+      "convergence": [
+        {
+          "tolerance": 1e-08,
+          "delta": 0.002904769539041538,
+          "delta_wave_fit": 0.0029044992453410856,
+          "method_difference": 2.702937004525445e-07
+        },
+        {
+          "tolerance": 1e-10,
+          "delta": 0.002904769535147861,
+          "delta_wave_fit": 0.0029047668478998645,
+          "method_difference": 2.687247996607106e-09
+        },
+        {
+          "tolerance": 1e-12,
+          "delta": 0.002904769535213676,
+          "delta_wave_fit": 0.002904769508853988,
+          "method_difference": 2.6359687869959014e-11
+        }
+      ]
+    }
+  ],
+  "packet_grid_runs": [
+    {
+      "N": 700,
+      "h": 0.11412268188302425,
+      "trajectory": [
+        {
+          "time_in_inverse_gv": 0.0,
+          "norm": 0.9999999999999994,
+          "reference_norm": 1.0000000000000013,
+          "mean_radius": 21.999999999999986,
+          "outside_readout_probability": 0.9999986720564565,
+          "reference_readout_probability": 0.9999986720564583,
+          "overlap_with_reference": {
+            "real": 0.9999986720564574,
+            "imag": 3.409962739743701e-18
+          },
+          "relative_phase_on_readout": 3.4099672679877148e-18,
+          "selected_probability": 0.9999986720564574,
+          "joint_plus_probability": 0.4999993360282287,
+          "joint_minus_probability": 0.4999993360282287,
+          "conditional_plus_probability": 0.5,
+          "visibility": 1.0
+        },
+        {
+          "time_in_inverse_gv": 10.0,
+          "norm": 1.0000000000000009,
+          "reference_norm": 1.0000000000000002,
+          "mean_radius": 12.599531203754646,
+          "outside_readout_probability": 0.6041572308376488,
+          "reference_readout_probability": 0.6041572314555355,
+          "overlap_with_reference": {
+            "real": 0.6041572311465919,
+            "imag": 2.551740631729499e-09
+          },
+          "relative_phase_on_readout": 4.223636663069829e-09,
+          "selected_probability": 0.6041572311465921,
+          "joint_plus_probability": 0.3020786142974258,
+          "joint_minus_probability": 0.30207861684916637,
+          "conditional_plus_probability": 0.4999999978881817,
+          "visibility": 0.9999999999999997
+        },
+        {
+          "time_in_inverse_gv": 20.0,
+          "norm": 0.9999999999999993,
+          "reference_norm": 0.9999999999999994,
+          "mean_radius": 3.3228470981152785,
+          "outside_readout_probability": 1.469708310526112e-05,
+          "reference_readout_probability": 1.4697072615000372e-05,
+          "overlap_with_reference": {
+            "real": 1.469707786011657e-05,
+            "imag": 1.9716424645937445e-12
+          },
+          "relative_phase_on_readout": 1.341520051373052e-07,
+          "selected_probability": 1.4697077860130745e-05,
+          "joint_plus_probability": 7.348537944244141e-06,
+          "joint_minus_probability": 7.348539915886605e-06,
+          "conditional_plus_probability": 0.49999993292399747,
+          "visibility": 0.9999999999990444
+        },
+        {
+          "time_in_inverse_gv": 30.0,
+          "norm": 0.9999999999999996,
+          "reference_norm": 0.9999999999999992,
+          "mean_radius": 6.205006224427153,
+          "outside_readout_probability": 0.0030314359177987943,
+          "reference_readout_probability": 0.0030248354656812523,
+          "overlap_with_reference": {
+            "real": 0.0030280247864865224,
+            "imag": 2.5703632469532443e-05
+          },
+          "relative_phase_on_readout": 0.008488376727939438,
+          "selected_probability": 0.0030281356917400233,
+          "joint_plus_probability": 0.0015012160296352453,
+          "joint_minus_probability": 0.001526919662104778,
+          "conditional_plus_probability": 0.4957558651450717,
+          "visibility": 0.999999401103247
+        },
+        {
+          "time_in_inverse_gv": 40.0,
+          "norm": 1.0000000000000009,
+          "reference_norm": 1.0000000000000002,
+          "mean_radius": 15.603413198776769,
+          "outside_readout_probability": 0.9536449372452346,
+          "reference_readout_probability": 0.9535749848519803,
+          "overlap_with_reference": {
+            "real": 0.9535745243665554,
+            "imag": 0.0082149013777865
+          },
+          "relative_phase_on_readout": 0.008614636771651878,
+          "selected_probability": 0.9536099610486075,
+          "joint_plus_probability": 0.4726975298354105,
+          "joint_minus_probability": 0.480912431213197,
+          "conditional_plus_probability": 0.4956927351258196,
+          "visibility": 0.9999999451898757
+        }
+      ]
+    },
+    {
+      "N": 1400,
+      "h": 0.05710206995003569,
+      "trajectory": [
+        {
+          "time_in_inverse_gv": 0.0,
+          "norm": 1.0000000000000018,
+          "reference_norm": 0.9999999999999976,
+          "mean_radius": 22.000000000000036,
+          "outside_readout_probability": 0.9999987292127495,
+          "reference_readout_probability": 0.9999987292127454,
+          "overlap_with_reference": {
+            "real": 0.9999987292127474,
+            "imag": 5.567637559553162e-17
+          },
+          "relative_phase_on_readout": 5.567644634844991e-17,
+          "selected_probability": 0.9999987292127475,
+          "joint_plus_probability": 0.4999993646063737,
+          "joint_minus_probability": 0.4999993646063738,
+          "conditional_plus_probability": 0.49999999999999994,
+          "visibility": 0.9999999999999999
+        },
+        {
+          "time_in_inverse_gv": 10.0,
+          "norm": 0.9999999999999999,
+          "reference_norm": 0.9999999999999992,
+          "mean_radius": 12.298546947803077,
+          "outside_readout_probability": 0.5523281906364319,
+          "reference_readout_probability": 0.5523281913200869,
+          "overlap_with_reference": {
+            "real": 0.5523281909782594,
+            "imag": 2.4747657477973417e-09
+          },
+          "relative_phase_on_readout": 4.4806073421929555e-09,
+          "selected_probability": 0.5523281909782594,
+          "joint_plus_probability": 0.2761640942517468,
+          "joint_minus_probability": 0.27616409672651254,
+          "conditional_plus_probability": 0.49999999775969634,
+          "visibility": 1.0
+        },
+        {
+          "time_in_inverse_gv": 20.0,
+          "norm": 0.9999999999999996,
+          "reference_norm": 0.9999999999999994,
+          "mean_radius": 2.8256193115806814,
+          "outside_readout_probability": 4.284512860513352e-06,
+          "reference_readout_probability": 4.284498227485591e-06,
+          "overlap_with_reference": {
+            "real": 4.284505543901685e-06,
+            "imag": 2.3680471999717702e-12
+          },
+          "relative_phase_on_readout": 5.527002300982126e-07,
+          "selected_probability": 4.2845055439994715e-06,
+          "joint_plus_probability": 2.1422515879761356e-06,
+          "joint_minus_probability": 2.142253956023336e-06,
+          "conditional_plus_probability": 0.49999972364988493,
+          "visibility": 0.9999999999773295
+        },
+        {
+          "time_in_inverse_gv": 30.0,
+          "norm": 1.0000000000000004,
+          "reference_norm": 1.0,
+          "mean_radius": 7.106394061415863,
+          "outside_readout_probability": 0.010350636591326682,
+          "reference_readout_probability": 0.010330078448423699,
+          "overlap_with_reference": {
+            "real": 0.010340009759010643,
+            "imag": 8.417080540651031e-05
+          },
+          "relative_phase_on_readout": 0.008140122520453819,
+          "selected_probability": 0.01034035751987519,
+          "joint_plus_probability": 0.00512809335723434,
+          "joint_minus_probability": 0.00521226416264085,
+          "conditional_plus_probability": 0.49592998572608704,
+          "visibility": 0.9999994991818671
+        },
+        {
+          "time_in_inverse_gv": 40.0,
+          "norm": 0.9999999999999996,
+          "reference_norm": 0.9999999999999996,
+          "mean_radius": 16.80742630282058,
+          "outside_readout_probability": 0.9881012830446818,
+          "reference_readout_probability": 0.9880777078553694,
+          "overlap_with_reference": {
+            "real": 0.9880556895537963,
+            "imag": 0.008165377905915969
+          },
+          "relative_phase_on_readout": 0.008263898598711438,
+          "selected_probability": 0.9880894954500257,
+          "joint_plus_probability": 0.48996205877205484,
+          "joint_minus_probability": 0.4981274366779708,
+          "conditional_plus_probability": 0.49586809800958515,
+          "visibility": 0.9999999324183663
+        }
+      ]
+    },
+    {
+      "N": 2800,
+      "h": 0.028561228132809712,
+      "trajectory": [
+        {
+          "time_in_inverse_gv": 0.0,
+          "norm": 1.0000000000000009,
+          "reference_norm": 1.0000000000000009,
+          "mean_radius": 22.00000000000002,
+          "outside_readout_probability": 0.9999987575721488,
+          "reference_readout_probability": 0.9999987575721488,
+          "overlap_with_reference": {
+            "real": 0.9999987575721487,
+            "imag": -6.823776832419449e-18
+          },
+          "relative_phase_on_readout": -6.823785310480369e-18,
+          "selected_probability": 0.9999987575721488,
+          "joint_plus_probability": 0.4999993787860744,
+          "joint_minus_probability": 0.4999993787860744,
+          "conditional_plus_probability": 0.5,
+          "visibility": 0.9999999999999999
+        },
+        {
+          "time_in_inverse_gv": 10.0,
+          "norm": 1.0000000000000022,
+          "reference_norm": 1.0000000000000024,
+          "mean_radius": 12.222671321451346,
+          "outside_readout_probability": 0.5400093609493943,
+          "reference_readout_probability": 0.5400093616521556,
+          "overlap_with_reference": {
+            "real": 0.5400093613007748,
+            "imag": 2.4675599142112703e-09
+          },
+          "relative_phase_on_readout": 4.569476181426579e-09,
+          "selected_probability": 0.540009361300775,
+          "joint_plus_probability": 0.27000467941660755,
+          "joint_minus_probability": 0.2700046818841675,
+          "conditional_plus_probability": 0.4999999977152619,
+          "visibility": 0.9999999999999996
+        },
+        {
+          "time_in_inverse_gv": 20.0,
+          "norm": 0.9999999999999993,
+          "reference_norm": 0.9999999999999984,
+          "mean_radius": 2.7096794752253213,
+          "outside_readout_probability": 3.1498906110439462e-06,
+          "reference_readout_probability": 3.14987434858566e-06,
+          "overlap_with_reference": {
+            "real": 3.1498824796541066e-06,
+            "imag": 2.031782198354395e-12
+          },
+          "relative_phase_on_readout": 6.450342866687605e-07,
+          "selected_probability": 3.149882479814803e-06,
+          "joint_plus_probability": 1.5749402240163024e-06,
+          "joint_minus_probability": 1.5749422557985007e-06,
+          "conditional_plus_probability": 0.4999996774828567,
+          "visibility": 0.9999999999491913
+        },
+        {
+          "time_in_inverse_gv": 30.0,
+          "norm": 0.9999999999999998,
+          "reference_norm": 1.0000000000000004,
+          "mean_radius": 7.333891291894018,
+          "outside_readout_probability": 0.01384697011892074,
+          "reference_readout_probability": 0.013820238974237547,
+          "overlap_with_reference": {
+            "real": 0.013833149078352161,
+            "imag": 0.00011144464676302599
+          },
+          "relative_phase_on_readout": 0.008056172541118978,
+          "selected_probability": 0.013833604546579142,
+          "joint_plus_probability": 0.006861079949908058,
+          "joint_minus_probability": 0.006972524596671084,
+          "conditional_plus_probability": 0.4959719592103497,
+          "visibility": 0.999999525998631
+        },
+        {
+          "time_in_inverse_gv": 40.0,
+          "norm": 1.0000000000000029,
+          "reference_norm": 1.0000000000000022,
+          "mean_radius": 17.11094593368355,
+          "outside_readout_probability": 0.9919687427268066,
+          "reference_readout_probability": 0.9919518180399715,
+          "overlap_with_reference": {
+            "real": 0.9919270263954143,
+            "imag": 0.008113801712993573
+          },
+          "relative_phase_on_readout": 0.008179654894196309,
+          "selected_probability": 0.991960280383389,
+          "joint_plus_probability": 0.4919232393351977,
+          "joint_minus_probability": 0.5000370410481914,
+          "conditional_plus_probability": 0.49591021844652006,
+          "visibility": 0.9999999296806446
+        }
+      ]
+    }
+  ],
+  "packet_trajectory": [
+    {
+      "time_in_inverse_gv": 0.0,
+      "norm": 1.0000000000000018,
+      "reference_norm": 0.9999999999999976,
+      "mean_radius": 22.000000000000036,
+      "outside_readout_probability": 0.9999987292127495,
+      "reference_readout_probability": 0.9999987292127454,
+      "overlap_with_reference": {
+        "real": 0.9999987292127474,
+        "imag": 5.567637559553162e-17
+      },
+      "relative_phase_on_readout": 5.567644634844991e-17,
+      "selected_probability": 0.9999987292127475,
+      "joint_plus_probability": 0.4999993646063737,
+      "joint_minus_probability": 0.4999993646063738,
+      "conditional_plus_probability": 0.49999999999999994,
+      "visibility": 0.9999999999999999
+    },
+    {
+      "time_in_inverse_gv": 10.0,
+      "norm": 0.9999999999999999,
+      "reference_norm": 0.9999999999999992,
+      "mean_radius": 12.298546947803077,
+      "outside_readout_probability": 0.5523281906364319,
+      "reference_readout_probability": 0.5523281913200869,
+      "overlap_with_reference": {
+        "real": 0.5523281909782594,
+        "imag": 2.4747657477973417e-09
+      },
+      "relative_phase_on_readout": 4.4806073421929555e-09,
+      "selected_probability": 0.5523281909782594,
+      "joint_plus_probability": 0.2761640942517468,
+      "joint_minus_probability": 0.27616409672651254,
+      "conditional_plus_probability": 0.49999999775969634,
+      "visibility": 1.0
+    },
+    {
+      "time_in_inverse_gv": 20.0,
+      "norm": 0.9999999999999996,
+      "reference_norm": 0.9999999999999994,
+      "mean_radius": 2.8256193115806814,
+      "outside_readout_probability": 4.284512860513352e-06,
+      "reference_readout_probability": 4.284498227485591e-06,
+      "overlap_with_reference": {
+        "real": 4.284505543901685e-06,
+        "imag": 2.3680471999717702e-12
+      },
+      "relative_phase_on_readout": 5.527002300982126e-07,
+      "selected_probability": 4.2845055439994715e-06,
+      "joint_plus_probability": 2.1422515879761356e-06,
+      "joint_minus_probability": 2.142253956023336e-06,
+      "conditional_plus_probability": 0.49999972364988493,
+      "visibility": 0.9999999999773295
+    },
+    {
+      "time_in_inverse_gv": 30.0,
+      "norm": 1.0000000000000004,
+      "reference_norm": 1.0,
+      "mean_radius": 7.106394061415863,
+      "outside_readout_probability": 0.010350636591326682,
+      "reference_readout_probability": 0.010330078448423699,
+      "overlap_with_reference": {
+        "real": 0.010340009759010643,
+        "imag": 8.417080540651031e-05
+      },
+      "relative_phase_on_readout": 0.008140122520453819,
+      "selected_probability": 0.01034035751987519,
+      "joint_plus_probability": 0.00512809335723434,
+      "joint_minus_probability": 0.00521226416264085,
+      "conditional_plus_probability": 0.49592998572608704,
+      "visibility": 0.9999994991818671
+    },
+    {
+      "time_in_inverse_gv": 40.0,
+      "norm": 0.9999999999999996,
+      "reference_norm": 0.9999999999999996,
+      "mean_radius": 16.80742630282058,
+      "outside_readout_probability": 0.9881012830446818,
+      "reference_readout_probability": 0.9880777078553694,
+      "overlap_with_reference": {
+        "real": 0.9880556895537963,
+        "imag": 0.008165377905915969
+      },
+      "relative_phase_on_readout": 0.008263898598711438,
+      "selected_probability": 0.9880894954500257,
+      "joint_plus_probability": 0.48996205877205484,
+      "joint_minus_probability": 0.4981274366779708,
+      "conditional_plus_probability": 0.49586809800958515,
+      "visibility": 0.9999999324183663
+    }
+  ],
+  "maximum_packet_norm_error": 2.886579864025407e-15,
+  "seconds": 4.231912073999979,
+  "status": "test_field_calculation_complete"
+}

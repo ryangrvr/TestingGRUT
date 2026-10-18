@@ -5758,3 +5758,9 @@ NEXT: OWNER REVIEW. If accepted, the remaining consequence prerequisites
 are the low-frequency/epoch-window fork-(ii) path and the
 certificate-vs-manifest face ruling. CC-C, Axis-2 C, Gate-E A, Noise A,
 Tier-4 banked, Lambda_R one, H^2 fork-gated -- all unchanged.
+
+### 2026-10-18 · Codex · Candidate 1 theory research report
+
+Added `research/reality_framework/grut_candidate_1_20261018/` with `REPORT.md`, the five candidate documents, reproducible code, raw results, figures and original challenge notes. The owner explicitly authorized this repository posting after the standalone construction was complete. This separately named successor adopts a leading Einstein/SM/scalar EFT and replaces the moving-word mechanism; it inherits no archived transport/density theorem. Outcome: narrower working model, not validated physics or a UV-complete theory.
+
+Verification in this repository copy: `python research/reality_framework/grut_candidate_1_20261018/code/verify.py` passed all 25 internal numerical checks. Original manifest SHA-256 values and all relative Markdown links passed inspection. No physical solver or couplings changed for posting; original failed starts and scope limits are preserved. Historical reports and frozen mechanisms were not edited.
