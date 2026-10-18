@@ -1,0 +1,115 @@
+{
+  "exact_scalar_checks": {
+    "lower_band_margin_bound": {
+      "fraction": "13811/26565120",
+      "decimal": 0.0005198922496868074
+    },
+    "lower_margin_in_J": {
+      "fraction": "13811/6918",
+      "decimal": 1.9963862387973403
+    },
+    "upper_band_margin_bound": {
+      "fraction": "1427/2741760",
+      "decimal": 0.00052046860410831
+    },
+    "upper_margin_in_J": {
+      "fraction": "1427/714",
+      "decimal": 1.9985994397759104
+    },
+    "above_ground_band_weight_upper": {
+      "fraction": "509796/2546125",
+      "decimal": 0.20022426235946783
+    },
+    "in_ground_band_weight_lower": {
+      "fraction": "2036329/2546125",
+      "decimal": 0.7997757376405322
+    },
+    "central_interval_weight_lower": {
+      "fraction": "5/9",
+      "decimal": 0.5555555555555556
+    },
+    "compatible_velocity_squared_lower": {
+      "fraction": "192530608/140185125",
+      "decimal": 1.373402548950896
+    },
+    "B1_residual_squared": {
+      "fraction": "163225/1803473947459584",
+      "decimal": 9.050588184538102e-11
+    },
+    "fuel_bound_at_theta2": {
+      "fraction": "2310947/4032000",
+      "decimal": 0.5731515376984126
+    },
+    "fuel_bound_at_theta16": {
+      "fraction": "2611331/4032000",
+      "decimal": 0.6476515376984127
+    },
+    "retained_matter_source_lower": {
+      "fraction": "288748849999/500000000000",
+      "decimal": 0.577497699998
+    },
+    "joint_q2_lower_on_theta2_to16": {
+      "fraction": "83087399525746002300001/250000000000000000000000",
+      "decimal": 0.33234959810298403
+    },
+    "conditional_joint_output_lower": {
+      "fraction": "458329/4000000",
+      "decimal": 0.11458225
+    }
+  },
+  "finite_source_controls": [
+    {
+      "length": 8,
+      "dimension": 65,
+      "fuel_subspace_scalar_rank": 1,
+      "source_mean": 1.9994357638888889,
+      "source_variance": 6.781684027777778e-08,
+      "minimum_eigenvalue": 1.9989438656945782,
+      "ground_band_interval_weight_observed": 0.9999999999902331,
+      "central_energy_weight_observed": 0.847045736252569,
+      "high_weight_observed": 9.767565862450549e-12,
+      "minimum_computed_supersolution_residual": 7.754818242684634e-26,
+      "root_computed_residual": 0.0001296668711647797,
+      "root_residual_identity_error": 1.0368225375478879e-15,
+      "witness_fuel_residual": 2.220446049250313e-16,
+      "note": "Ordinary double controls, not outward-rounded proof."
+    },
+    {
+      "length": 12,
+      "dimension": 145,
+      "fuel_subspace_scalar_rank": 1,
+      "source_mean": 1.9994357638888889,
+      "source_variance": 6.781684027777778e-08,
+      "minimum_eigenvalue": 1.9989296351622177,
+      "ground_band_interval_weight_observed": 0.9988364860240554,
+      "central_energy_weight_observed": 0.8384288320263776,
+      "high_weight_observed": 9.76756586257511e-12,
+      "minimum_computed_supersolution_residual": 9.027796614315168e-36,
+      "root_computed_residual": 0.0001296668711647797,
+      "root_residual_identity_error": 1.0368225375478879e-15,
+      "witness_fuel_residual": 2.220446049250313e-16,
+      "note": "Ordinary double controls, not outward-rounded proof."
+    },
+    {
+      "length": 16,
+      "dimension": 257,
+      "fuel_subspace_scalar_rank": 1,
+      "source_mean": 1.9994357638888889,
+      "source_variance": 6.781684027777778e-08,
+      "minimum_eigenvalue": 1.9989239536012935,
+      "ground_band_interval_weight_observed": 0.9995666249183148,
+      "central_energy_weight_observed": 0.833753547226055,
+      "high_weight_observed": 9.767565862558642e-12,
+      "minimum_computed_supersolution_residual": 4.379057701015053e-46,
+      "root_computed_residual": 0.0001296668711647797,
+      "root_residual_identity_error": 1.0368225375478879e-15,
+      "witness_fuel_residual": 2.220446049250313e-16,
+      "note": "Ordinary double controls, not outward-rounded proof."
+    }
+  ],
+  "status": "PASS: explicit scalar/spectral/algebra controls only",
+  "full_source_scaling_verdict": "MATHEMATICALLY UNRESOLVED",
+  "no_source_time_evolution": true,
+  "no_operating_probabilities": true,
+  "source_and_proof_pins_unchanged": true
+}

@@ -1,0 +1,100 @@
+{
+  "campaign": "B2-SS",
+  "law": "Unchanged nominal B1/B2 fixed-path matter law",
+  "decision": "Partial source spectrum and finite-time return results. Both full scaling source estimates and operating gate remain mathematically unresolved. Stop this cycle.",
+  "comparison_status": "B2-SO unchanged; no source success assumed independent.",
+  "historical_status": "B2 original endpoint failed; A1 and closed solver branch preserved.",
+  "independence": "One assistant, shared context/catalog; independent proof review pending.",
+  "claims": [
+    {
+      "id": "B2SS_fuel_observable",
+      "tier": "derived-pending",
+      "statement": "In the fixed resource-one source, total fuel occupation is exactly |G(t)|^2 for the declared fuel seed and every input qubit/reference, because the return map is G(t) I_2.",
+      "proof": "OBSERVABLES.md (1)",
+      "open_input": "Independent operator/protocol review.",
+      "falsifying_check": "Another allowed fuel-occupied spatial/electric state in this exact sector.",
+      "status": "one source only; no two-source marginal inference"
+    },
+    {
+      "id": "B2SS_joint_accounting",
+      "tier": "derived-pending",
+      "statement": "The sufficient 34% one-source condition would imply >11.458225% joint output after frozen errors, not joint 33.8%.",
+      "proof": "OBSERVABLES.md (3)-(4)",
+      "open_input": "Independent review of the existing comparison and event reconstruction.",
+      "falsifying_check": "The embedded reference event is not the square of the one-source probability.",
+      "status": "conditional; the 34% condition is not proved"
+    },
+    {
+      "id": "B2SS_no_lower_point",
+      "tier": "derived-pending",
+      "statement": "The exact half-line source has no spectrum below the bulk ground-band bottom e0 and no point eigenstate at e0.",
+      "proof": "SOURCE_PROOF.md (7)-(11)",
+      "open_input": "Independent review of positive supersolution, form closure and threshold eigenvector exclusion.",
+      "falsifying_check": "A valid source vector below e0 or a missing negative term in the witness residual.",
+      "status": "does not exclude embedded/above-band localized or singular components"
+    },
+    {
+      "id": "B2SS_preparation_energy",
+      "tier": "derived-pending",
+      "statement": "Original fuel spectral weight is >79.9% in the exact first-band energy interval and >=5/9 in a central interval compatible with useful bulk velocities.",
+      "proof": "SOURCE_PROOF.md (12)-(14)",
+      "open_input": "Independent spectral moment, band margin and exact-bulk-graph review.",
+      "falsifying_check": "Violation of the stated energy support, variance, or derivative mapping.",
+      "status": "spectral energy weight only; not outgoing probability"
+    },
+    {
+      "id": "B2SS_finite_return",
+      "tier": "derived-pending",
+      "statement": "The original source obeys |G(t)|<13/20 for every 2<=Jt<=16.",
+      "proof": "SOURCE_PROOF.md (15)-(16)",
+      "dependency": "B1 return-inclusive approximate intertwiner and its uniform half-line limit",
+      "open_input": "Independent review of B1 residual/initial error and the continuous convex bound.",
+      "falsifying_check": "A proven source amplitude above the bound in this interval or failed inherited inequality.",
+      "status": "continuous finite interval; not full scaling retention"
+    },
+    {
+      "id": "B2SS_joint_finite_retention",
+      "tier": "derived-pending",
+      "statement": "With the unchanged B2-SO comparison, original q=2 probability >33% for every 2<=Jt<=16 and frozen-family L>=2016; separated constituents are allowed.",
+      "proof": "SOURCE_PROOF.md (17)",
+      "dependency": "B2-SO comparison and B1 source bound",
+      "open_input": "Independent composition review.",
+      "falsifying_check": "A missing projection/reconstruction term or contradiction on the stated interval.",
+      "status": "not co-pair receiver output; full window begins at theta>=252"
+    },
+    {
+      "id": "B2SS_full_source_estimates",
+      "tier": "to-derive",
+      "statement": "Source A_L>=17/50 throughout all I_L and |G|<=2/3 through every L/(6J).",
+      "source": "SOURCE_VERDICT.md",
+      "open_input": "Point/singular/outgoing source weights and position-sensitive spectral kernel with uniform oscillatory control.",
+      "falsifying_check": "An explicit violating frozen-family length/time or permitted parameter choice.",
+      "status": "mathematically unresolved; no violation found"
+    },
+    {
+      "id": "B2SS_operating_gate",
+      "tier": "to-derive",
+      "statement": "The frozen joint output and full retention gate hold for the unchanged fixed-path scaling family.",
+      "source": "CHARTER.md",
+      "open_input": "Full source estimates or another direct controlled argument; sufficient-route failure alone would not refute the gate.",
+      "falsifying_check": "A rigorous physical joint-event counterexample in the declared family.",
+      "status": "mathematically unresolved"
+    },
+    {
+      "id": "B2SS_controls",
+      "tier": "shown",
+      "statement": "Frozen exact rational and finite source spectral/algebra controls passed; all five data files replayed byte-identically.",
+      "source": "CONTROLS.json; PRIMARY_WORKER.json; REPLAY.json",
+      "falsifying_check": "Frozen-source replay mismatch or assertion failure.",
+      "status": "implementation consistency; not infinite-source proof or outward-rounded certificate"
+    },
+    {
+      "id": "B2SS_inputs",
+      "tier": "assumed",
+      "statement": "Same nominal microscopic couplings, fixed prepared path, loaded endpoint fuels and color input, quantum framework and final receiver readout.",
+      "source": "CHARTER.md",
+      "falsifying_check": "Change an input and rederive; no claim without it.",
+      "status": "no new law or universality/empirical claim"
+    }
+  ]
+}
