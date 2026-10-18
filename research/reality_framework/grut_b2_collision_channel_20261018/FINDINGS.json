@@ -1,0 +1,56 @@
+{
+  "campaign": "B2 two-composite collision-channel test of B1",
+  "baseline": "b0787a7442778fdee1ba1873fb8bfa963ff6b256",
+  "decision": "frozen fixed-record outgoing task failed; full moving-geometry composition unresolved",
+  "cycle": "closed without rescue or retuning",
+  "claims": [
+    {
+      "id": "B2-outgoing-gate",
+      "tier": "shown",
+      "sub_status": "refuted; closed; finite frozen protocol only",
+      "statement": "At theta=6, outgoing two-composite probability is approximately 0.01932705, below the frozen 0.1 threshold. The evaluated numerical enclosure also lies wholly below threshold.",
+      "source": "CHARTER.md; CHECKS.json; ARITHMETIC.md",
+      "scope": "773-state fixed eight-event record at nominal B1 parameters; conditional numerical account, not all-size theorem."
+    },
+    {
+      "id": "B2-contact-gate",
+      "tier": "shown",
+      "sub_status": "refuted; closed; frozen sensitivity target only",
+      "statement": "The contact-only reference changes p_R by about 0.00550858, resolved nonzero but below the 0.01 gate.",
+      "source": "CHECKS.json",
+      "scope": "Does not imply interaction absent or contact alone causes retention failure."
+    },
+    {
+      "id": "B2-ordered-channel",
+      "tier": "derived-pending",
+      "pending": "independent check of no-passing encoding and joint instrument",
+      "statement": "For two end fuels on a fixed path, the arbitrary two-qubit successful channel is p_R times identity, including reference entanglement; all other events are erasures.",
+      "source": "TWO_COMPOSITE_CHANNEL.md; checks.py",
+      "falsification": "Allowed color-changing/order-exchanging primitive on the endpoint line or failure of direct colored-matrix factorization."
+    },
+    {
+      "id": "B2-interior-exchange",
+      "tier": "derived-pending",
+      "pending": "independent operator-word and geometry-embedding check",
+      "statement": "An interior fuel permits a closed local color-exchange word, so endpoint order identity cannot be inherited unchanged after geometry growth.",
+      "source": "TWO_COMPOSITE_CHANNEL.md; CHECKS.json",
+      "scope": "Local exchange, not a locality violation; no quantitative full-geometry loss bound claimed."
+    },
+    {
+      "id": "B1-channel-and-spectrum",
+      "tier": "derived-pending",
+      "pending": "independent review of exact channel factorization, spectral min-max and variance bound; old B1 proof still pending",
+      "statement": "Single-composite success is an arbitrary-qubit erasure channel. Fixed-path high-cluster initial fuel weight is bounded by lambda^2/(2+Delta-tau-Omega)^2.",
+      "source": "ONE_COMPOSITE_CHANNEL.md",
+      "scope": "Not a real-energy storage gap or infinite-volume no-trapped-state theorem."
+    },
+    {
+      "id": "B2-supplied-and-open",
+      "tier": "to-derive",
+      "statement": "Full geometry two-composite operation, finite density, autonomous resource preparation, selected dimension, gravity and empirical discrimination remain unproved.",
+      "source": "REPORT.md; REVIEW_REQUEST.md"
+    }
+  ],
+  "external_review": "not performed; prepared request not dispatched",
+  "empirical_data": "none"
+}
