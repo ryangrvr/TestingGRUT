@@ -1,0 +1,21 @@
+{
+  "title": "Independent finite-volume stationarity refinement",
+  "date": "2026-10-18",
+  "frozen_before_newton_steps": true,
+  "reason": "All twelve original L-BFGS-B runs stopped on relative-energy ftol while remaining above the requested projected-gradient tolerance. Preserve those outputs and test the discrete stationarity equations directly.",
+  "physical_parameters_unchanged": true,
+  "original_outputs_preserved": true,
+  "charges": [1.0, 0.75, 0.5],
+  "N": 1600,
+  "L": 40.0,
+  "initial_state_rule": "For each charge use its original N1600 independent_gaussian output, without choosing by agreement or gradient size.",
+  "method": "Newton for the same analytic finite-volume gradient; sparse symmetric local Hessian plus the exact fixed-Q rank-one term, solved by sparse LU and Sherman-Morrison.",
+  "hessian": "H_uu=Lpre+diag(S^2+3bF^2-Omega^2)+4Omega^2/I*u*u^T; H_ww=Lpre+diag(a(3S^2-1)+F^2); H_uw=diag(2FS).",
+  "preflight": "Check analytic Hessian-vector product against two central finite-difference steps of the independently checked gradient on the same N32,L8 interior test as before. Abort refinement if both relative discrepancies exceed 1e-5.",
+  "max_newton_steps": 6,
+  "requested_projected_gradient_inf": 1e-9,
+  "backtracking": "Try scale 1,1/2,...,1/1024; project to the original bounds; accept first finite trial that strictly reduces projected-gradient infinity norm, or meets tolerance. Stop and retain failure if none does.",
+  "wall_time_limit_total_seconds": 30,
+  "outputs": "independent_refinement_results.json, independent_refinement_profiles.npz, independent_refinement_execution.jsonl; original twelve run outputs remain unchanged.",
+  "interpretation": "A refined root is evidence for a stationary point of the bounded finite-volume radial functional; neither global minimization nor continuum or nonlinear stability follows. Numerical full gradients and core Euler residuals are reported as well as projected gradients."
+}

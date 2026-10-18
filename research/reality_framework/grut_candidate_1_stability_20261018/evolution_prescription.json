@@ -1,0 +1,76 @@
+{
+  "configuration": {
+    "a": 1.0,
+    "b": 0.1,
+    "Qbar_target": 399.4384624223012,
+    "T": 40.0,
+    "diagnostic_interval": 1.0,
+    "fft_workers": 1,
+    "integrator": "Strang: exact linear KG + local potential kicks",
+    "boundary": "periodic Fourier collocation; no filter or damping",
+    "preparation": "volume-preserving deformation M=diag(exp(epsilon),exp(-epsilon),1); on-grid fixed Q",
+    "run_matrix": [
+      {
+        "name": "control",
+        "L": 64.0,
+        "N": 96,
+        "dt": 0.1,
+        "epsilon": 0.0
+      },
+      {
+        "name": "small",
+        "L": 64.0,
+        "N": 96,
+        "dt": 0.1,
+        "epsilon": 0.05
+      },
+      {
+        "name": "stress",
+        "L": 64.0,
+        "N": 96,
+        "dt": 0.1,
+        "epsilon": 0.2
+      },
+      {
+        "name": "time",
+        "L": 64.0,
+        "N": 96,
+        "dt": 0.05,
+        "epsilon": 0.2
+      },
+      {
+        "name": "coarse",
+        "L": 64.0,
+        "N": 64,
+        "dt": 0.1,
+        "epsilon": 0.2
+      },
+      {
+        "name": "space",
+        "L": 64.0,
+        "N": 128,
+        "dt": 0.1,
+        "epsilon": 0.2
+      },
+      {
+        "name": "domain",
+        "L": 85.33333333333333,
+        "N": 128,
+        "dt": 0.1,
+        "epsilon": 0.2
+      }
+    ],
+    "validity_relative_Q_drift": 1e-09,
+    "validity_relative_E_drift": 0.002,
+    "operating_sampled_core_Q_fraction": 0.9,
+    "scope": "finite classical scalar trajectories; not a global/quantum stability proof"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "background_sha256": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3",
+  "source_sha256": "c0f0477b6bf8a4a1176a9f065c0cf566f3e45c5e6e6cdeaf260b931be1cdfc24"
+}

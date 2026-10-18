@@ -1,0 +1,117 @@
+{
+  "independent_results_sha256": "db0e01384b1d9cb90308b2d547c22481abf353d7cffaabc0efe3749cbfcc271f",
+  "branch_results_sha256": "030fa0c7fa4428b22763846503696c581d8e8cee6f68788306a68bc56c55a431",
+  "averaging_rule": "Use arithmetic means over both frozen starts; report their spreads. No result was selected by best agreement.",
+  "comparison": [
+    {
+      "fraction": 1.0,
+      "Qbar": 399.4384624223012,
+      "reference_Ebar": 363.922998551561,
+      "reference_Omega": 0.8000000019720692,
+      "meshes": {
+        "800": {
+          "mean_Ebar": 363.91743552915773,
+          "mean_Omega": 0.79999164706353,
+          "Ebar_error_vs_BVP": -0.005563022403293871,
+          "Omega_error_vs_BVP": -8.354908539232042e-06,
+          "Ebar_start_spread": 1.1186784831807017e-10,
+          "Omega_start_spread": 1.3742382753978433e-07,
+          "max_projected_gradient_inf": 4.247042436162775e-05
+        },
+        "1600": {
+          "mean_Ebar": 363.9216078577483,
+          "mean_Omega": 0.7999979052066999,
+          "Ebar_error_vs_BVP": -0.0013906938127092872,
+          "Omega_error_vs_BVP": -2.0967653693304555e-06,
+          "Ebar_start_spread": 5.616129783447832e-11,
+          "Omega_start_spread": 1.652078459590811e-07,
+          "max_projected_gradient_inf": 4.0179227205243764e-05
+        }
+      },
+      "energy_error_reduction_factor": 4.000177718815216,
+      "second_order_Richardson_Ebar": 363.92299863394516,
+      "Richardson_Ebar_error_vs_BVP": 8.238413329308969e-08,
+      "second_order_Richardson_Omega": 0.7999999912544231,
+      "Richardson_Omega_error_vs_BVP": -1.0717646103941547e-08
+    },
+    {
+      "fraction": 0.75,
+      "Qbar": 299.5788468167259,
+      "reference_Ebar": 282.62746755939946,
+      "reference_Omega": 0.8305089386175254,
+      "meshes": {
+        "800": {
+          "mean_Ebar": 282.6228841782649,
+          "mean_Omega": 0.8304972319488966,
+          "Ebar_error_vs_BVP": -0.004583381134580122,
+          "Omega_error_vs_BVP": -1.1706668628819195e-05,
+          "Ebar_start_spread": 1.3301360013429075e-11,
+          "Omega_start_spread": 1.1798336796431386e-07,
+          "max_projected_gradient_inf": 3.078514614555938e-05
+        },
+        "1600": {
+          "mean_Ebar": 282.62632177217495,
+          "mean_Omega": 0.8305060221271839,
+          "Ebar_error_vs_BVP": -0.0011457872245159706,
+          "Omega_error_vs_BVP": -2.9164903414535814e-06,
+          "Ebar_start_spread": 8.412825991399586e-12,
+          "Omega_start_spread": 1.9122506023094843e-08,
+          "max_projected_gradient_inf": 3.404356954882267e-05
+        }
+      },
+      "energy_error_reduction_factor": 4.000202687297668,
+      "second_order_Richardson_Ebar": 282.6274676368116,
+      "Richardson_Ebar_error_vs_BVP": 7.741215313217253e-08,
+      "second_order_Richardson_Omega": 0.8305089521866131,
+      "Richardson_Omega_error_vs_BVP": 1.3569087742304475e-08
+    },
+    {
+      "fraction": 0.5,
+      "Qbar": 199.7192312111506,
+      "reference_Ebar": 197.2984205537194,
+      "reference_Omega": 0.8850748131166005,
+      "meshes": {
+        "800": {
+          "mean_Ebar": 197.2954383784828,
+          "mean_Omega": 0.8850516642567211,
+          "Ebar_error_vs_BVP": -0.0029821752366103738,
+          "Omega_error_vs_BVP": -2.3148859879418282e-05,
+          "Ebar_start_spread": 8.472511581203435e-11,
+          "Omega_start_spread": 1.0206079270602686e-07,
+          "max_projected_gradient_inf": 2.120440950816501e-05
+        },
+        "1600": {
+          "mean_Ebar": 197.29767508914242,
+          "mean_Omega": 0.885069086353691,
+          "Ebar_error_vs_BVP": -0.0007454645769939816,
+          "Omega_error_vs_BVP": -5.726762909552541e-06,
+          "Ebar_start_spread": 8.810729923425242e-12,
+          "Omega_start_spread": 2.7785128753343713e-08,
+          "max_projected_gradient_inf": 7.602276773556287e-05
+        }
+      },
+      "energy_error_reduction_factor": 4.000425142447043,
+      "second_order_Richardson_Ebar": 197.29842065936228,
+      "Richardson_Ebar_error_vs_BVP": 1.0564286867520423e-07,
+      "second_order_Richardson_Omega": 0.8850748937193477,
+      "Richardson_Omega_error_vs_BVP": 8.060274714338789e-08
+    }
+  ],
+  "equal_half_branch_fission_difference": {
+    "800": 30.67344122780787,
+    "1600": 30.67374232053652,
+    "second_order_Richardson": 30.6738426847794,
+    "BVP_reference": 30.673842555877798
+  },
+  "gradient_preflight_max_relative_discrepancy": 3.65909026693156e-09,
+  "number_requested": 12,
+  "number_optimizer_success": 12,
+  "number_requested_projected_gradient_met": 0,
+  "limits": [
+    "All optimizer stops use relative-energy ftol; none satisfies the frozen projected-gradient threshold.",
+    "Two cell counts at fixed L40 are mesh refinement, not domain refinement or interval bounds.",
+    "Richardson estimates assume leading second-order discretization and are cross-checks, not certified error bounds.",
+    "Fields are restricted to the nodeless positive F>=0,0<=S<=1 radial class; no global or nonradial minimization is claimed.",
+    "Both source-BVP and explicit Gaussian starts share the same action and implementation context; this is an independent method, not external independent validation."
+  ]
+}

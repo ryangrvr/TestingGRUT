@@ -1,0 +1,107 @@
+{
+  "physical": {
+    "a": 1.0,
+    "b": 0.1,
+    "g": 0.1,
+    "lambda": 0.01,
+    "lambda_X": 0.001
+  },
+  "reference_profile": "/workspace/scratch/9a57d63bee22/TestingGRUT-review/research/reality_framework/grut_candidate_1_20261018/code/results_profile.npz",
+  "main_omega": [
+    0.8,
+    0.81,
+    0.82,
+    0.83,
+    0.84,
+    0.85,
+    0.86,
+    0.87,
+    0.88,
+    0.89,
+    0.9,
+    0.91,
+    0.92,
+    0.93,
+    0.94,
+    0.95,
+    0.96,
+    0.97,
+    0.98,
+    0.99,
+    0.995,
+    0.9975,
+    0.999
+  ],
+  "main_grid": {
+    "L": "max(40,14/sqrt(1-Omega^2))",
+    "initial_spacing_max": 0.1,
+    "tol": 1e-06,
+    "max_nodes": 30000
+  },
+  "refinement_grid": {
+    "L": "max(50,18/sqrt(1-Omega^2))",
+    "initial_spacing_max": 0.06,
+    "tol": 1e-08,
+    "max_nodes": 40000
+  },
+  "alternate_starts": [
+    {
+      "Omega": 0.9,
+      "A": 0.3,
+      "width": 8.0,
+      "kind": "gaussian"
+    },
+    {
+      "Omega": 0.9,
+      "A": 2.3,
+      "width": 3.5,
+      "kind": "gaussian"
+    },
+    {
+      "Omega": 0.97,
+      "A": 0.3,
+      "width": 8.0,
+      "kind": "gaussian"
+    },
+    {
+      "Omega": 0.97,
+      "A": 2.3,
+      "width": 3.5,
+      "kind": "gaussian"
+    }
+  ],
+  "turning_point_refinement": {
+    "method": "bounded minimize_scalar of Q(Omega) in adjacent-sample bracket",
+    "maxiter": 16,
+    "xatol": 2e-07
+  },
+  "binding_point_refinement": {
+    "method": "brentq on E/Q-1 in sampled sign-change bracket",
+    "maxiter": 16,
+    "xtol": 2e-08
+  },
+  "fragments": {
+    "equal_counts": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "unequal_two_fractions": [
+      0.2,
+      0.25,
+      0.3333333333333333,
+      0.4,
+      0.5
+    ],
+    "lump_plus_free_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "target_resolution": "Fixed-Q BVP with Omega as unknown and integral charge auxiliary equation; try each sampled monotone branch containing target Q.",
+  "acceptance": "BVP status0, positive Omega<1, nodeless F up to1e-7, 0<S<=1 up to1e-6, F0>1e-4; vacuum and failed starts retained.",
+  "scope": "Found nodeless spherical tree-level flat-space states and positive-charge fragmentation candidates plus free X carriers; no global minimization, no proof of all partitions.",
+  "frozen_before_first_scan": true
+}

@@ -1,0 +1,147 @@
+{
+  "scope": "direct saved final two-dimensional field-slice comparisons only; neither a full three-dimensional solution norm nor a continuum error enclosure",
+  "space": {
+    "fine_grid_N": 128,
+    "reference_grid_N": 96,
+    "same_box_side": 64.0,
+    "same_dt": 0.1,
+    "tau": 40.0,
+    "resampling": "scipy.signal.resample along both periodic slice axes, fine N128 to reference N96; field slices have common physical z=0 and x/y origin=-L/2",
+    "global_A_phase_alignment_radians": 1.559296422590409e-09,
+    "metrics": {
+      "core_r8": {
+        "A_raw": {
+          "max_abs": 3.5832193649350822e-06,
+          "L2_abs_plane": 1.1777131907204055e-05,
+          "L2_relative_plane": 1.1724266310050133e-06
+        },
+        "A_phase_aligned": {
+          "max_abs": 3.5832435825783145e-06,
+          "L2_abs_plane": 1.1777132269831304e-05,
+          "L2_relative_plane": 1.1724266671049608e-06
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 5.715135609138389e-06,
+          "L2_abs_plane": 1.7918139852570944e-05,
+          "L2_relative_plane": 3.8513263144687635e-06
+        }
+      },
+      "core_r12": {
+        "A_raw": {
+          "max_abs": 3.5832193649350822e-06,
+          "L2_abs_plane": 1.1963285282190688e-05,
+          "L2_relative_plane": 1.1892035597405699e-06
+        },
+        "A_phase_aligned": {
+          "max_abs": 3.5832435825783145e-06,
+          "L2_abs_plane": 1.1963276550804938e-05,
+          "L2_relative_plane": 1.1892026918021426e-06
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 5.715135609138389e-06,
+          "L2_abs_plane": 1.8152519012261223e-05,
+          "L2_relative_plane": 3.901512598621949e-06
+        }
+      },
+      "whole_plane": {
+        "A_raw": {
+          "max_abs": 3.5832193649350822e-06,
+          "L2_abs_plane": 1.5281086550128885e-05,
+          "L2_relative_plane": 1.5178073412370353e-06
+        },
+        "A_phase_aligned": {
+          "max_abs": 3.5832435825783145e-06,
+          "L2_abs_plane": 1.5281078486219092e-05,
+          "L2_relative_plane": 1.5178065402821131e-06
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 5.715135609138389e-06,
+          "L2_abs_plane": 2.0614963384189893e-05,
+          "L2_relative_plane": 4.430690990229201e-06
+        }
+      }
+    },
+    "fine_to_reference_to_fine_resampling_remainder": {
+      "A": {
+        "max_abs": 2.7091164055410666e-06,
+        "L2_abs_plane": 1.0676078057496216e-05,
+        "L2_relative_plane": 1.060410832592257e-06
+      },
+      "S_organization_normalized": {
+        "max_abs": 4.475673972326177e-06,
+        "L2_abs_plane": 1.5693549544333037e-05,
+        "L2_relative_plane": 3.3729513565382965e-06
+      }
+    }
+  },
+  "domain": {
+    "reference_box_side": 64.0,
+    "larger_box_side": 85.33333333333333,
+    "same_h": 0.6666666666666679,
+    "same_dt": 0.1,
+    "tau": 40.0,
+    "comparison": "exact coordinate subset of saved z=0 slice; no resampling",
+    "max_coordinate_mismatch": 0.0,
+    "global_A_phase_alignment_radians": -8.639252477830567e-08,
+    "metrics": {
+      "core_r8": {
+        "A_raw": {
+          "max_abs": 5.817585663834454e-08,
+          "L2_abs_plane": 4.1921721717120943e-07,
+          "L2_relative_plane": 4.173354204232759e-08
+        },
+        "A_phase_aligned": {
+          "max_abs": 2.242373206072411e-07,
+          "L2_abs_plane": 9.879796388992023e-07,
+          "L2_relative_plane": 9.835447617153634e-08
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 5.81140688904469e-08,
+          "L2_abs_plane": 5.154596026251409e-07,
+          "L2_relative_plane": 1.1079292538008483e-07
+        }
+      },
+      "core_r12": {
+        "A_raw": {
+          "max_abs": 8.066538877936443e-08,
+          "L2_abs_plane": 6.244433265127926e-07,
+          "L2_relative_plane": 6.207243321788234e-08
+        },
+        "A_phase_aligned": {
+          "max_abs": 2.242373206072411e-07,
+          "L2_abs_plane": 1.091582373770564e-06,
+          "L2_relative_plane": 1.0850812414968246e-07
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 7.567126825147596e-08,
+          "L2_abs_plane": 7.504020419253636e-07,
+          "L2_relative_plane": 1.6128356723526406e-07
+        }
+      },
+      "whole_plane": {
+        "A_raw": {
+          "max_abs": 0.0024396508535605753,
+          "L2_abs_plane": 0.023879399956312476,
+          "L2_relative_plane": 0.00237184237122986
+        },
+        "A_phase_aligned": {
+          "max_abs": 0.002439650830519566,
+          "L2_abs_plane": 0.023879399940471883,
+          "L2_relative_plane": 0.0023718423696564793
+        },
+        "S_raw_organization_normalized": {
+          "max_abs": 0.0006713918391074714,
+          "L2_abs_plane": 0.003405195691896132,
+          "L2_relative_plane": 0.0007318649851991659
+        }
+      }
+    }
+  },
+  "caveats": [
+    "The time discretization is unchanged in the space comparison.",
+    "A single central plane does not constrain every off-plane mode.",
+    "Core masks use reference-grid quadrature.",
+    "Global phase alignment removes only a common U(1) phase; raw errors are retained.",
+    "Spectral resampling is analysis of existing outputs, not a new physical run."
+  ]
+}

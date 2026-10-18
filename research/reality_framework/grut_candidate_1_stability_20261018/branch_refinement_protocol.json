@@ -1,0 +1,69 @@
+{
+  "reason": "Initial 16-call turning optimizer hit its declared cap; confirm turning by linear BVP sensitivity and extend explicit multi-component comparisons.",
+  "turning": {
+    "method": "root of dQ/dOmega from differentiated fixed-frequency ODE",
+    "bracket": [
+      0.958,
+      0.962
+    ],
+    "domain": 80,
+    "tol": 1e-09,
+    "xtol": 2e-09,
+    "maxiter": 12,
+    "confirmation_domain": 100,
+    "confirmation_tol": 3e-10
+  },
+  "binding": {
+    "method": "brentq E/Q-1 with refined BVP",
+    "bracket": [
+      0.90649,
+      0.90659
+    ],
+    "domain": 60,
+    "tol": 1e-09,
+    "xtol": 2e-10,
+    "maxiter": 12,
+    "confirmation_domain": 80,
+    "confirmation_tol": 3e-10
+  },
+  "additional_exact_charge_fractions": [
+    0.375,
+    0.45,
+    0.55,
+    0.625,
+    1.0
+  ],
+  "additional_multicomponent_candidates": [
+    [
+      0.375,
+      0.375,
+      "free .25"
+    ],
+    [
+      0.4,
+      0.4,
+      "free .2"
+    ],
+    [
+      0.45,
+      0.45,
+      "free .1"
+    ]
+  ],
+  "amplitude_l0_checks": {
+    "Omega": [
+      0.95,
+      0.97
+    ],
+    "N": [
+      800,
+      1200
+    ],
+    "L": 70,
+    "lowest_count": 2,
+    "fixed_Q_rank_one": true
+  },
+  "first_pass_preserved": true,
+  "physical_parameters_unchanged": true,
+  "frozen_before_second_pass": true
+}

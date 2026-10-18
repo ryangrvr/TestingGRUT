@@ -1,0 +1,361 @@
+{
+  "scope": "bounded leading classical numerical evidence",
+  "passed": true,
+  "number_of_checks": 60,
+  "checks": [
+    {
+      "name": "same_original_background",
+      "passed": true,
+      "evidence": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3"
+    },
+    {
+      "name": "evolution_source_matches_execution",
+      "passed": true,
+      "evidence": "c0f0477b6bf8a4a1176a9f065c0cf566f3e45c5e6e6cdeaf260b931be1cdfc24"
+    },
+    {
+      "name": "all_112_scalar_bvp_attempts_accepted",
+      "passed": true,
+      "evidence": 112
+    },
+    {
+      "name": "turning_root_converged",
+      "passed": true,
+      "evidence": true
+    },
+    {
+      "name": "turning_domain_energy_convergence",
+      "passed": true,
+      "evidence": 1.6854642126418184e-09
+    },
+    {
+      "name": "turning_domain_charge_convergence",
+      "passed": true,
+      "evidence": 1.6470664832013426e-09
+    },
+    {
+      "name": "binding_root_converged",
+      "passed": true,
+      "evidence": true
+    },
+    {
+      "name": "binding_domain_energy_convergence",
+      "passed": true,
+      "evidence": 8.187441835616482e-10
+    },
+    {
+      "name": "binding_domain_charge_convergence",
+      "passed": true,
+      "evidence": 8.35541413835017e-10
+    },
+    {
+      "name": "all_resolved_fragmentation_margins_positive",
+      "passed": true,
+      "evidence": 15.104816159154666
+    },
+    {
+      "name": "radial_branch_negative_control",
+      "passed": true,
+      "evidence": [
+        {
+          "Omega": 0.95,
+          "N": 800,
+          "lowest_eigenvalues": [
+            0.03044218051396688,
+            0.10037237263373584
+          ]
+        },
+        {
+          "Omega": 0.95,
+          "N": 1200,
+          "lowest_eigenvalues": [
+            0.030520712937971484,
+            0.10037268439943961
+          ]
+        },
+        {
+          "Omega": 0.97,
+          "N": 800,
+          "lowest_eigenvalues": [
+            -0.02740401150317017,
+            0.06209789038517104
+          ]
+        },
+        {
+          "Omega": 0.97,
+          "N": 1200,
+          "lowest_eigenvalues": [
+            -0.0273358065121457,
+            0.06209813662611667
+          ]
+        }
+      ]
+    },
+    {
+      "name": "independent_gradient_preflight",
+      "passed": true,
+      "evidence": 3.65909026693156e-09
+    },
+    {
+      "name": "independent_energy_mesh_convergence_1.0",
+      "passed": true,
+      "evidence": {
+        "coarse_error": 0.005563022403293871,
+        "fine_error": 0.0013906938127092872,
+        "ratio": 4.000177718815216
+      }
+    },
+    {
+      "name": "independent_energy_mesh_convergence_0.75",
+      "passed": true,
+      "evidence": {
+        "coarse_error": 0.004583381134580122,
+        "fine_error": 0.0011457872245159706,
+        "ratio": 4.000202687297668
+      }
+    },
+    {
+      "name": "independent_energy_mesh_convergence_0.5",
+      "passed": true,
+      "evidence": {
+        "coarse_error": 0.0029821752366103738,
+        "fine_error": 0.0007454645769939816,
+        "ratio": 4.000425142447043
+      }
+    },
+    {
+      "name": "independent_FV_stationarity_1.0",
+      "passed": true,
+      "evidence": 4.37058443360416e-12
+    },
+    {
+      "name": "independent_FV_stationarity_0.75",
+      "passed": true,
+      "evidence": 5.083045095943817e-12
+    },
+    {
+      "name": "independent_FV_stationarity_0.5",
+      "passed": true,
+      "evidence": 9.142020473973389e-12
+    },
+    {
+      "name": "control_global_charge_conservation",
+      "passed": true,
+      "evidence": 3.260725023324085e-13
+    },
+    {
+      "name": "control_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 1.3200501191024117e-05
+    },
+    {
+      "name": "control_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9977159724634677
+    },
+    {
+      "name": "control_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 35.515463885562724
+    },
+    {
+      "name": "control_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 7.147541808375117e-12
+    },
+    {
+      "name": "small_global_charge_conservation",
+      "passed": true,
+      "evidence": 3.254063685176334e-13
+    },
+    {
+      "name": "small_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 1.6415403256475614e-05
+    },
+    {
+      "name": "small_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9969618781458055
+    },
+    {
+      "name": "small_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 35.29341784907672
+    },
+    {
+      "name": "small_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 7.936488893068147e-12
+    },
+    {
+      "name": "stress_global_charge_conservation",
+      "passed": true,
+      "evidence": 3.254063685176334e-13
+    },
+    {
+      "name": "stress_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 8.838947307099332e-05
+    },
+    {
+      "name": "stress_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9846444948260259
+    },
+    {
+      "name": "stress_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 31.91810159405668
+    },
+    {
+      "name": "stress_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 3.419077556696967e-11
+    },
+    {
+      "name": "time_global_charge_conservation",
+      "passed": true,
+      "evidence": 6.119549311733863e-13
+    },
+    {
+      "name": "time_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 2.0168435569845045e-05
+    },
+    {
+      "name": "time_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9848066917622164
+    },
+    {
+      "name": "time_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 31.91810159405668
+    },
+    {
+      "name": "time_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 3.419077556696967e-11
+    },
+    {
+      "name": "coarse_global_charge_conservation",
+      "passed": true,
+      "evidence": 2.9976021664879227e-14
+    },
+    {
+      "name": "coarse_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 8.838933962107554e-05
+    },
+    {
+      "name": "coarse_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9845700230150897
+    },
+    {
+      "name": "coarse_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 31.918685291664815
+    },
+    {
+      "name": "coarse_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 6.6315089946123e-08
+    },
+    {
+      "name": "space_global_charge_conservation",
+      "passed": true,
+      "evidence": 6.838973831690964e-14
+    },
+    {
+      "name": "space_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 8.83895382064459e-05
+    },
+    {
+      "name": "space_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.9847488007302929
+    },
+    {
+      "name": "space_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 31.918102116418993
+    },
+    {
+      "name": "space_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 9.898713649670654e-15
+    },
+    {
+      "name": "domain_global_charge_conservation",
+      "passed": true,
+      "evidence": 6.52811138479592e-14
+    },
+    {
+      "name": "domain_Hamiltonian_energy_error",
+      "passed": true,
+      "evidence": 8.838947319822488e-05
+    },
+    {
+      "name": "domain_sampled_core_retention",
+      "passed": true,
+      "evidence": 0.984644494539995
+    },
+    {
+      "name": "domain_same_charge_below_free_escape_energy",
+      "passed": true,
+      "evidence": 31.91810159452558
+    },
+    {
+      "name": "domain_consistent_regional_gradient_energy",
+      "passed": true,
+      "evidence": 2.0425067582686334e-11
+    },
+    {
+      "name": "time_refinement_reduces_energy_error",
+      "passed": true,
+      "evidence": 4.382564664715461
+    },
+    {
+      "name": "time_core_retention_comparison",
+      "passed": true,
+      "evidence": 0.00016219693619046183
+    },
+    {
+      "name": "time_profile_comparison",
+      "passed": true,
+      "evidence": 0.0003342799495884008
+    },
+    {
+      "name": "space_core_retention_comparison",
+      "passed": true,
+      "evidence": 0.00013535742738690626
+    },
+    {
+      "name": "space_profile_comparison",
+      "passed": true,
+      "evidence": 1.2768957030617756e-08
+    },
+    {
+      "name": "domain_core_retention_comparison",
+      "passed": true,
+      "evidence": 1.2083050116018512e-09
+    },
+    {
+      "name": "domain_profile_comparison",
+      "passed": true,
+      "evidence": 1.2113628333448867e-05
+    }
+  ],
+  "declaration": "Protocol conservation/retention gates were frozen before trajectories; extra convergence/cross-method checks were consolidated after execution, not statistical preregistration.",
+  "open": [
+    "all field configurations and partitions",
+    "arbitrarily long evolution",
+    "quantum lifetime",
+    "physical apparatus",
+    "empirical calibration",
+    "nonlinear Einstein evolution"
+  ]
+}

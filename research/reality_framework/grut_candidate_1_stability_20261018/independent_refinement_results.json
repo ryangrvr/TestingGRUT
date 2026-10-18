@@ -1,0 +1,214 @@
+{
+  "protocol": {
+    "title": "Independent finite-volume stationarity refinement",
+    "date": "2026-10-18",
+    "frozen_before_newton_steps": true,
+    "reason": "All twelve original L-BFGS-B runs stopped on relative-energy ftol while remaining above the requested projected-gradient tolerance. Preserve those outputs and test the discrete stationarity equations directly.",
+    "physical_parameters_unchanged": true,
+    "original_outputs_preserved": true,
+    "charges": [
+      1.0,
+      0.75,
+      0.5
+    ],
+    "N": 1600,
+    "L": 40.0,
+    "initial_state_rule": "For each charge use its original N1600 independent_gaussian output, without choosing by agreement or gradient size.",
+    "method": "Newton for the same analytic finite-volume gradient; sparse symmetric local Hessian plus the exact fixed-Q rank-one term, solved by sparse LU and Sherman-Morrison.",
+    "hessian": "H_uu=Lpre+diag(S^2+3bF^2-Omega^2)+4Omega^2/I*u*u^T; H_ww=Lpre+diag(a(3S^2-1)+F^2); H_uw=diag(2FS).",
+    "preflight": "Check analytic Hessian-vector product against two central finite-difference steps of the independently checked gradient on the same N32,L8 interior test as before. Abort refinement if both relative discrepancies exceed 1e-5.",
+    "max_newton_steps": 6,
+    "requested_projected_gradient_inf": 1e-09,
+    "backtracking": "Try scale 1,1/2,...,1/1024; project to the original bounds; accept first finite trial that strictly reduces projected-gradient infinity norm, or meets tolerance. Stop and retain failure if none does.",
+    "wall_time_limit_total_seconds": 30,
+    "outputs": "independent_refinement_results.json, independent_refinement_profiles.npz, independent_refinement_execution.jsonl; original twelve run outputs remain unchanged.",
+    "interpretation": "A refined root is evidence for a stationary point of the bounded finite-volume radial functional; neither global minimization nor continuum or nonlinear stability follows. Numerical full gradients and core Euler residuals are reported as well as projected gradients."
+  },
+  "protocol_sha256": "c62e7de37aac001a0195703af3dd100f96363dfd6bdd126ab61e9c2135c70188",
+  "implementation_sha256": "94aa4eacc29dcafd6a3e2bc855cba5c688a412e7932c6b5feb0d90f08c08592d",
+  "original_results_sha256": "db0e01384b1d9cb90308b2d547c22481abf353d7cffaabc0efe3749cbfcc271f",
+  "Hessian_preflight": [
+    {
+      "step": 1e-05,
+      "relative_Hessian_vector_discrepancy": 1.6584669059452773e-10
+    },
+    {
+      "step": 3e-06,
+      "relative_Hessian_vector_discrepancy": 7.690749954549488e-10
+    }
+  ],
+  "runs": [
+    {
+      "label": "q1.00_N1600_independent_gaussian",
+      "fraction": 1.0,
+      "Qbar": 399.4384624223012,
+      "steps": [
+        {
+          "step": 1,
+          "Sherman_Morrison_denominator": -8.198000207213058,
+          "linear_residual_inf": 1.2097748069159545e-18,
+          "trials": [
+            {
+              "scale": 1.0,
+              "projection_inf": 2.5977614668448817e-15,
+              "Ibar": 499.29938016299633,
+              "Omega": 0.7999979136603463,
+              "Ebar": 363.92160785759603,
+              "Etime_bar": 159.7749682867688,
+              "Egrad_bar": 66.55889764041063,
+              "EU_bar": 137.5877419304166,
+              "Ebar_over_Qbar": 0.9110830380496623,
+              "projected_gradient_inf": 4.37058443360416e-12,
+              "full_gradient_inf": 4.37058443360416e-12,
+              "F_core_EL_residual_inf": 2.84913481099632e-12,
+              "S_core_EL_residual_inf": 6.351714292393497e-13
+            }
+          ],
+          "accepted_scale": 1.0
+        }
+      ],
+      "initial": {
+        "Ibar": 499.2994369943861,
+        "Omega": 0.7999978226027767,
+        "Ebar": 363.9216078577202,
+        "Etime_bar": 159.774950100821,
+        "Egrad_bar": 66.55890107942095,
+        "EU_bar": 137.58775667747824,
+        "Ebar_over_Qbar": 0.911083038049973,
+        "projected_gradient_inf": 1.7425998833526905e-05,
+        "full_gradient_inf": 1.7425998833526905e-05,
+        "F_core_EL_residual_inf": 0.0003981167244230092,
+        "S_core_EL_residual_inf": 0.0016605773445849546
+      },
+      "status": "requested_gradient_reached",
+      "final": {
+        "Ibar": 499.29938016299633,
+        "Omega": 0.7999979136603463,
+        "Ebar": 363.92160785759603,
+        "Etime_bar": 159.7749682867688,
+        "Egrad_bar": 66.55889764041063,
+        "EU_bar": 137.5877419304166,
+        "Ebar_over_Qbar": 0.9110830380496623,
+        "projected_gradient_inf": 4.37058443360416e-12,
+        "full_gradient_inf": 4.37058443360416e-12,
+        "F_core_EL_residual_inf": 2.84913481099632e-12,
+        "S_core_EL_residual_inf": 6.351714292393497e-13
+      }
+    },
+    {
+      "label": "q0.75_N1600_independent_gaussian",
+      "fraction": 0.75,
+      "Qbar": 299.5788468167259,
+      "steps": [
+        {
+          "step": 1,
+          "Sherman_Morrison_denominator": -7.192625610769273,
+          "linear_residual_inf": 1.5477409528704203e-18,
+          "trials": [
+            {
+              "scale": 1.0,
+              "projection_inf": 4.918513661642988e-16,
+              "Ibar": 360.71846317180007,
+              "Omega": 0.830505996789094,
+              "Ebar": 282.62632177201334,
+              "Etime_bar": 124.4010143962261,
+              "Egrad_bar": 50.737585275740905,
+              "EU_bar": 107.48772210004634,
+              "Ebar_over_Qbar": 0.9434121426634516,
+              "projected_gradient_inf": 5.083045095943817e-12,
+              "full_gradient_inf": 5.083045095943817e-12,
+              "F_core_EL_residual_inf": 4.666379782738028e-12,
+              "S_core_EL_residual_inf": 1.191051890122063e-12
+            }
+          ],
+          "accepted_scale": 1.0
+        }
+      ],
+      "initial": {
+        "Ibar": 360.71844801376767,
+        "Omega": 0.8305060316884368,
+        "Ebar": 282.62632177217074,
+        "Etime_bar": 124.40101962377855,
+        "Egrad_bar": 50.73758005244318,
+        "EU_bar": 107.48772209594898,
+        "Ebar_over_Qbar": 0.943412142663977,
+        "projected_gradient_inf": 3.404356954882267e-05,
+        "full_gradient_inf": 3.404356954882267e-05,
+        "F_core_EL_residual_inf": 0.0036695888666725463,
+        "S_core_EL_residual_inf": 0.0003597062746820887
+      },
+      "status": "requested_gradient_reached",
+      "final": {
+        "Ibar": 360.71846317180007,
+        "Omega": 0.830505996789094,
+        "Ebar": 282.62632177201334,
+        "Etime_bar": 124.4010143962261,
+        "Egrad_bar": 50.737585275740905,
+        "EU_bar": 107.48772210004634,
+        "Ebar_over_Qbar": 0.9434121426634516,
+        "projected_gradient_inf": 5.083045095943817e-12,
+        "full_gradient_inf": 5.083045095943817e-12,
+        "F_core_EL_residual_inf": 4.666379782738028e-12,
+        "S_core_EL_residual_inf": 1.191051890122063e-12
+      }
+    },
+    {
+      "label": "q0.50_N1600_independent_gaussian",
+      "fraction": 0.5,
+      "Qbar": 199.7192312111506,
+      "steps": [
+        {
+          "step": 1,
+          "Sherman_Morrison_denominator": -5.514026638247754,
+          "linear_residual_inf": 1.7129123775850089e-18,
+          "trials": [
+            {
+              "scale": 1.0,
+              "projection_inf": 0.0,
+              "Ibar": 225.65384715808344,
+              "Omega": 0.8850690281882757,
+              "Ebar": 197.29767508894307,
+              "Etime_bar": 88.3826529392813,
+              "Egrad_bar": 30.799299306040183,
+              "EU_bar": 78.11572284362158,
+              "Ebar_over_Qbar": 0.9878751980591826,
+              "projected_gradient_inf": 9.142020473973389e-12,
+              "full_gradient_inf": 9.142020473973389e-12,
+              "F_core_EL_residual_inf": 1.104978971305115e-11,
+              "S_core_EL_residual_inf": 5.958904896513785e-13
+            }
+          ],
+          "accepted_scale": 1.0
+        }
+      ],
+      "initial": {
+        "Ibar": 225.65382878645536,
+        "Omega": 0.8850691002462553,
+        "Ebar": 197.29767508914682,
+        "Etime_bar": 88.38266013496344,
+        "Egrad_bar": 30.799295538573077,
+        "EU_bar": 78.1157194156103,
+        "Ebar_over_Qbar": 0.9878751980602027,
+        "projected_gradient_inf": 3.290929285596277e-05,
+        "full_gradient_inf": 3.290929285596277e-05,
+        "F_core_EL_residual_inf": 0.0021824097366999113,
+        "S_core_EL_residual_inf": 0.0028078962149986194
+      },
+      "status": "requested_gradient_reached",
+      "final": {
+        "Ibar": 225.65384715808344,
+        "Omega": 0.8850690281882757,
+        "Ebar": 197.29767508894307,
+        "Etime_bar": 88.3826529392813,
+        "Egrad_bar": 30.799299306040183,
+        "EU_bar": 78.11572284362158,
+        "Ebar_over_Qbar": 0.9878751980591826,
+        "projected_gradient_inf": 9.142020473973389e-12,
+        "full_gradient_inf": 9.142020473973389e-12,
+        "F_core_EL_residual_inf": 1.104978971305115e-11,
+        "S_core_EL_residual_inf": 5.958904896513785e-13
+      }
+    }
+  ],
+  "total_wall_seconds": 0.03736671600017871
+}

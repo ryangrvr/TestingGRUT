@@ -1,0 +1,37 @@
+{
+  "title": "Independent fixed-charge radial finite-volume minimization",
+  "frozen_before_optimization": true,
+  "date": "2026-10-18",
+  "scope": "Local classical scalar energy minimization at the existing Candidate 1 couplings; implementation cross-check, not independent external validation or proof of a global minimizer.",
+  "a": 1.0,
+  "b": 0.1,
+  "target_Qbar": 399.4384624223012,
+  "charge_fractions": [1.0, 0.75, 0.5],
+  "radial_domain_L": 40.0,
+  "cell_counts": [800, 1600],
+  "cell_centers": "r_i=(i+1/2)h, h=L/N",
+  "cell_volumes": "V_i=4*pi/3*((i+1)^3-i^3)*h^3",
+  "gradient_energy": "0.5*sum_faces(4*pi*r_face^2/h)*(delta F^2+delta S^2); origin has zero area; outer Dirichlet F=0,S=1 is a half-cell away and uses coefficient 4*pi*L^2/(h/2).",
+  "charge_elimination": "I=sum_i V_i F_i^2; E_Q=Qbar^2/(2I)+E_gradient+sum_i V_i Ubar_i; Omega=Qbar/I",
+  "variables": "u_i=sqrt(V_i) F_i; w_i=sqrt(V_i)(S_i-1)",
+  "bounds": "F>=0, 0<=S<=1",
+  "starts": [
+    {
+      "name": "bvp_shape",
+      "source": "../grut_candidate_1_20261018/code/results_profile.npz",
+      "formula": "c=(Qbar/Qstar)^(1/3); F_i=F_BVP(r_i/c), S_i=S_BVP(r_i/c); interpolate the existing target BVP profile, use vacuum outside its range. No BVP solve is called."
+    },
+    {
+      "name": "independent_gaussian",
+      "formula": "sigma=4*(Qbar/Qstar)^(1/3); F=1.25*exp(-r^2/(2*sigma^2)); S=1-0.8*exp(-r^2/(2*(1.1*sigma)^2))."
+    }
+  ],
+  "optimizer": "scipy.optimize.minimize L-BFGS-B with an independently implemented objective and analytic gradients",
+  "options": {"maxiter": 2500, "maxfun": 12000, "maxls": 40, "maxcor": 30, "ftol": 1e-14, "gtol": 3e-7},
+  "run_order": "charge fractions in listed order; N in listed order; starts in listed order",
+  "wall_time_limit_per_run_seconds": 40.0,
+  "wall_time_limit_total_seconds": 180.0,
+  "preflight": "Check analytic objective gradients against central finite differences in four deterministic random directions on N=32,L=8 with strictly interior test fields; two step sizes 1e-5 and 3e-6. Abort physical optimization if relative discrepancy exceeds 1e-5 in both steps for any direction.",
+  "outputs": "independent_results.json, independent_execution.jsonl, independent_profiles.npz, independent_results.csv, independent_notes.md; retain optimizer stop flags, convergence failures and budget-skipped runs.",
+  "interpretation": "Compare energies and Omega at matched charge against the stationary branch and compare N=800 versus N=1600. Multiple starts and numerical agreement support local implementation consistency only. Finite domain fixed at L40: no claim of a new domain refinement or global minimization."
+}
