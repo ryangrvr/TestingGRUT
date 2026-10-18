@@ -1,0 +1,80 @@
+{
+  "campaign": "B2-SO",
+  "law": "Unchanged nominal B1/B2 fixed recorded path law",
+  "decision": "Uniform joint state comparison author-derived; source transfer and full operating gate remain mathematically unresolved. Stop this cycle.",
+  "historical_dispositions": "B2 original endpoint remains failed; A1 and old solver branch remain closed.",
+  "roles": "One assistant; shared code; no independent proof review or empirical test.",
+  "claims": [
+    {
+      "id": "B2SO_weighted_exact_source",
+      "tier": "derived-pending",
+      "statement": "The exact half-line low-source graph exists in the weighted Schur ball; its reconstructed preparation has tail <=(101/100) exp(-3M/20+11J|t|/28).",
+      "proof": "PROOF.md (3)-(11)",
+      "open_input": "Independent review of weighted kernel contraction, domains, spectral identification and logarithmic norm.",
+      "falsifying_check": "Violation of a contraction/growth constant or a valid half-line configuration not represented.",
+      "status": "author-derived, no numerical infinite-graph solve"
+    },
+    {
+      "id": "B2SO_joint_comparison",
+      "tier": "derived-pending",
+      "statement": "Original double-fuel full evolution differs from its embedded unnormalized cut source product by <=12/27613+1500 exp(-L/105), uniformly 0<=t<=L/(6J).",
+      "proof": "PROOF.md (12)-(15)",
+      "open_input": "Independent review of same-Hilbert-space embedding and every incoming/outgoing defect term.",
+      "falsifying_check": "A valid cross-contact or field term on the separated reference range, or a boundary coupling exceeding the defect bound.",
+      "status": "author-derived; <0.001 for frozen-family lengths >=2016"
+    },
+    {
+      "id": "B2SO_original_event",
+      "tier": "derived-pending",
+      "statement": "Actual original-trial joint output and q=2 probabilities obey the source-function amplitude inequalities (16); endpoint successful color channel remains p_out times identity including references.",
+      "proof": "PROOF.md (16); inherited B2 endpoint ordering",
+      "open_input": "Independent proof and protocol review.",
+      "falsifying_check": "The receiver event differs from the frozen R_L or the embedding fails to factor that event.",
+      "status": "author-derived; no outgoing probability lower constant proved"
+    },
+    {
+      "id": "B2SO_short_launch",
+      "tier": "derived-pending",
+      "statement": "For L>=2016 in the frozen family, original q=2 probability >0.323761 for 2<=Jt<=4; this permits separated constituents and is not co-pair output.",
+      "proof": "PROOF.md (19)",
+      "dependency": "B1 author-derived short-time source launch estimate and present comparison",
+      "open_input": "Independent review of both proofs and their half-line limit.",
+      "falsifying_check": "An exact original-seed evolution or proof step contradicts the specified short interval.",
+      "status": "short-time only; does not satisfy the growing receiver/use gate"
+    },
+    {
+      "id": "B2SO_source_launch_retention",
+      "tier": "to-derive",
+      "statement": "The original source reaches its receiver with sufficient probability and has a late fuel-return amplitude bound over the required intervals.",
+      "source": "SOURCE_ESTIMATE.md (22)",
+      "open_input": "Quantitative boundary spectral measure and outgoing spatial/scattering estimate, including all nonradiative/slow components and time-uniform remainder.",
+      "falsifying_check": "A valid source measure or evolution violates the proposed sufficient inequalities.",
+      "status": "mathematically unresolved; no source trajectories run"
+    },
+    {
+      "id": "B2SO_operating_gate",
+      "tier": "to-derive",
+      "statement": "The unchanged-law scaling family satisfies the frozen joint output, information and continuous retention thresholds.",
+      "source": "CHARTER.md",
+      "open_input": "The source estimates above, or an alternative complete proof of the actual joint event.",
+      "falsifying_check": "A rigorously resolved counterexample within the stated family.",
+      "status": "mathematically unresolved; not passed or refuted"
+    },
+    {
+      "id": "B2SO_controls",
+      "tier": "shown",
+      "statement": "Frozen rational and small embedding controls passed; replay data are byte-identical.",
+      "source": "CONTROLS.json; PRIMARY_WORKER.json; REPLAY.json",
+      "falsifying_check": "A frozen-source replay differs or a stated assertion fails.",
+      "status": "execution consistency; inherited catalog and ordinary double matrices"
+    },
+    {
+      "id": "B2SO_supplied",
+      "tier": "assumed",
+      "statement": "Prepared fixed path, loaded endpoint fuels and qubits, nominal couplings, relational generator rule, quantum framework, final color/occupation readout.",
+      "source": "CHARTER.md",
+      "falsifying_check": "Remove/change an input and rederive rather than export the theorem.",
+      "status": "no formation, universality, matter-density or empirical claim"
+    }
+  ]
+}
