@@ -1,0 +1,62 @@
+{
+  "campaign": "GRUT-A1",
+  "baseline_commit": "643ec7f9af41ec5d8d7816a5dcddbe24de2de7a7",
+  "charter_freeze": "ea45722e0a857cbbb74bac7cc2d8b15ad634d325",
+  "analytic_source_freeze": "523f051cfcbc93bed95fe8095fd15593768a87d6",
+  "decision": "refuted by explicit permitted counterexample",
+  "claim_status": "author-derived all-size argument; independent proof review pending",
+  "independent_validation": false,
+  "experimental_observations": 0,
+  "physical_variants_run": 1,
+  "rescue_variant_launched": false,
+  "background_service_installed": false,
+  "canonical_records_modified": false,
+  "fixed_Hamiltonian": true,
+  "conversion_present_during_propagation": true,
+  "reverse_transitions_retained": true,
+  "clock_register": false,
+  "external_switch_after_t0": false,
+  "initial_resource_preparation_supplied": true,
+  "primary_gate": {
+    "N_min": 262144,
+    "N_multiple": 64,
+    "K": "N/64",
+    "event": "P>=K",
+    "probability_target": "1/4",
+    "every_time_window": "[pi/2,pi/2+N/65536]",
+    "parameter_class": "lambda_e in [0.9,1.1], Omega_e in [5/2,7/2]; P1 storage/g class",
+    "counterexample_point": "lambda=1, Omega=13/4, both nonzero original hoppings and full density interactions",
+    "formation_probability": "greater than 0.946 minus 2 D_A(pi/2)",
+    "return_probability": "less than 0.215 plus 2 D_A(pi), strictly below 1/4",
+    "moving_geometry_error": "exp(-N/5)+exp(-N/12)",
+    "S9_dependency": "not needed for the retention counterexample; record/fuel are supplied"
+  },
+  "neutral_results": {
+    "law": "unchanged P1 operating sector",
+    "ground_composite_hopping": "1/3840",
+    "ground_dispersion_error_upper": "8.1e-6",
+    "excited_even_hopping": "-1/23040",
+    "excited_odd_hopping": "1/4608",
+    "excited_dispersion_error_upper": "4.2e-5",
+    "adjacent_one_pair_low_band_weight_upper": "1/529",
+    "two_pair_connected_interaction": true,
+    "scattering_matrix_derived": false,
+    "finite_density_gas_derived": false,
+    "protected_internal_qubit_transport_derived": false
+  },
+  "remaining_supplied": [
+    "quantum framework and external time",
+    "single-end path grammar",
+    "universal relational interaction support",
+    "electric capacity",
+    "record/program and fuel resource preparation"
+  ],
+  "roles": "Builder, Challenger, Integrator, Recorder are functions of one assistant sharing context; no independent validation",
+  "next_decision": "stop A1 under the frozen gate, preserve neutral analysis, seek proof review; do not execute another variant",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "arithmetic": "ordinary double precision; no outward rounding"
+  }
+}
