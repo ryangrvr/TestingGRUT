@@ -1,0 +1,79 @@
+{
+  "campaign": "B2-SA",
+  "law_status": "unchanged B2/B1 fixed-record matter law",
+  "decision": "Concrete analytical route identified; scaling operation unresolved. Stop this cycle; no B3.",
+  "historical_status": "B2 failed original eight-event endpoint; A1 and closed solver branches unchanged.",
+  "independence": "One assistant; inherited implementations; no independent review or empirical test.",
+  "claims": [
+    {
+      "id": "B2SA_uniform_band",
+      "tier": "derived-pending",
+      "statement": "A common contour and exact band isometry exist uniformly for fixed-record paths with two resources.",
+      "proof": "DERIVATION.md equations (1)-(8)",
+      "open_input": "Independent mathematical review of diagonal bounds, contour estimate and canonical isometry.",
+      "falsifying_check": "A valid configuration below the diagonal threshold, norm violation, or contour touching spectrum.",
+      "status": "author-derived"
+    },
+    {
+      "id": "B2SA_high_weight",
+      "tier": "derived-pending",
+      "statement": "The original double-fuel preparation has high-band weight <=32/37027225 and all-time event error <0.001 after low-band normalization.",
+      "proof": "DERIVATION.md equations (9)-(10)",
+      "open_input": "Independent mathematical review of min-max and preparation spectral-measure argument.",
+      "falsifying_check": "An allowed length violates the bound or the exact initial variance.",
+      "status": "author-derived"
+    },
+    {
+      "id": "B2SA_bulk_mobility",
+      "tier": "derived-pending",
+      "statement": "The exact one-composite infinite-bulk ground band has the lower/upper velocity bounds stated in (15) and (18).",
+      "proof": "DERIVATION.md (12)-(16); ROUTE_AND_DECISION.md (18)",
+      "open_input": "Independent mathematical review of fiber/gauge, positivity and Hellmann-Feynman bounds.",
+      "falsifying_check": "An exact fiber violates the analytic gap or derivative estimate.",
+      "status": "author-derived; upper bound is post-source-freeze analytic extension"
+    },
+    {
+      "id": "B2SA_endpoint_channel",
+      "tier": "derived-pending",
+      "statement": "On a fixed path with endpoint fuels the successful ordered two-qubit channel is exactly p_R times identity, including a reference.",
+      "proof": "DERIVATION.md (17), inherited B2 no-passing mechanism",
+      "open_input": "Independent all-size color-order proof review.",
+      "falsifying_check": "An allowed endpoint primitive transition exchanges ordered carriers.",
+      "status": "author-derived"
+    },
+    {
+      "id": "B2SA_controls",
+      "tier": "shown",
+      "statement": "Exact rational scalar checks and L=4,6,8 matrix controls passed, with a byte-identical replay.",
+      "source": "CONTROLS.json; PRIMARY_WORKER.json; REPLAY.json",
+      "falsifying_check": "Frozen-source replay differs or violates an archived assertion.",
+      "status": "execution consistency; shared code ancestry; double matrices"
+    },
+    {
+      "id": "B2SA_scaling_operation",
+      "tier": "to-derive",
+      "statement": "The prospective preparation-retention-arrival gate holds at increasing length.",
+      "source": "CHARTER.md",
+      "open_input": "Quantitative boundary-fuel emission and connected two-source/finite-host comparison; no operating probabilities computed.",
+      "falsifying_check": "A rigorous counterexample within the frozen family or failure of required lower bound.",
+      "status": "mathematically unresolved"
+    },
+    {
+      "id": "B2SA_full_geometry",
+      "tier": "to-derive",
+      "statement": "This scaling protocol composes with actual growing geometry and accessible decoding.",
+      "source": "ROUTE_AND_DECISION.md section 4",
+      "open_input": "Fresh buffer/time comparison and interior-fuel channel analysis.",
+      "falsifying_check": "Geometry disturbance or allowed exchange defeats proposed output protocol.",
+      "status": "unproved"
+    },
+    {
+      "id": "B2SA_inputs",
+      "tier": "assumed",
+      "statement": "Prepared path, loaded endpoint fuel qubits, nominal microscopic parameters, universal relational support, quantum framework and output measurement.",
+      "source": "CHARTER.md; unchanged B1 candidate",
+      "falsifying_check": "Change an input and rederive; no universality under its removal claimed.",
+      "status": "supplied"
+    }
+  ]
+}
