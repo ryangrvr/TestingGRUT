@@ -1,0 +1,68 @@
+{
+  "accounting": {
+    "conditional_joint_lower": "458329/4000000",
+    "joint_lower_established": false,
+    "source_threshold": "17/50 ONE-source probability"
+  },
+  "campaign": "B2-SB",
+  "candidate_changed": false,
+  "charter_commit": "09fef5b1459f25e9380a052fac7bd74715199f4d",
+  "claims": [
+    {
+      "artifact": "DECOMPOSITION.md",
+      "id": "exact_coherent_decomposition",
+      "review": "author_derived_pending_independent_review",
+      "tier": "derived"
+    },
+    {
+      "artifact": "DECOMPOSITION.md",
+      "consequence": "one-source A_L>32041/90000>17/50",
+      "hypothesis": "eta_C>=24/25 for every L,t in frozen window",
+      "hypothesis_established_for_actual_source": false,
+      "id": "central_capture_implies_arrival",
+      "review": "author_derived_pending_independent_review",
+      "tier": "derived"
+    },
+    {
+      "artifact": "DECOMPOSITION.md",
+      "hypothesis": "zero-extended dimensionless density in BV; omega+beta+V/16<=2/3",
+      "hypothesis_established_for_actual_source": false,
+      "id": "BV_route_implies_late_retention",
+      "review": "author_derived_pending_independent_review",
+      "tier": "derived"
+    },
+    {
+      "control": "controls.py",
+      "id": "banked_scalar_summaries_imply_late_return_bound",
+      "scope": "listed scalar summaries only; not the unchanged Hamiltonian",
+      "sub_status": "refuted",
+      "tier": "derived",
+      "witness": "SCALAR_LIMITATION.md"
+    },
+    {
+      "actual_violating_point_established": false,
+      "id": "actual_source_uniform_operating_gate",
+      "sub_status": "unresolved",
+      "tier": "to-derive"
+    },
+    {
+      "id": "historical_B2_endpoint_operates",
+      "reopened": false,
+      "source_commit": "d6fc811690372342ac0ab54e453c81b427fe6b37",
+      "sub_status": "refuted",
+      "tier": "derived"
+    }
+  ],
+  "decision": "demonstrated_limitation_of_specified_scalar_inference; actual_source_unresolved",
+  "independent_review": false,
+  "parent": "ac4bf51515f502534c2307a0e1e1f55b4d456af5",
+  "physical_source_simulation": false,
+  "source_freeze_commit": "dabee3a04a42b0b5236437e92f843d002a3b1b41",
+  "verification": {
+    "arithmetic": "exact rational expressions; ordinary double diagnostics only",
+    "frozen_checks": 40,
+    "output_sha256": "a3a3d675db13a811509f292c9218dcda0bbc1c271c59391290ccdda55de5a7d5",
+    "primary_runs": 1,
+    "replays": 1
+  }
+}

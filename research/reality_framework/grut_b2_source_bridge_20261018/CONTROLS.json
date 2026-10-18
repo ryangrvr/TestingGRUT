@@ -1,0 +1,176 @@
+{
+  "arithmetic": "Fraction expressions exact; trigonometric and 2D floats diagnostic only",
+  "band_margins_in_J": [
+    {
+      "decimal_diagnostic": 1.9963862387973403,
+      "denominator": 6918,
+      "numerator": 13811
+    },
+    {
+      "decimal_diagnostic": 1.9985994397759104,
+      "denominator": 714,
+      "numerator": 1427
+    }
+  ],
+  "bridge": {
+    "conditional_central_capture": {
+      "decimal_diagnostic": 0.96,
+      "denominator": 25,
+      "numerator": 24
+    },
+    "joint_retention_lower_if_fuel_bound": {
+      "decimal_diagnostic": 0.30752816717049586,
+      "denominator": 81000000000000000000000000,
+      "numerator": 24909781540810162540000081
+    },
+    "one_source_lower_if_capture": {
+      "decimal_diagnostic": 0.3560111111111111,
+      "denominator": 90000,
+      "numerator": 32041
+    },
+    "unchanged_joint_sufficient_lower": {
+      "decimal_diagnostic": 0.11458225,
+      "denominator": 4000000,
+      "numerator": 458329
+    }
+  },
+  "capture_equality_controls": [
+    {
+      "coherent_cross_term_diagnostic": -0.19474579822405913,
+      "equality_defect_diagnostic": 0.0,
+      "eta": {
+        "decimal_diagnostic": 0.96,
+        "denominator": 25,
+        "numerator": 24
+      },
+      "probability_diagnostic": 0.35636531288705187,
+      "w": {
+        "decimal_diagnostic": 0.5555555555555556,
+        "denominator": 9,
+        "numerator": 5
+      }
+    },
+    {
+      "coherent_cross_term_diagnostic": -0.36660605559646714,
+      "equality_defect_diagnostic": 0.0,
+      "eta": {
+        "decimal_diagnostic": 0.7,
+        "denominator": 10,
+        "numerator": 7
+      },
+      "probability_diagnostic": 0.2533939444035328,
+      "w": {
+        "decimal_diagnostic": 0.8,
+        "denominator": 5,
+        "numerator": 4
+      }
+    },
+    {
+      "coherent_cross_term_diagnostic": -0.39999999999999997,
+      "equality_defect_diagnostic": 0.0,
+      "eta": {
+        "decimal_diagnostic": 0.8,
+        "denominator": 5,
+        "numerator": 4
+      },
+      "probability_diagnostic": 0.10000000000000003,
+      "w": {
+        "decimal_diagnostic": 0.5,
+        "denominator": 2,
+        "numerator": 1
+      }
+    }
+  ],
+  "checks": [
+    "lower_band_margin_exact",
+    "upper_band_margin_exact",
+    "witness_strictly_inside_reference_band",
+    "positive_atomic_measure",
+    "mass_exactly_one",
+    "dimensionless_mean_exactly_zero",
+    "dimensionless_variance_exactly_one",
+    "central_mass_exact",
+    "central_mass_exceeds_five_ninths",
+    "high_measure_zero",
+    "positive_sine_lower_bound",
+    "continuous_early_upper_below_031",
+    "continuous_early_upper_below_065",
+    "declared_length_allowed",
+    "recurrence_phase_integer_turns",
+    "pi_lower_puts_recurrence_above_window_start",
+    "pi_upper_puts_recurrence_below_window_end",
+    "central_capture_first_radical",
+    "central_capture_second_radical",
+    "positive_rational_radical_lower",
+    "capture_rational_amplitude",
+    "capture_rational_probability",
+    "capture_closes_original_source_threshold",
+    "correct_joint_lower",
+    "joint_lower_exceeds_one_tenth",
+    "twice_high_amplitude_below_00005",
+    "high_weight_below_1e6",
+    "retention_closure_exceeds_one_quarter",
+    "left_ray_margin",
+    "right_ray_margin",
+    "capture_equality_5/9",
+    "orthogonality_5/9",
+    "normalization_5/9",
+    "capture_equality_4/5",
+    "orthogonality_4/5",
+    "normalization_4/5",
+    "capture_equality_1/2",
+    "orthogonality_1/2",
+    "normalization_1/2",
+    "declared_recurrence_diagnostic"
+  ],
+  "scope": "exact scalar countermodel and conditional bridge checks; no physical source violation",
+  "status": "all_frozen_controls_pass",
+  "witness": {
+    "L": 3072,
+    "alpha": {
+      "decimal_diagnostic": 0.9709228824273072,
+      "denominator": 791,
+      "numerator": 768
+    },
+    "atoms": 225,
+    "beta": {
+      "decimal_diagnostic": 0.029077117572692796,
+      "denominator": 791,
+      "numerator": 23
+    },
+    "central_mass": {
+      "decimal_diagnostic": 0.861913190054783,
+      "denominator": 59325,
+      "numerator": 51133
+    },
+    "early_continuous_upper": {
+      "decimal_diagnostic": 0.30526197545376327,
+      "denominator": 485970625,
+      "numerator": 148348353
+    },
+    "exact_return_modulus": 1,
+    "grid_denominator": 64,
+    "grid_maximum": 112,
+    "mass": {
+      "decimal_diagnostic": 1.0,
+      "denominator": 1,
+      "numerator": 1
+    },
+    "mean": {
+      "decimal_diagnostic": 0.0,
+      "denominator": 1,
+      "numerator": 0
+    },
+    "return_modulus_diagnostic": 1.0000000000000018,
+    "theta_recurrence": "128*pi",
+    "theta_window": [
+      384,
+      512
+    ],
+    "variance": {
+      "decimal_diagnostic": 1.0,
+      "denominator": 1,
+      "numerator": 1
+    }
+  }
+}
