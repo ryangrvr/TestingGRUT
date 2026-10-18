@@ -1,0 +1,100 @@
+{
+  "candidate": "unchanged nominal B2 endpoint-source fixed-path law",
+  "cycle": "B2-RA",
+  "parent": "20936d48123942a673db2f8a88375e9bb9b14ef0",
+  "charter_commit": "233b27781f89a617b3315481da5f180a4eec2724",
+  "proof_code_freeze_commit": "5e77eb0e9d4d950db68d5682069e95801d00011b",
+  "decision": "author_derived_operating_pass",
+  "validation": "internal_challenge_and_exact_constants_only_independent_proof_review_pending",
+  "scope": {
+    "lengths": "L in 24N, L>=2016",
+    "parameters": "unchanged nominal only",
+    "output_times": "L/(8J)<=t<=L/(6J)",
+    "retention_times": "2/J<=t<=L/(6J)",
+    "initial_state": "two endpoint fuels; matter and electric vacuum; arbitrary two-qubit/reference input",
+    "geometry": "fixed prepared recorded path"
+  },
+  "claims": [
+    {
+      "id": "ra_zero_factor",
+      "tier": "derived",
+      "status": "author_derived_review_pending",
+      "claim": "actual open-band zero extraction and threshold-controlled localized inverse",
+      "proof": "REAL_AXIS.md"
+    },
+    {
+      "id": "ra_density",
+      "tier": "derived",
+      "status": "author_derived_review_pending",
+      "claim": "24/25 <= w(k)/[(2/pi)sin^2 k] <=26/25; all residual source spectral mass<=1/25",
+      "proof": "REAL_AXIS.md"
+    },
+    {
+      "id": "ra_return",
+      "tier": "derived",
+      "status": "author_derived_review_pending",
+      "claim": "|G(t)|<=2/25+1/(J|t|), hence <=29/50 for J|t|>=2",
+      "proof": "OPERATING_PROOF.md"
+    },
+    {
+      "id": "ra_source_capture",
+      "tier": "derived",
+      "status": "author_derived_review_pending",
+      "claim": "A_L(t)>9/25 for every allowed length and time in I_L",
+      "proof": "OPERATING_PROOF.md"
+    },
+    {
+      "id": "ra_joint_gate",
+      "tier": "derived",
+      "status": "author_derived_review_pending",
+      "claim": "p_out>514089/4000000 and p_q2>434281/1000000 on their respective frozen intervals",
+      "proof": "OPERATING_PROOF.md",
+      "dependencies": [
+        "B2-SO same-Hilbert-space comparison",
+        "B2-SB orthogonal projection inequality",
+        "B2-SS exact low invariant graph",
+        "new actual-source estimates"
+      ]
+    },
+    {
+      "id": "ra_exact_controls",
+      "tier": "shown",
+      "status": "executed_exact_arithmetic_only",
+      "claim": "110 exact rational and identity controls passed, replay byte-identical",
+      "evidence": [
+        "CONTROLS.json",
+        "PRIMARY_WORKER.json",
+        "REPLAY.json"
+      ]
+    }
+  ],
+  "preserved_failure": {
+    "B2_original_eight_event_endpoint": "failed_unchanged",
+    "closed_solver_branch": "not_reopened"
+  },
+  "assumed": [
+    "quantum dynamics and external time",
+    "fixed recorded path",
+    "universal relational generator support rule",
+    "nominal couplings and endpoint fuel preparation"
+  ],
+  "not_claimed": [
+    "independent mathematical validation",
+    "moving geometry composition",
+    "extensive matter",
+    "disorder robustness beyond nominal source",
+    "dimensional selection",
+    "gravity",
+    "buoyancy explanation of gravity",
+    "distinctive empirical prediction",
+    "completed theory of reality"
+  ],
+  "execution": {
+    "controls": 110,
+    "worker_count": 2,
+    "new_dynamics_runs": 0,
+    "counterexample_search": false,
+    "paid_compute": false,
+    "external_reviewer_contact": false
+  }
+}
