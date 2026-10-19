@@ -1,0 +1,47 @@
+{
+  "title": "B Step 1: three published prescriptions at quadratic spectator order",
+  "registered_before_control_execution": true,
+  "parent_commit": "f28b49d977f4a3e2bbe8625b768ff9a1ae16e44f",
+  "branch_policy": "Reuse codex/grut-closure-fork-20261019 as the single B Step 1 branch; open no additional branch and execute no B Step 2 or 3.",
+  "model": {
+    "metric": "ds^2=-N^2 dt^2/q + q dOmega_3^2; t in [0,1]",
+    "units": "8 pi G = 1; H = 1; Lambda = 3; hbar = 1",
+    "background_action": "6 pi^2 integral[-qdot^2/(4N)+N(1-H^2 q)]dt",
+    "mode_action": "one half integral[q^2 zdot^2/N - N ell(ell+2) z^2]dt",
+    "mode_definition": "real, massless, minimally coupled spectator with integral Y^2 dOmega_3 = 1; not an inflaton curvature perturbation",
+    "approximation": "quadratic mode action on background saddles; leading semiclassical lapse saddle expansion; no mode backreaction or fluctuation prefactor correction to the width",
+    "width_convention": "Psi proportional exp[-(B+i C) z1^2/(2 hbar)]; B = Im[q1^2 zdot(1)/(N z(1))]. Negative B is an inverse-Gaussian coefficient, not a variance."
+  },
+  "benchmark": {"q1": 40.0, "ell": 2, "robin_b": 1.5},
+  "prescriptions": {
+    "a": "Dirichlet q0=0, positive-real lapse with convergent endpoint deformation; FLT 1703.02076,1705.00192",
+    "b": "Dirichlet q0=0, whole-real lapse contour passing below zero; 1705.05340; report the Gaussian envelope of each WKB component, not a single exact Gaussian for the saddle sum",
+    "c": "Di Tucci-Lehners Robin alpha=-6 pi^2 i, beta=-i b/(3 pi^2), b=1.5, contour emanating from Nstar=3 pi^2 beta toward positive infinity in the corresponding relative cycle"
+  },
+  "source_expectations_before_execution": {
+    "a": "upper-right Dirichlet saddle; B<0, late-size coefficient B -> -ell(ell+1)(ell+2)/H^2",
+    "b": "two lower Dirichlet saddles; positive B envelope, B -> +ell(ell+1)(ell+2)/H^2",
+    "c": "one lower-right original-lapse saddle at admissible b; positive B with the same late-size coefficient",
+    "normalization_warning": "1903.06757 displays a pi^2 action and an asymptotic unit-mode coefficient without that factor. Audit the PDF explicitly; do not hide a possible 2 pi^2 convention mismatch by fitting a width."
+  },
+  "numerical_plan": {
+    "background": "Find all roots of the reduced-action derivative, derive Robin reduction by independent elimination of q0, and calculate oriented upward-flow intersections with representative prescribed contours.",
+    "flow_controls": "Use small phase tilts to resolve Stokes connections, check both tilt signs if feasible, and refine arclength/cutoff. Record unresolved or regulator-dependent intersections rather than supplying desired saddle lists.",
+    "modes": "Integrate the common complex mode ODE with the regular Frobenius branch z~t^(ell/2), without prescribing Im K or the final width. Compare with an independently differentiated closed mode solution and the published large-q coefficients.",
+    "q1_grid": [10.0, 40.0, 160.0, 10000.0],
+    "ell_grid": [2, 3, 5],
+    "initial_time_grid": [0.00004, 0.00002, 0.00001],
+    "ode_tolerances": [1e-10, 2e-12],
+    "robin_b_checks": [1.25, 1.5, 2.0],
+    "mode_acceptance_relative_error": 0.0000005,
+    "large_q_acceptance": "At q1=10000, ell=2, compare the finite-size result to the published asymptotic value with its explicit O(1/q1) correction; do not demand equality at finite size.",
+    "contour_acceptance": "Expected contributing saddle sets must be recovered from oriented flow intersections or an independently evaluated contour, with cutoff/regulator sensitivity reported. If only prescribed saddle widths are obtained, label Step 1 partial."
+  },
+  "decision_rules": {
+    "control_pass": "All three prescription-specific saddle selections and canonical widths reproduced in stated leading approximation. This is established physics, not a GRUT prediction or a solution of the full contour dispute.",
+    "partial": "Widths agree but a contour or normalization issue remains unresolved; do not label the three-prescription control complete.",
+    "failure": "A disagreement survives refinement or the stated prescriptions cannot be implemented consistently; report the offending datum and do not advance the selection claim.",
+    "hypothesis_status": "Failure of one closure definition does not disprove every possible observer/state principle. No success criterion promises a universal theory."
+  },
+  "resource_limits": "Existing Python, NumPy and SciPy only; bounded local runs, no package installation, paid resources, external messages, or indefinite jobs."
+}

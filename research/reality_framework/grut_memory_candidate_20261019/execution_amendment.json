@@ -1,0 +1,7 @@
+{
+  "reason": "The first 2048-point, dt=0.0002 writer calculation completed in 414.6 seconds and passed the operational thresholds. The pending dt=0.0001 replay is replaced by a faster independent split: exact spectral core evolution, combined with the commuting clock kinetic step. No physical parameter, state, gate or acceptance threshold changes.",
+  "preservation": "writer_results_initial.json retains the completed coarse calculation. Interrupt the unfinished local-Pauli replay rather than overwrite its completed coarse record. Keep autonomous_writer.py unchanged.",
+  "new_execution": "writer_replay.py computes dt=0.0001 at 2048 clock points, then at 4096 points to resolve the previously untested spatial cutoff. It uses exact core exponentials instead of the local Pauli split and strided, algebraically equivalent writer rotations.",
+  "comparison": "Compare the original coarse record, refined time step, and doubled spatial grid. Require <=0.01 probability changes, <=0.1 energy-drift change, norm error<1e-9, and all original writer operational thresholds.",
+  "scope": "This is an implementation/refinement amendment after a successful coarse run, not a fitted rescue or an independent physical validation. It does not remove the finite scattering-reduction limitation."
+}

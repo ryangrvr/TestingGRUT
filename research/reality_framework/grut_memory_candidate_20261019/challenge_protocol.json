@@ -1,0 +1,11 @@
+{
+  "registered_after_initial_results_before_challenge_execution": true,
+  "reason": "Initial registered retention/readout conditions passed. Test whether the result is only a redundant prepared bit, whether it writes a new record, and whether another evolution algorithm agrees. This does not change the candidate law or retroactively change its acceptance criteria.",
+  "independent_evolution": "L=4 Hamiltonian assembled by tensor products; Krylov expm_multiply compared with the saved spectral evolution at t=10 and 40 and readout t=0.58; tolerance 1e-9 in probabilities.",
+  "measurement": "At the registered best matter-Y readout time, calculate the energy change of the nonselective projective instrument D_Y(rho)=(rho+Y rho Y)/2, separately for each input bit.",
+  "local_bit_attack": "Prepare tau_1,...,tau_(L-1) all +z and only tau_0=+/-z; sigma all +x. Same H. Compare local tau_0 measurement success with the original uniform repetition encoding at L=4,5, t in [0,40]. This tests independent local-bit retention, not the already demonstrated repetition bit.",
+  "autonomous_write_attempt": "Prepare all tau in +x, sigma_0=+/-z, all other sigma in +x. Same autonomous H. Measure tau_0^z over [0,40]. Predeclared success: a write time <=10 with success>=0.8 and all later sampled successes through ten additional time units>=0.8. Report failure without changing the law.",
+  "unfacilitated_perturbation_attack": "Add -kappa sum tau_i^x at kappa=0.1 and 0.3, L=4. This is an explicitly different Hamiltonian used as a robustness attack, not a fit or improvement of the candidate. Report minimum original repetition-bit success to t=10.",
+  "centered_thermal_diagnostic": "The originally registered OTOCs use Pauli X with nonzero Gibbs means. In an additional diagnostic subtract those means before calculating the regulated OTOC and its factorized reference. Do not overwrite the raw registered curves or extract an exponent without a controlled large-size window.",
+  "output": "challenge_results.json; preserve results_initial.json and its original source hash. No new branch or closure-selection calculation."
+}

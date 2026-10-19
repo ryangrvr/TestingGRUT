@@ -1,0 +1,51 @@
+{
+  "title": "GRUT-M1: a closed adaptive-bond memory candidate",
+  "registered_before_execution": true,
+  "parent_commit": "f28b49d977f4a3e2bbe8625b768ff9a1ae16e44f",
+  "motivation": "Try a new explicit construction instead of inferring that the intuition has no possible law. Test structured local records under nonzero interactions and writing amplitude, separately from chaos and gravitational claims.",
+  "state_space": "(C^2_sigma tensor C^2_tau)^(tensor L), periodic ring; external Hamiltonian time and quantum probabilities supplied",
+  "hamiltonian": "sum_i J(1+alpha tau_i^z) sigma_i^z sigma_(i+1)^z + hx sigma_i^x + hz sigma_i^z - K tau_i^z tau_(i+1)^z - Delta F_i(epsilon) tau_i^x",
+  "facilitation": "F_i=epsilon+(1-epsilon)(1-tau_(i-1)^z tau_(i+1)^z)/2; each F_i commutes with tau_i^x; all parameters uniform, no quenched disorder or external controller",
+  "fixed_parameters": {"J":1.0,"alpha":0.5,"hx":1.05,"hz":0.5,"K":1.0,"Delta":1.0,"epsilon":0.05},
+  "controls": {
+    "unfacilitated": "epsilon=1 with all other parameters fixed",
+    "exactly_frozen": "epsilon=0 with all other parameters fixed; uniform tau patterns are invariant, so formation from orthogonal sectors is forbidden",
+    "no_feedback": "alpha=0; all other parameters including epsilon=0.05 fixed",
+    "half_softness": "epsilon=0.025, all other parameters fixed; sensitivity, not a fitted rescue"
+  },
+  "sizes": {"main_L":4,"finite_size_L":[3,5],"dimension":"2^(2L)"},
+  "preparations": {
+    "retention": "tau all +z or all -z; sigma all +x; prepared records and their energy supplied as initial conditions",
+    "readout": "tau all +z or all -z; sigma all +z except site1 in +x; measure sigma_1^y and tau_0^z under the same autonomous Hamiltonian",
+    "formation_diagnostic": "tau all +x; sigma each in the ground state of hx X+hz Z; track neighbor tau ZZ correlations and total energy. A finite correlation increase does not establish autonomous durable record formation.",
+    "equilibrium": "full finite-system Gibbs state beta=1, with no external bath in the dynamical law"
+  },
+  "observables": {
+    "memory_success": "equal-prior probability of guessing the prepared bit by measuring tau_0^z: 1/2+abs(m_plus-m_minus)/4",
+    "readout_success": "equal-prior probability of guessing the bit by measuring sigma_1^y: 1/2+abs(y_plus-y_minus)/4",
+    "thermal_memory": "normalized real Gibbs autocorrelation of tau_0^z after projecting out identity and energy",
+    "spreading": "C_beta=1-Re Tr[rho A(t) B A(t) B], A=sigma_0^x, B=sigma_1^x or sigma_2^x; unregularized squared-commutator diagnostic, not itself an MSS exponent",
+    "regulated_otoc": "F=Tr[rho^(1/4) A(t) rho^(1/4) B rho^(1/4) A(t) rho^(1/4) B]; record factorized reference and connected initial difference",
+    "energy": "prepare and conserve total energy; quote excitation energy above the exact finite-system ground state",
+    "structure": "L^(-1) sum_i <tau_i^z tau_(i+1)^z>"
+  },
+  "time_grids": {"retention":[0.0,40.0,0.2],"readout":[0.0,2.0,0.02],"formation":[0.0,40.0,0.2],"otoc":[0.0,4.0,0.1]},
+  "acceptance_before_execution": {
+    "algebra": "Hermitian Hamiltonian, exact spin action versus independent Kronecker assembly at L=3, norm and energy conservation, zero-time correlators, and exactly frozen control to numerical precision",
+    "record": "main epsilon=0.05 memory success remains >=0.9 at every sampled time through t=10; report first crossing and the complete trace, even if this fails",
+    "readout": "max readout success in the registered [0,2] window exceeds 0.6, with memory success >=0.9 at that same time",
+    "active_interactions": "thermal matter squared commutator between sites0 and1 exceeds 0.1 somewhere in [0,4]; otherwise persistence alone is insufficient",
+    "feedback": "the alpha=0 control has identical matter measurement statistics for the two memory preparations; the alpha=0.5 candidate must have distinguishable statistics",
+    "size": "repeat retention/readout at L=3 and L=5. A loss with size is retained; no thermodynamic localization conclusion from these sizes",
+    "formation": "diagnostic only; do not call prepared uniform records autonomously produced",
+    "exponent": "a universal Lyapunov exponent or lambda/(2pi T) requires a regulated exponential regime, factorization and size scaling; no estimate is permitted solely from a short log-linear segment or t^2 onset",
+    "gravity": "a lattice memory result does not establish a gravitational scrambling deficit; any universal gravity claim must be separately specified and remains unestablished by this experiment"
+  },
+  "predicted_short_time_checks": {
+    "memory": "uniform tau initial records have <tau_0^z>=r[1-2 Delta^2 epsilon^2 t^2+O(t^3)]",
+    "readout": "initial derivative of <sigma_1^y> is 4J(1+alpha r)+2hz, hence 7 or 3 for r=+/- at the fixed parameters",
+    "matter_commutator": "for uniform memory r and a maximally mixed matter state, C(sigma0X(t),sigma1X)=8 J^2(1+alpha r)^2 t^2+O(t^3); coefficients 18 and 2"
+  },
+  "interpretation": "A working finite closed matter-memory model is a possible outcome. Novelty, infinite-time localization, universal non-scrambling, emergent spacetime and validated physics are not acceptance conditions that documentation can satisfy.",
+  "resources": "Existing local Python/NumPy/SciPy only; no installs, paid resources, external publication beyond authorized repository posting, or indefinite execution."
+}

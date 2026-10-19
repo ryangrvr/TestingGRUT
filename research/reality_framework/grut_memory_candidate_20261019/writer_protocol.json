@@ -1,0 +1,31 @@
+{
+  "name": "GRUT-M1-W: explicit autonomous writing apparatus",
+  "registered_before_execution": true,
+  "reason": "The core M1 retention/readout test passed, but its separately registered local-bit and autonomous-writing attacks failed. Complete its preparation obligation with a separately named, physically modeled apparatus. Do not relabel this as formation without prepared resources.",
+  "architecture_change_budget": "One completion only: same M1 Hamiltonian and parameters, plus a source qubit and a massive quantum particle. No tuning of the memory Hamiltonian, no further repair loop.",
+  "hilbert_space": "L^2(R_Q) tensor C^2_source tensor (C^2_sigma tensor C^2_tau)^(tensor L)",
+  "total_hamiltonian": "P^2/(2M) + H_M1 + Omega (1-R_z)/2 sum_i f_i(Q) tau_i^x",
+  "gate_shape": "f_i(Q)=cos^2(pi(Q-i)/(2w)) for abs(Q-i)<w and zero otherwise; integral f_i dQ=w",
+  "fixed_parameters": {"L":4,"M":0.5,"p0":100.0,"q0":-4.0,"clock_sigma_q":0.35,"w":0.3,"Omega":"pi*(p0/M)/(2w)","write_scattering_time":0.06},
+  "preparation": "source R_z=+1 or -1 at equal prior; all tau initially +z for both inputs; sigma all +z except sigma_1 in +x; Gaussian clock packet centered q0,p0 with position probability variance sigma_q^2. The source bit, blank register, carrier energy and matter preparation are supplied resources.",
+  "physical_claim": "A source bit is copied into a repetitive memory register by a moving quantum apparatus under one time-independent Hamiltonian, then affects a matter-spin readout. No external pulse, reset, postselection, reservoir or time-dependent physical coupling.",
+  "numerics": {
+    "clock_domain": [-16.0,16.0],
+    "clock_points": 2048,
+    "time_steps": [0.0002,0.0001],
+    "method": "unitary symmetric split of clock kinetic FFT, M1 local diagonal/rotation terms, and position-dependent writer rotations; compare refinements and report energy drift, edge and spectral-tail weights",
+    "after_scattering": "trace over the clock without conditioning on transmission; propagate the full spin density matrix with the original exact M1 spectrum. Interpret storage numbers with the stated finite scattering-domain and residual-interaction qualifications.",
+    "storage_grid": [0.0,10.0,0.1],
+    "readout_grid": [0.0,2.0,0.02]
+  },
+  "acceptance": {
+    "write_and_hold": "equal-prior tau_0^z guessing success >=0.9 at every sampled storage time through 10, starting from identical blank tau registers",
+    "all_cells": "all individual tau_i^z guessing successes >=0.9 immediately after the scattering stage; record their later minima",
+    "readout": "matter sigma_1^y guessing success exceeds 0.6 in [0,2], with memory success >=0.9 at that time",
+    "unitarity": "norm error below 1e-9; preserve both transmitted and reflected components in the clock trace",
+    "refinement": "probabilities at the two time steps differ by <=0.01 and total energy drift differs by <=0.1 in spin energy units; otherwise refine once or report unresolved",
+    "scattering_limits": "report the clock probability remaining near any gate and all numerical boundary/spectral weights. Do not claim a rigorous infinite-time decoupling theorem or erase this approximation.",
+    "resource_account": "report initial/final clock, spin, interaction and total energies. The energy source and input bit are explicit; no creation from nothing.",
+    "gravity": "no horizon, graviton amplitude or gravitational Lyapunov exponent is computed. A working apparatus is not a theory of all physics."
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "core": [
+    {
+      "run": "candidate_L3",
+      "L": 3,
+      "minimum_memory_t10": 0.9949990829926045,
+      "memory_t40": 0.9850063302853134,
+      "best_readout": 0.806446566237308,
+      "readout_time": 1.2,
+      "memory_at_readout": 0.998451124694516
+    },
+    {
+      "run": "candidate_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.9875095925556739,
+      "memory_t40": 0.9350645853495996,
+      "best_readout": 0.7784678210302141,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.9993121152552136
+    },
+    {
+      "run": "candidate_L5",
+      "L": 5,
+      "minimum_memory_t10": 0.9891321882423039,
+      "memory_t40": 0.940398765661841,
+      "best_readout": 0.7784597005654044,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.9993107650816296
+    },
+    {
+      "run": "unfacilitated_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.6214520774709054,
+      "memory_t40": 0.7099360114881256,
+      "best_readout": 0.741417114112719,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.7952495875453661
+    },
+    {
+      "run": "frozen_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.9999999999999998,
+      "memory_t40": 0.9999999999999998,
+      "best_readout": 0.7785771814011487,
+      "readout_time": 0.58,
+      "memory_at_readout": 1.0
+    },
+    {
+      "run": "no_feedback_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.9962409674135733,
+      "memory_t40": 0.9944487409864264,
+      "best_readout": 0.5000000000000016,
+      "readout_time": 0.46,
+      "memory_at_readout": 0.999534948333764
+    },
+    {
+      "run": "half_softness_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.9968211359193733,
+      "memory_t40": 0.9792849192829733,
+      "best_readout": 0.7785498324346294,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.9998279285483057
+    }
+  ],
+  "registered_core_conditions": {
+    "all_hamiltonians_hermitian": true,
+    "independent_kronecker_match": true,
+    "all_eigen_residuals": true,
+    "all_norms_conserved": true,
+    "all_energies_conserved": true,
+    "record_main_t10": true,
+    "readout_main": true,
+    "active_matter_interactions": true,
+    "no_feedback_no_readout": true,
+    "frozen_record": true,
+    "short_time_derivatives": true,
+    "zero_time_matter_commutators": true,
+    "finite_size_retention_t10": true
+  },
+  "adversarial_conditions": {
+    "independent_full_H_match": true,
+    "krylov_retention_matches_spectral": true,
+    "krylov_readout_matches_spectral": true,
+    "local_independent_bit_retains_to_t10_L4": false,
+    "local_independent_bit_retains_to_t10_L5": false,
+    "autonomous_write_and_hold_L4": false,
+    "autonomous_write_and_hold_L5": false,
+    "perturbed_kappa0_1_retains_to_t10": false,
+    "perturbed_kappa0_3_retains_to_t10": false
+  },
+  "source_of_core_times": "dimensionless Hamiltonian time, hbar/J=1",
+  "lyapunov_exponent": null,
+  "gravitational_prediction": null,
+  "writer_checks": {
+    "write_and_hold": true,
+    "all_cells_initial": true,
+    "readout": true,
+    "norms": true,
+    "probability_refinement": true,
+    "energy_refinement": true
+  },
+  "writer_refinement": {
+    "time_and_algorithm": {
+      "max_memory_probability_difference": 2.6150573628758167e-07,
+      "max_readout_probability_difference": 9.669863543226853e-08,
+      "energy_drift_difference": 0.00010978215323120821
+    },
+    "spatial": {
+      "max_memory_probability_difference": 6.561331526988567e-07,
+      "max_readout_probability_difference": 2.804813288292962e-07,
+      "energy_drift_difference": 0.000712805742296041
+    },
+    "overall": {
+      "max_memory_probability_difference": 6.705103664517154e-07,
+      "max_readout_probability_difference": 1.9454029331900102e-07,
+      "energy_drift_difference": 0.0006030235890648328
+    }
+  },
+  "writer_minimum_memory_t10": 0.9916972267188419,
+  "writer_best_readout": 0.769977434073726
+}
