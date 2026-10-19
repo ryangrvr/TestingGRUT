@@ -5,6 +5,11 @@ mathematics and [SOURCES.md](SOURCES.md) for source/read scope. The findings
 are classical channel gaps and explicit thermality/curvature qualifications.
 This packet does not supply a new cosmological theory.
 
+The follow-up [CLOSURE_SELECTION_RESPONSE.md](CLOSURE_SELECTION_RESPONSE.md)
+answers the C2 question against the archived P1, supplies Obadia's full
+reference, and corrects the proposed B control's source map. It introduces
+no extra closure postulate and executes no new cosmological calculation.
+
 From the repository root:
 
 ```sh
