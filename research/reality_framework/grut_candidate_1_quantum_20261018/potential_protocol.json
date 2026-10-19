@@ -1,0 +1,129 @@
+{
+  "parameters": {
+    "lambda_phi": 0.01,
+    "lambda_X": 0.001,
+    "c": 0.01,
+    "d": 0.0001,
+    "lambda_D": 0.001,
+    "alpha": 0.0,
+    "mphi2": -0.01,
+    "mX2": 0.0,
+    "mD2": 0.01,
+    "C": 0.0025,
+    "mu": 0.1,
+    "v": 1.0,
+    "v_over_reduced_Mpl": 1e-05
+  },
+  "scheme": "flat-space MSbar, scalar modes only, finite constant -3/2, fixed mu=.1v",
+  "potential": "C+mphi2*phi\u00b2/2+lambda_phi*phi\u2074/4+mX2*(x\u00b2+y\u00b2)/2+lambda_X*(x\u00b2+y\u00b2)\u00b2/4+c*phi\u00b2*(x\u00b2+y\u00b2)/2+mD2*D\u00b2/2+lambda_D*D\u2074/4+d*phi\u00b2*D\u00b2/2+alpha*D\u00b2*(x\u00b2+y\u00b2)/2",
+  "field_order": [
+    "phi",
+    "x",
+    "y",
+    "D"
+  ],
+  "background": "x=F,y=D=0, X=(x+i*y)/sqrt(2)",
+  "CW": "sum eigenvalue\u00b2*(log(eigenvalue/mu\u00b2)-3/2)/(64*pi\u00b2), eigenvalue=m_a\u00b2",
+  "negative_eigenvalues": "retain complex principal logarithm log(negative)=log(abs)+i*pi; report imaginary part and unstable-background flag; no clipping",
+  "zero_eigenvalue": "continuous t\u00b2 log(t) -> 0 for potential only; analytic curvature routines require strictly positive tree masses",
+  "vacuum": {
+    "tree": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "root_bracket_phi": [
+      0.98,
+      1.02
+    ],
+    "xtol": 1e-14,
+    "report": "strict order-hbar shifts and separately minimum of V0+V1"
+  },
+  "bulk": {
+    "tree_F": 1.7782794100389228,
+    "local_rectangle_phi": [
+      -0.15,
+      0.15
+    ],
+    "local_rectangle_F": [
+      1.4,
+      2.2
+    ],
+    "grid": [
+      31,
+      101
+    ],
+    "one_dimensional_xatol": 1e-13,
+    "two_dimensional_starts": [
+      [
+        0.0,
+        1.7782794100389228
+      ],
+      [
+        0.1,
+        1.6282794100389228
+      ],
+      [
+        -0.1,
+        1.9282794100389227
+      ]
+    ],
+    "optimizer_maxiter": 100,
+    "report": "strict one-loop shift plus truncated-potential numerical minimum; no derivative terms or finite-charge energy"
+  },
+  "derivatives": {
+    "method": "analytic spectral Frechet derivatives of trace f(H), including degeneracies",
+    "finite_difference_steps": [
+      0.001,
+      0.0003,
+      0.0001,
+      3e-05,
+      1e-05
+    ],
+    "points": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.7782794100389228,
+        0.0,
+        0.0
+      ],
+      [
+        0.95,
+        0.08,
+        0.04,
+        0.03
+      ]
+    ]
+  },
+  "global_background_scan": {
+    "phi": [
+      0,
+      1.2,
+      61
+    ],
+    "F": [
+      0,
+      2.4,
+      121
+    ]
+  },
+  "profile_background_scan": {
+    "source": "../grut_candidate_1_20261018/code/results_profile.npz",
+    "rho": [
+      0,
+      20,
+      1001
+    ],
+    "interpretation": "Only flags constant-background Hessian signs on classical-profile values; no local-CW integration as quantum soliton energy"
+  },
+  "gravity": "Raw fixed-C vacuum shift reported. Subtraction for relative energies does not calibrate gravity or solve the cosmological-constant problem.",
+  "scope": "Scalar constant-background one-loop potential only. No pole masses, running-scale claim, nonlocal determinant, rotating-phase derivative correction, full soliton one-loop energy, or quantum lifetime.",
+  "frozen_before_execution": true
+}

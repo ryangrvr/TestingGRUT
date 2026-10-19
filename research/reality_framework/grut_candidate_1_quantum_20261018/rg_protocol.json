@@ -1,0 +1,18 @@
+{
+  "title": "One-loop pure-scalar MSbar closure and polynomial RG check",
+  "date": "2026-10-18",
+  "frozen_before_symbolic_tests": true,
+  "scope": "Four real scalars phi,x,y,D, X=(x+i*y)/sqrt(2), original Candidate 1 matching. No Standard Model, gravitational, thermal, finite-density or derivative corrections are calculated.",
+  "potential": "C+mp/2*phi^2+mx/2*(x^2+y^2)+md/2*D^2+lp/4*phi^4+lx/4*(x^2+y^2)^2+ld/4*D^4+c/2*phi^2*(x^2+y^2)+d/2*phi^2*D^2+alpha/2*(x^2+y^2)*D^2",
+  "notation": "mp,mx,md are signed mass-squared coefficients, not masses; B_z=16*pi^2*d z/d ln(mu).",
+  "matching": {"mu_over_v": 0.1, "lp": "1/100", "lx": "1/1000", "ld": "1/1000", "c": "1/100", "d": "1/10000", "alpha": "0", "mp_over_v2": "-1/100", "mx_over_v2": "0", "md_over_v2": "1/100", "C_over_v4": "1/400"},
+  "quartic_tensor": "V4=lambda_abcd z_a z_b z_c z_d/4!. Explicit seed tensors with all permutations: 0000=6lp,1111=2222=6lx,3333=6ld,0011=0022=2c,0033=2d,1122=2lx,1133=2233=2alpha.",
+  "tensor_beta": "B_lambda_abcd=sum_ef(lambda_abef*lambda_efcd+lambda_acef*lambda_efbd+lambda_adef*lambda_efbc); B_m_ab=sum_cd(lambda_abcd*m_cd); B_C=Tr((m^2)^2)/2. Scalar gamma=0 at this loop order.",
+  "independent_route": "Construct V0 directly as a polynomial; differentiate twice to obtain its field Hessian H=M^2; compare every exact coefficient of sum_z B_z*dV0/dz and Tr(H*H)/2.",
+  "arithmetic": "Python standard-library Fraction coefficients in a sparse multivariate polynomial implementation; no symbolic package installation or floating-point cancellation is used for identity checks.",
+  "checks": ["Polynomial arithmetic and differentiation preflight", "All 256 quartic tensor components remain in the declared coupling family", "Mass tensor remains diagonal with equal x/y entries", "Derived projected betas equal the stated candidate formulas coefficient-by-coefficient", "Full independent polynomial RG identity including the constant term", "x/y interchange invariance", "Display nonzero RG residuals if generated alpha, mX2, or vacuum C beta is incorrectly omitted"],
+  "numeric_output": "Evaluate exact beta numerators and beta values at matching. Show only first-order leading-log parameter changes at mu/mu0=1/2,1,2; no coupling search or fit.",
+  "vacuum_energy": "Distinguish polynomial C, tree minimum value C-mp^2/(4lp), scalar one-loop vacuum value, and separately matched total gravitational rho_Lambda. Do not impose tree C=lp*v^4/4 as an RG-invariant identity without checking it.",
+  "limits": "The constant-background CW potential is a zero-derivative diagnostic, not the one-loop determinant or fixed-Q energy of a rotating inhomogeneous soliton; no pole mass, quantum stability or lifetime is calculated.",
+  "source": "Stephen P. Martin, hep-ph/0111209v2, https://arxiv.org/html/hep-ph/0111209v2 , especially scalar one-loop potential and RG invariance conventions."
+}

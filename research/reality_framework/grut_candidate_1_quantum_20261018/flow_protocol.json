@@ -1,0 +1,22 @@
+{
+  "title": "Fixed-matching scalar RG flow and effective-potential scale cancellation",
+  "written_utc": "2026-10-19",
+  "scope": "Four canonical real scalars only. Reference v=1 is the fixed matching unit; it is not redefined at each scale. Original Candidate 1 inputs unchanged.",
+  "parameters_in_order": ["lambda_phi", "lambda_X", "c", "d", "lambda_D", "alpha", "mphi2", "mX2", "mD2", "C"],
+  "matching_values": [0.01, 0.001, 0.01, 0.0001, 0.001, 0.0, -0.01, 0.0, 0.01, 0.0025],
+  "mu0_over_v": 0.1,
+  "scale_ratios": [0.25, 0.5, 1.0, 2.0, 4.0],
+  "integrator": {"method": "DOP853", "rtol": 1e-11, "atol": 1e-15, "comparison_rtol": 1e-12, "comparison_atol": 1e-16},
+  "backgrounds_phi_x_y_D": [[1.0, 0.0, 0.0, 0.0], [0.98, 0.05, 0.03, 0.02], [1.02, 0.08, 0.04, 0.03], [0.0, 1.7782794100389228, 0.0, 0.0], [0.05, 1.75, 0.03, 0.1], [-0.1, 1.85, 0.02, 0.08], [0.95, 0.08, 0.04, 0.03]],
+  "tests": {
+    "positive_tree_Hessian": "All sampled backgrounds at all flow scales must have positive scalar masses squared before a real CW evaluation.",
+    "quartic_boundedness": "At each sampled scale lambda_phi,lambda_X,lambda_D>0, c,d>=0, alpha>-sqrt(lambda_X*lambda_D) gives a sufficient strict quartic lower bound.",
+    "RG_identity": "beta dot parameter derivatives of V0 = Tr[(M squared)^2]/(32*pi^2). Evaluate with direct polynomial derivatives and a separately constructed Hessian; relative residual <1e-11.",
+    "strict_order_scale_cancellation": "V0(theta0)+t beta0 dot dV0 + V1(theta0,mu0 exp(t)) is scale independent at one-loop. Absolute spread <1e-16 v^4 on the prescribed grid.",
+    "loop_bookkeeping": "For theta=theta0+eta*t*beta0, evaluate V0(theta)+eta V1(theta,mu0 exp(t)) at eta=1,1/2,1/4,1/8. For t=+/-ln2,+/-ln4, residual scale variation divided by eta squared must converge: adjacent values differ by <3%.",
+    "running_potential": "Tabulate V0 and V0+V1 on the same one-loop RG trajectory. Residual variation is an uncomputed-higher-order diagnostic, not a rigorous two-loop uncertainty or different physical matching data.",
+    "solver_reproducibility": "Maximum absolute difference between prescribed ODE tolerances <1e-12 for all dimensionless parameters."
+  },
+  "excluded_claims": ["physical pole mass", "quantum soliton energy", "quantum lifetime", "all-orders stability", "SM or quantum-gravity vacuum energy", "empirical fit"],
+  "frozen_before_execution": true
+}

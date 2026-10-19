@@ -1,0 +1,131 @@
+{
+  "source": "/workspace/scratch/9a57d63bee22/TestingGRUT-review/research/reality_framework/grut_candidate_1_quantum_20261018",
+  "replay": "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018",
+  "execution": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018/rg_symbolic.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.13000433799993516
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018/effective_potential.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.0236127010000473
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018/flow_check.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6323312919998898
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018/verify.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6657924349999575
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/9a57d63bee22/grut-quantum-replay-v2-20261019/research/reality_framework/grut_candidate_1_quantum_20261018/plot_results.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.1402255500001957
+    }
+  ],
+  "checks": [
+    {
+      "file": "rg_results.json",
+      "key": "checks_passed",
+      "passed": true
+    },
+    {
+      "file": "rg_results.json",
+      "key": "full_identity_residual_monomials",
+      "passed": true
+    },
+    {
+      "file": "rg_results.json",
+      "key": "beta_B_expressions",
+      "passed": true
+    },
+    {
+      "file": "rg_results.json",
+      "key": "matching_beta",
+      "passed": true
+    },
+    {
+      "file": "potential_results.json",
+      "key": "vacuum",
+      "passed": true
+    },
+    {
+      "file": "potential_results.json",
+      "key": "bulk",
+      "passed": true
+    },
+    {
+      "file": "potential_results.json",
+      "key": "classical_profile_flags",
+      "passed": true
+    },
+    {
+      "file": "potential_results.json",
+      "key": "gravity_vacuum_shift",
+      "passed": true
+    },
+    {
+      "file": "flow_results.json",
+      "key": "beta_at_matching",
+      "passed": true
+    },
+    {
+      "file": "flow_results.json",
+      "key": "trajectories",
+      "passed": true
+    },
+    {
+      "file": "flow_results.json",
+      "key": "scale_variations",
+      "passed": true
+    },
+    {
+      "file": "flow_results.json",
+      "key": "bookkeeping",
+      "passed": true
+    },
+    {
+      "file": "flow_results.json",
+      "key": "checks",
+      "passed": true
+    },
+    {
+      "file": "VERIFICATION.json",
+      "key": "checks_passed",
+      "passed": true
+    },
+    {
+      "file": "VERIFICATION.json",
+      "key": "total_checks",
+      "passed": true
+    },
+    {
+      "file": "VERIFICATION.json",
+      "key": "all_checks_pass",
+      "passed": true
+    }
+  ],
+  "all_checks_pass": true,
+  "profile_sha256": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3",
+  "limits": "Internal replay on the available numerical runtime, not an external replication or empirical validation."
+}

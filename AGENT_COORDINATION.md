@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| *(none)* | | | |
 
 ## ANSWERED QUESTIONS
 
@@ -5770,3 +5769,9 @@ Verification in this repository copy: `python research/reality_framework/grut_ca
 Added `research/reality_framework/grut_candidate_1_stability_20261018/` after the owner requested continuation and a fixed-action worked test. Physical fields/couplings are unchanged. Executed 112 accepted BVP starts/refinements plus six sensitivities, resolved branch and fragmentation comparisons, a separate finite-volume method (12 preserved optimizer stops plus three bounded Newton stationarity checks), and seven prescribed 3D trajectories through tau40. The larger strain retains approximately 98.5% of charge within radius 8 over the sampled window; its modest outward redistribution and continuing core decline are retained. No global or quantum stability claim follows.
 
 Verification: `analyze.py` and `verify.py` passed all 60 follow-up checks; `compare_slices.py` reproduces its supplementary JSON; source compilation, relative Markdown links, original Candidate1 manifest hashes and snapshot integrity passed. Exact-linear/nonlinear-kick trajectories consumed 806.31 s total local wall time. No new package, physical parameter adjustment, paid compute, indefinite worker, detector/quantum/Einstein evolution or empirical data was used. Original Candidate1 and historical reports remain unchanged; this is a separately posted additive packet.
+
+### 2026-10-18–19 · Codex · Candidate 1 scalar quantum-consistency follow-up
+
+Added `research/reality_framework/grut_candidate_1_quantum_20261018/` at the original action and matching. Derived all ten one-loop scalar potential beta functions by exact tensor contraction; a separately differentiated polynomial gives a zero 50-monomial RG residual and 290 exact checks pass. Evaluated the full four-real-mode CW potential, tadpole/vacuum curvatures and homogeneous bulk diagnostic, retaining negative-Hessian wall flags. No local CW energy was integrated over the rotating soliton. The raw fixed-constant scalar vacuum shift is nonzero; quantum asymptotic flatness therefore requires an explicit total-vacuum matching condition, not an unreported subtraction.
+
+Verification: six prescribed flow acceptance conditions and 39 cross-checks pass. A new-directory five-script replay reproduces all 16 substantive comparisons. Analytic derivatives were compared with finite differences; independent Hessian/CW and exact/numeric beta routines agree. Initial bulk-mass metadata, verifier-list handling and replay overwrite-guard errors are disclosed and corrected without altering physics or thresholds. Code compilation, relative links, original profile hash and unchanged parent packets were checked. No install, paid compute, empirical data, external validation or continuing background execution; finite-charge quantum energy, pole thresholds and lifetime remain open.
