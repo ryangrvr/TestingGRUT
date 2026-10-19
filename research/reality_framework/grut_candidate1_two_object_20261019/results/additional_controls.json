@@ -1,0 +1,174 @@
+{
+  "kind": "Post-freeze supplementary controls; no changes to physical evolutions",
+  "stationary_profile_defects": [
+    {
+      "h": 0.5,
+      "core_radius": 12,
+      "relative_L2_X_stationary_acceleration_defect": 0.005743587501853176,
+      "phi_acceleration_RMS": 0.0009134731629352307
+    },
+    {
+      "h": 0.3333333333333333,
+      "core_radius": 12,
+      "relative_L2_X_stationary_acceleration_defect": 0.0025759081297776973,
+      "phi_acceleration_RMS": 0.0004105599950150179
+    },
+    {
+      "h": 0.25,
+      "core_radius": 12,
+      "relative_L2_X_stationary_acceleration_defect": 0.001453585742541003,
+      "phi_acceleration_RMS": 0.00023152633439713018
+    }
+  ],
+  "manufactured_operator_control": {
+    "note": "Uses a=b=0 only to test the operator, not as a Candidate 1 physical run",
+    "profile": "F=r^2, S=1, Omega=0",
+    "target": "u_tt=6-r^2",
+    "dt": 1e-8,
+    "points": 104,
+    "maximum_absolute_error": 2.007283228522283e-13
+  },
+  "initial_current": {
+    "assumptions": "Equal charges, symmetric centers and opposite velocities, equal radial profile, supplied initial superposition",
+    "gamma": 1.0206207261596576,
+    "half_separation": 12,
+    "F_at_gamma_d": 0.0020387137122438777,
+    "continuum_coefficient": 0.00032643924842561703,
+    "law": "Qbar_left_dot=-2*pi*gamma^2*d*F(gamma*d)^2*sin(theta)",
+    "flux": [
+      {
+        "h": 0.5,
+        "name": "pair_phase_0",
+        "phase": 0,
+        "initial_discrete_rightward_Qbar_flux": 0,
+        "continuum_prediction": 0
+      },
+      {
+        "h": 0.5,
+        "name": "pair_phase_halfpi",
+        "phase": 1.5707963267948966,
+        "initial_discrete_rightward_Qbar_flux": 0.0003327003856808323,
+        "continuum_prediction": 0.00032643924842561703
+      },
+      {
+        "h": 0.5,
+        "name": "pair_phase_pi_minus",
+        "phase": 2.941592653589793,
+        "initial_discrete_rightward_Qbar_flux": 0.00006609736297846975,
+        "continuum_prediction": 0.00006485346702996018
+      },
+      {
+        "h": 0.5,
+        "name": "pair_phase_pi",
+        "phase": 3.141592653589793,
+        "initial_discrete_rightward_Qbar_flux": 1.005339000668406e-19,
+        "continuum_prediction": 3.997727807004995e-20
+      },
+      {
+        "h": 0.5,
+        "name": "pair_phase_pi_plus",
+        "phase": 3.3415926535897933,
+        "initial_discrete_rightward_Qbar_flux": -0.0000660973629784698,
+        "continuum_prediction": -0.0000648534670299601
+      },
+      {
+        "h": 0.3333333333333333,
+        "name": "pair_phase_0",
+        "phase": 0,
+        "initial_discrete_rightward_Qbar_flux": 1.5545927212750862e-18,
+        "continuum_prediction": 0
+      },
+      {
+        "h": 0.3333333333333333,
+        "name": "pair_phase_halfpi",
+        "phase": 1.5707963267948966,
+        "initial_discrete_rightward_Qbar_flux": 0.0003292118615766179,
+        "continuum_prediction": 0.00032643924842561703
+      },
+      {
+        "h": 0.3333333333333333,
+        "name": "pair_phase_pi_minus",
+        "phase": 2.941592653589793,
+        "initial_discrete_rightward_Qbar_flux": 0.00006540430022922311,
+        "continuum_prediction": 0.00006485346702996018
+      },
+      {
+        "h": 0.3333333333333333,
+        "name": "pair_phase_pi",
+        "phase": 3.141592653589793,
+        "initial_discrete_rightward_Qbar_flux": -1.5482219222169843e-19,
+        "continuum_prediction": 3.997727807004995e-20
+      },
+      {
+        "h": 0.3333333333333333,
+        "name": "pair_phase_pi_plus",
+        "phase": 3.3415926535897933,
+        "initial_discrete_rightward_Qbar_flux": -0.00006540430022922282,
+        "continuum_prediction": -0.0000648534670299601
+      },
+      {
+        "h": 0.25,
+        "name": "pair_phase_0",
+        "phase": 0,
+        "initial_discrete_rightward_Qbar_flux": 0,
+        "continuum_prediction": 0
+      },
+      {
+        "h": 0.25,
+        "name": "pair_phase_halfpi",
+        "phase": 1.5707963267948966,
+        "initial_discrete_rightward_Qbar_flux": 0.0003279968583554286,
+        "continuum_prediction": 0.00032643924842561703
+      },
+      {
+        "h": 0.25,
+        "name": "pair_phase_pi_minus",
+        "phase": 2.941592653589793,
+        "initial_discrete_rightward_Qbar_flux": 0.00006516291635235565,
+        "continuum_prediction": 0.00006485346702996018
+      },
+      {
+        "h": 0.25,
+        "name": "pair_phase_pi",
+        "phase": 3.141592653589793,
+        "initial_discrete_rightward_Qbar_flux": -7.434934983079595e-20,
+        "continuum_prediction": 3.997727807004995e-20
+      },
+      {
+        "h": 0.25,
+        "name": "pair_phase_pi_plus",
+        "phase": 3.3415926535897933,
+        "initial_discrete_rightward_Qbar_flux": -0.00006516291635235548,
+        "continuum_prediction": -0.0000648534670299601
+      }
+    ],
+    "plane_quadratures": [
+      {
+        "h": 0.5,
+        "discrete_coefficient": 0.00033270038568083233,
+        "relative_difference_from_continuum": 0.019180099468468104
+      },
+      {
+        "h": 0.3333333333333333,
+        "discrete_coefficient": 0.00032921186157662037,
+        "relative_difference_from_continuum": 0.008493504271852581
+      },
+      {
+        "h": 0.25,
+        "discrete_coefficient": 0.000327996858355429,
+        "relative_difference_from_continuum": 0.00477151548817778
+      },
+      {
+        "h": 0.125,
+        "discrete_coefficient": 0.0003268281734738568,
+        "relative_difference_from_continuum": 0.0011914163205419825
+      },
+      {
+        "h": 0.0625,
+        "discrete_coefficient": 0.0003265364483337936,
+        "relative_difference_from_continuum": 0.0002977580319931672
+      }
+    ]
+  },
+  "pass": true
+}

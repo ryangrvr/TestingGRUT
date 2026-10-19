@@ -1,0 +1,57 @@
+{
+  "parent": "96a7e7e6a49f49dc30e1c92f0855522af41d9641",
+  "source_freeze": "52f552802759392a2353af068f60efea2c5c95b2",
+  "execution_commit": "879dbd59cc307d03f8f2cf23c63bc7ad2ba00aac",
+  "branch": "codex/grut-candidate1-two-object-20261019",
+  "source_identities": [
+    {
+      "name": "kernel.cjs",
+      "unchanged_since_freeze": true,
+      "blob": "f2a905e3973537044f0f993e8510ac5893d44c87"
+    },
+    {
+      "name": "run.cjs",
+      "unchanged_since_freeze": true,
+      "blob": "91244d8cec26ee7fd430e11e1a41b345e6e71ec7"
+    },
+    {
+      "name": "protocol.json",
+      "unchanged_since_freeze": true,
+      "blob": "8724cf80f4a6438852ea4a568c94b88da4594a93"
+    },
+    {
+      "name": "profile.json",
+      "unchanged_since_freeze": true,
+      "blob": "8f00476e96d245d4125b1bd434cad0a255bb67c1"
+    }
+  ],
+  "planned_cases": 27,
+  "completed_cases": 27,
+  "numerical_checks": 33,
+  "all_numerical_checks_pass": true,
+  "supplementary_controls": true,
+  "runtime_replay": {
+    "coarse_cases": 8,
+    "numeric_entries_compared": 49424,
+    "maximum_absolute_difference": 2.3874235921539366e-12,
+    "maximum_scaled_difference": 4.001791644786091e-13,
+    "note": "Same kernel replay across V8 and Node; not an independent discretization."
+  },
+  "hosted_runtime": {
+    "node": "v22.23.3",
+    "platform": "linux",
+    "arch": "x64",
+    "workflow_commit": "9a854567dd5a2d61f7673e807e7e6ac82234c080"
+  },
+  "workflow_url": "https://github.com/ryangrvr/TestingGRUT/actions/runs/39336072781",
+  "execution_environment_note": "The ordinary shell workspace was unavailable. Eight cases ran in V8; a standard branch-scoped hosted Node run completed all 27 without changing kernel, driver, profile or protocol.",
+  "coverage": "Raw outputs are scalar diagnostic histories and five axial profile frames per case. Full two-dimensional state snapshots were not retained.",
+  "limitations": [
+    "Classical flat-space scalar sector only; D=0",
+    "Axisymmetric head-on prepared states",
+    "Finite tau<=80",
+    "No asymptotic particle or many-object phase theorem",
+    "No autonomous formation, physical detector, quantum prediction or consciousness claim"
+  ],
+  "supplementary_runtime": "V8, after main hosted suite; source supplied for Node reproduction"
+}

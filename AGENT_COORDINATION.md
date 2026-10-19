@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| `research/reality_framework/grut_candidate1_two_object_20261019/` and branch-scoped `.github/workflows/grut_candidate1_two_object.yml` (isolated branch) | Codex Work | Same-action axisymmetric two-object evolution, controls and report; no shared builder files | 2026-10-19 |
 
 ## ANSWERED QUESTIONS
 
@@ -5826,3 +5825,14 @@ Preserved the original source byte-for-byte as calculate_original.py, all origin
 The owner replaced the V7 CTP-genotype framing with the parent question: what does a closed whole, whose subsystem baths are internal complements, force beyond known physics? Each sector is to report that question's actual campaign result, including negative results. The owner then requested a new-chat checkpoint before the synthesis was completed. Added grut_closed_whole_handoff_20261019/NEXT_CHAT_HANDOFF.md and START_NEXT_CHAT.txt with the exact mandate, current commit/branch, formal construction brief, campaign/source map, corrected M1 numbers, unexecuted B control, no-cross-import rule, scope and bounded next-chat deliverables.
 
 Read the original 18,380-byte GRUT_V7.md through its final line 332; no PDF variant audited. Read selected repository reports and the first 105 lines of the separate toric report at 8e0f89f, without merging or executing it. Partial/truncated historical reads and literature metadata-only checks are explicitly disclosed. No fresh closure theorem, new physical calculation, state-selection principle or completed working-theory synthesis is claimed. Verified all relative handoff links and git diff --check; earlier scientific packets remain unchanged. No new branch, package, spend, external message or background computation.
+
+
+### 2026-10-19 · Codex Work · Candidate 1 two-object evolution on isolated branch
+
+The owner authorized trying the two-object calculation on a new branch. Created codex/grut-candidate1-two-object-20261019 from 96a7e7e. Added only the new grut_candidate1_two_object_20261019 package, this coordination entry, and a workflow scoped to that research branch. Kernel, radial input and 27-case physical protocol were frozen at 52f5528 after disclosed short implementation pilots, before full collision evolutions. All physical runs keep a=1, b=.1 and the parent's scalar action; D=0 and gravity is not evolved.
+
+The ordinary shell workspace was unavailable. Completed eight coarse axisymmetric three-dimensional evolutions in V8, then used a standard branch-scoped hosted Node job to replay those and complete all 27 prescribed grid/timestep/domain cases. Run 39336072781 succeeded and committed raw diagnostic outputs at 879dbd5. All 33 numerical consistency checks pass; the maximum relative energy drift is 7.06e-4 and maximum charge error over initial absolute charge is 1.26e-13. Retrieved all 27 output files and recomputed the checks. V8/Node comparison across 49,424 trace/profile entries has maximum scaled difference 4.01e-13. Core source/input/protocol files remain byte-identical to the freeze.
+
+At the finest grid, relative phase pi/2 yields two separated axial F-squared regions at tau80, with left/right half-charge fractions .33438/.66562; charge is still redistributing and no asymptotic masses are claimed. Phase zero has one central axial density component, not a certified stable fused soliton. Phase pi +/- .2 and exact pi have two separated components; nearby phases avoid relying solely on the exact antisymmetry node. These component counts survive 2/5/10-percent thresholds. Opposite-charge transients are more resolution-sensitive and are not assigned an annihilation fraction. Main qualitative outcomes survive refinement; recorded medium/fine axial-profile differences remain about 1-2 percent.
+
+Supplementary controls recover the three-dimensional manufactured Laplacian to 2.01e-13 and show second-order stationary-profile acceleration defects. Derived the initial Noether flux Qleft_dot=-2*pi*gamma^2*d*F(gamma*d)^2*sin(theta); initial-plane quadratures approach its coefficient without a fitted pair law. These are post-run controls and conditional consequences of ordinary scalar dynamics, not a new fundamental principle. Published report, plot source, SVG, reproducible controls and exact execution identities. No formation ensemble, non-axisymmetric stability, long-term populated phase, detector/memory, quantum-gravity theory, empirical confirmation, external review, PR or merge is claimed.

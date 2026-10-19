@@ -1,17 +1,20 @@
-# Candidate 1 two-object evolution
+# Candidate 1 two-object dynamics
 
-Parent: `96a7e7e6a49f49dc30e1c92f0855522af41d9641`. Isolated branch: `codex/grut-candidate1-two-object-20261019`.
+**Completed:** all 27 prescribed evolutions and all 33 numerical consistency checks pass. Prepared equal-charge objects show phase-dependent central concentration or separated outgoing structure, including substantial charge exchange at relative phase pi/2. This is a finite-time classical axisymmetric result under Candidate 1's unchanged scalar action.
 
-The owner authorized trying the two-object calculation on a new branch. The ordinary shell workspace was unavailable at execution; the dependency-free JavaScript kernel can run both in the available V8 runtime and with Node.js. This package is a bounded classical axisymmetric (three spatial dimensional, head-on) calculation at Candidate 1's unchanged couplings. It does not derive spacetime, quantum theory, a formation ensemble, gravity or consciousness.
+Read [REPORT.md](REPORT.md) for the physics, controls, numerical error and limitations. The result does not establish autonomous formation, settled asymptotic particles, non-axisymmetric stability, a memory apparatus, quantum behavior, or new physics in nature.
 
-## Reproduction
+![Finest-grid profiles and charge histories](RESULTS.svg)
 
-From this directory, run `node run.cjs`, or `node run.cjs medium_pair_phase_0` for one frozen case. No package installation is required. The source profile is a documented decimation of the parent's archived CSV, not a new boundary-value solve. `protocol.json` defines the full run list and measurement/consistency criteria before those evolutions. A short single-object time-1 implementation pilot and a time-10 forward/reverse preflight preceded this freeze; it is retained in `pilot.json`.
+## Inspect or reproduce
 
-Evolution uses the same real `phi` and complex `X` equations, with `D=0` and the flat-space benchmark approximation. Radial finite volumes preserve regularity at the symmetry axis; a weighted discrete Hamiltonian matches the spatial force. Kick-drift-kick Verlet preserves the global U(1) charge to roundoff and has a finite time-discretization error in energy. Boundaries have fixed vacuum ghost values. Domain and timestep controls are separately prescribed.
+- [Frozen physical protocol](protocol.json)
+- [Numerical summary and comparisons](results/summary.json)
+- [Raw diagnostic outputs](results/)
+- [Coarse V8 runtime replay](results_v8/)
+- [Supplementary controls and initial-current derivation evidence](results/additional_controls.json)
+- [Completed execution logs](https://github.com/ryangrvr/TestingGRUT/actions/runs/39336072781)
 
-A superposition of Lorentz-boosted one-object profiles supplies the initial two-object state. It is not an exact two-object stationary solution; its interaction energy is included in diagnostics. All preparations, dimension, axisymmetry, couplings and initial resources are supplied. Opposite charge means opposite frequency rotation, not a change of coupling. Relative phase pi has an exact antisymmetry node; phases pi +/- 0.2 are included before evaluation to avoid treating a symmetry-enforced separation as a generic result.
+Run `node run.cjs`, then `node verify.cjs`. Supplementary checks use `node additional_controls.cjs`; `node plot.cjs` recreates the figure. No package installation is required. For one case, use `node run.cjs fine_pair_phase_halfpi`. The full verifier requires the complete suite.
 
-Classification must use the full convergence evidence. Multiple density peaks alone do not prove persistent particle identity; sparse phase samples do not establish a populated phase or an open interval of successful initial data.
-
-The full-run outcomes are initially unexecuted. A later report will state exactly what completed and what the numerical controls support.
+Parent: 96a7e7e6a49f49dc30e1c92f0855522af41d9641. Kernel/input/protocol freeze: 52f552802759392a2353af068f60efea2c5c95b2. Execution commit: 879dbd59cc307d03f8f2cf23c63bc7ad2ba00aac. Hosted runtime: Node v22.23.3 on Linux x64. [The execution amendment](EXECUTION_AMENDMENT.md) explains the switch from the unavailable shell workspace to the hosted replay.
