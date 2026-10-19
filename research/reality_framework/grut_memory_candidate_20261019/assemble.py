@@ -12,7 +12,7 @@ HERE=Path(__file__).resolve().parent
 
 
 def main():
-    raw=json.loads((HERE/'results_initial.json').read_text())
+    raw=json.loads((HERE/'results_with_control.json').read_text())
     challenge=json.loads((HERE/'challenge_results.json').read_text())
     rows=[]
     for name,x in raw['runs'].items():
@@ -23,17 +23,21 @@ def main():
     summary=dict(core=rows,registered_core_conditions=raw['checks'],
           adversarial_conditions=challenge['checks'],
           source_of_core_times='dimensionless Hamiltonian time, hbar/J=1',
+          matched_comparison=raw['matched_comparison'],
+          control_method_checks=raw['control_method_checks'],
+          mechanism_claims=raw['mechanism_claims'],
+          classification='Finite repetition register with matter feedback and programmed writer; facilitation benefit rejected by the matched control.',
           lyapunov_exponent=None,gravitational_prediction=None)
     plt.rcParams.update({'font.size':11,'axes.spines.top':False,'axes.spines.right':False})
     fig,axs=plt.subplots(2,2,figsize=(12,8.5),constrained_layout=True)
-    for name,label,color in [('candidate_L4','M1, L=4','#156a8a'),('candidate_L5','M1, L=5','#54a3b0'),('unfacilitated_L4','Saturation removed','#b44f49')]:
+    for name,label,color in [('candidate_L4','M1, L=4','#156a8a'),('uniform_floor_L4','Matched uniform F=0.05, L=4','#347746')]:
         x=raw['runs'][name]['retention'];axs[0,0].plot(x['times'],x['success'],label=label,color=color)
     axs[0,0].axhline(.9,color='#777',ls=':',lw=1)
-    axs[0,0].set(title='Prepared repetition bit: local read succeeds',xlabel='Time (hbar/J)',ylabel='Equal-prior guessing probability',ylim=(.48,1.02))
+    axs[0,0].set(title='Matched control retains the record better',xlabel='Time (hbar/J)',ylabel='Equal-prior guessing probability',ylim=(.90,1.005))
     axs[0,0].legend(fontsize=9)
-    for name,label,color in [('candidate_L4','Feedback present','#156a8a'),('no_feedback_L4','Feedback removed','#777')]:
-        x=raw['runs'][name]['readout'];axs[0,1].plot(x['times'],x['success'],label=label,color=color)
-    axs[0,1].set(title='A matter-spin measurement reads the memory',xlabel='Time (hbar/J)',ylabel='Guessing probability',ylim=(.48,.84))
+    for name,label,color in [('candidate_L4','M1 feedback','#156a8a'),('uniform_floor_L4','Matched control feedback','#347746'),('no_feedback_L4','Feedback removed','#777')]:
+        x=raw['runs'][name]['readout'];axs[0,1].plot(x['times'],x['success'],label=label,color=color,ls='--' if name.startswith('uniform') else '-')
+    axs[0,1].set(title='Readout persists without facilitation',xlabel='Time (hbar/J)',ylabel='Guessing probability',ylim=(.48,.84))
     axs[0,1].legend(fontsize=9)
     for L,color in [('4','#156a8a'),('5','#54a3b0')]:
         x=challenge['local_bit'][L];axs[1,0].plot(x['times'],x['success'],label='One-cell bit, L='+L,color=color)
@@ -46,7 +50,7 @@ def main():
     o=eq['otoc'][0];axs[1,1].plot(o['times'],o['squared_commutator'],label='Matter commutator, adjacent sites',color='#b57728')
     axs[1,1].set(title='Memory and spreading are separate observables',xlabel='Time (hbar/J)',ylabel='Normalized correlation / commutator',xlim=(0,4))
     axs[1,1].legend(fontsize=8)
-    fig.suptitle('GRUT-M1: a constructed closed memory model — finite-system results',fontsize=15)
+    fig.suptitle('GRUT-M1: repetition memory works; matched control rejects facilitation benefit',fontsize=14)
     fig.savefig(HERE/'core_summary.png',dpi=160)
     plt.close(fig)
     writer_path=HERE/'writer_results_refined.json'

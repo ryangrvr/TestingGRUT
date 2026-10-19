@@ -4,6 +4,16 @@ The Hamiltonian and candidate-specific calculations are specified in this
 packet. The following sources establish context and prevent false priority
 or inference claims; their models' theorems are not imported as M1 results.
 
+The owner-directed [M1 review](../grut_memory_candidate_20261019_review/REVIEW.md)
+at [commit cc24967](https://github.com/ryangrvr/TestingGRUT/commit/cc249673086b984f090d170f394d4d635e9c451d)
+is the source of the previously omitted F=epsilon control. Its complete
+text, tensor-construction script and archived output were read; the script
+was executed. The corrected packet reproduces its outcome with a separate
+bit-table construction and explicitly withdraws the original protection
+attribution. The review's writer discussion is analytical, not a new
+scattering execution; its toric-code discussion is not imported as a theorem
+about M1.
+
 | Primary source | Read scope and use |
 |---|---|
 | J. Maldacena, S. H. Shenker, D. Stanford, [A bound on chaos, arXiv:1503.01409](https://arxiv.org/pdf/1503.01409), JHEP 08 (2016) 106, DOI 10.1007/JHEP08(2016)106 | Regulated correlator definitions, the bound/assumption statements and section 3's Einstein/stringy examples. The bound is an upper bound under assumptions, not a universal equality. No independent proof of its full analytic argument is claimed. |

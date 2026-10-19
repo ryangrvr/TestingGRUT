@@ -30,7 +30,9 @@ def hamiltonian(L, p):
         diagonal += p['J']*(1+p['alpha']*z[L+i])*z[i]*z[j]
         diagonal += p['hz']*z[i] - p['K']*z[L+i]*z[L+j]
         H[b ^ (1 << i), b] += p['hx']
-        F = p['epsilon'] + (1-p['epsilon'])*(1-z[L+(i-1)%L]*z[L+j])/2
+        F = p['epsilon']
+        if p.get('facilitated', True):
+            F = F + (1-p['epsilon'])*(1-z[L+(i-1)%L]*z[L+j])/2
         H[b ^ (1 << (L+i)), b] -= p['Delta']*F
     H[b, b] += diagonal
     return H, z
@@ -53,8 +55,11 @@ def kron_hamiltonian(L, p):
         H += p['alpha']*p['J']*word({i:Z, j:Z, L+i:Z})
         H += p['hx']*word({i:X}) + p['hz']*word({i:Z})
         H -= p['K']*word({L+i:Z, L+j:Z})
-        H -= p['Delta']*(1+p['epsilon'])/2*word({L+i:X})
-        H += p['Delta']*(1-p['epsilon'])/2*word({L+prev:Z, L+i:X, L+j:Z})
+        if p.get('facilitated', True):
+            H -= p['Delta']*(1+p['epsilon'])/2*word({L+i:X})
+            H += p['Delta']*(1-p['epsilon'])/2*word({L+prev:Z, L+i:X, L+j:Z})
+        else:
+            H -= p['Delta']*p['epsilon']*word({L+i:X})
     return H
 
 
@@ -221,7 +226,7 @@ def kinematic_checks(L, p, H, z):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', default='results_initial.json')
+    parser.add_argument('--output', default='results_with_control.json')
     args = parser.parse_args()
     target = HERE/args.output
     if target.exists():
@@ -232,8 +237,14 @@ def main():
                ('frozen_L4',4,{**BASE,'epsilon':0.}),
                ('no_feedback_L4',4,{**BASE,'alpha':0.}),
                ('half_softness_L4',4,{**BASE,'epsilon':.025})]
+    configs += [('uniform_floor_L'+str(L), L, {**BASE, 'facilitated':False})
+                for L in [3,4,5]]
     result = dict(protocol_sha256=hashlib.sha256((HERE/'protocol.json').read_bytes()).hexdigest(),
                   source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  control_protocol_sha256=hashlib.sha256((HERE/'control_protocol.json').read_bytes()).hexdigest(),
+                  original_source_sha256=hashlib.sha256((HERE/'calculate_original.py').read_bytes()).hexdigest(),
+                  review_source_sha256=hashlib.sha256((HERE.parent/'grut_memory_candidate_20261019_review'/'uniform_field_control.py').read_bytes()).hexdigest(),
+                  registration_scope='Original seven runs follow protocol.json; matched controls are a post-review replay with a known expected outcome, not a blind prediction.',
                   environment=dict(python=platform.python_version(), numpy=np.__version__, scipy=scipy.__version__),
                   runs={}, checks={})
     for name,L,p in configs:
@@ -246,7 +257,7 @@ def main():
         run.update(prepared_runs(L,p,E,V,z))
         if name in ['candidate_L4','unfacilitated_L4','no_feedback_L4']:
             run['equilibrium'] = equilibrium(L,E,V,z)
-        if name == 'candidate_L3':
+        if name == 'candidate_L3' or name.startswith('uniform_floor'):
             run['kronecker_max_error'] = float(np.max(np.abs(H-kron_hamiltonian(L,p))))
             run['kinematic_checks'] = kinematic_checks(L,p,H,z)
         run['wall_seconds'] = time.monotonic()-t0
@@ -274,6 +285,31 @@ def main():
         'finite_size_retention_t10':all(min(v for t,v in zip(runs[name]['retention']['times'],runs[name]['retention']['success']) if t<=10)>=.9 for name in ['candidate_L3','candidate_L5'])
     }
     result['all_registered_acceptance_pass'] = all(result['checks'].values())
+    comparison={}
+    for L in [3,4,5]:
+        a=runs['candidate_L'+str(L)]; b=runs['uniform_floor_L'+str(L)]
+        ts=np.array(a['retention']['times'])
+        pa=np.array(a['retention']['success']); pb=np.array(b['retention']['success'])
+        delta=pb-pa
+        comparison[str(L)]=dict(
+            candidate_minimum_t10=float(pa[ts<=10].min()),
+            uniform_floor_minimum_t10=float(pb[ts<=10].min()),
+            candidate_t40=float(pa[-1]),uniform_floor_t40=float(pb[-1]),
+            candidate_minimum_t40=float(pa.min()),uniform_floor_minimum_t40=float(pb.min()),
+            minimum_sampled_uniform_minus_candidate=float(delta.min()),
+            largest_sampled_candidate_advantage=float(max(0.,-delta.min())),
+            uniform_no_worse_on_all_samples=bool(delta.min()>=-1e-10),
+            candidate_best_readout=a['readout']['best_success'],
+            uniform_floor_best_readout=b['readout']['best_success'],
+            readout_best_probability_difference=float(b['readout']['best_success']-a['readout']['best_success']),
+            uniform_floor_best_readout_time=b['readout']['best_registered_time'])
+    result['matched_comparison']=comparison
+    result['control_method_checks']=dict(
+        matched_tensor_constructions=all(runs['uniform_floor_L'+str(L)]['kronecker_max_error']<1e-13 for L in [3,4,5]),
+        original_short_time_onset_retained=all(abs(c['memory_second_derivative']-c['expected_memory_second'])<1e-10 for L in [3,4,5] for c in runs['uniform_floor_L'+str(L)]['kinematic_checks']))
+    result['mechanism_claims']=dict(
+        facilitation_improves_minimum_retention_all_sizes=all(c['candidate_minimum_t10']>c['uniform_floor_minimum_t10'] for c in comparison.values()),
+        matched_uniform_control_retains_better_on_registered_samples=all(c['uniform_no_worse_on_all_samples'] for c in comparison.values()))
     result['total_wall_seconds'] = time.monotonic()-start
     target.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(dict(checks=result['checks'],all_pass=result['all_registered_acceptance_pass'],seconds=result['total_wall_seconds'])),flush=True)

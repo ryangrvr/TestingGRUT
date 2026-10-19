@@ -24,7 +24,12 @@ At L=4, the prepared-register matter-Y measurement succeeds with
 probability 0.778467821 at time 0.58; its memory measurement then succeeds
 with probability 0.999312115. At L=5 the corresponding matter success is
 0.778459701. The full time-dependent predictions and all controls are
-provided in `results_initial.json`, not just their best values.
+provided in `results_initial.json`, not just their best values. The corrected
+ten-run replay and the matched F=0.05 baseline are in
+`results_with_control.json`. This control was added with its review outcome
+known; it is not a held-out prediction. At L=4 its t=40 memory probability
+is 0.998457850 versus M1's 0.935064585, with readout 0.778483402 versus
+0.778467821. All three tested sizes favor the control on the sampled grid.
 
 The writer-completed experiment has identical initial blank memories for
 both source inputs. Its output is in `writer_results_refined.json`, with
@@ -45,7 +50,11 @@ test setting. No held-out physical observations have yet been collected.
 2. The original core acceptance rules were registered before execution:
    minimum memory success 0.9 through sampled t=10, readout above 0.6 with
    contemporaneous memory above 0.9, active matter commutators, independent
-   numerical methods and controls. They passed at the original point.
+   numerical methods and controls. They passed at the original point, but
+   did not test a benefit over the matched weak-field control. The claim that
+   facilitation accounts for the demonstrated protection is now rejected
+   in this preparation and parameter regime. The high-field F=1 comparison
+   cannot rescue that claim.
 3. The stronger bare autonomous-writing and independent-cell requirements
    were separately registered and failed. Adding the explicit writer is a
    named completion with its own law and energy resources, not a retroactive
@@ -72,3 +81,8 @@ precision. No scientific error bar is inferred solely by counting checks.
 The parameter point is illustrative. A physical implementation would need
 actual calibration uncertainties and a model of the measurement apparatus.
 No unique empirical prediction for the universe is established.
+
+An error-correction-by-cascade successor would need an explicit error model
+and correction resources, then a predeclared retention or recovery advantage
+against F=epsilon with equal resources. That is a new experiment, not a
+result of the present writer or a pending proof supplied by these traces.

@@ -2,7 +2,10 @@
 
 Start with [REPORT.md](REPORT.md), then the complete law in
 [GRUT_CANDIDATE_M1.md](GRUT_CANDIDATE_M1.md). The outcome is a narrower
-working matter–memory model, not a universal or empirically validated theory.
+Ising repetition register with matter feedback and a programmed writer.
+The matched F=0.05 control retains the bit better than M1 with nearly the
+same readout. The claimed retention benefit from facilitation is withdrawn.
+This is not a universal or empirically validated theory.
 
 - [WORKED_REGIME.md](WORKED_REGIME.md): derivation, prepared record,
   readout, energy and retained failed attacks.
@@ -17,6 +20,11 @@ working matter–memory model, not a universal or empirically validated theory.
 The core results, stronger attacks and writer each have separate protocols
 written before the corresponding calculation. Numerical outputs preserve
 failed claims; no universal Lyapunov exponent was fitted.
+The matched control was added after its review outcome was known, as
+explicitly recorded in [control_protocol.json](control_protocol.json).
+Original records remain unchanged; the corrected ten-run replay is
+`results_with_control.json`. The [review](../grut_memory_candidate_20261019_review/REVIEW.md)
+and its independent control script are included alongside this packet.
 
 ## Reproduce
 
@@ -24,10 +32,12 @@ Use the recorded Python/NumPy/SciPy environment. All dependencies were
 already installed; no package was installed for this work. To preserve
 execution records, calculation scripts refuse to overwrite their default
 outputs. Run the following in a fresh copy of this packet containing only
-its Python files and protocol/amendment JSON files, with a different output
-directory from the archived results:
+its Python files and protocol/amendment JSON files, together with the sibling
+`grut_memory_candidate_20261019_review` directory in its original relative
+location. Use a different directory from the archived results:
 
 ```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python calculate_original.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python calculate.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python challenge.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python algebra.py

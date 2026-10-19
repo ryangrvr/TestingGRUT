@@ -1,11 +1,11 @@
 # GRUT-M1-W: an explicit closed matter–memory model
 
-This candidate proposes **state-dependent kinetic saturation**: ordered
-memory neighborhoods suppress their own rewriting, while their stored
-values alter matter interactions. A quantum carrier supplies a bit and the
-energy needed to write it. This is a complete nonrelativistic model of that
-mechanism. Its intended demonstrated scope is a finite interacting
-register, not spacetime, Standard Model matter, or quantum gravity.
+This is a finite Ising repetition register with matter feedback and a
+programmed quantum-carrier writer. Its proposed **state-dependent kinetic
+saturation** rule is specified below, but the matched uniform weak-field
+control retains the record better. Protection cannot be attributed to
+facilitation in the demonstrated regime. The scope is a prepared finite
+interacting register, not spacetime, Standard Model matter or quantum gravity.
 
 ## Theory datum
 
@@ -78,7 +78,7 @@ lower-bounded Hamiltonian on the free kinetic domain. Global evolution is
 |---|---|---|
 | Quantum mechanics | The Hilbert space, unitary law and Born instruments above | Gives exact probability and energy bookkeeping. No derivation of quantum mechanics is claimed. |
 | Fixed local substrate | Ring adjacency and two two-level systems per cell | Makes the common interaction neighborhood explicit. Dimension/locality are supplied, unlike the archived emergent-geometry ambition. |
-| Kinetic saturation | The displayed \(F_i\), with \(0<\epsilon<1\) | Protects prepared ordered patterns without freezing all transitions. Its strength is a construction choice. |
+| Kinetic saturation | The displayed \(F_i\), with \(0<\epsilon<1\) | Supplies slow flips on an ordered record and faster motion after defects. Its claimed retention benefit is rejected by the matched uniform-floor control. Its strength is a construction choice. |
 | Physical feedback | The same \(\tau_i^z\) changes \(J_i\) | Prevents “memory” from being a disconnected label. The matter readout depends on this term. |
 | Modeled preparation resources | A source qubit, massive particle, initial packet and blank register | Addresses the failed bare-writing protocol. An autonomous apparatus is included; spontaneous formation from generic resources is not inferred. |
 
@@ -142,6 +142,14 @@ global information-recovery probability. Core record encoding is one
 classical bit repeated across \(L\) cells, not \(L\) protected independent
 bits. A coherent source input evolves linearly into an entangled source–
 register state; the model does not clone an arbitrary unknown quantum state.
+
+The matched control replaces only \(F_i\) by the constant
+\(\epsilon\). The low flip amplitude and the \(\alpha\) matter feedback
+then remain, while facilitation is absent. It has better sampled retention
+at all tested sizes and nearly equal matter readout. The original
+\(F_i\equiv1\) control is a twentyfold-stronger transverse field, not
+an isolated test of facilitation. The original M1 law is preserved rather
+than silently replaced by the better control.
 
 The writer is internal during the calculated evolution. Preparation and
 terminal readout remain specified operations; a fully dynamical detector and

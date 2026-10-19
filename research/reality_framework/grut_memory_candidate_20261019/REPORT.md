@@ -1,19 +1,50 @@
-# GRUT-M1-W: a constructed and calculated memory candidate
+# GRUT-M1-W: repetition memory works; facilitation does not explain its protection
 
-**Outcome: a narrower working physical model, not the intended universal
-theory.** One explicit, closed, time-independent Hamiltonian can write a
-prepared input into a structured register, retain a readable record, and
-let that record alter later matter interactions. The core and completed
-writer have actual numerical regimes, specified resources and retained
-failed tests. A gravitational theory or gravitational scrambling exponent
-has not been produced.
+**Corrected outcome: a finite Ising repetition register with matter feedback
+and a programmed flying-qubit writer.** The matched weak-field control
+retains the record better than M1 while preserving essentially the same
+matter readout. The demonstrated retention therefore does not support
+the added facilitation principle. The finite calculation remains correct;
+the attribution of its protection to that principle is withdrawn.
+
+This amendment follows the [independent core review](../grut_memory_candidate_20261019_review/REVIEW.md)
+at commit `cc24967`. Its control script and the packet's separately assembled
+Hamiltonian were both executed. The original records and failed tests are
+preserved. Neither a universal theory nor a gravitational scrambling
+exponent has been produced.
+
+## The control that changes the interpretation
+
+Replace only the neighbor-dependent factor by the constant
+\(F_i\equiv\epsilon=0.05\). Keep \(\Delta=K=1\), matter couplings,
+feedback, preparations, observables and time grids identical.
+
+| Size | M1 minimum recovery through t=10 | Matched uniform-floor minimum | M1 recovery at t=40 | Uniform-floor recovery at t=40 |
+|---|---:|---:|---:|---:|
+| L=3 | 0.994999 | 0.998738 | 0.985006 | 0.994692 |
+| L=4 | 0.987510 | 0.999055 | 0.935065 | 0.998458 |
+| L=5 | 0.989132 | 0.998479 | 0.940399 | 0.997517 |
+
+The control is no worse at every sampled time through t=40, within
+1e-10 numerical tolerance. This is not an all-continuous-time theorem.
+At L=4 its best matter readout is 0.778483, versus M1's 0.778468 at
+the same time 0.58. They differ by 1.56e-5, rather than being exactly
+identical. The original \(F=1\) comparison also increases the transverse
+field twentyfold; it cannot isolate the benefit of neighbor dependence.
+
+Both models have the same small initial flip amplitude on an ordered
+record. After a spin leaks, M1 raises its neighbors' flip amplitudes to
+1, allowing faster domain-wall motion instead of correcting the error.
+The supported explanation is a prepared ferromagnetic repetition register
+with weak transverse flips and matter feedback. No finite-temperature
+memory phase or advantage from facilitation has been demonstrated.
 
 ## The constructive proposal
 
-The added principle is **kinetic saturation**: a cell surrounded by an
-ordered memory neighborhood rewrites slowly, while its stored value changes
-the matter bond. It is an explicit proposed law, not a conclusion inferred
-from the words “closed whole.”
+The proposed **kinetic saturation** law makes a cell surrounded by an
+ordered memory neighborhood rewrite slowly, while its stored value changes
+the matter bond. It remains an explicit law that can be studied, but the
+matched control rejects its claimed retention benefit in this regime.
 
 With matter spins \(\sigma\), memory spins \(\tau\), and a supplied ring,
 
@@ -42,7 +73,9 @@ H_{M1W}=P^2/(2M)+H_{M1}
 \]
 
 A massive quantum particle carries the source bit \(R\) through fixed,
-local gate regions \(f_i\). Its energy changes as it writes. Both source
+local gate regions \(f_i\). This is a programmed conditional flip with
+leading pulse area \(\pi/2\), not an organization mechanism selected by
+facilitation. Its energy changes as it writes. Both source
 inputs start with identical blank memory registers. There is no timed
 external pulse or transmitted-only postselection. The complete state
 space, functions, parameters, domains and instruments are in
@@ -62,7 +95,10 @@ space, functions, parameters, domains and instruments are in
 
 The core uses exact finite-system spectral evolution. Independent
 Kronecker assembly and Krylov evolution agree within 2.24e-13 in the
-retention trace. Thirteen originally registered core conditions pass.
+retention trace. Thirteen originally registered core conditions pass; none
+tested superiority over the matched weak-field baseline. Their passing does
+not establish the proposed principle. Full corrected traces are in
+`results_with_control.json`.
 
 The writer uses an FFT scattering calculation and two core-evolution
 implementations. All six writer conditions pass at the registered
@@ -98,7 +134,10 @@ spontaneous creation of information, matter or the universe.
 
 ## What failed, and what the construction explains
 
-The stronger attacks were registered before execution. A single-cell bit
+The matched control rejects the claimed facilitation benefit for the
+demonstrated preparation. It was added after the review's outcome was
+known and is not a blind prediction. The stronger original attacks were
+registered before execution. A single-cell bit
 falls below the declared retention standard; the bare matter-to-memory
 writing protocol fails; and extra unconstrained flip terms spoil the
 retention threshold. The six false attack conditions remain false in
@@ -129,10 +168,12 @@ acknowledged in [SOURCES.md](SOURCES.md); no novelty claim is established.
 
 ## Deliverable and remaining boundary
 
-The candidate now has an actual law, preparations, energy accounting,
-instruments, a worked finite regime, controls, failure records and code.
-It supplies a concrete physical meaning for “records that affect later
-interactions and persist.”
+The packet specifies a finite repetition register, matter feedback and a
+programmed writer, with preparations, energy accounting, instruments,
+controls, failures and code. It supplies an example of records that affect
+later interactions and persist, but the extra facilitation rule is a
+liability for retention here. This is not a newly established memory
+principle, error-correction mechanism or gravitational law.
 
 Universal GRUT remains unfinished. Missing pieces include a gravitational
 sector, relativistic propagation, observed matter, the origin and

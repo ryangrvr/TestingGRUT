@@ -2,8 +2,10 @@
 
 ## Demonstrated scope
 
-The finite core gives a stable, computable regime of prepared, readable,
-redundant classical memory with nonzero matter interactions. Its exact
+The finite core gives a computable finite-time regime of prepared, readable,
+redundant classical memory with nonzero matter interactions. A matched
+uniform weak-field Ising register retains the record better, so this is
+not evidence that facilitation protects it. Its exact
 saturation limit has a proved domain-wall constraint. Its nonzero-softness
 regime has numerical probabilities and an independent evolution check.
 The completed writer has a separately specified source and energy carrier;
@@ -11,6 +13,10 @@ its actual numerical status is recorded in [REPORT.md](REPORT.md).
 
 ## Failures that remain failures
 
+- The matched F=epsilon control rejects the attribution of the demonstrated
+  retention to facilitation. It improves the sampled retention at L=3,4,5
+  while preserving nearly the same matter readout. F=1 was a confounded
+  high-field comparison. The original positive mechanism claim is withdrawn.
 - A single memory cell does not retain the independent bit to the declared
   0.9 success standard through t=10 at L=4 or 5.
 - The attempted bare matter-to-memory preparation does not write and hold a
@@ -23,8 +29,10 @@ its actual numerical status is recorded in [REPORT.md](REPORT.md).
 
 ## Missing physical foundations
 
-1. A derived origin or robust protection of the facilitation law and small
-   softness. They are supplied here. Radiative stability is not established.
+1. A demonstrated benefit, derived origin or robust protection of the
+   facilitation law and small softness. They are supplied here; the tested
+   retention benefit has been rejected. An error-correction cascade against
+   the matched baseline has not been specified or calculated.
 2. Autonomous durable formation from generic allowed resources. A programmed
    writer with prepared input and fuel is a different, narrower result.
 3. Independent local memory capacity growing with volume; all-time retention;
@@ -45,9 +53,9 @@ its actual numerical status is recorded in [REPORT.md](REPORT.md).
 
 ## Final classification
 
-The available classification is **a narrower working model rather than the
-intended universal theory**. A complete finite law with a demonstrated
-regime is a substantive construction. It does not finish universal GRUT,
-and no amount of documentation changes that boundary. Conversely, the
-missing gravitational derivation does not falsify the demonstrated finite
-memory mechanism or every possible future gravitational extension.
+The available classification is **a finite Ising repetition register with
+matter feedback and a programmed flying-qubit writer; the proposed
+facilitation benefit is rejected in the demonstrated regime**. The original
+probabilities survive, but their former interpretation does not. This is
+not a new established memory principle, self-correcting phase or universal
+theory. No empirical or gravitational validation has occurred.

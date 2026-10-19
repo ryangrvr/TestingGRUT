@@ -1,0 +1,18 @@
+{
+  "title": "Matched uniform-floor control and claim correction",
+  "date": "2026-10-19",
+  "review_commit": "cc249673086b984f090d170f394d4d635e9c451d",
+  "reviewed_commit": "1997d205830875e73437c2bcd50ca621bf4bd30c",
+  "registration": "Post-review specification. The independent review's numerical outcome was known before this replay. This is not a blinded or held-out prediction.",
+  "law_change": "Replace F_i by the constant epsilon=0.05, holding Delta=1, K, matter interactions, alpha feedback, all other parameters, preparations, measurements, sizes and time grids fixed.",
+  "sizes": [3, 4, 5],
+  "retention_times": [0, 40, 0.2],
+  "readout_times": [0, 2, 0.02],
+  "outputs": "Full conditional means and guessing probabilities, minima through 10 and 40, value at 40, best readout and pointwise baseline-minus-candidate difference.",
+  "methods": "Re-execute the review's independent tensor construction. Add the control to calculate.py's bit-table construction and compare with its independent Kronecker construction at every size. Replay original seven runs without overwriting their original records.",
+  "reading_before_replay": "If the uniform-floor control matches or improves retention while preserving readout, withdraw the attribution of the demonstrated protection to facilitation. The F=1 control remains a large-transverse-field comparison and cannot isolate neighbor dependence. No error-correction benefit, finite-temperature phase, Lyapunov exponent or gravitational result is inferred.",
+  "precision": "Compare rounded review values within 5e-7; original retention traces within 1e-10; use 1e-10 tolerance for pointwise no-worse comparisons near t=0. Readout differences are recorded, not called exactly zero.",
+  "scope": "Pure prepared finite records at L=3,4,5. They have nonzero energy above the ground state and are not a demonstrated finite-temperature memory phase.",
+  "writer": "Do not rerun or transfer the writer's scattering probabilities to this different core. The leading impulsive controlled-flip limit is independent of facilitation; finite-clock errors for a uniform-floor writer remain uncalculated.",
+  "archive": "Keep calculate_original.py, results_initial.json, all original protocols and all earlier failed tests byte-for-byte. The corrected execution is results_with_control.json."
+}

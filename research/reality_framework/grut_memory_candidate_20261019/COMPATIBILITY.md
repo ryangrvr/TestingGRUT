@@ -23,6 +23,26 @@ and low-entropy blank state are initial resources. Neither information nor
 organized matter is claimed to arise from nothing. Bare formation was
 tested separately and did not establish a durable record.
 
+## The matched control and the writer
+
+With the same low transverse amplitude everywhere, F=0.05, the finite Ising
+register retains the prepared bit better and gives nearly the same matter
+readout. Thus the demonstrated retention does not establish a benefit from
+the proposed facilitation law. The old F=1 comparison changes the field
+strength as well as its neighbor dependence.
+
+The carrier crosses each gate in 2w/(p0/M)=0.003. In the fast straight-line
+limit, its conditional pulse area is Omega*w/(p0/M)=pi/2, giving a controlled
+flip. This leading operation does not require facilitation. The reported
+finite-clock scattering probabilities belong to M1-W; they have not been
+recomputed for the different uniform-floor core. The writer is a programmed
+apparatus, not evidence that facilitation autonomously organizes records.
+
+No equilibrium memory phase or self-correction follows from L=3–5 pure-state
+records. A future proposed correction cascade would have to specify noise,
+an error syndrome, correction dynamics, entropy/energy resources and an
+advantage over this matched baseline. No such calculation has been executed.
+
 ## KMS and fluctuation–dissipation
 
 For the finite core, \(\rho_\beta\propto e^{-\beta H_{M1}}\) obeys KMS.

@@ -1,7 +1,9 @@
 # Preparation, evolution, records and measured output
 
-All core values below come from the preregistered parameter point in
-[protocol.json](protocol.json). Time is in \(\hbar/J\); no conversion to
+All core values below use the parameter point in [protocol.json](protocol.json).
+The matched uniform-floor control was added after the review's result was
+known; [control_protocol.json](control_protocol.json) records that scope.
+Time is in \(\hbar/J\); no conversion to
 seconds or fit to nature is available. Exact finite-system spectral
 evolution is compared with Krylov evolution of an independently assembled
 Hamiltonian. This is algorithmic cross-checking by the same worker.
@@ -75,9 +77,12 @@ probability were not inserted as a boundary condition.
 | M1, L=3 | 0.994999 | 0.985006 | 0.806447 |
 | M1, L=4 | 0.987510 | 0.935065 | 0.778468 |
 | M1, L=5 | 0.989132 | 0.940399 | 0.778460 |
-| Saturation removed, L=4 | 0.621452 | 0.709936 | 0.741417 |
+| Uniform F=1, stronger field, L=4 | 0.621452 | 0.709936 | 0.741417 |
 | Feedback removed, L=4 | 0.996241 | 0.994449 | 0.500000 |
 | Exactly frozen, L=4 | 1.000000 | 1.000000 | 0.778577 |
+| Matched uniform F=0.05, L=3 | 0.998738 | 0.994692 | 0.806626 |
+| Matched uniform F=0.05, L=4 | 0.999055 | 0.998458 | 0.778483 |
+| Matched uniform F=0.05, L=5 | 0.998479 | 0.997517 | 0.778475 |
 
 For M1 at \(L=4\), the best registered readout time is 0.58. The two
 matter-Y means are -0.491561535 and +0.622309749. Hence
@@ -92,10 +97,34 @@ use this same readout time. Sampling is explicit; the reported minima are
 not rigorous all-continuous-time enclosures.
 
 Removing feedback leaves a persistent memory but no matter readout signal.
-Removing saturation leaves an interacting readout but substantially erases
-the record. Both parts of the proposed mechanism have a tested operational
-role. The exactly frozen control is retained as an important limiting
-case, not offered as autonomous formation.
+Removing facilitation while keeping the uniform floor amplitude 0.05
+improves retention and preserves readout. The old F=1 comparison increases
+the transverse field twentyfold and does not isolate neighbor dependence.
+The inference that both facilitation and feedback are responsible for the
+demonstrated memory/readout is withdrawn: feedback matters, while
+facilitation is a retention liability in this preparation.
+
+The complete original execution remains in `results_initial.json`, with its
+byte-identical source archived as `calculate_original.py`. The ten-run
+replay, including all original configurations and the three matched
+controls, is `results_with_control.json`. The review's independent tensor
+script was also rerun and matches to the printed six decimals. The control
+is no worse at all 201 sampled retention times at each size, within
+1e-10 tolerance. This does not imply a continuous-time or thermodynamic
+theorem. At L=4 readout differs by 0.000015581, not exactly zero.
+
+On either model's ordered input, every memory flip has the same initial
+amplitude 0.05, and the displayed second derivative agrees. After a defect,
+opposite-neighbor flips in M1 occur with amplitude 1. Such flips move
+domain walls without changing the ferromagnetic energy, rather than
+annihilating the error. Matter can still change the transition energy;
+an exact resonance theorem for the full coupled Hamiltonian is not claimed.
+This reversible facilitation does not supply an error-correction bias.
+
+These are pure prepared states with nonzero excitation energy, not a
+ground-state preparation or a demonstrated finite-temperature memory phase.
+The exactly frozen control is an important limiting case, not autonomous
+formation.
 
 The core's largest norm deviation is \(1.29\times10^{-14}\); sampled total
 energy deviations are below \(3.07\times10^{-14}J\). Independent

@@ -62,6 +62,33 @@
       "best_readout": 0.7785498324346294,
       "readout_time": 0.58,
       "memory_at_readout": 0.9998279285483057
+    },
+    {
+      "run": "uniform_floor_L3",
+      "L": 3,
+      "minimum_memory_t10": 0.9987381693845035,
+      "memory_t40": 0.9946923430640838,
+      "best_readout": 0.8066264967923176,
+      "readout_time": 1.2,
+      "memory_at_readout": 0.9995069287768361
+    },
+    {
+      "run": "uniform_floor_L4",
+      "L": 4,
+      "minimum_memory_t10": 0.9990547948737153,
+      "memory_t40": 0.998457849859687,
+      "best_readout": 0.7784834017608981,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.9994723624638273
+    },
+    {
+      "run": "uniform_floor_L5",
+      "L": 5,
+      "minimum_memory_t10": 0.9984791011094952,
+      "memory_t40": 0.9975174637666251,
+      "best_readout": 0.7784753524417052,
+      "readout_time": 0.58,
+      "memory_at_readout": 0.9994723632362305
     }
   ],
   "registered_core_conditions": {
@@ -91,6 +118,62 @@
     "perturbed_kappa0_3_retains_to_t10": false
   },
   "source_of_core_times": "dimensionless Hamiltonian time, hbar/J=1",
+  "matched_comparison": {
+    "3": {
+      "candidate_minimum_t10": 0.9949990829926045,
+      "uniform_floor_minimum_t10": 0.9987381693845035,
+      "candidate_t40": 0.9850063302853134,
+      "uniform_floor_t40": 0.9946923430640838,
+      "candidate_minimum_t40": 0.9845910858512478,
+      "uniform_floor_minimum_t40": 0.9942656047750478,
+      "minimum_sampled_uniform_minus_candidate": -2.7755575615628914e-15,
+      "largest_sampled_candidate_advantage": 2.7755575615628914e-15,
+      "uniform_no_worse_on_all_samples": true,
+      "candidate_best_readout": 0.806446566237308,
+      "uniform_floor_best_readout": 0.8066264967923176,
+      "readout_best_probability_difference": 0.00017993055500953314,
+      "uniform_floor_best_readout_time": 1.2
+    },
+    "4": {
+      "candidate_minimum_t10": 0.9875095925556739,
+      "uniform_floor_minimum_t10": 0.9990547948737153,
+      "candidate_t40": 0.9350645853495996,
+      "uniform_floor_t40": 0.998457849859687,
+      "candidate_minimum_t40": 0.9350645853495996,
+      "uniform_floor_minimum_t40": 0.9983968248969708,
+      "minimum_sampled_uniform_minus_candidate": 8.881784197001252e-16,
+      "largest_sampled_candidate_advantage": 0.0,
+      "uniform_no_worse_on_all_samples": true,
+      "candidate_best_readout": 0.7784678210302141,
+      "uniform_floor_best_readout": 0.7784834017608981,
+      "readout_best_probability_difference": 1.5580730684083832e-05,
+      "uniform_floor_best_readout_time": 0.58
+    },
+    "5": {
+      "candidate_minimum_t10": 0.9891321882423039,
+      "uniform_floor_minimum_t10": 0.9984791011094952,
+      "candidate_t40": 0.940398765661841,
+      "uniform_floor_t40": 0.9975174637666251,
+      "candidate_minimum_t40": 0.940398765661841,
+      "uniform_floor_minimum_t40": 0.9957166969846252,
+      "minimum_sampled_uniform_minus_candidate": -1.7763568394002505e-15,
+      "largest_sampled_candidate_advantage": 1.7763568394002505e-15,
+      "uniform_no_worse_on_all_samples": true,
+      "candidate_best_readout": 0.7784597005654044,
+      "uniform_floor_best_readout": 0.7784753524417052,
+      "readout_best_probability_difference": 1.5651876300815104e-05,
+      "uniform_floor_best_readout_time": 0.58
+    }
+  },
+  "control_method_checks": {
+    "matched_tensor_constructions": true,
+    "original_short_time_onset_retained": true
+  },
+  "mechanism_claims": {
+    "facilitation_improves_minimum_retention_all_sizes": false,
+    "matched_uniform_control_retains_better_on_registered_samples": true
+  },
+  "classification": "Finite repetition register with matter feedback and programmed writer; facilitation benefit rejected by the matched control.",
   "lyapunov_exponent": null,
   "gravitational_prediction": null,
   "writer_checks": {
