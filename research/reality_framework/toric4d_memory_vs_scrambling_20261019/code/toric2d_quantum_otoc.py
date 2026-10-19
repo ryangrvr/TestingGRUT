@@ -43,9 +43,9 @@ def build(h):
     return H.tocsr(), Xs, Zs, Zbar, stars, plaqs
 
 
-def main(h=0.3, times=None, n_states=2, seed=0):
+def main(h=0.3, times=None, n_states=1, seed=0):
     if times is None:
-        times = [0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0, 10.0, 14.0, 20.0]
+        times = [0.0, 0.5, 1.0, 2.0, 4.0, 8.0]
     H, Xs, Zs, Zbar, stars, plaqs = build(h)
     rs = np.random.RandomState(seed)
     W = Zs[edge(0, 0, 0)]                # local probe

@@ -172,17 +172,19 @@ def energy_scan(L, betas, seed, f2e, nf, ne, n_eq=300, n_obs=200):
 
 
 def fit_tau(t, P):
-    """tau_log from P(t)=exp(-t/tau) using points with 0.05<P<0.95; lower bound if never below 0.9."""
+    """Robust memory time: the half-life t_half at which P_log first falls to 0.5 (log-interpolated).
+    Reported instead of an exponential fit, which is dominated by late-time noise once P ~ 0.
+    tau_log = t_half / ln 2 under P = exp(-t/tau).  If P never reaches 0.5, t_max is a lower bound."""
     t = np.asarray(t, float); P = np.asarray(P, float)
-    if P.min() > 0.9:
-        return {"tau": None, "lower_bound": float(t.max()), "note": "no decay within t_max"}
-    m = (P > 0.05) & (P < 0.95)
-    if m.sum() < 2:
-        m = P < 0.95
-    if m.sum() < 1:
-        return {"tau": None, "note": "insufficient points"}
-    slope = np.sum(-np.log(P[m]) * t[m]) / np.sum(t[m] ** 2)  # least squares through origin
-    return {"tau": float(1.0 / slope) if slope > 0 else None, "n_points": int(m.sum())}
+    idx = np.where(P <= 0.5)[0]
+    if len(idx) == 0:
+        return {"t_half": None, "tau": None, "lower_bound_t_half": float(t.max()), "note": "P_log > 0.5 at t_max"}
+    i = int(idx[0])
+    if i == 0:
+        return {"t_half": float(t[0]), "tau": float(t[0] / np.log(2)), "note": "decayed by first readout"}
+    lt = np.log(t[i - 1]) + (0.5 - P[i - 1]) * (np.log(t[i]) - np.log(t[i - 1])) / (P[i] - P[i - 1])
+    th = float(np.exp(lt))
+    return {"t_half": th, "tau": th / np.log(2), "P_before": float(P[i - 1]), "P_after": float(P[i])}
 
 
 def main(L, betas, ntraj, tmax, seed):
