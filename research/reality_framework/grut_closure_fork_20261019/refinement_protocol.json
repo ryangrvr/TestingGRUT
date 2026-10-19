@@ -1,0 +1,8 @@
+{
+  "reason": "The first finite-epsilon run is retained as results_initial.json. At separation 3, the coarsest halving ratio was 3.6864 and failed the proposed 3.7 lower acceptance bound; subsequent ratios 3.8479 and 3.9251 approach 4. The initial epsilon grid was not uniformly asymptotic to that tolerance.",
+  "additional_epsilon": [0.00125, 0.000625],
+  "decision": "Retain every original row. Add the two smaller epsilons and judge the final three halving ratios against 4 with absolute tolerance .1. This tests asymptotic order rather than loosening the initial bound. Also compare the leading residual coefficient with the separately derived second-order expression.",
+  "prediction": "lim_epsilon->0 (W_exact/W_thermal(H_eff)-1)/epsilon² = s²/4 - s³ coth(s/2)/12",
+  "coefficient_relative_tolerance": 0.02,
+  "unchanged": "All BVP charges, couplings, grids and other criteria. No new physical law or state selection."
+}

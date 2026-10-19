@@ -1,0 +1,8 @@
+{
+  "stage": "Before any physical calculation ran",
+  "initial_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python probe.py",
+  "initial_failure": "ModuleNotFoundError: No module named 'mpmath'",
+  "additional_read_only_check": "The primary runtime also lacks mpmath; no package was installed.",
+  "amendment": "Use Python's built-in Decimal at the same 60 digits for the elementary conformal-kernel and curvature calculations. Present the analytic first-order identity in the derivation, and verify its finite-separation prediction numerically. Remove the SymPy dependency and do not count a literal polynomial identity as an independent numerical test.",
+  "unchanged": "Physics, charges, domains, BVP tolerances, epsilon/separation grids and acceptance criteria."
+}

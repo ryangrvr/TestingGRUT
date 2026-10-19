@@ -1,0 +1,11 @@
+{
+  "purpose": "Resolve the user's proposed A/B/C fork after Candidate 1 commit 8fdd674, without assuming that closure fixes a state, curvature magnitude or thermality.",
+  "parent": "8fdd674d5e487dc050d685890e7c6defc35e18b1",
+  "classical_channels": {"charges": [39944, 39943, 19972], "method": "Independent fixed-integer-charge radial BVP at original couplings; domain and tolerance comparison", "domains": [40, 50], "tolerances": [1e-9, 1e-10], "quantum_energy_recalculated": false},
+  "conformal_scope": "Massless conformally coupled scalar, conformal vacuum in spatially flat FLRW; fixed midpoint proper times; H=1 at midpoint. Verify first-order shifted de Sitter kernel and an endpoint-anchored countercheck. This is not a full no-boundary path-integral construction.",
+  "slow_roll_test": {"epsilon": [0.02, 0.01, 0.005, 0.0025], "separations": [0.5, 1, 2, 3], "mpmath_digits": 60, "tests": "Residual after H_eff=H(1-epsilon) scales quadratically; unshifted comparison and endpoint anchoring retain linear terms. No infinite-time detector rate or minimally coupled IR state is claimed to have been recomputed."},
+  "curvature_test": "Closed global de Sitter, a=cosh(H_Lambda t)/H_Lambda. Verify Omega_K=-1/(exp(2N)-1) at N=1,5,10,60; closed spatial sections coexist with arbitrarily small |Omega_K|. These are an exact limiting counterexample and inflationary dilution identity, not a fitted history of our universe.",
+  "topology": "Exhibit a flat compact three-torus with periodic spatial coordinates. Compactness by itself does not fix spatial curvature sign. Additional action and boundary conditions may do so.",
+  "literature": "Read primary Graham, Laflamme, Obadia, no-boundary and sequestering sources. Distinguish a previously published local-temperature coefficient from the stronger finite-separation/Wigner statement; absence of a search hit is not a novelty proof.",
+  "no_changes": "No modification of Candidate 1, no new expensive one-loop integral, no assumption that any option is a universal theory."
+}
