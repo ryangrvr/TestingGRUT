@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| `research/reality_framework/grut_candidate1_two_object_20261019/` (isolated branch) | Codex Work | Same-action axisymmetric two-object evolution, controls and report; no shared builder files | 2026-10-19 |
 
 ## ANSWERED QUESTIONS
 
