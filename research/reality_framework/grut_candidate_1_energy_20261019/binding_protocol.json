@@ -1,0 +1,14 @@
+{
+  "title": "Fixed integer charge and like-order free-carrier binding comparison",
+  "frozen_before_spectral_energy_result": true,
+  "action_matching": "Original Candidate 1 and MSbar mu0=g*v; unchanged scalar couplings and gravitational vacuum parameter.",
+  "reference_inputs": "Original Qbar and Ebar from the candidate calculation, g=.1; original Omega from hashed profile. Prior one-scalar-loop X pole mass from fluctuations packet.",
+  "charge": "Qref=Qbar/g² is a continuous semiclassical interpolation point. The exact U(1) eigenstate target is the nearest integer N=round(Qref), independent of the spectral-energy outcome. Reference N=39944 expected; do not call the floating point Qref an exact charge eigenvalue.",
+  "energy_units": "Output energies divided by g*v. Eclass_ref=Ebar/g². Strict first-order adjustment to the integer target is Omega*(N-Qref). The change of one-loop K1 from the corresponding O(g²) change in Omega is beyond the calculated order.",
+  "integer_energy_formula": "E_soliton_1loop(N)/(g*v)=Ebar/g²+Omega*(N-Qref)+K1_ren(Omega). Any interval must include the spectral calculation's stated numerical/tail errors. Classical quadratic charge-displacement term is separately estimated, not silently omitted.",
+  "comparison_channel": "N infinitely separated elementary X carriers, total U(1) charge N. Lowest free-carrier threshold at this order is N*mX_pole; additional neutral particles or X-antiparticle pairs have positive rest energy. Residual charged soliton plus emitted X and multi-soliton fragmentation are distinct channels not calculated by this single-profile energy.",
+  "binding_definition": "DeltaE_freeX=E_soliton_1loop(N)-N*mX_pole. Negative interval supports binding against this specified free-carrier channel at one-loop. Positive challenges it; overlap zero is inconclusive. If the remainder/normalization is uncontrolled, no finite claimed interval or binding verdict is permitted.",
+  "order_boundary": "A numerical interval at one-loop is not a bound on omitted genuine two-loop, gravitational, nonperturbative or empirical uncertainties. A favorable free-carrier comparison is not a lifetime or global stability theorem.",
+  "vacuum": "Use excitation energy relative to the same scalar vacuum. This does not fix the gravitating total vacuum density or erase the previously calculated raw shift. Gravity/SM loops excluded.",
+  "no_tuning": "Do not alter couplings, profile family, finite counterterms or target integer based on a desired binding outcome."
+}

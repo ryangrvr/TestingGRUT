@@ -1,0 +1,11 @@
+{
+  "scope": "Root analytical refinement after inspecting the conservative compact-support tail bounds, before executing this refined bound. No spectrum or physical parameter is fitted.",
+  "method": "Signed Birman-Schwinger operator S G0 S sign(V), S=abs(V)^(1/2). Kernel domination by the massless radial Green function implies norm<=Wmax/[ell(ell+1)], Wmax=sup r²||V(r)||. Its HS squared is bounded by 2 Irad3/[(2ell+1)(2ell+3)(2ell-1)]. Apply the same n>=3 logarithm bound.",
+  "profile_test": "Bound Wmax on the original cubic-spline cells via padded Bernstein convex-hull ranges and a symmetric-matrix midpoint/radius bound, including all four real species. Verify conservative rounded Wmax=64 on 0..20, 0..25 and 0..50. This encloses the numerical spline, not an interval-certified exact BVP solution.",
+  "angular_cutoff": 40,
+  "frequency_cutoff": 10,
+  "Irad3_used": 600,
+  "Wmax_used": 64,
+  "UV_bound": "Retain the previously verified Vmax=2,I2=1800 frequency-tail bound at all angular momenta. Angular bound applies only below the frequency cutoff, avoiding overlap.",
+  "calculation": "Sum through ell=100000, then bound the remaining decreasing ell^-4 series analytically. Reject the refinement if a spline enclosure exceeds its supplied rounded bound."
+}

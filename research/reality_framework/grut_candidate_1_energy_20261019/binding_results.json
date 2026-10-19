@@ -1,0 +1,89 @@
+{
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "parent_commit": "1f370987f2fa96a52426ec95680a4f3ad7cbd373",
+  "g": 0.1,
+  "Omega_reference": 0.8000000019763136,
+  "Q_reference_continuous": 39943.84624223011,
+  "N_integer": 39944,
+  "delta_charge": 0.15375776989094447,
+  "Eclass_reference_over_gv": 36392.29985516866,
+  "integer_linear_adjustment_over_gv": 0.12300621621662915,
+  "Eclass_integer_first_order_over_gv": 36392.422861384875,
+  "integer_check": {
+    "integer_BVP_success": true,
+    "integer_BVP_max_residual": 9.999019398117063e-11,
+    "Omega_at_N": 0.7999996263326561,
+    "Ebar_at_N": 363.92422861363667,
+    "Qbar_at_N": 399.4399999999982,
+    "sensitivity_success": true,
+    "dQbar_dOmega_reference": -4093.1632365408204,
+    "sensitivity_max_residual": 9.997726415187426e-11
+  },
+  "integer_quadratic_estimate_over_gv": -2.8879194935084364e-08,
+  "direct_integer_minus_linear_over_gv": -2.121669240295887e-08,
+  "spectral_remainder_initial_n6": -1.1000785657860743,
+  "spectral_remainder_initial_n8": -1.1000970384048012,
+  "spectral_remainder_replay": -1.0915840190527524,
+  "spectral_replay_change": 0.008513019352048845,
+  "graphs_matched_R25": {
+    "R": 25.0,
+    "first": 2.8349938178547522,
+    "second": 1.0518678518879991
+  },
+  "renormalized_K1_over_gv": 2.7952776506899992,
+  "renormalized_K1_over_gv_numerical_range": [
+    2.6852776506899994,
+    2.905277650689999
+  ],
+  "error_budget_over_gv": {
+    "frequency_tail_analytical": 0.03827594312628678,
+    "angular_tail_analytical": 0.05042781562786045,
+    "empirical_numerical_allowance": 0.02,
+    "graph_allowance": 1e-06,
+    "classical_allowance": 1e-05,
+    "sum_before_roundup": 0.10871475875414724,
+    "rounded_reported_allowance": 0.11,
+    "qualification": "Analytical truncation bounds conditional on supplied spline enclosures, plus an empirical numerical allowance. Not a certified exact-profile enclosure, statistical confidence interval, or higher-loop error bound."
+  },
+  "X_strict_one_loop_pole_mass_over_v": 0.10001232694040532,
+  "free_NX_threshold_over_gv": 39948.923873075495,
+  "soliton_0plus1_energy_over_gv": 36395.21813903557,
+  "DeltaE_freeX_over_gv": -3553.705734039926,
+  "DeltaE_freeX_numerical_range": [
+    -3553.815734039926,
+    -3553.595734039926
+  ],
+  "loop_shift_percent_of_classical_energy": 0.007680933092410292,
+  "E_over_free_threshold": 0.9110437681542899,
+  "checks": {
+    "N_is_frozen_nearest_integer": true,
+    "all_inputs_same_profile": true,
+    "finite_cutoff_complete": true,
+    "all_spectral_points_succeeded": true,
+    "no_discarded_large_determinant_phase": true,
+    "toy_exact_charge_identity": true,
+    "toy_frequency_integral_agrees": true,
+    "pole_calculation_passed": true,
+    "integer_and_sensitivity_BVP_converged": true,
+    "integer_energy_expansion_matches_direct_BVP": true,
+    "numerical_freeX_binding_interval_negative": true
+  },
+  "all_checks_pass": true,
+  "claim": "Numerical one-scalar-loop support for binding against N separated free X carriers at the fixed original benchmark, conditional on the stable-saddle semiclassical construction. Not global quantum stability, lifetime, full-continuum stability proof, empirical viability or a universal theory.",
+  "execution_seconds": 0.3160832019998452,
+  "source_sha256": {
+    "results_profile.npz": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3",
+    "pole_results.json": "fdc14148427ac9179f86a24c0a9f1fa5c83fd75bbf4a1c731152a7612ed5b3e2",
+    "graphs_results.json": "795ddeed9d8bb35582735d564ffa10a6b604a5e307f8f8bc91d6873361d83b74",
+    "spectral_results.json": "17084a03ac491000b56105018ea68452caa549433af8c534daf9451adcb559e7",
+    "audit_results.json": "11c5eb3f9ebff5945d5831c97bb60143020bc324647253ba3e168ed2f6cb39d2",
+    "tail_refinement_results.json": "4350e681cdb07f5c7f7cded43354ebacc7bbacf65c956f8104d55d8e606e12f9",
+    "binding_protocol.json": "af5ce9f1ed417d27dbc02e004d80e79cb49a629ff734774af4aeba8cf983528e",
+    "integrate.py": "16c024b1599cba05c6b2b5d4eda32922fc2f3bd8fc19aa4efb30d6c187190537"
+  }
+}

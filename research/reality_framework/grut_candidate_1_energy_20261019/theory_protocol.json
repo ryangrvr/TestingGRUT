@@ -1,0 +1,13 @@
+{
+  "title": "Finite Hamiltonian check of fixed-charge rotating determinant prescription",
+  "date": "2026-10-19",
+  "frozen_before_toy_tests": true,
+  "scope": "Analytic prescription plus finite canonical toy verification only; no continuum energy, Born graphs or parameter tuning computed here.",
+  "toy_two_coordinates": "q=(u,w), Omega=4/5, K=diag(-1/2,0), G_uw=2Omega. Q1=2Omega*u-wdot. FixedQ removes w and gives nu^2=-1/2+4Omega^2. Unfixed cyclic-momentum ground curvature is k/(k+4Omega^2), negative for k=-1/2, demonstrating that the unconstrained rotating trace is not a convergent Gaussian definition.",
+  "toy_four_coordinates": "q=(u1,u2,w1,w2), Omega=4/5; amplitude K=[[ -1/2,1/10],[1/10,7/10]], phase K=diag(0,2/5), G=[[0,2Omega*I],[-2Omega*I,0]]. Phase e=w1. Q1=2Omega*u1-w1dot.",
+  "reduction": "Delete w1 after its Routh reduction, add 4Omega^2 to amplitude(1,1), project the original G to remaining q=(u1,u2,w2).",
+  "checks": ["Exact Fraction-polynomial determinant identity det(Pfull)=zeta^2 det(Pred)", "Positive reduced stiffness", "Full/reduced nonzero generator frequencies agree", "Reconstructed full eigenvectors satisfy charge constraint and full generator", "Constrained full quadratic energy equals reduced energy", "Vacuum oscillator reference with same four coordinates, Kvac=(1-Omega^2)I and same G", "Numerical integral (1/(2pi))*int_0^infty log(det(Pfull)/det(Pvac)) equals half the nonzero-frequency difference with the full vacuum count"],
+  "normalization": "Finite basis is orthonormal and kinetic metric identity. Phase zero frequency counts as zero energy, but its zeta^2 factor remains in the full vacuum-normalized determinant. No arbitrary vacuum oscillator is removed.",
+  "output": "theory_toy_results.json and theory_toy_execution.log; preserve failures; no overwrite of recorded results.",
+  "scope_limits": "Toy confirms algebra/normalization, not existence or stability of the continuum soliton or convergence of its partial-wave/Born-renormalized energy."
+}

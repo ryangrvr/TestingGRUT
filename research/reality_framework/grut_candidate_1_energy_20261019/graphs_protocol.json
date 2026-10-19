@@ -1,0 +1,34 @@
+{
+  "title": "MSbar restoration of the first two rotating Hessian Born terms",
+  "frozen_before_execution": true,
+  "matching": "Original Candidate 1, g=.1, a=1,b=.1,Omega from original profile, mu/(g*v)=1. No finite counterterm adjustment.",
+  "units": "The output is the one-loop Routhian divided by g*v. Classical energy divided by g*v is Ebar/g². A fixed-Q interpretation requires the separate charge/collective-coordinate derivation.",
+  "potentials": {
+    "A": "3(S²-1)+F², real binding-field diagonal, static",
+    "B": "(S²-1)+2bF², common X diagonal, static",
+    "C": "bF², rotating traceless X matrix with harmonics +/-2Omega",
+    "D": "2FS, phi-X offdiagonal with harmonics +/-Omega",
+    "E": ".01(S²-1), reporter diagonal, static"
+  },
+  "first_graph": "1/2 [Aloop(2)*int A +2 Aloop(1)*int B +Aloop(1.01)*int E], Aloop(m²)=m²(log(m²/mu²)-1)/(16pi²)",
+  "second_graph": "-1/(64pi²)*int_0∞ dk k²/(2pi²) [Atilde² B0(-k²;2,2)+2Btilde² B0(-k²;1,1)+2Ctilde² B0(4Omega²-k²;1,1)+2Dtilde² B0(Omega²-k²;2,1)+Etilde² B0(-k²;1.01,1.01)]",
+  "Fourier": "Vtilde(k)=4pi int_0∞dr r² sinc(k*r) V(r); real radial functions",
+  "B0": "-int_0^1 dx log([x m1²+(1-x)m2²-x(1-x)s]/mu²), mu²=1 in these units",
+  "radial_grids": [{"R": 50.0,"N": 5001},{"R": 50.0,"N": 10001}],
+  "momentum_grids": [{"K": 20.0,"N": 801},{"K": 40.0,"N": 1601},{"K": 80.0,"N": 3201}],
+  "Feynman_quadratures": [32,64,128],
+  "spatial_integration": "Composite Simpson; Fourier transform in blocks <=256 momenta to bound memory",
+  "checks": {
+    "profile": "Original input SHA256 must match 0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3",
+    "Parseval": "int dk k² |Vtilde|²/(2pi²) agrees with int d³r V² for all5 potentials on finest momentum grid within relative1e-7",
+    "radial_convergence": "Restored second graph differs between prescribed radial refinements by <1e-4 in output units",
+    "momentum_convergence": "Second graph difference K40→80 <1e-4 in output units; report rather than hide any failure",
+    "Feynman_convergence": "32,64,128 node differences are reported; finest64→128 total change <1e-5",
+    "cuts": "All5 kernels have positive Feynman denominators at k=0; larger k increases denominator",
+    "vacuum": "All5 potentials vanish when F=0,S=1",
+    "RG_derivative": "At fixed matching parameters explicit d(K1graph+K2graph)/dlnmu=-int tr[(Hvac+DeltaV)²-Hvac²]/(32pi²). Evaluate graph totals at mu/(gv)=1/2,1,2 and compare derivative within1e-6. This checks local MSbar counterterm restoration, not a full energy RG prediction.",
+    "loop_order": "Only first and second terms of Hessian-potential logdet expansion. They are not a complete one-loop soliton energy on their own."
+  },
+  "diagnostics": "Compute Vmax from the full4real profile ΔV and I2=intd³r trΔV² for a full-angular UV remainder bound. A numerical sup is not an interval-certified profile bound.",
+  "gravity": "Vacuum subtraction defines relative matter energy. It does not calibrate the gravitating total constant or cancel the preceding raw scalar vacuum shift."
+}

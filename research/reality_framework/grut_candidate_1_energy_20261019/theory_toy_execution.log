@@ -1,0 +1,106 @@
+{
+  "protocol_sha256": "eca39c9f7a91b9a20a2fe27c43db87d93634c15bed391ff8af1d24d2ccb2e3c5",
+  "implementation_sha256": "5b4d126694181a253f982ec9808987d655bc634d535f47ad9d25e412e544f394",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "two_coordinate_toy": {
+    "Omega_exact": "4/5",
+    "k_exact": "-1/2",
+    "fixedQ_frequency_squared_exact": "103/50",
+    "unfixed_charge_curvature_exact": "-25/103",
+    "meaning": "Negative grandcanonical charge curvature; fixed charge is a stable oscillator, so an unfixed real Gaussian trace is not the prescription."
+  },
+  "full_determinant_polynomial": {
+    "2": "358/625",
+    "4": "4881/625",
+    "6": "143/25",
+    "8": "1"
+  },
+  "reduced_determinant_polynomial": {
+    "0": "358/625",
+    "2": "4881/625",
+    "4": "143/25",
+    "6": "1"
+  },
+  "vacuum_determinant_polynomial": {
+    "0": "6561/390625",
+    "2": "13284/15625",
+    "4": "6886/625",
+    "6": "164/25",
+    "8": "1"
+  },
+  "exact_full_minus_zeta2_reduced_residual": {},
+  "reduced_stiffness_eigenvalues": [
+    0.4,
+    0.6926863889024167,
+    2.067313611097583
+  ],
+  "full_nonzero_positive_frequencies": [
+    0.27876226317550146,
+    1.433359244216627,
+    1.8941417258610853
+  ],
+  "reduced_positive_frequencies": [
+    0.27876226317550135,
+    1.4333592442166283,
+    1.8941417258610849
+  ],
+  "vacuum_positive_frequencies": [
+    0.19999999999999996,
+    0.2,
+    1.7999999999999992,
+    1.8
+  ],
+  "full_smallest_absolute_generator_roots": [
+    0.0,
+    6.712481276630255e-16
+  ],
+  "max_full_reduced_frequency_difference": 1.3322676295501878e-15,
+  "reconstructed_mode_checks": [
+    {
+      "frequency": 1.8941417258610849,
+      "generator_residual": 2.6981439353100777e-15,
+      "charge_abs": 0.0
+    },
+    {
+      "frequency": 1.4333592442166283,
+      "generator_residual": 5.598664331078738e-16,
+      "charge_abs": 3.0814879110195774e-33
+    },
+    {
+      "frequency": 0.27876226317550135,
+      "generator_residual": 2.1173169302047655e-16,
+      "charge_abs": 0.0
+    }
+  ],
+  "energy_checks": [
+    {
+      "full": 1.1345856166048636,
+      "reduced": 1.1345856166048636,
+      "absolute_difference": 0.0
+    },
+    {
+      "full": 2.079920914505041,
+      "reduced": 2.079920914505041,
+      "absolute_difference": 0.0
+    },
+    {
+      "full": 1.3884160280056044,
+      "reduced": 1.3884160280056044,
+      "absolute_difference": 0.0
+    },
+    {
+      "full": 7.546993709792373,
+      "reduced": 7.546993709792374,
+      "absolute_difference": 8.881784197001252e-16
+    }
+  ],
+  "logdet_integral_over_2pi": -0.19686838337339285,
+  "quadrature_error_estimate_over_2pi": 9.599642355264244e-14,
+  "half_frequency_difference": -0.1968683833733924,
+  "integral_frequency_difference": -4.440892098500626e-16,
+  "wrong_reduced_vs_full_vacuum_logdet_UV_power": -2,
+  "normalization_conclusion": "Multiply the charge-reduced determinant by zeta^2 before comparing to the original full vacuum determinant. No additional I or Qprime constant in an orthonormal kinetic basis. Phase zero energy and collective normalization are not a deletion of an arbitrary vacuum oscillator.",
+  "limits": "Toy confirms algebra/normalization, not existence or stability of the continuum soliton or convergence of its partial-wave/Born-renormalized energy."
+}
