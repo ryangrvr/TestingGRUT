@@ -1,0 +1,53 @@
+{
+  "reason": "Separate outer-domain change from radial spacing; tighten a phase-zero diagnostic while preserving original roots.",
+  "matched_h_grids": [
+    {
+      "N": 599,
+      "L": 30.0
+    },
+    {
+      "N": 799,
+      "L": 40.0
+    }
+  ],
+  "h": 0.05,
+  "ell": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sparse_shifts": [
+    [
+      0,
+      0.08
+    ],
+    [
+      0,
+      0.18
+    ],
+    [
+      0.05,
+      0
+    ]
+  ],
+  "sparse_k": 18,
+  "maxiter": 1500,
+  "tol": 1e-10,
+  "phase_tightening": {
+    "N": 180,
+    "L": 30.0,
+    "background_tolerance": 2e-13,
+    "ell": 0,
+    "method": "full dense spectrum"
+  },
+  "extra_unconstrained_energy_diagnostic": {
+    "N": 799,
+    "L": 40.0,
+    "ell": 0
+  },
+  "additional_budget_seconds": 60,
+  "frozen_before_execution": true,
+  "no_physical_parameters_changed": true
+}

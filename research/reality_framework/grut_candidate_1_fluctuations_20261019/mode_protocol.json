@@ -1,0 +1,83 @@
+{
+  "action": "Same original four-scalar tree action and matched couplings. a=1,b=.1,g=.1,d/g\u00b2=.01,mD0\u00b2/(g\u00b2v\u00b2)=1,alpha0; D background zero.",
+  "time_radius_units": "tau=g*v*t, rho=g*v*r; s generator exponent e^(s*tau), frequency nu=Im(s) for stable positive-frequency roots",
+  "fields": "q=(rho*u,rho*w,rho*eta); qddot+G*qdot+K*q=0; G_uw=+2Omega,G_wu=-2Omega",
+  "reference": "/workspace/scratch/9a57d63bee22/TestingGRUT-review/research/reality_framework/grut_candidate_1_20261018/code/results_profile.npz",
+  "Omega": 0.8000000019763136,
+  "boundaries": "uniform interior rho=jL/(N+1); Dirichlet transformed fields at rho=0,L; S(L)=1",
+  "background": "consistent fixed-Omega finite-difference stationary p=rho F,z=rho(S-1), Newton max15 iterations, max residual1e-10; no physical fit; retain failures",
+  "dense_grids": [
+    {
+      "N": 120,
+      "L": 30.0
+    },
+    {
+      "N": 180,
+      "L": 30.0
+    }
+  ],
+  "sparse_grids": [
+    {
+      "N": 400,
+      "L": 30.0
+    },
+    {
+      "N": 800,
+      "L": 30.0
+    },
+    {
+      "N": 800,
+      "L": 40.0
+    }
+  ],
+  "ell": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "sparse_shifts": [
+    [
+      0.0,
+      0.08
+    ],
+    [
+      0.0,
+      0.18
+    ],
+    [
+      0.05,
+      0.0
+    ]
+  ],
+  "sparse_k": 18,
+  "sparse_tol": 1e-10,
+  "sparse_maxiter": 1500,
+  "vacuum_check": {
+    "N": 80,
+    "L": 30.0,
+    "ell": [
+      0,
+      2
+    ],
+    "expected": "sqrt(k_discrete\u00b2+1)\u00b1Omega, sqrt(k_discrete\u00b2+2), sqrt(k_discrete\u00b2+1.01)"
+  },
+  "controls": "full dense spectra at two spacings; sparse low-frequency/real-axis probes at two spacings and one larger box; phase and translation overlap/residuals; exact discrete charge-left-null check; amplitude constrained and phase energy eigenvalues",
+  "internal_mode_window": [
+    1e-05,
+    0.2
+  ],
+  "all_positive_real_roots_retained": true,
+  "higher_ell_scope": "K_ell=K_2+[ell(ell+1)-6]/rho\u00b2 for ell>=2; numerical K2 positivity plus this algebraic comparison supports higher-ell energy test without infinite scan; continuum positivity is conditional on converged background/operator.",
+  "budget_seconds": 240,
+  "time_budget_behavior": "do not start another grid once elapsed budget exceeded; record skipped grids; no paid compute or installs",
+  "no_claims": [
+    "complete continuum spectrum",
+    "renormalized determinant or quantum energy",
+    "full soliton one-loop correction",
+    "quantum lifetime"
+  ],
+  "frozen_before_execution": true,
+  "reference_sha256": "0417c30367b52d6fdac021b8fb113d8486547faddf06c332617805d584a461c3"
+}

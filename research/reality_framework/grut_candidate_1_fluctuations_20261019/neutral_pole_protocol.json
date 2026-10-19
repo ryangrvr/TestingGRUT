@@ -1,0 +1,16 @@
+{
+  "title": "Complementary tensor calculation of all four real-scalar vacuum pole masses",
+  "frozen_before_execution": true,
+  "relation_to_pole_protocol": "Extends the completed X-specific formula to the neutral phi and D particles and independently contracts all vertices for x,y. No original result or physical input is changed.",
+  "inputs": "Original Candidate 1 quartic tensor and fixed MSbar matching from prior quantum effective_potential.py, qvac_tree=(1,0,0,0), mu=.1v.",
+  "formula": "Pi_i(s)=1/2 sum_k K_iikk A(m_k²) -1/(32*pi²) sum_kl g_ikl² B0(s;m_k²,m_l²), g_ijk=K_ijk_phi*v. Add tree vacuum-displacement correction g_ii_phi delta_v; delta_v from independently differentiated four-mode potential.",
+  "order": "Strict one-loop squared masses evaluated at tree external mass shell; strict first-order mass expansion reported separately from square root of truncated squared mass.",
+  "checks": [
+    "Each zero-momentum reconstructed curvature agrees with prior effective-potential curvature within1e-14v²",
+    "x and y masses agree within1e-14v² and match the separate X pole calculation",
+    "All nonzero cubic-loop channels have external s below pair threshold before a real integral is used",
+    "Every bubble evaluated by adaptive quadrature and independent128-node Gauss quadrature agrees within1e-11",
+    "Every strict pole mass squared remains positive"
+  ],
+  "scope": "Pure-new-scalar vacuum threshold only. No quantum finite-charge energy, loop-corrected soliton frequencies, lifetime, SM/gravity loops or vacuum-energy recalibration."
+}

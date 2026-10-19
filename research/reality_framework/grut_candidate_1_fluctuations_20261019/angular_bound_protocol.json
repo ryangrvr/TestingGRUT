@@ -1,0 +1,15 @@
+{
+  "title": "High-angular-momentum subgap exclusion diagnostic",
+  "frozen_before_execution": true,
+  "input": "Unchanged original results_profile.npz; CubicSpline interpolation, no refit",
+  "matrix": "DeltaV in order(u,w,eta): diagonal(S²+.3F²-1,S²+.1F²-1,3(S²-1)+F²), cross u-eta=2FS",
+  "B": "sup_{rho>0} rho² max(0,-lambda_min DeltaV). If ell(ell+1)>B on the whole half-line, the rotating pencil has no eigenfrequency 0<|nu|<1-Omega by comparison with the positive vacuum pencil plus radial kinetic energy.",
+  "numerics": {
+    "grids_on_saved_profile_domain": [4001,8001,16001],
+    "bounded_scalar_maximizer": "Refine the largest sampled value in its adjacent-cell bracket; xatol1e-12. Report grid values and optimized value separately.",
+    "tail_samples": "Report max B-integrand on rho>=10,15,20,25 where saved domain permits, and endpoint fields. These are diagnostics, not an interval bound beyond the saved domain.",
+    "conservative_reported_comparison_value": "ceil(optimized B)+2, a numerical margin only, not a certified continuum error. Compute least integer ell>=2 with ell(ell+1)>that value."
+  },
+  "claim_limit": "High-ell exclusion is a theorem conditional on the exact half-line pointwise bound. Finite sampling, spline optimization and small saved tail do not alone prove that bound. Any extra finite ell below the indicated cutoff must be computed explicitly before expanding the numerical no-subgap scope.",
+  "scope": "Tree linear spectrum only, not a renormalized quantum determinant or lifetime."
+}

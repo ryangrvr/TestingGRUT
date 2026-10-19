@@ -1,0 +1,27 @@
+{
+  "title": "Vacuum charged-particle pole threshold at fixed scalar MSbar matching",
+  "frozen_before_execution": true,
+  "scope": "New scalars only, flat-space vacuum, one loop, original matching. No graviton/SM loops, finite-Q determinant, soliton quantum energy or lifetime.",
+  "units": "v(mu0)=1; s is the positive timelike invariant, p_E squared=-s",
+  "parameters": {"lambda_phi": 0.01, "lambda_X": 0.001, "c": 0.01, "d": 0.0001, "lambda_D": 0.001, "alpha": 0.0, "mphi2": -0.01, "mX2": 0.0, "mD2": 0.01, "C": 0.0025, "mu0": 0.1},
+  "fields": "q=(phi,x,y,D), X=(x+i*y)/sqrt(2). Tree vacuum q=(1,0,0,0).",
+  "masses_squared": "a=Mphi²=.02, b=MX²=.01, MD²=.0101. Cubic g3_phi_xx=2c*v=.02.",
+  "integrals": {
+    "A": "A(t)=t[log(t/mu²)-1]/(16*pi²)",
+    "B0": "B0(s;a,b)=-int_0^1 dz log([z*a+(1-z)*b-z*(1-z)*s]/mu²)",
+    "inverse_Euclidean": "Gamma_xx(-s)=-s+b+2c*v*delta_v+c*A(a)+4lambda_X*A(b)+alpha*A(MD²)-g3²*B0(s;a,b)/(16*pi²) at strict one-loop order",
+    "tadpole": "delta_v=-dV1/dphi / Mphi². Derive directly from four tree mass derivatives at vacuum. No finite tadpole counterterm is fitted.",
+    "pole": "M_X,pole²=b+2c*v*delta_v+c*A(a)+4lambda_X*A(b)+alpha*A(MD²)-g3²*B0(b;a,b)/(16*pi²)",
+    "curvature_crosscheck": "Same formula at s=0 must equal previous strict effective-potential X curvature squared. Pole-minus-curvature=-g3²[B0(b)-B0(0)]/(16*pi²)."
+  },
+  "checks": {
+    "quadrature": "Adaptive quad at epsabs=epsrel=1e-12, compared to independent Gauss-Legendre n=32,64,128,256. Absolute B0 difference<1e-11.",
+    "tadpole_and_curvature": "Independent direct integral reconstruction must agree with prior tadpole and strict curvature within1e-14 v³/v².",
+    "below_cut": "At s=b and the resulting pole, Feynman denominator has positive minimum; cut threshold=(sqrt(a)+sqrt(b))². No imaginary scalar self-energy at this pole.",
+    "derivative": "Analytic dB0/ds integral checked against central differences at steps1e-4,3e-5,1e-5,3e-6; best relative difference<1e-7.",
+    "RG_scale": "Run all ten coefficients from mu0 with the previously verified one-loop betas, mu/mu0=1/2,1,2. Derive the tree vacuum and tadpole at each scale. Residual variation of one-loop pole is an order diagnostic, not a two-loop error bound.",
+    "strict_vs_implicit": "Report strict evaluation at s=b and separately the numerical root of the truncated one-loop inverse propagator. Their difference contains induced higher-order terms, not a two-loop calculation."
+  },
+  "comparison_rule": "The pole is a quantum vacuum threshold. Comparing it to an uncorrected classical E or Omega does not demonstrate a consistently quantum binding margin. Use it as an input for the as-yet uncomputed fixed-Q quantum energy.",
+  "vacuum_gravity": "Keep the raw scalar vacuum constant matching; relative subtraction and the tadpole shift do not impose a gravitational zero vacuum density."
+}

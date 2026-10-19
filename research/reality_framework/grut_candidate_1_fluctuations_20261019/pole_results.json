@@ -1,0 +1,291 @@
+{
+  "protocol_sha256": "0c13878e8c249ede87cf9f3f6469dde63d3b7626151bc9977945a687da7eb0cf",
+  "source_inputs": {
+    "grut_candidate_1_quantum_20261018/flow_check.py": "546b47a1a366e5a3abc439b800060e9f2629bf4f69c251f8ed26be0803d1646e",
+    "grut_candidate_1_quantum_20261018/potential_results.json": "f4c9892f1ea9a6421bce7ed3d139d326fe863191617ce92a3da838af4e4982fd"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "matching_result": {
+    "mu_over_v": 0.1,
+    "tree_vacuum_phi_over_v": 1.0,
+    "tree_internal_masses_squared_over_v2": {
+      "phi": 0.02,
+      "X": 0.01,
+      "D": 0.0101
+    },
+    "cubic_phi_xx_over_v": 0.02,
+    "tadpole_over_v3": -2.438747961540413e-06,
+    "strict_vacuum_shift_over_v": 0.00012193739807702064,
+    "vacuum_displacement_mass_squared_correction_over_v2": 2.438747961540413e-06,
+    "quartic_tadpole_mass_squared_correction_over_v2": -6.419365949765311e-07,
+    "bubble_at_zero_over_v2": 9.784950475756992e-07,
+    "bubble_at_tree_shell_over_v2": 6.685767144975664e-07,
+    "strict_curvature_squared_over_v2": 0.01000277530641414,
+    "strict_pole_squared_over_v2": 0.010002465388081062,
+    "strict_pole_mass_over_v": 0.10001232694040532,
+    "sqrt_of_truncated_strict_pole_squared_over_v": 0.10001232618073165,
+    "pole_minus_curvature_squared_over_v2": -3.0991833307840444e-07,
+    "B0_zero": -0.38629436111989046,
+    "B0_tree_shell": -0.2639435073548418,
+    "B0_shell_minus_zero": 0.12235085376504867,
+    "dB0_ds_at_tree_shell_times_v2": 13.197175367742096,
+    "strict_pole_residue": 0.9999665711642751,
+    "scalar_pair_cut_threshold_over_v2": 0.058284271247461904,
+    "minimum_Feynman_denominator_at_tree_shell_over_v2": 0.01,
+    "implicit_root_of_truncated_one_loop_inverse_over_v2": 0.010002465305667037,
+    "implicit_minus_strict_pole_squared_over_v2": -8.241402525699382e-11,
+    "implicit_root_converged": true
+  },
+  "analytic_B0_difference": 0.12235085376504884,
+  "quadrature_checks": [
+    {
+      "n": 32,
+      "s": 0.0,
+      "B0": -0.38629436111989035,
+      "quad_minus_gauss": -1.1102230246251565e-16
+    },
+    {
+      "n": 32,
+      "s": 0.01,
+      "B0": -0.2639435073548418,
+      "quad_minus_gauss": 0.0
+    },
+    {
+      "n": 32,
+      "s": 0.010002465388081062,
+      "B0": -0.26391097054394574,
+      "quad_minus_gauss": -5.551115123125783e-17
+    },
+    {
+      "n": 64,
+      "s": 0.0,
+      "B0": -0.3862943611198905,
+      "quad_minus_gauss": 5.551115123125783e-17
+    },
+    {
+      "n": 64,
+      "s": 0.01,
+      "B0": -0.2639435073548416,
+      "quad_minus_gauss": -1.6653345369377348e-16
+    },
+    {
+      "n": 64,
+      "s": 0.010002465388081062,
+      "B0": -0.26391097054394563,
+      "quad_minus_gauss": -1.6653345369377348e-16
+    },
+    {
+      "n": 128,
+      "s": 0.0,
+      "B0": -0.38629436111989024,
+      "quad_minus_gauss": -2.220446049250313e-16
+    },
+    {
+      "n": 128,
+      "s": 0.01,
+      "B0": -0.2639435073548423,
+      "quad_minus_gauss": 4.996003610813204e-16
+    },
+    {
+      "n": 128,
+      "s": 0.010002465388081062,
+      "B0": -0.2639109705439463,
+      "quad_minus_gauss": 4.996003610813204e-16
+    },
+    {
+      "n": 256,
+      "s": 0.0,
+      "B0": -0.3862943611198905,
+      "quad_minus_gauss": 5.551115123125783e-17
+    },
+    {
+      "n": 256,
+      "s": 0.01,
+      "B0": -0.26394350735484184,
+      "quad_minus_gauss": 5.551115123125783e-17
+    },
+    {
+      "n": 256,
+      "s": 0.010002465388081062,
+      "B0": -0.26391097054394586,
+      "quad_minus_gauss": 5.551115123125783e-17
+    }
+  ],
+  "derivative_checks": [
+    {
+      "step": 0.0001,
+      "derivative": 13.197187932411923,
+      "relative_error": 9.520726578227112e-07
+    },
+    {
+      "step": 3e-05,
+      "derivative": 13.197176498560188,
+      "relative_error": 8.568637310801819e-08
+    },
+    {
+      "step": 1e-05,
+      "derivative": 13.197175493387391,
+      "relative_error": 9.520620292136073e-09
+    },
+    {
+      "step": 3e-06,
+      "derivative": 13.197175379055698,
+      "relative_error": 8.572744736312643e-10
+    }
+  ],
+  "scale_results": [
+    {
+      "mu_over_mu0": 0.5,
+      "parameters": {
+        "lambda_phi": 0.009990351981971264,
+        "lambda_X": 0.0009990349853350269,
+        "c": 0.00999350836777814,
+        "d": 9.997069669793413e-05,
+        "lambda_D": 0.0009999209091821528,
+        "alpha": -8.774405983859562e-09,
+        "mphi2": -0.0099973768270778,
+        "mX2": 8.774660168754864e-07,
+        "mD2": 0.009999745425793091,
+        "C": 0.0024995611225844152
+      },
+      "mu_over_v": 0.05,
+      "tree_vacuum_phi_over_v": 1.0003515196787125,
+      "tree_internal_masses_squared_over_v2": {
+        "phi": 0.0199947536541556,
+        "X": 0.010001412898355018,
+        "D": 0.01009978641817838
+      },
+      "cubic_phi_xx_over_v": 0.019994042565257584,
+      "tadpole_over_v3": 4.588682305670121e-06,
+      "strict_vacuum_shift_over_v": -0.00022949431561095703,
+      "vacuum_displacement_mass_squared_correction_over_v2": -4.588519114810133e-06,
+      "quartic_tadpole_mass_squared_correction_over_v2": 1.4633552606985762e-06,
+      "bubble_at_zero_over_v2": 4.487075784873306e-06,
+      "bubble_at_tree_shell_over_v2": 4.1772608750871955e-06,
+      "strict_curvature_squared_over_v2": 0.01000277481028578,
+      "strict_pole_squared_over_v2": 0.010002464995375993,
+      "strict_pole_mass_over_v": 0.10001232435577521,
+      "sqrt_of_truncated_strict_pole_squared_over_v": 0.10001232421744828,
+      "pole_minus_curvature_squared_over_v2": -3.098149097876396e-07,
+      "B0_zero": -1.772482304074093,
+      "B0_tree_shell": -1.6500993822198549,
+      "B0_shell_minus_zero": 0.12238292185423805,
+      "dB0_ds_at_tree_shell_times_v2": 13.19903443911236,
+      "strict_pole_residue": 0.999966586370042,
+      "scalar_pair_cut_threshold_over_v2": 0.05827872563729662,
+      "minimum_Feynman_denominator_at_tree_shell_over_v2": 0.01000141126959801,
+      "implicit_root_of_truncated_one_loop_inverse_over_v2": 0.010002464960222413,
+      "implicit_minus_strict_pole_squared_over_v2": -3.515357969996469e-11,
+      "implicit_root_converged": true
+    },
+    {
+      "mu_over_mu0": 1.0,
+      "parameters": {
+        "lambda_phi": 0.01,
+        "lambda_X": 0.001,
+        "c": 0.01,
+        "d": 0.0001,
+        "lambda_D": 0.001,
+        "alpha": 0.0,
+        "mphi2": -0.01,
+        "mX2": 0.0,
+        "mD2": 0.01,
+        "C": 0.0025
+      },
+      "mu_over_v": 0.1,
+      "tree_vacuum_phi_over_v": 1.0,
+      "tree_internal_masses_squared_over_v2": {
+        "phi": 0.02,
+        "X": 0.01,
+        "D": 0.0101
+      },
+      "cubic_phi_xx_over_v": 0.02,
+      "tadpole_over_v3": -2.438747961540413e-06,
+      "strict_vacuum_shift_over_v": 0.00012193739807702064,
+      "vacuum_displacement_mass_squared_correction_over_v2": 2.438747961540413e-06,
+      "quartic_tadpole_mass_squared_correction_over_v2": -6.419365949765311e-07,
+      "bubble_at_zero_over_v2": 9.784950475756992e-07,
+      "bubble_at_tree_shell_over_v2": 6.685767144975664e-07,
+      "strict_curvature_squared_over_v2": 0.01000277530641414,
+      "strict_pole_squared_over_v2": 0.010002465388081062,
+      "strict_pole_mass_over_v": 0.10001232694040532,
+      "sqrt_of_truncated_strict_pole_squared_over_v": 0.10001232618073165,
+      "pole_minus_curvature_squared_over_v2": -3.0991833307840444e-07,
+      "B0_zero": -0.38629436111989046,
+      "B0_tree_shell": -0.2639435073548418,
+      "B0_shell_minus_zero": 0.12235085376504867,
+      "dB0_ds_at_tree_shell_times_v2": 13.197175367742096,
+      "strict_pole_residue": 0.9999665711642751,
+      "scalar_pair_cut_threshold_over_v2": 0.058284271247461904,
+      "minimum_Feynman_denominator_at_tree_shell_over_v2": 0.01,
+      "implicit_root_of_truncated_one_loop_inverse_over_v2": 0.010002465305667037,
+      "implicit_minus_strict_pole_squared_over_v2": -8.241402525699382e-11,
+      "implicit_root_converged": true
+    },
+    {
+      "mu_over_mu0": 2.0,
+      "parameters": {
+        "lambda_phi": 0.010009665558803527,
+        "lambda_X": 0.0010009663248137085,
+        "c": 0.010006501016000967,
+        "d": 0.00010002933918457392,
+        "lambda_D": 0.0010000791033681407,
+        "alpha": 8.78322251312157e-09,
+        "mphi2": -0.010002626558808993,
+        "mX2": -8.782968052130495e-07,
+        "mD2": 0.010000254596864764,
+        "C": 0.0025004390038063764
+      },
+      "mu_over_v": 0.2,
+      "tree_vacuum_phi_over_v": 0.9996483280145376,
+      "tree_internal_masses_squared_over_v2": {
+        "phi": 0.020005253117617985,
+        "X": 0.009998585944571953,
+        "D": 0.010100213593387653
+      },
+      "cubic_phi_xx_over_v": 0.020005964019842278,
+      "tadpole_over_v3": -9.475961534946287e-06,
+      "strict_vacuum_shift_over_v": 0.00047367366357394956,
+      "vacuum_displacement_mass_squared_correction_over_v2": 9.476298270607312e-06,
+      "quartic_tadpole_mass_squared_correction_over_v2": -2.7510118700544016e-06,
+      "bubble_at_zero_over_v2": -2.5342704467099586e-06,
+      "bubble_at_tree_shell_over_v2": -2.8442922988631717e-06,
+      "strict_curvature_squared_over_v2": 0.010002776960525796,
+      "strict_pole_squared_over_v2": 0.010002466938673644,
+      "strict_pole_mass_over_v": 0.10001233581553716,
+      "sqrt_of_truncated_strict_pole_squared_over_v": 0.10001233393273873,
+      "pole_minus_curvature_squared_over_v2": -3.10021852151926e-07,
+      "B0_zero": 0.9998934428282966,
+      "B0_tree_shell": 1.1222122022582206,
+      "B0_shell_minus_zero": 0.12231875942992398,
+      "dB0_ds_at_tree_shell_times_v2": 13.195314398691472,
+      "strict_pole_residue": 0.99996655594098,
+      "scalar_pair_cut_threshold_over_v2": 0.05828982447118139,
+      "minimum_Feynman_denominator_at_tree_shell_over_v2": 0.009998585944571953,
+      "implicit_root_of_truncated_one_loop_inverse_over_v2": 0.01000246680887762,
+      "implicit_minus_strict_pole_squared_over_v2": -1.2979602462270812e-10,
+      "implicit_root_converged": true
+    }
+  ],
+  "pole_squared_scale_spread_over_v2": 1.9432976512689937e-09,
+  "checks": {
+    "independent_tadpole_matches_previous_potential": true,
+    "independent_zero_momentum_curvature_matches_previous_potential": true,
+    "analytic_B0_difference": true,
+    "adaptive_and_Gauss_quadratures_agree": true,
+    "analytic_momentum_derivative_agrees": true,
+    "strict_and_implicit_poles_below_scalar_pair_cut": true,
+    "implicit_root_converged": true,
+    "pole_shift_below_curvature_shift": true,
+    "pole_residue_positive_at_this_order": true,
+    "implicit_induced_higher_order_difference_small": true
+  },
+  "all_checks_pass": true,
+  "elapsed_seconds": 0.03200931599997148,
+  "claim_boundary": "One-scalar-loop vacuum charged-particle threshold only; no finite-Q quantum binding/lifetime or gravitational vacuum matching."
+}

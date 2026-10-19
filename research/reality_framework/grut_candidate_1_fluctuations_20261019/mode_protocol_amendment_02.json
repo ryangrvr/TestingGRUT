@@ -1,0 +1,50 @@
+{
+  "reason": "Root numerical angular comparison B<31 conditionally excludes real subgap modes for ell>=6. Fill ell5 explicitly, without claiming a certified half-line bound.",
+  "ell": [
+    5
+  ],
+  "grids": [
+    {
+      "method": "dense_ell5",
+      "N": 180,
+      "L": 30.0
+    },
+    {
+      "method": "sparse_ell5",
+      "N": 800,
+      "L": 30.0
+    },
+    {
+      "method": "matched_ell5",
+      "N": 599,
+      "L": 30.0
+    },
+    {
+      "method": "matched_ell5",
+      "N": 799,
+      "L": 40.0
+    }
+  ],
+  "shifts": [
+    [
+      0,
+      0.08
+    ],
+    [
+      0,
+      0.18
+    ],
+    [
+      0.05,
+      0
+    ]
+  ],
+  "k": 18,
+  "tol": 1e-10,
+  "maxiter": 1500,
+  "eigenvalue_summary_dedup_distance": 2e-07,
+  "raw_shift_eigenvalues_retained": true,
+  "budget_seconds": 45,
+  "frozen_before_execution": true,
+  "no_physical_parameters_changed": true
+}
