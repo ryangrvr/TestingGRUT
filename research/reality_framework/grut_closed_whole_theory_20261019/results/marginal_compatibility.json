@@ -1,0 +1,80 @@
+{
+ "C1_nested_restriction": {
+  "max_abs_Tr_C(Tr_D rho) - Tr_CD rho": 0.0,
+  "max_abs_rho_B_from_AB_minus_rho_B_from_BC": 3.46944695195e-18,
+  "note": "Restriction maps compose; nested and overlapping restrictions of ONE global state agree automatically. This is the necessary direction and it is a theorem (partial trace is a conditional expectation)."
+ },
+ "C2_bell_chain": {
+  "rho_AB": "Phi+ (pure Bell state)",
+  "rho_BC": "Phi+ (pure Bell state)",
+  "overlap_rho_B_from_AB": [
+   [
+    0.5,
+    0.0
+   ],
+   [
+    0.0,
+    0.5
+   ]
+  ],
+  "overlap_rho_B_from_BC": [
+   [
+    0.5,
+    0.0
+   ],
+   [
+    0.0,
+    0.5
+   ]
+  ],
+  "overlap_agreement_max_abs_dev": 0.0,
+  "sdp_status_common_global_state": "infeasible",
+  "analytic_proof": "If rho_AB is pure then any extension satisfies rho_ABC = rho_AB (x) rho_C (purity => no correlations with C), so rho_BC = Tr_A(rho_AB) (x) rho_C = (I/2) (x) rho_C, whose fidelity with Phi+ is 1/2 != 1. Overlap agreement is necessary, not sufficient (entanglement monogamy)."
+ },
+ "C3_quantitative_obstruction": {
+  "max_F_AB_plus_F_BC_over_all_3qubit_states": 1.49999999899,
+  "max_min(F_AB,F_BC)_symmetric": 0.750000000106,
+  "F_AB_and_F_BC_at_optimum_of_sum": [
+   0.749999999496,
+   0.749999999496
+  ],
+  "value_if_compatible_would_be": 2.0,
+  "note": "Linear objective over the convex set of 3-qubit states (SDP). The optimum is strictly below 2: the two requested Bell marginals cannot coexist; the gap is the quantitative size of the obstruction."
+ },
+ "C4_werner_thresholds": {
+  "chain_AB_BC_max_p": 0.666666673771,
+  "chain_status": "optimal",
+  "triangle_AB_BC_CA_max_p": 0.33333333563,
+  "triangle_status": "optimal",
+  "werner_entangled_iff_p_gt": 0.333333333333,
+  "note": "W(p) = p Phi+ + (1-p) I/4 on each listed pair, with identical overlaps by construction. The largest p admitting a common global state is computed by SDP; above it the pairwise-consistent family has no global realization."
+ },
+ "C5_classical_contrast": {
+  "chain_extension_max_abs_marginal_error": 5.55111512313e-17,
+  "chain_note": "Classically, two marginals sharing one variable ALWAYS have a joint (Markov gluing). The quantum Bell chain fails. The obstruction in C2 is specifically quantum (monogamy), not a bookkeeping failure.",
+  "odd_cycle_anticorrelated_status": "infeasible",
+  "cycle_note": "Even classically, overlap agreement on a CYCLE is not sufficient (three pairwise perfectly anticorrelated bits). Sufficiency of overlap agreement is a property of acyclic (tree) access structures in the classical case and fails already for a chain in the quantum case."
+ },
+ "C6_inconsistent_overlap": {
+  "rho_B_from_AB": [
+   0.6,
+   0.4
+  ],
+  "rho_B_from_BC": [
+   0.5,
+   0.5
+  ],
+  "sdp_status": "infeasible",
+  "note": "Disagreeing overlaps are infeasible at once: overlap agreement is the necessary condition every sector's effective environment must satisfy."
+ },
+ "provenance": {
+  "script_sha256": "1aad4b064ec518d7928ec454c2941267a9b19df84e1dab1d5f6731b85beb2cec",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "cvxpy": "1.9.3",
+  "solver": "CLARABEL",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "wall_seconds": 0.29
+ }
+}

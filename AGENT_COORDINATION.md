@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| `research/reality_framework/grut_closed_whole_theory_20261019/` (new packet) | Claude (closed-whole working theory) | write WORKING_THEORY, FORMAL_CORE, CALCULATIONS, CAMPAIGN_LEDGER, ledger/, code, results; additive only | 2026-10-19 |
 
 ## ANSWERED QUESTIONS
 
