@@ -15,9 +15,10 @@ theory. Anything not listed under "Established" is not claimed.
 3. **Closure forces nothing local.** Fourteen "closure forces X" claims are each refuted by a
    legal closed model or a standard theorem (FORMAL_CORE §4); ten of them are exhibited with
    numbers in calculation 1 (S2–S7).
-4. **Compatibility has a computable edge.** Bell-pair chain infeasible; max F_AB + F_BC = 3/2;
-   Werner chain p ≤ 2/3; Werner triangle p ≤ 1/3 (calculation 2). Standard quantum marginal
-   problem; the numbers are solver outputs within 10⁻⁸ of the analytic values.
+4. **Compatibility has a computable edge.** Bell-pair chain infeasible (two solvers; minimum
+   marginal violation 0.289); max F_AB + F_BC = 3/2; isotropic-state chain p ≤ 2/3; triangle
+   p ≤ 1/3 (calculation 2). Standard quantum marginal problem; the thresholds are solver outputs
+   within 10⁻⁸ of the analytic values, with positive violation certificates just above them.
 5. **The campaign ledger.** Twelve sectors re-read as campaigns; in every sector the recorded
    answer to the parent question is "nothing additional was forced in the stated class", with
    the sector's own computations as the demonstration (CAMPAIGN_LEDGER.md).
@@ -91,7 +92,7 @@ theory. Anything not listed under "Established" is not claimed.
 | Independent re-execution by a separate agent | 5030 + 24 numeric leaves bit-exact; statuses identical; two runs bitwise identical |
 | Independent re-implementation from the specification (separate agent, code unseen) | 16 quantities agree to ≤ 10⁻⁶ relative; offsets explained (rounding, ε = 1/512, solver tolerance) |
 | Adversarial code review of calculation 1 | "sound with minor issues"; nine items, all addressed (CALCULATIONS.md §Verification) |
-| Adversarial code review of calculation 2 | [[REVIEW2]] |
+| Adversarial code review of calculation 2 | "sound with minor issues"; six items, all addressed (CALCULATIONS.md §Verification) |
 | M1 matched-control re-run | identical to `control_results.txt` |
 | Ledger entries | each written by one reader and adversarially re-read by a second against the same sources; [[LEDGERVERIFY]] |
 | Completeness critic over the ledger | [[CRITIC]] |

@@ -151,12 +151,13 @@ that the parent question's negative answers become exhibits rather than assertio
 **Compatibility** (CALCULATIONS §2, `results/marginal_compatibility.json`). Two Bell pairs
 Φ⁺ on AB and on BC agree exactly on the shared qubit (ρ_B = 1/2 from both sides) and have no
 common three-qubit state: the semidefinite program is infeasible, and analytically a pure
-ρ_AB forces ρ_ABC = ρ_AB ⊗ ρ_C. The obstruction is quantitative: the largest achievable
-F_AB + F_BC is 3/2 (it would be 2 if compatible); Werner states W(p) on AB and BC are jointly
+ρ_AB forces ρ_ABC = ρ_AB ⊗ ρ_C. The obstruction is quantitative: the smallest achievable
+Frobenius violation of the two marginals is 0.289; the largest achievable F_AB + F_BC is 3/2
+(it would be 2 if compatible); isotropic states W(p) = pΦ⁺ + (1−p)1/4 on AB and BC are jointly
 realizable only for p ≤ 2/3, and on all three pairs of a triangle only for p ≤ 1/3, the
 separability threshold. Classically, two marginals sharing one variable always extend, and
-an odd cycle of perfect anticorrelations does not; the quantum failure on a chain is the
-specifically quantum constraint (monogamy). Consequence for GRUT: an "effective environment"
+an odd cycle of perfect anticorrelations does not (an even one does); the quantum failure on a
+chain is the specifically quantum constraint (monogamy). Consequence for GRUT: an "effective environment"
 asserted sector by sector is not automatically a restriction of anything; the family must pass
 this test, and the test is standard.
 

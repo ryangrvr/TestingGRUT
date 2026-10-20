@@ -173,22 +173,28 @@ the product state) and the Araki–Lieb slack S_Ω − |S_A − S_Ā| is 0 at t 
 
 | Check | Result |
 |---|---|
-| C1 nested restrictions of one global 4-qubit state: Tr_C(Tr_D ρ) vs Tr_{CD} ρ; ρ_B via AB vs via BC | identical (0; 3·10⁻¹⁸) |
-| C2 chain A–B–C, ρ_AB = ρ_BC = Φ⁺: overlap ρ_B = 1/2 from both sides | overlap agrees exactly; **no global state** (SDP infeasible) |
+| C1 nested restrictions of one global 4-qubit state: Tr_C(Tr_D ρ) and Tr_D(Tr_C ρ) vs Tr_{CD} ρ; ρ_B via AB vs via BC | identical in both trace orders (0; 3·10⁻¹⁷; 3·10⁻¹⁸) |
+| C2 chain A–B–C, ρ_AB = ρ_BC = Φ⁺: overlap ρ_B = 1/2 from both sides | overlap agrees exactly; **no global state** (infeasible with CLARABEL and with SCS); smallest achievable Frobenius violation of the two marginals **0.2887** |
 | C3 max F_AB + F_BC over all 3-qubit states (linear SDP) | **1.5000** (would be 2 if compatible); symmetric max 0.7500 each |
-| C4 Werner W(p) = pΦ⁺ + (1−p)1/4 on AB and BC: largest compatible p | **2/3** (0.666667) |
-| C4 Werner on AB, BC and CA (triangle): largest compatible p | **1/3** (0.333333), the separability threshold |
+| C4 isotropic W(p) = pΦ⁺ + (1−p)1/4 on AB and BC: largest compatible p | **2/3** (0.666667); at p = 2/3 + 10⁻³ the minimum violation is 8.7·10⁻⁴ > 0 |
+| C4 isotropic W(p) on AB, BC and CA (triangle): largest compatible p | **1/3** (0.333333), the separability threshold; violation 5.0·10⁻⁴ at 1/3 + 10⁻³ |
 | C5 classical chain P(a,b), P(b,c): extension by Markov gluing | always exists (error 6·10⁻¹⁷) |
-| C5 classical odd cycle of perfect anticorrelations | no joint distribution (LP infeasible) |
-| C6 overlaps that disagree (ρ_B = diag(0.6,0.4) vs 1/2) | infeasible at once |
+| C5 classical 3-cycle of perfect anticorrelations | no joint distribution (LP infeasible) |
+| C5 classical 4-cycle of four perfect anticorrelations | joint exists (½ on 0101, ½ on 1010): the obstruction is odd frustration, not cyclicity |
+| C6 overlaps that disagree (ρ_B = diag(0.6,0.4) vs 1/2) | infeasible at once (both solvers); minimum violation 0.0500 |
 
 Analytic proof for C2: a pure ρ_AB forces ρ_ABC = ρ_AB ⊗ ρ_C, hence ρ_BC = (1/2) ⊗ ρ_C, whose
-fidelity with Φ⁺ is 1/2. Overlap agreement is therefore **necessary and not sufficient** for a
-common global realization. Classically, overlap agreement suffices on acyclic access
-structures and fails on cycles; quantumly it already fails on a chain (monogamy of
-entanglement). This is the quantum marginal problem, standard since the 1960s; it is stated
-here because it is the exact form of the working theory's requirement that every sector's
-effective environment be compatible with one global model and preparation.
+fidelity with Φ⁺ is Tr(ρ_C)/4 = 1/4. The C3 optimum is the top eigenspace of
+Φ⁺_AB ⊗ 1 + 1 ⊗ Φ⁺_BC (eigenvalue 3/2), e.g. (2|000⟩ + |110⟩ + |011⟩)/√6 with F_AB = F_BC = 3/4.
+W(p) is the isotropic state; pairwise it is locally equivalent to the Werner state, and for the
+chain globally (a Y on B), so 2/3 holds for both; the two triangle problems are distinct and
+both give 1/3. Overlap agreement is therefore **necessary and not sufficient** for a common
+global realization. Classically, overlap agreement suffices for every consistent family exactly
+on acyclic access structures (Vorob'ev 1962), and a cycle permits but does not force failure;
+quantumly it already fails on a chain (monogamy of entanglement). This is the quantum marginal
+problem, standard since the 1960s; it is stated here because it is the exact form of the
+working theory's requirement that every sector's effective environment be compatible with one
+global model and preparation.
 
 ## Reading of the two calculations for the working theory
 
@@ -214,7 +220,16 @@ effective environment be compatible with one global model and preparation.
   identical-marginal trace distance, the Werner chain threshold) all agree to 10⁻⁶ relative or
   better; residual offsets traced to 12-digit JSON rounding, ε = 1/512 versus the numerically
   halved ε_max, and interior-point tolerance.
-- Adversarial code review (separate agent): verdict "sound with minor issues"; nine items, all
+- Adversarial code review of calculation 2 (separate agent): verdict "sound with minor issues";
+  six items, all addressed: the C2 fidelity corrected from 1/2 to 1/4; the C3 optimiser comment
+  corrected; W(p) relabelled isotropic; the cycle note corrected to odd frustration with the
+  feasible 4-cycle added; a second solver (SCS) and minimum-violation certificates recorded for
+  every infeasibility and threshold; C1 checked in both trace orders. The review confirmed the
+  cvxpy axis convention, the 3/2 and 3/4 optima by eigen-decomposition and 300 random restarts,
+  the 2/3 chain threshold against the symmetric-extension criterion of Chen–Ji–Kribs–Lütkenhaus–
+  Zeng (2014), the 1/3 triangle threshold by an independent spin-decomposition construction,
+  and the LP constructions.
+- Adversarial code review of calculation 1 (separate agent): verdict "sound with minor issues"; nine items, all
   addressed in the present version: entropy inequalities now checked on the mixed trajectory
   (they were trivial on the pure one); S7 wording made non-monotone and the identity
   ρ_rev(t) = ρ(T−t)* recorded; the κX_R case relabelled a basis rotation and a bath-coupled

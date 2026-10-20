@@ -146,9 +146,11 @@ exists, because a pure ρ_AB forces ρ_ABC = ρ_AB ⊗ ρ_C and then ρ_BC = (1/
 extension is the quantum marginal problem (a semidefinite feasibility problem in finite
 dimension; QMA-complete in general, Liu 2006; Klyachko 2006 for the one-body pure case).
 Classically, overlap agreement suffices for every consistent family iff the hypergraph of
-subsystems is acyclic (Vorob'ev, Theory Probab. Appl. 7, 147 (1962)); quantumly it fails
-already on a chain. (Calc 2: Bell chain infeasible; max F_AB + F_BC = 3/2; Werner chain
-threshold 2/3, Werner triangle 1/3; classical chain always extends, classical odd cycle fails.)
+subsystems is acyclic (Vorob'ev, Theory Probab. Appl. 7, 147 (1962)); on a cycle a consistent
+family can fail (odd frustration) but need not; quantumly failure occurs already on a chain.
+(Calc 2: Bell chain infeasible, minimum marginal violation 0.289; max F_AB + F_BC = 3/2;
+isotropic-state chain threshold 2/3, triangle 1/3; classical chain always extends, classical
+odd anticorrelated 3-cycle fails, 4-cycle extends.)
 
 **THM 2.8 (records and multi-time statistics).** A record written unitarily into an idle
 register R and then traced out yields, for all later statistics of A, the same result as the

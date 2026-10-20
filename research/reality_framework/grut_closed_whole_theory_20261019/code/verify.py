@@ -65,7 +65,10 @@ check(m["C2_bell_chain"]["sdp_status_common_global_state"] == "infeasible", "C2 
 check(abs(m["C3_quantitative_obstruction"]["max_F_AB_plus_F_BC_over_all_3qubit_states"] - 1.5) < 1e-5, "C3 max F_AB+F_BC = 3/2")
 check(abs(m["C4_werner_thresholds"]["chain_AB_BC_max_p"] - 2 / 3) < 1e-5 and abs(m["C4_werner_thresholds"]["triangle_AB_BC_CA_max_p"] - 1 / 3) < 1e-5, "C4 Werner thresholds 2/3 and 1/3")
 check(m["C5_classical_contrast"]["chain_extension_max_abs_marginal_error"] < 1e-12 and m["C5_classical_contrast"]["odd_cycle_anticorrelated_status"] == "infeasible", "C5 classical chain extends, odd cycle does not")
-check(m["C6_inconsistent_overlap"]["sdp_status"] == "infeasible", "C6 inconsistent overlap infeasible")
+check(m["C6_inconsistent_overlap"]["sdp_status"] == "infeasible" and m["C6_inconsistent_overlap"]["sdp_status_second_solver_SCS"] == "infeasible", "C6 inconsistent overlap infeasible (both solvers)")
+check(m["C2_bell_chain"]["sdp_status_second_solver_SCS"] == "infeasible" and m["C2_bell_chain"]["minimum_achievable_marginal_violation_frobenius"] > 0.2, "C2 second solver and positive minimum violation")
+check(m["C4_werner_thresholds"]["chain_min_violation_at_p_plus_1e-3"] > 1e-5 and m["C4_werner_thresholds"]["triangle_min_violation_at_p_plus_1e-3"] > 1e-5, "C4 violation certificates above thresholds")
+check(m["C5_classical_contrast"]["even_cycle_four_anticorrelated_status"] == "optimal", "C5 even anticorrelated cycle extends")
 check(d["provenance"]["script_sha256"] == sha(PKT / "code" / "closed_whole_demo.py"), "provenance hash closed_whole_demo.py matches results")
 check(m["provenance"]["script_sha256"] == sha(PKT / "code" / "marginal_compatibility.py"), "provenance hash marginal_compatibility.py matches results")
 
