@@ -1,0 +1,272 @@
+{
+  "local_freeze_unix": 1792517716.4288669,
+  "public_preregistration": false,
+  "base_commit": "9ae004a06868674487bca679697bb073a10b7c75",
+  "scope": "Leading classical D=0, flat local microphysics; full Cartesian 3D. Finite perturbation family and finite observation interval, not all-perturbation or eternal stability.",
+  "pilot_disclosure": "Development pilots T=3 or 6 only, U(1), tangent finite differences, rectangular indexing and throughput; no T>6 object outcome inspected before this freeze.",
+  "cases": [
+    {
+      "id": "single_reference_coarse",
+      "case": "single",
+      "h": 0.75,
+      "L": 18,
+      "T": 160,
+      "eps": 0,
+      "sym": "none"
+    },
+    {
+      "id": "single_generic_coarse",
+      "case": "single",
+      "h": 0.75,
+      "L": 18,
+      "T": 160,
+      "eps": 0.05,
+      "sym": "space"
+    },
+    {
+      "id": "pair_reference_coarse",
+      "case": "pair",
+      "h": 0.75,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "sym": "all"
+    },
+    {
+      "id": "pair_generic_coarse",
+      "case": "pair",
+      "h": 0.75,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "eps": 0.05
+    },
+    {
+      "id": "single_reference_medium",
+      "case": "single",
+      "h": 0.5,
+      "L": 18,
+      "T": 160,
+      "eps": 0,
+      "sym": "none"
+    },
+    {
+      "id": "single_generic_medium",
+      "case": "single",
+      "h": 0.5,
+      "L": 18,
+      "T": 160,
+      "eps": 0.05,
+      "sym": "space"
+    },
+    {
+      "id": "pair_reference_medium",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "sym": "all"
+    },
+    {
+      "id": "pair_generic_medium",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "eps": 0.05
+    },
+    {
+      "id": "single_reference_fine",
+      "case": "single",
+      "h": 0.375,
+      "L": 18,
+      "T": 160,
+      "eps": 0,
+      "sym": "none"
+    },
+    {
+      "id": "single_generic_fine",
+      "case": "single",
+      "h": 0.375,
+      "L": 18,
+      "T": 160,
+      "eps": 0.05,
+      "sym": "space"
+    },
+    {
+      "id": "pair_reference_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "sym": "all"
+    },
+    {
+      "id": "pair_generic_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "eps": 0.05
+    },
+    {
+      "id": "single_negative_fine",
+      "case": "single",
+      "h": 0.375,
+      "L": 18,
+      "T": 160,
+      "eps": -0.05
+    },
+    {
+      "id": "single_generic_box",
+      "case": "single",
+      "h": 0.5,
+      "L": 27,
+      "T": 160,
+      "eps": 0.05,
+      "sym": "space"
+    },
+    {
+      "id": "single_generic_dt",
+      "case": "single",
+      "h": 0.5,
+      "L": 18,
+      "T": 160,
+      "dt": 0.025,
+      "eps": 0.05,
+      "sym": "space"
+    },
+    {
+      "id": "pair_reference_box",
+      "case": "pair",
+      "h": 0.5,
+      "L": 30,
+      "Lz": 60,
+      "T": 160,
+      "sym": "all"
+    },
+    {
+      "id": "pair_reference_dt",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "dt": 0.025,
+      "sym": "all"
+    },
+    {
+      "id": "pair_rotated_medium",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "angle": 0.3
+    },
+    {
+      "id": "pair_rotated_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "angle": 0.3
+    },
+    {
+      "id": "pair_negative_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "eps": -0.05
+    },
+    {
+      "id": "production_coarse",
+      "case": "condensate",
+      "h": 1,
+      "L": 32,
+      "T": 240,
+      "eps": 0.005,
+      "sample": 10
+    },
+    {
+      "id": "production_medium",
+      "case": "condensate",
+      "h": 0.6666666666666666,
+      "L": 32,
+      "T": 240,
+      "eps": 0.005,
+      "sample": 10
+    },
+    {
+      "id": "production_fine",
+      "case": "condensate",
+      "h": 0.5,
+      "L": 32,
+      "T": 240,
+      "eps": 0.005,
+      "sample": 10
+    }
+  ],
+  "checks_before_science": {
+    "compile_command": [
+      "g++",
+      "-O3",
+      "-march=native",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "/workspace/scratch/85cb4751a782/grut_two_object/research/reality_framework/grut_3d_empirical_20261020/cartesian.cpp",
+      "-o",
+      "/workspace/scratch/85cb4751a782/grut3d_build/cartesian3d"
+    ],
+    "global_phase_relative_residual": 0.0,
+    "tangent_fd_errors": [
+      3.4730006432985386e-07,
+      8.682505433229577e-08
+    ],
+    "tangent_fd_error_reduction": 3.9999982378435535,
+    "source_sha256": "3e8c04f2f92c4dc5881344e6f0d52fe16845f551ef07899f3dde3d7da1c632f0",
+    "rectangular_core_Q8_relative_difference": 0.0,
+    "checks": {
+      "global_phase": true,
+      "tangent_linearization": true,
+      "rectangular_indexing": true
+    }
+  },
+  "criteria": {
+    "single_retention": "Every sampled tau=120..160: dominant R12 ball Q >= .90 initial total Q; local E/abs(Q)<1; one dominant 2%-of-peak connected component at endpoint. Report R8 and 5/10% sensitivity.",
+    "pair_retention": "Every sampled tau=120..160: two disjoint R12 balls contain >= .90 initial total Q in sum and each >= .15 initial total Q. Report each laboratory E/Q; this is sufficient but not necessary for binding.",
+    "spatial_convergence": "Report actual three-grid differences, inferred order where meaningful, finest change <= 2% of initial total Q for late core charges and <=5% for phase-space tangent norm/initial norm. Require decreasing differences; no pass for nonmonotonic unresolved sequences.",
+    "symmetry": "R36 canonical translation and rotation tangent residual relative to instantaneous generator: report every grid/time, seek decreasing O(h^2) residual. Never demand a symmetry tangent have constant positive norm. Full event rotation .3 rad must approach same core charges on refinement.",
+    "boundary_time": "Larger box and halved timestep changes < 1% initial Q in late core charge and <5% for normalized relative-shift tangent norm; otherwise continuum conclusion limited.",
+    "conservation": "max relative total Q error <1e-9 and Hamiltonian drift <1e-3. Boundary is conservative fixed vacuum, no sponge.",
+    "production": "Periodic mixed branch F=.5,S=sqrt(.75),Omega=sqrt(.775), zero-mean fully 3D perturbations, Qbar/volume exactly .25 sqrt(.775); count endpoint components at thresholds .02,.05,.10. Fragmentation does not certify a frozen cosmological mass function."
+  },
+  "empirical_point": {
+    "a": 1,
+    "b": 0.1,
+    "gX": 0.1,
+    "mX_GeV": 100,
+    "v_GeV": 1000,
+    "primordial_charge_yield": "YQ=YB inferred from D+3nu BBN, not fitted to Planck dark density; an additional initial-state postulate.",
+    "entropy": "No later SM entropy injection; hidden U1 exact in adopted EFT.",
+    "observable": "Lower bound on present hidden matter omega=Omega h^2, compared with Planck 2018 TT,TE,EE+lowE+lensing base-LambdaCDM omega_c.",
+    "blindness": "Published target already known; held out from parameter calibration, not an unseen/blind or prospective prediction."
+  },
+  "files_sha256": {
+    "cartesian.cpp": "3e8c04f2f92c4dc5881344e6f0d52fe16845f551ef07899f3dde3d7da1c632f0",
+    "run.py": "4ae8fb4dc71b494b2b44bb6c3b30d84a7ef48dd28f8127041e34bcefa9484ca4",
+    "profile.dat": "51ed75e5966c22962f92faf6c3e0d07a5f9b1dfad6e07dab3c8bc6bedff50c8b",
+    "modes.dat": "631bd6e8d9b9a69c0c10e73bf510bf32627b983056651f032bc406bd88f63431",
+    "PREFLIGHT.json": "68101045aaedb84b034f75d2d9da34298124d4c842807ddb113612eb01c72dba"
+  }
+}

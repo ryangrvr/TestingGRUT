@@ -1,0 +1,86 @@
+{
+  "local_freeze_unix": 1792519619.0611227,
+  "public_preregistration": false,
+  "source_sha256": "569b42cbd3cead6864072dfb8fdc731a8ff73d4e36380d6a3eee935d7e7abbb1",
+  "solver_sha256": "3e8c04f2f92c4dc5881344e6f0d52fe16845f551ef07899f3dde3d7da1c632f0",
+  "parent_protocol_sha256": "2aa03cdbb9889df303cc4a315b35d881d478007a61687c81260587470101363a",
+  "cases": [
+    {
+      "id": "impact_coarse",
+      "case": "pair",
+      "h": 0.75,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "extra": {
+        "--impact": 0.02
+      }
+    },
+    {
+      "id": "impact_medium",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "extra": {
+        "--impact": 0.02
+      }
+    },
+    {
+      "id": "impact_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "extra": {
+        "--impact": 0.02
+      }
+    },
+    {
+      "id": "impact_half_fine",
+      "case": "pair",
+      "h": 0.375,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "extra": {
+        "--impact": 0.01
+      }
+    },
+    {
+      "id": "impact_box",
+      "case": "pair",
+      "h": 0.5,
+      "L": 30,
+      "Lz": 60,
+      "T": 160,
+      "extra": {
+        "--impact": 0.02
+      }
+    },
+    {
+      "id": "impact_dt",
+      "case": "pair",
+      "h": 0.5,
+      "L": 24,
+      "Lz": 48,
+      "T": 160,
+      "dt": 0.025,
+      "extra": {
+        "--impact": 0.02
+      }
+    }
+  ],
+  "posthoc_scope": "Proposed after original large-domain mode fits showed >99.6% of local geometric m1 response as core translations, with material global symmetry error. No finite pure-impact Cartesian result inspected before this freeze.",
+  "hypothesis": "Small opposite source-center displacements, with velocity directions held fixed, produce chiefly outgoing trajectory deflection. Cores retain charge and bounded intrinsic shape; centroid response should be linear in initial impact for .01/.02 and converge in space/time/box.",
+  "observables": "Core x-centroid/impact, late slope, R12 charge retention, R8 charge covariance eigenvalues. Compare unshifted controls and the original axisymmetric linear core-position fits; do not equate R36 Cartesian canonical norms with whole-domain cylindrical norms.",
+  "criteria": {
+    "retention": "Same late tau120..160, >=90% initial Q in two nonoverlapping R12 cores, >=15% in each.",
+    "linearization": "Fine centroid response x/impact changes <2% of response magnitude when impact .02 is halved.",
+    "space": "Max late centroid-response difference medium/fine <5% of response magnitude and smaller than coarse/medium difference.",
+    "time_box": "Each max late centroid-response change <5% of response magnitude.",
+    "shape": "Report actual core covariance/charge changes vs matched reference. Bounded response over a finite interval is not a measured asymptotic Lyapunov exponent."
+  }
+}

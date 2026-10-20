@@ -1,0 +1,3799 @@
+{
+  "integrity": {
+    "cartesian.cpp": true,
+    "run.py": true,
+    "profile.dat": true,
+    "modes.dat": true,
+    "PREFLIGHT.json": true,
+    "transverse_source": true,
+    "transverse_solver": true
+  },
+  "case_count": 29,
+  "cases": {
+    "single_reference_coarse": {
+      "id": "single_reference_coarse",
+      "case": {
+        "id": "single_reference_coarse",
+        "case": "single",
+        "h": 0.75,
+        "L": 18,
+        "T": 160,
+        "eps": 0,
+        "sym": "none"
+      },
+      "N": 48,
+      "Nz": 48,
+      "initial_Q": 399.4384619113011,
+      "initial_E": 363.1790662272326,
+      "initial_EQ": 0.9092240754418882,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 5.218048215738236e-15,
+      "max_relative_E_drift": 5.138180241281987e-07,
+      "endpoint_Qnegative": 1.073937601423093e-05,
+      "endpoint_maxF2": 3.920146140798713,
+      "endpoint_minS": 0.05012450408846503,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        399.4100527486453,
+        399.4100527486453
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9091882560033906,
+          0.9091927480024928
+        ],
+        [
+          0.9091882560033906,
+          0.9091927480024928
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0000988881712365,
+          1.0001240135165372
+        ],
+        [
+          1.0000988881712365,
+          1.0001240135165372
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          0.2299216744257728,
+          -0.3099647553909681,
+          0.1698276462024748
+        ],
+        [
+          0.2299216744257728,
+          -0.3099647553909681,
+          0.1698276462024748
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9999142350186794,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            380.0858564987352
+          ],
+          "selected_total_Q": 380.0858564987352,
+          "selected_fraction_of_total_Q": 0.951550470828562
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            360.0986178603254
+          ],
+          "selected_total_Q": 360.0986178603254,
+          "selected_fraction_of_total_Q": 0.9015121281442561
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            331.8825837516687
+          ],
+          "selected_total_Q": 331.8825837516687,
+          "selected_fraction_of_total_Q": 0.8308728762964399
+        }
+      },
+      "single_dominant_component_pass": true
+    },
+    "single_generic_coarse": {
+      "id": "single_generic_coarse",
+      "case": {
+        "id": "single_generic_coarse",
+        "case": "single",
+        "h": 0.75,
+        "L": 18,
+        "T": 160,
+        "eps": 0.05,
+        "sym": "space"
+      },
+      "N": 48,
+      "Nz": 48,
+      "initial_Q": 399.4384618691289,
+      "initial_E": 363.8455112802464,
+      "initial_EQ": 0.9108925304230114,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 7.771561172376096e-15,
+      "max_relative_E_drift": 2.4436074435030264e-06,
+      "endpoint_Qnegative": 0.01115963066239622,
+      "endpoint_maxF2": 3.86131692361616,
+      "endpoint_minS": 0.05535109871014308,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.85716830356,
+        398.85716830356
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9098940694156366,
+          0.909937827378151
+        ],
+        [
+          0.9098940694156366,
+          0.909937827378151
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0214981102748895,
+          1.044955213345667
+        ],
+        [
+          1.0214981102748895,
+          1.044955213345667
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          2.316954533433841,
+          1.018776632304226,
+          -0.5179069074171156
+        ],
+        [
+          2.316954533433841,
+          1.018776632304226,
+          -0.5179069074171156
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9985097501090581,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.8186863637342
+          ],
+          "selected_total_Q": 379.8186863637342,
+          "selected_fraction_of_total_Q": 0.9508816066094734
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.5350417096029
+          ],
+          "selected_total_Q": 359.5350417096029,
+          "selected_fraction_of_total_Q": 0.9001012071476486
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            332.0562627129112
+          ],
+          "selected_total_Q": 332.0562627129112,
+          "selected_fraction_of_total_Q": 0.8313076841901753
+        }
+      },
+      "single_dominant_component_pass": true,
+      "endpoint_tangent_amplification": [
+        1.0414291743282595,
+        5.641406475211533
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.1009377264404921,
+        0.3290239470296178
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.03351934014700162,
+          0.11830224763551109
+        ],
+        "40": [
+          0.1086835477004489,
+          0.7303516330979423
+        ],
+        "60": [
+          0.13365446710469958,
+          0.6365180565840353
+        ],
+        "80": [
+          0.1361155868122725,
+          0.5524775126703974
+        ],
+        "120": [
+          0.09489997213865989,
+          0.4133561844536667
+        ],
+        "160": [
+          0.1009377264404921,
+          0.3290239470296178
+        ]
+      }
+    },
+    "pair_reference_coarse": {
+      "id": "pair_reference_coarse",
+      "case": {
+        "id": "pair_reference_coarse",
+        "case": "pair",
+        "h": 0.75,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "sym": "all"
+      },
+      "N": 64,
+      "Nz": 128,
+      "initial_Q": 798.8769252998181,
+      "initial_E": 741.0767593854979,
+      "initial_EQ": 0.9276482220429287,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 4.551914400963142e-14,
+      "max_relative_E_drift": 5.345165467685042e-06,
+      "endpoint_Qnegative": 3.96651632158916e-05,
+      "endpoint_maxF2": 4.065193839999145,
+      "endpoint_minS": 0.03660327008908713,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        261.0819916322222,
+        517.1092101634481
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9820270016747805,
+          0.9820961041257559
+        ],
+        [
+          0.8931367897825552,
+          0.8936462066519297
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0041329274085105,
+          1.057678923506038
+        ],
+        [
+          1.0173069667128296,
+          1.2868345267328545
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -1.258501974599056e-15,
+          1.994588880439772e-15,
+          -27.98506071048807
+        ],
+        [
+          -2.630552348560006e-15,
+          -1.430018835211052e-15,
+          15.20665455208784
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9736593763161782,
+      "minimum_late_separation": 29.595827346014097,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            492.1930581933541,
+            238.9832036206999
+          ],
+          "selected_total_Q": 731.176261814054,
+          "selected_fraction_of_total_Q": 0.9152552022198461
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            470.7496153820131,
+            219.7084343288871
+          ],
+          "selected_total_Q": 690.4580497109002,
+          "selected_fraction_of_total_Q": 0.8642858841513937
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            434.4580111249844,
+            195.3631722672633
+          ],
+          "selected_total_Q": 629.8211833922477,
+          "selected_fraction_of_total_Q": 0.7883832458371183
+        }
+      },
+      "endpoint_tangent_amplification": [
+        1.0375507289993087,
+        1.7438788774581844,
+        10.20139154200308
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.2288473653793307,
+        0.1241649846277383
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.03370961772998079,
+          0.04449040181910717
+        ],
+        "40": [
+          0.04333660181712679,
+          0.09891931168352328
+        ],
+        "60": [
+          0.05354364674829381,
+          0.10672807887308683
+        ],
+        "80": [
+          0.054797374377349904,
+          0.06930956077130918
+        ],
+        "120": [
+          0.18627436510994377,
+          0.12036673196116925
+        ],
+        "160": [
+          0.2288473653793307,
+          0.1241649846277383
+        ]
+      },
+      "relative_shift_after_global_translation_rotation_phase_projection": 1.274044222380505,
+      "projection_note": "Canonical norm, R36, global rigid generators only; physical separate-core motion remains. This is not a Lyapunov exponent."
+    },
+    "pair_generic_coarse": {
+      "id": "pair_generic_coarse",
+      "case": {
+        "id": "pair_generic_coarse",
+        "case": "pair",
+        "h": 0.75,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "eps": 0.05
+      },
+      "N": 64,
+      "Nz": 128,
+      "initial_Q": 798.8762716492643,
+      "initial_E": 741.703578022504,
+      "initial_EQ": 0.9284336064848585,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 6.17284001691587e-14,
+      "max_relative_E_drift": 4.011215028021375e-06,
+      "endpoint_Qnegative": 0.003068958207519817,
+      "endpoint_maxF2": 4.050992754948641,
+      "endpoint_minS": 0.03317790987700547,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        264.72081029441364,
+        510.21330922357333
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.975148270316294,
+          0.9752298283524489
+        ],
+        [
+          0.8946051814886501,
+          0.8953086824152544
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0172858983656672,
+          1.0666770011517868
+        ],
+        [
+          1.1035356359793025,
+          1.3397887320853696
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          6.502642277686941,
+          -0.7437746198441498,
+          -24.1993050633267
+        ],
+        [
+          -3.408278137888274,
+          0.7645584814868464,
+          13.66104816207821
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9693388798479591,
+      "minimum_late_separation": 27.051892974011313,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            484.2724994596601,
+            243.3386731837861
+          ],
+          "selected_total_Q": 727.6111726434463,
+          "selected_fraction_of_total_Q": 0.9107933211501043
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            460.955405276822,
+            224.3855789196753
+          ],
+          "selected_total_Q": 685.3409841964973,
+          "selected_fraction_of_total_Q": 0.8578812621153766
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            427.7851624270695,
+            198.6917159854298
+          ],
+          "selected_total_Q": 626.4768784124993,
+          "selected_fraction_of_total_Q": 0.784197629401547
+        }
+      }
+    },
+    "single_reference_medium": {
+      "id": "single_reference_medium",
+      "case": {
+        "id": "single_reference_medium",
+        "case": "single",
+        "h": 0.5,
+        "L": 18,
+        "T": 160,
+        "eps": 0,
+        "sym": "none"
+      },
+      "N": 72,
+      "Nz": 72,
+      "initial_Q": 399.4384619073448,
+      "initial_E": 363.5906350427869,
+      "initial_EQ": 0.9102544439677087,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 2.1760371282653068e-14,
+      "max_relative_E_drift": 2.617312893082868e-07,
+      "endpoint_Qnegative": 3.662421934571957e-06,
+      "endpoint_maxF2": 3.924235247744515,
+      "endpoint_minS": 0.04940010772684943,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        399.4275491310834,
+        399.4275491310834
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.910240600404476,
+          0.9102432680291681
+        ],
+        [
+          0.910240600404476,
+          0.9102432680291681
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0000548755103598,
+          1.0000618297793673
+        ],
+        [
+          1.0000548755103598,
+          1.00006291469547
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          0.2300131981879965,
+          -0.3099637364938312,
+          0.1700376300554014
+        ],
+        [
+          0.2300131981879965,
+          -0.3099637364938312,
+          0.1700376300554014
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9999661727196802,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.9231895762125
+          ],
+          "selected_total_Q": 379.9231895762125,
+          "selected_fraction_of_total_Q": 0.9511432318311422
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.6659614320075
+          ],
+          "selected_total_Q": 359.6659614320075,
+          "selected_fraction_of_total_Q": 0.9004289664910561
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            330.7880613080902
+          ],
+          "selected_total_Q": 330.7880613080902,
+          "selected_fraction_of_total_Q": 0.8281327234451975
+        }
+      },
+      "single_dominant_component_pass": true
+    },
+    "single_generic_medium": {
+      "id": "single_generic_medium",
+      "case": {
+        "id": "single_generic_medium",
+        "case": "single",
+        "h": 0.5,
+        "L": 18,
+        "T": 160,
+        "eps": 0.05,
+        "sym": "space"
+      },
+      "N": 72,
+      "Nz": 72,
+      "initial_Q": 399.4384618358057,
+      "initial_E": 364.2640667483014,
+      "initial_EQ": 0.9119403902021754,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 7.993605777301127e-15,
+      "max_relative_E_drift": 2.2355876385660167e-06,
+      "endpoint_Qnegative": 0.01128952628404223,
+      "endpoint_maxF2": 3.832143974631223,
+      "endpoint_minS": 0.05441074960546863,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.84903827133945,
+        398.84903827133945
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9109515472264472,
+          0.9109979027367897
+        ],
+        [
+          0.9109515472264472,
+          0.9109979027367897
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0192559226505515,
+          1.0436651187799917
+        ],
+        [
+          1.0192559226505515,
+          1.0436651187799917
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          2.33575956090437,
+          1.029548829849996,
+          -0.5246097115650115
+        ],
+        [
+          2.33575956090437,
+          1.029548829849996,
+          -0.5246097115650115
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9984893064594469,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.722401564138
+          ],
+          "selected_total_Q": 379.722401564138,
+          "selected_fraction_of_total_Q": 0.9506405562923176
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.350283217015
+          ],
+          "selected_total_Q": 359.350283217015,
+          "selected_fraction_of_total_Q": 0.8996386616487887
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            330.9027604243407
+          ],
+          "selected_total_Q": 330.9027604243407,
+          "selected_fraction_of_total_Q": 0.8284198744996233
+        }
+      },
+      "single_dominant_component_pass": true,
+      "endpoint_tangent_amplification": [
+        1.033619524899569,
+        5.686753836780556
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.10228780996571028,
+        0.3379602524707934
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.0170214821282109,
+          0.07625833033655056
+        ],
+        "40": [
+          0.10856156436770813,
+          0.7419970064672546
+        ],
+        "60": [
+          0.1310838254671702,
+          0.6392288963422489
+        ],
+        "80": [
+          0.12828468092859624,
+          0.5581356578806309
+        ],
+        "120": [
+          0.0863813048050365,
+          0.4172181003561335
+        ],
+        "160": [
+          0.10228780996571028,
+          0.3379602524707934
+        ]
+      }
+    },
+    "pair_reference_medium": {
+      "id": "pair_reference_medium",
+      "case": {
+        "id": "pair_reference_medium",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "sym": "all"
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8769251802725,
+      "initial_E": 742.0601878635158,
+      "initial_EQ": 0.9288792359299456,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.6342482922482304e-13,
+      "max_relative_E_drift": 5.448748078840104e-06,
+      "endpoint_Qnegative": 4.146650031096226e-05,
+      "endpoint_maxF2": 4.068151440046534,
+      "endpoint_minS": 0.03324258475282723,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.12944153040524,
+        518.7256812357748
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9851843274051256,
+          0.9852723532867871
+        ],
+        [
+          0.8939065357271078,
+          0.894356636552048
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0016072760116994,
+          1.0514844699693802
+        ],
+        [
+          1.0712021969819956,
+          1.3055891907259027
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -1.076534880613273e-15,
+          9.472480121557265e-15,
+          -29.02098221349775
+        ],
+        [
+          -8.237045726320323e-16,
+          -8.145873482903956e-15,
+          15.68764756045534
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9745560615216525,
+      "minimum_late_separation": 30.605810206368993,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            493.9979710957035,
+            238.5093316266044
+          ],
+          "selected_total_Q": 732.5073027223079,
+          "selected_fraction_of_total_Q": 0.9169213424921646
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.3076004023718,
+            218.5821727892721
+          ],
+          "selected_total_Q": 689.8897731916439,
+          "selected_fraction_of_total_Q": 0.8635745400156166
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.9377768514547,
+            192.2652367055401
+          ],
+          "selected_total_Q": 630.2030135569948,
+          "selected_fraction_of_total_Q": 0.7888612046402328
+        }
+      },
+      "endpoint_tangent_amplification": [
+        1.0339240033716006,
+        1.7893862089054395,
+        10.402251749813768
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.22638639602026456,
+        0.11584356267490141
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.01489464362122952,
+          0.019840678489553294
+        ],
+        "40": [
+          0.02073594482110917,
+          0.049319116673057904
+        ],
+        "60": [
+          0.024461727550373107,
+          0.048773876190011986
+        ],
+        "80": [
+          0.03250721300760824,
+          0.036262486712656486
+        ],
+        "120": [
+          0.18961426353481337,
+          0.11897835223422354
+        ],
+        "160": [
+          0.22638639602026456,
+          0.11584356267490141
+        ]
+      },
+      "relative_shift_after_global_translation_rotation_phase_projection": 1.2324682766058965,
+      "projection_note": "Canonical norm, R36, global rigid generators only; physical separate-core motion remains. This is not a Lyapunov exponent."
+    },
+    "pair_generic_medium": {
+      "id": "pair_generic_medium",
+      "case": {
+        "id": "pair_generic_medium",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "eps": 0.05
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8762715315833,
+      "initial_E": 742.6920333132744,
+      "initial_EQ": 0.9296709137316169,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 2.1538326677728037e-13,
+      "max_relative_E_drift": 4.291330996886167e-06,
+      "endpoint_Qnegative": 0.002872553673377738,
+      "endpoint_maxF2": 4.07434870137148,
+      "endpoint_minS": 0.03167872391749604,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        262.8709028539809,
+        512.7805220925911
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9788032410106922,
+          0.9788789049854267
+        ],
+        [
+          0.8952555847837522,
+          0.895879353409203
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0188225354788958,
+          1.0611198223929035
+        ],
+        [
+          1.1173623372045292,
+          1.302493263490049
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          6.687781984410744,
+          -0.8399390354213571,
+          -25.33167695093851
+        ],
+        [
+          -3.487722178570571,
+          0.8207508808952398,
+          14.18030083588382
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9703515541413942,
+      "minimum_late_separation": 28.128698949296254,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            487.4146570592771,
+            241.578228671617
+          ],
+          "selected_total_Q": 728.9928857308942,
+          "selected_fraction_of_total_Q": 0.9125228921035411
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            463.9349718192328,
+            222.0575329206247
+          ],
+          "selected_total_Q": 685.9925047398575,
+          "selected_fraction_of_total_Q": 0.8586968084866157
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            430.0369006929555,
+            195.8335473523156
+          ],
+          "selected_total_Q": 625.8704480452711,
+          "selected_fraction_of_total_Q": 0.7834385252742203
+        }
+      }
+    },
+    "single_reference_fine": {
+      "id": "single_reference_fine",
+      "case": {
+        "id": "single_reference_fine",
+        "case": "single",
+        "h": 0.375,
+        "L": 18,
+        "T": 160,
+        "eps": 0,
+        "sym": "none"
+      },
+      "N": 96,
+      "Nz": 96,
+      "initial_Q": 399.438461904381,
+      "initial_E": 363.7357017975518,
+      "initial_EQ": 0.9106176207052995,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 2.4868995751603507e-14,
+      "max_relative_E_drift": 1.725101579364008e-07,
+      "endpoint_Qnegative": 1.042051121040067e-06,
+      "endpoint_maxF2": 3.918005183551554,
+      "endpoint_minS": 0.04930332527063312,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        399.4302773256412,
+        399.4302773256412
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9106081274931463,
+          0.910609656181895
+        ],
+        [
+          0.9106081274931463,
+          0.910609656181895
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0000105130372663,
+          1.0000200909365689
+        ],
+        [
+          1.0000105130372663,
+          1.0000200909365689
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          0.2300001649693653,
+          -0.3100335900008271,
+          0.1699874356939638
+        ],
+        [
+          0.2300001649693653,
+          -0.3100335900008271,
+          0.1699874356939638
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9999759428545142,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.8545854582571
+          ],
+          "selected_total_Q": 379.8545854582571,
+          "selected_fraction_of_total_Q": 0.9509714804309156
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.4951720026033
+          ],
+          "selected_total_Q": 359.4951720026033,
+          "selected_fraction_of_total_Q": 0.9000013926767536
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            330.5523785527244
+          ],
+          "selected_total_Q": 330.5523785527244,
+          "selected_fraction_of_total_Q": 0.8275426882448121
+        }
+      },
+      "single_dominant_component_pass": true
+    },
+    "single_generic_fine": {
+      "id": "single_generic_fine",
+      "case": {
+        "id": "single_generic_fine",
+        "case": "single",
+        "h": 0.375,
+        "L": 18,
+        "T": 160,
+        "eps": 0.05,
+        "sym": "space"
+      },
+      "N": 96,
+      "Nz": 96,
+      "initial_Q": 399.4384618301339,
+      "initial_E": 364.4116132327099,
+      "initial_EQ": 0.9123097749852651,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.965094753586527e-14,
+      "max_relative_E_drift": 2.1643483953948106e-06,
+      "endpoint_Qnegative": 0.009948262332712567,
+      "endpoint_maxF2": 3.852358686925486,
+      "endpoint_minS": 0.05308295552849492,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.84442378685753,
+        398.84442378685753
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9113206678475541,
+          0.9113667498646792
+        ],
+        [
+          0.9113206678475541,
+          0.9113667498646792
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0185292944079198,
+          1.0430102210485046
+        ],
+        [
+          1.0185292944079198,
+          1.0430102210485046
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          2.341915442255079,
+          1.033226362912864,
+          -0.5268829946900718
+        ],
+        [
+          2.341915442255079,
+          1.033226362912864,
+          -0.5268829946900718
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9984842155193793,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.4535234365499
+          ],
+          "selected_total_Q": 379.4535234365499,
+          "selected_fraction_of_total_Q": 0.9499674160019101
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.0979172712232
+          ],
+          "selected_total_Q": 359.0979172712232,
+          "selected_fraction_of_total_Q": 0.8990068598449941
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            330.5258230361104
+          ],
+          "selected_total_Q": 330.5258230361104,
+          "selected_fraction_of_total_Q": 0.8274762062764766
+        }
+      },
+      "single_dominant_component_pass": true,
+      "endpoint_tangent_amplification": [
+        1.0304442236847087,
+        5.6969369519827495
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.10316119199038268,
+        0.33863304191470556
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.013360461217834725,
+          0.07746296672527822
+        ],
+        "40": [
+          0.10996832341577428,
+          0.7461741134452491
+        ],
+        "60": [
+          0.13162329246365712,
+          0.6411571728292932
+        ],
+        "80": [
+          0.12637504628218013,
+          0.5595170711293913
+        ],
+        "120": [
+          0.08635025462308898,
+          0.4200124682388216
+        ],
+        "160": [
+          0.10316119199038268,
+          0.33863304191470556
+        ]
+      }
+    },
+    "pair_reference_fine": {
+      "id": "pair_reference_fine",
+      "case": {
+        "id": "pair_reference_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "sym": "all"
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.8769251325277,
+      "initial_E": 742.4069334569753,
+      "initial_EQ": 0.9293132773034037,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 3.3084646133829665e-13,
+      "max_relative_E_drift": 5.468871851599388e-06,
+      "endpoint_Qnegative": 2.847951484154127e-05,
+      "endpoint_maxF2": 4.059917566359665,
+      "endpoint_minS": 0.03222451878579352,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        259.86749129128594,
+        519.2029188577661
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9862381581769866,
+          0.9863309831842756
+        ],
+        [
+          0.8941850981652348,
+          0.8946118658454105
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0006453262344652,
+          1.0488042545896339
+        ],
+        [
+          1.1013067186450118,
+          1.3061605787032666
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -2.824812070501196e-15,
+          -7.813848560378633e-15,
+          -29.37305150027442
+        ],
+        [
+          3.096533993401087e-15,
+          6.79406013529951e-15,
+          15.8519984500297
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.974846460433207,
+      "minimum_late_separation": 30.95176707905625,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.8408569433371,
+            238.2892014678074
+          ],
+          "selected_total_Q": 733.1300584111445,
+          "selected_fraction_of_total_Q": 0.9177008815087803
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.2276861951432,
+            217.8783638837582
+          ],
+          "selected_total_Q": 689.1060500789014,
+          "selected_fraction_of_total_Q": 0.8625935089620768
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            438.178982677548,
+            192.0053351392311
+          ],
+          "selected_total_Q": 630.1843178167791,
+          "selected_fraction_of_total_Q": 0.7888378021586193
+        }
+      },
+      "endpoint_tangent_amplification": [
+        1.0306010349666297,
+        1.8015409763722001,
+        10.457220686716232
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.22631245800853825,
+        0.11381236148411922
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.00836538163368682,
+          0.011178960905414512
+        ],
+        "40": [
+          0.011976851476915493,
+          0.028884102479792256
+        ],
+        "60": [
+          0.013819816903990213,
+          0.027654622336641826
+        ],
+        "80": [
+          0.027613513914650112,
+          0.027630924634795405
+        ],
+        "120": [
+          0.19185929243781502,
+          0.11981068200938462
+        ],
+        "160": [
+          0.22631245800853825,
+          0.11381236148411922
+        ]
+      },
+      "relative_shift_after_global_translation_rotation_phase_projection": 1.222675101024929,
+      "projection_note": "Canonical norm, R36, global rigid generators only; physical separate-core motion remains. This is not a Lyapunov exponent."
+    },
+    "pair_generic_fine": {
+      "id": "pair_generic_fine",
+      "case": {
+        "id": "pair_generic_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "eps": 0.05
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.8762715160179,
+      "initial_E": 743.0405847696567,
+      "initial_EQ": 0.9301072159266884,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 4.902744876744691e-13,
+      "max_relative_E_drift": 4.376454556198617e-06,
+      "endpoint_Qnegative": 0.002762367130671376,
+      "endpoint_maxF2": 4.077454538109509,
+      "endpoint_minS": 0.03030186073673402,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        262.3251482298744,
+        513.5562758195124
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9800226761793202,
+          0.980094372437638
+        ],
+        [
+          0.8954958312841924,
+          0.8960915173220282
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0202609477023656,
+          1.059744112443155
+        ],
+        [
+          1.1202044542344225,
+          1.3105338352816869
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          6.747375266376793,
+          -0.8733195162262088,
+          -25.71489901504032
+        ],
+        [
+          -3.514111937659107,
+          0.84020395914688,
+          14.35632189696184
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9706749565756679,
+      "minimum_late_separation": 28.496084359987492,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            488.3767523771056,
+            240.9366967207271
+          ],
+          "selected_total_Q": 729.3134490978327,
+          "selected_fraction_of_total_Q": 0.9129241599751403
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            464.6600019459668,
+            221.2070179581034
+          ],
+          "selected_total_Q": 685.8670199040703,
+          "selected_fraction_of_total_Q": 0.8585397318191823
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            431.1654427004295,
+            195.0536401241562
+          ],
+          "selected_total_Q": 626.2190828245857,
+          "selected_fraction_of_total_Q": 0.7838749317666142
+        }
+      }
+    },
+    "single_negative_fine": {
+      "id": "single_negative_fine",
+      "case": {
+        "id": "single_negative_fine",
+        "case": "single",
+        "h": 0.375,
+        "L": 18,
+        "T": 160,
+        "eps": -0.05
+      },
+      "N": 96,
+      "Nz": 96,
+      "initial_Q": 399.4384618278573,
+      "initial_E": 364.4046149335799,
+      "initial_EQ": 0.9122922546467855,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.7763568394002505e-14,
+      "max_relative_E_drift": 1.4879530307876365e-06,
+      "endpoint_Qnegative": 0.008886469224548707,
+      "endpoint_maxF2": 3.895149252159694,
+      "endpoint_minS": 0.04583696274309278,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.87436908419346,
+        398.87436908419346
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9113107920534229,
+          0.911352099034865
+        ],
+        [
+          0.9113107920534229,
+          0.911352099034865
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0180635612625166,
+          1.0427808981814712
+        ],
+        [
+          1.0180635612625166,
+          1.0427808981814712
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -2.042299109970408,
+          -1.686858822017697,
+          0.9237135653317966
+        ],
+        [
+          -2.042299109970408,
+          -1.686858822017697,
+          0.9237135653317966
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.998551563581652,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            378.9062959649103
+          ],
+          "selected_total_Q": 378.9062959649103,
+          "selected_fraction_of_total_Q": 0.9485974240713065
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            358.4797793245844
+          ],
+          "selected_total_Q": 358.4797793245844,
+          "selected_fraction_of_total_Q": 0.8974593425083723
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            329.4885581084189
+          ],
+          "selected_total_Q": 329.4885581084189,
+          "selected_fraction_of_total_Q": 0.8248793984451499
+        }
+      },
+      "single_dominant_component_pass": true
+    },
+    "single_generic_box": {
+      "id": "single_generic_box",
+      "case": {
+        "id": "single_generic_box",
+        "case": "single",
+        "h": 0.5,
+        "L": 27,
+        "T": 160,
+        "eps": 0.05,
+        "sym": "space"
+      },
+      "N": 108,
+      "Nz": 108,
+      "initial_Q": 399.4384626038357,
+      "initial_E": 364.2640661536211,
+      "initial_EQ": 0.9119403869599291,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.9029222642075183e-13,
+      "max_relative_E_drift": 2.2367063812200882e-06,
+      "endpoint_Qnegative": 0.01158069210655575,
+      "endpoint_maxF2": 3.869258151696279,
+      "endpoint_minS": 0.05517122483684826,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.8023759136912,
+        398.8023759136912
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9108268211957291,
+          0.9108512941212088
+        ],
+        [
+          0.9108268211957291,
+          0.9108512941212088
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0192029223111385,
+          1.0504920643334286
+        ],
+        [
+          1.0192029223111385,
+          1.0504920643334286
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          2.336352542740678,
+          1.029785114352763,
+          -0.5237590183158729
+        ],
+        [
+          2.336352542740678,
+          1.029785114352763,
+          -0.5237590183158729
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9983237615389651,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.3957548250522
+          ],
+          "selected_total_Q": 379.3957548250522,
+          "selected_fraction_of_total_Q": 0.9498227896028583
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            358.9720201151563
+          ],
+          "selected_total_Q": 358.9720201151563,
+          "selected_fraction_of_total_Q": 0.8986916727425567
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            329.8514496621515
+          ],
+          "selected_total_Q": 329.8514496621515,
+          "selected_fraction_of_total_Q": 0.8257879011248327
+        }
+      },
+      "single_dominant_component_pass": true,
+      "endpoint_tangent_amplification": [
+        1.033271061489169,
+        5.708650757945689
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.093218108501681,
+        0.46951821946699346
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.014617751076350102,
+          0.049250801586522015
+        ],
+        "40": [
+          0.049046946313103794,
+          0.41495513560665714
+        ],
+        "60": [
+          0.10691412344555835,
+          0.7334990383280163
+        ],
+        "80": [
+          0.12330437892357192,
+          0.6788916621656597
+        ],
+        "120": [
+          0.12492359580551685,
+          0.5573007767946565
+        ],
+        "160": [
+          0.093218108501681,
+          0.46951821946699346
+        ]
+      }
+    },
+    "single_generic_dt": {
+      "id": "single_generic_dt",
+      "case": {
+        "id": "single_generic_dt",
+        "case": "single",
+        "h": 0.5,
+        "L": 18,
+        "T": 160,
+        "dt": 0.025,
+        "eps": 0.05,
+        "sym": "space"
+      },
+      "N": 72,
+      "Nz": 72,
+      "initial_Q": 399.4384618358056,
+      "initial_E": 364.2640667483013,
+      "initial_EQ": 0.9119403902021753,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.1546319456101628e-14,
+      "max_relative_E_drift": 5.513248431121553e-07,
+      "endpoint_Qnegative": 0.01132174130558313,
+      "endpoint_maxF2": 3.832404684092913,
+      "endpoint_minS": 0.05444404372186548,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        398.84861104355855,
+        398.84861104355855
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9109507367240571,
+          0.9109977539477768
+        ],
+        [
+          0.9109507367240571,
+          0.9109977539477768
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.019137126818095,
+          1.0436046117376152
+        ],
+        [
+          1.019137126818095,
+          1.0436046117376152
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          2.335515839015159,
+          1.029356724383395,
+          -0.524535794674962
+        ],
+        [
+          2.335515839015159,
+          1.029356724383395,
+          -0.524535794674962
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9984880685981539,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 1,
+          "largest_Q": [
+            379.7171001666459
+          ],
+          "selected_total_Q": 379.7171001666459,
+          "selected_fraction_of_total_Q": 0.9506272841665747
+        },
+        "0.05": {
+          "count": 1,
+          "largest_Q": [
+            359.3572252077952
+          ],
+          "selected_total_Q": 359.3572252077952,
+          "selected_fraction_of_total_Q": 0.8996560410236951
+        },
+        "0.1": {
+          "count": 1,
+          "largest_Q": [
+            330.8773840424935
+          ],
+          "selected_total_Q": 330.8773840424935,
+          "selected_fraction_of_total_Q": 0.8283563443585084
+        }
+      },
+      "single_dominant_component_pass": true,
+      "endpoint_tangent_amplification": [
+        1.0336668437193046,
+        5.6858062395819635
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.10227799078740021,
+        0.3381020000685134
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.017001477171347132,
+          0.07602773728319419
+        ],
+        "40": [
+          0.10853083640998168,
+          0.7419627781384451
+        ],
+        "60": [
+          0.13107991646405093,
+          0.6393127187740759
+        ],
+        "80": [
+          0.12836025518757055,
+          0.5583058325129253
+        ],
+        "120": [
+          0.08641339462091942,
+          0.41732981573057787
+        ],
+        "160": [
+          0.10227799078740021,
+          0.3381020000685134
+        ]
+      }
+    },
+    "pair_reference_box": {
+      "id": "pair_reference_box",
+      "case": {
+        "id": "pair_reference_box",
+        "case": "pair",
+        "h": 0.5,
+        "L": 30,
+        "Lz": 60,
+        "T": 160,
+        "sym": "all"
+      },
+      "N": 120,
+      "Nz": 240,
+      "initial_Q": 798.8769251806732,
+      "initial_E": 742.0601878630458,
+      "initial_EQ": 0.9288792359288913,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 2.915445662665661e-13,
+      "max_relative_E_drift": 5.448633824678417e-06,
+      "endpoint_Qnegative": 2.443959748312269e-05,
+      "endpoint_maxF2": 4.076901634182075,
+      "endpoint_minS": 0.03293459338038584,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.0066955431243,
+        518.3910104490359
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9851266483639475,
+          0.9851765392014648
+        ],
+        [
+          0.8936879005588044,
+          0.89430680077904
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0004676198424989,
+          1.0514289010731184
+        ],
+        [
+          1.0696014408881551,
+          1.3033541679750704
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          4.248731320367342e-15,
+          9.024841275750045e-15,
+          -29.02131146939919
+        ],
+        [
+          -4.476727353274224e-15,
+          -7.101664722468577e-15,
+          15.6872132095652
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9736295468095955,
+      "minimum_late_separation": 30.60568367016802,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.9327131446711,
+            238.9261038837747
+          ],
+          "selected_total_Q": 733.8588170284457,
+          "selected_fraction_of_total_Q": 0.9186131103517315
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.9027563534459,
+            219.4893165515134
+          ],
+          "selected_total_Q": 691.3920729049594,
+          "selected_fraction_of_total_Q": 0.8654550546050568
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            438.5509380986261,
+            193.2464360870394
+          ],
+          "selected_total_Q": 631.7973741856655,
+          "selected_fraction_of_total_Q": 0.7908569571499124
+        }
+      },
+      "endpoint_tangent_amplification": [
+        1.0381258214995728,
+        1.800315283542097,
+        10.46655401706275
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.18688497861546183,
+        0.0891125177544468
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.01489464600896216,
+          0.019840675273308506
+        ],
+        "40": [
+          0.017218479791186382,
+          0.03857635210403153
+        ],
+        "60": [
+          0.021846924068673966,
+          0.042517273769837396
+        ],
+        "80": [
+          0.02256396887023595,
+          0.028383374281204327
+        ],
+        "120": [
+          0.1239585120694824,
+          0.0728622056488988
+        ],
+        "160": [
+          0.18688497861546183,
+          0.0891125177544468
+        ]
+      },
+      "relative_shift_after_global_translation_rotation_phase_projection": 0.9750023073563047,
+      "projection_note": "Canonical norm, R36, global rigid generators only; physical separate-core motion remains. This is not a Lyapunov exponent."
+    },
+    "pair_reference_dt": {
+      "id": "pair_reference_dt",
+      "case": {
+        "id": "pair_reference_dt",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "dt": 0.025,
+        "sym": "all"
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8769251802725,
+      "initial_E": 742.0601878635158,
+      "initial_EQ": 0.9288792359299456,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.7630341631047486e-13,
+      "max_relative_E_drift": 1.370507149434097e-06,
+      "endpoint_Qnegative": 4.172554673618874e-05,
+      "endpoint_maxF2": 4.069835261685685,
+      "endpoint_minS": 0.03322470445986066,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.15052430175797,
+        518.7119687906428
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9851781173887222,
+          0.9852660806488606
+        ],
+        [
+          0.8939105794479704,
+          0.8943601055145667
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.001586488780086,
+          1.051508950651871
+        ],
+        [
+          1.0697848887055363,
+          1.3052408101243185
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          8.643418475653856e-16,
+          6.194863694769847e-15,
+          -29.01399145175967
+        ],
+        [
+          1.568710772831703e-15,
+          -5.278513010494065e-15,
+          15.68610656124124
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9745665714503651,
+      "minimum_late_separation": 30.599090358523192,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.0119738480203,
+            238.4689631275973
+          ],
+          "selected_total_Q": 732.4809369756176,
+          "selected_fraction_of_total_Q": 0.9168883389770307
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.1751722989725,
+            218.6182196300705
+          ],
+          "selected_total_Q": 689.793391929043,
+          "selected_fraction_of_total_Q": 0.8634538940693349
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.0681498236406,
+            191.949537470535
+          ],
+          "selected_total_Q": 629.0176872941756,
+          "selected_fraction_of_total_Q": 0.7873774638718388
+        }
+      },
+      "endpoint_tangent_amplification": [
+        1.0339919663600912,
+        1.789232897798764,
+        10.401359901623541
+      ],
+      "endpoint_symmetry_relative_residual": [
+        0.2263485303264731,
+        0.11583216116918574
+      ],
+      "symmetry_trace": {
+        "20": [
+          0.01489817240501088,
+          0.019845313611390282
+        ],
+        "40": [
+          0.02069190709028298,
+          0.049175462444330874
+        ],
+        "60": [
+          0.024449049188594314,
+          0.048724844917897435
+        ],
+        "80": [
+          0.032460819723272846,
+          0.036211812920473575
+        ],
+        "120": [
+          0.18958730659391107,
+          0.11893863195514677
+        ],
+        "160": [
+          0.2263485303264731,
+          0.11583216116918574
+        ]
+      },
+      "relative_shift_after_global_translation_rotation_phase_projection": 1.2323862430627424,
+      "projection_note": "Canonical norm, R36, global rigid generators only; physical separate-core motion remains. This is not a Lyapunov exponent."
+    },
+    "pair_rotated_medium": {
+      "id": "pair_rotated_medium",
+      "case": {
+        "id": "pair_rotated_medium",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "angle": 0.3
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8769251967375,
+      "initial_E": 742.0621383402766,
+      "initial_EQ": 0.9288816774342691,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.5876189252139739e-13,
+      "max_relative_E_drift": 5.443267997451429e-06,
+      "endpoint_Qnegative": 4.427271331731895e-05,
+      "endpoint_maxF2": 4.08340889347925,
+      "endpoint_minS": 0.03232291559341108,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        259.87561738798934,
+        519.0750814114184
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.985453396054032,
+          0.9855202359878006
+        ],
+        [
+          0.8938960058110805,
+          0.8942937793656361
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.004305352137636,
+          1.0514535095372275
+        ],
+        [
+          1.0772149221803922,
+          1.3041741269441238
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -8.561427722426343,
+          -7.553269982397309e-15,
+          -27.81823670368216
+        ],
+        [
+          4.621753077916139,
+          1.125228686045476e-15,
+          15.02092744064193
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9746762543452243,
+      "minimum_late_separation": 30.676068468956704,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            495.0115812533489,
+            238.8117753495359
+          ],
+          "selected_total_Q": 733.8233566028848,
+          "selected_fraction_of_total_Q": 0.9185687224877198
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.3857156049407,
+            219.1497929639105
+          ],
+          "selected_total_Q": 690.5355085688511,
+          "selected_fraction_of_total_Q": 0.8643828439515819
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            439.1205489685042,
+            193.6055211961853
+          ],
+          "selected_total_Q": 632.7260701646894,
+          "selected_fraction_of_total_Q": 0.7920194590785927
+        }
+      }
+    },
+    "pair_rotated_fine": {
+      "id": "pair_rotated_fine",
+      "case": {
+        "id": "pair_rotated_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "angle": 0.3
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.8769252124998,
+      "initial_E": 742.4080352619308,
+      "initial_EQ": 0.9293146564027388,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 3.7192471324942744e-13,
+      "max_relative_E_drift": 5.466032483192329e-06,
+      "endpoint_Qnegative": 5.239818702172694e-05,
+      "endpoint_maxF2": 4.087085523018932,
+      "endpoint_minS": 0.03109207453112454,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        259.71873628967387,
+        519.4113410226785
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9863861012672107,
+          0.9864565649580745
+        ],
+        [
+          0.8941987335506335,
+          0.8945758568164093
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.004622159024855,
+          1.0502276527023007
+        ],
+        [
+          1.100369341401058,
+          1.3036663697179565
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -8.671909476667933,
+          -4.911064991171636e-15,
+          -28.11346068035559
+        ],
+        [
+          4.677958448405392,
+          1.437896329129027e-15,
+          15.16250622089384
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9749002630627221,
+      "minimum_late_separation": 30.991033030170122,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            495.5424181336791,
+            238.6463969515922
+          ],
+          "selected_total_Q": 734.1888150852714,
+          "selected_fraction_of_total_Q": 0.9190261877822775
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.9798689347118,
+            219.227596510769
+          ],
+          "selected_total_Q": 691.2074654454808,
+          "selected_fraction_of_total_Q": 0.8652239708408411
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            438.6610535643883,
+            192.8579320630905
+          ],
+          "selected_total_Q": 631.5189856274787,
+          "selected_fraction_of_total_Q": 0.7905084822164513
+        }
+      }
+    },
+    "pair_negative_fine": {
+      "id": "pair_negative_fine",
+      "case": {
+        "id": "pair_negative_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "eps": -0.05
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.877601703678,
+      "initial_E": 744.4462624979751,
+      "initial_EQ": 0.9318652330599542,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 4.907185768843192e-13,
+      "max_relative_E_drift": 5.280821027464633e-06,
+      "endpoint_Qnegative": 0.002688366162489705,
+      "endpoint_maxF2": 4.068111329248415,
+      "endpoint_minS": 0.03527959660766035,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        263.67785957080116,
+        511.92593675258297
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.978430597233943,
+          0.9785546327326908
+        ],
+        [
+          0.8976816795648386,
+          0.8988589484142879
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.006487204438203,
+          1.060054681479407
+        ],
+        [
+          1.254217689911158,
+          1.3419700407096833
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -10.30585857165796,
+          -11.37587299532323,
+          -21.33382308720473
+        ],
+        [
+          5.228303952344075,
+          5.712991464256193,
+          11.42276937868398
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9698102901587121,
+      "minimum_late_separation": 27.784298891474602,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            485.9660170585792,
+            241.3180654616986
+          ],
+          "selected_total_Q": 727.2840825202778,
+          "selected_fraction_of_total_Q": 0.910382367673445
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            462.4056397452928,
+            221.3236319124298
+          ],
+          "selected_total_Q": 683.7292716577226,
+          "selected_fraction_of_total_Q": 0.8558623626443008
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            428.7521706953178,
+            194.6867676661334
+          ],
+          "selected_total_Q": 623.4389383614512,
+          "selected_fraction_of_total_Q": 0.7803935634594233
+        }
+      }
+    },
+    "production_coarse": {
+      "id": "production_coarse",
+      "case": {
+        "id": "production_coarse",
+        "case": "condensate",
+        "h": 1,
+        "L": 32,
+        "T": 240,
+        "eps": 0.005,
+        "sample": 10
+      },
+      "N": 64,
+      "Nz": 64,
+      "initial_Q": 57694.01749228421,
+      "initial_E": 54482.86001487536,
+      "initial_EQ": 0.9443415865806485,
+      "last_t": 240.0,
+      "max_relative_Q_drift": 4.218847493575595e-15,
+      "max_relative_E_drift": 2.76205051227274e-05,
+      "endpoint_Qnegative": 6.517781613619885,
+      "endpoint_maxF2": 6.093486309215974,
+      "endpoint_minS": -0.1758832837620011,
+      "conservation_pass": true,
+      "components": {
+        "0.02": {
+          "count": 315,
+          "largest_Q": [
+            46158.6151516399,
+            1960.932365066738,
+            56.76109140349636,
+            41.21294321872281,
+            40.80863203770295,
+            40.06859943895905,
+            39.97006511288961,
+            34.82690362871521,
+            34.52702930254988,
+            29.85248157887899,
+            27.41564797059404,
+            26.38110610761588
+          ],
+          "selected_total_Q": 49169.489394781325,
+          "selected_fraction_of_total_Q": 0.8522458918961064
+        },
+        "0.05": {
+          "count": 105,
+          "largest_Q": [
+            11734.51346862861,
+            4994.22159124939,
+            4650.518430568291,
+            2938.275143228317,
+            2372.39374934911,
+            2361.18066973787,
+            1883.234104135134,
+            1742.040619123344,
+            1551.682180277922,
+            1488.665343122492,
+            1347.139892694152,
+            1099.420591989218
+          ],
+          "selected_total_Q": 43328.13858079927,
+          "selected_fraction_of_total_Q": 0.7509988117328424
+        },
+        "0.1": {
+          "count": 29,
+          "largest_Q": [
+            7858.325679630234,
+            4744.720453466275,
+            4399.89335375246,
+            3054.292842992798,
+            2733.452519803935,
+            2202.245846599136,
+            2175.487274852645,
+            1728.447771252842,
+            1632.749667763998,
+            1432.043669402335,
+            1374.35571605604,
+            1219.276291977425
+          ],
+          "selected_total_Q": 39718.352018993595,
+          "selected_fraction_of_total_Q": 0.6884310322869331
+        }
+      }
+    },
+    "production_medium": {
+      "id": "production_medium",
+      "case": {
+        "id": "production_medium",
+        "case": "condensate",
+        "h": 0.6666666666666666,
+        "L": 32,
+        "T": 240,
+        "eps": 0.005,
+        "sample": 10
+      },
+      "N": 96,
+      "Nz": 96,
+      "initial_Q": 57694.01749228396,
+      "initial_E": 54482.86832205307,
+      "initial_EQ": 0.9443417305674657,
+      "last_t": 240.0,
+      "max_relative_Q_drift": 9.547918011776346e-15,
+      "max_relative_E_drift": 2.5646243648758116e-05,
+      "endpoint_Qnegative": 5.391235528534211,
+      "endpoint_maxF2": 6.050767714785863,
+      "endpoint_minS": -0.1045404995680094,
+      "conservation_pass": true,
+      "components": {
+        "0.02": {
+          "count": 281,
+          "largest_Q": [
+            47795.19499117907,
+            262.0360504772394,
+            78.01230875063551,
+            58.10648347525522,
+            53.88782831030101,
+            50.11897469477547,
+            49.84462980613512,
+            34.0846070985618,
+            32.38717500479704,
+            30.52857547300997,
+            26.47167988195676,
+            21.47500925195136
+          ],
+          "selected_total_Q": 49127.84210694519,
+          "selected_fraction_of_total_Q": 0.8515240269671909
+        },
+        "0.05": {
+          "count": 119,
+          "largest_Q": [
+            10865.32800002111,
+            6068.16969980721,
+            5605.287877663413,
+            4480.478050548199,
+            3855.805275183833,
+            2174.699209957999,
+            1773.351302589387,
+            1704.089607509423,
+            1449.103490153145,
+            858.0165365193313,
+            849.9018358400364,
+            849.6850603480402
+          ],
+          "selected_total_Q": 43302.20650748272,
+          "selected_fraction_of_total_Q": 0.7505493357829344
+        },
+        "0.1": {
+          "count": 36,
+          "largest_Q": [
+            7300.454169646347,
+            5200.355393748539,
+            4247.322543137624,
+            3980.077896927038,
+            3607.456977042636,
+            2875.514396526802,
+            2019.921936495204,
+            1676.334837374168,
+            1567.756738882284,
+            1563.727610081793,
+            1335.053877777233,
+            770.6719716989792
+          ],
+          "selected_total_Q": 39570.9781656869,
+          "selected_fraction_of_total_Q": 0.6858766278666442
+        }
+      }
+    },
+    "production_fine": {
+      "id": "production_fine",
+      "case": {
+        "id": "production_fine",
+        "case": "condensate",
+        "h": 0.5,
+        "L": 32,
+        "T": 240,
+        "eps": 0.005,
+        "sample": 10
+      },
+      "N": 128,
+      "Nz": 128,
+      "initial_Q": 57694.01749228379,
+      "initial_E": 54482.87124628538,
+      "initial_EQ": 0.9443417812526597,
+      "last_t": 240.0,
+      "max_relative_Q_drift": 1.0880185641326534e-14,
+      "max_relative_E_drift": 2.486257090206223e-05,
+      "endpoint_Qnegative": 5.720547416235997,
+      "endpoint_maxF2": 5.683727375791056,
+      "endpoint_minS": -0.1074185814444996,
+      "conservation_pass": true,
+      "components": {
+        "0.02": {
+          "count": 248,
+          "largest_Q": [
+            48853.7618075347,
+            81.92124980753253,
+            51.4343711654506,
+            38.07337183909353,
+            35.08947435483484,
+            32.59338568868506,
+            31.91724469388885,
+            31.20460013960125,
+            25.26489638257873,
+            23.52945023701421,
+            22.26845657722378,
+            18.77601581393379
+          ],
+          "selected_total_Q": 49685.56874965937,
+          "selected_fraction_of_total_Q": 0.8611910022786071
+        },
+        "0.05": {
+          "count": 111,
+          "largest_Q": [
+            15199.12670968118,
+            14336.61084299077,
+            3744.680707233701,
+            3253.922119275293,
+            1516.551156850481,
+            1438.687829472856,
+            1434.040217910411,
+            956.8336509826295,
+            427.5741568041898,
+            224.9261859857236,
+            224.7637466602308,
+            190.2906542274347
+          ],
+          "selected_total_Q": 43730.0269607961,
+          "selected_fraction_of_total_Q": 0.7579646705422224
+        },
+        "0.1": {
+          "count": 39,
+          "largest_Q": [
+            12460.11946241961,
+            5774.994893464405,
+            4589.156056836511,
+            3454.498381948445,
+            3043.830892775253,
+            2789.346790224329,
+            1414.914892456051,
+            1336.121683809291,
+            1334.164959559118,
+            796.4748185073878,
+            744.9385695389445,
+            722.9944134971541
+          ],
+          "selected_total_Q": 39803.34289230277,
+          "selected_fraction_of_total_Q": 0.6899041637657876
+        }
+      }
+    },
+    "impact_coarse": {
+      "id": "impact_coarse",
+      "case": {
+        "id": "impact_coarse",
+        "case": "pair",
+        "h": 0.75,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "extra": {
+          "--impact": 0.02
+        }
+      },
+      "N": 64,
+      "Nz": 128,
+      "initial_Q": 798.8769253116801,
+      "initial_E": 741.076759268535,
+      "initial_EQ": 0.9276482218827456,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 4.973799150320701e-14,
+      "max_relative_E_drift": 5.345007739410157e-06,
+      "endpoint_Qnegative": 6.35033395145509e-05,
+      "endpoint_maxF2": 4.094215601124095,
+      "endpoint_minS": 0.03486383031150433,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        261.08070844672665,
+        517.1072592072347
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9820245485077705,
+          0.982093471888023
+        ],
+        [
+          0.893138282721805,
+          0.8936460289133344
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0041069258767379,
+          1.0577352405228213
+        ],
+        [
+          1.0178741217647336,
+          1.2867454813436456
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.2745210384868678,
+          1.401761928908482e-15,
+          -27.98262366543137
+        ],
+        [
+          0.1466776476581453,
+          -2.32445829953204e-15,
+          15.20527656259588
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.973658599008769,
+      "minimum_late_separation": 29.594965479776466,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            491.9608854997626,
+            239.6050124646787
+          ],
+          "selected_total_Q": 731.5658979644413,
+          "selected_fraction_of_total_Q": 0.9157429320906001
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            469.377828668702,
+            219.7420097802638
+          ],
+          "selected_total_Q": 689.1198384489658,
+          "selected_fraction_of_total_Q": 0.8626107684611207
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            434.257575734512,
+            194.3443941614784
+          ],
+          "selected_total_Q": 628.6019698959904,
+          "selected_fraction_of_total_Q": 0.7868570864664074
+        }
+      }
+    },
+    "impact_medium": {
+      "id": "impact_medium",
+      "case": {
+        "id": "impact_medium",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "extra": {
+          "--impact": 0.02
+        }
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8769251727787,
+      "initial_E": 742.060187901701,
+      "initial_EQ": 0.9288792359864575,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.7208456881689926e-13,
+      "max_relative_E_drift": 5.448635377658384e-06,
+      "endpoint_Qnegative": 4.38396037427761e-05,
+      "endpoint_maxF2": 4.085148679200449,
+      "endpoint_minS": 0.03222630129208733,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.1301773427395,
+        518.725305202284
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9851821815458551,
+          0.9852703869613416
+        ],
+        [
+          0.8939074614395438,
+          0.8943574393249194
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0016290781033894,
+          1.0513809267947651
+        ],
+        [
+          1.0711397526878739,
+          1.3054440790779078
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.2822825916843986,
+          1.371414105836019e-15,
+          -29.01883792446101
+        ],
+        [
+          0.150460895017204,
+          1.728293449498168e-15,
+          15.68658944812002
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9745546773194681,
+      "minimum_late_separation": 30.604813775198092,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.0940895921122,
+            238.2875318713277
+          ],
+          "selected_total_Q": 732.3816214634398,
+          "selected_fraction_of_total_Q": 0.9167640200711049
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            470.7765457044823,
+            218.5867535988991
+          ],
+          "selected_total_Q": 689.3632993033814,
+          "selected_fraction_of_total_Q": 0.8629155225059079
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.3770709552239,
+            192.4271259988661
+          ],
+          "selected_total_Q": 629.80419695409,
+          "selected_fraction_of_total_Q": 0.7883619830650107
+        }
+      }
+    },
+    "impact_fine": {
+      "id": "impact_fine",
+      "case": {
+        "id": "impact_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "extra": {
+          "--impact": 0.02
+        }
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.8769252008188,
+      "initial_E": 742.4069335195154,
+      "initial_EQ": 0.9293132773022476,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 3.8746783559417963e-13,
+      "max_relative_E_drift": 5.468776280714849e-06,
+      "endpoint_Qnegative": 3.147244848304622e-05,
+      "endpoint_maxF2": 4.070679721196667,
+      "endpoint_minS": 0.03157738630395448,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        259.86822817047084,
+        519.2015337458629
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9862358994143362,
+          0.9863287315975511
+        ],
+        [
+          0.8941859520788724,
+          0.8946128362590103
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.000611374516435,
+          1.0487840728649058
+        ],
+        [
+          1.101441791010225,
+          1.3062347504552598
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.2848307823111607,
+          5.6571742557797e-15,
+          -29.37069437949899
+        ],
+        [
+          0.1517232143989312,
+          -2.276764995960952e-15,
+          15.85079496826079
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9748453483277081,
+      "minimum_late_separation": 30.95085324609214,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.7560571203946,
+            238.1061750999458
+          ],
+          "selected_total_Q": 732.8622322203404,
+          "selected_fraction_of_total_Q": 0.9173656280485458
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.0620525018748,
+            218.0064182479227
+          ],
+          "selected_total_Q": 689.0684707497975,
+          "selected_fraction_of_total_Q": 0.8625464686898823
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.4380723035619,
+            191.527086796105
+          ],
+          "selected_total_Q": 628.965159099667,
+          "selected_fraction_of_total_Q": 0.7873117113021633
+        }
+      }
+    },
+    "impact_half_fine": {
+      "id": "impact_half_fine",
+      "case": {
+        "id": "impact_half_fine",
+        "case": "pair",
+        "h": 0.375,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "extra": {
+          "--impact": 0.01
+        }
+      },
+      "N": 128,
+      "Nz": 256,
+      "initial_Q": 798.8769251572079,
+      "initial_E": 742.4069334795843,
+      "initial_EQ": 0.929313277302995,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 3.588240815588506e-13,
+      "max_relative_E_drift": 5.4688479210751595e-06,
+      "endpoint_Qnegative": 2.955379158447963e-05,
+      "endpoint_maxF2": 4.067157459751578,
+      "endpoint_minS": 0.03178879480205877,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        259.86772124186115,
+        519.2026329748445
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9862376690066437,
+          0.9863303896356875
+        ],
+        [
+          0.894185498084575,
+          0.8946122463161909
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0006178586286998,
+          1.048779770225732
+        ],
+        [
+          1.1013308741864969,
+          1.3061517844832415
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.1423990854189094,
+          1.155214149118832e-14,
+          -29.37242862153086
+        ],
+        [
+          0.0758183360948051,
+          3.391069078740753e-15,
+          15.85169831308544
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9748463671566328,
+      "minimum_late_separation": 30.951529936437773,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.7337063986216,
+            238.0502544708748
+          ],
+          "selected_total_Q": 732.7839608694965,
+          "selected_fraction_of_total_Q": 0.9172676513660659
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.0025397193586,
+            217.9237354388597
+          ],
+          "selected_total_Q": 688.9262751582182,
+          "selected_fraction_of_total_Q": 0.862368474371252
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.7589806113149,
+            191.7090545245716
+          ],
+          "selected_total_Q": 629.4680351358865,
+          "selected_fraction_of_total_Q": 0.7879411900800813
+        }
+      }
+    },
+    "impact_box": {
+      "id": "impact_box",
+      "case": {
+        "id": "impact_box",
+        "case": "pair",
+        "h": 0.5,
+        "L": 30,
+        "Lz": 60,
+        "T": 160,
+        "extra": {
+          "--impact": 0.02
+        }
+      },
+      "N": 120,
+      "Nz": 240,
+      "initial_Q": 798.8769251731796,
+      "initial_E": 742.0601879012289,
+      "initial_EQ": 0.9288792359854003,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 3.055333763768431e-13,
+      "max_relative_E_drift": 5.448521117945582e-06,
+      "endpoint_Qnegative": 2.276615432628103e-05,
+      "endpoint_maxF2": 4.093912628370716,
+      "endpoint_minS": 0.0319239433839526,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.0075008817797,
+        518.3905371258644
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.9851244318586183,
+          0.9851742959624191
+        ],
+        [
+          0.8936888115452817,
+          0.8943075284357138
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0005508658007223,
+          1.051329937729867
+        ],
+        [
+          1.0695448032663266,
+          1.303213959910806
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.2819253477388503,
+          8.19710168613102e-15,
+          -29.01915235603826
+        ],
+        [
+          0.1505981740467922,
+          -5.17039837866255e-15,
+          15.6861444774113
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9736300371465266,
+      "minimum_late_separation": 30.6046906877563,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.8074239343568,
+            238.7937857779805
+          ],
+          "selected_total_Q": 733.6012097123373,
+          "selected_fraction_of_total_Q": 0.9182906485292563
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            471.7556997025117,
+            219.3549776484806
+          ],
+          "selected_total_Q": 691.1106773509923,
+          "selected_fraction_of_total_Q": 0.8651028156823708
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            438.3585265315816,
+            193.4903136890208
+          ],
+          "selected_total_Q": 631.8488402206024,
+          "selected_fraction_of_total_Q": 0.7909213801407906
+        }
+      }
+    },
+    "impact_dt": {
+      "id": "impact_dt",
+      "case": {
+        "id": "impact_dt",
+        "case": "pair",
+        "h": 0.5,
+        "L": 24,
+        "Lz": 48,
+        "T": 160,
+        "dt": 0.025,
+        "extra": {
+          "--impact": 0.02
+        }
+      },
+      "N": 96,
+      "Nz": 192,
+      "initial_Q": 798.8769251727786,
+      "initial_E": 742.060187901701,
+      "initial_EQ": 0.9288792359864577,
+      "last_t": 160.0,
+      "max_relative_Q_drift": 1.7319479184152442e-13,
+      "max_relative_E_drift": 1.3704786857582363e-06,
+      "endpoint_Qnegative": 4.505764713178731e-05,
+      "endpoint_maxF2": 4.086848317269186,
+      "endpoint_minS": 0.03220843877648163,
+      "conservation_pass": true,
+      "late_core_Q12_means": [
+        260.1512647843713,
+        518.7114424160591
+      ],
+      "late_core_EQ12_ranges": [
+        [
+          0.985175875407999,
+          0.985264044955151
+        ],
+        [
+          0.8939114575217546,
+          0.894360909656169
+        ]
+      ],
+      "late_core_anisotropy_ranges": [
+        [
+          1.0016250818271595,
+          1.0514141693172436
+        ],
+        [
+          1.0697832781532872,
+          1.3051067054494987
+        ]
+      ],
+      "endpoint_centers": [
+        [
+          -0.2822338324328989,
+          4.442604977830541e-15,
+          -29.01187136948947
+        ],
+        [
+          0.1504466473223962,
+          2.178040614114506e-15,
+          15.68504139936058
+        ]
+      ],
+      "minimum_late_Q12_fraction": 0.9745647224681332,
+      "minimum_late_separation": 30.59805694198629,
+      "retention_pass": true,
+      "components": {
+        "0.02": {
+          "count": 2,
+          "largest_Q": [
+            494.107921917367,
+            238.3546844894081
+          ],
+          "selected_total_Q": 732.4626064067751,
+          "selected_fraction_of_total_Q": 0.916865393562795
+        },
+        "0.05": {
+          "count": 2,
+          "largest_Q": [
+            470.8169073486754,
+            218.5764306750554
+          ],
+          "selected_total_Q": 689.3933380237308,
+          "selected_fraction_of_total_Q": 0.8629531236925275
+        },
+        "0.1": {
+          "count": 2,
+          "largest_Q": [
+            437.441916119964,
+            192.3740975202554
+          ],
+          "selected_total_Q": 629.8160136402194,
+          "selected_fraction_of_total_Q": 0.7883767746877965
+        }
+      }
+    }
+  },
+  "grid_comparisons": {
+    "single_reference": {
+      "coarse_medium": {
+        "cases": [
+          "single_reference_coarse",
+          "single_reference_medium"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          5.1937691096604566e-05,
+          5.1937691096604566e-05
+        ]
+      },
+      "medium_fine": {
+        "cases": [
+          "single_reference_medium",
+          "single_reference_fine"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          9.77012741410823e-06,
+          9.77012741410823e-06
+        ]
+      },
+      "charge_convergence_pass": true
+    },
+    "single_generic": {
+      "coarse_medium": {
+        "cases": [
+          "single_generic_coarse",
+          "single_generic_medium"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          3.9364774349019474e-05,
+          3.9364774349019474e-05
+        ]
+      },
+      "medium_fine": {
+        "cases": [
+          "single_generic_medium",
+          "single_generic_fine"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          1.8129534918629877e-05,
+          1.8129534918629877e-05
+        ]
+      },
+      "charge_convergence_pass": true
+    },
+    "pair_reference": {
+      "coarse_medium": {
+        "cases": [
+          "pair_reference_coarse",
+          "pair_reference_medium"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          0.0012162103246337375,
+          0.0021426712146751644
+        ],
+        "maximum_late_relative_shift_amplification_relative_difference": 0.028961733832516625
+      },
+      "medium_fine": {
+        "cases": [
+          "pair_reference_medium",
+          "pair_reference_fine"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          0.0003321940247530954,
+          0.0006406412292943046
+        ],
+        "maximum_late_relative_shift_amplification_relative_difference": 0.009578528140430776
+      },
+      "charge_convergence_pass": true,
+      "relative_shift_norm_convergence_pass": true
+    },
+    "pair_generic": {
+      "coarse_medium": {
+        "cases": [
+          "pair_generic_coarse",
+          "pair_generic_medium"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          0.002343752960775424,
+          0.003365422921186904
+        ]
+      },
+      "medium_fine": {
+        "cases": [
+          "pair_generic_medium",
+          "pair_generic_fine"
+        ],
+        "maximum_late_Q12_difference_over_initial_Q": [
+          0.0006901841240702136,
+          0.0010203267057248896
+        ]
+      },
+      "charge_convergence_pass": true
+    }
+  },
+  "time_boundary_controls": {
+    "single_box": {
+      "cases": [
+        "single_generic_medium",
+        "single_generic_box"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        0.0002229086129698327,
+        0.0002229086129698327
+      ],
+      "charge_control_pass": true
+    },
+    "single_dt": {
+      "cases": [
+        "single_generic_medium",
+        "single_generic_dt"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        1.5055285740314655e-06,
+        1.5055285740314655e-06
+      ],
+      "charge_control_pass": true
+    },
+    "pair_box": {
+      "cases": [
+        "pair_reference_medium",
+        "pair_reference_box"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        0.0002586842179736888,
+        0.0006678304935950041
+      ],
+      "maximum_late_relative_shift_amplification_relative_difference": 0.006181571913036319,
+      "charge_control_pass": true,
+      "relative_shift_control_pass": true
+    },
+    "pair_dt": {
+      "cases": [
+        "pair_reference_medium",
+        "pair_reference_dt"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        2.709841766118695e-05,
+        1.902701857242959e-05
+      ],
+      "maximum_late_relative_shift_amplification_relative_difference": 0.0003364018042460607,
+      "charge_control_pass": true,
+      "relative_shift_control_pass": true
+    }
+  },
+  "whole_event_rotation_control": {
+    "medium": {
+      "cases": [
+        "pair_reference_medium",
+        "pair_rotated_medium"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        0.00036898159296625357,
+        0.000607737814267798
+      ]
+    },
+    "fine": {
+      "cases": [
+        "pair_reference_fine",
+        "pair_rotated_fine"
+      ],
+      "maximum_late_Q12_difference_over_initial_Q": [
+        0.00024012058188973575,
+        0.0004318375612194772
+      ]
+    },
+    "decreasing_charge_difference": true
+  },
+  "large_domain_original_m1": [
+    {
+      "h": 0.25,
+      "last_t": 160,
+      "endpoint_amplification": [
+        0.5971643914746493,
+        1.3073482074097964,
+        9.063794494860602
+      ],
+      "endpoint_symmetry_residual": [
+        0.4427691925902056,
+        0.2866340585717031
+      ],
+      "late_core_shape": [
+        {
+          "z": -29.625,
+          "raw": 3998.147274152491,
+          "translation_norm": 28.08634102877218,
+          "dot": 335.09981608684836,
+          "fitted_displacement": 11.931059860861398,
+          "remaining_shape_norm": 0.22651502523635927,
+          "fraction_explained_by_translation": 0.9999871667917314
+        },
+        {
+          "z": 15.875,
+          "raw": 2911.955161120404,
+          "translation_norm": 62.596206152477315,
+          "dot": -426.51409399049845,
+          "fitted_displacement": -6.813737128917336,
+          "remaining_shape_norm": 2.408369342689406,
+          "fraction_explained_by_translation": 0.9980081276771534
+        }
+      ],
+      "wall_seconds": 877.801
+    },
+    {
+      "h": 0.3333333333333333,
+      "last_t": 160,
+      "endpoint_amplification": [
+        0.3273980887113868,
+        0.9579441348573583,
+        7.970893091768341
+      ],
+      "endpoint_symmetry_residual": [
+        0.7367582806614027,
+        0.4780780124583811
+      ],
+      "late_core_shape": [
+        {
+          "z": -29.5,
+          "raw": 2942.2892748263107,
+          "translation_norm": 28.08138748660015,
+          "dot": 287.4391669700796,
+          "fitted_displacement": 10.235931793157997,
+          "remaining_shape_norm": 0.28559943701395935,
+          "fraction_explained_by_translation": 0.9999722776957655
+        },
+        {
+          "z": 15.833333333333314,
+          "raw": 2411.5407096823446,
+          "translation_norm": 62.603813673533594,
+          "dot": -388.11035851086575,
+          "fitted_displacement": -6.199468302918156,
+          "remaining_shape_norm": 2.3372727825461186,
+          "fraction_explained_by_translation": 0.9977347079242339
+        }
+      ],
+      "wall_seconds": 366.144
+    },
+    {
+      "h": 0.5,
+      "last_t": 160,
+      "endpoint_amplification": [
+        0.42991482636272976,
+        0.22529519025917746,
+        5.394845563659798
+      ],
+      "endpoint_symmetry_residual": [
+        1.3675576661931568,
+        0.8931860140833501
+      ],
+      "late_core_shape": [
+        {
+          "z": -28.75,
+          "raw": 1112.0559041987776,
+          "translation_norm": 28.067633260044175,
+          "dot": 176.65868628559997,
+          "fitted_displacement": 6.294035718967561,
+          "remaining_shape_norm": 0.3997782526936015,
+          "fraction_explained_by_translation": 0.9998562818193553
+        },
+        {
+          "z": 15.75,
+          "raw": 1350.3067117364917,
+          "translation_norm": 62.3690642163407,
+          "dot": -289.704578902029,
+          "fitted_displacement": -4.6450044191319835,
+          "remaining_shape_norm": 2.151200244932258,
+          "fraction_explained_by_translation": 0.9965728804770247
+        }
+      ],
+      "wall_seconds": 128.84
+    }
+  ],
+  "direct_transverse": {
+    "cases": {
+      "impact_coarse": {
+        "endpoint_x_over_impact": [
+          -13.726051924343391,
+          7.333882382907265
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.11738779603390048,
+            "intercept": 5.073820109594842,
+            "maximum_fit_error": 0.017824668514155206,
+            "maximum_fit_error_over_response": 0.0012986012738697896
+          },
+          {
+            "slope_per_tau": 0.06234668100505872,
+            "intercept": -2.62284249155123,
+            "maximum_fit_error": 0.03013742325030666,
+            "maximum_fit_error_over_response": 0.004109340957055234
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          0.0003677269393085325,
+          0.000567155051903967
+        ],
+        "initial_Q_change_vs_reference": 1.484834477594177e-11,
+        "initial_E_change_vs_reference": -1.5782819495768763e-10
+      },
+      "impact_medium": {
+        "endpoint_x_over_impact": [
+          -14.114129584219931,
+          7.523044750860199
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.12075784400864291,
+            "intercept": 5.225118732126519,
+            "maximum_fit_error": 0.01867281263910847,
+            "maximum_fit_error_over_response": 0.0013229871900839922
+          },
+          {
+            "slope_per_tau": 0.06380207782964942,
+            "intercept": -2.681227640590137,
+            "maximum_fit_error": 0.022332358699356902,
+            "maximum_fit_error_over_response": 0.0029685266323589764
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          0.00010354317461502838,
+          0.00014511164799491105
+        ],
+        "initial_Q_change_vs_reference": -9.38038535736041e-12,
+        "initial_E_change_vs_reference": 5.1458393102166156e-11
+      },
+      "impact_fine": {
+        "endpoint_x_over_impact": [
+          -14.241539115558036,
+          7.58616071994656
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.1216776161267899,
+            "intercept": 5.2455546954945005,
+            "maximum_fit_error": 0.02011307780869309,
+            "maximum_fit_error_over_response": 0.0014122825942822956
+          },
+          {
+            "slope_per_tau": 0.06425126453716937,
+            "intercept": -2.6920425606244334,
+            "maximum_fit_error": 0.020047438863885603,
+            "maximum_fit_error_over_response": 0.0026426330266341664
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          9.526018896122146e-05,
+          0.00013698934318684408
+        ],
+        "initial_Q_change_vs_reference": 8.548384222706318e-11,
+        "initial_E_change_vs_reference": 8.423972630566823e-11
+      },
+      "impact_half_fine": {
+        "endpoint_x_over_impact": [
+          -14.239908541890939,
+          7.581833609480509
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.12172105518298375,
+            "intercept": 5.252184982172929,
+            "maximum_fit_error": 0.018796408189235336,
+            "maximum_fit_error_over_response": 0.001319980962935267
+          },
+          {
+            "slope_per_tau": 0.06415366855090056,
+            "intercept": -2.6787149597276994,
+            "maximum_fit_error": 0.020928757186537972,
+            "maximum_fit_error_over_response": 0.0027603820216218072
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          2.746760576544105e-05,
+          8.783035660520078e-05
+        ],
+        "initial_Q_change_vs_reference": 3.0893509972429456e-11,
+        "initial_E_change_vs_reference": 3.045363961007297e-11
+      },
+      "impact_box": {
+        "endpoint_x_over_impact": [
+          -14.096267386942515,
+          7.52990870233961
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.12056211778319369,
+            "intercept": 5.19832399977745,
+            "maximum_fit_error": 0.01124284941476894,
+            "maximum_fit_error_over_response": 0.0007975763445848993
+          },
+          {
+            "slope_per_tau": 0.06416034300609978,
+            "intercept": -2.7292102675299574,
+            "maximum_fit_error": 0.0138195023974923,
+            "maximum_fit_error_over_response": 0.0018352815344492102
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          9.896334325132372e-05,
+          0.00015725246459452613
+        ],
+        "initial_Q_change_vs_reference": -9.380163312755485e-12,
+        "initial_E_change_vs_reference": 5.145550652230213e-11
+      },
+      "impact_dt": {
+        "endpoint_x_over_impact": [
+          -14.111691621644944,
+          7.5223323661198105
+        ],
+        "late_fits": [
+          {
+            "slope_per_tau": -0.12073152694681656,
+            "intercept": 5.224370586356545,
+            "maximum_fit_error": 0.01935544623577634,
+            "maximum_fit_error_over_response": 0.0013715893710494896
+          },
+          {
+            "slope_per_tau": 0.06379252834878167,
+            "intercept": -2.6805883868469,
+            "maximum_fit_error": 0.02227139776908693,
+            "maximum_fit_error_over_response": 0.0029607037664802125
+          }
+        ],
+        "maximum_core_anisotropy_change_vs_reference": [
+          0.0001607988426934881,
+          0.00014896359374882984
+        ],
+        "initial_Q_change_vs_reference": -9.380496379662873e-12,
+        "initial_E_change_vs_reference": 5.1458393102166156e-11
+      }
+    },
+    "relative_response_differences": {
+      "coarse_medium": [
+        0.02749568491353685,
+        0.025144389567974483
+      ],
+      "medium_fine": [
+        0.008946331594098347,
+        0.008319882931086242
+      ],
+      "half_seed": [
+        0.00019124514117953618,
+        0.0005703953061095944
+      ],
+      "box": [
+        0.001265554292302035,
+        0.002271481680607717
+      ],
+      "dt": [
+        0.0003109117910810332,
+        0.00018163175233984407
+      ]
+    },
+    "checks": {
+      "space": true,
+      "linearization": true,
+      "box": true,
+      "time": true
+    },
+    "sign_note": "Cartesian --impact=.02 shifts left center -delta, right +delta; the original cylindrical relative-shift tangent has the opposite sign. Compare magnitudes or reverse the latter.",
+    "inference": "A converged centroid response and retained core charge/shape support finite scattering deflection over this interval; no asymptotic internal-growth exponent inferred."
+  },
+  "spectral": {
+    "base": {
+      "Omega": 0.8000000019763136,
+      "Qbar": 399.43846235341556,
+      "Ebar": 363.92299849416145,
+      "E_over_Q": 0.9110865196856514,
+      "bvp_nodes": 1298,
+      "max_rms_residual": 1.991419860277753e-08,
+      "Ibar": 499.29807670830746,
+      "minimum_F": 1.5128179713161738e-31,
+      "maximum_positive_Fprime": 0.0,
+      "minimum_Sprime": 0.0
+    },
+    "larger_domain": {
+      "Omega": 0.8000000019763136,
+      "Qbar": 399.43846235341795,
+      "Ebar": 363.92299849417066,
+      "E_over_Q": 0.911086519685669,
+      "bvp_nodes": 1498,
+      "max_rms_residual": 1.9914198587357596e-08,
+      "Ibar": 499.2980767083105,
+      "minimum_F": -2.7290276848690227e-34,
+      "maximum_positive_Fprime": 0.0,
+      "minimum_Sprime": 0.0
+    },
+    "radial_spectra": [
+      {
+        "R": 50,
+        "dr": 0.1,
+        "dimension": 998,
+        "phase_l0": [
+          -6.491132250516431e-05,
+          0.36435444624008073,
+          0.37739739278563017
+        ],
+        "phase_l0_residuals": [
+          3.321844604435115e-13,
+          1.4568410710180932e-12,
+          1.1438601834521258e-10
+        ],
+        "unconstrained_l0": [
+          -0.18899364010246003,
+          0.3643531893309071,
+          0.3774258846850415
+        ],
+        "unconstrained_l0_residuals": [
+          2.487035736205649e-13,
+          1.3470399654669907e-12,
+          1.166058358068472e-10
+        ],
+        "fixed_charge_l0": [
+          0.36434800237801285,
+          0.3773867255818034,
+          0.3990648337631559
+        ],
+        "fixed_charge_l0_residuals": [
+          4.972357188328433e-13,
+          2.271600852861349e-12,
+          4.286078162101036e-10
+        ],
+        "translation_l1": [
+          -0.0001705879013922929,
+          0.36813871083696664,
+          0.38432908237048313
+        ],
+        "translation_l1_residuals": [
+          4.16979424226574e-13,
+          5.599473667216977e-12,
+          2.78381381316404e-10
+        ],
+        "shape_l2": [
+          0.2853524361220647,
+          0.3733095017573121,
+          0.3933189326743131
+        ],
+        "shape_l2_residuals": [
+          4.668328980300973e-13,
+          1.5476040619933065e-11,
+          5.775963320754774e-10
+        ],
+        "translation_generator_residual": 0.0008119454132343081,
+        "phase_generator_residual": 0.00019922527180276346
+      },
+      {
+        "R": 50,
+        "dr": 0.05,
+        "dimension": 1998,
+        "phase_l0": [
+          -1.6225360403160198e-05,
+          0.36435500519026204,
+          0.3773997511966636
+        ],
+        "phase_l0_residuals": [
+          2.227078301466935e-12,
+          4.0086966039791795e-12,
+          3.308134807078405e-11
+        ],
+        "unconstrained_l0": [
+          -0.18888530539849516,
+          0.3643539001915381,
+          0.37742878246391176
+        ],
+        "unconstrained_l0_residuals": [
+          1.2607354845437029e-12,
+          3.122886001692792e-12,
+          3.6186965375602385e-11
+        ],
+        "fixed_charge_l0": [
+          0.364348690820722,
+          0.37738953587139185,
+          0.3990715045466856
+        ],
+        "fixed_charge_l0_residuals": [
+          4.078001734725903e-12,
+          4.323348644054317e-12,
+          6.579515374587494e-11
+        ],
+        "translation_l1": [
+          -4.262659426507208e-05,
+          0.36813881990699543,
+          0.38432994418599076
+        ],
+        "translation_l1_residuals": [
+          2.6470246827544847e-12,
+          4.888394580606807e-12,
+          4.287232563752753e-10
+        ],
+        "shape_l2": [
+          0.28545716862602005,
+          0.3733095768551497,
+          0.39331961613561095
+        ],
+        "shape_l2_residuals": [
+          4.588016195001895e-12,
+          1.118882405873268e-11,
+          6.867974947201578e-10
+        ],
+        "translation_generator_residual": 0.00020322933527181853,
+        "phase_generator_residual": 4.9835336149649626e-05
+      },
+      {
+        "R": 50,
+        "dr": 0.025,
+        "dimension": 3998,
+        "phase_l0": [
+          -4.056184984311979e-06,
+          0.36435514475813635,
+          0.37740034014795404
+        ],
+        "phase_l0_residuals": [
+          1.739983646640443e-11,
+          4.533260087368047e-11,
+          7.238138392661897e-10
+        ],
+        "unconstrained_l0": [
+          -0.1888582404650487,
+          0.36435407756967925,
+          0.37742950565594074
+        ],
+        "unconstrained_l0_residuals": [
+          9.051689931552679e-12,
+          4.8669024239417486e-11,
+          6.357234240904911e-10
+        ],
+        "fixed_charge_l0": [
+          0.3643488625917472,
+          0.3773902371796576,
+          0.39907316961468886
+        ],
+        "fixed_charge_l0_residuals": [
+          4.764744988630196e-11,
+          3.2492699801303795e-11,
+          9.563056402349719e-11
+        ],
+        "translation_l1": [
+          -1.065539303789765e-05,
+          0.368138847158332,
+          0.38433015951987576
+        ],
+        "translation_l1_residuals": [
+          1.5811784396348735e-11,
+          4.623743603935064e-11,
+          1.899170632668056e-10
+        ],
+        "shape_l2": [
+          0.2854833329113808,
+          0.37330959563190264,
+          0.39331978703097475
+        ],
+        "shape_l2_residuals": [
+          3.3482712835761705e-11,
+          3.9052425087065097e-11,
+          8.520543468999741e-11
+        ],
+        "translation_generator_residual": 5.085835197210629e-05,
+        "phase_generator_residual": 1.2499953156199456e-05
+      },
+      {
+        "R": 60,
+        "dr": 0.05,
+        "dimension": 2398,
+        "phase_l0": [
+          -1.622536047720312e-05,
+          0.3629745476330486,
+          0.3718901675307198
+        ],
+        "phase_l0_residuals": [
+          1.9009772241383305e-12,
+          8.049823583152406e-12,
+          6.284826710644336e-10
+        ],
+        "unconstrained_l0": [
+          -0.18888530539834014,
+          0.36297338557091136,
+          0.37189889243375873
+        ],
+        "unconstrained_l0_residuals": [
+          1.1197422432821988e-12,
+          6.026971718396966e-12,
+          4.4731537180469615e-10
+        ],
+        "fixed_charge_l0": [
+          0.3629706771223643,
+          0.3718814744655127,
+          0.3867188706925469
+        ],
+        "fixed_charge_l0_residuals": [
+          5.61013133870435e-12,
+          5.399260635440784e-12,
+          1.143636415890328e-10
+        ],
+        "translation_l1": [
+          -4.262659487123791e-05,
+          0.36563424590527777,
+          0.37677315235646036
+        ],
+        "translation_l1_residuals": [
+          2.127114385713424e-12,
+          4.791316670621369e-12,
+          1.1359040583752959e-10
+        ],
+        "shape_l2": [
+          0.2854571686248405,
+          0.36923388649738487,
+          0.38305437059016706
+        ],
+        "shape_l2_residuals": [
+          4.836166658881816e-12,
+          1.0765391565769131e-11,
+          9.824748959997893e-11
+        ],
+        "translation_generator_residual": 0.00020322933527183967,
+        "phase_generator_residual": 4.983533615258752e-05
+      }
+    ],
+    "nearby_profiles": [
+      {
+        "Omega": 0.7980000019763136,
+        "Qbar": 407.756193069544,
+        "Ebar": 370.56882125738224,
+        "E_over_Q": 0.908799982822531,
+        "bvp_nodes": 1301,
+        "max_rms_residual": 1.9375455153086563e-08,
+        "Ibar": 510.9726717540122,
+        "minimum_F": 2.205189786323385e-32,
+        "maximum_positive_Fprime": 0.0,
+        "minimum_Sprime": 0.0
+      },
+      {
+        "Omega": 0.8020000019763136,
+        "Qbar": 391.38007975154085,
+        "Ebar": 357.4682763793525,
+        "E_over_Q": 0.9133532718534972,
+        "bvp_nodes": 1299,
+        "max_rms_residual": 1.989003043326842e-08,
+        "Ibar": 488.0050857694386,
+        "minimum_F": -1.9740781929969167e-31,
+        "maximum_positive_Fprime": 0.0,
+        "minimum_Sprime": 0.0
+      }
+    ],
+    "dQ_dOmega_centered": -4094.028329500787,
+    "interpretation": "Numerical local constrained-energy minimum at one isolated stationary branch, modulo phase and translations, supported by analytic angular ordering; not a global-minimizer certificate or a finite-collision Lyapunov exponent."
+  },
+  "empirical_geometric": {
+    "target": {
+      "observable": "H0, km/s/Mpc",
+      "mean": 73.9,
+      "sigma": 3.0,
+      "source": "Pesce et al., The Megamaser Cosmology Project. XIII. Combined Hubble Constant Constraints, ApJL 891 L1 (2020), doi:10.3847/2041-8213/ab75f0",
+      "url": "https://arxiv.org/abs/2001.09213",
+      "measurement": "Six geometric megamaser distances and velocities, 250 km/s peculiar-velocity uncertainty; independent of CMB and distance ladder",
+      "published_peculiar_velocity_central_value_range": [
+        71.8,
+        76.9
+      ],
+      "role": "Held out from all parameter calibration; additive external constraint, not blind, no new raw maser likelihood fit"
+    },
+    "prediction_sha256": "5116dc75862fe2ec4865489c4b9e619ed465cd900bbe8aea82d22474454d0768",
+    "H0_predicted_lower_bound": 116.66353672494776,
+    "H0_conservative_lower_bound": 113.25181751823035,
+    "observed_3sigma_upper": 82.9,
+    "incompatible_at_conservative_edges": true,
+    "derived_nominal_constraint_mX_times_YQ_over_YB_GeV": 39.126603311014264,
+    "no_refit": "Keep and reject 100 GeV, YQ=YB, flat nonnegative-energy preparation. Positive Lambda increases predicted H0 minimum.",
+    "statistical_limit": "Comparison to published inferred H0 with conservative edges. No Gaussian sigma detection/exclusion significance and no new maser-likelihood analysis claimed."
+  },
+  "empirical_cold_matter": {
+    "target": {
+      "role": "Comparison only; never read by prediction()",
+      "observable": "omega_c = Omega_c h^2",
+      "mean": 0.12,
+      "sigma": 0.0012,
+      "assumptions": "Planck 2018 TT,TE,EE+lowE+lensing base LambdaCDM, baseline Plik; hidden relic interpreted as cold, collisionless gravitating matter",
+      "source": "Planck Collaboration, A&A 641, A6 (2020), arXiv:1807.06209v4, Tables 1/2 and matter-density result",
+      "url": "https://arxiv.org/html/1807.06209v4",
+      "not_blind": "Published and already known; held out from calibration/parameter fitting only. This is a conditional external-constraint comparison, not a fresh raw CMB likelihood fit or an independent detection."
+    },
+    "prediction_sha256": "d69bdb12ae3c1d924d332b6b1bbbcc45e818d07ce0012c6b67408e7d1bd7c115",
+    "nominal_minimum_overproduction_factor": 11.155900667644364,
+    "BBN_3sigma_and_mass_allowance_floor": 1.2613474171182546,
+    "target_3sigma_upper": 0.1236,
+    "conservative_overproduction_factor": 10.20507619027714,
+    "excluded_under_stated_cosmology": true,
+    "derived_constraint_mX_times_YQ_over_YB_GeV": 8.963866117061404,
+    "no_refit": "The 100 GeV / YQ=YB point is retained and rejected; derived constraint is not fed back to select a new mass.",
+    "missing_for_positive_empirical_success": [
+      "Derived/calibrated hidden charge production or independently constrained initial yield",
+      "Late relic distribution, equation of state and survival under cosmological evolution",
+      "Direct forward CMB or another observable likelihood for an independently fixed viable point"
+    ]
+  },
+  "claim_boundaries": [
+    "Finite generic-perturbation family, tau160, three-field D=0 flat classical sector, not universal survival or a quantum lifetime.",
+    "Numerical fixed-Q isolated-branch Hessian plus analytic angular ordering, not a rigorous global minimizer theorem.",
+    "Symmetry residuals must converge before using a raw canonical m1 norm as internal-instability evidence.",
+    "One conditional cosmological preparation is rejected; no viable empirically validated GRUT point established."
+  ]
+}

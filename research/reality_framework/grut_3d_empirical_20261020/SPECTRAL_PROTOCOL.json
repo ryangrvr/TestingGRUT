@@ -1,0 +1,27 @@
+{
+  "local_freeze_unix": 1792517955.285743,
+  "public_preregistration": false,
+  "source_sha256": "cad34d6d1887185099e1855c9f78bf372f4df15c90ac28e9f7f31077263fb194",
+  "grids": [
+    [
+      50,
+      0.1
+    ],
+    [
+      50,
+      0.05
+    ],
+    [
+      50,
+      0.025
+    ],
+    [
+      60,
+      0.05
+    ]
+  ],
+  "omega": 0.8000000019763136,
+  "criteria": "Fixed-Q l=0 lowest eigenvalue positive and convergent; l=1 translation and l=0 phase approach zero as O(dr^2); l=2 positive. Inspect all residuals. Angular operator ordering extends l>=2 and l>=1 phase sectors. No claim of computer-assisted rigorous spectral enclosure.",
+  "mathematics": "Hminus_l=-d_r^2+l(l+1)/r^2+S^2+b F^2-Omega^2; Hplus_l diagonals add 2bF^2 and a(3S^2-1)+F^2, off-diagonal 2SF. Fixed Q adds 4Omega^2 |rF><rF| / integral(r^2F^2 dr) to l=0 amplitude block.",
+  "posthoc_scope": "Additive diagnostic proposed after coarse/medium finite runs; no empirical target fitted. Profile and exact symmetry modes predate these runs."
+}

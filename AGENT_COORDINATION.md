@@ -5871,3 +5871,48 @@ All 22 source/numerical/prediction checks pass. Largest frequency relative discr
 Converted the inherited illustrative v/M_P=1e-5 using NIST CODATA/SI constants: mX about 2.44e12 GeV, archived soliton mass 1.58e-10 kg, R90 about 4.14e-28 m, tau240 about 6.49e-35 s. The finite readout interval is not a lifetime; it spans about 15.7 reference light-crossing times. Identified the displayed leading benchmark's absent direct ordinary-sector portal: hidden reporter D scattering is not an ordinary optical detector response. EFT matching/loop effects need their own calculation. No observed mass scale, abundance, realistic apparatus or empirical validation supplied. Included exact-vacuum counterexample to automatic organization and allowed bare-mass sensitivity of the bulk sound speed.
 
 Preserved exact ten-run diagnostic histories and status in a hash-indexed archive. Fresh extraction reproduces byte-identical SUMMARY and PHYSICAL_SCALES JSON. Verified 22 checks, source identities, links, syntax and scoped diff; rendered/inspected scientific SVG. Published an evidence ledger, physical-access requirements and compact START_HERE checkpoint for session continuity. Reviewed selected NIST, PDG 2026 and primary FLS production sources with access/scope stated. No outside solver review, observational exclusion analysis, person-directed message, PR or merge.
+
+### 2026-10-20 · Codex · full 3D finite objects, original-mode symmetry audit, and empirical exclusion
+
+On the isolated `codex/grut-candidate1-two-object-20261019` branch, added
+`research/reality_framework/grut_3d_empirical_20261020/`. The 29 completed full
+Cartesian nonlinear 3D runs comprise 26 finite-object/control cases and three
+periodic condensate-production cases, at the unchanged a=1,b=.1,gX=.1. All
+26 finite-object cases satisfy their declared finite-time retention criterion.
+The finest generic isolated core retains at least 99.8484% of Q over tau120..160;
+the two signs of the generic pair seed retain at least 97.0675% / 96.9810% jointly.
+Grid, time, box, whole-event rotation and direct finite-impact controls are filed.
+
+Three large-domain replays preserve the original linear m=1 kernel and reproduce
+its finest relative-shift amplification 9.06379449, while exposing translation /
+rotation residuals 44.28% / 28.66% at tau160. Thus that raw norm is not an earned
+internal-instability exponent. Local displacement explains 99.9987% / 99.8008%
+of its finest core geometric response. Six direct nonlinear 3D opposite-source-
+offset runs instead measure outgoing deflection: final x/delta=-14.2415,+7.5862;
+maximum response changes are 0.895% (medium/fine), 0.0571% (halved offset),
+0.227% (box) and 0.0311% (dt). Cores survive. Delta is each source's offset;
+the relative impact parameter is 2*delta. The global symmetry residuals remain
+explicit limitations.
+
+A re-solved isolated-branch fixed-Q Hessian has positive radial/ell=2 curvature,
+phase/translation zeros tending to zero as dr^2, and an analytic angular ordering.
+No global-minimizer enclosure or quantum lifetime is claimed. The production
+network's component count is threshold/grid dependent and is not a relic mass
+function. A common mX=100 GeV,v=1000 GeV, primordial YQ=YB preparation gives
+omega_hidden>=1.3387 from exact adopted net-charge conservation and the classical
+energy floor. Flat FRW with nonnegative other densities requires H0>=116.66
+(>=113.25 with documented conservative allowances), incompatible with held-out
+geometric megamaser H0=73.9+-3.0. The conditional preparation is rejected; no
+positive empirical validation, hidden charge-generation mechanism or individual
+cosmological composite lifetime is supplied.
+
+Verification actually run: C++ build without fast-math; local frozen source and
+protocol hashes; full run completion/conservation; grid/time/domain/orientation/
+seed controls; eigenpair residuals and zero-mode refinement; prediction code
+blocked from reading held-out files; interrupted-run replay agreeing to 4.18e-16;
+`verify_packet.py` 78/78 integrity/operator checks; archive extraction and SHA256
+verification of 190 raw files; scientific figure inspection. Maximum relative Q
+drift 4.91e-13 and Hamiltonian drift 2.77e-5. Failed symmetry controls and the
+interrupted prefix are retained. Original frozen packets and unrelated work
+were not edited; Claude's unpushed results were unavailable. Read REPORT.md and
+START_HERE.md for exact scope and continuation.
