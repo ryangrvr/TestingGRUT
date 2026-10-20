@@ -5916,3 +5916,47 @@ drift 4.91e-13 and Hamiltonian drift 2.77e-5. Failed symmetry controls and the
 interrupted prefix are retained. Original frozen packets and unrelated work
 were not edited; Claude's unpushed results were unavailable. Read REPORT.md and
 START_HERE.md for exact scope and continuation.
+
+### 2026-10-20 · Codex · exclusion audit, inference correction and independent-input boundary
+
+Continued from 479f111 only on the isolated research branch. Added
+`research/reality_framework/grut_empirical_audit_20261020/`; the Candidate-1
+action, old evidence packet and failed preparation remain byte-identical.
+Read action, latest report/math, protocols, calibration, raw/source manifests
+and development notes before new calculations. No unavailable Claude results.
+
+Rederived the normalized current, Q=Qbar/gX^2, E=(v/gX)Ebar, and the sharp
+leading classical proper-energy floor m*=v*min(gX,(lambda_phi*lambda_X)^1/4).
+The old omega_hidden>=1.33870808, H0>=116.66354 (conservative >=113.25182)
+arithmetic reproduces to roundoff. The ledger distinguishes action, initial
+state, external inference and additional cosmological hypotheses, including
+standard BBN, yield/entropy preservation and negligible strong binding.
+No ADM/quantum/global-cosmological-lifetime theorem is claimed.
+
+Corrected the earlier complete cosmology/CMB-independence characterization:
+Pesce 2020 Eq. 1 uses flat LambdaCDM and Planck Omega_m=.315 for inferred H0.
+After an eight-target feasibility comparison, publicly froze source and all
+six disk-distance rows at eb5a1084 before new numerical evaluation; the data
+and old rejection were already known, so this is explicitly retrospective.
+The direct flat-FRW D_A envelope avoids that Omega_m prior without changing
+100 GeV or r=YQ/YB=1. At conservative declared corners, NGC 5765b has lower
+distance 96.90 Mpc versus model upper 77.8415; doubling peculiar rms 250 to
+500 km/s raises the upper to 83.9531 and retains the mismatch. No likelihood
+significance, independent maser test or mechanism identification is claimed.
+
+The action and searched compatible records leave the physical scalar scale
+and primordial yield free. Conditional product limits are not a fitted new
+point or abundance prediction. No action extension or new production/lifetime
+campaign was run. The decision packet stops at independent input/history/access
+requirements and includes an owner-approval boundary for any future extension.
+
+Verification actually run: 22 alternate algebra/unit/implementation checks;
+60-digit Decimal and independent distance quadrature; negative controls;
+65 old packet files, three parent identities, 20 archives and all 190 raw
+members; five recomputation/integrity checks; four packaging/dependency checks,
+including prediction with test-value reads blocked; syntax, links and scoped
+diff checks. Public source identities verified against Git objects. These are
+same-author checks, not independent scientific replication. Reports, correction,
+claim table, assumption/parameter ledgers, uncertainty budget, source/data/raw
+diagnostics, exact commands and an independent-review checklist are preserved.
+No PR, merge, person-directed message or change to Claude's checkout.

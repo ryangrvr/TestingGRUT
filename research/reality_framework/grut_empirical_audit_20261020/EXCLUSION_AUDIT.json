@@ -1,0 +1,129 @@
+{
+  "Doppler_max_inverse_absolute_error": 3.469446951953614e-17,
+  "all_checks_pass": true,
+  "check_count": 22,
+  "checks": {
+    "SI_entropy_ratio_cancellation": true,
+    "canonical_charge_normalization": true,
+    "decimal60_floor_conversion": true,
+    "dimensionful_floor_route": true,
+    "distance_analytic_vs_quadrature": true,
+    "distance_float_vs_decimal60": true,
+    "exact_Doppler_inverse": true,
+    "gradient_FRW_factors_positive": true,
+    "mX_equals_gv": true,
+    "negative_Lambda_counterexample_to_unqualified_H0_bound": true,
+    "old_exclusion_arithmetic_reproduced": true,
+    "parameters_preserved": true,
+    "physical_E_Q_conversion": true,
+    "physical_dimensionless_couplings": true,
+    "potential_ratio_both_binding_regimes": true,
+    "reference_gravity_is_weak_only_for_reference_object": true,
+    "reference_optical_geometric_lensing_not_accessible": true,
+    "sampled_local_energy_bound": true,
+    "sharp_coexistence_equality": true,
+    "square_completion_both_signs": true,
+    "wrong_factor_two_detected": true,
+    "yield_unit_route_matches_baseline": true
+  },
+  "conservative": {
+    "H_floor_km_s_Mpc": 113.25181751823033,
+    "baryon_mass_GeV": 0.94738,
+    "omega_b": 0.021249999999999998,
+    "omega_hidden_floor": 1.2613474171182542
+  },
+  "decimal60_H_floor": "116.663536724947763648476086371816975332180297134187232326191",
+  "decimal_floor_relative_error": 0.0,
+  "decision": "Old arithmetic and leading conditional bound survive. Correct the characterization of the published H0 inference. No independent scalar scale or hidden yield calibration exists in this packet.",
+  "distance_max_decimal_relative_error": 1.1102230246251565e-16,
+  "distance_quadrature_convergence": [
+    {
+      "relative_error": 2.843814073116846e-11,
+      "steps": 16
+    },
+    {
+      "relative_error": 1.7772450178199506e-12,
+      "steps": 32
+    },
+    {
+      "relative_error": 1.1102230246251565e-13,
+      "steps": 64
+    },
+    {
+      "relative_error": 6.661338147750939e-15,
+      "steps": 128
+    }
+  ],
+  "mstar_GeV": 56.23413251903491,
+  "mu": 0.5623413251903491,
+  "nominal": {
+    "H_floor_km_s_Mpc": 116.66353672494776,
+    "baryon_mass_GeV": 0.938,
+    "omega_b": 0.02233,
+    "omega_hidden_floor": 1.3387080801173237
+  },
+  "old_arithmetic_relative_errors": {
+    "H0_floor": 0.0,
+    "conservative_H0": 2.220446049250313e-16,
+    "omega_floor": 0.0
+  },
+  "potential_ratio_regimes": [
+    {
+      "a": 1,
+      "b": 0.1,
+      "ratio_minimum_error": 5.551115123125783e-17
+    },
+    {
+      "a": 0.1,
+      "b": 0.1,
+      "ratio_minimum_error": 0.0
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "ratio_minimum_error": 0.0
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "ratio_minimum_error": 9.992007221626409e-15
+    },
+    {
+      "a": 0.1,
+      "b": 40,
+      "ratio_minimum_error": 2.000621890374532e-13
+    }
+  ],
+  "reference_object_accessibility_only": {
+    "M_GeV": 3639229.985516867,
+    "M_kg": 6.487516719227364e-21,
+    "R90_m": 1.007044868662393e-17,
+    "Schwarzschild_radius_over_R90": 9.56806204068362e-31,
+    "interpretation": "One old prepared object, not a cosmological mass function. No detector event rate is inferred.",
+    "optical_1eV_wave_parameter": 9.765991207777208e-41
+  },
+  "sample_count": 12000,
+  "sampled_energy_minimum_gap": 0.2309587955920933,
+  "scope": "Same-author analytic rederivation and implementation checks, not scientific replication or all-orders quantum verification.",
+  "square_completion_max_normalized_residual": 1.2732963234267132e-15,
+  "uncertainty_separation": {
+    "BBN_fractional_sigma": 0.016121809225257504,
+    "H_floor_BBN_linearized_sigma_km_s_Mpc": 0.9404136413117151,
+    "baryon_mass_allowance_fraction": 0.01,
+    "hidden_fraction_of_minimum_total": 0.9835934054114965,
+    "unquantified": [
+      "EFT loop/running/higher-operator changes",
+      "full cosmological realization and BBN consistency",
+      "strong-binding/backreaction and collapse",
+      "raw maser posterior tails/covariances and alternative disk/systematic models"
+    ]
+  },
+  "units": {
+    "YB_entropy_convention": 8.675813860451158e-11,
+    "entropy_note": "Ideal standard photon+neutrino entropy convention for unit checking; cancels from primary bound.",
+    "entropy_route_omega_floor": 1.3387080801173237,
+    "nB_cm3": 2.508369305492221e-07,
+    "rho_critical_over_h2_GeV_cm3": 1.0536723728399925e-05,
+    "visible_entropy_cm3_convention": 2891.220749821137
+  }
+}
