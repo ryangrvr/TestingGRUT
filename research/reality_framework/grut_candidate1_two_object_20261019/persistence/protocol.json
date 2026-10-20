@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "parent": "e68de81d99756fe39e512a167b979ba992e752c1",
+  "branch": "codex/grut-candidate1-two-object-20261019",
+  "purpose": "Post-encounter persistence plus linear non-axisymmetric response under the unchanged Candidate 1 scalar action",
+  "preflight": "Implementation controls and one time-2 isolated-object timing pilot ran before this freeze; no extended encounter outcome observed.",
+  "runs": [
+    {
+      "id": "coarse_single_static",
+      "name": "single_static",
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "coarse_pair_phase_0",
+      "name": "pair_phase_0",
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "coarse_pair_phase_halfpi",
+      "name": "pair_phase_halfpi",
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "medium_single_static",
+      "name": "single_static",
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "medium_pair_phase_0",
+      "name": "pair_phase_0",
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "medium_pair_phase_halfpi",
+      "name": "pair_phase_halfpi",
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "fine_single_static",
+      "name": "single_static",
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160
+    },
+    {
+      "id": "fine_pair_phase_0",
+      "name": "pair_phase_0",
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160
+    },
+    {
+      "id": "fine_pair_phase_halfpi",
+      "name": "pair_phase_halfpi",
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160
+    },
+    {
+      "id": "medium_half_dt_pair_phase_halfpi",
+      "name": "pair_phase_halfpi",
+      "h": 0.3333333333333333,
+      "dt": 0.03333333333333333,
+      "R": 144,
+      "Z": 160,
+      "T": 240
+    },
+    {
+      "id": "medium_larger_box_pair_phase_0",
+      "name": "pair_phase_0",
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 168,
+      "Z": 184,
+      "T": 240
+    },
+    {
+      "id": "medium_larger_box_pair_phase_halfpi",
+      "name": "pair_phase_halfpi",
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 168,
+      "Z": 184,
+      "T": 240
+    }
+  ],
+  "modes": [
+    {
+      "m": 1,
+      "seed": "relative_shift",
+      "epsilon": 0.0001
+    },
+    {
+      "m": 2,
+      "seed": "elliptic",
+      "epsilon": 0.0001
+    }
+  ],
+  "diagnostic_period": 2,
+  "profile_times": [
+    0,
+    80,
+    120,
+    160,
+    200,
+    240
+  ],
+  "linear_warning": 0.1,
+  "acceptance": {
+    "maximum_relative_energy_drift": 0.001,
+    "maximum_normalized_charge_error": 1e-09,
+    "finite": true
+  },
+  "measurement_conventions": {
+    "mode_norm": "Angular-integrated positive canonical norm: integral(delta fields squared + delta momenta squared), cos(m phi) angular factor 1/2 for m>0; no claim this norm is unique or conserved.",
+    "initial_normalization": "Each mode starts at 1e-4 of the same norm of background (with S-1).",
+    "linear_warning": "First background-relative norm >=0.1 flags loss of a quantitative finite-amplitude linear approximation. This is not a numerical-failure condition or a nonlinear evolved state.",
+    "object_diagnostics": "Axial F^2 regions above 5% maximum and at least 5% total norm; centers define radius 8/12/16 balls. Overlapping balls flagged. Region count and local E/Q are diagnostics, not exact particle certification.",
+    "boundaries": "Vacuum ghosts, enlarged to postpone radiation returns; compare larger boxes over the same window. No physical damping or particle removal."
+  },
+  "limitations": [
+    "Only selected m=1 and m=2 perturbations, no nonlinear 3D evolution",
+    "No inference of exponential chaos or all-mode stability from positive-norm growth",
+    "Finite windows and prescribed preparations",
+    "No formation, memory apparatus, quantum or gravity result"
+  ]
+}
