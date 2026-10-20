@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "Qbar": 399.4384624223012,
+  "preparation_frequency": 1,
+  "physical_a": 1,
+  "physical_b": 0.1,
+  "runs": [
+    {
+      "id": "coarse_sigma4",
+      "sigma": 4,
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "coarse_sigma6",
+      "sigma": 6,
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "coarse_sigma8",
+      "sigma": 8,
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "coarse_rigid_sigma6",
+      "sigma": 6,
+      "h": 0.5,
+      "dt": 0.1,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "rigid_phi"
+    },
+    {
+      "id": "medium_sigma4",
+      "sigma": 4,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "medium_sigma6",
+      "sigma": 6,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "medium_sigma8",
+      "sigma": 8,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "full"
+    },
+    {
+      "id": "medium_rigid_sigma6",
+      "sigma": 6,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "control": "rigid_phi"
+    },
+    {
+      "id": "fine_sigma4",
+      "sigma": 4,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "control": "full"
+    },
+    {
+      "id": "fine_sigma6",
+      "sigma": 6,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "control": "full"
+    },
+    {
+      "id": "fine_sigma8",
+      "sigma": 8,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "control": "full"
+    },
+    {
+      "id": "fine_rigid_sigma6",
+      "sigma": 6,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "control": "rigid_phi"
+    },
+    {
+      "id": "medium_larger_box_sigma6",
+      "sigma": 6,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 168,
+      "Z": 184,
+      "T": 240,
+      "control": "full"
+    }
+  ],
+  "diagnostic_period": 2,
+  "profile_times": [
+    0,
+    20,
+    40,
+    80,
+    120,
+    160,
+    200,
+    240
+  ],
+  "initial_state": "U=A exp[-r^2/(2 sigma^2)], W=0, S=1, P=0, Qcanonical=-U, T=0; A fixes the continuum charge. The frequency 1 is a preparation momentum, not a later imposed drive.",
+  "prediction": "At a=1,b=.1 the algebraic local mediator minimum produces an attractive quartic for F^2<a. Its gradient-free envelope is an explanation to test, not an exact effective equation or a formation theorem. No outcome is presumed.",
+  "control": "Rigid S=1 removes organization feedback and retains a repulsive quartic. This is an explicit counterfactual law, not an equally complete closed-universe implementation.",
+  "acceptance": {
+    "maximum_relative_energy_drift": 0.001,
+    "maximum_normalized_charge_error": 1e-09,
+    "finite": true
+  },
+  "limitations": [
+    "Coherent low-entropy charged initial resources are supplied",
+    "Only spherical initial clouds in axisymmetric evolution",
+    "No generic formation from vacuum, equilibrium or arbitrary initial state",
+    "No nonlinear non-axisymmetric stability conclusion"
+  ]
+}
