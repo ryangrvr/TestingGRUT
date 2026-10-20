@@ -1,0 +1,24 @@
+{
+  "version": "candidate1-issue13-wall-diagnostics-v1",
+  "date_UTC": "2026-10-20",
+  "parent_commit": "2ee7f82a62287ae67d92b3b481646f8efed20fc0",
+  "review_commit": "55fd11b056385126e876a2b388327eee3028c9d9",
+  "action": "Unchanged Candidate 1, leading classical D=0 local Minkowski solver; no expansion, thermal bath or gravitational backreaction",
+  "purpose": "Resolve what the already chosen preparations say about opposite-vacuum domains, and audit the review's cosmological escape thresholds",
+  "exposure": "Retrospective. Archived min(S) values and endpoint fields were available before this protocol. Not a held-out or blinded empirical prediction.",
+  "diagnostic_runs": ["pair_generic_coarse", "pair_generic_medium", "pair_generic_fine", "production_coarse", "production_medium", "production_fine"],
+  "run_parameters": "Copy each named execution.json case and original command options, including dt and scalar sample interval. Only observational code is inserted. No new initial condition or action parameter.",
+  "sampling": "Full-grid field-only scan at t=0 and every drift step, before the next kick. Coordinates q are synchronized; no momentum-dependent quantity is added at the staggered step.",
+  "diagnostics": {
+    "S": "phi/v",
+    "F2": "(q1^2+q2^2)/v^2 = 2|X|^2/v^2",
+    "thresholds_absS": [0.5, 0.75, 0.9],
+    "thresholds_F2": [0.01, 0.1],
+    "record": "minS, maxS, counts S<0, S<-0.1, S<-0.25, S<-0.5, S<-0.75, S<-0.9; count S<-0.5 and F2<0.1; count S>0.5 and F2<0.1; negative-cell mean F2",
+    "endpoint": "For every archived endpoint, evaluate sign occupancy, negative-cell F2 quantiles, and opposite-branch low-X plateau counts at all thresholds. These are subsample statistics except where stride=1.",
+    "wall_interpretation": "S<0 alone is not a vacuum wall. Both near-vacuum plateaus and an interpolating interface are necessary diagnostics; network persistence/percolation, expansion and cosmological population remain additional requirements. Counts do not define particles. Thresholds do not prove topology."
+  },
+  "controls": "Compare rerun original scalar histories and endpoint fields with archived values; diagnostics must not materially change trajectories. Check three spatial grids. No continuum-time positivity theorem, new cosmological lifetime, thermal network or new empirical exclusion is inferred.",
+  "cosmology_sensitivity": "Retain original six-row sensitivity corners. Independently calculate separate negative constant vacuum and negative curvature escapes with physical density fixed by the original classical floor. No SN/BAO calibration, new likelihood significance or cosmologically viable fit is adopted.",
+  "stop": "If no near-negative-vacuum plateau appears, report that boundary and send Claude the histories. Do not launch an expanding thermal network campaign until a thermal history and meaningful cosmological target are specified."
+}
