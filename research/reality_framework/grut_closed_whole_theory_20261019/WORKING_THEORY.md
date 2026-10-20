@@ -171,11 +171,103 @@ content beyond the restriction rules (ledger s01, s02).
 
 ## 5. The campaign ledger
 
-[[LEDGER_TABLE]]
+Each row is one campaign; the full line-cited entry, with its assumptions, executed evidence,
+retained failures and sources, is in [CAMPAIGN_LEDGER.md](CAMPAIGN_LEDGER.md) and `ledger/`.
+Every entry was written from the primary sources by one reader and re-read adversarially by a
+second; corrections are recorded inside the entries.
+
+| # | Campaign | Question it asked | Answer | Classification |
+|---|---|---|---|---|
+| s01 | V7 / CTP organization | Does CTP doubling, normalization or the response vocabulary derive dynamics, Born probabilities or the asserted predictions? | No. The Feynman–Vernon / Keldysh form is generic ("any local causal open system yields it"); in-in does no work at the gravity rung (Ward identity leaves EH, R², f(R), Lovelock); the declared action "fixes nothing" in its own family; the Born measure is inherited; every differentiator fell 7 to 63 orders below detectability. The V7 file itself is absent from the repository and was not re-audited. | mixed: recovered physics on supplied choices; rejected mechanisms retained |
+| s02 | Influence hierarchy and dependence | Are kernel and noise downstream of subsystem, state and access? Do two-point data fix higher data? Is positivity a new principle? | Yes; no; no. Matched two-point baths split a probe coherence by 0.338 at fourth order and discrimination persists at orders 6 and 8; every positivity constraint reduced to state positivity on the generated algebra (NULL-AS-NEW-PRINCIPLE); the access seed is "a physical boundary condition, not an axiom, not a derived object". | mixed: dominantly recovered physics, bounded by in-class conditional constraints |
+| s03 | Level-0 floor and earned theorems | Do the floor theorems constrain a closed whole beyond standard quantum theory? | No. Every theorem is about a supplied classical class (rings, OU chains, declared readouts); the lift to quantum theory is "IRREDUCIBLE/SUPPLIED"; the one closed-system item (O-6, conservative chain with internal bath) shows closure plus partition plus product start does **not** force a strict arrow (D-4 recurrence obstruction). | mixed: recovered mathematics; conditional constraints; three hypotheses falsified |
+| s04 | GRUT I–II vacuum response | What was recovered with imports, what was a projector choice, which exclusions are conditional, is the arrow supplied? | Derived count 0 across 26 V1 claims and V2; TT-only projector CHOSEN (Ward identity leaves {P⁽²⁾, P⁽⁰ˢ⁾}, GR's lock −2); the four boundaries hold at stated scopes; arrow direction imported through the KMS gate; Γ_T 62.7 orders below the bound; ISW anchor retired 32σ → 2.0σ. | mixed: recovered physics; supplied choices; conditional exclusions; many retractions retained |
+| s05 | GRUT III observer bath | Is P1 a law? Is modular KMS a temperature? What is imported in GR recovery and universal coupling? | P1 is an identification with zero credit, no dynamics, no state; modular KMS is a physical temperature only where the flow is geometric (imports); GR recovery imports the area law, Jacobson and η = 1/4Għ; universal coupling inserts κ; "GRUT III makes no prediction that distinguishes it from GR + QFT in curved spacetime". Slow-roll thermality (D11, D13) is conditional. | mixed: dominated by recovered physics; five postulates supplied |
+| s06 | CP-12 geometry and preparation | Which geometry-selection obstructions are model- and preparation-specific? What does the min-entropy theorem assume? | All obstructions are model- and preparation-specific. The min-entropy theorem needs ‖ρ₀‖_∞ ≤ e^{cN}/D and O(N) excess energy; closure enters only as unitary invariance of the spectrum, converting the question into an initial-state obligation of αN log₂N bits, "not a state-selection law"; pure coherent preparations are outside it; no theorem excludes every emergent geometry. | mixed: conditional constraints; rejected local-geometry mechanisms |
+| s07 | WM / B1 / B2 matter and moving channels | Keep acceptance, recoverability, delivery and retention distinct; is B2 an impossibility proof? | Conditional externally powered preparation (P1); autonomous every-time retention refuted at one permitted point (A1); a conditional delivery window (B1); a fixed-path two-source pass that does not transfer to the moving law; B2's eight-event endpoint failed (1.93%) and the closeout is a feasibility stop within a computational envelope (1411/640 majorant, N ≥ 2²⁸), "neither established nor refuted". Closure raised the proof and resource cost; it supplied no principle. | mixed: recovered physics; conditional windows; one refutation; one feasibility stop |
+| s08 | Candidate 1 scalar EFT | What is the action, what is supplied, what does the one-loop calculation show? | Einstein–Hilbert + SM + three singlet scalars; everything structural supplied; classically supported charged profile at Q ≈ 39 944; one-loop shift K₁/(gv) = 2.795 ± 0.11 against a free-carrier margin −3553.7 gv (conditional on saddle stability); tree gaps −0.199999152115 and −3067.397336565 gv; no lifetime, no quantum fission, no gravity matching, no novelty (FLS-type soliton, Graham's spectral method). | mixed: conventional EFT; conditional one-loop constraint; supplied couplings |
+| s09 | Closure / no-boundary | Does C2 supply a state-selection rule? Is the slow-roll coefficient new? Is curvature sign a discriminator? | [[S09]] | [[S09C]] |
+| s10 | M1 memory | What works in the stated finite regime, what was withdrawn, what is not established? | [[S10]] | [[S10C]] |
+| s11 | Toric memory / scrambling bridge (separate branch) | What was computed, what was corrected post hoc, what is it not? | [[S11]] | [[S11C]] |
+| s12 | Program no-go ledger, postulate map, endogenous access | Which recorded no-gos bear on "closure forces X"? Is access ever derived? | [[S12]] | [[S12C]] |
+
 
 ## 6. Proposed additions that did not survive, and what remains open
 
-[[LEDGER_FAILURES]]
+Grouped by the kind of addition each would have been (FORMAL_CORE §7). Every item is a
+recorded withdrawal, refutation or non-implication in the repository; the ledger entries give
+the lines.
+
+**State selection.**
+- C1 defined as the Feynman–Lehners–Turok Dirichlet prescription terminates on an
+  inverse-Gaussian coefficient; that is a conditional termination of that definition, not of
+  every meaning of closure (s09).
+- C2 identifies the observer-state object and adds no selection condition beyond restriction,
+  trace matching, positivity, normalization and modular KMS; the no-boundary density-matrix
+  construction already contains the trace-matching conditions (s09).
+- D2 "slow-roll thermality" novelty withdrawn (Obadia 2008 is the prior source for the
+  first-order coefficient); the sign-only curvature falsifier and "all sequestering
+  formulations force positive curvature" withdrawn (s09).
+- The TT-only projector of GRUT I–II is a choice, not a consequence (s04); the sharp
+  Sorkin–Johnston state is rejected and "P1 selects the horizon state" remains a conjecture (s05).
+- The CP-12 min-entropy theorem is an initial-state obligation, not a selection law (s06).
+- The HJW route from P0 + P1 to the outcome rule is withdrawn (s05).
+
+**Dynamical constraint.**
+- The Schwinger–Keldysh formalism does not select the Einstein–Hilbert action; the in-in
+  machinery does no work at the gravity rung, which reverts to Jacobson with G inserted
+  (s01, s04, s05).
+- One-loop induced gravity with Standard-Model content does not supply G (s05).
+- a₀ via Jacobson, a memory time 1/(4H), a bulk Planckian fluid, c_eff at LIGO frequencies, and
+  w ≡ −1 as a GRUT discriminator are rejected (s05).
+- The 689 Hz falsifier is withdrawn, the ISW anchor retired from 32σ to 2.0σ, Γ_T is 62.7 orders
+  below its bound, GW dephasing 22–62 orders below detectability (s01, s04).
+- The founding ζ-hypothesis, the conformalon, the information principle, the single-particle
+  interference memory mechanism and the symmetry route to forced TT are rejected; single-pole
+  finite memory stays a conjecture (s01, s04).
+- Candidate 1 is a quartic extension of Friedberg–Lee–Sirlin with supplied couplings; its
+  "coefficients vanish at every scale" rule and a pointwise Coleman–Weinberg shortcut are
+  rejected (s08).
+- The classical relaxational carrier is eliminated inside the supplied quantum class (CA-1);
+  H-HERM-2, strict H-ORD and the two-property reduction of the floor are falsified (s02, s03).
+
+**Access structure.**
+- The access seed is load-bearing under boundary change and nothing in the record fixes it:
+  "a physical boundary condition, not an axiom, not a derived object" (s02); no earned Level-0
+  structure selects the physical lift, and observability at the earned readout is an identity
+  (s03). [[EA0]]
+
+**Measurement rule.**
+- Decoherence does not yield outcomes or Born weights in the tested branch-preserving unitary
+  class (EXPERIMENT_P_FRONTIER closed at that class); P5 remains a postulate; a positivity
+  "principle" reduces to state positivity (NULL-AS-NEW-PRINCIPLE) (s01, s02, s05).
+
+**Arrow and clock.**
+- The arrow's direction is imported with the passive, uncorrelated past-boundary state; the
+  exactly solvable model has Γ(t) = Γ(−t) and full recurrence; closure plus partition plus
+  product start does not force a strict arrow (band-edge memory, anti-arrow at switch-on;
+  recurrence obstruction D-4) (s01, s03, s04).
+- The temporal generator is supplied (S5-0 GENERATOR-IRREDUCIBLE); P1 assigns no temperature in
+  FRW with ε ≠ 0; modular time equals physical time only in the imported geometric cases (s02, s05).
+
+**Memory and structure mechanisms.**
+- M1's facilitation benefit is withdrawn: the matched uniform-floor control retains better at
+  every sampled time for L = 3, 4, 5; a single cell fails the 0.9 standard at L = 4, 5; bare
+  matter-to-memory writing fails; unconstrained flips at 0.1 and 0.3 violate retention; exact
+  saturation is a barrier to formation as well as a memory (s10).
+- Autonomous every-time retention is refuted at the permitted point (A1); B2's eight-event
+  endpoint failed; the fixed-path pass does not transfer to the moving law (s07).
+- The toric report compares thermal Metropolis trajectories and decoded memory with a post-hoc
+  gauge-observable correction; it is not a closed-unitary gravitational scrambling-exponent
+  computation (s11).
+
+**Still open (registered, not executed).** The B three-prescription control (FLT, whole-line
+Hartle–Hawking, Di Tucci–Lehners Robin; Yamada as a distinct prescription) (s09); Candidate 1's
+three-charge one-loop family, lifetime and nonlinear gravity (s08); the O-6 declared-chain run
+(s03); the rung-3 pole-versus-cut ask never sent (s01); independent review of CP-04 and CP-05
+(s05); M1's error-correction cascade against the matched baseline (s10); the toric branch's
+merge decision (s11). [[S12OPEN]]
+
 
 ## 7. Physical scope, predictions and open claims
 
