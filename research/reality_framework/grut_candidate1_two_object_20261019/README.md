@@ -1,5 +1,7 @@
 # Candidate 1 two-object dynamics
 
+**Working theory:** [the explicit action, derived binding boundary, bulk phase and response predictions](../grut_theory_synthesis_20261020/THEORY.md), with a [construction brief for Claude](../grut_theory_synthesis_20261020/CLAUDE_HANDOFF.md).
+
 **Follow-up completed:** [conditional assembly, post-collision persistence and a charge record](persistence/REPORT.md) adds 31 evolutions under the same full scalar action, with a separate rigid-field comparison. Selected transverse m=1 response remains unconverged.
 
 **Completed:** all 27 prescribed evolutions and all 33 numerical consistency checks pass. Prepared equal-charge objects show phase-dependent central concentration or separated outgoing structure, including substantial charge exchange at relative phase pi/2. This is a finite-time classical axisymmetric result under Candidate 1's unchanged scalar action.
