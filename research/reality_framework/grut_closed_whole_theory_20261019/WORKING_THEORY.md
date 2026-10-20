@@ -38,13 +38,24 @@ the constants, not the action. Each negative is exhibited by a legal closed mode
 calculation 1 (§3 below), and the compatibility requirement has a quantitative edge in
 calculation 2 (§4).
 
-**Which proposed additions did not survive.** [[LEDGER_ADDITIONS]]
+**Which proposed additions did not survive.** Every addition that a campaign proposed and tested failed to survive as a law. The
+CTP action as a parent principle; the in-in selection of the Einstein–Hilbert action; the TT
+projector as forced; decoherence as a derivation of the Born weights and the HJW route to the
+outcome rule; influence-data positivity as a new principle; any GRUT-internal kernel-selection
+principle; the facilitation benefit of the M1 memory; C1-as-FLT and C2 as state selection; the
+novelty of slow-roll thermality; the curvature-sign falsifier; the CP-12 min-entropy theorem
+as a selection law; the 689 Hz falsifier and the 32σ ISW anchor; the founding ζ-hypothesis,
+the conformalon and the information principle; the self-correction/no-scrambling bridge in the
+classical 4D toric code; autonomous every-time retention; a GRUT-specific prediction of GRUT
+III. Section 6 lists each with its sector; the ledger retains every failure.
 
 **What remains a supplied choice.** The six entries of Θ, in every sector: the field content
 and action (GRUT III P0 and data; Candidate 1's couplings), the preparation (GRUT I–II
 projector choice; CP-12 preparation classes; the no-boundary state that C1/C2 did not select),
 the access structure (EA0; the register and writer in M1), the measurement rule (P5), the
-arrow (P4), and the time parameter. [[LEDGER_SUPPLIED]]
+arrow (P4), and the time parameter. The program's own register prices this at +16 net
+supplied inputs with an empty derived tier and an empty prediction ledger (s12); the access
+structure in particular is "currently irreducible" after the EA-0 attempt to make it endogenous.
 
 **Status.** A working closed-system framework of known physics with conditional model
 instances and computed boundaries. No additional law or state-selection rule has survived.
@@ -187,10 +198,10 @@ second; corrections are recorded inside the entries.
 | s06 | CP-12 geometry and preparation | Which geometry-selection obstructions are model- and preparation-specific? What does the min-entropy theorem assume? | All obstructions are model- and preparation-specific. The min-entropy theorem needs ‖ρ₀‖_∞ ≤ e^{cN}/D and O(N) excess energy; closure enters only as unitary invariance of the spectrum, converting the question into an initial-state obligation of αN log₂N bits, "not a state-selection law"; pure coherent preparations are outside it; no theorem excludes every emergent geometry. | mixed: conditional constraints; rejected local-geometry mechanisms |
 | s07 | WM / B1 / B2 matter and moving channels | Keep acceptance, recoverability, delivery and retention distinct; is B2 an impossibility proof? | Conditional externally powered preparation (P1); autonomous every-time retention refuted at one permitted point (A1); a conditional delivery window (B1); a fixed-path two-source pass that does not transfer to the moving law; B2's eight-event endpoint failed (1.93%) and the closeout is a feasibility stop within a computational envelope (1411/640 majorant, N ≥ 2²⁸), "neither established nor refuted". Closure raised the proof and resource cost; it supplied no principle. | mixed: recovered physics; conditional windows; one refutation; one feasibility stop |
 | s08 | Candidate 1 scalar EFT | What is the action, what is supplied, what does the one-loop calculation show? | Einstein–Hilbert + SM + three singlet scalars; everything structural supplied; classically supported charged profile at Q ≈ 39 944; one-loop shift K₁/(gv) = 2.795 ± 0.11 against a free-carrier margin −3553.7 gv (conditional on saddle stability); tree gaps −0.199999152115 and −3067.397336565 gv; no lifetime, no quantum fission, no gravity matching, no novelty (FLS-type soliton, Graham's spectral method). | mixed: conventional EFT; conditional one-loop constraint; supplied couplings |
-| s09 | Closure / no-boundary | Does C2 supply a state-selection rule? Is the slow-roll coefficient new? Is curvature sign a discriminator? | [[S09]] | [[S09C]] |
-| s10 | M1 memory | What works in the stated finite regime, what was withdrawn, what is not established? | [[S10]] | [[S10C]] |
-| s11 | Toric memory / scrambling bridge (separate branch) | What was computed, what was corrected post hoc, what is it not? | [[S11]] | [[S11C]] |
-| s12 | Program no-go ledger, postulate map, endogenous access | Which recorded no-gos bear on "closure forces X"? Is access ever derived? | [[S12]] | [[S12C]] |
+| s09 | Closure / no-boundary | Does C2 supply a state-selection rule? Is the slow-roll coefficient new? Is curvature sign a discriminator? | No. The restriction map exists for every state and modular KMS is automatic, so observer restriction selects nothing; the Ivo–Li–Maldacena trace-matching conditions are already in the published no-boundary density-matrix prescription. T_eff = H(1−ε)/2π is the first-order term of Obadia's 2008 coefficient (D2 withdrawn). Compactness does not imply k = +1 (flat torus), and closed de Sitter gives Ω_K = −1/(e^{2N} − 1), −4.5·10⁻⁵ at N = 5 and −2.1·10⁻⁹ at N = 10, so the sign is no discriminator. The B three-prescription control is registered with fixed grids and acceptance rules and unexecuted; its target widths are "established physics, not a GRUT prediction". Program decision: option C, preserve the map. | mixed: recovered physics; supplied prescription choices (action, state, cycle, measure, N-distribution); rejected falsifiers; one unexecuted control |
+| s10 | M1 memory | What works in the stated finite regime, what was withdrawn, what is not established? | In the stated finite regime the repetition register retains the bit (L = 4: min 0.987510 through sampled t = 10, 0.935065 at t = 40; matter readout 0.778468) and the flying-qubit writer copies a source bit at ≥ 0.999680 with the carrier paying the register's energy change. The matched F = ε control retains better at every sampled time and size (L = 4, t = 40: 0.998458), so the facilitation-benefit interpretation is withdrawn; the record persists for the standard reason, a ferromagnetic gap against a weak transverse field (a T = 0 transverse-field Ising repetition code). Not established: a thermal memory phase, cloning of an unknown state, gravity, a chaos exponent, all-times retention. | mixed: recovered physics; rejected mechanism (facilitation benefit); conditional numbers at L = 3–5 on sampled grids |
+| s11 | Toric memory / scrambling bridge (separate branch) | What was computed, what was corrected post hoc, what is it not? | An open-system computation: single-face Metropolis dynamics of the 4D toric code at fixed β. The logical half-life grows with L (977 → 1.6·10⁴ → 8.0·10⁴ sweeps at β = 1.0) while gauge-invariant local observables decorrelate in about one sweep; the face spin was reclassified post hoc as gauge-variant; the half-life estimator was changed after an unpreserved first attempt; the 18-qubit OTOC illustration "does not bear on B". It recovers the known thermal stability of the 4D toric code and refutes the self-correction/no-scrambling bridge claim in that classical class; it is not a closed-unitary gravitational scrambling-exponent computation, and its de Sitter and holography statements are uncomputed literature claims. Separate branch, not merged. | mixed: recovered physics; conditional rejected mechanism; conjectures not computed; unexecuted quantum OTOC |
+| s12 | Program no-go ledger, postulate map, endogenous access | Which recorded no-gos bear on "closure forces X"? Is access ever derived? | The program's own ledgers answer: a 74-claim register with zero banked no-gos, net +16 supplied inputs, an empty derived tier and an empty prediction ledger; every kernel alternative "excluded by an input, never by a principle"; the arrow's direction, the Born measure, the system/bath split, ħ, c, G, the action, the projector, the generator, the lift and the access seed all recorded as supplied. EA-0, the gate that attacked endogenous access directly, terminated UNFORMULABLE at the earned scope and the bridge gate NONUNIQUE-LIFT: "nothing selects the access seed; it is currently irreducible". Pure global state, compact topology and finite four-volume are not addressed anywhere in these sources. | mixed: dominantly supplied choices; rejected mechanisms; unexecuted tasks; conditional in-class constraints |
 
 
 ## 6. Proposed additions that did not survive, and what remains open
@@ -236,7 +247,11 @@ the lines.
 - The access seed is load-bearing under boundary change and nothing in the record fixes it:
   "a physical boundary condition, not an axiom, not a derived object" (s02); no earned Level-0
   structure selects the physical lift, and observability at the earned readout is an identity
-  (s03). [[EA0]]
+  (s03). 
+- EA-0 terminated UNFORMULABLE at the earned Level-0 scope: every seedless access candidate is
+  global, generically trivial, a correlation readout, or generator-carried by identity; the
+  successor bridge gate terminated NONUNIQUE-LIFT; "nothing selects the access seed; it is
+  currently irreducible" (s12).
 
 **Measurement rule.**
 - Decoherence does not yield outcomes or Born weights in the tested branch-preserving unitary
@@ -267,7 +282,8 @@ Hartle–Hawking, Di Tucci–Lehners Robin; Yamada as a distinct prescription) (
 three-charge one-loop family, lifetime and nonlinear gravity (s08); the O-6 declared-chain run
 (s03); the rung-3 pole-versus-cut ask never sent (s01); independent review of CP-04 and CP-05
 (s05); M1's error-correction cascade against the matched baseline (s10); the toric branch's
-merge decision (s11). [[S12OPEN]]
+merge decision (s11). The universality probe deferred, the criterion-unification fork never run, EA-1 closed and S-5
+held (s12); the quantum OTOC and Lyapunov question in the 4D code (s11).
 
 
 ## 7. Physical scope, predictions and open claims
