@@ -30,4 +30,17 @@ Bocchieri–Loinger 1957; Page–Wootters 1983; Connes–Rovelli 1994; Witten 20
 2012; Brunetti–Fredenhagen–Verch 2003; Gleason 1957; Busch 2003; Masanes–Galley–Müller 2019;
 Ivo–Li–Maldacena 2025; Obadia 2008.
 
-Primary texts actually inspected for this packet (beyond the repository): [[LITERATURE]]
+Primary texts actually inspected for this packet (beyond the repository), and what was not:
+
+| Paper | Access | What was checked | Used in |
+|---|---|---|---|
+| Fewster–Verch, Ann. Henri Poincaré 13, 1613 (2012), arXiv:1106.4785 | full text (downloaded by an attack agent; Definition 6.12 and Theorem 6.13 read again for this packet) | hypotheses and conclusion of the natural-state theorem; use of noncompact Cauchy surfaces in the proof; relation to BFV | FORMAL_CORE COND 5.3 |
+| Brunetti–Fredenhagen–Verch, Commun. Math. Phys. 237, 31 (2003) | full text (attack agent) | the free-field natural-state sketch | COND 5.3 |
+| Masanes–Galley–Müller, Nat. Commun. 10, 1361 (2019), arXiv:1811.11060 | full text (attack agent; assumptions re-checked for this packet) | the assumptions replacing the measurement postulates; Def. 9 | DEF 1.8 |
+| Witten, Rev. Mod. Phys. 90, 045003 (2018), arXiv:1803.04993 | full text (attack agent) | type III statements, §§6–7 ("believed to be of Type III₁") | COND 5.1 |
+| Pollock et al., Phys. Rev. Lett. 120, 040405 (2018), arXiv:1801.09811 | full HTML text | the operational Markov condition (causal break), divisibility not sufficient, CP-divisible example with memory (App. B.1) | THM 2.8; CALCULATIONS S2 |
+| Pollock et al., Phys. Rev. A 97, 012127 (2018), arXiv:1512.00589 | abstract only | framework and title | DEF 1.5 |
+| Chen–Ji–Kribs–Lütkenhaus–Zeng, Phys. Rev. A 90, 032318 (2014), arXiv:1310.3530 | full text (code reviewer) | symmetric-extension criterion giving the 2/3 chain threshold | CALCULATIONS C4 |
+| Cotler–Penington–Ranard, Commun. Math. Phys. 368, 1267 (2019), arXiv:1702.06142 | abstract only (attack agent) | uniqueness of local tensor-product structure from the spectrum | DEF 1.2; FORMAL_CORE §7 |
+| Feynman–Vernon, Ann. Phys. 24, 118 (1963) | **not accessed** (publisher paywall) | none; the factorized-preparation form and the Gaussian case are stated as in Caldeira–Leggett 1983 and Grabert–Schramm–Ingold 1988 (also not re-read here) | THM 2.5 |
+| All other references in FORMAL_CORE | cited from standard knowledge; not re-read for this packet | — | — |

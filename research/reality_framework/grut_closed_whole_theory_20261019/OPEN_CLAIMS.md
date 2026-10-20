@@ -106,13 +106,13 @@ theory. Anything not listed under "Established" is not claimed.
 
 | Check | Result | Record |
 |---|---|---|
-| `code/verify.py` (hashes + headline checks) | [[NCHECKS_TABLE]] | run it |
+| `code/verify.py` (hashes + headline checks) | every file in MANIFEST.json hashed; 28 headline results and 2 provenance hashes; all pass | run it |
 | `code/verify.py --rerun` | both calculations re-executed; every numeric leaf identical to the committed results | run it |
 | Independent re-implementation from the specification (separate agent, code unseen) | 23 comparisons agree to ≤ 10⁻⁶ relative; re-compared against the committed results after the final edits | `results/verification/independent_reimplementation_*` |
 | Independent re-execution (separate agent, 19 Oct) | bit-exact, but of the pre-review version (superseded) | `results/verification/independent_reexecution_19oct_prereview.md` |
 | Adversarial code review of calculation 1 | "sound with minor issues"; nine items, all applied | `results/verification/code_review_calculation1.md` |
 | Adversarial code review of calculation 2 | "sound with minor issues"; seven items, all applied | `results/verification/code_review_calculation2.md` |
 | M1 matched-control re-run | identical to `control_results.txt` | `results/m1_matched_control_rerun.txt` |
-| Ledger entries | [[LEDGER_VERIFY_TABLE]] | `ledger/`, CAMPAIGN_LEDGER.md |
-| Primary literature | [[LIT_TABLE]] | SOURCES.md |
+| Ledger entries | s01–s09 adversarially re-read by a second reader, corrections folded in; s10–s12 single-reader, report-row claims checked line by line in the main session; completeness critic not run | `ledger/`, CAMPAIGN_LEDGER.md |
+| Primary literature | Fewster–Verch, BFV, Masanes–Galley–Müller, Witten, Pollock et al. (PRL), Chen et al.: full text; Pollock et al. (PRA), Cotler–Penington–Ranard: abstract only; Feynman–Vernon: not accessed | SOURCES.md |
 | Attack on the packet | [[ATTACK_TABLE]] | `results/verification/attack_round*/` |

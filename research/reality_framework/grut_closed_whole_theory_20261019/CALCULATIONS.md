@@ -64,8 +64,10 @@ maximum 0.4893 occurs at t = 37.5 and S falls to 0.4042 by t = 39.5. Information
 from the bath into A: the trace distance D(t) between the reduced states of two preparations
 that differ only on A (|+⟩ vs |−⟩, same bath state) starts at 1, reaches its minimum 0.5418 at
 t = 37.6, and accumulates **1.2035** in positive increments on the 0.1 grid (a lower bound on
-the continuous Breuer–Laine–Piilo measure; largest single step 0.0145). A CP-divisible
-(Markovian) reduced dynamics would make D non-increasing.
+the continuous Breuer–Laine–Piilo measure; largest single step 0.0145). A CP-divisible reduced
+dynamics would make D non-increasing, so the backflow certifies memory. The converse does not
+hold: CP-divisible dynamics can still carry memory, and Markovianity is a property of the
+multi-time process (Pollock et al., Phys. Rev. Lett. 120, 040405 (2018), primary text inspected).
 
 ### S3. The reduced dynamics is derived, and it is state-dependent
 

@@ -183,7 +183,12 @@ corresponding instrument applied to A; and the statistics after an intervention 
 functions of the one-time map Φ_t (back-action). (Calc 1, S6: Born probability 0.354910 =
 register population; p(Z=+1, t₂) 0.3385 with the record vs 0.4491 without.) The multi-time
 object is the process tensor of DEF 1.5; an operational Markov condition is a property of it,
-not of Φ_t (Pollock et al. 2018).
+not of Φ_t: a process is Markovian iff the state after a causal break (measure and re-prepare)
+is independent of the earlier controls; Markov processes are divisible but the converse fails,
+and CP-divisible dynamics can have memory (Pollock et al., Phys. Rev. Lett. 120, 040405 (2018),
+Theorem and Appendix B.1; framework in Phys. Rev. A 97, 012127 (2018); primary texts
+inspected). Non-CP-divisibility, as in calc 1 S3, therefore certifies memory; CP-divisibility
+alone would not certify its absence.
 
 **THM 2.9 (entropy relations and recurrence).** For a pure ρ_Ω: S(ρ_A) = S(ρ_Ā).
 In general: subadditivity, strong subadditivity (Lieb–Ruskai 1973), Araki–Lieb
