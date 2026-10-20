@@ -1,0 +1,29 @@
+{
+  "purpose": "A separate implementation tests the previously published classical bulk predictions. This is an author numerical test, not an empirical or blinded test.",
+  "prediction_source_commit": "0cbb3644f3466c6dade3a00d919c62a97b24f087",
+  "physical_a": 1,
+  "physical_b": 0.1,
+  "preparation": "Full real u,w,S fields and momenta. Initial velocities rotate the charged field once; no background or frequency is held fixed during evolution. A cosine perturbs either the charged amplitude or S.",
+  "analysis": {
+    "frequency_extraction": "Find the two largest separated nonzero Fourier peaks of the charged-amplitude mode (one peak for S seed), then fit sinusoidal frequencies by variable projection. Theory values are not used as fit starting values.",
+    "frequency_search_range": [0.02,3.0],
+    "maximum_relative_frequency_error": 0.002,
+    "growth_fit_windows": {"mixed_k02":[60,130],"mixed_k04":[40,90],"mixed_k04_large_seed":[40,90]},
+    "maximum_relative_growth_error": 0.02,
+    "maximum_energy_drift": 0.000001,
+    "maximum_charge_drift": 0.000001,
+    "scope": "Plane-dependent uniform bulk tests. No finite-droplet or nonlinear unrestricted-3D verdict. Conservation checks are sampled. Frequency fits use a theory-informed number of branches, not a theory-fixed frequency."
+  },
+  "runs": [
+    {"id":"dense_k02","background":"dense","seed":"charged","k":0.2,"N":64,"dt":0.02,"T":400,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"dense_k02_half_dt","background":"dense","seed":"charged","k":0.2,"N":64,"dt":0.01,"T":400,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"dense_k02_double_grid","background":"dense","seed":"charged","k":0.2,"N":128,"dt":0.02,"T":400,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"dense_k08","background":"dense","seed":"charged","k":0.8,"N":64,"dt":0.02,"T":240,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"mediator_k02","background":"dense","seed":"mediator","k":0.2,"N":64,"dt":0.02,"T":240,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"mediator_k08","background":"dense","seed":"mediator","k":0.8,"N":64,"dt":0.02,"T":240,"epsilon":0.00001,"sample_period":0.1},
+    {"id":"mixed_k02","background":"mixed","seed":"charged","k":0.2,"N":64,"dt":0.02,"T":140,"epsilon":0.00000001,"sample_period":0.1},
+    {"id":"mixed_k04","background":"mixed","seed":"charged","k":0.4,"N":64,"dt":0.02,"T":100,"epsilon":0.00000001,"sample_period":0.1},
+    {"id":"mixed_k04_large_seed","background":"mixed","seed":"charged","k":0.4,"N":64,"dt":0.02,"T":100,"epsilon":0.0000001,"sample_period":0.1},
+    {"id":"mixed_stable_k08","background":"mixed","seed":"charged","k":0.8,"N":64,"dt":0.02,"T":160,"epsilon":0.0000001,"sample_period":0.1}
+  ]
+}

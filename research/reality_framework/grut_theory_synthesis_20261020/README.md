@@ -1,5 +1,7 @@
 # GRUT working theory and derived predictions
 
+**Subsequent test:** [the reality audit](../grut_reality_audit_20261020/REPORT.md) supplies ten full-field evolutions with a separate Fourier/RK4 solver, physical unit conversions and an empirical-access assessment. [START_HERE.md](../grut_reality_audit_20261020/START_HERE.md) preserves the continuation checkpoint.
+
 Read [THEORY.md](THEORY.md) for the complete candidate and [CLAUDE_HANDOFF.md](CLAUDE_HANDOFF.md) for the next controlled constructions. This is an explicit working EFT synthesis with a demonstrated classical sector; it is not an established theory of everything.
 
 New deductions/checks under the existing reference scalar action:

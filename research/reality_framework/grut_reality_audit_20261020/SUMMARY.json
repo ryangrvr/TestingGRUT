@@ -1,0 +1,352 @@
+{
+  "experiment": "Full nonlinear fields, plane-dependent periodic bulk, separate Fourier/RK4 implementation",
+  "completed": 10,
+  "all_checks_pass": true,
+  "checks": [
+    {
+      "name": "Frozen full_field.py",
+      "passed": true,
+      "detail": "1d9dc3373691d95de9156e65e154a72689f242d8c6ba15c93907f65297d7288a"
+    },
+    {
+      "name": "Frozen protocol.json",
+      "passed": true,
+      "detail": "29ad5ea278a52206be6f1081ca0fdf50b9ead912193c11114084b38b9fa05844"
+    },
+    {
+      "name": "Frozen run_suite.py",
+      "passed": true,
+      "detail": "9f34b473ce137593a6016155f0b5f6ccefb308ec499a3e1c17b27c6f306bb5a8"
+    },
+    {
+      "name": "dense_k02 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 5.622142751349202e-10,
+        "charge_drift": 5.622142751349202e-10
+      }
+    },
+    {
+      "name": "dense_k02 predicted frequency",
+      "passed": true,
+      "detail": [
+        1.4928617231291241e-09,
+        1.2520123826575968e-09
+      ]
+    },
+    {
+      "name": "dense_k02_half_dt numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 1.7569834476205415e-11,
+        "charge_drift": 1.7569723453902952e-11
+      }
+    },
+    {
+      "name": "dense_k02_half_dt predicted frequency",
+      "passed": true,
+      "detail": [
+        1.3206868931803228e-10,
+        6.890477077803325e-11
+      ]
+    },
+    {
+      "name": "dense_k02_double_grid numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 5.622140530903152e-10,
+        "charge_drift": 5.622140530903152e-10
+      }
+    },
+    {
+      "name": "dense_k02_double_grid predicted frequency",
+      "passed": true,
+      "detail": [
+        1.4898283717812433e-09,
+        1.251665104895494e-09
+      ]
+    },
+    {
+      "name": "dense_k08 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 3.3732816540066324e-10,
+        "charge_drift": 3.3732816540066324e-10
+      }
+    },
+    {
+      "name": "dense_k08 predicted frequency",
+      "passed": true,
+      "detail": [
+        3.877609122682202e-09,
+        2.2419618384006412e-09
+      ]
+    },
+    {
+      "name": "mediator_k02 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 3.373279433560583e-10,
+        "charge_drift": 3.373280543783608e-10
+      }
+    },
+    {
+      "name": "mediator_k02 predicted frequency",
+      "passed": true,
+      "detail": [
+        7.047636141344071e-09
+      ]
+    },
+    {
+      "name": "mediator_k08 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 3.3732838744526816e-10,
+        "charge_drift": 3.3732872051217555e-10
+      }
+    },
+    {
+      "name": "mediator_k08 predicted frequency",
+      "passed": true,
+      "detail": [
+        1.0912268089136035e-08
+      ]
+    },
+    {
+      "name": "mixed_k02 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 2.7003232982991676e-09,
+        "charge_drift": 2.896314188483018e-09
+      }
+    },
+    {
+      "name": "mixed_k02 predicted growth",
+      "passed": true,
+      "detail": 3.251849889251979e-05
+    },
+    {
+      "name": "mixed_k04 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 1.9288015629115307e-09,
+        "charge_drift": 2.06879513520164e-09
+      }
+    },
+    {
+      "name": "mixed_k04 predicted growth",
+      "passed": true,
+      "detail": 7.246200638311162e-05
+    },
+    {
+      "name": "mixed_k04_large_seed numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 1.9288063368705366e-09,
+        "charge_drift": 2.068786253417443e-09
+      }
+    },
+    {
+      "name": "mixed_k04_large_seed predicted growth",
+      "passed": true,
+      "detail": 7.25479039872523e-05
+    },
+    {
+      "name": "mixed_stable_k08 numerical consistency",
+      "passed": true,
+      "detail": {
+        "energy_drift": 3.0860849431491033e-09,
+        "charge_drift": 3.3100749918801853e-09
+      }
+    }
+  ],
+  "cases": {
+    "dense_k02": {
+      "energy_drift": 5.622142751349202e-10,
+      "charge_drift": 5.622142751349202e-10,
+      "expected": [
+        0.11703821170944478,
+        1.4013096207123117
+      ],
+      "frequency_fit": {
+        "measured": [
+          0.11703821153472292,
+          1.4013096189578547
+        ],
+        "fft_initial": [
+          0.10992826081044015,
+          1.3976593160184532
+        ],
+        "relative_RMS_residual": 2.457835824678189e-09
+      },
+      "relative_errors": [
+        1.4928617231291241e-09,
+        1.2520123826575968e-09
+      ]
+    },
+    "dense_k02_half_dt": {
+      "energy_drift": 1.7569834476205415e-11,
+      "charge_drift": 1.7569723453902952e-11,
+      "expected": [
+        0.11703821170944478,
+        1.4013096207123117
+      ],
+      "frequency_fit": {
+        "measured": [
+          0.1170382116939877,
+          1.4013096206157547
+        ],
+        "fft_initial": [
+          0.10992826081044015,
+          1.3976593160184532
+        ],
+        "relative_RMS_residual": 4.2342496166361587e-10
+      },
+      "relative_errors": [
+        1.3206868931803228e-10,
+        6.890477077803325e-11
+      ]
+    },
+    "dense_k02_double_grid": {
+      "energy_drift": 5.622140530903152e-10,
+      "charge_drift": 5.622140530903152e-10,
+      "expected": [
+        0.11703821170944478,
+        1.4013096207123117
+      ],
+      "frequency_fit": {
+        "measured": [
+          0.11703821153507793,
+          1.4013096189583414
+        ],
+        "fft_initial": [
+          0.10992826081044015,
+          1.3976593160184532
+        ],
+        "relative_RMS_residual": 2.4788555004208055e-09
+      },
+      "relative_errors": [
+        1.4898283717812433e-09,
+        1.251665104895494e-09
+      ]
+    },
+    "dense_k08": {
+      "energy_drift": 3.3732816540066324e-10,
+      "charge_drift": 3.3732816540066324e-10,
+      "expected": [
+        0.5302719434455188,
+        1.7018161657757105
+      ],
+      "frequency_fit": {
+        "measured": [
+          0.5302719413893314,
+          1.7018161619603036
+        ],
+        "fft_initial": [
+          0.5233807003065043,
+          1.700987275996139
+        ],
+        "relative_RMS_residual": 3.6068988664316133e-09
+      },
+      "relative_errors": [
+        3.877609122682202e-09,
+        2.2419618384006412e-09
+      ]
+    },
+    "mediator_k02": {
+      "energy_drift": 3.373279433560583e-10,
+      "charge_drift": 3.373280543783608e-10,
+      "expected": [
+        1.4840072978824528
+      ],
+      "frequency_fit": {
+        "measured": [
+          1.4840072874237094
+        ],
+        "fft_initial": [
+          1.4916349958735375
+        ],
+        "relative_RMS_residual": 1.658807142713869e-08
+      },
+      "relative_errors": [
+        7.047636141344071e-09
+      ]
+    },
+    "mediator_k08": {
+      "energy_drift": 3.3732838744526816e-10,
+      "charge_drift": 3.3732872051217555e-10,
+      "expected": [
+        1.674000495868618
+      ],
+      "frequency_fit": {
+        "measured": [
+          1.6740004776014759
+        ],
+        "fft_initial": [
+          1.6748182409808139
+        ],
+        "relative_RMS_residual": 3.392688501403377e-08
+      },
+      "relative_errors": [
+        1.0912268089136035e-08
+      ]
+    },
+    "mixed_k02": {
+      "energy_drift": 2.7003232982991676e-09,
+      "charge_drift": 2.896314188483018e-09,
+      "expected_growth": 0.07581066443605733,
+      "measured_growth": 0.07580819918704983,
+      "relative_error": 3.251849889251979e-05,
+      "fit_window": [
+        60,
+        130
+      ],
+      "largest_mode_norm": 0.0007260197140619435,
+      "largest_mode_norm_over_mean_F": 0.0014520401371675004
+    },
+    "mixed_k04": {
+      "energy_drift": 1.9288015629115307e-09,
+      "charge_drift": 2.06879513520164e-09,
+      "expected_growth": 0.1121253925537212,
+      "measured_growth": 0.11211726772281026,
+      "relative_error": 7.246200638311162e-05,
+      "fit_window": [
+        40,
+        90
+      ],
+      "largest_mode_norm": 0.0006328133628867449,
+      "largest_mode_norm_over_mean_F": 0.0012656271128366064
+    },
+    "mixed_k04_large_seed": {
+      "energy_drift": 1.9288063368705366e-09,
+      "charge_drift": 2.068786253417443e-09,
+      "expected_growth": 0.1121253925537212,
+      "measured_growth": 0.11211725809150767,
+      "relative_error": 7.25479039872523e-05,
+      "fit_window": [
+        40,
+        90
+      ],
+      "largest_mode_norm": 0.0063280688338153805,
+      "largest_mode_norm_over_mean_F": 0.01265652330805272
+    },
+    "mixed_stable_k08": {
+      "energy_drift": 3.0860849431491033e-09,
+      "charge_drift": 3.3100749918801853e-09,
+      "maximum_mode_norm_gain": 1.3809654286834305,
+      "interpretation": "Above the published instability band; report finite observed gain without inventing a post-run universal stability threshold."
+    }
+  },
+  "comparisons": {
+    "dense_k02_half_dt": {
+      "maximum_measured_frequency_difference": 1.657900039475635e-09
+    },
+    "dense_k02_double_grid": {
+      "maximum_measured_frequency_difference": 4.867217739956686e-13
+    },
+    "growth_seed_amplitude": {
+      "relative_change": 8.590382893913784e-08
+    }
+  },
+  "scope": "Author numerical tests of published model predictions. No finite-droplet, unrestricted-3D, quantum-lifetime or empirical verdict."
+}
