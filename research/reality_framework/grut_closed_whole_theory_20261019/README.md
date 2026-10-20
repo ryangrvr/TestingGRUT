@@ -21,12 +21,16 @@ Read in this order:
 | [SOURCES.md](SOURCES.md) | Repository sources (paths, commits, branches) and primary literature actually read |
 | `code/` | `closed_whole_demo.py`, `marginal_compatibility.py`, `verify.py`, `finalize.py` |
 | `results/` | JSON outputs, the M1 matched-control re-run record |
+| `results/verification/` | independent re-implementation (code, comparator, results), the superseded re-execution record, two code reviews, two rounds of attack findings, the s10–s12 row-check record |
 | `MANIFEST.json` | sha256 of every packet file |
 
 Reproduce: `python3 code/closed_whole_demo.py` (~1 min), `python3 code/marginal_compatibility.py`
-(<1 s), then `python3 code/verify.py --rerun`. Requirements: Python ≥ 3.12, numpy, scipy, cvxpy
+(<1 s), then `python3 code/verify.py --rerun` (about 2 minutes). Requirements: Python ≥ 3.12, numpy, scipy, cvxpy
 (CLARABEL solver, bundled with cvxpy).
 
 Status in one line: **a working closed-system framework of known physics with conditional
-model instances and computed boundaries; no additional law or state-selection rule has
-survived; nothing here is validated universal physics.**
+model instances and computed boundaries. Closure alone forces the standard global theorems and a
+few pointwise local inequalities; with a named hypothesis it forces more (equilibration on
+average, a second-law identity, relaxation for an infinite complement); it forces no local
+dynamical law. No additional law or state-selection rule has survived; nothing here is
+validated universal physics.**

@@ -1,21 +1,17 @@
 """
-Independent re-implementation of the closed-whole finite-model checks,
-written from the specification only (hbar = 1).
+Independent re-implementation of the closed-whole demo, written from the
+specification only (hbar = 1).
 
-8 qubits: A = qubit 0, Abar = qubits 1..7 (qubit 0 is the leftmost kron factor).
-H_A      = 0.5 Z_0
-H_Abar   = sum_{k=1..6} [X_k X_{k+1} + Y_k Y_{k+1} + 0.5 Z_k Z_{k+1}] + sum_{k=1..7} h_k Z_k
-H_AAbar  = 0.5 X_0 X_1
-H        = H_A + H_Abar + H_AAbar
-rho(0)   = |+><+|_0 (x) exp(-H_Abar)/Z     (beta = 1, 7-qubit chain operator)
+Convention: qubit 0 is the leftmost (most significant) tensor factor.
+Operator on qubit k = I x ... x P (position k) x ... x I.
 """
-import json, sys, time
+import json
+import time
 import numpy as np
-from scipy.linalg import eigh, expm, logm
+import scipy.linalg as sla
 
-np.set_printoptions(precision=12, linewidth=140)
+np.set_printoptions(precision=12)
 
-# ---------- Pauli algebra ----------
 I2 = np.eye(2, dtype=complex)
 X = np.array([[0, 1], [1, 0]], dtype=complex)
 Y = np.array([[0, -1j], [1j, 0]], dtype=complex)
@@ -29,308 +25,311 @@ def kron_all(ops):
     return out
 
 
-def op_on(n, placements):
-    """n-qubit operator with single-qubit ops placed at given sites (dict site->op)."""
-    return kron_all([placements.get(k, I2) for k in range(n)])
+def op_on(n, pauli_dict):
+    """pauli_dict: {qubit_index: 2x2 matrix}; identity elsewhere; n qubits total."""
+    ops = [pauli_dict.get(k, I2) for k in range(n)]
+    return kron_all(ops)
 
 
-def ptrace_keep_first(rho, dA, dB):
-    """Partial trace over the second factor of a dA*dB density matrix."""
-    r = rho.reshape(dA, dB, dA, dB)
-    return np.einsum('ijkj->ik', r)
+# ---------------------------------------------------------------- Hamiltonian
+N = 8
+h_field = [0.3, -0.7, 0.5, -0.2, 0.8, -0.4, 0.6]  # on qubits 1..7
 
 
-def herm(M):
-    return 0.5 * (M + M.conj().T)
-
-
-def trace_norm(M):
-    w = np.linalg.eigvalsh(herm(M))
-    return float(np.sum(np.abs(w)))
-
-
-def vn_entropy(rho):
-    w = np.linalg.eigvalsh(herm(rho))
-    w = w[w > 1e-15]
-    return float(-np.sum(w * np.log(w)))
-
-
-# ---------- Hamiltonian ----------
-h = [0.3, -0.7, 0.5, -0.2, 0.8, -0.4, 0.6]  # fields on qubits 1..7
-
-
-def chain_hamiltonian(n, offset):
-    """XXZ-type chain with fields, on sites offset..offset+6 of an n-qubit register."""
-    H = np.zeros((2 ** n, 2 ** n), dtype=complex)
-    for j in range(6):  # bonds (k, k+1), k = 1..6  -> sites offset+j, offset+j+1
-        a, b = offset + j, offset + j + 1
-        H += op_on(n, {a: X, b: X}) + op_on(n, {a: Y, b: Y}) + 0.5 * op_on(n, {a: Z, b: Z})
-    for j in range(7):
-        H += h[j] * op_on(n, {offset + j: Z})
+def build_H_Abar_as_7qubit():
+    """H_Abar on the 7-qubit chain (qubits 1..7 relabelled 0..6)."""
+    n = 7
+    H = np.zeros((2**n, 2**n), dtype=complex)
+    for k in range(n - 1):  # k=0..5  <-> spec k=1..6
+        H += op_on(n, {k: X, k + 1: X})
+        H += op_on(n, {k: Y, k + 1: Y})
+        H += 0.5 * op_on(n, {k: Z, k + 1: Z})
+    for k in range(n):
+        H += h_field[k] * op_on(n, {k: Z})
     return H
 
 
-N = 8
-H_A = 0.5 * op_on(N, {0: Z})
-H_Abar_8 = chain_hamiltonian(N, 1)       # embedded in 8 qubits
-H_Abar_7 = chain_hamiltonian(7, 0)       # 7-qubit chain operator (for the thermal state)
-H_int = 0.5 * op_on(N, {0: X, 1: X})
-H = H_A + H_Abar_8 + H_int
-assert np.allclose(H, H.conj().T)
-assert np.allclose(np.kron(I2, H_Abar_7), H_Abar_8)
+def build_H_global():
+    H = np.zeros((2**N, 2**N), dtype=complex)
+    # H_A
+    H += 0.5 * op_on(N, {0: Z})
+    # H_Abar on qubits 1..7
+    for k in range(1, 7):  # k = 1..6, pairs (k, k+1)
+        H += op_on(N, {k: X, k + 1: X})
+        H += op_on(N, {k: Y, k + 1: Y})
+        H += 0.5 * op_on(N, {k: Z, k + 1: Z})
+    for k in range(1, 8):
+        H += h_field[k - 1] * op_on(N, {k: Z})
+    # H_AAbar
+    H += 0.5 * op_on(N, {0: X, 1: X})
+    return H
 
-# ---------- initial states ----------
+
+H_Abar7 = build_H_Abar_as_7qubit()
+H = build_H_global()
+assert np.allclose(H, H.conj().T)
+# consistency: H == 0.5 Z_0 + I x H_Abar7 + 0.5 X0X1
+assert np.allclose(H, 0.5 * op_on(N, {0: Z}) + np.kron(I2, H_Abar7) + 0.5 * op_on(N, {0: X, 1: X}))
+
+# ---------------------------------------------------------------- initial states
 plus = np.array([1, 1], dtype=complex) / np.sqrt(2)
 minus = np.array([1, -1], dtype=complex) / np.sqrt(2)
 rho_plus = np.outer(plus, plus.conj())
 rho_minus = np.outer(minus, minus.conj())
 
-Eb, Vb = eigh(H_Abar_7)
-w = np.exp(-Eb)
-Zpart = w.sum()
-rho_bath = (Vb * (w / Zpart)) @ Vb.conj().T
-rho_bath = herm(rho_bath)
-assert abs(np.trace(rho_bath).real - 1) < 1e-12
-# cross-check thermal state against expm
-assert np.allclose(rho_bath, expm(-H_Abar_7) / np.trace(expm(-H_Abar_7)), atol=1e-12)
+beta = 1.0
+wB, VB = np.linalg.eigh(H_Abar7)
+boltz = np.exp(-beta * (wB - wB.min()))
+rho_bath = (VB * boltz) @ VB.conj().T
+rho_bath /= np.trace(rho_bath).real
+assert np.allclose(rho_bath, rho_bath.conj().T)
+assert abs(np.trace(rho_bath) - 1) < 1e-12
+# cross-check against expm
+rb2 = sla.expm(-beta * H_Abar7)
+rb2 /= np.trace(rb2)
+assert np.allclose(rho_bath, rb2, atol=1e-12)
 
 rho0_plus = np.kron(rho_plus, rho_bath)
 rho0_minus = np.kron(rho_minus, rho_bath)
 
-# ---------- exact propagator via eigendecomposition ----------
-E, V = eigh(H)
+# ---------------------------------------------------------------- evolution
+w, V = np.linalg.eigh(H)
 Vd = V.conj().T
 
 
-def U_of(t):
-    return (V * np.exp(-1j * E * t)) @ Vd
-
-
 def evolve(rho0, t):
-    U = U_of(t)
+    """Exact unitary evolution via eigendecomposition."""
+    phase = np.exp(-1j * w * t)
+    U = (V * phase) @ Vd
     return U @ rho0 @ U.conj().T
 
 
-# spot-check propagator vs expm
-for tt in (0.7, 3.0):
-    assert np.allclose(U_of(tt), expm(-1j * H * tt), atol=1e-9), tt
+def ptrace_to_A(rho, nA=1, n=N):
+    dA = 2**nA
+    dB = 2**(n - nA)
+    r = rho.reshape(dA, dB, dA, dB)
+    return np.einsum('ajbj->ab', r)
 
-ts = np.round(np.arange(0, 40 + 1e-9, 0.1), 10)
-assert len(ts) == 401 and abs(ts[-1] - 40) < 1e-12
+
+def vn_entropy(rho):
+    lam = np.linalg.eigvalsh(rho)
+    lam = lam[lam > 1e-15]
+    return float(-np.sum(lam * np.log(lam)))
+
+
+def trace_norm(M):
+    return float(np.sum(np.linalg.svd(M, compute_uv=False)))
+
+
+grid = np.round(np.arange(0, 401) * 0.1, 10)  # t in {0, 0.1, ..., 40}
+assert len(grid) == 401 and abs(grid[-1] - 40.0) < 1e-12
 
 results = {}
 
-# ========== 1. energy conservation ==========
-E_tot0 = float(np.trace(H @ rho0_plus).real)
-E_drift = []
+# ---------------------------------------------------------------- 1. energy conservation
+E0 = float(np.trace(H @ rho0_plus).real)
+E_t = []
 S_A = []
-D = []
-rhoA_plus_list = []
+D_t = []
 t0 = time.time()
-for t in ts:
-    rt_p = evolve(rho0_plus, t)
-    rt_m = evolve(rho0_minus, t)
-    E_drift.append(abs(float(np.trace(H @ rt_p).real) - E_tot0))
-    rA_p = ptrace_keep_first(rt_p, 2, 128)
-    rA_m = ptrace_keep_first(rt_m, 2, 128)
-    rhoA_plus_list.append(rA_p)
+for t in grid:
+    rp = evolve(rho0_plus, t)
+    rm = evolve(rho0_minus, t)
+    E_t.append(float(np.trace(H @ rp).real))
+    rA_p = ptrace_to_A(rp)
+    rA_m = ptrace_to_A(rm)
     S_A.append(vn_entropy(rA_p))
-    D.append(0.5 * trace_norm(rA_p - rA_m))
-E_drift = np.array(E_drift)
+    D_t.append(0.5 * trace_norm(rA_p - rA_m))
+E_t = np.array(E_t)
 S_A = np.array(S_A)
-D = np.array(D)
-print(f"[timing] main grid loop: {time.time()-t0:.1f}s", file=sys.stderr)
+D_t = np.array(D_t)
+print(f"[evolution loop] {time.time()-t0:.2f} s")
 
-results['E_tot'] = E_tot0
-results['E_max_drift'] = float(E_drift.max())
+results['1_energy'] = {
+    'E_tot_t0': E0,
+    'max_abs_drift': float(np.max(np.abs(E_t - E0))),
+}
 
-# ========== 2. entropy of A ==========
-i10 = int(np.argmin(np.abs(ts - 10.0)))
-i40 = int(np.argmin(np.abs(ts - 40.0)))
+# ---------------------------------------------------------------- 2. S_A
+i10 = int(np.argmin(np.abs(grid - 10.0)))
+i40 = int(np.argmin(np.abs(grid - 40.0)))
 imax = int(np.argmax(S_A))
-results['S_A_t10'] = float(S_A[i10])
-results['S_A_t40'] = float(S_A[i40])
-results['S_A_max'] = float(S_A[imax])
-results['S_A_argmax_t'] = float(ts[imax])
-results['S_A_t0'] = float(S_A[0])
-results['S_A_ln2'] = float(np.log(2))
+results['2_entropy'] = {
+    'S_A_t0': float(S_A[0]),
+    'S_A_t10': float(S_A[i10]),
+    'S_A_t40': float(S_A[i40]),
+    'S_A_max': float(S_A[imax]),
+    't_of_max': float(grid[imax]),
+    'ln2': float(np.log(2)),
+}
 
-# ========== 3. BLP backflow ==========
-dD = np.diff(D)
-results['BLP_sum_positive_increments'] = float(np.sum(dD[dD > 0]))
-results['D_min'] = float(D.min())
-results['D_argmin_t'] = float(ts[int(np.argmin(D))])
-results['D_t0'] = float(D[0])
-results['D_t40'] = float(D[-1])
-results['BLP_n_positive_increments'] = int(np.sum(dD > 0))
+# ---------------------------------------------------------------- 3. BLP
+dD = np.diff(D_t)
+results['3_BLP'] = {
+    'D_t0': float(D_t[0]),
+    'sum_positive_increments': float(np.sum(dD[dD > 0])),
+    'D_min': float(np.min(D_t)),
+    't_of_min': float(grid[int(np.argmin(D_t))]),
+    'n_positive_increments': int(np.sum(dD > 0)),
+}
 
-# ========== 4. record protocol (9th qubit R) ==========
+# ---------------------------------------------------------------- 4. record protocol (9 qubits)
+N9 = 9
+H9 = np.kron(H, I2)  # H' = H x I_R, R is qubit 8 (last factor)
+w9, V9 = np.linalg.eigh(H9)
+V9d = V9.conj().T
+
+
+def evolve9(rho0, t):
+    U = (V9 * np.exp(-1j * w9 * t)) @ V9d
+    return U @ rho0 @ U.conj().T
+
+
+ket0 = np.array([1, 0], dtype=complex)
+rhoR0 = np.outer(ket0, ket0.conj())
+rho9_0 = np.kron(rho0_plus, rhoR0)
+
+# CNOT control qubit 0, target qubit 8
+P0 = np.outer(ket0, ket0.conj())
+P1 = I2 - P0
+CNOT = op_on(N9, {0: P0}) + op_on(N9, {0: P1, 8: X})
+assert np.allclose(CNOT @ CNOT, np.eye(2**N9))
+
 t1, t2 = 3.0, 6.0
-P0_plus_8 = op_on(N, {0: (I2 + Z) / 2})
+rho9_t1 = evolve9(rho9_0, t1)
+rhoA_t1 = ptrace_to_A(rho9_t1, nA=1, n=N9)
+pZ_t1 = float(rhoA_t1[0, 0].real)
 
-
-def p_up(rho8):
-    return float(np.trace(P0_plus_8 @ rho8).real)
-
-
-# 9-qubit implementation, R = qubit 8 (rightmost factor)
-ket0 = np.array([[1, 0], [0, 0]], dtype=complex)
-rho9_0 = np.kron(rho0_plus, ket0)
-U8_3 = U_of(t1)
-U9_3 = np.kron(U8_3, I2)             # H' = H (x) I_R  =>  U' = U (x) I
-rho9_t1 = U9_3 @ rho9_0 @ U9_3.conj().T
-rho8_t1 = ptrace_keep_first(rho9_t1, 256, 2)
-p_t1 = p_up(rho8_t1)
-
-# CNOT: control qubit 0, target qubit 8
-P0 = (I2 + Z) / 2
-P1 = (I2 - Z) / 2
-CNOT = np.kron(np.kron(P0, np.eye(128)), I2) + np.kron(np.kron(P1, np.eye(128)), X)
-assert np.allclose(CNOT @ CNOT, np.eye(512))
 rho9_after = CNOT @ rho9_t1 @ CNOT.conj().T
-rho9_t2 = U9_3 @ rho9_after @ U9_3.conj().T   # evolve another dt = 3
-rho8_t2_rec = ptrace_keep_first(rho9_t2, 256, 2)
-p_t2_record = p_up(rho8_t2_rec)
+rho9_t2_rec = evolve9(rho9_after, t2 - t1)
+rhoA_t2_rec = ptrace_to_A(rho9_t2_rec, nA=1, n=N9)
+pZ_t2_rec = float(rhoA_t2_rec[0, 0].real)
 
-# no intervention
-rho8_t2_free = evolve(rho0_plus, t2)
-p_t2_free = p_up(rho8_t2_free)
+rho9_t2_free = evolve9(rho9_0, t2)
+rhoA_t2_free = ptrace_to_A(rho9_t2_free, nA=1, n=N9)
+pZ_t2_free = float(rhoA_t2_free[0, 0].real)
 
-# cross-check: record == Z_0 dephasing at t1 in the 8-qubit space
-rho8_deph = P0_plus_8 @ rho8_t1 @ P0_plus_8 + (np.eye(256) - P0_plus_8) @ rho8_t1 @ (np.eye(256) - P0_plus_8)
-rho8_t2_deph = U8_3 @ rho8_deph @ U8_3.conj().T
-p_t2_deph = p_up(rho8_t2_deph)
-# the record itself: p(R=0) should equal p(Z_0=+1) at t1, and R-A correlation
-rho_R_t2 = np.einsum('ijij->j', rho9_t2.reshape(256, 2, 256, 2))  # wrong axes guard below
-rho_R = np.trace(rho9_t2.reshape(256, 2, 256, 2), axis1=0, axis2=2)
-p_R0 = float(rho_R[0, 0].real)
+# cross-check: no-intervention 9-qubit result == 8-qubit result at t=6
+rhoA_t2_free8 = ptrace_to_A(evolve(rho0_plus, t2))
+assert abs(rhoA_t2_free8[0, 0].real - pZ_t2_free) < 1e-10
 
-results['record_p_up_t1'] = p_t1
-results['record_p_up_t2_with_record'] = p_t2_record
-results['record_p_up_t2_no_intervention'] = p_t2_free
-results['record_p_up_t2_dephasing_crosscheck'] = p_t2_deph
-results['record_p_R0_at_t2'] = p_R0
-results['record_p_up_t1_from_8q_grid'] = float(rhoA_plus_list[int(np.argmin(np.abs(ts - 3.0)))][0, 0].real)
+# record readout: p(Z_R = +1) after CNOT should equal pZ_t1 and persist
+rhoR_after = np.einsum('iaib->ab', rho9_t2_rec.reshape(256, 2, 256, 2))
+pZR_t2 = float(rhoR_after[0, 0].real)
 
-# ========== 5. initial correlations ==========
+results['4_record'] = {
+    'p_Z0_plus_t1_before_CNOT': pZ_t1,
+    'p_Z0_plus_t2_with_record': pZ_t2_rec,
+    'p_Z0_plus_t2_no_intervention': pZ_t2_free,
+    'p_ZR_plus_t2_with_record (record persists)': pZR_t2,
+    'Z0_t1_expectation': 2 * pZ_t1 - 1,
+}
+
+# ---------------------------------------------------------------- 5. initial correlations
 eps = 1.0 / 512
 rho1 = np.eye(256, dtype=complex) / 256
 rho2 = rho1 + eps * op_on(N, {0: Y, 1: X})
 assert np.allclose(rho2, rho2.conj().T)
-w2 = np.linalg.eigvalsh(rho2)
-assert w2.min() > 0, w2.min()
-results['rho2_min_eig'] = float(w2.min())
-results['rho2_max_eig'] = float(w2.max())
-rA1, rA2 = ptrace_keep_first(rho1, 2, 128), ptrace_keep_first(rho2, 2, 128)
-# marginal over Abar: trace out qubit 0 (the first factor)
-rB1 = np.trace(rho1.reshape(2, 128, 2, 128), axis1=0, axis2=2)
-rB2 = np.trace(rho2.reshape(2, 128, 2, 128), axis1=0, axis2=2)
-results['corr_marginal_A_diff'] = float(np.abs(rA1 - rA2).max())
-results['corr_marginal_Abar_diff'] = float(np.abs(rB1 - rB2).max())
-TD = []
-for t in ts:
-    r1t = evolve(rho1, t) if t == 0 else rho1  # I/256 is stationary; still check once below
-    r2t = evolve(rho2, t)
-    TD.append(0.5 * trace_norm(ptrace_keep_first(r1t, 2, 128) - ptrace_keep_first(r2t, 2, 128)))
-TD = np.array(TD)
-# confirm stationarity of rho1 at a random time
-assert np.allclose(evolve(rho1, 7.3), rho1)
-results['corr_TD_max'] = float(TD.max())
-results['corr_TD_argmax_t'] = float(ts[int(np.argmax(TD))])
-results['corr_TD_t0'] = float(TD[0])
+assert np.linalg.eigvalsh(rho2).min() > 0
+assert abs(np.trace(rho2) - 1) < 1e-12
 
-# ========== 6. Werner marginal compatibility (SDP) ==========
+
+def ptrace_to_Abar(rho):
+    return np.einsum('iaib->ab', rho.reshape(2, 128, 2, 128))
+
+
+marg_A_diff = trace_norm(ptrace_to_A(rho1) - ptrace_to_A(rho2))
+marg_Abar_diff = trace_norm(ptrace_to_Abar(rho1) - ptrace_to_Abar(rho2))
+TD = []
+for t in grid:
+    rA1 = ptrace_to_A(evolve(rho1, t))
+    rA2 = ptrace_to_A(evolve(rho2, t))
+    TD.append(0.5 * trace_norm(rA1 - rA2))
+TD = np.array(TD)
+iTD = int(np.argmax(TD))
+results['5_initial_correlations'] = {
+    'marginal_A_trace_norm_diff': marg_A_diff,
+    'marginal_Abar_trace_norm_diff': marg_Abar_diff,
+    'max_trace_distance_rhoA': float(TD[iTD]),
+    't_of_max': float(grid[iTD]),
+    'trace_distance_t0': float(TD[0]),
+}
+
+# ---------------------------------------------------------------- 6. Werner compatibility (SDP)
 import cvxpy as cp
 
 phi = np.array([1, 0, 0, 1], dtype=complex) / np.sqrt(2)
-Phi = np.outer(phi, phi.conj()).real
-I4 = np.eye(4)
+Phi = np.outer(phi, phi.conj()).real  # real symmetric
 
 
-def W(p):
-    return p * Phi + (1 - p) * I4 / 4
+def werner(p):
+    return p * Phi + (1 - p) * np.eye(4) / 4
 
 
-def ptrace_np(rho, dims, keep):
-    """Partial trace for a numpy array, dims list, keep = list of subsystem indices."""
-    n = len(dims)
-    r = rho.reshape(dims + dims)
-    trace_axes = [k for k in range(n) if k not in keep]
-    for k in sorted(trace_axes, reverse=True):
-        r = np.trace(r, axis1=k, axis2=k + r.ndim // 2)
-    d = int(np.prod([dims[k] for k in keep]))
-    return r.reshape(d, d)
-
-
-# linear partial-trace maps as matrices acting on vec(rho), to keep cvxpy expressions simple
-def ptrace_matrix(dims, keep):
-    D = int(np.prod(dims))
-    d = int(np.prod([dims[k] for k in keep]))
-    M = np.zeros((d * d, D * D))
-    for idx in range(D * D):
-        e = np.zeros(D * D); e[idx] = 1
-        M[:, idx] = ptrace_np(e.reshape(D, D), dims, keep).reshape(-1)
-    return M
-
-
-M_AB = ptrace_matrix([2, 2, 2], [0, 1])   # trace out C
-M_BC = ptrace_matrix([2, 2, 2], [1, 2])   # trace out A
-
-# Werner states are real; a real symmetric feasible rho exists iff a Hermitian one does
-# (take the real part), so a real SDP is exact. Also solve a complex (Hermitian) version as check.
-rho_var = cp.Variable((8, 8), symmetric=True)
+# 3-qubit state, ordering A(0) B(1) C(2); real symmetric suffices (W real) but
+# use Hermitian for generality.
+rhoABC = cp.Variable((8, 8), hermitian=True)
 p_var = cp.Variable()
-cons = [rho_var >> 0, cp.trace(rho_var) == 1,
-        cp.reshape(M_AB @ cp.vec(rho_var, order='C'), (4, 4), order='C') == p_var * Phi + (1 - p_var) * I4 / 4,
-        cp.reshape(M_BC @ cp.vec(rho_var, order='C'), (4, 4), order='C') == p_var * Phi + (1 - p_var) * I4 / 4]
+
+
+def ptrace_C(R):
+    # R (8x8) -> (4x4): index (a,b,c)
+    blocks = []
+    for i in range(4):
+        row = []
+        for j in range(4):
+            row.append(cp.trace(R[2 * i:2 * i + 2, 2 * j:2 * j + 2]))
+        blocks.append(row)
+    return cp.bmat([[blocks[i][j] for j in range(4)] for i in range(4)]) if False else cp.vstack([cp.hstack([cp.reshape(blocks[i][j], (1, 1), order='C') for j in range(4)]) for i in range(4)])
+
+
+def ptrace_A(R):
+    # trace over first qubit: sum of the two diagonal 4x4 blocks
+    return R[0:4, 0:4] + R[4:8, 4:8]
+
+
+W_expr = p_var * Phi + (1 - p_var) * np.eye(4) / 4
+cons = [rhoABC >> 0, cp.real(cp.trace(rhoABC)) == 1,
+        ptrace_C(rhoABC) == W_expr,
+        ptrace_A(rhoABC) == W_expr,
+        p_var >= 0, p_var <= 1]
 prob = cp.Problem(cp.Maximize(p_var), cons)
 prob.solve(solver=cp.CLARABEL)
-p_star = float(p_var.value)
-rho_star = np.array(rho_var.value)
-# verify the certificate directly
-chk_AB = np.abs(ptrace_np(rho_star, [2, 2, 2], [0, 1]) - W(p_star)).max()
-chk_BC = np.abs(ptrace_np(rho_star, [2, 2, 2], [1, 2]) - W(p_star)).max()
-chk_min_eig = float(np.linalg.eigvalsh(rho_star).min())
+p_sdp = float(p_var.value)
+rho_sol = rhoABC.value
+# verify solution
+rho_sol = (rho_sol + rho_sol.conj().T) / 2
+min_eig = float(np.linalg.eigvalsh(rho_sol).min())
+# numeric partial traces
+r8 = rho_sol.reshape(2, 2, 2, 2, 2, 2)
+rAB = np.einsum('abcdec->abde', r8).reshape(4, 4)
+rBC = np.einsum('abcade->bcde', r8).reshape(4, 4)
+res_AB = float(np.abs(rAB - werner(p_sdp)).max())
+res_BC = float(np.abs(rBC - werner(p_sdp)).max())
 
-# Hermitian (complex) version
-rho_c = cp.Variable((8, 8), hermitian=True)
-p_c = cp.Variable()
-cons_c = [rho_c >> 0, cp.real(cp.trace(rho_c)) == 1,
-          cp.reshape(M_AB @ cp.vec(rho_c, order='C'), (4, 4), order='C') == p_c * Phi + (1 - p_c) * I4 / 4,
-          cp.reshape(M_BC @ cp.vec(rho_c, order='C'), (4, 4), order='C') == p_c * Phi + (1 - p_c) * I4 / 4]
-prob_c = cp.Problem(cp.Maximize(p_c), cons_c)
-prob_c.solve(solver=cp.CLARABEL)
-p_star_c = float(p_c.value)
+# analytic cross-check: Werner state 2-extendible iff p <= 2/3
+# (two-qubit symmetric extension criterion Tr rho_B^2 >= Tr rho_AB^2 - 4 sqrt(det rho_AB))
+def sym_ext_margin(p):
+    lam = np.array([(1 + 3 * p) / 4] + [(1 - p) / 4] * 3)
+    return 0.5 - (np.sum(lam**2) - 4 * np.sqrt(np.prod(lam)))
 
-# analytic reference: 2-extendibility of the 2-qubit isotropic state, F <= 3/4 <=> p <= 2/3
-results['werner_p_max_sdp_real'] = p_star
-results['werner_p_max_sdp_hermitian'] = p_star_c
-results['werner_sdp_status'] = prob.status
-results['werner_certificate_marginal_err_AB'] = float(chk_AB)
-results['werner_certificate_marginal_err_BC'] = float(chk_BC)
-results['werner_certificate_min_eig'] = chk_min_eig
-results['werner_analytic_2_over_3'] = 2.0 / 3.0
-# infeasibility check just above threshold: feasibility SDP at p = 2/3 + 0.01
-rho_f = cp.Variable((8, 8), symmetric=True)
-pf = 2.0 / 3.0 + 0.01
-cons_f = [rho_f >> 0, cp.trace(rho_f) == 1,
-          cp.reshape(M_AB @ cp.vec(rho_f, order='C'), (4, 4), order='C') == W(pf),
-          cp.reshape(M_BC @ cp.vec(rho_f, order='C'), (4, 4), order='C') == W(pf)]
-prob_f = cp.Problem(cp.Minimize(0), cons_f)
-prob_f.solve(solver=cp.CLARABEL)
-results['werner_feasibility_status_at_p_0.6767'] = prob_f.status
+from scipy.optimize import brentq
+p_analytic = brentq(sym_ext_margin, 0.5, 0.99)
 
-# ---------- save ----------
-out = {
-    'spec': 'closed-whole finite model, independent re-implementation (spec only)',
-    'grid': {'t_min': 0.0, 't_max': 40.0, 'dt': 0.1, 'n': int(len(ts))},
-    'results': results,
-    'series': {
-        't': ts.tolist(), 'S_A': S_A.tolist(), 'D': D.tolist(), 'E_drift': E_drift.tolist(), 'TD_corr': TD.tolist(),
-    },
+results['6_werner'] = {
+    'p_max_sdp': p_sdp,
+    'sdp_status': prob.status,
+    'min_eig_solution': min_eig,
+    'residual_AB_marginal': res_AB,
+    'residual_BC_marginal': res_BC,
+    'p_max_analytic_2_over_3': float(p_analytic),
 }
-with open(sys.argv[1], 'w') as f:
-    json.dump(out, f, indent=1)
 
-for k, v in results.items():
-    print(f"{k:45s} {v!r}")
+out = '/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/wf2/reimpl/reimpl_results.json'
+with open(out, 'w') as f:
+    json.dump(results, f, indent=2)
+print(json.dumps(results, indent=2))
+
+# also dump the time series for later comparison
+np.savez('/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/wf2/reimpl/series.npz',
+         grid=grid, E_t=E_t, S_A=S_A, D_t=D_t, TD=TD)

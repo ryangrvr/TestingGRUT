@@ -1,5 +1,12 @@
 # Campaign ledger entry — S11: Toric memory / scrambling bridge (key `s11_toric_bridge`)
 
+> **Errata (main session, 20 Oct, after the round-2 attack on the packet).** This entry is
+> single-reader. Scope as corrected in WORKING_THEORY.md: the rejection of the bridge claim holds
+> only in the Z-sector Metropolis 4D code at β ∈ {1.0, 1.1}, L ∈ {3, 4, 5}, local cooling decoder,
+> t_max = 10⁵; by the letter of the pre-registration R2 fails on the face spin, and the fallback
+> rests on O3, pre-registered as secondary; O2 and O3 ran in separate seeded runs.
+
+
 Sector: the separate, unmerged branch `claude/toric4d-memory-vs-scrambling-20261019` (pre-registration commit `52b8f11`, results commit `8e0f89f`), which tested the "bridge claim" B that a passive self-correcting memory must be locally non-thermalising / non-scrambling, in the classical Metropolis dynamics of the 4D toric code.
 
 Checkout note. The task names commit `96a7e7e` as the checkout; the working tree is at `4a53fb2` (WIP checkpoint 3), a descendant of `96a7e7e` (`git log --oneline -3`: 4a53fb2, f0e4cf0, da8f925; `git show --stat 96a7e7e` adds NEXT_CHAT_HANDOFF.md, START_NEXT_CHAT.txt, AGENT_COORDINATION.md). `git diff --stat 96a7e7e HEAD -- research/reality_framework/grut_closed_whole_handoff_20261019/` is empty, so the handoff text read here is byte-identical to the handoff commit's.

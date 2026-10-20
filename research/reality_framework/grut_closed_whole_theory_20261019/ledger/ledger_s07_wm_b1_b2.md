@@ -53,7 +53,7 @@ authorized compute envelope? (`SPECIALIST_REVIEW.md:85-88`;
 > Keep preparation acceptance, recoverability, delivery and retention distinct.
 > The B2 closeout is a feasibility stop within a specified computational envelope,
 > not a physical impossibility proof. Results from incompatible state spaces are
-> not composable. | [closeout disclosure](../grut_b2_feasibility_closeout_20261018/REVIEW_STATUS.md),
+> not composable. | [closeout disclosure](../../grut_b2_feasibility_closeout_20261018/REVIEW_STATUS.md),
 > original WM/B reports via the continuation/index documents
 
 The handoff is not treated as a primary source; discrepancies are in section 13.

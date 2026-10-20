@@ -1,5 +1,16 @@
 # Campaign ledger entry — s12_program_nogo_postulates
 
+> **Errata (main session, 20 Oct, after the round-2 attack on the packet).** This entry is
+> single-reader. Known corrections: (1) the +16 net count and the 53/21 split are the 2026-08-17
+> register sync stamps of the responsive-vacuum stance, not a current price of every model
+> instance (the total of 74 was recounted); (2) "nothing selects the access seed; it is currently
+> irreducible" (GRUT_PROGRAM_STATE_SYNTHESIS_01.md, 28 Sep) predates the EA-0 ruling (29 Sep);
+> (3) EA-0 is UNFORMULABLE because the earned Level-0 substrate is classical and the construction
+> is undefined there without an unearned lift; the four-way pattern (global, generically trivial
+> at d = 4 and 8, correlation readout, generator-carried) is a finding over the ten quantum
+> candidates examined, not a no-go theorem. WORKING_THEORY.md carries the corrected wording.
+
+
 **Sector:** Program-level no-go ledger, postulate map, supplied primitives and endogenous access.
 **Repository:** `/home/user/TestingGRUT`, branch `codex/grut-closure-fork-20261019`. Working tree is at `4a53fb2` (three WIP commits after the handoff commit `96a7e7e`); `git diff 96a7e7e HEAD` over the twelve primary sources and the handoff file is empty, so every citation below holds at both commits.
 **Date of entry:** 2026-10-20. No tracked file was modified; no computation beyond `grep`, `sed`, `wc` and a one-line JSON length count.

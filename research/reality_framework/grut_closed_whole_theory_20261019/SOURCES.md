@@ -21,7 +21,18 @@ Exact line citations for every ledger claim are in `ledger/ledger_*.md`.
 
 ## Primary literature
 
-Standard results used in FORMAL_CORE.md, cited there with journal references: Nakajima 1958;
+Standard results used in FORMAL_CORE.md and CALCULATIONS.md, cited there with journal
+references: Linden–Popescu–Short–Winter 2009; Reimann 2008; Short 2011; Short–Farrelly 2012;
+Popescu–Short–Winter 2006; Goldstein–Lebowitz–Tumulka–Zanghì 2006; Lieb–Robinson 1972; Wigner
+1952; Araki–Yanase 1960; Ozawa 2002; Esposito–Lindenberg–Van den Broeck 2010; Reeb–Wolf 2014;
+Jakšić–Pillet 1996; Bach–Fröhlich–Sigal 2000; Davies 1974; Deutsch 1991; Srednicki 1994; Rigol
+et al. 2008; Maldacena–Shenker–Stanford 2016; Breuer 1995; Unruh–Wald 1989; Bong et al. 2020;
+Chiribella–D'Ariano–Perinotti 2011; Zurek 2003, 2005; Schlosshauer–Fine 2005; Araújo et al.
+2013; Broadbent–Grilo 2022; Hsieh–Lostaglio–Acín 2022; Haapasalo–Kraft–Miklin–Uola 2021;
+Aharonov–Bergmann–Lebowitz 1964; Gell-Mann–Hartle 1994; Horowitz–Maldacena 2004;
+Hartle–Srednicki 2007; Srednicki–Hartle 2010; Hakim–Ambegaokar 1985; Grabert–Schramm–Ingold
+1988; Fredenhagen 1985; Buchholz–D'Antoni–Fredenhagen 1987; Bratteli–Robinson; Breuer–Petruccione;
+Nakajima 1958;
 Zwanzig 1960; Shibata–Takahashi–Hashitsume 1977; Feynman–Vernon 1963; Caldeira–Leggett 1983;
 Schwinger 1961; Keldysh 1964; Stinespring 1955; Kraus 1971; Pechukas 1994; Štelmachovič–Bužek
 2001; Breuer–Laine–Piilo 2009; Rivas–Huelga–Plenio 2010; Pollock et al. 2018 (two papers);
@@ -39,8 +50,8 @@ Primary texts actually inspected for this packet (beyond the repository), and wh
 | Masanes–Galley–Müller, Nat. Commun. 10, 1361 (2019), arXiv:1811.11060 | full text (attack agent; assumptions re-checked for this packet) | the assumptions replacing the measurement postulates; Def. 9 | DEF 1.8 |
 | Witten, Rev. Mod. Phys. 90, 045003 (2018), arXiv:1803.04993 | full text (attack agent) | type III statements, §§6–7 ("believed to be of Type III₁") | COND 5.1 |
 | Pollock et al., Phys. Rev. Lett. 120, 040405 (2018), arXiv:1801.09811 | full HTML text | the operational Markov condition (causal break), divisibility not sufficient, CP-divisible example with memory (App. B.1) | THM 2.8; CALCULATIONS S2 |
-| Pollock et al., Phys. Rev. A 97, 012127 (2018), arXiv:1512.00589 | abstract only | framework and title | DEF 1.5 |
+| Pollock et al., Phys. Rev. A 97, 012127 (2018), arXiv:1512.00589 | abstract (main session); full text (round-2 attack agent) | the process tensor as a multilinear completely positive map of externally applied controls (near eq. 6) | DEF 1.5 |
 | Chen–Ji–Kribs–Lütkenhaus–Zeng, Phys. Rev. A 90, 032318 (2014), arXiv:1310.3530 | full text (code reviewer) | symmetric-extension criterion giving the 2/3 chain threshold | CALCULATIONS C4 |
-| Cotler–Penington–Ranard, Commun. Math. Phys. 368, 1267 (2019), arXiv:1702.06142 | abstract only (attack agent) | uniqueness of local tensor-product structure from the spectrum | DEF 1.2; FORMAL_CORE §7 |
+| Cotler–Penington–Ranard, Commun. Math. Phys. 368, 1267 (2019), arXiv:1702.06142 | full text (round-2 attack agent) | proved: a generic H admits no k-local structure; argued, proved only conditionally: uniqueness when one exists | DEF 1.2; FORMAL_CORE §7 |
 | Feynman–Vernon, Ann. Phys. 24, 118 (1963) | **not accessed** (publisher paywall) | none; the factorized-preparation form and the Gaussian case are stated as in Caldeira–Leggett 1983 and Grabert–Schramm–Ingold 1988 (also not re-read here) | THM 2.5 |
 | All other references in FORMAL_CORE | cited from standard knowledge; not re-read for this packet | — | — |

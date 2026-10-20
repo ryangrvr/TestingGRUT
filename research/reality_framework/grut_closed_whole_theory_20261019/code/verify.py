@@ -55,6 +55,10 @@ check(zp["frobenius_norm_of_commutator_H_chi"] < 1e-12 and zp["max_trace_distanc
 S9 = d["S9_equivariant_state_selection_is_stationary"]
 check(all(S9[k]["frobenius_norm_commutator_F_H"] < 1e-12 and S9[k]["max_trace_distance_rhoA_t_vs_0"] < 1e-12 for k in S9 if k != "note"), "S9 equivariant state-selection rules are stationary")
 S10 = d["S10_equilibration_on_average"]
+S11 = d["S11_pointwise_inequalities_forced"]
+check(S11["athermality_budget"]["max_abs_drift_D_global"] < 1e-12 and S11["athermality_budget"]["violations_of_D_local_le_D_global"] == 0, "S11 athermality budget: D(rho_A(t)||sigma_A) <= D(rho_Omega(0)||sigma)")
+check(S11["second_law_identity"]["max_abs_Sigma_minus_I_plus_D"] < 1e-10 and S11["second_law_identity"]["min_Sigma"] > -1e-10 and S11["second_law_identity"]["number_of_decreases_of_Sigma_on_unit_grid"] > 0, "S11 second-law identity exact, Sigma >= 0, not monotone")
+check(abs(S6["energy_injected_by_externally_timed_write"]) > 1e-3, "S6 the externally timed write changes the energy of the whole (it is a supplied intervention)")
 check(S10["non_degenerate_gaps_numerically"] and all(c["sampled_time_average_D_3000_random_t_in_0_1e4"] <= c["intermediate_bound_half_sqrt_dA_times_exact_avg_HS2"] + 0.02 and c["intermediate_bound_half_sqrt_dA_times_exact_avg_HS2"] <= c["lpsw_bound_half_sqrt_dA2_over_deff"] + 1e-12 for c in S10["cases"]), "S10 LPSW chain: sampled <D> <= intermediate bound <= (1/2) sqrt(d_A^2/d_eff)")
 check(S5["model_b_prime_exact_recurrence"]["trace_distance_rho_global_T_vs_0"] < 1e-10 and S5["model_b_prime_exact_recurrence"]["S_A_at_period"] < 1e-10, "S5 exact recurrence at T = 4 pi")
 check(S5["trace_distance_rhoA"]["5.0"]["a_vs_b"] > 0.3, "S5 different complements, different local dynamics")
@@ -98,15 +102,17 @@ if "--rerun" in sys.argv:
             check(r.returncode == 0, f"re-run {s}")
         for name, ref in (("closed_whole_demo.json", d), ("marginal_compatibility.json", m)):
             new = json.loads((td / "results" / name).read_text())
+            A_ = {k: v for k, v in leaves(ref) if not k.startswith("/provenance")}
+            B_ = {k: v for k, v in leaves(new) if not k.startswith("/provenance")}
+            check(set(A_) == set(B_), f"re-run {name}: identical leaf paths ({len(A_)} vs {len(B_)}; missing {len(set(A_) - set(B_))}, extra {len(set(B_) - set(A_))})")
             worst = 0.0
-            for (k1, v1), (k2, v2) in zip(leaves(ref), leaves(new)):
-                if k1.startswith("/provenance") or k1 != k2:
-                    continue
+            for k in set(A_) & set(B_):
+                v1, v2 = A_[k], B_[k]
                 if isinstance(v1, (int, float)) and isinstance(v2, (int, float)) and not isinstance(v1, bool):
                     worst = max(worst, abs(v1 - v2) / max(1e-12, abs(v1)) if abs(v1) > 1e-9 else abs(v1 - v2))
                 elif v1 != v2:
                     worst = max(worst, 1.0)
-            check(worst < 1e-6, f"re-run {name} agrees with committed results (worst rel dev {worst:.2e})")
+            check(worst < 1e-6, f"re-run {name} agrees with committed results on every common leaf (worst rel dev {worst:.2e})")
 
 print("\n%d failure(s)" % len(fails))
 sys.exit(1 if fails else 0)
