@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| `research/reality_framework/grut_candidate1_two_object_20261019/persistence/` and its README link, isolated research branch | Codex Work | Extend post-collision evolution and test linear non-axisymmetric perturbations at unchanged couplings | 2026-10-19 America/Chicago |
 
 ## ANSWERED QUESTIONS
 
@@ -5837,3 +5836,14 @@ The ordinary shell workspace was unavailable. Completed eight coarse axisymmetri
 At the finest grid, relative phase pi/2 yields two separated axial F-squared regions at tau80, with left/right half-charge fractions .33438/.66562; charge is still redistributing and no asymptotic masses are claimed. Phase zero has one central axial density component, not a certified stable fused soliton. Phase pi +/- .2 and exact pi have two separated components; nearby phases avoid relying solely on the exact antisymmetry node. These component counts survive 2/5/10-percent thresholds. Opposite-charge transients are more resolution-sensitive and are not assigned an annihilation fraction. Main qualitative outcomes survive refinement; recorded medium/fine axial-profile differences remain about 1-2 percent.
 
 Supplementary controls recover the three-dimensional manufactured Laplacian to 2.01e-13 and show second-order stationary-profile acceleration defects. Derived the initial Noether flux Qleft_dot=-2*pi*gamma^2*d*F(gamma*d)^2*sin(theta); initial-plane quadratures approach its coefficient without a fitted pair law. These are post-run controls and conditional consequences of ordinary scalar dynamics, not a new fundamental principle. Published report, plot source, SVG, reproducible controls and exact execution identities. No formation ensemble, non-axisymmetric stability, long-term populated phase, detector/memory, quantum-gravity theory, empirical confirmation, external review, PR or merge is claimed.
+
+
+### 2026-10-19 · Codex Work · Conditional assembly, persistence and charge-record follow-up
+
+Continued only on codex/grut-candidate1-two-object-20261019. Added 31 completed evolutions: 12 longer persistence/linear-azimuthal-response cases, 13 Gaussian assembly/rigid-mediator cases, and 6 exploratory phase-to-charge record/miss controls. Full-model couplings remain a=1,b=.1 and the parent physical kernel is byte-identical; the explicitly labeled rigid-S ablation changes the comparison law. No edits to Claude's working branches or other checkouts.
+
+At medium resolution, prepared undepleted-S Gaussian clouds of widths 4 and 6 retain 81.18% and 55.00% of total charge inside the measured radius-12 cores at tau240; matched rigid width6 retains 1.55%. Width8 remains marginal with late local E/Q above the free-carrier threshold. Earlier quarter-cycle outgoing cores persist to tau240, with late local E/Q below 1. Opposite phase inputs leave right-core Qbar about 519 versus 260; an outward missed encounter stays near 400. All 41 medium-window and 21 fine-window samples meet their respective ideal decoder targets. These remain conditional classical preparations and an ideal observable, not a detector, consciousness or theory-of-everything result.
+
+Selected m2 tangent response is modest; m1 is quantitatively resolution-sensitive and unresolved. Bitwise background replay, phase/zero tangent controls, central finite-difference scaling and manufactured angular operators pass. All 89 saved-source/numerical/decoder checks pass across 31 completed cases. Maximum relative energy drift is 4.298e-4 and normalized charge error 3.884e-13. The report preserves all-time component-matching jumps and reports late separated-region comparisons separately.
+
+Local persistence source freeze preceded evolutions; public 04f22ad followed launch after an ordinary Git push authentication failure. Gaussian 15224b5 and record 2b039b2 public source freezes preceded their runs. Exact frozen sources are verified by manifests. During plot review, a raw early-time central-component receiver ambiguity was found; the stricter distinct-left/right and nonoverlap analysis leaves every registered-window outcome unchanged. Raw code/data are preserved. Published combined report, summary, standard scientific SVG, source scripts and hash-indexed exact raw archive. Archive entries verified, complete fresh extraction and reanalysis checked, figure rendered and inspected, and git diff --check passes. No empirical confirmation, full nonlinear 3D stability, PR, merge or person-directed message is claimed.

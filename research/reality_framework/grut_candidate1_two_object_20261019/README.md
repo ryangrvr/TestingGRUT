@@ -1,5 +1,7 @@
 # Candidate 1 two-object dynamics
 
+**Follow-up completed:** [conditional assembly, post-collision persistence and a charge record](persistence/REPORT.md) adds 31 evolutions under the same full scalar action, with a separate rigid-field comparison. Selected transverse m=1 response remains unconverged.
+
 **Completed:** all 27 prescribed evolutions and all 33 numerical consistency checks pass. Prepared equal-charge objects show phase-dependent central concentration or separated outgoing structure, including substantial charge exchange at relative phase pi/2. This is a finite-time classical axisymmetric result under Candidate 1's unchanged scalar action.
 
 Read [REPORT.md](REPORT.md) for the physics, controls, numerical error and limitations. The result does not establish autonomous formation, settled asymptotic particles, non-axisymmetric stability, a memory apparatus, quantum behavior, or new physics in nature.
