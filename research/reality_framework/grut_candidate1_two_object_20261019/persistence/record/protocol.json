@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "id": "medium_plus",
+      "sign": 1,
+      "direction": 1,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "readout_start": 160
+    },
+    {
+      "id": "medium_minus",
+      "sign": -1,
+      "direction": 1,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "readout_start": 160
+    },
+    {
+      "id": "medium_miss",
+      "sign": 1,
+      "direction": -1,
+      "h": 0.3333333333333333,
+      "dt": 0.06666666666666667,
+      "R": 144,
+      "Z": 160,
+      "T": 240,
+      "readout_start": 160
+    },
+    {
+      "id": "fine_plus",
+      "sign": 1,
+      "direction": 1,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "readout_start": 120
+    },
+    {
+      "id": "fine_minus",
+      "sign": -1,
+      "direction": 1,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "readout_start": 120
+    },
+    {
+      "id": "fine_miss",
+      "sign": 1,
+      "direction": -1,
+      "h": 0.25,
+      "dt": 0.05,
+      "R": 96,
+      "Z": 112,
+      "T": 160,
+      "readout_start": 120
+    }
+  ],
+  "reference_charge": 399.4384624223012,
+  "receiver_radius": 12,
+  "undecided_fraction": 0.1,
+  "diagnostic_period": 2,
+  "profile_times": [
+    0,
+    80,
+    120,
+    160,
+    200,
+    240
+  ],
+  "design": "Exploratory follow-up informed by the completed positive-phase encounter: source phase +/-pi/2 is converted into charge sharing. The negative input follows a known reflection prediction. This is not an independently sealed holdout.",
+  "preparation": "Same boosted prepared object profiles and couplings as the earlier suite; only relative phase and incoming/outgoing velocity directions change. No later control or detector acts.",
+  "decoder": "Rightmost separated region defines a radius-12 ball. Charge >1.1 Qref -> +1, <.9 Qref -> -1, otherwise undecided. Compare all sampled times in fixed window; outbound miss control should remain undecided.",
+  "interpretation": "Candidate finite-time physical record is distinguishable localized charge correlated with the past phase input. Ideal access, initial preparation, geometric address and decoder remain supplied. No detector, error-correction theorem, generic memory phase or consciousness claim.",
+  "acceptance": {
+    "maximum_relative_energy_drift": 0.001,
+    "maximum_normalized_charge_error": 1e-09,
+    "finite": true
+  }
+}
