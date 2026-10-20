@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| `research/reality_framework/grut_candidate1_two_object_20261019/persistence/` and its README link, isolated research branch | Codex Work | Extend post-collision evolution and test linear non-axisymmetric perturbations at unchanged couplings | 2026-10-19 America/Chicago |
 
 ## ANSWERED QUESTIONS
 
