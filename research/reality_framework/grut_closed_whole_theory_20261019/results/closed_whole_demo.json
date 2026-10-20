@@ -5010,7 +5010,26 @@
     0.000913737221321,
     0.00206596386612
    ],
-   "norm_of_inhomogeneous_term_at_t0": 0.353553390602
+   "norm_of_inhomogeneous_term_at_t0_A_factor": 0.353553390602,
+   "frobenius_norm_of_commutator_H_chi": 43.406911892
+  },
+  "inf_T_bath_conserved_correlation_Zparity": {
+   "eps_max_for_positivity": 0.0039062500001,
+   "eps_used": 0.00195312500005,
+   "min_eigenvalue_rho2": 0.00195312499995,
+   "trace_norm_of_correlation_term": 0.500000000013,
+   "max_marginal_deviation_between_rho1_and_rho2": 0.0,
+   "trace_distance_rhoA_t0": 3.33066907388e-16,
+   "max_trace_distance_rhoA_over_grid": 4.16390692119e-16,
+   "t_of_max": 2.7,
+   "trace_distance_rhoA_at_t1_t5_t20_t40": [
+    3.05368330858e-16,
+    2.77609000243e-16,
+    1.38818287756e-16,
+    4.74673808858e-17
+   ],
+   "norm_of_inhomogeneous_term_at_t0_A_factor": 0.0,
+   "frobenius_norm_of_commutator_H_chi": 0.0
   },
   "inf_T_bath_classical_correlation_Z0Z1": {
    "eps_max_for_positivity": 0.0039062500001,
@@ -5027,7 +5046,8 @@
     0.00523580023406,
     0.00147940302377
    ],
-   "norm_of_inhomogeneous_term_at_t0": 0.0
+   "norm_of_inhomogeneous_term_at_t0_A_factor": 0.0,
+   "frobenius_norm_of_commutator_H_chi": 45.2548339959
   },
   "thermal_beta1_bath_dressed_quantum_correlation": {
    "eps_max_for_positivity": 0.500000000002,
@@ -5044,8 +5064,10 @@
     0.00754146512893,
     0.0321840245395
    ],
-   "norm_of_inhomogeneous_term_at_t0": 0.192540159419
+   "norm_of_inhomogeneous_term_at_t0_A_factor": 0.192540159419,
+   "frobenius_norm_of_commutator_H_chi": 1.11626177163
   },
+  "note_converse": "The Zparity case has Q rho(0) = eps Z^(x8) != 0 but [H, Z^(x8)] = 0, so the inhomogeneous term vanishes identically and the futures coincide: the inhomogeneous term vanishes IF the preparation is rho_A (x) rho_ref, not only if.",
   "note": "Two global preparations with identical rho_A(0) AND identical rho_Abar(0) evolve to different rho_A(t). No map on rho_A(0) alone (nor on both marginals) reproduces both futures; the Nakajima-Zwanzig inhomogeneous term carries the difference (its t = 0 value is recorded; for the classical Z0Z1 correlation the first two orders vanish at t = 0 and the difference appears at third order in t). Standard initial-correlation result (Pechukas 1994; Stelmachovic-Buzek 2001)."
  },
  "S5_nonunique_local_law": {
@@ -5254,12 +5276,47 @@
   },
   "note": "Closure forces: unitarity (global purity and entropy constant), conservation of the fixed global H, S_A = S_Abar for a pure global state, subadditivity and Araki-Lieb (checked on the mixed trajectory), and eventual quasi-recurrence in finite dimension. All are theorems of standard quantum mechanics; none is a GRUT contribution."
  },
+ "S9_equivariant_state_selection_is_stationary": {
+  "gibbs_beta_1_of_global_H": {
+   "frobenius_norm_commutator_F_H": 8.8638487264e-15,
+   "max_trace_distance_rhoA_t_vs_0": 1.22127869311e-15
+  },
+  "ground_projector_of_global_H": {
+   "frobenius_norm_commutator_F_H": 1.58438140937e-14,
+   "max_trace_distance_rhoA_t_vs_0": 1.13971332372e-15
+  },
+  "note": "A unitarily equivariant selection rule F(H) yields a stationary state: every restriction is frozen. A selection rule with local dynamical content must depend on more than H (the access structure, a clock, or a non-equivariant datum)."
+ },
+ "S10_equilibration_on_average": {
+  "spectrum_min_level_spacing": 0.000589793752268,
+  "min_separation_between_distinct_Bohr_gaps": 3.2027144492e-08,
+  "non_degenerate_gaps_numerically": true,
+  "cases": [
+   {
+    "preparation": "|+> (x) excited bath eigenstate (the S8 pure preparation)",
+    "d_eff": 3.23426363233,
+    "lpsw_bound_half_sqrt_dA2_over_deff": 0.556048010634,
+    "intermediate_bound_half_sqrt_dA_times_exact_avg_HS2": 0.298136364187,
+    "sampled_time_average_D_3000_random_t_in_0_1e4": 0.286579469086,
+    "sampled_max_D": 0.515206152877
+   },
+   {
+    "preparation": "|+> (x) bath Neel product state |0101010>",
+    "d_eff": 29.5634374083,
+    "lpsw_bound_half_sqrt_dA2_over_deff": 0.183917280021,
+    "intermediate_bound_half_sqrt_dA_times_exact_avg_HS2": 0.0949075606194,
+    "sampled_time_average_D_3000_random_t_in_0_1e4": 0.0875922264762,
+    "sampled_max_D": 0.242065492239
+   }
+  ],
+  "note": "Closure plus the generic hypothesis of non-degenerate energy gaps forces equilibration ON AVERAGE: the infinite-time average of D(rho_A(t), omega_A) is bounded by (1/2) sqrt(d_A^2/d_eff). The size of the bound is set by the supplied preparation through d_eff; it does not force pointwise or monotone relaxation, a thermal omega_A, or a time scale."
+ },
  "provenance": {
-  "script_sha256": "6115d716da571f9108b3999b8b834357817433f38c6d0abf8f7c067407d8e23e",
+  "script_sha256": "4ebbd2db777a1ba436f1ecb50c88ce9f3b7e35096c81464ea8027e90e6ef508f",
   "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
   "numpy": "2.5.3",
   "scipy": "1.18.1",
   "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
-  "wall_seconds": 46.03
+  "wall_seconds": 70.35
  }
 }

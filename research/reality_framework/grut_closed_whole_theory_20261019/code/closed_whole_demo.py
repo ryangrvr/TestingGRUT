@@ -17,6 +17,8 @@ Sections
   S6  records and interventions as included subsystems / unitaries; record persistence depends on H
   S7  time reversal: exact recovery and an entropy-decreasing legal preparation (no arrow forced)
   S8  closed-whole invariants and standard bounds that closure DOES force (checked numerically)
+  S9  unitarily equivariant state-selection rules F(H) are stationary (finite-class obstruction)
+  S10 conditional equilibration on average (Linden-Popescu-Short-Winter 2009) for pure global states
 Writes ../results/closed_whole_demo.json and prints a summary.
 """
 from __future__ import annotations
@@ -388,8 +390,10 @@ sq_b = sqrtm_psd(rho_bath_th)
 X1_b = site_op(X, 0, NB)  # X on bath qubit 1 (first bath qubit) in the 7-qubit bath space
 c1 = float(np.real(np.trace(rho_bath_th @ X1_b)))
 O_dressed = sq_b @ (X1_b - c1 * np.eye(2 ** NB)) @ sq_b
+ZPAR = kron_all([Z] * N)  # global Z-parity: [H, ZPAR] = 0, Tr_A ZPAR = 0 = Tr_Abar ZPAR
 S4_cases = [
     ("inf_T_bath_quantum_correlation_Y0X1", np.kron(rho_A_mm, rho_bath_inf), two_site(Y, 0, X, 1, N), rho_bath_inf),
+    ("inf_T_bath_conserved_correlation_Zparity", np.kron(rho_A_mm, rho_bath_inf), ZPAR, rho_bath_inf),
     ("inf_T_bath_classical_correlation_Z0Z1", np.kron(rho_A_mm, rho_bath_inf), two_site(Z, 0, Z, 1, N), rho_bath_inf),
     ("thermal_beta1_bath_dressed_quantum_correlation", np.kron(rho_A_mm, rho_bath_th), np.kron(Y, O_dressed), rho_bath_th),
 ]
@@ -412,8 +416,11 @@ for name, rho1, chi, rb in S4_cases:
         "trace_distance_rhoA_t0": float(dists[0]),
         "max_trace_distance_rhoA_over_grid": float(dists.max()), "t_of_max": float(t_grid[int(np.argmax(dists))]),
         "trace_distance_rhoA_at_t1_t5_t20_t40": [float(dists[np.argmin(np.abs(t_grid - s))]) for s in (1, 5, 20, 40)],
-        "norm_of_inhomogeneous_term_at_t0": float(np.linalg.norm(inhom0)),
+        "norm_of_inhomogeneous_term_at_t0_A_factor": float(np.linalg.norm(inhom0)),
+        "frobenius_norm_of_commutator_H_chi": float(np.linalg.norm(H @ chi - chi @ H)),
     }
+S4["note_converse"] = ("The Zparity case has Q rho(0) = eps Z^(x8) != 0 but [H, Z^(x8)] = 0, so the inhomogeneous term vanishes identically "
+                       "and the futures coincide: the inhomogeneous term vanishes IF the preparation is rho_A (x) rho_ref, not only if.")
 S4["note"] = ("Two global preparations with identical rho_A(0) AND identical rho_Abar(0) evolve to different rho_A(t). "
               "No map on rho_A(0) alone (nor on both marginals) reproduces both futures; the Nakajima-Zwanzig inhomogeneous term "
               "carries the difference (its t = 0 value is recorded; for the classical Z0Z1 correlation the first two orders vanish at t = 0 and the "
@@ -623,6 +630,69 @@ checks["note"] = ("Closure forces: unitarity (global purity and entropy constant
                   "quasi-recurrence in finite dimension. All are theorems of standard quantum mechanics; none is a GRUT contribution.")
 results["S8_what_closure_forces"] = checks
 
+# ----------------------------------------------------------------------------- S9
+# Any rule F that picks a global state from H alone and is unitarily equivariant, F(U H U^+) = U F(H) U^+, satisfies
+# [F(H), H] = 0 (take U = exp(iHs)); the selected state is stationary, so no subsystem has any dynamics.
+S9 = {}
+for name, F in (("gibbs_beta_1_of_global_H", thermal(H, 1.0)), ("ground_projector_of_global_H", ground(H))):
+    devs = [trace_distance(ptrace(closed.evolve(F, t), A, N), ptrace(F, A, N)) for t in (1.0, 5.0, 10.0, 40.0)]
+    S9[name] = {"frobenius_norm_commutator_F_H": float(np.linalg.norm(F @ H - H @ F)),
+                "max_trace_distance_rhoA_t_vs_0": float(max(devs))}
+S9["note"] = ("A unitarily equivariant selection rule F(H) yields a stationary state: every restriction is frozen. A selection rule "
+              "with local dynamical content must depend on more than H (the access structure, a clock, or a non-equivariant datum).")
+results["S9_equivariant_state_selection_is_stationary"] = S9
+
+# ----------------------------------------------------------------------------- S10
+# Linden-Popescu-Short-Winter, PRE 79, 061103 (2009), Theorem 1: pure global state, H with non-degenerate energy gaps =>
+# <D(rho_A(t), omega_A)>_t <= (1/2) sqrt(d_A * <||rho_A(t) - omega_A||_2^2>_t) <= (1/2) sqrt(d_A^2 / d_eff),
+# d_eff = 1 / sum_k p_k^2 with p_k = |<E_k|psi>|^2, omega = time-averaged (dephased) state.
+E_all, V_all = closed.E, closed.V
+spac = np.diff(np.sort(E_all))
+gaps = np.array([E_all[k] - E_all[l] for k in range(len(E_all)) for l in range(k)])
+gaps_sorted = np.sort(gaps)
+min_gap_coincidence = float(np.min(np.diff(gaps_sorted)))
+Vr = V_all.reshape(2, 2 ** NB, -1)                        # (a, b, k)
+Mkl = np.einsum("abk,cbl->klac", Vr, Vr.conj())           # Tr_Abar |k><l|, shape (256,256,2,2)
+Mkl_norm2 = np.einsum("klac,klac->kl", Mkl, Mkl.conj()).real
+
+
+def lpsw(psi, label):
+    c = V_all.conj().T @ psi
+    pk = np.abs(c) ** 2
+    d_eff = float(1.0 / np.sum(pk ** 2))
+    omega = (V_all * pk) @ V_all.conj().T
+    omega_A = ptrace(omega, A, N)
+    hs2_avg = float(np.sum(np.outer(pk, pk) * Mkl_norm2) - np.sum(pk ** 2 * np.diag(Mkl_norm2)))  # exact infinite-time average, non-degenerate gaps
+    rng = np.random.default_rng(11)
+    ts = np.sort(rng.uniform(0, 1.0e4, 3000))
+    Ds = []
+    for t in ts:
+        ph = c * np.exp(-1j * E_all * t)
+        v = V_all @ ph
+        rA = ptrace(np.outer(v, v.conj()), A, N)
+        Ds.append(trace_distance(rA, omega_A))
+    return {"preparation": label, "d_eff": d_eff,
+            "lpsw_bound_half_sqrt_dA2_over_deff": float(0.5 * np.sqrt(4.0 / d_eff)),
+            "intermediate_bound_half_sqrt_dA_times_exact_avg_HS2": float(0.5 * np.sqrt(2.0 * hs2_avg)),
+            "sampled_time_average_D_3000_random_t_in_0_1e4": float(np.mean(Ds)),
+            "sampled_max_D": float(np.max(Ds))}
+
+
+psi_S8 = np.kron(PLUS, psi_bath)
+neel = kron_all([np.array([[1.0], [0.0]]) if k % 2 == 0 else np.array([[0.0], [1.0]]) for k in range(NB)]).ravel().astype(complex)
+psi_neel = np.kron(PLUS, neel)
+S10 = {
+    "spectrum_min_level_spacing": float(spac.min()),
+    "min_separation_between_distinct_Bohr_gaps": min_gap_coincidence,
+    "non_degenerate_gaps_numerically": bool(spac.min() > 1e-8 and min_gap_coincidence > 1e-8),
+    "cases": [lpsw(psi_S8, "|+> (x) excited bath eigenstate (the S8 pure preparation)"),
+              lpsw(psi_neel, "|+> (x) bath Neel product state |0101010>")],
+    "note": ("Closure plus the generic hypothesis of non-degenerate energy gaps forces equilibration ON AVERAGE: the infinite-time average "
+             "of D(rho_A(t), omega_A) is bounded by (1/2) sqrt(d_A^2/d_eff). The size of the bound is set by the supplied preparation "
+             "through d_eff; it does not force pointwise or monotone relaxation, a thermal omega_A, or a time scale."),
+}
+results["S10_equilibration_on_average"] = S10
+
 # ----------------------------------------------------------------------------- provenance
 src = (HERE / "closed_whole_demo.py").read_bytes()
 results["provenance"] = {
@@ -660,11 +730,11 @@ print("S3 CPTP: min Choi eig %.2e, TP dev %.1e; CP-divisibility most negative in
       (S3["cptp_check"]["min_choi_eigenvalue_over_samples"], S3["cptp_check"]["max_trace_preservation_deviation"], S3["cp_divisibility"]["most_negative"]))
 print("S3 TCL generator |K(t)-K(0.5)| thermal:", {k: round(v, 4) for k, v in S3["tcl"]["generator_time_dependence_fro_norm_K(t)-K(0.5)_thermal"].items()})
 print("S3 TCL generator |K_thermal-K_ground|:", {k: round(v, 4) for k, v in S3["tcl"]["generator_bath_state_dependence_fro_norm_K_thermal-K_ground"].items()})
-for k in [kk for kk in S4 if kk != "note"]:
+for k in [kk for kk in S4 if not kk.startswith("note")]:
     s = S4[k]
-    print("S4 %s: eps=%.4g (max %.4g), marginal dev %.1e, D(rhoA) t0 %.1e, max %.4f at t=%.1f, |inhom(0)|=%.4f" %
+    print("S4 %s: eps=%.4g (max %.4g), marginal dev %.1e, D(rhoA) t0 %.1e, max %.4g at t=%.1f, |inhom(0) A-factor|=%.4f" %
           (k, s["eps_used"], s["eps_max_for_positivity"], s["max_marginal_deviation_between_rho1_and_rho2"], s["trace_distance_rhoA_t0"],
-           s["max_trace_distance_rhoA_over_grid"], s["t_of_max"], s["norm_of_inhomogeneous_term_at_t0"]))
+           s["max_trace_distance_rhoA_over_grid"], s["t_of_max"], s["norm_of_inhomogeneous_term_at_t0_A_factor"]))
 print("S5 b' exact recurrence: D(T)=%.1e, S_A(T/2)=%.4f, S_A(T)=%.1e" % (S5["model_b_prime_exact_recurrence"]["trace_distance_rho_global_T_vs_0"], S5["model_b_prime_exact_recurrence"]["S_A_at_half_period"], S5["model_b_prime_exact_recurrence"]["S_A_at_period"]))
 print("S5 trace distances rhoA at t=5:", {k: round(v, 4) for k, v in S5["trace_distance_rhoA"]["5.0"].items()},
       "| model b recurrence min S_A after max = %.2e at t=%.1f" % (S5["model_b_recurrence"]["min_S_A_after_first_max"], S5["model_b_recurrence"]["t_of_that_min"]))
@@ -682,4 +752,9 @@ print("S8 pure-global |S_A-S_Abar| max %.1e; mixed S1: min MI %.1e, min Araki-Li
       (checks["pure_global_state_S_A_equals_S_Abar_max_dev"], checks["mixed_S1_trajectory"]["subadditivity_min_slack_MI"], checks["mixed_S1_trajectory"]["araki_lieb_min_slack"],
        *checks["mixed_S1_trajectory"]["araki_lieb_slack_at_t3_t20"], checks["mixed_S1_trajectory"]["subadditivity_violations"], checks["mixed_S1_trajectory"]["araki_lieb_violations"],
        checks["closest_return_to_initial_pure_state_within_grid_t_ge_1"]["trace_distance"], checks["closest_return_to_initial_pure_state_within_grid_t_ge_1"]["t"]))
+print("S4 converse: Zparity case max D = %.1e with |[H,chi]| = %.1e" % (S4["inf_T_bath_conserved_correlation_Zparity"]["max_trace_distance_rhoA_over_grid"], S4["inf_T_bath_conserved_correlation_Zparity"]["frobenius_norm_of_commutator_H_chi"]))
+print("S9 equivariant rules: %s" % {k: (round(v["frobenius_norm_commutator_F_H"], 16), round(v["max_trace_distance_rhoA_t_vs_0"], 16)) for k, v in S9.items() if k != "note"})
+print("S10 gaps: min spacing %.3e, min gap coincidence %.3e, non-degenerate %s" % (S10["spectrum_min_level_spacing"], S10["min_separation_between_distinct_Bohr_gaps"], S10["non_degenerate_gaps_numerically"]))
+for cse in S10["cases"]:
+    print("S10 %s: d_eff %.2f, bound %.4f, intermediate %.4f, sampled <D> %.4f, max D %.4f" % (cse["preparation"][:30], cse["d_eff"], cse["lpsw_bound_half_sqrt_dA2_over_deff"], cse["intermediate_bound_half_sqrt_dA_times_exact_avg_HS2"], cse["sampled_time_average_D_3000_random_t_in_0_1e4"], cse["sampled_max_D"]))
 print("wall %.1fs; sha256 %s" % (results["provenance"]["wall_seconds"], results["provenance"]["script_sha256"][:16]))

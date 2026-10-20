@@ -1,0 +1,175 @@
+{
+  "rows": [
+    {
+      "quantity": "1. E_tot = Tr(H rho(0))",
+      "mine": "-10.228788512441923",
+      "packet": "-10.2287885124",
+      "agree": true,
+      "note": "rel diff 4.10e-12; packet value printed to 12 significant figures"
+    },
+    {
+      "quantity": "1. max |E_tot(t)-E_tot(0)| on grid",
+      "mine": "1.7763568394002505e-14",
+      "packet": "7.1054273576e-15",
+      "agree": true,
+      "note": "abs diff 1.07e-14; both are double-precision round-off (<1e-13); a 1e-6 RELATIVE criterion is meaningless between two numbers that are themselves numerical zero, so compared as |a-b|<1e-12"
+    },
+    {
+      "quantity": "1b. full 401-point E_tot(t) series: max |mine-packet|",
+      "mine": "4.1941561335079314e-11",
+      "packet": "0.0",
+      "agree": true,
+      "note": "abs diff 4.19e-11; series compared pointwise (packet stores 12 sig figs)"
+    },
+    {
+      "quantity": "2b. full 401-point S_A(t) series: max |mine-packet|",
+      "mine": "5.755951271169124e-13",
+      "packet": "0.0",
+      "agree": true,
+      "note": "abs diff 5.76e-13; series compared pointwise (packet stores 12 sig figs)"
+    },
+    {
+      "quantity": "2. S_A(t=10)",
+      "mine": "0.39287118329981924",
+      "packet": "0.3928711833",
+      "agree": true,
+      "note": "rel diff 4.60e-13; also packet S5 S_A/10.0/a = 0.3928711833"
+    },
+    {
+      "quantity": "2. S_A(t=40)",
+      "mine": "0.41983791686476823",
+      "packet": "0.419837916865",
+      "agree": true,
+      "note": "rel diff 5.52e-13"
+    },
+    {
+      "quantity": "2. max_t S_A",
+      "mine": "0.48933887859496117",
+      "packet": "0.489338878595",
+      "agree": true,
+      "note": "rel diff 7.94e-14"
+    },
+    {
+      "quantity": "2. argmax_t S_A",
+      "mine": "37.5",
+      "packet": "37.5",
+      "agree": true,
+      "note": "abs diff 0.00e+00"
+    },
+    {
+      "quantity": "3. BLP sum of positive increments of D",
+      "mine": "1.2035373576160984",
+      "packet": "1.20353735762",
+      "agree": true,
+      "note": "rel diff 3.24e-12"
+    },
+    {
+      "quantity": "3. min_t D(t)",
+      "mine": "0.5418014611825231",
+      "packet": "0.541801461183",
+      "agree": true,
+      "note": "rel diff 8.80e-13"
+    },
+    {
+      "quantity": "3. argmin_t D(t)",
+      "mine": "37.6",
+      "packet": "37.6",
+      "agree": true,
+      "note": "abs diff 0.00e+00"
+    },
+    {
+      "quantity": "3. D(t=0)",
+      "mine": "1.0000000000000007",
+      "packet": "1.0",
+      "agree": true,
+      "note": "rel diff 6.66e-16"
+    },
+    {
+      "quantity": "3. D(t=40)",
+      "mine": "0.6748582294962724",
+      "packet": "0.674858229496",
+      "agree": true,
+      "note": "rel diff 4.04e-13"
+    },
+    {
+      "quantity": "3. largest single increase of D",
+      "mine": "0.01454521447272017",
+      "packet": "0.0145452144727",
+      "agree": true,
+      "note": "rel diff 1.39e-12"
+    },
+    {
+      "quantity": "4. p(Z_0=+1) at t1=3 (before CNOT)",
+      "mine": "0.3549095082640668",
+      "packet": "0.354909508264",
+      "agree": true,
+      "note": "rel diff 1.88e-13"
+    },
+    {
+      "quantity": "4. p(Z_0=+1) at t2=6, record written",
+      "mine": "0.3385311237554523",
+      "packet": "0.338531123755",
+      "agree": true,
+      "note": "rel diff 1.34e-12"
+    },
+    {
+      "quantity": "4. p(Z_0=+1) at t2=6, no intervention",
+      "mine": "0.449147357617469",
+      "packet": "0.449147357617",
+      "agree": true,
+      "note": "rel diff 1.04e-12"
+    },
+    {
+      "quantity": "4. register population |0>_R after write (= p at t1)",
+      "mine": "0.35490950826406714",
+      "packet": "0.354909508264",
+      "agree": true,
+      "note": "rel diff 1.89e-13"
+    },
+    {
+      "quantity": "5. max marginal deviation rho1 vs rho2 (A and Abar)",
+      "mine": "0.0",
+      "packet": "0.0",
+      "agree": true,
+      "note": "abs diff 0.00e+00"
+    },
+    {
+      "quantity": "5. max_t trace distance rho_A(t): rho1 vs rho2",
+      "mine": "0.10248731291636753",
+      "packet": "0.102487312919",
+      "agree": true,
+      "note": "rel diff 2.57e-11"
+    },
+    {
+      "quantity": "5. argmax_t of that trace distance",
+      "mine": "0.7",
+      "packet": "0.7",
+      "agree": true,
+      "note": "abs diff 0.00e+00"
+    },
+    {
+      "quantity": "6. max Werner p, AB & BC share B (SDP)",
+      "mine": "0.6666666737712065",
+      "packet": "0.666666673771",
+      "agree": true,
+      "note": "rel diff 3.10e-13; both CLARABEL optima; exact value 2/3 (two-qubit symmetric-extension criterion), solver overshoot ~7e-9"
+    },
+    {
+      "quantity": "6. max Werner p vs analytic 2/3",
+      "mine": "0.6666666737712065",
+      "packet": "0.6666666666666666",
+      "agree": true,
+      "note": "rel diff 1.07e-08; SDP optimum vs closed form; rel diff 1.07e-8 is solver tolerance"
+    }
+  ],
+  "all_agree": true,
+  "provenance": {
+    "closed_whole_demo_py_sha256": "4ebbd2db777a1ba436f1ecb50c88ce9f3b7e35096c81464ea8027e90e6ef508f",
+    "closed_whole_demo_json_claims": "4ebbd2db777a1ba436f1ecb50c88ce9f3b7e35096c81464ea8027e90e6ef508f",
+    "demo_hash_matches": true,
+    "marginal_compatibility_py_sha256": "9a6333833d7b70ed10f729e253a1ce6d3a8b0c9a678850997a7876dffa600695",
+    "marginal_json_claims": "9a6333833d7b70ed10f729e253a1ce6d3a8b0c9a678850997a7876dffa600695",
+    "marg_hash_matches": true,
+    "my_reimpl_sha256": "a4740e24fb2c1efd300baf1b86b6f0b103611655b83c04059e99017bc89948ad"
+  }
+}

@@ -49,7 +49,13 @@ check(S3["cptp_check"]["min_choi_eigenvalue_over_samples"] > -1e-9 and S3["cp_di
 check(max(S3["tcl"]["generator_bath_state_dependence_fro_norm_K_thermal-K_ground"].values()) > 0.05, "S3 generator depends on bath state")
 q = S4["inf_T_bath_quantum_correlation_Y0X1"]
 check(q["max_marginal_deviation_between_rho1_and_rho2"] < 1e-12 and q["min_eigenvalue_rho2"] >= -1e-13 and q["max_trace_distance_rhoA_over_grid"] > 0.05, "S4 identical marginals, different futures")
-check(abs(q["norm_of_inhomogeneous_term_at_t0"] - math.sqrt(2) / 4) < 1e-9, "S4 inhomogeneous term = (1/4) Z_0 (norm sqrt(2)/4)")
+check(abs(q["norm_of_inhomogeneous_term_at_t0_A_factor"] - math.sqrt(2) / 4) < 1e-9, "S4 inhomogeneous term A-factor = (1/4) Z_0 (norm sqrt(2)/4)")
+zp = S4["inf_T_bath_conserved_correlation_Zparity"]
+check(zp["frobenius_norm_of_commutator_H_chi"] < 1e-12 and zp["max_trace_distance_rhoA_over_grid"] < 1e-12 and zp["max_marginal_deviation_between_rho1_and_rho2"] < 1e-12, "S4 converse: conserved correlation, Q rho(0) != 0, futures identical")
+S9 = d["S9_equivariant_state_selection_is_stationary"]
+check(all(S9[k]["frobenius_norm_commutator_F_H"] < 1e-12 and S9[k]["max_trace_distance_rhoA_t_vs_0"] < 1e-12 for k in S9 if k != "note"), "S9 equivariant state-selection rules are stationary")
+S10 = d["S10_equilibration_on_average"]
+check(S10["non_degenerate_gaps_numerically"] and all(c["sampled_time_average_D_3000_random_t_in_0_1e4"] <= c["intermediate_bound_half_sqrt_dA_times_exact_avg_HS2"] + 0.02 and c["intermediate_bound_half_sqrt_dA_times_exact_avg_HS2"] <= c["lpsw_bound_half_sqrt_dA2_over_deff"] + 1e-12 for c in S10["cases"]), "S10 LPSW chain: sampled <D> <= intermediate bound <= (1/2) sqrt(d_A^2/d_eff)")
 check(S5["model_b_prime_exact_recurrence"]["trace_distance_rho_global_T_vs_0"] < 1e-10 and S5["model_b_prime_exact_recurrence"]["S_A_at_period"] < 1e-10, "S5 exact recurrence at T = 4 pi")
 check(S5["trace_distance_rhoA"]["5.0"]["a_vs_b"] > 0.3, "S5 different complements, different local dynamics")
 check(S6["abs_difference"] < 1e-12 and abs(S6["pZ_plus_A_at_t2_with_record_written"] - S6["pZ_plus_A_at_t2_with_measure_and_forget_dephasing"]) < 1e-12, "S6 record = Born probability; unitary record = instrument")

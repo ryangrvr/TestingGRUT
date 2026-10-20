@@ -71,8 +71,9 @@ the continuous Breuer–Laine–Piilo measure; largest single step 0.0145). A CP
 
 For product preparations with a fixed bath state, ρ_A(0) ↦ ρ_A(t) is a linear CPTP map Φ_t
 (min Choi eigenvalue over sampled t: 3·10⁻¹¹; trace preservation to 3·10⁻¹⁵). Its exact
-time-convolutionless generator K(t) = Φ̇_t Φ_t⁻¹ (4×4 in the Pauli basis; condition numbers
-1.1–2.3 at the sample times) is time dependent and depends on which bath state was supplied:
+time-convolutionless generator K(t) = Φ̇_t Φ_t⁻¹, which exists wherever Φ_t is invertible
+(4×4 in the Pauli basis; condition numbers 1.1–2.3 at the six sample times, at most 2.86 over
+the full 0.1 grid), is time dependent and depends on which bath state was supplied:
 
 | t | ‖K(t) − K(0.5)‖, thermal bath | ‖K_thermal − K_ground‖ | ‖K_thermal − K_{T=∞}‖ |
 |---|---|---|---|
@@ -92,19 +93,23 @@ not CP-divisible.
 Two global preparations ρ₁ = ρ_A ⊗ ρ_Ā and ρ₂ = ρ₁ + εχ with Tr_A χ = 0 = Tr_Ā χ have the
 **same** ρ_A(0) and the **same** ρ_Ā(0) (verified to machine precision), ρ₂ ≥ 0, and yet:
 
-| Case | ε (= ½ ε_max) | ‖εχ‖₁ | max_t D(ρ_A^{(1)}(t), ρ_A^{(2)}(t)) | at t | ‖−i Tr_Ā[H, εχ]‖ at t = 0 |
+| Case | ε (= ½ ε_max) | ‖εχ‖₁ | max_t D(ρ_A^{(1)}(t), ρ_A^{(2)}(t)) | at t | A-factor of 𝓘(0), ‖−i Tr_Ā[H, εχ]‖ |
 |---|---|---|---|---|---|
 | T = ∞ bath, χ = Y₀X₁ | 1/512 | 0.500 | **0.1025** | 0.7 | 0.3536 |
 | T = ∞ bath, χ = Z₀Z₁ (classical correlation) | 1/512 | 0.500 | 0.0097 | 14.1 | 0 |
 | β = 1 bath, χ = Y₀ ⊗ √ρ_Ā (X₁ − ⟨X₁⟩) √ρ_Ā | 0.25 | 0.293 | 0.0544 | 0.7 | 0.1925 |
+| T = ∞ bath, χ = Z^{⊗8} (conserved Z-parity, [H, χ] = 0) | 1/512 | 0.500 | **4·10⁻¹⁶** | n/a | 0 |
 
-The last column is the t = 0 value of the Nakajima–Zwanzig inhomogeneity 𝓘(t). For χ = Y₀X₁ it
-is exact by hand:
+The last column is the A-factor of the Nakajima–Zwanzig inhomogeneity at t = 0 (𝓘(0) is this
+operator tensored with ρ_ref). For χ = Y₀X₁ it is exact by hand:
 [gX₀X₁, Y₀X₁] = 2ig Z₀ ⊗ 1_Ā, so −i Tr_Ā[H, εχ] = 2gε·2⁷ Z₀ = ¼ Z₀, Frobenius norm √2/4 =
 0.35355, as computed. No map acting on ρ_A(0), nor on the pair (ρ_A(0), ρ_Ā(0)), reproduces
 both futures: the reduced state alone does not specify an arbitrary preparation's future.
 For the classical correlation Z₀Z₁ the first two orders of 𝓘 vanish at t = 0 and the difference
-appears at third order in t, which is why it stays small. (Pechukas 1994; Štelmachovič–Bužek
+appears at third order in t, which is why it stays small. The fourth row is the converse
+counterexample: the preparation is correlated (𝒬ρ(0) ≠ 0), yet [H, χ] = 0 makes 𝓘 vanish for
+all t and the two futures coincide. The inhomogeneous term vanishes for product preparations,
+but not only for them. (Pechukas 1994; Štelmachovič–Bužek
 2001; standard.)
 
 ### S5. Closure does not force a unique local law
@@ -169,6 +174,33 @@ Araki–Lieb are trivial for a pure global state, so they are checked on the mix
 the product state) and the Araki–Lieb slack S_Ω − |S_A − S_Ā| is 0 at t = 0, 0.2115 at t = 3 and
 0.2439 at t = 20, with no violation. All of these are theorems of standard quantum mechanics.
 
+### S9. A state-selection rule built from H alone freezes every subsystem
+
+If a rule picks the global state from H alone and is equivariant under unitary conjugation,
+F(UHU†) = UF(H)U†, then taking U = e^{iHs} gives [F(H), H] = 0: the selected state is
+stationary and no subsystem has any dynamics. Checked for the Gibbs state at β = 1 and the
+ground projector of the same eight-qubit H: ‖[F, H]‖ = 9·10⁻¹⁵ and 1.6·10⁻¹⁴, and ρ_A(t) differs
+from ρ_A(0) by at most 1.2·10⁻¹⁵ over t ∈ {1, 5, 10, 40}. A selection rule with local dynamical
+content must depend on more than H.
+
+### S10. What closure plus one hypothesis does force: equilibration on average
+
+Theorem (Linden–Popescu–Short–Winter 2009): for a pure global state and an H with
+non-degenerate energy gaps, ⟨D(ρ_A(t), ω_A)⟩_t ≤ ½√(d_A ⟨‖ρ_A − ω_A‖₂²⟩_t) ≤ ½√(d_A²/d_eff),
+where ω is the time-averaged state and d_eff = 1/Tr ω². In this H the smallest level spacing is
+5.9·10⁻⁴ and the closest pair of distinct Bohr gaps is separated by 3.2·10⁻⁸: the hypothesis
+holds numerically, but the infinite-time average is reached only on times of order 10⁷, so the
+sampled average over 3000 random times in [0, 10⁴] is an estimate.
+
+| Pure preparation | d_eff | ½√(d_A²/d_eff) | ½√(d_A⟨‖·‖₂²⟩), exact average | sampled ⟨D⟩ | sampled max D |
+|---|---|---|---|---|---|
+| \|+⟩ ⊗ excited bath eigenstate (S8) | 3.23 | 0.556 | 0.298 | 0.287 | 0.515 |
+| \|+⟩ ⊗ bath Néel state \|0101010⟩ | 29.56 | 0.184 | 0.095 | 0.088 | 0.242 |
+
+The bound holds, and its size is set by the supplied preparation through d_eff. Closure plus
+generic gaps therefore forces equilibration **on average** for a subsystem small compared with
+d_eff; it does not force pointwise or monotone relaxation, a thermal ω_A, or a time scale.
+
 ## Calculation 2: nested and overlapping compatibility
 
 | Check | Result |
@@ -180,7 +212,7 @@ the product state) and the Araki–Lieb slack S_Ω − |S_A − S_Ā| is 0 at t 
 | C4 isotropic W(p) on AB, BC and CA (triangle): largest compatible p | **1/3** (0.333333), the separability threshold; violation 5.0·10⁻⁴ at 1/3 + 10⁻³ |
 | C5 classical chain P(a,b), P(b,c): extension by Markov gluing | always exists (error 6·10⁻¹⁷) |
 | C5 classical 3-cycle of perfect anticorrelations | no joint distribution (LP infeasible) |
-| C5 classical 4-cycle of four perfect anticorrelations | joint exists (½ on 0101, ½ on 1010): the obstruction is odd frustration, not cyclicity |
+| C5 classical 4-cycle of four perfect anticorrelations | joint exists (½ on 0101, ½ on 1010): a cycle permits failure but does not force it |
 | C6 overlaps that disagree (ρ_B = diag(0.6,0.4) vs 1/2) | infeasible at once (both solvers); minimum violation 0.0500 |
 
 Analytic proof for C2: a pure ρ_AB forces ρ_ABC = ρ_AB ⊗ ρ_C, hence ρ_BC = (1/2) ⊗ ρ_C, whose
@@ -190,7 +222,9 @@ W(p) is the isotropic state; pairwise it is locally equivalent to the Werner sta
 chain globally (a Y on B), so 2/3 holds for both; the two triangle problems are distinct and
 both give 1/3. Overlap agreement is therefore **necessary and not sufficient** for a common
 global realization. Classically, overlap agreement suffices for every consistent family exactly
-on acyclic access structures (Vorob'ev 1962), and a cycle permits but does not force failure;
+on acyclic access structures (Vorob'ev 1962); on a cycle a family fails exactly when it violates
+an n-cycle inequality (Araújo et al. 2013), with an odd number of perfect anticorrelations as
+the deterministic extreme;
 quantumly it already fails on a chain (monogamy of entanglement). This is the quantum marginal
 problem, standard since the 1960s; it is stated here because it is the exact form of the
 working theory's requirement that every sector's effective environment be compatible with one
@@ -198,11 +232,13 @@ global model and preparation.
 
 ## Reading of the two calculations for the working theory
 
-1. Closure forces exactly the global theorems (unitarity, global conservation, entropy
-   relations, quasi-recurrence) and the restriction/compatibility rules. All are standard.
-2. Closure forces nothing local: not relaxation, not Markovianity, not a kernel, not a unique
-   local law, not thermality of the complement, not an arrow, not record persistence. Each
-   negative is exhibited by a legal closed model above.
+1. Closure alone forces the global theorems (unitarity, global conservation, entropy
+   relations, quasi-recurrence) and the restriction/compatibility rules. Closure plus generic
+   gaps forces equilibration on average (S10). All are standard.
+2. Closure forces nothing local pointwise: not monotone relaxation, not Markovianity, not a
+   kernel, not a unique local law, not thermality of the complement, not an arrow, not record
+   persistence. Each negative is exhibited by a legal closed model above, and a state rule
+   built from H alone is dynamically empty (S9).
 3. The reduced dynamics, kernel and noise are downstream of the supplied global state,
    Hamiltonian and access structure; identical marginals do not fix the future.
 4. Records and interventions are represented by including registers and instrument unitaries
@@ -212,34 +248,47 @@ global model and preparation.
 
 ## Verification record
 
-- Independent re-execution (separate agent, copied scripts): every numeric leaf of both JSON
-  files bit-exact (5030 and 24 leaves), SDP statuses identical, two runs bitwise identical.
-- Independent re-implementation from the specification alone (separate agent, no access to the
-  code before computing): 16 quantities (E_tot and its drift, S_A at t = 10 and 40 and its
-  maximum, the backflow sum and D's minimum, the three record probabilities, the
-  identical-marginal trace distance, the Werner chain threshold) all agree to 10⁻⁶ relative or
-  better; residual offsets traced to 12-digit JSON rounding, ε = 1/512 versus the numerically
-  halved ε_max, and interior-point tolerance.
-- Adversarial code review of calculation 2 (separate agent): verdict "sound with minor issues";
-  six items, all addressed: the C2 fidelity corrected from 1/2 to 1/4; the C3 optimiser comment
-  corrected; W(p) relabelled isotropic; the cycle note corrected to odd frustration with the
-  feasible 4-cycle added; a second solver (SCS) and minimum-violation certificates recorded for
-  every infeasibility and threshold; C1 checked in both trace orders. The review confirmed the
-  cvxpy axis convention, the 3/2 and 3/4 optima by eigen-decomposition and 300 random restarts,
-  the 2/3 chain threshold against the symmetric-extension criterion of Chen–Ji–Kribs–Lütkenhaus–
-  Zeng (2014), the 1/3 triangle threshold by an independent spin-decomposition construction,
-  and the LP constructions.
-- Adversarial code review of calculation 1 (separate agent): verdict "sound with minor issues"; nine items, all
-  addressed in the present version: entropy inequalities now checked on the mixed trajectory
-  (they were trivial on the pure one); S7 wording made non-monotone and the identity
-  ρ_rev(t) = ρ(T−t)* recorded; the κX_R case relabelled a basis rotation and a bath-coupled
-  register added; the composed one-time-map prediction recorded; the two S6 identities labelled
-  as identities; the t = 0 qualifier on the inhomogeneity; the integrability claim withdrawn and
-  the symmetries stated; the first local maximum of S_A quoted and the grid nature of the
-  backflow sum stated; dead code removed. The review confirmed the partial trace against brute
-  force, the conditioning of the map inversion (worst condition number 2.86), the step-robustness
-  of the generator, the CP-divisibility failure at other τ and through negative canonical rates,
-  the analytic inhomogeneity, the b′ period, the CNOT, and the time-reversal validity.
+All records named below are in `results/verification/`.
+
+- **Current version** (scripts and results as committed): `python3 code/verify.py --rerun`
+  re-executes both calculations and compares every numeric leaf with the committed JSON
+  (worst relative deviation 0 in this session). The separate agent's spec-only
+  re-implementation was re-compared against the committed results after the final edits:
+  23 comparisons, all agree, script hashes matched
+  (`independent_reimplementation_comparison_current.json`).
+- **Independent re-implementation** (separate agent, written from the specification without
+  reading the code): 23 comparisons covering E_tot and its drift, the full 401-point E_tot(t)
+  and S_A(t) series, S_A at t = 10 and 40 and its maximum, the backflow sum and D's minimum,
+  the three record probabilities, the identical-marginal trace distance and the isotropic
+  chain threshold; all agree to 10⁻⁶ relative or better; offsets are 12-digit JSON rounding,
+  numerical zeros compared absolutely, and solver tolerance (`independent_reimplementation_*`).
+- **Independent re-execution** (separate agent, 19 Oct): verified the **pre-review** version of
+  both scripts (hashes ba50f60e… and 1aad4b06…), 5030 and 24 numeric leaves bit-exact, two
+  runs bitwise identical. That version is superseded; the record is kept as history
+  (`independent_reexecution_19oct_prereview.md`).
+- **Adversarial code review of calculation 1** (separate agent): "sound with minor issues", nine
+  items, all addressed: entropy inequalities moved to the mixed trajectory; the S7 identity
+  ρ_rev(t) = ρ(T−t)* recorded and the wording made non-monotone; the κX_R case relabelled a
+  basis rotation and a bath-coupled register added; the composed one-time-map prediction
+  recorded; the S6 identities labelled; the t = 0 qualifier on the inhomogeneity; the
+  integrability claim withdrawn and the symmetries stated; the first local maximum quoted and
+  the backflow sum labelled a grid quantity; dead code removed. The review confirmed the
+  partial trace against brute force, the conditioning of the map inversion (at most 2.86 over
+  the full grid), the step-robustness of the generator, the CP-divisibility failure at other τ
+  and through negative canonical rates, the analytic inhomogeneity, the b′ period, the CNOT
+  and the validity of the time reversal (`code_review_calculation1.md`).
+- **Adversarial code review of calculation 2** (separate agent): "sound with minor issues",
+  seven items (six prose defects and one robustness caveat), all addressed: the C2 fidelity
+  corrected from 1/2 to 1/4; the C3 optimiser comment corrected; W(p) relabelled isotropic; the
+  cycle note corrected; a second solver and minimum-violation certificates added; C1 checked in
+  both trace orders. The review confirmed the cvxpy axis convention, the 3/2 and 3/4 optima by
+  eigen-decomposition and 300 random restarts, the 2/3 chain threshold against the
+  symmetric-extension criterion of Chen–Ji–Kribs–Lütkenhaus–Zeng (Phys. Rev. A 90, 032318
+  (2014)), the 1/3 triangle threshold by a spin-decomposition construction, and the LP
+  constructions (`code_review_calculation2.md`).
+- **Attack on the packet**, round 1 (separate agents, equations / handoff compliance / number
+  provenance): its findings produced S4's fourth row, S9, S10 and the corrections above
+  (`attack_round1/`).
 - Re-run of the M1 matched uniform-field control script (`uniform_field_control.py` in the M1
   review packet) reproduced `control_results.txt` line for line (8.6 s); see
   `results/m1_matched_control_rerun.txt`. No other old solver was reopened.
