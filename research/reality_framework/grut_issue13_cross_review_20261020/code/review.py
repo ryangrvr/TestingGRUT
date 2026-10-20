@@ -156,7 +156,6 @@ res["R3_distance_envelope"] = {"Hfloor_used": H_cons, "rows": rows,
                                "necessary_bound_mX_r_GeV_stress": product_bound("stress", -1500.0)}
 
 # ---------------- R4 vacuum-energy scope
-GeV4_per_rho_crit100 = 1.0 / (1.87834e-26 * 100 ** 2 / (3.0856775814913673e22 ** 2) * 0)  if False else None
 # rho_crit,100 = 3 H100^2 / (8 pi G) in GeV^4: H100 = 100 km/s/Mpc = 2.1331e-42 GeV ; M_P(reduced) = 2.435e18 GeV
 H100_GeV = 100.0 / 3.0856775814913673e19 * 6.582119569e-25   # (km/s/Mpc -> 1/s) * hbar[GeV s]
 MPred = 2.435323e18

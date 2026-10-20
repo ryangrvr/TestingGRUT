@@ -138,6 +138,8 @@ Summary; the complete list is each ledger entry's "Failures retained" section.
   principle fixing a renormalisation constant); GRUT III O5/O7 items; independent review of
   CP-04 and CP-05.
 - Candidate 1 three-charge one-loop family; lifetime; nonlinear gravitational matching.
+- Candidate 1 Z₂ domain walls and the hidden sector's initial thermal history; an external
+  calibration of the total vacuum energy for its cosmological application (s08 addendum).
 - Level-0 O-6 declared-chain run and magnitude maps.
 - M1 error-correction cascade against the matched baseline; thermal inclusions; dynamical
   terminal detector.

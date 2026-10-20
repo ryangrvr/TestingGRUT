@@ -1,0 +1,8 @@
+# build (frozen source sha256 3e8c04f2..., identical to protocol.json files_sha256)
+g++ -O3 -march=native -fopenmp -ffp-contract=off -std=c++17 -Wall -Wextra build/cartesian.cpp -o build/cartesian3d
+# build validation: reproduce published pair_generic_coarse (max abs diff 3.06e-11 over all columns)
+./build/cartesian3d --case pair --h 0.75 --L 24 --Lz 48 --T 160 --dt 0.05 --sample 5 --eps 0.05 --angle 0 --sym none --threads 4 --profile raw/profile.dat --modes raw/modes.dat --out ctrl/repro_pair_generic_coarse.csv
+# matched small-box baseline for the negative-seed pair at coarse h (frozen box L24/Lz48)
+./build/cartesian3d --case pair --h 0.75 --L 24 --Lz 48 --T 160 --dt 0.05 --sample 5 --eps -0.05 --angle 0 --sym none --threads 4 --profile raw/profile.dat --modes raw/modes.dat --out ctrl/repro_pair_generic_coarse_neg.csv
+# deciding control: enlarged box L36/Lz60, extended to T=240
+./build/cartesian3d --case pair --h 0.75 --L 36 --Lz 60 --T 240 --dt 0.05 --sample 5 --eps -0.05 --angle 0 --sym none --threads 4 --profile raw/profile.dat --modes raw/modes.dat --out ctrl/control_pair_negative_coarse_bigbox_T240.csv

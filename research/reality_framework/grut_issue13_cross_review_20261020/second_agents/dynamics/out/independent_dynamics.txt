@@ -1,0 +1,80 @@
+=== A. conservation over all 29 science runs ===
+runs 29 max |dQ/Q0| = 4.907e-13 (pair_negative_fine)  max |dE/E0| = 2.762e-05 (production_coarse)
+
+=== B. retention recomputed (late window t>=120) ===
+case                         h    L   Lz    nlate   retain%    core0%    core1%   minsep  wallgap slope%/40t Q12late/Qbox
+single_reference_coarse   0.75   18   18        9  99.99142   99.9914   99.9914      nan     5.69    0.00162    0.99993
+single_generic_coarse     0.75   18   18        9  99.85098   99.8510   99.8510      nan     3.68    0.00311    0.99854
+pair_reference_coarse     0.75   24   48        9  97.36594   32.6769   64.6860    29.60     8.01   -0.12302    0.97411
+pair_generic_coarse       0.75   24   48        9  96.93389   33.1207   63.8082    27.05     5.50   -0.20779    0.97003
+single_reference_medium    0.5   18   18        9  99.99662   99.9966   99.9966      nan     5.69    0.00054    0.99997
+single_generic_medium      0.5   18   18        9  99.84893   99.8489   99.8489      nan     3.66    0.00161    0.99852
+pair_reference_medium      0.5   24   48        9  97.45561   32.5565   64.8912    30.61     6.98   -0.09578    0.97494
+pair_generic_medium        0.5   24   48        9  97.03516   32.8927   64.1353    28.13     5.31   -0.16793    0.97093
+single_reference_fine    0.375   18   18        9  99.99759   99.9976   99.9976      nan     5.69    0.00024    0.99998
+single_generic_fine      0.375   18   18        9  99.84842   99.8484   99.8484      nan     3.66    0.00124    0.99851
+pair_reference_fine      0.375   24   48        9  97.48465   32.5235   64.9517    30.95     6.63   -0.08762    0.97521
+pair_generic_fine        0.375   24   48        9  97.06750   32.8252   64.2353    28.50     5.25   -0.15465    0.97122
+single_negative_fine     0.375   18   18        9  99.85516   99.8552   99.8552      nan     3.96    0.00547    0.99859
+single_generic_box         0.5   27   27        9  99.83238   99.8324   99.8324      nan    12.66   -0.01797    0.99841
+single_generic_dt          0.5   18   18        9  99.84881   99.8488   99.8488      nan     3.66    0.00158    0.99852
+pair_reference_box         0.5   30   60        9  97.36295   32.5385   64.8244    30.61    18.00   -0.15868    0.97436
+pair_reference_dt          0.5   24   48        9  97.45666   32.5591   64.8896    30.60     6.99   -0.09569    0.97495
+pair_rotated_medium        0.5   24   48        9  97.46763   32.5250   64.9395    30.68     3.44   -0.07100    0.97506
+pair_rotated_fine        0.375   24   48        9  97.49003   32.5051   64.9831    30.99     3.33   -0.06159    0.97528
+pair_negative_fine       0.375   24   48        9  96.98103   32.9819   63.9992    27.78     0.62   -0.23765    0.97087
+impact_coarse             0.75   24   48        9  97.36586   32.6765   64.6860    29.59     8.02   -0.12262    0.97410
+impact_medium              0.5   24   48        9  97.45547   32.5567   64.8909    30.60     6.98   -0.09595    0.97494
+impact_fine              0.375   24   48        9  97.48453   32.5235   64.9515    30.95     6.63   -0.08774    0.97521
+impact_half_fine         0.375   24   48        9  97.48464   32.5235   64.9517    30.95     6.63   -0.08765    0.97521
+impact_box                 0.5   30   60        9  97.36300   32.5387   64.8243    30.60    17.72   -0.15863    0.97437
+impact_dt                  0.5   24   48        9  97.45647   32.5593   64.8892    30.60     6.99   -0.09589    0.97495
+pass count (R12 criterion, excluding single E/Q and component sub-criteria): 26 / 26
+late windows: t from {np.float64(120.0)} to {np.float64(160.0)} samples {9}
+single max late E12/Q12: {'single_reference_coarse': np.float64(0.909193), 'single_generic_coarse': np.float64(0.909938), 'single_reference_medium': np.float64(0.910243), 'single_generic_medium': np.float64(0.910998), 'single_reference_fine': np.float64(0.91061), 'single_generic_fine': np.float64(0.911367), 'single_negative_fine': np.float64(0.911352), 'single_generic_box': np.float64(0.910851), 'single_generic_dt': np.float64(0.910998)}
+
+=== C. grid convergence of late core charges (max |dQ12|/Q0 over common late samples) ===
+single_reference   coarse-medium=0.00519% medium-fine=0.00098% ratio=5.32  diff-order p=3.70 | min retention c/m/f=[np.float64(99.99142), np.float64(99.99662), np.float64(99.99759)]  Richardson p=3.70 extrap=99.99811% fine-extrap=-0.00051%
+single_generic     coarse-medium=0.00394% medium-fine=0.00181% ratio=2.17  diff-order p=1.23 | min retention c/m/f=[np.float64(99.85098), np.float64(99.84893), np.float64(99.84842)]  Richardson p=2.94 extrap=99.84804% fine-extrap=0.00038%
+pair_reference     coarse-medium=0.21427% medium-fine=0.06406% ratio=3.34  diff-order p=2.44 | min retention c/m/f=[np.float64(97.36594), np.float64(97.45561), np.float64(97.48465)]  Richardson p=2.22 extrap=97.51723% fine-extrap=-0.03258%
+    core0 late-mean Q12 c/m/f = [np.float64(261.082), np.float64(260.1294), np.float64(259.8675)]  p=2.67 extrap=259.6403 fine-extrap=0.2271 (0.028% of Q0)
+    core1 late-mean Q12 c/m/f = [np.float64(517.1092), np.float64(518.7257), np.float64(519.2029)]  p=2.47 extrap=519.6638 fine-extrap=-0.4608 (-0.058% of Q0)
+pair_generic       coarse-medium=0.33654% medium-fine=0.10203% ratio=3.30  diff-order p=2.40 | min retention c/m/f=[np.float64(96.93389), np.float64(97.03516), np.float64(97.0675)]  Richardson p=2.25 extrap=97.10294% fine-extrap=-0.03544%
+    core0 late-mean Q12 c/m/f = [np.float64(264.7208), np.float64(262.8709), np.float64(262.3251)]  p=2.47 extrap=261.7988 fine-extrap=0.5264 (0.066% of Q0)
+    core1 late-mean Q12 c/m/f = [np.float64(510.2133), np.float64(512.7805), np.float64(513.5563)]  p=2.41 extrap=514.3333 fine-extrap=-0.7770 (-0.097% of Q0)
+
+=== D. box / dt / rotation controls ===
+single_box           max late |dQ12|/Q0 = 0.02229%, 0.02229%
+single_dt            max late |dQ12|/Q0 = 0.00015%, 0.00015%
+pair_box             max late |dQ12|/Q0 = 0.02587%, 0.06678%
+pair_dt              max late |dQ12|/Q0 = 0.00271%, 0.00190%
+rot_medium           max late |dQ12|/Q0 = 0.03690%, 0.06077%
+rot_fine             max late |dQ12|/Q0 = 0.02401%, 0.04318%
+impact_vs_ref_fine   max late |dQ12|/Q0 = 0.00015%, 0.00030%
+
+=== E. charge outside the two R12 balls vs time (pairs): reflection check, box 24x48 vs 30x60 (medium) ===
+pair_reference_medium 80:nan% 85:nan% 90:nan% 95:nan% 100:nan% 105:2.3266% 110:2.3916% 115:2.4144% 120:2.4258% 125:2.4513% 130:2.4992% 135:2.5364% 140:2.5352% 145:2.5202% 150:2.5185% 155:2.5252% 160:2.5444%
+pair_reference_box 80:nan% 85:nan% 90:nan% 95:nan% 100:nan% 105:2.3217% 110:2.3887% 115:2.4221% 120:2.4498% 125:2.4868% 130:2.5404% 135:2.5853% 140:2.5954% 145:2.5877% 150:2.5871% 155:2.6019% 160:2.6370%
+pair_reference_fine 80:nan% 85:nan% 90:nan% 95:nan% 100:nan% 105:2.3098% 110:2.3689% 115:2.3907% 120:2.4033% 125:2.4298% 130:2.4759% 135:2.5087% 140:2.5042% 145:2.4905% 150:2.4897% 155:2.4962% 160:2.5154%
+
+=== F. direct impact responses (x/delta), reference-subtracted, CM check, growth form ===
+impact_coarse    endpoint x/d raw=(-13.726052, 7.333882) ref-subtracted=(-13.726052, 7.333882)  ref x at end=(-1.26e-15,-2.63e-15)  Qweighted xcm/d end=0.2653 Eweighted=-0.1873
+                 late slope d(x/d)/dt = (-0.11739, 0.06235); linear-fit max rel err t>=80: (1.48e-03, 6.07e-03); best exp fit growth g=(0.0001,0.0007) err=(1.15e-03,5.52e-03)
+impact_medium    endpoint x/d raw=(-14.114130, 7.523045) ref-subtracted=(-14.114130, 7.523045)  ref x at end=(-1.08e-15,-8.24e-16)  Qweighted xcm/d end=0.2930 Eweighted=-0.1828
+                 late slope d(x/d)/dt = (-0.12076, 0.06380); linear-fit max rel err t>=80: (1.54e-03, 3.85e-03); best exp fit growth g=(0.0001,0.0005) err=(1.31e-03,3.47e-03)
+impact_fine      endpoint x/d raw=(-14.241539, 7.586161) ref-subtracted=(-14.241539, 7.586161)  ref x at end=(-2.82e-15,3.10e-15)  Qweighted xcm/d end=0.3017 Eweighted=-0.1818
+                 late slope d(x/d)/dt = (-0.12168, 0.06425); linear-fit max rel err t>=80: (1.53e-03, 4.31e-03); best exp fit growth g=(0.0001,0.0006) err=(1.35e-03,3.85e-03)
+impact_half_fine endpoint x/d raw=(-14.239909, 7.581834) ref-subtracted=(-14.239909, 7.581834)  ref x at end=(-2.82e-15,3.10e-15)  Qweighted xcm/d end=0.2994 Eweighted=-0.1840
+                 late slope d(x/d)/dt = (-0.12172, 0.06415); linear-fit max rel err t>=80: (1.52e-03, 4.43e-03); best exp fit growth g=(0.0001,0.0006) err=(1.26e-03,3.93e-03)
+impact_box       endpoint x/d raw=(-14.096267, 7.529909) ref-subtracted=(-14.096267, 7.529909)  ref x at end=(4.25e-15,-4.48e-15)  Qweighted xcm/d end=0.3025 Eweighted=-0.1737
+                 late slope d(x/d)/dt = (-0.12056, 0.06416); linear-fit max rel err t>=80: (1.06e-03, 3.75e-03); best exp fit growth g=(0.0001,0.0005) err=(9.95e-04,3.34e-03)
+impact_dt        endpoint x/d raw=(-14.111692, 7.522332) ref-subtracted=(-14.111692, 7.522332)  ref x at end=(8.64e-16,1.57e-15)  Qweighted xcm/d end=0.2928 Eweighted=-0.1828
+                 late slope d(x/d)/dt = (-0.12073, 0.06379); linear-fit max rel err t>=80: (1.61e-03, 3.85e-03); best exp fit growth g=(0.0001,0.0005) err=(1.36e-03,3.47e-03)
+relative response differences (late, normalised by 2nd arg):
+   coarse_medium  [2.74957 2.51444]
+   medium_fine    [0.89463 0.83199]
+   half_seed      [0.01912 0.05704]
+   box            [0.12656 0.22715]
+   dt             [0.03109 0.01816]
+core0 endpoint x/d c/m/f=[-13.726052 -14.11413  -14.241539]  Richardson p=2.18 continuum=-14.3878 fine-continuum=0.1463 (1.02%)
+core1 endpoint x/d c/m/f=[7.333882 7.523045 7.586161]  Richardson p=2.13 continuum=7.6607 fine-continuum=-0.0745 (-0.97%)
