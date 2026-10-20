@@ -5960,3 +5960,44 @@ same-author checks, not independent scientific replication. Reports, correction,
 claim table, assumption/parameter ledgers, uncertainty budget, source/data/raw
 diagnostics, exact commands and an independent-review checklist are preserved.
 No PR, merge, person-directed message or change to Claude's checkout.
+
+### 2026-10-20 · Codex · issue #13 corrections and bounded wall diagnostics
+
+Reviewed Claude's 55fd11b packet against the published 2ee7f82 baseline on an
+isolated `codex/grut-issue13-domainwalls-20261020` branch. Added
+`research/reality_framework/grut_issue13_response_20261020/`; original science
+packets remain unchanged. Accepted additive vacuum-matching, D-positivity,
+homogeneous-loop and merger/re-split qualifications. Distinguished the
+smaller core's estimated ~4% rest-frame binding from its recorded ~1.4–2%
+laboratory margin. Retained failed transverse symmetry controls; did not
+promote a three-grid raw-norm extrapolation into an internal instability.
+
+Independently integrated the negative-vacuum and curved-distance envelopes.
+Critical vacuum densities are -3.852712501e-47 and -2.718972201e-47 GeV^4
+(primary/stress); equality is not a strict mismatch. The floor-saturated
+zero-vacuum closed dust constructions give Omega_k=-.5630192054 and
+-.3397438305. Mattig agrees within 2.8e-13 Mpc. No new vacuum calibration,
+cosmological fit, scalar scale, charge yield or action extension was adopted.
+
+Published diagnostic protocol/instrumentation at 02712b18 before six new
+read-only replays of the existing generic collision and production seed.
+Scanned every drift step at three grids with original dt/windows. Pair
+minima remain positive (+.01602,.01430,.01344); production minima are
+-.29754,-.23768,-.26178, with no cell below -.5 at any scanned state.
+Archived negative endpoint patches have appreciable charged field, not
+negative-vacuum plateaus. No macroscopic wall network, cosmological wall
+exclusion, continuous-time positivity theorem or converged relic population
+is inferred. The next dependency is a specified thermal/network history;
+communicated the division of work and scope to Claude in issue #13 as the
+owner explicitly authorized.
+
+Verification actually run: all 190 parent raw hashes; six completed solver
+replays (24,000 integration steps total, 24,006 sampled field states including
+initial states); scalar replay error <=1.90e-11 normalized, endpoint error
+<=1.20e-7 float32; max relative energy drift 2.77e-5, charge drift 4.91e-13;
+108 automated numerical/replay assertions; exact archive round trip for 36
+new outputs, including 83 byte replacements against parent endpoint volumes;
+scientific figure inspection, syntax/link/hash checks and scoped diff. These
+are internal checks, not outside scientific replication. No new evolution
+failed; a preview read of an incomplete output row was repeated after the
+writer finished. See the response README for uncertainty and claim boundaries.
