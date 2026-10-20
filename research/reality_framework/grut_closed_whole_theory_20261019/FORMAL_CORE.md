@@ -301,13 +301,13 @@ an instance (s10).
 
 Further conditional statements, each with closure plus a named hypothesis:
 
-**COND 2.16 (second law and Landauer for a passive, uncorrelated complement).** If
+**COND 2.16 (second law and Landauer for an uncorrelated Gibbs complement).** If
 ρ_Ω(0) = ρ_A(0) ⊗ γ_Ā with γ_Ā the Gibbs state of H_Ā at β, then exactly, at every t,
 Σ(t) ≡ ΔS_A + β ΔE_Ā = I(A:Ā)(t) + D(ρ_Ā(t)‖γ_Ā) ≥ 0, with E_Ā = Tr(H_Ā ρ)
 (Esposito–Lindenberg–Van den Broeck, New J. Phys. 12, 013013 (2010)). Landauer's bound on the
 heat cost of erasure follows from the same identity (Reeb–Wolf, New J. Phys. 16, 103011
 (2014)). Σ is non-negative pointwise but not monotone, and the identity holds in both time
-directions from the reference time; the direction is supplied by the choice of a passive,
+directions from the reference time; the direction is supplied by the choice of a Gibbs,
 uncorrelated reference preparation. (Calc 1, S11, on the S1 preparation, which satisfies the
 hypothesis: |Σ − (I + D)| ≤ 1.1·10⁻¹⁴; Σ = 0.346, 0.739, 0.551, 0.665 at t = 1, 10, 20, 40; Σ
 decreases on 22 of 40 unit steps.)
@@ -330,7 +330,9 @@ state and preparation, a theory X can differ from the conventional theory only b
 different dissipative response Δρ_f ≠ 0, (b) a different state (non-KMS, a different β, or
 non-stationary), or (c) higher cumulants Δκ_n ≠ 0 (GRUT III, 07_ACCESS_RESOLVED_RESPONSE.md:20-38,
 T1 and T2, the latter adopted from a reviewer). This is the program's own statement of the form
-a distinct prediction must take.
+a distinct prediction must take, within its scope: the same observable and preparation, and KMS
+states for both theories at the same β. It does not classify differences in non-equilibrium or
+non-stationary settings beyond item (b).
 
 **COND 2.19 (chaos bound).** Under a thermal state with factorization and analyticity
 hypotheses, the out-of-time-order growth rate obeys λ_L ≤ 2πT/ħ (Maldacena–Shenker–Stanford,
@@ -365,7 +367,7 @@ record/instrument equivalence and the multi-time structure (2.8).
 From closure plus one named hypothesis on the supplied datum: equilibration on average for
 non-degenerate gaps (2.10), canonical typicality for a stated measure over preparations
 (2.11), effective light cones for local H (2.12), conservation-law limits on records made
-inside the whole (2.13), the second law and Landauer bound for a passive, uncorrelated
+inside the whole (2.13), the second law and Landauer bound for an uncorrelated Gibbs
 complement (2.16), relaxation for an infinite complement under stated conditions (2.17), the
 fluctuation–dissipation constraint and the trichotomy of possible differences for KMS states
 (2.18), the chaos bound (2.19), and limits on apparatus inside the whole (2.20).
@@ -386,7 +388,7 @@ held to exactly these rules and nothing more unless it supplies more.
 | a unique local law for A | NOT FORCED | calc 1 S5: same H_A and ρ_A(0), three complements, trace distances up to 0.79 |
 | that ρ_A(0) determines ρ_A(t) | NOT FORCED | THM 2.4; calc 1 S4 |
 | persistence of records | NOT FORCED; necessary conditions FORCED | records stable for all states need [H, O] = 0, and then the dynamics cannot write them (THM 2.15); calc 1 S6: otherwise retrievability depends on the supplied coupling (lossless for a register rotation, reduced for a bath-coupled register); erasure has a Landauer cost under COND 2.16 |
-| an arrow of time | direction NOT FORCED; pointwise Σ ≥ 0 FORCED under COND 2.16 | calc 1 S7: S_A returns from 0.42 to 0 along a legal preparation, so the direction is the low-entropy, passive reference preparation (GRUT III P4 locates it as a postulate); given that preparation, Σ = I + D ≥ 0 at every t, two-sided and not monotone (S11) |
+| an arrow of time | direction NOT FORCED; pointwise Σ ≥ 0 FORCED under COND 2.16 | calc 1 S7: S_A returns from 0.42 to 0 along a legal preparation, so the direction is the low-entropy reference preparation (GRUT III P4 locates it as a postulate); given a Gibbs complement uncorrelated with A at the reference time, Σ = I + D ≥ 0 at every t, two-sided and not monotone (S11) |
 | a small gravitational Lyapunov exponent or any chaos exponent | SCOPE | in finite dimension t ↦ ρ_Ω(t) is almost periodic (THM 2.9), so no exponential growth persists for all times; the MSS upper bound λ_L ≤ 2πT/ħ holds under its hypotheses (COND 2.19) and does not make λ_L small; no gravitational sector is in any model here |
 | compact spatial topology, finite four-volume, positive spatial curvature | SCOPE | "closed system" (no exterior) is not "closed universe" (k = +1); spatially open FLRW models have no exterior either; the finite model has no geometry at all |
 | the observed constants or a specified matter/gravity action | BY DEFINITION | they are elements of Θ (GRUT III data and postulates P0, P2, P3) |

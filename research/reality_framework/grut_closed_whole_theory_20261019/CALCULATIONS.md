@@ -216,7 +216,7 @@ does not force pointwise or monotone relaxation, a thermal ω_A, or a time scale
 global H at β = 1 (stationary), D(ρ_Ω(t)‖σ) = 0.891092, constant to 4·10⁻¹⁵, and
 D(ρ_A(t)‖Tr_Ā σ) ≤ 0.891092 at every one of the 41 unit-grid times (maximum 0.801675, at t = 0).
 
-**Second-law identity (closure plus a passive, uncorrelated complement, COND 2.16).** The S1
+**Second-law identity (closure plus a Gibbs complement uncorrelated with A, COND 2.16).** The S1
 preparation is ρ_A(0) ⊗ γ_Ā with γ_Ā the Gibbs state of H_Ā at β = 1, so
 Σ(t) = ΔS_A + βΔE_Ā = I(A:Ā)(t) + D(ρ_Ā(t)‖γ_Ā) must hold exactly.
 
@@ -228,7 +228,7 @@ preparation is ρ_A(0) ⊗ γ_Ā with γ_Ā the Gibbs state of H_Ā at β = 1, s
 | decreasing unit steps of Σ | 22 of 40 |
 
 Σ is non-negative at every time and not monotone. The forced half of the arrow is this
-pointwise inequality given a passive, uncorrelated reference preparation; the direction is the
+pointwise inequality given a Gibbs reference preparation uncorrelated with A (general passivity is not sufficient); the direction is the
 choice of that reference (S7).
 
 
@@ -267,7 +267,7 @@ global model and preparation.
 1. Closure alone forces the global theorems (unitarity, global conservation, entropy
    relations, quasi-recurrence), the restriction/compatibility rules, and some pointwise local
    inequalities: the entropy inequalities, monogamy and the athermality budget (S8, S11).
-   Closure plus generic gaps forces equilibration on average (S10); closure plus a passive,
+   Closure plus generic gaps forces equilibration on average (S10); closure plus a Gibbs,
    uncorrelated complement forces Σ = I + D ≥ 0 at every time (S11). All are standard.
 2. Closure forces no local dynamical law: not monotone relaxation, not Markovianity, not a
    kernel, not a unique local law, not thermality of the complement, not the direction of the

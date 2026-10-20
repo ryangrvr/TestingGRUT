@@ -39,8 +39,8 @@ inequalities, monogamy, a relative-entropy "athermality budget" that no subsyste
 and protect-or-form for records (a record the closed dynamics can write is not protected for
 every state). From closure plus one named hypothesis on the supplied datum: equilibration on
 average when energy gaps are non-degenerate (for a pure global state; its size is set by the
-preparation); the second-law identity Σ = I + D ≥ 0 when the complement starts passive and
-uncorrelated; relaxation when the complement is infinite and satisfies stated mixing or
+preparation); the second-law identity Σ = I + D ≥ 0 when the complement starts in a Gibbs state
+uncorrelated with A (passivity alone is not enough); relaxation when the complement is infinite and satisfies stated mixing or
 weak-coupling conditions; canonical typicality under a stated measure; light cones for local H;
 fluctuation–dissipation for KMS states; and conservation-law and clock limits on apparatus
 inside the whole. Closure forces **no local dynamical law**: not monotone relaxation, not
@@ -183,7 +183,7 @@ What the numbers show (all from `results/closed_whole_demo.json`):
 | Records | an externally timed write changes the energy by 0.2076; the register population then equals the Born probability 0.354910 (an identity); p(Z=+1) at t₂ is 0.3385 with the record, 0.4491 without it, and 0.2883 from composing one-time maps with the instrument |
 | Record persistence | exact for [H, Z_R] = 0, but then H cannot write the register; a register rotation loses nothing (optimal readout 1.000); coupling the register to the bath lowers the optimal readout to 0.96–0.97 |
 | Arrow | forward then backward evolution returns ρ_Ω(0) to 5·10⁻¹⁵; the conjugated final state is a legal preparation whose S(ρ_A) returns non-monotonically from 0.4198 to 0 |
-| Second law given a passive complement | Σ = ΔS_A + βΔE_Ā equals I + D to 1.1·10⁻¹⁴, is ≥ 0 at every time and decreases on 22 of 40 unit steps |
+| Second law given a Gibbs complement uncorrelated with A | Σ = ΔS_A + βΔE_Ā equals I + D to 1.1·10⁻¹⁴, is ≥ 0 at every time and decreases on 22 of 40 unit steps |
 | Athermality budget | D(ρ_A(t)‖σ_A) never exceeds the conserved D(ρ_Ω‖σ) = 0.891 for the stationary global Gibbs state σ |
 | Entropy theorems | pure global state: S(ρ_A) = S(ρ_Ā) to 3·10⁻¹⁶; mixed trajectory: mutual information ≥ 0 at all 401 times, Araki–Lieb slack 0.2115 at t = 3 and 0.2439 at t = 20 (0.20–0.40 over t ≥ 3), no violation |
 | A state rule built from H alone? | the Gibbs and ground states of H commute with H to 2·10⁻¹⁴ and their one-time marginals stay fixed to below 1.3·10⁻¹⁵; multi-time and response physics remain |

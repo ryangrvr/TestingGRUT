@@ -20,7 +20,7 @@ Sections
   S9  unitarily equivariant state-selection rules F(H) are stationary (finite-class obstruction)
   S10 conditional equilibration on average (Linden-Popescu-Short-Winter 2009) for pure global states
   S11 pointwise local inequalities that closure does force: athermality budget (closure alone) and the
-      second-law identity Sigma = I + D for an initially passive, uncorrelated complement
+      second-law identity Sigma = I + D for a complement initially in a Gibbs state uncorrelated with A
 Writes ../results/closed_whole_demo.json and prints a summary.
 """
 from __future__ import annotations

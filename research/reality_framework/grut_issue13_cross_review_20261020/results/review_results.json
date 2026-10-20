@@ -1,0 +1,229 @@
+{
+ "benchmark": {
+  "gX": 0.1,
+  "lambda_phi": 0.01,
+  "lambda_X": 0.001,
+  "mD0_over_v": 0.1,
+  "hD": 0.01,
+  "lambda_D": 0.001,
+  "v_GeV": 1000.0,
+  "mX_GeV": 100.0,
+  "r": 1.0
+ },
+ "R1_classical_floor": {
+  "mstar_over_v_closed_form": 0.056234132519,
+  "mstar_over_v_direct_minimization": 0.056234132519,
+  "mu_mstar_over_mX": 0.56234132519,
+  "mstar_GeV": 56.234132519,
+  "branch_values_over_v": {
+   "phi=v branch (s->0 limit)": 0.1,
+   "phi=0 branch": 0.056234132519
+  },
+  "pointwise_random_test": {
+   "samples": 800000,
+   "violations": 0,
+   "min_rho_over_absn_observed_over_v": 0.102466542292
+  },
+  "saturation_check_rho_minus_mstar_n": 0.0,
+  "D_sector_nonnegative": true
+ },
+ "R2_frw_floor": {
+  "omega_h_min_nominal": 1.33870808012,
+  "Hfloor_nominal": 116.663536725,
+  "omega_h_min_conservative": 1.26134741712,
+  "Hfloor_conservative": 113.251817518,
+  "Hfloor_conservative_with_mb_0.9315_GeV": 113.639741724,
+  "dHfloor_from_one_sigma_omega_b": 0.940413641312
+ },
+ "R3_distance_envelope": {
+  "Hfloor_used": 113.251817518,
+  "rows": [
+   {
+    "galaxy": "UGC 3789",
+    "D_med": 51.5,
+    "D_low_corner": 39.5,
+    "primary_vpec_-750": {
+     "z_cos": 0.0136146267662,
+     "DA_max": 35.1966443697,
+     "mismatch": true
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.0161536293147,
+     "DA_max": 41.5779667876,
+     "mismatch": false
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.84496935211,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 41.8902063604,
+     "mismatch": false
+    }
+   },
+   {
+    "galaxy": "NGC 6264",
+    "D_med": 132.1,
+    "D_low_corner": 81.1,
+    "primary_vpec_-750": {
+     "z_cos": 0.0365969100815,
+     "DA_max": 90.9672499802,
+     "mismatch": false
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.0391934809349,
+     "DA_max": 96.9952744849,
+     "mismatch": false
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.60316508416,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 99.7703702835,
+     "mismatch": false
+    }
+   },
+   {
+    "galaxy": "NGC 6323",
+    "D_med": 109.4,
+    "D_low_corner": 40.4,
+    "primary_vpec_-750": {
+     "z_cos": 0.0286081029402,
+     "DA_max": 72.0802671365,
+     "mismatch": false
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.0311846626363,
+     "DA_max": 78.2284987514,
+     "mismatch": false
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.71122936854,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 79.8884941493,
+     "mismatch": false
+    }
+   },
+   {
+    "galaxy": "NGC 5765b",
+    "D_med": 112.2,
+    "D_low_corner": 96.9,
+    "primary_vpec_-750": {
+     "z_cos": 0.0310217994636,
+     "DA_max": 77.8414841966,
+     "mismatch": true
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.0336044052265,
+     "DA_max": 83.9531109813,
+     "mismatch": true
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.61257833174,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 85.9222824765,
+     "mismatch": true
+    }
+   },
+   {
+    "galaxy": "CGCG 074-064",
+    "D_med": 87.6,
+    "D_low_corner": 66.0,
+    "primary_vpec_-750": {
+     "z_cos": 0.0265077388692,
+     "DA_max": 67.0278081381,
+     "mismatch": false
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.0290790373649,
+     "DA_max": 73.2080968164,
+     "mismatch": false
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.48512451571,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 74.6191408502,
+     "mismatch": false
+    }
+   },
+   {
+    "galaxy": "NGC 4258",
+    "D_med": 7.58,
+    "D_low_corner": 7.25,
+    "primary_vpec_-750": {
+     "z_cos": 0.00478045736236,
+     "DA_max": 12.5493172485,
+     "mismatch": false
+    },
+    "stress_vpec_-1500": {
+     "z_cos": 0.00729733120627,
+     "DA_max": 19.0727324826,
+     "mismatch": false
+    },
+    "nominal_ratio_Dmed_over_DAmax_nominal_floor": 1.30696202843,
+    "stress_if_velocity_were_radio_convention": {
+     "DA_max": 19.0861254606,
+     "mismatch": false
+    }
+   }
+  ],
+  "mismatching_rows_primary": [
+   "UGC 3789",
+   "NGC 5765b"
+  ],
+  "mismatching_rows_stress": [
+   "NGC 5765b"
+  ],
+  "necessary_bound_mX_r_GeV_primary": 63.9343983587,
+  "necessary_bound_mX_r_GeV_stress": 74.6429052365
+ },
+ "R4_vacuum_energy_scope": {
+  "rho_crit_100_GeV4": 8.09589449217e-47,
+  "benchmark_one_loop_new_scalar_vacuum_energy_GeV4": -1226526.32365,
+  "same_in_omega_units": -1.51499791016e+52,
+  "critical_total_omega_Lambda_below_which_the_row_no_longer_mismatches": {
+   "NGC 5765b primary": {
+    "omega_L_over_omega_floor": -0.371032029074,
+    "omega_L_critical": -0.475884722159
+   },
+   "NGC 5765b stress": {
+    "omega_L_over_omega_floor": -0.26184818424,
+    "omega_L_critical": -0.335845804783
+   },
+   "UGC 3789 primary": {
+    "omega_L_over_omega_floor": -0.210219085894,
+    "omega_L_critical": -0.269626456597
+   },
+   "UGC 3789 stress": null
+  },
+  "note": "Mismatch survives only if the total effective vacuum density is above omega_L_critical (negative values allowed down to it)."
+ },
+ "R5_one_loop_floor_estimate": {
+  "one_loop_vacuum_phi_over_v": 1.00012188184,
+  "archived_value": 1.0001219374,
+  "vacuum_energy_one_loop_over_v4": -1.22667495222e-06,
+  "archived_new_scalar_vacuum_energy_over_v4": -1.22652632365e-06,
+  "mstar_tree_over_v": 0.056234132519,
+  "mstar_one_loop_over_v": 0.056235180773,
+  "relative_change": 1.86408847194e-05,
+  "location_phi_over_v": -1.37982535921e-09,
+  "location_s_over_v": 1.25756538647,
+  "negative_mass_squared_at_location": false,
+  "note": "Derivative-expansion estimate: one-loop effective potential, vacuum energy subtracted (it gravitates through the separately matched Lambda), wavefunction renormalization neglected. Not a quantum energy inequality.",
+  "fractional_reduction_of_mstar_needed_to_remove_all_mismatches": {
+   "primary": 0.360656016413,
+   "stress": 0.253570947635
+  }
+ },
+ "R6_domain_wall_preview": {
+  "status": "order-of-magnitude preview of the PROPOSED next calculation, not a result",
+  "Tc_over_v_leading_high_T": 1.54764646507,
+  "Tc_GeV": 1547.64646507,
+  "wall_tension_GeV3": 94280904.1582,
+  "wall_tension_cuberoot_GeV": 455.136060679,
+  "domination_temperature_GeV_if_scaling_with_A_1": 4.61077392536e-06,
+  "ZKO_CMB_bound_sigma_GeV3": 2.25543119794e-09,
+  "ZKO_bound_cuberoot_MeV": 1.31142420287,
+  "ratio_sigma_over_bound": 4.18017203292e+16,
+  "note": "Exact Z2 (phi -> -phi) of the unchanged action: walls are stable. If the hidden sector was ever hotter than ~Tc, a network forms; the estimate says it would dominate well before recombination and violate CMB isotropy by many orders. Quantities to be computed properly: Tc with the full one-loop thermal potential and X/D dynamics; whether symmetric-phase core interiors (phi ~ 0 inside the charged objects) can seed -v domains on fragmentation; the network's scaling constant."
+ },
+ "provenance": {
+  "script_sha256": "e08b0e01adc085e14fd26dff273c201a964b592dd36b1721e88aed474bb3a368",
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "wall_seconds": 2.01
+ }
+}

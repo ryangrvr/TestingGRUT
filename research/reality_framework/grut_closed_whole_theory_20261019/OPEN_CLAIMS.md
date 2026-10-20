@@ -19,7 +19,8 @@ stated there.
    one supplied eight-qubit model.
 3. **What closure plus one named hypothesis forces.** Equilibration on average for a pure
    global state under non-degenerate gaps (computed in S10); the second-law identity
-   Σ = I + D ≥ 0 for a passive, uncorrelated complement (computed in S11); relaxation for an
+   Σ = I + D ≥ 0 for a complement prepared in a Gibbs state uncorrelated with A (computed in S11; general
+   passivity is not sufficient); relaxation for an
    infinite complement under stated mixing or weak-coupling conditions; canonical typicality
    under a stated measure; Lieb–Robinson light cones for local H; fluctuation–dissipation and
    the three-way form of any difference for KMS states; the chaos bound; conservation and clock
@@ -29,7 +30,7 @@ stated there.
    are refuted by a legal closed model exhibited in calculation 1 (a thermal complement,
    pointwise relaxation, a Markovian kernel, a unique local law, determination of the future by
    ρ_A(0), record persistence); one is split (the arrow: its direction is not forced, Σ ≥ 0 is
-   forced given a passive reference preparation); four are settled by how the definitions are
+   forced given an uncorrelated Gibbs reference preparation); four are settled by how the definitions are
    written (a pure global state, a preferred initial state, the constants and action, the Born
    rule); three are scope statements the finite model cannot address (chaos exponents, spatial
    topology and curvature, cosmological energy). A unitarily equivariant state rule built from H

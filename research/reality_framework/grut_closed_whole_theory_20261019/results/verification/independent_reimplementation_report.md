@@ -109,7 +109,7 @@ expm cross-check (independent of eigh): S_A(10)=0.392871183300, S_A(37.5)=0.4893
 
 ## Provenance check of the packet
 
-- sha256(code/closed_whole_demo.py) = `0ed2d6b1ff6264d9abed675b25fe8d9a11d92060678cb3ff90fbad79cfbcbba2`; JSON claims `0ed2d6b1ff6264d9abed675b25fe8d9a11d92060678cb3ff90fbad79cfbcbba2`; match = True
+- sha256(code/closed_whole_demo.py) = `ee19642f84a4b943dffdda56b3ba1f1cbcd2302b7ce5f5428b4a44bcc180bdb1`; JSON claims `ee19642f84a4b943dffdda56b3ba1f1cbcd2302b7ce5f5428b4a44bcc180bdb1`; match = True
 - sha256(code/marginal_compatibility.py) = `9a6333833d7b70ed10f729e253a1ce6d3a8b0c9a678850997a7876dffa600695`; JSON claims `9a6333833d7b70ed10f729e253a1ce6d3a8b0c9a678850997a7876dffa600695`; match = True
 
 ## What the numbers demonstrate (standard QM only, no new physics)
