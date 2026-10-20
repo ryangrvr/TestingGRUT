@@ -242,6 +242,10 @@ the lines.
   rejected (s08).
 - The classical relaxational carrier is eliminated inside the supplied quantum class (CA-1);
   H-HERM-2, strict H-ORD and the two-property reduction of the floor are falsified (s02, s03).
+- The bath behind the in-in action was never specified: "what bath Hilbert space was integrated
+  out to make the influence functional" is recorded as the deepest open item, the noise-origin
+  campaign closed with NO-PHYSICAL-BATH-CANDIDATE, and GRUT III retired the finite-memory
+  ontology ("memory is a property of (observable, state)") (s01, s02).
 
 **Access structure.**
 - The access seed is load-bearing under boundary change and nothing in the record fixes it:
@@ -283,7 +287,10 @@ three-charge one-loop family, lifetime and nonlinear gravity (s08); the O-6 decl
 (s03); the rung-3 pole-versus-cut ask never sent (s01); independent review of CP-04 and CP-05
 (s05); M1's error-correction cascade against the matched baseline (s10); the toric branch's
 merge decision (s11). The universality probe deferred, the criterion-unification fork never run, EA-1 closed and S-5
-held (s12); the quantum OTOC and Lyapunov question in the 4D code (s11).
+held (s12); the quantum OTOC and Lyapunov question in the 4D code (s11). One external signal is
+recorded against a GRUT I–II shape exclusion: the DESI DR2 + CMB preference for a w(z) that
+crosses the phantom divide at z ≈ 0.35–0.5 (3.1σ), "pending refutation if the signal
+consolidates" (s04); the exclusion itself is conditional on the supplied projector and arrow.
 
 
 ## 7. Physical scope, predictions and open claims
