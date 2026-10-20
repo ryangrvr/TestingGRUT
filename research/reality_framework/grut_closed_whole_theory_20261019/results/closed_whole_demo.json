@@ -14,7 +14,7 @@
    7
   ],
   "H_A": "omega0/2 * Z_0, omega0 = 1.0",
-  "H_Abar": "XXZ chain on qubits 1..7: J (X X + Y Y) + Jz Z Z nearest-neighbour, J=1.0, Jz=0.5, longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed, non-integrable)",
+  "H_Abar": "XXZ chain on qubits 1..7: J (X X + Y Y) + Jz Z Z nearest-neighbour, J=1.0, Jz=0.5, longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed disorder; no known integrability; H_Abar conserves total Z of the bath, and the full H conserves the Z-parity of all 8 qubits; nothing below needs non-integrability)",
   "H_AAbar": "g X_0 X_1, g = 0.5",
   "preparation_S1": "rho_A(0) = |+><+| ; rho_Abar(0) = exp(-beta H_Abar)/Z, beta = 1.0 (mixed global state)",
   "instruments": "projective Z and X measurements on A; Born rule p = Tr(rho_A E)",
@@ -4887,6 +4887,29 @@
   }
  },
  "S2_nonmonotone_relaxation": {
+  "first_local_max": {
+   "t": 2.1,
+   "S_A": 0.338264035926
+  },
+  "first_local_min_after_it": {
+   "t": 3.6,
+   "S_A": 0.23533233338
+  },
+  "local_maxima_times": [
+   2.1,
+   5.2,
+   9.3,
+   12.0,
+   16.3,
+   19.1,
+   23.6,
+   26.2,
+   27.6,
+   30.5,
+   33.3,
+   35.1,
+   37.5
+  ],
   "S_A_t0": 0.0,
   "S_A_max": 0.489338878595,
   "t_of_S_A_max": 37.5,
@@ -4900,6 +4923,7 @@
    "t_of_D_min": 37.6,
    "D_t40": 0.674858229496,
    "backflow_sum_of_positive_increments": 1.20353735762,
+   "grid_note": "sum over the 0.1 grid: a lower bound on the continuous Breuer-Laine-Piilo measure",
    "largest_single_increase": 0.0145452144727,
    "note": "Any positive increment of the trace distance between two reduced states is information backflow (Breuer-Laine-Piilo); a Markovian (CP-divisible) reduced dynamics would make D non-increasing."
   }
@@ -5022,11 +5046,11 @@
    ],
    "norm_of_inhomogeneous_term_at_t0": 0.192540159419
   },
-  "note": "Two global preparations with identical rho_A(0) AND identical rho_Abar(0) evolve to different rho_A(t). No map on rho_A(0) alone (nor on both marginals) reproduces both futures; the Nakajima-Zwanzig inhomogeneous term carries the difference. Standard initial-correlation result (Pechukas 1994; Stelmachovic-Buzek 2001), computed in the supplied model."
+  "note": "Two global preparations with identical rho_A(0) AND identical rho_Abar(0) evolve to different rho_A(t). No map on rho_A(0) alone (nor on both marginals) reproduces both futures; the Nakajima-Zwanzig inhomogeneous term carries the difference (its t = 0 value is recorded; for the classical Z0Z1 correlation the first two orders vanish at t = 0 and the difference appears at third order in t). Standard initial-correlation result (Pechukas 1994; Stelmachovic-Buzek 2001)."
  },
  "S5_nonunique_local_law": {
   "models": {
-   "a_nonintegrable_XXZ_disordered": "XXZ chain on qubits 1..7: J (X X + Y Y) + Jz Z Z nearest-neighbour, J=1.0, Jz=0.5, longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed, non-integrable)",
+   "a_nonintegrable_XXZ_disordered": "XXZ chain on qubits 1..7: J (X X + Y Y) + Jz Z Z nearest-neighbour, J=1.0, Jz=0.5, longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed disorder; no known integrability; H_Abar conserves total Z of the bath, and the full H conserves the Z-parity of all 8 qubits; nothing below needs non-integrability)",
    "b_single_spin": "H_Abar = omega0/2 Z_1 (one bath qubit), thermal at beta=1",
    "c_clean_XX_chain": "J (XX+YY) chain on 7 qubits, Jz=0, no fields (free fermions), thermal at beta=1"
   },
@@ -5144,34 +5168,47 @@
   "pZ_plus_A_at_t2_with_record_written": 0.338531123755,
   "pZ_plus_A_at_t2_without_intervention": 0.449147357617,
   "pZ_plus_A_at_t2_with_measure_and_forget_dephasing": 0.338531123755,
-  "note_two_time": "The one-time map Phi_t does not give the statistics after an intervention at t1: the process after the record is written differs from the uninterrupted process (back-action by entanglement with the included register). A measure-and-forget dephasing at t1 gives the same later statistics as the unitary record (register traced out).",
+  "pZ_plus_A_at_t2_composed_one_time_maps_bath_reprepared": 0.288331120315,
+  "note_two_time": "The uninterrupted one-time map gives 0.449; composing one-time maps with the instrument (bath re-prepared at t1) gives the composed value; the exact closed-whole result with the record written differs from both. Multi-time statistics are properties of the process (process tensor), not of Phi_t. Two recorded equalities are identities, not evidence: register population = Born probability (CNOT with a fresh |0> is a Stinespring dilation of Z-dephasing on A), and unitary record = measure-and-forget (the idle register commutes with the partial trace).",
   "record_persistence": {
    "3.0": {
-    "kappa=0_trace_distance_register_vs_written": 2.49800180541e-16,
-    "kappa=0.3_trace_distance_register_vs_written": 1.01769212554e-15
+    "idle_register_trace_distance_vs_written": 2.49800180541e-16,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 1.01769212554e-15,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 1.0
    },
    "4.0": {
-    "kappa=0_trace_distance_register_vs_written": 1.88368822609e-15,
-    "kappa=0.3_trace_distance_register_vs_written": 0.0857543442048
+    "idle_register_trace_distance_vs_written": 1.88368822609e-15,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 0.0857543442048,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 0.960743999368
    },
    "5.0": {
-    "kappa=0_trace_distance_register_vs_written": 2.98796508489e-15,
-    "kappa=0.3_trace_distance_register_vs_written": 0.16384850824
+    "idle_register_trace_distance_vs_written": 2.98796508489e-15,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 0.16384850824,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 0.963801662665
    },
    "6.0": {
-    "kappa=0_trace_distance_register_vs_written": 3.35705562245e-15,
-    "kappa=0.3_trace_distance_register_vs_written": 0.227306573016
+    "idle_register_trace_distance_vs_written": 3.35705562245e-15,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 0.227306573016,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 0.96717231667
    },
    "8.0": {
-    "kappa=0_trace_distance_register_vs_written": 4.49757816885e-15,
-    "kappa=0.3_trace_distance_register_vs_written": 0.289454076221
+    "idle_register_trace_distance_vs_written": 4.49757816885e-15,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 0.289454076221,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 0.961338292163
    },
    "10.0": {
-    "kappa=0_trace_distance_register_vs_written": 7.07343959841e-15,
-    "kappa=0.3_trace_distance_register_vs_written": 0.250486942956
+    "idle_register_trace_distance_vs_written": 7.07343959841e-15,
+    "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": 0.250486942956,
+    "kappa_X_R_optimal_readout_success": 1.0,
+    "kappa_X_R_X_7_optimal_readout_success": 0.969999441856
    }
   },
-  "note_persistence": "With [H', Z_R] = 0 the record is exactly stable; adding kappa X_R to the supplied Hamiltonian makes it drift. Record persistence is a property of the supplied dynamics, not of closure."
+  "note_persistence": "With [H', Z_R] = 0 the register is unchanged. kappa X_R alone rotates the record out of the fixed Z_R readout basis but loses no information (optimal readout success stays 1). kappa X_R X_7 couples the register to the bath and the recorded bit becomes genuinely less retrievable from R. Record persistence is a property of the supplied dynamics, not of closure."
  },
  "S7_time_reversal": {
   "trace_distance_after_forward_then_backward_evolution": 5.05083275371e-15,
@@ -5188,25 +5225,41 @@
    0.0,
    0.419837916865
   ],
-  "note": "The time-reversed final state is an admissible preparation of the same closed whole and its forward evolution lowers S_A back to the original initial value. Closure supplies no arrow; a low-entropy preparation does."
+  "max_abs_rho_rev(t)_minus_rho(T-t)_conj": 4.93007313172e-15,
+  "reversed_run_S_A_max_and_t": [
+   0.489338878595,
+   2.5
+  ],
+  "reversed_run_number_of_increasing_steps_of_400": 201,
+  "note": "The conjugated final state is an admissible preparation of the same closed whole; rho_rev(t) = rho(T-t)^* exactly, so its forward evolution is the original run read backwards: S_A returns non-monotonically to 0 at t = 40. Closure supplies no arrow; the low-entropy preparation does."
  },
  "S8_what_closure_forces": {
-  "S_A_equals_S_Abar_max_dev": 3.33066907388e-16,
-  "araki_lieb_violations": 0,
-  "subadditivity_violations": 0,
-  "purity_const_dev": 1.3433698598e-14,
+  "pure_global_state_S_A_equals_S_Abar_max_dev": 3.33066907388e-16,
+  "pure_global_state_purity_const_dev": 1.3433698598e-14,
+  "mixed_S1_trajectory": {
+   "S_tot": 1.26093113354,
+   "subadditivity_min_slack_MI": 1.7763568394e-15,
+   "subadditivity_violations": 0,
+   "araki_lieb_min_slack": -1.7763568394e-15,
+   "araki_lieb_slack_at_t3_t20": [
+    0.211539958001,
+    0.243894500346
+   ],
+   "araki_lieb_violations": 0,
+   "note": "Both inequalities are saturated at t = 0 (product state with pure A) and strict afterwards; on a pure global state they reduce to S_A = S_Abar and test nothing more."
+  },
   "closest_return_to_initial_pure_state_within_grid_t_ge_1": {
    "trace_distance": 0.401231543122,
    "t": 11.1
   },
-  "note": "Closure forces: unitarity (global purity and entropy constant), conservation of the fixed global H, S_A = S_Abar for a pure global state, subadditivity and Araki-Lieb, and eventual quasi-recurrence in finite dimension. All are theorems of standard quantum mechanics; none is a GRUT contribution."
+  "note": "Closure forces: unitarity (global purity and entropy constant), conservation of the fixed global H, S_A = S_Abar for a pure global state, subadditivity and Araki-Lieb (checked on the mixed trajectory), and eventual quasi-recurrence in finite dimension. All are theorems of standard quantum mechanics; none is a GRUT contribution."
  },
  "provenance": {
-  "script_sha256": "ba50f60e58a0219a228ea5829b2116c4e1ca3f2c7008e4ff2eb8f51de7090ed2",
+  "script_sha256": "6115d716da571f9108b3999b8b834357817433f38c6d0abf8f7c067407d8e23e",
   "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
   "numpy": "2.5.3",
   "scipy": "1.18.1",
   "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
-  "wall_seconds": 53.03
+  "wall_seconds": 46.03
  }
 }

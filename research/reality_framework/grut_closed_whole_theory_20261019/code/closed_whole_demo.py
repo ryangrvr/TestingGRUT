@@ -135,12 +135,6 @@ def chain_H(n, sites, J, Jz, hs):
     return H
 
 
-def embed_bath_state(rho_bath, n_bath, n_total, bath_sites):
-    """Return the n_total-qubit operator rho_bath on bath_sites (assumed the trailing qubits)."""
-    assert bath_sites == list(range(n_total - n_bath, n_total))
-    return rho_bath
-
-
 PAULI = [I2, X, Y, Z]
 
 
@@ -176,7 +170,8 @@ DATUM = {
     "Abar": [1, 2, 3, 4, 5, 6, 7],
     "H_A": "omega0/2 * Z_0, omega0 = 1.0",
     "H_Abar": "XXZ chain on qubits 1..7: J (X X + Y Y) + Jz Z Z nearest-neighbour, J=1.0, Jz=0.5, "
-              "longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed, non-integrable)",
+              "longitudinal fields h = [0.3,-0.7,0.5,-0.2,0.8,-0.4,0.6] (fixed disorder; no known integrability; "
+              "H_Abar conserves total Z of the bath, and the full H conserves the Z-parity of all 8 qubits; nothing below needs non-integrability)",
     "H_AAbar": "g X_0 X_1, g = 0.5",
     "preparation_S1": "rho_A(0) = |+><+| ; rho_Abar(0) = exp(-beta H_Abar)/Z, beta = 1.0 (mixed global state)",
     "instruments": "projective Z and X measurements on A; Born rule p = Tr(rho_A E)",
@@ -274,7 +269,13 @@ SA = np.array(S1["S_A"])
 dSA = np.diff(SA)
 sign_changes = int(np.sum(np.diff(np.sign(dSA[np.abs(dSA) > 1e-12])) != 0))
 first_max_idx = int(np.argmax(SA))
+loc_max = [i for i in range(1, len(SA) - 1) if SA[i] > SA[i - 1] and SA[i] >= SA[i + 1]]
+i1 = loc_max[0]
+j1 = next(j for j in range(i1 + 1, len(SA) - 1) if SA[j] < SA[j - 1] and SA[j] <= SA[j + 1])
 S2 = {
+    "first_local_max": {"t": float(t_grid[i1]), "S_A": float(SA[i1])},
+    "first_local_min_after_it": {"t": float(t_grid[j1]), "S_A": float(SA[j1])},
+    "local_maxima_times": [float(t_grid[i]) for i in loc_max],
     "S_A_t0": float(SA[0]),
     "S_A_max": float(SA.max()), "t_of_S_A_max": float(t_grid[first_max_idx]),
     "S_A_min_after_max": float(SA[first_max_idx:].min()),
@@ -295,6 +296,7 @@ S2["BLP"] = {
     "D_t0": float(D[0]), "D_min": float(D.min()), "t_of_D_min": float(t_grid[int(np.argmin(D))]),
     "D_t40": float(D[-1]),
     "backflow_sum_of_positive_increments": float(np.sum(dD[dD > 0])),
+    "grid_note": "sum over the 0.1 grid: a lower bound on the continuous Breuer-Laine-Piilo measure",
     "largest_single_increase": float(dD.max()),
     "note": "Any positive increment of the trace distance between two reduced states is information backflow "
             "(Breuer-Laine-Piilo); a Markovian (CP-divisible) reduced dynamics would make D non-increasing.",
@@ -414,7 +416,8 @@ for name, rho1, chi, rb in S4_cases:
     }
 S4["note"] = ("Two global preparations with identical rho_A(0) AND identical rho_Abar(0) evolve to different rho_A(t). "
               "No map on rho_A(0) alone (nor on both marginals) reproduces both futures; the Nakajima-Zwanzig inhomogeneous term "
-              "carries the difference. Standard initial-correlation result (Pechukas 1994; Stelmachovic-Buzek 2001), computed in the supplied model.")
+              "carries the difference (its t = 0 value is recorded; for the classical Z0Z1 correlation the first two orders vanish at t = 0 and the "
+              "difference appears at third order in t). Standard initial-correlation result (Pechukas 1994; Stelmachovic-Buzek 2001).")
 results["S4_initial_correlations"] = S4
 
 # ----------------------------------------------------------------------------- S5
@@ -475,7 +478,6 @@ H9 = np.kron(H, I2)  # register idle: [H9, Z_R] = 0 -> record stable by construc
 rho0_9 = np.kron(rho0, proj(ZERO))
 closed9 = Closed(H9)
 t1, t2 = 3.0, 6.0
-CNOT = kron_all([I2] * N9)  # build CNOT(A -> R): |0><0|_A x I + |1><1|_A x X_R
 P0A = site_op(proj(ZERO), 0, N9)
 P1A = site_op(proj(ONE), 0, N9)
 CNOT = P0A + P1A @ site_op(X, R, N9)
@@ -500,18 +502,44 @@ rho_t1_8 = closed.evolve(rho0, t1)
 P0A8, P1A8 = site_op(proj(ZERO), 0, N), site_op(proj(ONE), 0, N)
 rho_deph = P0A8 @ rho_t1_8 @ P0A8 + P1A8 @ rho_t1_8 @ P1A8
 pA_deph = float(np.real(np.trace(closed.evolve(rho_deph, t2 - t1) @ P0A8)))
-# record persistence under a Hamiltonian that acts on R
+# composed one-time-map prediction: Phi_{t2-t1} o (Z-dephasing) o Phi_{t1}, bath re-prepared at t1 (what "one-time maps + instrument" would give)
+def apply_map(M, rho):
+    coeffs = np.array([np.trace(P.conj().T @ rho) / 2 for P in PAULI])
+    outc = M @ coeffs
+    return sum(c * P for c, P in zip(outc, PAULI))
+
+
+rA_t1_map = apply_map(dyn_map(rho_bath_th, t1), rho_A0)
+rA_t1_deph = PZp @ rA_t1_map @ PZp + (I2 - PZp) @ rA_t1_map @ (I2 - PZp)
+pA_composed = float(np.real(apply_map(dyn_map(rho_bath_th, t2 - t1), rA_t1_deph)[0, 0]))
+# record persistence: (i) kappa X_R acting on R alone (a basis rotation, no information loss); (ii) kappa X_R X_7 coupling R to the bath
 kappa = 0.3
 H9k = H9 + kappa * site_op(X, R, N9)
-closed9k = Closed(H9k)
+H9c = H9 + kappa * two_site(X, R, X, 7, N9)
+closed9k, closed9c = Closed(H9k), Closed(H9c)
+# branch states by recorded value: sigma_z = P_z rho(t1) P_z (x) |z><z|_R ; Helstrom success of reading the recorded bit from R alone
+P0A8, P1A8 = site_op(proj(ZERO), 0, N), site_op(proj(ONE), 0, N)
+rho_t1_8 = closed.evolve(rho0, t1)
+sig_plus = np.kron(P0A8 @ rho_t1_8 @ P0A8, proj(ZERO))
+sig_minus = np.kron(P1A8 @ rho_t1_8 @ P1A8, proj(ONE))
+
+
+def helstrom_from_register(cl, tt):
+    a = ptrace(cl.evolve(sig_plus, tt - t1), [R], N9)
+    b = ptrace(cl.evolve(sig_minus, tt - t1), [R], N9)
+    return float(0.5 * (1 + np.sum(np.abs(np.linalg.eigvalsh(herm(a - b))))))
+
+
 agree = {}
 for tt2 in (3.0, 4.0, 5.0, 6.0, 8.0, 10.0):
     r_k = closed9k.evolve(rho_after_write, tt2 - t1)
     r_0 = closed9.evolve(rho_after_write, tt2 - t1)
-    # record stability: probability that Z_R still equals the value written (conditional on the written value)
-    # computed as Tr[rho * (P0A(t1-record) ... )]: compare register marginal to the one right after the write
-    agree[str(tt2)] = {"kappa=0_trace_distance_register_vs_written": trace_distance(ptrace(r_0, [R], N9), rR),
-                       "kappa=0.3_trace_distance_register_vs_written": trace_distance(ptrace(r_k, [R], N9), rR)}
+    agree[str(tt2)] = {
+        "idle_register_trace_distance_vs_written": trace_distance(ptrace(r_0, [R], N9), rR),
+        "kappa_X_R_fixed_Zbasis_trace_distance_vs_written": trace_distance(ptrace(r_k, [R], N9), rR),
+        "kappa_X_R_optimal_readout_success": helstrom_from_register(closed9k, tt2),
+        "kappa_X_R_X_7_optimal_readout_success": helstrom_from_register(closed9c, tt2),
+    }
 S6 = {
     "construction": "Omega' = A u Abar u R (9 qubits); H' = H x I_R; record written at t1=3 by the unitary CNOT(A->R); readout at t2=6.",
     "born_pZ_plus_at_t1": pz_plus_t1, "register_population_0_after_write": record_pop_0,
@@ -520,12 +548,16 @@ S6 = {
     "pZ_plus_A_at_t2_with_record_written": pA_int,
     "pZ_plus_A_at_t2_without_intervention": pA_noint,
     "pZ_plus_A_at_t2_with_measure_and_forget_dephasing": pA_deph,
-    "note_two_time": "The one-time map Phi_t does not give the statistics after an intervention at t1: the process after the record is "
-                     "written differs from the uninterrupted process (back-action by entanglement with the included register). "
-                     "A measure-and-forget dephasing at t1 gives the same later statistics as the unitary record (register traced out).",
+    "pZ_plus_A_at_t2_composed_one_time_maps_bath_reprepared": pA_composed,
+    "note_two_time": "The uninterrupted one-time map gives 0.449; composing one-time maps with the instrument (bath re-prepared at t1) gives "
+                     "the composed value; the exact closed-whole result with the record written differs from both. Multi-time statistics are "
+                     "properties of the process (process tensor), not of Phi_t. Two recorded equalities are identities, not evidence: "
+                     "register population = Born probability (CNOT with a fresh |0> is a Stinespring dilation of Z-dephasing on A), and "
+                     "unitary record = measure-and-forget (the idle register commutes with the partial trace).",
     "record_persistence": agree,
-    "note_persistence": "With [H', Z_R] = 0 the record is exactly stable; adding kappa X_R to the supplied Hamiltonian makes it drift. "
-                        "Record persistence is a property of the supplied dynamics, not of closure.",
+    "note_persistence": "With [H', Z_R] = 0 the register is unchanged. kappa X_R alone rotates the record out of the fixed Z_R readout basis but "
+                        "loses no information (optimal readout success stays 1). kappa X_R X_7 couples the register to the bath and the recorded "
+                        "bit becomes genuinely less retrievable from R. Record persistence is a property of the supplied dynamics, not of closure.",
 }
 results["S6_records_and_interventions"] = S6
 
@@ -537,15 +569,24 @@ rho_back = closed.evolve(rho_T, -T)
 is_real = float(np.max(np.abs(np.imag(H))))
 rho_rev0 = rho_T.conj()
 S_rev = []
+rev_identity_dev = 0.0
 for t in (0.0, 5.0, 10.0, 20.0, 30.0, 40.0):
-    S_rev.append((t, vn_entropy(ptrace(closed.evolve(rho_rev0, t), A, N))))
+    r_rev = closed.evolve(rho_rev0, t)
+    S_rev.append((t, vn_entropy(ptrace(r_rev, A, N))))
+    rev_identity_dev = max(rev_identity_dev, float(np.max(np.abs(r_rev - closed.evolve(rho0, T - t).conj()))))
+SA_rev_grid = np.array([vn_entropy(ptrace(closed.evolve(rho_rev0, t), A, N)) for t in t_grid])
+dSr = np.diff(SA_rev_grid)
 S7 = {
     "trace_distance_after_forward_then_backward_evolution": trace_distance(rho_back, rho0),
     "H_max_imag_part": is_real,
     "entropy_of_A_along_the_conjugated_reversed_preparation": {str(t): s for t, s in S_rev},
     "S_A_original_t0_and_t40": [float(SA[0]), float(SA[-1])],
-    "note": "The time-reversed final state is an admissible preparation of the same closed whole and its forward evolution lowers S_A "
-            "back to the original initial value. Closure supplies no arrow; a low-entropy preparation does.",
+    "max_abs_rho_rev(t)_minus_rho(T-t)_conj": rev_identity_dev,
+    "reversed_run_S_A_max_and_t": [float(SA_rev_grid.max()), float(t_grid[int(np.argmax(SA_rev_grid))])],
+    "reversed_run_number_of_increasing_steps_of_400": int(np.sum(dSr > 0)),
+    "note": "The conjugated final state is an admissible preparation of the same closed whole; rho_rev(t) = rho(T-t)^* exactly, so its forward "
+            "evolution is the original run read backwards: S_A returns non-monotonically to 0 at t = 40. Closure supplies no arrow; the "
+            "low-entropy preparation does.",
 }
 results["S7_time_reversal"] = S7
 
@@ -553,17 +594,23 @@ results["S7_time_reversal"] = S7
 # what closure does force (standard theorems) -- checked in the pure-global-state version of S1
 psi_bath = np.linalg.eigh(H_bath_only)[1][:, 3]  # an excited pure bath eigenstate (pure global state)
 rho0_pure = np.kron(rho_A0, proj(psi_bath))
-checks = {"S_A_equals_S_Abar_max_dev": 0.0, "araki_lieb_violations": 0, "subadditivity_violations": 0, "purity_const_dev": 0.0}
+checks = {"pure_global_state_S_A_equals_S_Abar_max_dev": 0.0, "pure_global_state_purity_const_dev": 0.0}
 for t in (0.0, 1.0, 5.0, 10.0, 20.0, 40.0):
     rho = closed.evolve(rho0_pure, t)
     rA, rB = ptrace(rho, A, N), ptrace(rho, ABAR, N)
-    sA, sB, sT = vn_entropy(rA), vn_entropy(rB), vn_entropy(rho)
-    checks["S_A_equals_S_Abar_max_dev"] = max(checks["S_A_equals_S_Abar_max_dev"], abs(sA - sB))
-    if sT > sA + sB + 1e-9:
-        checks["subadditivity_violations"] += 1
-    if sT < abs(sA - sB) - 1e-9:
-        checks["araki_lieb_violations"] += 1
-    checks["purity_const_dev"] = max(checks["purity_const_dev"], abs(purity(rho) - 1.0))
+    checks["pure_global_state_S_A_equals_S_Abar_max_dev"] = max(checks["pure_global_state_S_A_equals_S_Abar_max_dev"], abs(vn_entropy(rA) - vn_entropy(rB)))
+    checks["pure_global_state_purity_const_dev"] = max(checks["pure_global_state_purity_const_dev"], abs(purity(rho) - 1.0))
+# subadditivity and Araki-Lieb are only non-trivial for a mixed global state: evaluate them on the S1 trajectory (S_tot = 1.26)
+_SA, _SB, _ST = np.array(S1["S_A"]), np.array(S1["S_Abar"]), np.array(S1["S_tot"])
+sub_slack = _SA + _SB - _ST          # = mutual information >= 0
+al_slack = _ST - np.abs(_SA - _SB)   # Araki-Lieb >= 0
+checks["mixed_S1_trajectory"] = {
+    "S_tot": float(_ST[0]),
+    "subadditivity_min_slack_MI": float(sub_slack.min()), "subadditivity_violations": int(np.sum(sub_slack < -1e-9)),
+    "araki_lieb_min_slack": float(al_slack.min()), "araki_lieb_slack_at_t3_t20": [float(al_slack[np.argmin(np.abs(t_grid - 3))]), float(al_slack[np.argmin(np.abs(t_grid - 20))])],
+    "araki_lieb_violations": int(np.sum(al_slack < -1e-9)),
+    "note": "Both inequalities are saturated at t = 0 (product state with pure A) and strict afterwards; on a pure global state they reduce to S_A = S_Abar and test nothing more.",
+}
 # Poincare recurrence is a theorem for finite dimension but the recurrence time is not short: report the closest return within the grid
 dmin, tmin = 1.0, 0.0
 for t in t_grid[t_grid >= 1.0]:
@@ -572,8 +619,8 @@ for t in t_grid[t_grid >= 1.0]:
         dmin, tmin = d, float(t)
 checks["closest_return_to_initial_pure_state_within_grid_t_ge_1"] = {"trace_distance": float(dmin), "t": tmin}
 checks["note"] = ("Closure forces: unitarity (global purity and entropy constant), conservation of the fixed global H, "
-                  "S_A = S_Abar for a pure global state, subadditivity and Araki-Lieb, and eventual quasi-recurrence in finite dimension. "
-                  "All are theorems of standard quantum mechanics; none is a GRUT contribution.")
+                  "S_A = S_Abar for a pure global state, subadditivity and Araki-Lieb (checked on the mixed trajectory), and eventual "
+                  "quasi-recurrence in finite dimension. All are theorems of standard quantum mechanics; none is a GRUT contribution.")
 results["S8_what_closure_forces"] = checks
 
 # ----------------------------------------------------------------------------- provenance
@@ -624,9 +671,15 @@ print("S5 trace distances rhoA at t=5:", {k: round(v, 4) for k, v in S5["trace_d
 print("S6 Born p(Z+,t1)=%.6f register pop=%.6f; p(Z+,t2) with record %.6f, without %.6f, dephased %.6f" %
       (S6["born_pZ_plus_at_t1"], S6["register_population_0_after_write"], S6["pZ_plus_A_at_t2_with_record_written"],
        S6["pZ_plus_A_at_t2_without_intervention"], S6["pZ_plus_A_at_t2_with_measure_and_forget_dephasing"]))
-print("S6 record drift at t=10: kappa=0 %.1e, kappa=0.3 %.4f" % (agree["10.0"]["kappa=0_trace_distance_register_vs_written"], agree["10.0"]["kappa=0.3_trace_distance_register_vs_written"]))
+print("S6 composed one-time-map prediction p(Z+,t2) = %.6f (exact with record %.6f)" % (pA_composed, pA_int))
+print("S6 record at t=10: idle %.1e; kappa X_R fixed-basis TD %.4f, optimal readout %.6f; kappa X_R X_7 optimal readout %.6f" % (
+    agree["10.0"]["idle_register_trace_distance_vs_written"], agree["10.0"]["kappa_X_R_fixed_Zbasis_trace_distance_vs_written"],
+    agree["10.0"]["kappa_X_R_optimal_readout_success"], agree["10.0"]["kappa_X_R_X_7_optimal_readout_success"]))
 print("S7 forward-backward trace distance %.1e; reversed preparation S_A: %s" % (S7["trace_distance_after_forward_then_backward_evolution"], {k: round(v, 4) for k, v in S7["entropy_of_A_along_the_conjugated_reversed_preparation"].items()}))
-print("S8 pure-global checks: |S_A-S_Abar| max %.1e, subadditivity violations %d, Araki-Lieb violations %d, closest return D=%.4f at t=%.1f" %
-      (checks["S_A_equals_S_Abar_max_dev"], checks["subadditivity_violations"], checks["araki_lieb_violations"],
+print("S7 identity rho_rev(t)=rho(T-t)^*: %.1e; reversed run S_A max %.4f at t=%.1f, increasing steps %d/400" % (rev_identity_dev, *S7["reversed_run_S_A_max_and_t"], S7["reversed_run_number_of_increasing_steps_of_400"]))
+print("S2 first local max S_A %.4f at t=%.1f -> min %.4f at t=%.1f; %d local maxima" % (S2["first_local_max"]["S_A"], S2["first_local_max"]["t"], S2["first_local_min_after_it"]["S_A"], S2["first_local_min_after_it"]["t"], len(S2["local_maxima_times"])))
+print("S8 pure-global |S_A-S_Abar| max %.1e; mixed S1: min MI %.1e, min Araki-Lieb slack %.4f (t3 %.4f, t20 %.4f), violations %d/%d; closest return D=%.4f at t=%.1f" %
+      (checks["pure_global_state_S_A_equals_S_Abar_max_dev"], checks["mixed_S1_trajectory"]["subadditivity_min_slack_MI"], checks["mixed_S1_trajectory"]["araki_lieb_min_slack"],
+       *checks["mixed_S1_trajectory"]["araki_lieb_slack_at_t3_t20"], checks["mixed_S1_trajectory"]["subadditivity_violations"], checks["mixed_S1_trajectory"]["araki_lieb_violations"],
        checks["closest_return_to_initial_pure_state_within_grid_t_ge_1"]["trace_distance"], checks["closest_return_to_initial_pure_state_within_grid_t_ge_1"]["t"]))
 print("wall %.1fs; sha256 %s" % (results["provenance"]["wall_seconds"], results["provenance"]["script_sha256"][:16]))

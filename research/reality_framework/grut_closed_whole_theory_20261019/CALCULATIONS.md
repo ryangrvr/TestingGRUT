@@ -26,8 +26,9 @@ library versions are recorded in each JSON under `provenance`. ħ = 1 throughout
 | Instruments | projective Z and X measurements on A; Born rule p = Tr(ρ_A E) |
 | External time | the parameter t of U(t) = e^{−iHt}; grid t ∈ [0, 40], step 0.1 |
 
-The complement is nonintegrable (disordered XXZ), so nothing below depends on a fine-tuned
-spectrum. The global law is ρ_Ω(t) = U(t)ρ_Ω(0)U(t)†; the local state is ρ_A(t) = Tr_Ā ρ_Ω(t).
+The complement is a disordered XXZ chain with no known integrability; H_Ā conserves the total
+bath Z and the full H conserves the Z-parity of all eight qubits. Nothing below needs
+non-integrability. The global law is ρ_Ω(t) = U(t)ρ_Ω(0)U(t)†; the local state is ρ_A(t) = Tr_Ā ρ_Ω(t).
 
 ### S1. Preparation → evolution → measurement, with accounting
 
@@ -57,13 +58,14 @@ functional of the **global** state, not of ρ_A: that is the whole content of "b
 
 ### S2. Closure does not force monotone relaxation
 
-S(ρ_A) is not monotone: 26 sign changes of dS/dt on the grid; maximum 0.489339 at t = 37.5,
-falling to 0.404187 by t = 39.5. Information flows back from the bath into A: the trace
-distance D(t) between the reduced states of two preparations that differ only on A
-(|+⟩ vs |−⟩, same bath state) starts at 1, reaches its minimum 0.5418 at t = 37.6, and
-accumulates a total of **1.2035** in positive increments (Breuer–Laine–Piilo measure;
-largest single step 0.0145). A CP-divisible (Markovian) reduced dynamics would make D
-non-increasing.
+S(ρ_A) is not monotone: it has 13 local maxima and 26 sign changes of dS/dt on the grid. The
+first local maximum, 0.3383 at t = 2.1, is followed by a drop to 0.2353 at t = 3.6; the global
+maximum 0.4893 occurs at t = 37.5 and S falls to 0.4042 by t = 39.5. Information flows back
+from the bath into A: the trace distance D(t) between the reduced states of two preparations
+that differ only on A (|+⟩ vs |−⟩, same bath state) starts at 1, reaches its minimum 0.5418 at
+t = 37.6, and accumulates **1.2035** in positive increments on the 0.1 grid (a lower bound on
+the continuous Breuer–Laine–Piilo measure; largest single step 0.0145). A CP-divisible
+(Markovian) reduced dynamics would make D non-increasing.
 
 ### S3. The reduced dynamics is derived, and it is state-dependent
 
@@ -96,11 +98,14 @@ Two global preparations ρ₁ = ρ_A ⊗ ρ_Ā and ρ₂ = ρ₁ + εχ with Tr_
 | T = ∞ bath, χ = Z₀Z₁ (classical correlation) | 1/512 | 0.500 | 0.0097 | 14.1 | 0 |
 | β = 1 bath, χ = Y₀ ⊗ √ρ_Ā (X₁ − ⟨X₁⟩) √ρ_Ā | 0.25 | 0.293 | 0.0544 | 0.7 | 0.1925 |
 
-The first-order term is the Nakajima–Zwanzig inhomogeneity. For χ = Y₀X₁ it is exact by hand:
+The last column is the t = 0 value of the Nakajima–Zwanzig inhomogeneity 𝓘(t). For χ = Y₀X₁ it
+is exact by hand:
 [gX₀X₁, Y₀X₁] = 2ig Z₀ ⊗ 1_Ā, so −i Tr_Ā[H, εχ] = 2gε·2⁷ Z₀ = ¼ Z₀, Frobenius norm √2/4 =
 0.35355, as computed. No map acting on ρ_A(0), nor on the pair (ρ_A(0), ρ_Ā(0)), reproduces
 both futures: the reduced state alone does not specify an arbitrary preparation's future.
-(Pechukas 1994; Štelmachovič–Bužek 2001; standard.)
+For the classical correlation Z₀Z₁ the first two orders of 𝓘 vanish at t = 0 and the difference
+appears at third order in t, which is why it stays small. (Pechukas 1994; Štelmachovič–Bužek
+2001; standard.)
 
 ### S5. Closure does not force a unique local law
 
@@ -124,34 +129,45 @@ complement, not of closure.
 
 Add a register qubit R (|0⟩), H′ = H ⊗ 1_R. At t₁ = 3 apply CNOT(A→R); evolve to t₂ = 6.
 
-- Born probability p(Z_A = +1, t₁) = 0.354910; population of |0⟩_R after the write = 0.354910
-  (difference < 10⁻¹⁵). The record **is** the Born probability, stored in a subsystem.
+- Born probability p(Z_A = +1, t₁) = 0.354910; population of |0⟩_R after the write = 0.354910.
+  This equality is an identity (a CNOT on a fresh |0⟩ is a Stinespring dilation of Z-dephasing
+  on A), recorded as a consistency check: the record **is** the Born probability, stored in a
+  subsystem.
 - Joint readout at t₂: p(+,+) = 0.2155, p(+,−) = 0.1230, p(−,+) = 0.1394, p(−,−) = 0.5220.
-- p(Z_A = +1, t₂) = **0.338531** with the record written, **0.449147** with no intervention,
-  0.338531 if A is instead dephased at t₁ and nothing is kept. The one-time map Φ_t does not
-  give multi-time statistics under intervention; the intervention's back-action (entanglement
-  with R) does. Since R is idle and traced out, the unitary record and the measure-and-forget
-  instrument give the same later statistics for A.
-- Record persistence: with [H′, Z_R] = 0 the register state is unchanged at all later times
-  (trace distance 7·10⁻¹⁵ at t = 10). Adding κX_R, κ = 0.3, to the supplied Hamiltonian
-  makes it drift: 0.0858 (t = 4), 0.2273 (t = 6), 0.2505 (t = 10). Whether a record persists
-  is a property of the supplied dynamics, not a consequence of closure.
+- p(Z_A = +1, t₂): **0.338531** exact, with the record written; **0.449147** with no
+  intervention; **0.288331** from composing one-time maps with the instrument
+  (Φ_{t₂−t₁} ∘ dephase ∘ Φ_{t₁}, bath re-prepared at t₁); 0.338531 if A is dephased at t₁ with
+  nothing kept (identical to the unitary record because the idle register commutes with the
+  partial trace, again an identity). Multi-time statistics under intervention are properties of
+  the process, not of Φ_t.
+- Record persistence. With [H′, Z_R] = 0 the register is unchanged at all later times
+  (7·10⁻¹⁵ at t = 10). Adding κX_R (κ = 0.3) rotates the record out of the fixed Z_R readout
+  basis (trace distance 0.0858, 0.2273, 0.2505 at t = 4, 6, 10) but loses nothing: the optimal
+  readout of the recorded bit from R stays at success 1.000000. Coupling the register to the
+  bath, κX_RX₇, makes the bit genuinely less retrievable: optimal readout success 0.9607 (t = 4),
+  0.9672 (t = 6), 0.9613 (t = 8), 0.9700 (t = 10). Whether a record persists is a property of the
+  supplied dynamics, not a consequence of closure.
 
 ### S7. No arrow is forced
 
 Forward evolution to T = 40 followed by U(−T) returns ρ_Ω(0) to 5·10⁻¹⁵. H is real in the
 computational basis, so complex conjugation is a time reversal and ρ_Ω(T)* is an admissible
-preparation of the same closed whole. Along its forward evolution S(ρ_A) goes 0.4198 (t = 0)
-→ 0.4005 → 0.4484 → 0.3337 → 0.3929 → **0.0000** (t = 40). The same closed law lowers the local
-entropy; a low-entropy preparation, not closure, supplies the arrow.
+preparation of the same closed whole. Its forward evolution is the original run read backwards,
+ρ_rev(t) = ρ_Ω(T−t)* exactly (deviation 5·10⁻¹⁵), so S(ρ_A) returns **non-monotonically** to
+0 at t = 40 (sampled 0.4198 → 0.4005 → 0.4484 → 0.3337 → 0.3929 → 0.0000; it rises on 201 of 400
+grid steps and reaches 0.4893 at t = 2.5). The same closed law carries a legal preparation from
+local entropy 0.42 to 0; a low-entropy preparation, not closure, supplies the arrow.
 
 ### S8. What closure does force (checked for a pure global preparation)
 
 With ρ_Ā(0) a pure eigenstate of H_Ā: S(ρ_A) = S(ρ_Ā) at all sampled times (deviation
-3·10⁻¹⁶); subadditivity and Araki–Lieb never violated; global purity constant to 10⁻¹⁴; the
-closest return to the initial state for t ≥ 1 within the grid is trace distance 0.401 at
-t = 11.1 (quasi-recurrence is a theorem in finite dimension; its time is not short and no
-recurrence time is claimed). All of these are theorems of standard quantum mechanics.
+3·10⁻¹⁶) and global purity constant to 10⁻¹⁴; the closest return to the initial state for t ≥ 1
+within the grid is trace distance 0.401 at t = 11.1 (quasi-recurrence is a theorem in finite
+dimension; its time is not short and no recurrence time is claimed). Subadditivity and
+Araki–Lieb are trivial for a pure global state, so they are checked on the mixed S1 trajectory
+(S(ρ_Ω) = 1.2609): the mutual information is ≥ 0 at all 401 times (minimum 1.8·10⁻¹⁵ at t = 0,
+the product state) and the Araki–Lieb slack S_Ω − |S_A − S_Ā| is 0 at t = 0, 0.2115 at t = 3 and
+0.2439 at t = 20, with no violation. All of these are theorems of standard quantum mechanics.
 
 ## Calculation 2: nested and overlapping compatibility
 
@@ -190,6 +206,25 @@ effective environment be compatible with one global model and preparation.
 
 ## Verification record
 
-Re-run of the M1 matched uniform-field control script (`uniform_field_control.py` in the M1
-review packet) in this environment reproduced `control_results.txt` line for line (8.6 s);
-see `results/m1_matched_control_rerun.txt`. No other old solver was reopened.
+- Independent re-execution (separate agent, copied scripts): every numeric leaf of both JSON
+  files bit-exact (5030 and 24 leaves), SDP statuses identical, two runs bitwise identical.
+- Independent re-implementation from the specification alone (separate agent, no access to the
+  code before computing): 16 quantities (E_tot and its drift, S_A at t = 10 and 40 and its
+  maximum, the backflow sum and D's minimum, the three record probabilities, the
+  identical-marginal trace distance, the Werner chain threshold) all agree to 10⁻⁶ relative or
+  better; residual offsets traced to 12-digit JSON rounding, ε = 1/512 versus the numerically
+  halved ε_max, and interior-point tolerance.
+- Adversarial code review (separate agent): verdict "sound with minor issues"; nine items, all
+  addressed in the present version: entropy inequalities now checked on the mixed trajectory
+  (they were trivial on the pure one); S7 wording made non-monotone and the identity
+  ρ_rev(t) = ρ(T−t)* recorded; the κX_R case relabelled a basis rotation and a bath-coupled
+  register added; the composed one-time-map prediction recorded; the two S6 identities labelled
+  as identities; the t = 0 qualifier on the inhomogeneity; the integrability claim withdrawn and
+  the symmetries stated; the first local maximum of S_A quoted and the grid nature of the
+  backflow sum stated; dead code removed. The review confirmed the partial trace against brute
+  force, the conditioning of the map inversion (worst condition number 2.86), the step-robustness
+  of the generator, the CP-divisibility failure at other τ and through negative canonical rates,
+  the analytic inhomogeneity, the b′ period, the CNOT, and the time-reversal validity.
+- Re-run of the M1 matched uniform-field control script (`uniform_field_control.py` in the M1
+  review packet) reproduced `control_results.txt` line for line (8.6 s); see
+  `results/m1_matched_control_rerun.txt`. No other old solver was reopened.

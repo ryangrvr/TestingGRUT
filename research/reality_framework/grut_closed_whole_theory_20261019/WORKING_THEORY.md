@@ -138,10 +138,10 @@ What the numbers show (all from `results/closed_whole_demo.json`):
 | CP-divisible? | No: intermediate maps have Choi eigenvalues down to −0.159 |
 | Does ρ_A(0) fix the future? | No: two preparations with identical ρ_A(0) and identical ρ_Ā(0) separate to trace distance 0.1025; the initial-correlation term is ¼Z₀ exactly |
 | Unique local law? | No: same H_A and ρ_A(0) with three different complements, trace distances up to 0.79; a commensurate complement returns A exactly at T = 4π |
-| Records | The register population after a unitary write equals the Born probability 0.354910; p(Z=+1) at t₂ is 0.3385 with the record and 0.4491 without it |
-| Record persistence | exact for [H, Z_R] = 0; drift 0.25 by t = 10 when 0.3 X_R is added to H |
-| Arrow | forward then backward evolution returns ρ_Ω(0) to 5·10⁻¹⁵; the conjugated final state is a legal preparation whose S(ρ_A) falls from 0.4198 to 0 |
-| Pure global state | S(ρ_A) = S(ρ_Ā) to 3·10⁻¹⁶; subadditivity and Araki–Lieb never violated |
+| Records | The register population after a unitary write equals the Born probability 0.354910 (an identity); p(Z=+1) at t₂ is 0.3385 exactly with the record, 0.4491 without it, and 0.2883 from composing one-time maps with the instrument |
+| Record persistence | exact for [H, Z_R] = 0; a register rotation loses nothing (optimal readout 1.000); coupling the register to the bath lowers the optimal readout to 0.96–0.97 |
+| Arrow | forward then backward evolution returns ρ_Ω(0) to 5·10⁻¹⁵; the conjugated final state is a legal preparation whose S(ρ_A) returns non-monotonically from 0.4198 to 0 |
+| Entropy theorems | pure global state: S(ρ_A) = S(ρ_Ā) to 3·10⁻¹⁶; mixed trajectory: mutual information ≥ 0 and Araki–Lieb slack 0.21–0.24 away from saturation after t ≈ 3, no violation |
 
 Every line is standard quantum mechanics. The point of computing them in one supplied model is
 that the parent question's negative answers become exhibits rather than assertions.

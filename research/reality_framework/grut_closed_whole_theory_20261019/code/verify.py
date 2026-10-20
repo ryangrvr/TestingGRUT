@@ -54,9 +54,13 @@ check(S5["model_b_prime_exact_recurrence"]["trace_distance_rho_global_T_vs_0"] <
 check(S5["trace_distance_rhoA"]["5.0"]["a_vs_b"] > 0.3, "S5 different complements, different local dynamics")
 check(S6["abs_difference"] < 1e-12 and abs(S6["pZ_plus_A_at_t2_with_record_written"] - S6["pZ_plus_A_at_t2_with_measure_and_forget_dephasing"]) < 1e-12, "S6 record = Born probability; unitary record = instrument")
 check(abs(S6["pZ_plus_A_at_t2_with_record_written"] - S6["pZ_plus_A_at_t2_without_intervention"]) > 0.05, "S6 intervention back-action")
-check(S6["record_persistence"]["10.0"]["kappa=0_trace_distance_register_vs_written"] < 1e-12 and S6["record_persistence"]["10.0"]["kappa=0.3_trace_distance_register_vs_written"] > 0.1, "S6 record persistence depends on H")
-check(S7["trace_distance_after_forward_then_backward_evolution"] < 1e-12 and S7["entropy_of_A_along_the_conjugated_reversed_preparation"]["40.0"] < 1e-9, "S7 reversal and entropy-decreasing preparation")
-check(S8["S_A_equals_S_Abar_max_dev"] < 1e-12 and S8["subadditivity_violations"] == 0 and S8["araki_lieb_violations"] == 0, "S8 entropy theorems")
+rp = S6["record_persistence"]["10.0"]
+check(rp["idle_register_trace_distance_vs_written"] < 1e-12 and rp["kappa_X_R_optimal_readout_success"] > 1 - 1e-9 and rp["kappa_X_R_X_7_optimal_readout_success"] < 1 - 1e-3, "S6 record persistence depends on H (idle exact; X_R rotation lossless; bath-coupled register loses retrievability)")
+check(abs(S6["pZ_plus_A_at_t2_composed_one_time_maps_bath_reprepared"] - S6["pZ_plus_A_at_t2_with_record_written"]) > 0.02, "S6 composed one-time maps differ from the exact closed-whole result")
+check(S7["trace_distance_after_forward_then_backward_evolution"] < 1e-12 and S7["entropy_of_A_along_the_conjugated_reversed_preparation"]["40.0"] < 1e-9 and S7["max_abs_rho_rev(t)_minus_rho(T-t)_conj"] < 1e-12, "S7 reversal, rho_rev(t) = rho(T-t)^*, entropy returns to 0")
+mx = S8["mixed_S1_trajectory"]
+check(S8["pure_global_state_S_A_equals_S_Abar_max_dev"] < 1e-12 and mx["subadditivity_violations"] == 0 and mx["araki_lieb_violations"] == 0 and mx["araki_lieb_slack_at_t3_t20"][0] > 0.1, "S8 entropy theorems (pure: S_A = S_Abar; mixed: subadditivity and Araki-Lieb strict)")
+check(S2["first_local_max"]["t"] < 5 and S2["first_local_min_after_it"]["S_A"] < S2["first_local_max"]["S_A"] - 0.05, "S2 early local maximum followed by a drop")
 check(m["C2_bell_chain"]["sdp_status_common_global_state"] == "infeasible", "C2 Bell chain infeasible")
 check(abs(m["C3_quantitative_obstruction"]["max_F_AB_plus_F_BC_over_all_3qubit_states"] - 1.5) < 1e-5, "C3 max F_AB+F_BC = 3/2")
 check(abs(m["C4_werner_thresholds"]["chain_AB_BC_max_p"] - 2 / 3) < 1e-5 and abs(m["C4_werner_thresholds"]["triangle_AB_BC_CA_max_p"] - 1 / 3) < 1e-5, "C4 Werner thresholds 2/3 and 1/3")
