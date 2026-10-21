@@ -1,0 +1,170 @@
+{
+  "utc": "2026-10-21T12:34:10.403982+00:00",
+  "protocol_commit": "188b92b9375df468802cb064c8a288bcc38f956f",
+  "amendments_commit": "8ed29f00b402054a5d88cbb796e1dfb1cb8cdf2b",
+  "reviewed_claude_commit": "c7b8480a49e3f0b8737e800396a30f33f6337981",
+  "validation_passed": 24,
+  "validation_failed": 0,
+  "files": {
+    "PROTOCOL.md": {
+      "bytes": 7176,
+      "sha256": "11a60ce294a91394c42fc214628852a235c16e41c7e5a0cbff73beb562945091"
+    },
+    "AMENDMENT_01.md": {
+      "bytes": 2374,
+      "sha256": "3a7e54df444039455c5e397c024f3feebb0b5d6303859ba97dd5f23ec127e130"
+    },
+    "AMENDMENT_02.md": {
+      "bytes": 1241,
+      "sha256": "00e8fe1e5b4801591c908b39b511726e837623af88fbfcd181d8d192615948e8"
+    },
+    "expanding.cpp": {
+      "bytes": 14149,
+      "sha256": "e62701e5a946d69f487a6fdaf2cda2fce40d1c1eef8df461552a3520233b05fb"
+    },
+    "run.py": {
+      "bytes": 12486,
+      "sha256": "94bf866b0d3d1de046ab1e70921576dc789bc5b05593b539d27fc32ad31cd682"
+    },
+    "VALIDATION.json": {
+      "bytes": 5618,
+      "sha256": "ce6088f52a4fb04473708bfdea29943ed4680e096b2aad66d4a819cdbf407f6b"
+    },
+    "FAILED_VALIDATION_01.json": {
+      "bytes": 4717,
+      "sha256": "38fbea984b5fabfa4993407de14c25777b74c3490158ba0b40bf2802d05e072a"
+    },
+    "FAILED_VALIDATION_02.json": {
+      "bytes": 5630,
+      "sha256": "b6bd7965a3a6be17c2d7c3c9af166960686d1ca219e8e97b45a24ef47b777346"
+    }
+  },
+  "jobs": [
+    {
+      "name": "main_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 101,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "main_s202",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 202,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "main_s303",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 303,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "large_s101",
+      "N": 288,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 101,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "large_s202",
+      "N": 288,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 202,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "large_s303",
+      "N": 288,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 303,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "grid256_s101",
+      "N": 256,
+      "dx": 0.3,
+      "dt": 0.06,
+      "seed": 101,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "grid384_s101",
+      "N": 384,
+      "dx": 0.2,
+      "dt": 0.04,
+      "seed": 101,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "dt_half_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.03,
+      "seed": 101,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "kappa4_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 101,
+      "kappa": 4,
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    },
+    {
+      "name": "cold_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "seed": 101,
+      "kappa": 0.9,
+      "kind": "cold",
+      "T": 48,
+      "tau_i": 40,
+      "scalar_cadence": 1.2,
+      "topology_cadence": 4.8
+    }
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+}
+
