@@ -1,0 +1,285 @@
+{
+  "A6_inout_phase_difference_rad": -0.8874440784612425,
+  "A9_free_energy": {
+    "F": -4.825867166115598,
+    "F_c": 2.484132833884401,
+    "difference": 7.309999999999999,
+    "c": 7.31
+  },
+  "A14_Sigma": 0.26565477187171865,
+  "A18_work_shift": {
+    "meanW_c0": -0.22032630021993999,
+    "meanW_clam": 2.7796736997800604,
+    "dF_c0": -0.7130859902596777,
+    "dF_clam": 2.2869140097403227
+  },
+  "A20_piston": {
+    "x_c0": 0.0711320378233411,
+    "x_cconst": 0.07113203782204491,
+    "x_cx": -0.6716371462573618,
+    "predicted_shift": -0.7434102386658377
+  },
+  "A21_constraint_dims": {
+    "H_S,eps=3": 2,
+    "H_S+0.5,eps=3": 0,
+    "H_S+0.5,eps=3.5": 2
+  },
+  "B2_residual_with_shift": "-I*c*f(t, x)",
+  "C2_physical_shift_changes_constraint_by": "-C*a(t)**3",
+  "C3_constraint_solved_for_rho_Lambda": "-rho_m + 3*H**2/(8*pi*G) + 3*k/(8*pi*G*a(t)**2)",
+  "C4_HT_equations": {
+    "dL/dT": "-Derivative(Lam(t), t)/(8*pi*G)",
+    "dL/dLambda": "(-N(t)*a(t)**3 + Derivative(T(t), t))/(8*pi*G)"
+  },
+  "C7_WdW_levels_Er_vs_lam_tilde(lam<0 is Lambda<0)": {
+    "0.0": [
+      1.4999975016568907,
+      3.4999875082918903,
+      5.4999695201468395,
+      7.49994353721479
+    ],
+    "-0.01": [
+      1.5182600440839797,
+      3.589273011058017,
+      5.712861850326782,
+      7.885691259379513
+    ],
+    "-0.1": [
+      1.6534325592309063,
+      4.17631776963106,
+      6.984902696424449,
+      10.021804947493527
+    ],
+    "-1.0": [
+      2.3243978287930323,
+      6.578339411668576,
+      11.648524912606954,
+      17.31998930901235
+    ]
+  },
+  "C8_dS_box_dependence": {
+    "lowest_level_box12": -392.84586235106457,
+    "lowest_level_box16": -1412.0413797441324
+  },
+  "D1_scales": {
+    "H0_GeV": 1.4377226629626767e-42,
+    "rho_Lambda_GeV4": 2.5186046135005834e-47,
+    "rho_Lambda_quarter_meV": 2.240216536081548,
+    "rho_Lambda_over_Mpl_red4": 7.164141125106213e-121,
+    "(H0/Mpl_red)^2": 3.486200060878935e-121,
+    "status": "retrospective; H0 and Omega_Lambda are already-exposed data"
+  },
+  "D2_threshold_ratios": {
+    "electron(1 dof, illustrative)": {
+      "m^4/(64pi^2)/rho_Lambda": 4.285918285561044e+30,
+      "d rho/d ln mu^2 = -m^4/(64pi^2), relative to rho_Lambda": -4.285918285561044e+30
+    },
+    "Higgs": {
+      "m^4/(64pi^2)/rho_Lambda": 1.546932002924531e+52,
+      "d rho/d ln mu^2 = -m^4/(64pi^2), relative to rho_Lambda": -1.546932002924531e+52
+    },
+    "top(1 dof, illustrative)": {
+      "m^4/(64pi^2)/rho_Lambda": 5.59151682896385e+52,
+      "d rho/d ln mu^2 = -m^4/(64pi^2), relative to rho_Lambda": -5.59151682896385e+52
+    }
+  },
+  "D3_everpresent_estimate_over_rhoL": 0.4866180048661799,
+  "checks": [
+    {
+      "name": "A1 U_c = exp(-ict) U",
+      "max_abs_deviation": 2.5634869929928818e-15,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A2 global state identical",
+      "max_abs_deviation": 1.3600259698212773e-15,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A3 reduced state identical",
+      "max_abs_deviation": 2.109529002936838e-15,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A4 [H_c,rho]=[H,rho]",
+      "max_abs_deviation": 6.753223014464258e-16,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A5 all energy gaps identical",
+      "max_abs_deviation": 5.329070518200751e-15,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A6 in-out amplitude acquires exactly exp(-ict)",
+      "max_abs_deviation": 6.329245045284193e-16,
+      "tol": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "A7 normalized Gibbs state identical",
+      "max_abs_deviation": 2.2427758250932666e-16,
+      "tol": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "A8 Z_c = exp(-beta c) Z (relative)",
+      "max_abs_deviation": 6.661338147750939e-16,
+      "tol": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "A9 free energy shifts by exactly c (non-invariant label)",
+      "max_abs_deviation": 8.881784197001252e-16,
+      "tol": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "A10 KMS holds with H",
+      "max_abs_deviation": 6.720289191984444e-15,
+      "tol": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "A11 KMS holds with H_c (same automorphisms)",
+      "max_abs_deviation": 5.687116766346677e-15,
+      "tol": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "A12 exp(-K_A) has unit trace (no additive freedom left)",
+      "max_abs_deviation": 2.3310811024513125e-17,
+      "tol": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "A13 exp(-(K+k))/Tr exp(-(K+k)) = rho_A",
+      "max_abs_deviation": 0.3132720230821743,
+      "tol": 1e-12,
+      "pass": false
+    },
+    {
+      "name": "A14 Sigma = I + D (H_B)",
+      "max_abs_deviation": 2.220446049250313e-15,
+      "tol": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "A15 Sigma invariant under H_B -> H_B + c",
+      "max_abs_deviation": 2.886579864025407e-15,
+      "tol": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "A16 Jarzynski holds, c=0",
+      "max_abs_deviation": -2.220446049250313e-16,
+      "tol": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "A17 Jarzynski holds, constant c; <W> unchanged",
+      "max_abs_deviation": 1.1102230246251565e-15,
+      "tol": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "A18 Jarzynski holds, c(lambda); <W> and dF both shift by c(1)-c(0)=3",
+      "max_abs_deviation": 4.440892098500626e-16,
+      "tol": 1e-10,
+      "pass": true
+    },
+    {
+      "name": "A19 x-independent c leaves the internal control's motion unchanged",
+      "max_abs_deviation": -1.2961853812498703e-12,
+      "tol": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "A20 c(x)=kappa x moves the control by the predicted amount (grid error tol 1e-3)",
+      "max_abs_deviation": 0.0006410545851347482,
+      "tol": 0.001,
+      "pass": true
+    },
+    {
+      "name": "A21 constraint space unchanged iff eps shifts with c",
+      "max_abs_deviation": 0.0,
+      "tol": 1e-12,
+      "pass": true
+    },
+    {
+      "name": "A22 constraint space changes if eps is held fixed (dimension drop)",
+      "max_abs_deviation": 0.0,
+      "tol": 0.5,
+      "pass": true
+    },
+    {
+      "name": "A23 operator coupling to the absolute energy reads c (shift g c t = 0.3)",
+      "max_abs_deviation": -2.0539125955565396e-15,
+      "tol": 1e-06,
+      "pass": true
+    },
+    {
+      "name": "B1 [K,P] = iH closes on the generator H",
+      "residual": "0",
+      "pass": true
+    },
+    {
+      "name": "B2 [K,P] = i(H+c) fails unless c = 0",
+      "residual": "-I*c*f(t, x)",
+      "pass": true
+    },
+    {
+      "name": "C1 relabelling (rho_m+C, rho_L-C) leaves the Hamiltonian constraint unchanged",
+      "max_abs_deviation": 0.0,
+      "tol": 0.0,
+      "pass": true
+    },
+    {
+      "name": "C2 uncompensated shift changes the constraint by -a^3 C",
+      "residual": "-C*a(t)**3",
+      "pass": true
+    },
+    {
+      "name": "C3 constraint relates rho_Lambda to state data (H, k/a^2, rho_m)",
+      "expression": "-rho_m + 3*H**2/(8*pi*G) + 3*k/(8*pi*G*a(t)**2)",
+      "pass": true
+    },
+    {
+      "name": "C4 HT: d Lambda/dt = 0 (integration constant) and dT/dt = N a^3 (4-volume clock)",
+      "pass": true
+    },
+    {
+      "name": "C5 trace-free part invariant under T -> T - C g",
+      "max_abs_deviation": 0.0,
+      "tol": 0.0,
+      "pass": true
+    },
+    {
+      "name": "C6 sequestered source T - <T>g/4 invariant under constant shift (all loop orders of a constant)",
+      "max_abs_deviation": 0.0,
+      "tol": 0.0,
+      "pass": true
+    },
+    {
+      "name": "C7 lam=0 levels are 2k+3/2 (odd oscillator states)",
+      "max_abs_deviation": 5.646278520998749e-05,
+      "tol": 0.001,
+      "pass": true
+    },
+    {
+      "name": "C8 Lambda>0: lowest level depends strongly on the box (no normalizable bound state)",
+      "values": [
+        -392.84586235106457,
+        -1412.0413797441324
+      ],
+      "pass": true
+    }
+  ],
+  "n_checks": 33,
+  "n_pass": 32
+}
