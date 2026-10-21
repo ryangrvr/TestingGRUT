@@ -1,0 +1,128 @@
+{
+ "inputs": {
+  "v": 1000.0,
+  "g_X": 0.1,
+  "lambda_phi": 0.01,
+  "lambda_X": 0.001,
+  "h_D": 0.01,
+  "lambda_D": 0.001,
+  "m_D0": 100.0,
+  "M_P_reduced": 2.435323e+18,
+  "sigma_GeV3": 94280904.15820633,
+  "m_star": 56.23413251903491,
+  "Y_B": 8.67400002819534e-11
+ },
+ "phase": {
+  "Tc_leading_over_v": 1.5476464650682737,
+  "Tc_resummed_range_over_v": [
+   1.557139688846714,
+   1.5641467705552632
+  ],
+  "n_c_over_v3": 0.031622776601683784,
+  "n_t_over_v3": 0.0401026192332647,
+  "n_s1_over_v3": 0.04276668660663895,
+  "n_star_over_v3": 0.177829,
+  "Qmatter_E_per_Q_GeV": 56.23413251936728,
+  "T_n_r1_TeV": 198.19764503428553,
+  "T_s1_r1_TeV": 219.1797150508011
+ },
+ "network": {
+  "T_parity_keV_A": {
+   "0.7": 5.446394085976791,
+   "0.8": 5.822440189450562,
+   "0.9": 6.175630411520368
+  },
+  "H0_pred_n1_kmsMpc_A0.8_simple": 79827241753.77113,
+  "H0_pred_n2_kmsMpc_A0.8_simple": 16032754.52292455,
+  "DeltaNeff_conservative_min": 7.447204662458465
+ },
+ "relic": {
+  "Y_N_max_strict": 4.373616491422247e-12,
+  "floor_coef_GeV_per_omega_sym": 79.28029870506704
+ },
+ "histories": {
+  "H_star": {
+   "inputs": {
+    "H_inf_GeV [P]": 100000000.0,
+    "reheating [P]": "instant, visible T_RH ~ 8e12 GeV",
+    "hidden bath [P]": "P-invariant, all 4 dof, kinetically thermal, mu_N = 0",
+    "xi [P]": 0.0005,
+    "r = Y_Q/Y_B [P]": 0.0001,
+    "rho_Lambda [matching, free]": 0.0
+   },
+   "T_SM_at_transition_GeV": 3121286.4594019772,
+   "H_over_mX_at_transition": 1.3687472073323455e-07,
+   "Hinv_over_wall_width": 5166087.480570508,
+   "Y_N_mu0": 1.30049945246707e-12,
+   "omega_sym_estimate": 0.036288722042812145,
+   "omega_asym": 0.00023799068926707822,
+   "maser_product_GeV": 2.886980723179297,
+   "network": "forms (thermal exit, p = 1/2) and persists (neutral lattice + scaling literature)",
+   "T_parity_keV": 5.822440189450562,
+   "DeltaNeff_min_at_recombination": 7.447204662458465
+  },
+  "C_star": {
+   "inputs": {
+    "H_inf_GeV [P]": 120.0,
+    "N_* [P]": "~48 (instant reheating)",
+    "start [P]": "+v at start of last N_* e-folds",
+    "reheating [P]": "instant, visible only, B_h = 0",
+    "r [P]": 0.05,
+    "T_Q_GeV [P]": 100000.0,
+    "charge form [P]": "homogeneous condensate on the +v branch"
+   },
+   "T_RH_instant_GeV": 9241929011.340193,
+   "below regime-A boundary 145.6 GeV (minority_relic)": true,
+   "gravity-only heating below nonthermal restoration threshold 9.07e12 GeV": true,
+   "spectator Y_N range": [
+    6.365090376503069e-26,
+    9.775314953802788e-25
+   ],
+   "n_Q(T_Q)/n_c": 0.006422062599023391,
+   "maser_product_GeV": 5.0,
+   "network": "none (no restoration, no opposite-vacuum region expected, charge sub-critical on +v)"
+  }
+ },
+ "module_values": {
+  "T_dom_keV_backreaction (cosmo_observable)": 6.366861314287523,
+  "DeltaNeff stress n=4 (cosmo_observable)": 7.448020686548512,
+  "A_3D_PRS_256 (network_sim)": {
+   "mean": 0.7769805187895832,
+   "seed_std": 0.012983065798358957,
+   "n_seeds": 3
+  },
+  "kappa_E (minority_relic)": 7.786625485748964,
+  "charged exit p(+) (charged_exit_sim)": {
+   "n": 11,
+   "p_plus_end": [
+    0.47126060401442404,
+    0.5872386339252935,
+    0.5503635761844908,
+    0.47744613684471404,
+    0.5083659122973273,
+    0.4531576470397312,
+    0.538168883766608,
+    0.5113746283821161,
+    0.4708171445244713,
+    0.45331428542063856,
+    0.4878004656350059
+   ],
+   "mean_end": 0.5008461743668019,
+   "std_end": 0.043016609088689275,
+   "p_plus_form": [
+    0.4931877999690355,
+    0.5096212889900273,
+    0.5047526379096217,
+    0.4982980216844644,
+    0.502482378081331,
+    0.4967625698599028,
+    0.4967391163555821,
+    0.5039329547566305,
+    0.4985832338280169,
+    0.4979724046876232,
+    0.5014578773508431
+   ],
+   "mean_form": 0.5003445712248252
+  }
+ }
+}
