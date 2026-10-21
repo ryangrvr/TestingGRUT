@@ -23,7 +23,8 @@ terms are defined in §9.
    in three ways, each set by [P] inputs:
    - a hidden bath above T_c = 1.557–1.564 v (μ_N = 0);
    - a homogeneous hidden charge above n_s1 = 0.0428 v³ (forced restoration), or a charge already condensed in a
-     thermally restored bath, which holds φ = 0 down to n_c = 0.0316 v³;
+     thermally restored bath, which holds φ = 0 down to n_c(T_h) ≈ 0.032–0.042 v³ (≈ 0.035 v³ at T_h ≈ 0.29 v
+     for H★Q);
    - inflationary mixing of the sign of φ (opposite-sign domains appear for H_inf ≳ 140–150 GeV, percolate above
      1.35–1.8 TeV).
 
@@ -32,19 +33,22 @@ terms are defined in §9.
    phase-ordering law m ∝ m₀ (L/ξ₀)^γ with γ = 1.41 ± 0.05 (fit error; ± 0.08 across estimators), matching model-A
    theory. Extrapolated over 11–17 decades of domain growth, this gives three outcomes for the reference history H★:
    - |m₀| < ε_persist ≈ 6×10⁻²⁴ (band 10⁻²⁵·³–10⁻¹⁹·⁸): the network persists to wall–radiation parity;
-   - ε_persist < |m₀| < ε_safe ≈ 1.5×10⁻¹⁸ (band 10⁻²²·⁷–10⁻¹⁴·⁹): it decays late and overproduces stable hidden
-     relics (for rest-mass fraction f = 1);
+   - ε_persist < |m₀| < ε_safe ≈ 1.5×10⁻¹⁸ (band 10⁻¹⁹·⁷–10⁻¹⁴·⁹ for f = 1; 10⁻²²·⁷–10⁻¹⁴·⁹ over f = 0.01–1): it
+     decays late and overproduces stable hidden relics;
    - |m₀| > ε_safe: it decays early, and the wall tests computed here do not reject it.
 
-3. **Which restorations erase the sign memory.** A kinetically thermal hidden bath produced well above T_c damps
-   the memory of any earlier vacuum to |m₀| ~ 10⁻¹²⁹⁷. The soft φ mode's thermal width is 3.8×10⁻⁵ T_h, integrated
-   over the restored epoch. This holds for every T_h/T_SM = ξ ≳ 7×10⁻⁵ (production at ≥ 10 T_c), rising to
-   ≈ 3×10⁻⁴ for production within 1% of T_c. Such histories therefore end with an unbiased network that persists.
+3. **Which restorations erase the sign memory.** The soft φ mode of a kinetically thermal hidden bath has thermal
+   width 3.8×10⁻⁵ T_h, and integrating it over the restored epoch damps the memory of any earlier vacuum. For H★
+   (ξ = 5×10⁻⁴, bath produced at T_SM ≈ 10⁸ GeV, i.e. T_h ≈ 32 T_c) this gives |m₀| ~ 10⁻¹²⁹⁷, far below the
+   realization floor. The bias falls below ε_persist for ξ ≳ 7×10⁻⁵ (production at ≥ 10 T_c; ≳ 9–10×10⁻⁵ if the width
+   is half the central value), rising to ≈ 3×10⁻⁴ for production within 1% of T_c. Such histories end with an
+   unbiased network that persists. Just above the kinetic threshold ξ_kin ≈ (4–7)×10⁻⁵ the erasure is incomplete: a
+   bath produced from a selected vacuum with ξ up to ≈ 6×10⁻⁵ (≈ 9×10⁻⁵ at half width) leaves |m₀| > ε_safe.
    Three routes leave a systematic bias instead:
    - a free-streaming (non-thermal) restoring gas that leaves the restored phase above T_SM ≈ 2.6×10⁷ GeV
      (v/TeV)^(1/2);
-   - charge forced to 1.35–2 n_c into an already selected vacuum (|m₀| ≈ 0.4–0.8, 2D lattice);
-   - post-inflation trapping (|m₀| ≥ 3.6×10⁻⁵ for H_inf = 3–20 TeV, 0.08–0.8 below 2 TeV).
+   - charge forced to 1.35–2 n_c into an already selected vacuum (|m₀| ≈ 0.4–0.85, 2D lattice);
+   - post-inflation trapping (|m₀| ≥ 3.6×10⁻⁵ for H_inf = 3–20 TeV, 0.08–0.82 for 0.7–2 TeV).
 
    These sub-horizon networks decay early. A spatially varying bias was not treated, nor were the super-horizon
    sign domains left by inflation, which re-enter later.
@@ -56,14 +60,15 @@ terms are defined in §9.
    After parity none of the hidden sector's energy can pass to visible matter (gravity only), and the
    energy-weighted mean w̄ of the hidden sector stays ≤ 1/3. Walls dominate with w ≈ −2/3 + ⟨v²⟩, Q-balls and
    non-relativistic quanta have w ≈ 0, and gravitational waves and relativistic quanta have w = 1/3. Only coherent
-   oscillations spanning both vacua exceed 1/3 locally (up to 0.44), and only transiently. Since g_*s is constant
+   oscillations spanning both vacua have w > 1/3 (up to 0.44), and they need an energy density about 30 orders of
+   magnitude above that at parity, so they cannot occur after parity. Since g_*s is constant
    below 20 keV, visible radiation scales as a⁻⁴. The hidden energy at recombination is therefore at least ρ_rad,
    equivalent to **ΔN_eff ≥ 7.4** if it were free-streaming radiation (the least constraining case; w̄ < 1/3 is
    more constraining). Planck 2018 gives N_eff = 2.99 ± 0.17 (recalled; retrospective).
 
    The H₀ implied by such a history given T_CMB exceeds the measured value by **R_H ≈ 2×10⁵–2×10⁹** (post-domination
-   law bracketed). After parity the metric is also O(1)-inhomogeneous on horizon scales, itself incompatible with
-   CMB isotropy. These rejections are conditional on the network staying in scaling until parity. That is about
+   law bracketed). After parity the metric would also be O(1)-inhomogeneous on horizon scales, which we expect to be
+   incompatible with CMB isotropy [E, not computed]. These rejections are conditional on the network staying in scaling until parity. That is about
    29 decades in H⁻¹/δ beyond our largest physical-equation box, and it rests on the scaling attractor in the
    literature.
 
@@ -71,7 +76,8 @@ terms are defined in §9.
    - **Cold histories.** There is no hidden restoration after inflation, and charge is supplied after inflation below
      n_c onto a single-sign background (T_Q < 198 r^(−1/3) (v/TeV) TeV). H_inf must be ≲ 139–153 GeV for no opposite
      region at all. If the collapsing minority domains' relics are allowed for, the limit is ≲ 314–560 GeV for f = 1;
-     for f ≤ 0.01 there is no constraint below percolation. Codex's cold Q-ball preparations belong to this class.
+     for f ≤ 0.01 there is no constraint below percolation in the 1D baseline (≈ 1.16 TeV with the X correction,
+     fresh start, N_* = 50). Codex's cold Q-ball preparations belong to this class.
    - **Biased-exit histories.** The sub-horizon network decays early.
 
    Inflation above the percolation threshold is not resolved, because its super-horizon sign structure was not
@@ -100,24 +106,26 @@ Inputs that remain free [P]:
 - v (all thresholds scale with it);
 - H_inf, N_* and the pre-inflationary sign;
 - T_RH and any hidden branching B_h;
-- ξ and μ_N of a produced bath;
+- ξ, μ_N and the production time of a produced bath;
 - r = Y_Q/Y_B, and the supply time T_Q and form of the charge;
 - ρ_Λ (total vacuum matching).
 
 ## 2. Reference histories, with values
 
-`code/history.py` recomputes the dependent numbers (`results/history.json`).
+`code/history.py` recomputes the H★ and C★ numbers and the bias classification (`results/history.json`). H★Q values
+are from CRITIC.md §5.1 and H★′ values from production_map.
 
 **H★, hot hidden sector (network forms and persists; history rejected).** [P]: H_inf = 10⁸ GeV, instant visible
-reheating. An outside producer leaves a Z₂-invariant bath of all four hidden dof with ξ = 5×10⁻⁴ and μ_N = 0, i.e.
+reheating. An outside producer leaves, from T_SM ≈ 10⁸ GeV (T_h ≈ 32 T_c), a Z₂-invariant bath of all four hidden
+dof with ξ = 5×10⁻⁴ and μ_N = 0, i.e.
 Y_N = 1.30×10⁻¹² (μ_N = 0 is an input: the bath never reaches chemical equilibrium). r = 10⁻⁴; ρ_Λ = 0.
 
 Consequences:
 - Thermal restoration; exit at T_h = T_c, i.e. T_SM = 3.1×10⁶ GeV, where H/m_X = 1.4×10⁻⁷ and H⁻¹/δ = 5.2×10⁶.
 - Exit bias |m₀| ~ 10⁻¹²⁹⁷ (thermal damping), far below ε_persist = 6×10⁻²⁴. Kibble–Zurek gives ≈ 10¹³·⁷–10¹⁵·⁷
   domains per H⁻³ [E].
-- The history passes the relic test (ω_sym ≈ 0.034–0.036 < 0.12) and Codex's maser product
-  (m_X r + 79.28 GeV · ω_sym = 2.9 GeV < 63.93 GeV).
+- The history passes the relic test (ω_sym ≈ 0.034–0.036 < 0.12) and the maser product (Codex's m_X r < 63.93 GeV,
+  extended by relic_yield to m_X r + 79.28 GeV · ω_sym = 2.9 GeV).
 - It fails the wall tests: parity at 5.8–6.4 keV, ΔN_eff ≥ 7.4, R_H ≥ 2×10⁵.
 
 With H_inf = 10⁸ GeV the spectator condensate would also restore the Z₂ after inflation [E]. The thermal bath is
@@ -130,9 +138,10 @@ thermalizes (μ_N/T ≈ −23 to −44) and leaves the restored phase at T_SM �
 a gas keeps an O(1) phase-set bias unless it exits below ≈ 2.6×10⁷ GeV, so its network generally decays early. H★′
 is therefore **not** shown to give a persistent network.
 
-**H★Q, charged variant (network forms and persists; history rejected).** Same as H★ with r = 0.05. The charge is
+**H★Q, charged variant (network forms and persists; history rejected).** Same as H★ with r = 0.05 (exit values
+from CRITIC.md §5.1). The charge is
 Bose-condensed when the bath cools through T_c and holds φ = 0 until T_h ≈ 0.29 v (T_SM ≈ 578 TeV). The preceding
-thermal phase erases any earlier sign. The exit through n_c gives p(+) = 0.5003 ± 0.0046 in 11 lattice runs. The
+thermal phase erases any earlier sign. The exit through n_c(T_h) gives p(+) = 0.5003 ± 0.0046 in 11 lattice runs. The
 network persists over the simulated range, with 15–37% of the charge on its walls. It coarsens more slowly, so if
 it persists it reaches parity no later than H★.
 
@@ -162,7 +171,7 @@ Consequences:
   Ginzburg region t_G = 6.9×10⁻⁴. The perturbative order is therefore scheme-dependent. Continuous 3D-Ising order is
   argued from universality, not computed. Formation does not depend on the order.
 - *Other fields.* X and D never condense at zero charge (curvatures ≥ 2.79×10⁻³ v² and ≥ 1.01×10⁻² v²).
-- *Domain count.* Kibble–Zurek gives 10³–10³⁰ domains per H⁻³ [E] (central τ₀; formal below ξ ≈ 6.6×10⁻⁵). Domains
+- *Domain count.* Kibble–Zurek gives 10³–10³⁰ domains per H⁻³ [E] (central τ₀; formal below ξ_kin ≈ (4–7)×10⁻⁵). Domains
   form far smaller than the horizon.
 
 **Nonzero charge.**
@@ -187,13 +196,14 @@ Consequences:
 
 | Route | Systematic exit bias \|m₀\| | Fate |
 |---|---|---|
-| Kinetically thermal bath above T_c (H★, H★Q) | ~10⁻¹²⁹⁷ (band 10⁻⁶⁴⁸–10⁻²⁵⁹⁷); below 10⁻²⁰ for ξ ≳ 6.7×10⁻⁵ (production ≥ 10 T_c) or ≳ 3×10⁻⁴ (within 1% of T_c) | persists → rejected |
+| Kinetically thermal bath above T_c (H★, H★Q) | ~10⁻¹²⁹⁷ for H★ (band 10⁻⁶⁴⁸–10⁻²⁵⁹⁷); below ε_persist for ξ ≳ 7×10⁻⁵ (production ≥ 10 T_c; 9–10×10⁻⁵ at half width) or ≳ 3×10⁻⁴ (within 1% of T_c) | persists → rejected |
+| Kinetically thermal bath from a selected vacuum, ξ_kin ≲ ξ ≲ 6×10⁻⁵ (≲ 9×10⁻⁵ at half width) | > ε_safe | decays early |
 | Exactly Z₂-symmetric ensemble, no prior sign | 0 | persists → rejected |
 | Free-streaming restoring gas, cold +v start | O(1) phase-set unless exit ≲ 2.6×10⁷ GeV (v/TeV)^(1/2) | decays early |
-| Charge forced into a selected vacuum, 1.35–2 n_c | 0.4–0.8 (2D lattice) | decays early |
+| Charge forced into a selected vacuum, 1.35–2 n_c | 0.4–0.85 (2D lattice) | decays early |
 | Charge forced ≳ 3 n_c | exit deferred to n_c; remnant decays, plausibly below ε_persist [E] | persists → rejected [E] |
-| Post-inflation trapping only, H_inf 3–20 TeV (< 2 TeV) | ≥ 3.6×10⁻⁵ (0.08–0.82) | sub-horizon network decays early; super-horizon sign structure not followed |
-| Hubble friction only (bath absent) | O(0.5–0.9), phase-set [E] | decays early |
+| Post-inflation trapping only, H_inf 3–20 TeV (0.7–2 TeV) | ≥ 3.6×10⁻⁵ (0.08–0.82) | sub-horizon network decays early; super-horizon sign structure not followed |
+| Thermal restoration with plasma damping neglected (counterfactual, Hubble friction only; not a physical route) | O(0.5–0.9), phase-set [E] | decays early |
 
 The thresholds ε_persist ≈ 6×10⁻²⁴ and ε_safe ≈ 1.5×10⁻¹⁸ are for H★ (H★Q: 10⁻²⁴ and 2.5×10⁻¹⁹). A purely
 statistical finite-volume asymmetry cannot remove the network: it is bounded by K^(γ−3/2) ≤ O(1), since λ̄ ≥ d/2.
@@ -267,17 +277,20 @@ magnitude is conditional on the benchmark v = 1 TeV and the tree tension.
 
 *Rejected classes* (network persists to parity, or decays between T_safe and parity):
 1. A kinetically thermal hidden bath above T_c after inflation, with ξ ≳ 7×10⁻⁵–3×10⁻⁴ depending on how far above
-   T_c it is produced. This holds with or without charge. Any relic-compatible bath of this kind (μ_N ≤ 0) existed
+   T_c it is produced (≳ 9–10×10⁻⁵ at half the damping width). This holds with or without charge. Any relic-compatible bath of this kind (μ_N ≤ 0) existed
    above T_SM ≈ 2.07–2.09×10⁶ (v/TeV)^(4/3) GeV. Overpopulated or condensate baths are not bounded by this
-   (placeholder ≈ 5–6×10⁵ GeV). A thin strip 6.6×10⁻⁵ ≲ ξ ≲ 7×10⁻⁵–10⁻⁴ is kinetically thermal but not fully
-   erased.
-2. Any restoration whose exit bias falls below ε_safe ≈ 10⁻¹⁸ (band 10⁻²²·⁷–10⁻¹⁴·⁹; f = 1). Charge forced to
+   (placeholder ≈ 5–6×10⁵ GeV). Baths produced from a selected vacuum just above ξ_kin ≈ (4–7)×10⁻⁵ are not fully
+   erased: up to ξ ≈ 6×10⁻⁵ (≈ 9×10⁻⁵ at half width) they leave |m₀| > ε_safe (class 5); up to 7×10⁻⁵–10⁻⁴ they
+   leave ε_persist < |m₀| < ε_safe (class 2).
+2. Any restoration whose exit bias falls below ε_safe ≈ 1.5×10⁻¹⁸ (band 10⁻¹⁹·⁷–10⁻¹⁴·⁹ for f = 1;
+   10⁻²²·⁷–10⁻¹⁴·⁹ over f = 0.01–1). Charge forced to
    ≳ 3 n_c into a selected vacuum belongs here [E].
 3. Inflation-only histories whose collapsing minority domains overproduce stable relics: H_inf ≳ 314–367 GeV (relaxed
    start) or ≳ 396–545 GeV (fresh start), for f = 1. This was computed below percolation. Most of that relic comes
    from near-critical domains, whose wall energy is ≥ 10% of the horizon radiation at re-entry. If those collapse into
    10⁵–10⁹ M_⊙ black holes, the relic threshold moves to ≈ 400–560 GeV and a black-hole abundance bound (not
-   computed) applies instead. For f ≤ 0.01 there is no relic constraint below percolation.
+   computed) applies instead. For f ≤ 0.01 there is no relic constraint below percolation in the 1D baseline
+   (≈ 1.16 TeV with the X correction, fresh start, N_* = 50).
 
 *Classes the wall tests computed here do not reject:*
 4. Cold: no hidden restoration after inflation and no charge-driven restoration. Charge, if r ≠ 0, is supplied below
@@ -285,7 +298,7 @@ magnitude is conditional on the benchmark v = 1 TeV and the tree tension.
    simulated. Inflation, if present, satisfies the H_inf limits of item 3. A single vacuum sign across the observable
    patch is [P], as the archived +v choice already was.
 5. Biased exits that decay early: a free-streaming gas exiting above ≈ 2.6×10⁷ GeV from a selected vacuum; charge
-   forced to 1.35–2 n_c. Gravitational waves and other signals of the early decay were not computed.
+   forced to 1.35–2 n_c; a kinetically thermal bath produced from a selected vacuum just above ξ_kin (item 1). Gravitational waves and other signals of the early decay were not computed.
 
 *Not resolved:*
 - inflation above the percolation threshold (super-horizon sign structure with a small systematic trapping bias);
@@ -308,7 +321,7 @@ viable point. A wall signal would not distinguish Candidate 1 from other Z₂ se
 
 Replies to specific points:
 - *"Ever above T_c does not alone imply a surviving network."* Agreed, and now quantified. Survival needs an exit bias
-  below ≈ 10⁻²³. A kinetically thermal bath provides it; biased restorations do not.
+  below ≈ 10⁻²³. A kinetically thermal bath with ξ above ≈ 7×10⁻⁵–3×10⁻⁴ provides it; biased restorations do not.
 - *"Core-seeded closed bubbles do not alone exclude a cosmology."* Agreed. Codex's replays and our sub-critical
   controls show no opposite vacuum. Closed walls collapse on computed timescales, and the relic of collapsing minority
   domains is quantified (§5, item 3).
@@ -326,14 +339,17 @@ Replies to specific points:
 All checks below were run by AI verifier agents in this session, each with separate code but working from the same
 brief. They are not an outside replication. Claim counts are not distinct scientific tests.
 
-| Round | Coverage | Verdicts |
+| Round | Coverage | Outcome |
 |---|---|---|
 | Build | 12 modules, each with its own code and NOTES.md (failures and corrections recorded there) | — |
-| Check 1 | 7 module verifiers + completeness critic | 109 confirmed, 19 corrected, 1 refuted, 11 not checked. The refutation was the wording "every biased network disappeared". The critic graded the requirements 5 met / 4 partial / 1 not met; the not-met item was charged persistence, since addressed. |
-| Check 2 | charged_exit_sim, minority_relic, production_map | 37 confirmed, 6 corrected, 1 refuted ("the charge slowdown does not grow within a run"), 2 not checked |
-| Check 3 | bias_threshold, residual_bias | 38 confirmed, 5 corrected, 0 refuted, 3 not checked |
-| Report review | number tracing + skeptical referee on the previous draft | 1 blocking finding: the bias threshold, which led to the bias modules. All major and minor findings are addressed in this version or listed in §8. |
-| Synthesis | `code/history.py`, `code/verify.py` | recomputes σ, m*, n_c, n_t, n_s1, n_*, T_n, T_par, ΔN_eff, the H★/C★ numbers and the bias classification; 0 failures |
+| Check 1 | 7 module verifiers + completeness critic | No headline number overturned. Corrections are listed below. One wording overclaim was found (v_network P3, "every biased network disappeared": partly supported). The critic graded Codex's six requirements 3 met and 3 partially met. Within R3 it found charged-exit persistence not established, since addressed by charged_exit_sim. |
+| Check 2 | charged_exit_sim, minority_relic, production_map | One claim refuted: "the charge slowdown does not grow within a run". Corrections listed below. |
+| Check 3 | bias_threshold, residual_bias | No refutation. Corrections cover the γ uncertainty, the erf ansatz, the trapping values, the erasure threshold, the Hubble-only bias and the free-streaming band. |
+| Report review | number tracing (twice) + skeptical referee | The referee raised one blocking point, the bias threshold, which led to the bias modules. All other findings are fixed here or listed in §8. |
+| Synthesis | `code/history.py`, `code/verify.py` | Recomputes σ, m*, n_c, n_t, n_s1, n_*, T_n, T_par, ΔN_eff, the H★/C★ numbers and the bias classification; 0 failures |
+
+Per-claim verdicts are in each `verification/*/VERIFY.md`. We do not quote aggregate counts, because the agents'
+structured summaries and their tables count claims differently.
 
 Corrections carried into this report:
 - perturbative order is scheme-dependent;
@@ -396,7 +412,7 @@ Corrections carried into this report:
 | fresh / relaxed start | φ exactly +v / equilibrium restricted to φ > 0, at the start of the last N_* e-folds |
 | f | fraction of collapse energy ending as rest mass of stable hidden quanta [P] |
 | PRS, KZ, AE, DR, J_B | Press–Ryden–Spergel algorithm; Kibble–Zurek; Arnold–Espinosa; dimensional reduction; bosonic thermal function |
-| maser product | Codex's necessary condition m_X\|r\| + 79.28 GeV · ω_sym < 63.93 GeV (primary distance envelope) |
+| maser product | Codex's necessary condition m_X\|r\| < 63.93 GeV (primary distance envelope), extended by relic_yield to m_X\|r\| + 79.28 GeV · ω_sym < 63.93 GeV |
 | [P], [E] | preparation input outside the action; estimate |
 
 ## 10. Reproduction

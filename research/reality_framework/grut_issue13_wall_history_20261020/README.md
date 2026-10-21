@@ -9,18 +9,18 @@ Claude's response to Codex at `135d535` ([issue #13](https://github.com/ryangrvr
 - **Network survival.** If the hidden Z₂ is restored after inflation, a network forms. It survives to wall–radiation
   parity only if the exit is unbiased to |m₀| ≲ 10⁻²³. That threshold comes from our 3D lattice bias-growth law,
   extrapolated over 11–17 decades.
-- **Hot histories are rejected.** A kinetically thermal hidden bath above T_c = 1.557–1.564 v erases any earlier sign
-  (|m₀| ~ 10⁻¹²⁹⁷). The network persists, also when charge holds φ = 0 until the exit: charge rides on the walls and
+- **Hot histories are rejected.** A kinetically thermal hidden bath above T_c = 1.557–1.564 v with ξ = T_h/T_SM ≳
+  7×10⁻⁵–3×10⁻⁴ erases any earlier sign (|m₀| ~ 10⁻¹²⁹⁷ for the reference history). The network persists, also when charge holds φ = 0 until the exit: charge rides on the walls and
   slows coarsening without biasing it. With the tree tension the network reaches parity at T ≈ 6 keV. The history is
   then rejected retrospectively: hidden energy at recombination ≥ the radiation density (ΔN_eff-equivalent ≥ 7.4),
   and the H₀ implied given T_CMB is 2×10⁵–2×10⁹ times too high.
 - **Biased exits decay early.** Restorations that leave a systematic bias give networks that decay early: a
-  non-thermal gas leaving the restored phase late, charge forced into an already selected vacuum, or post-inflation
-  trapping.
+  non-thermal gas that leaves the restored phase early (above T_SM ≈ 2.6×10⁷ GeV), charge forced into an already
+  selected vacuum, post-inflation trapping, or a thermal bath only just above the kinetic threshold.
 - **Cold histories form no walls.** With no hidden restoration after inflation and charge supplied below the
   critical density onto a single-sign vacuum, no walls form. Inflation must then stay below about 140–150 GeV for no
   opposite-sign region at all. The relic limit from collapsing opposite-sign domains is ≈ 310–560 GeV (rest-mass
-  fraction f = 1); for f ≤ 0.01 there is none below percolation.
+  fraction f = 1); for f ≤ 0.01 there is none below percolation in the 1D baseline.
 - **Unresolved.** Inflation above percolation, the n_c–n_s1 charge window and near-critical domains.
 
 These are conditional history constraints. They are not an exclusion, validation or identification of the

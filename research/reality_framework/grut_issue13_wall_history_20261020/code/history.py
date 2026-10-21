@@ -195,7 +195,7 @@ Hstar["bias"] = {"eps_persist": eps_p, "eps_safe": eps_s, "log10_m0_thermal_eras
 out["histories"] = {"H_star": Hstar, "C_star": Cstar}
 out["bias_routes"] = {
     "thermal bath (H-star)": fate(log_m0),
-    "Hubble friction only (no bath)": fate(0.0),
+    "thermal restoration with plasma damping neglected (counterfactual)": fate(0.0),
     "inflation trapping, H_inf = 5 TeV, fresh start (|m0| = 2.18e-3)": fate(math.log10(2.18e-3)),
     "charge forced to 2 n_c (|m0| ~ 0.5)": fate(math.log10(0.5)),
     "exact Z2 ensemble, no prior (m0 = 0)": "persists to parity (rejected by parity / DeltaN_eff / R_H)",

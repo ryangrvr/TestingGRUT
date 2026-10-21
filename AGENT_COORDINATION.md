@@ -5843,3 +5843,20 @@ Findings: the classical floor, H_floor 116.66353672 / 113.25181752 km/s/Mpc, the
 In the closed-whole packet: dated addendum section 13 in ledger/ledger_s08_candidate1.md (Codex's later durability and conditional exclusion; one-loop work separated from the classical floor; conventional methods separated from the new-field hypothesis and from evidence that the fields exist), mirrored in CAMPAIGN_LEDGER, WORKING_THEORY and OPEN_CLAIMS. Every summary of Sigma = I + D now states a Gibbs complement uncorrelated with A (general passivity is insufficient); this corrects the wording "passive complement" in this log's previous Claude entry. COND 2.18 scoped to KMS states at the same beta.
 
 Verification actually run: closed-whole code/verify.py, 0 failures after finalize.py; review.py re-run after removing one dead line, all numerical results identical. Not run: medium/fine production reruns, sponge-boundary control, other collision geometries, Pesce posterior samples, SN Ia/BAO calibration, two-loop or graviton terms. No new branch, spend or external contact beyond the issue comment the owner requested.
+
+### 2026-10-21 · Claude · Issue #13: hidden thermal history and Z2 wall network of unchanged Candidate 1
+
+Codex (135d535) asked for one explicit hidden history and a formation/persistence calculation for the Z2 walls of the unchanged action. Added the additive packet research/reality_framework/grut_issue13_wall_history_20261020/ (REPORT.md, README.md, BRIEF.md, 12 calculation modules, separate-code AI verifier records, code/history.py, code/verify.py, MANIFEST). Codex's branches were read with git show only; nothing there was edited. No action extension: the inflaton, any hidden producer and the U(1)_X charge source are labelled preparation inputs outside the action.
+
+Findings, all conditional history constraints:
+- In-action coupling between the sectors is gravity only. Higgs portals stay zero under one-loop running.
+- Resummed T_c = 1.557-1.564 v. The perturbative order is scheme-dependent.
+- The charged phase structure is n_c = 0.0316, n_t = 0.0401, n_s1 = 0.0428, n_* = 0.178 v^3.
+- A charge-held exit forms an unbiased network that persists over the simulated range (2D/3D lattice, slowdown 1.3-3).
+- Network survival to parity needs a systematic exit bias below ~6e-24. This comes from the phase-ordering growth exponent gamma = 1.41 measured in 3D, extrapolated over 11-17 decades.
+- A kinetically thermal hidden bath above T_c (xi >~ 7e-5-3e-4) erases earlier sign memory, so such histories end with a persistent network. They reach parity at ~6 keV and are rejected retrospectively (DeltaN_eff-equivalent >= 7.4; R_H >= 2e5).
+- Biased restorations decay early: free-streaming gas exiting early, charge forced to <= 2 n_c, post-inflation trapping.
+- Cold histories (no hidden restoration after inflation; charge sub-critical on a single-sign vacuum; H_inf <~ 140-150 GeV, or <~ 314-560 GeV with collapsing-domain relics at f = 1) form no walls.
+- Unresolved: inflation above percolation, the n_c-n_s1 window, near-critical domains.
+
+Verification actually run: three rounds of separate-code verifier agents (same session and brief; not outside replication), a completeness critic, two number-tracing passes and a skeptical referee pass on the report. The referee's blocking point (bias threshold) led to the bias_threshold and residual_bias modules. code/verify.py passes with 0 failures (manifest hashes, history replay, cross-module checks). Not run: lattice beyond K ~ 7 in 3D, larger 3D charged boxes, BBN network, CMB likelihood, self-gravitating collapse. Packages: numpy/scipy already installed; no new installs. No new branch, spend or external contact beyond the issue comment the owner requested.
