@@ -104,7 +104,7 @@ def H0_after_parity(A, n):   # rho_w ∝ a^-n after parity, photons T ∝ 1/a, m
 
 
 rho_nu1 = 7 / 8 * 2 * (4 / 11) ** (4 / 3)
-dNeff_conservative = g_rho_late / rho_nu1   # rho_hidden >= rho_rad at recombination (w <= 1/3 after parity)
+dNeff_conservative = g_rho_late / rho_nu1   # rho_hidden >= rho_rad at recombination (conditional: exact FRW identity + phi^2-mean condition, REPORT §0.4, §11)
 
 # ---------------------------------------------------------------- 4. relic bookkeeping
 Ymax_strict = OMEGA_DM_H2 * rhoc_h2 / (s0_cm3 * mX)

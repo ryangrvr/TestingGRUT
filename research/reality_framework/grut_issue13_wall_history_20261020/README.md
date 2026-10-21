@@ -11,8 +11,9 @@ Claude's response to Codex at `135d535` ([issue #13](https://github.com/ryangrvr
   extrapolated over 11–17 decades.
 - **Hot histories are rejected.** A kinetically thermal hidden bath above T_c = 1.557–1.564 v with ξ = T_h/T_SM ≳
   7×10⁻⁵–3×10⁻⁴ erases any earlier sign (|m₀| ~ 10⁻¹²⁹⁷ for the reference history). The network persists, also when charge holds φ = 0 until the exit: charge rides on the walls and
-  slows coarsening without biasing it. With the tree tension the network reaches parity at T ≈ 6 keV. The history is
-  then rejected retrospectively: hidden energy at recombination ≥ the radiation density (ΔN_eff-equivalent ≥ 7.4),
+  slows coarsening without biasing it. With the tree tension the network reaches parity at T ≈ 6–7 keV. The history is
+  then rejected retrospectively: hidden energy at recombination ≥ the radiation density under an exact FRW identity
+  and a φ²-mean condition (radiation-equivalent energy ratio ≥ 7.45; not an N_eff likelihood),
   and the H₀ implied given T_CMB is 2×10⁵–2×10⁹ times too high.
 - **Biased exits decay early.** Restorations that leave a systematic bias give networks that decay early: a
   non-thermal gas that leaves the restored phase early (above T_SM ≈ 2.6×10⁷ GeV), charge forced into an already
@@ -58,3 +59,6 @@ Classical lattice dynamics, perturbative thermal field theory, and stochastic in
 limits (REPORT §8). All inflation, reheating, hidden-bath and charge-supply inputs are outside the action. Known
 observations (T_CMB, H₀, Planck N_eff and Ω_DM, BBN ω_b) are used retrospectively. The work was done by one AI
 session with separate AI verifier agents; this is not an outside replication.
+
+**Corrections of 21 October 2026** (after Codex `a69bd86` and Claude's audit in
+`../grut_issue13_3d_review_20261021/`) are listed in REPORT.md §11.

@@ -1,0 +1,59 @@
+{
+ "track": "reach",
+ "verdicts": [
+  {
+   "claim": "relic_yield retrospective r_max = 0.0897 (omega_h <= 0.12)",
+   "verdict": "CONFIRMED",
+   "independent_value": "0.08966 (e = m*/m_X); omega_asym = 1.3383 r",
+   "source": "c7b8480 modules/relic_yield NOTES \u00a76"
+  },
+  {
+   "claim": "All-DM calibration gives r ~ 0.09 at v = 1 TeV",
+   "verdict": "CORRECTED",
+   "independent_value": "r = 5.042 GeV/(e gX v): 0.0504 (free X) - 0.0897 (Q-matter); Codex-like cold Q-balls Q~4e4-6e5 need 0.055-0.071",
+   "source": "task framing / relic_yield"
+  },
+  {
+   "claim": "Thin-wall binding threshold Q ~ 1.3e4 [E]",
+   "verdict": "CORRECTED",
+   "independent_value": "E/(m_X Q) = 1 at Q = 1.77e4 on the computed stationary branch",
+   "source": "c7b8480 modules/charge_phase \u00a72"
+  },
+  {
+   "claim": "Archived soliton Q = 39,944, E/(m_X Q) = 0.91108652, R90 g v = 5.1034",
+   "verdict": "CONFIRMED",
+   "independent_value": "39943.85, 0.911086520, 5.103432",
+   "source": "grut_candidate_1_20261018 PREDICTIONS_AND_TESTS"
+  },
+  {
+   "claim": "Branch-1 growth rates 0.0045/0.045/0.112/0.226 at x = 0.01/0.1/0.25/0.5; k_max = 0.404 at x = 0.25",
+   "verdict": "CONFIRMED",
+   "independent_value": "0.0045/0.0448/0.1121/0.2264; 0.4035; small-x law gamma = 0.450 x, k = 0.949 sqrt(x)",
+   "source": "c7b8480 modules/charge_phase \u00a72,\u00a76"
+  },
+  {
+   "claim": "Codex maser product m_X r < 63.93 GeV is compatible with hidden charge = all DM",
+   "verdict": "CONFIRMED",
+   "independent_value": "m_X r = 5.0-9.0 GeV; floor H0 >= 37.7 km/s/Mpc",
+   "source": "Codex 2ee7f82 REPORT / relic_yield"
+  },
+  {
+   "claim": "Codex a69bd86: the model cannot yet make a discriminating empirical prediction because inputs/calculations are missing",
+   "verdict": "CONFIRMED",
+   "independent_value": "Strengthened: with gravity-only coupling at v ~ TeV, every computed channel lies 4-25 decades below current/planned reach even after calibration",
+   "source": "a69bd86 REVIEW.md"
+  },
+  {
+   "claim": "Claude c7b8480: GW signals of early-decaying networks not computed",
+   "verdict": "NOT CHECKED",
+   "independent_value": "Now estimated [E]: relic safety caps Omega_gw h^2 <~ 2.5e-19 f^-2 (MeV/T_ann)^2 independent of v; benchmark at T_safe 3e-22 (f=1) to 6.5e-14 (f=0.01, 3e-11 Hz)",
+   "source": "c7b8480 REPORT \u00a75, bias_threshold"
+  },
+  {
+   "claim": "Claude c7b8480: a wall signal would not distinguish Candidate 1 from other Z2 sectors",
+   "verdict": "CONFIRMED",
+   "independent_value": "GW and PBH channels depend only on sigma, T_ann/H_inf and generic wall dynamics",
+   "source": "c7b8480 REPORT \u00a75"
+  }
+ ]
+}

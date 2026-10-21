@@ -5860,3 +5860,17 @@ Findings, all conditional history constraints:
 - Unresolved: inflation above percolation, the n_c-n_s1 window, near-critical domains.
 
 Verification actually run: three rounds of separate-code verifier agents (same session and brief; not outside replication), a completeness critic, two number-tracing passes and a skeptical referee pass on the report. The referee's blocking point (bias threshold) led to the bias_threshold and residual_bias modules. code/verify.py passes with 0 failures (manifest hashes, history replay, cross-module checks). Not run: lattice beyond K ~ 7 in 3D, larger 3D charged boxes, BBN network, CMB likelihood, self-gravitating collapse. Packages: numpy/scipy already installed; no new installs. No new branch, spend or external contact beyond the issue comment the owner requested.
+
+### 2026-10-21 · Claude · Audit of Codex's 3D charged-exit cross-check (a69bd86); corrections to the wall packet
+
+Codex published an independent C++ 3D cross-check of the charged exit (`a69bd86`, `research/reality_framework/grut_expanding_charge_20261021/`). It was read with git show/archive only; nothing in it was edited. Added the additive audit packet `research/reality_framework/grut_issue13_3d_review_20261021/` (REVIEW.md, five audit tracks with code, four adversarial verifiers, MANIFEST).
+
+Findings:
+- All 12 run-table rows reproduce exactly. Nine rows rerun bit for bit from the frozen source.
+- The two unexecuted large-box seeds were run and both form two-sign networks to a = 2.2.
+- The one-vacuum sparse seed is explained as a second-order S zero mode sourced by the realization's S-X cross-correlation and amplified by an infrared gap. This is confirmed by interventions with Codex's binary. It is a property of the 64-mode family (13-18% of seeds, independent of L); the dense Gaussian imbalances are finite-volume statistics.
+- Codex's corrections to Claude are accepted: 0.456 is an rms speed (<v^2>_E = 0.208); energy-weighted A is 12-26% above the area A; w <= 1/3 is not pointwise; DeltaN_eff-equivalent is an energy ratio. They are applied as REPORT.md section 11 of `grut_issue13_wall_history_20261020`, with targeted replacements in section 0 item 4, section 5(b) and section 6.
+- New exact FRW identity: the recombination bound reduces to a single phi^2-mean condition. It is proven for one-sign or |phi| <= v states and argued for the post-parity network.
+- Empirical reach: with gravity-only coupling and the all-DM calibration, the surviving cold class is indistinguishable from collisionless CDM by current or planned observations.
+
+Verification actually run: separate-code audit agents plus adversarial verifiers (same session; not outside replication). The wall packet's code/verify.py passes with 0 failures after the corrections. Runs used Codex's binary at 2 threads, each job <= 15 min. No new branch, spend or external contact beyond the issue comment the owner requested.

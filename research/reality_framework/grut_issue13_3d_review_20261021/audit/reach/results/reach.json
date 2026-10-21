@@ -1,0 +1,890 @@
+{
+ "1_calibration_allDM": {
+  "label": "[C] with [RETRO] omega_c = 0.120 (Planck 2018) and [Q] Y_B = 8.674e-11 (BBN)",
+  "omega_per_GeV_r": 0.023799068849347564,
+  "product_e_gX_v_r_GeV": 5.042214078190279,
+  "statement": "All-DM calibration fixes only the product (E/Q) * r = e * gX * v * r = 5.0422 GeV; v and r separately free",
+  "by_E_over_Q": {
+   "Q-matter floor e=m*/m_X (relic_yield r_max convention)": {
+    "e": 0.5623413251903491,
+    "r_allDM_at_v1TeV": 0.0896646547625416
+   },
+   "archived soliton Q=39,944, e=0.91109": {
+    "e": 0.91108652,
+    "r_allDM_at_v1TeV": 0.055342867746416426
+   },
+   "Codex production endpoint, charge-weighted Q ~ 4-6e5, e(Q)": {
+    "e": 0.7065067357952026,
+    "r_allDM_at_v1TeV": 0.07136823787695468
+   },
+   "free X quanta e=1": {
+    "e": 1.0,
+    "r_allDM_at_v1TeV": 0.05042214078190279
+   }
+  },
+  "relic_yield_rmax_check": {
+   "quoted": 0.0897,
+   "recomputed": 0.0896646547625416,
+   "omega_asym_per_r": 1.3383199915038466
+  },
+  "codex_maser_product_check": {
+   "bound_GeV": 63.93,
+   "mX_r_allDM_GeV": [
+    5.042214078190279,
+    8.966465476254161
+   ],
+   "H0_floor_kms_Mpc": 37.72664840666342,
+   "verdict": "satisfied by construction; the floor is an upper bound on omega_h and is saturated only far above omega_c"
+  },
+  "T_n_threshold_TeV": [
+   536.4919666193998,
+   442.82271461032263
+  ]
+ },
+ "3_fragmentation_dispersion": {
+  "label": "[C] cubic of charge_phase section 2, branch 1; units sqrt(lam_phi) v = 100 GeV (v/TeV) for rates, 1/ell for k",
+  "check_charge_phase": {
+   "quoted": "gamma_max 0.0045/0.045/0.112/0.226 at x=0.01/0.1/0.25/0.5; k=0.404 at x=0.25",
+   "got": [
+    [
+     0.01,
+     0.0045,
+     0.0943
+    ],
+    [
+     0.1,
+     0.0448,
+     0.282
+    ],
+    [
+     0.25,
+     0.1121,
+     0.4035
+    ],
+    [
+     0.5,
+     0.2264,
+     0.4605
+    ]
+   ]
+  },
+  "rows": [
+   {
+    "x": 1e-08,
+    "gamma_max": 4.499997808228534e-09,
+    "k_max": 9.491427669900679e-05,
+    "gamma_over_x": 0.44999978082285336,
+    "k_over_sqrtx": 0.9491427669900678
+   },
+   {
+    "x": 1e-06,
+    "gamma_max": 4.4999976582330403e-07,
+    "k_max": 0.0009491427669900679,
+    "gamma_over_x": 0.44999976582330403,
+    "k_over_sqrtx": 0.9491427669900678
+   },
+   {
+    "x": 0.0001,
+    "gamma_max": 4.499977508048542e-05,
+    "k_max": 0.009486243102538145,
+    "gamma_over_x": 0.44999775080485416,
+    "k_over_sqrtx": 0.9486243102538144
+   },
+   {
+    "x": 0.001,
+    "gamma_max": 0.00044997758036680155,
+    "k_max": 0.029981658280245748,
+    "gamma_over_x": 0.4499775803668015,
+    "k_over_sqrtx": 0.9481032819442344
+   },
+   {
+    "x": 0.01,
+    "gamma_max": 0.004497829747546365,
+    "k_max": 0.09428894532499546,
+    "gamma_over_x": 0.4497829747546365,
+    "k_over_sqrtx": 0.9428894532499545
+   },
+   {
+    "x": 0.1,
+    "gamma_max": 0.04484923322489045,
+    "k_max": 0.2819758871358729,
+    "gamma_over_x": 0.44849233224890445,
+    "k_over_sqrtx": 0.8916860485959311
+   },
+   {
+    "x": 0.25,
+    "gamma_max": 0.11213960590150131,
+    "k_max": 0.40350901021787233,
+    "gamma_over_x": 0.44855842360600523,
+    "k_over_sqrtx": 0.8070180204357447
+   },
+   {
+    "x": 0.5,
+    "gamma_max": 0.22640018452698402,
+    "k_max": 0.4604788661248632,
+    "gamma_over_x": 0.45280036905396803,
+    "k_over_sqrtx": 0.6512154576599662
+   }
+  ],
+  "small_x_law": {
+   "gamma_max": "0.4500 x",
+   "k_max": "0.9491 sqrt(x)"
+  }
+ },
+ "3_fragmentation_window": {
+  "label": "[E] homogeneous sub-critical condensate supplied at T_Q (form [P]); all-DM r; fragments into Q-balls only if gamma_max >> H",
+  "rows": [
+   {
+    "v_GeV": 1000.0,
+    "e_assumed": "e=1",
+    "r_allDM": 0.05042214078190279,
+    "T_n_GeV": 536491.9666193998,
+    "T_floor_gamma_eq_H_GeV": 0.048039401429334105,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 0.6013185386320992,
+    "x_at_floor": 2.575779412526882e-19,
+    "Q_frag_at_floor": 57159792517352.87,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 1000.0,
+    "e_assumed": "e=m*",
+    "r_allDM": 0.0896646547625416,
+    "T_n_GeV": 442822.71461032267,
+    "T_floor_gamma_eq_H_GeV": 0.027014540661122872,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 0.3451996978232248,
+    "x_at_floor": 8.315234114154913e-20,
+    "Q_frag_at_floor": 100602259952128.39,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 100.0,
+    "e_assumed": "e=1",
+    "r_allDM": 0.5042214078190279,
+    "T_n_GeV": 24901.751215835666,
+    "T_floor_gamma_eq_H_GeV": 7.384051225774418e-05,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 0.0014411820428800225,
+    "x_at_floor": 6.173378662494534e-24,
+    "Q_frag_at_floor": 1.1675715908572832e+16,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 100.0,
+    "e_assumed": "e=m*",
+    "r_allDM": 0.896646547625416,
+    "T_n_GeV": 20554.009674053726,
+    "T_floor_gamma_eq_H_GeV": 4.15235715157541e-05,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 0.0008363684003765235,
+    "x_at_floor": 1.9938635389361805e-24,
+    "Q_frag_at_floor": 2.0544579737470376e+16,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 10.0,
+    "e_assumed": "e=1",
+    "r_allDM": 5.042214078190279,
+    "T_n_GeV": 1155.8369038082626,
+    "T_floor_gamma_eq_H_GeV": 7.384051225773423e-08,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 2.215215367732323e-06,
+    "x_at_floor": 8.154222355416234e-29,
+    "Q_frag_at_floor": 3.212578159859053e+18,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 10.0,
+    "e_assumed": "e=m*",
+    "r_allDM": 8.96646547625416,
+    "T_n_GeV": 954.032617890568,
+    "T_floor_gamma_eq_H_GeV": 4.1523571515751526e-08,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 1.2457071454726217e-06,
+    "x_at_floor": 2.578591519057837e-29,
+    "Q_frag_at_floor": 5.712861594818082e+18,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 1.0,
+    "e_assumed": "e=1",
+    "r_allDM": 50.42214078190278,
+    "T_n_GeV": 53.649196661939996,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 2.2152153677323236e-09,
+    "x_at_floor": 8.154222355416237e-34,
+    "Q_frag_at_floor": 1.0159064146467117e+21,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 1.0,
+    "e_assumed": "e=m*",
+    "r_allDM": 89.66465476254159,
+    "T_n_GeV": 44.28227146103228,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": false,
+    "T_floor_gamma_eq_30H_GeV": 1.2457071454726244e-09,
+    "x_at_floor": 2.5785915190578544e-34,
+    "Q_frag_at_floor": 1.806565459692705e+21,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 0.3,
+    "e_assumed": "e=1",
+    "r_allDM": 168.07380260634264,
+    "T_n_GeV": 10.774361997282291,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": true,
+    "T_floor_gamma_eq_30H_GeV": 1e-09,
+    "x_at_floor": 9.260824717594211e-33,
+    "Q_frag_at_floor": 3.014533714714784e+20,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 0.3,
+    "e_assumed": "e=m*",
+    "r_allDM": 298.8821825418053,
+    "T_n_GeV": 8.893203486149488,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": true,
+    "T_floor_gamma_eq_30H_GeV": 1e-09,
+    "x_at_floor": 1.6468333915277305e-32,
+    "Q_frag_at_floor": 2.2605813765020746e+20,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 0.1,
+    "e_assumed": "e=1",
+    "r_allDM": 504.2214078190278,
+    "T_n_GeV": 2.4901751215835666,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": true,
+    "T_floor_gamma_eq_30H_GeV": 1e-09,
+    "x_at_floor": 7.501268021251305e-31,
+    "Q_frag_at_floor": 3.349481905238649e+19,
+    "Q_frag_near_Tn": 95365.6553981797
+   },
+   {
+    "v_GeV": 0.1,
+    "e_assumed": "e=m*",
+    "r_allDM": 896.6465476254158,
+    "T_n_GeV": 2.055400967405373,
+    "T_floor_gamma_eq_H_GeV": 1e-09,
+    "floor_at_1eV_edge": true,
+    "T_floor_gamma_eq_30H_GeV": 1e-09,
+    "x_at_floor": 1.3339350471374608e-30,
+    "Q_frag_at_floor": 2.5117570850023064e+19,
+    "Q_frag_near_Tn": 95365.6553981797
+   }
+  ],
+  "note": "Below T_floor the supplied condensate stays homogeneous (behaves as CDM); gamma/H falls as 1/a so it never fragments later by this instability."
+ },
+ "4_free_streaming": {
+  "label": "[C] numerical integral of v dt/a with g*(T) steps; formation velocities not computed [E]: beta_i = 0.01 / 0.5 / 0.9 bracket (energy bound below)",
+  "grid": [
+   {
+    "T_Q_GeV": 440000.0,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 3.7454743658947516e-14
+   },
+   {
+    "T_Q_GeV": 440000.0,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 2.1566567132368062e-12
+   },
+   {
+    "T_Q_GeV": 440000.0,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 7.596823462504664e-12
+   },
+   {
+    "T_Q_GeV": 1000.0,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 1.293867665767528e-11
+   },
+   {
+    "T_Q_GeV": 1000.0,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 7.444777822926845e-10
+   },
+   {
+    "T_Q_GeV": 1000.0,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 2.6115191394821427e-09
+   },
+   {
+    "T_Q_GeV": 10.0,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 1.125184190473611e-09
+   },
+   {
+    "T_Q_GeV": 10.0,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 6.469933860877393e-08
+   },
+   {
+    "T_Q_GeV": 10.0,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 2.2609583145396404e-07
+   },
+   {
+    "T_Q_GeV": 0.3,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 3.414053499499415e-08
+   },
+   {
+    "T_Q_GeV": 0.3,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 1.9624178166870313e-06
+   },
+   {
+    "T_Q_GeV": 0.3,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 6.8488952867191494e-06
+   },
+   {
+    "T_Q_GeV": 0.01,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 1.4265200722011244e-06
+   },
+   {
+    "T_Q_GeV": 0.01,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 8.198935399673576e-05
+   },
+   {
+    "T_Q_GeV": 0.01,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 0.00028574056267872326
+   },
+   {
+    "T_Q_GeV": 0.001,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 1.2301096628849788e-05
+   },
+   {
+    "T_Q_GeV": 0.001,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 0.0007065726031825379
+   },
+   {
+    "T_Q_GeV": 0.001,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 0.0024541431184472067
+   },
+   {
+    "T_Q_GeV": 0.0001,
+    "beta_i": 0.01,
+    "lambda_fs_Mpc": 0.00014243873413034825
+   },
+   {
+    "T_Q_GeV": 0.0001,
+    "beta_i": 0.5,
+    "lambda_fs_Mpc": 0.008176462952276134
+   },
+   {
+    "T_Q_GeV": 0.0001,
+    "beta_i": 0.9,
+    "lambda_fs_Mpc": 0.028286444495505925
+   }
+  ],
+  "at_fragmentation_floor": [
+   {
+    "T": 0.6013185386320992,
+    "v": 1000.0,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 9.963865600422109e-07,
+    "lam_fs_Mpc_beta0p9": 3.47403011644326e-06
+   },
+   {
+    "T": 0.3451996978232248,
+    "v": 1000.0,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 1.6986440074559187e-06,
+    "lam_fs_Mpc_beta0p9": 5.926258320539962e-06
+   },
+   {
+    "T": 0.0014411820428800225,
+    "v": 100.0,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 0.0005027357771420269,
+    "lam_fs_Mpc_beta0p9": 0.0017468409635570305
+   },
+   {
+    "T": 0.0008363684003765235,
+    "v": 100.0,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 0.0008535463685293895,
+    "lam_fs_Mpc_beta0p9": 0.0029641010929751938
+   },
+   {
+    "T": 2.215215367732323e-06,
+    "v": 10.0,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 0.2609722490824759,
+    "lam_fs_Mpc_beta0p9": 0.890229543873488
+   },
+   {
+    "T": 1.2457071454726217e-06,
+    "v": 10.0,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 0.4350341647111389,
+    "lam_fs_Mpc_beta0p9": 1.4792252290852657
+   },
+   {
+    "T": 2.2152153677323236e-09,
+    "v": 1.0,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 69.92499620581087,
+    "lam_fs_Mpc_beta0p9": 217.77176406991208
+   },
+   {
+    "T": 1.2457071454726244e-09,
+    "v": 1.0,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 100.86841718494394,
+    "lam_fs_Mpc_beta0p9": 310.6210210150427
+   },
+   {
+    "T": 1e-09,
+    "v": 0.3,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 115.3039575342427,
+    "lam_fs_Mpc_beta0p9": 353.6872472994533
+   },
+   {
+    "T": 1e-09,
+    "v": 0.3,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 115.3039575342427,
+    "lam_fs_Mpc_beta0p9": 353.6872472994533
+   },
+   {
+    "T": 1e-09,
+    "v": 0.1,
+    "e": "e=1",
+    "lam_fs_Mpc_beta0p5": 115.3039575342427,
+    "lam_fs_Mpc_beta0p9": 353.6872472994533
+   },
+   {
+    "T": 1e-09,
+    "v": 0.1,
+    "e": "e=m*",
+    "lam_fs_Mpc_beta0p5": 115.3039575342427,
+    "lam_fs_Mpc_beta0p9": 353.6872472994533
+   }
+  ],
+  "v_GeV_where_floor_corner_reaches_0p03Mpc": {
+   "beta=0.01": 5.3789274345261004,
+   "beta=0.5": 24.451764948652738,
+   "beta=0.9": 38.363890222124375
+  },
+  "wall_debris_biased_class": [
+   {
+    "f": 1.0,
+    "T_ann_GeV": 0.0306,
+    "p_over_m": 1.0,
+    "lambda_fs_Mpc": 4.920890170135546e-05
+   },
+   {
+    "f": 0.1,
+    "T_ann_GeV": 0.0033,
+    "p_over_m": 10.0,
+    "lambda_fs_Mpc": 0.0035999299743523644
+   },
+   {
+    "f": 0.01,
+    "T_ann_GeV": 0.00031,
+    "p_over_m": 100.0,
+    "lambda_fs_Mpc": 0.321104139513168
+   }
+  ],
+  "Mcut_Msun": {
+   "lambda=1e-12 Mpc": 2.079179366480205e-26,
+   "lambda=1e-09 Mpc": 2.0791793664802056e-17,
+   "lambda=6e-06 Mpc": 4.491027431597244e-06,
+   "lambda=0.03 Mpc": 561378.4289496553,
+   "lambda=0.1 Mpc": 20791793.664802056
+  },
+  "beta_energy_bound": {
+   "e_hom_codex_density": 0.9442,
+   "e_Q_1e5": 0.8183521206538341,
+   "e_Q_6e5": 0.6963190140390833,
+   "beta_max": [
+    0.5545846471175072,
+    0.8437863161963397
+   ],
+   "note": "[E] upper bound if all released binding energy went into Q-ball bulk motion; most goes to X/phi waves; not computed"
+  },
+  "lyman_alpha_reference": "[R] thermal-WDM bounds m_WDM >~ 3-5 keV correspond to lambda_fs ~ 0.03-0.1 Mpc; halo-scale probes reach ~1e7-1e8 Msun"
+ },
+ "5_self_interaction": {
+  "label": "[D/C/E] geometric Q-ball contact cross-section pi(R1+R2)^2 (band: half-charge to R90 radii); elementary threshold Born amplitudes",
+  "qball_population_v1TeV": {
+   "binding threshold": {
+    "Q": 17660.386164742053,
+    "e": 0.99999644352315,
+    "M_GeV": 1766032.3355987498,
+    "M_g": 3.1482352033784673e-18,
+    "M_Msun": 1.5832891068823848e-51,
+    "R90_cm": 1.029448313858451e-15,
+    "sigma_over_m_cm2_g": [
+     1.2180487979630368e-12,
+     4.23011122185746e-12
+    ]
+   },
+   "archived": {
+    "Q": 39944.0,
+    "e": 0.9110860950748777,
+    "M_GeV": 3639242.2981670923,
+    "M_g": 6.487531675250548e-18,
+    "M_Msun": 3.2626654517285796e-51,
+    "R90_cm": 1.0070455388683517e-15,
+    "sigma_over_m_cm2_g": [
+     6.465809882562439e-13,
+     1.9643939709779394e-12
+    ]
+   },
+   "Codex endpoint charge-weighted (fine 10%)": {
+    "Q": 618530.0,
+    "e": 0.6963167458428593,
+    "M_GeV": 43069279.680618376,
+    "M_g": 7.677788211545115e-17,
+    "M_Msun": 3.8612612003208094e-50,
+    "R90_cm": 1.9290570342121788e-15,
+    "sigma_over_m_cm2_g": [
+     2.9055698887787964e-13,
+     6.090653207485522e-13
+    ]
+   },
+   "Codex endpoint largest (fine 5%)": {
+    "Q": 1519910.0,
+    "e": 0.6604120836035519,
+    "M_GeV": 100376692.99898747,
+    "M_g": 1.7893751554157498e-16,
+    "M_Msun": 8.999004231499118e-50,
+    "R90_cm": 2.577161784909034e-15,
+    "sigma_over_m_cm2_g": [
+     2.7545610049060584e-13,
+     4.66435746853596e-13
+    ]
+   }
+  },
+  "elementary": {
+   "XX_to_XX": {
+    "M_threshold": 0.036000000000000004,
+    "sigma_cm2": 1.2549261978812964e-37,
+    "sigma_over_m": 7.039627286646339e-16
+   },
+   "hh_to_hh": {
+    "M_threshold": 0.24,
+    "sigma_cm2": 2.7887248841806577e-36,
+    "sigma_over_m": 1.106170709202996e-14
+   }
+  },
+  "sidm_scale_change": {
+   "archived Q=39,944": {
+    "sigma_over_m_v1TeV": [
+     6.465809882562439e-13,
+     1.9643939709779394e-12
+    ],
+    "v_for_1cm2g_GeV": [
+     0.08647176234254249,
+     0.12523994383513892
+    ],
+    "v_for_0p1cm2g_GeV": [
+     0.18629776449896623,
+     0.2698212795760681
+    ]
+   },
+   "Codex endpoint cw mean Q=6.2e5": {
+    "sigma_over_m_v1TeV": [
+     2.905570567870573e-13,
+     6.090739430380194e-13
+    ],
+    "v_for_1cm2g_GeV": [
+     0.06623341418717128,
+     0.08476632209598926
+    ],
+    "v_for_0p1cm2g_GeV": [
+     0.1426955651640917,
+     0.1826235048700154
+    ]
+   },
+   "binding threshold": {
+    "sigma_over_m_v1TeV": [
+     1.2180487979630368e-12,
+     4.23011122185746e-12
+    ],
+    "v_for_1cm2g_GeV": [
+     0.10679597766308295,
+     0.1617275206908291
+    ],
+    "v_for_0p1cm2g_GeV": [
+     0.2300849590332161,
+     0.3484313809091715
+    ]
+   }
+  },
+  "sidm_point_consistency": {
+   "v_GeV": 0.15,
+   "r_allDM": 373.49733912520577,
+   "T_n_GeV": 4.128247613270031
+  },
+  "sidm_reference": "[R] cluster/Bullet bounds sigma/m <~ 0.1-1 cm^2/g; dwarf-scale preferences up to O(1-10) cm^2/g; forecasts ~0.01-0.1 cm^2/g"
+ },
+ "6_lensing": {
+  "label": "[C/E]",
+  "qball_mass_range_v1TeV_Msun": [
+   1.5832891068823848e-51,
+   5.0436220016526625e-42
+  ],
+  "archived_mass_Msun": 3.2626654517285796e-51,
+  "causal_upper_bound_all_DM_in_one_horizon": [
+   {
+    "T_Q_GeV": 440000.0,
+    "Q_horizon": 4.842026451608967e+27,
+    "M_horizon_Msun": 2.4411177595923603e-28
+   },
+   {
+    "T_Q_GeV": 1000.0,
+    "Q_horizon": 4.124631812538583e+35,
+    "M_horizon_Msun": 2.079441752331156e-20
+   },
+   {
+    "T_Q_GeV": 1.0,
+    "Q_horizon": 5.423137901473823e+44,
+    "M_horizon_Msun": 2.734086312066126e-11
+   }
+  ],
+  "lensing_reference": "[R] microlensing (HSC, EROS/OGLE) probes ~1e-11 to 10 Msun; femtolensing claims ~1e-16-1e-13 Msun (disputed)",
+  "gap_decades": 25.297257469432008
+ },
+ "7_Neff_BBN": {
+  "label": "[D/E]",
+  "cold_class": {
+   "440000.0": {
+    "rho_h_over_rho_rad": 1.3253383307340142e-15,
+    "DeltaNeff_if_all_hidden_energy_became_radiation_at_T": 3.78889017497599e-15
+   },
+   "10000.0": {
+    "rho_h_over_rho_rad": 5.831488655229664e-14,
+    "DeltaNeff_if_all_hidden_energy_became_radiation_at_T": 1.667111676989436e-13
+   },
+   "1000.0": {
+    "rho_h_over_rho_rad": 5.831488655229663e-13,
+    "DeltaNeff_if_all_hidden_energy_became_radiation_at_T": 1.6671116769894357e-12
+   }
+  },
+  "BBN": {
+   "rho_DM_over_rho_rad_at_1MeV": 5.831488655229664e-07,
+   "note": "identical to any CDM: the hidden matter is pressureless at BBN with gravity-only coupling; no injection, no portal"
+  },
+  "biased_class_symmetric_relic": {
+   "xi_kin_band": [
+    4e-05,
+    7e-05
+   ],
+   "Omega_sym_h2": [
+    1.7408000000000003e-05,
+    9.329599999999997e-05
+   ],
+   "DeltaNeff_hidden_bath_at_BBN_upper": "~ (4/7)(g_h) xi^4 ... < 1e-15 (all hidden species massive >= 100 GeV (v/TeV); none relativistic at BBN)"
+  },
+  "reference": "[R/RETRO] Planck N_eff = 2.99 +- 0.17; CMB-S4 forecast sigma ~ 0.03"
+ },
+ "8_gravitational_waves": {
+  "relic_safe_bound_f=1": [
+   {
+    "T_ann_GeV": 0.0003,
+    "rho_w_over_rho_r_max": 2.1256627015168713e-06,
+    "Omega_gw_h2_today_max": 3.712800631553176e-18,
+    "f_peak_Hz": 2.926906949379511e-11
+   },
+   {
+    "T_ann_GeV": 0.001,
+    "rho_w_over_rho_r_max": 5.831488655229662e-07,
+    "Omega_gw_h2_today_max": 2.4665021973015447e-19,
+    "f_peak_Hz": 1.1355832476369235e-10
+   },
+   {
+    "T_ann_GeV": 0.01,
+    "rho_w_over_rho_r_max": 5.831488655229662e-08,
+    "Omega_gw_h2_today_max": 2.466502197301545e-21,
+    "f_peak_Hz": 1.1355832476369236e-09
+   },
+   {
+    "T_ann_GeV": 0.1,
+    "rho_w_over_rho_r_max": 5.831488655229662e-09,
+    "Omega_gw_h2_today_max": 2.3431563325044137e-23,
+    "f_peak_Hz": 1.1650889890252415e-08
+   },
+   {
+    "T_ann_GeV": 1.0,
+    "rho_w_over_rho_r_max": 5.831488655229662e-10,
+    "Omega_gw_h2_today_max": 1.3772264054313157e-25,
+    "f_peak_Hz": 1.5196971886285212e-07
+   },
+   {
+    "T_ann_GeV": 100.0,
+    "rho_w_over_rho_r_max": 5.831488655229663e-12,
+    "Omega_gw_h2_today_max": 1.2223911042863766e-29,
+    "f_peak_Hz": 1.613075295905619e-05
+   },
+   {
+    "T_ann_GeV": 10000.0,
+    "rho_w_over_rho_r_max": 5.831488655229663e-14,
+    "Omega_gw_h2_today_max": 1.1475237960519115e-33,
+    "f_peak_Hz": 0.0016648644517713454
+   }
+  ],
+  "relic_safe_bound_f=0.1": [
+   {
+    "T_ann_GeV": 0.0003,
+    "rho_w_over_rho_r_max": 2.125662701516871e-05,
+    "Omega_gw_h2_today_max": 3.7128006315531743e-16,
+    "f_peak_Hz": 2.926906949379511e-11
+   },
+   {
+    "T_ann_GeV": 0.001,
+    "rho_w_over_rho_r_max": 5.831488655229661e-06,
+    "Omega_gw_h2_today_max": 2.4665021973015445e-17,
+    "f_peak_Hz": 1.1355832476369235e-10
+   },
+   {
+    "T_ann_GeV": 0.01,
+    "rho_w_over_rho_r_max": 5.831488655229661e-07,
+    "Omega_gw_h2_today_max": 2.4665021973015437e-19,
+    "f_peak_Hz": 1.1355832476369236e-09
+   },
+   {
+    "T_ann_GeV": 0.1,
+    "rho_w_over_rho_r_max": 5.83148865522966e-08,
+    "Omega_gw_h2_today_max": 2.3431563325044124e-21,
+    "f_peak_Hz": 1.1650889890252415e-08
+   },
+   {
+    "T_ann_GeV": 1.0,
+    "rho_w_over_rho_r_max": 5.831488655229661e-09,
+    "Omega_gw_h2_today_max": 1.3772264054313153e-23,
+    "f_peak_Hz": 1.5196971886285212e-07
+   },
+   {
+    "T_ann_GeV": 100.0,
+    "rho_w_over_rho_r_max": 5.831488655229661e-11,
+    "Omega_gw_h2_today_max": 1.2223911042863763e-27,
+    "f_peak_Hz": 1.613075295905619e-05
+   },
+   {
+    "T_ann_GeV": 10000.0,
+    "rho_w_over_rho_r_max": 5.831488655229661e-13,
+    "Omega_gw_h2_today_max": 1.147523796051911e-31,
+    "f_peak_Hz": 0.0016648644517713454
+   }
+  ],
+  "relic_safe_bound_f=0.01": [
+   {
+    "T_ann_GeV": 0.0003,
+    "rho_w_over_rho_r_max": 0.00021256627015168715,
+    "Omega_gw_h2_today_max": 3.7128006315531767e-14,
+    "f_peak_Hz": 2.926906949379511e-11
+   },
+   {
+    "T_ann_GeV": 0.001,
+    "rho_w_over_rho_r_max": 5.831488655229663e-05,
+    "Omega_gw_h2_today_max": 2.4665021973015456e-15,
+    "f_peak_Hz": 1.1355832476369235e-10
+   },
+   {
+    "T_ann_GeV": 0.01,
+    "rho_w_over_rho_r_max": 5.831488655229663e-06,
+    "Omega_gw_h2_today_max": 2.4665021973015458e-17,
+    "f_peak_Hz": 1.1355832476369236e-09
+   },
+   {
+    "T_ann_GeV": 0.1,
+    "rho_w_over_rho_r_max": 5.831488655229662e-07,
+    "Omega_gw_h2_today_max": 2.3431563325044136e-19,
+    "f_peak_Hz": 1.1650889890252415e-08
+   },
+   {
+    "T_ann_GeV": 1.0,
+    "rho_w_over_rho_r_max": 5.831488655229662e-08,
+    "Omega_gw_h2_today_max": 1.3772264054313157e-21,
+    "f_peak_Hz": 1.5196971886285212e-07
+   },
+   {
+    "T_ann_GeV": 100.0,
+    "rho_w_over_rho_r_max": 5.831488655229661e-10,
+    "Omega_gw_h2_today_max": 1.2223911042863762e-25,
+    "f_peak_Hz": 1.613075295905619e-05
+   },
+   {
+    "T_ann_GeV": 10000.0,
+    "rho_w_over_rho_r_max": 5.831488655229663e-12,
+    "Omega_gw_h2_today_max": 1.1475237960519115e-29,
+    "f_peak_Hz": 0.0016648644517713454
+   }
+  ],
+  "benchmark_v1TeV_HKS": [
+   {
+    "case": "T_safe f=1 (30.6 MeV) [Q]",
+    "T_ann_GeV": 0.0306,
+    "Omega_gw_h2_today": 2.9915965453973146e-22,
+    "f_peak_Hz": 3.4748847377689863e-09,
+    "note": ""
+   },
+   {
+    "case": "T_safe f=0.1 (3.3 MeV) [Q]",
+    "T_ann_GeV": 0.0033,
+    "Omega_gw_h2_today": 2.2117343832272063e-18,
+    "f_peak_Hz": 3.747424717201848e-10,
+    "note": ""
+   },
+   {
+    "case": "T_safe f=0.01 (0.31 MeV) [Q]",
+    "T_ann_GeV": 0.00031,
+    "Omega_gw_h2_today": 6.478968982148336e-14,
+    "f_peak_Hz": 3.0415451792044314e-11,
+    "note": ""
+   },
+   {
+    "case": "charge-forced exit ~ T_n(r=0.06) ~ 500 TeV",
+    "T_ann_GeV": 500000.0,
+    "Omega_gw_h2_today": 1.9662081217569243e-52,
+    "f_peak_Hz": 0.08324322258856727,
+    "note": "decays at formation are sub-horizon: Omega lower by (H R)^2-ish, frequency higher by 1/(H R)"
+   },
+   {
+    "case": "free-streaming gas exit > 2.6e7 GeV",
+    "T_ann_GeV": 26000000.0,
+    "Omega_gw_h2_today": 2.6891567086632075e-59,
+    "f_peak_Hz": 4.3286475746054975,
+    "note": "decays at formation are sub-horizon: Omega lower by (H R)^2-ish, frequency higher by 1/(H R)"
+   }
+  ],
+  "scaling": "[D] Omega_gw(T_ann) ~ (3 eps/(32 pi)) (rho_w/rho_r)^2; relic safety caps rho_w/rho_r independent of v, so Omega_gw h^2 <~ 1.6e-19 f^-2 (MeV/T_ann)^2 (g* factors aside)",
+  "detector_reference": "[R] NANOGrav-15 signal ~1e-9-1e-8 at 2e-9-3e-8 Hz; SKA-PTA ~1e-13-1e-12; LISA ~1e-13-1e-12 at mHz; ET/CE ~1e-13-1e-12 at 10-100 Hz; BBO/DECIGO ~1e-17-1e-16 at 0.1-1 Hz",
+  "fragmentation_GW_cold_class": {
+   "rho_h_over_rho_r_at_T_Q": 1.3253383307340142e-15,
+   "Omega_gw_upper": "< (rho_h/rho_r)^2 ~ 1e-25 at emission, times (H/m)^2 suppression: unobservable [E]"
+  }
+ },
+ "9_PBH_minority_domains": {
+  "quoted_minority_relic": "[Q] late minority domains re-entering after T_dom = 7.97 keV dominate their patch: black-hole/baby-universe candidates of >= 4 pi M_P^4/sigma = 4.2e9 Msun (v/TeV)^-3; none per Hubble volume if H_inf <~ 206-258 GeV; mass density <= Omega_DM if <~ 301-533 GeV; cold class allows H_inf up to 314-560 GeV (f=1)",
+  "M_min_Msun_formula": 4203141196.352767,
+  "tensor_to_scalar_at_H_inf": {
+   "150.0": 3.6608364996637216e-25,
+   "250.0": 1.0168990276843671e-24,
+   "560.0": 5.1023925613090804e-24
+  },
+  "note": "Abundance changes ~1 decade per 1-3 % in H_inf [Q]; H_inf cannot be calibrated independently (r_t ~ 1e-25); BH fraction not computed; signal generic to any exact-Z2 wall sector with the same sigma"
+ },
+ "10_portal_estimate": {
+  "label": "[E] Higgs portal kappa |H|^2 phi^2 (a versioned change of a matching choice, NOT adopted): SM -> hidden rate ~ 2e-3 kappa^2 T",
+  "kappa_thermalizes_at_Tc": 1.0468279172115505e-06,
+  "statement": "A portal large enough for direct/collider detection (kappa ~ 1e-3-1e-2 [R]) thermalizes the hidden sector above T_c if T_RH > T_c ~ 1.56 v, i.e. produces the rejected H-star-type history unless reheating stays below T_c"
+ }
+}

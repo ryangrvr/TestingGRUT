@@ -1,0 +1,119 @@
+{
+ "track": "v_wbound",
+ "verifies": "audit/wbound",
+ "date": "2026-10-21",
+ "verdicts": [
+  {
+   "id": "V1",
+   "claim": "trace identity 3p-rho = sum fdot^2 - sum (grad f)^2 - 4U = T^mu_mu",
+   "verdict": "CONFIRMED",
+   "reason": "sympy with complex X, Hilbert-form T: residual 0",
+   "source": "algebra_check.json"
+  },
+  {
+   "id": "V2",
+   "claim": "Phi_{+v} = -lam v (phi-v)^2 (phi+v) (phi only) <= 0 for phi >= -v",
+   "verdict": "CONFIRMED",
+   "reason": "residual 0, factored form reproduced",
+   "source": "algebra_check.json"
+  },
+  {
+   "id": "V3",
+   "claim": "X: pointwise worse for +v origin; exact criterion X-free; X lowers max wbar",
+   "verdict": "CORRECTED",
+   "reason": "Phi_0 has no X and the pointwise |X|^2 bound is confirmed; 'X lowers max wbar' holds only above the barrier (wbound zero_d e=0.5: -0.017 vs -0.066; e=0.95: -0.063 vs -0.276); targeted 37-state scan above barrier: all below phi-only; 'no' is [C] not [T]",
+   "source": "homog_check.json, wbound zero_d.json"
+  },
+  {
+   "id": "V4",
+   "claim": "Codex: instantaneous w <= 1/3 not a theorem at small mean density",
+   "verdict": "CONFIRMED",
+   "reason": "w=1 kick; radial lumps wbar_T(t=1)=0.97-0.98, below 1/3 by t=5-7",
+   "source": "radial_lump.json"
+  },
+  {
+   "id": "V5",
+   "claim": "Codex needs state family; wbound 'supplied exactly' via FRW budget",
+   "verdict": "CORRECTED",
+   "reason": "identity exact (sympy; homogeneous FRW closure 1.9e-11 to 3.0e-9), bound (2/sqrt3)v/M_P = 4.74e-16 confirmed; but it is an exact reduction to one inequality that stays [A] for the post-parity network, not a justified state family; weight is a^4 dln a",
+   "source": "algebra_check.json, homog_check.json"
+  },
+  {
+   "id": "V6",
+   "claim": "Claude wbar<=1/3 holds as Hubble integral iff <phi^2> condition",
+   "verdict": "CONFIRMED",
+   "reason": "as stated; but 'can fail only through coherent over-barrier regions' is [A] (global identity, local flux terms)",
+   "source": "NOTES"
+  },
+  {
+   "id": "V7",
+   "claim": "'only coherent both-vacua oscillations' too strong",
+   "verdict": "CORRECTED",
+   "reason": "wbound's counterexamples are coherent over-barrier oscillations or the collision-instant overshoot; T1 makes both signs necessary; post-collision debris local wbar -0.045..+0.016; valid corrections: time-average qualifier, 0.4415 is homogeneous phi-only max not a proven bound, hot-plasma route [E]",
+   "source": "collide_1d.json"
+  },
+  {
+   "id": "V8",
+   "claim": "'30 orders above parity so cannot occur' refuted as argument",
+   "verdict": "CONFIRMED",
+   "reason": "mean-density inference invalid (wall cores 2.7-4.0e30 rho_h(par)); production of time-averaged wbar>1/3 states by walls not shown",
+   "source": "collide_1d.json, wbound cosmo_numbers.json"
+  },
+  {
+   "id": "V9",
+   "claim": "eps* = 0.58768 lam v^4 = 5.9e9 GeV^4 (not 0.0225 v^4)",
+   "verdict": "CONFIRMED",
+   "reason": "ODE: 0.587678, amp 1.59160; max 0.441506 at 2.12703 lam v^4",
+   "source": "homog_check.json"
+  },
+  {
+   "id": "V10",
+   "claim": "Phi_{+v}<=0 for phi>0 => time-averaged wbar<=1/3",
+   "verdict": "CONFIRMED",
+   "reason": "each term <= 0",
+   "source": "algebra_check.json"
+  },
+  {
+   "id": "V11",
+   "claim": "walls: int(3p-rho)dz = -3 sigma/gamma, w = u^2 - 2/3",
+   "verdict": "CONFIRMED",
+   "reason": "lab-frame sympy exact",
+   "source": "algebra_check.json"
+  },
+  {
+   "id": "V12",
+   "claim": "von Laue / quanta",
+   "verdict": "CONFIRMED",
+   "reason": "standard divergence argument; not recomputed",
+   "source": "-"
+  },
+  {
+   "id": "V13",
+   "claim": "rho_h/rho_1nu >= 7.447",
+   "verdict": "CONFIRMED",
+   "reason": "7.4472 (7.4032 for N_eff 3)",
+   "source": "algebra_check.json"
+  },
+  {
+   "id": "V14",
+   "claim": "Codex DERIVATION \u00a73 omits -2G",
+   "verdict": "CONFIRMED",
+   "reason": "DERIVATION.md l.81 vs l.30-31; code correct",
+   "source": "git show a69bd86"
+  },
+  {
+   "id": "V15",
+   "claim": "Codex 12 runs: w<=0.140, rho a^4 x5.8-6.8 monotone",
+   "verdict": "CORRECTED",
+   "reason": "w_max 0.140 and monotone confirmed; cold_s101 x2.371 (others 5.80-6.83)",
+   "source": "codex_eos_check.json"
+  },
+  {
+   "id": "V16",
+   "claim": "outside-F states are produced locally after parity",
+   "verdict": "CORRECTED",
+   "reason": "T3 confirmed; production shown only for instantaneous overshoot; static wall cores have |phi|<=v, Phi_0<0",
+   "source": "collide_1d.json"
+  }
+ ]
+}

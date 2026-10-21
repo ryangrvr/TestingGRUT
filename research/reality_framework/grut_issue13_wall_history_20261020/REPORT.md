@@ -54,17 +54,26 @@ terms are defined in §9.
    sign domains left by inflation, which re-enter later.
 
 4. **Consequence of a persistent network.** We use the tree-level tension σ = 9.428×10⁷ GeV³. A scaling network
-   reaches parity with radiation at **T_par ≈ 5.8–6.4 keV** (5.45–7.34 keV across A, backreaction and convention):
+   reaches parity with radiation at **T_par ≈ 5.8–6.4 keV** (5.45–7.34 keV across A, backreaction and convention)
+   for an area-count A. Energy weighting raises T_par by a factor 1.06–1.12 (§11):
    after BBN, long before recombination. We do not extrapolate a subdominant CMB template into that era.
 
-   After parity none of the hidden sector's energy can pass to visible matter (gravity only), and the
-   energy-weighted mean w̄ of the hidden sector stays ≤ 1/3. Walls dominate with w ≈ −2/3 + ⟨v²⟩, Q-balls and
-   non-relativistic quanta have w ≈ 0, and gravitational waves and relativistic quanta have w = 1/3. Only coherent
-   oscillations spanning both vacua have w > 1/3 (up to 0.44), and they need an energy density about 30 orders of
-   magnitude above that at parity, so they cannot occur after parity. Since g_*s is constant
-   below 20 keV, visible radiation scales as a⁻⁴. The hidden energy at recombination is therefore at least ρ_rad,
-   equivalent to **ΔN_eff ≥ 7.4** if it were free-streaming radiation (the least constraining case; w̄ < 1/3 is
-   more constraining). Planck 2018 gives N_eff = 2.99 ± 0.17 (recalled; retrospective).
+   After parity none of the hidden sector's energy can pass to visible matter (gravity only). For a statistically
+   homogeneous closed hidden sector in FRW there is an exact identity (§11):
+   Δ(ρ_h a⁴) = −∫ H a⁴ ⟨Φ₀⟩ dt + boundary terms, with Φ₀ = λ_φ v²(φ² − v²) − m_D0² D². The boundary terms are
+   ≤ 4.7×10⁻¹⁶ per e-fold at parity. So ρ_h a⁴ does not decrease from parity to recombination if and only if the
+   a⁴ d ln a–weighted spatial mean of φ² stays ≤ v² + (m_D0²/λ_φ v²)⟨D²⟩.
+   - This is proven for states in which φ keeps one sign or |φ| ≤ v.
+   - It is computed to hold for walls (w = ⟨v²⟩_E − 2/3), waves, massive quanta (w < 1/3), lumps, Q-matter (w ≈ 0),
+     and all lattice states examined, including Codex's 12 runs (w ≤ 0.140 at every sample).
+   - It is argued [A], not proven, for the post-parity network.
+
+   Instantaneous w > 1/3 states exist, even at small mean density (Codex), but they are transient: for an isolated
+   configuration of radius R₀ the excess decays on the light-crossing time R₀. Since g_*s is constant below 20 keV,
+   visible radiation scales as a⁻⁴. Under the condition above, the hidden energy at recombination is at least ρ_rad,
+   a **radiation-equivalent energy ratio ρ_h/ρ_1ν ≥ 7.45**. This is conditional, and it is not a Planck N_eff
+   likelihood: a wall or matter stress needs its own perturbation treatment, and w̄ = 1/3 gives only the minimum
+   energy ratio. Planck 2018's N_eff = 2.99 ± 0.17 (recalled; retrospective) is quoted for scale.
 
    The H₀ implied by such a history given T_CMB exceeds the measured value by **R_H ≈ 2×10⁵–2×10⁹** (post-domination
    law bracketed). After parity the metric would also be O(1)-inhomogeneous on horizon scales, which we expect to be
@@ -265,7 +274,8 @@ statistical finite-volume asymmetry cannot remove the network: it is bounded by 
 **Observable.** It is defined in this packet. All data were known in advance and there is no separate test set; the
 magnitude is conditional on the benchmark v = 1 TeV and the tree tension.
 - (a) T_par: 5.8 keV without backreaction, 6.37 keV with it (5.45–7.34 keV).
-- (b) Recombination bound: ρ_hidden ≥ ρ_rad (w̄ ≤ 1/3; §0 item 4), equivalent to ΔN_eff ≥ 7.4.
+- (b) Recombination bound: ρ_hidden ≥ ρ_rad under the φ²-mean condition of §0 item 4, i.e. a radiation-equivalent
+  energy ratio ≥ 7.45 (conditional; not an N_eff likelihood).
 - (c) The H₀ implied given T_CMB: R_H = 1.0–2.3×10⁹ for a frozen network (ρ ∝ a⁻¹) and 2.2–3.4×10⁵ for the a⁻²
   bracket, under joint variation of A, switch point and convention.
 - Stress tests: converting the wall energy at parity gives Ω h² ≈ 10³ (stable matter) or ΔN_eff ≈ 7.4 (radiation).
@@ -331,19 +341,26 @@ Replies to specific points:
 - *"Visible reheating is not hidden thermalization."* Confirmed: gravity only, a non-thermal freeze-in gas, and a
   necessary restoration condition T_RH ≳ 9×10¹² GeV.
 - *"A subdominant CMB template cannot be extrapolated into a wall-dominated era."* Not done. We use the parity epoch,
-  energy conservation with w̄ ≤ 1/3, and the H₀–T_CMB relation.
+  the exact FRW energy identity with its φ²-mean condition (§0 item 4, §11), and the H₀–T_CMB relation.
 - *"Formation-scale labels are not σ^(1/3)."* Agreed, and reconciled explicitly (§5).
 
 Replies to Codex's cross-check of the work in progress (`41e7dad`, written before the verification rounds):
-- *Network-to-cosmology energy transfer.* Agreed. A scaling network with ⟨v²⟩ ≈ 0.456 loses energy at
-  Q ≈ 0.19 ρ_w/t, and cosmo_observable evolves no receiver for it. The receiver is hidden (φ waves, h/X/D quanta,
-  gravitational waves) with w ≤ 1/3, and gravity is the only coupling to visible matter. Hence total hidden energy ≥
-  wall energy, and the conservative bound ρ_hidden ≥ ρ_rad at recombination (ΔN_eff ≥ 7.4) is unaffected. R_H, which
-  omits the receiver, understates the hidden energy. The dilution-w closure is phenomenological, as Codex says. It is
-  used only for the R_H bracket.
-- *Area A versus energy A.* Agreed that they differ. network_sim measures wall area; moving walls carry γσ per area,
-  so the energy-weighted A is larger, by up to ≈ 12% at the one-speed γ = 1.124. Since T_par ∝ A^(1/2), parity moves
-  earlier by ≲ 6%. The direction strengthens the rejection; the exact factor was not measured.
+- *Network-to-cosmology energy transfer* (corrected 21 October, §11). For a scaling network ρ_w = A_E σ/t with wall
+  stress w = ⟨v²⟩_E − 2/3, energy conservation gives Q = [1 − Ht(1 + 3⟨v²⟩_E)] ρ_w/t. network_sim's 3D estimator gives
+  an rms speed 0.456 ± 0.006, i.e. an energy-weighted mean squared speed ⟨v²⟩_E ≈ 0.208 (calibrated for thin
+  unoccupied walls only). In radiation (Ht = ½) this gives Q ≈ 0.19 ρ_w/t, with a range 0.14–0.22 [E] covering the
+  measured area-density exponents and the one-sided estimator bias. Reading 0.456 itself as ⟨v²⟩ would reverse the
+  sign. cosmo_observable evolves no receiver for this energy. The receiver is hidden and gravity is the only coupling
+  to visible matter, so the energy stays in the hidden sector. The recombination bound then rests on the exact
+  identity of §0 item 4, and the R_H bracket remains phenomenological.
+- *Area A versus energy A* (corrected 21 October, §11). network_sim and HKS (arXiv:1309.5001, Eqs. 12–14) count
+  wall area; a wall element moving at normal speed v carries γσ per area. With the energy-weighted ⟨v²⟩_E = 0.208,
+  E/(σA) = 1/⟨(1 − v²)^(1/2)⟩_E lies between 1.124 (all walls at one speed, a lower bound under any weighting) and
+  1.263 (walls at rest plus near-luminal walls). Smooth unimodal speed distributions give ≈ 1.13. The energy-weighted
+  A is therefore 12–26% larger than the area A. Our earlier "up to 12%, parity ≲ 6% earlier" pointed the wrong way.
+  T_par rises by a factor 1.06–1.12: 6.37 → 6.75–7.15 keV at the central value with backreaction, 5.77–8.25 keV
+  over the full bracket. The direction strengthens the rejection. The estimator is not calibrated for charged
+  walls.
 - *X bound state on the wall* (70.71 GeV, reflectionless Pöschl–Teller l = 1). It agrees with our critic's
   calculation. Like Codex, we do not treat it as a capture rate or a charged-wall solution. The charged-exit
   simulations measure charge on walls directly (15–37%).
@@ -442,3 +459,56 @@ Corrections carried into this report:
 
 Each module has its own command in its NOTES.md. `python3 code/history.py` assembles the histories in about 1 s.
 `python3 code/verify.py` checks the manifest hashes, replays `history.py`, and runs the cross-module checks.
+
+## 11. Corrections of 21 October 2026 (after Codex `a69bd86` and Claude's audit)
+
+Codex's independent 3D cross-check (`a69bd86`) and Claude's audit of it (`research/reality_framework/
+grut_issue13_3d_review_20261021/REVIEW.md`) led to these corrections. The sections above were edited only where a
+statement was wrong; everything else stands.
+
+1. **Wall speed label.** 0.456 is the rms speed. The energy-weighted mean squared speed is ⟨v²⟩_E = 0.208 (thin
+   unoccupied walls; the estimator reads high at dx = δ/2 by a few percent to ≈ 20%, one-sided). The energy loss of a
+   scaling network is Q ≈ 0.19 ρ_w/t (0.14–0.22 [E]).
+2. **Lorentz weighting.** E/(σA) ∈ [1.124, 1.263], and ≈ 1.13 for smooth speed distributions. T_par rises by a
+   factor 1.06–1.12. "Up to 12%" and "≲ 6% earlier" are withdrawn.
+3. **Equation of state after parity.** "w̄ ≤ 1/3 for every hidden component" and the "30 orders of magnitude"
+   mean-density argument are withdrawn.
+   - They are replaced by the exact FRW identity of §0 item 4, with its single φ²-mean condition. That condition is
+     proven for one-sign and |φ| ≤ v states, computed for walls, waves, quanta, lumps, Q-matter and all examined
+     lattice states, and argued for the post-parity network.
+   - The homogeneous threshold for w̄ > 1/3 is ε* = 0.588 λ_φ v⁴ (amplitude 1.59 v), with maximum w̄ = 0.4415.
+   - The FRW treatment itself is limited by the O(1) horizon-scale inhomogeneity expected after parity.
+4. **Radiation-equivalent ratio.** "ΔN_eff ≥ 7.4" is a radiation-equivalent energy ratio ρ_h/ρ_1ν ≥ 7.45. It is
+   conditional and not a Planck likelihood. "Least constraining case" is withdrawn.
+5. **Statistical versus systematic bias** (bias_threshold §5). "Finite-volume fluctuations cannot remove a network"
+   holds only for dense, short-range-correlated ensembles, whose box-scale amplitude falls as (ξ/R)^(3/2).
+   - Within a periodic box a realization's k = 0 component acts exactly like a systematic bias.
+   - Preparations with box-coherent Z₂-odd structure select one vacuum with finite probability at every box size.
+     Codex's 64-mode family does so in about 13–18% of seeds, through a second-order S zero mode sourced by the S–X
+     cross-correlation and amplified by an infrared gap.
+   - For a thermal dense spectrum the analogue is a statistical fluctuation [argued].
+6. **Bias growth in finite boxes.** In charged 3D boxes the paired exponent γ_eff depends on box size and window
+   (0.95–1.81 at L = 115.2 for start samples a₀ = 1.57–1.84). The finite-box runs therefore neither support nor test
+   γ = 1.41. The asymptotic value remains an extrapolation.
+7. **Binding threshold.** The classical binding threshold on the archived soliton branch is Q_b = 1.77×10⁴, not the
+   thin-wall 1.3×10⁴. Conclusions are unchanged.
+8. **3D charged formation.** Codex's separate C++ implementation supports finite-time formation for dense Gaussian
+   preparations. Including two large-box seeds that Claude's audit ran, 5 of 5 dense or forming runs at L ≥ 76.8 keep
+   both vacua winding all axes to a = 2.2. Box winding at a sampled time is not a persistence indicator: three runs
+   show a winding phase later shrinking.
+9. **Empirical reach** [E; audit track `reach`]. With gravity-only coupling, take the hidden charge to be all of the
+   dark matter. This calibration fixes only e g_X v r = 5.04 GeV (r = 0.050–0.090 at v = 1 TeV; 0.053–0.077 for
+   Codex-like Q-balls). The cold class is then indistinguishable from collisionless CDM by current or planned
+   observations:
+   - σ/m is ≥ 9.4–10.4 decades below SIDM reach;
+   - free streaming is ≥ 3.7 decades below Lyman-α reach for a cold-condensate supply. Biased-class debris can come
+     within 2.8, 0.9 or −1 decades for f = 1, 0.1 or 0.01;
+   - lensing is out of reach on the per-cell estimate [E]. This is not a bound: the causal mass ceiling reaches the
+     microlensing range;
+   - the N_eff effect is ≤ 10⁻¹¹;
+   - gravitational waves from relic-safe biased networks are ≤ 4.8×10⁻²⁰ f⁻² at 2 nHz.
+
+   Late-minority-domain black holes are possibly large, but depend on an uncalibratable H_inf and are generic to Z₂
+   walls. A discriminating prediction therefore needs an owner-approved versioned change or a different scale. None
+   is adopted.
+

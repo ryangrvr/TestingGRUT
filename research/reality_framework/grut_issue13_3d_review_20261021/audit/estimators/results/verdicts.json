@@ -1,0 +1,31 @@
+{
+ "track": "estimators",
+ "codex_commit": "a69bd861e76edeb93b2f5ce02b20d8186c505a20",
+ "claude_commit": "c7b8480",
+ "verdicts": [
+  {"claim": "Codex DERIVATION 2: energy-weighted (1-s_E)^-1/2 <= E/(sigma A) <= (1-s_E)^-1", "verdict": "CONFIRMED",
+   "value": "lower attained by one speed; upper approached by {rest, v->1} two-point, not attained for v<1; LP R_min 1.123621, R_max 1.262193"},
+  {"claim": "Codex DERIVATION 2: no upper bound at fixed area-weighted s_A; mixture with v=0.99 gives 2.29179", "verdict": "CONFIRMED",
+   "value": "2.291790; 5.45, 15.5, 147.8 for v_fast 0.999, 0.9999, 0.999999"},
+  {"claim": "Codex: interval 1.12362-1.26252 at s=0.456^2", "verdict": "CONFIRMED", "value": "1.123621-1.262524"},
+  {"claim": "Codex: ratio Sdot^2/|grad S|^2 measures energy-weighted v^2 for unoccupied planar walls", "verdict": "CONFIRMED",
+   "value": "lattice kinks dx=delta/8: estimator/s_E-1 = +0.4..+4.8%; vs s_A +11..+44% (mixtures)"},
+  {"claim": "Codex: 0.456 is rms speed, mean squared ~0.208", "verdict": "CONFIRMED",
+   "value": "v_rms_win = sqrt(window mean of per-output ratio of sums); energy-weighted; seeds 0.4559/0.4624/0.4500"},
+  {"claim": "Codex: Q=[1-Ht(1+3<v^2>)]rho_w/t gives 0.188 rho_w/t at <v^2>=0.208, Ht=1/2", "verdict": "CONFIRMED", "value": "0.188096"},
+  {"claim": "Codex: 0.456 taken as <v^2> reverses the sign", "verdict": "CONFIRMED", "value": "-0.184; sign change at <v^2>=1/3"},
+  {"claim": "Claude REPORT:338 '<v^2> ~ 0.456 ... Q ~ 0.19 rho_w/t'", "verdict": "CORRECTED", "value": "rms 0.456, <v^2>_E 0.208; Q~0.19 number stands"},
+  {"claim": "Claude REPORT:345-346 'up to ~12% at one-speed gamma=1.124; parity earlier by <~6%'", "verdict": "REFUTED",
+   "value": "A_E/A = 1.124-1.263 (12-26%); T_par factor 1.060-1.124; T_par 5.45-7.34 -> 5.77-8.25 keV"},
+  {"claim": "Codex: charged-state core velocity proxies exceed one", "verdict": "CONFIRMED",
+   "value": "final v2_core 1.25-1.27 (s101 family), 3.19 (large_s101); all 11 charged runs >1 before formation (max 3.2-10.3); Gaussian first post-formation sample 2.15-2.27"},
+  {"claim": "Codex: proxy >1 diagnoses thin-wall estimator failure, not superluminal propagation", "verdict": "CONFIRMED",
+   "value": "linear modes give omega^2/k^2>1; oscillating restored cores; homogeneous oscillation gives unbounded ratio"},
+  {"claim": "Codex kernel calibrations 1, 11/16, 4/5", "verdict": "CONFIRMED", "value": "analytic"}
+ ],
+ "new_findings": [
+  "network_sim estimator at dx=delta/2: 1D axis-aligned lattice kinks read +20..+27% high in v^2 vs measured s_E; 3D PRS dx 1 vs 0.5 same field agree -3.6..+1.5%; discretisation uncertainty of <v^2>_E not established [E]",
+  "Off-scaling Q coefficient (-mu-3<v^2>_E)/2 = 0.136-0.176 for mu = -0.896..-0.975 [E]",
+  "Claude network_sim v2_wall also exceeds one at formation (phys 2.1-2.8, 2D PRS alpha=2 1.0-1.5); the 3D PRS 0.456 window never exceeds 0.73"
+ ]
+}

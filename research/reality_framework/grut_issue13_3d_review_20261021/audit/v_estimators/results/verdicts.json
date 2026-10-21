@@ -1,0 +1,25 @@
+{
+ "track": "v_estimators (verifies audit/estimators)",
+ "codex_commit": "a69bd861e76edeb93b2f5ce02b20d8186c505a20",
+ "claude_commit": "c7b8480",
+ "verdicts": [
+  {"claim": "Energy-weighted bounds (1-s_E)^-1/2 <= R <= (1-s_E)^-1", "verdict": "CONFIRMED", "value": "MC 4e5 distributions, 0 violations; capped two-point brute force = chord formula (1.2228 at 0.99)"},
+  {"claim": "No upper bound from s_A; rest+0.99 mix R=2.29179", "verdict": "CONFIRMED", "value": "2.291790; s_E of mix 0.6432"},
+  {"claim": "Interval 1.123621-1.262524 at s=0.456^2", "verdict": "CONFIRMED", "value": "1.123621-1.262524; smooth unimodal distributions give R=1.127-1.134"},
+  {"claim": "One-speed gamma is the lower edge", "verdict": "CONFIRMED", "value": "lower edge under both area and energy weighting (Jensen)"},
+  {"claim": "Sdot^2/|grad S|^2 is energy-weighted <v^2> for isolated resolved unoccupied walls", "verdict": "CONFIRMED", "value": "3D isotropic sampled dx=0.1: +0.1..+0.3% vs s_E, +11..+40% vs s_A"},
+  {"claim": "0.456 is rms; <v^2>_E = 0.208", "verdict": "CONFIRMED", "value": "seeds 0.455920/0.462422/0.449998; mean v^2 0.208065; window v2 0.1941-0.2178"},
+  {"claim": "Q=[1-Ht(1+3<v^2>_E)]rho_w/t, 0.188 in radiation", "verdict": "CONFIRMED", "value": "sympy from boosted stress; 0.188096"},
+  {"claim": "0.456 as <v^2> reverses sign", "verdict": "CONFIRMED", "value": "-0.184"},
+  {"claim": "Claude REPORT:338-339 CORRECTED (label)", "verdict": "CONFIRMED", "value": "number right, label wrong"},
+  {"claim": "Claude REPORT:345-346 REFUTED", "verdict": "CONFIRMED", "value": "bound direction wrong under either weighting; realistic R ~1.13 close to Claude's number"},
+  {"claim": "T_par shifts 5.822->6.171-6.542 (no br), 6.367->6.749-7.154 (br); bracket 5.446-7.344 -> 5.773-8.252", "verdict": "CONFIRMED", "value": "rerun; ratio = R^(1/2) in all 12 rows"},
+  {"claim": "Discretisation uncertainty of <v^2>_E 'few % to ~20%'", "verdict": "CORRECTED", "value": "one-sided (reads high); isotropic sampled +9.7% (dx=1), +2.4% (dx=0.5); evolved (1,1,1) +5.4%, (1,1,0) +8.7%, (1,0,0) +20.6% vs measured lattice speed; 3D pair -3.6..+1.5% (mean -0.8%) shows no trend; continuum s_E ~0.19-0.21 [E]; Q up to ~0.22, R_lo down to ~1.11"},
+  {"claim": "Off-scaling Q 0.136-0.176", "verdict": "CONFIRMED", "value": "0.1361/0.1756"},
+  {"claim": "HKS A = 0.8 is an area count (track: NOT CHECKED)", "verdict": "CONFIRMED", "value": "1309.5001 Eqs. 12-14 link counting x sigma_wall; Eq. 29"},
+  {"claim": "Codex charged proxies >1; final values; pre-formation maxima 3.2-10.3", "verdict": "CONFIRMED", "value": "raw CSVs = RESULTS.json; 3.24-10.31 at a=1.51-1.90; first >1 at a=1.03-1.06"},
+  {"claim": "box K_phi/G_phi oscillates 0.5-3.3", "verdict": "CORRECTED", "value": "0.27-7.83 across forming runs (Gaussian 0.69-7.83)"},
+  {"claim": "network_sim v2_wall >1 at formation: phys 2.1-2.8, 2D PRS a2 1.0-1.5; 3D PRS <=0.73", "verdict": "CONFIRMED", "value": "2.09-2.78; 1.003-1.495; 0.689-0.727"},
+  {"claim": "Kernel 1, 11/16, 4/5", "verdict": "CONFIRMED", "value": "quadrature"}
+ ]
+}

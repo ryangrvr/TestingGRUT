@@ -1,0 +1,97 @@
+{
+ "track": "v_reach",
+ "verifies": "reach",
+ "verdicts": [
+  {
+   "claim": "relic_yield retrospective r_max = 0.0897 (omega_h <= 0.12), CONFIRMED by reach",
+   "verdict": "CONFIRMED",
+   "reason": "Own s0 = 2891.2 cm^-3, Y_B = 8.6734e-11: (E/Q) r = 5.0422 GeV; with e = m*/m_X = 0.56234, r = 0.089664; omega_asym = 1.33832 r. It is a rigorous upper edge because any hidden state has e_eff >= m*.",
+   "independent_value": "0.089664",
+   "source": "v_cosmo.py; results/v_cosmo.json"
+  },
+  {
+   "claim": "reach: all-DM calibration fixes only e*gX*v*r = 5.042 GeV; r in [0.0504, 0.0897]; Codex-like cold Q-balls need 0.055-0.071 (correcting the 'r ~ 0.09' framing)",
+   "verdict": "CORRECTED",
+   "reason": "Product and band edges reproduced (5.0422 GeV; 0.05042-0.08966), so 'r ~ 0.09' is indeed only the Q-matter edge. But (i) released binding energy stays as stable hidden h / X quanta (m_h < 2 m_X, XX->hh closed, no massless state), so e_eff lies between the Q-ball value and the supplied state's e (0.9442 at the Codex density); (ii) the charge-weighted Codex lump is Q = 6.19e5 (e = 0.6958, r = 0.0725) and the largest Q = 1.52e6 (e = 0.6593, r = 0.0765), while the track used e(5e5). Codex-like range is 0.053-0.077. The lower edge 0.0504 holds only if the hidden density is the net charge alone.",
+   "independent_value": "r in [0.0504, 0.0897]; Codex-like 0.053-0.077",
+   "source": "v_qball_summary.json, v_cosmo.json"
+  },
+  {
+   "claim": "reach: thin-wall binding threshold Q ~ 1.3e4 [E] (charge_phase) corrected to 1.77e4; dQ/dOmega < 0 over 1.65e4-5.8e5",
+   "verdict": "CONFIRMED",
+   "reason": "Independent fixed-charge energy minimisation (no archived profile, two resolutions, Richardson): e = 1 at Q = 1.766e4; thin-wall formula gives 1.34e4. Omega decreases monotonically over Q = 1.5e4-1.52e6.",
+   "independent_value": "1.766e4",
+   "source": "v_qball_min.py, v_qball_large.py, v_summary.py"
+  },
+  {
+   "claim": "Archived soliton Q = 39,944, E/(m_X Q) = 0.91108652, R90 = 5.1034",
+   "verdict": "CONFIRMED",
+   "reason": "Minimisation at fixed Qbar = 399.44 gives e = 0.9110861 (4e-7 off) and Omega = 0.80000; R90 5.098 with a cell-based energy cumulant (convention difference ~0.1%).",
+   "independent_value": "e = 0.9110861, Omega = 0.80000",
+   "source": "v_qball_summary.json"
+  },
+  {
+   "claim": "Branch-1 fragmentation gamma_max = 0.0045/0.0448/0.1121/0.2264 at x = 0.01/0.1/0.25/0.5; k_max = 0.4035; small-x law 0.450 x, 0.949 sqrt(x)",
+   "verdict": "CONFIRMED",
+   "reason": "Linearisation re-derived by hand as a 6x6 first-order system (eigenvalues) and checked by direct 1D nonlinear lattice evolution of the full field equations (rates agree to 1e-5). Small-x closed form: attractive NR condensate, gamma = (a^2-b) x/2, k = sqrt((a^2-b) x) = 0.9487 sqrt(x).",
+   "independent_value": "0.004498/0.044849/0.11214/0.22640; k = 0.40351; 0.45 x, 0.9487 sqrt(x)",
+   "source": "v_dispersion.py; results/v_dispersion.json"
+  },
+  {
+   "claim": "Codex maser product m_X|r| < 63.93 GeV and H0 floor compatible with hidden charge = all DM; not a separate test once omega_c calibrates",
+   "verdict": "CONFIRMED",
+   "reason": "m_X r = 5.04-8.97 GeV; floor 100 sqrt(0.02233+0.120) = 37.73 km/s/Mpc. The floor and the maser envelope bound omega_h only from above.",
+   "independent_value": "5.04-8.97 GeV; 37.73 km/s/Mpc",
+   "source": "v_cosmo.json"
+  },
+  {
+   "claim": "Codex a69bd86 REVIEW: the model cannot yet make a discriminating empirical prediction because identified inputs or calculations are missing",
+   "verdict": "CONFIRMED",
+   "reason": "REVIEW.md states this verbatim; nothing found here yields a Candidate-1-specific observable. Every channel that comes near reach (biased-class debris free streaming, PTA-band GW tail, latest-supply free streaming) is controlled by [P] inputs (f, m0, T_ann, supply form, beta_i) and is generic to Z2 walls.",
+   "independent_value": "",
+   "source": "a69bd86 REVIEW.md"
+  },
+  {
+   "claim": "reach strengthening: every gravity-only channel at v ~ 1 TeV sits 3.7-25 decades below current or planned reach (SIDM >= 10.4, lambda_fs >= 3.7, M_cut >= 11, lensing >= 25, N_eff <= 1.7e-12, GW <= 2.5e-17 in PTA band)",
+   "verdict": "CORRECTED",
+   "reason": "Overstated as a uniform margin. Biased-class debris near T_safe: lambda_fs = 4.9e-5 / 3.6e-3 / 0.28 Mpc for f = 1/0.1/0.01, i.e. 2.8 / 0.9 / -1 decades from 0.03 Mpc. PTA-band GW including the f^-1 tail: <= 4.8e-16 (f = 0.01) at 2e-9 Hz, not 2.5e-17. Lensing >= 25 decades is an estimate from per-cell fragment charge; the hard causal ceiling at the fragmentation floor (1.7e-10-9.4e-10 Msun) lies inside microlensing reach. SIDM margin vs forecasts (0.01 cm^2/g) is 9.4 decades. Cold-class numbers (lambda_fs, sigma/m, M_cut, N_eff) reproduce for a cold-condensate supply.",
+   "independent_value": "cold class: 3.7-25 dec (estimates); biased class near T_safe: 2.8 to -1 dec in free streaming; GW tail <= 5e-16",
+   "source": "v_cosmo.json"
+  },
+  {
+   "claim": "reach estimate (Claude c7b8480 left GW of early-decaying networks uncomputed): Omega_gw h^2 <~ 2.5e-19 f^-2 (MeV/T_ann)^2; benchmark 3e-22 / 2e-18 / 6.5e-14 for f = 1/0.1/0.01; <= 2.5e-17 inside the PTA band",
+   "verdict": "CORRECTED",
+   "reason": "REPORT.md line 301 does say GWs were not computed. Cap coefficient reproduced (2.47e-19) and f = 1, 0.1 benchmarks reproduced (2.97e-22, 2.20e-18). f = 0.01: the track's step table has g* = 5.3 at 0.31 MeV (computed 8.98), giving 6.5e-14, which exceeds its own relic cap there; computed value 3.5e-14 at 3.4e-11 Hz. The PTA-band ceiling ignores the f^-1 UV tail of networks peaking below the band: <= 4.8e-20 f^-2 at 2e-9 Hz (benchmark f = 0.01 network: 6e-16). reach.py's text string says 1.6e-19.",
+   "independent_value": "cap 2.47e-19 f^-2 (MeV/T)^2; f=0.01 benchmark 3.5e-14; in-band <= 4.8e-16 (f=0.01)",
+   "source": "v_cosmo.json 4_GW"
+  },
+  {
+   "claim": "Claude c7b8480: a wall signal would not distinguish Candidate 1 from other Z2 sectors",
+   "verdict": "CONFIRMED",
+   "reason": "GW amplitude and frequency depend only on sigma, A, eps and T_ann; the minority-domain mass scale 4 pi M_P^4/sigma (reduced Planck mass) = 4.203e9 Msun at v = 1 TeV.",
+   "independent_value": "4.203e9 Msun",
+   "source": "v_cosmo.json 6_misc"
+  },
+  {
+   "claim": "reach: Q-ball mass function at v = 1 TeV spans Q ~ 1.8e4 -> 1e14, M 1.6e-51 -> 5e-42 Msun, radii 1e-15 -> 1e-13 cm",
+   "verdict": "CORRECTED",
+   "reason": "Masses and Q range reproduce as an [E] (floor Q_frag = 5.7e13-1.0e14). The top radius is (3Q/(4 pi n*))^(1/3) = 5.1e3 ell = 1.0e-12 cm, not 1e-13 cm. No downstream consequence (contact sigma/m ~1e-15 cm^2/g there).",
+   "independent_value": "R(1e14) = 1.0e-12 cm",
+   "source": "v_cosmo.json; closed form"
+  },
+  {
+   "claim": "reach extension: Y_Q = Y_B fixes v ~ 50-90 GeV, which is still unobservable under gravity-only coupling",
+   "verdict": "CORRECTED",
+   "reason": "v = 50.4-89.7 GeV reproduced. At the latest-supply (fragmentation-floor) corner lambda_fs = 1.2e-3-3.3e-3 Mpc for beta_i = 0.5 and up to 1.1e-2 Mpc for beta_i = 0.9, only 0.4-1.4 decades below 0.03 Mpc. 'Unobservable' is likely but depends on the uncomputed formation velocity; not established.",
+   "independent_value": "lambda_fs 1.2e-3-1.1e-2 Mpc (beta 0.5-0.9)",
+   "source": "v_cosmo.json 3_free_streaming_Mpc"
+  },
+  {
+   "claim": "reach: Codex 479f111 fine-grid 10% endpoint has 39 components holding 68% of the charge, 15 above Q_b, charge-weighted mean Q ~ 6.2e5",
+   "verdict": "CONFIRMED",
+   "reason": "Recomputed from the raw component CSVs: 39 components, 15 above Q_b, top Qbar and charge-weighted mean 6185.3 identical. Charge fraction 0.690 (quoted 0.680), 5%: 0.758 (0.744). Charge-weighted mean ranges 3.6e5-1.07e6 across grids/thresholds.",
+   "independent_value": "39; 15; 6.19e5; 0.690",
+   "source": "v_codex479.py; results/v_codex479.json"
+  }
+ ]
+}

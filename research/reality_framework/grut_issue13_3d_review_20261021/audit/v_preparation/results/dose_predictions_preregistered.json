@@ -1,0 +1,36 @@
+{
+ "written_utc": "2026-10-21T16:51:09Z",
+ "rule": "Class by the audit track's empirical kappa=2 sparse thresholds: S0/sigma_f(rms 0.5) <= 0.13 -> two-sign network retained at a=2.2 (both vacua > 1%, sign of bias = sign S0); >= 0.34 -> minority removed by a=2.2; between: untested, verifier predicts network retained if < 0.25. Formation m_f (first f+ + f- >= 0.5) predicted as m_lin x [1.4, 2.5] (the audit's sparse under-prediction band).",
+ "variants": {
+  "Xscale0.1": {
+   "a_rms05": 1.639,
+   "S0": 0.05013005586850495,
+   "sigma_f": 0.5235317793232961,
+   "S0_over_sigma_f": 0.09575360627257774,
+   "m_lin_rms05": 0.046985767505787035,
+   "m_f_pred_band": [
+    0.06578007450810185,
+    0.11746441876446759
+   ],
+   "predicted_class": "network retained",
+   "S0_pred_a1.54": 0.001260698691235985,
+   "S0_pred_a1.57": 0.0035823921082595326,
+   "verifier_guess": "two-sign network retained to a=2.2, positive bias, both vacua winding; m_f in [0.066, 0.117]"
+  },
+  "Xscale0.3": {
+   "a_rms05": 1.6375000000000002,
+   "S0": 0.14152859753847577,
+   "sigma_f": 0.49662012238400066,
+   "S0_over_sigma_f": 0.28498361455648363,
+   "m_lin_rms05": 0.14139585141782407,
+   "m_f_pred_band": [
+    0.19795419198495368,
+    0.3534896285445602
+   ],
+   "predicted_class": "untested",
+   "S0_pred_a1.54": 0.0037820960737079534,
+   "S0_pred_a1.57": 0.010747176324778595,
+   "verifier_guess": "minority removed by a=2.2 (f- < 0.01), LOW confidence: nearest calibrator noW (ratio 0.34, m_f 0.28) was removed; s303 (0.13) retained"
+  }
+ }
+}

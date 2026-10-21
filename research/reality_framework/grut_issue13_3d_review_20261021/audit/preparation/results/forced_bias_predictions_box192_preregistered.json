@@ -1,0 +1,56 @@
+{
+ "written_utc": "2026-10-21T15:29:24Z",
+ "N": 192,
+ "dx": 0.4,
+ "L": 76.80000000000001,
+ "seed": 101,
+ "rule": "m_lin = <sign S_lin> of the linear field (incl. the forced zero mode, which grows with the k=0 rate) at total rms 1.0. Bias law (Claude bias_threshold, gamma=1.41, x10=1.54): network removed within the window if erfinv(m_f) K^gamma >= 1.54 with K the basin-area coarsening from formation to a=2.2 measured in the unbiased (mu=0) run; predicted m_end = erf(erfinv(m_f) K^gamma). Threshold m_f for takeover = erf(1.54 K^-gamma).",
+ "runs": {
+  "N192_mu0.02": {
+   "mu": 0.02,
+   "S_shift": 0.0002,
+   "noise_file": "/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/prep/runs/fb/fb_N192_mu0.02.noise.f64",
+   "predictions": {
+    "rms_0.5": {
+     "a": 1.5575,
+     "S0": 0.13684198654023028,
+     "S0_cross_only": 0.14503752851076565,
+     "sigma_f": 0.5138809433221241,
+     "S0_over_sigma_f": 0.26629122624314067,
+     "mean_sign_fluct_only": -0.01689289234302662,
+     "mean_sign_with_zero_mode": 0.19803732412832756,
+     "pplus_with_zero_mode": 0.5990186620641638,
+     "mean_sign_zero_mode_without_bare_cubic": 0.2110007957175926,
+     "ensemble_sd_of_mean_sign": 0.024539392703773727,
+     "growth_weighted_power_frac_k_lt_0.25": 0.8487374075470501,
+     "growth_weighted_power_frac_lowest_shell": 0.04684134131783625,
+     "effective_k_peak": 0.21047815747246942,
+     "bare_cubic_over_cross_source": 21033.486348664457,
+     "erfinv_m": 0.17734792806825408
+    },
+    "rms_1.0": {
+     "a": 1.5775000000000001,
+     "S0": 0.2287556471103766,
+     "S0_cross_only": 0.2962284652459428,
+     "sigma_f": 1.0284880942792785,
+     "S0_over_sigma_f": 0.22241934387259876,
+     "mean_sign_fluct_only": -0.018130832248263888,
+     "mean_sign_with_zero_mode": 0.16198278356481483,
+     "pplus_with_zero_mode": 0.5809913917824074,
+     "mean_sign_zero_mode_without_bare_cubic": 0.2156092325846354,
+     "ensemble_sd_of_mean_sign": 0.025198883361579827,
+     "growth_weighted_power_frac_k_lt_0.25": 0.8605497032650842,
+     "growth_weighted_power_frac_lowest_shell": 0.04848392821376557,
+     "effective_k_peak": 0.20517069540007138,
+     "bare_cubic_over_cross_source": 126266.8171237174,
+     "erfinv_m": 0.14455408553408874
+    }
+   },
+   "C_uS": -0.0010187565213488764,
+   "C_wS": -0.0023179361635614296
+  }
+ },
+ "takeover_threshold_m_f_K1.2": 0.9078543535158391,
+ "takeover_threshold_m_f_K1.4": 0.824638000447815,
+ "takeover_threshold_m_f_K1.6": 0.7383942378279696
+}
