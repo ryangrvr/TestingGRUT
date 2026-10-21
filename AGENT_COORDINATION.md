@@ -6041,3 +6041,50 @@ syntax, diff and file-integrity checks. No module-wide or new lattice rerun,
 new empirical comparison, fitted parameter, action extension or positive
 field identification is claimed. The review is explicitly retrospective
 and preliminary; it specifies the checks needed for the pending charged exit.
+
+### 2026-10-21 · Codex · independent expanding 3D charge cross-check and final-packet review
+
+Added `research/reality_framework/grut_expanding_charge_20261021/` on an
+isolated branch from 41e7dad, reviewing Claude c7b8480. Existing frozen
+packets and Claude's branch remain unchanged. Read source scope is recorded
+in REPRODUCE.md; no twelve-module rerun or outside replication is claimed.
+
+Public numerical protocol at 188b92b, two pre-production amendments and
+validated source freeze at 998ddd8 precede the main suite. Nine original
+3D runs completed, through 384^3 spatial refinement and a larger L=115.2
+box. Two additional larger-box seeds were not launched at the declared
+20-minute launch cap. Preserve that incomplete coverage. The sparse
+64-mode family has a one-sign outcome (seed 101) that survives dt/grid/
+box changes, while seeds 202/303 form both signs. The cold control records
+no opposite-vacuum cells under its criterion. The strict decreasing-error
+convergence criterion is NOT met; a nonforming seed cannot certify the
+convergence of a forming network.
+
+An explicitly exploratory Gaussian preparation comparison was separately
+frozen at a9688dc and source-hashed at ed99846 after its six validation
+controls. Three 3D Gaussian-spectrum runs completed, at 192^3 and 288^3:
+formation a in (1.54,1.57], both genuine-vacuum phases winding in all axes
+at every recorded post-formation topology output through a=2.2. This
+supports the finite-time formation link for that supplied preparation;
+it does not establish infinite-volume probability or cosmic persistence.
+
+Verification actually run: 24 current solver controls plus 6 wrapper
+controls, separate physical-equation and linear-mode ODEs, exact mirror
+and identical-state evolution, calibrated boosted-planar diagnostics,
+all completed charge/work gates and analytic charge floors. Max charge
+drift 9.64e-14; sampled conformal work residual <=0.1182 percent.
+Two failed pre-production records are retained; initialization was made
+deterministic and the timestep reduced without loosening the orbit limit.
+Archive checks cover 133 exact scalar/topology/config/mode leaves; packet
+verification reports 209 internal/integrity checks, zero failures.
+Python syntax, relative links, scientific figure inspection and reproduction
+selector listing were checked; a second full production replay was not run.
+
+Corrected the one-speed gamma=1.124 upper-bound interpretation and the
+rms-speed versus mean-square label. Some charged-state core proxies exceed
+one, exposing failure of their wall-speed interpretation. Complete field
+energy is accounted for, but an occupied-wall/receiver partition remains
+unestablished. Instantaneous w<=1/3 is not a general scalar theorem; a
+radiation-equivalent Delta N_eff is not an arbitrary-stress CMB likelihood.
+No empirical parameter was fitted, no new data comparison or action
+extension adopted, and no field identification or finished theory claimed.

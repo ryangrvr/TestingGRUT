@@ -1,0 +1,199 @@
+{
+  "tests": [
+    {
+      "name": "homogeneous_charge_0.06",
+      "pass": true,
+      "relative_error": 8.43769498715119e-15
+    },
+    {
+      "name": "homogeneous_dilution_0.06",
+      "pass": true,
+      "final_nbar": 0.059396650266123126
+    },
+    {
+      "name": "homogeneous_orbit_0.06",
+      "pass": true,
+      "max_field_error": 0.0011268936190504952,
+      "source_budget": 3.570188620252224e-07
+    },
+    {
+      "name": "homogeneous_charge_0.03",
+      "pass": true,
+      "relative_error": 8.43769498715119e-15
+    },
+    {
+      "name": "homogeneous_dilution_0.03",
+      "pass": true,
+      "final_nbar": 0.05939665026612325
+    },
+    {
+      "name": "homogeneous_orbit_0.03",
+      "pass": true,
+      "max_field_error": 0.00028172297923206857,
+      "source_budget": 8.930690334969599e-08
+    },
+    {
+      "name": "homogeneous_second_order",
+      "pass": true,
+      "error_ratio": 4.00000604182955
+    },
+    {
+      "name": "direct_physical_vs_conformal",
+      "pass": true,
+      "errors": [
+        0.0002642035160610179,
+        6.605721224291206e-05,
+        1.6514699040390268e-05
+      ]
+    },
+    {
+      "name": "physical_second_order",
+      "pass": true,
+      "ratios": [
+        3.9996165004581608,
+        3.9999040903715444
+      ]
+    },
+    {
+      "name": "linear_crossing_ODE",
+      "pass": true,
+      "relative_peak_error": 0.0014851970897691036,
+      "mode_crossing_a": 1.2625659703975736
+    },
+    {
+      "name": "Z2_mirror",
+      "pass": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "name": "nonlinear_charge",
+      "pass": true,
+      "relative_drift": 1.887379141862766e-15
+    },
+    {
+      "name": "nonlinear_work_source",
+      "pass": true,
+      "residual_coarse": 0.0006495474493343885,
+      "residual_fine": 0.0001635475729089995
+    },
+    {
+      "name": "work_source_second_order",
+      "pass": true,
+      "ratio": 3.9716116710323
+    },
+    {
+      "name": "slab_winding_128",
+      "pass": true,
+      "plus": 6,
+      "minus": 6
+    },
+    {
+      "name": "slab_winding_256",
+      "pass": true,
+      "plus": 6,
+      "minus": 6
+    },
+    {
+      "name": "planar_energy",
+      "pass": true,
+      "controls": [
+        {
+          "N": 128,
+          "energy_relative_error": -0.0008397089458602736,
+          "coarea_relative_error": -0.11727214004229358,
+          "core_energy_proxy_relative_error": -0.09846163974624633,
+          "v2_relative_error": 0.013785431471419196,
+          "smooth_coarea_relative_error": -0.0033546515346972727,
+          "smooth_energy_proxy_relative_error": -0.0029919030303153793
+        },
+        {
+          "N": 256,
+          "energy_relative_error": -0.000210338529716525,
+          "coarea_relative_error": 0.009064759801233224,
+          "core_energy_proxy_relative_error": 0.007633148573865878,
+          "v2_relative_error": 0.003218318988096547,
+          "smooth_coarea_relative_error": -0.0008409472752494151,
+          "smooth_energy_proxy_relative_error": -0.0007506215552213202
+        }
+      ]
+    },
+    {
+      "name": "planar_coarea",
+      "pass": true,
+      "relative_error": 0.009064759801233224
+    },
+    {
+      "name": "planar_velocity_proxy",
+      "pass": true,
+      "relative_error": 0.003218318988096547
+    },
+    {
+      "name": "planar_smooth_coarea",
+      "pass": true,
+      "relative_error": -0.0008409472752494151
+    },
+    {
+      "name": "planar_smooth_energy",
+      "pass": true,
+      "relative_error": -0.0007506215552213202
+    },
+    {
+      "name": "corner_blob_crosses_cuts_without_winding",
+      "pass": true,
+      "positive_winding": 0,
+      "negative_winding": 7
+    },
+    {
+      "name": "Lorentz_weighting_counterexample",
+      "pass": true,
+      "one_speed": 1.123621039525968,
+      "area_weighted_mixture_gamma": 2.2917898402674552,
+      "fixed_energy_weighted_lower": 1.123621039525968,
+      "fixed_energy_weighted_upper": 1.262524240465417
+    },
+    {
+      "name": "instantaneous_w_counterexample",
+      "pass": true,
+      "rho": 1e-60,
+      "w": 1.0
+    }
+  ],
+  "passed": 24,
+  "failed": 0,
+  "details": {
+    "planar_controls": [
+      {
+        "N": 128,
+        "energy_relative_error": -0.0008397089458602736,
+        "coarea_relative_error": -0.11727214004229358,
+        "core_energy_proxy_relative_error": -0.09846163974624633,
+        "v2_relative_error": 0.013785431471419196,
+        "smooth_coarea_relative_error": -0.0033546515346972727,
+        "smooth_energy_proxy_relative_error": -0.0029919030303153793
+      },
+      {
+        "N": 256,
+        "energy_relative_error": -0.000210338529716525,
+        "coarea_relative_error": 0.009064759801233224,
+        "core_energy_proxy_relative_error": 0.007633148573865878,
+        "v2_relative_error": 0.003218318988096547,
+        "smooth_coarea_relative_error": -0.0008409472752494151,
+        "smooth_energy_proxy_relative_error": -0.0007506215552213202
+      }
+    ]
+  },
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "/workspace/scratch/85cb4751a782/grut_expanding_charge/research/reality_framework/grut_expanding_charge_20261021/expanding.cpp",
+    "-o",
+    "/workspace/scratch/85cb4751a782/grut_expanding_charge/research/reality_framework/grut_expanding_charge_20261021/build/expanding"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "source_sha256": "e62701e5a946d69f487a6fdaf2cda2fce40d1c1eef8df461552a3520233b05fb",
+  "run_py_sha256": "94bf866b0d3d1de046ab1e70921576dc789bc5b05593b539d27fc32ad31cd682"
+}

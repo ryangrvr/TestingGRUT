@@ -1,0 +1,1246 @@
+{
+  "reviewed_claude_commit": "c7b8480a49e3f0b8737e800396a30f33f6337981",
+  "protocol_freeze": "188b92b9375df468802cb064c8a288bcc38f956f",
+  "validated_source_freeze": "998ddd8b1252e3ecd7cab8be4dc99044574f5faa",
+  "observational_scope": "No new data comparison; no fitted mass, yield or abundance prediction.",
+  "status": [
+    {
+      "name": "main_s101",
+      "status": "completed",
+      "wall_seconds": 50.08297980100019
+    },
+    {
+      "name": "main_s202",
+      "status": "completed",
+      "wall_seconds": 49.22525548700014
+    },
+    {
+      "name": "main_s303",
+      "status": "completed",
+      "wall_seconds": 48.23408879099998
+    },
+    {
+      "name": "cold_s101",
+      "status": "completed",
+      "wall_seconds": 53.16959956400001
+    },
+    {
+      "name": "kappa4_s101",
+      "status": "completed",
+      "wall_seconds": 47.72701003599991
+    },
+    {
+      "name": "dt_half_s101",
+      "status": "completed",
+      "wall_seconds": 103.58788370599996
+    },
+    {
+      "name": "grid256_s101",
+      "status": "completed",
+      "wall_seconds": 166.120691545
+    },
+    {
+      "name": "grid384_s101",
+      "status": "completed",
+      "wall_seconds": 570.7777937619999
+    },
+    {
+      "name": "large_s101",
+      "status": "completed",
+      "wall_seconds": 223.85049738299995
+    },
+    {
+      "name": "large_s202",
+      "status": "not_launched_cost_cap"
+    },
+    {
+      "name": "large_s303",
+      "status": "not_launched_cost_cap"
+    },
+    {
+      "name": "gaussian_s101",
+      "status": "completed",
+      "wall_seconds": 48.99429677199987
+    },
+    {
+      "name": "gaussian_s202",
+      "status": "completed",
+      "wall_seconds": 49.40355768500012
+    },
+    {
+      "name": "gaussian_large_s101",
+      "status": "completed",
+      "wall_seconds": 230.38559289400018
+    }
+  ],
+  "runs": {
+    "main_s101": {
+      "name": "main_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.986144878246166,
+        "fminus_04": 6.216543692129629e-06,
+        "fplus_05": 0.9776715879087094,
+        "fminus_05": 2.1192762586805556e-06,
+        "fplus_06": 0.9643242447464554,
+        "fminus_06": 8.477105034722222e-07,
+        "genuine_plus": 0.9645159686053241,
+        "genuine_minus": 1.2715657552083333e-06,
+        "rho": 0.11158841122918138,
+        "p": 0.004521495810631438,
+        "area_core_com_over_V": 0.011693594001677396,
+        "area_smooth_com_over_V": 0.029548146288255386,
+        "phi_core_energy_proxy": 42826.637451519324,
+        "phi_smooth_energy_proxy": 78212.45344438558,
+        "v2_core_proxy": 1.2631890177339393,
+        "v2_smooth_proxy": 1.785300290695273,
+        "q_fraction_core": 0.23552120092391982,
+        "w_all_fields": 0.04051940305293124
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614968,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -2.6247064483381603e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.76292572357,
+      "charge_relative_drift": 1.765254609153999e-14,
+      "conformal_budget_residual": 0.0011660162044947785,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 1,
+          "occupied_fraction": 0.9645159686053241,
+          "largest_fraction": 0.9645159686053241,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 2,
+          "occupied_fraction": 1.2715657552083333e-06,
+          "largest_fraction": 1.1302806712962962e-06,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 2.9669867621527777e-05,
+        "interface_links": 126,
+        "q_fraction_interface_shell": 0.00036410069213151715,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 50.08297980100019
+    },
+    "main_s202": {
+      "name": "main_s202",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 202,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.57,
+          1.6
+        ],
+        "a_first_sample": 1.6,
+        "pplus_among_raw_vacuum_cells": 0.48517423834050455
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.45215267605251735,
+        "fminus_04": 0.48415205213758683,
+        "fplus_05": 0.4425376609519676,
+        "fminus_05": 0.4739213166413484,
+        "fplus_06": 0.43089393333152487,
+        "fminus_06": 0.461469155770761,
+        "genuine_plus": 0.4389598987720631,
+        "genuine_minus": 0.46957468103479455,
+        "rho": 0.11744735317007672,
+        "p": -0.01701991131399439,
+        "area_core_com_over_V": 0.08627322560607842,
+        "area_smooth_com_over_V": 0.09502248233816388,
+        "phi_core_energy_proxy": 206770.6095167322,
+        "phi_smooth_energy_proxy": 226391.62674813461,
+        "v2_core_proxy": 0.17507847973710985,
+        "v2_smooth_proxy": 0.26335355763806023,
+        "q_fraction_core": 0.3458886968789097,
+        "w_all_fields": -0.14491523950605922
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.24543692606170256,
+        "covariance": [
+          [
+            1.0000000000000002,
+            0.0977664190206795,
+            -0.06321756518118735
+          ],
+          [
+            0.0977664190206795,
+            1.0,
+            0.08239012793486705
+          ],
+          [
+            -0.06321756518118735,
+            0.08239012793486705,
+            0.9999999999999996
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": 2.0070325894296998e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.76292577584,
+      "charge_relative_drift": 1.2989609388114332e-14,
+      "conformal_budget_residual": 0.0007325966684275031,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 15,
+          "occupied_fraction": 0.4389598987720631,
+          "largest_fraction": 0.43895523636429395,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 14,
+          "occupied_fraction": 0.46957468103479455,
+          "largest_fraction": 0.4695673342104311,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.08710931848596642,
+        "interface_links": 369930,
+        "q_fraction_interface_shell": 0.34626984104943204,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": true,
+      "postformation_topology_samples": 6,
+      "wall_seconds": 49.22525548700014
+    },
+    "main_s303": {
+      "name": "main_s303",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 303,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.6,
+          1.63
+        ],
+        "a_first_sample": 1.63,
+        "pplus_among_raw_vacuum_cells": 0.5814036980104366
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.6990104957863137,
+        "fminus_04": 0.2395475882071036,
+        "fplus_05": 0.6877226652922453,
+        "fminus_05": 0.23124821980794272,
+        "fplus_06": 0.6729508859139902,
+        "fminus_06": 0.22191648130063657,
+        "genuine_plus": 0.6838773091634115,
+        "genuine_minus": 0.2305155153627749,
+        "rho": 0.1282298741530603,
+        "p": -0.017814448573666264,
+        "area_core_com_over_V": 0.09199743207574779,
+        "area_smooth_com_over_V": 0.1013886706417301,
+        "phi_core_energy_proxy": 217713.59931199998,
+        "phi_smooth_energy_proxy": 241157.68789143278,
+        "v2_core_proxy": 0.15968184510113526,
+        "v2_smooth_proxy": 0.2496917778538274,
+        "q_fraction_core": 0.29996976427644373,
+        "w_all_fields": -0.13892588362367278
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.3373207901931039,
+        "covariance": [
+          [
+            1.0000000000000004,
+            0.09664523196645132,
+            0.022619073337936543
+          ],
+          [
+            0.09664523196645132,
+            1.0,
+            -0.0854245523464265
+          ],
+          [
+            0.022619073337936543,
+            -0.0854245523464265,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -7.181108162237263e-07,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.76292574353,
+      "charge_relative_drift": 1.9761969838327786e-14,
+      "conformal_budget_residual": 0.0008938443283390223,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 10,
+          "occupied_fraction": 0.6838773091634115,
+          "largest_fraction": 0.6838760375976562,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 84,
+          "occupied_fraction": 0.2305155153627749,
+          "largest_fraction": 0.23045264350043404,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.0996544920367959,
+        "interface_links": 423206,
+        "q_fraction_interface_shell": 0.450413450825065,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": true,
+      "postformation_topology_samples": 5,
+      "wall_seconds": 48.23408879099998
+    },
+    "cold_s101": {
+      "name": "cold_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 1.0,
+        "fminus_04": 0.0,
+        "fplus_05": 1.0,
+        "fminus_05": 0.0,
+        "fplus_06": 1.0,
+        "fminus_06": 0.0,
+        "genuine_plus": 1.0,
+        "genuine_minus": 0.0,
+        "rho": 0.02664749909991088,
+        "p": 0.00024286169200785212,
+        "area_core_com_over_V": 0.0,
+        "area_smooth_com_over_V": 3.179966087962638e-05,
+        "phi_core_energy_proxy": 0.0,
+        "phi_smooth_energy_proxy": 5.196798638937154,
+        "v2_core_proxy": 0.0,
+        "v2_smooth_proxy": 8.518585160938123,
+        "q_fraction_core": 0.0,
+        "w_all_fields": 0.0091138643479179
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614968,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -1.541306751324948e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 128921.74331658098,
+      "charge_relative_drift": 2.5646151868841116e-14,
+      "conformal_budget_residual": 0.0007007006466773701,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 1,
+          "occupied_fraction": 1,
+          "largest_fraction": 1,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 0,
+          "occupied_fraction": 0,
+          "largest_fraction": 0,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 0,
+        "interface_links": 0,
+        "q_fraction_interface_shell": 0,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 53.16959956400001
+    },
+    "kappa4_s101": {
+      "name": "kappa4_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.9,
+          1.93
+        ],
+        "a_first_sample": 1.93,
+        "pplus_among_raw_vacuum_cells": 0.23289636699768812
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.1275753445095486,
+        "fminus_04": 0.7636485629611545,
+        "fplus_05": 0.11728866012008102,
+        "fminus_05": 0.7438848989981192,
+        "fplus_06": 0.10626799971969039,
+        "fminus_06": 0.720675856978805,
+        "genuine_plus": 0.11626787538881656,
+        "genuine_minus": 0.724158110441985,
+        "rho": 0.20282287002526614,
+        "p": -0.022158602652786474,
+        "area_core_com_over_V": 0.13537672785056162,
+        "area_smooth_com_over_V": 0.14179441617060154,
+        "phi_core_energy_proxy": 366324.12151050905,
+        "phi_smooth_energy_proxy": 383112.70471058565,
+        "v2_core_proxy": 0.40445128815096293,
+        "v2_smooth_proxy": 0.4553481354454483,
+        "q_fraction_core": 0.4665916571046451,
+        "w_all_fields": -0.10925100630922993
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614968,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -4.166461777199713e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 572985.525851437,
+      "charge_relative_drift": 2.842170943040401e-14,
+      "conformal_budget_residual": 0.0007567908315329196,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 62,
+          "occupied_fraction": 0.11626787538881656,
+          "largest_fraction": 0.01740052964952257,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "minus": {
+          "components": 175,
+          "occupied_fraction": 0.724158110441985,
+          "largest_fraction": 0.7241328204119647,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.13635046688126928,
+        "interface_links": 579044,
+        "q_fraction_interface_shell": 0.5896004994445632,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 3,
+      "wall_seconds": 47.72701003599991
+    },
+    "dt_half_s101": {
+      "name": "dt_half_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.03,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.9862360071252894,
+        "fminus_04": 5.933973524305556e-06,
+        "fplus_05": 0.9777201899775753,
+        "fminus_05": 1.9779911747685184e-06,
+        "fplus_06": 0.9642811527958622,
+        "fminus_06": 8.477105034722222e-07,
+        "genuine_plus": 0.964447162769459,
+        "genuine_minus": 1.2715657552083333e-06,
+        "rho": 0.11165419279966228,
+        "p": 0.0046571402772596394,
+        "area_core_com_over_V": 0.011603987137587837,
+        "area_smooth_com_over_V": 0.029471528367839107,
+        "phi_core_energy_proxy": 42613.84293481707,
+        "phi_smooth_energy_proxy": 78081.9187505415,
+        "v2_core_proxy": 1.2699744866426024,
+        "v2_smooth_proxy": 1.7903881823509813,
+        "q_fraction_core": 0.23305626326199358,
+        "w_all_fields": 0.0417103931387136
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614968,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -2.6247064483381603e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.7629257235,
+      "charge_relative_drift": 1.765254609153999e-14,
+      "conformal_budget_residual": 0.0002906628446453501,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 1,
+          "occupied_fraction": 0.964447162769459,
+          "largest_fraction": 0.964447162769459,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 2,
+          "occupied_fraction": 1.2715657552083333e-06,
+          "largest_fraction": 1.1302806712962962e-06,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 2.9669867621527777e-05,
+        "interface_links": 126,
+        "q_fraction_interface_shell": 0.0003683512411268715,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 103.58788370599996
+    },
+    "grid256_s101": {
+      "name": "grid256_s101",
+      "N": 256,
+      "dx": 0.3,
+      "dt": 0.06,
+      "L": 76.8,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.9865337610244751,
+        "fminus_04": 5.781650543212891e-06,
+        "fplus_05": 0.9783522486686707,
+        "fminus_05": 1.6689300537109375e-06,
+        "fplus_06": 0.9652877449989319,
+        "fminus_06": 4.172325134277344e-07,
+        "genuine_plus": 0.9654735326766968,
+        "genuine_minus": 1.3113021850585938e-06,
+        "rho": 0.11160258691897675,
+        "p": 0.005183723054153188,
+        "area_core_com_over_V": 0.011768895252720873,
+        "area_smooth_com_over_V": 0.030334842700961817,
+        "phi_core_energy_proxy": 41949.88392904481,
+        "phi_smooth_energy_proxy": 77915.96861713818,
+        "v2_core_proxy": 1.2488552125252244,
+        "v2_smooth_proxy": 1.7466803927691044,
+        "q_fraction_core": 0.23001164092101536,
+        "w_all_fields": 0.046448054630817484
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614969,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -2.6247064483381603e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.76292573253,
+      "charge_relative_drift": 4.107825191113079e-14,
+      "conformal_budget_residual": 0.0011815908176067375,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 1,
+          "occupied_fraction": 0.9654735326766968,
+          "largest_fraction": 0.9654735326766968,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 4,
+          "occupied_fraction": 1.3113021850585938e-06,
+          "largest_fraction": 9.5367431640625e-07,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 6.119410196940105e-05,
+        "interface_links": 462,
+        "q_fraction_interface_shell": 0.0006460435030960939,
+        "shell_radius_cells": 4
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 166.120691545
+    },
+    "grid384_s101": {
+      "name": "grid384_s101",
+      "N": 384,
+      "dx": 0.2,
+      "dt": 0.04,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.9869752813268591,
+        "fminus_04": 4.99795984338831e-06,
+        "fplus_05": 0.9789050243518971,
+        "fminus_05": 8.300498679832176e-07,
+        "fplus_06": 0.9660680205733688,
+        "fminus_06": 2.8257016782407406e-07,
+        "genuine_plus": 0.9660415649414062,
+        "genuine_minus": 6.534435130931713e-07,
+        "rho": 0.11167261216191994,
+        "p": 0.005742572591815263,
+        "area_core_com_over_V": 0.011657806971595443,
+        "area_smooth_com_over_V": 0.030635300626444463,
+        "phi_core_energy_proxy": 41052.24302041683,
+        "phi_smooth_energy_proxy": 77060.32586009048,
+        "v2_core_proxy": 1.2631341456410037,
+        "v2_smooth_proxy": 1.7306748000665024,
+        "q_fraction_core": 0.22214064884283166,
+        "w_all_fields": 0.051423285267911595
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.4770436363614968,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -2.6247064483381603e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 286492.76292577153,
+      "charge_relative_drift": 9.636735853746359e-14,
+      "conformal_budget_residual": 0.0005302899937405516,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 4,
+          "occupied_fraction": 0.9660415649414062,
+          "largest_fraction": 0.9660415119594998,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 2,
+          "occupied_fraction": 6.534435130931713e-07,
+          "largest_fraction": 6.004616066261574e-07,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 3.178914388020833e-05,
+        "interface_links": 540,
+        "q_fraction_interface_shell": 0.0003149829457623735,
+        "shell_radius_cells": 5
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 570.7777937619999
+    },
+    "large_s101": {
+      "name": "large_s101",
+      "N": 288,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 115.2,
+      "seed": 101,
+      "complete": true,
+      "formation": null,
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.9886991608126501,
+        "fminus_04": 3.3489797668038406e-07,
+        "fplus_05": 0.981401524589549,
+        "fminus_05": 0.0,
+        "fplus_06": 0.9692261411983454,
+        "fminus_06": 0.0,
+        "genuine_plus": 0.9552821197300454,
+        "genuine_minus": 0.0,
+        "rho": 0.11198496158206771,
+        "p": 0.00042076202889518554,
+        "area_core_com_over_V": 0.009591834421007178,
+        "area_smooth_com_over_V": 0.027212394950544425,
+        "phi_core_energy_proxy": 146024.48557870399,
+        "phi_smooth_energy_proxy": 271734.9734042483,
+        "v2_core_proxy": 3.188098592945547,
+        "v2_smooth_proxy": 2.8424230784147104,
+        "q_fraction_core": 0.1869609779577661,
+        "w_all_fields": 0.0037573083291798236
+      },
+      "initial_noise": {
+        "sparse_modes": 64,
+        "minimum_nonzero_k": 0.5057974260007592,
+        "covariance": [
+          [
+            1.0,
+            0.00370103649682315,
+            0.08267307260140147
+          ],
+          [
+            0.00370103649682315,
+            0.9999999999999998,
+            -0.2482607319121969
+          ],
+          [
+            0.08267307260140147,
+            -0.2482607319121969,
+            0.9999999999999998
+          ]
+        ],
+        "leading_mean_chiS_acceleration_cross_term": -2.6247064483381603e-06,
+        "cross_term_scope": "Leading restored-branch perturbative term only; not the full force or a demonstrated causal attribution."
+      },
+      "Q_initial": 966913.0748744642,
+      "charge_relative_drift": 6.061817714453355e-14,
+      "conformal_budget_residual": 0.001022176355884827,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 7,
+          "occupied_fraction": 0.9552821197300454,
+          "largest_fraction": 0.9552818266943158,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 0,
+          "occupied_fraction": 0,
+          "largest_fraction": 0,
+          "any_winding": 0,
+          "largest_winding": 0
+        },
+        "basin_link_area_comoving_over_V": 0,
+        "interface_links": 0,
+        "q_fraction_interface_shell": 0,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": false,
+      "every_postformation_sample_both_vacua_wind_all_axes": false,
+      "postformation_topology_samples": 0,
+      "wall_seconds": 223.85049738299995
+    },
+    "gaussian_s101": {
+      "name": "gaussian_s101",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 101,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.54,
+          1.57
+        ],
+        "a_first_sample": 1.57,
+        "pplus_among_raw_vacuum_cells": 0.502315311025661
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.4341690628616898,
+        "fminus_04": 0.5234825699417679,
+        "fplus_05": 0.42775726318359375,
+        "fminus_05": 0.5166377314814815,
+        "fplus_06": 0.41988542344835067,
+        "fminus_06": 0.5080776921025029,
+        "genuine_plus": 0.42344707912868923,
+        "genuine_minus": 0.5117659392180266,
+        "rho": 0.1094004546338119,
+        "p": -0.006611971452358167,
+        "area_core_com_over_V": 0.05445217755307436,
+        "area_smooth_com_over_V": 0.06443532658059112,
+        "phi_core_energy_proxy": 141715.1041567745,
+        "phi_smooth_energy_proxy": 162514.13720121654,
+        "v2_core_proxy": 0.3008321826400267,
+        "v2_smooth_proxy": 0.4325721128096958,
+        "q_fraction_core": 0.3794951630981582,
+        "w_all_fields": -0.060438244744868135
+      },
+      "initial_noise": {
+        "N": 192,
+        "dx": 0.4,
+        "L": 76.80000000000001,
+        "seed": 101,
+        "generator": "NumPy PCG64 standard_normal; rfftn, exp(-k^2/2), zero k=0, unit realization rms",
+        "numpy_version": "2.3.5",
+        "means": [
+          -1.2849803525754126e-18,
+          -1.02798428206033e-18,
+          -1.02798428206033e-18
+        ],
+        "rms": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "covariance": [
+          [
+            1.0000000000000002,
+            -0.001645004974050622,
+            -0.001018756521348878
+          ],
+          [
+            -0.001645004974050622,
+            1.0,
+            -0.0023179361635614288
+          ],
+          [
+            -0.001018756521348878,
+            -0.0023179361635614288,
+            1.0000000000000002
+          ]
+        ],
+        "sha256": "a3f25f537206aa38099cd07944553e9bea01494a745ce93137cd6633687c23bc"
+      },
+      "Q_initial": 286492.7629257533,
+      "charge_relative_drift": 3.019806626980426e-14,
+      "conformal_budget_residual": 0.00089953925040928,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 26,
+          "occupied_fraction": 0.42344707912868923,
+          "largest_fraction": 0.42343323319046583,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 24,
+          "occupied_fraction": 0.5117659392180266,
+          "largest_fraction": 0.5117576033980759,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.05019058415919173,
+        "interface_links": 213146,
+        "q_fraction_interface_shell": 0.38103734795083505,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": true,
+      "postformation_topology_samples": 6,
+      "wall_seconds": 48.99429677199987
+    },
+    "gaussian_s202": {
+      "name": "gaussian_s202",
+      "N": 192,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 76.80000000000001,
+      "seed": 202,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.54,
+          1.57
+        ],
+        "a_first_sample": 1.57,
+        "pplus_among_raw_vacuum_cells": 0.49426647593611267
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.4773986251265914,
+        "fminus_04": 0.47669078685619215,
+        "fplus_05": 0.4702183758770978,
+        "fminus_05": 0.4695071467646846,
+        "fplus_06": 0.46129466869212965,
+        "fminus_06": 0.4605979919433594,
+        "genuine_plus": 0.46602517587167247,
+        "genuine_minus": 0.4649563542118779,
+        "rho": 0.11053152660611602,
+        "p": -0.00876223853767248,
+        "area_core_com_over_V": 0.06015664765075496,
+        "area_smooth_com_over_V": 0.07016900207644859,
+        "phi_core_energy_proxy": 153761.23828996727,
+        "phi_smooth_energy_proxy": 174572.37863412194,
+        "v2_core_proxy": 0.28009906978351473,
+        "v2_smooth_proxy": 0.393920000454741,
+        "q_fraction_core": 0.38494994031345636,
+        "w_all_fields": -0.07927365889821737
+      },
+      "initial_noise": {
+        "N": 192,
+        "dx": 0.4,
+        "L": 76.80000000000001,
+        "seed": 202,
+        "generator": "NumPy PCG64 standard_normal; rfftn, exp(-k^2/2), zero k=0, unit realization rms",
+        "numpy_version": "2.3.5",
+        "means": [
+          0.0,
+          5.13992141030165e-19,
+          2.05596856412066e-18
+        ],
+        "rms": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "covariance": [
+          [
+            1.0000000000000002,
+            -0.0013764355575230339,
+            -0.00592056437800152
+          ],
+          [
+            -0.0013764355575230339,
+            1.0000000000000002,
+            -0.006788084271432388
+          ],
+          [
+            -0.00592056437800152,
+            -0.006788084271432388,
+            1.0000000000000002
+          ]
+        ],
+        "sha256": "1f54b2b08aa54871c303e9ffe92b9a34bc329282d9bae8ad5df143e31456c65c"
+      },
+      "Q_initial": 286492.76292576606,
+      "charge_relative_drift": 3.597122599785507e-14,
+      "conformal_budget_residual": 0.0008577501336849225,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 13,
+          "occupied_fraction": 0.46602517587167247,
+          "largest_fraction": 0.46602150245949076,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 20,
+          "occupied_fraction": 0.4649563542118779,
+          "largest_fraction": 0.4649488661024306,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.056145750446084094,
+        "interface_links": 238436,
+        "q_fraction_interface_shell": 0.40812122670592454,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": true,
+      "postformation_topology_samples": 6,
+      "wall_seconds": 49.40355768500012
+    },
+    "gaussian_large_s101": {
+      "name": "gaussian_large_s101",
+      "N": 288,
+      "dx": 0.4,
+      "dt": 0.06,
+      "L": 115.2,
+      "seed": 101,
+      "complete": true,
+      "formation": {
+        "a_interval": [
+          1.54,
+          1.57
+        ],
+        "a_first_sample": 1.57,
+        "pplus_among_raw_vacuum_cells": 0.49517638469213354
+      },
+      "final": {
+        "a": 2.2,
+        "t": 48.0,
+        "fplus_04": 0.4658639748237097,
+        "fminus_04": 0.49431862327460563,
+        "fplus_05": 0.4595748419951346,
+        "fminus_05": 0.4878856936272934,
+        "fplus_06": 0.4516694915311,
+        "fminus_06": 0.4797967772097908,
+        "genuine_plus": 0.45490272218471367,
+        "genuine_minus": 0.48290165821384173,
+        "rho": 0.10880062263595684,
+        "p": -0.005494788380550626,
+        "area_core_com_over_V": 0.05070408071782176,
+        "area_smooth_com_over_V": 0.060941376169594746,
+        "phi_core_energy_proxy": 452508.0709830396,
+        "phi_smooth_energy_proxy": 524790.2847672831,
+        "v2_core_proxy": 0.3358046487094607,
+        "v2_smooth_proxy": 0.47593349199985274,
+        "q_fraction_core": 0.37418093775532135,
+        "w_all_fields": -0.05050328065617786
+      },
+      "initial_noise": {
+        "N": 288,
+        "dx": 0.4,
+        "L": 115.2,
+        "seed": 101,
+        "generator": "NumPy PCG64 standard_normal; rfftn, exp(-k^2/2), zero k=0, unit realization rms",
+        "numpy_version": "2.3.5",
+        "means": [
+          -1.522939677126415e-19,
+          -6.09175870850566e-19,
+          -3.04587935425283e-19
+        ],
+        "rms": [
+          0.9999999999999999,
+          0.9999999999999998,
+          1.0
+        ],
+        "covariance": [
+          [
+            0.9999999999999999,
+            -0.0018876546148818602,
+            0.00588467648735644
+          ],
+          [
+            -0.0018876546148818602,
+            0.9999999999999997,
+            -0.001757950605271335
+          ],
+          [
+            0.00588467648735644,
+            -0.001757950605271335,
+            1.0
+          ]
+        ],
+        "sha256": "59cb743f2be0a068aecf7b76e32e8b791dc13423cbdacc18331e0c29b18ec9cf"
+      },
+      "Q_initial": 966913.074874392,
+      "charge_relative_drift": 4.1300296516055823e-14,
+      "conformal_budget_residual": 0.0009231857829114779,
+      "numerical_gates_pass": true,
+      "topology_final": {
+        "t": 48,
+        "a": 2.2,
+        "plus": {
+          "components": 99,
+          "occupied_fraction": 0.45490272218471367,
+          "largest_fraction": 0.4547434781968021,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "minus": {
+          "components": 104,
+          "occupied_fraction": 0.48290165821384173,
+          "largest_fraction": 0.4828891414019633,
+          "any_winding": 7,
+          "largest_winding": 7
+        },
+        "basin_link_area_comoving_over_V": 0.04532104548003829,
+        "interface_links": 649574,
+        "q_fraction_interface_shell": 0.3593011300372822,
+        "shell_radius_cells": 3
+      },
+      "every_postformation_topology_has_interface": true,
+      "every_postformation_sample_both_vacua_wind_all_axes": true,
+      "postformation_topology_samples": 6,
+      "wall_seconds": 230.38559289400018
+    }
+  },
+  "comparisons": {
+    "dt_half_s101": {
+      "reference": "main_s101",
+      "endpoint_absolute_fraction_differences": {
+        "fplus_05": 4.8602068865810644e-05,
+        "fminus_05": 1.4128508391203724e-07,
+        "genuine_plus": 6.880583586510447e-05,
+        "genuine_minus": 0.0
+      },
+      "endpoint_relative_difference": {
+        "rho": 0.0005891545031267152,
+        "area_core_com_over_V": 0.0077220754407166855,
+        "area_smooth_com_over_V": 0.0025997267416876992
+      },
+      "basin_area_relative_difference": 0.0,
+      "same_raw_formation_presence": true
+    },
+    "grid256_s101": {
+      "reference": "main_s101",
+      "endpoint_absolute_fraction_differences": {
+        "fplus_05": 0.0006806607599612047,
+        "fminus_05": 4.5034620496961815e-07,
+        "genuine_plus": 0.0009575640713727074,
+        "genuine_minus": 3.973642985026049e-08
+      },
+      "endpoint_relative_difference": {
+        "rho": 0.00012701936565015647,
+        "area_core_com_over_V": 0.006398327916638435,
+        "area_smooth_com_over_V": 0.02593375612531157
+      },
+      "basin_area_relative_difference": 0.5151515151515151,
+      "same_raw_formation_presence": true
+    },
+    "grid384_s101": {
+      "reference": "main_s101",
+      "endpoint_absolute_fraction_differences": {
+        "fplus_05": 0.00123343644318763,
+        "fminus_05": 1.2892263906973382e-06,
+        "genuine_plus": 0.00152559633608218,
+        "genuine_minus": 6.181222421151619e-07
+      },
+      "endpoint_relative_difference": {
+        "rho": 0.0007539980583285026,
+        "area_core_com_over_V": 0.003069790928014958,
+        "area_smooth_com_over_V": 0.03548698122618203
+      },
+      "basin_area_relative_difference": 0.06666666666666654,
+      "same_raw_formation_presence": true
+    },
+    "spatial_refinement": {
+      "successive_relative_errors_192_256": {
+        "rho": 0.00012701936565015647,
+        "area_core_com_over_V": 0.006398327916638435,
+        "area_smooth_com_over_V": 0.02593375612531157
+      },
+      "successive_relative_errors_256_384": {
+        "rho": 0.0006270583412310749,
+        "area_core_com_over_V": 0.009529089081342682,
+        "area_smooth_com_over_V": 0.00980757228878929
+      },
+      "all_scalar_area_errors_below_10pct_and_decreasing": false,
+      "formation_convergence_certified": false,
+      "scope": "A nonforming seed cannot certify convergence of two-phase formation or network persistence."
+    }
+  },
+  "all_completed_numerical_gates_pass": true,
+  "negative_controls_and_limits": "Retain one-sign outcomes, threshold-dependent cores and every failed validation. No finite-time result establishes cosmic persistence or a bias law."
+}
