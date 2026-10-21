@@ -1,0 +1,136 @@
+{
+ "status": "derived + computed; inflation/reheating inputs are outside-action preparation data",
+ "noether_identity_max_rel": 1.278475797318309e-16,
+ "noether_statement": "Under X -> e^{i a} X every term of U depends on |X|^2 only, so with j^mu = i(X d^mu X* - X* d^mu X) the field equation Box X = dU/dX* gives nabla_mu j^mu = i(X dU/dX - X* dU/dX*) = i(|X|^2 U' - |X|^2 U') = 0 on shell. In FRW, d(a^3 n_Q)/dt = -(spatial divergence), whose volume average vanishes: comoving net charge is constant.",
+ "anomaly_statement": "U(1)_X is global and acts only on the gauge-singlet scalar X. No fermion carries X charge, so there is no ABJ (gauge) anomaly, no mixed U(1)_X-gravitational anomaly (both need chiral fermions) and no instanton/sphaleron violation (no gauge field couples to the current). EFT rule 2 admits only U(1)_X-symmetric counterterms, so running cannot generate violation. Gravity-only production is C-symmetric (hidden_heating). Hence Candidate 1's dynamics cannot generate a net hidden yield. Quantum-gravity violation of global symmetries (black holes, wormholes, Planck-suppressed charged operators) is NOT in the action; adding it would be an action extension (GRUT_CANDIDATE_1.md P4 claims no quantum-gravity protection).",
+ "lattice_FRW_check": {
+  "grid": 16,
+  "dx_GeVinv": 0.01,
+  "dt_GeVinv": 0.002,
+  "t_range_GeVinv": [
+   0.5,
+   5.0
+  ],
+  "a_final": 3.1622776601683795,
+  "Q_comoving_initial": -24741.667144958014,
+  "max_rel_change_comoving_Q": 4.440892098500626e-16,
+  "physical_density_ratio_final_over_initial": 0.03162277660168689,
+  "expected_a_minus3": 0.031622776601683784,
+  "max_abs_field_final_GeV": 1037.9607027992604,
+  "all_finite": true,
+  "note": "leapfrog in cosmic time with pi = a^3 dq/dt; each kick and drift conserves Q exactly for a U(1)-invariant potential and lattice Laplacian (summation by parts); residual is floating-point roundoff"
+ },
+ "inflation_dilution": {
+  "label": "OUTSIDE-ACTION preparation data (H_inf, reheating); charge floor rho_Q >= m* |n_Q| (quoted/derived)",
+  "condition": "charge present N e-folds before the end of inflation needs n_Q,i = n_Q,end e^{3N}; requiring m* n_Q,i < 3 H^2 M_P^2 (subdominant to the inflaton) gives N < N_max. Instantaneous reheating is the most permissive case; any later entropy production lowers N_max further.",
+  "rows": [
+   {
+    "H_inf_GeV": 100.0,
+    "r": 1.0,
+    "T_RH_instant_GeV": 8436688323.95407,
+    "nQ_end_GeV3": 2.439049116694176e+21,
+    "N_max_efolds": 13.902251892984866
+   },
+   {
+    "H_inf_GeV": 100.0,
+    "r": 0.0897,
+    "T_RH_instant_GeV": 8436688323.95407,
+    "nQ_end_GeV3": 2.1878270576746755e+20,
+    "N_max_efolds": 14.706013396290663
+   },
+   {
+    "H_inf_GeV": 100.0,
+    "r": 0.001,
+    "T_RH_instant_GeV": 8436688323.95407,
+    "nQ_end_GeV3": 2.439049116694176e+18,
+    "N_max_efolds": 16.20483698597891
+   },
+   {
+    "H_inf_GeV": 1000.0,
+    "r": 1.0,
+    "T_RH_instant_GeV": 26679151012.643364,
+    "nQ_end_GeV3": 7.712950533775411e+22,
+    "N_max_efolds": 14.286016075150542
+   },
+   {
+    "H_inf_GeV": 1000.0,
+    "r": 0.0897,
+    "T_RH_instant_GeV": 26679151012.643364,
+    "nQ_end_GeV3": 6.918516628796544e+21,
+    "N_max_efolds": 15.089777578456337
+   },
+   {
+    "H_inf_GeV": 1000.0,
+    "r": 0.001,
+    "T_RH_instant_GeV": 26679151012.643364,
+    "nQ_end_GeV3": 7.712950533775412e+19,
+    "N_max_efolds": 16.58860116814459
+   },
+   {
+    "H_inf_GeV": 1000000.0,
+    "r": 1.0,
+    "T_RH_instant_GeV": 843668832395.407,
+    "nQ_end_GeV3": 2.4390491166941756e+27,
+    "N_max_efolds": 15.437308621647565
+   },
+   {
+    "H_inf_GeV": 1000000.0,
+    "r": 0.0897,
+    "T_RH_instant_GeV": 843668832395.407,
+    "nQ_end_GeV3": 2.1878270576746753e+26,
+    "N_max_efolds": 16.24107012495336
+   },
+   {
+    "H_inf_GeV": 1000000.0,
+    "r": 0.001,
+    "T_RH_instant_GeV": 843668832395.407,
+    "nQ_end_GeV3": 2.439049116694176e+24,
+    "N_max_efolds": 17.73989371464161
+   },
+   {
+    "H_inf_GeV": 1000000000.0,
+    "r": 1.0,
+    "T_RH_instant_GeV": 26679151012643.363,
+    "nQ_end_GeV3": 7.7129505337754115e+31,
+    "N_max_efolds": 16.58860116814459
+   },
+   {
+    "H_inf_GeV": 1000000000.0,
+    "r": 0.0897,
+    "T_RH_instant_GeV": 26679151012643.363,
+    "nQ_end_GeV3": 6.918516628796544e+30,
+    "N_max_efolds": 17.392362671450382
+   },
+   {
+    "H_inf_GeV": 1000000000.0,
+    "r": 0.001,
+    "T_RH_instant_GeV": 26679151012643.363,
+    "nQ_end_GeV3": 7.712950533775411e+28,
+    "N_max_efolds": 18.891186261138632
+   },
+   {
+    "H_inf_GeV": 10000000000000.0,
+    "r": 1.0,
+    "T_RH_instant_GeV": 2667915101264336.5,
+    "nQ_end_GeV3": 7.712950533775413e+37,
+    "N_max_efolds": 18.123657896807284
+   },
+   {
+    "H_inf_GeV": 10000000000000.0,
+    "r": 0.0897,
+    "T_RH_instant_GeV": 2667915101264336.5,
+    "nQ_end_GeV3": 6.918516628796544e+36,
+    "N_max_efolds": 18.92741940011308
+   },
+   {
+    "H_inf_GeV": 10000000000000.0,
+    "r": 0.001,
+    "T_RH_instant_GeV": 2667915101264336.5,
+    "nQ_end_GeV3": 7.712950533775412e+34,
+    "N_max_efolds": 20.42624298980133
+   }
+  ]
+ },
+ "chronology": "The net hidden yield Y_Q = r Y_B is an initial datum supplied by OUTSIDE-ACTION physics at a time T_Q that the action does not fix: either after the last ~N_max e-folds of inflation (N_max ~ 10-20 for r ~ 1, see table; observable scales leave the horizon ~50-60 e-folds before the end), or during/after reheating. T_Q (visible temperature at supply), the spatial form of the supplied charge (homogeneous condensate, plasma, localized) and any later entropy dilution are free inputs. Y_Q is constant only between T_Q and today if no entropy is injected.",
+ "runtime_s": 2.005844831466675
+}

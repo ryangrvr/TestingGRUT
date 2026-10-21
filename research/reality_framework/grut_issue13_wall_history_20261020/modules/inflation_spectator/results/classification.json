@@ -1,0 +1,510 @@
+{
+ "module": "inflation_spectator",
+ "part": "3 classification",
+ "labels": "computed from the 1D/2D Fokker-Planck results; percolation threshold quoted (Wang et al. arXiv:1302.0421, abstract); re-entry mapping is an estimate with instant reheating (outside-action preparation data)",
+ "regimes": {
+  "N50": {
+   "A_no_opposite_region_expected": "H_inf < 144.4 GeV (all-size count < 1e-3; relaxed start 144.4)",
+   "B_rare_closed_minority_regions": "144.4 < H_inf < 368.5 GeV (p_- < 1e-3)",
+   "C_closed_minority_domains_below_pc": "368.5 < H_inf < 1784 GeV (1e-3 < p_- < p_c)",
+   "D_both_vacua_percolate_network": "H_inf > 1784 GeV (p_- > p_c = 0.3116); p_- -> 1/2 for H_inf >> v",
+   "late_reentry_counts": "N(minority domains re-entering after 1 MeV) < 1e-3 needs H_inf < 196.5 GeV (delta start) / 186.2 GeV (relaxed start)"
+  },
+  "N60": {
+   "A_no_opposite_region_expected": "H_inf < 138.1 GeV (all-size count < 1e-3; relaxed start 138.1)",
+   "B_rare_closed_minority_regions": "138.1 < H_inf < 355 GeV (p_- < 1e-3)",
+   "C_closed_minority_domains_below_pc": "355 < H_inf < 1607 GeV (1e-3 < p_- < p_c)",
+   "D_both_vacua_percolate_network": "H_inf > 1607 GeV (p_- > p_c = 0.3116); p_- -> 1/2 for H_inf >> v",
+   "late_reentry_counts": "N(minority domains re-entering after 1 MeV) < 1e-3 needs H_inf < 196.5 GeV (delta start) / 186.2 GeV (relaxed start)"
+  }
+ },
+ "high_H_summary_1D": [
+  {
+   "H_GeV": 10000.0,
+   "p_minus_fresh_N50": 0.461212057911721,
+   "p_minus_fresh_N60": 0.4650533179441919,
+   "Lambda1": 0.009483766956618973,
+   "sign_field_spectral_tilt_2Lambda1": 0.018967533913237945,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.22647369077800578,
+    "minority_fraction_quantiles_10_50_90": [
+     0.07004721887996752,
+     0.19987094313699283,
+     0.43327809788494526
+    ],
+    "prob_minority_below_pc": 0.7172362378415115,
+    "prob_minority_below_1e-3": 8.483624951534853e-31
+   }
+  },
+  {
+   "H_GeV": 316227.7660168379,
+   "p_minus_fresh_N50": 0.49884205792665476,
+   "p_minus_fresh_N60": 0.49894921978011963,
+   "Lambda1": 0.008339691268924686,
+   "sign_field_spectral_tilt_2Lambda1": 0.016679382537849372,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.21004696115301397,
+    "minority_fraction_quantiles_10_50_90": [
+     0.05771973105607595,
+     0.17849124494960245,
+     0.4237137043576459
+    ],
+    "prob_minority_below_pc": 0.7488176699407924,
+    "prob_minority_below_1e-3": 5.4970493470362255e-31
+   }
+  },
+  {
+   "H_GeV": 10000000.0,
+   "p_minus_fresh_N50": 0.4999620463517038,
+   "p_minus_fresh_N60": 0.49996530843200576,
+   "Lambda1": 0.0072438279071826055,
+   "sign_field_spectral_tilt_2Lambda1": 0.014487655814365211,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.1926666845538709,
+    "minority_fraction_quantiles_10_50_90": [
+     0.046777510755182286,
+     0.15372348836392974,
+     0.4135818533187215
+    ],
+    "prob_minority_below_pc": 0.7798350916517887,
+    "prob_minority_below_1e-3": 3.876725915878451e-31
+   }
+  },
+  {
+   "H_GeV": 316227766.01683795,
+   "p_minus_fresh_N50": 0.4999987568248531,
+   "p_minus_fresh_N60": 0.4999988557734423,
+   "Lambda1": 0.006228729717028863,
+   "sign_field_spectral_tilt_2Lambda1": 0.012457459434057726,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.17484400873432,
+    "minority_fraction_quantiles_10_50_90": [
+     0.037352248250611654,
+     0.13050555400125166,
+     0.39539658352259244
+    ],
+    "prob_minority_below_pc": 0.8095003737145391,
+    "prob_minority_below_1e-3": 4.396270672918274e-29
+   }
+  },
+  {
+   "H_GeV": 10000000000.0,
+   "p_minus_fresh_N50": 0.4999999593071963,
+   "p_minus_fresh_N60": 0.49999996229771987,
+   "Lambda1": 0.005298120400638092,
+   "sign_field_spectral_tilt_2Lambda1": 0.010596240801276184,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.15675345676867783,
+    "minority_fraction_quantiles_10_50_90": [
+     0.029370454836388653,
+     0.10605137907217567,
+     0.3840687140074717
+    ],
+    "prob_minority_below_pc": 0.8375343931228968,
+    "prob_minority_below_1e-3": 2.723576389550993e-30
+   }
+  },
+  {
+   "H_GeV": 316227766016.83795,
+   "p_minus_fresh_N50": 0.499999998668918,
+   "p_minus_fresh_N60": 0.49999999875896556,
+   "Lambda1": 0.004454499590876441,
+   "sign_field_spectral_tilt_2Lambda1": 0.008908999181752883,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.1386146350630182,
+    "minority_fraction_quantiles_10_50_90": [
+     0.02272861518108355,
+     0.08448467751623633,
+     0.3566219649031965
+    ],
+    "prob_minority_below_pc": 0.8636630915580372,
+    "prob_minority_below_1e-3": 1.6519783352207408e-30
+   }
+  },
+  {
+   "H_GeV": 10000000000000.0,
+   "p_minus_fresh_N50": 0.49999999995648997,
+   "p_minus_fresh_N60": 0.4999999999591911,
+   "Lambda1": 0.0036989514362070646,
+   "sign_field_spectral_tilt_2Lambda1": 0.007397902872414129,
+   "eq_draws_N50": {
+    "mean_p_minus_over_full_equilibrium": 0.5,
+    "mean_minority_fraction": 0.12069043083306966,
+    "minority_fraction_quantiles_10_50_90": [
+     0.016859083769229427,
+     0.06591319942588232,
+     0.33620748139052026
+    ],
+    "prob_minority_below_pc": 0.8822227019464173,
+    "prob_minority_below_1e-3": 7.661645034309145e-28
+   }
+  }
+ ],
+ "high_H_summary_2D": [
+  {
+   "H_GeV": 10000.0,
+   "grid": [
+    112,
+    197
+   ],
+   "Lambda1_2D": 0.013710788763606272,
+   "marginal_phi2_over_H2_with_X": 0.729197182307308,
+   "phi2_over_H2_X0_slice": 1.4892457996358437,
+   "marginal_peak_y": 0.025,
+   "X0_slice_peak_y": 0.775,
+   "rho2_over_H2_mean": 5.821550999742281,
+   "symmetry": "exact: P(phi) = P(-phi) by Z2 (the odd sector is solved explicitly)",
+   "N50": {
+    "p_minus_fresh_start_phi_v_X0": 0.4753625805366849,
+    "eq_draws_mean_minority_fraction": 0.36021490828969377,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.18240387742632924,
+     0.3909947442431234,
+     0.4834411909160407
+    ],
+    "eq_draws_prob_minority_below_pc": 0.30337508798663715
+   },
+   "N60": {
+    "p_minus_fresh_start_phi_v_X0": 0.47851111107013844,
+    "eq_draws_mean_minority_fraction": 0.3813524396075238,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.22215790086890558,
+     0.41097716891714176,
+     0.48744326642864616
+    ],
+    "eq_draws_prob_minority_below_pc": 0.24042258347506348
+   }
+  },
+  {
+   "H_GeV": 10000000000000.0,
+   "grid": [
+    120,
+    217
+   ],
+   "Lambda1_2D": 0.008453253115566634,
+   "marginal_phi2_over_H2_with_X": 0.9681445299173869,
+   "phi2_over_H2_X0_slice": 2.710102152127101,
+   "marginal_peak_y": 0.025,
+   "X0_slice_peak_y": 1.7750000000000001,
+   "rho2_over_H2_mean": 7.998031937814808,
+   "symmetry": "exact: P(phi) = P(-phi) by Z2 (the odd sector is solved explicitly)",
+   "N50": {
+    "p_minus_fresh_start_phi_v_X0": 0.49999999995918476,
+    "eq_draws_mean_minority_fraction": 0.33337115625640634,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.0964243815379538,
+     0.37995460106599904,
+     0.48536260923228913
+    ],
+    "eq_draws_prob_minority_below_pc": 0.3711099444185688
+   },
+   "N60": {
+    "p_minus_fresh_start_phi_v_X0": 0.4999999999627458,
+    "eq_draws_mean_minority_fraction": 0.3524679786967455,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.1264766603103294,
+     0.40102103326545435,
+     0.4892443637268617
+    ],
+    "eq_draws_prob_minority_below_pc": 0.3255908155766819
+   },
+   "dt_check_max_abs_dS_N50": 6.089810332676748e-07
+  }
+ ],
+ "minority_domain_profiles": [
+  {
+   "H_GeV": 200.0,
+   "T_reheat_instant_GeV": 11931279049.250582,
+   "Lambda1": 3.9280209638516544e-20,
+   "p_minus_N50_delta": 1.8631153572653397e-19,
+   "profile": [
+    {
+     "efolds_before_end": 0.0,
+     "comoving_size_over_end_Hubble": 1.0,
+     "T_reentry_GeV": 11931279049.250624,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.5856389519851402e-20,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.5856389519851402e-20,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 7.948416245228442e-32
+    },
+    {
+     "efolds_before_end": 5.0,
+     "comoving_size_over_end_Hubble": 148.4131591025766,
+     "T_reentry_GeV": 80392325.86514926,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.3193362223169295e-20,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.3193362223169295e-20,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.7507551854841155e-27
+    },
+    {
+     "efolds_before_end": 10.0,
+     "comoving_size_over_end_Hubble": 22026.465794806718,
+     "T_reentry_GeV": 541679.2308125844,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 9.31233676604785e-21,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 9.31233676604785e-21,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 3.856294920814622e-23
+    },
+    {
+     "efolds_before_end": 20.0,
+     "comoving_size_over_end_Hubble": 485165195.4097903,
+     "T_reentry_GeV": 25.48192080960325,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.6886720737423518e-21,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.6886720737423518e-21,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.9386288661892164e-14
+    },
+    {
+     "efolds_before_end": 30.0,
+     "comoving_size_over_end_Hubble": 10686474581524.463,
+     "T_reentry_GeV": 0.001636863442251909,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 8.305368093326929e-24,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 8.305368093326929e-24,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.3307896658965794e-05
+    },
+    {
+     "efolds_before_end": 40.0,
+     "comoving_size_over_end_Hubble": 2.3538526683701997e+17,
+     "T_reentry_GeV": 9.483329288180102e-08,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 7.580793384283044e-33,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 7.580793384283044e-33,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 7088.485498408067
+    },
+    {
+     "efolds_before_end": 45.0,
+     "comoving_size_over_end_Hubble": 3.4934271057485095e+19,
+     "T_reentry_GeV": 6.389817011863198e-10,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": 7.413212421151187e-52,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 7.413212421151187e-52,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 156134283.36767092
+    },
+    {
+     "efolds_before_end": 50.0,
+     "comoving_size_over_end_Hubble": 5.184705528587072e+21,
+     "T_reentry_GeV": 4.30542483597889e-12,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": NaN,
+     "dp_dn_relaxed": 1.9640104819258272e-20,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": NaN,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 3439086451994.6636
+    }
+   ],
+   "gaussian_approx_fraction_smoothed_at_n_0_5_10": [
+    2.6850499010463643e-74,
+    0.0,
+    0.0
+   ],
+   "gaussian_exponent_over_HM_exponent": 4.0
+  },
+  {
+   "H_GeV": 250.0,
+   "T_reheat_instant_GeV": 13339575506.321682,
+   "Lambda1": 9.031890245886358e-10,
+   "p_minus_N50_delta": 2.4002207916269313e-09,
+   "profile": [
+    {
+     "efolds_before_end": 0.0,
+     "comoving_size_over_end_Hubble": 1.0,
+     "T_reentry_GeV": 13339575506.321674,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 2.3048185410656791e-10,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 2.3048185410656791e-10,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 6.358732996182804e-32
+    },
+    {
+     "efolds_before_end": 5.0,
+     "comoving_size_over_end_Hubble": 148.4131591025766,
+     "T_reentry_GeV": 89881352.75189444,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.7253180028695658e-10,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.7253180028695658e-10,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.400604148387284e-27
+    },
+    {
+     "efolds_before_end": 10.0,
+     "comoving_size_over_end_Hubble": 22026.465794806718,
+     "T_reentry_GeV": 605615.7910483695,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.1099122714444198e-10,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.1099122714444198e-10,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 3.08503593665169e-23
+    },
+    {
+     "efolds_before_end": 20.0,
+     "comoving_size_over_end_Hubble": 485165195.4097903,
+     "T_reentry_GeV": 28.489653563769213,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 2.1709727093428395e-11,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 2.1709727093428395e-11,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.5509030929514227e-14
+    },
+    {
+     "efolds_before_end": 30.0,
+     "comoving_size_over_end_Hubble": 10686474581524.463,
+     "T_reentry_GeV": 0.0018300689633797729,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 3.8780470344288243e-13,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 3.8780470344288243e-13,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.0646317327172778e-05
+    },
+    {
+     "efolds_before_end": 40.0,
+     "comoving_size_over_end_Hubble": 2.3538526683701997e+17,
+     "T_reentry_GeV": 1.060268447069262e-07,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 3.4437726868740568e-19,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 3.4437726868740568e-19,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 5670.7883987265395
+    },
+    {
+     "efolds_before_end": 45.0,
+     "comoving_size_over_end_Hubble": 3.4934271057485095e+19,
+     "T_reentry_GeV": 7.144032601155367e-10,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": 1.505963593290607e-31,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.505963593290607e-31,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 124907426.694136
+    },
+    {
+     "efolds_before_end": 50.0,
+     "comoving_size_over_end_Hubble": 5.184705528587072e+21,
+     "T_reentry_GeV": 4.813611302632304e-12,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": NaN,
+     "dp_dn_relaxed": 4.515945122943179e-10,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": NaN,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 2751269161595.772
+    }
+   ],
+   "gaussian_approx_fraction_smoothed_at_n_0_5_10": [
+    7.217252763955819e-32,
+    2.3724852610814454e-89,
+    2.5241990367853436e-257
+   ],
+   "gaussian_exponent_over_HM_exponent": 3.9999999999999973
+  },
+  {
+   "H_GeV": 300.0,
+   "T_reheat_instant_GeV": 14612772824.711565,
+   "Lambda1": 3.8950788733705135e-06,
+   "p_minus_N50_delta": 1.0329409636562776e-05,
+   "profile": [
+    {
+     "efolds_before_end": 0.0,
+     "comoving_size_over_end_Hubble": 1.0,
+     "T_reentry_GeV": 14612772824.711586,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 8.672149842564715e-07,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 8.672149842564715e-07,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 5.29894416348565e-32
+    },
+    {
+     "efolds_before_end": 5.0,
+     "comoving_size_over_end_Hubble": 148.4131591025766,
+     "T_reentry_GeV": 98460088.8025831,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 6.784823846255533e-07,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 6.784823846255533e-07,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.1671701236560736e-27
+    },
+    {
+     "efolds_before_end": 10.0,
+     "comoving_size_over_end_Hubble": 22026.465794806718,
+     "T_reentry_GeV": 663418.8598770534,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 4.767835401852701e-07,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 4.767835401852701e-07,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 2.570863280543083e-23
+    },
+    {
+     "efolds_before_end": 20.0,
+     "comoving_size_over_end_Hubble": 485165195.4097903,
+     "T_reentry_GeV": 31.208851824767667,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 1.4148943178314626e-07,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.4148943178314626e-07,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 1.2924192441261872e-14
+    },
+    {
+     "efolds_before_end": 30.0,
+     "comoving_size_over_end_Hubble": 10686474581524.463,
+     "T_reentry_GeV": 0.0020047401060663897,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 8.345099686505296e-09,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 8.345099686505296e-09,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 8.87193110597736e-06
+    },
+    {
+     "efolds_before_end": 40.0,
+     "comoving_size_over_end_Hubble": 2.3538526683701997e+17,
+     "T_reentry_GeV": 1.1614658909416122e-07,
+     "RD_mapping_valid": true,
+     "dp_dn_delta_start": 5.790588910805033e-13,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 5.790588910805033e-13,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 4725.656998938798
+    },
+    {
+     "efolds_before_end": 45.0,
+     "comoving_size_over_end_Hubble": 3.4934271057485095e+19,
+     "T_reentry_GeV": 7.825895614410192e-10,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": 1.6658965058980487e-21,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": 1.6658965058980487e-21,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 104089522.24511366
+    },
+    {
+     "efolds_before_end": 50.0,
+     "comoving_size_over_end_Hubble": 5.184705528587072e+21,
+     "T_reentry_GeV": 5.273046987027127e-12,
+     "RD_mapping_valid": false,
+     "dp_dn_delta_start": NaN,
+     "dp_dn_relaxed": 1.9475394366852567e-06,
+     "domains_per_Hubble_volume_at_reentry_per_efold_delta": NaN,
+     "wall_energy_fraction_one_wall_per_Hubble_patch": 2292724301329.768
+    }
+   ],
+   "gaussian_approx_fraction_smoothed_at_n_0_5_10": [
+    1.6485688378591339e-16,
+    7.403029874281935e-33,
+    2.290444028218145e-67
+   ],
+   "gaussian_exponent_over_HM_exponent": 3.9999999999999982
+  }
+ ],
+ "notes": [
+  "Stationary barrier crossing creates minority domains at a constant rate per Hubble volume per e-fold, so the minority volume fraction per unit ln k is flat (= Lambda_1/2) and the number per Hubble volume at re-entry is ~ Lambda_1/2 per e-fold of scale. A fresh start at +v suppresses the largest scales (the first 20-45 e-folds after the patch start).",
+  "The Gaussian approximation (linearised about +v) puts all opposite-sign volume on scales that exited in the last ~3H^2/(2 m^2) e-folds and has an exponent 4x the Hawking-Moss/stochastic barrier exponent: it misses trapping in the other well and underestimates p_- by many orders of magnitude where p_- is small.",
+  "Re-entry: in RD with constant g_*, T_re = T_reheat e^{-n} for a scale that exited n e-folds before the end.",
+  "Site percolation p_c = 0.3116 is for uncorrelated sites; the inflationary sign field is correlated (power-law, tilt 2 Lambda_1), so p_c is only a proxy for the network/no-network boundary."
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "n_checks": 35,
+ "n_pass": 33,
+ "n_fail": 2,
+ "failing": [
+  "LMS literal SI reading reproduces 0.96 MeV label",
+  "T_dom ODE tolerance 1e-7 vs 1e-11"
+ ],
+ "checks": [
+  {
+   "name": "g_rho(T0) vs 3.383 (1803.01038 eq.3.19)",
+   "value": 3.383,
+   "reference": 3.383,
+   "rel_tol": null,
+   "abs_tol": 0.003,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "g_s(T0) vs 3.931 (1803.01038 eq.3.18)",
+   "value": 3.931,
+   "reference": 3.931,
+   "rel_tol": null,
+   "abs_tol": 0.004,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "g_rho continuity at 120 MeV",
+   "value": 19.76340794663961,
+   "reference": 19.767509776994306,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "g_s continuity at 120 MeV",
+   "value": 19.092871285353908,
+   "reference": 19.100021395214565,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "g_rho(10 MeV) ~ 10.75 (e, nu, gamma)",
+   "value": 10.742715276025253,
+   "reference": 10.75,
+   "rel_tol": 0.01,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "Omega_gamma h^2 = 2.473e-5 standard",
+   "value": 2.4729762633252763e-05,
+   "reference": 2.4728e-05,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "T_nu/T at 1 keV = (4/11)^(1/3)",
+   "value": 0.7137658555036082,
+   "reference": 0.7137658555036082,
+   "rel_tol": 1e-06,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "sigma_bench = 9.428090416e7 GeV^3 (BRIEF)",
+   "value": 94280904.15820633,
+   "reference": 94280904.16,
+   "rel_tol": 1e-09,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "sigma^(1/3) = 455.136 GeV (BRIEF)",
+   "value": 455.1360606788448,
+   "reference": 455.136,
+   "rel_tol": null,
+   "abs_tol": 0.0005,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "1 GeV^3 in J/m^2 via MeV/fm^2 route",
+   "value": 4.114693148808747e+21,
+   "reference": 4.114693148808747e+21,
+   "rel_tol": 1e-12,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "Codex G sigma/H0 = 1e-5 reproduces 2.23e-9 GeV^3",
+   "value": 2.225698138592812e-09,
+   "reference": 2.23e-09,
+   "rel_tol": 0.003,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "Codex benchmark ratio 4.24e16",
+   "value": 4.236014872071332e+16,
+   "reference": 4.24e+16,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "LMS kg/cm^2 reading reproduces 0.96 MeV label",
+   "value": 0.9732075462382429,
+   "reference": 0.96,
+   "rel_tol": 0.02,
+   "abs_tol": null,
+   "pass": true,
+   "note": "reconciliation check; the literal kg/m^2 reading fails this by a factor 21"
+  },
+  {
+   "name": "LMS kg/cm^2 reading reproduces 0.93 MeV label",
+   "value": 0.9438903817196702,
+   "reference": 0.93,
+   "rel_tol": 0.02,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "LMS literal SI reading reproduces 0.96 MeV label",
+   "value": 0.045172292794071214,
+   "reference": 0.96,
+   "rel_tol": 0.02,
+   "abs_tol": null,
+   "pass": false,
+   "note": "EXPECTED TO FAIL: documents the unit inconsistency in arXiv:1505.03673v1"
+  },
+  {
+   "name": "t_dom (no backreaction) vs Saikawa eq.(2.19) 3 M_P^2/(4 A sigma)",
+   "value": 38823.236762035274,
+   "reference": 38817.40025657215,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "T_dom (no backreaction) vs closed form rho_rad(T)=3 M_P^2 (2 A sigma/3 M_P^2)^2",
+   "value": 5.8220618665478415e-06,
+   "reference": 5.822280702558707e-06,
+   "rel_tol": 0.005,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "T_dom insensitive to T_start (100 vs 1000 GeV)",
+   "value": 6.3668613149748655e-06,
+   "reference": 6.366861314287523e-06,
+   "rel_tol": 1e-06,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "T_dom ODE tolerance 1e-7 vs 1e-11",
+   "value": 6.366852448438718e-06,
+   "reference": 6.366861318580379e-06,
+   "rel_tol": 1e-06,
+   "abs_tol": null,
+   "pass": false,
+   "note": "FAILED as first written: rtol=1e-7 differs by 1.4e-6; kept as a record. Production uses rtol=1e-10 (next check)"
+  },
+  {
+   "name": "T_dom production rtol 1e-10 vs 1e-12",
+   "value": 6.366861314287523e-06,
+   "reference": 6.366861318814571e-06,
+   "rel_tol": 1e-08,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "rho_w0 production rtol 1e-10 vs 1e-12",
+   "value": 6.746456643533401e-29,
+   "reference": 6.746456657924264e-29,
+   "rel_tol": 1e-08,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "H0 ODE-independent: rho_w0 tolerance 1e-7 vs 1e-11",
+   "value": 6.746428460267788e-29,
+   "reference": 6.746456657179749e-29,
+   "rel_tol": 1e-05,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=1 wall-dominated: q0 = -1/2",
+   "value": -0.5,
+   "reference": -0.5,
+   "rel_tol": null,
+   "abs_tol": 1e-06,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=2 wall-dominated: q0 = 0",
+   "value": 2.3170693864564696e-12,
+   "reference": 0.0,
+   "rel_tol": null,
+   "abs_tol": 1e-06,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=1 age = 2/H0 (a ~ t^2)",
+   "value": 675931470.7842383,
+   "reference": 676044204.1979822,
+   "rel_tol": 0.001,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=2 age = 1/H0 (a ~ t)",
+   "value": 1759941529861.76,
+   "reference": 1759941594599.2754,
+   "rel_tol": 0.002,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=1 rho_w0 = rho_w,dom (a_dom/a0)",
+   "value": 6.746456643533401e-29,
+   "reference": 6.746456643533401e-29,
+   "rel_tol": 1e-09,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "tuned rho_L<0, n=1: age = pi/(R_H H0)",
+   "value": 1061815018.8006771,
+   "reference": 1061927752.7051692,
+   "rel_tol": 0.01,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "tuned rho_L<0, n=2: age = (pi/2)/(R_H H0)",
+   "value": 2764502700877.3037,
+   "reference": 2764509792170.094,
+   "rel_tol": 0.01,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "tuned rho_L<0, n=1: q0 = R_H^2/2",
+   "value": 8.503247465534176e+17,
+   "reference": 8.503247465534177e+17,
+   "rel_tol": 0.001,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "n=4 stress test: R_H equals no-wall value (radiation negligible today)",
+   "value": 0.539186198551242,
+   "reference": 0.5391070288524824,
+   "rel_tol": 0.001,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "v_max(dom, rhoL=0) root vs scan characteristic v (T_dom=T0)",
+   "value": 47.29813944164284,
+   "reference": 47.298163095623416,
+   "rel_tol": 0.001,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "sigma_max(dom, Planck-like rhoL) vs analytic 3 M_P^2 H0^2 t0/A (order of magnitude)",
+   "value": 2.3932472556248015e-05,
+   "reference": 3.0373991967292635e-05,
+   "rel_tol": 0.5,
+   "abs_tol": null,
+   "pass": true,
+   "note": "analytic omits backreaction and the definition rho_w = rho_others; agreement within 50% expected"
+  },
+  {
+   "name": "continuous relic rho/s vs 2 sigma/(t s) at T_end = 1 MeV",
+   "value": 3.567109536620614e-08,
+   "reference": 3.5938384064229956e-08,
+   "rel_tol": 0.03,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "GW today: direct a^4 redshift vs HKS eq.(35)",
+   "value": 6.110579414386584e-07,
+   "reference": 6.052403983831969e-07,
+   "rel_tol": 0.03,
+   "abs_tol": null,
+   "pass": true,
+   "note": ""
+  }
+ ]
+}

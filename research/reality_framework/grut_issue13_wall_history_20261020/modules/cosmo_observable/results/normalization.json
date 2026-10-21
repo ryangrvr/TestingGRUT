@@ -1,0 +1,147 @@
+{
+ "module": "cosmo_observable",
+ "part": "3 normalization",
+ "conversion": {
+  "hbar_c_GeV_m": 1.973269804e-16,
+  "GeV_J": 1.602176634e-10,
+  "c_m_s": 299792458.0,
+  "1_GeV3_in_J_per_m2": 4.114693148808747e+21,
+  "1_GeV3_in_kg_per_m2": 45782.13562665492,
+  "1_kg_per_m2_in_GeV3": 2.184258087378929e-05,
+  "formula": "1 GeV^3 = (1 GeV)/(hbar c / 1 GeV)^2 energy per area; divide by c^2 for mass per area"
+ },
+ "benchmark": {
+  "sigma_GeV3": 94280904.15820633,
+  "sigma_kg_m2": 4316381141174.656,
+  "sigma_J_m2": 3.879369904032657e+29,
+  "sigma_cuberoot_GeV": 455.1360606788448
+ },
+ "LMS_1505.03673": {
+  "R+M": {
+   "printed_sigma_kg_m2": 4.22e-09,
+   "printed_label_MeV": 0.96,
+   "literal_sigma_GeV3": 9.21756912873908e-14,
+   "literal_cuberoot_MeV": 0.045172292794071214,
+   "kg_per_cm2_reading_sigma_GeV3": 9.217569128739079e-10,
+   "kg_per_cm2_reading_cuberoot_MeV": 0.9732075462382429,
+   "label_as_cuberoot_sigma_GeV3": 8.847360000000001e-10,
+   "label_as_vev_at_lam0.01_sigma_GeV3": 8.341371002131485e-11,
+   "ratio_label_cuberoot_to_literal_cuberoot": 21.251965322557158,
+   "ratio_kgcm2_cuberoot_to_label": 1.0137578606648363,
+   "G_sigma_t0_literal": 4.090592963305768e-10,
+   "G_sigma_t0_kgcm2": 4.090592963305767e-06,
+   "6piGsigma_t0_literal": 7.710586081408503e-09,
+   "6piGsigma_t0_kgcm2": 7.710586081408501e-05,
+   "rho_w_over_rho_bar_today_literal": 4.960477045706137e-09,
+   "rho_w_over_rho_bar_today_kgcm2": 4.9604770457061365e-05
+  },
+  "R+M+Lambda": {
+   "printed_sigma_kg_m2": 3.85e-09,
+   "printed_label_MeV": 0.93,
+   "literal_sigma_GeV3": 8.409393636408876e-14,
+   "literal_cuberoot_MeV": 0.04381151055944525,
+   "kg_per_cm2_reading_sigma_GeV3": 8.409393636408877e-10,
+   "kg_per_cm2_reading_cuberoot_MeV": 0.9438903817196702,
+   "label_as_cuberoot_sigma_GeV3": 8.043570000000002e-10,
+   "label_as_vev_at_lam0.01_sigma_GeV3": 7.583550522598239e-11,
+   "ratio_label_cuberoot_to_literal_cuberoot": 21.22729821739741,
+   "ratio_kgcm2_cuberoot_to_label": 1.014935894322226,
+   "G_sigma_t0_literal": 3.7319390778974427e-10,
+   "G_sigma_t0_kgcm2": 3.731939077897443e-06,
+   "6piGsigma_t0_literal": 7.0345394344603636e-09,
+   "6piGsigma_t0_kgcm2": 7.034539434460365e-05,
+   "rho_w_over_rho_bar_today_literal": 4.525553702836168e-09,
+   "rho_w_over_rho_bar_today_kgcm2": 4.5255537028361674e-05
+  }
+ },
+ "LMS_reconciliation": "The printed SI values (4.22e-9, 3.85e-9 kg/m^2) convert to sigma^(1/3) = 45.2, 43.8 keV, a factor 21.3 below the printed MeV labels; sigma differs by ~1e4 = (m/cm)^2. Reading the unit as kg/cm^2 gives sigma^(1/3) = 0.973, 0.944 MeV, within 1.5% of both labels, and gives G sigma t0 = 4.09e-06, consistent with the paper's stated agreement with the deltaT/T <~ 1e-5 estimate, whereas the literal reading gives G sigma t0 = 4.1e-10. We therefore adopt sigma_95 = 9.218e-10 GeV^3 (R+M) and 8.409e-10 GeV^3 (R+M+Lambda) as the reconciled bound and identify the MeV label with sigma^(1/3) in natural units (not a vev). This is our reconciliation, not an erratum by the authors; the literal reading is carried as a stricter alternative.",
+ "ZKO_Saikawa_eq2.21": {
+  "sigma_max_GeV3": 2.2533576944526897e-09,
+  "cuberoot_MeV": 1.3110221989713127,
+  "note": "order-of-magnitude; t0 = 13.797 Gyr; ZKO 1974 itself not read (secondary via 1703.02576 sec. 2.2)"
+ },
+ "Codex_G_sigma_over_H0": {
+  "sigma_GeV3": 2.225698138592812e-09,
+  "cuberoot_MeV": 1.3056359135781255,
+  "benchmark_over_this": 4.236014872071332e+16,
+  "quoted_value": 2.23e-09,
+  "quoted_ratio": 4.24e+16
+ },
+ "Saikawa_eq2.21_coefficient_check": {
+  "G_t0_TeV3": 4437821844538.031,
+  "quoted": 1000000000000.0
+ },
+ "bounds_table": {
+  "LMS_R+M+Lambda_reconciled": {
+   "sigma_GeV3": 8.409393636408877e-10,
+   "sigma_kg_m2": 3.85e-05,
+   "cuberoot_MeV": 0.9438903817196702,
+   "benchmark_over_bound": 1.1211379587466638e+17,
+   "v_max_GeV_at_lam0.01": 0.002073864198569188,
+   "v_max_MeV": 2.073864198569188,
+   "m_X_max_MeV_gX0.1": 0.2073864198569188,
+   "r_max_from_mX_r<63.93GeV": 308265.1219115839,
+   "r_max_from_mX_r<74.64GeV_stress": 359907.8476377385
+  },
+  "LMS_R+M_reconciled": {
+   "sigma_GeV3": 9.217569128739079e-10,
+   "sigma_kg_m2": 4.2199999999999996e-05,
+   "cuberoot_MeV": 0.9732075462382429,
+   "benchmark_over_bound": 1.0228391329797763e+17,
+   "v_max_GeV_at_lam0.01": 0.002138278265155882,
+   "v_max_MeV": 2.138278265155882,
+   "m_X_max_MeV_gX0.1": 0.2138278265155882,
+   "r_max_from_mX_r<63.93GeV": 298978.86089834734,
+   "r_max_from_mX_r<74.64GeV_stress": 349065.8873369724
+  },
+  "LMS_R+M+Lambda_literal_SI": {
+   "sigma_GeV3": 8.409393636408876e-14,
+   "sigma_kg_m2": 3.85e-09,
+   "cuberoot_MeV": 0.04381151055944525,
+   "benchmark_over_bound": 1.121137958746664e+21,
+   "v_max_GeV_at_lam0.01": 9.626024906508059e-05,
+   "v_max_MeV": 0.09626024906508059,
+   "m_X_max_MeV_gX0.1": 0.00962602490650806,
+   "r_max_from_mX_r<63.93GeV": 6641370.72373224,
+   "r_max_from_mX_r<74.64GeV_stress": 7753979.521654534
+  },
+  "LMS_R+M_literal_SI": {
+   "sigma_GeV3": 9.21756912873908e-14,
+   "sigma_kg_m2": 4.22e-09,
+   "cuberoot_MeV": 0.045172292794071214,
+   "benchmark_over_bound": 1.0228391329797763e+21,
+   "v_max_GeV_at_lam0.01": 9.92500851870445e-05,
+   "v_max_MeV": 0.09925008518704449,
+   "m_X_max_MeV_gX0.1": 0.00992500851870445,
+   "r_max_from_mX_r<63.93GeV": 6441304.295056165,
+   "r_max_from_mX_r<74.64GeV_stress": 7520396.567855344
+  },
+  "ZKO_Saikawa_Gsigma_t0_1e-5": {
+   "sigma_GeV3": 2.2533576944526897e-09,
+   "sigma_kg_m2": 0.00010316352758279947,
+   "cuberoot_MeV": 1.3110221989713127,
+   "benchmark_over_bound": 4.1840185599608456e+16,
+   "v_max_GeV_at_lam0.01": 0.0028805060996834565,
+   "v_max_MeV": 2.8805060996834566,
+   "m_X_max_MeV_gX0.1": 0.2880506099683457,
+   "r_max_from_mX_r<63.93GeV": 221940.16533075686,
+   "r_max_from_mX_r<74.64GeV_stress": 259121.1315546331
+  },
+  "Codex_Gsigma_over_H0_1e-5": {
+   "sigma_GeV3": 2.225698138592812e-09,
+   "sigma_kg_m2": 0.00010189721404504952,
+   "cuberoot_MeV": 1.3056359135781255,
+   "benchmark_over_bound": 4.236014872071332e+16,
+   "v_max_GeV_at_lam0.01": 0.002868671648716962,
+   "v_max_MeV": 2.868671648716962,
+   "m_X_max_MeV_gX0.1": 0.2868671648716962,
+   "r_max_from_mX_r<63.93GeV": 222855.7598378094,
+   "r_max_from_mX_r<74.64GeV_stress": 260190.11284677134
+  }
+ },
+ "v_max_general_formula": "v_max = (3 sigma_max / (2 sqrt(2 lambda_phi)))^(1/3); at lambda_phi=0.01 v_max = 2.1972 sigma_max^(1/3)",
+ "vilenkin_gravitational_time_benchmark": {
+  "t_sigma_s": 165620.90776137458,
+  "formula": "t_sigma = 1/(2 pi G sigma) (planar-wall repulsion scale, Vilenkin 1983 / Ipser-Sikivie 1984; secondary)"
+ }
+}

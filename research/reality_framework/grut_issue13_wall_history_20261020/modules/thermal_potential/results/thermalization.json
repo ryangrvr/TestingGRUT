@@ -1,0 +1,480 @@
+{
+ "formulas": {
+  "rate": "Gamma_a = sum_b n_b sum_f |M_ab->f|^2 S_f / (16 pi <s>), n_b = zeta(3) T^3/pi^2, <s> = 2 <E>^2, <E> = pi^4 T/(30 zeta(3))",
+  "amplitudes": "phi phi->phi phi: 6 lambda_phi; phi phi->q_i q_i, phi q_i->phi q_i: 2 g_X^2; q q->q q: 6 lambda_X (same), 2 lambda_X (q1q1->q2q2, q1q2->q1q2); phi phi->DD, phi D->phi D: 2 h_D^2; DD->DD: 6 lambda_D; alpha = 0 at mu0",
+  "sum_|M|^2_S_f": {
+   "phi_elastic_total": 0.00300006,
+   "X_elastic_total": 0.0006240000000000001,
+   "D_exchange_with_phi": 6.000000000000001e-08,
+   "D_self": 1.8e-05
+  },
+  "2to4": "sigma = |M4|^2 Phi_4/(2 s S_f), Phi_4 = s^2/(24576 pi^5), |M4| = N_d (6 lambda_phi)^2 kappa_p/s, N_d = 10, S_f = 4!; central kappa_p = 4, N_ch = 1; band kappa_p in [1,16], N_ch in [1,4]",
+  "criterion": "Gamma(T_h = Tc) > H(T_SM = Tc/xi); Gamma/H scales as xi^2 / T_h for contact interactions, so a bath thermal at Tc stays thermal below it",
+  "estimate_quality": "order of magnitude; collinear logs, Bose enhancement and thermal masses not resolved (factor ~3-10 on 2->2 rates)"
+ },
+ "Gamma_over_T": {
+  "phi_elastic_total": 4.981371739469606e-07,
+  "X_elastic_total": 1.0361045997176838e-07,
+  "D_exchange_with_phi": 9.962544228054652e-12,
+  "D_self": 2.988763268416395e-09,
+  "number_changing_2to4_central": 4.794154793283605e-13,
+  "number_changing_2to4_low": 2.996346745802253e-14,
+  "number_changing_2to4_high": 3.068259067701507e-11
+ },
+ "Gamma_over_H_at_xi=1": {
+  "phi_elastic_total": 227384725.79706135,
+  "X_elastic_total": 47295077.064247474,
+  "D_exchange_with_phi": 4547.60356386995,
+  "D_self": 1364281.069160985,
+  "number_changing_2to4_central": 218.83883197513194,
+  "number_changing_2to4_low": 13.677426998445746,
+  "number_changing_2to4_high": 14005.685246408444
+ },
+ "xi_min_for_Gamma>H": {
+  "phi_elastic_total": 6.63161577337117e-05,
+  "X_elastic_total": 0.0001454092489456327,
+  "D_exchange_with_phi": 0.014828891956613044,
+  "D_self": 0.0008561464762934419,
+  "number_changing_2to4_central": 0.06759861624322319,
+  "number_changing_2to4_low": 0.27039446497289277,
+  "number_changing_2to4_high": 0.008449827030402899
+ },
+ "number_chemical_potential_sensitivity": {
+  "statement": "kinetic equilibrium alone fixes T_h but allows a number chemical potential mu_N <= 0 if 2->4 is slow; the leading Debye coefficient scales as Li_2(z)/zeta(2), z = exp(mu_N/T_h), so Tc (in kinetic temperature) scales as sqrt(zeta(2)/Li_2(z))",
+  "example_z": {
+   "1.0": 1.0,
+   "0.9": 1.1249940569861567,
+   "0.5": 1.6808270630189777,
+   "0.1": 4.0037128000064355
+  }
+ },
+ "grid": [
+  {
+   "xi": 1e-06,
+   "phi_elastic_Gamma_over_H": 0.00022738472579706136,
+   "X_elastic_Gamma_over_H": 4.7295077064247474e-05,
+   "D_exchange_Gamma_over_H": 4.547603563869951e-09,
+   "two_to_four_central_Gamma_over_H": 2.1883883197513194e-10
+  },
+  {
+   "xi": 1.2589254117941661e-06,
+   "phi_elastic_Gamma_over_H": 0.00036038050398539887,
+   "X_elastic_Gamma_over_H": 7.495764567604943e-05,
+   "D_exchange_Gamma_over_H": 7.207465930389371e-09,
+   "two_to_four_central_Gamma_over_H": 3.4683617504352747e-10
+  },
+  {
+   "xi": 1.584893192461114e-06,
+   "phi_elastic_Gamma_over_H": 0.0005711646074621653,
+   "X_elastic_Gamma_over_H": 0.00011879986235488326,
+   "D_exchange_Gamma_over_H": 1.1423063687969548e-08,
+   "two_to_four_central_Gamma_over_H": 5.496982927257392e-10
+  },
+  {
+   "xi": 1.9952623149688787e-06,
+   "phi_elastic_Gamma_over_H": 0.0009052348981415082,
+   "X_elastic_Gamma_over_H": 0.0001882850931115715,
+   "D_exchange_Gamma_over_H": 1.8104335876112646e-08,
+   "two_to_four_central_Gamma_over_H": 8.71213082048519e-10
+  },
+  {
+   "xi": 2.5118864315095823e-06,
+   "phi_elastic_Gamma_over_H": 0.0014347006276427096,
+   "X_elastic_Gamma_over_H": 0.0002984117623144373,
+   "D_exchange_Gamma_over_H": 2.869343868408052e-08,
+   "two_to_four_central_Gamma_over_H": 1.380779682921767e-09
+  },
+  {
+   "xi": 3.162277660168379e-06,
+   "phi_elastic_Gamma_over_H": 0.0022738472579706135,
+   "X_elastic_Gamma_over_H": 0.0004729507706424747,
+   "D_exchange_Gamma_over_H": 4.54760356386995e-08,
+   "two_to_four_central_Gamma_over_H": 2.1883883197513194e-09
+  },
+  {
+   "xi": 3.981071705534969e-06,
+   "phi_elastic_Gamma_over_H": 0.0036038050398539885,
+   "X_elastic_Gamma_over_H": 0.0007495764567604944,
+   "D_exchange_Gamma_over_H": 7.207465930389371e-08,
+   "two_to_four_central_Gamma_over_H": 3.4683617504352748e-09
+  },
+  {
+   "xi": 5.011872336272725e-06,
+   "phi_elastic_Gamma_over_H": 0.0057116460746216525,
+   "X_elastic_Gamma_over_H": 0.001187998623548833,
+   "D_exchange_Gamma_over_H": 1.1423063687969549e-07,
+   "two_to_four_central_Gamma_over_H": 5.496982927257393e-09
+  },
+  {
+   "xi": 6.30957344480193e-06,
+   "phi_elastic_Gamma_over_H": 0.009052348981415083,
+   "X_elastic_Gamma_over_H": 0.001882850931115715,
+   "D_exchange_Gamma_over_H": 1.8104335876112646e-07,
+   "two_to_four_central_Gamma_over_H": 8.71213082048519e-09
+  },
+  {
+   "xi": 7.943282347242822e-06,
+   "phi_elastic_Gamma_over_H": 0.014347006276427099,
+   "X_elastic_Gamma_over_H": 0.002984117623144374,
+   "D_exchange_Gamma_over_H": 2.869343868408052e-07,
+   "two_to_four_central_Gamma_over_H": 1.380779682921767e-08
+  },
+  {
+   "xi": 9.999999999999999e-06,
+   "phi_elastic_Gamma_over_H": 0.022738472579706133,
+   "X_elastic_Gamma_over_H": 0.004729507706424747,
+   "D_exchange_Gamma_over_H": 4.5476035638699495e-07,
+   "two_to_four_central_Gamma_over_H": 2.188388319751319e-08
+  },
+  {
+   "xi": 1.2589254117941661e-05,
+   "phi_elastic_Gamma_over_H": 0.036038050398539884,
+   "X_elastic_Gamma_over_H": 0.007495764567604943,
+   "D_exchange_Gamma_over_H": 7.20746593038937e-07,
+   "two_to_four_central_Gamma_over_H": 3.468361750435275e-08
+  },
+  {
+   "xi": 1.584893192461114e-05,
+   "phi_elastic_Gamma_over_H": 0.05711646074621653,
+   "X_elastic_Gamma_over_H": 0.011879986235488327,
+   "D_exchange_Gamma_over_H": 1.1423063687969545e-06,
+   "two_to_four_central_Gamma_over_H": 5.496982927257392e-08
+  },
+  {
+   "xi": 1.9952623149688786e-05,
+   "phi_elastic_Gamma_over_H": 0.09052348981415083,
+   "X_elastic_Gamma_over_H": 0.01882850931115715,
+   "D_exchange_Gamma_over_H": 1.8104335876112645e-06,
+   "two_to_four_central_Gamma_over_H": 8.712130820485191e-08
+  },
+  {
+   "xi": 2.5118864315095822e-05,
+   "phi_elastic_Gamma_over_H": 0.14347006276427096,
+   "X_elastic_Gamma_over_H": 0.029841176231443733,
+   "D_exchange_Gamma_over_H": 2.8693438684080514e-06,
+   "two_to_four_central_Gamma_over_H": 1.3807796829217667e-07
+  },
+  {
+   "xi": 3.1622776601683795e-05,
+   "phi_elastic_Gamma_over_H": 0.22738472579706137,
+   "X_elastic_Gamma_over_H": 0.04729507706424749,
+   "D_exchange_Gamma_over_H": 4.547603563869951e-06,
+   "two_to_four_central_Gamma_over_H": 2.1883883197513195e-07
+  },
+  {
+   "xi": 3.9810717055349695e-05,
+   "phi_elastic_Gamma_over_H": 0.3603805039853989,
+   "X_elastic_Gamma_over_H": 0.07495764567604946,
+   "D_exchange_Gamma_over_H": 7.2074659303893725e-06,
+   "two_to_four_central_Gamma_over_H": 3.468361750435276e-07
+  },
+  {
+   "xi": 5.011872336272725e-05,
+   "phi_elastic_Gamma_over_H": 0.5711646074621654,
+   "X_elastic_Gamma_over_H": 0.1187998623548833,
+   "D_exchange_Gamma_over_H": 1.142306368796955e-05,
+   "two_to_four_central_Gamma_over_H": 5.496982927257393e-07
+  },
+  {
+   "xi": 6.309573444801929e-05,
+   "phi_elastic_Gamma_over_H": 0.905234898141508,
+   "X_elastic_Gamma_over_H": 0.18828509311157146,
+   "D_exchange_Gamma_over_H": 1.810433587611264e-05,
+   "two_to_four_central_Gamma_over_H": 8.712130820485188e-07
+  },
+  {
+   "xi": 7.943282347242822e-05,
+   "phi_elastic_Gamma_over_H": 1.4347006276427097,
+   "X_elastic_Gamma_over_H": 0.2984117623144374,
+   "D_exchange_Gamma_over_H": 2.8693438684080518e-05,
+   "two_to_four_central_Gamma_over_H": 1.380779682921767e-06
+  },
+  {
+   "xi": 0.0001,
+   "phi_elastic_Gamma_over_H": 2.2738472579706137,
+   "X_elastic_Gamma_over_H": 0.4729507706424748,
+   "D_exchange_Gamma_over_H": 4.54760356386995e-05,
+   "two_to_four_central_Gamma_over_H": 2.1883883197513197e-06
+  },
+  {
+   "xi": 0.00012589254117941674,
+   "phi_elastic_Gamma_over_H": 3.603805039853996,
+   "X_elastic_Gamma_over_H": 0.7495764567604959,
+   "D_exchange_Gamma_over_H": 7.207465930389386e-05,
+   "two_to_four_central_Gamma_over_H": 3.468361750435282e-06
+  },
+  {
+   "xi": 0.00015848931924611142,
+   "phi_elastic_Gamma_over_H": 5.711646074621654,
+   "X_elastic_Gamma_over_H": 1.187998623548833,
+   "D_exchange_Gamma_over_H": 0.00011423063687969549,
+   "two_to_four_central_Gamma_over_H": 5.496982927257393e-06
+  },
+  {
+   "xi": 0.0001995262314968881,
+   "phi_elastic_Gamma_over_H": 9.052348981415102,
+   "X_elastic_Gamma_over_H": 1.882850931115719,
+   "D_exchange_Gamma_over_H": 0.00018104335876112685,
+   "two_to_four_central_Gamma_over_H": 8.71213082048521e-06
+  },
+  {
+   "xi": 0.0002511886431509582,
+   "phi_elastic_Gamma_over_H": 14.347006276427095,
+   "X_elastic_Gamma_over_H": 2.9841176231443733,
+   "D_exchange_Gamma_over_H": 0.00028693438684080513,
+   "two_to_four_central_Gamma_over_H": 1.380779682921767e-05
+  },
+  {
+   "xi": 0.00031622776601683794,
+   "phi_elastic_Gamma_over_H": 22.738472579706137,
+   "X_elastic_Gamma_over_H": 4.729507706424748,
+   "D_exchange_Gamma_over_H": 0.00045476035638699507,
+   "two_to_four_central_Gamma_over_H": 2.18838831975132e-05
+  },
+  {
+   "xi": 0.00039810717055349735,
+   "phi_elastic_Gamma_over_H": 36.038050398539966,
+   "X_elastic_Gamma_over_H": 7.495764567604961,
+   "D_exchange_Gamma_over_H": 0.0007207465930389387,
+   "two_to_four_central_Gamma_over_H": 3.468361750435283e-05
+  },
+  {
+   "xi": 0.0005011872336272725,
+   "phi_elastic_Gamma_over_H": 57.11646074621654,
+   "X_elastic_Gamma_over_H": 11.879986235488332,
+   "D_exchange_Gamma_over_H": 0.0011423063687969553,
+   "two_to_four_central_Gamma_over_H": 5.496982927257394e-05
+  },
+  {
+   "xi": 0.0006309573444801936,
+   "phi_elastic_Gamma_over_H": 90.52348981415102,
+   "X_elastic_Gamma_over_H": 18.82850931115719,
+   "D_exchange_Gamma_over_H": 0.0018104335876112684,
+   "two_to_four_central_Gamma_over_H": 8.71213082048521e-05
+  },
+  {
+   "xi": 0.0007943282347242822,
+   "phi_elastic_Gamma_over_H": 143.47006276427098,
+   "X_elastic_Gamma_over_H": 29.841176231443736,
+   "D_exchange_Gamma_over_H": 0.0028693438684080515,
+   "two_to_four_central_Gamma_over_H": 0.0001380779682921767
+  },
+  {
+   "xi": 0.001,
+   "phi_elastic_Gamma_over_H": 227.38472579706132,
+   "X_elastic_Gamma_over_H": 47.29507706424748,
+   "D_exchange_Gamma_over_H": 0.004547603563869951,
+   "two_to_four_central_Gamma_over_H": 0.00021883883197513194
+  },
+  {
+   "xi": 0.0012589254117941675,
+   "phi_elastic_Gamma_over_H": 360.3805039853996,
+   "X_elastic_Gamma_over_H": 74.95764567604961,
+   "D_exchange_Gamma_over_H": 0.007207465930389387,
+   "two_to_four_central_Gamma_over_H": 0.0003468361750435282
+  },
+  {
+   "xi": 0.001584893192461114,
+   "phi_elastic_Gamma_over_H": 571.1646074621652,
+   "X_elastic_Gamma_over_H": 118.79986235488327,
+   "D_exchange_Gamma_over_H": 0.011423063687969547,
+   "two_to_four_central_Gamma_over_H": 0.0005496982927257392
+  },
+  {
+   "xi": 0.0019952623149688807,
+   "phi_elastic_Gamma_over_H": 905.23489814151,
+   "X_elastic_Gamma_over_H": 188.28509311157188,
+   "D_exchange_Gamma_over_H": 0.01810433587611268,
+   "two_to_four_central_Gamma_over_H": 0.0008712130820485208
+  },
+  {
+   "xi": 0.002511886431509582,
+   "phi_elastic_Gamma_over_H": 1434.7006276427094,
+   "X_elastic_Gamma_over_H": 298.41176231443734,
+   "D_exchange_Gamma_over_H": 0.028693438684080513,
+   "two_to_four_central_Gamma_over_H": 0.0013807796829217668
+  },
+  {
+   "xi": 0.0031622776601683794,
+   "phi_elastic_Gamma_over_H": 2273.8472579706136,
+   "X_elastic_Gamma_over_H": 472.9507706424748,
+   "D_exchange_Gamma_over_H": 0.04547603563869951,
+   "two_to_four_central_Gamma_over_H": 0.0021883883197513195
+  },
+  {
+   "xi": 0.003981071705534973,
+   "phi_elastic_Gamma_over_H": 3603.8050398539963,
+   "X_elastic_Gamma_over_H": 749.5764567604961,
+   "D_exchange_Gamma_over_H": 0.07207465930389385,
+   "two_to_four_central_Gamma_over_H": 0.003468361750435282
+  },
+  {
+   "xi": 0.005011872336272725,
+   "phi_elastic_Gamma_over_H": 5711.646074621653,
+   "X_elastic_Gamma_over_H": 1187.9986235488327,
+   "D_exchange_Gamma_over_H": 0.11423063687969547,
+   "two_to_four_central_Gamma_over_H": 0.005496982927257392
+  },
+  {
+   "xi": 0.006309573444801936,
+   "phi_elastic_Gamma_over_H": 9052.348981415102,
+   "X_elastic_Gamma_over_H": 1882.850931115719,
+   "D_exchange_Gamma_over_H": 0.18104335876112687,
+   "two_to_four_central_Gamma_over_H": 0.00871213082048521
+  },
+  {
+   "xi": 0.00794328234724282,
+   "phi_elastic_Gamma_over_H": 14347.006276427093,
+   "X_elastic_Gamma_over_H": 2984.117623144373,
+   "D_exchange_Gamma_over_H": 0.2869343868408051,
+   "two_to_four_central_Gamma_over_H": 0.013807796829217666
+  },
+  {
+   "xi": 0.01,
+   "phi_elastic_Gamma_over_H": 22738.472579706136,
+   "X_elastic_Gamma_over_H": 4729.507706424748,
+   "D_exchange_Gamma_over_H": 0.4547603563869951,
+   "two_to_four_central_Gamma_over_H": 0.021883883197513197
+  },
+  {
+   "xi": 0.012589254117941687,
+   "phi_elastic_Gamma_over_H": 36038.05039854003,
+   "X_elastic_Gamma_over_H": 7495.764567604975,
+   "D_exchange_Gamma_over_H": 0.7207465930389401,
+   "two_to_four_central_Gamma_over_H": 0.03468361750435289
+  },
+  {
+   "xi": 0.01584893192461114,
+   "phi_elastic_Gamma_over_H": 57116.46074621653,
+   "X_elastic_Gamma_over_H": 11879.986235488328,
+   "D_exchange_Gamma_over_H": 1.1423063687969548,
+   "two_to_four_central_Gamma_over_H": 0.05496982927257393
+  },
+  {
+   "xi": 0.01995262314968879,
+   "phi_elastic_Gamma_over_H": 90523.48981415085,
+   "X_elastic_Gamma_over_H": 18828.50931115715,
+   "D_exchange_Gamma_over_H": 1.8104335876112647,
+   "two_to_four_central_Gamma_over_H": 0.08712130820485191
+  },
+  {
+   "xi": 0.025118864315095822,
+   "phi_elastic_Gamma_over_H": 143470.06276427096,
+   "X_elastic_Gamma_over_H": 29841.176231443733,
+   "D_exchange_Gamma_over_H": 2.869343868408052,
+   "two_to_four_central_Gamma_over_H": 0.1380779682921767
+  },
+  {
+   "xi": 0.03162277660168379,
+   "phi_elastic_Gamma_over_H": 227384.7257970613,
+   "X_elastic_Gamma_over_H": 47295.07706424747,
+   "D_exchange_Gamma_over_H": 4.5476035638699495,
+   "two_to_four_central_Gamma_over_H": 0.2188388319751319
+  },
+  {
+   "xi": 0.039810717055349776,
+   "phi_elastic_Gamma_over_H": 360380.5039854004,
+   "X_elastic_Gamma_over_H": 74957.64567604977,
+   "D_exchange_Gamma_over_H": 7.207465930389402,
+   "two_to_four_central_Gamma_over_H": 0.346836175043529
+  },
+  {
+   "xi": 0.05011872336272725,
+   "phi_elastic_Gamma_over_H": 571164.6074621653,
+   "X_elastic_Gamma_over_H": 118799.86235488327,
+   "D_exchange_Gamma_over_H": 11.423063687969547,
+   "two_to_four_central_Gamma_over_H": 0.5496982927257392
+  },
+  {
+   "xi": 0.06309573444801943,
+   "phi_elastic_Gamma_over_H": 905234.8981415122,
+   "X_elastic_Gamma_over_H": 188285.0931115723,
+   "D_exchange_Gamma_over_H": 18.10433587611272,
+   "two_to_four_central_Gamma_over_H": 0.8712130820485227
+  },
+  {
+   "xi": 0.07943282347242822,
+   "phi_elastic_Gamma_over_H": 1434700.6276427098,
+   "X_elastic_Gamma_over_H": 298411.76231443736,
+   "D_exchange_Gamma_over_H": 28.693438684080522,
+   "two_to_four_central_Gamma_over_H": 1.3807796829217673
+  },
+  {
+   "xi": 0.1,
+   "phi_elastic_Gamma_over_H": 2273847.2579706144,
+   "X_elastic_Gamma_over_H": 472950.7706424749,
+   "D_exchange_Gamma_over_H": 45.47603563869951,
+   "two_to_four_central_Gamma_over_H": 2.18838831975132
+  },
+  {
+   "xi": 0.12589254117941687,
+   "phi_elastic_Gamma_over_H": 3603805.039854003,
+   "X_elastic_Gamma_over_H": 749576.4567604974,
+   "D_exchange_Gamma_over_H": 72.074659303894,
+   "two_to_four_central_Gamma_over_H": 3.468361750435289
+  },
+  {
+   "xi": 0.1584893192461114,
+   "phi_elastic_Gamma_over_H": 5711646.074621652,
+   "X_elastic_Gamma_over_H": 1187998.6235488325,
+   "D_exchange_Gamma_over_H": 114.23063687969547,
+   "two_to_four_central_Gamma_over_H": 5.496982927257392
+  },
+  {
+   "xi": 0.19952623149688828,
+   "phi_elastic_Gamma_over_H": 9052348.981415119,
+   "X_elastic_Gamma_over_H": 1882850.9311157227,
+   "D_exchange_Gamma_over_H": 181.0433587611272,
+   "two_to_four_central_Gamma_over_H": 8.712130820485227
+  },
+  {
+   "xi": 0.25118864315095824,
+   "phi_elastic_Gamma_over_H": 14347006.2764271,
+   "X_elastic_Gamma_over_H": 2984117.6231443738,
+   "D_exchange_Gamma_over_H": 286.9343868408052,
+   "two_to_four_central_Gamma_over_H": 13.807796829217672
+  },
+  {
+   "xi": 0.31622776601683794,
+   "phi_elastic_Gamma_over_H": 22738472.57970614,
+   "X_elastic_Gamma_over_H": 4729507.706424748,
+   "D_exchange_Gamma_over_H": 454.7603563869951,
+   "two_to_four_central_Gamma_over_H": 21.883883197513196
+  },
+  {
+   "xi": 0.39810717055349776,
+   "phi_elastic_Gamma_over_H": 36038050.39854004,
+   "X_elastic_Gamma_over_H": 7495764.567604977,
+   "D_exchange_Gamma_over_H": 720.7465930389402,
+   "two_to_four_central_Gamma_over_H": 34.683617504352895
+  },
+  {
+   "xi": 0.5011872336272725,
+   "phi_elastic_Gamma_over_H": 57116460.74621652,
+   "X_elastic_Gamma_over_H": 11879986.235488327,
+   "D_exchange_Gamma_over_H": 1142.3063687969545,
+   "two_to_four_central_Gamma_over_H": 54.96982927257391
+  },
+  {
+   "xi": 0.6309573444801942,
+   "phi_elastic_Gamma_over_H": 90523489.8141512,
+   "X_elastic_Gamma_over_H": 18828509.31115723,
+   "D_exchange_Gamma_over_H": 1810.433587611272,
+   "two_to_four_central_Gamma_over_H": 87.12130820485226
+  },
+  {
+   "xi": 0.7943282347242822,
+   "phi_elastic_Gamma_over_H": 143470062.76427096,
+   "X_elastic_Gamma_over_H": 29841176.23144373,
+   "D_exchange_Gamma_over_H": 2869.343868408051,
+   "two_to_four_central_Gamma_over_H": 138.07796829217665
+  },
+  {
+   "xi": 1.0,
+   "phi_elastic_Gamma_over_H": 227384725.79706135,
+   "X_elastic_Gamma_over_H": 47295077.064247474,
+   "D_exchange_Gamma_over_H": 4547.60356386995,
+   "two_to_four_central_Gamma_over_H": 218.83883197513194
+  }
+ ]
+}

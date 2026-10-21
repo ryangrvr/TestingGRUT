@@ -1,0 +1,321 @@
+{
+ "headline": {
+  "module": "relic_yield",
+  "conservation_verdict": "Comoving net U(1)_X charge is exactly conserved by the unchanged action (Noether; no anomaly, gauge-singlet scalar; checked to 4e-16 on an FRW lattice). Candidate 1 cannot generate Y_Q; it is an outside-action initial datum supplied at a free time T_Q after the last ~14-20 inflationary e-folds.",
+  "N_max_efolds_r1": [
+   13.902251892984866,
+   14.286016075150542,
+   15.437308621647565,
+   16.58860116814459,
+   18.123657896807284
+  ],
+  "h_lifetime_s": {
+   "naive_m5_over_MP4": 4.0927673643525714e+38,
+   "loop_graviton_pair": 1.6865206492828278e+49,
+   "xi_trace_xi_1em4": 4.4406540809578064e+48
+  },
+  "Omega_sym_h2_vs_xi": [
+   [
+    9.999999999999999e-06,
+    3.020872432935647e-07
+   ],
+   [
+    3.1622776601683795e-05,
+    9.507794187637672e-06
+   ],
+   [
+    0.0001,
+    0.0002936440032756463
+   ],
+   [
+    0.00031622776601683794,
+    0.008957111876283527
+   ],
+   [
+    0.001,
+    0.27203390850725007
+   ],
+   [
+    0.0031622776601683794,
+    7.661048906195941
+   ],
+   [
+    0.01,
+    196.72213235748592
+   ],
+   [
+    0.03162277660168379,
+    5028.121012100903
+   ],
+   [
+    0.1,
+    130954.74746638427
+   ],
+   [
+    0.31622776601683794,
+    3487558.638084453
+   ],
+   [
+    1.0,
+    95293317.07608765
+   ]
+  ],
+  "Omega_hot_relic_coef": 315372982.65339065,
+  "xi_max": {
+   "all_species": 0.0007581204495228554,
+   "no_D": 0.0008364315724820824,
+   "hot_relic_band": [
+    0.000724634355082151,
+    0.000824504615417645
+   ]
+  },
+  "xi_32_equilibrium": 0.003475358703577808,
+  "Y_N_max": 4.297918585588408e-12,
+  "T_SM_min_restoring_GeV": {
+   "leading_Tc": 2041425.5623549728,
+   "resummed": [
+    2053948.0249873619,
+    2063190.6196230957
+   ],
+   "no_D": 1861646.6083163738,
+   "number_bound": [
+    2078032.9001431786,
+    2090779.9186094801,
+    2100188.2536915513
+   ]
+  },
+  "xi_BEC_formula": "xi_BEC = (r Y_B (2 pi^2/45) g*s / f_max)^(1/3) = 0.007092 r^(1/3)",
+  "floor": {
+   "coef_GeV_per_omega_sym": 79.28029870506704,
+   "r_max_primary_with_sym012": 0.5442076415539195,
+   "retrospective_DM_r_max": 0.08966465447108143
+  },
+  "T_Q_max_cold_GeV": {
+   "r=1 benchmark": 198197.6939177226,
+   "maser primary r_max": 230066.68372340902,
+   "maser stress r_max": 218492.11182166782,
+   "maser primary with omega_sym=0.12": 242759.9569601868,
+   "retrospective DM (omega_h<=0.12)": 442817.56279136427,
+   "r=0.01": 919952.2029363045
+  },
+  "prior_art": [
+   [
+    "Frieman, Gelmini, Gleiser, Kolb, PRL 60 (1988) 2101; SLAC-PUB-4538/FERMILAB-PUB-88-013-A",
+    "(b)+(a)"
+   ],
+   [
+    "Griest, Kolb, Massarotti, PRD 40 (1989) 3529; FERMILAB-PUB-89-110-A",
+    "(b)"
+   ],
+   [
+    "Frieman, Olinto, Gleiser, Alcock, PRD 40 (1989) 3241; FERMILAB-PUB-89-128-A",
+    "(b)"
+   ],
+   [
+    "Macpherson, Campbell, PLB 347 (1995) 205, arXiv:hep-ph/9408387",
+    "(a)+(c)"
+   ],
+   [
+    "Krylov, Levin, Rubakov, PRD 87 (2013) 083528, arXiv:1301.0354",
+    "(a) assumed, not analysed"
+   ],
+   [
+    "Ponton, Bai, Jain, JHEP 09 (2019) 011, arXiv:1906.10739",
+    "(b)"
+   ],
+   [
+    "Bai, Long, Lu, PRD 99 (2019) 055047, arXiv:1810.04360",
+    "(b)"
+   ],
+   [
+    "Hong, Jung, Xie, PRD 102 (2020) 075028, arXiv:2008.04430",
+    "(b)"
+   ]
+  ],
+  "assertions_passed": 24,
+  "assertions_total": 24,
+  "timing_s": {
+   "r1_charge.py": 2.0084071159362793,
+   "r2_spectrum.py": 0.0015511512756347656,
+   "r3_rates.py": 113.61988019943237,
+   "r4_boltzmann.py": 84.3849732875824,
+   "r5_charge_history.py": 0.032419443130493164
+  },
+  "total_runtime_s": 200.04922914505005
+ },
+ "assertions": [
+  {
+   "name": "vertex tensors analytic vs finite difference (abs < 1e-9)",
+   "passed": true,
+   "value": [
+    1.0914047443577601e-12,
+    9.094947017729282e-13
+   ]
+  },
+  {
+   "name": "hh->XXbar recursion vs hand-written tree amplitude (rel < 1e-12)",
+   "passed": true,
+   "value": 1.0617776982838498e-15
+  },
+  {
+   "name": "charge-violating amplitude vanishes",
+   "passed": true,
+   "value": 0.0
+  },
+  {
+   "name": "Z2_D-violating amplitude vanishes",
+   "passed": true,
+   "value": 0.0
+  },
+  {
+   "name": "Lorentz invariance of 3->2 amplitude (rel < 1e-12)",
+   "passed": true,
+   "value": 6.383861113984639e-16
+  },
+  {
+   "name": "identical-particle symmetry of 3->2 amplitude (rel < 1e-12)",
+   "passed": true,
+   "value": 3.1919305569923197e-16
+  },
+  {
+   "name": "MC thermal <sigma v^2> -> threshold value at x=3000 (within 2%)",
+   "passed": true,
+   "value": 0.9956660284756421
+  },
+  {
+   "name": "Gondolo-Gelmini vs direct MC for hh->XXbar at x=5 (within 2%)",
+   "passed": true,
+   "value": 1.005229801106879
+  },
+  {
+   "name": "pure-h 3->2 threshold amplitude nullified (|M|^2 < 1e-30, known broken-phi^4 property)",
+   "passed": true,
+   "value": 6.612155723375367e-39
+  },
+  {
+   "name": "Noether identity q1 dU/dq2 - q2 dU/dq1 = 0 (rel < 1e-12)",
+   "passed": true,
+   "value": 1.278475797318309e-16
+  },
+  {
+   "name": "lattice FRW comoving charge conserved (rel < 1e-12)",
+   "passed": true,
+   "value": 4.440892098500626e-16
+  },
+  {
+   "name": "lattice FRW physical charge density ~ a^-3 (rel < 1e-10)",
+   "passed": true,
+   "value": 1.0000000000000984
+  },
+  {
+   "name": "lattice fields finite",
+   "passed": true,
+   "value": 1037.9607027992604
+  },
+  {
+   "name": "collisionless Boltzmann run conserves hidden entropy and numbers (rel < 1e-7)",
+   "passed": true,
+   "value": [
+    4.3053283160787714e-10,
+    3.6384306678627354e-10,
+    3.20197646175302e-10,
+    3.621558608557507e-10
+   ]
+  },
+  {
+   "name": "xi=1e-5 run reproduces frozen initial numbers (rel < 2e-3)",
+   "passed": true,
+   "value": 0.9994189480036435
+  },
+  {
+   "name": "Omega_sym(xi_max) = 0.12 (rel < 1e-3)",
+   "passed": true,
+   "value": 0.12000000434165509
+  },
+  {
+   "name": "3->2 out of equilibrium at xi_max (max Gamma32/H < 1)",
+   "passed": true,
+   "value": 0.047585775395961726
+  },
+  {
+   "name": "Boltzmann solver status ok for all scan points",
+   "passed": true,
+   "value": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "h -> X Xbar and h -> D D kinematically closed",
+   "passed": true,
+   "value": [
+    141.4213562373095,
+    200.0,
+    200.9975124224178
+   ]
+  },
+  {
+   "name": "all in-action h lifetime estimates exceed 1e3 x age of Universe",
+   "passed": true,
+   "value": 4.0927673643525714e+38
+  },
+  {
+   "name": "thermal charge capacity n_Q,max/T^3 vs M/(3T) (rel < 1e-3)",
+   "passed": true,
+   "value": 1.0000295280728912
+  },
+  {
+   "name": "restoring power per quantum maximal at mu_N = 0 (F(z) monotonic)",
+   "passed": true,
+   "value": [
+    0.10001667409766711,
+    0.21580415081068874,
+    0.4722609556378316,
+    0.7083522042980646,
+    0.8810583082006354,
+    1.0495409775419158,
+    1.2583918486243286,
+    1.417987851557856,
+    1.4550072045758964
+   ]
+  },
+  {
+   "name": "kinetic-equilibrium window xi_kin < xi_max exists",
+   "passed": true,
+   "value": [
+    6.6e-05,
+    0.0007581204495228554
+   ]
+  },
+  {
+   "name": "number-changing equilibrium incompatible with relic bound (xi_chem,low > xi_max) [EXPECTED FALSE-for-compatibility]",
+   "passed": true,
+   "value": {
+    "xi_kinetic_min_phi": 6.6e-05,
+    "xi_max": 0.0007581204495228554,
+    "xi_chem_2to4": 0.068,
+    "kinetic_window_exists": true,
+    "chemical_equilibrium_compatible": false
+   }
+  }
+ ],
+ "code_sha256": {
+  "amplitudes.py": "682f31d0b53fe62822c42cb62f6b35937fee16d12bee82eda6e1f22f47e0f81f",
+  "common.py": "05e8cb037dedf3d07ab2613fde00aacddde1e1aacca355ed5340740dd492b8a5",
+  "r1_charge.py": "2fbed77c56ded6a64391ba89b7c6a31a8bee8352330eeee635396853d1c8a6bf",
+  "r2_spectrum.py": "cd287b7a1c87b39299404bfd1c03777c44a557839a647c8eed116561870c9367",
+  "r3_rates.py": "555a079112f2eb340410a1b9c3784952c8027b5b8378f8cc1231c02e332d607c",
+  "r4_boltzmann.py": "a202696335a228270dd161494fde4b70df3b9a5959890e97e4d821f4eb0fb50a",
+  "r5_charge_history.py": "8bff2af586d4a6a81e8a830edac1139caf1ff944e8b3416713aa4d5d0def5ae7",
+  "run_all.py": "5bc93b4dc3b04c11f96d10ac87fbb8924c438393a0641ae75acb6628cd5f51d9"
+ }
+}

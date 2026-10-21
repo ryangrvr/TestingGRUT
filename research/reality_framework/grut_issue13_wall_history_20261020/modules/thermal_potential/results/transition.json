@@ -1,0 +1,1853 @@
+{
+ "conventions": {
+  "units": "v = 1 (v = 1000 GeV); mu0 = g_X v = 0.1 v",
+  "schemes": {
+   "oneloop": "tree + CW(m^2) + exact J_B(m^2/T^2); no resummation (IR-unreliable where X is massless at phi=0)",
+   "AE": "Arnold-Espinosa: oneloop - (T/12pi) sum n [Re(m^2+Pi)^{3/2} - Re(m^2)^{3/2}] for all scalars",
+   "Parwani": "Parwani: tree + CW(m^2+Pi) + exact J_B((m^2+Pi)/T^2)",
+   "DR": "dimensional-reduction split: AE for X and D; for phi only the hard (nonzero-Matsubara) part of its own loop, i.e. J_B minus its zero-mode term -(pi/6)Re(y^2)^{3/2}, no phi daisy.  = mean-field potential of the soft phi zero mode in the 3D effective theory; the soft phi loop is left to the nonperturbative 3D (Ising) treatment"
+  },
+  "rg": "running: all ten coefficients evolved from mu0 with the one-loop betas of grut_candidate_1_quantum_20261018; fixed: mu0 values kept, mu changed only in the CW logs"
+ },
+ "leading_high_T": {
+  "Pi_phi_over_T2": 0.004175000000000001,
+  "check_lp/4+gX^2/6+hD^2/12": 0.004175,
+  "Pi_X_over_T2_per_real_mode": 0.0011666666666666668,
+  "check_gX^2/12+lambda_X/3": 0.0011666666666666668,
+  "Pi_D_over_T2": 0.00025833333333333334,
+  "check_hD^2/12+lambda_D/4": 0.00025833333333333334,
+  "T_curvature_zero_over_v": 1.5476464650682737
+ },
+ "zero_T_check": {
+  "phi_min_over_v_numerical_V0+V1": 1.000121881803984,
+  "strict_one_loop_archived": 1.0001219374,
+  "curvature_over_v2_numerical": 0.020012783214028225,
+  "strict_one_loop_curvature_archived": 0.020012778428,
+  "note": "numerical minimisation of truncated V0+V1 differs from the strict expansion at O(loop^2)"
+ },
+ "runs": [
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5499426235131677,
+   "Pi_over_T2": {
+    "phi": 0.004171503614847334,
+    "X_per_real_mode": 0.0011658032945593552,
+    "D": 0.0002583096562860354
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5499475911697569,
+   "T1_upper_spinodal_over_v": 1.5499490453977487,
+   "T0_lower_spinodal_over_v": 1.5499426235131677,
+   "phic_over_Tc": 0.006367238513515963,
+   "phic_over_v": 0.00986888599642737,
+   "latent_heat_over_v4": 9.784407822971857e-07,
+   "latent_heat_GeV4": 978440.7822971857,
+   "latent_heat_over_rho_hidden": 1.288332641223783e-07,
+   "barrier_height_over_Tc4": 7.267766841003622e-14,
+   "barrier_location_over_Tc": 0.0035352403995414644,
+   "m_phi_broken_at_Tc_over_Tc": 0.0002862775019484057,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.00016349288894064532,
+   "kappa_dm2_dT2_at_Tc": 0.004169979157624862,
+   "kappa_over_leading_Pi_phi": 0.9996345545004334,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 8.774660168754874e-07,
+   "m_X_debye_over_Tc": 0.034149210088245036,
+   "m_D_thermal_over_Tc": 0.06648921778150478,
+   "eps_X": 0.023287745916407053,
+   "eps_D": 0.0035902593091165116,
+   "scale_label": "mu0/2",
+   "rg": "running",
+   "eps_phi_at_phic_broken": 8.33919581570432,
+   "(T1-T0)/Tc": 4.143291436165009e-06,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5641467705552632,
+   "Pi_over_T2": {
+    "phi": 0.004171503614847334,
+    "X_per_real_mode": 0.0011658032945593552,
+    "D": 0.0002583096562860354
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5641467705552632,
+   "T1_upper_spinodal_over_v": 1.5641467705552632,
+   "T0_lower_spinodal_over_v": 1.5641467705552632,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010938961252526511
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010938748167219718
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010917990361673518
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03404848340500832
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10264240557701836
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035661934460904966,
+   "kappa_over_leading_Pi_phi": 0.8548940083373295,
+   "lambda_eff_at_phi0_Tc": 0.005960637534635196,
+   "lambda_eff_over_lambda_phi": 0.5966393922248036,
+   "tree_mX2_at_mu_over_v2": 8.774660168754874e-07,
+   "m_X_debye_over_Tc": 0.034149113432817804,
+   "m_D_thermal_over_Tc": 0.06592105438916362,
+   "eps_X": 0.023287811829890728,
+   "eps_D": 0.0036212031999167077,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.0092301676913749,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2583940976464204,
+   "scale_label": "mu0/2",
+   "rg": "running"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5619162024084674,
+   "Pi_over_T2": {
+    "phi": 0.004171503614847334,
+    "X_per_real_mode": 0.0011658032945593552,
+    "D": 0.0002583096562860354
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5619162024084674,
+   "T1_upper_spinodal_over_v": 1.5619162024084674,
+   "T0_lower_spinodal_over_v": 1.5619162024084674,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011175086472819608
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011174778315076546
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011144950072893556
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0345904308031763
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10327490605006388
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.00353681607726744,
+   "kappa_over_leading_Pi_phi": 0.847851615105667,
+   "lambda_eff_at_phi0_Tc": 0.005664398559549573,
+   "lambda_eff_over_lambda_phi": 0.5669868859247031,
+   "tree_mX2_at_mu_over_v2": 8.774660168754874e-07,
+   "m_X_debye_over_Tc": 0.03414912844222484,
+   "m_D_thermal_over_Tc": 0.06600960385959476,
+   "eps_X": 0.02328780159430749,
+   "eps_D": 0.0036163454882061786,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008574168930524076,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.27816350144995117,
+   "scale_label": "mu0/2",
+   "rg": "running"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5599584438068408,
+   "Pi_over_T2": {
+    "phi": 0.004171503614847334,
+    "X_per_real_mode": 0.0011658032945593552,
+    "D": 0.0002583096562860354
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5599584438068408,
+   "T1_upper_spinodal_over_v": 1.5599584438068408,
+   "T0_lower_spinodal_over_v": 1.5599584438068408,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.150087379117546e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009150094032216808
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00915075480486543
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.028956242871134866
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.09217516078322772
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004116141693659945,
+   "kappa_over_leading_Pi_phi": 0.9867285453162876,
+   "lambda_eff_at_phi0_Tc": 0.00983263324404925,
+   "lambda_eff_over_lambda_phi": 0.9842128947802206,
+   "tree_mX2_at_mu_over_v2": 8.774660168754874e-07,
+   "m_X_debye_over_Tc": 0.03414914166899129,
+   "m_D_thermal_over_Tc": 0.06608753815354367,
+   "eps_X": 0.023287792574393732,
+   "eps_D": 0.003612080881895018,
+   "scale_label": "mu0/2",
+   "rg": "running"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.549116691377784,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5492204794681002,
+   "T1_upper_spinodal_over_v": 1.5492334542744077,
+   "T0_lower_spinodal_over_v": 1.549116691377784,
+   "phic_over_Tc": 0.01054139072921103,
+   "phic_over_v": 0.016330938399768898,
+   "latent_heat_over_v4": 2.673025668263882e-06,
+   "latent_heat_GeV4": 2673025.668263882,
+   "latent_heat_over_rho_hidden": 3.526238880306273e-07,
+   "barrier_height_over_Tc4": 1.942025296722632e-12,
+   "barrier_location_over_Tc": 0.005265036560726699,
+   "m_phi_broken_at_Tc_over_Tc": 0.0007478215234616736,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.0007478228085353312,
+   "kappa_dm2_dT2_at_Tc": 0.004173954213437289,
+   "kappa_over_leading_Pi_phi": 0.9997495122005481,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.06651957613050304,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.003588904628157583,
+   "scale_label": "mu0",
+   "rg": "running",
+   "eps_phi_at_phic_broken": 3.19237153716502,
+   "(T1-T0)/Tc": 7.536880526117583e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.5634661935420204,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5634661935420204,
+   "T1_upper_spinodal_over_v": 1.5634661935420204,
+   "T0_lower_spinodal_over_v": 1.5634661935420204,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010968336363604764
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010968114280086887
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010946499519567806
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0341213131160538
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10275360516992198
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035650899813983255,
+   "kappa_over_leading_Pi_phi": 0.8539137679995987,
+   "lambda_eff_at_phi0_Tc": 0.005926922670455648,
+   "lambda_eff_over_lambda_phi": 0.5926922670455648,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06594901357317592,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.0036199542904906306,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.0091684754489715,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2603839820115606,
+   "scale_label": "mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.561519841769815,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.561519841769815,
+   "T1_upper_spinodal_over_v": 1.561519841769815,
+   "T0_lower_spinodal_over_v": 1.561519841769815,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011177476474983943
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011177169444446806
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011147438512501044
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03459996314732791
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10331011895962663
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035392282834103184,
+   "kappa_over_leading_Pi_phi": 0.8477193493198366,
+   "lambda_eff_at_phi0_Tc": 0.005665837347796239,
+   "lambda_eff_over_lambda_phi": 0.5665837347796239,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06602633584241419,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.0036157150263135675,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008593969313307234,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.277790629608347,
+   "scale_label": "mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.559307166351358,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.559307166351358,
+   "T1_upper_spinodal_over_v": 1.559307166351358,
+   "T0_lower_spinodal_over_v": 1.559307166351358,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.153969915446455e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009153976559767981
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009154637575023565
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.02896852826919654
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0922142356935094
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004119580848165454,
+   "kappa_over_leading_Pi_phi": 0.986725951656396,
+   "lambda_eff_at_phi0_Tc": 0.009832502752040584,
+   "lambda_eff_over_lambda_phi": 0.9832502752040584,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06611447970140008,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.0036108945531456325,
+   "scale_label": "mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.5484688454442055,
+   "Pi_over_T2": {
+    "phi": 0.004178502337299757,
+    "X_per_real_mode": 0.0011675312582065266,
+    "D": 0.0002583570179778352
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5484887468154747,
+   "T1_upper_spinodal_over_v": 1.548517392655786,
+   "T0_lower_spinodal_over_v": 1.5484688454442055,
+   "phic_over_Tc": 0.013289141258637687,
+   "phic_over_v": 0.020578085693841692,
+   "latent_heat_over_v4": 4.241429708253605e-06,
+   "latent_heat_GeV4": 4241429.708253605,
+   "latent_heat_over_rho_hidden": 5.60585135233458e-07,
+   "barrier_height_over_Tc4": 6.389304600152026e-12,
+   "barrier_location_over_Tc": 0.007253632984618922,
+   "m_phi_broken_at_Tc_over_Tc": 0.0010850512683206765,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.00032768528880204037,
+   "kappa_dm2_dT2_at_Tc": 0.004177454584569529,
+   "kappa_over_leading_Pi_phi": 0.9997492516108282,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": -8.782968052130513e-07,
+   "m_X_debye_over_Tc": 0.034163796160466,
+   "m_D_thermal_over_Tc": 0.06655015063986734,
+   "eps_X": 0.023308066999790114,
+   "eps_D": 0.003587539575498716,
+   "scale_label": "2mu0",
+   "rg": "running",
+   "eps_phi_at_phic_broken": 2.2001947890197564,
+   "(T1-T0)/Tc": 3.135134929483984e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.562784722906069,
+   "Pi_over_T2": {
+    "phi": 0.004178502337299757,
+    "X_per_real_mode": 0.0011675312582065266,
+    "D": 0.0002583570179778352
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.562784722906069,
+   "T1_upper_spinodal_over_v": 1.562784722906069,
+   "T0_lower_spinodal_over_v": 1.562784722906069,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010998582229181499
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010998350677332424
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010975825774758276
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03419579840595195
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10286603290183222
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.003563881292329349,
+   "kappa_over_leading_Pi_phi": 0.8529087708091148,
+   "lambda_eff_at_phi0_Tc": 0.005892375471966118,
+   "lambda_eff_over_lambda_phi": 0.5886685661324377,
+   "tree_mX2_at_mu_over_v2": -8.782968052130513e-07,
+   "m_X_debye_over_Tc": 0.03416389379020814,
+   "m_D_thermal_over_Tc": 0.06597703314604243,
+   "eps_X": 0.023308000392611637,
+   "eps_D": 0.0036187031727759125,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.009106000817779103,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2624238319751476,
+   "scale_label": "2mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.5611232893862952,
+   "Pi_over_T2": {
+    "phi": 0.004178502337299757,
+    "X_per_real_mode": 0.0011675312582065266,
+    "D": 0.0002583570179778352
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5611232893862952,
+   "T1_upper_spinodal_over_v": 1.5611232893862952,
+   "T0_lower_spinodal_over_v": 1.5611232893862952,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011179905430840152
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011179598988067978
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011149963924810529
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034609588044770274
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10334550746042398
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035416380171835004,
+   "kappa_over_leading_Pi_phi": 0.8475855058327398,
+   "lambda_eff_at_phi0_Tc": 0.005667231481539962,
+   "lambda_eff_over_lambda_phi": 0.5661759075012869,
+   "tree_mX2_at_mu_over_v2": -8.782968052130513e-07,
+   "m_X_debye_over_Tc": 0.03416388258157897,
+   "m_D_thermal_over_Tc": 0.06604308415075402,
+   "eps_X": 0.02330800803959767,
+   "eps_D": 0.003615084035611311,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008613775083613428,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2774197846326844,
+   "scale_label": "2mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.5586553352987251,
+   "Pi_over_T2": {
+    "phi": 0.004178502337299757,
+    "X_per_real_mode": 0.0011675312582065266,
+    "D": 0.0002583570179778352
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5586553352987251,
+   "T1_upper_spinodal_over_v": 1.5586553352987251,
+   "T0_lower_spinodal_over_v": 1.5586553352987251,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.157865699494686e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009157872306483473
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009158533566335003
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.02898085549748998
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.09225344357172251
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004123025849201356,
+   "kappa_over_leading_Pi_phi": 0.9867233559729796,
+   "lambda_eff_at_phi0_Tc": 0.009832354503287224,
+   "lambda_eff_over_lambda_phi": 0.9822860160037657,
+   "tree_mX2_at_mu_over_v2": -8.782968052130513e-07,
+   "m_X_debye_over_Tc": 0.03416386586565217,
+   "m_D_thermal_over_Tc": 0.0661414663725307,
+   "eps_X": 0.023308019443897113,
+   "eps_D": 0.003609706773526893,
+   "scale_label": "2mu0",
+   "rg": "running"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.546962474201625,
+   "Pi_over_T2": {
+    "phi": 0.004186657553454074,
+    "X_per_real_mode": 0.0011695434955089443,
+    "D": 0.00025841204137305783
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.546962474201625,
+   "T1_upper_spinodal_over_v": 1.546962474201625,
+   "T0_lower_spinodal_over_v": 1.546962474201625,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.11953739821907e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009119544197046051
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 2,
+     "phi_min_over_Tc": 0.009120221916886164
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03741642237741194
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10010624044357845
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004185605422085316,
+   "kappa_over_leading_Pi_phi": 0.9997486941897384,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": -2.9208512823024364e-06,
+   "m_X_debye_over_Tc": 0.034180739627654964,
+   "m_D_thermal_over_Tc": 0.06661424973805281,
+   "eps_X": 0.023331740657529146,
+   "eps_D": 0.0035847459096760383,
+   "scale_label": "v",
+   "rg": "running"
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5611988935649124,
+   "Pi_over_T2": {
+    "phi": 0.004186657553454074,
+    "X_per_real_mode": 0.0011695434955089443,
+    "D": 0.00025841204137305783
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5611988935649124,
+   "T1_upper_spinodal_over_v": 1.5611988935649124,
+   "T0_lower_spinodal_over_v": 1.5611988935649124,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011072443547581119
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011072187324414945
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011047317987278664
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034375528604216395
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10313199374904085
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035606419266461906,
+   "kappa_over_leading_Pi_phi": 0.8504736490111525,
+   "lambda_eff_at_phi0_Tc": 0.0058087508209898496,
+   "lambda_eff_over_lambda_phi": 0.5790120412026415,
+   "tree_mX2_at_mu_over_v2": -2.9208512823024364e-06,
+   "m_X_debye_over_Tc": 0.034181063761392905,
+   "m_D_thermal_over_Tc": 0.06604232847196478,
+   "eps_X": 0.023331519406243204,
+   "eps_D": 0.003615789521654924,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.00895780592986109,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.26736520837373956,
+   "scale_label": "v",
+   "rg": "running"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5602017828532733,
+   "Pi_over_T2": {
+    "phi": 0.004186657553454074,
+    "X_per_real_mode": 0.0011695434955089443,
+    "D": 0.00025841204137305783
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5602017828532733,
+   "T1_upper_spinodal_over_v": 1.5602017828532733,
+   "T0_lower_spinodal_over_v": 1.5602017828532733,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011185691773722144
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011185388100877778
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011155970200664878
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03463229407684778
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10342835860774979
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.003547223842813693,
+   "kappa_over_leading_Pi_phi": 0.8472686857054177,
+   "lambda_eff_at_phi0_Tc": 0.005670296814127874,
+   "lambda_eff_over_lambda_phi": 0.5652110468759171,
+   "tree_mX2_at_mu_over_v2": -2.9208512823024364e-06,
+   "m_X_debye_over_Tc": 0.03418104134793262,
+   "m_D_thermal_over_Tc": 0.06608203562185806,
+   "eps_X": 0.02333153470536994,
+   "eps_D": 0.003613616878285696,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008659784343200869,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.27656643099770045,
+   "scale_label": "v",
+   "rg": "running"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.557139688846714,
+   "Pi_over_T2": {
+    "phi": 0.004186657553454074,
+    "X_per_real_mode": 0.0011695434955089443,
+    "D": 0.00025841204137305783
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.557139688846714,
+   "T1_upper_spinodal_over_v": 1.557139688846714,
+   "T0_lower_spinodal_over_v": 1.557139688846714,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.166962673968105e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009166969307177982
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009167631134955433
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.029009640922534042
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.09234499794969242
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004131047528560418,
+   "kappa_over_leading_Pi_phi": 0.9867173218292534,
+   "lambda_eff_at_phi0_Tc": 0.009831941264667332,
+   "lambda_eff_over_lambda_phi": 0.9800407275293347,
+   "tree_mX2_at_mu_over_v2": -2.9208512823024364e-06,
+   "m_X_debye_over_Tc": 0.03418097224749351,
+   "m_D_thermal_over_Tc": 0.06620430225335636,
+   "eps_X": 0.0233315818725272,
+   "eps_D": 0.0036069432219190366,
+   "scale_label": "v",
+   "rg": "running"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5493196542770986,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5494233563575217,
+   "T1_upper_spinodal_over_v": 1.5494363204421575,
+   "T0_lower_spinodal_over_v": 1.5493196542770986,
+   "phic_over_Tc": 0.010531293281818744,
+   "phic_over_v": 0.016317431783501018,
+   "latent_heat_over_v4": 2.669891624071766e-06,
+   "latent_heat_GeV4": 2669891.6240717657,
+   "latent_heat_over_rho_hidden": 3.5202601353599297e-07,
+   "barrier_height_over_Tc4": 1.9364962085827815e-12,
+   "barrier_location_over_Tc": 0.00526357164206381,
+   "m_phi_broken_at_Tc_over_Tc": 0.0007474645847687482,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.0007474639747710603,
+   "kappa_dm2_dT2_at_Tc": 0.004173954453566643,
+   "kappa_over_leading_Pi_phi": 0.999749569716561,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06651137478917384,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.003589347166474476,
+   "scale_label": "mu0/2",
+   "rg": "fixed",
+   "eps_phi_at_phic_broken": 3.1938959985870428,
+   "(T1-T0)/Tc": 7.529650600670199e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5637015084573753,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5637015084573753,
+   "T1_upper_spinodal_over_v": 1.5637015084573753,
+   "T0_lower_spinodal_over_v": 1.5637015084573753,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010939301520567659
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010939088244800916
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010918315397831708
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03404918043750949
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10264135656190043
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.003568947652550475,
+   "kappa_over_leading_Pi_phi": 0.8548377610899339,
+   "lambda_eff_at_phi0_Tc": 0.005964870087575867,
+   "lambda_eff_over_lambda_phi": 0.5964870087575868,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06593967870121961,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.003620466755981136,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.00923537254869874,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.25849787150327824,
+   "scale_label": "mu0/2",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.5614695292045904,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5614695292045904,
+   "T1_upper_spinodal_over_v": 1.5614695292045904,
+   "T0_lower_spinodal_over_v": 1.5614695292045904,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011175771979346927
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011175463543984028
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011145603883079976
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034591869280595385
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10327461632126886
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.003539510798943976,
+   "kappa_over_leading_Pi_phi": 0.8477870177111319,
+   "lambda_eff_at_phi0_Tc": 0.005668019066496254,
+   "lambda_eff_over_lambda_phi": 0.5668019066496254,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.06602833722976616,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.003615605430242765,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008578578903618688,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.27828900021790187,
+   "scale_label": "mu0/2",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.05,
+   "T0_curvature_zero_over_v": 1.559511464181638,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.559511464181638,
+   "T1_upper_spinodal_over_v": 1.559511464181638,
+   "T0_lower_spinodal_over_v": 1.559511464181638,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.14947749906302e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009149484089965627
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009150144818526303
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.02895431265551167
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.09216901636297543
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004119581082593976,
+   "kappa_over_leading_Pi_phi": 0.9867260078069401,
+   "lambda_eff_at_phi0_Tc": 0.009842161357011091,
+   "lambda_eff_over_lambda_phi": 0.9842161357011091,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.0661063305278487,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.003611339681564565,
+   "scale_label": "mu0/2",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.549116691377784,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5492204794681002,
+   "T1_upper_spinodal_over_v": 1.5492334542744077,
+   "T0_lower_spinodal_over_v": 1.549116691377784,
+   "phic_over_Tc": 0.01054139072921103,
+   "phic_over_v": 0.016330938399768898,
+   "latent_heat_over_v4": 2.673025668263882e-06,
+   "latent_heat_GeV4": 2673025.668263882,
+   "latent_heat_over_rho_hidden": 3.526238880306273e-07,
+   "barrier_height_over_Tc4": 1.942025296722632e-12,
+   "barrier_location_over_Tc": 0.005265036560726699,
+   "m_phi_broken_at_Tc_over_Tc": 0.0007478215234616736,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.0007478228085353312,
+   "kappa_dm2_dT2_at_Tc": 0.004173954213437289,
+   "kappa_over_leading_Pi_phi": 0.9997495122005481,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.06651957613050304,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.003588904628157583,
+   "scale_label": "mu0",
+   "rg": "fixed",
+   "eps_phi_at_phic_broken": 3.19237153716502,
+   "(T1-T0)/Tc": 7.536880526117583e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.5634661935420204,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5634661935420204,
+   "T1_upper_spinodal_over_v": 1.5634661935420204,
+   "T0_lower_spinodal_over_v": 1.5634661935420204,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010968336363604764
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010968114280086887
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010946499519567806
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0341213131160538
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10275360516992198
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035650899813983255,
+   "kappa_over_leading_Pi_phi": 0.8539137679995987,
+   "lambda_eff_at_phi0_Tc": 0.005926922670455648,
+   "lambda_eff_over_lambda_phi": 0.5926922670455648,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06594901357317592,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.0036199542904906306,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.0091684754489715,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2603839820115606,
+   "scale_label": "mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.561519841769815,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.561519841769815,
+   "T1_upper_spinodal_over_v": 1.561519841769815,
+   "T0_lower_spinodal_over_v": 1.561519841769815,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011177476474983943
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011177169444446806
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011147438512501044
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03459996314732791
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10331011895962663
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035392282834103184,
+   "kappa_over_leading_Pi_phi": 0.8477193493198366,
+   "lambda_eff_at_phi0_Tc": 0.005665837347796239,
+   "lambda_eff_over_lambda_phi": 0.5665837347796239,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06602633584241419,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.0036157150263135675,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008593969313307234,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.277790629608347,
+   "scale_label": "mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.1,
+   "T0_curvature_zero_over_v": 1.559307166351358,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.559307166351358,
+   "T1_upper_spinodal_over_v": 1.559307166351358,
+   "T0_lower_spinodal_over_v": 1.559307166351358,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.153969915446455e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009153976559767981
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009154637575023565
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.02896852826919654
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0922142356935094
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004119580848165454,
+   "kappa_over_leading_Pi_phi": 0.986725951656396,
+   "lambda_eff_at_phi0_Tc": 0.009832502752040584,
+   "lambda_eff_over_lambda_phi": 0.9832502752040584,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06611447970140008,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.0036108945531456325,
+   "scale_label": "mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.548913701871402,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5490175760672615,
+   "T1_upper_spinodal_over_v": 1.5490305617103572,
+   "T0_lower_spinodal_over_v": 1.548913701871402,
+   "phic_over_Tc": 0.010551514460230206,
+   "phic_over_v": 0.016344481353024454,
+   "latent_heat_over_v4": 2.6781967646777155e-06,
+   "latent_heat_GeV4": 2678196.7646777155,
+   "latent_heat_over_rho_hidden": 3.534912082780606e-07,
+   "barrier_height_over_Tc4": 1.947644617912588e-12,
+   "barrier_location_over_Tc": 0.005275750050484705,
+   "m_phi_broken_at_Tc_over_Tc": 0.0007481804113350054,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.000748181914921723,
+   "kappa_dm2_dT2_at_Tc": 0.004173953972727875,
+   "kappa_over_leading_Pi_phi": 0.9997494545455986,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06652778075499574,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.0035884620218586804,
+   "scale_label": "2mu0",
+   "rg": "fixed",
+   "eps_phi_at_phic_broken": 3.1908402174264903,
+   "(T1-T0)/Tc": 7.544126080986314e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.5632305853058275,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5632305853058275,
+   "T1_upper_spinodal_over_v": 1.5632305853058275,
+   "T0_lower_spinodal_over_v": 1.5632305853058275,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00010998155886245176
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0010997924540317595
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.010975417810911447
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034194899687679234
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10286681624187298
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035611386590414683,
+   "kappa_over_leading_Pi_phi": 0.8529673434829863,
+   "lambda_eff_at_phi0_Tc": 0.005888297227984449,
+   "lambda_eff_over_lambda_phi": 0.5888297227984449,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.0659583629803498,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.003619441172440344,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.00910097172206115,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2623153020673004,
+   "scale_label": "2mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.561570175317212,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.561570175317212,
+   "T1_upper_spinodal_over_v": 1.561570175317212,
+   "T0_lower_spinodal_over_v": 1.561570175317212,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011179211001360736
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011178905302185434
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011149301527181958
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034608121076953956
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10334571874934548
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.0035389405556553867,
+   "kappa_over_leading_Pi_phi": 0.847650432492308,
+   "lambda_eff_at_phi0_Tc": 0.005663617992522137,
+   "lambda_eff_over_lambda_phi": 0.5663617992522136,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06602433375328114,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.0036158246674617756,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008609337127135644,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.27729476858954194,
+   "scale_label": "2mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 0.2,
+   "T0_curvature_zero_over_v": 1.5591028417391715,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5591028417391715,
+   "T1_upper_spinodal_over_v": 1.5591028417391715,
+   "T0_lower_spinodal_over_v": 1.5591028417391715,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.158469041058559e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009158475653512943
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009159136956467284
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.028982764842386155
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.09225952161657541
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004119580613643951,
+   "kappa_over_leading_Pi_phi": 0.9867258954835809,
+   "lambda_eff_at_phi0_Tc": 0.00982284414706669,
+   "lambda_eff_over_lambda_phi": 0.9822844147066689,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.06612263214245856,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.0036104493560314356,
+   "scale_label": "2mu0",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "oneloop",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5484422721615365,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "first",
+   "Tc_over_v": 1.5485463467586063,
+   "T1_upper_spinodal_over_v": 1.5485593575099035,
+   "T0_lower_spinodal_over_v": 1.5484422721615365,
+   "phic_over_Tc": 0.010575112687934471,
+   "phic_over_v": 0.01637605211946151,
+   "latent_heat_over_v4": 2.6845947405185685e-06,
+   "latent_heat_GeV4": 2684594.7405185685,
+   "latent_heat_over_rho_hidden": 3.547671679722318e-07,
+   "barrier_height_over_Tc4": 1.9607084531807885e-12,
+   "barrier_location_over_Tc": 0.005296701917854182,
+   "m_phi_broken_at_Tc_over_Tc": 0.0007490186891686046,
+   "m_phi_symmetric_at_Tc_over_Tc": 0.0007490171494349371,
+   "kappa_dm2_dT2_at_Tc": 0.00417395341395861,
+   "kappa_over_leading_Pi_phi": 0.9997493207086489,
+   "lambda_eff_at_phi0_Tc": null,
+   "lambda_eff_over_lambda_phi": null,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06654684397299614,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.003587434059753722,
+   "scale_label": "v",
+   "rg": "fixed",
+   "eps_phi_at_phic_broken": 3.18726913079874,
+   "(T1-T0)/Tc": 7.560984442735242e-05,
+   "window_inside_ginzburg_t_G": true
+  },
+  {
+   "scheme": "AE",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5626823490329425,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5626823490329425,
+   "T1_upper_spinodal_over_v": 1.5626823490329425,
+   "T0_lower_spinodal_over_v": 1.5626823490329425,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0001107065694648495
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011070401471608088
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011045607337579961
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.034371697936594565
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.10313352850911307
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.003551580851677087,
+   "kappa_over_leading_Pi_phi": 0.8506780483058889,
+   "lambda_eff_at_phi0_Tc": 0.0057958384514418294,
+   "lambda_eff_over_lambda_phi": 0.5795838451441829,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06598012933124699,
+   "eps_X": 0.023297898086025042,
+   "eps_D": 0.003618247145884021,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.008941804446824731,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2669846070304275,
+   "scale_label": "v",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "Parwani",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5616871275803346,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5616871275803346,
+   "T1_upper_spinodal_over_v": 1.5616871275803346,
+   "T0_lower_spinodal_over_v": 1.5616871275803346,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.00011183352815695967
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0011183050284104884
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.011153735823311892
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.03462730897708334
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.1034287539560155
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.00353825262507641,
+   "kappa_over_leading_Pi_phi": 0.8474856587009364,
+   "lambda_eff_at_phi0_Tc": 0.005658321485806122,
+   "lambda_eff_over_lambda_phi": 0.5658321485806121,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.03415650255319866,
+   "m_D_thermal_over_Tc": 0.06601968232213193,
+   "eps_X": 0.02329789808602505,
+   "eps_D": 0.0036160794211791015,
+   "phi_debye_mass_M_at_Tc_over_Tc": 0.00864493374284123,
+   "eps_phi_soft_at_Tc_3lpT_over_4piM": 0.2761529720635911,
+   "scale_label": "v",
+   "rg": "fixed"
+  },
+  {
+   "scheme": "DR",
+   "mu_over_v": 1.0,
+   "T0_curvature_zero_over_v": 1.5586283113349557,
+   "Pi_over_T2": {
+    "phi": 0.004175000000000001,
+    "X_per_real_mode": 0.0011666666666666668,
+    "D": 0.00025833333333333334
+   },
+   "order_perturbative": "second (no coexisting minimum found for T0 < T <= T0+0.02 v on a phi grid from 1e-7 v)",
+   "Tc_over_v": 1.5586283113349557,
+   "T1_upper_spinodal_over_v": 1.5586283113349557,
+   "T0_lower_spinodal_over_v": 1.5586283113349557,
+   "phic_over_Tc": 0.0,
+   "latent_heat_over_v4": 0.0,
+   "latent_heat_over_rho_hidden": 0.0,
+   "broken_minimum_below_Tc": [
+    {
+     "eps": -1e-08,
+     "n_minima": 1,
+     "phi_min_over_Tc": 9.168941283498474e-05
+    },
+    {
+     "eps": -1e-06,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0009168947865329323
+    },
+    {
+     "eps": -0.0001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.009169609837375078
+    },
+    {
+     "eps": -0.001,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.029015902261639935
+    },
+    {
+     "eps": -0.01,
+     "n_minima": 1,
+     "phi_min_over_Tc": 0.0923649300066007
+    }
+   ],
+   "kappa_dm2_dT2_at_Tc": 0.004119580068222927,
+   "kappa_over_leading_Pi_phi": 0.9867257648438146,
+   "lambda_eff_at_phi0_Tc": 0.009800417556903437,
+   "lambda_eff_over_lambda_phi": 0.9800417556903437,
+   "tree_mX2_at_mu_over_v2": 0.0,
+   "m_X_debye_over_Tc": 0.034156502553198666,
+   "m_D_thermal_over_Tc": 0.06614157413794933,
+   "eps_X": 0.023297898086025046,
+   "eps_D": 0.003609415375266494,
+   "scale_label": "v",
+   "rg": "fixed"
+  }
+ ],
+ "evaluator_crosscheck_mu0": {
+  "oneloop": {
+   "Tc_series": 1.5492204794681002,
+   "Tc_table": 1.549220479424433,
+   "diff": 4.366706995995173e-11,
+   "phic_over_Tc_series": 0.01054139072921103,
+   "phic_over_Tc_table": 0.010541396462932826
+  },
+  "AE": {
+   "Tc_series": 1.5634661935420204,
+   "Tc_table": 1.5634661935572252,
+   "diff": -1.5204726366846444e-11,
+   "phic_over_Tc_series": 0.0,
+   "phic_over_Tc_table": 0.0
+  },
+  "Parwani": {
+   "Tc_series": 1.561519841769815,
+   "Tc_table": 1.561519841775671,
+   "diff": -5.855982365687851e-12,
+   "phic_over_Tc_series": 0.0,
+   "phic_over_Tc_table": 0.0
+  },
+  "DR": {
+   "Tc_series": 1.559307166351358,
+   "Tc_table": 1.5593071663644582,
+   "diff": -1.3100187601366997e-11,
+   "phic_over_Tc_series": 0.0,
+   "phic_over_Tc_table": 0.0
+  }
+ },
+ "adopted": {
+  "Tc_over_v_range_resummed_running": [
+   1.557139688846714,
+   1.5641467705552632
+  ],
+  "Tc_GeV_range_resummed_running": [
+   1557.1396888467139,
+   1564.1467705552632
+  ],
+  "Tc_over_v_range_resummed_running_and_fixed": [
+   1.557139688846714,
+   1.5641467705552632
+  ],
+  "Tc_over_v_central_AE_mu0": 1.5634661935420204,
+  "Tc_over_v_DR_mu0": 1.559307166351358,
+  "order_resummed_schemes": [
+   "second"
+  ],
+  "order_oneloop_unresummed": [
+   "first",
+   "second"
+  ],
+  "phic_over_Tc_oneloop_range": [
+   0.0,
+   0.013289141258637687
+  ],
+  "latent_heat_over_rho_hidden_oneloop_range": [
+   0.0,
+   5.60585135233458e-07
+  ],
+  "shift_from_leading_estimate_percent": [
+   0.6133974388021102,
+   1.0661546974335412
+  ],
+  "ginzburg": {
+   "definition": "eps_phi = 3 lambda_phi T/(4 pi m_phi(T)) = 1 with mean-field m^2 = 2 kappa Tc^2 |t|",
+   "kappa_DR": 0.004119580848165454,
+   "t_G": 0.0006917350077520069,
+   "t_G_band_O1_criteria": [
+    1.9214861326444636e-05,
+    0.0027669400310080276
+   ],
+   "m_phi_at_Ginzburg_over_Tc": 0.0023873241463784303
+  },
+  "two_loop_soft_sunset_Tc_shift_estimate_fraction": [
+   0.0004611566718346714,
+   0.00278427128758888
+  ],
+  "nonperturbative_order_statement": "DR effective quartic at Tc is positive (lambda_eff/lambda_phi = 0.9833); X and D are Debye-screened and perturbative (eps_X = 0.0233, eps_D = 0.0036).  The soft phi zero mode is a 3D real scalar with Z2 and a positive quartic: 3D Ising universality, continuous transition.  Any perturbative first-order signal below lies inside the Ginzburg region.",
+  "oneloop_ir_sensitivity": [
+   {
+    "rg": "running",
+    "scale": "mu0/2",
+    "tree_mX2_over_v2": 8.774660168754874e-07,
+    "order": "first",
+    "phic_over_Tc": 0.006367238513515963
+   },
+   {
+    "rg": "running",
+    "scale": "mu0",
+    "tree_mX2_over_v2": 0.0,
+    "order": "first",
+    "phic_over_Tc": 0.01054139072921103
+   },
+   {
+    "rg": "running",
+    "scale": "2mu0",
+    "tree_mX2_over_v2": -8.782968052130513e-07,
+    "order": "first",
+    "phic_over_Tc": 0.013289141258637687
+   },
+   {
+    "rg": "running",
+    "scale": "v",
+    "tree_mX2_over_v2": -2.9208512823024364e-06,
+    "order": "second",
+    "phic_over_Tc": 0.0
+   },
+   {
+    "rg": "fixed",
+    "scale": "mu0/2",
+    "tree_mX2_over_v2": 0.0,
+    "order": "first",
+    "phic_over_Tc": 0.010531293281818744
+   },
+   {
+    "rg": "fixed",
+    "scale": "mu0",
+    "tree_mX2_over_v2": 0.0,
+    "order": "first",
+    "phic_over_Tc": 0.01054139072921103
+   },
+   {
+    "rg": "fixed",
+    "scale": "2mu0",
+    "tree_mX2_over_v2": 0.0,
+    "order": "first",
+    "phic_over_Tc": 0.010551514460230206
+   },
+   {
+    "rg": "fixed",
+    "scale": "v",
+    "tree_mX2_over_v2": 0.0,
+    "order": "first",
+    "phic_over_Tc": 0.010575112687934471
+   }
+  ],
+  "lambda_eff_over_lambda_phi_range": {
+   "AE": [
+    0.5790120412026415,
+    0.5966393922248036
+   ],
+   "Parwani": [
+    0.5652110468759171,
+    0.5669868859247031
+   ],
+   "DR": [
+    0.9800407275293347,
+    0.9842161357011091
+   ]
+  },
+  "eps_phi_soft_at_Tc_range_AE_Parwani": [
+   0.2583940976464204,
+   0.27828900021790187
+  ]
+ },
+ "seconds": 11.9584481716156
+}

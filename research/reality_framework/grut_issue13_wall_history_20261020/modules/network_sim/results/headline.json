@@ -1,0 +1,394 @@
+{
+ "module": "network_sim",
+ "scope": "classical lattice simulation of the X = D = 0 sector of the unchanged Candidate 1 potential, radiation era a ~ tau, no backreaction",
+ "A_definition": "A = rho_w t / sigma = (A_c/V_c) tau / 2 (Hiramatsu-Kawasaki-Saikawa)",
+ "A_3D_PRS_256_box_safe": {
+  "mean": 0.7769805187895832,
+  "seed_std": 0.012983065798358957,
+  "n_seeds": 3
+ },
+ "A_3D_PRS_384_box_safe": {
+  "mean": 0.7699574294157904,
+  "seed_std": null,
+  "n_seeds": 1
+ },
+ "A_3D_PRS_256_box_affected": {
+  "mean": 0.8494980288255135,
+  "seed_std": 0.043388166924592575,
+  "n_seeds": 3
+ },
+ "A_3D_phys_256_postformation_box_affected": {
+  "mean": 0.8839037313528303,
+  "seed_std": 0.06170492587610247,
+  "n_seeds": 3
+ },
+ "A_2D_phys_2048_box_safe": {
+  "mean": 0.708743617156847,
+  "seed_std": 0.01399210047389171,
+  "n_seeds": 3
+ },
+ "A_2D_PRS_alpha2_2048_box_safe": {
+  "mean": 0.6524326794158237,
+  "seed_std": 0.0018194729581188153,
+  "n_seeds": 3
+ },
+ "A_2D_PRS_alpha2_4096_L4096_box_safe": {
+  "mean": 0.7247237031529745,
+  "seed_std": null,
+  "n_seeds": 1
+ },
+ "A_2D_PRS_alpha3_2048_box_safe": {
+  "mean": 0.6727893654037662,
+  "seed_std": 0.016032720116861715,
+  "n_seeds": 3
+ },
+ "mu_3D_PRS_256": {
+  "mean": -0.8959076875725586,
+  "seed_std": 0.03232131041421508,
+  "n_seeds": 3
+ },
+ "mu_3D_PRS_384": {
+  "mean": -0.974684401111734,
+  "seed_std": null,
+  "n_seeds": 1
+ },
+ "mu_2D_PRS_alpha2": {
+  "mean": -0.9911837177007728,
+  "seed_std": 0.010367164058046451,
+  "n_seeds": 3
+ },
+ "mu_2D_PRS_alpha3": {
+  "mean": -0.9876371640065252,
+  "seed_std": 0.018383413497096775,
+  "n_seeds": 3
+ },
+ "mu_2D_phys": {
+  "mean": -0.9114034947460107,
+  "seed_std": 0.14487482864635254,
+  "n_seeds": 3
+ },
+ "spanning_area_frac_3D_PRS": {
+  "mean": 0.9939970320254895,
+  "seed_std": 0.0009342590713139457,
+  "n_seeds": 3
+ },
+ "spanning_area_frac_2D_phys": {
+  "mean": 0.7122166484642912,
+  "seed_std": 0.056422787164041595,
+  "n_seeds": 3
+ },
+ "spanning_area_frac_2D_PRS_alpha2": {
+  "mean": 0.8122823023736121,
+  "seed_std": 0.13682370565078114,
+  "n_seeds": 3
+ },
+ "v_rms_3D_PRS": {
+  "mean": 0.456113137775563,
+  "seed_std": 0.006214056726737444,
+  "n_seeds": 3
+ },
+ "xi_over_tau_3D_PRS": {
+  "mean": 0.64390835342768,
+  "seed_std": 0.010393563438556004,
+  "n_seeds": 3
+ },
+ "resolution_checks": {
+  "phys2d_N1024_L64_s1__vs__phys2d_N2048_L64_s1": {
+   "late_mean_rel_diff": 0.03470947702701168,
+   "max_abs_rel_diff": 0.06621791944306908
+  },
+  "phys2d_N2048_L64_s1__vs__phys2d_N4096_L64_s1": {
+   "late_mean_rel_diff": 0.0037859189495404134,
+   "max_abs_rel_diff": 0.030159406751851456
+  },
+  "prs2d_a2_N2048_L2048_s1__vs__prs2d_a2_N4096_L2048_s1": {
+   "late_mean_rel_diff": 0.01887070235843107,
+   "max_abs_rel_diff": 0.03460575815879792
+  },
+  "prs3d_bias_N128_L128_p0.50_s1__vs__prs3d_N256_L128_s1": {
+   "late_mean_rel_diff": 0.009140586327027475,
+   "max_abs_rel_diff": 0.012503069309862211
+  },
+  "phys3d_N128_L24_s1__vs__phys3d_N256_L24_s1": {
+   "late_mean_rel_diff": 0.01788631665134756,
+   "max_abs_rel_diff": 0.028292498469402367
+  }
+ },
+ "ic_sensitivity_late_start_rel_diff": 0.0715255538559527,
+ "biased_fits": {
+  "phys2d_bias_N1024_L32": {},
+  "prs2d_bias_a2_N1024_L1024": {
+   "fit_tau10_vs_bias": {
+    "q": -1.4247792514921562,
+    "C": 2.319023060823584,
+    "law": "tau_10 = C (0.5 - p)^q"
+   },
+   "fit_K10_vs_bias": {
+    "q": -1.2552564678255753,
+    "C": 0.26215136053499893,
+    "law": "K10 = xi_ref(tau_10)/xi_ref(tau_form) = C (0.5 - p)^q"
+   },
+   "fit_tau0_vs_bias": {
+    "q": -1.1394114225883758,
+    "C": 8.8774275116225,
+    "law": "tau_zero = C (0.5 - p)^q"
+   }
+  },
+  "prs2d_biaslate_a2_N1024_L1024": {
+   "fit_tau10_vs_bias": {
+    "q": -0.18401769980938998,
+    "C": 140.78775516398514,
+    "law": "tau_10 = C (0.5 - p)^q"
+   },
+   "fit_K10_vs_bias": {
+    "q": -0.3150108515034908,
+    "C": 2.757258084260123,
+    "law": "K10 = xi_ref(tau_10)/xi_ref(tau_form) = C (0.5 - p)^q"
+   },
+   "fit_tau0_vs_bias": {
+    "q": -0.14939925480653593,
+    "C": 226.02405460568713,
+    "law": "tau_zero = C (0.5 - p)^q"
+   }
+  },
+  "prs2d_biasdamp_a2_N1024_L1024": {
+   "fit_tau10_vs_bias": {
+    "q": -0.4974247746863489,
+    "C": 56.46693854920112,
+    "law": "tau_10 = C (0.5 - p)^q"
+   },
+   "fit_K10_vs_bias": {
+    "q": -1.2259567935507734,
+    "C": 0.24679111290672495,
+    "law": "K10 = xi_ref(tau_10)/xi_ref(tau_form) = C (0.5 - p)^q"
+   },
+   "fit_tau0_vs_bias": {
+    "q": -0.48841060262099084,
+    "C": 82.74471412076879,
+    "law": "tau_zero = C (0.5 - p)^q"
+   }
+  },
+  "prs3d_bias_N128_L128": {
+   "fit_tau10_vs_bias": {
+    "q": -0.834017329764993,
+    "C": 3.3240786898911137,
+    "law": "tau_10 = C (0.5 - p)^q"
+   },
+   "fit_K10_vs_bias": {
+    "q": -0.701453791521222,
+    "C": 0.33126903699920807,
+    "law": "K10 = xi_ref(tau_10)/xi_ref(tau_form) = C (0.5 - p)^q"
+   },
+   "fit_tau0_vs_bias": {
+    "q": -0.9038817058884593,
+    "C": 6.201211721930456,
+    "law": "tau_zero = C (0.5 - p)^q"
+   }
+  }
+ },
+ "biased_K10": {
+  "phys2d_bias_N1024_L32": {
+   "0.50": null,
+   "0.45": 2.676270337944562,
+   "0.40": 1.9705943921114544,
+   "0.35": 1.2947921315358228,
+   "0.30": 1.0,
+   "0.25": 1.0,
+   "0.20": null
+  },
+  "prs2d_bias_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 10.782897288506698,
+   "0.40": 4.8487778809248026,
+   "0.35": 2.989610541771562,
+   "0.30": 2.0551848857868027,
+   "0.25": 1.461308118827364,
+   "0.20": 1.1267055443025173
+  },
+  "prs2d_biaslate_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 8.536371625317821,
+   "0.40": 4.543496018061322,
+   "0.35": 4.37493142141126,
+   "0.30": 4.543496018061322,
+   "0.25": 4.543496018061322,
+   "0.20": 4.543496018061322
+  },
+  "prs2d_biasdamp_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 9.240718288206997,
+   "0.40": 4.319825978598318,
+   "0.35": 2.84945766418554,
+   "0.30": 1.6400086736181663,
+   "0.25": 1.3089217410465996,
+   "0.20": 1.0
+  },
+  "prs3d_bias_N128_L128": {
+   "0.50": null,
+   "0.45": 2.731827606875045,
+   "0.40": 1.6282375591349112,
+   "0.35": 1.2716617329246314,
+   "0.30": 1.0,
+   "0.25": 1.0,
+   "0.20": 1.0
+  }
+ },
+ "biased_tau10": {
+  "phys2d_bias_N1024_L32": {
+   "0.50": null,
+   "0.45": 12.697916666666666,
+   "0.40": 9.920138888888888,
+   "0.35": 6.8125,
+   "0.30": 5.041666666666666,
+   "0.25": 5.041666666666666,
+   "0.20": null
+  },
+  "prs2d_bias_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 155.88888888888889,
+   "0.40": 63.888888888888886,
+   "0.35": 37.333333333333336,
+   "0.30": 24.333333333333332,
+   "0.25": 16.11111111111111,
+   "0.20": 12.0
+  },
+  "prs2d_biaslate_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 272.22222222222223,
+   "0.40": 188.33333333333334,
+   "0.35": 185.1111111111111,
+   "0.30": 188.33333333333334,
+   "0.25": 188.33333333333334,
+   "0.20": 188.33333333333334
+  },
+  "prs2d_biasdamp_a2_N1024_L1024": {
+   "0.50": null,
+   "0.45": 258.3333333333333,
+   "0.40": 169.33333333333331,
+   "0.35": 144.66666666666666,
+   "0.30": 123.33333333333333,
+   "0.25": 117.0,
+   "0.20": 111.0
+  },
+  "prs3d_bias_N128_L128": {
+   "0.50": null,
+   "0.45": 40.666666666666664,
+   "0.40": 22.333333333333332,
+   "0.35": 16.333333333333332,
+   "0.30": 12.333333333333334,
+   "0.25": 12.333333333333334,
+   "0.20": 12.333333333333334
+  }
+ },
+ "biased_failed_setup": "prs2d_biaslate_a2_N1024_L1024 (undamped post-quench oscillations; not wall decay)",
+ "bubble_NG_flat_collapse_over_R0": {
+  "kappa1": 1.5707962267925515,
+  "kappa1_exact": 1.5707963267948966,
+  "kappa2": 1.3110286771227997,
+  "kappa2_exact": 1.31102877714606
+ },
+ "bubble_NG_superhorizon": {
+  "kappa1_D2": {
+   "tau_c_over_R0_x1e4": 2.2139190271575564,
+   "R_over_R0_at_tau_eq_R0_over_2": 0.9579223286686834,
+   "R_over_R0_at_tau_eq_R0": 0.8264625876820504
+  },
+  "kappa1_D3": {
+   "tau_c_over_R0_x1e4": 2.458929509635558,
+   "R_over_R0_at_tau_eq_R0_over_2": 0.968460700336544,
+   "R_over_R0_at_tau_eq_R0": 0.8701414926645364
+  },
+  "kappa2_D3": {
+   "tau_c_over_R0_x1e4": 1.8669786966722721,
+   "R_over_R0_at_tau_eq_R0_over_2": 0.9365087695160524,
+   "R_over_R0_at_tau_eq_R0": 0.7336362985183257
+  }
+ },
+ "bubble_field_vs_NG_tau10_max_abs_rel_dev": {
+  "radial_physical": 0.025455983998468046,
+  "radial_prs": 0.039949611611934
+ },
+ "scales": {
+  "benchmark": {
+   "v_GeV": 1000.0,
+   "lambda_phi": 0.01,
+   "m_phi_GeV": 141.4213562373095,
+   "sigma_GeV3": 94280904.15820633,
+   "sigma_cuberoot_GeV": 455.1360606788448,
+   "delta_GeV_inv": 0.01414213562373095,
+   "delta_m": 2.790624919038099e-18,
+   "status": "derived from the unchanged action (tree level, X = D = 0)"
+  },
+  "hierarchy_at_formation_illustrative": {
+   "rows": [
+    {
+     "T_GeV": 1547.6464649999998,
+     "gstar": 106.75,
+     "H_GeV": 3.3651118936182615e-12,
+     "Hinv_over_delta": 21012875753924.684
+    },
+    {
+     "T_GeV": 1547.6464649999998,
+     "gstar": 110.75,
+     "H_GeV": 3.427578698659716e-12,
+     "Hinv_over_delta": 20629921100368.812
+    },
+    {
+     "T_GeV": 1000.0,
+     "gstar": 106.75,
+     "H_GeV": 1.4049342157095809e-12,
+     "Hinv_over_delta": 50330241322325.1
+    },
+    {
+     "T_GeV": 1000.0,
+     "gstar": 110.75,
+     "H_GeV": 1.431014106816689e-12,
+     "Hinv_over_delta": 49412984667182.39
+    },
+    {
+     "T_GeV": 100.0,
+     "gstar": 106.75,
+     "H_GeV": 1.4049342157095808e-14,
+     "Hinv_over_delta": 5033024132232510.0
+    },
+    {
+     "T_GeV": 100.0,
+     "gstar": 110.75,
+     "H_GeV": 1.431014106816689e-14,
+     "Hinv_over_delta": 4941298466718239.0
+    }
+   ],
+   "note": "T values are illustrative (1.5476 v is the leading curvature-zero CHECK of BRIEF.md, not a transition temperature); g_* = 106.75 (SM) or 110.75 (SM + 4 hidden real scalar dof phi, X, D in equilibrium) are free inputs."
+  },
+  "simulated_hierarchy": {
+   "phys2d_tau_end_32": 512.0,
+   "phys3d_tau_end_12": 72.0,
+   "phys2d_tau_i_2": 2.0,
+   "note": "H^-1 / delta = a tau / 2 = tau^2 / 2 for a = tau"
+  },
+  "wall_domination_if_scaling_persists": {
+   "rows": [
+    {
+     "A": 0.5,
+     "t_w_GeV_inv": 9.435842020103458e+28,
+     "t_w_s": 62107.840410515455,
+     "T_vis_at_t_w_keV_illustrative": 4.6107739253597915
+    },
+    {
+     "A": 0.8,
+     "t_w_GeV_inv": 5.89740126256466e+28,
+     "t_w_s": 38817.40025657215,
+     "T_vis_at_t_w_keV_illustrative": 5.832218952100855
+    },
+    {
+     "A": 1.0,
+     "t_w_GeV_inv": 4.717921010051729e+28,
+     "t_w_s": 31053.920205257728,
+     "T_vis_at_t_w_keV_illustrative": 6.52061901828005
+    }
+   ],
+   "formula": "t_w = 3 M_P^2 / (4 A sigma) (radiation era, no backreaction until then)",
+   "note": "Conditional: holds only if an unbiased scaling network forms and persists with the tree tension; it is the validity limit of the no-backreaction simulations, not an observable prediction."
+  }
+ }
+}

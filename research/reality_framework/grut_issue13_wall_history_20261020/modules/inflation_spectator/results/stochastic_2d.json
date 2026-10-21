@@ -1,0 +1,183 @@
+{
+ "module": "inflation_spectator",
+ "part": "2 X fluctuations (2D phi-|X| Fokker-Planck)",
+ "label": "computed; D set to zero (its entropic factor R_D is computed in stochastic_1d.json)",
+ "rate_checks": [
+  {
+   "H_GeV": 1000.0,
+   "B_HM": 0.10975946266348091,
+   "grid": [
+    153,
+    197
+   ],
+   "hy": 0.04,
+   "hr": 0.05,
+   "Lambda1_2D": 0.011747276182012179,
+   "Lambda1_1D_X0": 0.007620413722331715,
+   "ratio_2D_over_1D": 1.5415535967012715,
+   "R_X_entropic_estimate": 2.4929577375031697,
+   "ratio_over_RX": 0.6183633093777273
+  },
+  {
+   "H_GeV": 500.0,
+   "B_HM": 1.1619047842157084,
+   "grid": [
+    149,
+    197
+   ],
+   "hy": 0.04,
+   "hr": 0.05,
+   "Lambda1_2D": 0.0052708467406374256,
+   "Lambda1_1D_X0": 0.0022845478220520875,
+   "ratio_2D_over_1D": 2.3071728636010365,
+   "R_X_entropic_estimate": 6.541093166315003,
+   "ratio_over_RX": 0.3527197679253983
+  },
+  {
+   "H_GeV": 400.0,
+   "B_HM": 2.7146382766634756,
+   "grid": [
+    157,
+    197
+   ],
+   "hy": 0.04,
+   "hr": 0.05,
+   "Lambda1_2D": 0.0020456011637397273,
+   "Lambda1_1D_X0": 0.0005884235006306073,
+   "ratio_2D_over_1D": 3.476409697348046,
+   "R_X_entropic_estimate": 9.76729857941135,
+   "ratio_over_RX": 0.3559233568098376
+  },
+  {
+   "H_GeV": 330.0,
+   "B_HM": 5.728556197959245,
+   "grid": [
+    164,
+    197
+   ],
+   "hy": 0.04,
+   "hr": 0.05,
+   "Lambda1_2D": 0.00026979511370322194,
+   "Lambda1_1D_X0": 4.217652394935889e-05,
+   "ratio_2D_over_1D": 6.396807712915445,
+   "R_X_entropic_estimate": 14.016956853577934,
+   "ratio_over_RX": 0.4563620891279701
+  },
+  {
+   "H_GeV": 280.0,
+   "B_HM": 10.918138542446744,
+   "grid": [
+    175,
+    197
+   ],
+   "hy": 0.038389273505478064,
+   "hr": 0.05,
+   "Lambda1_2D": 3.940406430119323e-06,
+   "Lambda1_1D_X0": 3.3746472320769204e-07,
+   "ratio_2D_over_1D": 11.676498783827567,
+   "R_X_entropic_estimate": 19.20723584373031,
+   "ratio_over_RX": 0.6079218727164767
+  },
+  {
+   "H_GeV": 250.0,
+   "B_HM": 17.079991864811277,
+   "grid": [
+    214,
+    197
+   ],
+   "hy": 0.03432750915469445,
+   "hr": 0.05,
+   "Lambda1_2D": 1.5081711223895828e-08,
+   "Lambda1_1D_X0": 9.031890245886358e-10,
+   "ratio_2D_over_1D": 16.698288855718666,
+   "R_X_entropic_estimate": 23.919807062813902,
+   "ratio_over_RX": 0.6980946297714115
+  }
+ ],
+ "high_H": [
+  {
+   "H_GeV": 10000.0,
+   "grid": [
+    112,
+    197
+   ],
+   "Lambda1_2D": 0.013710788763606272,
+   "marginal_phi2_over_H2_with_X": 0.729197182307308,
+   "phi2_over_H2_X0_slice": 1.4892457996358437,
+   "marginal_peak_y": 0.025,
+   "X0_slice_peak_y": 0.775,
+   "rho2_over_H2_mean": 5.821550999742281,
+   "symmetry": "exact: P(phi) = P(-phi) by Z2 (the odd sector is solved explicitly)",
+   "N50": {
+    "p_minus_fresh_start_phi_v_X0": 0.4753625805366849,
+    "eq_draws_mean_minority_fraction": 0.36021490828969377,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.18240387742632924,
+     0.3909947442431234,
+     0.4834411909160407
+    ],
+    "eq_draws_prob_minority_below_pc": 0.30337508798663715
+   },
+   "N60": {
+    "p_minus_fresh_start_phi_v_X0": 0.47851111107013844,
+    "eq_draws_mean_minority_fraction": 0.3813524396075238,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.22215790086890558,
+     0.41097716891714176,
+     0.48744326642864616
+    ],
+    "eq_draws_prob_minority_below_pc": 0.24042258347506348
+   }
+  },
+  {
+   "H_GeV": 10000000000000.0,
+   "grid": [
+    120,
+    217
+   ],
+   "Lambda1_2D": 0.008453253115566634,
+   "marginal_phi2_over_H2_with_X": 0.9681445299173869,
+   "phi2_over_H2_X0_slice": 2.710102152127101,
+   "marginal_peak_y": 0.025,
+   "X0_slice_peak_y": 1.7750000000000001,
+   "rho2_over_H2_mean": 7.998031937814808,
+   "symmetry": "exact: P(phi) = P(-phi) by Z2 (the odd sector is solved explicitly)",
+   "N50": {
+    "p_minus_fresh_start_phi_v_X0": 0.49999999995918476,
+    "eq_draws_mean_minority_fraction": 0.33337115625640634,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.0964243815379538,
+     0.37995460106599904,
+     0.48536260923228913
+    ],
+    "eq_draws_prob_minority_below_pc": 0.3711099444185688
+   },
+   "N60": {
+    "p_minus_fresh_start_phi_v_X0": 0.4999999999627458,
+    "eq_draws_mean_minority_fraction": 0.3524679786967455,
+    "eq_draws_minority_quantiles_10_50_90": [
+     0.1264766603103294,
+     0.40102103326545435,
+     0.4892443637268617
+    ],
+    "eq_draws_prob_minority_below_pc": 0.3255908155766819
+   },
+   "dt_check_max_abs_dS_N50": 6.089810332676748e-07
+  }
+ ],
+ "rate_check_refinement_H330": {
+  "Lambda1_2D_coarse_fine": [
+   0.0002697951137032216,
+   0.0002698063836479171
+  ],
+  "rel_change": 4.1772234273596e-05
+ },
+ "fresh_start_2D_H330": {
+  "p_minus_2D_N50": 0.0002553610811997022,
+  "p_minus_2D_N60": 0.0005455797562360723,
+  "p_minus_1D_N50": 0.0001334188382218711,
+  "p_minus_1D_N60": 0.0002513444250664792,
+  "p_minus_2D_N50_dt_half": 0.0002553588191572437
+ },
+ "runtime_s": 51.309186935424805
+}

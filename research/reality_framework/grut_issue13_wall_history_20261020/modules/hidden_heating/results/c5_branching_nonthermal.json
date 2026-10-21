@@ -1,0 +1,267 @@
+{
+ "thermal_branching": {
+  "rows": [
+   {
+    "T_max_visible": 1000.0,
+    "B_h_max_nominal": 0.17693484295810688,
+    "B_h_max_minus30": 0.04908115370742249,
+    "B_h_max_plus30": 0.3804127309475824,
+    "xi_at_boundary": 1.0
+   },
+   {
+    "T_max_visible": 3000.0,
+    "B_h_max_nominal": 0.0026469336572221935,
+    "B_h_max_minus30": 0.0006368096531469187,
+    "B_h_max_plus30": 0.007522947177805674,
+    "xi_at_boundary": 0.5158821549999999
+   },
+   {
+    "T_max_visible": 10000.0,
+    "B_h_max_nominal": 2.1496601811712408e-05,
+    "B_h_max_minus30": 5.161418408143639e-06,
+    "B_h_max_plus30": 6.139399482370037e-05,
+    "xi_at_boundary": 0.1547646465
+   },
+   {
+    "T_max_visible": 100000.0,
+    "B_h_max_nominal": 2.149706387932336e-09,
+    "B_h_max_minus30": 5.161445045857075e-10,
+    "B_h_max_plus30": 6.139776390075406e-09,
+    "xi_at_boundary": 0.015476464649999999
+   },
+   {
+    "T_max_visible": 1000000.0,
+    "B_h_max_nominal": 2.1497063925531112e-13,
+    "B_h_max_minus30": 5.161445048520861e-14,
+    "B_h_max_plus30": 6.139776427768491e-13,
+    "xi_at_boundary": 0.0015476464649999998
+   },
+   {
+    "T_max_visible": 10000000.0,
+    "B_h_max_nominal": 2.1497063925535738e-17,
+    "B_h_max_minus30": 5.161445048521126e-18,
+    "B_h_max_plus30": 6.139776427772261e-17,
+    "xi_at_boundary": 0.0001547646465
+   },
+   {
+    "T_max_visible": 100000000.0,
+    "B_h_max_nominal": 2.1497063925535727e-21,
+    "B_h_max_minus30": 5.161445048521128e-22,
+    "B_h_max_plus30": 6.1397764277722604e-21,
+    "xi_at_boundary": 1.5476464649999997e-05
+   },
+   {
+    "T_max_visible": 10000000000.0,
+    "B_h_max_nominal": 2.1497063925535733e-29,
+    "B_h_max_minus30": 5.161445048521126e-30,
+    "B_h_max_plus30": 6.139776427772263e-29,
+    "xi_at_boundary": 1.5476464649999998e-07
+   },
+   {
+    "T_max_visible": 1000000000000.0,
+    "B_h_max_nominal": 2.149706392553573e-37,
+    "B_h_max_minus30": 5.161445048521128e-38,
+    "B_h_max_plus30": 6.139776427772263e-37,
+    "xi_at_boundary": 1.5476464649999998e-09
+   },
+   {
+    "T_max_visible": 100000000000000.0,
+    "B_h_max_nominal": 2.1497063925535728e-45,
+    "B_h_max_minus30": 5.161445048521126e-46,
+    "B_h_max_plus30": 6.13977642777226e-45,
+    "xi_at_boundary": 1.5476464649999998e-11
+   },
+   {
+    "T_max_visible": 1e+16,
+    "B_h_max_nominal": 2.149706392553573e-53,
+    "B_h_max_minus30": 5.161445048521127e-54,
+    "B_h_max_plus30": 6.139776427772262e-53,
+    "xi_at_boundary": 1.5476464649999998e-13
+   }
+  ],
+  "formula": "T_h,max = (B_h g*/((1-B_h) g_h))^(1/4) T_max; B_h,max = (g_h/g*)(T_c/T_max)^4 for B_h<<1",
+  "ode_check": {
+   "B_h": 1e-12,
+   "rho_h/rho_R_end": 9.999999974320028e-13,
+   "expected": 1.000000000001e-12,
+   "T_h,max/T_max_num": 0.002272888876665695,
+   "expected_(B g*/g_h)^1/4": 0.0022728824386542643
+  },
+  "kinetic_equilibrium_at_Tc": {
+   "Gamma_22_at_Tc": 0.0018504634805285335,
+   "T_SM_max_for_Gamma>H": 36292113.847549215,
+   "xi_min": 4.264415325878053e-05,
+   "thermal_potential_module_xi_min_kinetic": 6.6e-05,
+   "thermal_potential_module_xi_min_number_changing": 0.068,
+   "consequence": "thermal B_h bound is self-consistent only if T_max <~ T_c/xi_min"
+  },
+  "T_max_selfconsistency_kinetic": 23449188.86363636,
+  "T_max_selfconsistency_number_changing": 22759.50683823529
+ },
+ "nonthermal_branching": {
+  "rows": [
+   {
+    "H_e": 100000.0,
+    "T_RH": 64019808.90949543,
+    "T_max": 3152649485.897874,
+    "m_I": 300000.0,
+    "B_h_max_noHubble_equal_share": 3.406916812540123e-24,
+    "B_h_max_withHubble_equal_share": 7.979566069537451e-22,
+    "B_h_max_noHubble_phi_only": 1.4223877692355015e-24,
+    "B_h_max_withHubble_phi_only": 3.3314688340308906e-22,
+    "B_h_max_noHubble_D_only": 4.267163307706504e-22,
+    "B_h_max_withHubble_D_only": 9.994406502077468e-20,
+    "B_h_max_thermal_same_T_max": 2.1760877042425386e-27,
+    "Gamma22_over_H_at_a_e_noHubble_boundary": 4.5180474873296285e-09
+   },
+   {
+    "H_e": 1000000000.0,
+    "T_RH": 63968278.91328366,
+    "T_max": 31526472387.721127,
+    "m_I": 3000000000.0,
+    "B_h_max_noHubble_equal_share": 3.406914385782353e-20,
+    "B_h_max_withHubble_equal_share": 7.219962118404513e-14,
+    "B_h_max_noHubble_phi_only": 1.4223867560641324e-20,
+    "B_h_max_withHubble_phi_only": 3.014334184433884e-14,
+    "B_h_max_noHubble_D_only": 4.267160268192397e-18,
+    "B_h_max_withHubble_D_only": 9.043002553301654e-12,
+    "B_h_max_thermal_same_T_max": 2.176093908486269e-31,
+    "Gamma22_over_H_at_a_e_noHubble_boundary": 4.518044269109916e-17
+   },
+   {
+    "H_e": 10000000000000.0,
+    "T_RH": 63944758.65495023,
+    "T_max": 315264587660.0592,
+    "m_I": 30000000000000.0,
+    "B_h_max_noHubble_equal_share": 3.406920854721454e-16,
+    "B_h_max_withHubble_equal_share": 7.1880079608126965e-06,
+    "B_h_max_noHubble_phi_only": 1.4223894568462074e-16,
+    "B_h_max_withHubble_phi_only": 3.000993323645407e-06,
+    "B_h_max_noHubble_D_only": 4.2671683705386215e-14,
+    "B_h_max_withHubble_D_only": 0.0009002979970924542,
+    "B_h_max_thermal_same_T_max": 2.1760976694098685e-35,
+    "Gamma22_over_H_at_a_e_noHubble_boundary": 4.518052847826586e-25
+   },
+   {
+    "H_e": 10000000000000.0,
+    "T_RH": 640198089094.9543,
+    "T_max": 31526494858978.715,
+    "m_I": 30000000000000.0,
+    "B_h_max_noHubble_equal_share": 3.406916812540123e-24,
+    "B_h_max_withHubble_equal_share": 1.3123048134613292e-12,
+    "B_h_max_noHubble_phi_only": 1.4223877692355015e-24,
+    "B_h_max_withHubble_phi_only": 5.478872596201406e-13,
+    "B_h_max_noHubble_D_only": 4.267163307706504e-22,
+    "B_h_max_withHubble_D_only": 1.6436617788599856e-10,
+    "B_h_max_thermal_same_T_max": 2.1760877042425442e-43,
+    "Gamma22_over_H_at_a_e_noHubble_boundary": 4.51804748732963e-25
+   },
+   {
+    "H_e": 1000000000.0,
+    "T_RH": 639447.5865495023,
+    "T_max": 3152645876.6006145,
+    "m_I": 1000000000.0,
+    "B_h_max_noHubble_equal_share": 3.7854676163571743e-17,
+    "B_h_max_withHubble_equal_share": 8.022169514573688e-11,
+    "B_h_max_noHubble_phi_only": 1.5804327298291206e-17,
+    "B_h_max_withHubble_phi_only": 3.349255772334514e-11,
+    "B_h_max_noHubble_D_only": 4.741298189487361e-15,
+    "B_h_max_withHubble_D_only": 1.0047767317003566e-08,
+    "B_h_max_thermal_same_T_max": 2.1760976694098062e-27,
+    "Gamma22_over_H_at_a_e_noHubble_boundary": 1.3554158543479764e-16
+   }
+  ],
+  "note": "B_h needed for nonthermal restoration is many orders larger than the thermal bound; the thermal bound needs hidden self-thermalisation, which itself needs xi >~ 6.6e-5"
+ },
+ "freezein_gas": {
+  "Pi_formula": "Pi = 4 C_avg gamma_chi (T_RH^3 - T^3) T^2/(3 c_H M_P^3)",
+  "gamma_chi_1dof": 0.0014803576277009436,
+  "mean_T_over_E": 0.34203335309978333,
+  "C_avg": 0.012525000000000001,
+  "T_RH_threshold_noHubble": 9069602400302.78,
+  "T_RH_threshold_withHubble": 825078091122627.6,
+  "required_H_inf_for_instant_TRH_noHubble": 115566639.95429015
+ },
+ "condensate_gas_thermalisation": {
+  "rows": [
+   {
+    "H_e": 1000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.9885657577643168e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.25
+   },
+   {
+    "H_e": 1000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.2095175086270183e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203245.5
+   },
+   {
+    "H_e": 100000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.9885657577643165e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.25
+   },
+   {
+    "H_e": 100000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.2095175086270186e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203245.0
+   },
+   {
+    "H_e": 10000000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.9885657577643162e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.25
+   },
+   {
+    "H_e": 10000000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.2095175086270183e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203245.5
+   },
+   {
+    "H_e": 1000000000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.9885657577643162e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.266
+   },
+   {
+    "H_e": 1000000000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.2095175086270183e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203245.5
+   },
+   {
+    "H_e": 100000000000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.988565757764316e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.266
+   },
+   {
+    "H_e": 100000000000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.209517508627018e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203245.5
+   },
+   {
+    "H_e": 10000000000000.0,
+    "m_I/H_e": 1.0,
+    "Gamma22_over_H_at_peak": 1.9885657577643162e-07,
+    "a_over_a_e_for_Gamma=H_MD": 32116174385225.266
+   },
+   {
+    "H_e": 10000000000000.0,
+    "m_I/H_e": 3.0,
+    "Gamma22_over_H_at_peak": 2.209517508627018e-08,
+    "a_over_a_e_for_Gamma=H_MD": 2601410125203246.5
+   }
+  ],
+  "scaling": "Gamma/H \u221d a^(1/2) in MD, \u221d a in RD after production"
+ },
+ "Pi_definition": "Pi_phi = 3 lambda_phi <dphi^2> + g_X^2 (<q1^2>+<q2^2>) + h_D^2 <D^2>, <chi^2> = int d^3p f/((2pi)^3 E)",
+ "thermal_check": {
+  "Pi/T^2 for thermal 4-dof bath": 0.004175000000000001,
+  "brief_value": 0.004175
+ }
+}

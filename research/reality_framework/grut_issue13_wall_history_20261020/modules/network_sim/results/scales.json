@@ -1,0 +1,83 @@
+{
+ "benchmark": {
+  "v_GeV": 1000.0,
+  "lambda_phi": 0.01,
+  "m_phi_GeV": 141.4213562373095,
+  "sigma_GeV3": 94280904.15820633,
+  "sigma_cuberoot_GeV": 455.1360606788448,
+  "delta_GeV_inv": 0.01414213562373095,
+  "delta_m": 2.790624919038099e-18,
+  "status": "derived from the unchanged action (tree level, X = D = 0)"
+ },
+ "hierarchy_at_formation_illustrative": {
+  "rows": [
+   {
+    "T_GeV": 1547.6464649999998,
+    "gstar": 106.75,
+    "H_GeV": 3.3651118936182615e-12,
+    "Hinv_over_delta": 21012875753924.684
+   },
+   {
+    "T_GeV": 1547.6464649999998,
+    "gstar": 110.75,
+    "H_GeV": 3.427578698659716e-12,
+    "Hinv_over_delta": 20629921100368.812
+   },
+   {
+    "T_GeV": 1000.0,
+    "gstar": 106.75,
+    "H_GeV": 1.4049342157095809e-12,
+    "Hinv_over_delta": 50330241322325.1
+   },
+   {
+    "T_GeV": 1000.0,
+    "gstar": 110.75,
+    "H_GeV": 1.431014106816689e-12,
+    "Hinv_over_delta": 49412984667182.39
+   },
+   {
+    "T_GeV": 100.0,
+    "gstar": 106.75,
+    "H_GeV": 1.4049342157095808e-14,
+    "Hinv_over_delta": 5033024132232510.0
+   },
+   {
+    "T_GeV": 100.0,
+    "gstar": 110.75,
+    "H_GeV": 1.431014106816689e-14,
+    "Hinv_over_delta": 4941298466718239.0
+   }
+  ],
+  "note": "T values are illustrative (1.5476 v is the leading curvature-zero CHECK of BRIEF.md, not a transition temperature); g_* = 106.75 (SM) or 110.75 (SM + 4 hidden real scalar dof phi, X, D in equilibrium) are free inputs."
+ },
+ "simulated_hierarchy": {
+  "phys2d_tau_end_32": 512.0,
+  "phys3d_tau_end_12": 72.0,
+  "phys2d_tau_i_2": 2.0,
+  "note": "H^-1 / delta = a tau / 2 = tau^2 / 2 for a = tau"
+ },
+ "wall_domination_if_scaling_persists": {
+  "rows": [
+   {
+    "A": 0.5,
+    "t_w_GeV_inv": 9.435842020103458e+28,
+    "t_w_s": 62107.840410515455,
+    "T_vis_at_t_w_keV_illustrative": 4.6107739253597915
+   },
+   {
+    "A": 0.8,
+    "t_w_GeV_inv": 5.89740126256466e+28,
+    "t_w_s": 38817.40025657215,
+    "T_vis_at_t_w_keV_illustrative": 5.832218952100855
+   },
+   {
+    "A": 1.0,
+    "t_w_GeV_inv": 4.717921010051729e+28,
+    "t_w_s": 31053.920205257728,
+    "T_vis_at_t_w_keV_illustrative": 6.52061901828005
+   }
+  ],
+  "formula": "t_w = 3 M_P^2 / (4 A sigma) (radiation era, no backreaction until then)",
+  "note": "Conditional: holds only if an unbiased scaling network forms and persists with the tree tension; it is the validity limit of the no-backreaction simulations, not an observable prediction."
+ }
+}

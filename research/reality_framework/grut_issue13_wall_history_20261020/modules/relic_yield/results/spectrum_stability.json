@@ -1,0 +1,117 @@
+{
+ "status": "derived (masses, thresholds, symmetry stability) + estimate (gravitational decay rates)",
+ "masses_GeV": {
+  "m_X": 100.0,
+  "m_h": 141.4213562373095,
+  "m_D": 100.4987562112089,
+  "formulas": "m_X = gX v, m_h = sqrt(2 lam_phi) v, m_D = sqrt(mD0^2 + hD^2 v^2)"
+ },
+ "thresholds_GeV": {
+  "two_m_X": 200.0,
+  "two_m_D": 200.9975124224178,
+  "h_to_XXbar_open": false,
+  "h_to_DD_open": false
+ },
+ "broken_phase_vertices": {
+  "hhh": "lam_phi v h^3 (Feynman 6 lam_phi v = 60 GeV)",
+  "hhhh": "lam_phi/4 h^4 (6 lam_phi = 0.06)",
+  "hXX": "2 gX^2 v h |X|^2 (vertex 20 GeV)",
+  "hhXX": "gX^2 h^2 |X|^2 (vertex 0.02)",
+  "hDD": "hD^2 v h D^2 (vertex 0.2 GeV)",
+  "hhDD": "hD^2/2 h^2 D^2 (vertex 0.0002)",
+  "note": "symmetric phase (phi = 0) has no cubic vertex: number changes only by 2->4 there (thermal_potential)"
+ },
+ "stability": [
+  {
+   "species": "X, Xbar",
+   "mass": 100.0,
+   "verdict": "exactly stable in the action",
+   "reason": "lightest U(1)_X-charged state; U(1)_X exact"
+  },
+  {
+   "species": "D",
+   "mass": 100.4987562112089,
+   "verdict": "exactly stable in the action",
+   "reason": "lightest Z2_D-odd state; Z2_D exact"
+  },
+  {
+   "species": "h (phi radial mode)",
+   "mass": 141.4213562373095,
+   "verdict": "no non-gravitational decay; gravitational lifetime >> age",
+   "reason": "h -> X Xbar needs m_h > 200 GeV, h -> D D needs m_h > 201.0 GeV (both closed); Higgs and other portals are zero at mu_0 and stay zero under non-gravitational running (hidden_heating)"
+  }
+ ],
+ "h_decay": {
+  "naive_dimensional": {
+   "Gamma_GeV": 1.6082320305642917e-63,
+   "tau_s": 4.0927673643525714e+38,
+   "note": "m_h^5/M_P^4 with no small factors: generous upper estimate of any gravitational 2-body rate"
+  },
+  "loop_h_to_graviton_pair": {
+   "contributions_v_dlnm2_dh": {
+    "X": 4.0,
+    "D": 0.019801980198019802,
+    "h_self": 3.0
+   },
+   "c": 0.00012348170930008508,
+   "Gamma_GeV": 3.902780302037195e-74,
+   "tau_s": 1.6865206492828278e+49,
+   "band_tau_s": [
+    1.6865206492828274e+48,
+    1.6865206492828277e+50
+   ],
+   "note": "heavy-loop low-energy theorem; m_h^2/(4 m_X^2) = 0.5 so O(1)-O(10) form-factor uncertainty; tree-level h -> gg vanishes for minimal coupling (no h-linear vertex; h R term vanishes on shell)"
+  },
+  "xi_trace_coupling": {
+   "xi_phi_running_at_m_h": -3.665015717210711e-05,
+   "Gamma_SM_Higgs_141GeV_recalled": 0.0086,
+   "rows": [
+    {
+     "xi_eff": 1e-05,
+     "kappa": 4.151549171858076e-37,
+     "Gamma_GeV": 1.482241005266571e-75,
+     "Gamma_upper_GeV": 1.482241005266571e-74,
+     "tau_s": 4.440654080957807e+50,
+     "tau_lower_s": 4.4406540809578064e+49
+    },
+    {
+     "xi_eff": 0.0001,
+     "kappa": 4.151549171858076e-36,
+     "Gamma_GeV": 1.482241005266571e-73,
+     "Gamma_upper_GeV": 1.482241005266571e-72,
+     "tau_s": 4.4406540809578064e+48,
+     "tau_lower_s": 4.440654080957806e+47
+    },
+    {
+     "xi_eff": 0.001,
+     "kappa": 4.151549171858076e-35,
+     "Gamma_GeV": 1.4822410052665708e-71,
+     "Gamma_upper_GeV": 1.4822410052665707e-70,
+     "tau_s": 4.440654080957807e+46,
+     "tau_lower_s": 4.440654080957807e+45
+    }
+   ],
+   "note": "xi_phi = 0 at mu_0 by matching; |xi_eff| ~ 1e-5..1e-3 band covers running + finite parts"
+  },
+  "age_of_universe_s": 4.35e+17,
+  "verdict": "every estimate gives tau_h > 1e36 s >> 4.4e17 s: h is a cosmologically stable relic species of the action"
+ },
+ "outside_action_comparison": {
+  "dim5_Z2odd_phiFF_over_MP": {
+   "Gamma_GeV": 2.3719307534625715e-33,
+   "tau_s": 277500494.4554704,
+   "note": "NOT in the action (Z2_phi exact by postulate P4); such an operator would also bias the walls"
+  },
+  "dim6_phi2FF_over_MP2": {
+   "Gamma_GeV": 1.5997379831438945e-63,
+   "tau_s": 4.114498523104672e+38,
+   "note": "zero at mu_0 by matching; shown for scale"
+  },
+  "graviton_induced_higgs_portal": {
+   "delta_lambda": 3.4e-34,
+   "mixing": 1.941240887549095e-32,
+   "Gamma_GeV": 3.240837917803462e-66,
+   "tau_s": 2.030993136941928e+41
+  }
+ }
+}
