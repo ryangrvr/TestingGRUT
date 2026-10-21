@@ -1,0 +1,40 @@
+{
+  "source_commit": "8ec108c9807892a1c6e7afb81ce2b8a65864e4f1",
+  "interpretation": "Local quadratic representative of fixed-mu q-theory; not a new state-selection rule or a fit to observations.",
+  "background_units": "M_ref=H_ref=1; density is in M_ref^2 H_ref^2. H_ref sets units and need not equal the numerical endpoint H.",
+  "background": {
+    "a_initial": 0.1,
+    "a_final": 1.0,
+    "omega_m_reference": 0.3,
+    "omega_r_reference": 0.00009,
+    "omega_lambda_reference": 0.69991,
+    "m_over_Href": [300.0, 600.0, 1200.0],
+    "k_over_Href": [30.0, 300.0],
+    "initial_state": "F=1+(rho_d+4 Lambda)/(3m^2), Fdot=-H rho_d/m^2; H from the exact Friedmann constraint. D=a_initial and dD/dln(a)=D are supplied for both theory and GR reference.",
+    "samples": 501,
+    "rtol": 1e-9,
+    "refined_rtol": 1e-11,
+    "atol": 1e-12,
+    "refined_atol": 1e-14
+  },
+  "tensor_control": {
+    "conformal_interval": [1.0, 2.0],
+    "a": "eta^2",
+    "F": "1+0.02 eta^-2",
+    "k": [40.0, 80.0, 160.0],
+    "interpretation": "Prescribed smooth background for a propagation/WKB control only; not a solved q-theory cosmology. Complex outgoing initial data are WKB initial data."
+  },
+  "scale_control": {
+    "hbar_eV_s": 6.582119569e-16,
+    "c_m_s": 299792458.0,
+    "Mpc_m": 3.085677581491367e22,
+    "H_reference_km_s_Mpc": 67.4,
+    "k_comoving_Mpc_inverse": [0.01, 0.1, 1.0],
+    "redshifts": [0.0, 1.0, 1000.0],
+    "assumed_uniform_unscreened_mass_floor_eV": 0.004,
+    "floor_provenance": "Conservative illustrative floor relayed from Claude stage-1 ledger, not independently refitted here; local bound applies to cosmology only if the same unscreened constant mass describes both."
+  },
+  "observational_status": "All empirical inputs are already known; no held-out dataset, likelihood, or confidence level is constructed.",
+  "calibration": "Positive Lambda=3*omega_lambda_reference is supplied. In q-theory it corresponds to a chosen integration constant/matching residual; its sign and magnitude are not derived.",
+  "physical_scope": "Finite cosmological masses are numerical hierarchy controls, far below the unscreened laboratory floor. No claim of empirical viability, nonlinear screening, quantum completion, or a solved threshold/transition history."
+}
