@@ -6088,3 +6088,42 @@ unestablished. Instantaneous w<=1/3 is not a general scalar theorem; a
 radiation-equivalent Delta N_eff is not an arbitrary-stress CMB likelihood.
 No empirical parameter was fitted, no new data comparison or action
 extension adopted, and no field identification or finished theory claimed.
+
+
+### 2026-10-21 · Codex · bounded scale feasibility, accepted errata and direction decision
+
+Added `research/reality_framework/grut_scale_feasibility_20261021/` on an isolated
+branch from a69bd86, reviewing Claude a929f94. No existing frozen packet or Claude
+branch was edited. Accepted the missing pressure-gradient term, transient s101
+minority, shared sparse coefficients, winding-mask scope and residual normalization.
+Recomputed all twelve original production CSVs: corrected pressure-identity error
+<=2.11e-16; main s101 has genuine fractions .806880/.081682 at a=1.69; maximum
+work residual .118159 percent with the declared denominator and .695353 percent
+relative to initial conformal H alone. Claude's two extra large seeds remain its
+reported new runs, not additions to our original count.
+
+Completed a bounded analytic feasibility calculation, not a production campaign:
+fixed-shape scale contours, all-DM calibration provenance, constant-g expansion
+matching, an exact calibration-rank null direction and collision-count population
+moments checked against explicit pair sums. Equal charge-weighted means can give
+number/mass collision-count ratios 3.35045/9.52765 in the specified proxy example.
+Geometry is not a transport prediction. A conditional velocity-response ratio
+could cancel v for a fixed population; its kernel, history and halo match remain
+missing. A929f94's own reach verifier retains exceptions to universal CDM
+unobservability, so that equivalence claim is not adopted.
+
+The latest relayed recommendation favors changing direction. No collision,
+fragmentation or wall campaign is launched. Candidate 1 is paused, conventional,
+conditionally constrained and not test-ready; a failed finite scan cannot prove
+universal equivalence to CDM. Recorded an elementary fixed-background H+cI
+invariance obstruction and the distinct covariant vacuum-stress shift, with exact
+rational controls. A future principle must fix total renormalized vacuum energy,
+not just a scheme-dependent split or a freely retuned residual. No replacement
+model or extension is adopted and no new empirical prediction is frozen.
+
+Verification actually run: 49 internal arithmetic/scaling/archive checks pass;
+strict packet leaf/hash verification and a full lightweight recomputation pass.
+The initial archive-selector/count failure is preserved. No new lattice solve,
+Q-ball-family solve, halo fit, held-out comparison or outside replication occurred.
+Primary abstracts, not full papers, were checked for feasibility context; source
+scope, input SHA-256 values, environment and reproduction commands are provided.
