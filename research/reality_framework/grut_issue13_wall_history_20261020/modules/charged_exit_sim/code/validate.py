@@ -244,7 +244,23 @@ def v6():
     sim.S[...] = S
     sim.ghosts()
     mm = C.measure(sim, 1.0, 10.0, qlist=True)
+    # same configuration with an oscillating (sign-changing) Q-ball interior: L_vor must stay at 2L
+    sim2 = C.Sim(2, N, dx, 10.0)
+    S2 = np.tanh((X - L / 4) / delta) * np.tanh((3 * L / 4 - X) / delta)
+    for (cx, cy) in ((L / 2, L / 2), (L / 4, L / 4)):
+        r = np.hypot(X - cx, Yg - cy)
+        ball = 0.5 * (1 - np.tanh((r - 3.0) / 0.6))
+        S2 = S2 * (1 - ball) - 0.2 * ball * np.cos(3 * X)
+        sim2.R[...] += np.sqrt(1.6) * ball
+        sim2.PI[...] += 0.56 * np.sqrt(1.6) * ball
+    sim2.S[...] = S2
+    sim2.ghosts()
+    m2 = C.measure(sim2, 1.0, 10.0)
+    out["synthetic_oscillating_Qball_interiors"] = dict(L_vor_times_area=m2["L_vor"] * L * L, expected=2 * L,
+                                                        L_wall_times_area=m2["L_wall"] * L * L,
+                                                        L_internal_times_area=m2["L_internal"] * L * L)
     out["synthetic"] = dict(L_wall_times_area=mm["L_wall"] * L * L, expected_two_walls=2 * L,
+                            L_vor_times_area=mm["L_vor"] * L * L,
                             L_all_times_area=mm["L_all"] * L * L, n_lumps=mm["n_lumps"],
                             n_lumps_attached=mm["n_lumps_attached"], lump_attached_list=mm.get("lump_attached_list"),
                             n_core_walltype=mm["n_core_walltype"], n_core_single=mm["n_core_single"],
@@ -257,6 +273,7 @@ def v6():
         mm = C.measure(sim, 1.0, 10.0)
         out[f"circle_R{R0}"] = dict(L=mm["L_wall"] * L * L, exact=2 * math.pi * R0,
                                     rel_err=mm["L_wall"] * L * L / (2 * math.pi * R0) - 1,
+                                    rel_err_L_vor=mm["L_vor"] * L * L / (2 * math.pi * R0) - 1,
                                     wraps_plus=mm["wraps_plus"], n_comp_minus=mm["n_comp_minus"])
     return out
 

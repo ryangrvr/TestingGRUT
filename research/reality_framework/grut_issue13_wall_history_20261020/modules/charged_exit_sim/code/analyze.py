@@ -33,6 +33,8 @@ def metrics(run):
     tau = arr(s, "tau"); a = arr(s, "a")
     fp = arr(s, "f_plus"); fm = arr(s, "f_minus"); fc = arr(s, "f_core")
     Lw = arr(s, "L_wall"); Lb = arr(s, "L_bare"); Lall = arr(s, "L_all"); Lint = arr(s, "L_internal")
+    Lv = arr(s, "L_vor")                       # vacuum-basin interface length (NaN for runs without it)
+    has_vor = bool(np.isfinite(Lv).any())
     d = cfg["d"]
     Lbox = cfg["N"] * cfg["dx"]
     out = dict(name=cfg["name"], kind=cfg["kind"], kappa=cfg.get("kappa"), tau_i=cfg["tau_i"], seed=cfg["seed"],
@@ -83,6 +85,18 @@ def metrics(run):
         selc = (tau >= tau[i0] + 5) & (tau <= tend0) & (xic <= Lbox / 8)
         if selc.sum() >= 4:
             out["dxi_dtau_boxsafe"] = float(np.polyfit(tau[selc], xic[selc], 1)[0])
+        if has_vor:
+            xiv = np.where(Lv > 0, 1.0 / np.maximum(Lv, 1e-300), np.nan)
+            t_start = tau[i0] + (5 if not cfg.get("init_from") else 0)
+            selv = (tau >= t_start) & (tau <= tend0) & (xiv <= Lbox / 8)
+            if selv.sum() >= 4:
+                out["dxi_vor_dtau_boxsafe"] = float(np.polyfit(tau[selv], xiv[selv], 1)[0])
+            if afr0:
+                selfz = tau >= afr0 * cfg["tau_i"]
+                if selfz.sum() >= 4:
+                    out["dxi_vor_dtau_frozen"] = float(np.polyfit(tau[selfz], xiv[selfz], 1)[0])
+                    out["xi_vor_frozen_start_end"] = [float(xiv[selfz][0]), float(xiv[selfz][-1])]
+            out["L_vor_over_L_wall_end"] = float(Lv[-1] / Lw[-1]) if Lw[-1] > 0 else None
             out["boxsafe_window_tau"] = [float(tau[selc][0]), float(tau[selc][-1])]
             out["boxsafe_window_xi"] = [float(xic[selc][0]), float(xic[selc][-1])]
         # is the coarsening slowing down (approach to freezing)?  rate in the first and second half of the
@@ -202,7 +216,7 @@ def metrics(run):
         out["a_cross_nc"] = ac
         out["H_over_mX_at_nc_crossing"] = 1.0 / (cfg["tau_i"] * ac * ac)
         out["n_at_form_over_nc"] = (cfg["kappa"] / out["a_form"] ** 3) if "a_form" in out else None
-    return out, dict(tau=tau, a=a, Lw=Lw, fp=fp, fm=fm)
+    return out, dict(tau=tau, a=a, Lw=Lw, fp=fp, fm=fm, Lv=Lv, has_vor=has_vor)
 
 
 def timeseries_table(run, keys, every=1):
@@ -246,10 +260,14 @@ def main():
                        mu_neutral=per[partner].get("mu_Lwall_vs_tau_late"))
     summ["charged_vs_neutral"] = comp
     dc = {}
-    for ch, dcn in (("A_k2_t150_s1", "DC_k2_t150_s1_from1.6"), ("A_k2_t40_s1", "DC_k2_t40_s1_from1.8"),
-                    ("F_k2_t150_freeze1.6", "F_dc_k2_t150_freeze1.6")):
+    for ch, dcn in (("CC_k2_t150_s1_from1.6", "DC_k2_t150_s1_from1.6"), ("CC_k2_t40_s1_from1.8", "DC_k2_t40_s1_from1.8"),
+                    ("F_k2_t150_freeze1.6", "F_dc_k2_t150_freeze1.6"), ("A_k2_t150_s1", "DC_k2_t150_s1_from1.6"),
+                    ("A_k2_t40_s1", "DC_k2_t40_s1_from1.8")):
         if ch in ts and dcn in ts:
-            A, B = ts[ch], ts[dcn]
+            A, B = dict(ts[ch]), dict(ts[dcn])
+            use_vor = A["has_vor"] and B["has_vor"]
+            if use_vor:
+                A["Lw"], B["Lw"] = A["Lv"], B["Lv"]
             t0 = B["tau"][0]
             rows = []
             for frac in (0.0, 0.25, 0.5, 0.75, 1.0):
@@ -262,7 +280,8 @@ def main():
             selb = B["tau"] >= t0
             fa = np.polyfit(A["tau"][sel], 1 / np.maximum(A["Lw"][sel], 1e-300), 1)[0]
             fb = np.polyfit(B["tau"][selb], 1 / np.maximum(B["Lw"][selb], 1e-300), 1)[0]
-            dc[ch] = dict(decharged=dcn, rows=rows, dxi_dtau_charged=float(fa), dxi_dtau_decharged=float(fb),
+            dc[ch] = dict(decharged=dcn, length_measure="L_vor" if use_vor else "L_wall", rows=rows,
+                          dxi_dtau_charged=float(fa), dxi_dtau_decharged=float(fb),
                           rate_ratio_charged_over_decharged=float(fa / fb))
     summ["decharged_controls"] = dc
     if "S_k2_t150_s1_to1.6" in runs and "A_k2_t150_s1" in runs:

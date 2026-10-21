@@ -455,6 +455,26 @@ def measure(sim, a, tau, qlist=False):
         nlinks += j[0].size
         nwl += int(iswall.sum())
     sl = dx ** (d - 1)
+    # --- vacuum-basin ('Voronoi') interface: every core cell is assigned to the nearer vacuum sign (Euclidean
+    # distance, periodic via wrap padding); the interface between the + and - basins counts each wall exactly once,
+    # including wall segments covered by Q-matter, and is blind to sign oscillations inside Q-balls.
+    Lvor = 0.0
+    if plus.any() and minus.any():
+        pad = min(64, N // 4) if d == 2 else min(24, N // 4)
+        dP = ndimage.distance_transform_edt(~np.pad(plus, pad, mode="wrap"))
+        dM = ndimage.distance_transform_edt(~np.pad(minus, pad, mode="wrap"))
+        inner = tuple(slice(pad, pad + N) for _ in range(d))
+        dsg = (dM[inner] - dP[inner]) * dx          # > 0 in the + basin
+        del dP, dM
+        posb = dsg > 0
+        for ax in range(d):
+            sc = posb != np.roll(posb, -1, axis=ax)
+            j = np.nonzero(sc)
+            if j[0].size == 0:
+                continue
+            Lvor += float(link_weights(dsg, dx, ax, j).sum())
+    out["L_vor"] = Lvor * sl / V
+    out["xi_vor_comoving"] = (1.0 / out["L_vor"]) if out["L_vor"] > 0 else None
     out["L_all"] = Lall * sl / V        # comoving length (area) per comoving area (volume)
     out["L_wall"] = Lwall * sl / V
     out["L_bare"] = Lbare * sl / V
@@ -652,8 +672,10 @@ def run(cfg, outpath, ckpt_dir=None, max_wall=None, verbose=True, snap_dir=None)
             Q = sim.charge()
             want_q = any(abs(a - x) < 0.5 * dt * out_every / tau_i for x in qlist_at) or step == nsteps
             m = measure(sim, a, tau, qlist=want_q)
-            if snap_dir and any(abs(a - x) < 0.5 * dt / tau_i * out_every for x in cfg.get("snap_at_a", [])):
-                np.savez_compressed(os.path.join(snap_dir, f"{cfg['name']}_a{a:.3f}.npz"),
+            snap_now = any(abs(a - x) < 0.5 * dt / tau_i * out_every for x in cfg.get("snap_at_a", [])) or \
+                any(abs(tau - x) < 0.5 * dt * out_every for x in cfg.get("snap_at_tau", []))
+            if snap_dir and snap_now:
+                np.savez_compressed(os.path.join(snap_dir, f"{cfg['name']}_tau{tau:.1f}.npz"),
                                     S=(sim.S / a).astype(np.float32),
                                     F2=(2 * (sim.R ** 2 + sim.I ** 2) / a ** 2).astype(np.float32),
                                     n=(2 * (sim.R * sim.PI - sim.I * sim.PR) / a ** 3).astype(np.float32))

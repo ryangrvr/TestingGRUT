@@ -49,7 +49,8 @@ RUNS = [
     cfg("C2_forced_k2_t150", kind="memory_forced", kappa=2.0, tau_i=150.0, a_final=2.5, seed=1, dtau_out=2.5),
     # H -> 0 continuation: expansion stopped at a = 1.6 (after the exit), then Minkowski evolution
     cfg("F_k2_t150_freeze1.6", kind="charged_exit", kappa=2.0, tau_i=150.0, a_final=None, a_freeze=1.6,
-        tau_final=500.0, seed=1, dtau_out=2.5),
+        tau_final=500.0, seed=1, dtau_out=2.5, init_from=os.path.join(CKPT, "state_k2_t150_s1_a1.6.npz"),
+        snap_dir=CKPT, snap_at_tau=[240.0, 370.0, 500.0]),
     cfg("F_neutral_t150_freeze1.6", kind="neutral", kappa=0.0, tau_i=150.0, a_final=None, a_freeze=1.6,
         tau_final=500.0, seed=1, dtau_out=2.5),
     # resolution pair: same continuum initial field (N_base = 512), L = 128
@@ -79,11 +80,16 @@ RUNS = [
         init_from=os.path.join(CKPT, "state_k2_t150_s1_a1.6.npz"), zero_X=True),
     cfg("F_dc_k2_t150_freeze1.6", kind="charged_exit", kappa=2.0, tau_i=150.0, a_final=None, a_freeze=1.6,
         tau_final=500.0, seed=1, dtau_out=2.5, init_from=os.path.join(CKPT, "state_k2_t150_s1_a1.6.npz"),
-        zero_X=True),
+        zero_X=True, snap_dir=CKPT, snap_at_tau=[370.0, 500.0]),
     cfg("S_k2_t40_s1_to1.8", kind="charged_exit", kappa=2.0, tau_i=40.0, a_final=1.8, seed=1, dtau_out=1.0,
         save_state=os.path.join(CKPT, "state_k2_t40_s1_a1.8.npz")),
     cfg("DC_k2_t40_s1_from1.8", kind="charged_exit", kappa=2.0, tau_i=40.0, a_final=3.0, seed=1, dtau_out=1.0,
         init_from=os.path.join(CKPT, "state_k2_t40_s1_a1.8.npz"), zero_X=True),
+    # charged continuations from the same saved states (identical to the A runs, now with the L_vor diagnostic)
+    cfg("CC_k2_t150_s1_from1.6", kind="charged_exit", kappa=2.0, tau_i=150.0, a_final=2.5, seed=1, dtau_out=2.5,
+        init_from=os.path.join(CKPT, "state_k2_t150_s1_a1.6.npz")),
+    cfg("CC_k2_t40_s1_from1.8", kind="charged_exit", kappa=2.0, tau_i=40.0, a_final=3.0, seed=1, dtau_out=1.0,
+        init_from=os.path.join(CKPT, "state_k2_t40_s1_a1.8.npz")),
 ]
 
 
@@ -109,7 +115,7 @@ def do_run(c):
         c = dict(c)
         c["a_final"] = c["tau_final"] / c["tau_i"]
     tmp = path + ".tmp"
-    st = C.run(c, tmp, ckpt_dir=CKPT, max_wall=MAX_WALL, verbose=True)
+    st = C.run(c, tmp, ckpt_dir=CKPT, max_wall=MAX_WALL, verbose=True, snap_dir=c.get("snap_dir"))
     if st == "done":
         with open(tmp) as f:
             res = json.load(f)
@@ -127,8 +133,9 @@ if __name__ == "__main__":
         wid, nw = int(sys.argv[2]), int(sys.argv[3])
         mine = [c for i, c in enumerate(RUNS) if i % nw == wid]
         if len(sys.argv) > 4:
-            names = set(sys.argv[4].split(","))
-            mine = [c for c in RUNS if c["name"] in names]
+            names = sys.argv[4].split(",")
+            byname = {c["name"]: c for c in RUNS}
+            mine = [byname[x] for x in names]          # in the order given (state-producing runs first)
         pending = list(mine)
         while pending:
             c = pending.pop(0)
