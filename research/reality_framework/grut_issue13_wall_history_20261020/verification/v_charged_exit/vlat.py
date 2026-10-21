@@ -26,18 +26,17 @@ B_X = 0.1
 NBAR_C = np.sqrt(8.0 * B_X) * 0.5 ** 1.5   # |Y_c|^2 = 1/(2A); n_c = sqrt(8B)|Y_c|^3
 
 
-def lap(f, out, inv_dx2):
-    """5-point periodic Laplacian (2D) or 7-point (3D), in place into out."""
+def lapraw(f, out):
+    """Periodic nearest-neighbour sum minus 2*ndim*f (5-point 2D / 7-point 3D stencil, no 1/dx^2)."""
     np.multiply(f, -2.0 * f.ndim, out=out)
-    for ax in range(f.ndim):
-        sl = [slice(None)] * f.ndim
-        def S(s):
-            sl2 = list(sl); sl2[ax] = s; return tuple(sl2)
-        out[S(slice(1, None))] += f[S(slice(None, -1))]
-        out[S(slice(0, 1))] += f[S(slice(-1, None))]
-        out[S(slice(None, -1))] += f[S(slice(1, None))]
-        out[S(slice(-1, None))] += f[S(slice(0, 1))]
-    out *= inv_dx2
+    if f.ndim == 2:
+        out[1:] += f[:-1]; out[:1] += f[-1:]; out[:-1] += f[1:]; out[-1:] += f[:1]
+        out[:, 1:] += f[:, :-1]; out[:, :1] += f[:, -1:]; out[:, :-1] += f[:, 1:]; out[:, -1:] += f[:, :1]
+    else:
+        out[1:] += f[:-1]; out[:1] += f[-1:]; out[:-1] += f[1:]; out[-1:] += f[:1]
+        out[:, 1:] += f[:, :-1]; out[:, :1] += f[:, -1:]; out[:, :-1] += f[:, 1:]; out[:, -1:] += f[:, :1]
+        out[:, :, 1:] += f[:, :, :-1]; out[:, :, :1] += f[:, :, -1:]
+        out[:, :, :-1] += f[:, :, 1:]; out[:, :, -1:] += f[:, :, :1]
 
 
 class Lattice:
@@ -49,43 +48,54 @@ class Lattice:
         self.q1 = np.zeros(shp); self.q2 = np.zeros(shp)
         self.p1 = np.zeros(shp); self.p2 = np.zeros(shp)
         self.tau = tau_i
-        self._t1 = np.empty(shp); self._t2 = np.empty(shp); self._t3 = np.empty(shp)
+        self._t1 = np.empty(shp); self._t2 = np.empty(shp); self._t3 = np.empty(shp); self._t4 = np.empty(shp)
         self.inv_dx2 = 1.0 / dx ** 2
+
+    a_freeze = None   # if set, expansion is switched off (a = a_freeze, Minkowski limit H -> 0)
+
+    def a_of(self, tau):
+        if self.a_freeze is not None:
+            return self.a_freeze
+        return tau / self.tau_i
 
     @property
     def a(self):
-        return self.tau / self.tau_i
+        return self.a_of(self.tau)
 
     def kick(self, a, h):
-        """p += h * force evaluated at scale factor a (fields fixed)."""
-        a2, a4 = a * a, a ** 4
-        t1, t2, t3 = self._t1, self._t2, self._t3
+        """p += h * force evaluated at scale factor a (fields fixed); in-place, no large temporaries."""
+        c2 = h * a * a * self.inv_dx2
+        c4 = h * a ** 4
+        t1, t2, t3, t4 = self._t1, self._t2, self._t3, self._t4
         S = self.S
         if self.with_X:
-            np.multiply(self.q1, self.q1, out=t3); t3 += self.q2 * self.q2      # F2 = q1^2+q2^2
-        # phi
-        lap(S, t1, self.inv_dx2)
-        np.multiply(S, S, out=t2); t2 -= 1.0
+            np.multiply(self.q1, self.q1, out=t3); np.multiply(self.q2, self.q2, out=t2); t3 += t2   # F2
+        lapraw(S, t1); t1 *= c2; self.pS += t1
+        np.multiply(S, S, out=t4)                    # S^2
+        np.subtract(t4, 1.0, out=t2)
         if self.with_X:
-            t2 += A_G * t3
-        t2 *= S
-        t1 *= a2; t2 *= a4; t1 -= t2
-        self.pS += h * t1
+            if A_G == 1.0:
+                t2 += t3
+            else:
+                np.multiply(t3, A_G, out=t1); t2 += t1
+        t2 *= S; t2 *= c4; self.pS -= t2
         if self.with_X:
-            # mass^2 for q: A S^2 + B F2  (stored in t3)
-            t3 *= B_X; t3 += A_G * S * S; t3 *= a4
+            t3 *= B_X
+            if A_G == 1.0:
+                t3 += t4
+            else:
+                t4 *= A_G; t3 += t4
+            t3 *= c4                                 # c4 * (A S^2 + B F2)
             for q, p in ((self.q1, self.p1), (self.q2, self.p2)):
-                lap(q, t1, self.inv_dx2)
-                t1 *= a2
-                np.multiply(q, t3, out=t2)
-                t1 -= t2
-                p += h * t1
+                lapraw(q, t1); t1 *= c2; p += t1
+                np.multiply(q, t3, out=t2); p -= t2
 
     def drift(self, w):
-        self.S += w * self.pS
+        t1 = self._t1
+        np.multiply(self.pS, w, out=t1); self.S += t1
         if self.with_X:
-            self.q1 += w * self.p1
-            self.q2 += w * self.p2
+            np.multiply(self.p1, w, out=t1); self.q1 += t1
+            np.multiply(self.p2, w, out=t1); self.q2 += t1
 
     def evolve(self, tau_end, dt):
         """KDK steps until tau_end (last step shortened to land exactly)."""
@@ -94,16 +104,17 @@ class Lattice:
             return
         h = (tau_end - self.tau) / nsteps
         ti = self.tau_i
-        self.kick(self.tau / ti, 0.5 * h)
+        fz = self.a_freeze
+        self.kick(self.a_of(self.tau), 0.5 * h)
         for k in range(nsteps):
             t0 = self.tau
             t1 = t0 + h
-            self.drift(ti * ti * h / (t0 * t1))
+            self.drift(h / fz ** 2 if fz is not None else ti * ti * h / (t0 * t1))
             self.tau = t1
             if k < nsteps - 1:
-                self.kick(t1 / ti, h)
+                self.kick(self.a_of(t1), h)
             else:
-                self.kick(t1 / ti, 0.5 * h)
+                self.kick(self.a_of(t1), 0.5 * h)
 
     # ---------- observables ----------
     def charge(self):
@@ -263,10 +274,12 @@ def link_count(lbl):
     return c
 
 
-def diagnostics(lat, qexcl_ell=1.0, pad=96, radii=(2.0, 4.0, 6.0)):
+def diagnostics(lat, qexcl_ell=1.0, pad=None, radii=(2.0, 4.0, 6.0)):
     a = lat.a
     S = lat.S
     nd = lat.ndim
+    if pad is None:
+        pad = 96 if nd == 2 else 16
     dx = lat.dx
     ncell = S.size
     out = dict(tau=lat.tau, a=a)
@@ -325,6 +338,15 @@ def diagnostics(lat, qexcl_ell=1.0, pad=96, radii=(2.0, 4.0, 6.0)):
             out['maxcl_' + tag] = float(sizes.max() / ncell)
         else:
             out['ncl_' + tag] = 0; out['maxcl_' + tag] = 0.0
+        # open-box spanning test (non-periodic labels): some cluster touches both opposite faces along every axis
+        lab0, n0 = ndimage.label(m)
+        span_axes = []
+        for ax in range(nd):
+            f0 = np.unique(np.take(lab0, 0, axis=ax)); f1 = np.unique(np.take(lab0, -1, axis=ax))
+            common = np.intersect1d(f0[f0 > 0], f1[f1 > 0])
+            span_axes.append(bool(len(common)))
+        out['spans_all_axes_' + tag] = bool(all(span_axes))
+        out['spans_any_axis_' + tag] = bool(any(span_axes))
     # ---- charge near walls ----
     if lat.with_X and basin is not None and Qtot != 0:
         iface = np.zeros(S.shape, bool)

@@ -110,7 +110,15 @@ def rhs2(t, y):
 y0 = np.concatenate([x.ravel() for x in f0 + v0])
 sol = solve_ivp(rhs2, (ti, 2.5 * ti), y0, rtol=1e-10, atol=1e-12, method='DOP853')
 yS = sol.y[:, -1].reshape(6, N, N)
+conv = {}
+for dtc in (0.02, 0.01, 0.0025):
+    lc = Lattice(N, dx, ti)
+    vlat.init_charged_exit(lc, 2.0, 3, phi_std=0.3, x_std=0.1)
+    lc.evolve(2.5 * ti, dtc)
+    conv[str(dtc)] = float(np.abs(yS[0] - lc.S).max())
 lat.evolve(2.5 * ti, 0.005)
+conv['0.005'] = float(np.abs(yS[0] - lat.S).max())
+res['friction_form_vs_canonical_dt_sequence'] = conv
 res['friction_form_vs_canonical'] = dict(max_abs_diff_S=float(np.abs(yS[0] - lat.S).max()),
                                          max_abs_diff_q1=float(np.abs(yS[1] - lat.q1).max()),
                                          S_range=[float(lat.S.min()), float(lat.S.max())],
@@ -134,3 +142,16 @@ res['synthetic_circle_R16'] = dict(L_basin=d['L_basin'] * Lb * Lb, exact=2 * np.
 with open(os.path.join(HERE, 'results', 'checks.json'), 'w') as fh:
     json.dump(res, fh, indent=1)
 print(json.dumps(res, indent=1))
+
+# --- 6. exact Z2 mirror: phi -> -phi initial data gives the bitwise mirrored evolution ---
+lat_a = Lattice(128, 0.25, 40.0); vlat.init_charged_exit(lat_a, 2.0, 11)
+lat_b = Lattice(128, 0.25, 40.0); vlat.init_charged_exit(lat_b, 2.0, 11)
+lat_b.S *= -1; lat_b.pS *= -1
+lat_a.evolve(40.0 * 2.2, 0.05); lat_b.evolve(40.0 * 2.2, 0.05)
+da = vlat.diagnostics(lat_a); db = vlat.diagnostics(lat_b)
+res['z2_mirror'] = dict(max_abs_S_plus_Smirror=float(np.abs(lat_a.S + lat_b.S).max()),
+                        max_abs_dq=float(np.abs(lat_a.q1 - lat_b.q1).max()),
+                        fplus_a=da['f_plus'], fminus_b=db['f_minus'], S_range=[float(lat_a.S.min()), float(lat_a.S.max())])
+with open(os.path.join(HERE, 'results', 'checks.json'), 'w') as fh:
+    json.dump(res, fh, indent=1)
+print(res['z2_mirror'])

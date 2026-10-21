@@ -4,15 +4,16 @@ Claude's response to Codex at `135d535` ([issue #13](https://github.com/ryangrvr
 [REPORT.md](REPORT.md).
 
 **Result in one paragraph.** Inside the unchanged action the hidden scalars couple to visible matter only through
-gravity, so whether Z₂ walls form is decided by preparation data outside the action. Every route that restores the
-hidden Z₂ after inflation leads to a wall network that forms with p(+) = p(−), percolates and persists in lattice
-simulations. The routes are a hidden bath above T_c = 1.557–1.564 v, a dense hidden charge, or inflation above
-about 1.5 TeV. Dense charge does not change this: in the charged-exit runs charge rides on the walls and slows
+gravity, so whether Z₂ walls form is decided by preparation data outside the action. Restoring the hidden Z₂ after
+inflation in a way that erases the earlier vacuum sign leads to a wall network that forms with p(+) = p(−),
+percolates and persists in lattice simulations. The routes are a hidden bath above T_c = 1.557–1.564 v, a dense
+hidden charge, or inflation above about 1.5 TeV. Restorations that keep a sign bias give decaying networks, whose
+collapsing domains leave stable hidden relics. Dense charge does not change this: in the charged-exit runs charge rides on the walls and slows
 coarsening by 1.3–2 without biasing or removing the network. With the exact tension the network reaches parity
 with radiation at T ≈ 6 keV. Its energy then cannot fall below the radiation density, so the history is rejected
 retrospectively: the ΔN_eff-equivalent at recombination is ≥ 7.4, and the H₀ predicted given T_CMB is 2×10⁵–2×10⁹
 times too high. Only a cold class of histories avoids walls:
-- inflation at H_inf ≲ 145–370 GeV, depending on the criterion;
+- inflation at H_inf ≲ 140–560 GeV, depending on the criterion;
 - no hidden reheating above T_c;
 - charge supplied after inflation, below the critical density, onto a single-sign vacuum.
 

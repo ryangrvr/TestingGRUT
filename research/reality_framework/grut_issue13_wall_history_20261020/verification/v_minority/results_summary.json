@@ -1,0 +1,179 @@
+{
+ "verifier": "v_minority",
+ "module": "modules/minority_relic",
+ "date": "2026-10-21",
+ "claims": [
+  {
+   "claim": "kappa_E (RD) = 7.787",
+   "module": 7.787,
+   "verifier": 7.78661006830258,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "tau_c = 1.8670 r0 (RD)",
+   "module": 1.867,
+   "verifier": 1.8669787966665936,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "E_c = 0.620 x 4 pi sigma R_re^2 (energy at r->0, all kinetic)",
+   "module": 0.62,
+   "verifier": 0.6196387411497383,
+   "verdict": "CONFIRMED",
+   "note": "alternatives: wall energy at tau_re 0.6530, max 0.7740 at tau=1.340 r0"
+  },
+  {
+   "claim": "kappa_E (MD) = 1.888, tau_c = 2.2663 r0",
+   "module": [
+    1.888,
+    2.2663
+   ],
+   "verifier": [
+    1.888095396867509,
+    2.2663226697102528
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "C_E = 3 kappa_E c_A/(4 pi) = 1.859 c_A",
+   "module": 1.859,
+   "verifier": 1.8589199040929836,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "rho/s <= 4.373e-10 GeV for Omega h^2 <= 0.12",
+   "module": 4.373e-10,
+   "verifier": 4.3732666888723816e-10,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "N_0 (instant) = 48.05-49.41 for H = 130-2000 GeV",
+   "module": [
+    48.05,
+    49.41
+   ],
+   "verifier": [
+    48.04517813769303,
+    49.411862142236274
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "T_dom,iso = 7.97 keV; sigma H/s there = 1.716e-6 GeV",
+   "module": [
+    7.972,
+    1.716e-06
+   ],
+   "verifier": [
+    7.979465114811429,
+    1.7165836813143193e-06
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "relic threshold relaxed N*=50 f=1: 362 GeV",
+   "module": 362.5,
+   "verifier": 362.34610547365486,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "relic thresholds relaxed N60 / fresh N50 / fresh N60 / relaxed N50 f=0.1",
+   "module": [
+    366.6,
+    505.4,
+    437.8,
+    489.2
+   ],
+   "verifier": [
+    366.5664658544447,
+    505.0352510368904,
+    437.8579058677284,
+    489.02288606190785
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "N*=60 unreachable with instant reheating for H ~ 100s GeV",
+   "module": "N_0 = 48.05-49.41",
+   "verifier": [
+    48.04517813769303,
+    48.11672855951336,
+    48.2555444278125,
+    48.35380937921056,
+    48.37214137139636,
+    48.46330214979334,
+    48.46662442115267,
+    48.71871496167633,
+    49.06528855195631,
+    49.300290366579176,
+    49.411862142236274
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "N_0 reach: kination to 4 MeV 57.84-59.42; MD reheating 38.71-39.50 (150-1600 GeV)",
+   "module": [
+    57.84,
+    59.42,
+    38.71,
+    39.5
+   ],
+   "verifier": [
+    58.02608922401809,
+    59.60417163343917,
+    38.89549360723973,
+    39.68453481195028
+   ],
+   "verdict": "CORRECTED",
+   "note": "formula omits (1/12) ln(g_s(T_RH)/g_s(T_x)) = +0.19; conclusion N_0 < 60 for T_x >= 4 MeV survives"
+  },
+  {
+   "claim": "regime-A boundary 145.6 GeV (N*=50 and 60, instant reheating)",
+   "module": 145.6,
+   "verifier": 145.57426630186862,
+   "verdict": "CONFIRMED",
+   "note": "exit N60 137.83, exit N50 144.19, kination max 139.00, MD 10 MeV 153.41"
+  },
+  {
+   "claim": "Lambda_1/2 = 1e-11 at 237.4 GeV",
+   "module": 237.4,
+   "verifier": 237.29259496733852,
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "count closed forms T_dom / 1 MeV / T_rec: 212.0 / 192.4 / 403.9 GeV",
+   "module": [
+    212.0,
+    192.4,
+    403.9
+   ],
+   "verifier": [
+    211.9282601821029,
+    192.39771127728307,
+    402.60220150663196
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "sigma/(M_P^2 H) = 1.1e-5 at 1 MeV",
+   "module": 1.1e-05,
+   "verifier": 3.592688538608582e-05,
+   "verdict": "CORRECTED",
+   "note": "1.1e-5 is the 1.8 MeV value"
+  },
+  {
+   "claim": "Omega h^2 (relaxed N50, f=1) = 10^-7.6 at 241 GeV",
+   "module": -7.6,
+   "verifier": -7.48790929740235,
+   "verdict": "CORRECTED",
+   "note": "NOTES quotes the H=240 GeV row; module per_H_quantities at 241.04 GeV gives -7.48"
+  }
+ ],
+ "sensitivity": {
+  "relic_fraction_ratio_ge_0p1": 0.6962677230413022,
+  "relic_fraction_ratio_ge_0p01": 0.9105758658516189,
+  "threshold_if_ratio_lt_0p1": 403.92931694442336,
+  "threshold_if_ratio_lt_0p01": 506.5368006771339,
+  "threshold_tree_no_running": 358.6199492041209
+ }
+}

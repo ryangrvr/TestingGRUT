@@ -16,14 +16,23 @@ marked **[P]** (preparation, outside the action).
 2. **When walls form.** The hidden Z₂ is restored after inflation in three ways, all set by preparation data:
    a hidden bath above T_c = 1.557–1.564 v; a homogeneous hidden charge above the critical density; or an
    inflationary scale H_inf ≳ 1.5–1.8 TeV (stochastic spectator mixing) or ≳ 2.4×10⁴ GeV (the spectator
-   condensate itself restores after inflation). The exit is exactly Z₂-symmetric, so p(+) = p(−) = ½ in every
-   one of these routes, with or without charge. Both vacua percolate in 3D.
+   condensate itself restores after inflation). The dynamics and the thermal or charged ensembles are exactly
+   Z₂-symmetric. Whenever the restored phase has erased the sign memory of the earlier vacuum, the exit gives
+   p(+) = p(−) = ½, with or without charge, and both vacua percolate in 3D. A bath kinetically thermal above T_c, or
+   inflation with H_inf ≫ v, erases it (argued for the thermal bath; computed for the inflationary case). Memory is
+   not erased in two cases. A sparse non-thermal restoration of an already selected vacuum is one, unless its
+   branching exceeds ≈ 6×10⁻¹⁵ (m_I/T_RH)² (an estimate). Charge forced only just above n_s1 is the other: one run
+   kept p(+) = 0.71. Those exits are biased, the network decays, and the consequence is the collapsing-domain
+   relic of §5.
 3. **Persistence.** Lattice runs of the unchanged potential in a radiation background give a persistent network
    for every unbiased start: 23 of 23 neutral runs, all 11 charged-exit runs, and the one 3D charged run. In 3D
    one spanning wall carries ≥ 97% of the wall area. The area parameter approaches A ≈ 0.78–0.88, consistent with
-   the literature value 0.8 ± 0.1. Charge rides on the walls (15–37%) and slows coarsening by a factor 1.3–2. It
-   neither biases the sign nor freezes or removes the network. Only an initial population bias |p − ½| ≥ 0.05,
-   which no route above supplies, removed the network in our runs.
+   the literature value 0.8 ± 0.1. Charge rides on the walls (15–37%) and slows coarsening by a factor 1.3–2. In
+   charge-rich realizations the slowdown grows within a run. It neither biases the sign nor removes the network.
+   The runs show persistence over a 2–8-fold growth of the domain size. Persistence over cosmological times rests
+   on the exact Z₂, the absence of any bias and 3D percolation at p = ½, together with the scaling literature. Only
+   an initial population bias |p − ½| ≥ 0.05, which no route above supplies, removed the network in our runs. A
+   slower network carries more energy, not less, so slowing only strengthens the consequence below.
 4. **Consequence (observable fixed before comparison).** With the exact tension σ = 9.428×10⁷ GeV³, a scaling
    network reaches parity with radiation at **T ≈ 5.8–6.4 keV**: after BBN, long before recombination. We do not
    extrapolate a subdominant CMB template into that era. After parity, every hidden component (walls, φ/X/D quanta,
@@ -32,8 +41,9 @@ marked **[P]** (preparation, outside the action).
    **ΔN_eff-equivalent ≥ 7.4** against Planck's ≲ 0.3. If the walls persist, the predicted H₀ given T_CMB exceeds
    the measured value by **R_H ≈ 2×10⁵ to 2×10⁹** (post-domination law bracketed). These data are known, so this
    is a retrospective consistency rejection of a history.
-5. **Wall-free histories exist only in a cold class.** They need low-scale inflation, H_inf ≲ 145 GeV for no
-   opposite region at all, or ≲ 310–370 GeV once the relics of collapsing minority domains are allowed for. They
+5. **Wall-free histories exist only in a cold class.** They need low-scale inflation: H_inf ≲ 140–150 GeV for no
+   opposite region at all, or ≲ 310–560 GeV once the relics of collapsing minority domains are allowed for
+   (near-critical domains may form black holes instead; not computed). They
    also need no hidden reheating above T_c (direct hidden branching B_h small enough), charge supplied after
    inflation at sub-critical density onto a single-sign background (T_Q ≲ 198 r^(−1/3) TeV), and a single vacuum
    sign across the observable patch. Codex's cold Q-ball preparations belong to this class. Our sub-critical
@@ -43,7 +53,7 @@ marked **[P]** (preparation, outside the action).
 
 | Stage | What happens | Inside the action? | Controlling numbers | Module |
 |---|---|---|---|---|
-| 0 Inflation | φ, X, D are light spectators; ξ_φ(H) ≤ 0 (tachyonic, \|12ξ\| ≤ 0.033) | **[P]** H_inf, N_*, start sign | regime A (no opposite region) H_inf < 145.6 GeV; percolation ≥ 1.62/1.79 TeV (X frozen), 1.47/1.70 TeV (X fluctuating) | inflation_spectator, minority_relic, v_inflation |
+| 0 Inflation | φ, X, D are light spectators; ξ_φ(H) ≤ 0 (tachyonic, \|12ξ\| ≤ 0.033) | **[P]** H_inf, N_*, start sign | regime A (no opposite region) H_inf < 145.6 GeV (139–153 GeV over reheating histories); percolation ≥ 1.62/1.79 TeV (X frozen), 1.47/1.70 TeV (X fluctuating) | inflation_spectator, minority_relic, v_inflation, v_minority |
 | 1 Reheating | visible bath at T_RH; hidden heated only by gravity unless an outside producer couples | gravity: in; producer: **[P]** | freeze-in β_E = 0.068 T⁹/M_P⁴; non-thermal restoration needs T_RH ≳ 9×10¹² GeV | hidden_heating |
 | 2 Hidden bath | if produced: kinetically thermal for ξ ≳ (4–7)×10⁻⁵, never chemically (needs ξ ≳ 0.07) | **[P]** ξ, μ_N, which dof | relic bound ξ ≤ 7.6×10⁻⁴, Y_N ≤ 4.37×10⁻¹² | thermal_potential, relic_yield, production_map |
 | 3 Hidden charge | exact U(1)_X: the yield cannot be generated by the action | **[P]** r, T_Q, form | critical density n_c = 0.0316 v³; forced restoration above n_s1 = 0.0428 v³ | relic_yield, charge_phase |
@@ -132,13 +142,20 @@ H_inf ≳ 2.4×10⁴ GeV.
     literature (Hiramatsu–Kawasaki–Saikawa arXiv:1309.5001, A = 0.8 ± 0.1; Leite–Martins arXiv:1110.3486). That is
     an extrapolation of about five decades beyond our boxes.
 - **Charged exit** (φ and complex X, conserved charge to 4×10⁻¹⁶):
-  - Formation: the charged runs form random-sign domains with p(+) = 0.5003 ± 0.0046, against
-    0.5009 ± 0.0042 for neutral controls.
-  - 3D: in the single 256³ run both signs wrap the torus at every output after formation.
-  - Persistence and slowdown: the network persists and coarsens 1.3–2 times more slowly than the same φ state with
-    X removed. This holds in the expanding runs (ratio 0.51–0.76) and in a Minkowski continuation (0.52).
+  - Formation: the charged runs form random-sign domains with p(+) = 0.5003 ± 0.0046 (11 runs), against
+    0.5009 ± 0.0042 for neutral controls. The independent verifier, with its own code, found 0.505 ± 0.012 over
+    9 runs.
+  - 3D: in the 256³ run both signs wrap the torus at every output after formation. The verifier's 192³ run agrees.
+    In its 128³ box one phase took over, so 3D percolation at these sizes depends on the box. Percolation of both
+    phases at p = ½ is standard 3D theory (site threshold 0.31), not a result of these runs.
+  - Persistence: walls are present at every output of every charged run, in both codes, over a 2–8-fold growth of
+    the domain size.
+  - Slowdown: coarsening is 1.3–2 times slower than for the same φ state with X removed (rate ratio 0.51–0.76 in the
+    expanding runs, 0.52 in a Minkowski continuation). In the verifier's charge-rich realizations the ratio falls
+    within the run from ≈ 0.55 to 0.30–0.45, so the slowdown can grow as charge accumulates on the walls. A slower
+    network only reaches parity earlier.
   - Charge on walls: 15–37% of the charge sits on the walls.
-  - Limits: 2D except for one 3D seed; simulated H/m_X ≈ 10⁻² against 5.6×10⁻¹⁰ physically; dynamic range 2–8.
+  - Limits: mostly 2D; simulated H/m_X ≈ 10⁻² against 5.6×10⁻¹⁰ physically; D = 0; no hidden bath.
 - **Sign memory.** Sub-critical charge on a +v background (0.9 n_c) keeps the sign. Charge forced into a selected
   vacuum above n_s1 loses the memory at 4 n_c (p(+) = 0.47, 0.50), but keeps a partial bias at 2 n_c (p(+) = 0.71,
   the minority phase then disappears). The outcome depends on the preparation.
@@ -182,10 +199,13 @@ and never in the wall-dominated benchmark history. Codex's dimensional estimate 
    T_Q < 198 r^(−1/3) (v/TeV) TeV. Supply above n_s1 (219 r^(−1/3) TeV) forces restoration. The window between is
    unresolved, and our two runs there are preparation-dependent.
 3. **Inflationary scale.** If inflation precedes:
-   - H_inf < 145.6 GeV for no opposite region at all.
+   - H_inf < 145.6 GeV for no opposite region at all (139–153 GeV across reheating histories).
    - ≲ 212–250 GeV for no locally wall-dominated late domain.
    - ≲ 314–367 GeV (relaxed start) or 396–545 GeV (fresh start) for the relic of collapsing minority domains to
-     stay within Ω h² ≤ 0.12, taking f = 1 rest-mass conversion.
+     stay within Ω h² ≤ 0.12, taking f = 1 rest-mass conversion. Most of that relic comes from near-critical
+     domains, whose wall energy is ≥ 10% of the horizon radiation at re-entry. If those domains collapse into black
+     holes of 10⁵–10⁹ M_⊙ rather than hidden quanta, the relic bound loosens to ≈ 400–560 GeV, and a black-hole
+     abundance bound (not computed) would apply instead.
    - Never above 1.47–1.79 TeV, where both signs percolate.
    - The spectator alone restores the Z₂ for H_inf ≳ 2.4×10⁴ GeV.
 4. **Reheating.** Gravity-only heating is safe below T_RH ≈ 9×10¹² GeV (implied by item 3). Any direct hidden
@@ -219,7 +239,7 @@ viable point. A wall signal would not distinguish Candidate 1 from other Z₂ se
 |---|---|---|
 | Build | 10 modules (7 + charged-exit simulation + 2 gap modules), own code each | all completed; failures and corrections recorded in each NOTES.md |
 | Independent verification 1 | 7 verifiers with their own code + completeness critic | 114 claims CONFIRMED, 23 CORRECTED, 2 REFUTED (wording of biased decay; charged persistence then unshown, since closed by charged_exit_sim), 13 NOT CHECKED; no headline number overturned |
-| Independent verification 2 | charged_exit_sim, minority_relic, production_map | see `verification/v_charged_exit`, `v_minority`, `v_production` |
+| Independent verification 2 | 3 verifiers with their own code for charged_exit_sim, minority_relic, production_map | 37 CONFIRMED, 6 CORRECTED, 1 REFUTED, 2 NOT CHECKED. The refutation: "the charge slowdown does not grow within a run" is not supported (it grows in charge-rich realizations). The persistence conclusion is unaffected. |
 | Synthesis | `code/history.py` recomputes σ, m*, n_c, n_t, n_s1, n_*, T_n, T_par, ΔN_eff and the H★/C★ numbers | agrees with the modules (simple H₀ cross-check 8.0×10¹⁰ / 1.6×10⁷ km/s/Mpc vs module 9.1×10¹⁰ / 1.75×10⁷ with backreaction) |
 
 The corrections applied in this report (from the verifiers):
@@ -228,8 +248,13 @@ The corrections applied in this report (from the verifiers):
 - R_H ranges under joint variation;
 - H_perc = 1617/1792 GeV;
 - de Sitter restoration at 0.44 v is an equilibrium statement (finite-N_* thresholds 0.60 v and up);
-- the spectator energy fraction is 1.727 (H/M_P)² (the critic's value was low);
+- the spectator energy fraction is 1.71–1.73 (H/M_P)² (the critic's value was low; the slow-roll velocity term
+  lowers 1.727 to 1.710);
 - Y_N,max = 4.373×10⁻¹² strictly;
+- the charge slowdown can grow within a run; 3D percolation at small box sizes depends on the box;
+- the minority-relic thresholds carry a near-criticality systematic (relaxed 362 → 404–507 GeV); the reach of N_0
+  gains 0.19 e-fold; the heavy-inflaton bath has μ_N/T ≈ −23 to −44, and the lower edge of its window is a
+  heuristic criterion (factor ≈ 1.5);
 - prior art: FOGA is silent rather than removing the degeneracy, and KLR keeps the Z₂;
 - σv(hh → XX̄) ∝ v⁴, not p-wave.
 
@@ -241,6 +266,9 @@ The corrections applied in this report (from the verifiers):
 - Network dynamics through and after wall domination (bracketed; the conservative bound does not need it).
 - BBN network for the D/H epoch; CMB likelihood; PBH formation from late minority domains.
 - Thermal friction from the hidden bath during formation; quantum corrections to σ.
+- Self-gravitating collapse of near-critical minority domains and the corresponding black-hole abundance bound.
+- Larger 3D charged-exit boxes with several seeds; whether charge loading eventually pins walls (which would only
+  make the network more energetic).
 - A full 3-field stochastic treatment during inflation, and a QFT tunneling prefactor at m_φ ~ H.
 - No dynamical mechanism inside the action for the inflaton, the hidden yield or its supply time; all are [P].
 - Literature: several prior-art and gravitational-production papers were read at abstract or section level (see the
