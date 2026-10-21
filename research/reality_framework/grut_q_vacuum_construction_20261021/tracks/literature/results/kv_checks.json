@@ -1,0 +1,88 @@
+{
+  "A_model": {
+    "mu0": "-1/(3*F0*chi)",
+    "rhoV(F0)": "0",
+    "chi(F0)": "chi",
+    "rV(y) at u0=-1/3": "y**4/6 + 2*y**3/3 + y**2/2",
+    "matches_KV_5.3": true
+  },
+  "A_FRW00": {
+    "extra_term_from_K": "-3*Derivative(K(t), t)*Derivative(a(t), t)/a(t)",
+    "statement": "3 K H^2 = rho_m + rho_V - 3 H Kdot  <=>  KV (4.2a) H^2 = (8pi/3) G rho_tot - H G dG^-1/dt with K = 1/(8 pi G)"
+  },
+  "B_kick": {
+    "rho_V0_general": "9*H**4*Kp**2*kappa**2/(8*epp)",
+    "note": "brief K (=1/(8 pi G)); trace: -K R = T - 4 rho_V => R = (rho_m - 3P_m)/K = kappa_M * 3 H^2 for rho_m = 3 K H^2",
+    "KV_0905.1919_eq3.4a_check": "h**4*kappa**2/8",
+    "Klinkhamer_1001.1939_eq3.18b_check": "9*H**4*kappa**2/8"
+  },
+  "C_numerics_0806.2805": {
+    "fig1_2_w=1/3": {
+      "tau_window": [
+        1800.0,
+        3000.0
+      ],
+      "mean_tau_h": 0.6654927931324088,
+      "mean_tau2_rV": 0.22064917267744769,
+      "mean_tau2_rM_end": 0.0009920773187125206,
+      "min_h_in_window": 2.4512707384617643e-07,
+      "success": true,
+      "KV_prediction": {
+        "mean_tau_h": 0.6666666666666666,
+        "mean_tau2_rV": 0.2222222222222222
+      }
+    },
+    "fig3_4_w=0": {
+      "tau_window": [
+        1800.0,
+        3000.0
+      ],
+      "mean_tau_h": 0.6670081684389946,
+      "mean_tau2_rV": 0.21654916515377404,
+      "mean_tau2_rM_end": 0.011448631132375462,
+      "min_h_in_window": 2.882418164808863e-06,
+      "success": true,
+      "rM_inf_measured": 0.011448631132375462,
+      "d_M_from_5.14b": 0.9870362607078603,
+      "KV_prediction_mean_tau2_rV": 0.21649790665603447
+    },
+    "fig5_w=0_high": {
+      "tau_window": [
+        1800.0,
+        3000.0
+      ],
+      "mean_tau_h": 0.6667079515262218,
+      "mean_tau2_rV": 0.07782176502938828,
+      "mean_tau2_rM_end": 0.28895977760796976,
+      "min_h_in_window": 9.088187360575265e-05,
+      "success": true,
+      "rM_inf_measured": 0.28895977760796976,
+      "d_M_from_5.14b": 0.591473161168001,
+      "KV_prediction_mean_tau2_rV": 0.07774233341823734
+    }
+  },
+  "D_numbers": {
+    "KV_5.16_EP^2/t^2_t=1e10yr_meV": 5.046254717122155,
+    "KV_5.16_quoted_meV": 4.0,
+    "(2/3)M^2/t^2_t=1e10yr_GeV4": 1.7196112294164351e-47,
+    "(2/3)M^2/t^2_t=1e10yr_meV": 2.036374115829115,
+    "(2/3)M^2/t^2_t=1e10yr_over_rho_obs": 0.6823854084985854,
+    "(2/3)M^2/t^2_t=13.787Gyr_GeV4": 9.04671109253446e-48,
+    "(2/3)M^2/t^2_t=13.787Gyr_meV": 1.7342938351699102,
+    "(2/3)M^2/t^2_t=13.787Gyr_over_rho_obs": 0.3589964719259706,
+    "0905.1919_eq1.4_EP=2.44e18_GeV4": 2.8212443000031563e-50,
+    "0905.1919_eq1.4_EP=2.44e18_meV": 0.4098360655737705,
+    "0905.1919_eq1.4_EP=2.44e18_rho_obs_over_pred": 893.222894592,
+    "0905.1919_eq1.4_EP=1e18_GeV4": 1e-48,
+    "0905.1919_eq1.4_EP=1e18_meV": 1.0,
+    "0905.1919_eq1.4_EP=1e18_rho_obs_over_pred": 25.2,
+    "E_ew_unit_coeff_TeV": 2.3357402807099232,
+    "E_ew_for_rVnum=0.051_TeV(1001.1939 eq5.2, E_P=2.44e18, Lambda=rho_obs)": 3.3917490244181074,
+    "E_ew_for_rVnum=0.0024_TeV(1001.1939 eq5.2, E_P=2.44e18, Lambda=rho_obs)": 4.969853370077286,
+    "E_ew_for_rVnum=2e-05_TeV(1001.1939 eq5.2, E_P=2.44e18, Lambda=rho_obs)": 9.04151550325287,
+    "E_ew_for_rVnum=1.0_TeV(1001.1939 eq5.2, E_P=2.44e18, Lambda=rho_obs)": 2.3381371415568086,
+    "H_over_T2/M_coefficient_gstar=106.75": 3.4214686090045032,
+    "T_with_H^4=rho_obs_TeV": 1.2627525972857236,
+    "H^4_at_T=159.5GeV_over_rho_obs": 6.479467792429908e-08
+  }
+}
