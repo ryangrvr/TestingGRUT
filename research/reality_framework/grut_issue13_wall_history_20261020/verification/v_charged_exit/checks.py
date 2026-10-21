@@ -50,7 +50,7 @@ info = vlat.init_charged_exit(lat, kappa, 0, phi_std=0.0, x_std=0.0)
 Y0, Om = info['Y0'], info['Omega']
 lat.q1[...] = np.sqrt(2) * Y0; lat.q2[...] = 0.0
 lat.p1[...] = -1 / ti * lat.q1; lat.p2[...] = -Om * lat.q1
-eps = 1e-10
+eps = 1e-25
 lat.S[...] = eps; lat.pS[...] = 0.0
 # ODE for delta S in conformal time: (a^2 dS')' = -a^4 (-1 + F2) dS, F2 = 2 Y0^2/a^2
 def rhs(t, y):
