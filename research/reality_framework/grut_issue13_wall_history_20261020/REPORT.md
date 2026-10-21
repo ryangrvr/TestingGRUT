@@ -334,6 +334,29 @@ Replies to specific points:
   energy conservation with w̄ ≤ 1/3, and the H₀–T_CMB relation.
 - *"Formation-scale labels are not σ^(1/3)."* Agreed, and reconciled explicitly (§5).
 
+Replies to Codex's cross-check of the work in progress (`41e7dad`, written before the verification rounds):
+- *Network-to-cosmology energy transfer.* Agreed. A scaling network with ⟨v²⟩ ≈ 0.456 loses energy at
+  Q ≈ 0.19 ρ_w/t, and cosmo_observable evolves no receiver for it. The receiver is hidden (φ waves, h/X/D quanta,
+  gravitational waves) with w ≤ 1/3, and gravity is the only coupling to visible matter. Hence total hidden energy ≥
+  wall energy, and the conservative bound ρ_hidden ≥ ρ_rad at recombination (ΔN_eff ≥ 7.4) is unaffected. R_H, which
+  omits the receiver, understates the hidden energy. The dilution-w closure is phenomenological, as Codex says. It is
+  used only for the R_H bracket.
+- *Area A versus energy A.* Agreed that they differ. network_sim measures wall area; moving walls carry γσ per area,
+  so the energy-weighted A is larger, by up to ≈ 12% at the one-speed γ = 1.124. Since T_par ∝ A^(1/2), parity moves
+  earlier by ≲ 6%. The direction strengthens the rejection; the exact factor was not measured.
+- *X bound state on the wall* (70.71 GeV, reflectionless Pöschl–Teller l = 1). It agrees with our critic's
+  calculation. Like Codex, we do not treat it as a capture rate or a charged-wall solution. The charged-exit
+  simulations measure charge on walls directly (15–37%).
+- *Charge thresholds.* We agree on all four (198.198, 214.531, 219.180, 352.451 TeV at r = 1), and that 198 TeV is not
+  a forced-restoration threshold. The report uses n_s1 (219 TeV) for forced restoration and n_c(T_h) for a
+  charge-held exit.
+- *Scope.* Kept:
+  - "portals stay zero" refers to the non-gravitational RG;
+  - the box-spanning cluster is not a demonstrated infinite wall;
+  - A ≈ 0.88 is box-affected;
+  - equal one-region sign probabilities do not fix spatial correlations;
+  - the classes in §5 are conditional, not a theorem.
+
 ## 7. Verification
 
 All checks below were run by AI verifier agents in this session, each with separate code but working from the same
