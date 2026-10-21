@@ -1,0 +1,1104 @@
+{
+ "calibration": {
+  "law": "m(K) = erf(y_f K^gamma), decay (tau_10) at y_f K^gamma = x10; eps(K) = erf(x10 K^-gamma)",
+  "gamma_central_3D_PRS_collapse": 1.4055087295038904,
+  "sig_gamma": 0.05315830523938074,
+  "x10_central": 1.527961153015073,
+  "gamma_band": [
+   1.3,
+   1.5
+  ],
+  "gamma_list_scanned": [
+   1.3,
+   1.3523504242645097,
+   1.4055087295038904,
+   1.458667034743271,
+   1.5
+  ],
+  "x10_for_gamma": {
+   "1.300": 1.493452619977077,
+   "1.352": 1.5045266639804264,
+   "1.406": 1.527961153015073,
+   "1.459": 1.566738772849122,
+   "1.500": 1.6086651901804194
+  },
+  "3D_lattice_lambda_bar_safe": {
+   "mean": 1.609761686605227,
+   "std": 0.018992634424536515,
+   "values": [
+    1.630842224015496,
+    1.6044586279641218,
+    1.5939842078360629
+   ]
+  },
+  "3D_lattice_lambda_bar_ext": {
+   "mean": 1.6866014762716246,
+   "std": 0.06707723062929542,
+   "values": [
+    1.609730405225317,
+    1.7332518578700755,
+    1.7168221657194815
+   ]
+  },
+  "3D_lattice_direct_response_gamma_safe": {
+   "mean": 1.5837100461169673,
+   "std": 0.12134281048640054,
+   "values": [
+    1.6722033196996104,
+    1.4453848089177468,
+    1.6335420097335447
+   ]
+  },
+  "quench_amplification_3D_lattice_R_y_form": {
+   "mean": 4.3893822023091875,
+   "std": 0.08874583055661621,
+   "values": [
+    4.4907017974997885,
+    4.352010638757323,
+    4.32543417067045
+   ]
+  },
+  "inputs": {
+   "A [Q]": [
+    0.7,
+    0.8,
+    0.9
+   ],
+   "f [P]": [
+    0.01,
+    1.0
+   ],
+   "kappa_emit [E]": [
+    1.0,
+    2.0
+   ],
+   "g_geo [E]": [
+    1.0,
+    3.0
+   ],
+   "K0/K10 [C network_sim]": [
+    1.0,
+    2.3
+   ],
+   "rho/s max GeV [Q]": 4.3731778425655974e-10,
+   "T_par backreaction keV [Q cosmo_observable]": 6.37
+  }
+ },
+ "histories": {
+  "H_star": {
+   "label": "H-star: thermal restoration, exit at T_SM = 3.1e6 GeV (xi = 5e-4 [P]); KZ domains",
+   "provenance": "T_f, xi_KZ from modules/thermal_potential/results/kibble_zurek.json row xi = 0.0005012 (main: z1/z2 Ginzburg-matched; ext: all six variants)",
+   "central": {
+    "T_f_GeV": 3111226.826481773,
+    "xi0_GeV^-1": 0.9255670287034017,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 16.698338657823562,
+    "log10_K_safe": 12.857998969199912,
+    "log10_K_horizon_subhorizon_phase": 4.700384286850502,
+    "eps_persist": 5.846643593043702e-24,
+    "eps_safe": 1.460621123116945e-18
+   },
+   "band": {
+    "log10_K_par": [
+     15.78812518129042,
+     17.12821998504156
+    ],
+    "log10_K_safe": [
+     11.662093626643266,
+     15.283557312035256
+    ],
+    "log10_eps_persist": [
+     -25.3313458548468,
+     -19.8451810812491
+    ],
+    "log10_eps_safe": [
+     -22.66641524449256,
+     -14.934075206222444
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -23.741661338689795,
+     -21.46430100811781
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -21.24460584777312,
+     -16.154607024373345
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -23.741661338689795,
+     -21.95378039263843
+    ],
+    "log10_eps_safe_f1": [
+     -19.710859548617883,
+     -14.934075206222444
+    ],
+    "log10_eps_safe_f0.01": [
+     -22.66641524449256,
+     -17.475208753332915
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 480
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     15.536147818426814,
+     17.148269179431573
+    ],
+    "log10_K_safe": [
+     11.41011626377966,
+     15.303606506425268
+    ],
+    "log10_eps_persist": [
+     -25.361419646431816,
+     -19.51761050952641
+    ],
+    "log10_eps_safe": [
+     -22.696489036077576,
+     -14.606504634499755
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -23.769840656424478,
+     -21.110144624975643
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -21.272785165507802,
+     -15.800450641231176
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -23.769840656424478,
+     -21.59962400949626
+    ],
+    "log10_eps_safe_f1": [
+     -19.7409333402029,
+     -14.606504634499755
+    ],
+    "log10_eps_safe_f0.01": [
+     -22.696489036077576,
+     -17.147638181610226
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "kz_inputs": {
+    "xi_row": 0.0005011872336272725,
+    "T_SM_GeV": 3111226.826481773,
+    "H_GeV": 1.3599387199651747e-05,
+    "variants": {
+     "z1_ising_naive": {
+      "xi_KZ_GeV^-1": 3.6414860036357495,
+      "log10_N_H": 12.915606047504578
+     },
+     "z1_ising_ginzburg_matched": {
+      "xi_KZ_GeV^-1": 2.038455720833088,
+      "log10_N_H": 13.671538136095398
+     },
+     "z1_meanfield_nu_half": {
+      "xi_KZ_GeV^-1": 1.5425695764932061,
+      "log10_N_H": 14.034707697577094
+     },
+     "z2_ising_naive": {
+      "xi_KZ_GeV^-1": 0.6386336406896477,
+      "log10_N_H": 15.183686607485363
+     },
+     "z2_ising_ginzburg_matched": {
+      "xi_KZ_GeV^-1": 0.42025652844337136,
+      "log10_N_H": 15.728898576604195
+     },
+     "z2_meanfield_nu_half": {
+      "xi_KZ_GeV^-1": 0.40129640975839165,
+      "log10_N_H": 15.789046159774232
+     }
+    },
+    "z1_log10_N_H_tau0_x1e-2_x1e2": [
+     11.352585529689291,
+     15.990490742501505
+    ],
+    "z2_log10_N_H_tau0_x1e-2_x1e2": [
+     14.056366432627051,
+     17.289046159774145
+    ]
+   }
+  },
+  "H_star_Q": {
+   "label": "H-star-Q: charged exit at T_SM ~ 580 TeV; domain scale 21 ell - 960 ell",
+   "provenance": "T_h = 0.29 v (REPORT \u00a72); xi0 = 21-29 ell measured at simulated H/m ~ 1e7 x physical, ~960 ell KZ estimate at 200 TeV (charged_exit_sim NOTES \u00a76.1, \u00a77; rescaled to 5.8e+05 GeV: 472 ell); charged slowdown sQ = 1.3-2 (charged_exit_sim), applied as A_eff = sQ A",
+   "central": {
+    "T_f_GeV": 580000.0,
+    "xi0_GeV^-1": 1.4198591479439078,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 17.242176794734537,
+    "log10_K_safe": 13.401837106110884,
+    "log10_K_horizon_subhorizon_phase": 5.973805163554383,
+    "eps_persist": 1.0058596146011635e-24,
+    "eps_safe": 2.5128602019195236e-19
+   },
+   "band": {
+    "log10_K_par": [
+     15.406755793695007,
+     18.15919068435389
+    ],
+    "log10_K_safe": [
+     11.141096856665776,
+     16.314528011347587
+    ],
+    "log10_eps_persist": [
+     -26.877801903815293,
+     -19.510048292940198
+    ],
+    "log10_eps_safe": [
+     -24.212871293461053,
+     -14.256779405251706
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -25.190699656436006,
+     -21.101968654647703
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -22.69364416551933,
+     -15.422341516126652
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -25.190699656436006,
+     -21.41776238920752
+    ],
+    "log10_eps_safe_f1": [
+     -21.257315597586377,
+     -14.256779405251706
+    ],
+    "log10_eps_safe_f0.01": [
+     -24.212871293461053,
+     -16.77032754590959
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     113.69634931467833
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     15.406755793695007,
+     18.15919068435389
+    ],
+    "log10_K_safe": [
+     11.141096856665776,
+     16.314528011347587
+    ],
+    "log10_eps_persist": [
+     -26.877801903815293,
+     -19.510048292940198
+    ],
+    "log10_eps_safe": [
+     -24.212871293461053,
+     -14.256779405251706
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -25.190699656436006,
+     -21.101968654647703
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -22.69364416551933,
+     -15.422341516126652
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -25.190699656436006,
+     -21.41776238920752
+    ],
+    "log10_eps_safe_f1": [
+     -21.257315597586377,
+     -14.256779405251706
+    ],
+    "log10_eps_safe_f0.01": [
+     -24.212871293461053,
+     -16.77032754590959
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     113.69634931467833
+    ],
+    "n_combinations": 2880
+   }
+  },
+  "infl_Hinf_2e+04": {
+   "label": "inflationary randomization, H_inf = 2.4e+04 GeV [P], instant reheating [P]",
+   "provenance": "H_trap = sqrt(lambda_phi) v^2/phi_end, phi_end = 1.5 H_inf [E, inflation_spectator \u00a74.1-4.4]",
+   "central": {
+    "T_f_GeV": 1412444105.6377795,
+    "xi0_GeV^-1": 0.007071067811865475,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 16.15783432890742,
+    "log10_K_safe": 12.317494640283766,
+    "log10_K_horizon_subhorizon_phase": 1.5026975159431164,
+    "eps_persist": 3.3619416614010354e-23,
+    "eps_safe": 8.398875230177763e-18
+   },
+   "band": {
+    "log10_K_par": [
+     14.590514259125742,
+     17.006313362318295
+    ],
+    "log10_K_safe": [
+     10.464482704478588,
+     15.161650689311989
+    ],
+    "log10_eps_persist": [
+     -25.148485920761896,
+     -18.288286882435017
+    ],
+    "log10_eps_safe": [
+     -22.483555310407656,
+     -13.37718100740836
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -23.570320516267905,
+     -19.78104840246615
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -21.073265025351226,
+     -14.471354418721685
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -23.570320516267905,
+     -20.27052778698677
+    ],
+    "log10_eps_safe_f1": [
+     -19.52799961453298,
+     -13.37718100740836
+    ],
+    "log10_eps_safe_f0.01": [
+     -22.483555310407656,
+     -15.918314554518831
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     14.590514259125742,
+     17.006313362318295
+    ],
+    "log10_K_safe": [
+     10.464482704478588,
+     15.161650689311989
+    ],
+    "log10_eps_persist": [
+     -25.148485920761896,
+     -18.288286882435017
+    ],
+    "log10_eps_safe": [
+     -22.483555310407656,
+     -13.37718100740836
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -23.570320516267905,
+     -19.78104840246615
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -21.073265025351226,
+     -14.471354418721685
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -23.570320516267905,
+     -20.27052778698677
+    ],
+    "log10_eps_safe_f1": [
+     -19.52799961453298,
+     -13.37718100740836
+    ],
+    "log10_eps_safe_f0.01": [
+     -22.483555310407656,
+     -15.918314554518831
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "H_trap_GeV": 2.7777777777777777
+  },
+  "infl_Hinf_1e+06": {
+   "label": "inflationary randomization, H_inf = 1.0e+06 GeV [P], instant reheating [P]",
+   "provenance": "H_trap = sqrt(lambda_phi) v^2/phi_end, phi_end = 1.5 H_inf [E, inflation_spectator \u00a74.1-4.4]",
+   "central": {
+    "T_f_GeV": 218843800.2658526,
+    "xi0_GeV^-1": 0.007071067811865475,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 16.967758850002937,
+    "log10_K_safe": 13.127419161379285,
+    "log10_K_horizon_subhorizon_phase": 3.1224862742321733,
+    "eps_persist": 2.4447485001948513e-24,
+    "eps_safe": 6.107523476104554e-19
+   },
+   "band": {
+    "log10_K_par": [
+     15.40043878022126,
+     17.81625118384388
+    ],
+    "log10_K_safe": [
+     11.274407225574105,
+     15.971588510837577
+    ],
+    "log10_eps_persist": [
+     -26.363392653050276,
+     -19.34118875985919
+    ],
+    "log10_eps_safe": [
+     -23.69846204269604,
+     -14.430082884832535
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -24.708695194777484,
+     -20.91940438710516
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -22.211639703860804,
+     -15.609710403360692
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -24.708695194777484,
+     -21.408883771625774
+    ],
+    "log10_eps_safe_f1": [
+     -20.74290634682136,
+     -14.430082884832535
+    ],
+    "log10_eps_safe_f0.01": [
+     -23.69846204269604,
+     -16.971216431943006
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     15.40043878022126,
+     17.81625118384388
+    ],
+    "log10_K_safe": [
+     11.274407225574105,
+     15.971588510837577
+    ],
+    "log10_eps_persist": [
+     -26.363392653050276,
+     -19.34118875985919
+    ],
+    "log10_eps_safe": [
+     -23.69846204269604,
+     -14.430082884832535
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -24.708695194777484,
+     -20.91940438710516
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -22.211639703860804,
+     -15.609710403360692
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -24.708695194777484,
+     -21.408883771625774
+    ],
+    "log10_eps_safe_f1": [
+     -20.74290634682136,
+     -14.430082884832535
+    ],
+    "log10_eps_safe_f0.01": [
+     -23.69846204269604,
+     -16.971216431943006
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "H_trap_GeV": 0.06666666666666667
+  },
+  "infl_Hinf_1e+08": {
+   "label": "inflationary randomization, H_inf = 1.0e+08 GeV [P], instant reheating [P]",
+   "provenance": "H_trap = sqrt(lambda_phi) v^2/phi_end, phi_end = 1.5 H_inf [E, inflation_spectator \u00a74.1-4.4]",
+   "central": {
+    "T_f_GeV": 21889199.9168167,
+    "xi0_GeV^-1": 0.007071067811865475,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 17.967804149968,
+    "log10_K_safe": 14.127464461344347,
+    "log10_K_horizon_subhorizon_phase": 5.122486274231748,
+    "eps_persist": 9.608637059177618e-26,
+    "eps_safe": 2.4004504515543514e-20
+   },
+   "band": {
+    "log10_K_par": [
+     16.400484080186324,
+     18.816320307724432
+    ],
+    "log10_K_safe": [
+     12.274452525539168,
+     16.971657634718127
+    ],
+    "log10_eps_persist": [
+     -27.863496338871105,
+     -20.64124764981377
+    ],
+    "log10_eps_safe": [
+     -25.19856572851686,
+     -15.730141774787116
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -26.114301078498904,
+     -22.324976786105392
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -23.617245587582225,
+     -17.015282802360925
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -26.114301078498904,
+     -22.81445617062601
+    ],
+    "log10_eps_safe_f1": [
+     -22.243010032642186,
+     -15.730141774787116
+    ],
+    "log10_eps_safe_f0.01": [
+     -25.19856572851686,
+     -18.271275321897587
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     16.400484080186324,
+     18.816320307724432
+    ],
+    "log10_K_safe": [
+     12.274452525539168,
+     16.971657634718127
+    ],
+    "log10_eps_persist": [
+     -27.863496338871105,
+     -20.64124764981377
+    ],
+    "log10_eps_safe": [
+     -25.19856572851686,
+     -15.730141774787116
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -26.114301078498904,
+     -22.324976786105392
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -23.617245587582225,
+     -17.015282802360925
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -26.114301078498904,
+     -22.81445617062601
+    ],
+    "log10_eps_safe_f1": [
+     -22.243010032642186,
+     -15.730141774787116
+    ],
+    "log10_eps_safe_f0.01": [
+     -25.19856572851686,
+     -18.271275321897587
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "H_trap_GeV": 0.0006666666666666666
+  },
+  "infl_Hinf_1e+10": {
+   "label": "inflationary randomization, H_inf = 1.0e+10 GeV [P], instant reheating [P]",
+   "provenance": "H_trap = sqrt(lambda_phi) v^2/phi_end, phi_end = 1.5 H_inf [E, inflation_spectator \u00a74.1-4.4]",
+   "central": {
+    "T_f_GeV": 2189606.369868715,
+    "xi0_GeV^-1": 0.007071067811865475,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 18.96786039106978,
+    "log10_K_safe": 15.12752070244613,
+    "log10_K_horizon_subhorizon_phase": 7.122486274231746,
+    "eps_persist": 3.776365422963607e-27,
+    "eps_safe": 9.434197617162444e-22
+   },
+   "band": {
+    "log10_K_par": [
+     17.400540321288105,
+     19.816406672576786
+    ],
+    "log10_K_safe": [
+     13.27450876664095,
+     17.97174399957048
+    ],
+    "log10_eps_persist": [
+     -29.363625886149634,
+     -21.94132076324609
+    ],
+    "log10_eps_safe": [
+     -26.698695275795394,
+     -17.030214888219433
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -27.5199311945567,
+     -23.730564562968794
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -25.022875703640022,
+     -18.420870579224328
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -27.5199311945567,
+     -24.220043947489412
+    ],
+    "log10_eps_safe_f1": [
+     -23.74313957992072,
+     -17.030214888219433
+    ],
+    "log10_eps_safe_f0.01": [
+     -26.698695275795394,
+     -19.571348435329902
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     17.400540321288105,
+     19.816406672576786
+    ],
+    "log10_K_safe": [
+     13.27450876664095,
+     17.97174399957048
+    ],
+    "log10_eps_persist": [
+     -29.363625886149634,
+     -21.94132076324609
+    ],
+    "log10_eps_safe": [
+     -26.698695275795394,
+     -17.030214888219433
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -27.5199311945567,
+     -23.730564562968794
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -25.022875703640022,
+     -18.420870579224328
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -27.5199311945567,
+     -24.220043947489412
+    ],
+    "log10_eps_safe_f1": [
+     -23.74313957992072,
+     -17.030214888219433
+    ],
+    "log10_eps_safe_f0.01": [
+     -26.698695275795394,
+     -19.571348435329902
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "H_trap_GeV": 6.666666666666667e-06
+  },
+  "infl_Hinf_1e+13": {
+   "label": "inflationary randomization, H_inf = 1.0e+13 GeV [P], instant reheating [P]",
+   "provenance": "H_trap = sqrt(lambda_phi) v^2/phi_end, phi_end = 1.5 H_inf [E, inflation_spectator \u00a74.1-4.4]",
+   "central": {
+    "T_f_GeV": 69288.31159141351,
+    "xi0_GeV^-1": 0.007071067811865475,
+    "A": 0.8,
+    "g_geo": 1.0,
+    "f": 1.0,
+    "kappa": 1.0,
+    "sQ": 1.0,
+    "gamma": 1.4055087295038904,
+    "x10": 1.527961153015073,
+    "T_par_keV": 5.822280702558697,
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_par": 20.467958108860408,
+    "log10_K_safe": 16.627618420236754,
+    "log10_K_horizon_subhorizon_phase": 10.122486274231747,
+    "eps_persist": 2.9422093754483304e-29,
+    "eps_safe": 7.35029097297059e-24
+   },
+   "band": {
+    "log10_K_par": [
+     18.900638039078732,
+     21.31651690452622
+    ],
+    "log10_K_safe": [
+     14.774606484431576,
+     19.471854231519917
+    ],
+    "log10_eps_persist": [
+     -31.613791234073787,
+     -23.891447796373903
+    ],
+    "log10_eps_safe": [
+     -28.948860623719547,
+     -18.980341921347247
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -29.628349220779736,
+     -25.83896500043238
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -27.13129372986306,
+     -20.529271016687915
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -29.628349220779736,
+     -26.328444384953
+    ],
+    "log10_eps_safe_f1": [
+     -25.99330492784487,
+     -18.980341921347247
+    ],
+    "log10_eps_safe_f0.01": [
+     -28.948860623719547,
+     -21.521475468457716
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "band_extended_formation_scale": {
+    "log10_K_par": [
+     18.900638039078732,
+     21.31651690452622
+    ],
+    "log10_K_safe": [
+     14.774606484431576,
+     19.471854231519917
+    ],
+    "log10_eps_persist": [
+     -31.613791234073787,
+     -23.891447796373903
+    ],
+    "log10_eps_safe": [
+     -28.948860623719547,
+     -18.980341921347247
+    ],
+    "log10_eps_persist_gamma_central_only": [
+     -29.628349220779736,
+     -25.83896500043238
+    ],
+    "log10_eps_safe_gamma_central_only": [
+     -27.13129372986306,
+     -20.529271016687915
+    ],
+    "log10_eps_persist_inputs_at_central_gamma_x_f_kappa_fixed": [
+     -29.628349220779736,
+     -26.328444384953
+    ],
+    "log10_eps_safe_f1": [
+     -25.99330492784487,
+     -18.980341921347247
+    ],
+    "log10_eps_safe_f0.01": [
+     -28.948860623719547,
+     -21.521475468457716
+    ],
+    "T_safe_MeV": [
+     0.30902578827545146,
+     62.466449712154194
+    ],
+    "n_combinations": 1440
+   },
+   "H_trap_GeV": 6.666666666666667e-09
+  }
+ },
+ "extrapolation_decades": {
+  "H_star_parity": [
+   15.055731421467451,
+   16.698467705039153
+  ],
+  "H_star_relic_safe": [
+   10.929699866820297,
+   14.853805032032849
+  ],
+  "lattice_K_reached": {
+   "network_sim 3D K10 max": 2.69,
+   "this module 3D lattice K (t <= L/2)": 5.4,
+   "network_sim 2D K10 max": 10.8
+  }
+ },
+ "statistical_vs_systematic": {
+  "statistical_bias_on_scale_K: (xi0/L)^(d/2)": "K^-1.5",
+  "H_star_K_par_central": 4.992736635420787e+16,
+  "statistical_floor_at_parity_K_par^-1.5": 8.963797012521956e-26,
+  "eps_persist_central": 5.846643593043702e-24,
+  "amplified_statistical_bias_at_scale_L: K^(gamma - d/2)": {
+   "1.30": 0.0004574380307873086,
+   "1.35": 0.003423713234999781,
+   "1.41": 0.026433384000451067,
+   "1.46": 0.2040836196713032,
+   "1.50": 1.0
+  },
+  "note": "exact Z2: the random magnetization of a region of the current domain size ~ K^(gamma - d/2) <= O(1) never grows (Fisher-Huse lambda_bar >= d/2), so it cannot remove the network; a systematic bias is the same on every scale and grows as K^gamma."
+ },
+ "candidates_H_star": {
+  "thermal remnant 1e-3 of soft-mode level, undamped [E, review finding]": {
+   "m_f": 0.0007978844278221252,
+   "log10_K10": 2.3725411594260013,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "post-inflation trapping p_- = 0.4999 [Q inflation_spectator]": {
+   "m_f": 0.0002,
+   "log10_K10": 2.8000803476636493,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "post-inflation trapping p_- = 0.4997 [Q inflation_spectator]": {
+   "m_f": 0.0006,
+   "log10_K10": 2.460615155390208,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "forced charge 2 n_c, p(+) = 0.71 [Q charged_exit_sim]": {
+   "m_f": 0.42,
+   "log10_K10": 0.4209153136747748,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "relaxed start p_- = 0.23 at end of inflation [Q]": {
+   "m_f": 0.54,
+   "log10_K10": 0.33160440435925603,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  }
+ },
+ "candidates_infl_Hinf_1e8": {
+  "post-inflation trapping p_- = 0.4999 [Q inflation_spectator]": {
+   "m_f": 0.0002,
+   "log10_K10": 2.8000803476636493,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "post-inflation trapping p_- = 0.4997 [Q inflation_spectator]": {
+   "m_f": 0.0006,
+   "log10_K10": 2.460615155390208,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  }
+ },
+ "damping_required_H_star": {
+  "m_remnant_undamped": 0.0007978844278221252,
+  "amplitude_efolds_to_reach_eps_safe": 33.93412310355495,
+  "amplitude_efolds_to_reach_eps_persist": 46.36262768175318,
+  "band_efolds_to_eps_persist": [
+   38.56167132715811,
+   51.19403255255323
+  ],
+  "band_efolds_to_eps_safe": [
+   27.253432149206258,
+   45.05780305528803
+  ]
+ },
+ "sensitivity_H_star": {
+  "gamma": {
+   "1.300": {
+    "eps_persist": 3.3022218997816355e-22,
+    "eps_safe": 3.245247682516856e-17
+   },
+   "1.352": {
+    "eps_persist": 4.444772937624457e-23,
+    "eps_safe": 6.939602376172278e-18
+   },
+   "1.406": {
+    "eps_persist": 5.846643593043723e-24,
+    "eps_safe": 1.4606211231169426e-18
+   },
+   "1.459": {
+    "eps_persist": 7.764893713142227e-25,
+    "eps_safe": 3.103933594795182e-19
+   },
+   "1.500": {
+    "eps_persist": 1.6270943492853715e-25,
+    "eps_safe": 9.373942166337296e-20
+   },
+   "1.327": {
+    "eps_persist": 1.1738318218577848e-22,
+    "eps_safe": 1.4646594081180342e-17
+   },
+   "1.390": {
+    "eps_persist": 1.0589899359847963e-23,
+    "eps_safe": 2.3065559834931557e-18
+   }
+  },
+  "f_kappa": {
+   "f=1,kappa=1": {
+    "T_safe_MeV": 30.60080739808587,
+    "log10_K_safe": 12.857998969199912,
+    "eps_safe": 1.460621123116945e-18
+   },
+   "f=1,kappa=2": {
+    "T_safe_MeV": 56.25501267217312,
+    "log10_K_safe": 12.580470358816648,
+    "eps_safe": 3.585968428055057e-18
+   },
+   "f=0.1,kappa=1": {
+    "T_safe_MeV": 3.266252852261143,
+    "log10_K_safe": 13.844232593704016,
+    "eps_safe": 6.00312806712633e-20
+   },
+   "f=0.1,kappa=2": {
+    "T_safe_MeV": 6.528106748774893,
+    "log10_K_safe": 13.543386219264148,
+    "eps_safe": 1.5893509796633384e-19
+   },
+   "f=0.01,kappa=1": {
+    "T_safe_MeV": 0.347954705705847,
+    "log10_K_safe": 14.828095352460254,
+    "eps_safe": 2.486279289600135e-21
+   },
+   "f=0.01,kappa=2": {
+    "T_safe_MeV": 0.6653048082850859,
+    "log10_K_safe": 14.53812525148995,
+    "eps_safe": 6.354851707031004e-21
+   }
+  },
+  "A": {
+   "0.7": {
+    "T_par_keV": 5.446244899650011,
+    "log10_K_par": 16.785326578290096,
+    "eps_persist": 4.412089756100823e-24,
+    "eps_safe": 1.0155626404788205e-18
+   },
+   "0.8": {
+    "T_par_keV": 5.822280702558697,
+    "log10_K_par": 16.698338657823562,
+    "eps_persist": 5.846643593043702e-24,
+    "eps_safe": 1.460621123116945e-18
+   },
+   "0.9": {
+    "T_par_keV": 6.175461250126246,
+    "log10_K_par": 16.62160987415249,
+    "eps_persist": 7.494619619362453e-24,
+    "eps_safe": 2.0100139415623784e-18
+   }
+  },
+  "xi0_variants": {
+   "z1_ising_naive": {
+    "log10_N_H": 12.915606047504578,
+    "log10_K_par": 16.103467888208492,
+    "eps_persist": 4.0086919135722573e-23,
+    "eps_safe": 1.0014600671055404e-17
+   },
+   "z1_ising_ginzburg_matched": {
+    "log10_N_H": 13.671538136095398,
+    "log10_K_par": 16.355445251072098,
+    "eps_persist": 1.773561680505743e-23,
+    "eps_safe": 4.43075007476022e-18
+   },
+   "z1_meanfield_nu_half": {
+    "log10_N_H": 14.034707697577094,
+    "log10_K_par": 16.476501771565996,
+    "eps_persist": 1.1986718340141223e-23,
+    "eps_safe": 2.994547850547025e-18
+   },
+   "z2_ising_naive": {
+    "log10_N_H": 15.183686607485363,
+    "log10_K_par": 16.859494741535418,
+    "eps_persist": 3.4705662404300905e-24,
+    "eps_safe": 8.670243498303931e-19
+   },
+   "z2_ising_ginzburg_matched": {
+    "log10_N_H": 15.728898576604195,
+    "log10_K_par": 17.04123206457503,
+    "eps_persist": 1.9273782062280118e-24,
+    "eps_safe": 4.815017839639397e-19
+   },
+   "z2_meanfield_nu_half": {
+    "log10_N_H": 15.789046159774232,
+    "log10_K_par": 17.061281258965042,
+    "eps_persist": 1.8062906179677692e-24,
+    "eps_safe": 4.512514212822417e-19
+   }
+  },
+  "Ymax_4.35e-10_instead_of_4.373e-10_T_safe_ratio": 1.0046922118167985
+ },
+ "zero_mode_equivalent_H_star": {
+  "phibar_over_sigma_at_eps_persist": 7.327681071006765e-24,
+  "phibar_over_sigma_at_eps_safe": 1.8306171028641112e-18
+ },
+ "comparison": {
+  "naive_2D_fit_(1/2-p)_at_K=1e17": 9.787647496321489e-15,
+  "naive_2D_fit_m0_at_K_par_H_star_central": 3.4046770146224404e-14,
+  "network_sim_3D_fit_initial_m0_at_K_par_H_star_central (c=0.49, alpha=0.722)": 2.874450384387337e-24,
+  "stress_gamma_0.84_eps_persist_H_star": 1.6450620545155995e-14,
+  "stress_gamma_0.84_eps_safe_H_star": 2.7673725153968612e-11
+ }
+}

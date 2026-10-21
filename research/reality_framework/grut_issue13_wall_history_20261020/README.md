@@ -3,22 +3,28 @@
 Claude's response to Codex at `135d535` ([issue #13](https://github.com/ryangrvr/TestingGRUT/issues/13)). Start with
 [REPORT.md](REPORT.md).
 
-**Result in one paragraph.** Inside the unchanged action the hidden scalars couple to visible matter only through
-gravity, so whether Z₂ walls form is decided by preparation data outside the action. Restoring the hidden Z₂ after
-inflation in a way that erases the earlier vacuum sign leads to a wall network that forms with p(+) = p(−),
-percolates and persists in lattice simulations. The routes are a hidden bath above T_c = 1.557–1.564 v, a dense
-hidden charge, or inflation above about 1.5 TeV. Restorations that keep a sign bias give decaying networks, whose
-collapsing domains leave stable hidden relics. Dense charge does not change this: in the charged-exit runs charge rides on the walls and slows
-coarsening by 1.3–2 without biasing or removing the network. With the exact tension the network reaches parity
-with radiation at T ≈ 6 keV. Its energy then cannot fall below the radiation density, so the history is rejected
-retrospectively: the ΔN_eff-equivalent at recombination is ≥ 7.4, and the H₀ predicted given T_CMB is 2×10⁵–2×10⁹
-times too high. Only a cold class of histories avoids walls:
-- inflation at H_inf ≲ 140–560 GeV, depending on the criterion;
-- no hidden reheating above T_c;
-- charge supplied after inflation, below the critical density, onto a single-sign vacuum.
+**Result.**
+- **Coupling.** Inside the unchanged action the hidden scalars couple to visible matter only through gravity, so
+  whether Z₂ walls form is decided by preparation data outside the action.
+- **Network survival.** If the hidden Z₂ is restored after inflation, a network forms. It survives to wall–radiation
+  parity only if the exit is unbiased to |m₀| ≲ 10⁻²³. That threshold comes from our 3D lattice bias-growth law,
+  extrapolated over 11–17 decades.
+- **Hot histories are rejected.** A kinetically thermal hidden bath above T_c = 1.557–1.564 v erases any earlier sign
+  (|m₀| ~ 10⁻¹²⁹⁷). The network persists, also when charge holds φ = 0 until the exit: charge rides on the walls and
+  slows coarsening without biasing it. With the tree tension the network reaches parity at T ≈ 6 keV. The history is
+  then rejected retrospectively: hidden energy at recombination ≥ the radiation density (ΔN_eff-equivalent ≥ 7.4),
+  and the H₀ implied given T_CMB is 2×10⁵–2×10⁹ times too high.
+- **Biased exits decay early.** Restorations that leave a systematic bias give networks that decay early: a
+  non-thermal gas leaving the restored phase late, charge forced into an already selected vacuum, or post-inflation
+  trapping.
+- **Cold histories form no walls.** With no hidden restoration after inflation and charge supplied below the
+  critical density onto a single-sign vacuum, no walls form. Inflation must then stay below about 140–150 GeV for no
+  opposite-sign region at all. The relic limit from collapsing opposite-sign domains is ≈ 310–560 GeV (rest-mass
+  fraction f = 1); for f ≤ 0.01 there is none below percolation.
+- **Unresolved.** Inflation above percolation, the n_c–n_s1 charge window and near-critical domains.
 
-These are conditional history constraints. They are not an exclusion, validation or identification of the Candidate 1
-fields, and the action is unchanged.
+These are conditional history constraints. They are not an exclusion, validation or identification of the
+Candidate 1 fields, and the action is unchanged.
 
 ## Layout
 
@@ -36,7 +42,9 @@ fields, and the action is unchanged.
 | `modules/relic_yield/` | U(1)_X conservation, stable species, symmetric relic bound, charge in a hot bath, prior-art table |
 | `modules/minority_relic/` | Relic and late-domain bounds on H_inf from collapsing minority domains |
 | `modules/production_map/` | Restoration by underpopulated baths, heavy-inflaton producer window, high-H_inf spectator relic |
-| `verification/` | Independent verifiers (own code) for every module, and the completeness critic (`v_critic/CRITIC.md`) |
+| `modules/bias_threshold/` | Phase-ordering growth of a systematic bias, lattice response, ε_persist / ε_safe |
+| `modules/residual_bias/` | Exit bias left by each restoration route (thermal damping, free-streaming gas, trapping, forced charge) |
+| `verification/` | Separate-code AI verifiers for every module and the completeness critic (`v_critic/CRITIC.md`); same session and brief, not an outside replication |
 | `code/history.py` | Recomputes the reference-history numbers and places module values beside them → `results/history.json` |
 | `code/verify.py`, `code/finalize.py` | Manifest hashes, history replay and cross-module checks; manifest writer |
 

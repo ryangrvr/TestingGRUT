@@ -171,7 +171,35 @@ Cstar = {
     "maser_product_GeV": mX * r_C,
     "network": "none (no restoration, no opposite-vacuum region expected, charge sub-critical on +v)",
 }
+# fate of a formed network is set by the systematic exit bias m0 (bias_threshold, residual_bias)
+bt = load("bias_threshold/results/thresholds.json") or {}
+rb = load("residual_bias/results/headline.json") or {}
+hs_bt = bt.get("histories", {}).get("H_star", {}).get("central", {})
+eps_p, eps_s = hs_bt.get("eps_persist"), hs_bt.get("eps_safe")
+rA = rb.get("routes", {}).get("A_Hstar_thermal [P: xi=5e-4, bath from T_SM=1e8 GeV, phi_0 = v]", {})
+log_m0 = rA.get("log10_abs_m0_central")
+
+
+def fate(log10_m0):
+    if None in (log10_m0, eps_p, eps_s):
+        return None
+    if log10_m0 < math.log10(eps_p):
+        return "persists to parity (rejected by parity / DeltaN_eff / R_H)"
+    if log10_m0 < math.log10(eps_s):
+        return "decays after T_safe (stable-relic overproduction)"
+    return "decays early (not rejected by the wall tests computed here)"
+
+
+Hstar["bias"] = {"eps_persist": eps_p, "eps_safe": eps_s, "log10_m0_thermal_erasure": log_m0,
+                 "fate": fate(log_m0)}
 out["histories"] = {"H_star": Hstar, "C_star": Cstar}
+out["bias_routes"] = {
+    "thermal bath (H-star)": fate(log_m0),
+    "Hubble friction only (no bath)": fate(0.0),
+    "inflation trapping, H_inf = 5 TeV, fresh start (|m0| = 2.18e-3)": fate(math.log10(2.18e-3)),
+    "charge forced to 2 n_c (|m0| ~ 0.5)": fate(math.log10(0.5)),
+    "exact Z2 ensemble, no prior (m0 = 0)": "persists to parity (rejected by parity / DeltaN_eff / R_H)",
+}
 
 # ---------------------------------------------------------------- 6. module values placed side by side
 co = load("cosmo_observable/results/headline.json") or {}

@@ -59,7 +59,13 @@
    "maser_product_GeV": 2.886980723179297,
    "network": "forms (thermal exit, p = 1/2) and persists (neutral lattice + scaling literature)",
    "T_parity_keV": 5.822440189450562,
-   "DeltaNeff_min_at_recombination": 7.447204662458465
+   "DeltaNeff_min_at_recombination": 7.447204662458465,
+   "bias": {
+    "eps_persist": 5.846643593043702e-24,
+    "eps_safe": 1.460621123116945e-18,
+    "log10_m0_thermal_erasure": -1297.2806708528194,
+    "fate": "persists to parity (rejected by parity / DeltaN_eff / R_H)"
+   }
   },
   "C_star": {
    "inputs": {
@@ -82,6 +88,13 @@
    "maser_product_GeV": 5.0,
    "network": "none (no restoration, no opposite-vacuum region expected, charge sub-critical on +v)"
   }
+ },
+ "bias_routes": {
+  "thermal bath (H-star)": "persists to parity (rejected by parity / DeltaN_eff / R_H)",
+  "Hubble friction only (no bath)": "decays early (not rejected by the wall tests computed here)",
+  "inflation trapping, H_inf = 5 TeV, fresh start (|m0| = 2.18e-3)": "decays early (not rejected by the wall tests computed here)",
+  "charge forced to 2 n_c (|m0| ~ 0.5)": "decays early (not rejected by the wall tests computed here)",
+  "exact Z2 ensemble, no prior (m0 = 0)": "persists to parity (rejected by parity / DeltaN_eff / R_H)"
  },
  "module_values": {
   "T_dom_keV_backreaction (cosmo_observable)": 6.366861314287523,

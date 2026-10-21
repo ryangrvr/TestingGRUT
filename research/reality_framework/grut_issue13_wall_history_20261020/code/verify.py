@@ -84,6 +84,11 @@ hs = ref["histories"]["H_star"]
 check(hs["omega_sym_estimate"] < 0.12 and hs["maser_product_GeV"] < 63.93, "H-star passes relic and maser product tests")
 cs = ref["histories"]["C_star"]
 check(cs["n_Q(T_Q)/n_c"] < 1 and cs["below regime-A boundary 145.6 GeV (minority_relic)"], "C-star charge sub-critical and inside regime A")
+b = hs["bias"]
+check(b["eps_persist"] is not None and b["log10_m0_thermal_erasure"] < math.log10(b["eps_persist"]),
+      "H-star thermal erasure leaves |m0| below eps_persist (network persists)")
+check(ref["bias_routes"]["inflation trapping, H_inf = 5 TeV, fresh start (|m0| = 2.18e-3)"].startswith("decays early"),
+      "inflation-trapping bias decays early")
 mr = mod("minority_relic/results/headline.json")
 check(close(mr["collapse_energy"]["kappa_E_RD"], 7.786625485748964, 1e-9), "minority_relic kappa_E as quoted")
 

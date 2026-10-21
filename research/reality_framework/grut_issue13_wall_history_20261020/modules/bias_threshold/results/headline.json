@@ -1,0 +1,244 @@
+{
+ "labels": "[C] computed here; [D] derived; [Q] quoted (source); [P] preparation input outside the action; [E] estimate.  m = 2p - 1 (systematic population bias); thresholds are CONDITIONAL on the scaling theory holding over 11-17 decades in L/xi0 beyond the runs.",
+ "K10 = c m0^-alpha, 3D PRS 128^3, m0 = initial (quench-start) bias [C, network_sim data]": {
+  "alpha": 0.722494904199629,
+  "sig_alpha": 0.05316144681732547,
+  "c": 0.4895132767855327,
+  "sig_lnc": 0.08796277492761304,
+  "first_output_definition": {
+   "alpha": 0.694626450507309,
+   "c": 0.5435832037551934
+  },
+  "jackknife_alpha": [
+   0.7942001100414139,
+   0.7221505523436468,
+   0.6800042628969091
+  ],
+  "implied_gamma = 1/alpha": 1.3840928070043452
+ },
+ "K10 = c m0^-alpha, 2D PRS (m0 = 2(1/2 - p)) [C, network_sim data]": {
+  "alpha": 1.2732916474681872,
+  "c": 0.5693658591436962,
+  "damped_late_start_alpha": 1.2282444990613897
+ },
+ "gamma = d - lambda_bar, 3D relativistic (PRS) [C]": {
+  "collapse_of_biased_runs (formation bias, erf-linearized)": [
+   1.4055087295038904,
+   0.05315830523938074
+  ],
+  "x10": 1.5408640959635207,
+  "unbiased_autocorrelation_lambda_bar_safe/ext": [
+   1.609761686605227,
+   1.6866014762716246
+  ],
+  "direct_small_bias_response_gamma_safe (K <= 2.6)": [
+   1.5837100461169673,
+   0.12134281048640054
+  ],
+  "pre_formation_linear_stage_gamma (theory d/2 = 1.5)": 1.4573437907299116,
+  "model_A_literature_gamma": "1.33 (Liu-Mazenko lambda_bar 1.673, Bray Table 1) - 1.40 (lambda_bar 1.6, brief)",
+  "band_used": [
+   1.3,
+   1.5
+  ]
+ },
+ "gamma 2D [C]": {
+  "relativistic collapse (early/damped)": [
+   0.8412826203192202,
+   0.8513043522259782
+  ],
+  "model A, this code, K <= 7: 2 - lambda_bar": 0.8538130836952018,
+  "model A literature asymptotic": 0.75
+ },
+ "H_star [P: xi = 5e-4, T_f = 3.1e6 GeV]": {
+  "log10_K_par": [
+   16.698338657823562,
+   [
+    15.78812518129042,
+    17.12821998504156
+   ]
+  ],
+  "log10_K_safe": [
+   12.857998969199912,
+   [
+    11.662093626643266,
+    15.283557312035256
+   ]
+  ],
+  "T_safe_MeV(f=1..0.01)": [
+   0.30902578827545146,
+   62.466449712154194
+  ],
+  "eps_persist": [
+   5.846643593043702e-24,
+   [
+    -25.3313458548468,
+    -19.8451810812491
+   ]
+  ],
+  "eps_safe": [
+   1.460621123116945e-18,
+   [
+    -22.66641524449256,
+    -14.934075206222444
+   ]
+  ]
+ },
+ "H_star_Q": {
+  "eps_persist": [
+   1.0058596146011635e-24,
+   [
+    -26.877801903815293,
+    -19.510048292940198
+   ]
+  ],
+  "eps_safe": [
+   2.5128602019195236e-19,
+   [
+    -24.212871293461053,
+    -14.256779405251706
+   ]
+  ],
+  "log10_K_par": [
+   15.406755793695007,
+   18.15919068435389
+  ]
+ },
+ "inflationary randomization (H_inf = 2.4e4 - 1e13 GeV [P])": {
+  "infl_Hinf_2e+04": {
+   "T_f_GeV": 1412444105.6377795,
+   "eps_persist_log10_band": [
+    -25.148485920761896,
+    -18.288286882435017
+   ],
+   "eps_safe_log10_band": [
+    -22.483555310407656,
+    -13.37718100740836
+   ]
+  },
+  "infl_Hinf_1e+06": {
+   "T_f_GeV": 218843800.2658526,
+   "eps_persist_log10_band": [
+    -26.363392653050276,
+    -19.34118875985919
+   ],
+   "eps_safe_log10_band": [
+    -23.69846204269604,
+    -14.430082884832535
+   ]
+  },
+  "infl_Hinf_1e+08": {
+   "T_f_GeV": 21889199.9168167,
+   "eps_persist_log10_band": [
+    -27.863496338871105,
+    -20.64124764981377
+   ],
+   "eps_safe_log10_band": [
+    -25.19856572851686,
+    -15.730141774787116
+   ]
+  },
+  "infl_Hinf_1e+10": {
+   "T_f_GeV": 2189606.369868715,
+   "eps_persist_log10_band": [
+    -29.363625886149634,
+    -21.94132076324609
+   ],
+   "eps_safe_log10_band": [
+    -26.698695275795394,
+    -17.030214888219433
+   ]
+  },
+  "infl_Hinf_1e+13": {
+   "T_f_GeV": 69288.31159141351,
+   "eps_persist_log10_band": [
+    -31.613791234073787,
+    -23.891447796373903
+   ],
+   "eps_safe_log10_band": [
+    -28.948860623719547,
+    -18.980341921347247
+   ]
+  }
+ },
+ "extrapolation_decades_in_L/xi0": {
+  "H_star_parity": [
+   15.055731421467451,
+   16.698467705039153
+  ],
+  "H_star_relic_safe": [
+   10.929699866820297,
+   14.853805032032849
+  ],
+  "lattice_K_reached": {
+   "network_sim 3D K10 max": 2.69,
+   "this module 3D lattice K (t <= L/2)": 5.4,
+   "network_sim 2D K10 max": 10.8
+  }
+ },
+ "statistical_vs_systematic": {
+  "statistical_bias_on_scale_K: (xi0/L)^(d/2)": "K^-1.5",
+  "H_star_K_par_central": 4.992736635420787e+16,
+  "statistical_floor_at_parity_K_par^-1.5": 8.963797012521956e-26,
+  "eps_persist_central": 5.846643593043702e-24,
+  "amplified_statistical_bias_at_scale_L: K^(gamma - d/2)": {
+   "1.30": 0.0004574380307873086,
+   "1.35": 0.003423713234999781,
+   "1.41": 0.026433384000451067,
+   "1.46": 0.2040836196713032,
+   "1.50": 1.0
+  },
+  "note": "exact Z2: the random magnetization of a region of the current domain size ~ K^(gamma - d/2) <= O(1) never grows (Fisher-Huse lambda_bar >= d/2), so it cannot remove the network; a systematic bias is the same on every scale and grows as K^gamma."
+ },
+ "candidate_residual_biases_H_star": {
+  "thermal remnant 1e-3 of soft-mode level, undamped [E, review finding]": {
+   "m_f": 0.0007978844278221252,
+   "log10_K10": 2.3725411594260013,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "post-inflation trapping p_- = 0.4999 [Q inflation_spectator]": {
+   "m_f": 0.0002,
+   "log10_K10": 2.8000803476636493,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "post-inflation trapping p_- = 0.4997 [Q inflation_spectator]": {
+   "m_f": 0.0006,
+   "log10_K10": 2.460615155390208,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "forced charge 2 n_c, p(+) = 0.71 [Q charged_exit_sim]": {
+   "m_f": 0.42,
+   "log10_K10": 0.4209153136747748,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  },
+  "relaxed start p_- = 0.23 at end of inflation [Q]": {
+   "m_f": 0.54,
+   "log10_K10": 0.33160440435925603,
+   "fate": "(iii) decays before the relic-safe temperature (harmless for relic/parity); already before the network reaches horizon size"
+  }
+ },
+ "damping_e-folds_needed_for_1e-3_remnant": {
+  "m_remnant_undamped": 0.0007978844278221252,
+  "amplitude_efolds_to_reach_eps_safe": 33.93412310355495,
+  "amplitude_efolds_to_reach_eps_persist": 46.36262768175318,
+  "band_efolds_to_eps_persist": [
+   38.56167132715811,
+   51.19403255255323
+  ],
+  "band_efolds_to_eps_safe": [
+   27.253432149206258,
+   45.05780305528803
+  ]
+ },
+ "comparison": {
+  "naive_2D_fit_(1/2-p)_at_K=1e17": 9.787647496321489e-15,
+  "naive_2D_fit_m0_at_K_par_H_star_central": 3.4046770146224404e-14,
+  "network_sim_3D_fit_initial_m0_at_K_par_H_star_central (c=0.49, alpha=0.722)": 2.874450384387337e-24,
+  "stress_gamma_0.84_eps_persist_H_star": 1.6450620545155995e-14,
+  "stress_gamma_0.84_eps_safe_H_star": 2.7673725153968612e-11
+ },
+ "runtime_s": {
+  "lattice_wall (2 workers; 0 if reused)": 0.1461329460144043,
+  "total": 2.9484763145446777
+ }
+}
