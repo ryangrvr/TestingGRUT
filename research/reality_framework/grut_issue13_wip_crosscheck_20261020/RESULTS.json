@@ -1,0 +1,250 @@
+{
+  "reviewed_commit": "559975fad327672f70221e62f6c11c913f7d30b6",
+  "status": "preliminary, retrospective cross-check; pending verification/charged-exit results not incorporated",
+  "charge": {
+    "units": "v=1000 GeV, lambda_phi=.01, a=1,b=.1; r=1; same stated baryon conversion as WIP",
+    "YB": 8.674000028195339e-11,
+    "thresholds": {
+      "restored_local_spinodal": {
+        "n_over_v3": 0.0316227766016838,
+        "n_GeV3": 31622776.601683795,
+        "T_visible_GeV_r1": 198197.64503428558
+      },
+      "homogeneous_global_switch": {
+        "n_over_v3": 0.04010261923326429,
+        "n_GeV3": 40102619.23326429,
+        "T_visible_GeV_r1": 214530.67678768412
+      },
+      "broken_radial_spinodal": {
+        "n_over_v3": 0.042766686606638946,
+        "n_GeV3": 42766686.606638946,
+        "T_visible_GeV_r1": 219179.71505080108
+      },
+      "phase_coexistence_dense_endpoint": {
+        "n_over_v3": 0.1778279410038923,
+        "n_GeV3": 177827941.00389227,
+        "T_visible_GeV_r1": 352450.79128267313
+      }
+    },
+    "effective_S4_coefficient_at_nc": -0.5833333333333333,
+    "S4_finite_differences": [
+      -0.5825930859265638,
+      -0.5831481686424667,
+      -0.5832870186850414
+    ],
+    "H_over_mX_at_nc": 5.518905646981807e-10,
+    "interpretation": "198 TeV is a local spinodal, not a universal forced-restoration threshold or a necessity to supply charge late. Inhomogeneous coexistence and initial state still matter."
+  },
+  "sign_correlations": {
+    "globally_correlated_symmetric_mixture": {
+      "p_plus_each_cell": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_neighbor_disagreement": 0.0
+    },
+    "independent_symmetric_signs": {
+      "p_plus_each_cell": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_neighbor_disagreement": 0.5
+    },
+    "interpretation": "Both distributions are Z2 invariant. Equal signs at one site do not establish short spatial correlations or percolation. This is a logical counterexample, not a proposal for the actual primordial ensemble."
+  },
+  "wall_stress_matching": {
+    "input_velocity_estimator": 0.456113137775563,
+    "thin_wall_energy_weighted_w_if_velocity_matches": -0.4586274722151969,
+    "isolated_fluid_w_inferred_from_RD_scaling": -0.3333333333333333,
+    "required_Q_t_over_rho_wall": 0.18794120832279537,
+    "required_Q_over_H_rho_wall": 0.37588241664559074,
+    "mono_speed_boost_gamma": 1.1236942424414893,
+    "RD_asymptotic_rho_massive_products_over_rho_wall": 0.37588241664559074,
+    "RD_asymptotic_rho_radiation_products_over_rho_wall": 0.18794120832279537,
+    "illustrative_constant_g_source_ODE": [
+      {
+        "w_emit": 0.0,
+        "tau_wall_equals_visible": 0.6539758726179928,
+        "rho_emitted_over_rho_wall_at_equality": 0.2056583242361259,
+        "T_wall_equality_over_no_backreaction_reference": 1.1120122423292924,
+        "minimum_Q_t_over_rho_wall": 0.024701729172100895,
+        "minimum_emitted_ratio": 0.0
+      },
+      {
+        "w_emit": 0.3333333333333333,
+        "tau_wall_equals_visible": 0.6772971491435901,
+        "rho_emitted_over_rho_wall_at_equality": 0.08689687859827995,
+        "T_wall_equality_over_no_backreaction_reference": 1.102313657022267,
+        "minimum_Q_t_over_rho_wall": 0.034554881284766026,
+        "minimum_emitted_ratio": 0.0
+      }
+    ],
+    "interpretation": "Effective dilution w and intrinsic wall pressure differ when the network loses energy. Areal A and energy-density A also require calibration; gamma is a mono-speed control, not a claimed 12% correction to the measured network. ODE cases illustrate bookkeeping only and do not recompute 6.367 keV."
+  },
+  "planar_wall_modes": {
+    "scope": "Leading classical uncharged static planar wall, weak linear probes. This is not a finite charged wall, a capture/production calculation, a lifetime or an ordinary detector signal.",
+    "delta_GeV_inverse": 0.01414213562373095,
+    "ell_phi": 2.0,
+    "ell_X": 1.0,
+    "ell_D": 0.019615242270663247,
+    "X_surface_mode_mass_GeV": 70.71067811865476,
+    "X_bulk_mass_GeV": 100.0,
+    "phi_translation_mode_mass_squared_GeV2": 0.0,
+    "phi_shape_mode_mass_GeV": 122.4744871391589,
+    "scattering": [
+      {
+        "ell": 2.0,
+        "k_delta": 0.05,
+        "R_numeric": 1.8152106946996077e-20,
+        "T_numeric": 1.0000000000156604,
+        "R_exact": 2.411420479720455e-30,
+        "flux_error": 1.5660361896152608e-11,
+        "field": "phi"
+      },
+      {
+        "ell": 2.0,
+        "k_delta": 0.2,
+        "R_numeric": 1.1168559900698435e-21,
+        "T_numeric": 1.0000000000337046,
+        "R_exact": 1.3344578472161223e-31,
+        "flux_error": 3.370459467078035e-11,
+        "field": "phi"
+      },
+      {
+        "ell": 2.0,
+        "k_delta": 1.0,
+        "R_numeric": 5.913717139777173e-23,
+        "T_numeric": 1.0000000000758353,
+        "R_exact": 4.497928370172866e-34,
+        "flux_error": 7.583533800925579e-11,
+        "field": "phi"
+      },
+      {
+        "ell": 1.0,
+        "k_delta": 0.05,
+        "R_numeric": 5.799363358660466e-19,
+        "T_numeric": 1.0000000000061904,
+        "R_exact": 6.028551199301138e-31,
+        "flux_error": 6.190381540704948e-12,
+        "field": "X"
+      },
+      {
+        "ell": 1.0,
+        "k_delta": 0.2,
+        "R_numeric": 1.7840385869661143e-21,
+        "T_numeric": 1.000000000026024,
+        "R_exact": 3.3361446180403056e-32,
+        "flux_error": 2.602407178642352e-11,
+        "field": "X"
+      },
+      {
+        "ell": 1.0,
+        "k_delta": 1.0,
+        "R_numeric": 1.3701808289172686e-22,
+        "T_numeric": 1.000000000063151,
+        "R_exact": 1.1244820925432166e-34,
+        "flux_error": 6.315103995291338e-11,
+        "field": "X"
+      },
+      {
+        "ell": 0.019615242270663247,
+        "k_delta": 0.05,
+        "R_numeric": 0.13228369210392216,
+        "T_numeric": 0.8677163078966611,
+        "R_exact": 0.13228369211209606,
+        "flux_error": 5.833111771380572e-13,
+        "field": "D"
+      },
+      {
+        "ell": 0.019615242270663247,
+        "k_delta": 0.2,
+        "R_numeric": 0.008365885609875012,
+        "T_numeric": 0.9916341144013006,
+        "R_exact": 0.008365885611311992,
+        "flux_error": 1.1175504965876826e-11,
+        "field": "D"
+      },
+      {
+        "ell": 0.019615242270663247,
+        "k_delta": 1.0,
+        "R_numeric": 2.8435167348291296e-05,
+        "T_numeric": 0.9999715649039933,
+        "R_exact": 2.8435167362269955e-05,
+        "flux_error": 7.134159929478301e-11,
+        "field": "D"
+      }
+    ],
+    "eigenvalue_refinement": [
+      {
+        "du": 0.04,
+        "X_eigenvalues_unshifted": [
+          -1.0000622372926022,
+          0.01095109495073409
+        ],
+        "phi_eigenvalues_unshifted": [
+          -4.000304871983159,
+          -1.0005909045511177
+        ]
+      },
+      {
+        "du": 0.02,
+        "X_eigenvalues_unshifted": [
+          -1.000015556497564,
+          0.010958466092107887
+        ],
+        "phi_eigenvalues_unshifted": [
+          -4.000076197352504,
+          -1.0001476457979868
+        ]
+      }
+    ],
+    "interpretation": "At the exact tree benchmark, phi/X linear continuum scattering is reflectionless but X has a localized bound mode. This supplies a check for wall-scattering and charge-storage calculations, not a capture rate or a proof of zero friction in a curved interacting network. Running, finite amplitudes, charge and curvature can change it."
+  },
+  "checks": {
+    "charge_threshold_order": true,
+    "homogeneous_switch_equal_energy": true,
+    "eliminated_quartic_negative": true,
+    "eliminated_quartic_finite_difference": true,
+    "identical_one_site_sign_marginals": true,
+    "different_interface_statistics": true,
+    "emission_ODE_refinement_w0.0": true,
+    "emission_nonnegative_to_equality_w0.0": true,
+    "emission_ODE_refinement_w0.3333333333333333": true,
+    "emission_nonnegative_to_equality_w0.3333333333333333": true,
+    "zero_loss_RD_velocity_control": true,
+    "quoted_velocity_requires_loss_if_scaling_energy": true,
+    "phi_scattering_flux_k0.05": true,
+    "phi_reflection_formula_k0.05": true,
+    "phi_scattering_flux_k0.2": true,
+    "phi_reflection_formula_k0.2": true,
+    "phi_scattering_flux_k1.0": true,
+    "phi_reflection_formula_k1.0": true,
+    "X_scattering_flux_k0.05": true,
+    "X_reflection_formula_k0.05": true,
+    "X_scattering_flux_k0.2": true,
+    "X_reflection_formula_k0.2": true,
+    "X_scattering_flux_k1.0": true,
+    "X_reflection_formula_k1.0": true,
+    "D_scattering_flux_k0.05": true,
+    "D_reflection_formula_k0.05": true,
+    "D_scattering_flux_k0.2": true,
+    "D_reflection_formula_k0.2": true,
+    "D_scattering_flux_k1.0": true,
+    "D_reflection_formula_k1.0": true,
+    "X_bound_eigenvalue_converges_to_minus1": true,
+    "phi_bound_eigenvalues_converge": true,
+    "X_wall_mode_below_bulk_threshold": true
+  },
+  "all_checks_pass": true,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "source_sha256": "25fc7748efb9a9f9ed3fa58176757a2799f0cd3f4d3435a984067ca3abfded6b"
+}

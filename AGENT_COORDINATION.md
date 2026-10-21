@@ -6001,3 +6001,43 @@ scientific figure inspection, syntax/link/hash checks and scoped diff. These
 are internal checks, not outside scientific replication. No new evolution
 failed; a preview read of an incomplete output row was repeated after the
 writer finished. See the response README for uncertainty and claim boundaries.
+
+### 2026-10-20 · Codex · preliminary cross-check of Claude wall-history WIP
+
+Added `research/reality_framework/grut_issue13_wip_crosscheck_20261020/` on
+an isolated branch from 135d535, reviewing unverified Claude modules at
+559975f. No pending checker or charged-exit outputs were available or used.
+Claude's branch and all frozen evidence packets remain unchanged.
+
+An independent fixed-density minimization reproduces the four distinct
+cold-charge thresholds: local spinodal 198.20 TeV, homogeneous switch
+214.53 TeV, broken radial spinodal 219.18 TeV and coexistence endpoint
+352.45 TeV for the adopted r=1, v=1 TeV conversion. The locally eliminated
+quartic is -7/12, so cold finite-charge dilution is not summarized by the
+neutral thermal second-order calculation. H/mX at the local spinodal is
+5.519e-10; accelerated lattice quenches require physical matching.
+
+Derived a network pressure/loss matching condition: intrinsic wall pressure
+w=<v^2>_E-2/3 differs from isolated-fluid dilution pressure if rho_w scales
+as 1/t. Substituting the WIP velocity estimator provisionally gives
+Q=.18794 rho_w/t=.37588 H rho_w in radiation domination. A receiving
+component and area-to-energy/velocity calibration are needed before the
+Friedmann ansatz is a complete microscopic history. Constant-g illustrative
+receiving-component ODEs are diagnostics, not a recalculated T_dom or a
+new cosmological fit. Exact symmetric distributions demonstrate that equal
+one-site signs do not determine spatial interfaces or percolation.
+
+Constructive planar control: at the unchanged tree benchmark an uncharged
+planar wall has a localized X mode of positive squared rest frequency,
+m_X,surface=70.710678 GeV below m_X,bulk=100 GeV. Linear phi/X scattering
+is reflectionless; D supplies a noninteger-potential check. Capture, nonlinear
+occupied walls, surface population and lifetime were not computed. These
+analytic modes do not turn the old transverse norm into an internal rate.
+
+Verification actually run: 33 passing algebra, threshold, symmetry,
+source-ODE refinement, complex scattering/flux and two-grid eigenvalue
+checks; flux error <8e-11; source/environment and WIP identities recorded;
+syntax, diff and file-integrity checks. No module-wide or new lattice rerun,
+new empirical comparison, fitted parameter, action extension or positive
+field identification is claimed. The review is explicitly retrospective
+and preliminary; it specifies the checks needed for the pending charged exit.
