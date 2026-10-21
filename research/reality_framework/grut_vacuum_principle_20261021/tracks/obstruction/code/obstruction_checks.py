@@ -115,7 +115,7 @@ record("A12 exp(-K_A) has unit trace (no additive freedom left)", abs(np.trace(s
 # Writing rho_A = exp(-K)/Z leaves K defined up to K -> K + k; the normalized state is unchanged
 k_shift = 3.3
 record("A13 exp(-(K+k))/Tr exp(-(K+k)) = rho_A",
-       np.max(np.abs(sla.expm(-(KA + k_shift)) / np.trace(sla.expm(-(KA + k_shift))) - rA)), 1e-12)
+       np.max(np.abs(sla.expm(-(KA + k_shift * np.eye(dA))) / np.trace(sla.expm(-(KA + k_shift * np.eye(dA)))) - rA)), 1e-12)
 
 # Sigma = Delta S_A + beta Delta E_B = I(A:B) + D(rho_B || gamma_B) for a product Gibbs preparation
 rhoA0 = np.array([[0.8, 0.2], [0.2, 0.2]], dtype=complex)
@@ -337,6 +337,19 @@ R["D2_threshold_ratios"] = thr
 V4 = H0 ** -4
 R["D3_everpresent_estimate_over_rhoL"] = (Mpl_red ** 2 / math.sqrt(V4)) / rhoL
 
+# Banks-Fischler / Bousso N-bound reading: ln dim H = S_dS = 8 pi^2 M^2 / H_L^2 = 24 pi^2 M^4 / rho_L (reduced M)
+R["D4_lnd_required_if_SdS_equals_ln_dim"] = 24 * math.pi ** 2 * Mpl_red ** 4 / rhoL
+# Sign check of the action shift: S_m -> S_m - C int sqrt(-g)  =>  T_mu nu -> T_mu nu - C g_mu nu  (signature -+++)
+gs = sp.symbols("q0:4", real=True)
+gmat = sp.diag(-sp.exp(gs[0]), sp.exp(gs[1]), sp.exp(gs[2]), sp.exp(gs[3]))
+sqrtg = sp.sqrt(-gmat.det())
+ginv_m = gmat.inv()
+# T_{mu nu} = -2/sqrt(-g) dS/dg^{mu nu}; use dS/dg^{mu nu} = -g_{mu a} g_{nu b} dS/dg_{ab}
+dS_dglow = [sp.diff(-Cs * sqrtg, gs[i]) / sp.diff(gmat[i, i], gs[i]) for i in range(4)]
+T_shift = [sp.simplify(-2 / sqrtg * (-gmat[i, i] ** 2 * dS_dglow[i])) for i in range(4)]
+ok_sign = all(sp.simplify(T_shift[i] - (-Cs * gmat[i, i])) == 0 for i in range(4))
+checks.append({"name": "D5 S_m - C int sqrt(-g) gives Delta T_mu nu = -C g_mu nu (diagonal metric, -+++)",
+               "pass": bool(ok_sign), "values": [str(x) for x in T_shift]})
 R["checks"] = checks
 R["n_checks"] = len(checks)
 R["n_pass"] = sum(1 for ch in checks if ch["pass"])
@@ -347,5 +360,5 @@ for ch in checks:
 print(f"{R['n_pass']}/{R['n_checks']} pass")
 print(json.dumps({k: R[k] for k in ["D1_scales", "D2_threshold_ratios", "D3_everpresent_estimate_over_rhoL",
                                     "C7_WdW_levels_Er_vs_lam_tilde(lam<0 is Lambda<0)", "C8_dS_box_dependence",
-                                    "A21_constraint_dims", "A20_piston", "C3_constraint_solved_for_rho_Lambda",
+                                    "A21_constraint_dims", "A20_piston", "D4_lnd_required_if_SdS_equals_ln_dim", "C3_constraint_solved_for_rho_Lambda",
                                     "C4_HT_equations"]}, indent=1, default=str))

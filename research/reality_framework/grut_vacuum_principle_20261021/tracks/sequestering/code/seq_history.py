@@ -248,6 +248,30 @@ def solve_ok(s, rc=RHO_CUT_PLANCK, lo=-0.95, hi=0.0):
     return root, list(zip([float(g) for g in grid], [float(v) for v in vals]))
 
 
+def part_c(I4_total, label):
+    """Phase-transition weight in the global version (KP 1406.0711 eqs. 49-52) [E inputs].
+
+    After a sudden transition at t*, <V_after - V> = -DeltaV * int_0^t* a^3 dt / int a^3 dt.
+    Radiation era, g_* changes ignored except in a* (order-of-magnitude only).
+    """
+    T0_eV = 2.348e-4
+    gs0 = 3.91
+    rhoDE0_eV4 = 3 * (1 - OM - OR) * (M_PL_RED_EV * H0_EV) ** 2
+    out = {}
+    for name, Tstar_eV, gs, dV_eV4 in [
+        ("electroweak", 160e9, 106.75, (125.1e9) ** 2 * (246.2e9) ** 2 / 8.0),
+        ("QCD", 0.15e9, 61.75, (0.2e9) ** 4),
+    ]:
+        a_s = T0_eV / Tstar_eV * (gs0 / gs) ** (1.0 / 3.0)
+        t_s = a_s**2 / (2 * math.sqrt(OR))
+        w = a_s**3 * t_s / 2.5 / I4_total
+        out[name] = {"a_star": a_s, "DeltaV_over_rhoDE0": dV_eV4 / rhoDE0_eV4,
+                     "volume_weight": w,
+                     "residual_shift_over_rhoDE0": -dV_eV4 / rhoDE0_eV4 * w}
+    out["history_used"] = label
+    return out
+
+
 if __name__ == "__main__":
     res = {"inputs": {"h": H_LITTLE, "Omega_m": OM, "Omega_r": OR,
                       "rho_cut_planck_units_M2H0^2": RHO_CUT_PLANCK,
@@ -270,6 +294,27 @@ if __name__ == "__main__":
         roots[str(s)] = {"Omega_k_root_Planck_cut": root, "scan": scan}
         print("s", s, "Omega_k root (<R>=0, Planck cut):", root, flush=True)
     res["partB_Ok_roots"] = roots
+    for row in rows:
+        if row["s"] == 1.0 and row["Omega_k"] == 0.0:
+            I4 = row["cuts"][f"{RHO_CUT_PLANCK:.3e}"]["four_volume_per_comoving_vol"]
+            res["partC_phase_transitions"] = part_c(I4, "s=1, Omega_k=0, Planck cut")
+            print("partC", res["partC_phase_transitions"], flush=True)
+    # slope-scaling summary: Lambda_res is linear in s (late dynamics scale-free under t->t/sqrt(s))
+    summ = []
+    for row in rows:
+        if row["Omega_k"] != 0.0:
+            continue
+        cs = row["cuts"]
+        summ.append({"s": row["s"], "w_today": row["w_today"], "cpl_w0": row["cpl_w0_fit"],
+                     "cpl_wa": row["cpl_wa_fit"], "a_max": row["a_max"],
+                     "turn_from_now_Gyr": row["t_turn_from_now_Gyr"],
+                     "Lres_over_rhoDE0_planck": cs[f"{RHO_CUT_PLANCK:.3e}"]["Lambda_res_over_rho_DE0"],
+                     "Lres_over_rhoDE0_TeV": cs[f"{RHO_CUT_TEV:.3e}"]["Lambda_res_over_rho_DE0"],
+                     "Lres_over_rhoDE0_notail": cs[f"{1e12:.3e}"]["Lambda_res_over_rho_DE0"],
+                     "Lres_over_3H_turn^2_planck": cs[f"{RHO_CUT_PLANCK:.3e}"]["Lambda_res_over_rho_DE0"]
+                     * 3 * (1 - OM - OR) / (3.0 / row["t_turn_over_tH"] ** 2),
+                     "R_avg_over_H0sq_planck": cs[f"{RHO_CUT_PLANCK:.3e}"]["R_avg_over_H0sq"]})
+    res["summary_flat"] = summ
     path = sys.argv[1] if len(sys.argv) > 1 else "seq_history_results.json"
     with open(path, "w") as fh:
         json.dump(res, fh, indent=1, default=float)

@@ -1,0 +1,759 @@
+{
+ "A3_note": "In the trace-free theory the gravitating constant is whatever the initial slice says: any value is a solution. Fixing it from (H0, rho_m0) is a measurement, not a prediction.",
+ "B1_HT_equations": {
+  "dL/dT": "-Derivative(Lam(t), t)",
+  "dL/dLambda": "-N(t)*a(t)**3 + Derivative(T(t), t)",
+  "dL/dN": "3*M**2*k*a(t) + 3*M**2*a(t)*Derivative(a(t), t)**2/N(t)**2 - rho_m0 - rho_r0/a(t) - rho_vac*a(t)**3 - Lam(t)*a(t)**3"
+ },
+ "B3_lemma": {
+  "sigma_L": 1.3,
+  "sigma_T": 0.8696717737647831,
+  "product": 1.130573305894218,
+  "product_min_uncertainty": 0.5000000000001137,
+  "shift_c": 7.5,
+  "statement": "A principle built only from the kinematic closure structure of quantum unimodular gravity (Hilbert space L^2(dLambda), the HT inner product, unitarity in unimodular time, normalizability, uncertainty relations, entropies) is invariant under Lambda -> Lambda + c and cannot select <Lambda>. It can select translation-invariant features (spread, shape). Fixing the mean needs a Lambda-dependent weight from the gravitational dynamics."
+ },
+ "B5_alpha_red_of_discreteness_length": {
+  "l = l_r (reduced Planck length)": 0.5,
+  "l = l_P = l_r/sqrt(8 pi)": 12.566370614359172,
+  "Sorkin 2007 ansatz Lambda = (1/l^2)/sqrt(V), l^2 ~ 3 kappa (his text): alpha_red": 0.3333333333333333
+ },
+ "C2_S_onshell_zero_gives_rho_L": {
+  "dust, L_m = p = 0": "-rho/2",
+  "dust, L_m = -rho": "rho/2",
+  "radiation, L_m = p = rho/3": "-rho/3",
+  "radiation, L_m = -rho": "rho"
+ },
+ "C3_explicit_dS_dLambda": "dS/d(rho_L) at fixed history = -V4 != 0: no stationary point in rho_L at finite V4; the rho_L integral with flat measure instead imposes delta(V4 - V_fixed)",
+ "D0_inputs": {
+  "h": 0.6736,
+  "Omega_m": 0.3153,
+  "Omega_r": 9.219771279994473e-05,
+  "Omega_L": 0.6846078022872001,
+  "H0_GeV": 1.436869415091482e-42,
+  "status": "retrospective: Planck 2018 base LCDM; massless-neutrino radiation approximation"
+ },
+ "D1_H4V": {
+  "radiation": 0.014959965017094254,
+  "matter": 0.0338488097356476,
+  "sigma_Omega_per_alpha_red_radiation": 2.7252946038220864,
+  "sigma_Omega_per_alpha_red_matter": 1.8117866047827877
+ },
+ "D2_epochs_LCDM": {
+  "BBN (a = 1e-9, T ~ 0.2 MeV)": {
+   "a": 9.99988487140806e-10,
+   "H4V": 0.014959993463486214,
+   "sigma_Omega_Lambda_per_alpha_red": 2.725292012750254,
+   "H0^4 V": 1.7597385115123107e-66,
+   "t*H0": 5.207142184169369e-17
+  },
+  "matter-radiation equality": {
+   "a": 0.00029240177187505044,
+   "H4V": 0.02062638416501908,
+   "sigma_Omega_Lambda_per_alpha_red": 2.320957533122519,
+   "H0^4 V": 3.241746066450029e-23,
+   "t*H0": 3.4773711232074e-06
+  },
+  "recombination z = 1089.8": {
+   "a": 0.0009167375064737729,
+   "H4V": 0.025658566458761935,
+   "sigma_Omega_Lambda_per_alpha_red": 2.080954339160361,
+   "H0^4 V": 8.806107111565499e-20,
+   "t*H0": 2.5576111961294396e-05
+  },
+  "z = 2": {
+   "a": 0.33333429636765455,
+   "H4V": 0.03717028149857881,
+   "sigma_Omega_Lambda_per_alpha_red": 1.7289435756018174,
+   "H0^4 V": 0.00043867071735475855,
+   "t*H0": 0.2252490090444126
+  },
+  "z = 1": {
+   "a": 0.49999423857843645,
+   "H4V": 0.045225522577800534,
+   "sigma_Omega_Lambda_per_alpha_red": 1.5674256460817888,
+   "H0^4 V": 0.00439299282640207,
+   "t*H0": 0.4024301479211295
+  },
+  "z = 0.5": {
+   "a": 0.6666762747414418,
+   "H4V": 0.06091831545374546,
+   "sigma_Omega_Lambda_per_alpha_red": 1.3505317622949329,
+   "H0^4 V": 0.019910667616121678,
+   "t*H0": 0.5912826219701737
+  },
+  "today z = 0": {
+   "a": 1.0,
+   "H4V": 0.12287231389610588,
+   "sigma_Omega_Lambda_per_alpha_red": 0.9509369587541914,
+   "H0^4 V": 0.12287231389610588,
+   "t*H0": 0.9503480798490566
+  }
+ },
+ "D2_today": {
+  "H0^4 V_cone": 0.12287231389610588,
+  "t0 H0": 0.9503480798490566,
+  "t0_Gyr": 13.795174589751797,
+  "tau0 H0 (comoving particle horizon, units c/H0)": 3.17874149516483
+ },
+ "D3_magnitudes": {
+  "rho_L_obs / M^4 (reduced, 8piG=1)": 7.151543244913474e-121,
+  "rho_L_obs / M_P^4 (G=1)": 1.1321919163187476e-123,
+  "Lambda l_P^2 (G=1 curvature)": 2.845508645408582e-122,
+  "(H0/M)^2": 3.4820633658283117e-121,
+  "(t_P/t0)^2 (Barrow's estimate, t_P = sqrt(G))": 1.5340213612855153e-122,
+  "V_cone in reduced units, V M^4": 1.0133995258601963e+240,
+  "V_cone in G=1 units, V/l_P^4": 6.4011855491146635e+242,
+  "(V M^4)^(-1/2)": 9.933668241870476e-121,
+  "(V/l_P^4)^(-1/2)": 3.9524810093216593e-122,
+  "alpha_red* = (rho_L/M^4) (V M^4)^(1/2)  [1-sigma coefficient, reduced convention]": 0.7199297450633264,
+  "alpha_G1* = (rho_L/M_P^4) (V/l_P^4)^(1/2)  [G=1 convention, Das et al. alpha]": 0.02864509440142911,
+  "N = V/l_P^4 (Sorkin's 'number of elements' if l = l_P)": 6.4011855491146635e+242
+ },
+ "D4_proxies": {
+  "past light cone (computed)": {
+   "H0^4 V": 0.12287231389610588,
+   "(V M^4)^(-1/2)": 9.933668241870476e-121,
+   "ratio rho_obs/(that)": 0.7199297450633264
+  },
+  "H0^-4": {
+   "H0^4 V": 1.0,
+   "(V M^4)^(-1/2)": 3.4820633658283125e-121,
+   "ratio rho_obs/(that)": 2.0538234068616
+  },
+  "t0^4": {
+   "H0^4 V": 0.8157006460817452,
+   "(V M^4)^(-1/2)": 3.8554161912515116e-121,
+   "ratio rho_obs/(that)": 1.8549341731617313
+  },
+  "(4pi/3) H0^-3 t0 (Hubble volume x age)": {
+   "H0^4 V": 3.9808087280092828,
+   "(V M^4)^(-1/2)": 1.7452233486676307e-121,
+   "ratio rho_obs/(that)": 4.097781095109249
+  },
+  "(4pi/3) tau0^3 t0 (particle-horizon volume x age, comoving=physical today)": {
+   "H0^4 V": 127.86066077904994,
+   "(V M^4)^(-1/2)": 3.07941483601964e-122,
+   "ratio rho_obs/(that)": 23.22370848273676
+  }
+ },
+ "D5_discreteness_length_for_1sigma": {
+  "l/l_r": 0.8333739931009863,
+  "l/l_P": 4.177917628898144
+ },
+ "B4_Baum_Hawking": {
+  "24 pi^2 M^4 / rho_L_obs (exponent = dS entropy)": 3.312159313231007e+122,
+  "ln[w(rho/2)/w(rho)]": 3.312159313231007e+122,
+  "note": "weight exp(+24 pi^2 M^4/rho_L) on rho_L>0 is maximal as rho_L -> 0+, not normalisable; it fixes the sign (+) and drives the scale to zero"
+ },
+ "E1_lag_correlation_sqrt(V1/V2)": {
+  "z=0.5 vs 0": 0.4025318937388181,
+  "z=1 vs 0": 0.18908929631900007,
+  "z=2 vs 0": 0.05975010159259269,
+  "rec vs 0": 8.466381543853165e-10,
+  "BBN vs 0": 3.7845744787202926e-33,
+  "per e-fold in a, matter era (analytic a^-3)": 0.049787068367863944,
+  "per e-fold in a, radiation era (analytic a^-4)": 0.01831563888873418
+ },
+ "E2_linear_gaussian_joint_max": {
+  "P_max": 5.0229485974610613e-05,
+  "alpha_red_at_max": 0.4172584123706022,
+  "P(today in [0.64,0.74])": 0.022284892060118522,
+  "P(|Omega_rec|<0.05)": 0.0459200605475647,
+  "P(|Omega_BBN|<0.07)": 0.04908465546294072,
+  "BBN-compatible alpha (2 sigma: 0.07/(2*sigma_BBN))": 0.01284266046950302,
+  "Omega_0 = 0.685 in units of sigma_Omega(today) at that alpha": 56.08979383207856,
+  "status": "optimistic: ignores termination, which removes all realizations at alpha_red >= 0.3 when started before BBN (section F)"
+ },
+ "F0_volume_convergence (V/V_ref - 1 by steps per e-fold)": {
+  "20": 0.023374123371730393,
+  "40": 0.005821981773723506,
+  "80": 0.0014534898086264736,
+  "160": 0.0003630866579882319
+ },
+ "F0_Hm0^4 V_today_Lambda_free": 0.03383468260864444,
+ "F_model1_MC": {
+  "settings": {
+   "a_start": 1e-10,
+   "steps_per_efold": 80,
+   "n_realizations": 20000,
+   "start": "stationary S_i ~ N(0, alpha^2 V_i)",
+   "Omega_m h^2": 0.143063263488,
+   "Omega_r h^2": 4.183350992480001e-05,
+   "H_m0 (rho_L = 0) km/s/Mpc": 37.82923432980435,
+   "selection (illustrative; cf. ZAS: Omega_de ~ 0.7 at z~0, ~0 at z~1000 at 5% level)": {
+    "rec_abs_lt": 0.05,
+    "today_window": [
+     0.64,
+     0.74
+    ],
+    "bbn_abs_lt": 0.07
+   },
+   "status": "computation of a published phenomenological model; all selections use already-exposed data (retrospective)"
+  },
+  "by_alpha_red": {
+   "0.02": {
+    "label": "alpha_red=0.02",
+    "fraction_terminated_H2<=0_before_today": 0.0,
+    "survivors": 20000,
+    "Omega_L_today_16/50/84pct(survivors)": [
+     -0.03628158962078343,
+     0.0005910064455191817,
+     0.035961395193718874
+    ],
+    "P(Omega_L_today>0 | survive)": 0.50685,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.77295,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.7998,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": [
+     37.16110846044904,
+     37.84041794791166,
+     38.52834360729886
+    ],
+    "corr(Omega_z1, Omega_0) empirical (survivors)": 0.1368057805082509,
+    "sqrt(V_z1/V_0) (linear prediction)": 0.12709143288795596,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.0007957747154594768
+   },
+   "0.05": {
+    "label": "alpha_red=0.05",
+    "fraction_terminated_H2<=0_before_today": 0.0,
+    "survivors": 20000,
+    "Omega_L_today_16/50/84pct(survivors)": [
+     -0.09106724627786507,
+     0.003255765534218681,
+     0.08907152893098516
+    ],
+    "P(Omega_L_today>0 | survive)": 0.51485,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.37055,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.3956,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": [
+     36.21610927928501,
+     37.890966669226984,
+     39.63559782957072
+    ],
+    "corr(Omega_z1, Omega_0) empirical (survivors)": 0.11202123135594362,
+    "sqrt(V_z1/V_0) (linear prediction)": 0.127296042163418,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.0019894367886486917
+   },
+   "0.1": {
+    "label": "alpha_red=0.1",
+    "fraction_terminated_H2<=0_before_today": 0.0021499999999999853,
+    "survivors": 19957,
+    "Omega_L_today_16/50/84pct(survivors)": [
+     -0.18239775624580312,
+     0.011131777975665495,
+     0.1706442747153876
+    ],
+    "P(Omega_L_today>0 | survive)": 0.5239765495816004,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.1879,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.2058,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": [
+     34.789305000150186,
+     38.041561990509486,
+     41.53910429669169
+    ],
+    "corr(Omega_z1, Omega_0) empirical (survivors)": 0.1113681885512394,
+    "sqrt(V_z1/V_0) (linear prediction)": 0.12804540586620447,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.0039788735772973835
+   },
+   "0.15": {
+    "label": "alpha_red=0.15",
+    "fraction_terminated_H2<=0_before_today": 0.34835000000000005,
+    "survivors": 13033,
+    "Omega_L_today_16/50/84pct(survivors)": [
+     -0.27702256992376495,
+     0.029560629044612166,
+     0.2499240016064354
+    ],
+    "P(Omega_L_today>0 | survive)": 0.5434665848231413,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.08625,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.1337,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": [
+     33.47559191154997,
+     38.40107192141375,
+     43.679224288684374
+    ],
+    "corr(Omega_z1, Omega_0) empirical (survivors)": 0.08715609057994715,
+    "sqrt(V_z1/V_0) (linear prediction)": 0.12903145527632354,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.005968310365946075
+   },
+   "0.2": {
+    "label": "alpha_red=0.2",
+    "fraction_terminated_H2<=0_before_today": 0.95425,
+    "survivors": 915,
+    "Omega_L_today_16/50/84pct(survivors)": [
+     -0.3835616633494536,
+     0.03482372116997853,
+     0.33730949059410825
+    ],
+    "P(Omega_L_today>0 | survive)": 0.5377049180327869,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0001,
+    "n_today_window": 2,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.00505,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.0691,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": [
+     32.160911426056366,
+     38.50562981866832,
+     46.469947144192766
+    ],
+    "corr(Omega_z1, Omega_0) empirical (survivors)": 0.10343864958008518,
+    "sqrt(V_z1/V_0) (linear prediction)": 0.1307726824605294,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.007957747154594767
+   },
+   "0.25": {
+    "label": "alpha_red=0.25",
+    "fraction_terminated_H2<=0_before_today": 0.9999,
+    "survivors": 2,
+    "Omega_L_today_16/50/84pct(survivors)": null,
+    "P(Omega_L_today>0 | survive)": 0.5,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.0,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.0226,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": null,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.009947183943243459
+   },
+   "0.3": {
+    "label": "alpha_red=0.3",
+    "fraction_terminated_H2<=0_before_today": 1.0,
+    "survivors": 0,
+    "Omega_L_today_16/50/84pct(survivors)": null,
+    "P(Omega_L_today>0 | survive)": null,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.0,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.0063,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": null,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.01193662073189215
+   },
+   "0.5": {
+    "label": "alpha_red=0.5",
+    "fraction_terminated_H2<=0_before_today": 1.0,
+    "survivors": 0,
+    "Omega_L_today_16/50/84pct(survivors)": null,
+    "P(Omega_L_today>0 | survive)": null,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.0,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 5e-05,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": null,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.019894367886486918
+   },
+   "0.72": {
+    "label": "alpha_red=0.72",
+    "fraction_terminated_H2<=0_before_today": 1.0,
+    "survivors": 0,
+    "Omega_L_today_16/50/84pct(survivors)": null,
+    "P(Omega_L_today>0 | survive)": null,
+    "P(Omega_L_today in [0.64,0.74]) (all realizations)": 0.0,
+    "n_today_window": 0,
+    "P(|Omega_L(rec)|<0.05) (all realizations)": 0.0,
+    "P(|Omega_L(BBN)|<0.07) (all realizations)": 0.0,
+    "n_joint(survive & today window & rec & BBN)": 0,
+    "H0_km/s/Mpc 16/50/84pct(survivors)": null,
+    "alpha_G1 (= alpha_red/8pi, Das et al. convention)": 0.02864788975654116
+   }
+  }
+ },
+ "F_small_alpha_check": {
+  "MC std Omega today (alpha_red 0.02)": 0.03633942724741529,
+  "linear prediction": 0.03624329612945845
+ },
+ "F_convergence_alpha0.15": {
+  "terminated_40/efold": 0.39675000000000005,
+  "terminated_80/efold": 0.35487500000000005,
+  "terminated_160/efold": 0.34750000000000003
+ },
+ "F_start_epoch_scan": {
+  "a_start=1e-10, alpha_red=0.15": {
+   "survive": 0.6458,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-10, alpha_red=0.2": {
+   "survive": 0.0496,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-10, alpha_red=0.25": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-10, alpha_red=0.3": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-10, alpha_red=0.5": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-10, alpha_red=0.72": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-06, alpha_red=0.15": {
+   "survive": 0.8716,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-06, alpha_red=0.2": {
+   "survive": 0.3358,
+   "P(today in [0.64,0.74])": 0.0012
+  },
+  "a_start=1e-06, alpha_red=0.25": {
+   "survive": 0.0352,
+   "P(today in [0.64,0.74])": 0.0012
+  },
+  "a_start=1e-06, alpha_red=0.3": {
+   "survive": 0.001,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-06, alpha_red=0.5": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=1e-06, alpha_red=0.72": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=0.0001, alpha_red=0.15": {
+   "survive": 0.9922,
+   "P(today in [0.64,0.74])": 0.0004
+  },
+  "a_start=0.0001, alpha_red=0.2": {
+   "survive": 0.8378,
+   "P(today in [0.64,0.74])": 0.0016
+  },
+  "a_start=0.0001, alpha_red=0.25": {
+   "survive": 0.4122,
+   "P(today in [0.64,0.74])": 0.0058
+  },
+  "a_start=0.0001, alpha_red=0.3": {
+   "survive": 0.111,
+   "P(today in [0.64,0.74])": 0.0036
+  },
+  "a_start=0.0001, alpha_red=0.5": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=0.0001, alpha_red=0.72": {
+   "survive": 0.0,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=0.001, alpha_red=0.15": {
+   "survive": 0.9994,
+   "P(today in [0.64,0.74])": 0.0006
+  },
+  "a_start=0.001, alpha_red=0.2": {
+   "survive": 0.9558,
+   "P(today in [0.64,0.74])": 0.0042
+  },
+  "a_start=0.001, alpha_red=0.25": {
+   "survive": 0.7384,
+   "P(today in [0.64,0.74])": 0.009
+  },
+  "a_start=0.001, alpha_red=0.3": {
+   "survive": 0.4044,
+   "P(today in [0.64,0.74])": 0.0158
+  },
+  "a_start=0.001, alpha_red=0.5": {
+   "survive": 0.0028,
+   "P(today in [0.64,0.74])": 0.0
+  },
+  "a_start=0.001, alpha_red=0.72": {
+   "survive": 0.0002,
+   "P(today in [0.64,0.74])": 0.0
+  }
+ },
+ "F_grid_dependence": {
+  "alpha_red=0.2": {
+   "survive_equal_steps_in_a(n=10^4, from a=1e-4)": 0.3484,
+   "survive_log_grid_80/efold(from a=1e-4)": 0.837
+  },
+  "alpha_red=0.25": {
+   "survive_equal_steps_in_a(n=10^4, from a=1e-4)": 0.1744,
+   "survive_log_grid_80/efold(from a=1e-4)": 0.3992
+  },
+  "alpha_red=0.3": {
+   "survive_equal_steps_in_a(n=10^4, from a=1e-4)": 0.0498,
+   "survive_log_grid_80/efold(from a=1e-4)": 0.099
+  }
+ },
+ "G_Barrow_type": {
+  "dT/T per unit dOmega (horizon patch, SW)": 0.25,
+  "dT/T bound used": 1e-05,
+  "dOmega_rec max": 4e-05,
+  "sigma_Omega_per_alpha at rec": 2.080954339160361,
+  "alpha_red max (independent horizon patches)": 1.9221949875238254e-05,
+  "alpha_red needed for 1 sigma today": 0.7199297450633264,
+  "ratio needed/allowed": 37453.52317200354,
+  "status": "estimate [E]; conditional on spatially independent Lambda in disjoint past cones, which Zwane-Afshordi-Sorkin dispute; no covariant inhomogeneous model exists"
+ },
+ "H_threshold_example": {
+  "electron m^4/(64 pi^2) / rho_L_obs": 4.2934329037044276e+30,
+  "spread delta_lambda": "independent of Lambda_tilde: at fixed V the factor e^{-i Lambda_tilde V} is a global phase (Das et al. 2023 eq. 2.14)"
+ },
+ "checks": [
+  {
+   "name": "A1_tracefree_part_blind_to_C_g",
+   "pass": true,
+   "note": "TF(T - C g) - TF(T) = 0 symbolically in C, random rational Lorentzian g"
+  },
+  {
+   "name": "A2a_TF_equation_independent_of_rho_vac",
+   "pass": true,
+   "note": "M^2 TF_00(R) - TF_00(T) has no rho_vac dependence"
+  },
+  {
+   "name": "A2b_Lambda_hat_conserved",
+   "pass": true,
+   "note": "d/dt[3M^2(H^2+k/a^2) - rho - rho_vac] = 0 using the TF equation and conservation"
+  },
+  {
+   "name": "A2c_rho_eff_equals_slice_data",
+   "pass": true,
+   "note": "rho_vac + Lambda_hat = 3M^2(H^2+k/a^2) - rho_nonvac: set by slice data, not by rho_vac"
+  },
+  {
+   "name": "A2d_rho_eff_equals_(M2R+tau)/4",
+   "pass": true,
+   "note": "FRW reduction of rho_eff = (M^2 R + tau)/4"
+  },
+  {
+   "name": "A3a_TF_history_independent_of_rho_vac",
+   "max_abs_deviation": 0.0,
+   "tol": 1e-12,
+   "pass": true,
+   "note": "max |a(t; rho_vac=0) - a(t; 1e6)|"
+  },
+  {
+   "name": "A3b_integration_constant_constant_and_equal_initial_slice",
+   "max_abs_deviation": 2.0118272825442318e-08,
+   "tol": 1e-07,
+   "pass": true,
+   "note": "3H^2 - rho_nonvac along the TF solution equals its initial-slice value 2.1"
+  },
+  {
+   "name": "B1a_Lambda_constant_and_dT_equals_4volume_rate",
+   "pass": true,
+   "note": "dLambda/dt = 0 and dT/dt = N a^3 (T counts 4-volume)"
+  },
+  {
+   "name": "B1b_vacuum_shift_is_boundary_term",
+   "pass": true,
+   "note": "L(rho_vac+c, Lambda-c) - L(rho_vac, Lambda) = -c dT/dt: action changes by -c * (4-volume)"
+  },
+  {
+   "name": "B1c_constraint_depends_only_on_Lambda_plus_rho_vac",
+   "pass": true,
+   "note": "Friedmann constraint unchanged under the compensated shift"
+  },
+  {
+   "name": "B2a_probabilities_in_unimodular_time_blind_to_c",
+   "max_abs_deviation": 4.996003610813204e-16,
+   "tol": 1e-12,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B2b_relative_phase_is_e^{icT}",
+   "max_abs_deviation": 1.1957467920563633e-15,
+   "tol": 1e-12,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3a_norm",
+   "max_abs_deviation": 1.1102230246251565e-16,
+   "tol": 1e-12,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3b_sigma_Lambda",
+   "max_abs_deviation": 0.0,
+   "tol": 1e-10,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3c_sigma_T",
+   "max_abs_deviation": 1.1102230246251565e-16,
+   "tol": 1e-08,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3d_entropy_of_|A|^2",
+   "max_abs_deviation": 0.0,
+   "tol": 1e-09,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3e_|psi(T)|^2_profile",
+   "max_abs_deviation": 2.0816681711721685e-17,
+   "tol": 1e-10,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3f_mean_moves_by_c",
+   "max_abs_deviation": 1.7763568394002505e-15,
+   "tol": 1e-10,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "B3g_unchirped_gaussian_saturates_sigL_sigT_half",
+   "max_abs_deviation": 1.1368683772161603e-13,
+   "tol": 1e-06,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "C1_onshell_density",
+   "pass": true,
+   "note": "M^2R/2 - rho_L + L_m = rho_L + L_m - T/2 on shell (trace equation M^2 R = 4 rho_L - T)"
+  },
+  {
+   "name": "C2_sign_depends_on_onshell_matter_Lagrangian",
+   "pass": true,
+   "note": "rho_L = -<rho>/2 (L=p) versus +<rho>/2 (L=-rho) for dust: the 'prediction' is not well defined"
+  },
+  {
+   "name": "D1a_H4V_radiation",
+   "max_abs_deviation": 3.469446951953614e-18,
+   "tol": 1e-12,
+   "pass": true,
+   "note": "4 pi / 840 = 0.0149600"
+  },
+  {
+   "name": "D1b_H4V_matter",
+   "max_abs_deviation": 0.0,
+   "tol": 1e-12,
+   "pass": true,
+   "note": "matter era 0.0338484"
+  },
+  {
+   "name": "D1c_radiation_equals_4pi_over_840",
+   "max_abs_deviation": 0.0,
+   "tol": 1e-15,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D2_V_moments_vs_direct_a=1e-09",
+   "max_abs_deviation": 2.6546747244893254e-08,
+   "tol": 0.0002,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D2_V_moments_vs_direct_a=0.0009168",
+   "max_abs_deviation": 1.6197163584141805e-05,
+   "tol": 0.0002,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D2_V_moments_vs_direct_a=0.5",
+   "max_abs_deviation": 1.1769064167665988e-08,
+   "tol": 0.0002,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D2_V_moments_vs_direct_a=1",
+   "max_abs_deviation": 4.7613912812494164e-11,
+   "tol": 0.0002,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D2_radiation_limit_H4V",
+   "max_abs_deviation": 1.90009966822835e-05,
+   "tol": 0.002,
+   "pass": true,
+   "note": "a = 1e-8, deep radiation era"
+  },
+  {
+   "name": "D3a_alpha_conventions_differ_by_8pi",
+   "max_abs_deviation": 3.552713678800501e-15,
+   "tol": 1e-09,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "D3b_alpha_red*_closed_form_3OmegaL_sqrt(H4V)",
+   "max_abs_deviation": 2.220446049250313e-16,
+   "tol": 1e-12,
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "E1a_matter_era_corr_power",
+   "max_abs_deviation": 0.19009095164792988,
+   "tol": 0.35,
+   "pass": true,
+   "note": "late LCDM is not pure matter; loose check of the a^3 law"
+  },
+  {
+   "name": "F0_model1_volume_integrator_vs_quadrature_80/efold",
+   "max_abs_deviation": 0.0014534898086264736,
+   "tol": 0.002,
+   "pass": true,
+   "note": "nested trapezoid V(a=1) against direct quadrature; error O(dx^2): 2.3%, 0.58%, 0.15%, 0.04%"
+  },
+  {
+   "name": "F1_small_alpha_std_matches_linear",
+   "max_abs_deviation": 0.002652383425984839,
+   "tol": 0.05,
+   "pass": true,
+   "note": "20000 realizations; statistical error ~0.5%; nonlinearity of Omega small at alpha 0.02"
+  },
+  {
+   "name": "F2_lag_correlation_matches_sqrt(V1/V2)",
+   "max_abs_deviation": 0.015274810807474379,
+   "tol": 0.03,
+   "pass": true,
+   "note": "random-walk prediction Corr(rho(a1), rho(a2)) = sqrt(V1/V2); 20000 samples, se ~0.007"
+  },
+  {
+   "name": "F3_survivor_bias_to_positive_Lambda",
+   "pass": true,
+   "note": "termination removes negative excursions; cf. Ahmed-Sorkin 2012: 50-60% positive"
+  },
+  {
+   "name": "F4_conv_termination_fraction_80_vs_160",
+   "max_abs_deviation": 0.00737500000000002,
+   "tol": 0.03,
+   "pass": true,
+   "note": "termination fraction stable to 3 points (different noise paths; se ~0.6 points)"
+  },
+  {
+   "name": "H1_prescription_i_shifts_by_threshold",
+   "pass": true,
+   "note": ""
+  },
+  {
+   "name": "H2_prescription_ii_stable_because_total_is_stated",
+   "pass": true,
+   "note": "stable only because the total mean is imposed: a value statement (obstruction scorecard R1)"
+  }
+ ],
+ "n_checks": 39,
+ "n_pass": 39
+}

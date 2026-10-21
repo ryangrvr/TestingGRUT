@@ -1,0 +1,500 @@
+{
+ "A_target": {
+  "inputs": {
+   "M_GeV": 2.435e+18,
+   "h": 0.674,
+   "Omega_DE": 0.685
+  },
+  "rho_DE0_GeV4": 2.5187942917501966e-47,
+  "rho_DE0_quarter_meV": 2.24025871304227,
+  "rho_DE0_over_M4": 7.164680662650657e-121,
+  "(H0/M)^2": 3.4864626095623636e-121,
+  "label": "retrospective inputs (Planck 2018-like); matches sequestering track 7.16e-121"
+ },
+ "B_well_tempered": {
+  "eq16_on_shell_solution_psi''": [
+   "3*kappa*y"
+  ],
+  "eq17_after_substituting_psi''=3 kappa psi'": "0",
+  "paper_eq28_rhs_for_F=-3k/(1-psi')": "3*kappa*y",
+  "statement": "On h = kappa both scalar and scale-factor equations reduce to psi'' = 3 kappa psi' for any rho_Lambda; rho_Lambda enters only the Hamiltonian constraint, which fixes psi. H_dS = kappa*M is a Lagrangian parameter (supplied).",
+  "psi_from_Hamiltonian_constraint": "(c1*(y - 1)/3 + kappa*mu*(ML2 - 3*kappa**2))/(c1*kappa)",
+  "d psi / d(M_Lambda^2)": "mu/c1"
+ },
+ "C_ADDG": {
+  "Mbar_for_E=(1TeV)^4_GeV": 4.851796929920942e+47,
+  "Mbar_for_E=M^4_GeV": 2.87673956518105e+78,
+  "paper_quotes": "M-bar ~ 1e48 GeV (TeV^4) and ~1e80 GeV (M_Pl^4) [Q, hep-th/0209227 p.6]",
+  "threshold_sensitivity_fixed_Mbar": [
+   {
+    "threshold_mass_GeV": 1000.0,
+    "delta_E_GeV4": 1583143494.4115279,
+    "rho_eff_over_rho_obs": 1.0015831434944118
+   },
+   {
+    "threshold_mass_GeV": 10000.0,
+    "delta_E_GeV4": 15831434944115.277,
+    "rho_eff_over_rho_obs": 16.83143494411528
+   },
+   {
+    "threshold_mass_GeV": 1e+16,
+    "delta_E_GeV4": 1.5831434944115277e+61,
+    "rho_eff_over_rho_obs": 1.5831434944115278e+49
+   }
+  ],
+  "rho_eff_before_over_obs": 1.0
+ },
+ "D_DHK": {
+  "residual_form": "rho_res ~ M^2 L^-2 (DHK sec. XI: 'leave a small effective cosmological term of order L^-2')",
+  "L_needed_GeV^-1": 4.8517969299209425e+41,
+  "L_needed_over_1/H0": 0.6975801064151558,
+  "note": "L is a supplied filter scale; order-one coefficient not computed in DHK"
+ },
+ "E_CKN": {
+  "UV_cutoff_for_L=1/H0_reduced_eV": 0.0018710923301643882,
+  "UV_cutoff_for_L=1/H0_nonreduced_eV": 0.004189432364904451,
+  "CKN_quote": "Lambda ~ 1e-2.5 eV for L ~ horizon [Q]",
+  "electron_loop_magnitude_over_rho_obs": 1.7142241239048937e+31,
+  "top_loop_magnitude_over_rho_obs": 6.678289228821953e+53,
+  "note": "Known thresholds are below/above this UV cutoff; a holographic IR cutoff does not subtract the m^4 log terms of particles that exist; CKN state it does not predict the value."
+ },
+ "E_Li": {
+  "w0(Omega=0.73,c=1)": -0.9029335830211687,
+  "dw/dz(Omega=0.73,c=1)": 0.1041480168539289,
+  "paper": "w = -0.903 + 0.104 z [Q, hep-th/0403127 eq. 29]",
+  "integration_constant_family_c=1": [
+   {
+    "Omega_de0": 0.5,
+    "Omega_de(z=1)": 0.18637905360363635,
+    "Omega_de(z=3)": 0.06698729810934569
+   },
+   {
+    "Omega_de0": 0.685,
+    "Omega_de(z=1)": 0.29513971440134096,
+    "Omega_de(z=3)": 0.10425604093480913
+   },
+   {
+    "Omega_de0": 0.9,
+    "Omega_de(z=1)": 0.5740936593040945,
+    "Omega_de(z=3)": 0.2239011069871573
+   }
+  ]
+ },
+ "E_DESI_BAO_retrospective": {
+  "data": "DESI DR2 Table 4 (arXiv:2503.14738), 13 numbers, per-bin DM-DH correlations; H0*rd profiled analytically; flat; BAO only",
+  "LCDM_best_Om": 0.29702684165364884,
+  "LCDM_Om_1sigma": [
+   0.28864115196436957,
+   0.3056868499667073
+  ],
+  "LCDM_chi2": 10.551496469122691,
+  "LCDM_no_radiation_best_Om": 0.2973453199548936,
+  "LCDM_no_radiation_chi2": 10.538631046921733,
+  "DESI_Table5_LCDM_DESI_only": "Omega_m = 0.2975 +/- 0.0086 [Q]",
+  "HDE_c1_best_Om": 0.2716846265761541,
+  "HDE_c1_chi2": 10.604766120252384,
+  "HDE_free_c_best": {
+   "c": 0.95,
+   "Om_best": 0.2721491224907172,
+   "chi2": 10.3931050967372
+  },
+  "HDE_free_c_profile": [
+   {
+    "c": 0.4,
+    "Om_best": 0.24691175490431902,
+    "chi2": 47.86576129128584
+   },
+   {
+    "c": 0.45,
+    "Om_best": 0.2545590996179422,
+    "chi2": 37.595555008644965
+   },
+   {
+    "c": 0.5,
+    "Om_best": 0.2601616361246408,
+    "chi2": 29.803076355236158
+   },
+   {
+    "c": 0.55,
+    "Om_best": 0.2642666072878971,
+    "chi2": 23.927285803550745
+   },
+   {
+    "c": 0.6,
+    "Om_best": 0.26724961687170823,
+    "chi2": 19.538236096605143
+   },
+   {
+    "c": 0.65,
+    "Om_best": 0.26937664913864157,
+    "chi2": 16.306448528234505
+   },
+   {
+    "c": 0.7,
+    "Om_best": 0.2708401069424952,
+    "chi2": 13.978706582989073
+   },
+   {
+    "c": 0.75,
+    "Om_best": 0.27178232367824146,
+    "chi2": 12.359566990940918
+   },
+   {
+    "c": 0.8,
+    "Om_best": 0.27231066521776026,
+    "chi2": 11.29743315369211
+   },
+   {
+    "c": 0.85,
+    "Om_best": 0.2725074812016723,
+    "chi2": 10.674112429991855
+   },
+   {
+    "c": 0.9,
+    "Om_best": 0.2724368123840886,
+    "chi2": 10.396983478220859
+   },
+   {
+    "c": 0.95,
+    "Om_best": 0.2721491224907172,
+    "chi2": 10.3931050967372
+   },
+   {
+    "c": 1.0,
+    "Om_best": 0.2716846265761541,
+    "chi2": 10.604766120252384
+   },
+   {
+    "c": 1.05,
+    "Om_best": 0.27107568566271883,
+    "chi2": 10.98610692390549
+   },
+   {
+    "c": 1.1,
+    "Om_best": 0.27034855077361775,
+    "chi2": 11.500540968210707
+   },
+   {
+    "c": 1.15,
+    "Om_best": 0.26952474300124113,
+    "chi2": 12.11877523457551
+   },
+   {
+    "c": 1.2,
+    "Om_best": 0.2686219636036294,
+    "chi2": 12.81728265514144
+   },
+   {
+    "c": 1.25,
+    "Om_best": 0.26765487558341305,
+    "chi2": 13.577116219787516
+   },
+   {
+    "c": 1.3,
+    "Om_best": 0.266635689117248,
+    "chi2": 14.382983592877403
+   },
+   {
+    "c": 1.35,
+    "Om_best": 0.26557461549741923,
+    "chi2": 15.222521207936737
+   },
+   {
+    "c": 1.4,
+    "Om_best": 0.2644801150275919,
+    "chi2": 16.08572184379188
+   },
+   {
+    "c": 1.45,
+    "Om_best": 0.2633597581071361,
+    "chi2": 16.964481234942163
+   },
+   {
+    "c": 1.5,
+    "Om_best": 0.26221930638160207,
+    "chi2": 17.852237002188545
+   },
+   {
+    "c": 1.55,
+    "Om_best": 0.26106404532646926,
+    "chi2": 18.7436802874997
+   },
+   {
+    "c": 1.6,
+    "Om_best": 0.2598983637284913,
+    "chi2": 19.634523912202425
+   },
+   {
+    "c": 1.65,
+    "Om_best": 0.2587259910809186,
+    "chi2": 20.521315620981703
+   },
+   {
+    "c": 1.7,
+    "Om_best": 0.2575501000867221,
+    "chi2": 21.401287227140553
+   },
+   {
+    "c": 1.75,
+    "Om_best": 0.25637305788140224,
+    "chi2": 22.27223165614033
+   },
+   {
+    "c": 1.8,
+    "Om_best": 0.2551978392498908,
+    "chi2": 23.132403332085037
+   },
+   {
+    "c": 1.85,
+    "Om_best": 0.2540260654561393,
+    "chi2": 23.980436246394323
+   },
+   {
+    "c": 1.9,
+    "Om_best": 0.25285940147975255,
+    "chi2": 24.815276998616632
+   },
+   {
+    "c": 1.95,
+    "Om_best": 0.2516992622208443,
+    "chi2": 25.636130035594874
+   },
+   {
+    "c": 2.0,
+    "Om_best": 0.2505468444614237,
+    "chi2": 26.442412164738833
+   }
+  ],
+  "Hubble_cutoff_EdS_shape_chi2": 1455.9753635205896,
+  "dof_note": "13 data; LCDM and HDE(c=1) fit 2 params (Om, H0 rd); HDE free c fits 3",
+  "CPL_projection_of_HDE": [
+   {
+    "Om0": 0.3,
+    "c": 1.0,
+    "w0_fit": -0.9170562659372858,
+    "wa_fit": 0.43965171471482617,
+    "w(z=0)": -0.8911066843560504,
+    "w(z=2.33)": -0.5850185140883701
+   },
+   {
+    "Om0": 0.2716846265761541,
+    "c": 1.0,
+    "w0_fit": -0.9305826251433402,
+    "wa_fit": 0.4402236940517804,
+    "w(z=0)": -0.9022759679826531,
+    "w(z=2.33)": -0.5949990428315046
+   },
+   {
+    "Om0": 0.2721491224907172,
+    "c": 0.95,
+    "w0_fit": -0.9619336246030651,
+    "wa_fit": 0.47524506033908287,
+    "w(z=0)": -0.9320293113720068,
+    "w(z=2.33)": -0.6015546425940603
+   },
+   {
+    "Om0": 0.3,
+    "c": 0.6,
+    "w0_fit": -1.299560727825918,
+    "wa_fit": 0.916614411551113,
+    "w(z=0)": -1.2629555850378618,
+    "w(z=2.33)": -0.6457326580979166
+   }
+  ],
+  "DESI_DR2_w0wa_quadrant": "DESI+CMB+{Pantheon+,Union3,DESY5}: w0 = -0.838, -0.667, -0.752; wa = -0.62, -1.09, -0.86 [Q, Table 5]"
+ },
+ "F_Euclidean": {
+  "minus_I_E_at_rho_obs": 3.306086018054454e+122,
+  "ln[P(rho_obs/2)/P(rho_obs)]_Hawking_weight": 3.306086018054454e+122,
+  "Coleman_weight": "exp(exp(+24 pi^2 M^4/rho)) -> peaked at rho -> 0+ more strongly",
+  "sign_flipped_weight_(tunnelling/Duff-sign)": "exp(-24 pi^2 M^4/rho) -> favours largest rho",
+  "formula_check": "I_E = -(1/16 pi G) int (R - 2 Lambda) = -3 pi/(G Lambda) = -24 pi^2 M^4/rho"
+ },
+ "G_anthropic": {
+  "rho_V_max_over_rho_m_delta^3": "500/729",
+  "z_c": 4.0,
+  "rho_V_max_over_rho_m0_EdS": 410.8896481481481,
+  "rho_V_max_over_rho_obs": 188.94925425790754,
+  "BP_window_quote": "-1e-120 < lambda < 1e-118 M^4, upper bound ~100x observed [Q, hep-th/0004134 eq. 3.13]",
+  "flat_prior_P(rho<=rho_obs | 0<rho<rho_max)": 0.005292426286240026,
+  "label": "[E] order of magnitude; MSW 1998 compute a collapsed-fraction-weighted distribution"
+ },
+ "G_BBN_fraction": {
+  "rows": [
+   {
+    "T_MeV": 1.0,
+    "rho_Lambda_over_rho_rad": 7.122061925349593e-36
+   },
+   {
+    "T_MeV": 0.1,
+    "rho_Lambda_over_rho_rad": 7.122061925349593e-32
+   }
+  ],
+  "BP_quote": "'only a fraction 1e-30' [Q, hep-th/0004134 sec. 4] (loose; computed value is smaller)"
+ },
+ "G_BP": {
+  "J": 100,
+  "log10_q_needed_for_1e-120": -1.4287511145023026,
+  "BP_quote": "q ~ 1e-1.6 (J = 100, lambda_bare ~ 1, D small) [Q]"
+ },
+ "H_Barrow_Shaw": {
+  "paper_prediction": "Omega_k0 = -0.0055 (2 zeta_b), zeta_b = 1/2 chiral bag [Q, 1007.3086]",
+  "reproduced_with_paper_inputs": -0.005543856846123623,
+  "updated_Planck2018_like_inputs(OL=0.6847,Ob=0.0493,h=0.6736)": -0.006374009767285587,
+  "updated_DESI+CMB_LCDM_inputs(Om=0.3027,h=0.6817)": -0.006192860116481329,
+  "DESI_DR2+CMB_Omega_K": [
+   0.0023,
+   0.0011
+  ],
+  "tension_sigma_paper_value": 7.09090909090909,
+  "tension_sigma_updated": 7.720781924073935,
+  "sign_only_tension_sigma(zeta_b->0+)": 2.090909090909091,
+  "label": "retrospective; prediction published 2010-2011 before Planck 2013 and DESI 2025"
+ },
+ "H_everpresent": {
+  "rho_estimate_over_rho_obs": 0.48661800486618023,
+  "note": "[E] Lambda ~ V^(-1/2) with V ~ H0^-4 gives rho ~ M_P^2 H0^2 up to O(1-10) factors; mean of Lambda assumed zero; sign fluctuates"
+ },
+ "checks": [
+  {
+   "name": "A1_target_matches_sibling_track",
+   "pass": true,
+   "detail": "7.1647e-121"
+  },
+  {
+   "name": "B1_eq16_gives_psi''=3k psi'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "B2_eq17_identically_satisfied_on_shell",
+   "pass": true,
+   "detail": "0"
+  },
+  {
+   "name": "B3_matches_paper_eq28",
+   "pass": true,
+   "detail": "3*kappa*y"
+  },
+  {
+   "name": "B4_vacuum_shift_absorbed_by_psi_not_H",
+   "pass": true,
+   "detail": "mu/c1"
+  },
+  {
+   "name": "C1_reproduces_ADDG_1e48",
+   "pass": true,
+   "detail": "4.852e+47"
+  },
+  {
+   "name": "C2_reproduces_ADDG_order_1e78-80",
+   "pass": true,
+   "detail": "2.877e+78"
+  },
+  {
+   "name": "C3_residual_scales_with_E",
+   "pass": true,
+   "detail": "adding a 1e16 GeV threshold multiplies the residual; Mbar would need retuning"
+  },
+  {
+   "name": "D1_L_is_Hubble_scale",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1_CKN_cutoff_meV",
+   "pass": true,
+   "detail": "1.871e-03 eV"
+  },
+  {
+   "name": "E2_electron_threshold_exceeds_target",
+   "pass": true,
+   "detail": "1.71e+31"
+  },
+  {
+   "name": "E3_Hsu_ratio_constant_so_w0",
+   "pass": true,
+   "detail": "-c**2/(c**2 - 1)"
+  },
+  {
+   "name": "E4_reproduces_Li_eq29",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E5_Omega_de0_is_free_initial_condition",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E6_LCDM_BAO_fit_reproduces_DESI_Om",
+   "pass": true,
+   "detail": "Om = 0.2970 [0.2886,0.3057]"
+  },
+  {
+   "name": "E7_Hubble_cutoff_excluded_by_BAO_shape",
+   "pass": true,
+   "detail": "dchi2 = 1445.4"
+  },
+  {
+   "name": "E8_HDE_c1_CPL_wa_positive",
+   "pass": true,
+   "detail": "wa = 0.440"
+  },
+  {
+   "name": "F1_IE_equals_-3pi/(G Lambda)",
+   "pass": true,
+   "detail": "-3*pi/(G*Lambda)"
+  },
+  {
+   "name": "F2_matches_obstruction_track_lnd_3.3e122",
+   "pass": true,
+   "detail": "3.306e+122"
+  },
+  {
+   "name": "G1_Weinberg_500_over_729",
+   "pass": true,
+   "detail": "500/729"
+  },
+  {
+   "name": "G2_window_order_100",
+   "pass": true,
+   "detail": "189"
+  },
+  {
+   "name": "G4_BBN_fraction_below_1e-30",
+   "pass": true,
+   "detail": "7.12e-36"
+  },
+  {
+   "name": "G3_reproduces_BP_charge_scale",
+   "pass": true,
+   "detail": "log10 q = -1.43"
+  },
+  {
+   "name": "H1_reproduces_BS_-0.0055",
+   "pass": true,
+   "detail": "-0.00554"
+  },
+  {
+   "name": "H2_updated_prediction_negative",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "H3_everpresent_order_H0^2",
+   "pass": true,
+   "detail": "0.49"
+  }
+ ],
+ "n_checks": 26,
+ "all_checks_pass": true,
+ "versions": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "sympy": "1.14.0",
+  "scipy": "1.18.1"
+ },
+ "elapsed_s": 5.242752552032471,
+ "scope": "Reproductions of published formulas and numbers, symbolic identities, order-of-magnitude estimates and a BAO-only retrospective fit. No new theory, no empirical validation, no confirmatory test."
+}

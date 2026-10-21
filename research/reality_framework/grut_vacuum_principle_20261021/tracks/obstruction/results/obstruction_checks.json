@@ -14,8 +14,8 @@
     "dF_clam": 2.2869140097403227
   },
   "A20_piston": {
-    "x_c0": 0.0711320378233411,
-    "x_cconst": 0.07113203782204491,
+    "x_c0": 0.07113203782245114,
+    "x_cconst": 0.07113203782270006,
     "x_cx": -0.6716371462573618,
     "predicted_shift": -0.7434102386658377
   },
@@ -84,6 +84,7 @@
     }
   },
   "D3_everpresent_estimate_over_rhoL": 0.4866180048661799,
+  "D4_lnd_required_if_SdS_equals_ln_dim": 3.3063350021965525e+122,
   "checks": [
     {
       "name": "A1 U_c = exp(-ict) U",
@@ -159,9 +160,9 @@
     },
     {
       "name": "A13 exp(-(K+k))/Tr exp(-(K+k)) = rho_A",
-      "max_abs_deviation": 0.3132720230821743,
+      "max_abs_deviation": 4.448670320799402e-16,
       "tol": 1e-12,
-      "pass": false
+      "pass": true
     },
     {
       "name": "A14 Sigma = I + D (H_B)",
@@ -195,13 +196,13 @@
     },
     {
       "name": "A19 x-independent c leaves the internal control's motion unchanged",
-      "max_abs_deviation": -1.2961853812498703e-12,
+      "max_abs_deviation": 2.489120021209601e-13,
       "tol": 1e-09,
       "pass": true
     },
     {
       "name": "A20 c(x)=kappa x moves the control by the predicted amount (grid error tol 1e-3)",
-      "max_abs_deviation": 0.0006410545851347482,
+      "max_abs_deviation": 0.000641054586024703,
       "tol": 0.001,
       "pass": true
     },
@@ -278,8 +279,18 @@
         -1412.0413797441324
       ],
       "pass": true
+    },
+    {
+      "name": "D5 S_m - C int sqrt(-g) gives Delta T_mu nu = -C g_mu nu (diagonal metric, -+++)",
+      "pass": true,
+      "values": [
+        "C*exp(q0)",
+        "-C*exp(q1)",
+        "-C*exp(q2)",
+        "-C*exp(q3)"
+      ]
     }
   ],
-  "n_checks": 33,
-  "n_pass": 32
+  "n_checks": 34,
+  "n_pass": 34
 }

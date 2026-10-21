@@ -1,0 +1,368 @@
+{
+ "seed": 20261021,
+ "versions": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sympy": "1.14.0"
+ },
+ "checks": {
+  "A1_compensated_shift_is_minus_c_dT": {
+   "pass": true,
+   "detail": "-c*Derivative(T(t), t)"
+  },
+  "A2_EL_T_gives_Lambda_const": {
+   "pass": true,
+   "detail": "Derivative(Lambda(t), t)"
+  },
+  "A3_EL_Lambda_gives_dT_eq_Na3": {
+   "pass": true,
+   "detail": "-N(t)*a(t)**3 + Derivative(T(t), t)"
+  },
+  "A4_constraint_depends_on_sum_only": {
+   "pass": true,
+   "detail": "(3*M**2*Derivative(a(t), t)**2 + (3*M**2*k - (rho_vac + Lambda(t) + rho_m(a(t)))*a(t)**2)*N(t)**2)*a(t)/N(t)**2"
+  },
+  "B1_conditional_expectations_invariant": {
+   "pass": true,
+   "detail": "max dev 7.86e-11"
+  },
+  "B2_shift_is_pure_clock_phase": {
+   "pass": true,
+   "detail": "max dev 2.54e-11"
+  },
+  "B3_T_average_is_Lambda_mixture_and_shift_invariant": {
+   "pass": true,
+   "detail": "||avg - mixture|| = 1.19e-04"
+  },
+  "B4_bare_label_rule_not_invariant": {
+   "pass": true,
+   "detail": {
+    "rho_vac=0.0": [
+     0.1521739164013625,
+     0.1521739164013625
+    ],
+    "rho_vac=1.0": [
+     1.2328104100917587,
+     0.1521739164013625
+    ],
+    "rho_vac=-2.0": [
+     -1.5055318000598485,
+     0.1521739164013625
+    ],
+    "rho_vac=7310.0": [
+     5.494310043909081,
+     0.1521739164013625
+    ]
+   }
+  },
+  "B5_anchored_rule_invariant": {
+   "pass": true,
+   "detail": {
+    "rho_vac=0.0": [
+     0.1521739164013625,
+     0.1521739164013625
+    ],
+    "rho_vac=1.0": [
+     1.2328104100917587,
+     0.1521739164013625
+    ],
+    "rho_vac=-2.0": [
+     -1.5055318000598485,
+     0.1521739164013625
+    ],
+    "rho_vac=7310.0": [
+     5.494310043909081,
+     0.1521739164013625
+    ]
+   }
+  },
+  "C1_gibbs_invariant": {
+   "pass": true,
+   "detail": 7.124958154293585e-16
+  },
+  "C2_fixed_nonexponential_rules_not_invariant": {
+   "pass": true,
+   "detail": {
+    "square": 0.5451605833110647,
+    "logistic": 0.5183110549203768,
+    "lorentzian": 0.8094845200828527
+   }
+  },
+  "C3_anchored_rules_invariant": {
+   "pass": true,
+   "detail": {
+    "power_law_on_shifted_positive": 8.452084638011322e-16,
+    "ground_projector": 1.099863286009661e-15
+   }
+  },
+  "C4_cauchy_ode_solution_exponential": {
+   "pass": true,
+   "detail": "Eq(f(x), C1*exp(-beta*x))"
+  },
+  "D1_GH_weighted_Gibbs_diverges_as_cutoff_to_0": {
+   "pass": true,
+   "detail": "lnZ = A/lam_min (1 + O(1e-2)) for both signs of beta: no normalizable state as lam_min -> 0"
+  },
+  "D2_GH_Gibbs_concentrates_at_cutoff": {
+   "pass": true,
+   "detail": 1.0
+  },
+  "D3_flat_density_mean_equals_1_over_absbeta": {
+   "pass": true,
+   "detail": "1/b"
+  },
+  "D4_selfconsistent_KMS_is_planckian_or_identity": {
+   "pass": true,
+   "detail": {
+    "a=0": "[sqrt(3)*M*sqrt(kappa)]",
+    "a=1": "[3*M*kappa]",
+    "a=2": "identity iff kappa = 1/3",
+    "a=3": "[M/(3*kappa)]",
+    "a=4": "[sqrt(3)*M/(3*sqrt(kappa))]"
+   }
+  },
+  "E2_K1_p_in_[0.45,0.55]_all_conventions": {
+   "pass": true,
+   "detail": "p range [0.4987, 0.5064]"
+  },
+  "E3_K1_window_is_weak": {
+   "pass": true,
+   "detail": "a window of +/-0.05 in p admits amplitude factors > 1e10: K1 only confirms rho ~ M^2 H^2"
+  },
+  "F2_linear_sigma_decouples_rho_vac": {
+   "pass": true,
+   "detail": "sigma linear: V4(Leff) = v/mu^4, so Leff does not depend on rho_vac"
+  },
+  "F3_nonlinear_sigma_leaks_rho_vac": {
+   "pass": true,
+   "detail": "q/(-mu**8*Derivative(V4(L_eff), L_eff) + q)"
+  },
+  "G1_no_recollapse_for_OL_in_[0.60,0.75]_Ok_in_[-0.05,0.05]": {
+   "pass": true,
+   "detail": "0/1271 grid points recollapse"
+  },
+  "G2_V4_monotone_in_lambda_and_diverges_at_lambda_E": {
+   "pass": true,
+   "detail": [
+    3.316,
+    18.851,
+    31.418,
+    33.913,
+    56.712,
+    143.743,
+    333.348,
+    554.992
+   ]
+  },
+  "H1_Tseytlin_residual": {
+   "pass": true,
+   "detail": "-L_avg + tau_avg/2"
+  },
+  "H2_both_subtractions_absorb_c": {
+   "pass": true,
+   "detail": "subtraction = residual - c in both cases"
+  },
+  "H3_KP_and_Tseytlin_differ_on_matter": {
+   "pass": true,
+   "detail": {
+    "dust,L=p,Tseytlin": "-rho/2",
+    "dust,L=-rho,Tseytlin": "rho/2",
+    "dust,KP": "-rho/4",
+    "radiation,L=p,Tseytlin": "-rho/3",
+    "radiation,L=-rho,Tseytlin": "rho",
+    "radiation,KP": "0"
+   }
+  },
+  "I1_hamiltonian_constraint_zero_for_every_Lambda": {
+   "pass": true,
+   "detail": "0"
+  },
+  "I3_ratio_is_2_at_every_scale": {
+   "pass": true,
+   "detail": {
+    "|rho_L|=0.001": 2.0,
+    "|rho_L|=1.0": 2.0,
+    "|rho_L|=10000.0": 1.9999999999999996
+   }
+  },
+  "I4_ratio_scale_free_and_above_1": {
+   "pass": true,
+   "detail": {
+    "r=0.0": 1.9999999999728368,
+    "r=0.01": 2.014187040597483,
+    "r=0.1": 2.115080783027744,
+    "r=1.0": 2.537639551201313,
+    "r=10.0": 2.917980091418581
+   }
+  }
+ },
+ "numbers": {
+  "B4_rule_selections_(bare,anchored)": {
+   "rho_vac=0.0": [
+    0.1521739164013625,
+    0.1521739164013625
+   ],
+   "rho_vac=1.0": [
+    1.2328104100917587,
+    0.1521739164013625
+   ],
+   "rho_vac=-2.0": [
+    -1.5055318000598485,
+    0.1521739164013625
+   ],
+   "rho_vac=7310.0": [
+    5.494310043909081,
+    0.1521739164013625
+   ]
+  },
+  "C1_shift_deviation_by_rule": {
+   "gibbs_beta0.7": 7.124958154293585e-16,
+   "square": 0.5451605833110647,
+   "logistic": 0.5183110549203768,
+   "lorentzian": 0.8094845200828527,
+   "power_law_on_shifted_positive": 8.452084638011322e-16,
+   "ground_projector": 1.099863286009661e-15
+  },
+  "D0_GH_exponent_at_rho_obs": 3.308247285281349e+122,
+  "D1_lnZ_GH_vs_cutoff": [
+   {
+    "lam_min": 0.1,
+    "lnZ(beta=+1)": 2358.7332598201424,
+    "lnZ(beta=-1)": 2358.5331752429074,
+    "A/lam_min": 2368.705056261446
+   },
+   {
+    "lam_min": 0.01,
+    "lnZ(beta=+1)": 23672.38279350413,
+    "lnZ(beta=-1)": 23672.362792659642,
+    "A/lam_min": 23687.05056261446
+   },
+   {
+    "lam_min": 0.001,
+    "lnZ(beta=+1)": 236851.2236104323,
+    "lnZ(beta=-1)": 236851.22161042385,
+    "A/lam_min": 236870.5056261446
+   },
+   {
+    "lam_min": 0.0001,
+    "lnZ(beta=+1)": 2368681.168167944,
+    "lnZ(beta=-1)": 2368681.1679679444,
+    "A/lam_min": 2368705.056261446
+   }
+  ],
+  "D2_GH_Gibbs_prob_within_factor2_of_cutoff": 1.0,
+  "D4_selfconsistent_KMS_solutions": {
+   "a=0": "[sqrt(3)*M*sqrt(kappa)]",
+   "a=1": "[3*M*kappa]",
+   "a=2": "identity iff kappa = 1/3",
+   "a=3": "[M/(3*kappa)]",
+   "a=4": "[sqrt(3)*M/(3*sqrt(kappa))]"
+  },
+  "D4_kappa_needed_for_observed_H_a0": 1.1599999999999999e-121,
+  "E0_rho_obs_over_M4": 7.152082605243508e-121,
+  "E0_inputs": {
+   "h": 0.6736,
+   "Omega_m": 0.3153,
+   "Omega_r": 9.212385960359059e-05,
+   "Omega_L": 0.6846078761403964,
+   "M_red_GeV": 2.435e+18
+  },
+  "E1_Vcone_H0^4": 0.1228623075003548,
+  "E1_t0_H0": 0.9503483812498771,
+  "E2_exponent_table": {
+   "past_light_cone": {
+    "V_M4": 1.0131643870023336e+240,
+    "p_reduced": 0.5005946839270697,
+    "p_nonreduced": 0.5063547291479578,
+    "alpha_red_for_1sigma": 0.7199005075412624
+   },
+   "H0^-4": {
+    "V_M4": 8.246340213001517e+240,
+    "p_reduced": 0.49870260668866623,
+    "p_nonreduced": 0.5044628723879738,
+    "alpha_red_for_1sigma": 2.0538236284211884
+   },
+   "t0^4": {
+    "V_M4": 6.726553572795619e+240,
+    "p_reduced": 0.49888580623668977,
+    "p_nonreduced": 0.5046460578008135,
+    "alpha_red_for_1sigma": 1.8549355498427833
+   }
+  },
+  "E3_amplitude_factor_spanned_by_dp_0.05": 1000654138330.0819,
+  "E4_rho_if_DeltaV_eq_V_over_M4": 9.870066623232946e-241,
+  "E5_clock_readings_needed_sqrt_VM4": 1.0065606722907137e+120,
+  "F1_dLeff_drho_vac": "-Subs(Derivative(sigma1(_xi_1), _xi_1), _xi_1, (L_eff - rho_vac)/mu**4)/(mu**8*Derivative(V4(L_eff), L_eff) - Subs(Derivative(sigma1(_xi_1), _xi_1), _xi_1, (L_eff - rho_vac)/mu**4))",
+  "F2_dLeff_drho_linear_sigma": "0",
+  "F2_dLeff_drho_nonlinear_sigma": "q/(-mu**8*Derivative(V4(L_eff), L_eff) + q)",
+  "G1_note": "constant Lambda_eff>0 with present acceleration => V4 infinite => no finite V0 solution",
+  "G2_lambda_Einstein_static": 0.14814814814814814,
+  "G2_closed_dust_V4_vs_lambda": [
+   {
+    "lambda/lambda_E": -10.0,
+    "V4": 3.315920293699467,
+    "a_max": 0.6298407847421795
+   },
+   {
+    "lambda/lambda_E": -1.0,
+    "V4": 18.85063446865898,
+    "a_max": 0.8941074569749823
+   },
+   {
+    "lambda/lambda_E": -0.1,
+    "V4": 31.41826249484916,
+    "a_max": 0.9858070715085807
+   },
+   {
+    "lambda/lambda_E": 0.0,
+    "V4": 33.91311511931163,
+    "a_max": 0.9999999999999991
+   },
+   {
+    "lambda/lambda_E": 0.5,
+    "V4": 56.71228335819133,
+    "a_max": 1.0980762113533202
+   },
+   {
+    "lambda/lambda_E": 0.9,
+    "V4": 143.74252775675615,
+    "a_max": 1.2788999711053082
+   },
+   {
+    "lambda/lambda_E": 0.99,
+    "V4": 333.34764544461876,
+    "a_max": 1.419548111781366
+   },
+   {
+    "lambda/lambda_E": 0.999,
+    "V4": 554.9915652264607,
+    "a_max": 1.4732632686469112
+   }
+  ],
+  "G3_note": "V4(lambda; A) monotone -> one-to-one map V0 <-> Lambda_eff at fixed A; rho_vac absent (F2) [D]",
+  "H3_residual_per_unit_avg_rho": {
+   "dust,L=p,Tseytlin": "-rho/2",
+   "dust,L=-rho,Tseytlin": "rho/2",
+   "dust,KP": "-rho/4",
+   "radiation,L=p,Tseytlin": "-rho/3",
+   "radiation,L=-rho,Tseytlin": "rho",
+   "radiation,KP": "0"
+  },
+  "I2_note": "k=+1: rho_m + rho_L = 3M^2(H^2+1/a^2) > 0 on every slice [D]",
+  "I3_avg_rho_m_over_absrhoL_dust": {
+   "|rho_L|=0.001": 2.0,
+   "|rho_L|=1.0": 2.0,
+   "|rho_L|=10000.0": 1.9999999999999996
+  },
+  "I4_ratio_mixed_vs_r": {
+   "r=0.0": 1.9999999999728368,
+   "r=0.01": 2.014187040597483,
+   "r=0.1": 2.115080783027744,
+   "r=1.0": 2.537639551201313,
+   "r=10.0": 2.917980091418581
+  },
+  "I5_note": "rho_L = -<rho_matter> <= 0 for WEC matter [D]; observed rho_L > 0 (retrospective)"
+ },
+ "summary": "29/29 checks pass"
+}
