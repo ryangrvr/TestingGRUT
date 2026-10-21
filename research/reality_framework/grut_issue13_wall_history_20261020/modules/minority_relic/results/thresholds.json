@@ -1,0 +1,3751 @@
+{
+ "module": "minority_relic",
+ "part": "thresholds",
+ "labels": "computed; inflation/reheating/N_*/start conditions are outside-action preparation data [P]",
+ "inputs": {
+  "sigma_GeV3": 94280904.15820633,
+  "kappa_E_RD": 7.786625485748964,
+  "C_E_sphere": 1.8589199040934175,
+  "rho_over_s_max_GeV": 4.3731778425655974e-10,
+  "T_dom_iso_GeV": 7.97e-06,
+  "T_dom_iso_recomputed_GeV": 7.972286358338176e-06,
+  "T_dom_net_GeV": 6.367e-06,
+  "T_eq_GeV": 7.993658862732062e-10,
+  "T_rec_GeV": 2.562193818654443e-10,
+  "nprime": {
+   "Tdom_iso": 12.694162948587717,
+   "Tdom_net": 12.469619480976021,
+   "BBN_1MeV": 17.765627342706267,
+   "BBN_70keV": 14.88069148043975,
+   "Teq": 3.8333107422290027,
+   "Trec": 3.0568605918880962
+  },
+  "H_grid_GeV": [
+   130.0,
+   2000.0,
+   57
+  ],
+  "particle_horizon_chi_a0H0": 3.184860451851933,
+  "observable_over_Hubble_volume": 32.30510998763137
+ },
+ "Nstar_reach": [
+  {
+   "H_GeV": 150.0,
+   "N0_instant": 48.11924840294909,
+   "N0_max_kination_until_4MeV": 57.83746024332317,
+   "N0_min_matter_dominated_reheating_T_RH_10MeV": 38.70664044497792
+  },
+  {
+   "H_GeV": 250.0,
+   "N0_instant": 48.37465367399594,
+   "N0_max_kination_until_4MeV": 58.17800311833101,
+   "N0_min_matter_dominated_reheating_T_RH_10MeV": 38.87690811206377
+  },
+  {
+   "H_GeV": 400.0,
+   "N0_instant": 48.60964864799377,
+   "N0_max_kination_until_4MeV": 58.49133203053647,
+   "N0_min_matter_dominated_reheating_T_RH_10MeV": 39.03356914785398
+  },
+  {
+   "H_GeV": 1000.0,
+   "N0_instant": 49.06778092506873,
+   "N0_max_kination_until_4MeV": 59.10217942959046,
+   "N0_min_matter_dominated_reheating_T_RH_10MeV": 39.33898630294991
+  },
+  {
+   "H_GeV": 1600.0,
+   "N0_instant": 49.30277614210266,
+   "N0_max_kination_until_4MeV": 59.41550858483201,
+   "N0_min_matter_dominated_reheating_T_RH_10MeV": 39.49564758177622
+  }
+ ],
+ "thresholds_GeV": {
+  "fresh_N50_instant": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 505.36450193227694,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 672.0813478328574,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 462.87657819217515,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 497.53246368206584,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 420.12521081568235,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 242.4573459166475,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 226.51260720831564,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 245.22825486965746,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 484.38720401396057,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 351.5468001368803,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 296.2506571195088,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 710.6580232240007,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 917.0943666415681,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 202.21133792202062,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 194.03881127181734,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 220.91503924819446,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 233.8413515320379,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 197.8537875078791,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 719.4174228960884,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.57936016229183,
+    "monotone_below": true
+   }
+  },
+  "fresh_N50_exit": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 520.8961013268962,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 689.3299825950121,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 476.84558668241164,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 513.4536068337559,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 444.37918063615064,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 249.87226646703613,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 232.97778220548517,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 253.0001639995797,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 502.81193762521184,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 365.2484111301503,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 307.02280224848624,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 790.6201438457014,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 1038.0012589679286,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 204.74032690600393,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 196.27747179815947,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 225.57033622951448,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 240.73436541099113,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 200.29084451858057,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 826.0208835188364,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.236066714814,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 437.82378563039975,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 604.9506426707723,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 401.63777898957926,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 430.235092474286,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 303.9679430858438,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 221.29379469813412,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 208.89301902413294,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 222.99009605539106,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 408.69567906111774,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 303.8241171390968,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 261.6758639339634,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 452.192592275565,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 559.8680121207312,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 195.12974758513965,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 188.0275718093187,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 207.85984320062428,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 214.64254635576702,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 191.3880378451915,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 429.6247326754607,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.5789940858618,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_exit": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 520.8961013268962,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 689.3299825950121,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 476.84558668241164,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 513.4536068337559,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 444.37918063615064,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 249.87226646703613,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 232.97778220548517,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 253.0001639995797,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 502.81193762521184,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 365.2484111301503,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 307.02280224848624,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 790.6201438457014,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 1038.0012589679286,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 204.74032690600393,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 196.27747179815947,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 225.57033622951448,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 240.73436541099113,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 200.29084451858057,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 826.0208835188364,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 137.8442943074902,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 362.51076747328136,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 489.1805556253644,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 338.5672213454396,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 356.5972874813187,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 246.11849916766283,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.8880438852979,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.86796820566985,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 213.00443020367086,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 336.96340084154974,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 270.51729015119247,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.50007405535732,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 325.1178239502698,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 370.484852301066,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.38777873668423,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.02446872667838,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.32849764726186,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.54907668294044,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.08581042714815,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 309.5725096143806,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.57897305226786,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_exit": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 361.6100629366642,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 484.422530931874,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 337.93321613908705,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 355.8033497183896,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 245.32542124017496,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.85298561699557,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.84431970130237,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 212.9673749490498,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 336.58301724120025,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 270.3730791720897,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.41585963495882,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 322.8909143350704,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 364.9335835723144,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.38174813787745,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.0200302733643,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.31233668970356,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.5203557716091,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.0803391298111,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 307.43086912674426,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.2357845056177,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 366.572272226337,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 522.23507507567,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 341.27798969487327,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 360.52578493245926,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 247.50974421852644,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.97685227268641,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.9235277716259,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 213.09873435852248,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 340.0224173255755,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 271.213822580329,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.80343455835612,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 331.4493692266464,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 387.1059946266225,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.40129913901134,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.03380161383762,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.36744253666512,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.61905792711028,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.09769363090697,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 315.0336106776263,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.57897305226786,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_exit": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 361.6100629366642,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 484.422530931874,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 337.93321613908705,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 355.8033497183896,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 245.32542124017496,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.85298561699557,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.84431970130237,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 212.9673749490498,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 336.58301724120025,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 270.3730791720897,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.41585963495882,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 322.8909143350704,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 364.9335835723144,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.38174813787745,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.0200302733643,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.31233668970356,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.5203557716091,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.0803391298111,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 307.43086912674426,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 137.84428972393727,
+    "monotone_below": true
+   }
+  }
+ },
+ "systematics_thresholds_GeV": {
+  "fresh_N50_instant_FX2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 476.95797162229536,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 607.9323006477166,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": 1162.8135748589868,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 441.87507765604795,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 471.13150954085813,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 409.02130838521816,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 240.60797100747544,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 225.1627583077237,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 243.33104516014245,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 461.77405237621946,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 343.95920581499513,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 292.25380480516,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 678.147963436815,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 866.1035473197614,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 201.33032097551302,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 193.2774079685294,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 219.659719776004,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 232.31572124251298,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 197.0774143359908,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 691.3786838994945,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.4027358613849,
+    "monotone_below": true
+   }
+  },
+  "fresh_N50_instant_FX_2Drate": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 465.31096263565576,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 596.5179563213987,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": 1269.373440577713,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 429.63712305098994,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 459.38161852054304,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 400.34697726930136,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 235.0818782646714,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 220.68802610032108,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 237.64023749739695,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 451.5267995011111,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 333.22509711193663,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 282.9902528728689,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 674.2655516997222,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 867.4322778810206,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 198.079928677755,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 190.60261300456744,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 215.3418533281765,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 227.34359484529466,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 194.1671503560866,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 688.3618699335055,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.6562039341413,
+    "monotone_below": true
+   }
+  },
+  "fresh_N50_instant_FX_RX_bound": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 465.31096263565576,
+    "monotone_below": false
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 596.5179563213987,
+    "monotone_below": false
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": 1269.373440577713,
+    "monotone_below": false
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 429.63712305098994,
+    "monotone_below": false
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 459.38161852054304,
+    "monotone_below": false
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 400.34697726930136,
+    "monotone_below": false
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 234.2141417111937,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 220.06026157462307,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 236.7544399829204,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 451.5267995011111,
+    "monotone_below": false
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 325.9864232066153,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 280.4462533506317,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 674.2655516997222,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 867.4322778810206,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 197.67160152446806,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 190.25266563039654,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 214.7610858161998,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 226.63352176154197,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 193.77031933984944,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 688.3618699335055,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.5729649359967,
+    "monotone_below": true
+   }
+  },
+  "fresh_N50_instant_s_off_+3": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 544.5923121264962,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 721.5963829379161,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 498.82125381335624,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 538.1210363196187,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 479.7306369931753,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 257.98799903528374,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 239.7719031005342,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 261.575088403545,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 532.5909025514403,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 383.3687851756626,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 320.18404022618773,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 1153.5751317307702,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 207.11613235063538,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 198.2393189977319,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 230.1921324973542,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 248.12625611186843,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 202.44233799919164,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 1600.5782025198116,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 143.4726358398354,
+    "monotone_below": true
+   }
+  },
+  "fresh_N50_instant_s_off_-2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 485.56584850667895,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 651.1353518430797,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 445.1715707097663,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 478.1528807941319,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 388.63014003893454,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 235.61973553425798,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 220.72253285096008,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 238.03171585447953,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 461.30815224647364,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 336.87990984862563,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 285.1097411095621,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 611.6629159375009,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 769.2633340525111,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 199.95924807014848,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 192.06812620832224,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 216.75264300831128,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 227.57137291955652,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 195.8253610514672,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 600.9639148217362,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 147.1601171183353,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant_FX2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 413.60614264409327,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 528.7020993857989,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 384.05180959671077,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 407.6217645200395,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 299.49232918901725,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 219.9326367487298,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 207.85504816932368,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 221.47941194626029,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 391.284865954057,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 298.2578424176573,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 258.6563569904365,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 433.0739390755619,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 523.0561487682414,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 194.34893986123012,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 187.35617108227092,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 206.82128266897033,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 213.45518984996056,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 190.7046377112589,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 414.193418692326,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.4024203375779,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant_FX_2Drate": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 396.30070746555066,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 512.4674564626976,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 366.15655166174514,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 390.0792517338578,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 289.8264229052338,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 215.26330338940184,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 204.11722913426397,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 216.78927963151452,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 373.70610454506465,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 285.8379570196284,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 250.30110561361988,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 421.15306944777836,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 513.2934338366091,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 191.51884159833585,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 185.01529828884475,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 203.13187819758838,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 209.28851220111787,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 188.08020422959785,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 402.99775460675454,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.6559183913082,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant_FX_RX_bound": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 396.30070746555066,
+    "monotone_below": false
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 512.4674564626976,
+    "monotone_below": false
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 348.7565018783225,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 366.12889794973876,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 286.634234999176,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 214.64000430314522,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 203.59712724837868,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 216.0908093797151,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 355.4700361942285,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 282.3447621588968,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 248.91574992569656,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 421.15306944777836,
+    "monotone_below": false
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 513.2934338366091,
+    "monotone_below": false
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 191.16304601762218,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 184.7091536861539,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.65765045451073,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 208.7451196041732,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 187.730796803539,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 402.99775460675454,
+    "monotone_below": false
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.57268283806144,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant_s_off_+3": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 451.8132256790337,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 618.9799166159838,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 414.3282756833539,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 444.1648020326274,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 326.6854141006306,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 225.09905181487287,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 211.98255468603594,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 226.90435107955298,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 423.35704976600636,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 313.01887158815043,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 268.10872052977965,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 488.68172230061646,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 611.663160973343,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 196.38151195899033,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 189.09488823754992,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 210.16631157613696,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 218.04257485956032,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.48147856504102,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 467.3919871266167,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 143.47239984891308,
+    "monotone_below": true
+   }
+  },
+  "fresh_N60_instant_s_off_-2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 430.2889972681168,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 597.2886178494274,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 394.85898636161403,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 422.5907872302991,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 293.1725137242825,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 219.50640555289348,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 207.45628221159163,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 221.02138273240044,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 400.88110351985654,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 299.13904013337225,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 258.3728493334643,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 434.3725534941482,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 536.3495728112216,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 194.51203324664579,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 187.51202461522777,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 206.72515156308503,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 213.03579510947912,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 190.85469661027318,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 411.5828746429797,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 147.1596203509298,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant_FX2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 346.37635485130835,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 426.82849246472824,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 327.10341979512884,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 341.90950771440924,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 243.78500897329408,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 210.74121373189624,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 200.99636814514025,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 211.85161855953675,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 326.0437491839676,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 266.8273341389443,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 239.37585844244532,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 315.8422900797775,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 352.97496060168777,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 191.7246167205441,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 185.45168550398023,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 201.45459487115735,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 205.5506180438078,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 188.4340303188182,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 302.2690447778483,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.40240243167273,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant_FX_2Drate": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 325.440485649725,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 395.4334522797618,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 308.8734714098422,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 321.50873210660455,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 236.90390262435915,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.95960765372382,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 197.80572475803734,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 207.9466916471991,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 307.790607234296,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 257.01126105726036,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 232.89486618168655,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 299.40296278925337,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 331.3286971796521,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.1879650595128,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 183.20750336548488,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 198.2320190082468,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 202.11387813703084,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 186.0517833123833,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 287.82750819191807,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.6559028107917,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant_FX_RX_bound": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 314.31003650104617,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 357.57144960546736,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 301.2698813701592,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 311.25522612394934,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 235.8442320624078,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.43707033474675,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 197.40846802701978,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 207.42168761407814,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 300.5077098815695,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 255.14379392023642,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 231.96685549909387,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 293.43262834257314,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 318.7748294342416,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 188.84881036510143,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 182.9144589368513,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 197.81359227030842,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 201.6588104729286,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 185.75418939545582,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 283.53598253546187,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.57266752241574,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant_s_off_+3": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 360.4838709063025,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 477.8954666531066,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 337.2127284042704,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 354.817323995275,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 243.74649120092866,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.81863316888703,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.821500306808,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 212.93093455173226,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 335.4401622828756,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 270.0805951043229,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.2901275838409,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 319.13580125404513,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 354.1853721846705,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.37612979989964,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.0159230654559,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.29693042309154,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.49244837133688,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.07526030561425,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 303.239758173174,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": null,
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 143.47238805801962,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N50_instant_s_off_-2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 363.58600176150685,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 496.0776960638768,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 339.29856704878745,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 357.6010873180624,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 246.65607287138187,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.9182378288961,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.88755782629997,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 213.0364172595016,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 337.75703097032516,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 270.7257324366903,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.59602498077942,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 327.1133364826153,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 375.7105185992737,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.39266253937134,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.02794537396844,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.34206895790018,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.57331974450207,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.09016826939487,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 311.43522692519844,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 147.15958930040762,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant_FX2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 349.50957401345266,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 439.4635977855313,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 329.1662767226579,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 344.73503585083586,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 245.14931141202632,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 210.82772641478562,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.0506858128827,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 211.9435515513392,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 328.3519914721261,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 267.42322971891616,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 239.64263644280604,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 321.0968303846565,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 365.1119608041354,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 191.7378063439212,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 185.46079735115927,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 201.4925733698983,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 205.61890867551014,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 188.44559326644102,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 307.00096200885577,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 145.40240243167273,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant_FX_2Drate": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 327.7479503979561,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 405.77020128812876,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 310.4119003606851,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 323.79060760903064,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 238.07837749701017,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 207.0312665127194,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 197.85070221998006,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 208.02278104338228,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 309.5956655604594,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 257.5233242470551,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 233.10970956699848,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 303.73797473663694,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 341.2285707063609,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.2000160929063,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 183.21582748259476,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 198.26689017791608,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 202.1704805713236,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 186.0612089179075,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 291.64752592391363,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.6559028107917,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant_FX_RX_bound": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 316.00282596709735,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 362.14121796342283,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 302.5390914096435,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 312.9386305645029,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 237.00758778855453,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.50782988106832,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 197.45296569193553,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 207.4968468843767,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 301.93807720431397,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 255.6323370914944,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 232.17846846171358,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 297.13554280402747,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 325.91395847329414,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 188.8606929099077,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 182.92267041576167,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 197.84428901495772,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 201.71475528496987,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 185.76349905840854,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 286.8378136276769,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 144.57266752241574,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant_s_off_+3": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 365.641255433334,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 513.1441413717895,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 340.67077217788574,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 359.6180917086663,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 247.31030170908062,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.96258807290224,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.9151523176961,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 213.083519065503,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 339.33859456965433,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 271.07687217466804,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.74845473017956,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 330.2483892042027,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 383.93498731320045,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.3993648464461,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.0325393666531,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.3614750151497,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.6081749940658,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.09603887416236,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 314.1016969749704,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 143.47238805801962,
+    "monotone_below": true
+   }
+  },
+  "relaxed_N60_instant_s_off_-2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 367.10254071002333,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.1_CEsphere": {
+    "H_GeV": 527.7499397121586,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_Omega_le_0.12_f1_CE3x": {
+    "H_GeV": 341.618701968018,
+    "monotone_below": true
+   },
+   "relic_f1_cut_Tdom_net": {
+    "H_GeV": 361.0408125641665,
+    "monotone_below": true
+   },
+   "relic_f1_only_collapses_before_1MeV": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "relic_f1_injection_to_0.03eV_(critic_style)": {
+    "H_GeV": 247.60340859363907,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 211.983392441323,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1e-3": {
+    "H_GeV": 201.92723245994765,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_net_lt_1": {
+    "H_GeV": 213.10573319449546,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 340.4021853671464,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-3_Omega_DM": {
+    "H_GeV": 271.2850286716239,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_1e-6_Omega_DM": {
+    "H_GeV": 241.8306167011748,
+    "monotone_below": true
+   },
+   "N_reenter_after_Teq_lt_1": {
+    "H_GeV": 332.07461414558867,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 388.8445011560393,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 192.40212418700978,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1e-3": {
+    "H_GeV": 186.03432252470932,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_70keV_lt_1": {
+    "H_GeV": 202.37009884973216,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 206.62395709577814,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 189.09838841579375,
+    "monotone_below": true
+   },
+   "N_obs_universe_reenter_after_Trec_lt_1": {
+    "H_GeV": 315.50852754590335,
+    "monotone_below": true
+   },
+   "N_superhorizon_wall_in_Hubble_volume_today_lt_1": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_all_sizes_in_Hubble_volume_lt_1e-3_(regime_A)": {
+    "H_GeV": 147.15958930040762,
+    "monotone_below": true
+   }
+  }
+ },
+ "fresh_DeltaN_scan_N60window": {
+  "DeltaN=-8": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 716.190315507037,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": 1577.8242425128349,
+    "monotone_below": true
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 356.52121840689375,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 232.56902242529898,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": null,
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 774.2096973453552,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=-4": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 590.1386142001501,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 280.34913608527296,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 213.98079577374642,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": null,
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 590.001200206564,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=0": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 520.8961013268962,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 249.87226646703613,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 204.74032690600393,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 1038.0012589679286,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 502.81193762521184,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=2": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 497.47253031820566,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 241.0315390951137,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 201.8780032550744,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 833.30797589755,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 476.43503417248945,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=4": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 479.85059426138076,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 234.6049000905843,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 199.70159992073783,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 729.2402845104492,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 456.03227641791585,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=8": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 453.5795171574285,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 226.13568648585624,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 196.76772501489552,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 615.2784800678079,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 426.57300433569776,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=12": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 435.1538798955835,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 220.98984362237948,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 195.04401503926016,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 548.7574633809841,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 406.6525508265142,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=16": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 421.8834015380777,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 217.8440594005296,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 193.97425563774948,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 512.0814577814966,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 392.5628848139453,
+    "monotone_below": true
+   }
+  },
+  "DeltaN=21": {
+   "relic_Omega_le_0.12_f1_CEsphere": {
+    "H_GeV": 409.93416857026347,
+    "monotone_below": true
+   },
+   "relic_Omega_le_0.12_f0.01_CEsphere": {
+    "H_GeV": null,
+    "note": "not reached on the grid (max 2000.0 GeV)"
+   },
+   "N_reenter_after_Tdom_iso_lt_1": {
+    "H_GeV": 215.33170767985726,
+    "monotone_below": true
+   },
+   "N_reenter_after_BBN_1MeV_lt_1": {
+    "H_GeV": 193.1993482023734,
+    "monotone_below": true
+   },
+   "N_reenter_after_Trec_lt_1": {
+    "H_GeV": 480.7638424642937,
+    "monotone_below": true
+   },
+   "Omega_late_enclosed_max_le_Omega_DM": {
+    "H_GeV": 380.10685215524586,
+    "monotone_below": true
+   }
+  }
+ },
+ "critic_comparison": {
+  "critic_estimate": "relaxed start, f c_b ~ 1, injection to late times needs Lambda_1/2 <~ 1e-11, i.e. H_inf <~ 240 GeV [E]",
+  "H_at_Lambda1_over_2_eq_1e-11": {
+   "H_GeV": 237.38443457194356,
+   "monotone_below": true
+  },
+  "H_at_p_minus_fresh_N60_eq_1e-10": {
+   "H_GeV": 236.65063142199205,
+   "monotone_below": true
+  },
+  "H_at_p_minus_fresh_N50_eq_1e-10": {
+   "H_GeV": 239.00232768437957,
+   "monotone_below": true
+  }
+ },
+ "relaxed_closed_forms": {
+  "Lambda1_max_N_after_BBN_lt_1": 4.281633432835377e-23,
+  "Lambda1_max_N_after_Tdom_lt_1": 1.7343489731528486e-16,
+  "Lambda1_max_N_after_Trec_lt_1": 0.0006243357293744681,
+  "Lambda1_max_relic_f1_CEsphere": 0.0002742057049816914,
+  "sigma_H_over_s_at_Tdom_iso_GeV": 1.7158920845808626e-06,
+  "H_thresholds_from_closed_forms_GeV": {
+   "N_after_BBN_lt_1": {
+    "H_GeV": 192.40588272298302,
+    "monotone_below": true
+   },
+   "N_after_Tdom_lt_1": {
+    "H_GeV": 212.00608269752306,
+    "monotone_below": true
+   },
+   "N_after_Trec_lt_1": {
+    "H_GeV": 403.8623365154756,
+    "monotone_below": true
+   },
+   "relic_f1_CEsphere": {
+    "H_GeV": 372.10727496349386,
+    "monotone_below": true
+   }
+  }
+ },
+ "p_minus_check": [
+  {
+   "H_GeV": 130.0,
+   "B_HM": 230.59574519566124,
+   "Lambda1_adopted": 6.3316793674205795e-102,
+   "Lambda1_eig": -3.449821645287634e-14,
+   "Lambda1_mfpt": 6.3316793674205795e-102,
+   "p_fresh_N50": 8.08057692650226e-101,
+   "p_fresh_N60": 1.1246374649422546e-100,
+   "p_relaxed_N50": 1.7482020221943742e-100,
+   "p_relaxed_N60": 2.0647859906847385e-100,
+   "N0_instant": 48.047700114374265,
+   "T_RH_instant": 9661547638.647919,
+   "R_X_times_R_D": 86.4197112746333
+  },
+  {
+   "H_GeV": 133.7,
+   "B_HM": 206.14594631461205,
+   "Lambda1_adopted": 2.486092541640585e-91,
+   "Lambda1_eig": 2.8741613638253625e-14,
+   "Lambda1_mfpt": 2.486092541640585e-91,
+   "p_fresh_N50": 3.0541752224635964e-90,
+   "p_fresh_N60": 4.297179107330468e-90,
+   "p_relaxed_N50": 6.8879222513958555e-90,
+   "p_relaxed_N60": 8.130968523672463e-90,
+   "N0_instant": 48.06173171210585,
+   "T_RH_instant": 9798067120.40878,
+   "R_X_times_R_D": 81.7905560013626
+  },
+  {
+   "H_GeV": 137.5053,
+   "B_HM": 184.29196838349637,
+   "Lambda1_adopted": 7.280462799428719e-82,
+   "Lambda1_eig": -1.1388381761238155e-14,
+   "Lambda1_mfpt": 7.280462799428719e-82,
+   "p_fresh_N50": 8.586896172839351e-81,
+   "p_fresh_N60": 1.222682694350713e-80,
+   "p_relaxed_N50": 2.0243830397661445e-80,
+   "p_relaxed_N60": 2.3884061809864837e-80,
+   "N0_instant": 48.07576328222769,
+   "T_RH_instant": 9936515377.971207,
+   "R_X_times_R_D": 77.40872098061912
+  },
+  {
+   "H_GeV": 141.4189,
+   "B_HM": 164.75807923012718,
+   "Lambda1_adopted": 2.0950377601134995e-73,
+   "Lambda1_eig": -5.4899112422168645e-14,
+   "Lambda1_mfpt": 2.0950377601134995e-73,
+   "p_fresh_N50": 2.365389418015675e-72,
+   "p_fresh_N60": 3.4127104448149203e-72,
+   "p_relaxed_N50": 5.847836075066254e-72,
+   "p_relaxed_N60": 6.895354965074995e-72,
+   "N0_instant": 48.08979483689307,
+   "T_RH_instant": 10076919780.10247,
+   "R_X_times_R_D": 73.2616422843696
+  },
+  {
+   "H_GeV": 145.4439,
+   "B_HM": 147.29778379124397,
+   "Lambda1_adopted": 7.579950615486342e-66,
+   "Lambda1_eig": 2.9736916761821355e-14,
+   "Lambda1_mfpt": 7.579950615486342e-66,
+   "p_fresh_N50": 8.16625975070149e-65,
+   "p_fresh_N60": 1.1954684861643519e-64,
+   "p_relaxed_N50": 2.1243071695367856e-64,
+   "p_relaxed_N60": 2.5033047097660634e-64,
+   "N0_instant": 48.103826437553046,
+   "T_RH_instant": 10219308591.101837,
+   "R_X_times_R_D": 69.33672597250018
+  },
+  {
+   "H_GeV": 149.5835,
+   "B_HM": 131.69075770415307,
+   "Lambda1_adopted": 4.298002394545482e-59,
+   "Lambda1_eig": -1.3585589507242908e-14,
+   "Lambda1_mfpt": 4.298002394545482e-59,
+   "p_fresh_N50": 4.402974118248129e-58,
+   "p_fresh_N60": 6.5501683295027e-58,
+   "p_relaxed_N50": 1.2097365864283014e-57,
+   "p_relaxed_N60": 1.4246367195437087e-57,
+   "N0_instant": 48.117858179932526,
+   "T_RH_instant": 10363710856.372913,
+   "R_X_times_R_D": 65.6220465684175
+  },
+  {
+   "H_GeV": 153.8409,
+   "B_HM": 117.74039563088203,
+   "Lambda1_adopted": 4.649182824685522e-53,
+   "Lambda1_eig": -4.9448260922369603e-14,
+   "Lambda1_mfpt": 4.649182824685522e-53,
+   "p_fresh_N50": 4.5115100236011475e-52,
+   "p_fresh_N60": 6.832278686435625e-52,
+   "p_relaxed_N50": 1.314456195388079e-51,
+   "p_relaxed_N60": 1.5469153711068275e-51,
+   "N0_instant": 48.13188985570378,
+   "T_RH_instant": 10510152878.502146,
+   "R_X_times_R_D": 62.10696572605095
+  },
+  {
+   "H_GeV": 158.2194,
+   "B_HM": 105.2708707819842,
+   "Lambda1_adopted": 1.1438137485436925e-47,
+   "Lambda1_eig": -8.254994340623424e-16,
+   "Lambda1_mfpt": 1.1438137485436925e-47,
+   "p_fresh_N50": 1.0470542266055765e-46,
+   "p_fresh_N60": 1.617207639914576e-46,
+   "p_relaxed_N50": 3.2494921141580724e-46,
+   "p_relaxed_N60": 3.821399181549292e-46,
+   "N0_instant": 48.145921301707496,
+   "T_RH_instant": 10658661721.227108,
+   "R_X_times_R_D": 58.780230384303486
+  },
+  {
+   "H_GeV": 162.7226,
+   "B_HM": 94.12450617235254,
+   "Lambda1_adopted": 7.493396407163364e-43,
+   "Lambda1_eig": 9.87588592482215e-16,
+   "Lambda1_mfpt": 7.493396407163364e-43,
+   "p_fresh_N50": 6.442371418476713e-42,
+   "p_fresh_N60": 1.0168617698555263e-41,
+   "p_relaxed_N50": 2.1395202902079309e-41,
+   "p_relaxed_N60": 2.5141903865297495e-41,
+   "N0_instant": 48.15995300167748,
+   "T_RH_instant": 10809271748.859167,
+   "R_X_times_R_D": 55.63261556930331
+  },
+  {
+   "H_GeV": 167.3539,
+   "B_HM": 84.16112871241873,
+   "Lambda1_adopted": 1.5039097390298405e-38,
+   "Lambda1_eig": -4.2747095610415495e-14,
+   "Lambda1_mfpt": 1.5039097390298405e-38,
+   "p_fresh_N50": 1.2087396570214993e-37,
+   "p_fresh_N60": 1.953705211017858e-37,
+   "p_relaxed_N50": 4.31697790094757e-37,
+   "p_relaxed_N60": 5.0689339307180855e-37,
+   "N0_instant": 48.17398449608261,
+   "T_RH_instant": 10962007691.617239,
+   "R_X_times_R_D": 52.65365450568406
+  },
+  {
+   "H_GeV": 172.1171,
+   "B_HM": 75.2547992469633,
+   "Lambda1_adopted": 1.0487605965116092e-34,
+   "Lambda1_eig": -1.980676541914999e-14,
+   "Lambda1_mfpt": 1.0487605965116092e-34,
+   "p_fresh_N50": 7.843048847323966e-34,
+   "p_fresh_N60": 1.3007368799788897e-33,
+   "p_relaxed_N50": 3.027308094401335e-33,
+   "p_relaxed_N60": 3.5516900240752816e-33,
+   "N0_instant": 48.1880162438224,
+   "T_RH_instant": 11116904627.152016,
+   "R_X_times_R_D": 49.83543201031029
+  },
+  {
+   "H_GeV": 177.0158,
+   "B_HM": 67.29353533767946,
+   "Lambda1_adopted": 2.8423250195781238e-31,
+   "Lambda1_eig": -1.0443136169967726e-15,
+   "Lambda1_mfpt": 2.8423250195781238e-31,
+   "p_fresh_N50": 1.9686371725859264e-30,
+   "p_fresh_N60": 3.3561143255496734e-30,
+   "p_relaxed_N50": 8.253545445851147e-30,
+   "p_relaxed_N60": 9.674716553635014e-30,
+   "N0_instant": 48.20204779578098,
+   "T_RH_instant": 11273988106.945415,
+   "R_X_times_R_D": 47.16823960834395
+  },
+  {
+   "H_GeV": 182.0539,
+   "B_HM": 60.17689014740103,
+   "Lambda1_adopted": 3.310048291128675e-28,
+   "Lambda1_eig": -2.7818796181620245e-15,
+   "Lambda1_mfpt": 3.310048291128675e-28,
+   "p_fresh_N50": 2.1141202015630096e-27,
+   "p_fresh_N60": 3.710246533366592e-27,
+   "p_relaxed_N50": 9.672463772371876e-27,
+   "p_relaxed_N60": 1.132750673328615e-26,
+   "N0_instant": 48.21607928206097,
+   "T_RH_instant": 11433290452.80787,
+   "R_X_times_R_D": 44.64528664360872
+  },
+  {
+   "H_GeV": 187.2354,
+   "B_HM": 53.81512702103172,
+   "Lambda1_adopted": 1.8118692771773434e-25,
+   "Lambda1_eig": -1.372775808747159e-14,
+   "Lambda1_mfpt": 1.8118692771773434e-25,
+   "p_fresh_N50": 1.0631528345817723e-24,
+   "p_fresh_N60": 1.922550435329089e-24,
+   "p_relaxed_N50": 5.329609382823251e-24,
+   "p_relaxed_N60": 6.235562757457912e-24,
+   "N0_instant": 48.23011079303714,
+   "T_RH_instant": 11594844044.374086,
+   "R_X_times_R_D": 42.25755130727856
+  },
+  {
+   "H_GeV": 192.5645,
+   "B_HM": 48.12797178269217,
+   "Lambda1_adopted": 5.0513740820240374e-23,
+   "Lambda1_eig": 1.4764407154225257e-14,
+   "Lambda1_mfpt": 5.0513740820240374e-23,
+   "p_fresh_N50": 2.7151495802979837e-22,
+   "p_fresh_N60": 5.060510499389742e-22,
+   "p_relaxed_N50": 1.4961720289118578e-21,
+   "p_relaxed_N60": 1.748749948436691e-21,
+   "N0_instant": 48.244142635428645,
+   "T_RH_instant": 11758684306.647894,
+   "R_X_times_R_D": 39.99908746434738
+  },
+  {
+   "H_GeV": 198.0451,
+   "B_HM": 43.04408542058971,
+   "Lambda1_adopted": 7.703019603616148e-21,
+   "Lambda1_eig": 6.304344695474229e-16,
+   "Lambda1_mfpt": 7.703019603616148e-21,
+   "p_fresh_N50": 3.7861121044796494e-20,
+   "p_fresh_N60": 7.268974791907924e-20,
+   "p_relaxed_N50": 2.298536582725487e-19,
+   "p_relaxed_N60": 2.683711645983737e-19,
+   "N0_instant": 48.25817403126881,
+   "T_RH_instant": 11924834383.829447,
+   "R_X_times_R_D": 37.86181261718446
+  },
+  {
+   "H_GeV": 203.6818,
+   "B_HM": 38.49915552627607,
+   "Lambda1_adopted": 6.851815938230182e-19,
+   "Lambda1_eig": 1.4490242166902407e-14,
+   "Lambda1_mfpt": 6.851815938230182e-19,
+   "p_fresh_N50": 3.078371349799751e-18,
+   "p_fresh_N60": 6.079428361192748e-18,
+   "p_relaxed_N50": 2.060518691088811e-17,
+   "p_relaxed_N60": 2.403145205981553e-17,
+   "N0_instant": 48.272205712260266,
+   "T_RH_instant": 12093335612.770311,
+   "R_X_times_R_D": 35.8404140511013
+  },
+  {
+   "H_GeV": 209.4789,
+   "B_HM": 34.43607523304048,
+   "Lambda1_adopted": 3.763911937745485e-17,
+   "Lambda1_eig": -1.4930237951104177e-14,
+   "Lambda1_mfpt": 3.763911937745485e-17,
+   "p_fresh_N50": 1.5475702103093916e-16,
+   "p_fresh_N60": 3.1366473758434475e-16,
+   "p_relaxed_N50": 1.1412029479690235e-15,
+   "p_relaxed_N60": 1.3294304221759333e-15,
+   "N0_instant": 48.286237321850784,
+   "T_RH_instant": 12264216940.030508,
+   "R_X_times_R_D": 33.92753198262884
+  },
+  {
+   "H_GeV": 215.441,
+   "B_HM": 30.803661598843146,
+   "Lambda1_adopted": 1.3439518929441211e-15,
+   "Lambda1_eig": -1.162291489736399e-14,
+   "Lambda1_mfpt": 1.3439518929441211e-15,
+   "p_fresh_N50": 5.071342574278514e-15,
+   "p_fresh_N60": 1.0516933777369959e-14,
+   "p_relaxed_N50": 4.110008735399264e-14,
+   "p_relaxed_N60": 4.782165125236151e-14,
+   "N0_instant": 48.300268944641005,
+   "T_RH_instant": 12437513024.612986,
+   "R_X_times_R_D": 32.11851406001064
+  },
+  {
+   "H_GeV": 221.5728,
+   "B_HM": 27.556192304018587,
+   "Lambda1_adopted": 3.265030062321181e-14,
+   "Lambda1_eig": 3.6132250043202944e-14,
+   "Lambda1_mfpt": 3.265030062321181e-14,
+   "p_fresh_N50": 1.1358219398464832e-13,
+   "p_fresh_N60": 2.4012282433695694e-13,
+   "p_relaxed_N50": 1.0076692601101079e-12,
+   "p_relaxed_N60": 1.170988669218114e-12,
+   "N0_instant": 48.31430058859214,
+   "T_RH_instant": 12613258092.690615,
+   "R_X_times_R_D": 30.406727637717104
+  },
+  {
+   "H_GeV": 227.8791,
+   "B_HM": 24.65281662833977,
+   "Lambda1_adopted": 5.6218859773278e-13,
+   "Lambda1_eig": 5.709861751962717e-13,
+   "Lambda1_mfpt": 5.6218859773278e-13,
+   "p_fresh_N50": 1.8140216770990404e-12,
+   "p_fresh_N60": 3.893443874494676e-12,
+   "p_relaxed_N50": 1.7518449482634168e-11,
+   "p_relaxed_N60": 2.0331164550418083e-11,
+   "N0_instant": 48.32833218688225,
+   "T_RH_instant": 12791485901.848326,
+   "R_X_times_R_D": 28.78797466747119
+  },
+  {
+   "H_GeV": 234.3649,
+   "B_HM": 22.05699397927173,
+   "Lambda1_adopted": 7.130839719680793e-12,
+   "Lambda1_eig": 7.130839719680793e-12,
+   "Lambda1_mfpt": 7.115845485996337e-12,
+   "p_fresh_N50": 2.1459116483150483e-11,
+   "p_fresh_N60": 4.655578084523622e-11,
+   "p_relaxed_N50": 2.239997627911202e-10,
+   "p_relaxed_N60": 2.5961229249303035e-10,
+   "N0_instant": 48.34236381341108,
+   "T_RH_instant": 12972232476.036951,
+   "R_X_times_R_D": 27.25638588602346
+  },
+  {
+   "H_GeV": 241.0353,
+   "B_HM": 19.736084008293087,
+   "Lambda1_adopted": 6.839394803975522e-11,
+   "Lambda1_eig": 6.839394803975522e-11,
+   "Lambda1_mfpt": 6.840426006472476e-11,
+   "p_fresh_N50": 1.9450526161176599e-10,
+   "p_fresh_N60": 4.246564556782815e-10,
+   "p_relaxed_N50": 2.176460679902437e-09,
+   "p_relaxed_N60": 2.5189481820169567e-09,
+   "N0_instant": 48.35639544828797,
+   "T_RH_instant": 13155533154.686539,
+   "R_X_times_R_D": 25.80807815166497
+  },
+  {
+   "H_GeV": 247.8955,
+   "B_HM": 17.660924572786914,
+   "Lambda1_adopted": 5.14146066279763e-10,
+   "Lambda1_eig": 5.14146066279763e-10,
+   "Lambda1_mfpt": 5.141638830504062e-10,
+   "p_fresh_N50": 1.3922048196286728e-09,
+   "p_fresh_N60": 3.0455945074855786e-09,
+   "p_relaxed_N50": 1.6545154616019894e-08,
+   "p_relaxed_N60": 1.9120985292715854e-08,
+   "N0_instant": 48.37042698213786,
+   "T_RH_instant": 13341422571.885284,
+   "R_X_times_R_D": 24.4379658669207
+  },
+  {
+   "H_GeV": 254.951,
+   "B_HM": 15.805407620723086,
+   "Lambda1_adopted": 3.101713602040346e-09,
+   "Lambda1_eig": 3.101713602040346e-09,
+   "Lambda1_mfpt": 3.101710513139234e-09,
+   "p_fresh_N50": 8.083406580625373e-09,
+   "p_fresh_N60": 1.764595821017457e-08,
+   "p_relaxed_N50": 1.0100534466005248e-07,
+   "p_relaxed_N60": 1.1655639897816239e-07,
+   "N0_instant": 48.384458612734946,
+   "T_RH_instant": 13529939944.942251,
+   "R_X_times_R_D": 23.14235766840216
+  },
+  {
+   "H_GeV": 262.2073,
+   "B_HM": 14.146241514116898,
+   "Lambda1_adopted": 1.53700401741481e-08,
+   "Lambda1_eig": 1.53700401741481e-08,
+   "Lambda1_mfpt": 1.53700567944971e-08,
+   "p_fresh_N50": 3.898934174781577e-08,
+   "p_fresh_N60": 8.461365942893752e-08,
+   "p_relaxed_N50": 5.067917291852818e-07,
+   "p_relaxed_N60": 5.83933409026702e-07,
+   "N0_instant": 48.39849022317348,
+   "T_RH_instant": 13721120840.270533,
+   "R_X_times_R_D": 21.91693206886869
+  },
+  {
+   "H_GeV": 269.6701,
+   "B_HM": 12.662594799485332,
+   "Lambda1_adopted": 6.387674628170385e-08,
+   "Lambda1_eig": 6.387674628170385e-08,
+   "Lambda1_mfpt": 6.387681320763845e-08,
+   "p_fresh_N50": 1.595577432488467e-07,
+   "p_fresh_N60": 3.4307689814649223e-07,
+   "p_relaxed_N50": 2.1343762371942377e-06,
+   "p_relaxed_N60": 2.455410417021052e-06,
+   "N0_instant": 48.41252178661373,
+   "T_RH_instant": 13915002512.87246,
+   "R_X_times_R_D": 20.758130117934932
+  },
+  {
+   "H_GeV": 277.3453,
+   "B_HM": 11.335841363023496,
+   "Lambda1_adopted": 2.2680906981355743e-07,
+   "Lambda1_eig": 2.2680906981355743e-07,
+   "Lambda1_mfpt": 2.2680994101738742e-07,
+   "p_fresh_N50": 5.644543085763269e-07,
+   "p_fresh_N60": 1.1989509559960232e-06,
+   "p_relaxed_N50": 7.685901114366161e-06,
+   "p_relaxed_N60": 8.827814644899556e-06,
+   "N0_instant": 48.4265533465793,
+   "T_RH_instant": 14111623721.096415,
+   "R_X_times_R_D": 19.66238420599591
+  },
+  {
+   "H_GeV": 285.239,
+   "B_HM": 10.149330391305567,
+   "Lambda1_adopted": 6.995585056207933e-07,
+   "Lambda1_eig": 6.995585056207933e-07,
+   "Lambda1_mfpt": 6.995672290808688e-07,
+   "p_fresh_N50": 1.754918929779206e-06,
+   "p_fresh_N60": 3.6731407809417365e-06,
+   "p_relaxed_N50": 2.405770346880194e-05,
+   "p_relaxed_N60": 2.7587582810070456e-05,
+   "N0_instant": 48.44058499931547,
+   "T_RH_instant": 14311024551.084396,
+   "R_X_times_R_D": 18.62613745747031
+  },
+  {
+   "H_GeV": 293.3573,
+   "B_HM": 9.08820351990062,
+   "Lambda1_adopted": 1.9021855340750645e-06,
+   "Lambda1_eig": 1.9021855340750645e-06,
+   "Lambda1_mfpt": 1.9022542251852e-06,
+   "p_fresh_N50": 4.865502957970281e-06,
+   "p_fresh_N60": 1.0014100403608299e-05,
+   "p_relaxed_N50": 6.644050808760426e-05,
+   "p_relaxed_N60": 7.606487017124938e-05,
+   "N0_instant": 48.45461653718418,
+   "T_RH_instant": 14513241303.522003,
+   "R_X_times_R_D": 17.646624808224438
+  },
+  {
+   "H_GeV": 301.7067,
+   "B_HM": 8.139150240370396,
+   "Lambda1_adopted": 4.620681691911385e-06,
+   "Lambda1_eig": 4.620681691911385e-06,
+   "Lambda1_mfpt": 4.621114205745226e-06,
+   "p_fresh_N50": 1.218546856501066e-05,
+   "p_fresh_N60": 2.4620725077242667e-05,
+   "p_relaxed_N50": 0.00016402640319907217,
+   "p_relaxed_N60": 0.0001874811985843354,
+   "N0_instant": 48.46864814473665,
+   "T_RH_instant": 14718316437.327682,
+   "R_X_times_R_D": 16.72019413024005
+  },
+  {
+   "H_GeV": 310.2938,
+   "B_HM": 7.29028619280402,
+   "Lambda1_adopted": 1.0147282424130773e-05,
+   "Lambda1_eig": 1.0147282424130773e-05,
+   "Lambda1_mfpt": 1.0149509678112082e-05,
+   "p_fresh_N50": 2.788256472876212e-05,
+   "p_fresh_N60": 5.52331450775849e-05,
+   "p_relaxed_N50": 0.0003663355474654183,
+   "p_relaxed_N60": 0.00041803381611255866,
+   "N0_instant": 48.482679854502976,
+   "T_RH_instant": 14926290856.45753,
+   "R_X_times_R_D": 15.84487013449414
+  },
+  {
+   "H_GeV": 319.1252,
+   "B_HM": 6.531004598582668,
+   "Lambda1_adopted": 2.0362908280787112e-05,
+   "Lambda1_eig": 2.0362908280787112e-05,
+   "Lambda1_mfpt": 2.0372485884090816e-05,
+   "p_fresh_N50": 5.8877115697626513e-05,
+   "p_fresh_N60": 0.00011423596175487594,
+   "p_relaxed_N50": 0.0007479880009883196,
+   "p_relaxed_N60": 0.000852144595276813,
+   "N0_instant": 48.496711401848955,
+   "T_RH_instant": 15137201565.90428,
+   "R_X_times_R_D": 15.016840599460874
+  },
+  {
+   "H_GeV": 328.208,
+   "B_HM": 5.851797689971774,
+   "Lambda1_adopted": 3.770610647121804e-05,
+   "Lambda1_eig": 3.770610647121804e-05,
+   "Lambda1_mfpt": 3.774114579639141e-05,
+   "p_fresh_N50": 0.00011575324605647305,
+   "p_fresh_N60": 0.00021983076992669641,
+   "p_relaxed_N50": 0.0014092303303216767,
+   "p_relaxed_N60": 0.0016028607958589976,
+   "N0_instant": 48.51074301940543,
+   "T_RH_instant": 15351093558.05828,
+   "R_X_times_R_D": 14.234954610598805
+  },
+  {
+   "H_GeV": 337.5493,
+   "B_HM": 5.244183854262945,
+   "Lambda1_adopted": 6.500072831890254e-05,
+   "Lambda1_eig": 6.500072831890254e-05,
+   "Lambda1_mfpt": 6.51116165001442e-05,
+   "p_fresh_N50": 0.00021353912523283206,
+   "p_fresh_N60": 0.0003967854569680182,
+   "p_relaxed_N50": 0.0024709948689749573,
+   "p_relaxed_N60": 0.002805972378963413,
+   "N0_instant": 48.52477462154071,
+   "T_RH_instant": 15568007656.366623,
+   "R_X_times_R_D": 13.495098045258233
+  },
+  {
+   "H_GeV": 347.1565,
+   "B_HM": 4.7005753227197395,
+   "Lambda1_adopted": 0.0001051676849760525,
+   "Lambda1_eig": 0.0001051676849760525,
+   "Lambda1_mfpt": 0.00010547583650050809,
+   "p_fresh_N50": 0.00037219860612343846,
+   "p_fresh_N60": 0.0006765445725228362,
+   "p_relaxed_N50": 0.004062453874294942,
+   "p_relaxed_N60": 0.004605865411088871,
+   "N0_instant": 48.53880627060487,
+   "T_RH_instant": 15787987541.538555,
+   "R_X_times_R_D": 12.79700731128218
+  },
+  {
+   "H_GeV": 357.0371,
+   "B_HM": 4.214195840671182,
+   "Lambda1_adopted": 0.0001608848335285452,
+   "Lambda1_eig": 0.0001608848335285452,
+   "Lambda1_mfpt": 0.0001616471273465815,
+   "p_fresh_N50": 0.0006166842879984034,
+   "p_fresh_N60": 0.0010965579633093303,
+   "p_relaxed_N50": 0.006306459262296257,
+   "p_relaxed_N60": 0.007138815398408751,
+   "N0_instant": 48.552837868904525,
+   "T_RH_instant": 16011074990.673615,
+   "R_X_times_R_D": 12.1361754759844
+  },
+  {
+   "H_GeV": 367.1989,
+   "B_HM": 3.7789837240769137,
+   "Lambda1_adopted": 0.00023428003611354945,
+   "Lambda1_eig": 0.00023428003611354945,
+   "Lambda1_mfpt": 0.0002359798368981212,
+   "p_fresh_N50": 0.0009765108841788978,
+   "p_fresh_N60": 0.0016988892720802876,
+   "p_relaxed_N50": 0.009301913436397143,
+   "p_relaxed_N60": 0.010513289023858704,
+   "N0_instant": 48.56686944458246,
+   "T_RH_instant": 16237314348.528358,
+   "R_X_times_R_D": 11.513261820226806
+  },
+  {
+   "H_GeV": 377.65,
+   "B_HM": 3.3895183734280354,
+   "Lambda1_adopted": 0.0003267190927543652,
+   "Lambda1_eig": 0.0003267190927543652,
+   "Lambda1_mfpt": 0.00033017522584259754,
+   "p_fresh_N50": 0.0014848395513894924,
+   "p_fresh_N60": 0.002528230046847292,
+   "p_relaxed_N50": 0.013115416223645104,
+   "p_relaxed_N60": 0.01480008718588271,
+   "N0_instant": 48.58090112682864,
+   "T_RH_instant": 16466752269.231314,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 388.3985,
+   "B_HM": 3.0409628182346107,
+   "Lambda1_adopted": 0.00043871695389658387,
+   "Lambda1_eig": 0.00043871695389658387,
+   "Lambda1_mfpt": 0.00044519249192108076,
+   "p_fresh_N50": 0.0021772138620980417,
+   "p_fresh_N60": 0.003629612568479381,
+   "p_relaxed_N50": 0.01775893523975702,
+   "p_relaxed_N60": 0.020009403903252086,
+   "N0_instant": 48.594932737388085,
+   "T_RH_instant": 16699431022.054617,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 399.4529,
+   "B_HM": 2.728987244725165,
+   "Lambda1_adopted": 0.0005699662433236389,
+   "Lambda1_eig": 0.0005699662433236389,
+   "Lambda1_mfpt": 0.0005812545620931678,
+   "p_fresh_N50": 0.0030899999000517384,
+   "p_fresh_N60": 0.00504602432505231,
+   "p_relaxed_N50": 0.023206061617524577,
+   "p_relaxed_N60": 0.026107424857191974,
+   "N0_instant": 48.60896432467222,
+   "T_RH_instant": 16935397187.016323,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 410.8219,
+   "B_HM": 2.4497227072314915,
+   "Lambda1_adopted": 0.000719450156784164,
+   "Lambda1_eig": 0.000719450156784164,
+   "Lambda1_mfpt": 0.0007379182472857284,
+   "p_fresh_N50": 0.004258811961914473,
+   "p_fresh_N60": 0.006816278856563441,
+   "p_relaxed_N50": 0.02937647236804535,
+   "p_relaxed_N60": 0.03300189367122639,
+   "N0_instant": 48.622995882215164,
+   "T_RH_instant": 17174697093.880138,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 422.5146,
+   "B_HM": 2.1997076963861564,
+   "Lambda1_adopted": 0.0008856000532962722,
+   "Lambda1_eig": 0.0008856000532962722,
+   "Lambda1_mfpt": 0.0009141782098137824,
+   "p_fresh_N50": 0.005716923075951908,
+   "p_fresh_N60": 0.008973196529916069,
+   "p_relaxed_N50": 0.03617878386538918,
+   "p_relaxed_N60": 0.0405864834145622,
+   "N0_instant": 48.63702758446735,
+   "T_RH_instant": 17417380873.139187,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 434.54,
+   "B_HM": 1.9758553196967963,
+   "Lambda1_adopted": 0.0010664627332911635,
+   "Lambda1_eig": 0.0010664627332911635,
+   "Lambda1_mfpt": 0.0011085801254337923,
+   "p_fresh_N50": 0.007493925459880667,
+   "p_fresh_N60": 0.01154230480169845,
+   "p_relaxed_N50": 0.0434865967393754,
+   "p_relaxed_N60": 0.04871844073013625,
+   "N0_instant": 48.651059178396864,
+   "T_RH_instant": 17663491941.464565,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 446.9076,
+   "B_HM": 1.7754008906378718,
+   "Lambda1_adopted": 0.001259867259101237,
+   "Lambda1_eig": 0.001259867259101237,
+   "Lambda1_mfpt": 0.0013193440945540103,
+   "p_fresh_N50": 0.009614702133463287,
+   "p_fresh_N60": 0.014541165798883909,
+   "p_relaxed_N50": 0.05115851281186454,
+   "p_relaxed_N60": 0.05724006262374212,
+   "N0_instant": 48.66509070445531,
+   "T_RH_instant": 17913079398.146866,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 459.6273,
+   "B_HM": 1.5958715017830631,
+   "Lambda1_adopted": 0.0014635571149349187,
+   "Lambda1_eig": 0.0014635571149349187,
+   "Lambda1_mfpt": 0.0015444688236406733,
+   "p_fresh_N50": 0.012098636467045678,
+   "p_fresh_N60": 0.017979102968501973,
+   "p_relaxed_N50": 0.05908952770347326,
+   "p_relaxed_N60": 0.06603115507797609,
+   "N0_instant": 48.67912234097991,
+   "T_RH_instant": 18166195570.642143,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 472.709,
+   "B_HM": 1.4350605701831463,
+   "Lambda1_adopted": 0.0016752941505978735,
+   "Lambda1_eig": 0.0016752941505978735,
+   "Lambda1_mfpt": 0.001781823655198525,
+   "p_fresh_N50": 0.014959210010159383,
+   "p_fresh_N60": 0.02185739256577986,
+   "p_relaxed_N50": 0.06715117222400961,
+   "p_relaxed_N60": 0.07494988872016917,
+   "N0_instant": 48.693153953630926,
+   "T_RH_instant": 18422887902.115284,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 486.1631,
+   "B_HM": 1.2909926812994885,
+   "Lambda1_adopted": 0.0018929407508740648,
+   "Lambda1_eig": 0.0018929407508740648,
+   "Lambda1_mfpt": 0.0020292356265345394,
+   "p_fresh_N50": 0.01820392732639754,
+   "p_fresh_N60": 0.02616990214515248,
+   "p_relaxed_N50": 0.0752384815110616,
+   "p_relaxed_N60": 0.08388014214116488,
+   "N0_instant": 48.707185643405836,
+   "T_RH_instant": 18683208799.163307,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 500.0,
+   "B_HM": 1.1619047842157084,
+   "Lambda1_adopted": 0.0021145034353031392,
+   "Lambda1_eig": 0.0021145034353031392,
+   "Lambda1_mfpt": 0.0022845475253532466,
+   "p_fresh_N50": 0.0218343622741949,
+   "p_fresh_N60": 0.03090376171424974,
+   "p_relaxed_N50": 0.08328473475473476,
+   "p_relaxed_N60": 0.0927462916614112,
+   "N0_instant": 48.72121720698064,
+   "T_RH_instant": 18947205722.705242,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 550.0,
+   "B_HM": 0.8154328698258494,
+   "Lambda1_adopted": 0.0028735142643942723,
+   "Lambda1_eig": 0.0028735142643942723,
+   "Lambda1_mfpt": 0.003183716443237439,
+   "p_fresh_N50": 0.0369536231260263,
+   "p_fresh_N60": 0.049843933324617354,
+   "p_relaxed_N50": 0.1092042761596989,
+   "p_relaxed_N60": 0.12120338389097611,
+   "N0_instant": 48.76887092884227,
+   "T_RH_instant": 19871950061.14585,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 661.3906,
+   "B_HM": 0.41932413802620083,
+   "Lambda1_adopted": 0.004235176117117868,
+   "Lambda1_eig": 0.004235176117117868,
+   "Lambda1_mfpt": 0.004878670700362679,
+   "p_fresh_N50": 0.07635416130749353,
+   "p_fresh_N60": 0.09559049000278386,
+   "p_relaxed_N50": 0.15021483988720025,
+   "p_relaxed_N60": 0.16586547524629666,
+   "N0_instant": 48.86108144640431,
+   "T_RH_instant": 21791452271.98096,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 795.341,
+   "B_HM": 0.2235001038562752,
+   "Lambda1_adopted": 0.005333571889050015,
+   "Lambda1_eig": 0.005333571889050015,
+   "Lambda1_mfpt": 0.006307159011759777,
+   "p_fresh_N50": 0.12348989917837952,
+   "p_fresh_N60": 0.14635239068382297,
+   "p_relaxed_N50": 0.17882823816563262,
+   "p_relaxed_N60": 0.19674801277543943,
+   "N0_instant": 48.953292004262174,
+   "T_RH_instant": 23896367262.25274,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 956.4201,
+   "B_HM": 0.12513441235524347,
+   "Lambda1_adopted": 0.0061545077685102294,
+   "Lambda1_eig": 0.0061545077685102294,
+   "Lambda1_mfpt": 0.007402880783038802,
+   "p_fresh_N50": 0.1722621833243679,
+   "p_fresh_N60": 0.1960822831323122,
+   "p_relaxed_N50": 0.1981173468368275,
+   "p_relaxed_N60": 0.2174173030667813,
+   "N0_instant": 49.04550254080844,
+   "T_RH_instant": 26204603318.50204,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 1150.1223,
+   "B_HM": 0.07469287446234413,
+   "Lambda1_adopted": 0.006741320989455603,
+   "Lambda1_eig": 0.006741320989455603,
+   "Lambda1_mfpt": 0.008198299883564322,
+   "p_fresh_N50": 0.218724323983121,
+   "p_fresh_N60": 0.2416439578399447,
+   "p_relaxed_N50": 0.21084936876584484,
+   "p_relaxed_N60": 0.23099527031499856,
+   "N0_instant": 49.137713096147465,
+   "T_RH_instant": 28735801036.983044,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 1383.0546,
+   "B_HM": 0.048192555412490096,
+   "Lambda1_adopted": 0.0071475607045696065,
+   "Lambda1_eig": 0.0071475607045696065,
+   "Lambda1_mfpt": 0.00875412398710913,
+   "p_fresh_N50": 0.26088083268341844,
+   "p_fresh_N60": 0.28186191369018115,
+   "p_relaxed_N50": 0.21929551058740393,
+   "p_relaxed_N60": 0.23996574253332886,
+   "N0_instant": 49.229923630563825,
+   "T_RH_instant": 31511495975.85327,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 1663.1624,
+   "B_HM": 0.03392932390123128,
+   "Lambda1_adopted": 0.00742060311759328,
+   "Lambda1_eig": 0.00742060311759328,
+   "Lambda1_mfpt": 0.009129833605970165,
+   "p_fresh_N50": 0.2980104575926595,
+   "p_fresh_N60": 0.3166102639665889,
+   "p_relaxed_N50": 0.22477594161936904,
+   "p_relaxed_N60": 0.24577252826434454,
+   "N0_instant": 49.32213421241005,
+   "T_RH_instant": 34555307279.52182,
+   "R_X_times_R_D": NaN
+  },
+  {
+   "H_GeV": 2000.0,
+   "B_HM": 0.026122152939837665,
+   "Lambda1_adopted": 0.00759779473583406,
+   "Lambda1_eig": 0.00759779473583406,
+   "Lambda1_mfpt": 0.009374459977904943,
+   "p_fresh_N50": 0.33010684371328075,
+   "p_fresh_N60": 0.34625122864398894,
+   "p_relaxed_N50": 0.227993226298658,
+   "p_relaxed_N60": 0.2491910402731442,
+   "N0_instant": 49.41434481089812,
+   "T_RH_instant": 37893132462.83198,
+   "R_X_times_R_D": NaN
+  }
+ ]
+}

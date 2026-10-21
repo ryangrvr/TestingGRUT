@@ -1,0 +1,437 @@
+{
+ "module": "production_map",
+ "part": "B spectator-condensate relic for H_inf >> v",
+ "labels": "[D] derived, [C] computed, [Q] quoted, [E] estimate, [P] preparation datum",
+ "SY equilibrium moments (units H^2, H^4) [C]": {
+  "minimal (mu0 couplings, xi = 0, exact quartic, H-independent)": {
+   "phi2": 0.6811971650172957,
+   "r2": 5.457668803362894,
+   "D2": 4.148432467346058,
+   "U4": 0.037998525600652915,
+   "U_total": 0.037998525600652915,
+   "couplings": {
+    "lphi": 0.01,
+    "lX": 0.001,
+    "gX2": 0.010000000000000002,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": 0.0,
+    "m2X": 0.0,
+    "m2D": 0.0
+   },
+   "sum_chi2": 10.28729843572625
+  },
+  "running xi and couplings at mu=H, H=1e+08": {
+   "phi2": 0.8147984083160301,
+   "r2": 6.698497099433475,
+   "D2": 4.452842808214231,
+   "U4": 0.051114815274956836,
+   "U_total": 0.024881161831817405,
+   "couplings": {
+    "lphi": 0.010196022429965437,
+    "lX": 0.0010195112686986433,
+    "gX2": 0.010131374180941632,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": -0.017736365718994375,
+    "m2X": -0.00495315619943194,
+    "m2D": -0.0010862817535962643
+   },
+   "sum_chi2": 11.966138315963736
+  },
+  "running xi and couplings at mu=H, H=1e+10": {
+   "phi2": 0.8675591477807157,
+   "r2": 7.19374299699502,
+   "D2": 4.561174248531498,
+   "U4": 0.05672024579284006,
+   "U_total": 0.019275455423904794,
+   "couplings": {
+    "lphi": 0.010262978492118461,
+    "lX": 0.001026134594191896,
+    "gX2": 0.010176023782031508,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": -0.023740751652646604,
+    "m2X": -0.006628518935496168,
+    "m2D": -0.0014490156336123868
+   },
+   "sum_chi2": 12.622476393307235
+  },
+  "running xi and couplings at mu=H, H=1e+11": {
+   "phi2": 0.8957529683588833,
+   "r2": 7.458287438279997,
+   "D2": 4.616684903925333,
+   "U4": 0.059802312278276114,
+   "U_total": 0.016193269005820937,
+   "couplings": {
+    "lphi": 0.010296767731347172,
+    "lX": 0.0010294691616233162,
+    "gX2": 0.01019851320522182,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": -0.02676060568089695,
+    "m2X": -0.007470840423761352,
+    "m2D": -0.0016305031514780948
+   },
+   "sum_chi2": 12.970725310564212
+  },
+  "running xi and couplings at mu=H, H=1e+12": {
+   "phi2": 0.9252582579249958,
+   "r2": 7.734511659781394,
+   "D2": 4.673108972029754,
+   "U4": 0.06308673305137083,
+   "U_total": 0.012908741175007787,
+   "couplings": {
+    "lphi": 0.010330766991913702,
+    "lX": 0.001032819146244411,
+    "gX2": 0.01022111350473437,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": -0.029792343557127177,
+    "m2X": -0.00831628011634781,
+    "m2D": -0.0018120712310240145
+   },
+   "sum_chi2": 13.332878889736143
+  },
+  "running xi and couplings at mu=H, H=1e+13": {
+   "phi2": 0.9561636917924401,
+   "r2": 8.022662488670113,
+   "D2": 4.730458668179577,
+   "U4": 0.06658629050698231,
+   "U_total": 0.009409090228418897,
+   "couplings": {
+    "lphi": 0.010364978215067308,
+    "lX": 0.0010361846599785812,
+    "gX2": 0.010243825537687289,
+    "hD2": 0.0001,
+    "lD": 0.001,
+    "m2phi": -0.03283604867069462,
+    "m2X": -0.009164856811444192,
+    "m2D": -0.001993720005316635
+   },
+   "sum_chi2": 13.709284848642131
+  }
+ },
+ "checks": {
+  "single quartic <x^2> = Gamma(3/4)/Gamma(1/4) sqrt(3/(2 pi^2 lambda)) [D]": {
+   "lphi": 1.3176451787100798,
+   "lD": 4.166759912663458
+  },
+  "X alone <r^2> = sqrt(3/(2 pi^3 lX)) = 6.955 [Q hidden_heating]": 6.955379331840877,
+  "inflation_spectator 2D FP at 1e13 GeV: <phi^2> = 0.97 H^2, <2|X|^2> = 8.0 H^2 [Q]": null,
+  "hidden_heating <U_true> = c H^4, c = 0.042-0.094 [Q]": null
+ },
+ "calibration single quartic field [C]": {
+  "J_zc_over_exact": [
+   1.0000553220379413,
+   0.9988116888744467,
+   0.998196537967426,
+   1.0003456830811757
+  ],
+  "J_curv_over_exact": [
+   0.7225851159269456,
+   0.7237417989674443,
+   0.7240248828943062,
+   0.7233807015571013
+  ],
+  "E_drift": [
+   -7.893001654490917e-07,
+   -5.996256665641297e-07,
+   2.5639210015082625e-06,
+   1.809128075236366e-05
+  ],
+  "omega_exact_formula": "0.847213 sqrt(lambda) amplitude [D]"
+ },
+ "conformal dynamics, instant reheating, minimal couplings (units H_e) [C]": {
+  "no slow-roll velocity": {
+   "mean_E_c": 5.231041007097166,
+   "mean_E_c_late": 5.231036424988251,
+   "energy_conservation": 8.759458983709223e-07,
+   "mean_J_zc": 21.00738685089464,
+   "mean_J_curv": 15.832986172125656,
+   "J_zc_sem": 0.2962413573516623,
+   "share_J_by_field": [
+    0.11398391337068199,
+    0.4205782201886138,
+    0.4654378664407042
+   ],
+   "min_zero_crossings": [
+    65,
+    32,
+    10
+   ],
+   "runtime_s": 101.0835452079773
+  },
+  "with slow-roll velocity": {
+   "mean_E_c": 5.180478726373958,
+   "mean_E_c_late": 5.1804743490425365,
+   "energy_conservation": 8.449665857002131e-07,
+   "mean_J_zc": 20.910288109710873,
+   "mean_J_curv": 15.745916767715126,
+   "J_zc_sem": 0.2947261590757384,
+   "share_J_by_field": [
+    0.11135300787487618,
+    0.4221021316966983,
+    0.4665448604284254
+   ],
+   "min_zero_crossings": [
+    65,
+    32,
+    9
+   ],
+   "runtime_s": 96.92318964004517
+  }
+ },
+ "instant reheating, minimal couplings [C]": {
+  "eps = coef (H/M_P)^2: analytic sum<chi^2>/6 + <U4>/3 [D]": 1.727215914487926,
+  "eps coef from sampled initial data incl. slow roll [C]": 1.7268262421246527,
+  "critic's eps coef (c/3, c = 0.07) [Q critic]": 0.023333333333333334,
+  "frozen-field term / potential term": 135.36444208179338,
+  "xi_E = coef (H/M_P)^(1/2) [C]": 2.605488334598273,
+  "Y_floor = coef (H/M_P)^(3/2) (mu=0 number at the same energy) [C]": 0.18402107398965578,
+  "Y_J = coef (H/M_P)^(3/2) (condensate quanta conserved) [C]": 2.8261404787377318,
+  "critic Y = coef (H/M_P)^(3/2), coef = (c/3)(3/4)(T_RH/sqrt(H M_P))/0.08 [Q critic, re-derived]": 0.11826106392800477,
+  "overpopulation J/n_eq(rho) [C]": 15.357700166974327,
+  "Y_N at H = 1e13 GeV: floor, J, critic": [
+   1.5312027676209764e-09,
+   2.3515752999964224e-08,
+   9.840267990096673e-10
+  ],
+  "H_inf threshold (Y = 4.373e-12): floor, J, critic-formula [C]": [
+   201294162820.0344,
+   32579698303.11948,
+   270301445032.01263
+  ],
+  "H_inf threshold with Y = 4.30e-12 (critic's bound): critic formula": 267284856012.7619,
+  "variance budget for the floor: sqrt(sum<chi^2>)_max = sqrt(6 eps_th) M_P with eps_th(Y_max) [D]": 647934531879.841
+ },
+ "running-xi variant (couplings and Hubble masses at mu=H) [C]": [
+  {
+   "H": 100000000.0,
+   "sum_chi2": 11.966138315963736,
+   "phi2": 0.8147984083160301,
+   "r2": 6.698497099433475,
+   "D2": 4.452842808214231,
+   "ratio_to_minimal": 1.1631954094388013,
+   "Y_floor": 5.42899191291142e-17,
+   "Y_J": 8.329106199741556e-16
+  },
+  {
+   "H": 10000000000.0,
+   "sum_chi2": 12.622476393307235,
+   "phi2": 0.8675591477807157,
+   "r2": 7.19374299699502,
+   "D2": 4.561174248531498,
+   "ratio_to_minimal": 1.226996229590391,
+   "Y_floor": 5.652693656577967e-14,
+   "Y_J": 8.669445305497008e-13
+  },
+  {
+   "H": 100000000000.0,
+   "sum_chi2": 12.970725310564212,
+   "phi2": 0.8957529683588833,
+   "r2": 7.458287438279997,
+   "D2": 4.616684903925333,
+   "ratio_to_minimal": 1.260848549461618,
+   "Y_floor": 1.824717899853628e-12,
+   "Y_J": 2.7980539388153078e-11
+  },
+  {
+   "H": 1000000000000.0,
+   "sum_chi2": 13.332878889736143,
+   "phi2": 0.9252582579249958,
+   "r2": 7.734511659781394,
+   "D2": 4.673108972029754,
+   "ratio_to_minimal": 1.2960525032921226,
+   "Y_floor": 5.891741034396599e-11,
+   "Y_J": 9.032871587905279e-10
+  },
+  {
+   "H": 10000000000000.0,
+   "sum_chi2": 13.709284848642131,
+   "phi2": 0.9561636917924401,
+   "r2": 8.022662488670113,
+   "D2": 4.730458668179577,
+   "ratio_to_minimal": 1.332641891775185,
+   "Y_floor": 1.9027979950574907e-09,
+   "Y_J": 2.9167149375522568e-08
+  }
+ ],
+ "running-xi thresholds H_inf (Y = 4.373e-12) [C]": {
+  "floor": 178452572862.5866,
+  "J": 29224890522.59182
+ },
+ "finite-duration variant [C, E]": {
+  "N=60 e-folds from zero": {
+   "sum_chi2": 6.0792710185402665,
+   "eps_coef": 1.0879654616142655,
+   "Y_floor_coef": 0.13013448942815328,
+   "Y_J_coef": 1.7356938073714956,
+   "H_thr_floor": 253599239575.5922,
+   "H_thr_J": 45091444278.22693
+  }
+ },
+ "non-instant reheating (MD + decay, Gamma_I = gamma H_e) [C]": {
+  "rows": [
+   {
+    "gamma": 10.0,
+    "T_RH_over_T_RH_inst": 3.1622776601683795,
+    "Y_J_coef": 2.7602615452970563,
+    "eps_late_coef": 1.6628571239352523,
+    "Y_floor_coef": 0.17888432338044138,
+    "rho_R_a4_late": 3.282188280185663,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 34.655070066452026,
+    "R_J": 1.002174551624191,
+    "R_floor": 0.999957998910957
+   },
+   {
+    "gamma": 1.0,
+    "T_RH_over_T_RH_inst": 1.0,
+    "Y_J_coef": 2.7368495077531416,
+    "eps_late_coef": 1.640883570949926,
+    "Y_floor_coef": 0.1771085005254444,
+    "rho_R_a4_late": 5.212448926229622,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 34.157514810562134,
+    "R_J": 0.9936742889341724,
+    "R_floor": 0.9900312024486052
+   },
+   {
+    "gamma": 0.1,
+    "T_RH_over_T_RH_inst": 0.31622776601683794,
+    "Y_J_coef": 2.2160770314936546,
+    "eps_late_coef": 1.1643379141997727,
+    "Y_floor_coef": 0.1369273996830324,
+    "rho_R_a4_late": 16.319450420683264,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 35.002416133880615,
+    "R_J": 0.804596219943647,
+    "R_floor": 0.7654200546792934
+   },
+   {
+    "gamma": 0.01,
+    "T_RH_over_T_RH_inst": 0.1,
+    "Y_J_coef": 0.9132953804389222,
+    "eps_late_coef": 0.3339055633924824,
+    "Y_floor_coef": 0.05365977192951739,
+    "rho_R_a4_late": 70.8747299770991,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 35.033178091049194,
+    "R_J": 0.3315922688381764,
+    "R_floor": 0.2999565146161112
+   },
+   {
+    "gamma": 0.001,
+    "T_RH_over_T_RH_inst": 0.03162277660168379,
+    "Y_J_coef": 0.2945914320672139,
+    "eps_late_coef": 0.07387696674310382,
+    "Y_floor_coef": 0.01731062996526491,
+    "rho_R_a4_late": 326.4646623272966,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 33.52854371070862,
+    "R_J": 0.10695799347250473,
+    "R_floor": 0.09676590196861798
+   },
+   {
+    "gamma": 0.0001,
+    "T_RH_over_T_RH_inst": 0.01,
+    "Y_J_coef": 0.09300216137188477,
+    "eps_late_coef": 0.015959710779615853,
+    "Y_floor_coef": 0.00548529316564425,
+    "rho_R_a4_late": 1514.1107618867732,
+    "residual_inflaton_fraction": 0.0,
+    "runtime_s": 34.301124572753906,
+    "R_J": 0.03376651010906965,
+    "R_floor": 0.030662624167978325
+   }
+  ],
+  "subset_instant_Y_J_coef": 2.754272238128171,
+  "subset_instant_eps_coef": 1.6629502509120861,
+  "note": "T_RH = TRH_COEF sqrt(gamma H_e M_P); R = Y/Y_instant at the same H_e",
+  "small-gamma fits R = A gamma^p": {
+   "J": {
+    "p": 0.49605910962775873,
+    "A": 3.267974073006302
+   },
+   "floor": {
+    "p": 0.4952244893634407,
+    "A": 2.943089418658392
+   }
+  }
+ },
+ "spectator bound H_e,max(T_RH) [C]": [
+  {
+   "T_RH": 10000000.0,
+   "H_e_max_floor": 1e+16,
+   "H_e_max_J": 1e+16
+  },
+  {
+   "T_RH": 100000000.0,
+   "H_e_max_floor": 1e+16,
+   "H_e_max_J": 1e+16
+  },
+  {
+   "T_RH": 1000000000.0,
+   "H_e_max_floor": 1e+16,
+   "H_e_max_J": 1318256738556410.0
+  },
+  {
+   "T_RH": 10000000000.0,
+   "H_e_max_floor": 2238721138568337.8,
+   "H_e_max_J": 134896288259165.61
+  },
+  {
+   "T_RH": 100000000000.0,
+   "H_e_max_floor": 229086765276777.0,
+   "H_e_max_J": 13803842646028.867
+  },
+  {
+   "T_RH": 1000000000000.0,
+   "H_e_max_floor": 23442288153199.273,
+   "H_e_max_J": 1412537544622.7554
+  }
+ ],
+ "MD-reheating law (J): Y = k H_e T_RH/M_P^2": {
+  "k": 17.08356985040677,
+  "fitted_p": 0.49605910962775873,
+  "H_e_times_T_RH_max_GeV2": 1.518147575773993e+24,
+  "validity": "gamma = Gamma_I/H_e <~ 1e-2 (T_RH <~ 0.1 T_RH,instant); fit over gamma = 1e-4..1e-2, extrapolated below with the derived p = 1/2"
+ },
+ "MD-reheating law (floor): Y = k H_e T_RH/M_P^2": {
+  "k": 1.0017913979257096,
+  "fitted_p": 0.4952244893634407,
+  "H_e_times_T_RH_max_GeV2": 2.588900264831783e+25,
+  "validity": "gamma = Gamma_I/H_e <~ 1e-2 (T_RH <~ 0.1 T_RH,instant); fit over gamma = 1e-4..1e-2, extrapolated below with the derived p = 1/2"
+ },
+ "Y_spectator function": "Y = coef (H_e/M_P)^1.5 R(gamma), gamma = (T_RH/TRH_COEF)^2/(H_e M_P); coefs and R above",
+ "headline": {
+  "eps coefficient (instant): eps = c_eps (H/M_P)^2": 1.7268262421246527,
+  "Y_N floor/J coefficients (instant), Y = c (H/M_P)^1.5": [
+   0.18402107398965578,
+   2.8261404787377318
+  ],
+  "H_inf threshold for Y_N = 4.373e-12 (floor, J)": [
+   201294162820.0344,
+   32579698303.11948
+  ],
+  "critic formula coefficient and threshold": [
+   0.11826106392800477,
+   270301445032.01263
+  ],
+  "overpopulation J/n_eq": 15.357700166974327,
+  "running-xi thresholds (floor, J)": {
+   "floor": 178452572862.5866,
+   "J": 29224890522.59182
+  },
+  "N=60-from-zero thresholds (floor, J)": [
+   253599239575.5922,
+   45091444278.22693
+  ],
+  "MD law H_e*T_RH max GeV^2 (floor, J)": [
+   2.588900264831783e+25,
+   1.518147575773993e+24
+  ],
+  "runtime_s": 495.71681666374207
+ }
+}

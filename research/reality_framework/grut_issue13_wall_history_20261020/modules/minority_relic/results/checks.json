@@ -1,0 +1,296 @@
+{
+ "module": "minority_relic",
+ "part": "checks",
+ "n_checks": 32,
+ "n_pass": 31,
+ "checks": [
+  {
+   "check": "p_minus fresh N50 at 250 GeV",
+   "value": 2.414772352832178e-09,
+   "reference": 2.412e-09,
+   "rel_dev": 0.0011494000133408897,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N60 at 250 GeV",
+   "value": 5.281411835339056e-09,
+   "reference": 5.278e-09,
+   "rel_dev": 0.0006464257936823879,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N50 at 335 GeV",
+   "value": 0.00018204697194786757,
+   "reference": 0.000182,
+   "rel_dev": 0.00025808762564593214,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N60 at 335 GeV",
+   "value": 0.0003402780401134677,
+   "reference": 0.0003402,
+   "rel_dev": 0.0002293948073712656,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N50 at 1000 GeV",
+   "value": 0.18380254093032417,
+   "reference": 0.18381,
+   "rel_dev": 4.058032574852223e-05,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N60 at 1000 GeV",
+   "value": 0.20754133648433462,
+   "reference": 0.20755,
+   "rel_dev": 4.1741824453824925e-05,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "Lambda_1 (eigenvalue) at 1000 GeV",
+   "value": 0.006315685790516969,
+   "reference": 0.00632,
+   "rel_dev": 0.0006826280827580383,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "v_inflation corrected column"
+  },
+  {
+   "check": "p_minus fresh N50 at 2000 GeV",
+   "value": 0.33010684371328075,
+   "reference": 0.33011,
+   "rel_dev": 9.561318103855083e-06,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "p_minus fresh N60 at 2000 GeV",
+   "value": 0.34625122864398894,
+   "reference": 0.34626,
+   "rel_dev": 2.533170453148641e-05,
+   "tol": 0.003,
+   "pass": true,
+   "reference_source": "v_inflation VERIFY.md \u00a72 table"
+  },
+  {
+   "check": "Lambda_1 (eigenvalue) at 501 GeV",
+   "value": 0.0021303787905817594,
+   "reference": 0.00213,
+   "rel_dev": 0.0001778359538776728,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "v_inflation corrected column"
+  },
+  {
+   "check": "NG sphere collapse tau_c/r0 (RD, x>>1)",
+   "value": 1.8669797208170844,
+   "reference": 1.867,
+   "rel_dev": 1.0861908363997591e-05,
+   "tol": 0.001,
+   "pass": true,
+   "reference_source": "network_sim bubbles.json; v_network 1.8670"
+  },
+  {
+   "check": "flat-space sphere collapse tau_c/r0",
+   "value": 1.3110287771451268,
+   "reference": 1.3110287771460603,
+   "rel_dev": 7.120175661871335e-13,
+   "tol": 1e-09,
+   "pass": true,
+   "reference_source": "Gamma(1/4)^2/(4 sqrt(2 pi))"
+  },
+  {
+   "check": "flat-space energy conservation eps_c/r0^2",
+   "value": 0.999999999999668,
+   "reference": 1.0,
+   "rel_dev": 3.319566843629218e-13,
+   "tol": 1e-09,
+   "pass": true,
+   "reference_source": "exact"
+  },
+  {
+   "check": "n'(1 MeV)",
+   "value": 17.765627342706267,
+   "reference": 17.766,
+   "rel_dev": 2.097586928577271e-05,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "inflation_spectator reentry_efolds 17.766 (step g_*)"
+  },
+  {
+   "check": "n'(8.0 keV)",
+   "value": 12.695917906834836,
+   "reference": 12.692,
+   "rel_dev": 0.0003086910522247132,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "inflation_spectator 12.692"
+  },
+  {
+   "check": "N_0 instant at 150 GeV",
+   "value": 48.11924840294909,
+   "reference": 48.115,
+   "rel_dev": 8.829685023564176e-05,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "inflation_spectator Nstar_instant_reheating"
+  },
+  {
+   "check": "N_0 instant at 300 GeV",
+   "value": 48.4658117880389,
+   "reference": 48.462,
+   "rel_dev": 7.865519456265235e-05,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "inflation_spectator Nstar_instant_reheating"
+  },
+  {
+   "check": "N_0 instant at 1000 GeV",
+   "value": 49.06778092506873,
+   "reference": 49.064,
+   "rel_dev": 7.706108488365672e-05,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "inflation_spectator Nstar_instant_reheating"
+  },
+  {
+   "check": "T_RH instant at 300 GeV",
+   "value": 14676630077.42169,
+   "reference": 14600000000.0,
+   "rel_dev": 0.00524863543984178,
+   "tol": 0.01,
+   "pass": true,
+   "reference_source": "v_inflation \u00a74.5 (g = 106.75)"
+  },
+  {
+   "check": "T_dom,iso sigma/(M_P^2 H) = 1",
+   "value": 7.972286358338176e-06,
+   "reference": 7.97e-06,
+   "rel_dev": 0.00028687055686022893,
+   "tol": 0.002,
+   "pass": true,
+   "reference_source": "critic I2 (7.97 keV)"
+  },
+  {
+   "check": "Y_N,max at m_X from rho/s max",
+   "value": 4.373177842565597e-12,
+   "reference": 4.373e-12,
+   "rel_dev": 4.0668320511591915e-05,
+   "tol": 0.001,
+   "pass": true,
+   "reference_source": "v_relic strict 4.373e-12"
+  },
+  {
+   "check": "CHC-3 T_end for f c_b p_- = 1e-06 (t = 1/(2H) at T_end, my background)",
+   "value": 1.2617359652729018e-07,
+   "reference": 1.26e-07,
+   "rel_dev": 0.0013777502165887947,
+   "tol": 0.03,
+   "pass": true,
+   "reference_source": "cosmo_observable NOTES \u00a77 table; at 60 MeV their t(T) includes the g_* history (QCD/muon steps), so t != 1/(2H) there and a ~14% offset is expected"
+  },
+  {
+   "check": "CHC-3 T_end for f c_b p_- = 0.001 (t = 1/(2H) at T_end, my background)",
+   "value": 0.00011285058820039405,
+   "reference": 0.000107,
+   "rel_dev": 0.05467839439620609,
+   "tol": 0.03,
+   "pass": false,
+   "reference_source": "cosmo_observable NOTES \u00a77 table; at 60 MeV their t(T) includes the g_* history (QCD/muon steps), so t != 1/(2H) there and a ~14% offset is expected"
+  },
+  {
+   "check": "CHC-3 T_end for f c_b p_- = 1 (t = 1/(2H) at T_end, my background)",
+   "value": 0.06895596470422863,
+   "reference": 0.0603,
+   "rel_dev": 0.14354833672020945,
+   "tol": 0.2,
+   "pass": true,
+   "reference_source": "cosmo_observable NOTES \u00a77 table; at 60 MeV their t(T) includes the g_* history (QCD/muon steps), so t != 1/(2H) there and a ~14% offset is expected"
+  },
+  {
+   "check": "T_re for a scale exiting 10 e-folds before the end, H = 250 GeV",
+   "numeric_GeV": 608605.8779454348,
+   "closed_form_GeV": 608605.877904834,
+   "module_classification_table_GeV": 610000.0,
+   "rel_dev_numeric_vs_closed_form": 6.671111187668609e-11,
+   "pass": true,
+   "note": "module table uses step g_* and instant RD (estimate); <= 2x agreement expected below 1 GeV"
+  },
+  {
+   "check": "T_re for a scale exiting 30 e-folds before the end, H = 250 GeV",
+   "numeric_GeV": 0.0018348414707817218,
+   "closed_form_GeV": 0.0018348417354517577,
+   "module_classification_table_GeV": 0.0018,
+   "rel_dev_numeric_vs_closed_form": 1.4424679293799663e-07,
+   "pass": true,
+   "note": "module table uses step g_* and instant RD (estimate); <= 2x agreement expected below 1 GeV"
+  },
+  {
+   "check": "T_re for a scale exiting 40 e-folds before the end, H = 250 GeV",
+   "numeric_GeV": 1.0565848931654775e-07,
+   "closed_form_GeV": 1.0605741980632443e-07,
+   "module_classification_table_GeV": 1.06e-07,
+   "rel_dev_numeric_vs_closed_form": 0.0037614576189500663,
+   "pass": true,
+   "note": "module table uses step g_* and instant RD (estimate); <= 2x agreement expected below 1 GeV"
+  },
+  {
+   "check": "relaxed relic integral vs closed form sigma (Lambda_1/2) H/s(T_cut), H = 198.0 GeV",
+   "value": 6.926792559488166e-27,
+   "reference": 6.60877518260808e-27,
+   "rel_dev": 0.04812047135708186,
+   "tol": 0.1,
+   "pass": true,
+   "reference_source": "derived closed form (flat dp/dn = Lambda_1/2, RD, g_* const near 8 keV); the relaxed start's slow transient makes dp/dn exceed Lambda_1/2 by ~5% at B ~ 40 and ~20% at B ~ 11"
+  },
+  {
+   "check": "H at p_-(fresh, N50) = 1e-3",
+   "value": 367.7838576020962,
+   "reference": 367.8,
+   "rel_dev": 4.38890644475814e-05,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "v_inflation thresholds"
+  },
+  {
+   "check": "H at p_-(fresh, N50) = 1e-10",
+   "value": 239.00232768437957,
+   "reference": 239.1,
+   "rel_dev": 0.0004084998562125833,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "inflation_spectator / v_inflation"
+  },
+  {
+   "check": "H at p_-(fresh, N60) = 1e-3",
+   "value": 355.12974271917085,
+   "reference": 355.07,
+   "rel_dev": 0.0001682561725036082,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "v_inflation thresholds"
+  },
+  {
+   "check": "H at p_-(fresh, N60) = 1e-10",
+   "value": 236.65063142199205,
+   "reference": 236.6,
+   "rel_dev": 0.000213995866407655,
+   "tol": 0.005,
+   "pass": true,
+   "reference_source": "inflation_spectator / v_inflation"
+  }
+ ]
+}
