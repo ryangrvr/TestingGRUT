@@ -85,6 +85,8 @@ def metrics(run):
         selc = (tau >= tau[i0] + 5) & (tau <= tend0) & (xic <= Lbox / 8)
         if selc.sum() >= 4:
             out["dxi_dtau_boxsafe"] = float(np.polyfit(tau[selc], xic[selc], 1)[0])
+            out["boxsafe_window_tau"] = [float(tau[selc][0]), float(tau[selc][-1])]
+            out["boxsafe_window_xi"] = [float(xic[selc][0]), float(xic[selc][-1])]
         if has_vor:
             xiv = np.where(Lv > 0, 1.0 / np.maximum(Lv, 1e-300), np.nan)
             t_start = tau[i0] + (5 if not cfg.get("init_from") else 0)
@@ -97,8 +99,6 @@ def metrics(run):
                     out["dxi_vor_dtau_frozen"] = float(np.polyfit(tau[selfz], xiv[selfz], 1)[0])
                     out["xi_vor_frozen_start_end"] = [float(xiv[selfz][0]), float(xiv[selfz][-1])]
             out["L_vor_over_L_wall_end"] = float(Lv[-1] / Lw[-1]) if Lw[-1] > 0 else None
-            out["boxsafe_window_tau"] = [float(tau[selc][0]), float(tau[selc][-1])]
-            out["boxsafe_window_xi"] = [float(xic[selc][0]), float(xic[selc][-1])]
         # is the coarsening slowing down (approach to freezing)?  rate in the first and second half of the
         # post-formation window that ends at xi_c = L/4 or at the end of the expanding phase
         selw = (tau >= tau[i0] + 5) & (tau <= tend0) & (xic <= Lbox / 4)
@@ -248,7 +248,11 @@ def main():
             partner = f"B_t{ti}_s1"
         if partner not in ts:
             continue
-        A, B = ts[n], ts[partner]
+        A, B = dict(ts[n]), ts[partner]
+        meas = "L_wall"
+        if A["has_vor"]:
+            A["Lw"] = A["Lv"]          # charged run: vacuum-basin interface (Q-matter-safe); neutral: L_wall = L_vor
+            meas = "L_vor"
         tmax = min(A["tau"][-1], B["tau"][-1])
         rat = []
         for frac in (0.5, 0.75, 1.0):
@@ -256,7 +260,9 @@ def main():
             la = interp_at(t, A["tau"], A["Lw"]); lb = interp_at(t, B["tau"], B["Lw"])
             rat.append(dict(tau=t, a=t / per[n]["tau_i"], L_charged=la, L_neutral=lb,
                             ratio=la / lb if lb > 0 else None))
-        comp[n] = dict(partner=partner, matched=rat, mu_charged=per[n].get("mu_Lwall_vs_tau_late"),
+        comp[n] = dict(partner=partner, charged_length_measure=meas, matched=rat,
+                       dxi_charged_Lwall=per[n].get("dxi_dtau_boxsafe"), dxi_charged_Lvor=per[n].get("dxi_vor_dtau_boxsafe"),
+                       dxi_neutral=per[partner].get("dxi_dtau_boxsafe"), mu_charged=per[n].get("mu_Lwall_vs_tau_late"),
                        mu_neutral=per[partner].get("mu_Lwall_vs_tau_late"))
     summ["charged_vs_neutral"] = comp
     dc = {}
@@ -335,6 +341,75 @@ def main():
         ev = max(1, len(runs[n]["series"]) // 12)
         tab[n] = timeseries_table(runs[n], keys, ev)
     summ["tables"] = tab
+    # ---------------------------------------------------------------- group aggregates -> headline.json
+    import re
+
+    def grp_of(n):
+        m = re.match(r"^(A_k\d_t\d+|B_t\d+)_s\d+$", n)
+        return m.group(1) if m else None
+    groups = {}
+    for n in names:
+        g = grp_of(n)
+        if g:
+            groups.setdefault(g, []).append(n)
+
+    def ms(v):
+        v = [x for x in v if x is not None]
+        if not v:
+            return None
+        return dict(mean=float(np.mean(v)), std=float(np.std(v, ddof=1)) if len(v) > 1 else None,
+                    min=float(np.min(v)), max=float(np.max(v)), n=len(v))
+    G = {}
+    for g, ns in groups.items():
+        P = [per[n] for n in ns]
+        topo = {}
+        for p in P:
+            topo[p.get("topology_end")] = topo.get(p.get("topology_end"), 0) + 1
+        G[g] = dict(runs=ns, a_form=ms([p.get("a_form") for p in P]),
+                    n_form_over_nc=ms([p.get("n_at_form_over_nc") for p in P]),
+                    p_plus_form=ms([p.get("p_plus_form") for p in P]),
+                    p_plus_end=ms([p["end"].get("p_plus") for p in P]),
+                    topology_end_counts=topo,
+                    frac_outputs_both_signs_wrap=ms([p.get("frac_outputs_both_signs_wrap") for p in P]),
+                    dxi_dtau_Lwall_boxsafe=ms([p.get("dxi_dtau_boxsafe") for p in P]),
+                    dxi_dtau_Lvor_boxsafe=ms([p.get("dxi_vor_dtau_boxsafe") for p in P]),
+                    A_wall_end=ms([p["end"].get("A_wall") for p in P]),
+                    xi_phys_end=ms([p["end"].get("xi_wall_physical") for p in P]),
+                    qfrac_vac_end=ms([p["end"].get("qfrac_vac") for p in P]),
+                    qfrac_walls_end=ms([p["end"].get("qfrac_core_walltype") for p in P]),
+                    qfrac_lumps_end=ms([p["end"].get("qfrac_lumps") for p in P]),
+                    qfrac_lumps_attached_end=ms([p["end"].get("qfrac_lumps_attached") for p in P]),
+                    walls_at_every_output=all(p.get("walls_at_every_output_after_form") for p in P),
+                    H_over_mX_at_nc=P[0].get("H_over_mX_at_nc_crossing"))
+    allp = list(per.values())
+    head = dict(
+        groups_2D=G,
+        conservation=dict(max_abs_dQ_rel_all_runs=float(max(p["max_abs_dQ_rel"] for p in allp)),
+                          max_budget_resid_over_kin_grad_all_runs=float(max(p["max_budget_resid_over_kin_grad"]
+                                                                            for p in allp))),
+        decharged_controls=dc, resolution_check=summ.get("resolution_check"),
+        determinism_check=summ.get("determinism_check"),
+        sign_statistics=sg, physical_scales=phys,
+        memory_controls={n: {k: per[n].get(k) for k in ("restored", "a_restored", "mean_S_min", "a_two_sign", "a_form",
+                                                       "p_plus_form", "max_f_minus", "min_f_plus", "sign_changes_ever",
+                                                       "dxi_dtau_boxsafe", "dxi_vor_dtau_boxsafe", "init")}
+                         | {"p_plus_end": per[n]["end"].get("p_plus"), "qfrac_walls_end": per[n]["end"].get("qfrac_core_walltype"),
+                            "qfrac_lumps_end": per[n]["end"].get("qfrac_lumps")}
+                         for n in names if n.startswith("C")},
+        three_d={n: {k: per[n].get(k) for k in ("a_form", "p_plus_form", "frac_outputs_both_signs_wrap",
+                                               "walls_at_every_output_after_form", "mu_Lwall_vs_tau_late",
+                                               "dxi_vor_dtau_boxsafe")}
+                 | {"end": per[n]["end"]} for n in names if n.startswith("D3")},
+        frozen={n: {k: per[n].get(k) for k in ("dxi_vor_dtau_frozen", "xi_vor_frozen_start_end", "freeze",
+                                              "dxi_dtau_boxsafe", "dxi_vor_dtau_boxsafe")}
+                | {"end": {k: per[n]["end"].get(k) for k in ("f_plus", "f_minus", "qfrac_core_walltype", "qfrac_lumps",
+                                                            "qfrac_lumps_attached", "lump_Q_quantiles", "wraps_plus",
+                                                            "wraps_minus")}}
+                for n in names if n.startswith("F_")},
+    )
+    summ["headline"] = head
+    with open(os.path.join(RES, "headline.json"), "w") as f:
+        json.dump(head, f, indent=1, default=float)
     with open(os.path.join(RES, "summary.json"), "w") as f:
         json.dump(summ, f, indent=1, default=float)
     print(json.dumps({n: dict(a_form=per[n].get("a_form"), p_form=per[n].get("p_plus_form"),

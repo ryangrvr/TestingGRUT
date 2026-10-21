@@ -114,7 +114,7 @@ def gaussian_field(d, N, L, s_c, amp, seed, N_base=None):
     # zero-pad in Fourier space
     big = np.zeros((N,) * d, dtype=complex)
     h = N_base // 2
-    idx_small = np.r_[0:h, N_base - h:N_base] if True else None
+    idx_small = np.r_[0:h, N_base - h:N_base]
     idx_big = np.r_[0:h, N - h:N]
     big[np.ix_(*([idx_big] * d))] = fk[np.ix_(*([idx_small] * d))]
     big *= (N / N_base) ** d
