@@ -1,0 +1,125 @@
+{
+  "SMDR_reproduction": {
+    "critical_by_loop_order": {
+      "3": [
+        171.0264124905411,
+        5.064126781623e+17
+      ],
+      "4": [
+        171.03167677735252,
+        5.1327705622401165e+17
+      ],
+      "5": [
+        171.03146036490452,
+        5.1330437576280346e+17
+      ]
+    },
+    "direct_matching_mass_correction_estimate_GeV": -3.4461520861720173e-07,
+    "direct_matching_minimum_scale_GeV": 5.0641273764373984e+17,
+    "driver_sha256": "63572d496a7ae3137d2feab09d7ab7be99f128644b4d44f633d0cec609b2b977",
+    "library_sha256": "fb41a78bb98ff568a8f5a0f850eea0ab123c59f30554d99baa091940a78adcbf",
+    "minimum_from_direct_matching_at_critical_mass": -2.226080271601522e-09,
+    "reference_model_sha256": "1d3d97b11a76d7327a08939c46f9617d22e2bdab45cb77046bc3cae009f3b7e9",
+    "scope": "Reuses published SMDR library and archived fit couplings; new minimization and direct matching check, not an independent beta-function calculation.",
+    "slopes": {
+      "Mh": 0.4936018266509734,
+      "alpha_s_per_0.0009": 0.3548226212894292
+    }
+  },
+  "branches": {
+    "EW_is_false_near_degenerate_vacuum": {
+      "gap": "supplied condition; no mechanism derives its magnitude",
+      "precision": "Finite-order SM running cannot resolve a ~1e-120 quartic splitting",
+      "relation": "V_EW - V_true = rho_Lambda,obs; near-critical equality rather than absolute stability"
+    },
+    "EW_is_true_final_vacuum": {
+      "relation": "Mt <= Mt_critical, within the declared theoretical approximation",
+      "vacuum_density": "zero plus transient corrections; retains the failure to produce observed positive dark energy"
+    },
+    "MPP_coexistence": {
+      "relation": "lambda=beta_lambda=0 at a high scale",
+      "status": "Additional Froggatt-Nielsen assumption; not implied by q dynamics"
+    }
+  },
+  "checks": {
+    "direct_full_matching_agrees_near_boundary": true,
+    "new_minimizer_reproduces_critical_mass": true,
+    "replay_MC_sensitivity_z": true,
+    "replay_direct_z": true,
+    "replay_xsec_z": true
+  },
+  "checks_passed": true,
+  "conditions": [
+    "One shared mu; minimally coupled, q-independent matter; chosen stable q branch",
+    "P_q matched to a specified true final vacuum, rather than independently to each phase",
+    "SM Higgs potential describes all relevant competing vacua up to the stated Planck cutoff",
+    "No relevant new thresholds or unsupplied higher-dimensional operators; conventional flat-space SM stability proxy",
+    "Small present vacuum gap is separately demanded; the action does not select that gap"
+  ],
+  "future_use": {
+    "covariance": "Use the full joint covariance or likelihood; gradient is (1,-dMt_dMh,-dMt_dalpha_s)",
+    "decision": "A discrepancy concerns the named conditional SM/final-vacuum hypothesis. A 5-sigma flag under the illustrative Gaussian model requires a separately justified likelihood; no fixed future significance is forecast.",
+    "eligible_data_rule": "Only data unobserved by this analysis when this version was published; no retrospective reclassification",
+    "measurement": "First subsequently published qualifying e+e- top-threshold joint mass and alpha_s likelihood, with Higgs input and theory/mass-scheme treatment stated",
+    "primary_mass": "Short-distance mass consistently matched to MSbar couplings; never silently identify a Monte Carlo mass with a pole mass",
+    "revision_rule": "New physics, matching or criterion changes require a new version; retain this version and report both.",
+    "support": "Agreement also supports ordinary SM stability and cannot uniquely support GRUT"
+  },
+  "higher_order_intercepts_GeV": {
+    "3": 171.02641242691539,
+    "4": 171.0316767019168,
+    "5": 171.03146028943593
+  },
+  "local_linearization": {
+    "dMt_dMh": 0.493601784127236,
+    "dMt_per_alpha_s_unit": 0.3548225735529513,
+    "intercept_GeV": 171.02641242691539
+  },
+  "local_use_box": {
+    "Mh_GeV": [
+      124.7,
+      125.7
+    ],
+    "alpha_s_5_MZ": [
+      0.1171,
+      0.1189
+    ],
+    "outside_box": "Run the recorded RG criterion, not an extrapolation of this line."
+  },
+  "operational_RG_proxy": "min lambda_MSbar(Q) = 0 for 1e8 GeV <= Q <= 1.2209e19 GeV; V=lambda*h^4/4",
+  "provenance": {
+    "freeze_code_sha256": "579495fcf0cbff8224bd1fbf41fbb61013d6588b67b1737dd4430c2dc2e776f4",
+    "inputs_sha256": "919ec9d4f05e9c2aa2a7a7269301f9f57023eb527dafd6f17e20b8651592d5f7",
+    "source_commit": "78352e2c24d2a9edee113b0d789b984eff77ac55",
+    "source_results_sha256": "fe9424adf66bd45d771a675b9ceb073f7ba15d3f14fc6b99aa61e65e0da708d0"
+  },
+  "recorded_utc_date": "2026-10-22",
+  "retrospective_snapshot_arithmetic": {
+    "cross_section_pole": {
+      "Gaussian_one_sided_tail_if_error_model_adopted": 0.04208116625156754,
+      "critical_top_mass_GeV": 171.02641242691539,
+      "difference_GeV": 1.3735875730846203,
+      "formal_significance": false,
+      "indicative_z": 1.7270296842279105,
+      "sigma_GeV": 0.7953468232937173
+    },
+    "direct_mass_assumed_pole": {
+      "Gaussian_one_sided_tail_if_error_model_adopted": 0.0008473686157506787,
+      "critical_top_mass_GeV": 171.02641242691539,
+      "difference_GeV": 1.533587573084617,
+      "formal_significance": false,
+      "indicative_z": 3.1390894211560627,
+      "sigma_GeV": 0.48854536055867687
+    },
+    "direct_with_MC_to_pole_sensitivity": {
+      "Gaussian_one_sided_tail_if_error_model_adopted": 0.0037364335569967048,
+      "critical_top_mass_GeV": 171.02641242691539,
+      "difference_GeV": 1.533587573084617,
+      "formal_significance": false,
+      "indicative_z": 2.675002597760182,
+      "sigma_GeV": 0.5733032088898574
+    }
+  },
+  "status": "Conditional relation recorded after exposure to all checkpoint data; not a new or GRUT-specific prediction",
+  "version": "QV1-SM-conditional-v1"
+}

@@ -1,0 +1,82 @@
+{
+  "review_status": "Built and checked by one Codex author. Separate numerical formulations are same-author controls, not independent agents, outside review or experimental replication.",
+  "Einstein_frame_scenario": {
+    "max_relative_H_difference": 4.697353617189037e-12,
+    "max_abs_N_difference": 2.930988785010413e-14,
+    "max_abs_s_difference": 1.3322676295501878e-14,
+    "max_abs_sdot_difference": 5.469583119754873e-15,
+    "max_abs_F_difference": 1.0589696962615093e-14,
+    "nfev": 80084
+  },
+  "SM_RK4": [
+    {
+      "hstar": 1e+16,
+      "max_abs_error_to_primary": 8.643086246706844e-13,
+      "max_abs_RK4_refinement": 3.6193270602780103e-14
+    },
+    {
+      "hstar": 1e+18,
+      "max_abs_error_to_primary": 1.2152501227546963e-12,
+      "max_abs_RK4_refinement": 3.354261313148754e-14
+    },
+    {
+      "hstar": 2.435e+18,
+      "max_abs_error_to_primary": 1.1806111643863915e-12,
+      "max_abs_RK4_refinement": 9.85878045867139e-14
+    }
+  ],
+  "receiver_quadrature": [
+    {
+      "gamma": 0.0031662869888230555,
+      "rV_initial": 0.1,
+      "relative_radiation_error": 1.9984014443252818e-15,
+      "relative_vacuum_error": 8.881784197001252e-16,
+      "quadrature_error_estimate": 2.0459799063144428e-17,
+      "mu_balance_max_abs_residual": 1.6940658945086007e-21
+    },
+    {
+      "gamma": 0.0031662869888230555,
+      "rV_initial": 1.0,
+      "relative_radiation_error": 1.4432899320127035e-15,
+      "relative_vacuum_error": 2.220446049250313e-16,
+      "quadrature_error_estimate": 1.5972276550562258e-15,
+      "mu_balance_max_abs_residual": 0.0
+    },
+    {
+      "gamma": 1.0,
+      "rV_initial": 0.1,
+      "relative_radiation_error": 4.451994328746878e-14,
+      "relative_vacuum_error": 2.220446049250313e-16,
+      "quadrature_error_estimate": 2.0517633953468624e-16,
+      "mu_balance_max_abs_residual": 0.0
+    },
+    {
+      "gamma": 1.0,
+      "rV_initial": 1.0,
+      "relative_radiation_error": 1.000310945187266e-13,
+      "relative_vacuum_error": 2.220446049250313e-16,
+      "quadrature_error_estimate": 2.8940554215438004e-16,
+      "mu_balance_max_abs_residual": 2.710505431213761e-20
+    }
+  ],
+  "full_background_coefficient": [
+    {
+      "m": 100,
+      "full_source_over_potential_piece": 9.000060000400003,
+      "deviation_from_9": 6.0000400002666686e-05
+    },
+    {
+      "m": 1000,
+      "full_source_over_potential_piece": 9.00000060000004,
+      "deviation_from_9": 6.000000400000027e-07
+    }
+  ],
+  "checks": {
+    "Jordan_Einstein_H_agree_below_1e-6": true,
+    "Jordan_Einstein_scalar_agree_below_1e-7": true,
+    "RG_independent_formulation_agrees_below_1e-8": true,
+    "radiation_receiver_agrees_below_1e-8": true,
+    "full_background_factor_approaches_9": true
+  },
+  "source_hash": "ac8fdc41076adc31f875585ebfb0c92043359ead94c2b146617f3b1b973cdfc1"
+}

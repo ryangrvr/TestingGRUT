@@ -1,0 +1,176 @@
+{
+  "K22_original_action_endpoint_residual": "2*sqrt(4 - lambda)",
+  "K22_table_III": [
+    {
+      "h": 0.9260418172247675,
+      "r_V": 0.1021783866763751,
+      "r_r": 0.0001845158951396894,
+      "tau": 100.0,
+      "xi": 2.319653541629645
+    },
+    {
+      "h": 0.42991840269879517,
+      "r_V": 0.02205388902044831,
+      "r_r": 8.54714180615164e-06,
+      "tau": 1000.0,
+      "xi": 2.1485055184848303
+    },
+    {
+      "h": 0.19961971878220036,
+      "r_V": 0.0047561114315367616,
+      "r_r": 3.970327034249696e-07,
+      "tau": 10000.0,
+      "xi": 2.068964566492778
+    },
+    {
+      "h": 0.09266498921832335,
+      "r_V": 0.0010249553422898884,
+      "r_r": 1.8433947607441867e-08,
+      "tau": 100000.0,
+      "xi": 2.032014923743309
+    },
+    {
+      "h": 0.043012379794312244,
+      "r_V": 0.0002208343647936224,
+      "r_r": 8.556915867403067e-10,
+      "tau": 1000000.0,
+      "xi": 2.014860496788251
+    }
+  ],
+  "KSV16_static_family": {
+    "h_squared": "f*(f - 1)*(f + 1)/2",
+    "meaning": "Quadratic time-derivative dissipation cannot select a unique Minkowski endpoint.",
+    "source_at_each_static_state": 0,
+    "u": "-f**3/3"
+  },
+  "author": "Codex, one author; no reviewer agents or outside replication",
+  "checks": {
+    "Einstein_constraint_with_radiation_receiver": true,
+    "K22_H5_source_does_not_stop_at_zero_vacuum_with_radiation": true,
+    "K22_TableIII_headline_reproduced": true,
+    "K22_endpoint_is_not_original_algebraic_field_equation": true,
+    "K22_table_run_completed": true,
+    "KSV16_has_continuum_of_static_de_Sitter_states": true,
+    "Minkowski_state_reselection_dmu_dc_equals_inverse_q": true,
+    "claimed_universal_floor_is_upper_envelope": true,
+    "constraint_all_runs": true,
+    "false_vacuum_gap_coexists_with_true_zero": true,
+    "finite_history_matches_both_builds": true,
+    "negative_vacuum_not_restored": true,
+    "radiation_closed_flow_all_runs": true,
+    "radiation_receiver_all_runs": true,
+    "selected_tolerance_refinement": true,
+    "tree_mass_gap_relation": true,
+    "vacuum_N_flow_independent_of_radiation_density": true
+  },
+  "constant_shift": {
+    "fixed_mu": "additive c gravitates",
+    "reselected_equilibrium": "dmu0/dc = 1/q0"
+  },
+  "constraint_identity": "0",
+  "finite_history": {
+    "BBN_reference_radiation_GeV4": 3.536608243723687e-12,
+    "N_BBN_to_present_reference": 22.509131248483122,
+    "N_M4_to_reference_rho_Lambda": 9.913512607512736e+122,
+    "N_standard_entropy_conserving_span": 72.51855959040431,
+    "early_start_attractor_at_reference_age_GeV4": 2.2434977673364107e+35,
+    "early_start_attractor_over_reference_rho_Lambda": 8.90276891800163e+81,
+    "final_in_M4_if_initial_M4": 0.9073990876236128,
+    "final_over_rho_Lambda_if_initial_M4": 1.2658832683598519e+120,
+    "gamma": 0.0031662869888230555,
+    "max_fractional_self_drain_after_BBN_if_initial_v_le_rho_r": 3.186526865862536e-87,
+    "rho_Lambda_in_M4": 7.168110285550176e-121,
+    "scope": "Radiation-only exact flow, constant K, fixed gamma. Age asymptote assumes early-start vacuum dominance; entropy span is a reference history, not a proof for arbitrary histories.",
+    "upper_envelope_in_M4": 9.799029667606115
+  },
+  "fixed_density_flat_zero_residual_background": {
+    "H0_km_s_Mpc": 37.741468244587075,
+    "q_dec_today": 0.500146875823057,
+    "scope": "Pinned omega_m and omega_r, spatial flatness and heavy q. Not an optimized CMB likelihood."
+  },
+  "multiple_vacua": {
+    "biased_scalar_potential": "delta*(s**3/v_s**3 - 3*s/v_s + 2)/4 + lambda*(s**2 - v_s**2)**2/4",
+    "conclusion": "Final true-vacuum matching alone does not exclude a positive false phase today; its gap and preparation remain inputs.",
+    "local_minima_condition": "0 < delta < 4*lambda*v_s^4/3",
+    "m_minus_squared": "(-3*delta + 4*lambda*v_s**4)/(2*v_s**2)",
+    "m_plus_squared": "(3*delta + 4*lambda*v_s**4)/(2*v_s**2)",
+    "same_mu_example": {
+      "V_false": 0.01,
+      "V_true": 0,
+      "epsilon": "q^2/2 + 1/2",
+      "mu": 1,
+      "q": 1,
+      "rho_false": 0.01,
+      "rho_true": 0
+    }
+  },
+  "negative_control": {
+    "N": 0.17328662526243988,
+    "turnaround_time_M_inverse": 6.8017376077763085,
+    "v_final": -0.010000024385204307
+  },
+  "passed": true,
+  "radiation_runs": [
+    {
+      "N_end": 12.000000000000002,
+      "max_relative_closed_v_error": 4.440892098500626e-16,
+      "max_relative_constraint": 6.291091921196949e-13,
+      "r_final": 3.506491081311767e-06,
+      "r_initial": 0.2,
+      "receiver_relative_error": 1.4608525500392489e-09,
+      "v_final": 0.09983141604602543,
+      "v_initial": 0.1
+    },
+    {
+      "N_end": 12.0,
+      "max_relative_closed_v_error": 5.551115123125783e-16,
+      "max_relative_constraint": 1.032750150856942e-11,
+      "r_final": 3.506491076689527e-06,
+      "r_initial": 10.0,
+      "receiver_relative_error": 1.4265344461250606e-10,
+      "v_final": 0.09983141604602541,
+      "v_initial": 0.1
+    },
+    {
+      "N_end": 12.0,
+      "max_relative_closed_v_error": 4.440892098500626e-16,
+      "max_relative_constraint": 7.640590610591786e-14,
+      "r_final": 0.0003404577338669835,
+      "r_initial": 0.2,
+      "receiver_relative_error": 1.3038459201197838e-12,
+      "v_final": 0.983393566640291,
+      "v_initial": 1.0
+    },
+    {
+      "N_end": 12.0,
+      "max_relative_closed_v_error": 4.440892098500626e-16,
+      "max_relative_constraint": 1.1588339730299477e-12,
+      "r_final": 0.00034045773386224914,
+      "r_initial": 10.0,
+      "receiver_relative_error": 1.2602141552520152e-11,
+      "v_final": 0.983393566640291,
+      "v_initial": 1.0
+    }
+  ],
+  "refinement": {
+    "N_end": 12.0,
+    "max_relative_closed_v_error": 4.440892098500626e-16,
+    "max_relative_constraint": 8.922372300095072e-15,
+    "r_final": 0.0003404577338639357,
+    "r_initial": 0.2,
+    "receiver_relative_error": 7.648326416642703e-12,
+    "v_final": 0.983393566640291,
+    "v_initial": 1
+  },
+  "unscreened_limit": {
+    "lambda_um": 54.02,
+    "m_meV": 3.652850433172899,
+    "scope": "alpha=1/3 unscreened, linear laboratory response; not a universal screened bound",
+    "source": "Lee et al. 2020 + Claude checkpoint SVG digitization"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  }
+}
