@@ -1,0 +1,577 @@
+{
+  "analytic_controls": [
+    {
+      "evidence": 1.7704994550485505e-21,
+      "name": "prepared phi stationary before roll",
+      "passed": true
+    },
+    {
+      "evidence": 1.7748463318837532e-13,
+      "name": "original metric variation connection",
+      "passed": true
+    },
+    {
+      "evidence": 2.722500000045305,
+      "name": "original positive metric",
+      "passed": true
+    },
+    {
+      "evidence": 3.907155728784641e-11,
+      "name": "completed metric variation connection",
+      "passed": true
+    },
+    {
+      "evidence": 2.722501445694431,
+      "name": "completed positive metric",
+      "passed": true
+    },
+    {
+      "evidence": 0.3225840732360353,
+      "name": "portal phase space normalization",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "c": 1.0,
+        "energy_scale_meV": 1.4134762934566492,
+        "log_phi0_over_M": -127.52423231168527,
+        "phi0_GeV": 1.0079258037224326e-37,
+        "phi0_over_M": 4.139325682638327e-56,
+        "ratio_to_known_reference": 0.15839941567113971,
+        "rho_approx_GeV4": 3.9916652749127197e-48,
+        "rho_initial_GeV4": 3.991665274912721e-48,
+        "scalaron_m_GeV": 28032607235206.168
+      },
+      "name": "physical remnant small-displacement limit",
+      "passed": true
+    }
+  ],
+  "analytical": {
+    "completed_rapid_transition_vs_late_mass": [
+      {
+        "b_max_for_completed_path_within_one_efold": 0.01920803362921893,
+        "b_min_for_initial_effective_mass_at_most_reference_H": 1.1413871253301542,
+        "c": 1.0
+      },
+      {
+        "b_max_for_completed_path_within_one_efold": 0.019347046577161738,
+        "b_min_for_initial_effective_mass_at_most_reference_H": 2.8534678133253855,
+        "c": 2.5
+      }
+    ],
+    "derivative_completion_path_bounds": [
+      {
+        "b": 1.0,
+        "minimum_efolds_all_positive_energy": 52.06154983396204,
+        "minimum_efolds_scalar_fraction_at_most_0p01": 520.6154983396203,
+        "minimum_length_over_M": 127.52423231168527
+      },
+      {
+        "b": 3.0,
+        "minimum_efolds_all_positive_energy": 156.1846495018861,
+        "minimum_efolds_scalar_fraction_at_most_0p01": 1561.8464950188609,
+        "minimum_length_over_M": 382.5726969350558
+      },
+      {
+        "b": 10.0,
+        "minimum_efolds_all_positive_energy": 520.6154983396204,
+        "minimum_efolds_scalar_fraction_at_most_0p01": 5206.1549833962035,
+        "minimum_length_over_M": 1275.2423231168527
+      }
+    ],
+    "original_portal": {
+      "ATLAS_bound": 0.107,
+      "assumptions": "SM-like Higgs production, invisible light scalar and SM reference visible width",
+      "branching_fraction": 0.9874496483425512,
+      "reference_total_SM_width_GeV": 0.0041,
+      "width_GeV": 0.3225840732360352
+    },
+    "pure_E8_over_M4": [
+      {
+        "E_GeV": 160.0,
+        "energy_scale_meV": 0.010513347022587268,
+        "ratio_to_reference": 4.848009456185315e-10,
+        "rho_GeV4": 1.2216983829586995e-56
+      },
+      {
+        "E_GeV": 246.0,
+        "energy_scale_meV": 0.024852566735112935,
+        "ratio_to_reference": 1.513855607445263e-08,
+        "rho_GeV4": 3.814916130762063e-55
+      },
+      {
+        "E_GeV": 1000.0,
+        "energy_scale_meV": 0.4106776180698152,
+        "ratio_to_reference": 0.0011287651621236735,
+        "rho_GeV4": 2.8444882085516572e-50
+      }
+    ],
+    "scales": [
+      {
+        "c": 1.0,
+        "energy_scale_meV": 1.4134762934566492,
+        "log_phi0_over_M": -127.52423231168527,
+        "phi0_GeV": 1.0079258037224326e-37,
+        "phi0_over_M": 4.139325682638327e-56,
+        "ratio_to_known_reference": 0.15839941567113971,
+        "rho_approx_GeV4": 3.9916652749127197e-48,
+        "rho_initial_GeV4": 3.991665274912721e-48,
+        "scalaron_m_GeV": 28032607235206.168
+      },
+      {
+        "c": 2.5,
+        "energy_scale_meV": 2.234902252987783,
+        "log_phi0_over_M": -126.60794157981111,
+        "phi0_GeV": 2.5198145093060816e-37,
+        "phi0_over_M": 1.0348314206595817e-55,
+        "ratio_to_known_reference": 0.9899963479446232,
+        "rho_approx_GeV4": 2.49479079682045e-47,
+        "rho_initial_GeV4": 2.4947907968204506e-47,
+        "scalaron_m_GeV": 28032607235206.168
+      }
+    ]
+  },
+  "conditional_late_refinements": [
+    {
+      "H_today_kms_Mpc": 42.96011088955122,
+      "Omega_phi_today": 0.22442039080422752,
+      "b": 1.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.7763380034307338,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.1265836411006297,
+      "max_frozen_change_before_a1e_3": 1.0440524948507672e-10,
+      "max_scalar_work_relative": 1.27830812677431e-16,
+      "numerical_nfev": 11096,
+      "refined": true,
+      "rho_phi_today_GeV4": 3.3522988780374726e-48,
+      "w_today": -0.8488097646613796
+    },
+    {
+      "H_today_kms_Mpc": 54.49825349027158,
+      "Omega_phi_today": 0.5180610793871224,
+      "b": 1.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.3902416682736621,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.47049453476482783,
+      "max_frozen_change_before_a1e_3": 6.525328087067637e-10,
+      "max_scalar_work_relative": 3.2724688045422336e-16,
+      "numerical_nfev": 11096,
+      "refined": true,
+      "rho_phi_today_GeV4": 1.245362445777134e-47,
+      "w_today": -0.5635148238912265
+    },
+    {
+      "H_today_kms_Mpc": 43.75568685535265,
+      "Omega_phi_today": 0.2523675230365267,
+      "b": 3.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.9705876862603633,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.014926764410491039,
+      "max_frozen_change_before_a1e_3": 3.4801749830234363e-11,
+      "max_scalar_work_relative": 1.27830812677431e-16,
+      "numerical_nfev": 11120,
+      "refined": true,
+      "rho_phi_today_GeV4": 3.910678433262483e-48,
+      "w_today": -0.9813754721179017
+    },
+    {
+      "H_today_kms_Mpc": 65.16167957322237,
+      "Omega_phi_today": 0.6628892280702735,
+      "b": 3.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.8843774599201661,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.06143565830961644,
+      "max_frozen_change_before_a1e_3": 2.1751093630884776e-10,
+      "max_scalar_work_relative": 1.6362344022711168e-16,
+      "numerical_nfev": 11096,
+      "refined": true,
+      "rho_phi_today_GeV4": 2.278112314381661e-47,
+      "w_today": -0.93698680613395
+    },
+    {
+      "H_today_kms_Mpc": 43.859448928218896,
+      "Omega_phi_today": 0.2559008155634132,
+      "b": 10.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.9972977871754448,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.0013529351960664994,
+      "max_frozen_change_before_a1e_3": 1.044052494913431e-11,
+      "max_scalar_work_relative": 1.27830812677431e-16,
+      "numerical_nfev": 11120,
+      "refined": true,
+      "rho_phi_today_GeV4": 3.984259724956885e-48,
+      "w_today": -0.9983029323514288
+    },
+    {
+      "H_today_kms_Mpc": 66.99358924627118,
+      "Omega_phi_today": 0.6810734480292145,
+      "b": 10.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.9887868308387017,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.005638255346978092,
+      "max_frozen_change_before_a1e_3": 6.525328089515431e-11,
+      "max_scalar_work_relative": 1.6362344022711168e-16,
+      "numerical_nfev": 11120,
+      "refined": true,
+      "rho_phi_today_GeV4": 2.4740591111660877e-47,
+      "w_today": -0.9941449858334054
+    }
+  ],
+  "conditional_late_runs": [
+    {
+      "H_today_kms_Mpc": 42.96011088955122,
+      "Omega_phi_today": 0.22442039080422757,
+      "b": 1.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.776338003430734,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.1265836411006296,
+      "max_frozen_change_before_a1e_3": 1.0440524948507613e-10,
+      "max_scalar_work_relative": 4.857570881742378e-15,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 3.352298878037473e-48,
+      "w_today": -0.8488097646613796
+    },
+    {
+      "H_today_kms_Mpc": 54.498253490271594,
+      "Omega_phi_today": 0.5180610793871228,
+      "b": 1.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.39024166827366236,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.47049453476482755,
+      "max_frozen_change_before_a1e_3": 6.5253280870676e-10,
+      "max_scalar_work_relative": 6.872184489538691e-15,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 1.2453624457771354e-47,
+      "w_today": -0.5635148238912258
+    },
+    {
+      "H_today_kms_Mpc": 43.75568685535265,
+      "Omega_phi_today": 0.2523675230365267,
+      "b": 3.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.9705876862603633,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.014926764410491034,
+      "max_frozen_change_before_a1e_3": 3.4801749830234156e-11,
+      "max_scalar_work_relative": 2.55661625354862e-16,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 3.910678433262483e-48,
+      "w_today": -0.9813754721179017
+    },
+    {
+      "H_today_kms_Mpc": 65.16167957322237,
+      "Omega_phi_today": 0.6628892280702737,
+      "b": 3.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.8843774599201664,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.06143565830961639,
+      "max_frozen_change_before_a1e_3": 2.1751093630884637e-10,
+      "max_scalar_work_relative": 3.2724688045422336e-16,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 2.278112314381662e-47,
+      "w_today": -0.9369868061339497
+    },
+    {
+      "H_today_kms_Mpc": 43.859448928218896,
+      "Omega_phi_today": 0.2559008155634132,
+      "b": 10.0,
+      "c": 1.0,
+      "fraction_potential_retained_today": 0.9972977871754448,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.0013529351960664987,
+      "max_frozen_change_before_a1e_3": 1.044052494913425e-11,
+      "max_scalar_work_relative": 1.27830812677431e-16,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 3.984259724956885e-48,
+      "w_today": -0.9983029323514288
+    },
+    {
+      "H_today_kms_Mpc": 66.99358924627118,
+      "Omega_phi_today": 0.6810734480292145,
+      "b": 10.0,
+      "c": 2.5,
+      "fraction_potential_retained_today": 0.9887868308387017,
+      "initial_displacement": "prepared physical minimum, initial canonical velocity zero",
+      "log_phi_ratio_today": -0.005638255346978089,
+      "max_frozen_change_before_a1e_3": 6.525328089515392e-11,
+      "max_scalar_work_relative": 1.6362344022711168e-16,
+      "numerical_nfev": 5600,
+      "refined": false,
+      "rho_phi_today_GeV4": 2.4740591111660877e-47,
+      "w_today": -0.9941449858334054
+    }
+  ],
+  "full_action_runs": [
+    {
+      "Hubble_length_upper_bound_over_M": 7.348469228349534,
+      "endpoint": {
+        "ddot_a_over_aH2": -0.8980570309756983,
+        "h_over_v": 0.9533037459535787,
+        "log_phi_ratio": -1.0649789771588774e-05,
+        "phi_ratio": 0.9999893502669372,
+        "radiation_fraction": 0.026458889762493124,
+        "scalar_fraction": 0.9735411102375069
+      },
+      "endpoint_z_displacement_over_M": 34.14391504505429,
+      "kind": "original",
+      "length_over_M": 1.9786202380193443,
+      "max_Friedmann_relative": 3.4636654992022287e-09,
+      "max_scalar_work_relative": 6.233412400423326e-10,
+      "nfev": 42335,
+      "phi0": 6.531955228890016e-06,
+      "refined": false,
+      "seconds": 1.5012099209999406,
+      "success": true
+    },
+    {
+      "Hubble_length_upper_bound_over_M": 7.348469228349534,
+      "endpoint": {
+        "ddot_a_over_aH2": -0.8980570520465146,
+        "h_over_v": 0.9533037464032873,
+        "log_phi_ratio": -1.0649789774108082e-05,
+        "phi_ratio": 0.9999893502669347,
+        "radiation_fraction": 0.02645888976256337,
+        "scalar_fraction": 0.9735411102374366
+      },
+      "endpoint_z_displacement_over_M": 34.14391506116126,
+      "kind": "original",
+      "length_over_M": 1.9786202382275682,
+      "max_Friedmann_relative": 3.10186144329363e-10,
+      "max_scalar_work_relative": 6.822432766601334e-11,
+      "nfev": 72506,
+      "phi0": 6.531955228890016e-06,
+      "refined": true,
+      "seconds": 2.3545649889999822,
+      "success": true
+    },
+    {
+      "Hubble_length_upper_bound_over_M": 7.348469228349534,
+      "endpoint": {
+        "ddot_a_over_aH2": 0.9987719055468353,
+        "h_over_v": 1.0050934046873966e-06,
+        "log_phi_ratio": 3.1821439206134046e-08,
+        "phi_ratio": 1.0000000318214397,
+        "radiation_fraction": 0.0006140472265796279,
+        "scalar_fraction": 0.9993859527734203
+      },
+      "endpoint_z_displacement_over_M": 1.8242738843737052e-07,
+      "kind": "completed",
+      "length_over_M": 1.8243034961028557e-07,
+      "max_Friedmann_relative": 5.948008774632969e-13,
+      "max_scalar_work_relative": 6.776299718120371e-16,
+      "nfev": 121775,
+      "phi0": 6.531955228890016e-06,
+      "refined": false,
+      "seconds": 4.780279683999993,
+      "success": true
+    },
+    {
+      "Hubble_length_upper_bound_over_M": 7.348469228349534,
+      "endpoint": {
+        "ddot_a_over_aH2": 0.9987719055468337,
+        "h_over_v": 1.0050934046874144e-06,
+        "log_phi_ratio": 3.18214400282775e-08,
+        "phi_ratio": 1.0000000318214406,
+        "radiation_fraction": 0.0006140472265796279,
+        "scalar_fraction": 0.9993859527734203
+      },
+      "endpoint_z_displacement_over_M": 1.824273884380007e-07,
+      "kind": "completed",
+      "length_over_M": 1.824303496104842e-07,
+      "max_Friedmann_relative": 6.503732033539105e-13,
+      "max_scalar_work_relative": 6.776299718120371e-16,
+      "nfev": 245481,
+      "phi0": 6.531955228890016e-06,
+      "refined": true,
+      "seconds": 8.303413473999967,
+      "success": true
+    }
+  ],
+  "numerical_gates": [
+    {
+      "name": "originalFalse Friedmann",
+      "passed": true,
+      "value": 3.4636654992022287e-09
+    },
+    {
+      "name": "originalFalse scalar work",
+      "passed": true,
+      "value": 6.233412400423326e-10
+    },
+    {
+      "name": "originalTrue Friedmann",
+      "passed": true,
+      "value": 3.10186144329363e-10
+    },
+    {
+      "name": "originalTrue scalar work",
+      "passed": true,
+      "value": 6.822432766601334e-11
+    },
+    {
+      "name": "completedFalse Friedmann",
+      "passed": true,
+      "value": 5.948008774632969e-13
+    },
+    {
+      "name": "completedFalse scalar work",
+      "passed": true,
+      "value": 6.776299718120371e-16
+    },
+    {
+      "name": "completedTrue Friedmann",
+      "passed": true,
+      "value": 6.503732033539105e-13
+    },
+    {
+      "name": "completedTrue scalar work",
+      "passed": true,
+      "value": 6.776299718120371e-16
+    },
+    {
+      "name": "original refinement",
+      "passed": true,
+      "value": {
+        "h": 4.4970860368920285e-10,
+        "log_phi": 2.519308072161837e-15
+      }
+    },
+    {
+      "name": "completed refinement",
+      "passed": true,
+      "value": {
+        "h": 1.7787691892340307e-20,
+        "log_phi": 8.221434531994942e-16
+      }
+    },
+    {
+      "name": "late b1 c1 refined=False scalar work",
+      "passed": true,
+      "value": 4.857570881742378e-15
+    },
+    {
+      "name": "late b1 c2.5 refined=False scalar work",
+      "passed": true,
+      "value": 6.872184489538691e-15
+    },
+    {
+      "name": "late b3 c1 refined=False scalar work",
+      "passed": true,
+      "value": 2.55661625354862e-16
+    },
+    {
+      "name": "late b3 c2.5 refined=False scalar work",
+      "passed": true,
+      "value": 3.2724688045422336e-16
+    },
+    {
+      "name": "late b10 c1 refined=False scalar work",
+      "passed": true,
+      "value": 1.27830812677431e-16
+    },
+    {
+      "name": "late b10 c2.5 refined=False scalar work",
+      "passed": true,
+      "value": 1.6362344022711168e-16
+    },
+    {
+      "name": "late b1 c1 refined=True scalar work",
+      "passed": true,
+      "value": 1.27830812677431e-16
+    },
+    {
+      "name": "late b1 c2.5 refined=True scalar work",
+      "passed": true,
+      "value": 3.2724688045422336e-16
+    },
+    {
+      "name": "late b3 c1 refined=True scalar work",
+      "passed": true,
+      "value": 1.27830812677431e-16
+    },
+    {
+      "name": "late b3 c2.5 refined=True scalar work",
+      "passed": true,
+      "value": 1.6362344022711168e-16
+    },
+    {
+      "name": "late b10 c1 refined=True scalar work",
+      "passed": true,
+      "value": 1.27830812677431e-16
+    },
+    {
+      "name": "late b10 c2.5 refined=True scalar work",
+      "passed": true,
+      "value": 1.6362344022711168e-16
+    },
+    {
+      "name": "late b1 c1 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 0.0,
+        "Omega_phi_today": 5.551115123125783e-17,
+        "w_today": 0.0
+      }
+    },
+    {
+      "name": "late b1 c2.5 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 1.4210854715202004e-14,
+        "Omega_phi_today": 3.3306690738754696e-16,
+        "w_today": 7.771561172376096e-16
+      }
+    },
+    {
+      "name": "late b3 c1 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 0.0,
+        "Omega_phi_today": 0.0,
+        "w_today": 0.0
+      }
+    },
+    {
+      "name": "late b3 c2.5 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 0.0,
+        "Omega_phi_today": 2.220446049250313e-16,
+        "w_today": 3.3306690738754696e-16
+      }
+    },
+    {
+      "name": "late b10 c1 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 0.0,
+        "Omega_phi_today": 0.0,
+        "w_today": 0.0
+      }
+    },
+    {
+      "name": "late b10 c2.5 refinement",
+      "passed": true,
+      "value": {
+        "H_today_kms_Mpc": 0.0,
+        "Omega_phi_today": 0.0,
+        "w_today": 0.0
+      }
+    }
+  ],
+  "status": "PASS"
+}

@@ -5,7 +5,7 @@ Same positive action, parameters, numerical gates and controls. All integrations
 are repeated; old raw files are not claimed to have survived the reset.
 """
 from pathlib import Path
-import json, math, platform, sys, time
+import gzip, hashlib, io, json, math, platform, sys, tarfile, time
 import numpy as np
 from scipy.integrate import solve_ivp, quad
 from scipy.optimize import brentq
@@ -158,6 +158,19 @@ def controls():
  x=physical_scale();ck('physical remnant small-displacement limit',abs(x['rho_initial_GeV4']/x['rho_approx_GeV4']-1)<1e-13,x)
  return records
 
+def archive_raw():
+ """Retain every raw CSV, with deterministic container metadata."""
+ manifest={};buf=io.BytesIO()
+ with tarfile.open(fileobj=buf,mode='w') as archive:
+  for path in sorted(P.glob('*.csv')):
+   data=path.read_bytes();info=tarfile.TarInfo(path.name)
+   info.size=len(data);info.mode=0o644;info.mtime=0
+   archive.addfile(info,io.BytesIO(data))
+   manifest[path.name]=dict(sha256=hashlib.sha256(data).hexdigest(),bytes=len(data))
+ (P/'RAW_DATA.tar.gz').write_bytes(gzip.compress(buf.getvalue(),mtime=0))
+ dump('RAW_MANIFEST.json',manifest)
+ for path in P.glob('*.csv'):path.unlink()
+
 def main():
  dump('INPUTS.json',INPUTS);records=controls()
  full=[full_run(k,r) for k in ['original','completed'] for r in [False,True]]
@@ -179,6 +192,7 @@ def main():
  r=dict(analytical=analytical(),full_action_runs=full,conditional_late_runs=late,conditional_late_refinements=ref,analytic_controls=records,numerical_gates=gates,status='PASS' if all(x['passed'] for x in records+gates) else 'FAIL')
  dump('RESULTS.json',r)
  dump('ENVIRONMENT.json',dict(python=sys.version,platform=platform.platform(),numpy=np.__version__,scipy=__import__('scipy').__version__,command='python3 code/build.py'))
+ archive_raw()
  print('STATUS',r['status'],'CONTROLS',len(records),'GATES',len(gates))
  if r['status']!='PASS':sys.exit(1)
 
