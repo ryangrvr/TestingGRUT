@@ -1,0 +1,72 @@
+{
+  "label": "QV1-M: supplied positive gap in an occupied metastable phase; same q and transition-scalar field content, changed potential and preparation.",
+  "gap_input_status": "Supplied, or calibrated to observed DE when physical units are attached.",
+  "physical_illustration": {
+    "v_s_GeV_supplied": 1000.0,
+    "lambda_s_supplied": 0.1,
+    "m_q_GeV_supplied": 2.435e+17,
+    "delta_GeV4_calibrated": 2.52e-47,
+    "scalar_mass_at_zero_bias_GeV": 447.21359549995793,
+    "mass_squared_splitting_GeV2": 7.56e-53,
+    "relative_gap_delta_over_lambda_v4": 2.52e-58,
+    "false_vacuum_H_GeV": 1.1902568169354776e-42,
+    "H_squared_over_mq_squared": 2.3893700951833922e-119,
+    "scope": "Analytic low-curvature illustration, not a direct integration of the physical hierarchy, collider prediction or independently calibrated benchmark."
+  },
+  "runs": [
+    {
+      "s_initial": -0.5,
+      "s_final": -0.5,
+      "V_final": 0.003,
+      "H_final": 0.03162956649146332,
+      "a_final": 31.31891096521561,
+      "tail_average_qdec": -0.9981835013560121,
+      "relative_constraint_max": 1.7616609175612773e-15
+    },
+    {
+      "s_initial": -0.495,
+      "s_final": -0.49997978601814624,
+      "V_final": 0.003000000404911148,
+      "H_final": 0.031629569980984235,
+      "a_final": 31.320520206357877,
+      "tail_average_qdec": -0.998182763443992,
+      "relative_constraint_max": 3.339624553213932e-15
+    },
+    {
+      "s_initial": 0.025,
+      "s_final": 0.4971896871931039,
+      "V_final": 7.92447709533261e-06,
+      "H_final": 0.008056481415268012,
+      "a_final": 13.871060323724155,
+      "tail_average_qdec": 0.5375770934720367,
+      "relative_constraint_max": 4.996312741759921e-14
+    }
+  ],
+  "refined_H_max_relative_difference": 5.184741524999481e-14,
+  "stationary_minima": {
+    "V_false": 0.003,
+    "V_true": 0.0,
+    "m_false_squared": 1.982,
+    "m_true_squared": 2.018,
+    "exact_gap_relation_residual": "0"
+  },
+  "exact_false_vacuum_de_Sitter": {
+    "H": 0.03162277660168379,
+    "x_Fminus1": 2.5e-06,
+    "constraint_residual": -4.782228906189572e-19
+  },
+  "checks": {
+    "positive_classical_curvatures": true,
+    "small_false_phase_perturbation_remains_false": true,
+    "false_phase_accelerates": true,
+    "true_phase_control_decelerates": true,
+    "constraint_below_1e-8": true,
+    "refinement_below_1e-6": true,
+    "exact_gap_relation": true
+  },
+  "source_hashes": {
+    "metastable.py": "8202798d38ef74140575f2a9fd1f5efe6690ae2a43a51a0a86fc5011bf91c1f7",
+    "INPUTS.json": "6acc220affa17cd51c257cf95c3011e1b65ddd48d407fd9aa333760b632339bb"
+  },
+  "scope": "Classical local stability and finite-time trajectories only. No tunneling rate, wall-population history, radiative matching calculation or cosmological lifetime certificate."
+}
