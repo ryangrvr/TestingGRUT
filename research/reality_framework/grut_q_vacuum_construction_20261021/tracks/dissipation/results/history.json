@@ -1,0 +1,497 @@
+{
+ "labels": "[C] computed here; [D] derived (formula in NOTES); inputs [Q]/[R] as listed under inputs",
+ "inputs": {
+  "M_GeV": 2.435e+18,
+  "rho_Lambda_GeV4": 2.52e-47,
+  "gamma": 0.0031662869888230555,
+  "H0_GeV": 1.4377226629626767e-42,
+  "Omega_m": 0.315,
+  "t0_GeVinv": 6.610099173055603e+41,
+  "T_CMB_GeV": 2.3486541805581e-13,
+  "Omega_gamma_h2": 2.473e-05,
+  "Delta_EW_GeV4": 119000000.0,
+  "Delta_QCD_GeV4": [
+   0.00044,
+   0.003
+  ],
+  "E_star=sqrt(3)M_GeV": 4.217543716430216e+18
+ },
+ "a_radiation_law_[D]": {
+  "formula": "rho_V(N) = rho_Vi / (1 + (4 gamma/9)(rho_Vi/M^4) N)  (exact for radiation + vacuum, constant G)",
+  "floor_formula": "rho_V(N) >= (1/2) min(rho_Vi, 9 M^4/(4 gamma N))",
+  "efolds_needed_to_reach_rho_Lambda": 9.913512607512736e+122,
+  "efolds_T=M_to_T_CMB_standard_history": 72.51855959040432,
+  "floor_after_standard_history_GeV4": 3.444918364627546e+74,
+  "floor_in_M^4": 9.799029667606112,
+  "floor_in_rho_Lambda": 1.367031097074423e+121,
+  "relative_change_if_prepared_at_rho_r(1MeV)": 1.026615980232685e-86
+ },
+ "b_histories_from_T=1e18GeV": {
+  "formed? rhoVi=M^4, kappa=0": {
+   "rho_V_i_GeV4": 3.5155709100625e+73,
+   "kappa_hot": 0.0,
+   "end": "reached N_max",
+   "N_end": 73.52629540783262,
+   "T_rad_end_GeV": 1.3043030530310168e+17,
+   "rows": [
+    {
+     "T_target_GeV": 1e+16,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1000.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 160.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 0.001,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1e-09,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 2.3486541805581e-13,
+     "not_reached": true
+    }
+   ],
+   "rho_V(q)_end_GeV4": 3.185926158233682e+73,
+   "total_vacuum_end_over_rho_Lambda": 1.2642564119974928e+120
+  },
+  "formed? rhoVi=M^4, kappa=1e-2": {
+   "rho_V_i_GeV4": 3.5155709100625e+73,
+   "kappa_hot": 0.01,
+   "end": "reached N_max",
+   "N_end": 73.52629540783262,
+   "T_rad_end_GeV": 1.3043024316955152e+17,
+   "rows": [
+    {
+     "T_target_GeV": 1e+16,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1000.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 160.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 0.001,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1e-09,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 2.3486541805581e-13,
+     "not_reached": true
+    }
+   ],
+   "rho_V(q)_end_GeV4": 3.185920581227874e+73,
+   "total_vacuum_end_over_rho_Lambda": 1.2642541988999501e+120
+  },
+  "rhoVi=1e-60 M^4, kappa=0": {
+   "rho_V_i_GeV4": 35155709100625.0,
+   "kappa_hot": 0.0,
+   "end": "reached N_max",
+   "N_end": 73.52629540783262,
+   "T_rad_end_GeV": 3.2523963449009355e-13,
+   "rows": [
+    {
+     "T_rad_GeV": 9998256768786836.0,
+     "N": 4.605344532108804,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 1.0017372294352e-52,
+     "H_GeV": 140463073133599.98,
+     "age_GeVinv": 3.559654432307343e-15,
+     "H*age": 0.5000000008555298,
+     "H/H_standard(T)": 0.9999999999999999
+    },
+    {
+     "T_rad_GeV": 998.6933214210513,
+     "N": 34.54008399081603,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 0.5015671201282837,
+     "H_GeV": 1.985064139218143e-12,
+     "age_GeVinv": 314255217469.6512,
+     "H*age": 0.6238167627612035,
+     "H/H_standard(T)": 1.4164350282342268
+    },
+    {
+     "T_rad_GeV": 160.30593854113243,
+     "N": 36.36994088490726,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 60410135.60838985,
+     "Omega_vac_total": 0.9993407322984152,
+     "H_GeV": 1.406312758071007e-12,
+     "age_GeVinv": 1549297192160.374,
+     "H*age": 2.1787964073787225,
+     "H/H_standard(T)": 38.94655964707827
+    },
+    {
+     "T_rad_GeV": 0.9976175588777815,
+     "N": 41.587160653728205,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 0.00044,
+     "Omega_vac_total": 0.9999999999994277,
+     "H_GeV": 1.405847905477141e-12,
+     "age_GeVinv": 5260322421468.137,
+     "H*age": 7.395213258355422,
+     "H/H_standard(T)": 1321788.7033431109
+    },
+    {
+     "T_rad_GeV": 0.0009978444634426984,
+     "N": 48.978893792647085,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 1.0,
+     "H_GeV": 1.405847905476739e-12,
+     "age_GeVinv": 10518169383520.271,
+     "H*age": 14.786946397271535,
+     "H/H_standard(T)": 3166494585067.2363
+    },
+    {
+     "T_rad_GeV": 9.992733289961282e-10,
+     "N": 63.08371459619205,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 1.0,
+     "H_GeV": 1.405847905476739e-12,
+     "age_GeVinv": 20551132941381.273,
+     "H*age": 28.891767200814876,
+     "H/H_standard(T)": 5.647684857095035e+24
+    },
+    {
+     "T_rad_GeV": 3.2523963449009355e-13,
+     "N": 73.52629540783262,
+     "rho_V(q-sector)_GeV4": 35155709100625.0,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 1.0,
+     "H_GeV": 1.405847905476739e-12,
+     "age_GeVinv": 27979092090418.484,
+     "H*age": 39.33434801245562,
+     "H/H_standard(T)": 5.331287685297529e+31
+    }
+   ],
+   "rho_V(q)_end_GeV4": 35155709100625.0,
+   "total_vacuum_end_over_rho_Lambda": 1.395067821453373e+60
+  },
+  "prepared rhoVi=rho_Lambda, kappa=0": {
+   "rho_V_i_GeV4": 2.52e-47,
+   "kappa_hot": 0.0,
+   "end": "reached N_max",
+   "N_end": 73.52629540783262,
+   "T_rad_end_GeV": 2.914265459209101e-14,
+   "rows": [
+    {
+     "T_rad_GeV": 9998256768786836.0,
+     "N": 4.605344532108804,
+     "rho_V(q-sector)_GeV4": 2.5199999999997457e-47,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 3.3908099095839616e-58,
+     "H_GeV": 140463073133599.98,
+     "age_GeVinv": 3.559654432307343e-15,
+     "H*age": 0.5000000008555298,
+     "H/H_standard(T)": 0.9999999999999999
+    },
+    {
+     "T_rad_GeV": 998.6933214210513,
+     "N": 34.54008399081603,
+     "rho_V(q-sector)_GeV4": 2.51999999999809e-47,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 3.4062029853642977e-06,
+     "H_GeV": 1.4014532826593022e-12,
+     "age_GeVinv": 356772911914.5158,
+     "H*age": 0.5000005685665163,
+     "H/H_standard(T)": 1.0000017031058437
+    },
+    {
+     "T_rad_GeV": 160.30593854113243,
+     "N": 36.36994088490726,
+     "rho_V(q-sector)_GeV4": 2.5199999999979906e-47,
+     "V_m(SM plateau)_GeV4": 60410135.60838985,
+     "Omega_vac_total": 0.002597976610041223,
+     "H_GeV": 3.6155776577881404e-14,
+     "age_GeVinv": 13849166153833.748,
+     "H*age": 0.5007273572479701,
+     "H/H_standard(T)": 1.0013015248531179
+    },
+    {
+     "T_rad_GeV": 0.9976175588777815,
+     "N": 41.587160653728205,
+     "rho_V(q-sector)_GeV4": 2.5199999999979906e-47,
+     "V_m(SM plateau)_GeV4": 0.00044,
+     "Omega_vac_total": 2.186610298510945e-05,
+     "H_GeV": 1.0636066664380592e-18,
+     "age_GeVinv": 4.7010205078551354e+17,
+     "H*age": 0.5000036751216752,
+     "H/H_standard(T)": 1.0000109336301957
+    },
+    {
+     "T_rad_GeV": 0.0009978444792245814,
+     "N": 48.978893792647085,
+     "rho_V(q-sector)_GeV4": 2.5199999999979906e-47,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 7.187232339214346e-36,
+     "H_GeV": 4.439763487967116e-25,
+     "age_GeVinv": 1.1261888818623066e+24,
+     "H*age": 0.5000012278246782,
+     "H/H_standard(T)": 1.000000536627208
+    },
+    {
+     "T_rad_GeV": 9.992733927814434e-10,
+     "N": 63.08371459619205,
+     "rho_V(q-sector)_GeV4": 2.5199999999979906e-47,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 9.396000826215693e-12,
+     "H_GeV": 3.883015769941546e-37,
+     "age_GeVinv": 1.4548865244897358e+36,
+     "H*age": 0.5649347318069092,
+     "H/H_standard(T)": 1.559916010733677
+    },
+    {
+     "T_rad_GeV": 2.344050727794968e-13,
+     "N": 71.4414475994196,
+     "rho_V(q-sector)_GeV4": 2.5199999999979906e-47,
+     "V_m(SM plateau)_GeV4": 0.0,
+     "Omega_vac_total": 0.5526927190784123,
+     "H_GeV": 1.6010275521261513e-42,
+     "age_GeVinv": 5.3654797185545216e+41,
+     "H*age": 0.8590280859779857,
+     "H/H_standard(T)": 116.88680898839974
+    }
+   ],
+   "rho_V(q)_end_GeV4": 2.5199999999979906e-47,
+   "total_vacuum_end_over_rho_Lambda": 0.9999999999992026
+  },
+  "relaxed-to-zero total before EW: rhoVi=-(D_EW+D_QCD), kappa=0": {
+   "rho_V_i_GeV4": -119000000.00044,
+   "kappa_hot": 0.0,
+   "end": "turnaround (crunch follows)",
+   "N_end": 37.68893093945615,
+   "T_rad_end_GeV": 49.19757937677133,
+   "rows": [
+    {
+     "T_rad_GeV": 9998256768786836.0,
+     "N": 4.605344532108804,
+     "rho_V(q-sector)_GeV4": -119000000.00044,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 0.0,
+     "H_GeV": 140463073133599.98,
+     "age_GeVinv": 3.559654432307343e-15,
+     "H*age": 0.5000000008555298,
+     "H/H_standard(T)": 0.9999999999999999
+    },
+    {
+     "T_rad_GeV": 998.6933214210513,
+     "N": 34.54008399081603,
+     "rho_V(q-sector)_GeV4": -119000000.00044,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": 0.0,
+     "H_GeV": 1.4014508958400921e-12,
+     "age_GeVinv": 356773114455.1738,
+     "H*age": 0.5000000008648631,
+     "H/H_standard(T)": 1.0000000000000002
+    },
+    {
+     "T_rad_GeV": 160.30593854113243,
+     "N": 36.36994088490726,
+     "rho_V(q-sector)_GeV4": -119000000.00044,
+     "V_m(SM plateau)_GeV4": 60410135.60838985,
+     "Omega_vac_total": -0.002532655980224922,
+     "H_GeV": 3.606314121665371e-14,
+     "age_GeVinv": 13861017448345.688,
+     "H*age": 0.4998718296461916,
+     "H/H_standard(T)": 0.9987360723243136
+    },
+    {
+     "T_target_GeV": 1.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 0.001,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1e-09,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 2.3486541805581e-13,
+     "not_reached": true
+    }
+   ],
+   "rho_V(q)_end_GeV4": -119000000.00044,
+   "total_vacuum_end_over_rho_Lambda": -4.7222222222222224e+54
+  },
+  "prepared rhoVi=rho_Lambda, kappa=1e-3 from T=1e18": {
+   "rho_V_i_GeV4": 2.52e-47,
+   "kappa_hot": 0.001,
+   "end": "turnaround (crunch follows)",
+   "N_end": 6.308650453742881,
+   "T_rad_end_GeV": 1820488417830037.2,
+   "rows": [
+    {
+     "T_rad_GeV": 9998553661482466.0,
+     "N": 4.605314831232303,
+     "rho_V(q-sector)_GeV4": -3.8570442711160166e+62,
+     "V_m(SM plateau)_GeV4": 119000000.00044,
+     "Omega_vac_total": -0.0011001123302831794,
+     "H_GeV": 140394211729307.8,
+     "age_GeVinv": 3.560095268949301e-15,
+     "H*age": 0.49981676896537514,
+     "H/H_standard(T)": 0.9994503972618708
+    },
+    {
+     "T_target_GeV": 1000.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 160.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1.0,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 0.001,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 1e-09,
+     "not_reached": true
+    },
+    {
+     "T_target_GeV": 2.3486541805581e-13,
+     "not_reached": true
+    }
+   ],
+   "rho_V(q)_end_GeV4": -3.857044271116114e+62,
+   "total_vacuum_end_over_rho_Lambda": -1.5305731234587753e+109
+  }
+ },
+ "b_note": "A standard radiation era has H*age = 1/2 and H/H_standard(T) = 1. \"formed?\" cases: vacuum-dominated from the start; rho_V falls only to ~9 M^4/(4 gamma N). Prepared case: the dissipation is negligible and the final total vacuum energy is what was prepared. Relaxed-before-EW case: the EW and QCD plateaux are released after the relaxation, total -> -(D_EW + D_QCD) < 0, turnaround and crunch. kappa = 1e-3 from 1e18 GeV: drain gamma kappa^2 H_i^4/32 = 3.9e62 GeV^4, so the prepared value would also have to absorb it.",
+ "c_attractor_[D/C]": {
+  "formulae": "rho_V = 9 M^4 (6 gamma sqrt(3) M t)^(-2/3);  H = sqrt(3) M (6 gamma sqrt(3) M t)^(-1/3);  N = (3 sqrt(3) M t/(4 sqrt(gamma)))^(2/3);  Omega_M = 1/(4N);  t(H) = M^2/(2 gamma H^3)",
+  "tau0=E_star*t0": 2.7878382232301227e+60,
+  "rho_V(t0)_GeV4": 2.2434977673364317e+35,
+  "rho_V(t0)/rho_Lambda": 8.902768918001714e+81,
+  "H(t0)_GeV": 0.11230606947409864,
+  "H(t0)/H0": 7.811386185056895e+40,
+  "H(t0)*t0": 7.423542569598646e+40,
+  "efolds_N(t0)": 1.1135313854397882e+41,
+  "Omega_M(t0)=1/(4N)": 2.2451095969896055e-42,
+  "age_when_H=H0_in_units_1/H0": 4.529678953009278e+122,
+  "age_when_H=H0_Gyr": 6.571342502913429e+123,
+  "Omega_V_when_H=H0": 1.0,
+  "observed_[R]": {
+   "H0*t0_LCDM": 0.9506030755565575,
+   "Omega_m": 0.315,
+   "Omega_Lambda": 0.685
+  },
+  "H0*t0_from_data_[R]": 0.950348938553289
+ },
+ "d_attractor_then_reheating_[D/C]": {
+  "requirement": "rho_V,end = 9 M^4/(4 gamma N_end) = rho_Lambda + Delta_EW + Delta_QCD + D_trace + D_inflaton",
+  "N_end_if_only_EW_QCD": 2.0993320815831697e+68,
+  "fractional_tuning_of_N_end_needed": 2.1176470588156993e-55,
+  "H_at_end_GeV_if_rhoV_end=D_EW": 2.5865083679248712e-15,
+  "radiation_fraction_at_end_1/(4N_end)": 1.190854949496809e-69,
+  "radiation_density_at_end_GeV4": 1.4171173899012026e-61,
+  "rho_r_needed_at_T=160GeV_GeV4": 23015812187.560104,
+  "inflaton_plateau_drain_[D]": {
+   "formula": "Delta rho_V = -(4 gamma/9)(V^2/M^4) N_inf  (V >> rho_V)",
+   "V^(1/4)_GeV": 1e+16,
+   "N_inf": 60,
+   "Delta_rho_V_GeV4": -2.4017242678927237e+53,
+   "in_rho_Lambda": -9.530651856717158e+99
+  }
+ },
+ "e_trace_drains_[D/C]": {
+  "formula_radiation_era": "D = gamma kappa^2 H_RH^4 / 32 (constant kappa, H ~ a^-2)",
+  "formula_matter_era": "D = gamma H_1^4 / 24 (from H_1 onwards, rho_V ~ 0)",
+  "radiation_era": {
+   "T_RH=1e+16,kappa=0.001": {
+    "D_GeV4": 3.8570447270656436e+46,
+    "D/rho_Lambda": 1.5305733043911285e+93
+   },
+   "T_RH=1e+16,kappa=0.01": {
+    "D_GeV4": 3.8570447270656436e+48,
+    "D/rho_Lambda": 1.5305733043911285e+95
+   },
+   "T_RH=1e+09,kappa=0.001": {
+    "D_GeV4": 3.8570447270656426e-10,
+    "D/rho_Lambda": 1.530573304391128e+37
+   },
+   "T_RH=1e+09,kappa=0.01": {
+    "D_GeV4": 3.857044727065643e-08,
+    "D/rho_Lambda": 1.530573304391128e+39
+   },
+   "T_RH=1000,kappa=0.001": {
+    "D_GeV4": 3.857044727065643e-58,
+    "D/rho_Lambda": 1.5305733043911282e-11
+   },
+   "T_RH=1000,kappa=0.01": {
+    "D_GeV4": 3.8570447270656435e-56,
+    "D/rho_Lambda": 1.5305733043911284e-09
+   },
+   "T_RH=160,kappa=0.001": {
+    "D_GeV4": 1.656588096195618e-64,
+    "D/rho_Lambda": 6.573762286490548e-18
+   },
+   "T_RH=160,kappa=0.01": {
+    "D_GeV4": 1.6565880961956183e-62,
+    "D/rho_Lambda": 6.573762286490548e-16
+   }
+  },
+  "QCD_epoch_kappa=0.3,T=0.2GeV": {
+   "D_GeV4": 2.9735504160071866e-83,
+   "D/rho_Lambda": 1.1799803238123757e-36
+  },
+  "matter_era_from_equality": {
+   "H_eq_GeV": 2.263368884939104e-37,
+   "D_GeV4": 3.462265749939741e-151,
+   "D/rho_Lambda": 1.3739149801348178e-104
+  },
+  "EW_kick_scale_comparison": {
+   "H(T=1.26TeV)^4/rho_Lambda": 0.9826937575358019,
+   "note": "the drain carries the KV/AHHKM H^4 scale times gamma kappa^2/32 and with negative sign"
+  }
+ },
+ "f_late_time_observables_[C]": {
+  "produced_quanta": "massless non-conformal fields (gravitons; KV 1601.00601 sec 5); photons are conformally coupled at tree level and are not produced by a conformally flat FRW background [R: Parker 1969]",
+  "energy_injected_per_efold_today_over_rho_gamma": 1.5770281379434655e-119,
+  "energy_injected_per_efold_today_over_rho_Lambda": 1.2526006935113647e-123,
+  "w_plus_1_today_from_drain": 4.1753356450378825e-124,
+  "energy_injected_per_efold_over_rho_gamma_at_z=2e6": 6.706540418271521e-109,
+  "FIRAS_limits_[Q ledger row 15]": "|mu| < 9e-5, |y| < 1.5e-5",
+  "graviton_fraction_per_efold_at_BBN_kappa=1e-2": 8.847872755188174e-94,
+  "graviton_fraction_per_efold_at_T=1e16_kappa=1e-2": 8.786143410384532e-17,
+  "N_eff_limit_[Q ledger row 12]": "N_nu = 2.898 +- 0.141 (BBN+CMB)",
+  "G_variation": "none at constant G (1601.00601, 2207.03453); with K'(q) != 0 (QV1 structure) dK/K ~ H^2/m_q^2 = 1.6e-121 today as in QV1 (../../equations/NOTES.md section 4.3)"
+ },
+ "summary": {
+  "efolds_needed": 9.913512607512736e+122,
+  "efolds_standard": 72.51855959040432,
+  "rho_V(t0)_on_attractor_over_rhoL": 8.902768918001714e+81,
+  "H(t0)/H0_on_attractor": 7.811386185056895e+40
+ }
+}

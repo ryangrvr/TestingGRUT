@@ -1,0 +1,141 @@
+{
+ "A_minisuperspace": {
+  "constraint_residual": "0",
+  "space_residual": "0",
+  "q_eq_residual": "0",
+  "pass_": true,
+  "note": "E_N = +a^3 C, E_a = +-3a^2 (space eq), E_q = -a^3 (eps' - K'R/2 - mu): the scenario FRW equations follow from the action"
+ },
+ "B_bianchi": {
+  "trace_form_dCdt_plus_4HC": "Gamma_q*v**2 - Q",
+  "trace_form_with_Q_equal_Gamma_q_v2": "0",
+  "pass_": true,
+  "space_form_dCdt_plus_3HC_with_Q": "0",
+  "note": "trace-form system (the one the scenario integrates): dC/dt = -4HC + (Gamma_q qdot^2 - Q); with the space-space equation instead of the trace, dC/dt = -3HC + (same). Either way the constraint surface is invariant iff Q = Gamma_q qdot^2"
+ },
+ "C_KV_forms": {
+  "mu0": "-1/(3*chi*q0)",
+  "eps_minus_mu0q_at_q0": "0",
+  "m_q2_natural": "2*M**2/3",
+  "m_q_GeV": 1.9881691745590129e+18,
+  "rhoV_Y": "Y**4/6 + 2*Y**3/3 + Y**2/2 + Y*c + c",
+  "rhoV_matches": true,
+  "R_Y": "4*Y**3/3 + 4*Y**2 + 2*Y + 2*c",
+  "R_matches": true,
+  "trace_force_matches": true,
+  "damping_coefficient": "Gamma*K0/K",
+  "damping_is_Gamma_over_1pY": true,
+  "note": "energy of a damped oscillator qdd + gamma qd decays at rate gamma: Gamma at Y -> 0"
+ },
+ "D_R1": {
+  "y1": "S(t)/3",
+  "y2": "-H(t)*Derivative(S(t), t) - 2*S(t)**2/9 - Derivative(S(t), (t, 2))/3",
+  "C_order0": "3*H(t)**2 - rho(t)",
+  "C_order1": "H(t)**2*S(t) + H(t)*Derivative(S(t), t) - S(t)**2/12",
+  "R1_matches": true,
+  "note": "3K0H^2 = rho + [S^2/(12K0) - H^2 S - H Sdot]/m^2 + O(m^-4); shape coefficients enter only at O(m^-4)"
+ },
+ "E_kick_equivalence": {
+  "ratio": "1",
+  "pass_": true
+ },
+ "F_form_factor": {
+  "table": {
+   "0.1": {
+    "numeric": 0.998335275729611,
+    "x_over_sinhx": 0.998335275729611
+   },
+   "1.0": {
+    "numeric": 0.8509181282393216,
+    "x_over_sinhx": 0.8509181282393216
+   },
+   "2.0": {
+    "numeric": 0.5514411295435664,
+    "x_over_sinhx": 0.5514411295435664
+   },
+   "4.0": {
+    "numeric": 0.14657428130346242,
+    "x_over_sinhx": 0.14657428130346242
+   },
+   "8.0": {
+    "numeric": 0.0053674026504617845,
+    "x_over_sinhx": 0.0053674026504617845
+   }
+  },
+  "E_sudden": "4*Delta**2/(3*m**2)",
+  "pass_": true,
+  "note": "energy = (4/3) Delta^2/(K0 m^2) (x/sinh x)^2, x = pi m tau/2 (tau: tanh width in t)"
+ },
+ "G_Pq_reabsorption": {
+  "root_u": "sqrt(8*c*chi + 1)/2 + 1/2",
+  "deltaK_over_K": "c*chi*(-5*c*chi + 2)/2",
+  "m2_ratio": "5*c*chi + 1",
+  "m2_over_K_ratio": "4*c*chi + 1",
+  "existence": "1 + 8 chi c >= 0  <=> c >= -1/(8 chi) = -M^4/8",
+  "chi_c": {
+   "rho_Lambda": "7.16811e-121",
+   "Delta_EW": "3.38155e-66",
+   "heavy_10TeV_abs": "6.75485e-61",
+   "toy_0.03": "0.03"
+  },
+  "relative_mu_offset_QV1cal": {
+   "c_over_M4": "7.16811e-121",
+   "delta_mu_over_mu0": "2.15043e-120",
+   "note": "|mu0| q0 = M^4/3 for the KV quartic, so delta mu/mu0 = 3 rho_L/M^4 (the \"7.2e-121\" is c/M^4)"
+  }
+ },
+ "H_mu_offset_static_typeii": {
+  "cases": {
+   "rho_Lambda": {
+    "rhoV_over_c_minus_1": "1.0752165e-120",
+    "c_over_K0m2": "1.0752165e-120",
+    "four_thirds_c_over_K0m2": "1.4336221e-120"
+   },
+   "Delta_EW": {
+    "rhoV_over_c_minus_1": "5.0723304e-66",
+    "c_over_K0m2": "5.0723304e-66",
+    "four_thirds_c_over_K0m2": "6.7631072e-66"
+   },
+   "heavy_10TeV_abs": {
+    "rhoV_over_c_minus_1": "1.0132274e-60",
+    "c_over_K0m2": "1.0132274e-60",
+    "four_thirds_c_over_K0m2": "1.3509699e-60"
+   },
+   "toy_0.03": {
+    "rhoV_over_c_minus_1": "0.043851201",
+    "c_over_K0m2": "0.045",
+    "four_thirds_c_over_K0m2": "0.06"
+   }
+  },
+  "note": "QV1-cal (mu offset): rho_V = c + c^2/(K0 m^2) + ..., coefficient 1, not 4/3 (the 4/3 belongs to eps -> eps + c at fixed mu)"
+ },
+ "H_fixed_mu_static": {
+  "cases": {
+   "rho_Lambda": {
+    "c_GeV4": "2.52e-47",
+    "rhoV_over_c_minus_1": "1.4336221e-120",
+    "series_2c_over_M4": "1.4336221e-120",
+    "series_with_c3": "1.4336221e-120"
+   },
+   "Delta_EW": {
+    "c_GeV4": "1.18881e+8",
+    "rhoV_over_c_minus_1": "6.7631072e-66",
+    "series_2c_over_M4": "6.7631072e-66",
+    "series_with_c3": "6.7631072e-66"
+   },
+   "heavy_10TeV_abs": {
+    "c_GeV4": "2.37472e+13",
+    "rhoV_over_c_minus_1": "1.3509699e-60",
+    "series_2c_over_M4": "1.3509699e-60",
+    "series_with_c3": "1.3509699e-60"
+   },
+   "toy_0.03": {
+    "c_GeV4": "1.05467e+72",
+    "rhoV_over_c_minus_1": "0.052073589",
+    "series_2c_over_M4": "0.06",
+    "series_with_c3": "0.0504"
+   }
+  },
+  "note": "(4/3) c/(K0 m^2) = 2 c/M^4 for natural KV scales; c3 (equations-track formula, KV data) = -32/3 in M = 1 units"
+ }
+}

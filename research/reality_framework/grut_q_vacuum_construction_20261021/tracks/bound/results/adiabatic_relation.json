@@ -1,0 +1,48 @@
+{
+ "S1_general_first_order": {
+  "formula": "rho_DE,eff = 3 K_lab H^2 - rho = -3*H**2*Derivative(F(R), R) - 3*H*Rdot*Derivative(F(R), (R, 2)) + Lambda + R*Derivative(F(R), R)/2 - F(R)/2",
+  "reading": "Lam + (R F' - F)/2 - 3 F' H^2 - 3 H F'' Rdot, exact in F for the 00 equation; first order when the background (R, H, Rdot) is taken from GR + Lam"
+ },
+ "S1_quadratic": {
+  "rho_dyn": "-(16*Lambda*rho_r - 9*rho_d**2 - 8*rho_d*rho_r)/(12*K_lab*m**2)",
+  "equals [(9/4) rho_d^2 + 2 rho_d rho_r - 4 Lam rho_r]/(3 K m^2)": true,
+  "Lam_dependence_without_radiation": "0"
+ },
+ "S1_Omega_dyn_today": "9*H_0**2*Omega_m**2/(4*m**2)",
+ "S1_w_dyn_dust_era": "1",
+ "S2_fpp_at_0_from_q": {
+  "f''(0)": "K1**2/(2*e2)",
+  "expected K1^2/(2 e2)": true,
+  "m^2 = K0/(3 f''(0)) = (2/3) K0 e2/K1^2": "2*K0*e2/(3*K1**2)"
+ },
+ "S3_rhoV_static_series": {
+  "rho_V,s(dmu)": "dmu**2*(-1/(2*E2) + 2*k1**2*q0**2/(E2*k0**2)) - dmu*q0",
+  "leading": "-q0",
+  "note": "rho_V,s = -q0 dmu + O(dmu^2): the calibrated part. With m^2 = (2/3) k0 E2/k1^2 the dmu^2 coefficient equals -1/(2 E2) + (4/3) q0^2/(k0 m^2) (checked below).",
+  "dmu2_coefficient_check": true
+ },
+ "S4_map": {
+  "f(R) = K(q_R) R - 2 eps(q_R) + 2 mu q_R; stationarity in q is the q-equation": "R*Derivative(K(q), q)/2 + mu - Derivative(epsilon(q), q)",
+  "df/dR (envelope)": "K(q_R)",
+  "df/dmu (envelope)": "2 q_R",
+  "f''(R)": "K'^2 / (2 (eps'' - K'' R/2))  [from dq_R/dR = K'/(2 D)]",
+  "f(0)": "-2 (eps(q_0) - mu q_0) at eps'(q_0) = mu  =  2 eps*(mu)  (Legendre transform)"
+ },
+ "S4_inverse_affine_gauge": {
+  "K(q)": "f'(lam (q - q0))",
+  "eps(q)": "[K(q) lam (q-q0) - f(lam (q-q0))]/2 + mu q",
+  "q-equation residual at R = lam (q - q0) (should be 0)": "0",
+  "reconstructed f minus f (should be 0)": "0",
+  "reading": "every C^2 function f(R) is the f of a q-theory; the realization is not unique (any reparametrization q(R) and the shift eps -> eps + d q, mu -> mu + d give the same f at this mu)"
+ },
+ "S4_P_q": {
+  "statement": "P_q (eps_inf'(q0) = mu, eps_inf(q0) - mu q0 = 0, eps_inf'' > 0, K > 0)  <=>  f(0) = 0 with f'(0) > 0 and f''(0) > 0, f being the full (final, renormalized) f of the selected mu. f(0) = 0 <=> R = 0 solves the vacuum trace equation R f' - 2 f = 0 (Minkowski is a vacuum solution). The final-state reading needs in addition that the cosmological trajectory ends at R = 0; f(0) = 0 alone does not imply it."
+ },
+ "S5_threshold": {
+  "delta f(R)": "2 c (q_R - q0)/q0 + O(c^2)",
+  "linear K": "K = K0 + K1 (q - q0): q_R - q0 = (f'(R) - f'(0))/K1  =>  f_new(R) = f(R + dR) - dR f'(0) + O(c^2), dR = 2c/(q0 K1)  [first-order identity checked below; exact numerics in hu_sawicki.py B4]",
+  "affine gauge": "q - q0 = R/lam  =>  f_new(R) = f(R) + (2 c/(lam q0)) R + O(c^2), a renormalization of K only [numerics in hu_sawicki.py B4]",
+  "local statement": "at a point of the curvature structure where the local slope is K'(q_R), the structure moves by dR = 2 c/(q0 K'(q_R)); keeping a feature at R ~ R_dS ~ 4 rho_Lam/K requires q0 K'/K >~ c/rho_Lam across the feature"
+ },
+ "S5_linearK_first_order_identity": true
+}

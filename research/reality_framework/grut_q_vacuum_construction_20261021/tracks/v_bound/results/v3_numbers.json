@@ -1,0 +1,110 @@
+{
+ "inputs": {
+  "H0 [eV]": 1.4377226629626768e-33,
+  "Omega_m": 0.315,
+  "Omega_L": 0.685,
+  "M [GeV]": 2.435e+18,
+  "rho_L [GeV^4]": 2.52e-47,
+  "R_sun [m]": 695700000.0,
+  "g*(T_osc)": 106.75,
+  "g*s0, g*0": [
+   3.909,
+   3.363
+  ],
+  "Omega_r": 9.1e-05
+ },
+ "A4_EotWash": {
+  "alpha=1 digitized [um] (paper 38.6)": 38.574646369496676,
+  "alpha=1/3 digitized [um]": 53.988119174124954,
+  "alpha=1/3 rescaled to 38.6 [um]": 54.02360348711123,
+  "EW2007 alpha=1 [um] (Kapner abstract 56)": 55.54656533439015,
+  "EW2007 alpha=1/3 [um]": 73.38889860266376,
+  "digitization uncertainty (max of the two calibrations)": 0.00816314497359416,
+  "m_q lower bound [meV]": 3.6526067804247377,
+  "m_q range [meV]": [
+   3.6230314494589138,
+   3.6826689408788846
+  ],
+  "bound track": "54.0 +- 0.8 um, 3.65 (3.60-3.71) meV"
+ },
+ "A4_Cassini": {
+  "2sigma lower edge": -2.5e-05,
+  "m b required": 10.191157124909783,
+  "m_q [eV] for b = R_sun": 2.890599773236155e-15,
+  "m_q [eV] for b = 1.6 R_sun": 1.8066248582725966e-15,
+  "light q: (gamma-1)/sigma": 21739.130434782608
+ },
+ "A5_Omega_dyn": {
+  "Omega_dyn max (Eot-Wash)": 3.4589797616859277e-62,
+  "rho_dyn max [GeV^4]": 1.2725005838611005e-108,
+  "1 + w max = 2 Omega_dyn/Omega_L": 1.0099210983024606e-61,
+  "Omega_dyn at Cassini-only bound": 5.523036767512707e-38,
+  "Omega_dyn at natural sqrt(2/3) M": 1.1674739285124046e-121,
+  "m_q/H0 for Omega_dyn = Omega_L (formal)": 0.5708953781970173,
+  "stage-1 m_q/H0 for rho_m^2/(12 K m^2) = rho_L": 0.19029845939900575,
+  "lab dK/K = rho_lab/(3 K m^2) at 1 g/cm^3, m = m_min": 1.8162192237959655e-32
+ },
+ "A6_regime_ii": {
+  "m_min/H0": 2.540550326234622e+30,
+  "m_Cassini/H0": 2.0105405915210191e+18,
+  "H(z_eq)/H0 (z_eq = 3400, rho_r = rho_m)": 157427.36365267,
+  "H(z_eq) [eV]": 2.2633688849391043e-28,
+  "G_cos/G_lab = 3/4 vs 1.011 +- 0.018 [sigma]": 14.499999999999995,
+  "same with ledger unrounded 1.01123 +- 0.01830": 14.273440163654962,
+  "dK/K to carry Omega_L: 2 sqrt(OL) H0/m": "2 sqrt(Omega_L) (H0/m_q) [V1h]"
+ },
+ "A7_relic_estimate": {
+  "T_osc [GeV]": 1612.295579823683,
+  "kappa_QCD": 0.001680104545151224,
+  "growth factor, correct": 7979292604765587.0,
+  "growth factor, bound code ((3.91/g*)^(1/3) T_osc/T0)": 2279791933176101.5,
+  "ratio correct/bound": 3.5000091405925815,
+  "cases": {
+   "ln^2 = 1": {
+    "relic fraction at onset": 2.8227512826378016e-07,
+    "Omega_relic (correct growth)": 204964.3817552639,
+    "Omega_relic (bound growth)": 58561.0989920334,
+    "overproduction vs Omega_c = 0.264 (correct)": 775792.5123212108
+   },
+   "drive from T = 1e15 GeV": {
+    "relic fraction at onset": 0.0008324915382028998,
+    "Omega_relic (correct growth)": 604485115.2624217,
+    "Omega_relic (bound growth)": 172709581.88414252,
+    "overproduction vs Omega_c = 0.264 (correct)": 2287983025.217342
+   }
+  },
+  "m [GeV] with tau = 1 s for Gamma = m^3/(192 pi M^2)": 133026.53121090817
+ },
+ "B5_threshold": {
+  "Delta_EW [GeV^4]": 118880914.16162813,
+  "dR = 2 Delta/K [GeV^2]": 4.0099984116517124e-29,
+  "R_dS [GeV^2]": 1.7000535483136498e-83,
+  "dR/R_dS": 2.3587482968577007e+54,
+  "= Delta_EW/(2 rho_L)": 2.358748296857701e+54
+ },
+ "B3_AB_GMink": {
+  "AB as written (Planck units, F''(R0) << 1): b, G_Mink/G": [
+   140.60566545086442,
+   1.3444023387020655e+122
+  ],
+  "AB F''(R0) << F'(R0) (1 mm)^2: b, G_Mink/G": [
+   68.65685362135679,
+   4.311072685365544e+59
+  ],
+  "data-driven (|f_R0| bounds mapped to AB, [E])": {
+   "|f_R0| <= 1.6e-5 (Cataneo+ 2015)": {
+    "b": 4.484202334826338,
+    "G_Mink/G = 1 + e^{2b} (>=)": 7852.066564627838
+   },
+   "|f_R0| <= 2.6e-5 (DESI DR1 FS)": {
+    "b": 4.296593945416618,
+    "G_Mink/G = 1 + e^{2b} (>=)": 5395.784275208812
+   },
+   "|f_R0| <= 1.4e-8 (Desmond-Ferreira)": {
+    "b": 7.351740544766671,
+    "G_Mink/G = 1 + e^{2b} (>=)": 2430193.643982115
+   }
+  },
+  "note": "G_Mink/G ~ |f_R0|^(-1/(1 + Om/(2 OL))) = |f_R0|^-0.813 for the AB form"
+ }
+}

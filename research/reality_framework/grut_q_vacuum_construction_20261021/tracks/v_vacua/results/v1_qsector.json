@@ -1,0 +1,247 @@
+{
+ "1a_dS": {
+  "G_plus_3H2_g_is_zero": true,
+  "R": "12*H**2",
+  "reading": "K G = -(V + eps - mu q) g with G = -3H^2 g gives 3 K H^2 = Lam = V + eps - mu q (E2); (q) eps' - K' R/2 = mu with R = 12 H^2 = 4 Lam/K gives E1: eps' - 2 K' Lam/K = mu"
+ },
+ "1b_series": {
+  "a2": "2*K1**2/(K0**2*e2)",
+  "a3": "8*K1**2*(-K1*e3 + 3*K2*e2)/(3*K0**3*e2**3)",
+  "a2_equals_track": true,
+  "a2_equals_4/(3 K0 mq^2)": true,
+  "a3_equals_track": true,
+  "dq/dx": "2*K1/(K0*e2)",
+  "dK/K per x (first order)": "2*K1**2/(K0**2*e2)",
+  "dK/K equals a2": true,
+  "H^2 = Lam/(3K(q)) series": "x*(3*K0**3*e2**3 - 2*K1**3*e3*x**2 + 6*K1**2*K2*e2*x**2)/(9*K0**4*e2**3)",
+  "H^2 x^2 coefficient": "0"
+ },
+ "1c_slope": {
+  "dLam/dV": "(-2*Lam*K(q)*Derivative(K(q), (q, 2)) + 2*Lam*Derivative(K(q), q)**2 + K(q)**2*Derivative(eps(q), (q, 2)))/(-2*Lam*K(q)*Derivative(K(q), (q, 2)) + 2*Lam*Derivative(K(q), q)**2 + 2*(mu - Derivative(eps(q), q))*K(q)*Derivative(K(q), q) + K(q)**2*Derivative(eps(q), (q, 2)))",
+  "dLam/dV_on_shell(E1 used)": "(2*Lam*K(q)*Derivative(K(q), (q, 2)) - 2*Lam*Derivative(K(q), q)**2 - K(q)**2*Derivative(eps(q), (q, 2)))/(2*Lam*K(q)*Derivative(K(q), (q, 2)) + 2*Lam*Derivative(K(q), q)**2 - K(q)**2*Derivative(eps(q), (q, 2)))",
+  "equals_track_formula_on_shell": true,
+  "pole_at_Lam": "K^2 D/(4 K'^2) = (3/8) K m_q^2 at leading order (K''=0 or Lam small)",
+  "check_pole_leading": true
+ },
+ "1d_numeric_KV": [
+  {
+   "Kprime": 0.0,
+   "x": -0.001,
+   "Lam_exact": -0.0010000000000000009,
+   "two_term": -0.001,
+   "three_term": -0.001,
+   "q-q0": 0.0,
+   "residual": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "Kprime": 0.0,
+   "x": 0.001,
+   "Lam_exact": 0.0010000000000000009,
+   "two_term": 0.001,
+   "three_term": 0.001,
+   "q-q0": 0.0,
+   "residual": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "Kprime": 0.0,
+   "x": 0.01,
+   "Lam_exact": 0.010000000000000009,
+   "two_term": 0.01,
+   "three_term": 0.01,
+   "q-q0": 0.0,
+   "residual": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "Kprime": 0.0,
+   "x": 0.05,
+   "Lam_exact": 0.04999999999999999,
+   "two_term": 0.05,
+   "three_term": 0.05,
+   "q-q0": 0.0,
+   "residual": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "Kprime": 0.3,
+   "x": -0.001,
+   "Lam_exact": -0.0009998197113111906,
+   "two_term": -0.00099982,
+   "three_term": -0.000999819712,
+   "q-q0": -0.0006007215448858849,
+   "residual": [
+    5.551115123125783e-17,
+    1.0842021724855044e-18
+   ]
+  },
+  {
+   "Kprime": 0.3,
+   "x": 0.001,
+   "Lam_exact": 0.0010001797126850693,
+   "two_term": 0.00100018,
+   "three_term": 0.001000179712,
+   "q-q0": 0.000599281536738161,
+   "residual": [
+    0.0,
+    -5.724587470723463e-17
+   ]
+  },
+  {
+   "Kprime": 0.3,
+   "x": 0.01,
+   "Lam_exact": 0.010017718681929133,
+   "two_term": 0.010018,
+   "three_term": 0.010017712000000002,
+   "q-q0": 0.005929501228209455,
+   "residual": [
+    5.551115123125783e-17,
+    5.551115123125783e-17
+   ]
+  },
+  {
+   "Kprime": 0.3,
+   "x": 0.05,
+   "Lam_exact": 0.050417770561625656,
+   "two_term": 0.05045,
+   "three_term": 0.050414,
+   "q-q0": 0.028370387363217064,
+   "residual": [
+    1.6653345369377348e-16,
+    -1.0408340855860843e-16
+   ]
+  },
+  {
+   "Kprime": 1.0,
+   "x": -0.001,
+   "Lam_exact": -0.0009979892553432339,
+   "two_term": -0.000998,
+   "three_term": -0.0009979893333333333,
+   "q-q0": -0.002008053769253504,
+   "residual": [
+    5.551115123125783e-17,
+    1.0408340855860843e-17
+   ]
+  },
+  {
+   "Kprime": 1.0,
+   "x": 0.001,
+   "Lam_exact": 0.0010019894100219348,
+   "two_term": 0.001002,
+   "three_term": 0.0010019893333333334,
+   "q-q0": 0.0019920529051791203,
+   "residual": [
+    -1.1102230246251565e-16,
+    6.245004513516506e-17
+   ]
+  },
+  {
+   "Kprime": 1.0,
+   "x": 0.01,
+   "Lam_exact": 0.01019004704598342,
+   "two_term": 0.0102,
+   "three_term": 0.010189333333333333,
+   "q-q0": 0.019249367749285984,
+   "residual": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "Kprime": 1.0,
+   "x": 0.05,
+   "Lam_exact": 0.05400977098924849,
+   "two_term": 0.05500000000000001,
+   "three_term": 0.053666666666666675,
+   "q-q0": 0.08479095241077639,
+   "residual": [
+    -2.220446049250313e-16,
+    4.163336342344337e-17
+   ]
+  }
+ ],
+ "1e_coupled": {
+  "Lam_i - [V_i - eps*(mu - theta_i)]": "0",
+  "Lam_i - Lam_j (exact, quadratic eps)": "(2*V_i*e2 - 2*V_j*e2 + 2*e2*q_c*theta_i - 2*e2*q_c*theta_j + 2*mu*theta_i - 2*mu*theta_j - theta_i**2 + theta_j**2)/(2*e2)",
+  "first-order term check (should be 0)": "0",
+  "q_i - q_j": "(-theta_i + theta_j)/e2",
+  "P_i - P_j at theta = 0": "-V_i + V_j",
+  "mu_c (P_i = P_j) with theta": "[(-V_i*e2 + V_j*e2 - e2*q_c*theta_i + e2*q_c*theta_j + theta_i**2/2 - theta_j**2/2)/(theta_i - theta_j)]"
+ },
+ "1f_junction": {
+  "coef_App_in_G_tt": "-2*A(n)",
+  "expected_2 h_tt/A": "-2*A(n)",
+  "coef_App_in_G_xx": "2*A(n)",
+  "expected_2 h_xx/A": "2*A(n)",
+  "coef_App_in_G_nn": "0",
+  "coef_App_in_R": "-6/A(n)",
+  "expected_-6/A": "-6/A(n)",
+  "consequence": "(g) delta part: -K([Kx_ab] - h_ab [Kx]) + h_ab [d_n K] = S_ab; (q): R has no delta (q continuous, K' != 0) => [Kx] = 0; trace => [d_n K] = S/3; traceless => -K [Kx_ab] = S_ab - h_ab S/3. Matches track 1.5 item 3.",
+  "distributional_parts_confirmed": true
+ },
+ "1f_linear_wall_sech2": [
+  {
+   "m_w": 0.01,
+   "kink_jump_over_sigma(+-3w)": -0.965539417971496,
+   "kink_corrected_exp(m zo)": -0.994944470959568,
+   "max_rel_dev_from_local_tracking(|z|<2w)": 0.9900689024780728,
+   "analytic_center_dev 2/(m w)^2 (sech^2: rho''/rho = -2/w^2)": 20000.0
+  },
+  {
+   "m_w": 0.1,
+   "kink_jump_over_sigma(+-3w)": -0.7389158358328786,
+   "kink_corrected_exp(m zo)": -0.9974320490563952,
+   "max_rel_dev_from_local_tracking(|z|<2w)": 0.9065416483087745,
+   "analytic_center_dev 2/(m w)^2 (sech^2: rho''/rho = -2/w^2)": 199.99999999999997
+  },
+  {
+   "m_w": 1.0,
+   "kink_jump_over_sigma(+-3w)": -0.07160841450296782,
+   "kink_corrected_exp(m zo)": null,
+   "max_rel_dev_from_local_tracking(|z|<2w)": 0.4292036744059894,
+   "analytic_center_dev 2/(m w)^2 (sech^2: rho''/rho = -2/w^2)": 2.0
+  },
+  {
+   "m_w": 10.0,
+   "kink_jump_over_sigma(+-3w)": -0.000204239036578439,
+   "kink_corrected_exp(m zo)": null,
+   "max_rel_dev_from_local_tracking(|z|<2w)": 0.018615276977519517,
+   "analytic_center_dev 2/(m w)^2 (sech^2: rho''/rho = -2/w^2)": 0.02
+  },
+  {
+   "m_w": 30.0,
+   "kink_jump_over_sigma(+-3w)": -2.1910564912277965e-05,
+   "kink_corrected_exp(m zo)": null,
+   "max_rel_dev_from_local_tracking(|z|<2w)": 0.0022028306616865036,
+   "analytic_center_dev 2/(m w)^2 (sech^2: rho''/rho = -2/w^2)": 0.0022222222222222222
+  }
+ ],
+ "1g_sizes": {
+  "m_q_natural": 1.9881691745590129e+18,
+  "a2 x at x=7.5e70 (track: ~4e-3)": 0.004266732312827486,
+  "a2 x at x=1e71 (track says <0.5% down to 1e71)": 0.005688976417103315,
+  "x at which a2 x = 0.5%": 8.78892727515625e+70,
+  "a2 x at x=1e8 (track ~6e-66)": 5.688976417103315e-66,
+  "xi_max = mh^2/M^2 (track ~3e-33)": 2.643691207535555e-33,
+  "mh^2 h*^2 at h*=4.7e17 and 2.435e18 (track ~1e40)": [
+   3.462616336e+39,
+   9.2940839044e+40
+  ],
+  "mq w for EW wall w=1/mh (track 1.6e16)": 1.5879945483698186e+16,
+  "mq R for R=1/(1e17 GeV) (track ~20)": 19.88169174559013,
+  "tolerance delta lambda = 4 rho_L/h*^4 at h* = 4.7e17, 2.435e18, 1.22e19 (track ~1e-118)": [
+   2.065708803505803e-117,
+   2.8672441142200703e-120,
+   4.536700999733114e-123
+  ]
+ }
+}

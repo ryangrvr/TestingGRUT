@@ -1,0 +1,75 @@
+{
+ "A_FRW_identity_dErho_plus_3H_Erho_plus_Ep_equals_q_mudot": {
+  "residual": "0",
+  "holds": true,
+  "consequence": "rho_m-dot + 3H(rho_m+p_m) = q * d(mu_eff)/dt: dissipated vacuum energy goes into matter"
+ },
+ "A_constant_mu_form": {
+  "residual_of_[dErho+3H(Erho+Ep)] = -(mu(x)-mu) qdot": "0",
+  "holds": true
+ },
+ "B_Hdot_plus_2H2_radiation": "2*rho_V/(3*M**2)",
+ "B_hdot_plus_2h2_in_Estar_units": "2*r_V",
+ "B_rV_dot_in_Estar_units": "-4*gamma*h*r_V**2",
+ "B_hdot_plus_2h2_in_EP_units": "16*pi*r_V/3",
+ "B_note": "KV 1601.00601 (6.1) [hdot+2h^2 = 2 r_V and -rV-dot = gamma|h|(hdot+2h^2)^2] equals (5.6) with the same gamma only in units E_* = (3/(8 pi G))^(1/2) = sqrt(3) M = 4.22e18 GeV; in E_P (G=1) units, as in 2207.03453 eq (7c), gamma_(6.1) = (8 pi/3) gamma_phys.",
+ "B_AppB_rV_solution_residual": "0",
+ "B_AppB_h_solution_residual": "0",
+ "B_Ei_asymptotic_check_ratio_to_1/y+1/y^2+2/y^3": {
+  "50": 1.0000512125756291,
+  "200": 1.0000007615408895,
+  "1000": 1.0000000060181438
+ },
+ "B_asymptote": {
+  "dxi/dtau - h residual": "0",
+  "r_V(tau)": "6**(1/3)/(6*gamma**(2/3)*tau**(2/3))",
+  "r_V / (6 gamma tau)^(-2/3)": "1"
+ },
+ "B_radiation_fraction_on_attractor": "r_M/r_V = 1/(4 xi) + O(xi^-2)  (from the Ei series): Omega_M -> 0",
+ "C_rVtilde_equals_eps_minus_ueff_f": "0",
+ "C_17a_equivalence_residual": "0",
+ "C_constraint_propagation_dC_over_C": "-3*h",
+ "C_constraint_without_matter_source_dC_minus_kC": "f*s",
+ "C_deSitter_h2": "[Derivative(epsilon(f), f) - epsilon(f)/f]",
+ "C_KSV_u0": "-1/3",
+ "C_KSV_with_lambda_f0^2_roots": [
+  "1/2 - sqrt(8*lambda + 1)/2",
+  "sqrt(8*lambda + 1)/2 + 1/2"
+ ],
+ "C_note_eq13_vs_18b": "1601.04676 eq (13) writes q S = Gamma_q qdot^2 + Gamma_H Hdot^2, but the integrated eqs (18b), (21) put s~ = gamma_f fdot^2 + gamma_h hdot^2 = du_eff/dtau and f s~ into matter (17c): the two differ by a factor f (=q/q0). Notational; the numerics follow (17)-(21).",
+ "D_rV_at_xibar": "0",
+ "D_action_n_equation_violation_eps_prime_minus_mu_at_endpoint": "sqrt(-4*lambda + mu**2)",
+ "D_note": "Action (1) gives eps'(q) = mu algebraically (eq 2a). Eq (15b) xi-dot r_V'(xi) = -Gamma at Gamma = 0 admits every constant xi, i.e. it deforms the weaker dr_V/dt = 0 (eq 6), not eq (2a). The late-time endpoint xi-bar violates eq (2a) by sqrt(mu^2 - 4 lambda) (= 2 sqrt(3) for mu=4, lambda=1), unless lambda = mu^2/4.",
+ "D_asymptote_rV_coefficient_of_(gt tau)^(-2/3)": [
+  "3*2**(2/3)/(32*pi**(5/3))",
+  0.022083851545660504
+ ],
+ "D_asymptote_h_coefficient_of_(gt tau)^(-1/3)": [
+  "2**(1/3)/(2*pi**(1/3))",
+  0.4301270069140498
+ ],
+ "D_asymptote_rM": "r_M ~ g~ h^4 / 4  (quasi-static balance 4 h r_M = g~ h^5, valid while h tau >> 1)",
+ "D_eq12_residual": "0",
+ "E_drho_V_dN": "-gamma*(3*p_m - 4*rho_V - rho_m)**2/(36*M**4)",
+ "E_radiation_closed_form": "9*M**4*rho_Vi/(9*M**4 + 4*N*gamma*rho_Vi)",
+ "E_dust_fixed_point": "drain vanishes at R = 0, i.e. rho_V = -(rho_m - 3 p_m)/4 (= -rho_d/4 for dust) < 0",
+ "E_matter_era_drain_in_units_of_H1^4": "gamma/24",
+ "E_radiation_trace_drain_in_units_of_H1^4": "gamma*kappa**2/32",
+ "checks": {
+  "A_identity": true,
+  "A_const_mu_form": true,
+  "B_k_equals_2rV": true,
+  "B_drain_Estar": true,
+  "B_AppB_rV": true,
+  "B_AppB_h": true,
+  "B_asym_ratio_1": true,
+  "C_rVtilde": true,
+  "C_17a": true,
+  "C_constraint_dC=-3hC": true,
+  "C_no_source_violates_by_fs": true,
+  "B_Ei_asym": true,
+  "D_endpoint_zero": true,
+  "D_eq12": true
+ },
+ "all_checks_pass": true
+}

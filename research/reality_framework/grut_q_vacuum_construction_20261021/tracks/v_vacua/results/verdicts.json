@@ -1,0 +1,234 @@
+[
+ {
+  "#": 1,
+  "claim (track section)": "E1/E2 static equations, signs (1.1)",
+  "track": "eps' - 2K'Lam/K = mu; Lam = V + eps - mu q",
+  "verifier": "same; G = -3H^2 g checked: True",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 2,
+  "claim (track section)": "a2 = 2K'^2/(K^2 eps'') = 4/(3 K m_q^2), a3, dq/dx, dK/K (1.3)",
+  "track": "as stated",
+  "verifier": "a2 True, a3 True, dK/K = a2 True",
+  "verdict": "CONFIRMED",
+  "note": "H^2 = Lam/(3K(q)) = x/(3K0) + O(x^3): no x^2 term in the expansion rate (as in equations 5.2)"
+ },
+ {
+  "#": 3,
+  "claim (track section)": "exact slope dLam/dV (1.3)",
+  "track": "K^2 D/(K^2 D - 4 Lam K'^2)",
+  "verifier": "equal on shell (after E1): True",
+  "verdict": "CONFIRMED",
+  "note": "holds only on the static family (uses E1); the off-shell implicit derivative has an extra 2(mu-eps')KK' term"
+ },
+ {
+  "#": 4,
+  "claim (track section)": "numeric static roots, KV eps (1.3)",
+  "track": "0.010190 (K'=1, x=0.01); 0.0100177 (K'=0.3)",
+  "verifier": "0.010190; 0.0100177",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 5,
+  "claim (track section)": "a2 x at Planck depth; \"<0.5% down to |V| ~ 1e71\" (0, 1.3)",
+  "track": "4e-3; <0.5% to 1e71",
+  "verifier": "4.27e-03 at 7.5e70; 5.69e-03 at 1e71; 0.5% reached at 8.79e+70",
+  "verdict": "CORRECTED",
+  "note": "0.57% at 1e71 (trivial); conclusion unchanged"
+ },
+ {
+  "#": 6,
+  "claim (track section)": "q-coupled matter: Lam_i = V_i - eps*(mu - theta_i); difference formula (1.4)",
+  "track": "as stated",
+  "verifier": "sympy: residual 0; first-order term 0",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 7,
+  "claim (track section)": "junction: [Kx]=0, [n.dK]=S/3=-sigma, -K[Kx_ab]=S_ab-h_ab S/3 (1.5)",
+  "track": "as stated",
+  "verifier": "distributional parts of G_ab and R recomputed: True",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 8,
+  "claim (track section)": "linear wall: kink -0.994/-0.997 sigma; tracking deviation 1.8% (m w=10), 0.12% (m w=30) (1.5)",
+  "track": "-0.994, -0.997; 1.8%; 0.12%",
+  "verifier": "-0.9949, -0.9974; 1.86%; 0.220% (analytic 2/(mw)^2 = 0.222%)",
+  "verdict": "CORRECTED",
+  "note": "the m w = 30 value is 0.22%, not 0.12% (track numerics); scaling 2/(m w)^2 confirmed"
+ },
+ {
+  "#": 9,
+  "claim (track section)": "V4: Minkowski pi t^4/3; MD 81pi/1485 t^4; LCDM 0.1230/H0^4, eta0 = 3.18/H0, t0 = 13.79 Gyr (2.1)",
+  "track": "0.1230; 3.18; 13.79",
+  "verifier": "0.1230; 3.181; 13.79",
+  "verdict": "CONFIRMED",
+  "note": "Buttazzo's 0.15 corresponds to Omega_m ~ 0.27 (0.143); the track flags the difference correctly"
+ },
+ {
+  "#": 10,
+  "claim (track section)": "volume criterion Gamma/H^4 < 9/(4pi); dS slope (4pi/3)/H^3 (2.2)",
+  "track": "0.716",
+  "verifier": "[9/(4*pi)] = 0.7162",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 11,
+  "claim (track section)": "rate table 1e-577 Gyr^-1 Gpc^-3 (2.3)",
+  "track": "-741.3; -574.8; -573.6; 1e574 Gyr; 1e145 Gyr",
+  "verifier": "-741.3; -574.8; -573.6; 1e574; 1e145",
+  "verdict": "CONFIRMED",
+  "note": "rates quoted from CMS 1707.09301 abstract (checked at abstract level)"
+ },
+ {
+  "#": 12,
+  "claim (track section)": "AdS crunch t_c = pi sqrt(3K/|Lam|) (2.4)",
+  "track": "3e-41 s; 2e-38 s; 55 Gyr",
+  "verifier": "3.18e-41 s; 1.95e-38 s; 55.1 Gyr",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 13,
+  "claim (track section)": "CDL quench moves the stability boundary by < 1e-3 GeV (2.5)",
+  "track": "eps/thr = 5934 at +0.001 GeV",
+  "verifier": "eps/thr = 5947 at +0.001; crossing eps = thr at dMt ~ 3e-6 GeV (0.38 at 1e-6, 4.26 at 1e-5)",
+  "verdict": "CONFIRMED",
+  "note": "conclusion holds; ratios quoted at >= 0.01 GeV depend on the tension definition (full-path sigma gives 0.17 at 0.05 GeV) because thin wall fails there"
+ },
+ {
+  "#": 14,
+  "claim (track section)": "track 1- to 3-loop beta functions and gamma_h (transcription from 1307.3536 App. A/B)",
+  "track": "own transcription",
+  "verifier": "equal to SMDR to 1e-13 (1-2 loop), <2e-5 rel. (3-loop, rounded coefficients), 4-loop QCD 1.5e-6",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 15,
+  "claim (track section)": "validation at 1307.3536 inputs: lambda(M_Pl), g_i, y_t (5.3)",
+  "track": "-0.01437; 0.61537 0.50546 0.48731 0.38248",
+  "verifier": "-0.01435; 0.61537 0.50546 0.48732 0.38246",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 16,
+  "claim (track section)": "M_t,crit at PDG 2025 point, msbar criterion (5.4)",
+  "track": "170.94, mu* = 4.7e17",
+  "verifier": "Buttazzo matching + SMDR running: 170.938 (mu* 4.73e+17); SMDR full matching: 171.026 (3-loop), 171.031 (loop order 5)",
+  "verdict": "CORRECTED",
+  "note": "pipeline reproduced to 2 MeV; with current matching (4-loop QCD y_t, correct g3) the line is 171.03 +- 0.11, = Hiller et al. 171.04 (the track listed 171.04 but did not resolve the 0.1 GeV gap)"
+ },
+ {
+  "#": 17,
+  "claim (track section)": "slopes 0.495 (M_h), 0.353 per 0.0009 (alpha_s) (5.4)",
+  "track": "0.495; 0.353",
+  "verifier": "B: 0.495; 0.354. S: 0.494; 0.355",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 18,
+  "claim (track section)": "theory shifts: dlam +0.072, dyt -0.087, 2-3 loop -0.109; 4-loop \"several times smaller\" (5.4)",
+  "track": "+0.072, -0.087, -0.109",
+  "verifier": "+0.072, -0.087, -0.111; loop order 4/5 minus 3: +0.0053/+0.0051",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 19,
+  "claim (track section)": "matching error budget 0.113 GeV covers the matching (5.4, 7)",
+  "track": "0.113 (Buttazzo +-0.0003, +-0.0005)",
+  "verifier": "SMDR - Buttazzo couplings at Mt: y_t -0.00094, g3 -0.0017, lambda +0.00012 -> M_t,crit +0.088 (y_t +0.163, g3 -0.111)",
+  "verdict": "CORRECTED",
+  "note": "net offset 0.088 GeV is inside 0.113, but the y_t shift (1.9x its quoted error, missing 4-loop QCD that 1307.3536 itself mentions) and a g3(Mt) 0.0017 above the 4-loop QCD value are outside the budget"
+ },
+ {
+  "#": 20,
+  "claim (track section)": "inverse: M_h,crit = 128.54 at M_t = 172.56 (5.4)",
+  "track": "128.54",
+  "verifier": "B: 128.53; S: 128.36",
+  "verdict": "CORRECTED",
+  "note": "128.36 with SMDR matching"
+ },
+ {
+  "#": 21,
+  "claim (track section)": "FN double condition (M_t, M_h) at mu* = 1.22e19 / 2.435e18 / 1e18 (5.4)",
+  "track": "174.20/132.03; 172.61/128.64; 171.71/126.77",
+  "verifier": "174.21/132.03; 172.61/128.65; 171.71/126.78",
+  "verdict": "CONFIRMED",
+  "note": "with Buttazzo matching (same caveat on matching as #16)"
+ },
+ {
+  "#": 22,
+  "claim (track section)": "potential at PDG central: V(2.435e18) = -7.5e70 GeV^4 = 3e117 rho_L; lambda = 0 at 4.2e10 GeV (5.4, 3.1)",
+  "track": "-7.48e70; 3e117; 4.2e10",
+  "verifier": "-7.55e+70 (1-loop lambda_eff); 3e+117; 4.7e+10",
+  "verdict": "CORRECTED",
+  "note": "depth confirmed; the lambda = 0 crossing is 4.7e10 (track picks a coarse grid point; 6.2e9 not 5.7e9 at the 1307.3536 point)"
+ },
+ {
+  "#": 23,
+  "claim (track section)": "retrospective tension z = 3.3 (direct), 2.8 (+0.3 MC), 1.8 (xsec) (5.5)",
+  "track": "3.34; 2.84; 1.84",
+  "verifier": "B: 3.33; 2.83; 1.84. S: 3.15; 2.68; 1.73",
+  "verdict": "CORRECTED",
+  "note": "3.1 / 2.7 / 1.7 sigma with current matching; still a retrospective tension, not a decisive failure"
+ },
+ {
+  "#": 24,
+  "claim (track section)": "held out: FCC-ee sigma 0.13 GeV, z ~ 12; HL-LHC z ~ 5.6 (5.6)",
+  "track": "0.1325; 12.25; 5.57",
+  "verifier": "B: 0.1325; 12.24; 5.56. S: 11.57; 5.25",
+  "verdict": "CORRECTED",
+  "note": "arithmetic confirmed; with current matching 11.6 and 5.3; future precisions themselves NOT CHECKED"
+ },
+ {
+  "#": 25,
+  "claim (track section)": "eff criterion: M_t,crit 171.00, eff - msbar = +0.064 (5.3, 5.4)",
+  "track": "171.00; +0.064",
+  "verifier": "1-loop lambda_eff: 170.989; +0.051",
+  "verdict": "CONFIRMED",
+  "note": "to 0.013 GeV with a 1-loop lambda_eff; the 2-loop piece was not independently coded"
+ },
+ {
+  "#": 26,
+  "claim (track section)": "cross-check with literature: Bednyakov 171.44 at (125.7, 0.1185); 1307.3536 own formula 171.12 vs quoted 171.53",
+  "track": "171.38; inconsistency 0.4 GeV in source",
+  "verifier": "B: 171.38; S: 171.47 (loop 5 171.48); formula: 171.115",
+  "verdict": "CONFIRMED",
+  "note": "SMDR matching reproduces Bednyakov to 0.03 and Hiller (171.04; alpha_s 0.1215; M_h 127.97) to 0.01-0.05"
+ },
+ {
+  "#": 27,
+  "claim (track section)": "PDG 2025 inputs (5.1)",
+  "track": "125.20+-0.11; 172.56+-0.31; 172.4+-0.7; 0.1180+-0.0009; 80.3692+-0.0133",
+  "verifier": "read from pdg-2025-v0.2.3.sqlite and QCD review eq. (9.25): identical",
+  "verdict": "CONFIRMED",
+  "note": ""
+ },
+ {
+  "#": 28,
+  "claim (track section)": "readings (a)-(d) and the fixed-point argument (3)",
+  "track": "see track 3.5",
+  "verifier": "logic re-derived; (c)-worldline -> (a); (d) not implied by the action; Volovik counting",
+  "verdict": "CONFIRMED",
+  "note": "(b) \"only if Gamma = 0\" is an interpretive [A] step (it imposes (c)'s end-point condition on (b)); under (a) with uncalibrated QV1, matching rho_L,obs > 0 needs exact criticality (splitting = rho_L), i.e. the equality"
+ },
+ {
+  "#": 29,
+  "claim (track section)": "novelty and credit (4, 6.4)",
+  "track": "FN, Degrassi/Buttazzo/Bednyakov, Klinkhamer, AHHKM, KV, Volovik",
+  "verifier": "missing: Shaposhnikov-Wetterich 0912.0208; Holthausen-Lim-Lindner 1112.2415; Bezrukov et al. 1205.2893; Kawai-Okada 1110.2303 / Hamada-Kawai-Kawana 1509.05955 (far-future selection of Lambda, MPP); Martin-Robertson 1907.02500 / Alam et al. (matching behind Hiller 171.04)",
+  "verdict": "CORRECTED",
+  "note": "credit additions only; the bookkeeping claim stands"
+ }
+]

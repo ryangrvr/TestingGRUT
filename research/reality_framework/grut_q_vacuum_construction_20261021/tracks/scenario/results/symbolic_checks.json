@@ -1,0 +1,17 @@
+{
+ "constraint_propagation_Gamma0": "0",
+ "constraint_propagation_with_dissipation_and_source": "0",
+ "constraint_propagation_with_dissipation_no_source": "Gamma_q*Derivative(q(t), t)**2",
+ "rhoV_Y_matches": true,
+ "R_Y_matches": true,
+ "Vdot_Y_matches": true,
+ "KV": {
+  "rhoV(q0) with mu0": "0",
+  "m2": "2/(3*chi)",
+  "b3": "4/3",
+  "b4": "1/3",
+  "beta": "1"
+ },
+ "adiabatic_correction_matches": true,
+ "adiabatic_correction": "(-H(t)**2*S(t) - H(t)*Derivative(S(t), t) + S(t)**2/12)/m2"
+}

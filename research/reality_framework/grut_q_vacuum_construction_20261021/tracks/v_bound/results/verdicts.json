@@ -1,0 +1,302 @@
+{
+ "track_verified": "tracks/bound (NOTES.md, code/, results/ as of 21 Oct 2026)",
+ "verifier": "tracks/v_bound (own code; nothing imported from bound/code)",
+ "verdicts": [
+  {
+   "id": "V01",
+   "claim": "A1/A.2 first-order rho_dyn = [(9/4) rho_d^2 + 2 rho_d rho_r - 4 Lam rho_r]/(3 K m^2)",
+   "track": "derived",
+   "verifier": "identical (sympy from the minisuperspace-derived 00 equation)",
+   "verdict": "CONFIRMED",
+   "source": "v1_symbolic.json V1a, V1b"
+  },
+  {
+   "id": "V02",
+   "claim": "Omega_dyn(t0) = (9/4) Omega_m^2 (H0/m)^2, w = +1, no Lambda dependence",
+   "track": "derived",
+   "verifier": "identical",
+   "verdict": "CONFIRMED",
+   "source": "V1b"
+  },
+  {
+   "id": "V03",
+   "claim": "Lam_cal(mu) = -q0 dmu + [-1/(2 eps'') + (4/3) q0^2/(K m^2)] dmu^2",
+   "track": "derived",
+   "verifier": "identical with Taylor data to eps'''' and K'''; equals stage-1 eq 5.2 via c*(dmu) = q0 dmu + dmu^2/(2 eps'')",
+   "verdict": "CONFIRMED",
+   "source": "V1d"
+  },
+  {
+   "id": "V04",
+   "claim": "effective DE = 9 x stage-1 rho_V; formal m_q = 0.57 H0 (stage-1: 0.19 H0)",
+   "track": "9; 0.57; 0.2",
+   "verifier": "9; 0.5709; 0.1903",
+   "verdict": "CONFIRMED",
+   "source": "V1b, V1c"
+  },
+  {
+   "id": "V05",
+   "claim": "A2 full FRW ratio <Delta>/<rho_dyn> at a = 1 and c = (1 - ratio)/(H/m)^2",
+   "track": "F1 0.9832/0.99848/0.99983, c 15.2; F2 c 53; F3 c 27",
+   "verifier": "F1 0.98307/0.998481/0.999831, c 15.05-15.18; F2 0.94344/0.994710/0.999409, c 50.1-53.2; F3 0.97008/0.997267/0.999696, c 26.5-27.4; new F4 c = -41.7",
+   "verdict": "CONFIRMED (|c| 15-53, sign family-dependent)",
+   "source": "v2_frw_adiabatic.json"
+  },
+  {
+   "id": "V06",
+   "claim": "formula fails below m ~ 10 H0",
+   "track": "F1 0.832, F2 0.595 at m = 10",
+   "verifier": "F1 0.832, F2 0.620 (initial-data dependent)",
+   "verdict": "CONFIRMED",
+   "source": "v2 runs_m10"
+  },
+  {
+   "id": "V07",
+   "claim": "Eot-Wash 2020 alpha = 1/3 crossing and m_q bound",
+   "track": "54.0 +- 0.8 um; 3.65 (3.60-3.71) meV",
+   "verifier": "53.99 um raw (alpha = 1 at 38.575 vs 38.6 stated), 54.02 um rescaled; 3.653 (3.62-3.68) meV",
+   "verdict": "CONFIRMED",
+   "source": "v3_eotwash_digitize.json, v3_numbers.json"
+  },
+  {
+   "id": "V08",
+   "claim": "Cassini m_q >= 2.9e-15 eV (b = R_sun); light q excess 2.2e4 sigma",
+   "track": "2.9e-15; 2.2e4",
+   "verifier": "2.891e-15 (1.81e-15 at b = 1.6 R_sun); 21739",
+   "verdict": "CONFIRMED",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V09",
+   "claim": "A4/A5 maximal Omega_dyn, rho_dyn, 1 + w; Cassini-only and natural values",
+   "track": "3.5e-62; 1.3e-108 GeV^4; 1.0e-61; 5.5e-38; 1.2e-121",
+   "verifier": "3.459e-62; 1.2725e-108; 1.010e-61; 5.523e-38; 1.167e-121",
+   "verdict": "CONFIRMED",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V10",
+   "claim": "K_lab = f'(0) to 1e-32 in the lab",
+   "track": "1e-32",
+   "verifier": "1.8e-32",
+   "verdict": "CONFIRMED",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V11",
+   "claim": "regime (ii) gaps and local exclusions",
+   "track": "2.5e30, 2.0e18; 14.5 sigma (G_cos/G_lab = 3/4 vs Lamine+)",
+   "verifier": "2.54e30, 2.01e18; 14.5 sigma (14.3 with unrounded ledger numbers)",
+   "verdict": "CONFIRMED (arithmetic); 14.5 sigma QUALIFIED: background-only ratio compared with a uniform G rescaling",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V12",
+   "claim": "phi-MDE runs (F1, q at dS value at a = 1e-4)",
+   "track": "m = 0.1: K ratio 0.0020, H 1.43, Om 3e-4, p 0.500; m = 10: 0.031, 28, 1e-5, 0.503; m = 100: 0.11, 147, 2e-6, 0.70",
+   "verifier": "0.001987, 1.4303, 3.06e-4, 0.500; 0.03077, 28.117, 1.23e-5, 0.503; 0.1076, 146.82, 1.57e-6, 0.704; m = 1 on a different calibration branch: 0.0111, 5.5 (track 0.013, 7.0)",
+   "verdict": "CONFIRMED",
+   "source": "v4_light_and_relic.json"
+  },
+  {
+   "id": "V13",
+   "claim": "omega_BD = 0 dust era a ~ t^(1/2)",
+   "track": "APT07 phi-MDE",
+   "verifier": "exact solution a ~ t^(1/2), K ~ t^(1/2), R = 0",
+   "verdict": "CONFIRMED",
+   "source": "V1g"
+  },
+  {
+   "id": "V14",
+   "claim": "threshold for the phi-MDE: any m_q <~ H(z_eq) = 1.6e5 H0",
+   "track": "stated in A5 verdict without [E]; [E] in A.6",
+   "verifier": "H(z_eq)/H0 = 1.574e5; runs only reach 1e3 H0",
+   "verdict": "CONFIRMED as [E]; label in verdict table A5 should carry [E]",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V15",
+   "claim": "rho_V = (3/4) m^2 K (dK/K)^2; dK/K = 2 sqrt(Omega_L) H0/m",
+   "track": "derived",
+   "verifier": "identical",
+   "verdict": "CONFIRMED",
+   "source": "V1h"
+  },
+  {
+   "id": "V16",
+   "claim": "relic toy: fraction at onset ~ 0.10 kappa^2 ln^2(H_i/m)",
+   "track": "0.091-0.102",
+   "verifier": "0.099-0.105",
+   "verdict": "CONFIRMED",
+   "source": "v4 partIII"
+  },
+  {
+   "id": "V17",
+   "claim": "kappa_QCD = (49/6) alpha_s^2/(pi^2 g*/30) = 1.7e-3; T_osc = 1.6 TeV; tau < 1 s needs m > 1.3e5 GeV",
+   "track": "1.68e-3; 1612.7 GeV; 1.33e5 GeV",
+   "verifier": "1.68e-3 (49/6 derived); 1612.3 GeV; 1.33e5 GeV",
+   "verdict": "CONFIRMED",
+   "source": "V1h, v3_numbers.json"
+  },
+  {
+   "id": "V18",
+   "claim": "A7 relic-to-radiation growth T_osc -> today and the overproduction factor",
+   "track": "growth 2.3e15; Omega_relic 6e4-2e8; overproduction 2e5-7e8",
+   "verifier": "growth 7.98e15 (bound_numbers.py inverts the entropy factor: uses (3.91/106.75)^(1/3), correct is g_s0/g*0 = 1.163); Omega_relic 2.0e5-6.0e8; overproduction 7.8e5-2.3e9",
+   "verdict": "CORRECTED (factor 3.50; verdict unchanged, strengthened)",
+   "source": "v3_numbers.json A7"
+  },
+  {
+   "id": "V19",
+   "claim": "B1 map f(R) = K R - 2 eps + 2 mu q, f' = K, f'' = K'^2/(2(eps'' - K'' R/2)), affine inverse for any C2 f",
+   "track": "derived",
+   "verifier": "identical; stationarity = K'(q)(R - lam(q - q0))",
+   "verdict": "CONFIRMED",
+   "source": "V1e"
+  },
+  {
+   "id": "V20",
+   "claim": "B2 P_q <=> f(0) = 0, f'(0) > 0, f''(0) > 0",
+   "track": "derived",
+   "verifier": "identical",
+   "verdict": "CONFIRMED",
+   "source": "V1e"
+  },
+  {
+   "id": "V21",
+   "claim": "B3 Hu-Sawicki n = 1 Minkowski ghost, R_*/R_1, R_1, stability",
+   "track": "c1 = 0.2/|f_R0|; R_*/R_1 0.090/0.011/0.0011; R_1 25.12/26.09/26.10; 40/4.0e3/4.0e5",
+   "verifier": "identical to all digits shown",
+   "verdict": "CONFIRMED (novelty: a narrow arXiv abstract search found no earlier statement; not a proof of novelty)",
+   "source": "v5_fR_models.json B3"
+  },
+  {
+   "id": "V22",
+   "claim": "B3 Starobinsky n = 2: f''(0) < 0, x1 = 1.637 (lam = 1), 3.959 (lam = 2), stable dS",
+   "track": "as stated",
+   "verifier": "identical; Starobinsky's own stability inequality and lambda(x1) relation reproduced",
+   "verdict": "CONFIRMED",
+   "source": "v5 B3"
+  },
+  {
+   "id": "V23",
+   "claim": "B3 Appleby-Battye: F'(0) = 1/(1 + e^{2b}), G_Mink/G >~ 1e59-1e122",
+   "track": "1.3e122 (AB condition 8 b e^{-2b} << 2 R0, Planck units), 4e59 (F''(R0) << (1 mm)^2)",
+   "verifier": "both reproduced as readings of AB's own conditions (0705.3199 sec. 4, checked in TeX); the data require only |f_R0| <~ 1e-5...1e-8, giving G_Mink/G >~ 5e3-8e3 (full shape, clusters) to >~ 2.4e6 (galaxy morphology)",
+   "verdict": "CORRECTED (as a lower bound: >~ 1e59-1e122 holds only under AB's stated sufficient conditions; the data-driven bound is >~ 1e4-1e6; qualitative conclusion unchanged)",
+   "source": "v3_numbers.json B3_AB_GMink, V1i"
+  },
+  {
+   "id": "V24",
+   "claim": "B5 threshold: delta f = 2c(q_R - q0)/q0; linear K: shift dR = 2c/(q0 K'); dR/R_dS = 2.4e54",
+   "track": "4.0e-29 GeV^2, 1.7e-83 GeV^2, 2.4e54",
+   "verifier": "sympy to R^3; exact linear-K form f_new(R) = f(R + d) - d f'(0) + 2(mu' q0 - c), d = 2 mu'/K1 (to 1e-15); 4.01e-29, 1.700e-83, 2.36e54",
+   "verdict": "CONFIRMED",
+   "source": "V1f, v5 B4, v3 B5"
+  },
+  {
+   "id": "V25",
+   "claim": "B5 'in the affine gauge this holds automatically: K' q0/K ~ lam q0 |f_R0|/R0 ~ 1e113'",
+   "track": "1e113 (no derivation in code)",
+   "verifier": "affine gauge: delta f = (2c/(lam q0)) R, a G renormalization dK/K = 2c/(lam q0 K) that shifts R_dS by the same relative amount; survival needs lam q0 >~ 2 Delta/K = 2.4e54 R_dS, i.e. the same relative q-width condition <~ rho_L/Delta",
+   "verdict": "CORRECTED (not automatic; same tuning in another gauge; 1e113 unsupported)",
+   "source": "V1f"
+  },
+  {
+   "id": "V26",
+   "claim": "B6 HS n = 1 background, CPL table, Omega_m(true), phantom crossing, future attractor",
+   "track": "(-0.776,-0.295), (-0.898,-0.136), (-0.9655,-0.0413), (-0.99667,-0.00360), (-0.999668,-0.000354); z_x = 1.59-1.60; R/R_1 - 1 = 4e-8, 1.4e-8",
+   "verifier": "identical to <= 1e-6 with an independent scalar-tensor formulation; z_x = 1.588, 1.592; 5.1e-8, 1.4e-8",
+   "verdict": "CONFIRMED",
+   "source": "v5 B5"
+  },
+  {
+   "id": "V27",
+   "claim": "small-field scaling (1 + w0, wa) = (3.32, -3.53) |f_R0|",
+   "track": "(3.32, -3.53)",
+   "verifier": "(3.318, -3.536) for the track's weighting (uniform in ln a, z <= 2); uniform in a (2.82, -2.03); uniform in z (3.96, -5.17)",
+   "verdict": "CONFIRMED (fit-weighting dependent at a factor ~2.5 in wa; conclusions unaffected)",
+   "source": "v5 B5"
+  },
+  {
+   "id": "V28",
+   "claim": "values at published f_R0 bounds; Compton wavelengths",
+   "track": "e.g. 8.5e-5 at 2.6e-5; 12.3 Mpc/h",
+   "verifier": "8.53e-5; 12.30 Mpc/h (18.2 Mpc)",
+   "verdict": "CONFIRMED",
+   "source": "v5 B5_at_bounds"
+  },
+  {
+   "id": "V29",
+   "claim": "linear growth table; neglected background shift <= 1e-4",
+   "track": "e.g. +6.8% at 1e-5, k = 0.1",
+   "verifier": "identical; background shift -6.1e-5 at |f_R0| = 1e-4, k = 0.1",
+   "verdict": "CONFIRMED",
+   "source": "v5 growth"
+  },
+  {
+   "id": "V30",
+   "claim": "DESI DR2 diagonal distances of the LCDM point",
+   "track": "4.1/4.2/5.3/5.9",
+   "verifier": "4.1/4.1/5.2/5.7 using the error bar on the side of the model point (track averages asymmetric wa errors)",
+   "verdict": "CORRECTED (minor; indicative statistic)",
+   "source": "v5 B5_DESI_LCDM_point"
+  },
+  {
+   "id": "V31",
+   "claim": "B6: screened QV2 viable only as a LCDM mimic",
+   "track": "computed for HS n = 1",
+   "verifier": "agrees",
+   "verdict": "CONFIRMED; MISSING CREDIT: Wang, Hui, Khoury, PRL 109, 241301 (2012), arXiv:1208.4612 (abstract read) prove the general no-self-acceleration result for chameleon-like scalars",
+   "source": "v_bound_dl/api (scratchpad)"
+  },
+  {
+   "id": "V32",
+   "claim": "stage-1 consistency",
+   "track": "section D lists updates to equations 6.4 and ledger rows 6/4.2",
+   "verifier": "ledger row 8 (DESI_w0wa) 'rho_V shift 9e-39 rho_L at the Cassini bound' is the gravitating rho_V; the effective DE there is 9x = 8.1e-38 rho_L (not listed in D)",
+   "verdict": "CORRECTED (un-noted update; negligible either way)",
+   "source": "v3_numbers.json"
+  },
+  {
+   "id": "V33",
+   "claim": "quotes: KV 0807.3896 sec. 5-6, Starobinsky 0706.2041, AB 0705.3199, HS 0705.1158, Lee+ 2020 text (38.6 um, 95%)",
+   "track": "[Q]",
+   "verifier": "found in the TeX/text at the stated places",
+   "verdict": "CONFIRMED",
+   "source": "scratchpad sources"
+  },
+  {
+   "id": "V34",
+   "claim": "B3 Appleby-Battye: Minkowski healthy, stable dS R_1, unstable middle vacuum",
+   "track": "[Q, C]",
+   "verifier": "a=2,b=3: vacua 0.402 (unstable), 2.992 (stable); a=10,b=10: 0.0797 (unstable), 2.000 (stable); F'(0) = 1/(1+e^{2b})",
+   "verdict": "CONFIRMED",
+   "source": "v5 B3_vacua"
+  },
+  {
+   "id": "V35",
+   "claim": "alpha = 1/3 excluded at every range from 54 um to the Cassini regime",
+   "track": "[Q-figure] Eot-Wash 2020 + Adelberger-Heckel-Nelson 2003 figures",
+   "verifier": "own digitization: the Eot-Wash 2020 curve stays below 1/3 from 54 um to the 1 mm frame edge; beyond 1 mm not re-read (consistent with recalled reviews [R])",
+   "verdict": "CONFIRMED to 1 mm; NOT CHECKED beyond",
+   "source": "v3_eotwash_digitize.json"
+  },
+  {
+   "id": "V36",
+   "claim": "signed alpha: the q-mode has alpha = +1/3; the figure bounds |alpha|",
+   "track": "Supplemental (signed limits) not obtained",
+   "verifier": "not obtained either",
+   "verdict": "NOT CHECKED",
+   "source": "-"
+  },
+  {
+   "id": "V37",
+   "claim": "retrospective vs held-out labelling",
+   "track": "all exposed comparisons retrospective; held-out: future >= 5 sigma w != -1 detection (DESI final, Euclid DR1, LSST), 'check at use'",
+   "verifier": "labels correct; Euclid DR1 is scheduled close to this date, so the 'check at use' caveat is needed",
+   "verdict": "CONFIRMED",
+   "source": "-"
+  }
+ ]
+}

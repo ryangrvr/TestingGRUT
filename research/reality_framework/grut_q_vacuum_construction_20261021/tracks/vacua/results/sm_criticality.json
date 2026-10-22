@@ -1,0 +1,335 @@
+{
+ "inputs": {
+  "Mh": [
+   125.2,
+   0.11,
+   "PDG 2025 (pdg-2025-v0.2.3.sqlite, S126M, AC, S=1.36), read level: database value"
+  ],
+  "Mt_direct": [
+   172.56,
+   0.31,
+   "PDG 2025 Q007TP \"t-Quark Mass (Direct Measurements)\", 172.56+-0.31 (S=1.6); MC-template mass, interpreted as pole mass with an extra theory error"
+  ],
+  "Mt_xsec_pole": [
+   172.4,
+   0.7,
+   "PDG 2025 Q007TP4 \"t-Quark Pole Mass from Cross-Section Measurements\""
+  ],
+  "alpha_s": [
+   0.118,
+   0.0009,
+   "PDG 2025 QCD review (rev. Aug 2025) eq. (9.25), section read"
+  ],
+  "MW": [
+   80.3692,
+   0.0133,
+   "PDG 2025 S043M displayed average"
+  ]
+ },
+ "future_precision": {
+  "Mt": [
+   0.04,
+   "FCC-ee ttbar threshold: 6.8 MeV exp (PS mass) + ~35 MeV N3LO theory, Defranchis et al. arXiv:2503.18713 abstract; FCC FSR vol.1 arXiv:2505.00272 sec. on theory: O(50) MeV"
+  ],
+  "alpha_s": [
+   0.00012,
+   "FCC-ee Z-pole fit, 0.1% (FCC FSR vol.1, arXiv:2505.00272, \"Measurements of the strong coupling constant\" paragraph); lattice: factor ~2 improvement in a decade (same source)"
+  ],
+  "Mh": [
+   0.004,
+   "FCC-ee recoil, O(4 MeV) (FCC FSR vol.1, arXiv:2505.00272); HL-LHC ~10-20 MeV [R]"
+  ]
+ },
+ "matching_theory_errors": {
+  "dlam": 0.0003,
+  "dyt": 0.0005,
+  "src": "Buttazzo et al. 1307.3536 sec. 3: theory errors of the NNLO matching fits"
+ },
+ "conventions": "V = -m^2|H|^2/2 + lambda|H|^4; MSbar; M_Pl = 1.2209e19 GeV unless stated",
+ "validation": {
+  "mine": {
+   "g1": 0.61537,
+   "g2": 0.50546,
+   "g3": 0.48731,
+   "yt": 0.38248,
+   "lam": -0.01437,
+   "Gamma": -0.03955
+  },
+  "Buttazzo_eq_sysPl": {
+   "g1": 0.6154,
+   "g2": 0.5055,
+   "g3": 0.4873,
+   "yt": 0.3825,
+   "lam": -0.0143
+  },
+  "source": "1307.3536 sec. 4.1, values at M_Pl for Mt=173.34, Mh=125.15, as=0.1184, MW=80.384",
+  "derivatives": {
+   "dlam_dMt_perGeV": -0.006519378041985166,
+   "dlam_das_per0.0007": 0.0018474836839039183,
+   "dlam_dMh_perGeV": 0.0028623838558676073,
+   "Buttazzo": {
+    "dlam_dMt_perGeV": -0.0066,
+    "dlam_das_per0.0007": 0.0018,
+    "dlam_dMh_perGeV": 0.0029
+   }
+  },
+  "Lambda_lambda_GeV(lambda=0 crossing)": 5725376727.011093,
+  "Buttazzo_Lambda_lambda": "Lambda_V = 10^9.5 GeV and Lambda_lambda ~ 2 Lambda_V ~ 6e9 GeV (sec. 4.2)",
+  "lam_MPl_by_RGE_loop_order": {
+   "1": -0.03371320830858781,
+   "2": -0.015084423204071221,
+   "3": -0.014366742967453416
+  },
+  "log10_Lambda_V": 9.497121154115687,
+  "Lambda_I_over_Lambda_V": 12.679213266487597,
+  "Buttazzo_scales": "log10 Lambda_V = 9.5; Lambda_I ~ 13 Lambda_V (Landau gauge); Lambda_lambda ~ 2 Lambda_V",
+  "note_on_quoted_171.53": "Buttazzo eq. (stability) M_h > 129.6 + 2.0 (M_t - 173.34) - 0.5 (as-0.1184)/0.0007 gives M_t < 171.12 at M_h = 125.15, not the 171.53 quoted in the next equation; this code reproduces 171.07-171.13 (and Bednyakov 171.44 at their inputs to 0.06)",
+  "Mt_crit_at_ref": {
+   "msbar": {
+    "Mt_crit": 171.0684535672966,
+    "mu_star": 4.344618037104898e+17,
+    "mu_star_interior": true
+   },
+   "eff": {
+    "Mt_crit": 171.13264868616193,
+    "mu_star": 2.7206262737011866e+18,
+    "mu_star_interior": true
+   },
+   "Buttazzo_quoted": "171.53 +- 0.15 (th) (+-0.23 as, +-0.15 Mh); eff. potential"
+  },
+  "Mt_crit_at_Bednyakov_inputs(125.7,0.1185)": {
+   "mine_msbar": 171.37947184528554,
+   "mu_star": 5.528963896837843e+17,
+   "Bednyakov_quoted": "171.44 +-0.30 (+0.17 -0.36) th; eff-type criterion 171.64"
+  }
+ },
+ "relation": {
+  "msbar": {
+   "Mt_crit_GeV": 170.9365798409548,
+   "mu_star_GeV": 4.7420645199492115e+17,
+   "mu_star_below_cut": true,
+   "dMtcrit_dMh": 0.49466057670971963,
+   "dMtcrit_per_0.0009_as": 0.3534779632347238,
+   "fit": "Mt_crit = 170.937 + 0.495 (Mh-125.20) + 0.353 (as-0.1180)/0.0009  GeV",
+   "Mh_crit_at_Mt_direct": 128.5372188914893,
+   "Mh_crit_at_Mt_xsec": 128.20340494033263,
+   "Mt_crit_cut_reduced_MPl": 170.9365798409548
+  },
+  "eff": {
+   "Mt_crit_GeV": 171.00063732117326,
+   "mu_star_GeV": 2.965637216510248e+18,
+   "mu_star_below_cut": true,
+   "dMtcrit_dMh": 0.49317519891403094,
+   "dMtcrit_per_0.0009_as": 0.35377576951003675,
+   "fit": "Mt_crit = 171.001 + 0.493 (Mh-125.20) + 0.354 (as-0.1180)/0.0009  GeV",
+   "Mh_crit_at_Mt_direct": 128.4128370831537,
+   "Mh_crit_at_Mt_xsec": 128.07853150093774,
+   "Mt_crit_cut_reduced_MPl": 171.00077627014122
+  },
+  "theory_shifts_GeV": {
+   "dlam_+0.0003": 0.07198316056854992,
+   "dyt_+0.0005": -0.08673968131716947,
+   "RGE_2loop_minus_3loop": -0.10917723238878807,
+   "no_yb_ytau": -8.613450756911334e-05,
+   "MW_+1sigma": -0.0004088730719331579,
+   "criterion_eff_minus_msbar": 0.0640574802184517
+  },
+  "sigma_th_matching_GeV": 0.11271800087138592,
+  "sigma_th_criterion_GeV": 0.03202874010922585
+ },
+ "FN_double_criticality": {
+  "MPl_1.22e19": {
+   "Mt": 174.20383187169048,
+   "Mh": 132.02869137525119,
+   "residuals(100lam,1e3beta)": [
+    -8.205343685323968e-14,
+    4.603211139765336e-14
+   ]
+  },
+  "reduced_2.435e18": {
+   "Mt": 172.61033444971378,
+   "Mh": 128.64245569786382,
+   "residuals(100lam,1e3beta)": [
+    4.522269200721307e-15,
+    -1.1426381814231906e-14
+   ]
+  },
+  "1e18": {
+   "Mt": 171.7074203618177,
+   "Mh": 126.77081558093245,
+   "residuals(100lam,1e3beta)": [
+    -4.103434172314513e-14,
+    -7.204624021328663e-15
+   ]
+  },
+  "FN1995_quoted": "Mt = 173 +- 5, Mh = 135 +- 9 GeV (2-loop, mu* ~ 1e19 GeV), hep-ph/9511371",
+  "caveat": "matching fits of 1307.3536 are linear around Mh=125.15; Mh = 128.6 (132.0) is an extrapolation by 3.5 (6.9) GeV. Tree-level curvature d2lambda/dMh2 ~ 2 lambda/Mh^2 ~ 1.6e-5 GeV^-2 gives lambda errors ~1e-4 (4e-4), i.e. ~0.05 (0.2) GeV in the predicted Mh [E]"
+ },
+ "tension_retrospective": {
+  "msbar|direct_MC|exp+param+matching": {
+   "Delta_GeV": 1.623420159045196,
+   "sigma_GeV": 0.4865313516675314,
+   "z": 3.336722604784062,
+   "one_sided_p": 0.0004238625574115677
+  },
+  "msbar|direct_MC|+criterion": {
+   "Delta_GeV": 1.623420159045196,
+   "sigma_GeV": 0.4875844504784986,
+   "z": 3.329515856077911,
+   "one_sided_p": 0.00043498555287406037
+  },
+  "msbar|direct_MC|+criterion+MCpole0.3": {
+   "Delta_GeV": 1.623420159045196,
+   "sigma_GeV": 0.5724845817560674,
+   "z": 2.835744770742012,
+   "one_sided_p": 0.0022859483184995287
+  },
+  "msbar|xsec_pole|exp+param+matching": {
+   "Delta_GeV": 1.4634201590451994,
+   "sigma_GeV": 0.7941112996019103,
+   "z": 1.8428401154583935,
+   "one_sided_p": 0.03267617891618235
+  },
+  "msbar|xsec_pole|+criterion": {
+   "Delta_GeV": 1.4634201590451994,
+   "sigma_GeV": 0.7947569416799197,
+   "z": 1.8413430349559337,
+   "one_sided_p": 0.032785652487621164
+  },
+  "eff|direct_MC|exp+param+matching": {
+   "Delta_GeV": 1.5593626788267443,
+   "sigma_GeV": 0.48672952069134817,
+   "z": 3.203756116152218,
+   "one_sided_p": 0.000678236648713078
+  },
+  "eff|direct_MC|+criterion": {
+   "Delta_GeV": 1.5593626788267443,
+   "sigma_GeV": 0.4877821916649006,
+   "z": 3.196842167411483,
+   "one_sided_p": 0.0006947046434234642
+  },
+  "eff|direct_MC|+criterion+MCpole0.3": {
+   "Delta_GeV": 1.5593626788267443,
+   "sigma_GeV": 0.5726530070692145,
+   "z": 2.72304983921663,
+   "one_sided_p": 0.003234114956488869
+  },
+  "eff|xsec_pole|exp+param+matching": {
+   "Delta_GeV": 1.3993626788267477,
+   "sigma_GeV": 0.794232728054208,
+   "z": 1.7619050807123606,
+   "one_sided_p": 0.039042668031590226
+  },
+  "eff|xsec_pole|+criterion": {
+   "Delta_GeV": 1.3993626788267477,
+   "sigma_GeV": 0.7948782715016267,
+   "z": 1.760474187051525,
+   "one_sided_p": 0.03916372020629467
+  }
+ },
+ "held_out_projection": {
+  "matching errors as today": {
+   "sigma_GeV": 0.13250047954967792,
+   "z_if_central_values_stay(direct)": 12.252183271808711,
+   "z_if_central_values_stay(xsec)": 11.044640472388062
+  },
+  "matching errors halved": {
+   "sigma_GeV": 0.0895955707083966,
+   "z_if_central_values_stay(direct)": 18.119424277444267,
+   "z_if_central_values_stay(xsec)": 16.333621712262307
+  },
+  "HL-LHC Mt 0.2 GeV [R] + lattice as 0.00045 + Mh 0.02": {
+   "sigma_GeV": 0.2916603009856305,
+   "z_if_central_values_stay(direct)": 5.566133455801304
+  },
+  "note": "held out = data that do not yet exist; the z values assume unchanged central values and are illustrations of reach, not predictions of outcome"
+ },
+ "potential_at_PDG_central": {
+  "1.000e+10": {
+   "lambda": 0.002835541923551804,
+   "lambda_eff": 0.006911092384266628,
+   "V_eff_GeV4": 1.357952173550968e+37
+  },
+  "1.000e+12": {
+   "lambda": -0.00433041981994055,
+   "lambda_eff": -0.0016866653156610459,
+   "V_eff_GeV4": -3.3302964119814188e+44
+  },
+  "1.000e+15": {
+   "lambda": -0.00944985552691151,
+   "lambda_eff": -0.008142707975218346,
+   "V_eff_GeV4": -1.651120533930488e+57
+  },
+  "1.000e+17": {
+   "lambda": -0.01047399356975087,
+   "lambda_eff": -0.00973717055269252,
+   "V_eff_GeV4": -2.0288196931067028e+65
+  },
+  "2.435e+18": {
+   "lambda": -0.010426681341472526,
+   "lambda_eff": -0.009991361878689322,
+   "V_eff_GeV4": -7.48428696958026e+70
+  },
+  "1.221e+19": {
+   "lambda": -0.010215942678119098,
+   "lambda_eff": -0.009911158341285867,
+   "V_eff_GeV4": -4.750211083556697e+73
+  },
+  "Lambda_lambda_GeV": 42108922904.417915
+ },
+ "CDL_quench_estimate": {
+  "scan": [
+   {
+    "dMt_above_crit_GeV": 0.001,
+    "h_min_GeV": 6.661314314256152e+17,
+    "eps_GeV4": 1.6222304414371713e+65,
+    "sigma_GeV3": 1.4701423197894423e+49,
+    "threshold_GeV4": 2.7338966396568054e+61,
+    "eps_over_threshold": 5933.766543715475
+   },
+   {
+    "dMt_above_crit_GeV": 0.01,
+    "h_min_GeV": 2.0813687825218967e+18,
+    "eps_GeV4": 6.49002832721955e+67,
+    "sigma_GeV3": 8.216801858620747e+47,
+    "threshold_GeV4": 8.540218087165693e+58,
+    "eps_over_threshold": 759937071.9786203
+   },
+   {
+    "dMt_above_crit_GeV": 0.05,
+    "h_min_GeV": 1.220900000000001e+19,
+    "eps_GeV4": 4.709063541659544e+71,
+    "sigma_GeV3": 3.5921228650778897e+45,
+    "threshold_GeV4": 1.6321711536265766e+54,
+    "eps_over_threshold": 2.8851530252794355e+17
+   },
+   {
+    "dMt_above_crit_GeV": 0.1,
+    "h_min_GeV": 1.220900000000001e+19,
+    "eps_GeV4": 2.043564920097379e+72,
+    "sigma_GeV3": 6.713172077908561e+43,
+    "threshold_GeV4": 5.700577986281235e+50,
+    "eps_over_threshold": 3.5848381076714223e+21
+   },
+   {
+    "dMt_above_crit_GeV": 0.4,
+    "h_min_GeV": 1.220900000000001e+19,
+    "eps_GeV4": 1.1436299861128156e+73,
+    "sigma_GeV3": 2.477574400959974e+38,
+    "threshold_GeV4": 7.76455807330491e+39,
+    "eps_over_threshold": 1.472884838152856e+33
+   },
+   {
+    "dMt_above_crit_GeV": 1.6,
+    "h_min_GeV": 1.220900000000001e+19,
+    "eps_GeV4": 4.825637210025701e+73,
+    "sigma_GeV3": 5.747211709912688e+29,
+    "threshold_GeV4": 4.178089350449366e+22,
+    "eps_over_threshold": 1.1549865991991506e+51
+   }
+  ],
+  "conclusion": "eps exceeds the CDL quench threshold already 0.001 GeV above Mt_crit, so gravitational quenching moves the stability boundary by < 1e-3 GeV (negligible)",
+  "status": "[E] thin wall, RG-improved tree potential, Planckian field values, Einstein gravity"
+ },
+ "runtime_s": 25.30013132095337
+}

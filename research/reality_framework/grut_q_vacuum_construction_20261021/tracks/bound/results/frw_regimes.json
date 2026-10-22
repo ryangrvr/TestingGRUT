@@ -1,0 +1,1033 @@
+{
+ "inputs": {
+  "Omega_m": 0.315,
+  "Omega_r": 9.1e-05,
+  "Omega_L": 0.6849090000000001,
+  "provenance": "Omega_m: Planck 2018 (ledger row 9) [Q]; Omega_r ~ 9.1e-5 [R]; units H0 = 1, K(q0) = 1; families supplied [P], illustrative; F2 is the KV 0806.2805 eq (4.7)/(4.14) form"
+ },
+ "partI_adiabatic": [
+  {
+   "family": "F1_quadratic_linearK",
+   "m_target": 10.0,
+   "m0 (R=0 of this mu)": 9.825707914847788,
+   "dmu (calibrated)": -2.0732783832585167,
+   "K_lab": 0.9654453602790247,
+   "Lam_cal": 1.9837266487900371,
+   "q_static": 0.9821043006975617,
+   "H_static": 0.8275922909259118,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.26095063443883953,
+     "H/m0 at start": 0.31135633455713324,
+     "ratio <Delta>/<rho_dyn>": 0.39869685969917507,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 2.543549582619727,
+     "Omega_dyn_measured": 0.28635150900590384,
+     "Omega_dyn_formula": 0.7182186215912558,
+     "max_rel_constraint": 7.246656672223415e-15
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.1413290017333394,
+     "H/m0 at start": 0.20146285226345054,
+     "ratio <Delta>/<rho_dyn>": 0.6677998730459906,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.8818805865806773,
+     "Omega_dyn_measured": 0.02284996173366142,
+     "Omega_dyn_formula": 0.03421678058942633,
+     "max_rel_constraint": 2.5354791269817386e-15
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.10462364134806855,
+     "H/m0 at start": 0.13536653878599408,
+     "ratio <Delta>/<rho_dyn>": 0.832152044790161,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.4291456917142438,
+     "Omega_dyn_measured": 0.003471287453019779,
+     "Omega_dyn_formula": 0.004171458178529278,
+     "max_rel_constraint": 7.258380048344898e-16
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.09374304883326388,
+     "H/m0 at start": 0.11025084642998345,
+     "ratio <Delta>/<rho_dyn>": 0.8705524171240212,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.2748458529078223,
+     "Omega_dyn_measured": 0.0008129761477428294,
+     "Omega_dyn_formula": 0.0009338623749143076,
+     "max_rel_constraint": 1.8208629580687967e-15
+    }
+   ],
+   "Omega_dyn_today_measured": 0.003471287453019779,
+   "Omega_dyn_today_formula": 0.004171458178529278,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.002188207809554388,
+   "Om_run": 0.2980733794794514
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m_target": 30.0,
+   "m0 (R=0 of this mu)": 29.942815142264163,
+   "dmu (calibrated)": -2.0566928137175085,
+   "K_lab": 0.9961913096042269,
+   "Lam_cal": 2.046901181009171,
+   "q_static": 0.9980883740105672,
+   "H_static": 0.8275922909259137,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.06128758498691839,
+     "H/m0 at start": 0.10217882645969936,
+     "ratio <Delta>/<rho_dyn>": 0.9730676823185169,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.09228390252583854,
+     "Omega_dyn_measured": 0.005984789677983857,
+     "Omega_dyn_formula": 0.006150435151359636,
+     "max_rel_constraint": 2.549545629353953e-15
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.04265062813167192,
+     "H/m0 at start": 0.06518277432892726,
+     "ratio <Delta>/<rho_dyn>": 0.9755982159185725,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.03947492174560929,
+     "Omega_dyn_measured": 0.0014303837017068002,
+     "Omega_dyn_formula": 0.0014661606369995514,
+     "max_rel_constraint": 5.381950085099759e-15
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.033489228093813814,
+     "H/m0 at start": 0.04419599337298025,
+     "ratio <Delta>/<rho_dyn>": 0.9831725663579945,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.018084246300307253,
+     "Omega_dyn_measured": 0.00026123489482465995,
+     "Omega_dyn_formula": 0.00026570604567656197,
+     "max_rel_constraint": 7.343818520054118e-15
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.030432618850235505,
+     "H/m0 at start": 0.03611735028471727,
+     "ratio <Delta>/<rho_dyn>": 0.9853777856764345,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.00508877001693214,
+     "Omega_dyn_measured": 6.470349643352864e-05,
+     "Omega_dyn_formula": 6.566364431395364e-05,
+     "max_rel_constraint": 9.118267598652682e-15
+    }
+   ],
+   "Omega_dyn_today_measured": 0.00026123489482465995,
+   "Omega_dyn_today_formula": 0.00026570604567656197,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.0002476411626764105,
+   "Om_run": 0.31326726877273225
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m_target": 100.0,
+   "m0 (R=0 of this mu)": 99.98287434186715,
+   "dmu (calibrated)": -2.054903003042231,
+   "K_lab": 0.9996575161661596,
+   "Lam_cal": 2.0540232892196033,
+   "q_static": 0.9998286994153989,
+   "H_static": 0.8275922909259242,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.017947139138031736,
+     "H/m0 at start": 0.030358825361324764,
+     "ratio <Delta>/<rho_dyn>": 0.9965739361527836,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0038055087782668203,
+     "Omega_dyn_measured": 0.0004527319752618755,
+     "Omega_dyn_formula": 0.0004542883963126923,
+     "max_rel_constraint": 4.7542967733935765e-14
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.012675149979860027,
+     "H/m0 at start": 0.019467330805708442,
+     "ratio <Delta>/<rho_dyn>": 0.9979470781815806,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.001153573065484141,
+     "Omega_dyn_measured": 0.00011922827395885478,
+     "Omega_dyn_formula": 0.00011947354380365319,
+     "max_rel_constraint": 8.06561869164262e-14
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.010004167577845793,
+     "H/m0 at start": 0.013226290540726342,
+     "ratio <Delta>/<rho_dyn>": 0.9984804102452997,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0005106104801450424,
+     "Omega_dyn_measured": 2.2412613459326433e-05,
+     "Omega_dyn_formula": 2.244672327003417e-05,
+     "max_rel_constraint": 1.0627834635366638e-13
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.009103754629953869,
+     "H/m0 at start": 0.010813981195276736,
+     "ratio <Delta>/<rho_dyn>": 0.9986333099048119,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.000393932315961609,
+     "Omega_dyn_measured": 5.596367737701795e-06,
+     "Omega_dyn_formula": 5.604026705493363e-06,
+     "max_rel_constraint": 1.334026641784693e-13
+    }
+   ],
+   "Omega_dyn_today_measured": 2.2412613459326433e-05,
+   "Omega_dyn_today_formula": 2.244672327003417e-05,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.2322315316486037e-05,
+   "Om_run": 0.31484543611084653
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m_target": 300.0,
+   "m0 (R=0 of this mu)": 299.9942923164068,
+   "dmu (calibrated)": -2.054746546962636,
+   "K_lab": 0.9999619491380192,
+   "Lam_cal": 2.0546488158680667,
+   "q_static": 0.999980973845048,
+   "H_static": 0.827592290926225,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.00597028202258745,
+     "H/m0 at start": 0.01011019170476851,
+     "ratio <Delta>/<rho_dyn>": 0.9996078334667405,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.00019586436705185307,
+     "Omega_dyn_measured": 4.9610765513299005e-05,
+     "Omega_dyn_formula": 4.963022882808339e-05,
+     "max_rel_constraint": 4.384595478380418e-13
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.004221612636683874,
+     "H/m0 at start": 0.006486483177801529,
+     "ratio <Delta>/<rho_dyn>": 0.9997704756869555,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 5.872678813796608e-05,
+     "Omega_dyn_measured": 1.3156955466196273e-05,
+     "Omega_dyn_formula": 1.3159976000647503e-05,
+     "max_rel_constraint": 6.090267479968611e-13
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.0033334877263371085,
+     "H/m0 at start": 0.004407808059205829,
+     "ratio <Delta>/<rho_dyn>": 0.9998313741151339,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 8.54481239343366e-06,
+     "Omega_dyn_measured": 2.4798025169706944e-06,
+     "Omega_dyn_formula": 2.4802207463887175e-06,
+     "max_rel_constraint": 7.906557976537127e-13
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.0030338275579156982,
+     "H/m0 at start": 0.003604039600135029,
+     "ratio <Delta>/<rho_dyn>": 0.9998475363269681,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 1.1481041545244738e-05,
+     "Omega_dyn_measured": 6.196658117032049e-07,
+     "Omega_dyn_formula": 6.19760302635344e-07,
+     "max_rel_constraint": 1.0937908740419997e-12
+    }
+   ],
+   "Omega_dyn_today_measured": 2.4798025169706944e-06,
+   "Omega_dyn_today_formula": 2.4802207463887175e-06,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.4805839944042784e-06,
+   "Om_run": 0.314982807116835
+  },
+  {
+   "family": "F2_KV0806_quartic_Kpropq",
+   "m_target": 10.0,
+   "m0 (R=0 of this mu)": 9.649775721821195,
+   "dmu (calibrated)": -2.0411460485315827,
+   "K_lab": 0.9860023178925644,
+   "Lam_cal": 2.0259655846364355,
+   "q_static": 1.0134265609706314,
+   "H_static": 0.8275922909259125,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.28375039937135477,
+     "H/m0 at start": 0.33048801075734435,
+     "ratio <Delta>/<rho_dyn>": 0.34746373438199846,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 3.186337498857885,
+     "Omega_dyn_measured": 0.37658513583408654,
+     "Omega_dyn_formula": 1.0838113407831862,
+     "max_rel_constraint": 6.26546759856268e-15
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.14429750304832756,
+     "H/m0 at start": 0.20519828978153504,
+     "ratio <Delta>/<rho_dyn>": 0.5890769697747946,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.9419361894577019,
+     "Omega_dyn_measured": 0.021815883674623535,
+     "Omega_dyn_formula": 0.03703401218174222,
+     "max_rel_constraint": 3.3290179848909228e-15
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.10659428749574779,
+     "H/m0 at start": 0.13769677717219755,
+     "ratio <Delta>/<rho_dyn>": 0.5945253375620289,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.6190319159238673,
+     "Omega_dyn_measured": 0.002627242421556457,
+     "Omega_dyn_formula": 0.004419058794583919,
+     "max_rel_constraint": 3.600547564174271e-15
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.09547556034609816,
+     "H/m0 at start": 0.11220432866511623,
+     "ratio <Delta>/<rho_dyn>": 0.4571455038203783,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.6010420994847883,
+     "Omega_dyn_measured": 0.0004500131088171591,
+     "Omega_dyn_formula": 0.0009843979762600452,
+     "max_rel_constraint": 5.034720247097511e-15
+    }
+   ],
+   "Omega_dyn_today_measured": 0.002627242421556457,
+   "Omega_dyn_today_formula": 0.004419058794583919,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.0022660364167643833,
+   "Om_run": 0.2977201659816237
+  },
+  {
+   "family": "F2_KV0806_quartic_Kpropq",
+   "m_target": 30.0,
+   "m0 (R=0 of this mu)": 29.885577248779228,
+   "dmu (calibrated)": -2.0531696471757317,
+   "K_lab": 0.9984744815483899,
+   "Lam_cal": 2.051592476048469,
+   "q_static": 1.0015185592159463,
+   "H_static": 0.8275922909259105,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.06140367950024886,
+     "H/m0 at start": 0.10234310048313006,
+     "ratio <Delta>/<rho_dyn>": 0.9353020373005339,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.08368730592990557,
+     "Omega_dyn_measured": 0.005780016361103219,
+     "Omega_dyn_formula": 0.006179839378716085,
+     "max_rel_constraint": 1.1865998004165755e-14
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.0427330773391277,
+     "H/m0 at start": 0.06530214198924167,
+     "ratio <Delta>/<rho_dyn>": 0.947602116525769,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.04641115609034027,
+     "Omega_dyn_measured": 0.0013953158129194475,
+     "Omega_dyn_formula": 0.0014724701312774067,
+     "max_rel_constraint": 1.7037507677973142e-14
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.03355357324256254,
+     "H/m0 at start": 0.044279770375381035,
+     "ratio <Delta>/<rho_dyn>": 0.943024370356842,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.029367917701109237,
+     "Omega_dyn_measured": 0.00025159568481619997,
+     "Omega_dyn_formula": 0.0002667965884285639,
+     "max_rel_constraint": 3.796363913122582e-14
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.030490946934797442,
+     "H/m0 at start": 0.03618624996080744,
+     "ratio <Delta>/<rho_dyn>": 0.919111245547261,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.021829063435623776,
+     "Omega_dyn_measured": 6.0594952007110313e-05,
+     "Omega_dyn_formula": 6.59277669603864e-05,
+     "max_rel_constraint": 3.4105757983381395e-14
+    }
+   ],
+   "Omega_dyn_today_measured": 0.00025159568481619997,
+   "Omega_dyn_today_formula": 0.0002667965884285639,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.00024858760914941774,
+   "Om_run": 0.31326343307888327
+  },
+  {
+   "family": "F2_KV0806_quartic_Kpropq",
+   "m_target": 100.0,
+   "m0 (R=0 of this mu)": 99.96574727422464,
+   "dmu (calibrated)": -2.054586321282385,
+   "K_lab": 0.9998629900368358,
+   "Lam_cal": 2.054445481929371,
+   "q_static": 1.0001369536642564,
+   "H_static": 0.827592290925903,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.01795021131905473,
+     "H/m0 at start": 0.030363891039795265,
+     "ratio <Delta>/<rho_dyn>": 0.993598093084605,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0037339380633702604,
+     "Omega_dyn_measured": 0.00045153797481518426,
+     "Omega_dyn_formula": 0.0004544473041543325,
+     "max_rel_constraint": 1.3400348551893727e-13
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.012677306652284866,
+     "H/m0 at start": 0.019470650480792072,
+     "ratio <Delta>/<rho_dyn>": 0.9952750569080626,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0013085956276385525,
+     "Omega_dyn_measured": 0.00011894945220078229,
+     "Omega_dyn_formula": 0.0001195141497570657,
+     "max_rel_constraint": 2.400515756502463e-13
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.01000588617989522,
+     "H/m0 at start": 0.013228554376197717,
+     "ratio <Delta>/<rho_dyn>": 0.9947052296581237,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0008333869308204725,
+     "Omega_dyn_measured": 2.233567143474168e-05,
+     "Omega_dyn_formula": 2.2454563189959667e-05,
+     "max_rel_constraint": 3.980181647786771e-13
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.009105314232177709,
+     "H/m0 at start": 0.010815833266847034,
+     "ratio <Delta>/<rho_dyn>": 0.9924076161088764,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0009058157415205942,
+     "Omega_dyn_measured": 5.5633900733530915e-06,
+     "Omega_dyn_formula": 5.605952617702136e-06,
+     "max_rel_constraint": 4.810875363822908e-13
+    }
+   ],
+   "Omega_dyn_today_measured": 2.233567143474168e-05,
+   "Omega_dyn_today_formula": 2.2454563189959667e-05,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.232994440127201e-05,
+   "Om_run": 0.31484514697549043
+  },
+  {
+   "family": "F2_KV0806_quartic_Kpropq",
+   "m_target": 300.0,
+   "m0 (R=0 of this mu)": 299.98858458068224,
+   "dmu (calibrated)": -2.054711363951356,
+   "K_lab": 0.9999847794524948,
+   "Lam_cal": 2.0546957259312366,
+   "q_static": 1.0000152198525323,
+   "H_static": 0.8275922909261441,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.005970395593916433,
+     "H/m0 at start": 0.010110383487483355,
+     "ratio <Delta>/<rho_dyn>": 0.9992766938683988,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0002251826519791487,
+     "Omega_dyn_measured": 4.959622226030482e-05,
+     "Omega_dyn_formula": 4.96321214780943e-05,
+     "max_rel_constraint": 1.0239550353325396e-12
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.004221692967837336,
+     "H/m0 at start": 0.00648660652788405,
+     "ratio <Delta>/<rho_dyn>": 0.9994722870551356,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 7.460378414550927e-05,
+     "Omega_dyn_measured": 1.3153532460460867e-05,
+     "Omega_dyn_formula": 1.3160477414753227e-05,
+     "max_rel_constraint": 1.8681827110272043e-12
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.0033335511561278512,
+     "H/m0 at start": 0.0044078919148706815,
+     "ratio <Delta>/<rho_dyn>": 0.9994094017935835,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 6.137678566996267e-05,
+     "Omega_dyn_measured": 2.4788503496193017e-06,
+     "Omega_dyn_formula": 2.480315219339191e-06,
+     "max_rel_constraint": 3.6022268143490482e-12
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.003033885284985899,
+     "H/m0 at start": 0.0036041081697403975,
+     "ratio <Delta>/<rho_dyn>": 0.9991513008559805,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 8.583058153025892e-05,
+     "Omega_dyn_measured": 6.192579033951119e-07,
+     "Omega_dyn_formula": 6.197839134719525e-07,
+     "max_rel_constraint": 3.5439280101540317e-12
+    }
+   ],
+   "Omega_dyn_today_measured": 2.4788503496193017e-06,
+   "Omega_dyn_today_formula": 2.480315219339191e-06,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.4806783813424487e-06,
+   "Om_run": 0.3149828061428327
+  },
+  {
+   "family": "F3_cubic_quartic_expK",
+   "m_target": 10.0,
+   "m0 (R=0 of this mu)": 9.674587448328941,
+   "dmu (calibrated)": -2.0429847903601543,
+   "K_lab": 0.9798922708155783,
+   "Lam_cal": 2.0134111059360777,
+   "q_static": 1.0114576820284926,
+   "H_static": 0.8275922909259118,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.2831833847122605,
+     "H/m0 at start": 0.3273844054472377,
+     "ratio <Delta>/<rho_dyn>": 0.4131898864200582,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 2.8331208253894973,
+     "Omega_dyn_measured": 0.4203629432509972,
+     "Omega_dyn_formula": 1.0173601945901616,
+     "max_rel_constraint": 7.006698685811507e-15
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.14399627859144884,
+     "H/m0 at start": 0.20483542004886124,
+     "ratio <Delta>/<rho_dyn>": 0.6493405272995416,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.8550930932989623,
+     "Omega_dyn_measured": 0.02376384768865943,
+     "Omega_dyn_formula": 0.036596895911437756,
+     "max_rel_constraint": 2.7300468505678044e-15
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.10633835813019377,
+     "H/m0 at start": 0.1374436956143971,
+     "ratio <Delta>/<rho_dyn>": 0.7405624004247208,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.49724665867044743,
+     "Omega_dyn_measured": 0.0032451826900795656,
+     "Omega_dyn_formula": 0.004382051651850563,
+     "max_rel_constraint": 1.3655319820139417e-15
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.09523665664231157,
+     "H/m0 at start": 0.11195553271748558,
+     "ratio <Delta>/<rho_dyn>": 0.7141582150825428,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.39553885415093987,
+     "Omega_dyn_measured": 0.0006976867053411439,
+     "Omega_dyn_formula": 0.0009769357694226128,
+     "max_rel_constraint": 1.181790455103895e-15
+    }
+   ],
+   "Omega_dyn_today_measured": 0.0032451826900795656,
+   "Omega_dyn_today_formula": 0.004382051651850563,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.0022536885929096036,
+   "Om_run": 0.2976224885563245
+  },
+  {
+   "family": "F3_cubic_quartic_expK",
+   "m_target": 30.0,
+   "m0 (R=0 of this mu)": 29.892670641836123,
+   "dmu (calibrated)": -2.053447382242588,
+   "K_lab": 0.997819243458737,
+   "Lam_cal": 2.050246140654227,
+   "q_static": 1.0012458623510332,
+   "H_static": 0.8275922909259097,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.06139309244440788,
+     "H/m0 at start": 0.1023418680868989,
+     "ratio <Delta>/<rho_dyn>": 0.9600693961177831,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.08386574493051416,
+     "Omega_dyn_measured": 0.005929187364579323,
+     "Omega_dyn_formula": 0.006175790404896856,
+     "max_rel_constraint": 2.425898579066983e-15
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.0427233231292868,
+     "H/m0 at start": 0.06529070650686104,
+     "ratio <Delta>/<rho_dyn>": 0.9664059475423717,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0407754916832671,
+     "Omega_dyn_measured": 0.0014222184121909945,
+     "Omega_dyn_formula": 0.0014716573462816337,
+     "max_rel_constraint": 3.593102964396502e-15
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.03354568289359386,
+     "H/m0 at start": 0.04426991836420392,
+     "ratio <Delta>/<rho_dyn>": 0.9700049092386823,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.021428679972464667,
+     "Omega_dyn_measured": 0.0002586610523246437,
+     "Omega_dyn_formula": 0.00026665952910244164,
+     "max_rel_constraint": 7.352406273877575e-15
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.03048374209723045,
+     "H/m0 at start": 0.03617786560473201,
+     "ratio <Delta>/<rho_dyn>": 0.9636948568607494,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.009202084295065078,
+     "Omega_dyn_measured": 6.350244675524608e-05,
+     "Omega_dyn_formula": 6.589476565445857e-05,
+     "max_rel_constraint": 9.228049259608094e-15
+    }
+   ],
+   "Omega_dyn_today_measured": 0.0002586610523246437,
+   "Omega_dyn_today_formula": 0.00026665952910244164,
+   "(9/4) Om_run^2 (H_run/m0)^2": 0.00024846858272886127,
+   "Om_run": 0.31326209284227824
+  },
+  {
+   "family": "F3_cubic_quartic_expK",
+   "m_target": 100.0,
+   "m0 (R=0 of this mu)": 99.96784665349624,
+   "dmu (calibrated)": -2.054612092721751,
+   "K_lab": 0.9998042597249313,
+   "Lam_cal": 2.0543248071716405,
+   "q_static": 1.0001118493872945,
+   "H_static": 0.8275922909258745,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.01794984137770178,
+     "H/m0 at start": 0.030363350319033228,
+     "ratio <Delta>/<rho_dyn>": 0.995613155499419,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0037600810276357,
+     "Omega_dyn_measured": 0.0004524339853860521,
+     "Omega_dyn_formula": 0.00045442748811319426,
+     "max_rel_constraint": 4.148207874995309e-14
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.012677042918312438,
+     "H/m0 at start": 0.019470253253992067,
+     "ratio <Delta>/<rho_dyn>": 0.9970866472215927,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0011764802884426495,
+     "Omega_dyn_measured": 0.000119160956477077,
+     "Omega_dyn_formula": 0.00011950912872930556,
+     "max_rel_constraint": 8.120904153469577e-14
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.010005672879736404,
+     "H/m0 at start": 0.013228278250652642,
+     "ratio <Delta>/<rho_dyn>": 0.9972651246986314,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0005971845588334855,
+     "Omega_dyn_measured": 2.2392125083191514e-05,
+     "Omega_dyn_formula": 2.2453532695188057e-05,
+     "max_rel_constraint": 1.1040226353363385e-13
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.009105124059261865,
+     "H/m0 at start": 0.010815606635327584,
+     "ratio <Delta>/<rho_dyn>": 0.9966291568023189,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0005484156280628166,
+     "Omega_dyn_measured": 5.586832542847884e-06,
+     "Omega_dyn_formula": 5.605728574882574e-06,
+     "max_rel_constraint": 1.299894587081446e-13
+    }
+   ],
+   "Omega_dyn_today_measured": 2.2392125083191514e-05,
+   "Omega_dyn_today_formula": 2.2453532695188057e-05,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.2329020682564208e-05,
+   "Om_run": 0.3148453465430772
+  },
+  {
+   "family": "F3_cubic_quartic_expK",
+   "m_target": 300.0,
+   "m0 (R=0 of this mu)": 299.9892835677917,
+   "dmu (calibrated)": -2.0547142350460557,
+   "K_lab": 0.9999782562155081,
+   "Lam_cal": 2.054682322460406,
+   "q_static": 1.0000124249926805,
+   "H_static": 0.8275922909262112,
+   "initial_data": "second-order adiabatic (slow-manifold) data at a_e/1.50, one run per a_e",
+   "comparison": [
+    {
+     "a": 0.5,
+     "a_start": 0.3333333333333333,
+     "H/m0 at a": 0.005970381635280492,
+     "H/m0 at start": 0.010110360345250442,
+     "ratio <Delta>/<rho_dyn>": 0.9995013806268556,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 0.0002049065330242225,
+     "Omega_dyn_measured": 4.9607139832942894e-05,
+     "Omega_dyn_formula": 4.963188725345319e-05,
+     "max_rel_constraint": 3.1613432619238005e-13
+    },
+    {
+     "a": 0.7,
+     "a_start": 0.4666666666666666,
+     "H/m0 at a": 0.004221683102504977,
+     "H/m0 at start": 0.006486591462185016,
+     "ratio <Delta>/<rho_dyn>": 0.9996745960494489,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 6.209574158462901e-05,
+     "Omega_dyn_measured": 1.3156133028876979e-05,
+     "Omega_dyn_formula": 1.3160415480065087e-05,
+     "max_rel_constraint": 5.277669291592581e-13
+    },
+    {
+     "a": 1.0,
+     "a_start": 0.6666666666666666,
+     "H/m0 at a": 0.0033335433833141096,
+     "H/m0 at start": 0.004407881651527508,
+     "ratio <Delta>/<rho_dyn>": 0.9996956682537779,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 2.1675326453441223e-05,
+     "Omega_dyn_measured": 2.479548766511231e-06,
+     "Omega_dyn_formula": 2.4803036016374787e-06,
+     "max_rel_constraint": 9.739139558179531e-13
+    },
+    {
+     "a": 1.3,
+     "a_start": 0.8666666666666667,
+     "H/m0 at a": 0.0030338782144561202,
+     "H/m0 at start": 0.0036040997739702767,
+     "ratio <Delta>/<rho_dyn>": 0.9996233442291882,
+     "free-oscillation amplitude in Delta / <rho_dyn>": 1.4013841605318421e-05,
+     "Omega_dyn_measured": 6.195475719240946e-07,
+     "Omega_dyn_formula": 6.197810160204182e-07,
+     "max_rel_constraint": 8.679925488427737e-13
+    }
+   ],
+   "Omega_dyn_today_measured": 2.479548766511231e-06,
+   "Omega_dyn_today_formula": 2.4803036016374787e-06,
+   "(9/4) Om_run^2 (H_run/m0)^2": 2.4806668293885074e-06,
+   "Om_run": 0.314982807183217
+  }
+ ],
+ "partI_error_coefficient (1-ratio)/(H/m)^2 at a=1": {
+  "F1_quadratic_linearK": [
+   [
+    10.0,
+    15.334032958024212
+   ],
+   [
+    30.0,
+    15.004019218077651
+   ],
+   [
+    100.0,
+    15.18323944340503
+   ],
+   [
+    300.0,
+    15.174923864147278
+   ]
+  ],
+  "F2_KV0806_quartic_Kpropq": [
+   [
+    10.0,
+    35.685834655887255
+   ],
+   [
+    30.0,
+    50.60711503708148
+   ],
+   [
+    100.0,
+    52.8854264686832
+   ],
+   [
+    300.0,
+    53.14689238776409
+   ]
+  ],
+  "F3_cubic_quartic_expK": [
+   [
+    10.0,
+    22.94314851587079
+   ],
+   [
+    30.0,
+    26.654890688049843
+   ],
+   [
+    100.0,
+    27.317750160141312
+   ],
+   [
+    300.0,
+    27.386405542868683
+   ]
+  ]
+ },
+ "partII_light_scan": [
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 0.1,
+   "dmu (calibrated)": -1.6425772005741757,
+   "K(q_s) (start, normalisation)": 1.200733237637417,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 1.4303164453903483,
+   "Omega_m(a=1), K_now normalisation": 0.0003059763526468305,
+   "K(z=1100)/K_now = G_now/G_rec": 2.311200713378837,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.001987199978137875,
+   "K(z=1)/K_now": 443.9883528614199,
+   "Gdot/G today [H0]": -0.5787981873143031,
+   "Gdot/G today [1/yr] (H0 = 67.4)": -3.989702204618232e-11,
+   "w_eff(a=1)": -1.0958665649500878,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -1.094934029428266,
+    -0.01989454996578742
+   ],
+   "p = dlna/dlnt at z=100": 0.5000094179367391,
+   "p at z=10": 0.5766694970718813,
+   "max_rel_constraint": 3.771323052102484e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 0.3,
+   "dmu (calibrated)": -1.6326121615690823,
+   "K(q_s) (start, normalisation)": 1.2068414524244293,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 2.425059590691767,
+   "Omega_m(a=1), K_now normalisation": 0.00026829109446691783,
+   "K(z=1100)/K_now = G_now/G_rec": 2.3230061075954285,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.00500887891575879,
+   "K(z=1)/K_now": 216.5495635420612,
+   "Gdot/G today [H0]": -0.3521725769074328,
+   "Gdot/G today [1/yr] (H0 = 67.4)": -2.4275537437553875e-11,
+   "w_eff(a=1)": -1.045196940205594,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -1.0425194559923392,
+    -0.025449989766333482
+   ],
+   "p = dlna/dlnt at z=100": 0.5000128015019826,
+   "p at z=10": 0.6958261403442222,
+   "max_rel_constraint": 3.7745001828571947e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 1.0,
+   "dmu (calibrated)": -0.6859345377504664,
+   "K(q_s) (start, normalisation)": 2.5964117704158944,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 7.026426288318863,
+   "Omega_m(a=1), K_now normalisation": 8.390702689133457e-05,
+   "K(z=1100)/K_now = G_now/G_rec": 4.99791086139234,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.013150939149283435,
+   "K(z=1)/K_now": 197.17419163191028,
+   "Gdot/G today [H0]": -0.008899835454630845,
+   "Gdot/G today [1/yr] (H0 = 67.4)": -6.13472777080391e-13,
+   "w_eff(a=1)": -1.0007420759628138,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -0.9999275904327605,
+    -0.006031522128572822
+   ],
+   "p = dlna/dlnt at z=100": 0.500099874492298,
+   "p at z=10": 1.2395225807538117,
+   "max_rel_constraint": 3.775876099072184e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 3.0,
+   "dmu (calibrated)": -2.8583913946385118,
+   "K(q_s) (start, normalisation)": 0.7750722602521275,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 10.197818392389879,
+   "Omega_m(a=1), K_now normalisation": 5.0442215969565286e-05,
+   "K(z=1100)/K_now = G_now/G_rec": 1.4919169816081934,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.016653217362080447,
+   "K(z=1)/K_now": 46.95501355088899,
+   "Gdot/G today [H0]": 0.1344762948210145,
+   "Gdot/G today [1/yr] (H0 = 67.4)": 9.269558572838926e-12,
+   "w_eff(a=1)": -0.9957783733694446,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -0.9952574877409178,
+    -0.0038751713987344658
+   ],
+   "p = dlna/dlnt at z=100": 0.5002535367387284,
+   "p at z=10": 1.4494042015929238,
+   "max_rel_constraint": 3.7766636654808456e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 10.0,
+   "dmu (calibrated)": -2.0732783832585215,
+   "K(q_s) (start, normalisation)": 0.9928417202790245,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 28.11676190531342,
+   "Omega_m(a=1), K_now normalisation": 1.2259807943799184e-05,
+   "K(z=1100)/K_now = G_now/G_rec": 1.9110681405965182,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.030768315454032167,
+   "K(z=1)/K_now": 33.153472219123394,
+   "Gdot/G today [H0]": 1.1155036162690812,
+   "Gdot/G today [1/yr] (H0 = 67.4)": 7.689255658763158e-11,
+   "w_eff(a=1)": -0.9865581144180954,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -0.9863872214268161,
+    -0.0018156858302969558
+   ],
+   "p = dlna/dlnt at z=100": 0.5034605093043976,
+   "p at z=10": 1.9990852219902333,
+   "max_rel_constraint": 3.774519985632e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 100.0,
+   "dmu (calibrated)": -2.054903003042685,
+   "K(q_s) (start, normalisation)": 0.9999314797661595,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 146.82412734764992,
+   "Omega_m(a=1), K_now normalisation": 1.5722091050321687e-06,
+   "K(z=1100)/K_now = G_now/G_rec": 1.9247910735336815,
+   "K(z=1e3...BBN proxy a_i)/K_now": 0.10759562430744518,
+   "K(z=1)/K_now": 10.206223864044466,
+   "Gdot/G today [H0]": 20.794453987967106,
+   "Gdot/G today [1/yr] (H0 = 67.4)": 1.4333783473750449e-09,
+   "w_eff(a=1)": -0.9491117729634705,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -0.9487498711096443,
+    -0.010451119177176076
+   ],
+   "p = dlna/dlnt at z=100": 0.7047260521618826,
+   "p at z=10": 2.7911476988216037,
+   "max_rel_constraint": 3.774032086125806e-13
+  },
+  {
+   "family": "F1_quadratic_linearK",
+   "m/H0": 1000.0,
+   "dmu (calibrated)": -2.0547287591180075,
+   "K(q_s) (start, normalisation)": 0.999999315088068,
+   "a_i": 0.0001,
+   "H(a=1) [units of the calibrated H_LCDM(1) = 1]": 55.85196785374454,
+   "Omega_m(a=1), K_now normalisation": 0.00010101985699221435,
+   "K(z=1100)/K_now = G_now/G_rec": 1.9245699899884943,
+   "K(z=1e3...BBN proxy a_i)/K_now": 1.0003987821220066,
+   "K(z=1)/K_now": 1.1625240821316272,
+   "Gdot/G today [H0]": 55.833354481958175,
+   "Gdot/G today [1/yr] (H0 = 67.4)": 3.848637786886086e-09,
+   "w_eff(a=1)": 0.24906421982262184,
+   "CPL_fit_a>=0.4 (w0, wa)": [
+    -1.9328755132163742,
+    5.355363747147424
+   ],
+   "p = dlna/dlnt at z=100": 1.5256559130338931,
+   "p at z=10": 2.7524205660123,
+   "max_rel_constraint": 8.273126561723298e-10
+  }
+ ],
+ "partIII_relic_kappa": [
+  {
+   "m": 10.0,
+   "kappa": 0.001,
+   "H_i/m": 100.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.00011174749564086693,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.00011130139844748637,
+   "relic fraction at onset / kappa^2": 2.046726776878516,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 3.976423582858799,
+   "status": 1
+  },
+  {
+   "m": 10.0,
+   "kappa": 0.001,
+   "H_i/m": 1000.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.00026514695108948214,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.0002640884816353249,
+   "relic fraction at onset / kappa^2": 4.856335808603819,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 8.946953061432296,
+   "status": 1
+  },
+  {
+   "m": 10.0,
+   "kappa": 0.003,
+   "H_i/m": 100.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.0009911578464893464,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.0009793350310972704,
+   "relic fraction at onset / kappa^2": 2.017076577559366,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 3.976423582858799,
+   "status": 1
+  },
+  {
+   "m": 10.0,
+   "kappa": 0.003,
+   "H_i/m": 1000.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.002344045122119146,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.0023160846788379164,
+   "relic fraction at onset / kappa^2": 4.77029822173701,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 8.946953061432298,
+   "status": 1
+  },
+  {
+   "m": 10.0,
+   "kappa": 0.01,
+   "H_i/m": 100.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.010501374365599428,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.010089609587052859,
+   "relic fraction at onset / kappa^2": 1.9233938071572911,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 3.976423582858799,
+   "status": 1
+  },
+  {
+   "m": 10.0,
+   "kappa": 0.01,
+   "H_i/m": 1000.0,
+   "e-folds after H = m": 4.0,
+   "E_osc/rho_f at end": 0.02440962402015283,
+   "E_osc/rho_f scaled back to H = m (x e^{-n(1-3wf)})": 0.02345250897224171,
+   "relic fraction at onset / kappa^2": 4.470778589628911,
+   "log-growth estimate (3/4)[(kappa/2) ln(H_i/m)]^2 / kappa^2": 8.946953061432296,
+   "status": 1
+  }
+ ],
+ "partIII_fit": {
+  "relic fraction at onset / [kappa^2 ln^2(H_i/m)]": [
+   0.09650915267654192,
+   0.10177352645767053,
+   0.09511105907396256,
+   0.09997044920592241,
+   0.09069364249739137,
+   0.09369345963923321
+  ]
+ },
+ "runtime_s": 103.880366563797
+}

@@ -1,0 +1,90 @@
+{
+ "inputs": {
+  "H0 [eV]": 1.4377226629626768e-33,
+  "H0 source": "Planck 2018 H0 = 67.4 km/s/Mpc [Q via ledger]; hbar [R]",
+  "Omega_m": 0.315,
+  "rho_Lambda [GeV^4]": 2.52e-47,
+  "M reduced [GeV]": 2.435e+18,
+  "alpha (unscreened q-mode)": 0.3333333333333333,
+  "alpha source": "equations track 4.3 [D]: G_eff = G*(1 + e^{-mr}/3)"
+ },
+ "EotWash": {
+  "source": "Lee, Adelberger, Cook, Fleischer, Heckel, PRL 124, 101101 (2020), arXiv:2002.11761, Fig. 5 bottom (95% CL)",
+  "read level": "figure: vector data digitized from the arXiv source figure; text: abstract + the constraint paragraph",
+  "alpha=1 crossing digitized [um]": 38.373921411281955,
+  "alpha=1 stated [um] [Q]": 38.6,
+  "EW2007 alpha=1 digitized [um]": 55.2236850986394,
+  "EW2007 alpha=1 stated (Kapner+ 2007 abstract) [um] [Q]": 56.0,
+  "alpha=1/3 crossing digitized [um]": 53.680432436994465,
+  "alpha=1/3 crossing, rescaled to the stated alpha=1 point [um]": 53.99668878924629,
+  "digitization uncertainty (relative)": 0.014057643925318608,
+  "EW2007 alpha=1/3 [um]": 72.93853530058006,
+  "HUST alpha=1 [um]": 47.65634083934555,
+  "HUST alpha=1/3 [um]": 57.16756025374578,
+  "strongest at alpha = 1/3": "Eot-Wash 2020",
+  "m_q lower bound [meV] = hbar c / lambda(1/3)": 3.6544274255442613,
+  "m_q lower bound range [meV]": [
+   3.603766952930139,
+   3.706532540191885
+  ],
+  "longer ranges": "alpha = 1/3 is excluded for every lambda from ~54 um to ~1 cm (Eot-Wash 2004/2007, Irvine: |alpha| < 0.1; Adelberger-Heckel-Nelson 2003 Fig. midlam), from ~4 mm to ~3e14 m (laboratory, geophysical, LAGEOS, LLR, planetary: |alpha| < 0.1; same review Fig. longlam, figure read), and for lambda >> 1 AU by Cassini gamma (below). Read level: figures rendered from the arXiv source."
+ },
+ "Cassini": {
+  "gamma-1 [Q]": [
+   2.1e-05,
+   2.3e-05
+  ],
+  "2 sigma lower edge": -2.5e-05,
+  "required m b": 10.191182124909785,
+  "m_q > [eV] (b = R_sun)": 2.8906068641870106e-15,
+  "light q (m b << 1): gamma - 1 = -1/2, excess in sigma": 21739.130434782608
+ },
+ "regime_i": {
+  "relation": "Omega_dyn(t0) = (9/4) Omega_m^2 (H0/m_q)^2 [1 + O(c (H0/m_q)^2)], w_dyn = +1 (stiff, ~ a^-6); rho_DE(t0) = Lam_cal(mu) + Omega_dyn rho_c, Lam_cal = -q0 (mu - mu0) + O((mu - mu0)^2)",
+  "H0/m at Eot-Wash bound": 3.934194048876354e-31,
+  "Omega_dyn max (unscreened, Eot-Wash alpha=1/3 bound)": 3.455534075040891e-62,
+  "rho_dyn max [GeV^4]": 1.2712329735916854e-108,
+  "Omega_dyn at the Cassini-only bound (2.9e-15 eV)": 5.523009670410889e-38,
+  "Omega_dyn at natural m_q = sqrt(2/3) M": 1.1674739285124046e-121,
+  "1 + w_DE(t0) max = 2 Omega_dyn/Omega_L": 1.0089150584060995e-61,
+  "stage-1 rho_V = rho_m^2/(12 K m^2) vs full effective (3/4) rho_m^2/(K m^2)": "factor 9 (the -3H Kdot and G-shift terms)"
+ },
+ "regime_ii": {
+  "m_q needed to be Hubble-frozen today": "m_q <~ H0 = 1.438e-33 eV",
+  "m_q below which the dust trace drives K (phi-MDE, a ~ t^(1/2); APT07)": "m_q <~ H(z_eq) ~ 1.57e+05 H0 = 2.26e-28 eV",
+  "gap to the Eot-Wash bound m_min/H0": 2.541816665819039e+30,
+  "gap to the Cassini-only bound": 2.010545523592439e+18,
+  "G_cos/G_lab for light q (= 3/4) vs Lamine+ 2025 G/G_N = 1.011 +- 0.018, sigma": 14.499999999999995
+ },
+ "regime_iii_estimate": {
+  "label": "[E] order-of-magnitude; coefficient 0.1 from frw_regimes.json part III (constant-kappa toy)",
+  "T_osc at m = m_min [GeV]": 1612.6973548511862,
+  "kappa_SM(T_osc) from the QCD trace anomaly [E]": 0.001680104545151224,
+  "growth factor relic/radiation from T_osc to today": 2280360113887695.5,
+  "cases": {
+   "drive over 1 e-fold of H (ln^2 = 1)": {
+    "relic fraction at onset": 2.8227512826378016e-07,
+    "Omega_relic today (if stable)": 58575.69387080844
+   },
+   "drive from T = 1e15 GeV: ln(H_i/m) = 2 ln(T_i/T_osc)": {
+    "relic fraction at onset": 0.0008324762601366375,
+    "Omega_relic today (if stable)": 172749455.00303268
+   }
+  },
+  "Omega_c (Planck 2018, h = 0.674) [Q]": 0.264156592027754,
+  "m_q above which the relic decays before 1 s (Gamma ~ m^3/(192 pi M^2), one scalar channel) [E] [GeV]": 133026.53121090817
+ },
+ "B_threshold": {
+  "dR = 2 c/(q0 K') with natural q0 K' = K, c = Delta_EW [GeV^2]": 4.0140153224072284e-29,
+  "R_dS = 4 rho_L/K [GeV^2]": 1.7000535483136498e-83,
+  "dR/R_dS (natural linear-K realization)": 2.361111111111111e+54,
+  "required q0 K'/K across the feature (dR < R_dS)": 2.3611111111111112e+54
+ },
+ "B_AppleByBattye_Minkowski": {
+  "G_Mink/G = 1/F'(0) = 1 + e^{2b} (F'(R_1) ~ 1)": "derived from 0705.3199 eq (ab3)",
+  "b at equality of their condition 8 b e^{-2b} = 2 R0, R0 = 12 H0^2/M^2": 140.60566545086442,
+  "G_Mink/G (>=)": 1.3444023387020655e+122,
+  "b at equality of F''(R0) = (1 mm)^2": 68.65685362135679,
+  "G_Mink/G (>=), lab reading": 4.311072685365544e+59
+ }
+}

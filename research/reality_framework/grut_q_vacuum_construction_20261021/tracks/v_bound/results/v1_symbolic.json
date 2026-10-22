@@ -1,0 +1,89 @@
+{
+ "V1a_fR_00_equation_from_minisuperspace": {
+  "claimed (bound A.1, adiabatic_relation S1)": "3 f' H^2 = (R f' - f)/2 - 3 H d(f')/dt + rho",
+  "f used": "c0 + c1 R + c2 R^2 + c3 R^3 + c4 sin(c5 R) (generic)",
+  "[dL/dN - d/dt dL/dNdot]_(N=1) / (a^3 * (LHS - RHS of claim)); a constant means identical": "1"
+ },
+ "V1a_trace_check_dust": {
+  "trace residual after eliminating addot by the a-equation (should be proportional to the constraint)": "-(C - 3*K(q(t))*a(t)*Derivative(a(t), t)**2 + U(q(t))*a(t)**3 - 3*a(t)**2*Derivative(K(q(t)), q(t))*Derivative(a(t), t)*Derivative(q(t), t))/(3*a(t)**3)",
+  "residual / (3H^2K + 3HKdot - rho - U) (a pure number: trace eq. holds on the constraint surface)": "1/3"
+ },
+ "V1a_trace_check_radiation": {
+  "trace residual after eliminating addot by the a-equation (should be proportional to the constraint)": "-(C_r - 3*K(q(t))*a(t)**2*Derivative(a(t), t)**2 + U(q(t))*a(t)**4 - 3*a(t)**3*Derivative(K(q(t)), q(t))*Derivative(a(t), t)*Derivative(q(t), t))/(3*a(t)**4)",
+  "residual / (3H^2K + 3HKdot - rho - U) (a pure number: trace eq. holds on the constraint surface)": "1/3"
+ },
+ "V1a_q_theory_minisuperspace": {
+  "constraint: [dL/dN]/(a^3 (3H^2K + 3H Kdot - rho - U)) (constant = identical)": "1",
+  "q-equation K' R/2 = U'  (0 = identical)": "0"
+ },
+ "V1b_first_order_rhoDE": {
+  "rho_DE,eff - Lam (GR background, f2 = K/(3 m^2))": "-(16*Lambda*rho_r(t) - 9*rho_d(t)**2 - 8*rho_d(t)*rho_r(t))/(12*K*m**2)",
+  "equals [(9/4) rd^2 + 2 rd rr - 4 Lam rr]/(3 K m^2)": true
+ },
+ "V1b_identity_rhoDE_exact_in_F": "0",
+ "V1b_Omega_dyn_and_w": {
+  "Omega_dyn(t0)": "9*H_0**2*Omega_m**2/(4*m**2)",
+  "w_dyn (dust era)": "1",
+  "m needed for Omega_dyn = Omega_L": "[3*H_0*Omega_m/(2*sqrt(Omega_L))]",
+  "numeric m/H0 at Om = 0.315, OL = 0.685": [
+   0.5708953781970172
+  ]
+ },
+ "V1c_gravitating_rhoV": {
+  "rho_V(R) to O(R^2)": "K1**2*R**2/(8*e2)",
+  "equals K0 R^2/(12 m^2) (stage-1 rho_m^2/(12 K m^2) with R = rho/K)": true,
+  "rho_DE,eff/rho_V in the dust era (no Lam): [(9/4)/(3)] / (1/12)": "9"
+ },
+ "V1d_static_root_series": {
+  "rho_V,s(dmu) to O(dmu^2) (generic Taylor data up to E4, k3)": "dmu**2*(-1/(2*E2) + 2*k1**2*q0**2/(E2*k0**2)) - dmu*q0",
+  "linear coefficient = -q0": true,
+  "quadratic coefficient = -1/(2 eps'') + (4/3) q0^2/(K m^2)": true,
+  "c*(dmu) from P_q": "dmu*q0 + dmu**2/(2*E2)",
+  "agrees with stage-1 dc + (4/3) dc^2/(K m^2) to O(dmu^2)": true
+ },
+ "V1e_map": {
+  "f'(R) (after using the q-equation)": "Kf(qR(R))",
+  "f''(R) = K' dq_R/dR": "-Derivative(Kf(qR(R)), qR(R))**2/(R*Derivative(Kf(qR(R)), (qR(R), 2)) - 2*Derivative(epsilon(qR(R)), (qR(R), 2)))",
+  "scalaron m^2 at R = 0: f'/(3 f'') with f'' = K'^2/(2 eps'')": "2*K0*e2/(3*K1**2)",
+  "equals (2/3) K eps''/K'^2": true
+ },
+ "V1e_inverse_affine": {
+  "q-equation residual": "0",
+  "reconstructed f - f": "0",
+  "stationarity in q at fixed R (should be K'(q) (R - lam (q-q0)))": "lambda*(R_fix - lambda*q + lambda*q0)*Subs(Derivative(g(_xi_1), (_xi_1, 2)), _xi_1, lambda*q - lambda*q0)"
+ },
+ "V1e_P_q": {
+  "f(0)": "-2 (eps(q0) - mu q0) at eps'(q0) = mu",
+  "f'(0)": "K(q0)",
+  "f''(0)": "K'(q0)^2/(2 eps''(q0))",
+  "vacuum trace eq. R f' - 2 f at R = 0": "-2 f(0)",
+  "reading": "P_q (eps - mu q0 = 0, eps'' > 0, K > 0, K' != 0) <=> f(0) = 0, f'(0) > 0, f''(0) > 0 [D, confirmed]"
+ },
+ "V1f_threshold": {
+  "dmu0/dc": "1/q0",
+  "delta f at O(c), series to R^3": "K1*R*c*(K1**2*R**2*e3**2 - 3*K1*K2*R**2*e2*e3 - 2*K1*R*e2**2*e3 + 2*K2**2*R**2*e2**2 + 4*K2*R*e2**3 + 8*e2**4)/(8*e2**5*q0)",
+  "equals 2 c (q_R - q0)/q0 to R^3": true,
+  "linear K: q_R - q0 = (f'(R) - f'(0))/K1 => f_new = f(R + dR) - dR f'(0), dR = 2c/(q0 K1)": "follows algebraically"
+ },
+ "V1g_phiMDE": {
+  "R for a ~ t^1/2": "0",
+  "constraint residual (U = 0)": "0",
+  "trace residual": "0",
+  "reading": "omega_BD = 0 with dust and U = 0 (q-mode frozen, m << H): a ~ t^(1/2), K ~ t^(1/2) ~ a solves the system exactly (Nariai-type BD dust solution; APT07 phi-MDE)"
+ },
+ "V1h_displacement": {
+  "rho_V for dK": "3*dK**2*m_q**2/(4*K)",
+  "equals (3/4) m^2 K (dK/K)^2": true,
+  "dK/K for rho_V = 3 K H0^2 Omega_L": "2*H_0*sqrt(Omega_L)/m_q"
+ },
+ "V1h_QCD_trace_anomaly": {
+  "(eps - 3p)/(alpha_s^2 T^4)": "-5*n_f**2/54 + 47*n_f/36 + 11/3",
+  "n_f = 6": "49/6",
+  "bound code uses 2940/360": "49/6"
+ },
+ "V1i_AppleByBattye": {
+  "F'(R) - [1 + tanh(aR - b)]/2": "0",
+  "F'(0)": "1/(exp(2*b) + 1)",
+  "1/F'(0)": "exp(2*b) + 1"
+ }
+}

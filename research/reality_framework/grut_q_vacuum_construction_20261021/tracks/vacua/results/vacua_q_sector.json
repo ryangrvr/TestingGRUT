@@ -1,0 +1,182 @@
+{
+ "A_series": {
+  "Lam = x + a2 x^2 + a3 x^3, x = V_i - eps*(mu)": true,
+  "a2": "2*K1**2/(K0**2*e2)",
+  "a2_minus_4/(3 K0 mq^2)": "0",
+  "a3": "8*K1**2*(-K1*e3 + 3*K2*e2)/(3*K0**3*e2**3)",
+  "dq/dx (= q_i - q0 per unit x)": "2*K1/(K0*e2)",
+  "Delta Lam_ij": "(V_i - V_j) [1 + a2 (x_i + x_j) + O(x^2)]"
+ },
+ "A_exact_slope": {
+  "dLam/dV": "(2*Lam*K(q)*Derivative(K(q), (q, 2)) - 2*Lam*Derivative(K(q), q)**2 - K(q)**2*Derivative(eps(q), (q, 2)))/(2*Lam*K(q)*Derivative(K(q), (q, 2)) + 2*Lam*Derivative(K(q), q)**2 - K(q)**2*Derivative(eps(q), (q, 2)))",
+  "reading": "= 1/(1 - 4 K'^2 Lam/(K^2 D)), D = eps'' - 2 Lam (K K'' - K'^2)/K^2: equals 1 at Lam = 0 and stays positive for Lam < K^2 D/(4 K'^2) ~ (3/8) K m_q^2"
+ },
+ "A_numeric_KV_eps": {
+  "eps": "(1/2)(-q^2 + q^4/3), q0 = 1, eps''(q0) = 1, K = 1 + K'(q-1)",
+  "rows": [
+   {
+    "Kprime": 0.0,
+    "x": -0.001,
+    "Lam_exact": -0.001,
+    "Lam_series2": -0.001,
+    "q_s - q0": 0.0,
+    "rel_dev_from_x": -0.0
+   },
+   {
+    "Kprime": 0.0,
+    "x": 0.001,
+    "Lam_exact": 0.001,
+    "Lam_series2": 0.001,
+    "q_s - q0": 0.0,
+    "rel_dev_from_x": 0.0
+   },
+   {
+    "Kprime": 0.0,
+    "x": 0.01,
+    "Lam_exact": 0.01,
+    "Lam_series2": 0.01,
+    "q_s - q0": 0.0,
+    "rel_dev_from_x": 0.0
+   },
+   {
+    "Kprime": 0.0,
+    "x": 0.05,
+    "Lam_exact": 0.05,
+    "Lam_series2": 0.05,
+    "q_s - q0": 0.0,
+    "rel_dev_from_x": 0.0
+   },
+   {
+    "Kprime": 0.3,
+    "x": -0.001,
+    "Lam_exact": -0.0009998197113110887,
+    "Lam_series2": -0.00099982,
+    "q_s - q0": -0.0006007215448858849,
+    "rel_dev_from_x": -0.00018028868891133316
+   },
+   {
+    "Kprime": 0.3,
+    "x": 0.001,
+    "Lam_exact": 0.0010001797126851257,
+    "Lam_series2": 0.00100018,
+    "q_s - q0": 0.000599281536738161,
+    "rel_dev_from_x": 0.0001797126851256492
+   },
+   {
+    "Kprime": 0.3,
+    "x": 0.01,
+    "Lam_exact": 0.010017718681929192,
+    "Lam_series2": 0.010018,
+    "q_s - q0": 0.005929501228209455,
+    "rel_dev_from_x": 0.0017718681929191835
+   },
+   {
+    "Kprime": 0.3,
+    "x": 0.05,
+    "Lam_exact": 0.05041777056162557,
+    "Lam_series2": 0.05045,
+    "q_s - q0": 0.028370387363216842,
+    "rel_dev_from_x": 0.008355411232511406
+   },
+   {
+    "Kprime": 1.0,
+    "x": -0.001,
+    "Lam_exact": -0.0009979892553432317,
+    "Lam_series2": -0.000998,
+    "q_s - q0": -0.002008053769253504,
+    "rel_dev_from_x": -0.0020107446567683117
+   },
+   {
+    "Kprime": 1.0,
+    "x": 0.001,
+    "Lam_exact": 0.0010019894100220031,
+    "Lam_series2": 0.001002,
+    "q_s - q0": 0.0019920529051793423,
+    "rel_dev_from_x": 0.001989410022003096
+   },
+   {
+    "Kprime": 1.0,
+    "x": 0.01,
+    "Lam_exact": 0.010190047045983397,
+    "Lam_series2": 0.0102,
+    "q_s - q0": 0.019249367749285984,
+    "rel_dev_from_x": 0.01900470459833964
+   },
+   {
+    "Kprime": 1.0,
+    "x": 0.05,
+    "Lam_exact": 0.0540097709892485,
+    "Lam_series2": 0.05500000000000001,
+    "q_s - q0": 0.08479095241077661,
+    "rel_dev_from_x": 0.08019541978496997
+   }
+  ]
+ },
+ "B_q_coupled": {
+  "coupling": "S_m contains -int sqrt(-g) theta(phi) q  (= -int theta(phi) F~, metric independent)",
+  "Lam_i": "V_i - eps*(mu - theta_i)",
+  "sympy_check_quadratic_eps (should be 0)": "0",
+  "q_i": "(e2*q_c + mu - theta)/e2",
+  "Delta Lam_ij first order": "(V_i - V_j) - q_mu (theta_j - theta_i) ... = (V_i - V_j) + q_mu (theta_i - theta_j)"
+ },
+ "C_coexistence_no_coupling": {
+  "P_i - P_j": "-V_i + V_j",
+  "verdict": "independent of mu: equal pressure (coexistence) iff V_i = V_j"
+ },
+ "C_coexistence_with_coupling": {
+  "mu_c": [
+   "(-V_i*e2 + V_j*e2 - e2*q_c*theta + e2*q_c*theta_j + theta**2/2 - theta_j**2/2)/(theta - theta_j)"
+  ],
+  "P at mu_c": [
+   "(-V_i*e2*(theta - theta_j)**2 - e2*q_c*(theta - theta_j)*(2*V_i*e2 - 2*V_j*e2 + 2*e2*q_c*theta - 2*e2*q_c*theta_j - theta**2 + 2*theta*(theta - theta_j) + theta_j**2)/2 + (2*V_i*e2 - 2*V_j*e2 + 2*e2*q_c*theta - 2*e2*q_c*theta_j - theta**2 + 2*theta*(theta - theta_j) + theta_j**2)**2/8)/(e2*(theta - theta_j)**2)"
+  ],
+  "verdict": "a coexistence value mu_c exists for any V_i, V_j if theta_i != theta_j; requiring also P(mu_c) = 0 is one further relation among (V_i, V_j, theta_i, theta_j, eps data)"
+ },
+ "C_multi_form": "k 4-forms, matter vacua without q coupling: P_i(mu_a) = eps*(mu_a) - V_i, Jacobian rows dP_i/dmu_a = q_a identical for all i (rank 1) -> at most one non-degenerate vacuum at P = 0; Volovik's nu <= k needs the phases to differ in their charge densities, i.e. q-coupled matter",
+ "D_linear_wall": {
+  "equation": "dK'' - m_q^2 dK = T/3 = -rho_w(z) (static planar wall, T = -3 rho_w)",
+  "rows": [
+   {
+    "m_w": 0.01,
+    "kink_jump_dKprime_at_+-zo": -0.9648672922164891,
+    "jump_times_exp(m zo) [thin walls only]": -0.9942518759279342,
+    "expected_thin(-sigma)": -1.0,
+    "zo": 0.03,
+    "max_rel_dev_from_local_tracking_rho/m^2": 0.9900675498335741
+   },
+   {
+    "m_w": 0.1,
+    "kink_jump_dKprime_at_+-zo": -0.738915195433933,
+    "jump_times_exp(m zo) [thin walls only]": -0.9974311846082382,
+    "expected_thin(-sigma)": -1.0,
+    "zo": 0.30000000000000004,
+    "max_rel_dev_from_local_tracking_rho/m^2": 0.9065403173437367
+   },
+   {
+    "m_w": 1.0,
+    "kink_jump_dKprime_at_+-zo": -0.07160857948550525,
+    "jump_times_exp(m zo) [thin walls only]": null,
+    "expected_thin(-sigma)": -1.0,
+    "zo": 3.0,
+    "max_rel_dev_from_local_tracking_rho/m^2": 0.42920233987030876
+   },
+   {
+    "m_w": 10.0,
+    "kink_jump_dKprime_at_+-zo": -0.0002042673151457933,
+    "jump_times_exp(m zo) [thin walls only]": null,
+    "expected_thin(-sigma)": -1.0,
+    "zo": 30.0,
+    "max_rel_dev_from_local_tracking_rho/m^2": 0.01848194734707903
+   },
+   {
+    "m_w": 30.0,
+    "kink_jump_dKprime_at_+-zo": -2.1936964282506235e-05,
+    "jump_times_exp(m zo) [thin walls only]": null,
+    "expected_thin(-sigma)": -1.0,
+    "zo": 90.0,
+    "max_rel_dev_from_local_tracking_rho/m^2": 0.0011877068863155003
+   }
+  ],
+  "reading": "m_q w << 1: K continuous with kink [dK'] = -sigma (thin-wall junction); m_q w >> 1: q tracks the local quasi-static value, deviation O(1/(m_q w)^2)"
+ }
+}

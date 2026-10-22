@@ -1,0 +1,343 @@
+{
+ "inputs": {
+  "M": 2.435e+18,
+  "rho_Lambda": 2.52e-47,
+  "gamma": 0.0031662869888230555,
+  "H0_GeV": 1.437722654338872e-42,
+  "t0_GeVinv": 6.610099173055603e+41,
+  "T_CMB_GeV": 2.3486541805581e-13,
+  "Delta_EW": 118880914.16162813,
+  "Delta_QCD": 0.00044,
+  "z_eq": 3400.0
+ },
+ "rows": [
+  {
+   "quantity": "N_Lambda = 9M^4/(4 gamma rho_L) [e-folds]",
+   "verifier": 9.913512607512736e+122,
+   "track": 9.9e+122,
+   "rel_diff": 0.0013649098497712285,
+   "note": ""
+  },
+  {
+   "quantity": "N_std (T=M -> T_CMB, entropy conserved)",
+   "verifier": 72.51864485279981,
+   "track": 72.5,
+   "rel_diff": 0.00025717038344564886,
+   "note": ""
+  },
+  {
+   "quantity": "floor 9M^4/(4 gamma N_std) [GeV^4]",
+   "verifier": 3.444914314331341e+74,
+   "track": 3.4e+74,
+   "rel_diff": 0.013210092450394463,
+   "note": ""
+  },
+  {
+   "quantity": "floor / M^4",
+   "verifier": 9.799018146586317,
+   "track": 9.8,
+   "rel_diff": -0.00010018912384531264,
+   "note": ""
+  },
+  {
+   "quantity": "floor / rho_L",
+   "verifier": 1.3670294898140242e+121,
+   "track": 1.4e+121,
+   "rel_diff": -0.023550364418554178,
+   "note": ""
+  },
+  {
+   "quantity": "relative drain after BBN, N = 72.5 (track bound)",
+   "verifier": 1.0266171872580067e-86,
+   "track": 1e-86,
+   "rel_diff": 0.02661718725800663,
+   "note": ""
+  },
+  {
+   "quantity": "relative drain after BBN, N = ln(a0/a_BBN)",
+   "verifier": 3.1865389361157522e-87,
+   "track": 1e-86,
+   "rel_diff": -0.6813461063884249,
+   "note": "tighter span; bound holds"
+  },
+  {
+   "quantity": "attractor rho_V(t0) [GeV^4]",
+   "verifier": 2.2434977673364317e+35,
+   "track": 2.24e+35,
+   "rel_diff": 0.001561503275192688,
+   "note": ""
+  },
+  {
+   "quantity": "attractor rho_V(t0)/rho_L",
+   "verifier": 8.902768918001714e+81,
+   "track": 8.9e+81,
+   "rel_diff": 0.0003111143822150428,
+   "note": ""
+  },
+  {
+   "quantity": "attractor H(t0) [GeV]",
+   "verifier": 0.11230606947409864,
+   "track": 0.112,
+   "rel_diff": 0.002732763161595012,
+   "note": ""
+  },
+  {
+   "quantity": "attractor H(t0)/H0",
+   "verifier": 7.811386231911461e+40,
+   "track": 7.8e+40,
+   "rel_diff": 0.0014597733219821267,
+   "note": ""
+  },
+  {
+   "quantity": "attractor H(t0) t0",
+   "verifier": 7.423542569598646e+40,
+   "track": 7.4e+40,
+   "rel_diff": 0.0031814283241413045,
+   "note": ""
+  },
+  {
+   "quantity": "attractor e-folds N(t0)",
+   "verifier": 1.1135313854397882e+41,
+   "track": 1.1e+41,
+   "rel_diff": 0.01230125949071663,
+   "note": ""
+  },
+  {
+   "quantity": "attractor Omega_M = 1/(4N)",
+   "verifier": 2.2451095969896055e-42,
+   "track": 2.2e-42,
+   "rel_diff": 0.020504362268002466,
+   "note": ""
+  },
+  {
+   "quantity": "attractor age when H = H0, in 1/H0",
+   "verifier": 4.529679007349475e+122,
+   "track": 4.5e+122,
+   "rel_diff": 0.00659533496655003,
+   "note": ""
+  },
+  {
+   "quantity": "attractor age when H = H0 [Gyr]",
+   "verifier": 6.571342621162887e+123,
+   "track": 6.6e+123,
+   "rel_diff": -0.0043420270965322146,
+   "note": ""
+  },
+  {
+   "quantity": "observed H0 t0 (data)",
+   "verifier": 0.9503489328528684,
+   "track": 0.95,
+   "rel_diff": 0.0003672977398614853,
+   "note": ""
+  },
+  {
+   "quantity": "flat LCDM H0 t0 integral",
+   "verifier": 0.9505839690377134,
+   "track": 0.951,
+   "rel_diff": -0.000437466837315032,
+   "note": ""
+  },
+  {
+   "quantity": "Delta_EW = mH^2 v^2/8 [GeV^4]",
+   "verifier": 118880914.16162813,
+   "track": 119000000.0,
+   "rel_diff": -0.0010007213308560747,
+   "note": ""
+  },
+  {
+   "quantity": "N_end (rho_V,end = D_EW + D_QCD + rho_L)",
+   "verifier": 2.1014350324455383e+68,
+   "track": 2.1e+68,
+   "rel_diff": 0.0006833487835896544,
+   "note": ""
+  },
+  {
+   "quantity": "fractional tuning rho_L/(D_EW + D_QCD)",
+   "verifier": 2.119768356226241e-55,
+   "track": 2.1e-55,
+   "rel_diff": 0.00941350296487661,
+   "note": ""
+  },
+  {
+   "quantity": "H at N_end [GeV]",
+   "verifier": 2.585213856939291e-15,
+   "track": 2.6e-15,
+   "rel_diff": -0.005686978100272773,
+   "note": ""
+  },
+  {
+   "quantity": "radiation fraction 1/(4 N_end)",
+   "verifier": 1.189663235551295e-69,
+   "track": 1.2e-69,
+   "rel_diff": -0.008613970373920815,
+   "note": ""
+  },
+  {
+   "quantity": "radiation density at N_end [GeV^4]",
+   "verifier": 1.4142825298734176e-61,
+   "track": 1.4e-61,
+   "rel_diff": 0.01020180705244111,
+   "note": ""
+  },
+  {
+   "quantity": "rho_r(160 GeV), g*=106.75 [GeV^4]",
+   "verifier": 23015812187.560104,
+   "track": 23000000000.0,
+   "rel_diff": 0.0006874864156567117,
+   "note": ""
+  },
+  {
+   "quantity": "inflaton drain V^1/4=1e16, 60 e-folds [GeV^4]",
+   "verifier": -2.4017242678927237e+53,
+   "track": -2.4e+53,
+   "rel_diff": 0.000718444955301556,
+   "note": ""
+  },
+  {
+   "quantity": "inflaton drain / rho_L",
+   "verifier": -9.530651856717158e+99,
+   "track": -9.5e+99,
+   "rel_diff": 0.003226511233385191,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1e+16, kappa=0.001, /rho_L",
+   "verifier": 1.5305733043911285e+93,
+   "track": 1.5e+93,
+   "rel_diff": 0.020382202927419088,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1e+16, kappa=0.01, /rho_L",
+   "verifier": 1.5305733043911285e+95,
+   "track": 1.5e+95,
+   "rel_diff": 0.020382202927419,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1e+09, kappa=0.001, /rho_L",
+   "verifier": 1.530573304391128e+37,
+   "track": 1.5e+37,
+   "rel_diff": 0.02038220292741867,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1e+09, kappa=0.01, /rho_L",
+   "verifier": 1.530573304391128e+39,
+   "track": 1.5e+39,
+   "rel_diff": 0.020382202927418724,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1000, kappa=0.001, /rho_L",
+   "verifier": 1.5305733043911282e-11,
+   "track": 1.5e-11,
+   "rel_diff": 0.020382202927418835,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=1000, kappa=0.01, /rho_L",
+   "verifier": 1.5305733043911284e-09,
+   "track": 1.5e-09,
+   "rel_diff": 0.020382202927418967,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=160, kappa=0.001, /rho_L",
+   "verifier": 6.573762286490548e-18,
+   "track": 6.6e-18,
+   "rel_diff": -0.003975411137795861,
+   "note": ""
+  },
+  {
+   "quantity": "trace drain T_RH=160, kappa=0.01, /rho_L",
+   "verifier": 6.573762286490548e-16,
+   "track": 6.6e-16,
+   "rel_diff": -0.00397541113779568,
+   "note": ""
+  },
+  {
+   "quantity": "QCD epoch trace drain (kappa=0.3, T=0.2 GeV, g*=61.75) / rho_L",
+   "verifier": 1.1799803238123757e-36,
+   "track": 1.2e-36,
+   "rel_diff": -0.016683063489686893,
+   "note": ""
+  },
+  {
+   "quantity": "QCD epoch with g*=17.25 / rho_L",
+   "verifier": 9.208291107329605e-38,
+   "track": 1.2e-36,
+   "rel_diff": -0.9232642407722533,
+   "note": "g* choice: order of magnitude only"
+  },
+  {
+   "quantity": "matter era from equality, H_1 = H_eq(total) / rho_L",
+   "verifier": 1.3739149471705343e-104,
+   "track": 1.4e-104,
+   "rel_diff": -0.018632180592475508,
+   "note": ""
+  },
+  {
+   "quantity": "matter era from equality, exact rho_m trace / rho_L",
+   "verifier": 3.4358021857020238e-105,
+   "track": 1.4e-104,
+   "rel_diff": -0.7545855581641412,
+   "note": "track bound is 4x high (uses total H_eq)"
+  },
+  {
+   "quantity": "H(1.26 TeV)^4 / rho_L (g*=106.75)",
+   "verifier": 0.9826937575358019,
+   "track": 0.98,
+   "rel_diff": 0.002748732179389716,
+   "note": ""
+  },
+  {
+   "quantity": "injection per e-fold today / rho_gamma",
+   "verifier": 1.5781922250135546e-119,
+   "track": 1.6e-119,
+   "rel_diff": -0.013629859366528357,
+   "note": ""
+  },
+  {
+   "quantity": "w+1 today = drain/(3 rho_V)",
+   "verifier": 4.179486160787254e-124,
+   "track": 4e-124,
+   "rel_diff": 0.04487154019681358,
+   "note": ""
+  },
+  {
+   "quantity": "injection per e-fold at z=2e6 / rho_gamma",
+   "verifier": 6.704825736478991e-109,
+   "track": 6.7e-109,
+   "rel_diff": 0.0007202591759687577,
+   "note": ""
+  },
+  {
+   "quantity": "graviton fraction per e-fold T=0.001, kappa=0.01",
+   "verifier": 8.847872755188168e-94,
+   "track": 8.8e-94,
+   "rel_diff": 0.005440085816837297,
+   "note": ""
+  },
+  {
+   "quantity": "graviton fraction per e-fold T=1e+16, kappa=0.01",
+   "verifier": 8.786143410384531e-17,
+   "track": 8.8e-17,
+   "rel_diff": -0.0015746124563033041,
+   "note": ""
+  },
+  {
+   "quantity": "e+- trace fraction at T=1 MeV (estimate)",
+   "verifier": 0.006152811347411831,
+   "track": 0.01,
+   "rel_diff": -0.3847188652588169,
+   "note": "[E] the track used 1e-2; physical ~6e-3 (and m/T=0.5 is not << 1)"
+  }
+ ],
+ "rows_differing_by_more_than_6pct": [
+  "relative drain after BBN, N = ln(a0/a_BBN)",
+  "QCD epoch with g*=17.25 / rho_L",
+  "matter era from equality, exact rho_m trace / rho_L",
+  "e+- trace fraction at T=1 MeV (estimate)"
+ ]
+}
