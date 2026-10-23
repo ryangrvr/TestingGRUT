@@ -5975,3 +5975,39 @@ Formation energy cannot be inherited from the small portal-production nuclear te
 Confirmed the neutral tree wall tension .0942809 GeV^3, or sigma^(1/3)=455.136 MeV. Caloni et al. 2602.20050v1 gives a .81 MeV 95%-credible bound for its specified stable-network model, a reference tension ratio 1.77e8. This excludes the ordinary surviving-network outcome under its cosmological assumptions, not every hot history. The even portal adds no explicit Z2 bias; restoration, memory erasure, phase population, early decay and occupied-wall dynamics are not inferred from the tension alone. Prior finite-box wall work was read, not rerun, and no subdominant CMB template is extrapolated into a new significance.
 
 Verification actually run: direct kink energy and Yukawa trace quadratures; twelve independently organized 6x6 full linear matrix controls (growth agreement within 2.74e-11); a separate full linear Radau evolution for five growth e-folds (4.93e-12); dense-grid physical peak and thermodynamic sound-speed convergence; charge/energy accounting across twelve supplied cases. Fresh isolated replay reproduces all 522 scientific numeric leaves and two raw CSV arrays. Manifest pins 15 packet files plus two consumed parent inputs; MANIFEST itself is additional. Syntax, finite values, local links, hashes, whitespace and rendered figure checked. One author, no subagents or new installs. Formation radiation and final mass distribution are the next prerequisites; vacuum density remains a separate calibrated input. Claim released; standing authorization covers additive publication and issue #13 coordination.
+
+
+### 2026-10-22 · Codex / AInstein · 3D fragmentation onset and delayed debris transport
+
+Following the owner's relayed Claude hand review, published the additive
+`research/reality_framework/grut_fragmentation_transport_20261022/` packet.
+The model is explicitly a conventional asymmetric scalar-composite / Q-ball-like
+Higgs-portal hypothesis, of the Friedberg--Lee--Sirlin type, not a new GRUT
+principle. Earlier science packets and canonical GRUT-RAI are unchanged.
+
+**Actually executed:** five 3D NR onset runs (64^3/96^3/128^3, shared seed;
+96^3 half-time-step and second-seed controls), 48 conditional redshift/decay
+kernels, threshold and finite-momentum tree scattering, and an irreversible
+DD-only channel diagnostic. **197/197 same-author checks passed**, including
+analytic growing modes, grid/time refinement, charge/energy accounting, a
+radiation-era closed form and an alternative channel ODE. JSON/AST/manifest
+checks passed; Matplotlib figure generated and visually inspected. No claim
+of independent replication or new experiment is made.
+
+**Deciding results:** nonlinear clumps develop, then all grids reach the
+specified spectral stop before full-field cores or a final dN/dQ. No target
+Q=39944 is imposed. Fixed primordial charge would give only 61.7% of the old
+all-DM normalization in the relaxed bulk limit. The old reference binding
+budget, if entirely in slow freely surviving s, produces nominal heat proxy
+.03177 against the named historical FIRAS 6e-5 screen; early formation alone
+does not cure late scalar decay. No massless hidden free receiver exists.
+ss->DD is allowed, but a 20 MeV cold DD-only diagnostic leaves 36.2% scalars;
+ss->XX* cancels only at threshold and matters at finite momentum. No full
+reaction network, emission spectrum, BBN nuclear rerun or new detector
+forecast is claimed. The observed vacuum density is still underived.
+
+**Next deciding calculation:** conserve charge/energy through a dilute-to-
+full-field core handoff, measure final charges and time/momentum emission,
+then evolve those actual products through reactions and deposition without
+retuning the initial charge. Formation/lattice and thermalization methods
+are credited with exact read scope in SOURCES.md.
