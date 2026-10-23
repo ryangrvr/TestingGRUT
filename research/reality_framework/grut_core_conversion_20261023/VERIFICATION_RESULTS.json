@@ -1,0 +1,180 @@
+{
+  "scope": "Same-author controls; pass counts are not empirical or external scientific validation.",
+  "checks": [
+    {
+      "name": "Fresh replay of all 13 parent implementation controls",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "Full real action derivative matches coupled perturbation equations",
+      "passed": true,
+      "evidence": 3.783163156914283e-10
+    },
+    {
+      "name": "Nodal fourth-order force matches a finite variation of its Hamiltonian",
+      "passed": true,
+      "evidence": 7.148682781101784e-06
+    },
+    {
+      "name": "Two- and three-open-channel flux unitarity and reciprocity",
+      "passed": true,
+      "evidence": {
+        "unitarity": 5.31344442808914e-07,
+        "reciprocity": 5.383913162998105e-07
+      }
+    },
+    {
+      "name": "Zero-potential partial waves return the identity scattering matrix",
+      "passed": true,
+      "evidence": 5.940675613157036e-08
+    },
+    {
+      "name": "Regular-origin and factored-origin BVPs independently agree on conversion",
+      "passed": true,
+      "evidence": [
+        1.8479622276856844e-09,
+        9.291864166982577e-09,
+        3.344631926971431e-08
+      ]
+    },
+    {
+      "name": "Absorptive flux loss agrees with the first-order radial optical integral",
+      "passed": true,
+      "evidence": [
+        {
+          "epsilon": 0.0001,
+          "measured_loss": 0.0009128183568317683,
+          "first_order": 0.0009132510443131674,
+          "relative_error": -0.00047378810469855814
+        },
+        {
+          "epsilon": 1e-05,
+          "measured_loss": 9.132078311646641e-05,
+          "first_order": 9.132510443131674e-05,
+          "relative_error": -4.731792947010316e-05
+        }
+      ]
+    },
+    {
+      "name": "Nonlocal visible kernel has the Fourier-Bessel Parseval normalization",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "Visible spectral integral converges in radial and momentum quadrature",
+      "passed": true,
+      "evidence": [
+        7.896790117383616e-35,
+        7.896790122992566e-35,
+        7.896790123129838e-35
+      ]
+    },
+    {
+      "name": "Rate table angular tails and every production partial-wave flux are controlled",
+      "passed": true,
+      "evidence": {
+        "tail": 1.8489475379503203e-08,
+        "flux": 8.550097629900222e-09
+      }
+    },
+    {
+      "name": "Kinetic energy invalidates a particle-antiparticle inference from mQ/E alone",
+      "passed": true,
+      "evidence": {
+        "mQ_over_E": 0.9878867019201812,
+        "antiparticles": 0.0
+      }
+    },
+    {
+      "name": "Transport consumes one rate table and conserves number, charge and energy with expansion work",
+      "passed": true,
+      "evidence": {
+        "rate_tables": 1,
+        "number": 8.559819519859957e-14,
+        "energy": 6.88934910791996e-14
+      }
+    },
+    {
+      "name": "Inverse conversion is included and produces nonzero events",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "All new collapse runs conserve charge plus their numerical receiver",
+      "passed": true,
+      "evidence": 5.611666686888839e-11
+    },
+    {
+      "name": "All 18 raw traces reconstruct their recorded lossless hashes and final times",
+      "passed": true,
+      "evidence": {
+        "runs": 18,
+        "matched": 18
+      }
+    },
+    {
+      "name": "Finite-time prototype charge agrees within one percent across fine grids and boundary controls",
+      "passed": true,
+      "evidence": {
+        "grid_spread": 0.0006934001981592867,
+        "max_control": 0.0023113296312262666
+      }
+    },
+    {
+      "name": "All three fine nodal grids resolve the core radius with at least ten points",
+      "passed": true,
+      "evidence": [
+        133.08090903447786,
+        67.16932925808702,
+        32.82650862797145
+      ]
+    },
+    {
+      "name": "Every masked exterior projection preserves its measured canonical charge",
+      "passed": true,
+      "evidence": 5.055441769809663e-14
+    }
+  ],
+  "passed": 18,
+  "total": 18,
+  "physical_gates": [
+    {
+      "name": "Observed Richardson order certifies continuum extrapolation",
+      "passed": false
+    },
+    {
+      "name": "Final primordial-density three-dimensional object/source population",
+      "passed": false
+    },
+    {
+      "name": "Complete asymptotic source including soft and absorbed fields",
+      "passed": false
+    },
+    {
+      "name": "Nonlinear hot-core capture, quantum lifetime, full visible deposition and structure test",
+      "passed": false
+    },
+    {
+      "name": "Independent Claude Code / GRUT-RAI scientific certification",
+      "passed": false
+    }
+  ],
+  "optical_normalization_control": {
+    "local_absorption": [
+      {
+        "epsilon": 0.0001,
+        "measured_loss": 0.0009128183568317683,
+        "first_order": 0.0009132510443131674,
+        "relative_error": -0.00047378810469855814
+      },
+      {
+        "epsilon": 1e-05,
+        "measured_loss": 9.132078311646641e-05,
+        "first_order": 9.132510443131674e-05,
+        "relative_error": -4.731792947010316e-05
+      }
+    ],
+    "fourier_bessel_parseval_relative": 0.0
+  }
+}
