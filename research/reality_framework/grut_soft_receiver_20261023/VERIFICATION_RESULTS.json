@@ -1,0 +1,45 @@
+{
+  "scope": "Author numerical controls. The receiver/source gate is separate and fails.",
+  "numerical_controls": [
+    {
+      "name": "Independent zero-damping and constant-slab analytic solutions",
+      "passed": true,
+      "evidence": 2.5928882608553856e-10
+    },
+    {
+      "name": "Independent boundary-value grids converge to the layer ODE",
+      "passed": true,
+      "evidence": {
+        "max_finest_complex_amplitude_error": 4.081719441184815e-05,
+        "minimum_observed_order": 1.9884994984437363
+      }
+    },
+    {
+      "name": "Positive flux loss, passivity and ODE tolerance control",
+      "passed": true,
+      "evidence": {
+        "max_flux_error": 1.5559553645516644e-11,
+        "max_tolerance_shift": 1.2464543286405672e-12
+      }
+    },
+    {
+      "name": "Measured signed currents agree with time/Fourier Parseval accounting",
+      "passed": true,
+      "evidence": 3.9094012458455995e-15
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "raw_validation": {
+    "performed": true,
+    "trace_count": 6,
+    "two_probe_fields_checked": true
+  },
+  "original_receiver_one_percent_gate_passed": false,
+  "complete_asymptotic_particle_source_certified": false,
+  "warnings": [
+    "Continuum linear boundary benchmark is not a full discrete nonlinear formation calculation.",
+    "Conditional pair estimates are not a certified antiparticle abundance.",
+    "The matched-layer formula is an analytic design reference; no time-domain PML is implemented."
+  ]
+}
