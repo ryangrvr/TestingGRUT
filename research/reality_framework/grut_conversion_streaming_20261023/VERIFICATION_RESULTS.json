@@ -1,0 +1,89 @@
+{
+  "scope": "Same-author verification of a conditional imposed-source transport calculation, not independent review or an observational likelihood.",
+  "checks": [
+    {
+      "name": "Collisionless quadrature agrees with independent radiation-era closed form",
+      "passed": true,
+      "evidence": [
+        0.0,
+        4.440892098500626e-16,
+        0.0
+      ]
+    },
+    {
+      "name": "Comoving-momentum receiver preserves extremely cold momentum without subtracting rest energy",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "All production runs conserve number, charge and energy including core exchange and expansion",
+      "passed": true,
+      "evidence": {
+        "number": 1.0436096431476471e-14,
+        "charge": 9.769962616701378e-14,
+        "energy": 2.882648705682299e-14
+      }
+    },
+    {
+      "name": "Receiver horizon is stable across all three grid/time/source-bin refinements",
+      "passed": true,
+      "evidence": {
+        "T20MeV": 0.0006524464670734087,
+        "T1keV": 3.057587110810722e-05,
+        "z1e6": 1.1398485271207903e-06
+      }
+    },
+    {
+      "name": "Every production run uses the same pinned ground-object rate table",
+      "passed": true,
+      "evidence": 1
+    },
+    {
+      "name": "Independent first-event optical-depth quadrature converges from order 32 to 64",
+      "passed": true,
+      "evidence": 1.2212453270876722e-15
+    },
+    {
+      "name": "Conversion energy and charge use the chemical potential, with consistent daughter mass accounting",
+      "passed": true,
+      "evidence": {
+        "m_X_GeV": 0.09240896373753621,
+        "omega_over_m": 0.8611951308217225,
+        "E_over_Qm": 0.9233161353942826,
+        "initial_anti_fraction_of_calibrated_matter": 0.031751303088508424,
+        "complete_net_conversion_core_charge_fraction": 0.06260901427479398,
+        "complete_net_conversion_core_energy_GeV": 996.5119882534575,
+        "released_energy_fraction_of_original_calibrated_rest_matter": 0.05468813523413636,
+        "remaining_rest_matter_ratio_without_retuning": 0.9453118647658637,
+        "final_converted_X_fraction_of_remaining_rest_matter": 0.03358817790399007,
+        "final_all_free_X_fraction_of_remaining_rest_matter": 0.06717635580798013,
+        "cold_ejected_K_over_m": 1.722390261643445,
+        "cold_ejected_p_over_m": 2.532075973720193,
+        "initial_daughter_ejected_K_over_m": 1.947135133035034,
+        "initial_daughter_ejected_p_over_m": 2.772292461550445,
+        "pairs_per_reference_object": 6260.901427479398,
+        "reference_object_mass_GeV": 17064.537454786467,
+        "reference_late_total_mass_GeV": 18221.721841256607
+      }
+    },
+    {
+      "name": "Rejected active-grid path estimator is fenced from physical conclusions",
+      "passed": true,
+      "evidence": -0.0810095777294747
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "rejected_diagnostic": {
+    "control": "Zero reactions must reproduce the independent collisionless horizon for both initial particles.",
+    "active_grid_path_relative_error": -0.0810095777294747,
+    "passed": false,
+    "consequence": "Do not use active-grid path moments as a certified free-streaming result. Released conclusions use the separate comoving-momentum receiver, analytic quadrature and the causal prefix bound."
+  },
+  "open_gates": [
+    "Actual formation spectrum and cosmological production history",
+    "Evolving object profiles and additional interactions",
+    "Elastic-angle transport and a mixed-species perturbation calculation",
+    "Lyman-alpha/BBN likelihood and independent replication"
+  ]
+}
