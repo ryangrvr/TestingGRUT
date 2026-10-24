@@ -1,0 +1,126 @@
+{
+  "scope": "Author numerical controls of a causal exterior and finite-time prepared core; not independent replication, an asymptotic particle source or a completed cosmology.",
+  "checks": [
+    {
+      "name": "Actual discrete massive-wave layer meets sampled reflection target with exact lattice leads",
+      "passed": true,
+      "evidence": {
+        "max_reflected_energy": 0.000651607572135075,
+        "zero_layer_amplitude_error": 1.0793795603395534e-10
+      }
+    },
+    {
+      "name": "Actual executable has the Hamiltonian gradient and energy/charge boundary-work identities",
+      "passed": true,
+      "evidence": {
+        "gradient_energy_identity_relative_error": 1.1102230246251565e-15,
+        "instantaneous_energy_plus_receiver_residual_over_E": 7.707858453599577e-10,
+        "instantaneous_charge_plus_receiver_residual_over_Q": 4.820150127560446e-11
+      }
+    },
+    {
+      "name": "Representative complete finite-grid linear spectra have no growing RK4 modes",
+      "passed": true,
+      "evidence": {
+        "max_real_eigenvalue": -9.879790235145514e-05,
+        "max_step_amplification": 0.9999984541257867
+      }
+    },
+    {
+      "name": "Time-domain packets match independent free propagation, including the 60000-unit soft case",
+      "passed": true,
+      "evidence": {
+        "max_full_physical_energy_error_fraction": 6.884010017030263e-06,
+        "max_same_RK4_error_plus_reference_tail": 2.5984256081319958e-12
+      }
+    },
+    {
+      "name": "Refined formation runs close physical-field plus signed boundary ledgers",
+      "passed": true,
+      "evidence": {
+        "max_energy_error": 8.911395446009607e-07,
+        "max_charge_error": 9.002738610153216e-08
+      }
+    },
+    {
+      "name": "Three spatial grids agree on the declared finite-time retained charge to one percent",
+      "passed": true,
+      "evidence": {
+        "h": [
+          0.25,
+          0.125,
+          0.0625
+        ],
+        "retained_fractions": [
+          0.35187665010278707,
+          0.353565086014028,
+          0.3536311021432161
+        ],
+        "relative_spread": 0.004985985969562012,
+        "Richardson_certified": false
+      }
+    },
+    {
+      "name": "Moving the layer from radius 360 to 720 preserves the controlled finite-time interior",
+      "passed": true,
+      "evidence": {
+        "names": [
+          "P025_time",
+          "P025_remote_time"
+        ],
+        "same_h": 0.25,
+        "same_dt": 0.015625,
+        "same_end_time": 12000.0,
+        "core_charge_relative_shift": 4.14406692517133e-07,
+        "raw_complex_field_L2_squared_relative_difference_inside_300": 1.2498808907250368e-07,
+        "explicitly_global_phase_aligned_L2_squared_relative_difference_inside_300": 2.6471590547931742e-08,
+        "global_phase_alignment_radians": 0.0003138734946060409
+      }
+    },
+    {
+      "name": "Exact extraction cut closes energy/charge without altering field dynamics",
+      "passed": true,
+      "evidence": {
+        "cut_errors": {
+          "energy": 3.2991896115053265e-07,
+          "charge": 6.281386344397788e-08
+        },
+        "bitwise_identities": {
+          "trace": true,
+          "final": true,
+          "memory": true
+        }
+      }
+    },
+    {
+      "name": "Classical-current Fourier accounting and independently applied bound-mode stencil are consistent",
+      "passed": true,
+      "evidence": {
+        "Parseval_error": 6.062839409356845e-15,
+        "bound_mode_stencil_residual": 3.189809527626153e-13
+      }
+    }
+  ],
+  "passed": 9,
+  "total": 9,
+  "raw_validation": {
+    "performed": true,
+    "arrays": 48
+  },
+  "coarse_budget_controls": [
+    {
+      "name": "P025",
+      "energy_error": 1.5347793658415654e-05,
+      "passes_refined_energy_target": false
+    },
+    {
+      "name": "P025_remote",
+      "energy_error": 2.927366130156539e-05,
+      "passes_refined_energy_target": false
+    }
+  ],
+  "long_soft_packet_ledger_energy_drift": 0.0005228645541367483,
+  "complete_asymptotic_particle_source_certified": false,
+  "nonlinear_vacuum_matching_theorem": false,
+  "Richardson_certified": false
+}
