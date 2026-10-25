@@ -92,7 +92,9 @@ def main():
             rows.append(dict(R_over_Xc=frac, R_GeV=R, omega_GeV=np.sqrt(w2), m_phi_GeV=np.sqrt(max(mp2, 0)),
                              k_peak_GeV=kp, gamma_max_GeV=gm, k_band_edge_GeV=kedge,
                              single_field_k_edge_GeV=2 * np.sqrt(a_eff) * R,
-                             n_circ_GeV3=n, Q_cell_eps1=n * (2 * np.pi / kp) ** 3 if kp > 0 else None))
+                             n_circ_GeV3=n, Q_cell_eps1=n * (2 * np.pi / kp) ** 3 if kp > 0 else None,
+                             k0_growth_GeV=growth(P, R, 1e-12 * v),
+                             homogeneous_unstable=bool(lam * (3 * lX * R * R + g * g * phi0sq) - g ** 4 * R * R < 0)))
         # stability just above Xc (phi=0 phase)
         above = [dict(R_over_Xc=f, gamma_any=max(growth(P, f * Xc, k) for k in np.geomspace(1e-6, 1, 400)))
                  for f in (1.001, 1.2, 2.0, 10.0)]

@@ -11,7 +11,7 @@ amplitude.  Conformal field chi = a X, conformal time tau:
     chi'' - (a''/a) chi + 2 lambda_X |chi|^2 chi + d lambda_d^* chi*^(d-1) a^(4-d) = 0.
 Dimensionless: s = omega_0 tau, u = chi / X_0, omega_0 = sqrt(2 lambda_X) X_0, a=1 at release:
     u'' = (a''/a) u - |u|^2 u - (d/2) eta_d e^{-i delta} conj(u)^(d-1) a^(4-d),
-    eta_d = |c_d| X_0^(d-2) / (lambda_X M^(d-4)).
+    eta_d = |c_d| X_0^(d-4) / (lambda_X M^(d-4)).
 Comoving charge (Codex sign convention Q = -2 Im X* Xdot):
     n a^3 = q X_0^2 omega_0,   q = -2 Im(conj(u) u').
 Release parameter h = H_rel / omega_0 (h >> 1: frozen field; h = 1/sqrt(c_H):

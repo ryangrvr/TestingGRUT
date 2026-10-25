@@ -1,0 +1,30 @@
+{
+ "track": "operators",
+ "commit_reviewed": "ff49e5d",
+ "items": {
+  "1_causal_CFS_realization_and_zero_memory": {"verdict": "CONFIRMED", "label": "D,C",
+     "resolvent_identity_max_rel": 8.6e-14, "codex_cpp_matrix_vs_mine_max_abs_REPRODUCTION": 3.6e-15,
+     "routh_hurwitz_symbolic": true, "initial_layer_charge_fraction": 1.6315e-15,
+     "production_geometry_max_real_eigenvalue_range": [-1.9e-7, -2.3e-8],
+     "reflection_charged_max_k_ge_0p01": {"codex": 1.8222e-8, "mine": 1.8222e-8},
+     "reflection_neutral_max_k_ge_0p01": {"codex": 6.5161e-4, "mine": 6.5161e-4},
+     "below_band_reflection": {"charged_k0.005": 1.35e-4, "charged_k0.002": 2.83e-2, "neutral_k0.005": 2.55e-2, "neutral_k0.002": 0.231},
+     "scope": "linear vacuum; k>=0.01; slower waves causally excluded within tau<=12000 [A]"},
+  "2_staggered_operators_closure_roots": {"verdict": "CONFIRMED", "label": "D,C",
+     "D_plus_GT": 0.0, "L7_minus_DG_times_h2": 4e-16, "order_grad_lap_regular": 3.998,
+     "dispersion_leading_coefficient": "3/640", "roots_2_2_2_all_sampled": true, "min_evanescent_modulus": 25.96,
+     "qualification": "odd/even closure exact only if even derivatives vanish at the boundary; otherwise O(1) Laplacian error at 3 boundary nodes (outer wall inside layer; included in reflection numbers)"},
+  "5_exact_discrete_extraction_currents": {"verdict": "CONFIRMED (semi-discrete exact; fully discrete = RK4 truncation)", "label": "D,C",
+     "instantaneous_identity_max_rel": 2.2e-14, "rk4_closure_vs_dt": {"0.1": 1.2e-4, "0.05": 3.9e-6, "0.025": 1.2e-7, "0.0125": 4.1e-9},
+     "bitwise_identical_REPRODUCTION": true, "I025_closure_not_rerun": true},
+  "6_bound_mode_diagnostic": {"verdict": "CONFIRMED as described (numbers reproduced); REFUTED as a bound/free separation for excited cores", "label": "D,C",
+     "P025_time_final_split": {"codex": 11182.655089599, "mine": 11182.655093968, "omega_codex": 0.86463213397, "omega_mine": 0.86463213351},
+     "P025_time_retention": {"late_mean_codex": 0.351876650103, "late_mean_mine": 0.351876650083, "final_codex": 0.3502072269059, "final_mine": 0.3502072268855},
+     "late_window_Qbound_range": [11063, 13954], "late_window_Q60_range": [13647, 13800], "Qbound_over_Q60": [0.80, 1.02],
+     "mode_count_fractions": {"1": 0.23, "2": 0.49, "3+": 0.28},
+     "operator": "mean-field -L+S^2+0.1|X|^2, not the fluctuation Hessian",
+     "counterexample_errors_fraction_of_core": {"soliton_x1.3": 0.20, "gaussian_collapse": 0.36, "soliton_x0.75_relaxed": 0.0005},
+     "neutral_kick_transient_over_escaped": [2.06, 2.15, 2.22],
+     "coupled_spectrum_soliton": {"w0": 0.80701, "internal_Omega": 0.18896, "threshold": 0.19299, "frozen_second_level": 0.9537}}
+ }
+}
