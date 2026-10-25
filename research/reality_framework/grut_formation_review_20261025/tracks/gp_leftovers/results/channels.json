@@ -1,0 +1,344 @@
+{
+ "thresholds": {
+  "s_s": {
+   "sqrt_s_needed": 0.4527096176326351,
+   "open_cold": false,
+   "KE_per_particle_needed": 0.13394584507878135
+  },
+  "s_single": {
+   "sqrt_s_needed": 0.22635480881631756,
+   "open_cold": false,
+   "KE_per_particle_needed": 0.02076844067062257
+  },
+  "D_D": {
+   "sqrt_s_needed": 0.1857397183677819,
+   "open_cold": false,
+   "KE_per_particle_needed": 0.0004608954463547338,
+   "note": "D is Z2-odd and stable; D D -> X Xbar is open, so D only stores dark energy"
+  },
+  "Aprime": {
+   "m_Aprime": 60000.0,
+   "ratio_to_2mX": 324643.83092972724,
+   "open_cold": false
+  },
+  "muons": {
+   "sqrt_s_needed": 0.211316751,
+   "open_cold": false
+  },
+  "three_to_two": {
+   "XXXbar_to_X_s": false,
+   "XXXbar_to_X_D": "forbidden by D -> -D",
+   "note": "charge conservation requires X X Xbar -> X + neutral; no neutral state lighter than 2 m_X"
+  },
+  "four_to_one_s": "forbidden: invariant mass >= 4 m_X != m_s",
+  "four_to_two": {
+   "XXXbarXbar_to_XXbar": true,
+   "XXXXbar_to_XX": true,
+   "XXXbarXbar_to_DD": true,
+   "XXXbarXbar_to_ss": false
+  },
+  "on_cores": {
+   "conversion_Xbar_core_to_X": "open: E_out = m_X + 2 omega_Q = 0.2516 GeV",
+   "Xbar_absorption_with_s": false,
+   "Xbar_absorption_with_s_margin_GeV": -0.05436369546373404,
+   "X_capture_with_s": false,
+   "X_capture_two_body": "closed: no hidden quantum lighter than m_X - omega_Q = 0.0128 GeV",
+   "X_capture_three_body_XX_core": "open: E_out = 2 m_X - omega_Q (rate not computed)",
+   "inverse_conversion_threshold_E": "E_X >= m_X + 2 omega_Q (closes after any redshift of the daughter)"
+  },
+  "bound_states": {
+   "alpha_eff": 0.0007957747154594769,
+   "criterion_alpha_mX_over_ms": 0.00032487366718069854,
+   "note": "Yukawa bound states need alpha m_X/m_s >~ 1.7; none, and a bound pair could not decay in the hidden sector"
+  }
+ },
+ "portal": {
+  "theta": 1.3103337630060573e-11,
+  "unit_width_at_2mX": 1.017135413791556e-13,
+  "sigma_v_GeV2": 2.213096432323133e-34,
+  "sigma_v_cm3s": 2.5826835365210964e-51,
+  "s_visible_width_GeV": 1.3162605249935295e-32,
+  "note": "mu mu closed for cold pairs; on-shell s -> SM branch ~1e-27 (portal-debris) so the hidden sector cannot drain energy"
+ },
+ "DD_to_XXbar": {
+  "M": -0.00020408163265306134,
+  "beta": 0.0995037190209984,
+  "sigma_v_GeV2": 4.779667964573951e-09,
+  "sigma_v_cm3s": 5.577872514657801e-26
+ },
+ "object": {
+  "r_half_GeV_inv": 40.97444816537648,
+  "r90_GeV_inv": 62.9119108968165,
+  "mass_GeV": 17064.537454385838
+ },
+ "conversion_quoted": {
+  "sigma_v_cold_GeV2": 9.686289631533846,
+  "sigma_v_daughter_GeV2": 696.0154241645245,
+  "source": "bb211d1 REPORT.md section 2 (cold Q=200000 ground profile, weak-wave)"
+ },
+ "epochs": [
+  {
+   "T_vis_GeV": 86.0,
+   "n_Q_GeV3": 0.12901165096516728,
+   "H_GeV": 9.84210742956614e-15,
+   "nQ_over_mX3": 163.4882828985307,
+   "G42_asym_over_H": 85886113.53348313,
+   "G42_p0.1_over_H": 671050471.807278,
+   "G42_p1_over_H": 19232127497.16437,
+   "G42_p10_over_H": 5766702216453.335,
+   "G42_p100_over_H": 4860875777254058.0,
+   "Gportal_p10_over_H": 3.19105180648172e-20,
+   "Gconv_cold_over_H": 634845852.8998449,
+   "Gelastic_v0.3_over_H": 1176736854.6278362,
+   "v_needed_obj_collision": 3.067704662744747e-13
+  },
+  {
+   "T_vis_GeV": 40.0,
+   "n_Q_GeV3": 0.012634732366540542,
+   "H_GeV": 2.1005713038125264e-15,
+   "nQ_over_mX3": 16.011194989248807,
+   "G42_asym_over_H": 377994.05183538224,
+   "G42_p0.1_over_H": 2953365.52544772,
+   "G42_p1_over_H": 84642668.05173025,
+   "G42_p10_over_H": 25379878618.85818,
+   "G42_p100_over_H": 21393238731153.105,
+   "Gportal_p10_over_H": 1.4642716093615864e-20,
+   "Gconv_cold_over_H": 291310456.5817427,
+   "Gelastic_v0.3_over_H": 539966905.0878705,
+   "v_needed_obj_collision": 6.685374791956839e-13
+  },
+  {
+   "T_vis_GeV": 20.0,
+   "n_Q_GeV3": 0.001540129189844926,
+   "H_GeV": 5.18582650329776e-16,
+   "nQ_over_mX3": 1.951708041916582,
+   "G42_asym_over_H": 2773.1778729661733,
+   "G42_p0.1_over_H": 21667.557693525818,
+   "G42_p1_over_H": 620986.422961239,
+   "G42_p10_over_H": 186201125.2892329,
+   "G42_p100_over_H": 156952883232.54874,
+   "Gportal_p10_over_H": 7.229898367241035e-21,
+   "Gconv_cold_over_H": 143835677.81655267,
+   "Gelastic_v0.3_over_H": 266610772.24334556,
+   "v_needed_obj_collision": 1.3539892275884967e-12
+  },
+  {
+   "T_vis_GeV": 10.0,
+   "n_Q_GeV3": 0.00018761460423403546,
+   "H_GeV": 1.2798460424892622e-16,
+   "nQ_over_mX3": 0.2377520887721328,
+   "G42_asym_over_H": 20.312643569804123,
+   "G42_p0.1_over_H": 158.70795045180495,
+   "G42_p1_over_H": 4548.527519371684,
+   "G42_p10_over_H": 1363863.8643294708,
+   "G42_p100_over_H": 1149629818.3519862,
+   "Gportal_p10_over_H": 3.568633392200362e-21,
+   "Gconv_cold_over_H": 70996406.41861463,
+   "Gelastic_v0.3_over_H": 131597438.33453102,
+   "v_needed_obj_collision": 2.743124168259871e-12
+  },
+  {
+   "T_vis_GeV": 7.0,
+   "n_Q_GeV3": 6.348669351921773e-05,
+   "H_GeV": 6.22894912198301e-17,
+   "nQ_over_mX3": 0.08045266014900133,
+   "G42_asym_over_H": 1.6171771503807313,
+   "G42_p0.1_over_H": 12.635424344074735,
+   "G42_p1_over_H": 362.1278907852549,
+   "G42_p10_over_H": 108583.08373521347,
+   "G42_p100_over_H": 91526987.47685015,
+   "Gportal_p10_over_H": 2.481195293033761e-21,
+   "Gconv_cold_over_H": 49362299.252477586,
+   "Gelastic_v0.3_over_H": 91496914.55686699,
+   "v_needed_obj_collision": 3.9453583251944455e-12
+  },
+  {
+   "T_vis_GeV": 5.0,
+   "n_Q_GeV3": 2.28391324671819e-05,
+   "H_GeV": 3.1575425593992e-17,
+   "nQ_over_mX3": 0.02894258403808661,
+   "G42_asym_over_H": 0.14852988692483238,
+   "G42_p0.1_over_H": 1.1605025142921759,
+   "G42_p1_over_H": 33.259692457316106,
+   "G42_p10_over_H": 9972.830215504768,
+   "G42_p100_over_H": 8406310.40161961,
+   "Gportal_p10_over_H": 1.7608542653848654e-21,
+   "Gconv_cold_over_H": 35031428.37323874,
+   "Gelastic_v0.3_over_H": 64933515.19703275,
+   "v_needed_obj_collision": 5.559349628326237e-12
+  },
+  {
+   "T_vis_GeV": 3.0,
+   "n_Q_GeV3": 4.6790963985897345e-06,
+   "H_GeV": 1.1070469321409393e-17,
+   "nQ_over_mX3": 0.0059295221012920455,
+   "G42_asym_over_H": 0.0036428744032374,
+   "G42_p0.1_over_H": 0.028462722161413122,
+   "G42_p1_over_H": 0.815734023776788,
+   "G42_p10_over_H": 244.5956747969553,
+   "G42_p100_over_H": 206174.8892546189,
+   "Gportal_p10_over_H": 1.028937470501592e-21,
+   "Gconv_cold_over_H": 20470262.648646668,
+   "Gelastic_v0.3_over_H": 37943246.17943809,
+   "v_needed_obj_collision": 9.51389640911019e-12
+  },
+  {
+   "T_vis_GeV": 1.0,
+   "n_Q_GeV3": 1.5305528772210017e-07,
+   "H_GeV": 1.1559753628920857e-18,
+   "nQ_over_mX3": 0.00019395725882914857,
+   "G42_asym_over_H": 1.221014128594545e-06,
+   "G42_p0.1_over_H": 9.540099945927689e-06,
+   "G42_p1_over_H": 0.0002734167193141706,
+   "G42_p10_over_H": 0.08198327520015143,
+   "G42_p100_over_H": 69.10544390923367,
+   "Gportal_p10_over_H": 3.223241033393468e-22,
+   "Gconv_cold_over_H": 6412497.593395545,
+   "Gelastic_v0.3_over_H": 11886070.002494438,
+   "v_needed_obj_collision": 3.037068715738527e-11
+  },
+  {
+   "T_vis_GeV": 0.3,
+   "n_Q_GeV3": 3.5319228851857648e-09,
+   "H_GeV": 9.618130001464755e-20,
+   "nQ_over_mX3": 4.475781865507238e-06,
+   "G42_asym_over_H": 1.803296951784554e-10,
+   "G42_p0.1_over_H": 1.4089626605724647e-09,
+   "G42_p1_over_H": 4.038049396477554e-08,
+   "G42_p10_over_H": 1.2107983585408593e-05,
+   "G42_p100_over_H": 0.010206076525640323,
+   "Gportal_p10_over_H": 8.939507501749434e-23,
+   "Gconv_cold_over_H": 1778476.0663945028,
+   "Gelastic_v0.3_over_H": 3296545.646223382,
+   "v_needed_obj_collision": 1.0950496438297417e-10
+  },
+  {
+   "T_vis_GeV": 0.1,
+   "n_Q_GeV3": 2.2772932083219063e-11,
+   "H_GeV": 4.458963163395617e-21,
+   "nQ_over_mX3": 2.8858692490150142e-08,
+   "G42_asym_over_H": 1.0426708241186137e-15,
+   "G42_p0.1_over_H": 8.14665747090423e-15,
+   "G42_p1_over_H": 2.334810297267084e-13,
+   "G42_p10_over_H": 7.000866502280286e-11,
+   "G42_p100_over_H": 5.901179066196535e-08,
+   "Gportal_p10_over_H": 1.2433061720873719e-23,
+   "Gconv_cold_over_H": 247350.3456230931,
+   "Gelastic_v0.3_over_H": 458483.37257004366,
+   "v_needed_obj_collision": 7.873526831584082e-10
+  },
+  {
+   "T_vis_GeV": 0.03,
+   "n_Q_GeV3": 6.148691662469144e-13,
+   "H_GeV": 4.0130668470560543e-22,
+   "nQ_over_mX3": 7.791846972340535e-10,
+   "G42_asym_over_H": 2.280321092347406e-19,
+   "G42_p0.1_over_H": 1.781673988886753e-18,
+   "G42_p1_over_H": 5.106230120123107e-17,
+   "G42_p10_over_H": 1.5310895040486964e-14,
+   "G42_p100_over_H": 1.2905878617771805e-11,
+   "Gportal_p10_over_H": 3.729918516262115e-24,
+   "Gconv_cold_over_H": 74205.10368692792,
+   "Gelastic_v0.3_over_H": 137545.01177101306,
+   "v_needed_obj_collision": 2.6245089438613617e-09
+  },
+  {
+   "T_vis_GeV": 0.01,
+   "n_Q_GeV3": 2.277293208321906e-14,
+   "H_GeV": 4.4589631633956163e-23,
+   "nQ_over_mX3": 2.8858692490150136e-11,
+   "G42_asym_over_H": 1.0426708241186136e-22,
+   "G42_p0.1_over_H": 8.146657470904227e-22,
+   "G42_p1_over_H": 2.3348102972670833e-20,
+   "G42_p10_over_H": 7.000866502280282e-18,
+   "G42_p100_over_H": 5.901179066196533e-15,
+   "Gportal_p10_over_H": 1.243306172087372e-24,
+   "Gconv_cold_over_H": 24735.034562309313,
+   "Gelastic_v0.3_over_H": 45848.337257004365,
+   "v_needed_obj_collision": 7.873526831584083e-09
+  },
+  {
+   "T_vis_GeV": 0.003,
+   "n_Q_GeV3": 6.148691662469145e-16,
+   "H_GeV": 4.0130668470560546e-24,
+   "nQ_over_mX3": 7.791846972340535e-13,
+   "G42_asym_over_H": 2.2803210923474066e-26,
+   "G42_p0.1_over_H": 1.7816739888867537e-25,
+   "G42_p1_over_H": 5.1062301201231084e-24,
+   "G42_p10_over_H": 1.5310895040486964e-21,
+   "G42_p100_over_H": 1.2905878617771813e-18,
+   "Gportal_p10_over_H": 3.7299185162621153e-25,
+   "Gconv_cold_over_H": 7420.510368692792,
+   "Gelastic_v0.3_over_H": 13754.501177101305,
+   "v_needed_obj_collision": 2.6245089438613615e-08
+  },
+  {
+   "T_vis_GeV": 0.001,
+   "n_Q_GeV3": 2.2772932083219057e-17,
+   "H_GeV": 4.4589631633956155e-25,
+   "nQ_over_mX3": 2.885869249015013e-14,
+   "G42_asym_over_H": 1.0426708241186133e-29,
+   "G42_p0.1_over_H": 8.146657470904227e-29,
+   "G42_p1_over_H": 2.3348102972670827e-27,
+   "G42_p10_over_H": 7.00086650228028e-25,
+   "G42_p100_over_H": 5.901179066196533e-22,
+   "Gportal_p10_over_H": 1.243306172087372e-25,
+   "Gconv_cold_over_H": 2473.503456230931,
+   "Gelastic_v0.3_over_H": 4584.833725700436,
+   "v_needed_obj_collision": 7.873526831584083e-08
+  },
+  {
+   "T_vis_GeV": 0.0001,
+   "n_Q_GeV3": 8.282992041431305e-21,
+   "H_GeV": 2.492868047979778e-27,
+   "nQ_over_mX3": 1.0496510477812748e-17,
+   "G42_asym_over_H": 8.974012997389497e-38,
+   "G42_p0.1_over_H": 7.011629014456635e-37,
+   "G42_p1_over_H": 2.0095141697117332e-35,
+   "G42_p10_over_H": 6.025474726173501e-33,
+   "G42_p100_over_H": 5.079000621767289e-30,
+   "Gportal_p10_over_H": 8.088741867335831e-27,
+   "Gconv_cold_over_H": 160.9219950370278,
+   "Gelastic_v0.3_over_H": 298.28160870129017,
+   "v_needed_obj_collision": 1.210225850491662e-06
+  },
+  {
+   "T_vis_GeV": 1e-05,
+   "n_Q_GeV3": 8.282992041431305e-24,
+   "H_GeV": 2.4928680479797784e-29,
+   "nQ_over_mX3": 1.0496510477812747e-20,
+   "G42_asym_over_H": 8.974012997389497e-45,
+   "G42_p0.1_over_H": 7.011629014456636e-44,
+   "G42_p1_over_H": 2.0095141697117333e-42,
+   "G42_p10_over_H": 6.0254747261735e-40,
+   "G42_p100_over_H": 5.079000621767289e-37,
+   "Gportal_p10_over_H": 8.088741867335831e-28,
+   "Gconv_cold_over_H": 16.09219950370278,
+   "Gelastic_v0.3_over_H": 29.828160870129015,
+   "v_needed_obj_collision": 1.210225850491662e-05
+  },
+  {
+   "T_vis_GeV": 2.5e-06,
+   "n_Q_GeV3": 1.2942175064736414e-25,
+   "H_GeV": 1.5580425299873615e-30,
+   "nQ_over_mX3": 1.6400797621582418e-22,
+   "G42_asym_over_H": 5.477302854851988e-49,
+   "G42_p0.1_over_H": 4.2795587246439427e-48,
+   "G42_p1_over_H": 1.2265101133494466e-46,
+   "G42_p10_over_H": 3.6776579139242553e-44,
+   "G42_p100_over_H": 3.0999759654341365e-41,
+   "Gportal_p10_over_H": 2.0221854668339578e-28,
+   "Gconv_cold_over_H": 4.023049875925695,
+   "Gelastic_v0.3_over_H": 7.457040217532254,
+   "v_needed_obj_collision": 4.840903401966648e-05
+  }
+ ],
+ "Gamma_equals_H_T_vis_GeV": {
+  "asym": 6.541501999326237,
+  "p0.1": 4.898422600805098,
+  "p1": 3.085286727806739,
+  "p10": 1.40898981249648,
+  "p100": 0.5603435337576517,
+  "conv": 6.214190917592729e-07
+ }
+}

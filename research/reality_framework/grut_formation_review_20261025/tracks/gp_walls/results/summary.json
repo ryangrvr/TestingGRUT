@@ -1,0 +1,75 @@
+{
+ "track": "gp_walls",
+ "packets": [
+  "b5174e5",
+  "7737487"
+ ],
+ "verdicts": [
+  {
+   "claim": "+/-v stationary, energies 0 and Delta",
+   "codex": "exact",
+   "mine": "sympy exact",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "full potential positive",
+   "codex": "bracket min>0",
+   "mine": "Delta-Delta^2/(4 lam v^4); with Higgs portal margin 8.8e20",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "false-vacuum curvature",
+   "codex": "2 lam v^2-3Delta/(2v^2)",
+   "mine": "same",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "wall tension/profile",
+   "codex": "unperturbed sigma 0.128863 GeV^3",
+   "mine": "first-order shift exactly 0 (odd tilt), 2nd ~1e-41; tilt = Saikawa eq.2.23 + Delta/2",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "extra core trial energy",
+   "codex": "1.74e-17 GeV",
+   "mine": "1.7382e-17 GeV (own profile)",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "minimum T_ann",
+   "codex": "4.26 MeV",
+   "mine": "4.2607 MeV reproduction (formula); self-consistent g*: 6.60 MeV; central 13.9-24.3 MeV",
+   "verdict": "CORRECTED (conservative)"
+  },
+  {
+   "claim": "T_ann above 1 MeV across controls",
+   "codex": "yes",
+   "mine": "yes for t_ann ~ 1/Delta (Delta/Delta_min=44-218); Babichev-type transfers 4.9 keV-17.9 GeV",
+   "verdict": "CONFIRMED for standard law only"
+  },
+  {
+   "claim": "terminal energy negligible",
+   "codex": "1.85e-7 of DM",
+   "mine": "<=1.0e-7; s->XXbar BR 0.99995; pairs <=9.5e-6 of 1% budget",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "claim": "GW from annihilation",
+   "codex": "not computed",
+   "mine": "Omega h^2 6e-41..2.5e-36 at 0.75-4.7 nHz; PTA level ~5e-10",
+   "verdict": "NEW"
+  },
+  {
+   "claim": "objects do not affect annihilation",
+   "codex": "not addressed",
+   "mine": "wall-core attraction >=1398.7 GeV (relaxed 1409); pinning threshold 6e-13..9e-9 per crossing; wall-bound X gap 0.8283 m_X < Omega 0.8612",
+   "verdict": "NOT CHECKED (open, potentially decisive)"
+  },
+  {
+   "claim": "bias preserves C / zero kinetic mixing; new channels",
+   "codex": "preserved",
+   "mine": "no new decay/mixing; cubic shift 1e-21, induced linear-portal mixing 1e-24 of existing",
+   "verdict": "CONFIRMED"
+  }
+ ]
+}

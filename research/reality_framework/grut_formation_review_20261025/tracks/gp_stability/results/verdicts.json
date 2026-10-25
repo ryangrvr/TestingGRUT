@@ -1,0 +1,17 @@
+{
+  "track": "gp_stability",
+  "packets": ["b5174e5 grut_gauge_point_test_20261025 (handoff item 3)", "7737487 grut_z6_gauge_bridge_20261025"],
+  "independence": "Own profile, gauge-energy and string codes; no Codex code run (no reproduction check).",
+  "verdicts": [
+    {"claim": "m_A = 6 e h", "codex": "6.0e4 GeV", "mine": "6.0e4 GeV [D]", "verdict": "CONFIRMED"},
+    {"claim": "screening length much smaller than the object", "codex": "m_A/m_X = 6.49e5", "mine": "1/m_A = 1.67e-5 GeV^-1 vs half-charge radius 40.97 GeV^-1; m_A r = 2.46e6 [C]", "verdict": "CONFIRMED"},
+    {"claim": "screened energy bound", "codex": "<= 6.56137e-20 GeV", "mine": "6.561366e-20 GeV local; Yukawa below it by 5.7e-13 relative; real-space vs Fourier ratios agree to 6e-9 [C]", "verdict": "CONFIRMED"},
+    {"claim": "binding margin and ratio", "codex": "1417.2553 GeV; 4.63e-23", "mine": "1417.2553 GeV (diff 3e-10 rel); 4.63e-23 [C]", "verdict": "CONFIRMED"},
+    {"claim": "unscreened upper bound", "codex": "not given", "mine": "3.40e-7 GeV = 2.4e-10 of margin [C]", "verdict": "NEW (passes)"},
+    {"claim": "cold classical binding survives gauging; full spectrum open", "codex": "PARTIAL", "mine": "heavy-vector limit inherits global criteria (E<Qm, omega<m, dQ/domega<0) with 1e-23 corrections [A,C]", "verdict": "CONFIRMED (scope as stated)"},
+    {"claim": "heavy vacuum masses exceed object energy", "codex": "yes", "mine": "min 6.0e4 GeV = 3.52 x 17064.5 GeV [C]", "verdict": "CONFIRMED"},
+    {"claim": "Q=200000 is 2 mod 6; three cores neutral (Sigma number -100000)", "codex": "yes", "mine": "yes [C]", "verdict": "CONFIRMED"},
+    {"claim": "compact population needs compensating sectors", "codex": "stated", "mine": "true for the whole compact slice only; invariant (Q_X+3Q_Y) mod 6; compensation anywhere (e.g. 4 X or 2 anti-X quanta); no constraint on single objects or open space [D,A]", "verdict": "CONFIRMED with clarification"},
+    {"claim": "observable Z6 consequences", "codex": "not discussed", "mine": "Z6 strings (if formed): beta=5.56e12, eps=14.823, G mu=3.12e-15; LVK O3 model B excludes >(4.0-6.3)e-15, C-1 >(2.1-4.5)e-15, model A >9.6e-9 [C vs Q, retrospective, conditional on network formation]", "verdict": "flagged (not addressed by Codex)"}
+  ]
+}
