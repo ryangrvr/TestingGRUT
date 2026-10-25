@@ -1,0 +1,126 @@
+{
+  "scope": "Author controls are separate from physical gate dispositions.",
+  "controls": [
+    {
+      "name": "Pair-source Fourier normalization agrees with the analytic Gaussian",
+      "passed": true,
+      "evidence": {
+        "Gaussian_Fourier_max_error_over_peak": 2.6734780314116376e-16
+      }
+    },
+    {
+      "name": "Independent invariant phase-space quadrature converges and agrees with the review Born estimate",
+      "passed": true,
+      "evidence": {
+        "quadrature_spread": 2.3000386548642236e-14,
+        "review_difference": 4.657926039208782e-06,
+        "pair_charge_ledger_residual": 0
+      }
+    },
+    {
+      "name": "Full high-field radial stationary point is stable in amplitude and respects the analytic lower bound",
+      "passed": true,
+      "evidence": {
+        "gradient": 7.12654131775841e-15,
+        "radial_mass2": [
+          0.4275686774785181,
+          1.9862913064415626,
+          21.607801426669916
+        ],
+        "full_lower_bound": -500.0
+      }
+    },
+    {
+      "name": "Independent angular finite differences match the physical phase mass matrix and its gauge null mode",
+      "passed": true,
+      "evidence": {
+        "finite_difference_error": 9.775710673076916e-07,
+        "angular_mass2": [
+          -4.826290005006189e-17,
+          0.14295028496255657,
+          7.565961762771008
+        ]
+      }
+    },
+    {
+      "name": "Full complex release conserves gauge charge and scalar stress, with zero aligned source and conjugate preparations",
+      "passed": true,
+      "evidence": {
+        "Gauss": 2.0823965299042947e-14,
+        "stress": 2.6379523498802744e-13,
+        "aligned_X": 0.0,
+        "tolerance_shift": 5.861977570020827e-13
+      }
+    },
+    {
+      "name": "Screened binding bound agrees with Parseval and positive massive-vector energy",
+      "passed": true,
+      "evidence": {
+        "Parseval": 5.995204332975845e-14,
+        "extra_energy": 6.561365592663978e-20,
+        "massive_local_error_bound": 5.716510462346907e-13
+      }
+    },
+    {
+      "name": "Proposed bias has the stated stationary vacua and a positive global factorization",
+      "passed": true,
+      "evidence": {
+        "exact_polynomial_coefficients": [
+          2.0,
+          -3.0,
+          0.0,
+          1.0
+        ],
+        "positive_bracket_minimum": 1e-22,
+        "new_coefficient": 1e-22
+      }
+    },
+    {
+      "name": "Residual gauge quantum numbers distinguish one core from a neutral three-core group",
+      "passed": true,
+      "evidence": {
+        "one_core_mod6": 2,
+        "neutral_group": 600000,
+        "Higgs_number": -100000
+      }
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "six_physical_tests": [
+    {
+      "test": "Potential stability",
+      "baseline": "PASS at classical tree level",
+      "qualification": "The full quartics stabilize the high-field branch; its truncated single-field AD description fails."
+    },
+    {
+      "test": "Fixed initial phase",
+      "baseline": "NOT SUPPLIED",
+      "qualification": "Own-potential alignment gives zero charge. The review assumes an additional phase mismatch; a full inflationary fluctuation calculation is absent."
+    },
+    {
+      "test": "Bias removing walls",
+      "baseline": "ABSENT",
+      "qualification": "A separately proposed DeltaV=1e-22 GeV^4 variant passes a scaling-time estimate, not a network simulation."
+    },
+    {
+      "test": "Symmetric leftover matter",
+      "baseline": "OPEN",
+      "qualification": "Fixed abundance leaves a small extra-pair budget; no number-changing or full transition/debris evolution is computed."
+    },
+    {
+      "test": "Gauged object stability",
+      "baseline": "PARTIAL",
+      "qualification": "Screened classical binding survives with an enormous margin. Full fluctuation/metastability and a quantum population state remain open."
+    },
+    {
+      "test": "Corrected survival rate",
+      "baseline": "PASS for included-channel estimate",
+      "qualification": "Coherent plus free-Born pairs is still far below the engineering target; complete in-medium quantum loss is uncomputed."
+    }
+  ],
+  "complete_cosmological_point": false,
+  "review_one_field_window_can_be_copied_to_current_gauge_point": false,
+  "in_medium_pair_calculation_completed": false,
+  "all_numerical_controls_passed": true
+}
