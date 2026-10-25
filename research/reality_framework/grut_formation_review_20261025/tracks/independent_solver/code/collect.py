@@ -74,6 +74,25 @@ def main():
             codex[n]['final_net_Eflux'] = x['final_net_Eflux']; codex[n]['final_net_Qflux'] = x['final_net_Qflux']
     bb = {n: json.loads((BB / f'{n}_RESULTS.json').read_text())['core60_late_mean_fraction'] for n in
           ['N025', 'N0125', 'N00625', 'H0125_late']}
+    # absorber tests (this track's sponge) and Codex's CFS reflection rows at the same momenta
+    sp = {}
+    for fn in ['sponge_tests.json', 'sponge_tests_soft.json']:
+        if (RUNS / fn).exists():
+            d = json.loads((RUNS / fn).read_text())
+            sp.setdefault('sponge', d['sponge'])
+            sp.setdefault('continuum', []).extend(d['continuum'])
+            for pk in d['packets']:
+                pk = {k: v for k, v in pk.items() if k != 'history'}
+                pk['source'] = fn
+                sp.setdefault('packets', []).append(pk)
+    rows = json.loads((FF / 'DISCRETE_LAYER_RESULTS.json').read_text())['rows']
+    sp['codex_cfs_lattice_quoted'] = [dict(k=r_['k'], mass=r_['mass'], h=r_['h'], reflected_energy=r_['reflected_energy'],
+                                           ideal_continuum=r_['ideal_continuum_wall_energy'])
+                                      for r_ in rows if r_['k'] in (0.02, 0.1, 0.5)]
+    # analytic ideal-continuum CFS wall return, |R|^2 = exp(-4 k int sigma dx  w/(alpha^2+w^2)), int sigma = 20*90/4
+    sp['cfs_ideal_continuum_rederived'] = [dict(k=k, mass=m, reflected_energy=float(np.exp(-4 * k * 450.0 * np.sqrt(k * k + m * m) / (0.01 + k * k + m * m))))
+                                           for m in (1.0, np.sqrt(6.0)) for k in (0.01, 0.02, 0.1, 0.5)]
+    (OUT / 'absorber_tests.json').write_text(json.dumps(sp, indent=1))
     (OUT / 'formation_runs.json').write_text(json.dumps(dict(runs=runs, codex_ff49e5d_quoted=codex,
                                                              codex_bb211d1_quoted=bb), indent=1))
     print(json.dumps({k: {kk: vv for kk, vv in v.items() if kk not in ('samples', 'modes', 'args', 'Q60_at')} for k, v in runs.items()}, indent=1))
