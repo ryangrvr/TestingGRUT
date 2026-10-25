@@ -1,0 +1,256 @@
+{
+ "method": "Track sp_critic (Claude, own driver; reuses our sp_yledger/gp_leftovers benchmark code).\n\nQuestion: in the maximal-equilibrium benchmark, how much thermalised debris energy R = E_inj/E_X can a release\nwith charge fraction eps carry before the symmetric relic exceeds 1% of calibrated dark matter (f = 0.01)?\nThis turns the point-specific relic (sp_yledger) into a threshold R_max that can be compared with the Y excitation\nof every release in Codex's published scan (critic_checks.py, part D).\n\nImports run_inj from tracks/sp_yledger/code/thermal_relic.py (which itself imports tracks/gp_leftovers/code).\nNo bytecode is written into those directories.\nUsage: python3 -B rmax_relic.py <out.json> [eps,eps,...] [R,R,...] [H|L|HL]   (~10-20 min, 4 cores)\n  default grid: eps 0.2402, 0.19; R 0-30; both cases.  Extension used for case L:\n  python3 -B rmax_relic.py ../results/rmax_relic_L.json 0.240201575085664,0.19,0.3267 30,50,75,100,150,200 L\n",
+ "eps": [
+  0.240201575085664,
+  0.19,
+  0.3267
+ ],
+ "R": [
+  30.0,
+  50.0,
+  75.0,
+  100.0,
+  150.0,
+  200.0
+ ],
+ "rows": [
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 30.0,
+   "sigma": 9.55397848256568,
+   "p_final": 2.316236083679598e-193,
+   "f_extra": 4.698589477525691e-193,
+   "cond_frac0": 0.599243403455165,
+   "max_cond_frac": 0.7905830092377717,
+   "final_cond_frac": 0.7905830092377717,
+   "T_h0_over_m": 7.542739779722526
+  },
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 50.0,
+   "sigma": 13.801037859833777,
+   "p_final": 1.557309164367883e-188,
+   "f_extra": 3.159071954931792e-188,
+   "cond_frac0": 0.485878239613434,
+   "max_cond_frac": 0.6950640152708513,
+   "final_cond_frac": 0.6950640152708513,
+   "T_h0_over_m": 8.527526784414796
+  },
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 75.0,
+   "sigma": 18.56028479407344,
+   "p_final": 8.389714088420434e-183,
+   "f_extra": 1.701891383743515e-182,
+   "cond_frac0": 0.3718448058059975,
+   "max_cond_frac": 0.5872412236488628,
+   "final_cond_frac": 0.5872412236488628,
+   "T_h0_over_m": 9.413415163495818
+  },
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 100.0,
+   "sigma": 22.938804617437388,
+   "p_final": 7.366813560129072e-121,
+   "f_extra": 1.4943913930193354e-120,
+   "cond_frac0": 0.27524958631940044,
+   "max_cond_frac": 0.4874859836250923,
+   "final_cond_frac": 0.4874859836250923,
+   "T_h0_over_m": 10.10250882007815
+  },
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 150.0,
+   "sigma": 30.967367339864758,
+   "p_final": 1.6064562851698765e-05,
+   "f_extra": 3.258769108550125e-05,
+   "cond_frac0": 0.11261633560433974,
+   "max_cond_frac": 0.3034986134850842,
+   "final_cond_frac": 0.3034986134850842,
+   "T_h0_over_m": 11.165999473196976
+  },
+  {
+   "eps": 0.240201575085664,
+   "case": "L",
+   "R": 200.0,
+   "sigma": 38.346947653799965,
+   "p_final": 2.12335315262684,
+   "f_extra": 4.307317742910851,
+   "cond_frac0": 0.0,
+   "max_cond_frac": 0.13341095666201847,
+   "final_cond_frac": 0.13341095666201847,
+   "T_h0_over_m": 11.991316529819919
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 30.0,
+   "sigma": 12.110655855771645,
+   "p_final": 1.9303113893968944e-190,
+   "f_extra": 3.915723810053057e-190,
+   "cond_frac0": 0.49243671068972183,
+   "max_cond_frac": 0.7331734833052377,
+   "final_cond_frac": 0.7331734833052377,
+   "T_h0_over_m": 7.549472341315195
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 50.0,
+   "sigma": 17.476137412572353,
+   "p_final": 3.388844469704441e-184,
+   "f_extra": 6.874424018569515e-184,
+   "cond_frac0": 0.3493167433185327,
+   "max_cond_frac": 0.6118640455478749,
+   "final_cond_frac": 0.6118640455478749,
+   "T_h0_over_m": 8.532188573807783
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 75.0,
+   "sigma": 23.49017634830313,
+   "p_final": 2.07592629664307e-97,
+   "f_extra": 4.2111102241490053e-97,
+   "cond_frac0": 0.20528189042454995,
+   "max_cond_frac": 0.4748919012351033,
+   "final_cond_frac": 0.4748919012351033,
+   "T_h0_over_m": 9.416881854214562
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 100.0,
+   "sigma": 29.02381644225646,
+   "p_final": 1.7166423663907335e-11,
+   "f_extra": 3.482286549385281e-11,
+   "cond_frac0": 0.08324195013433008,
+   "max_cond_frac": 0.348149502629751,
+   "final_cond_frac": 0.348149502629751,
+   "T_h0_over_m": 10.105313861282395
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 150.0,
+   "sigma": 39.170207734134586,
+   "p_final": 2.607333437644527,
+   "f_extra": 5.289093603556908,
+   "cond_frac0": 0.0,
+   "max_cond_frac": 0.11438699524746274,
+   "final_cond_frac": 0.11438699524746274,
+   "T_h0_over_m": 11.169607374911907
+  },
+  {
+   "eps": 0.19,
+   "case": "L",
+   "R": 200.0,
+   "sigma": 48.49559595002554,
+   "p_final": 4.565792170795753,
+   "f_extra": 9.261915571313434,
+   "cond_frac0": 0.0,
+   "max_cond_frac": 0.0,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 11.99538315499777
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 30.0,
+   "sigma": 6.991985429442144,
+   "p_final": 1.5529060377726453e-196,
+   "f_extra": 3.1501400138251094e-196,
+   "cond_frac0": 0.7062727390421145,
+   "max_cond_frac": 0.8477684881147962,
+   "final_cond_frac": 0.8477684881147962,
+   "T_h0_over_m": 7.531096965355357
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 50.0,
+   "sigma": 10.118332688673712,
+   "p_final": 1.053790971513497e-192,
+   "f_extra": 2.1376625660710517e-192,
+   "cond_frac0": 0.6227226250173804,
+   "max_cond_frac": 0.777937011403534,
+   "final_cond_frac": 0.777937011403534,
+   "T_h0_over_m": 8.51947643931395
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 75.0,
+   "sigma": 13.620206469864744,
+   "p_final": 9.742652462806126e-189,
+   "f_extra": 1.9763410417218448e-188,
+   "cond_frac0": 0.5387520463661842,
+   "max_cond_frac": 0.6991460379407222,
+   "final_cond_frac": 0.6991460379407222,
+   "T_h0_over_m": 9.407432979343682
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 100.0,
+   "sigma": 16.841226103288406,
+   "p_final": 5.58937174639676e-185,
+   "f_extra": 1.1338292956682921e-184,
+   "cond_frac0": 0.4676538533837428,
+   "max_cond_frac": 0.6262682177895512,
+   "final_cond_frac": 0.6262682177895512,
+   "T_h0_over_m": 10.097670184194534
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 150.0,
+   "sigma": 22.746421617782584,
+   "p_final": 6.887089129216315e-131,
+   "f_extra": 1.3970771261757798e-130,
+   "cond_frac0": 0.34798680023268225,
+   "max_cond_frac": 0.4918786781709425,
+   "final_cond_frac": 0.4918786781709425,
+   "T_h0_over_m": 11.162416626287639
+  },
+  {
+   "eps": 0.3267,
+   "case": "L",
+   "R": 200.0,
+   "sigma": 28.173771775767342,
+   "p_final": 6.968742788776467e-16,
+   "f_extra": 1.413640939696952e-15,
+   "cond_frac0": 0.24684299639932675,
+   "max_cond_frac": 0.36765730924961404,
+   "final_cond_frac": 0.36765730924961404,
+   "T_h0_over_m": 11.98808606026322
+  }
+ ],
+ "R_max": {
+  "0.240201575085664_L": {
+   "bracket": [
+    150.0,
+    200.0
+   ],
+   "R_max": 172.49014985200023
+  },
+  "0.19_L": {
+   "bracket": [
+    100.0,
+    150.0
+   ],
+   "R_max": 135.89463084582223
+  },
+  "0.3267_L": {
+   "bracket": null,
+   "R_max": null,
+   "note": "no crossing in scanned R"
+  }
+ },
+ "scope": "gp_leftovers maximal-equilibrium benchmark (full thermalisation, 4->2, case H homogeneous, case L lumps + conversion). Benchmark, not kinetics. f = symmetric mass / calibrated DM."
+}

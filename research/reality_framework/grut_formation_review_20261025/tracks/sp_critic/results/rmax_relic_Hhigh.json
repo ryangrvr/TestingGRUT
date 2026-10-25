@@ -1,0 +1,153 @@
+{
+ "method": "Track sp_critic (Claude, own driver; reuses our sp_yledger/gp_leftovers benchmark code).\n\nQuestion: in the maximal-equilibrium benchmark, how much thermalised debris energy R = E_inj/E_X can a release\nwith charge fraction eps carry before the symmetric relic exceeds 1% of calibrated dark matter (f = 0.01)?\nThis turns the point-specific relic (sp_yledger) into a threshold R_max that can be compared with the Y excitation\nof every release in Codex's published scan (critic_checks.py, part D).\n\nImports run_inj from tracks/sp_yledger/code/thermal_relic.py (which itself imports tracks/gp_leftovers/code).\nNo bytecode is written into those directories.\nUsage: python3 -B rmax_relic.py <out.json> [eps,eps,...] [R,R,...] [H|L|HL]   (~10-20 min, 4 cores)\n  default grid: eps 0.2402, 0.19; R 0-30; both cases.  Extension used for case L:\n  python3 -B rmax_relic.py ../results/rmax_relic_L.json 0.240201575085664,0.19,0.3267 30,50,75,100,150,200 L\n",
+ "eps": [
+  0.3267,
+  0.598
+ ],
+ "R": [
+  0.0,
+  1.0,
+  3.0,
+  10.0,
+  30.0
+ ],
+ "rows": [
+  {
+   "eps": 0.3267,
+   "case": "H",
+   "R": 0.0,
+   "sigma": 0.652388015098717,
+   "p_final": 0.0007580432843914835,
+   "f_extra": 0.0015377250292606746,
+   "cond_frac0": 0.9280967507723428,
+   "max_cond_frac": 0.9280967507723287,
+   "final_cond_frac": 0.4919208386931678,
+   "T_h0_over_m": 3.3992002051041332
+  },
+  {
+   "eps": 0.3267,
+   "case": "H",
+   "R": 1.0,
+   "sigma": 0.994936774863171,
+   "p_final": 0.002452725967731529,
+   "f_extra": 0.004975465370062653,
+   "cond_frac0": 0.9045311105490573,
+   "max_cond_frac": 0.9045311105490575,
+   "final_cond_frac": 0.22519263733133246,
+   "T_h0_over_m": 3.91787059118519
+  },
+  {
+   "eps": 0.3267,
+   "case": "H",
+   "R": 3.0,
+   "sigma": 1.5844160922412636,
+   "p_final": 0.007092536836085959,
+   "f_extra": 0.014387531211437016,
+   "cond_frac0": 0.8695831021047771,
+   "max_cond_frac": 0.8695831021047694,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 4.580169979938884
+  },
+  {
+   "eps": 0.3267,
+   "case": "H",
+   "R": 10.0,
+   "sigma": 3.259134022849039,
+   "p_final": 0.04121583634663376,
+   "f_extra": 0.08360818499039607,
+   "cond_frac0": 0.7886753141006039,
+   "max_cond_frac": 0.788675314100604,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 5.83162769037361
+  },
+  {
+   "eps": 0.3267,
+   "case": "H",
+   "R": 30.0,
+   "sigma": 6.985286114995219,
+   "p_final": 0.3266886783079793,
+   "f_extra": 0.6627027344665868,
+   "cond_frac0": 0.6482901079449367,
+   "max_cond_frac": 0.6482901079449368,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 7.524391345561574
+  },
+  {
+   "eps": 0.598,
+   "case": "H",
+   "R": 0.0,
+   "sigma": 0.21200155517331398,
+   "p_final": 8.921572707011804e-06,
+   "f_extra": 1.809781305951913e-05,
+   "cond_frac0": 0.9723155636103825,
+   "max_cond_frac": 0.9723155636103825,
+   "final_cond_frac": 0.8348801534554823,
+   "T_h0_over_m": 2.852323163539157
+  },
+  {
+   "eps": 0.598,
+   "case": "H",
+   "R": 1.0,
+   "sigma": 0.4230207659873372,
+   "p_final": 0.0001755361316454316,
+   "f_extra": 0.00035608296878120795,
+   "cond_frac0": 0.9559235520543227,
+   "max_cond_frac": 0.9559235520543224,
+   "final_cond_frac": 0.6705470590159551,
+   "T_h0_over_m": 3.6010835121599585
+  },
+  {
+   "eps": 0.598,
+   "case": "H",
+   "R": 3.0,
+   "sigma": 0.7645135276463348,
+   "p_final": 0.0012108496230479227,
+   "f_extra": 0.002456263132159162,
+   "cond_frac0": 0.9344386901531608,
+   "max_cond_frac": 0.9344386901531608,
+   "final_cond_frac": 0.40464021351561613,
+   "T_h0_over_m": 4.393310026540569
+  },
+  {
+   "eps": 0.598,
+   "case": "H",
+   "R": 10.0,
+   "sigma": 1.7021543704503113,
+   "p_final": 0.008209109922213869,
+   "f_extra": 0.016652550131716775,
+   "cond_frac0": 0.8879724560326349,
+   "max_cond_frac": 0.8879724560326349,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 5.744446329507691
+  },
+  {
+   "eps": 0.598,
+   "case": "H",
+   "R": 30.0,
+   "sigma": 3.755754009273883,
+   "p_final": 0.06548185102783591,
+   "f_extra": 0.13283289142077567,
+   "cond_frac0": 0.8098917774606127,
+   "max_cond_frac": 0.8098917774606127,
+   "final_cond_frac": 0.0,
+   "T_h0_over_m": 7.484357415432326
+  }
+ ],
+ "R_max": {
+  "0.3267_H": {
+   "bracket": [
+    1.0,
+    3.0
+   ],
+   "R_max": 2.0590375363375424
+  },
+  "0.598_H": {
+   "bracket": [
+    3.0,
+    10.0
+   ],
+   "R_max": 7.2556314809317435
+  }
+ },
+ "scope": "gp_leftovers maximal-equilibrium benchmark (full thermalisation, 4->2, case H homogeneous, case L lumps + conversion). Benchmark, not kinetics. f = symmetric mass / calibrated DM."
+}

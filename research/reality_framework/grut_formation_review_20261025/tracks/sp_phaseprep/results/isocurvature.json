@@ -1,0 +1,159 @@
+{
+ "coherence": {
+  "m_over_H": 0.6095774004361817,
+  "f_eff": 0.6122736107829764,
+  "nu": 1.3705529515044164,
+  "rows": {
+   "N50": {
+    "sigma_L_rad": 0.0007243140499619201,
+    "memory_factor": 0.0015455855791970776,
+    "gaussian_exponent_for_band": 2089810.1882710778,
+    "release_patches_in_observable_universe_log10": 60.337992311503875
+   },
+   "N55": {
+    "sigma_L_rad": 0.00037917196152541835,
+    "memory_factor": 0.0008091003008989895,
+    "gaussian_exponent_for_band": 7625849.512775435,
+    "release_patches_in_observable_universe_log10": 66.85240954005265
+   },
+   "N60": {
+    "sigma_L_rad": 0.00019849314867576007,
+    "memory_factor": 0.0004235568096170509,
+    "gaussian_exponent_for_band": 27827207.04391265,
+    "release_patches_in_observable_universe_log10": 73.36682676860143
+   }
+  },
+  "correlation_power": 0.2588940969911673,
+  "note": "linear Gaussian extrapolation; the exponent only shows that the probability is nil"
+ },
+ "transfer": {
+  "local": 1005.2624743461688,
+  "smoothed_sigma0.03": 2.3402652036755285,
+  "smoothed_sigma0.03_sem": 0.2668247557026666,
+  "smoothed_sigma0.29": 1.426727929214859,
+  "smoothed_sigma0.29_sem": 1.473430216989521
+ },
+ "isocurvature_cases": [
+  {
+   "case": "baseline light phase (displacement imposed, not an attractor)",
+   "m_over_H": 0.6095774004361817,
+   "f_eff": 0.6122736107829764,
+   "dpsi_cmb_N50": 0.00036854284465311874,
+   "S_over_Smax_N50_local": 40712.339771271414,
+   "S_over_Smax_N50_smoothed_sigma0.03": 94.77890059398787,
+   "S_over_Smax_N50_smoothed_sigma0.29": 57.78135929438435,
+   "dpsi_cmb_N60": 0.00010099656310817793,
+   "S_over_Smax_N60_local": 11156.929113251203,
+   "S_over_Smax_N60_smoothed_sigma0.03": 25.973488168449276,
+   "S_over_Smax_N60_smoothed_sigma0.29": 15.834573334192147
+  },
+  {
+   "case": "PPI tuned_cS0.5",
+   "m_over_H": 0.9268237694887094,
+   "f_eff": 0.6224282803776676,
+   "dpsi_cmb_N50": 2.3317660305873866e-08,
+   "S_over_Smax_N50_local": 2.5758647137413417,
+   "S_over_Smax_N50_smoothed_sigma0.03": 0.005996649345600296,
+   "S_over_Smax_N50_smoothed_sigma0.29": 0.003655819472784059,
+   "dpsi_cmb_N60": 9.448468594372518e-10,
+   "S_over_Smax_N60_local": 0.10437572437319764,
+   "S_over_Smax_N60_smoothed_sigma0.03": 0.00024298815691682458,
+   "S_over_Smax_N60_smoothed_sigma0.29": 0.0001481361981527553
+  },
+  {
+   "case": "PPI tuned_cS1.0",
+   "m_over_H": 1.152856997633605,
+   "f_eff": 0.6349408014962153,
+   "dpsi_cmb_N50": 3.680899590916154e-13,
+   "S_over_Smax_N50_local": 4.0662310226199714e-05,
+   "S_over_Smax_N50_smoothed_sigma0.03": 9.466243110818201e-08,
+   "S_over_Smax_N50_smoothed_sigma0.29": 5.771035440654534e-08,
+   "dpsi_cmb_N60": 1.6566357899261348e-15,
+   "S_over_Smax_N60_local": 1.8300591134852376e-07,
+   "S_over_Smax_N60_smoothed_sigma0.03": 4.260403400360061e-10,
+   "S_over_Smax_N60_smoothed_sigma0.29": 2.5973280769500404e-10
+  },
+  {
+   "case": "PPI tuned_cS2.0",
+   "m_over_H": 1.4851996817267532,
+   "f_eff": 0.6694580551979131,
+   "dpsi_cmb_N50": 4.694284724366886e-29,
+   "S_over_Smax_N50_local": 5.185701403629098e-21,
+   "S_over_Smax_N50_smoothed_sigma0.03": 1.2072385930309223e-23,
+   "S_over_Smax_N50_smoothed_sigma0.29": 7.359853982352651e-24,
+   "dpsi_cmb_N60": 1.1749439467348167e-34,
+   "S_over_Smax_N60_local": 1.2979418232007636e-26,
+   "S_over_Smax_N60_smoothed_sigma0.03": 3.021626851442511e-29,
+   "S_over_Smax_N60_smoothed_sigma0.29": 1.8421157627126357e-29
+  }
+ ],
+ "minimal_mass_for_isocurvature": {
+  "N50_local": 0.9510000000000001,
+  "N50_smoothed_sigma0.03": 0.782,
+  "N50_smoothed_sigma0.29": 0.765,
+  "N60_local": 0.8779999999999999,
+  "N60_smoothed_sigma0.03": 0.719,
+  "N60_smoothed_sigma0.29": 0.704
+ },
+ "sudden_quench_estimate": {
+  "rows": [
+   {
+    "design": "tuned_cS0.5",
+    "n_quanta_over_H3": 0.0012408083096399143,
+    "per_net_charge": 5.199280576743827e-06
+   },
+   {
+    "design": "tuned_cS1.0",
+    "n_quanta_over_H3": 0.00392531607840353,
+    "per_net_charge": 1.644800368071875e-05
+   },
+   {
+    "design": "tuned_cS2.0",
+    "n_quanta_over_H3": 0.010130167710718977,
+    "per_net_charge": 4.2447801008669504e-05
+   }
+  ],
+  "net_charge_NX": 238.65,
+  "allowance_pairs_per_charge": 0.00493,
+  "note": "flat-space sudden approximation, masses before (PPI) vs after (no PPI) paired by order; order of magnitude only [E]"
+ },
+ "inflaton_decay_estimate": {
+  "T_R_GeV": 2824675868024349.0,
+  "rows": [
+   {
+    "design": "tuned_cS1.0",
+    "g": 7.857952542149925e-07,
+    "m_I_over_H": 1.0,
+    "branching": 7.779097588972051e-17,
+    "n_over_s": 1.4699693153175856e-14,
+    "pairs_per_net_charge": 6.919807916986565e-08
+   },
+   {
+    "design": "tuned_cS1.0",
+    "g": 7.857952542149925e-07,
+    "m_I_over_H": 10.0,
+    "branching": 7.779097588972049e-16,
+    "n_over_s": 1.4699693153175853e-14,
+    "pairs_per_net_charge": 6.919807916986563e-08
+   },
+   {
+    "design": "tuned_cS2.0",
+    "g": 1.3276209079528317e-06,
+    "m_I_over_H": 1.0,
+    "branching": 2.2205399095065707e-16,
+    "n_over_s": 4.196020802001633e-14,
+    "pairs_per_net_charge": 1.9752560589510047e-07
+   },
+   {
+    "design": "tuned_cS2.0",
+    "g": 1.3276209079528317e-06,
+    "m_I_over_H": 10.0,
+    "branching": 2.2205399095065707e-15,
+    "n_over_s": 4.196020802001633e-14,
+    "pairs_per_net_charge": 1.9752560589510047e-07
+   }
+  ],
+  "note": "model-dependent order of magnitude [E]"
+ },
+ "tensor_ratio_lower": 0.002045571628969108
+}
