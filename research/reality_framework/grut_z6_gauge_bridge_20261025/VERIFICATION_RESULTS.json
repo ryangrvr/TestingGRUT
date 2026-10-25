@@ -1,0 +1,104 @@
+{
+  "scope": "Author controls of a specified new tree-level EFT and conditional phase diagnostic, not cosmological, UV-quantum or independent Claude validation.",
+  "checks": [
+    {
+      "name": "Renormalizable interactions and effective X6 respect the gauge charge",
+      "passed": true,
+      "evidence": {
+        "X": 1,
+        "Y": 3,
+        "Sigma": 6
+      }
+    },
+    {
+      "name": "Exact heavy-field elimination agrees with a real-matrix solve and Fourier operator extraction",
+      "passed": true,
+      "evidence": {
+        "matrix": 7.522986382359146e-16,
+        "Fourier": {
+          "alpha": 1.3172230978521944e-15,
+          "beta": 2.106994456295072e-16
+        }
+      }
+    },
+    {
+      "name": "Full mediator quartic solution and gauge transformations pass separate controls",
+      "passed": true,
+      "evidence": {
+        "root": 2.089385309943741e-16,
+        "gauge": 1.2565363230601701e-15,
+        "min_mass2": 0.929289321881345
+      }
+    },
+    {
+      "name": "The supplied full tree potential has a positive global lower bound",
+      "passed": true,
+      "evidence": {
+        "Young_limit": 0.002466942681640951,
+        "min_check": 0.5,
+        "analytic_condition": "z>=1; (z^2-.005)^2>=.990025*z^4 and (z-1)^2<=z^2"
+      }
+    },
+    {
+      "name": "Compact Gauss law and reduced phase inertia agree with the unreduced kinetic action",
+      "passed": true,
+      "evidence": {
+        "samples": 100,
+        "max_Gauss_residual": 5.298608773962599e-13,
+        "max_kinetic_reduction_relative_error": 4.969723399931333e-15,
+        "max_A0_gauge_shift_error": 2.1649348980190553e-15,
+        "inertia_fractions": [
+          {
+            "f_over_h": 0.01,
+            "relative_phase_inertia_to_single_field": 0.9999972222299381
+          },
+          {
+            "f_over_h": 1.0,
+            "relative_phase_inertia_to_single_field": 0.972972972972973
+          },
+          {
+            "f_over_h": 6.0,
+            "relative_phase_inertia_to_single_field": 0.5
+          },
+          {
+            "f_over_h": 30.0,
+            "relative_phase_inertia_to_single_field": 0.038461538461538464
+          }
+        ]
+      }
+    },
+    {
+      "name": "Conditional phase histories satisfy integrated source and absolute production bound",
+      "passed": true,
+      "evidence": {
+        "source": 9.537984117791165e-10,
+        "relative_phase": 2.2737367544323206e-13,
+        "bound_excess": -1.8817817833994015e-12
+      }
+    },
+    {
+      "name": "Zero-phase and conjugate preparations retain their distinct charge predictions",
+      "passed": true,
+      "evidence": {
+        "zero_phase": 0.0,
+        "CP_pair_relative_error": 0.0,
+        "net_gauge_charge": 0
+      }
+    },
+    {
+      "name": "The phase tolerance control passes and the unspecified cosmic inputs remain explicit",
+      "passed": true,
+      "evidence": {
+        "phase_tolerance_shift": 4.014583804279326e-15,
+        "no_abundance_prediction": true
+      }
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "conditional_ground_response_passes_engineering_target": true,
+  "full_quantum_matching": false,
+  "cosmological_abundance_predicted": false,
+  "formation_or_fragmentation_rerun": false,
+  "independent_review_completed": false
+}
