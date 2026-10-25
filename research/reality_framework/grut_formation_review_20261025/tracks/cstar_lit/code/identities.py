@@ -143,7 +143,7 @@ def huz_code(d_M=4, d_f=1, d_obs_list=(1, 2, 4, 8, 16), samples=40000):
         d = d_obs * d_M * d_f
         acc = 0.0
         for _ in range(samples):
-            u = haar_unit_vector(d).reshape(d_obs, d_M, d_f)[:, :, 0] if d_f == 1 else None
+            u = haar_unit_vector(d).reshape(d_obs, d_M, d_f)[:, :, 0]   # psi0 = first f basis state
             # amplitude for observer pointer a: sqrt(d) * u[a] . psi (psi0 = first f basis state)
             amp_psi = np.sqrt(d) * (u @ psi) / np.sqrt(d_obs)
             amp_phi = np.sqrt(d) * (u @ phi) / np.sqrt(d_obs)
@@ -182,6 +182,9 @@ def main():
         finite_clock=finite_clock_toy(),
         gram_rank=gram_rank_test(),
         huz_code=huz_code(),
+        huz_code_large_d=huz_code(d_M=4, d_f=64, d_obs_list=(1, 4, 16), samples=20000),
+        huz_exact_formula='Var = (d/(d+2)) (1+|<phi*|psi>|^2)/d_obs - 2|<phi|psi>|^2/(d+2); '
+                          '-> HUZ eq. (4.2) leading term (1+|<phi*|psi>|^2)/d_obs when d >> d_obs [D]',
         one_dimensional_algebra=dict(dim_End_C=1, max_orthogonal_nonzero_projectors=1),
     )
     (ROOT / 'results' / 'identities.json').write_text(json.dumps(out, indent=1) + '\n')

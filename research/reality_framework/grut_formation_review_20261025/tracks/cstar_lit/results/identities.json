@@ -1,0 +1,182 @@
+{
+ "scope": "Elementary identities and a reproduction of published code formulas; no cosmological inference.",
+ "de_sitter": {
+  "H_Lambda_per_s": 1.807817712016454e-18,
+  "M_reduced_GeV": 2.4353234593382036e+18,
+  "S_area_nats": 3.307213474702225e+122,
+  "S_reducedPlanck_nats": 3.307213471161004e+122,
+  "N_bousso": 3.3072134747022246e+122,
+  "rho_Lambda_GeV4": 2.5192737882772507e-47,
+  "identity_rho_eq_24pi2M4_over_S_relerr": 0.0,
+  "note": "All three entropy expressions are the same quantity; Bousso N-bound uses Lambda>0 and is trivial as Lambda->0."
+ },
+ "closed_de_sitter": {
+  "max_constraint_residual": 3.300119564286774e-07,
+  "max_acceleration_residual": 3.33541544161875e-07,
+  "pressure_over_density": -1.0,
+  "meaning": "Compact S^3 slices, positive vacuum density, p=-rho: all GR constraints hold for any H>0. Closure fixes neither rho_Lambda nor p=0."
+ },
+ "power_law_fading": {
+  "w": -0.6666666666666667,
+  "accelerating": true,
+  "rho_power": -2,
+  "horizons": [
+   {
+    "t": 1.0,
+    "event_horizon_over_t": 1.00000000017673
+   },
+   {
+    "t": 3.0,
+    "event_horizon_over_t": 1.0000000001767297
+   },
+   {
+    "t": 10.0,
+    "event_horizon_over_t": 1.0000000001767297
+   }
+  ],
+  "meaning": "Fading density with w>-1 can keep an event horizon; no Minkowski future follows."
+ },
+ "gauss_law": {
+  "max_relative_total_divergence": 8.481898307592944e-18,
+  "single_charge_zero_mode": 1.0,
+  "meaning": "Total gauge charge on a compact boundaryless space vanishes; a lone net charge has no Gauss-law solution (the k=0 Fourier mode of rho must vanish). Global (ungauged) charges are not constrained by this."
+ },
+ "finite_clock": {
+  "constraint_kernel_dimension": 2,
+  "conditional_sigma_x_vs_cos": [
+   [
+    0.0,
+    1.0000000000000002,
+    1.0
+   ],
+   [
+    0.7853981633974483,
+    0.7071067811865475,
+    0.7071067811865476
+   ],
+   [
+    1.5707963267948966,
+    6.123233995736766e-17,
+    6.123233995736766e-17
+   ],
+   [
+    2.356194490192345,
+    -0.7071067811865476,
+    -0.7071067811865475
+   ],
+   [
+    3.141592653589793,
+    -1.0000000000000002,
+    -1.0
+   ]
+  ],
+  "meaning": "A constraint alone does not force a one-dimensional physical space; the one-state claim comes from the nonperturbative path integral / factorization, not from H=0."
+ },
+ "gram_rank": {
+  "rank1_max_relative_violation": 1.0790524586951813e-15,
+  "rank2_max_relative_violation": 0.2642155063933471
+ },
+ "huz_code": {
+  "fluctuations": [
+   {
+    "d_obs": 1,
+    "S2_obs": 0.0,
+    "d": 4,
+    "monte_carlo": 0.8309054708414216,
+    "huz_leading": 1.5,
+    "exact_finite_d": 0.8333333333333334
+   },
+   {
+    "d_obs": 2,
+    "S2_obs": 0.6931471805599453,
+    "d": 8,
+    "monte_carlo": 0.49868508550731677,
+    "huz_leading": 0.75,
+    "exact_finite_d": 0.5000000000000001
+   },
+   {
+    "d_obs": 4,
+    "S2_obs": 1.3862943611198906,
+    "d": 16,
+    "monte_carlo": 0.2779899920387705,
+    "huz_leading": 0.375,
+    "exact_finite_d": 0.2777777777777778
+   },
+   {
+    "d_obs": 8,
+    "S2_obs": 2.0794415416798357,
+    "d": 32,
+    "monte_carlo": 0.1459753082586509,
+    "huz_leading": 0.1875,
+    "exact_finite_d": 0.1470588235294118
+   },
+   {
+    "d_obs": 16,
+    "S2_obs": 2.772588722239781,
+    "d": 64,
+    "monte_carlo": 0.07630262055975831,
+    "huz_leading": 0.09375,
+    "exact_finite_d": 0.0757575757575758
+   }
+  ],
+  "rank_bound": [
+   {
+    "d_obs": 2,
+    "n_input_states": 6,
+    "rank_of_images": 2
+   },
+   {
+    "d_obs": 4,
+    "n_input_states": 12,
+    "rank_of_images": 4
+   }
+  ],
+  "meaning": "Effective inner products are reliable only to ~e^{-S_Ob}, and the effective space has dimension <= e^{S_Ob} (dimension of the clone space). An e^{10^122}-state effective description in this dictionary needs an observer with S_Ob >~ 10^122 nats, i.e. of order the de Sitter entropy itself."
+ },
+ "huz_code_large_d": {
+  "fluctuations": [
+   {
+    "d_obs": 1,
+    "S2_obs": 0.0,
+    "d": 256,
+    "monte_carlo": 1.4721923861084498,
+    "huz_leading": 1.5,
+    "exact_finite_d": 1.4844961240310077
+   },
+   {
+    "d_obs": 4,
+    "S2_obs": 1.3862943611198906,
+    "d": 1024,
+    "monte_carlo": 0.37978414509623365,
+    "huz_leading": 0.375,
+    "exact_finite_d": 0.37329434697855746
+   },
+   {
+    "d_obs": 16,
+    "S2_obs": 2.772588722239781,
+    "d": 4096,
+    "monte_carlo": 0.09356948392391327,
+    "huz_leading": 0.09375,
+    "exact_finite_d": 0.093460224499756
+   }
+  ],
+  "rank_bound": [
+   {
+    "d_obs": 2,
+    "n_input_states": 6,
+    "rank_of_images": 2
+   },
+   {
+    "d_obs": 4,
+    "n_input_states": 12,
+    "rank_of_images": 4
+   }
+  ],
+  "meaning": "Effective inner products are reliable only to ~e^{-S_Ob}, and the effective space has dimension <= e^{S_Ob} (dimension of the clone space). An e^{10^122}-state effective description in this dictionary needs an observer with S_Ob >~ 10^122 nats, i.e. of order the de Sitter entropy itself."
+ },
+ "huz_exact_formula": "Var = (d/(d+2)) (1+|<phi*|psi>|^2)/d_obs - 2|<phi|psi>|^2/(d+2); -> HUZ eq. (4.2) leading term (1+|<phi*|psi>|^2)/d_obs when d >> d_obs [D]",
+ "one_dimensional_algebra": {
+  "dim_End_C": 1,
+  "max_orthogonal_nonzero_projectors": 1
+ }
+}
