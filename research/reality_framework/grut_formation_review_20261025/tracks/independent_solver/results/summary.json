@@ -1,0 +1,37 @@
+{
+ "track": "independent_solver",
+ "date": "2026-10-25",
+ "method": "Own DST-I pseudo-spectral radial solver with exact free Klein-Gordon rotation plus nonlinear kick, Yoshida-4 composition; boundaries: hard-wall box at L=6400, too far for reflections to return (production), and an own smooth velocity sponge (long runs). Written from the MATHEMATICS.md equations; Codex code not run. Python reference and C/FFTW port agree to 1e-14.",
+ "initial_data": {"Ebar0_this_track": 38951.47049696, "Qbar0_this_track": 38969.38665303, "Ebar0_codex_Q": 38951.470496956, "Qbar0_codex_Q": 38969.386653027},
+ "reflection": {
+  "this_track_bigbox": "identically zero before the causal return time; measured physical-region error <= 6.4e-25 of the packet energy",
+  "this_track_sponge_continuum": {"charged": {"0.02": 5.75e-13, "0.1": 1.37e-24, "0.5": 1.06e-28}, "neutral": {"0.02": 6.39e-11, "0.1": 8.08e-24, "0.5": 8.71e-30}},
+  "this_track_sponge_packets_time_domain": {"charged": {"0.02": 1.36e-11, "0.1": 6.05e-14, "0.5": 4.0e-25}, "neutral": {"0.02": 8.54e-10, "0.1": 5.07e-14, "0.5": 5.28e-24}},
+  "codex_cfs_lattice_Q": {"charged": {"0.02": "3.34e-16", "0.1": "6.4e-25..1.8e-18 (h-dependent)", "0.5": "2.1e-24..4.0e-17"}, "neutral": {"0.02": "4.247e-7", "0.1": "8.0e-26..3.0e-19", "0.5": "5.6e-25..8.1e-18"}},
+  "codex_cfs_ideal_continuum_rederived_analytically": {"charged_0.01": 1.8217e-08, "charged_0.02": 3.336e-16, "neutral_0.01": 6.5153e-04, "neutral_0.02": 4.2465e-07},
+  "old_damper_9636950_rederived": {"0.02": 0.3173, "0.5": 0.04921, "1.0": 0.1483}
+ },
+ "retention_Q60_window_9600_12000_percent": {
+  "h0.5": {"dt0.0625": 35.1420, "dt0.03125": 35.3455, "dt0.015625": 35.3566, "richardson_dt4": 35.3573, "codex_40tau_sampling_dt0.015625": 35.3531},
+  "h0.25_dt0.0625": 35.1443, "h1_dt0.0625": 34.5802, "h1_dt0.03125": 34.6849,
+  "perturbation_A_times_1+1e-6_dt0.03125": 35.3236,
+  "old_damper_L360_dt0.015625": 35.1681,
+  "best_estimate": "35.36 +- 0.02 (sensitivity band) [C/E]",
+  "codex_Q": {"P00625": 35.3631, "P0125": 35.3565, "P025_time": 35.1877, "bb211d1_N00625": 35.1532}
+ },
+ "pointwise_Q60_differences_abs_fraction": {"h0.25_vs_h0.125_to_1956": 2.0e-07, "h0.5_vs_h0.25_to_12000": 6.8e-05, "h1_vs_h0.5_to_12000": 1.3e-02, "dt0.03125_vs_dt0.015625": 1.6e-04, "dt0.0625_vs_dt0.03125": 3.0e-03, "amplitude_1e-6_perturbation": 2.7e-04, "box_vs_sponge": 1.8e-09},
+ "drift": {
+  "window_means_percent_dt0.03125": {"9600_12000": 35.3455, "19200_24000": 34.7286},
+  "window_means_percent_dt0.0625_long": {"9600_12000": 35.1420, "19200_24000": 34.5324, "28800_36000": 34.3544, "38400_48000": 34.2432},
+  "dt_offset_pp_0.0625_to_0.03125": {"9600_12000": 0.2035, "19200_24000": 0.1962},
+  "slope_pp_per_1000tau": {"9600_12000": -0.162, "19200_24000": -0.0226, "28800_36000": -0.0124, "38400_48000": -0.0087},
+  "power_law_fit_unstable": "Q_inf = 34.00/33.86/33.55% (dt0.0625 level) for fit starts 10000/12000/16000; beta 1.07/0.80/0.51; no asymptote certified",
+  "codex_P025_remote_19200_24000_Q": 34.5738
+ },
+ "escape_through_r240_at_tau12000_h0.5_dt0.015625": {
+  "Q_esc": 23526.87, "E_esc": 25486.07, "mQ_over_E": 0.92313, "E_charged_free": 25131.14, "E_neutral": 354.66, "mQ_over_Echarged": 0.93617,
+  "codex_I025_Q": {"Q_esc": 23680.857, "E_esc": 25618.621, "mQ_over_E": 0.92436},
+  "free_field_projection_r_gt_240": {"N_plus": 23750.6, "N_minus": 254.99, "E_plus": 24667.8, "E_minus": 432.26, "N_s": 110.17, "E_s": 354.72, "antiparticle_number_fraction": 0.01062},
+  "bb211d1_upper_bound_Q": 0.026943
+ }
+}

@@ -125,6 +125,37 @@
    },
    "Qbar_absorbed_final": 14430.742561513076,
    "history_sha256": "2d50a5e69cfcb2a7c96a93990b14ce0fd72d659f2441993f1e24041caceca7a9"
+  },
+  {
+   "label": "NEW CONTROL with Codex old executable (radial_nodal.cpp), own driver",
+   "name": "OLD0125_R1440",
+   "parameters": {
+    "h": 0.125,
+    "dt": 0.03125,
+    "length": 1530.0,
+    "absorber": 1440.0,
+    "eta": 0.03,
+    "tmax": 12000.0,
+    "probe": 120.0,
+    "amplitude": 0.18,
+    "width": 60.0
+   },
+   "seconds": 1470.9635841949998,
+   "Qbar_initial": 38969.38665302684,
+   "Ebar_initial": 38951.4704969562,
+   "max_energy_error": 2.994260213107225e-07,
+   "max_charge_error": 4.792832797306801e-13,
+   "core60_late_mean_fraction": 0.35335213248308645,
+   "core60_at": {
+    "2000.0": 0.5278472472713139,
+    "4000.0": 0.441740086815313,
+    "6000.0": 0.3801957353012267,
+    "8000.0": 0.361682347457711,
+    "10000.0": 0.3547708974820638,
+    "12000.0": 0.3514779775883257
+   },
+   "Qbar_absorbed_final": 7477.2008266677385,
+   "history_sha256": "a268610ec1595ca41d734700851dbfe75246d81625588740aea7bbeb3ce32557"
   }
  ],
  "published_old_near_damper": {
@@ -142,5 +173,13 @@
  "old_far_vs_new_finest_relative": 0.0005618619398888303,
  "old_far_vs_old_near_finest_relative": 0.006536165392744708,
  "richardson_order4_old_far": 0.3538350095424463,
- "richardson_order4_new": 0.3536355032184953
+ "richardson_order4_new": 0.3536355032184953,
+ "h0125_damper_position_scan": {
+  "R270 (published N0125)": 0.3514503331968012,
+  "R360 (published N0125_box)": 0.35176760845702826,
+  "R720": 0.3537515608676459,
+  "R1440": 0.35335213248308645,
+  "new CFS P0125": 0.353565086014028
+ },
+ "note": "Old-family late means scatter by 0.11% between damper radii 720 and 1440 at h=0.125 and bracket the CFS value; the late-window core charge is sensitive to small returning perturbations from an ordinary damper."
 }
