@@ -1,0 +1,146 @@
+{
+ "label": "NEW CONTROL: Codex old executable radial_nodal.cpp (bb211d1, g++ -O2), own driver; ordinary cubic damper moved from R=270 to R=720 (L=810), eta=.03, same nodal Gaussian preparation",
+ "driver_check": "OLD025_R270_check reproduces published N025 late mean bit-for-bit (0.35169410417520136)",
+ "runs": [
+  {
+   "label": "NEW CONTROL with Codex old executable (radial_nodal.cpp), own driver",
+   "name": "OLD025_R270_check",
+   "parameters": {
+    "h": 0.25,
+    "dt": 0.0625,
+    "length": 360.0,
+    "absorber": 270.0,
+    "eta": 0.03,
+    "tmax": 12000.0,
+    "probe": 120.0,
+    "amplitude": 0.18,
+    "width": 60.0
+   },
+   "seconds": 41.888522136000006,
+   "Qbar_initial": 38969.38665302709,
+   "Ebar_initial": 38951.47049695608,
+   "max_energy_error": 4.6336766752475e-06,
+   "max_charge_error": 1.7574830479816228e-13,
+   "core60_late_mean_fraction": 0.35169410417520136,
+   "core60_at": {
+    "2000.0": 0.5278282834358947,
+    "4000.0": 0.4386994095501401,
+    "6000.0": 0.3783153603755296,
+    "8000.0": 0.3592423303043996,
+    "10000.0": 0.35166349490285953,
+    "12000.0": 0.3512862776281236
+   },
+   "Qbar_absorbed_final": 22019.152901793328,
+   "history_sha256": "3fb593c5519f7e7b0911f13ce263227cbcfd2f5d71c1b1d4661a10ebdec058b4"
+  },
+  {
+   "label": "NEW CONTROL with Codex old executable (radial_nodal.cpp), own driver",
+   "name": "OLD025_R720",
+   "parameters": {
+    "h": 0.25,
+    "dt": 0.0625,
+    "length": 810.0,
+    "absorber": 720.0,
+    "eta": 0.03,
+    "tmax": 12000.0,
+    "probe": 120.0,
+    "amplitude": 0.18,
+    "width": 60.0
+   },
+   "seconds": 93.81105361700008,
+   "Qbar_initial": 38969.38665302709,
+   "Ebar_initial": 38951.47049695608,
+   "max_energy_error": 4.855382574442402e-06,
+   "max_charge_error": 1.3855583347321954e-13,
+   "core60_late_mean_fraction": 0.3515843216297999,
+   "core60_at": {
+    "2000.0": 0.5283056435898276,
+    "4000.0": 0.44005022749412037,
+    "6000.0": 0.37840574569198365,
+    "8000.0": 0.35969331749624284,
+    "10000.0": 0.3530675186652566,
+    "12000.0": 0.3498467596967771
+   },
+   "Qbar_absorbed_final": 14352.028475358693,
+   "history_sha256": "45d66d84ece20499f5ae34301e9a7adb1d3cb7b336eb413a3890781eee423b10"
+  },
+  {
+   "label": "NEW CONTROL with Codex old executable (radial_nodal.cpp), own driver",
+   "name": "OLD0125_R720",
+   "parameters": {
+    "h": 0.125,
+    "dt": 0.03125,
+    "length": 810.0,
+    "absorber": 720.0,
+    "eta": 0.03,
+    "tmax": 12000.0,
+    "probe": 120.0,
+    "amplitude": 0.18,
+    "width": 60.0
+   },
+   "seconds": 380.11325372600015,
+   "Qbar_initial": 38969.38665302684,
+   "Ebar_initial": 38951.47049695624,
+   "max_energy_error": 3.104886407978569e-07,
+   "max_charge_error": 6.717959522006822e-13,
+   "core60_late_mean_fraction": 0.3537515608676459,
+   "core60_at": {
+    "2000.0": 0.5278472472709446,
+    "4000.0": 0.44208763984726057,
+    "6000.0": 0.38091446794408507,
+    "8000.0": 0.36172643471382104,
+    "10000.0": 0.35515694941368176,
+    "12000.0": 0.35195557404309186
+   },
+   "Qbar_absorbed_final": 14434.937686138546,
+   "history_sha256": "1af9f80c843cf8ab96bf1b621847d4f56622dff25d743d754d19f326a9d7d1a4"
+  },
+  {
+   "label": "NEW CONTROL with Codex old executable (radial_nodal.cpp), own driver",
+   "name": "OLD00625_R720",
+   "parameters": {
+    "h": 0.0625,
+    "dt": 0.015625,
+    "length": 810.0,
+    "absorber": 720.0,
+    "eta": 0.03,
+    "tmax": 12000.0,
+    "probe": 120.0,
+    "amplitude": 0.18,
+    "width": 60.0
+   },
+   "seconds": 2324.3032644100003,
+   "Qbar_initial": 38969.38665302689,
+   "Ebar_initial": 38951.470496956055,
+   "max_energy_error": 1.892989498486486e-08,
+   "max_charge_error": 1.506461622113875e-11,
+   "core60_late_mean_fraction": 0.35382979400027126,
+   "core60_at": {
+    "2000.0": 0.5278469262327382,
+    "4000.0": 0.4421671035639753,
+    "6000.0": 0.38095147080256975,
+    "8000.0": 0.3617776845868546,
+    "10000.0": 0.35522810513136727,
+    "12000.0": 0.3520442180288887
+   },
+   "Qbar_absorbed_final": 14430.742561513076,
+   "history_sha256": "2d50a5e69cfcb2a7c96a93990b14ce0fd72d659f2441993f1e24041caceca7a9"
+  }
+ ],
+ "published_old_near_damper": {
+  "N025": 0.35169410417520136,
+  "N0125": 0.3514503331968012,
+  "N00625": 0.35153212191060107,
+  "N0125_box_R360": 0.35176760845702826
+ },
+ "published_new_cfs": {
+  "P025_time": 0.35187665010278707,
+  "P0125": 0.353565086014028,
+  "P00625": 0.3536311021432161
+ },
+ "old_far_damper_two_finest_relative": 0.00022115275600054218,
+ "old_far_vs_new_finest_relative": 0.0005618619398888303,
+ "old_far_vs_old_near_finest_relative": 0.006536165392744708,
+ "richardson_order4_old_far": 0.3538350095424463,
+ "richardson_order4_new": 0.3536355032184953
+}
