@@ -1,0 +1,137 @@
+{
+  "production_release_count": 4326,
+  "production_grid_release_count": 2263,
+  "phase_ensemble_member_count": 2048,
+  "additional_high_point_control_releases": 15,
+  "control_script_releases_not_included_in_production_count": 8,
+  "refined_nominal_candidates": 23,
+  "nominal_candidates_above_019": 3,
+  "baseline_high_scale_mean": 0.002327108412789666,
+  "baseline_high_scale_SEM": 0.01945665871546013,
+  "baseline_high_scale_local_rms": 0.1620939994816039,
+  "best_supplied_phase_H_GeV": 11211167304108.865,
+  "best_cH": 1.0,
+  "best_delta": 1.5707963267948966,
+  "best_sigma001_epsilon": -0.24489789771971365,
+  "best_sigma001_SEM": 0.0008679830217527554,
+  "best_sigma003_epsilon": -0.2490903451021933,
+  "best_sigma003_SEM": 0.0033327899773938174,
+  "best_Y_source": {
+    "candidate_index": 0,
+    "H_GeV": 11211167304108.865,
+    "cH": 1.0,
+    "delta": 1.5707963267948966,
+    "raw_epsX": -0.24066124082075235,
+    "YX_over_YQ": -65.98227759048056,
+    "JY_approx": 13.269029096898693,
+    "JY_window_relative_shift": 0.0018741186588181766,
+    "final_Y_quadratic_mass_matrix_positive": true,
+    "final_Y_selfinteraction_to_quadratic_force_ratio": 2.7931589158347255e-05,
+    "final_Y_mass_splitting_relative_parameter": 0.06377136234428502,
+    "a_at_assumed_Y_decay": 172230.3091474945,
+    "Y_excitation_energy_over_X_at_assumed_decay": 274.85203825803666,
+    "extra_Y_decay_pairs_per_abs_X_charge": 0.0834010223509602,
+    "one_percent_pair_allowance_per_net_charge": 0.0049296413205678555,
+    "ratio_to_one_percent_pair_allowance": 16.91827395291166,
+    "extra_DM_fraction_if_yield_diluted_to_YQ_and_Y_unthermalized": 0.1691827395291166,
+    "energy_equivalent_quartic_fraction_after_Y_injection": 0.0035554862510437835,
+    "energy_proxy_scope": "Only a comoving-energy ratio mapped to the quartic circular-charge scale; NOT a solved mixed-plasma remainder or thermal relic.",
+    "assumptions": "Adiabatic conserved late Y number extrapolated to perturbative Y->3X decay; zero mean Y charge; no thermalization/number changing; visible RD. Small Y mass splitting omitted. Not an evolved decay history."
+  },
+  "no_window_claim_supported": false,
+  "a_complete_create_and_protect_cosmology_constructed": false,
+  "baseline_action_has_a_phase_selector": false,
+  "final_relic_population_computed": false,
+  "outcome": "A reproducible conditional supplied-phase release clears the X-only regularity/yield/0.19 tests. It does not clear the complete leftover or preparation problem. Its Y source exceeds the unthermalized pair allowance; a real decay/thermalization calculation is still required.",
+  "max_grid_Gauss_error": 3.109157211912233e-08,
+  "max_grid_work_error": 0.0003228132552077146,
+  "controls": {
+    "author": "Codex, same-session numerical controls; not outside replication.",
+    "finite_difference_force_max_relative_error": 5.968580751785232e-10,
+    "gauge_Ward_max_relative_error": 9.67493212819522e-17,
+    "multiple_start_minima": [
+      {
+        "H": 300000000000.0,
+        "cH": 1.0,
+        "max_8_start_minimum_energy_relative_shift": 4.2998387872533703e-16
+      },
+      {
+        "H": 47000000000000.0,
+        "cH": 1.0,
+        "max_8_start_minimum_energy_relative_shift": 4.005881486653135e-16
+      },
+      {
+        "H": 94868329805.05138,
+        "cH": 10.0,
+        "max_8_start_minimum_energy_relative_shift": 4.1278452357632364e-16
+      }
+    ],
+    "physical_time_cross_checks": [
+      {
+        "H": 300000000000.0,
+        "cH": 1.0,
+        "delta": 1.5707963267948966,
+        "a_end": 20.0,
+        "physical_time_vs_C_state_relative_error": 2.5351943997625545e-11,
+        "independent_nfev": 35114,
+        "C_controls": {
+          "steps": 3213,
+          "rejects": 9,
+          "max_Gauss_over_initial_Ncirc": 3.4627250569915606e-14,
+          "max_Hamiltonian_work_error_over_initial_energy": 1.4230559924122261e-12
+        }
+      },
+      {
+        "H": 47000000000000.0,
+        "cH": 1.0,
+        "delta": 0.3,
+        "a_end": 30.0,
+        "physical_time_vs_C_state_relative_error": 1.2043793635059696e-12,
+        "independent_nfev": 7502,
+        "C_controls": {
+          "steps": 670,
+          "rejects": 47,
+          "max_Gauss_over_initial_Ncirc": 6.022458566618129e-15,
+          "max_Hamiltonian_work_error_over_initial_energy": 8.895165033806695e-14
+        }
+      },
+      {
+        "H": 1000000000000.0,
+        "cH": 10.0,
+        "delta": 0.2,
+        "a_end": 15.0,
+        "physical_time_vs_C_state_relative_error": 2.1943603493111267e-10,
+        "independent_nfev": 14942,
+        "C_controls": {
+          "steps": 1274,
+          "rejects": 106,
+          "max_Gauss_over_initial_Ncirc": 9.916027087417321e-14,
+          "max_Hamiltonian_work_error_over_initial_energy": 1.868741726031553e-12
+        }
+      }
+    ],
+    "old_short_release": {
+      "charge": [
+        -16.26138746611554,
+        6.395904448600664,
+        -0.487720979949372
+      ],
+      "reference": [
+        -16.2613874661,
+        6.39590444861,
+        -0.4877209799485
+      ],
+      "max_abs_difference": 1.553956963107339e-11
+    },
+    "CP_conjugate_charge_sum_max": 0.0,
+    "exact_aligned_max_abs_charge": 0.0,
+    "linear_seed": {
+      "delta": 1e-30,
+      "atol": 1e-38,
+      "window_30_40_NX_envelope": 1.64324795276211e-27,
+      "window_140_160_NX_envelope": 3.985879494510475e-10,
+      "envelope_growth_ratio": 2.425610503765224e+17,
+      "diagnostic": "Charge envelope of a homogeneous infinitesimal Sigma-phase seed, not a finite-k spectrum."
+    }
+  }
+}
