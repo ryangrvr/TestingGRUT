@@ -1,0 +1,482 @@
+{
+  "scope": "Exact elementary identities/counterexamples and operator enumeration, not empirical verification of C* or a quantum-gravity completion.",
+  "deSitter": {
+    "convention": "Reduced Planck mass; entropy in nats; reference H0 and OmegaLambda are adopted, not inferred.",
+    "M_reduced_GeV": 2.435e+18,
+    "H0_km_s_Mpc": 67.4,
+    "OmegaLambda": 0.685,
+    "rho_GeV4": 2.5186046135005825e-47,
+    "entropy_nats": 3.3063350021965525e+122,
+    "entropy_bits": 4.7700331111865666e+122,
+    "identity_relative_error": 2.220446049250313e-16,
+    "fixed_entropy_implies_fixed_positive_density": true
+  },
+  "finite_closed_clock": {
+    "physical_H_constraint_dimension": 2,
+    "H_state_residual": 0.0,
+    "exact_U1_commutator_norm": 0.0,
+    "relational_clock_values": [
+      {
+        "clock_phase": 0.0,
+        "conditional_sigma_x": 1.0000000000000002
+      },
+      {
+        "clock_phase": 1.5707963267948966,
+        "conditional_sigma_x": 6.123233995736766e-17
+      },
+      {
+        "clock_phase": 3.141592653589793,
+        "conditional_sigma_x": -1.0000000000000002
+      }
+    ],
+    "meaning": "A finite closed constrained quantum toy has a nontrivial physical state space and exact U(1). It is not a gravitational UV completion."
+  },
+  "fading_counterexample": {
+    "w": -0.6666666666666666,
+    "power_law_a_t": 2.0,
+    "rho_power_t": -2.0,
+    "H_power_t": -1.0,
+    "future_event_horizon_radius_over_t": 1.0,
+    "meaning": "rho tends to zero and w>-1 while an accelerating power-law FLRW future retains an event horizon; Minkowski global fate is not implied."
+  },
+  "compact_GR_counterexample": {
+    "spatial_topology": "S3",
+    "scale_factor": "cosh(H t)/H",
+    "positive_density": "3 M_reduced^2 H^2",
+    "pressure": "-rho",
+    "Friedmann_identity_max_error": 2.220446049250313e-16,
+    "meaning": "A compact boundaryless classical GR solution satisfies its Hamiltonian/Friedmann constraint with positive vacuum energy and nonzero pressure. Closure alone does not force the q-theory equilibrium condition."
+  },
+  "vacuum_exchange": {
+    "intrinsic_w": -1.0,
+    "effective_w_formula": "-1 + Qtransfer/(3 H rho_vac)",
+    "meaning": "A decaying vacuum transferring energy can retain intrinsic p=-rho. w>-1 requires a separately conserved/effective interpretation."
+  },
+  "one_dimensional_algebra": {
+    "matrix_algebra_dimension": 1,
+    "maximum_nonzero_orthogonal_projectors": 1,
+    "meaning": "Ordinary operators on one-dimensional space cannot realize two distinct orthogonal records. Observer/code rules are additional structure."
+  },
+  "charge_retention_benchmark": {
+    "age_seconds": 4.3549488e+17,
+    "fractional_loss_target": 0.01,
+    "constant_exponential_fractional_rate_target_per_second": 2.3077965585959244e-20,
+    "energy_width_target_GeV": 1.5190192889605088e-44,
+    "meaning": "Engineering reference target, not an observational dark-matter lifetime bound."
+  },
+  "explicit_breaking_Ward_controls": [
+    {
+      "power": 5,
+      "torque_finite_difference_relative_error": 2.9566613346727414e-11
+    },
+    {
+      "power": 6,
+      "torque_finite_difference_relative_error": 2.7390545688417045e-12
+    }
+  ],
+  "operator_scan": {
+    "scope": "Non-derivative pure scalar/Higgs-invariant monomials through dimension six, preserving the two declared scalar sign symmetries. One representative of each conjugate pair; not the full fermionic/derivative EFT.",
+    "without_X_protection": [
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 1,
+        "charge_violation": 1
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 2,
+        "charge_violation": 2
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 3,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 3,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 3,
+        "charge_violation": 1
+      },
+      {
+        "X": 2,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 3,
+        "charge_violation": 1
+      },
+      {
+        "X": 3,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 3,
+        "charge_violation": 3
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 4,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 4,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 4,
+        "charge_violation": 2
+      },
+      {
+        "X": 3,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 4,
+        "charge_violation": 2
+      },
+      {
+        "X": 4,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 4,
+        "charge_violation": 4
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 2,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 1,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 4,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 1,
+        "Xstar": 0,
+        "phi": 4,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 2,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 2,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 2,
+        "Xstar": 1,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 3,
+        "Xstar": 2,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 1
+      },
+      {
+        "X": 3,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 5,
+        "charge_violation": 3
+      },
+      {
+        "X": 3,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 3
+      },
+      {
+        "X": 3,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 3
+      },
+      {
+        "X": 4,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 3
+      },
+      {
+        "X": 5,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 5
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 2,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 1,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 4,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 2,
+        "Xstar": 0,
+        "phi": 4,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 3,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 3,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 3,
+        "Xstar": 1,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 4,
+        "Xstar": 2,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 2
+      },
+      {
+        "X": 4,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 1,
+        "dimension": 6,
+        "charge_violation": 4
+      },
+      {
+        "X": 4,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 2,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 4
+      },
+      {
+        "X": 4,
+        "Xstar": 0,
+        "phi": 2,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 4
+      },
+      {
+        "X": 5,
+        "Xstar": 1,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 4
+      },
+      {
+        "X": 6,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 6
+      }
+    ],
+    "residual_Z5": [
+      {
+        "X": 5,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 5,
+        "charge_violation": 5
+      }
+    ],
+    "residual_Z6": [
+      {
+        "X": 6,
+        "Xstar": 0,
+        "phi": 0,
+        "D": 0,
+        "HdagH": 0,
+        "dimension": 6,
+        "charge_violation": 6
+      }
+    ]
+  }
+}
