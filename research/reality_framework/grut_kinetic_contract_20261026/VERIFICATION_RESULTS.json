@@ -1,0 +1,73 @@
+{
+  "groups": {
+    "decay_number_energy_and_time": {
+      "passed": true,
+      "moment_quadrature_relative_error": 1.1102230246251565e-16,
+      "time_ODE_error": 2.744471316873387e-13,
+      "parent_budget_relative_error": 1.5543122344752192e-15,
+      "ODE_evaluations": 1622,
+      "estimated_early_decay_fraction_before_parent_p_over_m01": 8.289319156893811e-12
+    },
+    "reaction_inventory_and_fast_s_denominator": {
+      "passed": true,
+      "stoichiometry": [
+        [
+          1,
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          1,
+          -1,
+          0
+        ],
+        [
+          -1,
+          -2,
+          0,
+          -1
+        ]
+      ],
+      "charge_change": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pair_inventory_change": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "fixed_T_inventory_derivative_error": 2.476019389519024e-12,
+      "reviewer_term": "Existing rate_two s_channel already contains ss->X anti-X and this fixed-T inventory denominator. It is not inverse decay treated as a sink."
+    },
+    "on_shell_Bose_detailed_balance": {
+      "passed": true,
+      "samples": 240,
+      "max_forward_reverse_residual": 5.257255703132102e-16,
+      "max_energy_residual": 2.2122813202997696e-16
+    },
+    "thermodynamic_reservoir_quadrature": {
+      "passed": true,
+      "species_states": 16,
+      "max_Bessel_comparison_error": 3.9968028886505635e-14,
+      "max_fixed_energy_match_error": 2.149391775674303e-13
+    },
+    "finite_Q_object_number_work": {
+      "passed": true,
+      "derivative_samples": 40,
+      "max_normalized_derivative_error": 2.2222492380731512e-11,
+      "test_energy": "Arbitrary smooth aQ+bQ^(2/3) only; not a GRUT fit."
+    }
+  },
+  "passed": 5,
+  "total": 5,
+  "full_Boltzmann_run": false,
+  "new_threshold": false,
+  "physical_formation_kernel": false,
+  "scope": "Mathematical checks of supplied sources and conservation structure; no physical viability certification."
+}
