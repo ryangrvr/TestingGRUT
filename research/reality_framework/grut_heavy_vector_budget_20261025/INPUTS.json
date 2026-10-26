@@ -1,0 +1,78 @@
+{
+  "dimensionless_early": {
+    "M": 30.0,
+    "h": 40.0,
+    "mu": 7.159456159513794,
+    "kappa": 0.0034586847211042523,
+    "r": 0.45
+  },
+  "normalized_parameters": {
+    "H_GeV": 133349619398.33566,
+    "M_Y_GeV": 4000488581950.07,
+    "h_GeV": 5333984775933.427,
+    "mu_GeV": 954710753970.2344,
+    "kappa": 0.0034586847211042523,
+    "lambda_X": 0.001,
+    "lambda_Y": 1.0,
+    "lambda_Sigma": 1.0,
+    "cH": 10.0,
+    "e": 1e-07,
+    "base_H_GeV": 434867798206.6179,
+    "uniform_scale": 0.3066440420474121,
+    "base_yield_over_YQ": 5.8890901638077935
+  },
+  "prepared_state": {
+    "values_H_units": [
+      [
+        76.39978266076902,
+        0.0
+      ],
+      [
+        -2.111509854283515,
+        -0.9393290404896636
+      ],
+      [
+        0.0,
+        -28.293142125868524
+      ]
+    ],
+    "conditional_gradient_norm": 1.1879671075215628e-12,
+    "conditional_hessian_eigenvalues": [
+      16.688930052217618,
+      527.2905875411454,
+      1319.990994746186,
+      3203.441192618597
+    ],
+    "gauge_Higgs_norm_over_H": 263.4504211254087,
+    "nonzero_X_torque": -8692.733081190318,
+    "physical_velocities": "zero; conformal chi_prime=chi at a=1",
+    "scope": "Full conditional minimum at supplied X/Sigma phases; no phase-holder action derived."
+  },
+  "light_sector": {
+    "gX": 0.1,
+    "lambdaX": 0.001,
+    "lambdaPhi": 0.03,
+    "vPhi_GeV": 0.924089637375362,
+    "mX_GeV": 0.09240896373753621,
+    "Q_reference": 200000
+  },
+  "benchmark": {
+    "YQ": 4.8294009076988175e-09,
+    "DM_per_visible_entropy_GeV": 4.4e-10,
+    "allowance_f": 0.01,
+    "mu_cap_over_m": 0.8611951308217225,
+    "original_E_over_Qm": 0.9233161353726057,
+    "review_ke_choice": "mu_c=E_c=omega, plus scalar resonance route enabled"
+  },
+  "background": "Zero physical velocities, phi=0, instantaneous X Hubble-mass removal and prompt radiation; phase supplied, no holder action derived.",
+  "quantum": "Common-mode standard Bunch-Davies vacuum in held de Sitter with prepared Higgs norm; initially independent orthogonal modes omitted.",
+  "band": {
+    "k_over_kstar": [
+      0.2,
+      5.0
+    ],
+    "Proca_fine_nodes": 97,
+    "coupled_nodes": 49
+  },
+  "review_code_replay": "f7d641a lsrelic.py/lsthermo.py; not an independent new relic solver"
+}

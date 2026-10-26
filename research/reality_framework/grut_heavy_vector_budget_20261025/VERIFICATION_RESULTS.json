@@ -1,0 +1,84 @@
+{
+  "groups": {
+    "prepared_scalar_background": {
+      "passed": true,
+      "work_max": 2.98734725437492e-11,
+      "gauss_max": 7.422981373877312e-13,
+      "charge_tolerance_relative_spread": 1.6850076889340926e-11,
+      "conditional_gradient": 1.1879671075215628e-12
+    },
+    "Proca_mode_controls": {
+      "passed": true,
+      "absolute_Wronskian_max": 5.820766091346741e-08,
+      "scaled_Wronskian_max": 1.632849230125619e-11,
+      "changes": [
+        {
+          "k_over_kstar": 0.3,
+          "endpoint": 0.0010879243867119026,
+          "tolerance_and_start": 1.9025954989260185e-07,
+          "longer_background": 5.638894773341008e-07
+        },
+        {
+          "k_over_kstar": 1.0,
+          "endpoint": 0.0007302691655518556,
+          "tolerance_and_start": 1.9060622880040512e-07,
+          "longer_background": 1.5029366378094267e-06
+        },
+        {
+          "k_over_kstar": 3.0,
+          "endpoint": 0.00035096303832582443,
+          "tolerance_and_start": 1.9091254022107762e-07,
+          "longer_background": 5.135770398068118e-06
+        }
+      ]
+    },
+    "band_integration_and_profile": {
+      "passed": true,
+      "quadrature_change": 7.900846913022619e-05,
+      "smooth_profile_change": 4.207002770051371e-05
+    },
+    "Coulomb_Hamiltonian_algebra": {
+      "passed": true,
+      "canonical_hessian_fd_relative_error": 6.734228689702113e-10,
+      "gauge_Ward_relative_error": 3.2219074817680743e-15,
+      "hessian_symmetry_relative_error": 0.0,
+      "Legendre_relative_error": 2.180756663962569e-16,
+      "Schur_momentum_recovery_absolute_error": 0.0,
+      "samples": 18
+    },
+    "coupled_common_mode_transfer": {
+      "passed": true,
+      "band_relative_to_Proca": 1.0772664511438101e-05,
+      "max_matching_time_change": 0.0004940518650671244,
+      "tighter_common_mode_change": 4.892576344062149e-10,
+      "maximum_pointwise_change": 9.506308476003866e-05,
+      "scope": "Initial common mode only; late projection controls do not constitute all initial-mode production."
+    },
+    "energy_deposit_and_gauge_scaling": {
+      "passed": true,
+      "deposit_ratio": 0.3162277660168372,
+      "number_ratio": 0.3160608540207203,
+      "energy_ratio": 0.09993932173952955
+    },
+    "review_code_ke_replay": {
+      "passed": true,
+      "f_coarse": 0.6857543971883477,
+      "f_refined": 0.6736836519613963,
+      "fractional_grid_change": 0.017917527302032665,
+      "refined_cumulative_work_residual": 0.004037807196497859,
+      "source": "Actual replay of reviewer f7d641a code, not an independent relic implementation."
+    }
+  },
+  "groups_passed": 7,
+  "groups_total": 7,
+  "physical_results": {
+    "specified_point_fails_corrected_proxy": true,
+    "finite_band_vector_R": 40.56262288525944,
+    "common_mode_coupled_R": 40.55898141470034,
+    "original_isentropic_proxy_f": 1.5054455290359075e-181,
+    "full_kinetic_action_exclusion": false,
+    "new_viable_e_point_demonstrated": false,
+    "complete_initial_physical_mode_covariance_evolved": false,
+    "foundational_closure_prediction_derived": false
+  }
+}

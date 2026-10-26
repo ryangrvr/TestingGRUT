@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "name": "specified",
+      "e": 1e-07,
+      "mA_GeV": 3200390.8655600557,
+      "Gamma_A_GeV": 2.1223251086667907e-10,
+      "a_mean_decay": 31415926535.89801,
+      "deposit_R_per_vector": 19.641987024547266,
+      "N_A_band": 2.0650977334710046,
+      "vectors_per_net_charge": 0.0007406624063072549,
+      "direct_pair_rest_mass_fraction_if_unprocessed": 0.0015024671332922383,
+      "R_vector_band_only": 40.56262288525944,
+      "R_Y": 0.8055700748053104,
+      "R_Sigma_late_diagnostic": 1.240711650236604e-07,
+      "R_cascade_late_diagnostic": 0.338883874466159,
+      "combined_late_diagnostic": 41.707076958602066,
+      "headroom_without_any_scalar_at_R8_2": 0.00014972975857354112,
+      "headroom_without_any_scalar_at_R20": 0.0003651945331061979
+    },
+    {
+      "name": "sensitivity",
+      "e": 1e-06,
+      "mA_GeV": 32003908.655600563,
+      "Gamma_A_GeV": 2.1223251086668018e-07,
+      "a_mean_decay": 993458826.57961,
+      "deposit_R_per_vector": 6.2113416769042855,
+      "N_A_band": 0.6526449887956494,
+      "vectors_per_net_charge": 0.00023407589870009618,
+      "direct_pair_rest_mass_fraction_if_unprocessed": 0.0004748335294161574,
+      "R_vector_band_only": 4.053801019129147,
+      "R_Y": 0.8055700748053104,
+      "R_Sigma_late_diagnostic": 3.923474734253848e-08,
+      "R_cascade_late_diagnostic": 0.10716449056156375,
+      "combined_late_diagnostic": 4.966535623730769,
+      "headroom_without_any_scalar_at_R8_2": 0.000473487070599515,
+      "headroom_without_any_scalar_at_R20": 0.0011548465136573538
+    }
+  ],
+  "finite_object_thermodynamics": {
+    "E_per_Q_over_m": 0.9233161353726057,
+    "chemical_omega_over_m": 0.8611951308217225,
+    "energy_per_charge_excess_fraction": 0.07213348325786462,
+    "object_number_chemical_potential_GeV": 1148.1075313763777,
+    "identity": "d[n_L E(Q)] = omega d[n_L Q] + (E-Q omega) d n_L",
+    "scope": "E/Q unequal to dE/dQ is expected for finite objects. A linear lump proxy must include the missing object-number/surface work or use a consistently linear comparator."
+  },
+  "primary_comparison": "Vector finite band alone, omitting all scalar/cascade and extra release sources.",
+  "review_thresholds": {
+    "ke_omega_approx": 8.2,
+    "ke_EperQ_approx": 7.0,
+    "ke_with_s_route_bracket": [
+      15.0,
+      20.0
+    ],
+    "source_commit": "f7d641a2570f148b67e4ad05bd8acbea5f97c960",
+    "status": "Reviewer energy-conserving proxy; not an independently implemented kinetic solver."
+  }
+}
