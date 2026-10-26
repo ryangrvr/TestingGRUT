@@ -1,0 +1,103 @@
+{
+  "groups": {
+    "constraint_and_exact_spectrum": {
+      "passed": true,
+      "constraint_isometry_residual": 1.8543753674640895e-16,
+      "spectrum_error": 1.7763568394002505e-15,
+      "dressing_residual": 2.0193611980919367e-15,
+      "physical_projector_residual": 1.0153606928629727e-15,
+      "kernel_dimension": 8,
+      "gap": 0.2928932188134516
+    },
+    "physical_POVM_and_clock_conditioning": {
+      "passed": true,
+      "probability_and_conditional_error": 1.4432899320127035e-15,
+      "effect_constraint_commutator": 3.208711944859332e-16,
+      "effect_completeness_error": 1.289807533204061e-15
+    },
+    "records_coherence_and_erasure": {
+      "passed": true,
+      "record_window_ticks": [
+        3,
+        4,
+        5
+      ],
+      "R1_R2_information_at_tick3": 1.0,
+      "pure_vs_dephased_XXX_at_tick3": [
+        1.0,
+        0.0
+      ],
+      "erasure_entropy_at_tick7": -0.0
+    },
+    "state_selection_countermodels": {
+      "passed": true,
+      "maximum_entropy_conditional_state_error": 1.5741962150902938e-16,
+      "maximum_entropy_pointer_MI": 6.406853007629831e-16,
+      "state_filter_zero_eigenvalues_on_original_physical_space": 1,
+      "excluded_p01_filter_expectation": 0.1999999999999998,
+      "state_filter_constraint_commutator": 3.7846857116367226e-16,
+      "supplied_state_probabilities": [
+        0.0,
+        0.1,
+        0.5,
+        0.9,
+        1.0
+      ]
+    },
+    "complete_scalar_operator_census": {
+      "passed": true,
+      "gauge_neutral_monomials_degree_le4": 26,
+      "phi_even_subset": 19,
+      "unexplained": []
+    },
+    "rational_scalar_Hessian_and_counterterm": {
+      "passed": true,
+      "exact_polynomial_identity": true,
+      "samples": 40,
+      "max_trace_error": 5.065862712787283e-16,
+      "max_Hessian_FD_error": 2.8301575531071094e-10
+    },
+    "gauge_potential_derivative": {
+      "passed": true,
+      "normalized_derivative_errors": [
+        3.3333348981035016e-07,
+        3.334073128691273e-09,
+        2.8939184382181793e-11
+      ],
+      "derivative_exact": -0.6666666666666666,
+      "e_power_at_fixed_h": 4
+    },
+    "covariant_curvature_mass_representative": {
+      "passed": true,
+      "xi_X": -0.8333333333333334,
+      "FLRW_trace_identity_error": 0.0,
+      "backgrounds": [
+        {
+          "background": "de_Sitter",
+          "w": -1.0,
+          "R_over_H2": 12.0,
+          "mass_curvature_squared_over_H2": -10.0
+        },
+        {
+          "background": "matter",
+          "w": 0.0,
+          "R_over_H2": 3.0,
+          "mass_curvature_squared_over_H2": -2.5
+        },
+        {
+          "background": "radiation",
+          "w": 0.3333333333333333,
+          "R_over_H2": 0.0,
+          "mass_curvature_squared_over_H2": -0.0
+        }
+      ],
+      "relative_effective_Planck_mass_squared_shift_at_prepared_X": 2.9175521371380406e-11,
+      "scope": "One added covariant representative of cH; ideal backgrounds, spectator-size check only. No inflaton, phase holder, reheating trajectory or Einstein-frame perturbation spectrum solved."
+    }
+  },
+  "passed": 8,
+  "total": 8,
+  "physical_cosmology_certified": false,
+  "quantum_gravity_derived": false,
+  "closure_state_law_derived": false
+}

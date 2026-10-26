@@ -1,0 +1,425 @@
+{
+  "groups": {
+    "complete_scalar_operator_census": {
+      "passed": true,
+      "gauge_neutral_monomials_degree_le4": 26,
+      "phi_even_subset": 19,
+      "unexplained": []
+    },
+    "rational_scalar_Hessian_and_counterterm": {
+      "passed": true,
+      "exact_polynomial_identity": true,
+      "samples": 40,
+      "max_trace_error": 5.065862712787283e-16,
+      "max_Hessian_FD_error": 2.8301575531071094e-10
+    },
+    "gauge_potential_derivative": {
+      "passed": true,
+      "normalized_derivative_errors": [
+        3.3333348981035016e-07,
+        3.334073128691273e-09,
+        2.8939184382181793e-11
+      ],
+      "derivative_exact": -0.6666666666666666,
+      "e_power_at_fixed_h": 4
+    },
+    "covariant_curvature_mass_representative": {
+      "passed": true,
+      "xi_X": -0.8333333333333334,
+      "FLRW_trace_identity_error": 0.0,
+      "backgrounds": [
+        {
+          "background": "de_Sitter",
+          "w": -1.0,
+          "R_over_H2": 12.0,
+          "mass_curvature_squared_over_H2": -10.0
+        },
+        {
+          "background": "matter",
+          "w": 0.0,
+          "R_over_H2": 3.0,
+          "mass_curvature_squared_over_H2": -2.5
+        },
+        {
+          "background": "radiation",
+          "w": 0.3333333333333333,
+          "R_over_H2": 0.0,
+          "mass_curvature_squared_over_H2": -0.0
+        }
+      ],
+      "relative_effective_Planck_mass_squared_shift_at_prepared_X": 2.9175521371380406e-11,
+      "scope": "One added covariant representative of cH; ideal backgrounds, spectator-size check only. No inflaton, phase holder, reheating trajectory or Einstein-frame perturbation spectrum solved."
+    }
+  },
+  "scalar_monomials": [
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "degree": 0,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "degree": 1,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "degree": 2,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "degree": 3,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "degree": 2,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "degree": 3,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "degree": 3,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "degree": 4,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "degree": 2,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "degree": 3,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "degree": 3,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "degree": 4,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "degree": 2,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "degree": 3,
+      "phi_even": false
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    },
+    {
+      "exponents": [
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "degree": 4,
+      "phi_even": true
+    }
+  ],
+  "scalar_trace_kappa_squared": "Tr[(M_scalar^2)^2]|kappa^2 = 36 kappa^2 |X|^4 + 72 kappa^2 |X|^2 |Y|^2",
+  "isolated_beta_lambda_XY": 2.7271229834732976e-06,
+  "beta_convention": "mu_R*d lambda_XY/d mu_R; V includes lambda_XY |X|^2|Y|^2; isolated kappa^2 term only.",
+  "gauge_potential": "3 m_A^4(X)/(64 pi^2) [ln(m_A^2(X)/mu_R^2)-5/6], Landau gauge MS-bar, Sigma held fixed.",
+  "gauge_rows": [
+    {
+      "e": 1e-07,
+      "mA_GeV": 3200390.8655600557,
+      "delta_mX_squared_GeV2": -0.0006486139968303672,
+      "magnitude_over_target_mX_squared": 0.07595530570811937
+    },
+    {
+      "e": 1e-06,
+      "mA_GeV": 32003908.655600563,
+      "delta_mX_squared_GeV2": -6.486139968303675,
+      "magnitude_over_target_mX_squared": 759.553057081194
+    },
+    {
+      "e": 3e-06,
+      "mA_GeV": 96011725.96680169,
+      "delta_mX_squared_GeV2": -525.3773374325978,
+      "magnitude_over_target_mX_squared": 61523.79762357672
+    },
+    {
+      "e": 1e-05,
+      "mA_GeV": 320039086.55600566,
+      "delta_mX_squared_GeV2": -64861.399683036776,
+      "magnitude_over_target_mX_squared": 7595530.570811943
+    }
+  ],
+  "scope": "Operator/matching audit. Gauge derivative is one scheme/gauge-dependent potential contribution, not a pole mass, full threshold matching, tuning criterion or exclusion. Zero portals are matching choices, not identities preserved by running."
+}

@@ -1,0 +1,89 @@
+{
+  "architecture": "Constrained relational quantum description with covariant EFT; no fundamental completion selected.",
+  "spacetime": {
+    "signature": "-+++",
+    "spatial_branch": "T3, supplied compact topology",
+    "gravity": "Adopted Einstein EFT plus allowed counterterms"
+  },
+  "fields": {
+    "Standard_Model": "Adopted",
+    "binding_phi": "real, hidden neutral",
+    "X": 1,
+    "Y": 3,
+    "Sigma": 6,
+    "gauge_group": "SM x U(1)_X",
+    "reporter_D": "Optional earlier probe, not required by this core architecture"
+  },
+  "scalar_basis": {
+    "max_mass_dimension": 4,
+    "monomials": 26,
+    "with_exact_phi_parity": 19,
+    "reference_potential": "THEORY.md; full renormalizable basis ACTION.md"
+  },
+  "matching": {
+    "low_energy_targets": {
+      "gX": 0.1,
+      "lambdaX": 0.001,
+      "lambdaPhi": 0.03,
+      "vPhi_GeV": 0.924089637375362,
+      "mX_GeV": 0.09240896373753621,
+      "Q_reference": 200000
+    },
+    "heavy_reference": {
+      "H_GeV": 133349619398.33566,
+      "M_Y_GeV": 4000488581950.07,
+      "h_GeV": 5333984775933.427,
+      "mu_GeV": 954710753970.2344,
+      "kappa": 0.0034586847211042523,
+      "lambda_X": 0.001,
+      "lambda_Y": 1.0,
+      "lambda_Sigma": 1.0,
+      "cH": 10.0,
+      "e": 1e-07,
+      "base_H_GeV": 434867798206.6179,
+      "uniform_scale": 0.3066440420474121,
+      "base_yield_over_YQ": 5.8890901638077935
+    },
+    "missing": "Complete quantum matching, higher-dimensional coefficients and physical inflation/phase-holder state.",
+    "rho_vac": "Independent renormalized parameter"
+  },
+  "additional_curvature_representative": {
+    "xi_X": -0.8333333333333334,
+    "mass_squared_over_H2": {
+      "de_Sitter": -10,
+      "matter": -2.5,
+      "radiation": 0
+    },
+    "status": "Added covariant representative; no new cosmological history computed."
+  },
+  "observations": {
+    "probability": "Tr_phys(rho_phys E_a_given_t)",
+    "Born_rule": "Supplied",
+    "finite_dictionary": "RECORDS.md",
+    "continuum_gravity_dictionary": "Unconstructed"
+  },
+  "exact_finite_instance": {
+    "kinematic_dimension": 64,
+    "physical_dimension": 8,
+    "clock_readings": 8,
+    "input_state": "|000> at clock reading0",
+    "phase": 0.37,
+    "record_window": [
+      3,
+      4,
+      5
+    ],
+    "state_preparation": "Supplied"
+  },
+  "predictions": {
+    "kinetic_solver": "Claude, existing workflow",
+    "experimental_family": "Previously selected multi-target nuclear recoil shapes",
+    "distinctive_signal_established": false
+  },
+  "missing_fundamental_selection": {
+    "action_or_state_rule": "No new restriction derived from closure",
+    "vacuum_density": false,
+    "cosmic_arrow": false,
+    "subjective_consciousness": false
+  }
+}

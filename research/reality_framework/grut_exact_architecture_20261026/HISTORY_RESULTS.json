@@ -1,0 +1,502 @@
+{
+  "clock_readings": 8,
+  "matter_and_record_dimension": 8,
+  "total_dimension": 64,
+  "physical_dimension": 8,
+  "gate_order": [
+    "H_S",
+    "CNOT_S_R1",
+    "CNOT_S_R2",
+    "exp(-i*.37 Z_S)",
+    "inverse_phase",
+    "inverse_copy_R2",
+    "inverse_copy_R1",
+    "inverse_H"
+  ],
+  "cyclic_gate_product_residual": 6.312164422641715e-16,
+  "groups": {
+    "constraint_and_exact_spectrum": {
+      "passed": true,
+      "constraint_isometry_residual": 1.8543753674640895e-16,
+      "spectrum_error": 1.7763568394002505e-15,
+      "dressing_residual": 2.0193611980919367e-15,
+      "physical_projector_residual": 1.0153606928629727e-15,
+      "kernel_dimension": 8,
+      "gap": 0.2928932188134516
+    },
+    "physical_POVM_and_clock_conditioning": {
+      "passed": true,
+      "probability_and_conditional_error": 1.4432899320127035e-15,
+      "effect_constraint_commutator": 3.208711944859332e-16,
+      "effect_completeness_error": 1.289807533204061e-15
+    },
+    "records_coherence_and_erasure": {
+      "passed": true,
+      "record_window_ticks": [
+        3,
+        4,
+        5
+      ],
+      "R1_R2_information_at_tick3": 1.0,
+      "pure_vs_dephased_XXX_at_tick3": [
+        1.0,
+        0.0
+      ],
+      "erasure_entropy_at_tick7": -0.0
+    },
+    "state_selection_countermodels": {
+      "passed": true,
+      "maximum_entropy_conditional_state_error": 1.5741962150902938e-16,
+      "maximum_entropy_pointer_MI": 6.406853007629831e-16,
+      "state_filter_zero_eigenvalues_on_original_physical_space": 1,
+      "excluded_p01_filter_expectation": 0.1999999999999998,
+      "state_filter_constraint_commutator": 3.7846857116367226e-16,
+      "supplied_state_probabilities": [
+        0.0,
+        0.1,
+        0.5,
+        0.9,
+        1.0
+      ]
+    }
+  },
+  "histories": [
+    {
+      "input_branch_probability": 0.0,
+      "constraint_residual": 5.198989181997352e-17,
+      "global_entropy_bits": 8.008566259537292e-16,
+      "ticks": [
+        {
+          "tick": 0,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 1,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 2,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 6.035532688180104e-34,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 3,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 6.035532688180104e-34,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 6.503535905665379e-17
+        },
+        {
+          "tick": 4,
+          "clock_probability": 0.12499999999999993,
+          "record1_probability_one": 5.026294025128833e-34,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 8.489117896803985e-18
+        },
+        {
+          "tick": 5,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 6.035532688180104e-34,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 6.503535905665379e-17
+        },
+        {
+          "tick": 6,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 6.035532688180104e-34,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 7,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        }
+      ]
+    },
+    {
+      "input_branch_probability": 0.1,
+      "constraint_residual": 1.0056273398185362e-16,
+      "global_entropy_bits": 1.121199276335221e-15,
+      "ticks": [
+        {
+          "tick": 0,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 1,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 2,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.09999999999999983,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 3,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.09999999999999983,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.4689955935892812,
+          "pointer_MI_R1_R2": 0.4689955935892812,
+          "global_XXX_witness": 0.6
+        },
+        {
+          "tick": 4,
+          "clock_probability": 0.12499999999999989,
+          "record1_probability_one": 0.09999999999999983,
+          "matter_entropy_bits": 0.46899559358928133,
+          "pointer_MI_matter_R1": 0.4689955935892813,
+          "pointer_MI_matter_R2": 0.4689955935892813,
+          "pointer_MI_R1_R2": 0.4689955935892813,
+          "global_XXX_witness": 0.4430811352377528
+        },
+        {
+          "tick": 5,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.09999999999999983,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.4689955935892812,
+          "pointer_MI_R1_R2": 0.4689955935892812,
+          "global_XXX_witness": 0.6
+        },
+        {
+          "tick": 6,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.09999999999999983,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 7,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        }
+      ]
+    },
+    {
+      "input_branch_probability": 0.5,
+      "constraint_residual": 6.510145692348113e-17,
+      "global_entropy_bits": 3.2034265038149176e-16,
+      "ticks": [
+        {
+          "tick": 0,
+          "clock_probability": 0.12499999999999997,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 1,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 2,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.49999999999999944,
+          "matter_entropy_bits": 1.0,
+          "pointer_MI_matter_R1": 1.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 3,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.49999999999999944,
+          "matter_entropy_bits": 1.0,
+          "pointer_MI_matter_R1": 1.0,
+          "pointer_MI_matter_R2": 1.0,
+          "pointer_MI_R1_R2": 1.0,
+          "global_XXX_witness": 1.0
+        },
+        {
+          "tick": 4,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.49999999999999944,
+          "matter_entropy_bits": 1.0,
+          "pointer_MI_matter_R1": 1.0,
+          "pointer_MI_matter_R2": 1.0,
+          "pointer_MI_R1_R2": 1.0,
+          "global_XXX_witness": 0.7384685587295879
+        },
+        {
+          "tick": 5,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.49999999999999944,
+          "matter_entropy_bits": 1.0,
+          "pointer_MI_matter_R1": 1.0,
+          "pointer_MI_matter_R2": 1.0,
+          "pointer_MI_R1_R2": 1.0,
+          "global_XXX_witness": 1.0
+        },
+        {
+          "tick": 6,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.49999999999999944,
+          "matter_entropy_bits": 1.0,
+          "pointer_MI_matter_R1": 1.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 7,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        }
+      ]
+    },
+    {
+      "input_branch_probability": 0.9,
+      "constraint_residual": 9.889461791637109e-17,
+      "global_entropy_bits": 1.121199276335221e-15,
+      "ticks": [
+        {
+          "tick": 0,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 1,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 2,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.8999999999999986,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 3,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.8999999999999986,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.4689955935892812,
+          "pointer_MI_R1_R2": 0.4689955935892812,
+          "global_XXX_witness": 0.6
+        },
+        {
+          "tick": 4,
+          "clock_probability": 0.12499999999999989,
+          "record1_probability_one": 0.8999999999999986,
+          "matter_entropy_bits": 0.46899559358928133,
+          "pointer_MI_matter_R1": 0.4689955935892813,
+          "pointer_MI_matter_R2": 0.4689955935892813,
+          "pointer_MI_R1_R2": 0.4689955935892813,
+          "global_XXX_witness": 0.4430811352377528
+        },
+        {
+          "tick": 5,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.8999999999999986,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.4689955935892812,
+          "pointer_MI_R1_R2": 0.4689955935892812,
+          "global_XXX_witness": 0.6
+        },
+        {
+          "tick": 6,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.8999999999999986,
+          "matter_entropy_bits": 0.4689955935892812,
+          "pointer_MI_matter_R1": 0.4689955935892812,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 7,
+          "clock_probability": 0.12499999999999992,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        }
+      ]
+    },
+    {
+      "input_branch_probability": 1.0,
+      "constraint_residual": 5.073074630264762e-17,
+      "global_entropy_bits": 9.61027951144475e-16,
+      "ticks": [
+        {
+          "tick": 0,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 1,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 2,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.9999999999999989,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 3,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.9999999999999989,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 6.503535905665379e-17
+        },
+        {
+          "tick": 4,
+          "clock_probability": 0.12499999999999993,
+          "record1_probability_one": 0.9999999999999989,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 8.489117896803985e-18
+        },
+        {
+          "tick": 5,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.9999999999999989,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 6.503535905665379e-17
+        },
+        {
+          "tick": 6,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.9999999999999989,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        },
+        {
+          "tick": 7,
+          "clock_probability": 0.12499999999999994,
+          "record1_probability_one": 0.0,
+          "matter_entropy_bits": -0.0,
+          "pointer_MI_matter_R1": 0.0,
+          "pointer_MI_matter_R2": 0.0,
+          "pointer_MI_R1_R2": 0.0,
+          "global_XXX_witness": 0.0
+        }
+      ]
+    }
+  ],
+  "max_entropy_physical_state_entropy_bits": 3.0,
+  "scope": "Exact supplied finite history constraint and physical POVMs; no gravity, selected initial state, Born rule or unique outcome derived."
+}
