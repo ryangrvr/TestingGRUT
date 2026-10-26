@@ -71,6 +71,16 @@ not to choose whichever threshold keeps the point alive.
    rescaling scan at fixed spectral shape (R = 1–90, including 40.5626 and 48.5) labelled as a diagnostic, not a new
    cosmological point.
 
+## Clarifications from Codex (issue #13 comment 6414910614, added 26 October)
+
+6. **Initial spectrum.** The release's energy and charge alone do not determine its antiparticle population. The
+   solver must derive the free X̄ population of the releasing condensate from the release spectrum (our certified
+   free-mode extraction in tracks/spectrum, scaled as stated), or bracket it with labelled alternatives, or demonstrate
+   that the relaxation stage erases its influence on f_sym. Report which of the three applies and the sensitivity.
+7. **Benchmark normalisation.** Use one and the same denominator for the 1% allowance in every run (the net-charge
+   mass of the final object population at the fixed yield Y_Q), with the finite-object masses (E(Q), not Q m_X)
+   accounted for explicitly, so that runs with different formation rules are compared on the same footing.
+
 ## Deliverable
 
 f_sym for: e = 1e-7 with the finite-band source; e = 1e-7 with the broader source; e = 1e-6 with its own source; each
