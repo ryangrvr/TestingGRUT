@@ -1,0 +1,611 @@
+{
+ "method": "kin_source (Claude, own code): the release's own population (no-source control) and the equilibrium comparators.\n\nA. Onset / case-L coordinate [D]: n_Q = |eps| n_c with n_c = 2 sqrt(2 lambda_X) x_c^3, x_c^2 = lambda_phi v^2/(2 g_X^2);\n   a_ref = H_i (|N_X|/n_Q)^(1/3); the released condensate's energy there is E_X H_i^4/a_ref^4 = rho_c = 3 lambda_X x_c^4\n   (the two coordinates agree to 2e-5); the phi transition releases V0 = lambda_phi v^4/4 = m_X^2 x_c^2/2.\nB. Adiabatic coherent-orbit count [D, own quadrature; method of our gp_leftovers budget.py, re-implemented]:\n   planar orbit R(t), theta(t) of the homogeneous X field with L = |Xdot|^2 - V, charge n = 2 R^2 thetadot,\n   J_r = (1/2 pi) oint p_R dR, p_R = 2 Rdot.  In the quartic era eps_q = n/n_max(rho) (this is the released eps);\n   if a^3 n and a^3 J_r are adiabatic invariants through the transition to the quadratic era, the nonrelativistic\n   quanta are N_- = J_r, N_+ = J_r + n per volume, i.e. Xbar per net charge p_0 = j = J_r/n and eps_NR = 1/(1 + 2 j).\nC. Energy cap [D]: cold quanta per net charge <= (rho_c + V0)/(m_X n_Q); Xbar per net charge <= (that - 1)/2.\nD. Fragmentation template [A]: our tracks/spectrum certified free-mode fractions (prepared spherical object, Q0 = 38969,\n   E0/Q0 = 0.99954 m_X) scaled by |N_X|; applicable only as a spectral shape for a charge-saturated object.\nE. Equilibrium comparators [C, own Bose thermodynamics]: fully thermalised X, Xbar (and s) gas at fixed energy\n   rho_c (1 + R) + V0 and net charge n_Q, condensate at mu_c = omega with linear energy omega n_c (Codex's control\n   definition), for R = 0 (no source), 40.5626, 48.5; the reservoir table at zero chemical potential.\nUsage: python3 -B release_population.py ../results/release_population.json\n",
+ "onset": {
+  "x_c_GeV": 1.1317740440815878,
+  "n_c_GeV3": 0.12966542340859144,
+  "rho_c_GeV4": 0.004922210396956952,
+  "V0_GeV4": 0.0054691226632855045,
+  "V0_over_rho_c": 1.1111111111111116,
+  "mX2_xc2_over_2V0": 1.0,
+  "n_Q_GeV3": 0.018894513922557532,
+  "a_ref_from_charge": 7046713943374.486,
+  "a_ref_from_energy": 7046860281035.117,
+  "ratio": 0.9999792336367127,
+  "eps_from_window_means": -0.14571744282991028,
+  "eps_from_NX_EX": 0.14570836495436207,
+  "T_vis_ref_GeV": 45.66997652455368,
+  "T_vis_ref_from_YQ_entropy": 45.66997652455361,
+  "H_ref_constant_gstar_GeV": 2.6854588166307643e-15,
+  "H_ref_with_gstar_GeV": 2.744780787625106e-15,
+  "energy_per_net_charge_mX": {
+   "rho_c": 2.819099142498502,
+   "V0": 3.1323323805538923,
+   "total": 5.951431523052394
+  },
+  "condensate_conformal_amplitude_over_H": 78.7125393908577,
+  "condensate_conformal_frequency_scale_over_H": 3.520131775191754,
+  "condensate_momentum_scale_at_ref_over_mX": 0.7208583938477114,
+  "phase_note": "before the transition phi = 0 (X massless, pure quartic); s exists only after it; the hidden gas temperature at onset may restore the phase (ls_threshold: one-loop T_c = 18-42 m_X) [Q] - open for the solver",
+  "V0_release_alternatives": {
+   "sudden_into_s_at_rest": {
+    "n_s_GeV3": 0.02416172508940859,
+    "s_per_net_charge": 1.2787693395257291
+   },
+   "adiabatic_zero_pressure_coexistence": "no V0 released to quanta (gp_leftovers)"
+  }
+ },
+ "adiabatic_orbit_count": {
+  "eps_q": 0.14571744282991028,
+  "n_over_nmax": 0.14571744282991028,
+  "J_r": 0.46756703516936354,
+  "j_Jr_over_n": 2.585998632082164,
+  "eps_NR": 0.16202210681559615,
+  "Xbar_per_net_charge": 2.585998632082164,
+  "quanta_per_net_charge": 6.171997264164328,
+  "R1_over_R2": 0.09059303215245469,
+  "harmonic_control_max_rel_err": 1.1479706074624119e-13,
+  "gp_leftovers_check_eps0.1": {
+   "f_adiabatic_here": 8.09434002050298,
+   "f_adiabatic_gp_leftovers_table": 8.09,
+   "f_NR_count_here": 9.12843
+  },
+  "frozen_f_if_never_processed": 5.245814987172896,
+  "NR_count_law_at_eps_q": {
+   "Xbar_per_net_charge": 2.931298204866445,
+   "f": 5.946255660499778
+  }
+ },
+ "harmonic_control": [
+  {
+   "n": 0.2,
+   "Jr": 0.3999999999999541,
+   "exact": 0.4
+  },
+  {
+   "n": 0.5,
+   "Jr": 0.24999999999997138,
+   "exact": 0.25
+  },
+  {
+   "n": 0.9,
+   "Jr": 0.049999999999994264,
+   "exact": 0.04999999999999999
+  }
+ ],
+ "energy_cap": {
+  "quanta_per_net_charge_with_V0": 5.951431523052394,
+  "quanta_per_net_charge_without_V0": 2.819099142498502,
+  "Xbar_per_net_charge_max_with_V0": 2.475715761526197,
+  "Xbar_per_net_charge_max_without_V0": 0.909549571249251
+ },
+ "fragmentation_template": {
+  "source": "tracks/spectrum (own, certified): prepared spherical Gaussian, Q0=38969.39, E0/Q0=0.99954 m_X; X bins F4long R=480 T=48000, Xbar bins F3h R=240 T=12000 rescaled to the converged N_Xbar",
+  "fractions": {
+   "Xbar_over_Q0": 0.006571055435898394,
+   "s_over_Q0": 0.0028047657247771878,
+   "X_escaped_over_Q0": 0.6557259539610006,
+   "cores_and_halo_over_Q0": 0.3508451014748978,
+   "mean_omega_Xbar": 1.693677510055844,
+   "mean_omega_s": 3.2387923147301008,
+   "mean_omega_X": 1.0380516928025942,
+   "E0_over_Q0_mX": 0.9995402504989297
+  },
+  "scaled_to_point": {
+   "scale_factor": 0.07154787471632579,
+   "N_Xbar": 18.321264278609544,
+   "N_s": 7.820182706494409,
+   "N_X_free": 1828.2798880725513,
+   "N_cores": 978.2181702288987,
+   "Xbar_per_net_charge": 0.006571055435898394,
+   "s_per_net_charge": 0.0028047657247771878,
+   "energy_per_net_charge_mX": 0.9995402504989297,
+   "release_energy_per_net_charge_mX": 5.951431523052394,
+   "energy_fraction_carried": 0.1679495507303227
+  },
+  "bins_p_over_mX": [
+   0,
+   0.01,
+   0.02,
+   0.03,
+   0.05,
+   0.075,
+   0.1,
+   0.15,
+   0.2,
+   0.3,
+   0.4,
+   0.5,
+   0.6,
+   0.8,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   12.0
+  ],
+  "Xbar_dN_per_bin": [
+   0.0007125633875867282,
+   0.0019667633118937732,
+   0.006119398551779013,
+   0.01576319818513277,
+   0.05427296992964685,
+   0.04765664414791589,
+   0.03942673389777856,
+   0.060371773444530596,
+   0.15069779490979143,
+   0.23287173147397738,
+   0.3276769611375813,
+   0.5888923460629636,
+   1.4870365962837948,
+   2.907279305937624,
+   6.652017669281342,
+   3.6330785266290437,
+   1.6961069602189076,
+   0.41931221691473197
+  ],
+  "X_dN_per_bin": [
+   12.907455416681845,
+   45.94856818377006,
+   76.46594691791461,
+   372.0654987155631,
+   270.5788974255782,
+   305.6644080063457,
+   200.49304999976104,
+   139.86073989957902,
+   74.09354928308478,
+   65.69159493741859,
+   62.80246248455752,
+   68.36236320951141,
+   77.97540688470485,
+   37.85352647246304,
+   11.971719071796171,
+   2.2548894653142986,
+   2.55527012432786,
+   0.7345415741793826
+  ],
+  "X_bins_certified_from_p_over_mX": 0.03,
+  "bins_q_over_H_at_a_ref": [
+   0.0,
+   0.0020478165020070696,
+   0.004095633004014139,
+   0.006143449506021209,
+   0.010239082510035349,
+   0.015358623765053021,
+   0.020478165020070698,
+   0.030717247530106042,
+   0.040956330040141396,
+   0.061434495060212084,
+   0.08191266008028279,
+   0.10239082510035348,
+   0.12286899012042417,
+   0.16382532016056559,
+   0.20478165020070696,
+   0.30717247530106045,
+   0.4095633004014139,
+   0.6143449506021209,
+   2.4573798024084836
+  ],
+  "s_quanta": "N_s = 7.8 scaled, <omega> = 3.24 m_X (p ~ 2.1 m_X); each can decay s -> X Xbar (vacuum width 1.73e-5 GeV)",
+  "assumption": "[A] the heavy-point release fragments like a charge-saturated object; it does not: eps_q = 0.146 means ~ (1+2j) quanta per net charge and 5.95 m_X of energy per net charge, against 1.0 m_X in the template. Use only as a spectral shape alternative."
+ },
+ "equilibrium_comparators": {
+  "bose_series_vs_quadrature_max_rel": 9.103828801926284e-15,
+  "reservoir_zero_mu": [
+   {
+    "T_over_m": 0.3,
+    "n_s_over_nminus": 0.023049850882506336,
+    "scalar_fraction_of_gas_energy": 0.021215613259849123
+   },
+   {
+    "T_over_m": 1.0,
+    "n_s_over_nminus": 0.4507387279195279,
+    "scalar_fraction_of_gas_energy": 0.2358494367724049
+   },
+   {
+    "T_over_m": 3.0,
+    "n_s_over_nminus": 0.8455630737220085,
+    "scalar_fraction_of_gas_energy": 0.31894780956024193
+   },
+   {
+    "T_over_m": 12.0,
+    "n_s_over_nminus": 0.9810698062732435,
+    "scalar_fraction_of_gas_energy": 0.3323656305635191
+   },
+   {
+    "T_over_m": 30.0,
+    "n_s_over_nminus": 0.9959283980621779,
+    "scalar_fraction_of_gas_energy": 0.3331773016593175
+   }
+  ],
+  "ms_GeV": 0.22635480881631756,
+  "trilinear_GeV": 0.018481792747507244,
+  "vacuum_Gamma_s_to_XXbar_GeV": 1.733277037751546e-05,
+  "states": {
+   "R0.0000_s0_V01": {
+    "R": 0.0,
+    "include_s": false,
+    "with_V0": true,
+    "rho_GeV4": 0.010391333060242456,
+    "T_GeV": 0.34052247068967356,
+    "T_over_m": 3.684950646745046,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.01601241175735452,
+    "condensed_fraction": 0.8474635453965204,
+    "plus": {
+     "n": 0.006381049838323323,
+     "rho": 0.005714180620532934,
+     "P": 0.0018705510472365463
+    },
+    "minus": {
+     "n": 0.00349894767312031,
+     "rho": 0.0034028502915379837,
+     "P": 0.0011188357344066487
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.010391333060242447,
+    "pair_inventory": 0.00349894767312031,
+    "Xbar_per_net_charge": 0.1851832594085965,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 1.8459809903799203
+   },
+   "R0.0000_s0_V00": {
+    "R": 0.0,
+    "include_s": false,
+    "with_V0": false,
+    "rho_GeV4": 0.004922210396956952,
+    "T_GeV": 0.2679762829898629,
+    "T_over_m": 2.899894903604593,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.01714029717961283,
+    "condensed_fraction": 0.9071573500046275,
+    "plus": {
+     "n": 0.003317054439592418,
+     "rho": 0.002344030492516192,
+     "P": 0.0007596547083026742
+    },
+    "minus": {
+     "n": 0.0015628376966477172,
+     "rho": 0.0012141182098464407,
+     "P": 0.000396316916377297
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.004922210396956954,
+    "pair_inventory": 0.0015628376966477172,
+    "Xbar_per_net_charge": 0.0827138344523326,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 0.9034686079545068
+   },
+   "R0.0000_s1_V01": {
+    "R": 0.0,
+    "include_s": true,
+    "with_V0": true,
+    "rho_GeV4": 0.010391333060242456,
+    "T_GeV": 0.3093743041948592,
+    "T_over_m": 3.3478819768345955,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.016530881862514248,
+    "condensed_fraction": 0.8749037911358268,
+    "plus": {
+     "n": 0.004904031099132657,
+     "rho": 0.003992341194392035,
+     "P": 0.0013022943472366345
+    },
+    "minus": {
+     "n": 0.0025403990390893724,
+     "rho": 0.002257127297046907,
+     "P": 0.0007402378538885937
+    },
+    "neutral": {
+     "n": 0.0029877958060784606,
+     "rho": 0.002826301455151486,
+     "P": 0.0008703512702266939
+    },
+    "rho": 0.01039133306024171,
+    "pair_inventory": 0.0055281948451678335,
+    "Xbar_per_net_charge": 0.13445167467666233,
+    "s_per_net_charge": 0.15813033446239813,
+    "scalar_energy_fraction": 0.2719864177932282,
+    "entropy_per_net_charge": 2.0187489062204973
+   },
+   "R0.0000_s1_V00": {
+    "R": 0.0,
+    "include_s": true,
+    "with_V0": false,
+    "rho_GeV4": 0.004922210396956952,
+    "T_GeV": 0.24419854428574858,
+    "T_over_m": 2.6425850308129357,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.017449217941636723,
+    "condensed_fraction": 0.9235071096909607,
+    "plus": {
+     "n": 0.002581456972378394,
+     "rho": 0.0016662012107105286,
+     "P": 0.0005372181398742637
+    },
+    "minus": {
+     "n": 0.001136160991457585,
+     "rho": 0.0008098646959814233,
+     "P": 0.00026338758976904975
+    },
+    "neutral": {
+     "n": 0.0013548898535143733,
+     "rho": 0.0010574982173680988,
+     "P": 0.0003146443677382725
+    },
+    "rho": 0.004922210396956952,
+    "pair_inventory": 0.0024910508449719586,
+    "Xbar_per_net_charge": 0.06013179254646822,
+    "s_per_net_charge": 0.07170810845241249,
+    "scalar_energy_fraction": 0.21484214043793692,
+    "entropy_per_net_charge": 0.982614193329831
+   },
+   "R40.5626_s0_V01": {
+    "R": 40.56262288525937,
+    "include_s": false,
+    "with_V0": true,
+    "rho_GeV4": 0.21004909715391015,
+    "T_GeV": 0.7501473766740384,
+    "T_over_m": 8.117690604178165,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.004404564224805327,
+    "condensed_fraction": 0.23311339168915396,
+    "plus": {
+     "n": 0.05900792776420482,
+     "rho": 0.11714516339538553,
+     "P": 0.03889436087140786
+    },
+    "minus": {
+     "n": 0.044517978066452614,
+     "rho": 0.0925534090694028,
+     "P": 0.03075181979267291
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.2100490971539159,
+    "pair_inventory": 0.044517978066452614,
+    "Xbar_per_net_charge": 2.3561324863353104,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 19.627352037470427
+   },
+   "R40.5626_s0_V00": {
+    "R": 40.56262288525937,
+    "include_s": false,
+    "with_V0": false,
+    "rho_GeV4": 0.20457997449062465,
+    "T_GeV": 0.7451777445552314,
+    "T_over_m": 8.063911923866135,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.004598738522868691,
+    "condensed_fraction": 0.24339014709335335,
+    "plus": {
+     "n": 0.0578929548199877,
+     "rho": 0.11416035522256777,
+     "P": 0.03790137449617662
+    },
+    "minus": {
+     "n": 0.04359717942029886,
+     "rho": 0.09005364177090813,
+     "P": 0.029920038145148327
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.20457997449064333,
+    "pair_inventory": 0.04359717942029886,
+    "Xbar_per_net_charge": 2.307398835396852,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 19.240207523055524
+   },
+   "R40.5626_s1_V01": {
+    "R": 40.56262288525937,
+    "include_s": true,
+    "with_V0": true,
+    "rho_GeV4": 0.21004909715391015,
+    "T_GeV": 0.6786425764112541,
+    "T_over_m": 7.343904194605656,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.007072205615208237,
+    "condensed_fraction": 0.3742994206781348,
+    "plus": {
+     "n": 0.044288446795814916,
+     "rho": 0.07943932047473348,
+     "P": 0.026352634299697548
+    },
+    "minus": {
+     "n": 0.03246613848846562,
+     "rho": 0.06122495395711579,
+     "P": 0.02032912226006064
+    },
+    "neutral": {
+     "n": 0.0360409817152652,
+     "rho": 0.068822001396683,
+     "P": 0.02245458977670348
+    },
+    "rho": 0.21004909715391012,
+    "pair_inventory": 0.06850712020373081,
+    "Xbar_per_net_charge": 1.718283869144968,
+    "s_per_net_charge": 1.9074839322665544,
+    "scalar_energy_fraction": 0.3276472135762373,
+    "entropy_per_net_charge": 21.65561660757814
+   },
+   "R40.5626_s1_V00": {
+    "R": 40.56262288525937,
+    "include_s": true,
+    "with_V0": false,
+    "rho_GeV4": 0.20457997449062465,
+    "T_GeV": 0.6741571879368242,
+    "T_over_m": 7.295365738020757,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.007230501013527624,
+    "condensed_fraction": 0.38267727040574295,
+    "plus": {
+     "n": 0.043456961518326856,
+     "rho": 0.07742615532626955,
+     "P": 0.02568318232998488
+    },
+    "minus": {
+     "n": 0.03179294860929695,
+     "rho": 0.05957014384104962,
+     "P": 0.019778703097343666
+    },
+    "neutral": {
+     "n": 0.03531026431128004,
+     "rho": 0.06700825650985506,
+     "P": 0.021857337604143198
+    },
+    "rho": 0.20457997449062454,
+    "pair_inventory": 0.06710321292057699,
+    "Xbar_per_net_charge": 1.682655015080351,
+    "s_per_net_charge": 1.8688104100484049,
+    "scalar_energy_fraction": 0.3275406435878987,
+    "entropy_per_net_charge": 21.227684150101368
+   },
+   "R48.4991_s0_V01": {
+    "R": 48.49912,
+    "include_s": false,
+    "with_V0": true,
+    "rho_GeV4": 0.24911420576750531,
+    "T_GeV": 0.7830637017690777,
+    "T_over_m": 8.47389333347756,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.00308537067511485,
+    "condensed_fraction": 0.16329452494839405,
+    "plus": {
+     "n": 0.06675562297099269,
+     "rho": 0.1384191681260454,
+     "P": 0.04597247713626577
+    },
+    "minus": {
+     "n": 0.05094647972355001,
+     "rho": 0.11044949721077504,
+     "P": 0.03670713266943313
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.24911420576750531,
+    "pair_inventory": 0.05094647972355001,
+    "Xbar_per_net_charge": 2.69636360757218,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 22.323526630146016
+   },
+   "R48.4991_s0_V00": {
+    "R": 48.49912,
+    "include_s": false,
+    "with_V0": false,
+    "rho_GeV4": 0.2436450831042198,
+    "T_GeV": 0.7787015354307741,
+    "T_over_m": 8.426688320436908,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.0032634982042844263,
+    "condensed_fraction": 0.17272199844147587,
+    "plus": {
+     "n": 0.06569214290763407,
+     "rho": 0.13544531914440394,
+     "P": 0.04498297635990978
+    },
+    "minus": {
+     "n": 0.05006112718936097,
+     "rho": 0.10794004775745404,
+     "P": 0.0358720099345907
+    },
+    "neutral": {
+     "n": 0.0,
+     "rho": 0.0,
+     "P": 0.0
+    },
+    "rho": 0.24364508310421978,
+    "pair_inventory": 0.05006112718936097,
+    "Xbar_per_net_charge": 2.649505956837273,
+    "s_per_net_charge": 0.0,
+    "scalar_energy_fraction": 0.0,
+    "entropy_per_net_charge": 21.952851092374377
+   },
+   "R48.4991_s1_V01": {
+    "R": 48.49912,
+    "include_s": true,
+    "with_V0": true,
+    "rho_GeV4": 0.24911420576750531,
+    "T_GeV": 0.7083530971289759,
+    "T_over_m": 7.66541543676293,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.005996730122992566,
+    "condensed_fraction": 0.31737943339379954,
+    "plus": {
+     "n": 0.05006467635236045,
+     "rho": 0.09378313130818325,
+     "P": 0.031123036836117987
+    },
+    "minus": {
+     "n": 0.03716689255279548,
+     "rho": 0.07307328098872229,
+     "P": 0.024270488441167578
+    },
+    "neutral": {
+     "n": 0.04113521746177991,
+     "rho": 0.08178056079675024,
+     "P": 0.026724126284541398
+    },
+    "rho": 0.24911420576750484,
+    "pair_inventory": 0.07830211001457539,
+    "Xbar_per_net_charge": 1.967073231157493,
+    "s_per_net_charge": 2.1770984757998955,
+    "scalar_energy_fraction": 0.3282854165011971,
+    "entropy_per_net_charge": 24.636020646656853
+   },
+   "R48.4991_s1_V00": {
+    "R": 48.49912,
+    "include_s": true,
+    "with_V0": false,
+    "rho_GeV4": 0.2436450831042198,
+    "T_GeV": 0.7044156217977932,
+    "T_over_m": 7.622806200906048,
+    "mu_over_m": 0.8611951308217225,
+    "condensed_charge": 0.006141952734153987,
+    "condensed_fraction": 0.3250654004293444,
+    "plus": {
+     "n": 0.0492719614467368,
+     "rho": 0.09177851666191533,
+     "P": 0.03045629711250323
+    },
+    "minus": {
+     "n": 0.03651940025833326,
+     "rho": 0.07141173183263028,
+     "P": 0.0237177322409539
+    },
+    "neutral": {
+     "n": 0.04043433490247445,
+     "rho": 0.07996604480825587,
+     "P": 0.02612605508571392
+    },
+    "rho": 0.24364508310421948,
+    "pair_inventory": 0.07695373516080771,
+    "Xbar_per_net_charge": 1.9328044324407816,
+    "s_per_net_charge": 2.140003975132763,
+    "scalar_energy_fraction": 0.32820709447294816,
+    "entropy_per_net_charge": 24.22625210654312
+   }
+  },
+  "scope": "fixed vacuum masses, linear condensate energy omega*n_c; comparator only, not the population"
+ }
+}
