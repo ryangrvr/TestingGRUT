@@ -1,0 +1,866 @@
+{
+  "cases": {
+    "release_only_instant": {
+      "R": 0.0,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 4.209965362324948,
+        "T_over_m": 0.04279070909966845,
+        "up": 0.8611951308217225,
+        "um": -0.8611946847620595,
+        "pairs_per_net": 1.0000000000000157e-18,
+        "f_sym": 2.0285451516071433e-18,
+        "condensed_fraction": 0.6932072104680871,
+        "anti_fraction": 0.0,
+        "charge_error": 1.0904623870544583e-09,
+        "energy_work_error": -1.3913438179358195e-09,
+        "recycling_factor": 0.00555523354300427,
+        "hard_elastic_over_H": 154151.09183880096,
+        "hard_reverse_over_H": 27601329.87712267,
+        "energy_per_net_m": 0.9674006722757585,
+        "kinetic_rate_over_H": 154151.09183880096,
+        "visible_T_GeV": 0.748100647370598,
+        "conditional_energy_upper_f": 0.048427331750054856
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 4.209965362324948,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 1996
+        }
+      ],
+      "switches": [],
+      "stop": "pair_ratio=1e-18",
+      "checks": {
+        "max_charge_error": 3.346448906871302e-08,
+        "max_energy_work_error": 1.7268104723910938e-08
+      },
+      "calls": 2524,
+      "seconds": 2.2694690227508545,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "mediators_only_instant": {
+      "R": 1.1444541138521052,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 4.346837854983912,
+        "T_over_m": 0.042404334732968285,
+        "up": 0.8611951308217225,
+        "um": -0.8611947764559327,
+        "pairs_per_net": 1.0000000000000057e-18,
+        "f_sym": 2.028545151607123e-18,
+        "condensed_fraction": 0.557455823159557,
+        "anti_fraction": 0.0,
+        "charge_error": 1.4907779455342052e-09,
+        "energy_work_error": -2.7629776244708637e-09,
+        "recycling_factor": 0.00997243206684169,
+        "hard_elastic_over_H": 193809.43221365596,
+        "hard_reverse_over_H": 19244437.92560783,
+        "energy_per_net_m": 0.9866332735244789,
+        "kinetic_rate_over_H": 193809.43221365596,
+        "visible_T_GeV": 0.656017433281401,
+        "conditional_energy_upper_f": 0.06955454837783553
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 4.346837854983912,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 2531
+        }
+      ],
+      "switches": [],
+      "stop": "pair_ratio=1e-18",
+      "checks": {
+        "max_charge_error": 1.901878576848759e-08,
+        "max_energy_work_error": 3.051650110386106e-08
+      },
+      "calls": 3161,
+      "seconds": 2.432260274887085,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "mediators_only_gas": {
+      "R": 1.1444541138521052,
+      "formation": "gas",
+      "recycling_limiter": false,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 5.232177442252768,
+        "T_over_m": 0.0020000000000000005,
+        "up": 0.9986521371811327,
+        "um": 0.977568839658486,
+        "pairs_per_net": 2.1026134856575385e-05,
+        "f_sym": 4.265246392034328e-05,
+        "condensed_fraction": 0.0,
+        "anti_fraction": 0.0,
+        "charge_error": 9.572608564267782e-06,
+        "energy_work_error": 1.0483572803199337e-06,
+        "recycling_factor": 1.0,
+        "hard_elastic_over_H": null,
+        "hard_reverse_over_H": null,
+        "energy_per_net_m": 1.002705164970843,
+        "kinetic_rate_over_H": 44914.5083919317,
+        "visible_T_GeV": 0.2853266290047518,
+        "conditional_energy_upper_f": 0.002743774642950423
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 1.5838725969891811,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 518
+        },
+        {
+          "start_x": 1.5838725969891811,
+          "end_x": 5.232177442252768,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 1595
+        }
+      ],
+      "switches": [
+        {
+          "x": 1.5838725969891811,
+          "species": 0,
+          "new_active": false
+        }
+      ],
+      "stop": "T=0.002m",
+      "checks": {
+        "max_charge_error": 1.0510249139894512e-05,
+        "max_energy_work_error": 1.1512740818453437e-06
+      },
+      "calls": 2653,
+      "seconds": 17.642613649368286,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e7_band_gas": {
+      "R": 41.707076999111514,
+      "formation": "gas",
+      "recycling_limiter": false,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 7.339030349019581,
+        "T_over_m": 0.002000000000000002,
+        "up": 0.987568465091442,
+        "um": 0.9858523838331249,
+        "pairs_per_net": 0.7355678799063062,
+        "f_sym": 1.4921326564618593,
+        "condensed_fraction": 0.0,
+        "anti_fraction": 0.0,
+        "charge_error": 2.697811836371855e-06,
+        "energy_work_error": 6.282382414291021e-08,
+        "recycling_factor": 1.0,
+        "hard_elastic_over_H": null,
+        "hard_reverse_over_H": null,
+        "energy_per_net_m": 2.4785654889420266,
+        "kinetic_rate_over_H": 7147.59842271293,
+        "visible_T_GeV": 0.06104806100349189,
+        "conditional_energy_upper_f": 1.4996684269634728
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.2719085722722445,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 231
+        },
+        {
+          "start_x": 0.2719085722722445,
+          "end_x": 7.339030349019581,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 3258
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.2719085722722445,
+          "species": 0,
+          "new_active": false
+        }
+      ],
+      "stop": "T=0.002m",
+      "checks": {
+        "max_charge_error": 3.5559587061584352e-06,
+        "max_energy_work_error": 8.285841957000883e-08
+      },
+      "calls": 4377,
+      "seconds": 15.28062629699707,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "release_only_gas": {
+      "R": 0.0,
+      "formation": "gas",
+      "recycling_limiter": false,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 4.956083072932,
+        "T_over_m": 0.0019999999999999987,
+        "up": 0.9997070380247784,
+        "um": 0.9771256282530089,
+        "pairs_per_net": 7.358719404891128e-06,
+        "f_sym": 1.4927494570829063e-05,
+        "condensed_fraction": 0.0,
+        "anti_fraction": 0.0,
+        "charge_error": 7.475216379226879e-08,
+        "energy_work_error": 1.3097826823127434e-08,
+        "recycling_factor": 1.0,
+        "hard_elastic_over_H": null,
+        "hard_reverse_over_H": null,
+        "energy_per_net_m": 1.0022202630747041,
+        "kinetic_rate_over_H": 60001.8210704137,
+        "visible_T_GeV": 0.3660047646760655,
+        "conditional_energy_upper_f": 0.0022519519477416823
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 1.929385556758178,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 713
+        },
+        {
+          "start_x": 1.929385556758178,
+          "end_x": 4.956083072932,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 1285
+        }
+      ],
+      "switches": [
+        {
+          "x": 1.929385556758178,
+          "species": 0,
+          "new_active": false
+        }
+      ],
+      "stop": "T=0.002m",
+      "checks": {
+        "max_charge_error": 3.8879116903700606e-07,
+        "max_energy_work_error": 6.663635154779968e-08
+      },
+      "calls": 2544,
+      "seconds": 22.71151852607727,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e7_band_instant": {
+      "R": 41.707076999111514,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 17.551836842647543,
+        "T_over_m": 0.0036593791378551543,
+        "up": 0.8611951308217225,
+        "um": 0.8570040847638235,
+        "pairs_per_net": 0.4665403774595231,
+        "f_sym": 0.9463982207244671,
+        "condensed_fraction": 4.109023449556786e-05,
+        "anti_fraction": 0.0,
+        "charge_error": 6.226540254505863e-07,
+        "energy_work_error": 1.4621823085647634e-08,
+        "recycling_factor": 0.9999991324666212,
+        "hard_elastic_over_H": 0.9999999999999987,
+        "hard_reverse_over_H": 0.00034510960227891974,
+        "energy_per_net_m": 1.9437365494554066,
+        "kinetic_rate_over_H": 0.9999999999999987,
+        "visible_T_GeV": 3.138462461761992e-06,
+        "conditional_energy_upper_f": 1.1209426567387168
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.46997752568178797,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 588
+        },
+        {
+          "start_x": 0.46997752568178797,
+          "end_x": 6.104640378190687,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 2739
+        },
+        {
+          "start_x": 6.104640378190687,
+          "end_x": 17.551836842647543,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 2586
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.46997752568178797,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 6.104640378190687,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "kinetic_shape_rate/H=1",
+      "checks": {
+        "max_charge_error": 1.4171852585898037e-06,
+        "max_energy_work_error": 3.592986275169352e-08
+      },
+      "calls": 7701,
+      "seconds": 7.625059604644775,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e7_broad_instant": {
+      "R": 49.643577119716994,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 17.63212402232045,
+        "T_over_m": 0.003644530745034125,
+        "up": 0.8611951308217225,
+        "um": 0.8575782494807886,
+        "pairs_per_net": 0.5889958874928626,
+        "f_sym": 1.1948047518901739,
+        "condensed_fraction": 3.960374534783342e-05,
+        "anti_fraction": 0.0,
+        "charge_error": -1.5923843054155284e-06,
+        "energy_work_error": -3.7457305035459854e-08,
+        "recycling_factor": 0.9999992328561949,
+        "hard_elastic_over_H": 0.9999999999999792,
+        "hard_reverse_over_H": 0.0003062568824032414,
+        "energy_per_net_m": 2.1899492028576346,
+        "kinetic_rate_over_H": 0.9999999999999792,
+        "visible_T_GeV": 2.8963341132451573e-06,
+        "conditional_energy_upper_f": 1.3914098700739719
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.38153377912125924,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 572
+        },
+        {
+          "start_x": 0.38153377912125924,
+          "end_x": 6.168486315221149,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 2922
+        },
+        {
+          "start_x": 6.168486315221149,
+          "end_x": 17.63212402232045,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 2588
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.38153377912125924,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 6.168486315221149,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "kinetic_shape_rate/H=1",
+      "checks": {
+        "max_charge_error": 1.604608199201607e-06,
+        "max_energy_work_error": 3.7618013037921116e-08
+      },
+      "calls": 7876,
+      "seconds": 8.27952265739441,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e6_band_instant": {
+      "R": 4.966535664240221,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 4.621877342672346,
+        "T_over_m": 0.041648287909137605,
+        "up": 0.8611951308217225,
+        "um": -0.861194879422667,
+        "pairs_per_net": 1.0000000000000016e-18,
+        "f_sym": 2.028545151607115e-18,
+        "condensed_fraction": 0.07560818259627808,
+        "anti_fraction": 0.0,
+        "charge_error": -6.464622837043521e-09,
+        "energy_work_error": -9.839352665963474e-10,
+        "recycling_factor": 0.13551072886040166,
+        "hard_elastic_over_H": 307070.4319373533,
+        "hard_reverse_over_H": 1959195.322088652,
+        "energy_per_net_m": 1.0544533225216994,
+        "kinetic_rate_over_H": 307070.4319373533,
+        "visible_T_GeV": 0.5039703229705349,
+        "conditional_energy_upper_f": 0.1440555921181517
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 1.5029774623379724,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 584
+        },
+        {
+          "start_x": 1.5029774623379724,
+          "end_x": 4.418744990473635,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 1820
+        },
+        {
+          "start_x": 4.418744990473635,
+          "end_x": 4.621877342672346,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 3150
+        }
+      ],
+      "switches": [
+        {
+          "x": 1.5029774623379724,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 4.418744990473635,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "pair_ratio=1e-18",
+      "checks": {
+        "max_charge_error": 1.0272212391804203e-07,
+        "max_energy_work_error": 2.092125361841113e-08
+      },
+      "calls": 7270,
+      "seconds": 5.807343006134033,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e7_broad_gas": {
+      "R": 49.643577119716994,
+      "formation": "gas",
+      "recycling_limiter": false,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 7.3957257619431,
+        "T_over_m": 0.0020000000000000005,
+        "up": 0.9873993491402471,
+        "um": 0.9858943298394047,
+        "pairs_per_net": 0.8904342772906814,
+        "f_sym": 1.8062861360227938,
+        "condensed_fraction": 0.0,
+        "anti_fraction": 0.0,
+        "charge_error": 1.8096285891999742e-06,
+        "energy_work_error": 3.303969631218706e-08,
+        "recycling_factor": 1.0,
+        "hard_elastic_over_H": null,
+        "hard_reverse_over_H": null,
+        "energy_per_net_m": 2.7892297206614494,
+        "kinetic_rate_over_H": 7356.262749056304,
+        "visible_T_GeV": 0.05768320325300652,
+        "conditional_energy_upper_f": 1.8147666374795646
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.18898994631075472,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 246
+        },
+        {
+          "start_x": 0.18898994631075472,
+          "end_x": 7.3957257619431,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 3182
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.18898994631075472,
+          "species": 0,
+          "new_active": false
+        }
+      ],
+      "stop": "T=0.002m",
+      "checks": {
+        "max_charge_error": 3.1103903630480545e-06,
+        "max_energy_work_error": 7.41508624502174e-08
+      },
+      "calls": 4310,
+      "seconds": 20.610697031021118,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "diagnostic_R10_instant": {
+      "R": 10.0,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 7.870948532985664,
+        "T_over_m": 0.012472823690295768,
+        "up": 0.8611951308217225,
+        "um": 0.34425641435748056,
+        "pairs_per_net": 1.0000000000001638e-18,
+        "f_sym": 2.0285451516074438e-18,
+        "condensed_fraction": 0.0013221343347479659,
+        "anti_fraction": 0.0,
+        "charge_error": 4.089307554799859e-07,
+        "energy_work_error": 1.4735793252285134e-08,
+        "recycling_factor": 0.9605288601488301,
+        "hard_elastic_over_H": 11311.846084335757,
+        "hard_reverse_over_H": 469.19188122624655,
+        "energy_per_net_m": 1.0188707669944996,
+        "kinetic_rate_over_H": 11311.846084335757,
+        "visible_T_GeV": 0.03586433168753375,
+        "conditional_energy_upper_f": 0.1049677771589973
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 1.177834236969836,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 768
+        },
+        {
+          "start_x": 1.177834236969836,
+          "end_x": 5.320824820238571,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 2578
+        },
+        {
+          "start_x": 5.320824820238571,
+          "end_x": 7.870948532985664,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 3459
+        }
+      ],
+      "switches": [
+        {
+          "x": 1.177834236969836,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 5.320824820238571,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "pair_ratio=1e-18",
+      "checks": {
+        "max_charge_error": 5.979723609605969e-07,
+        "max_energy_work_error": 2.4150333066685903e-08
+      },
+      "calls": 8845,
+      "seconds": 7.017301321029663,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "e1e6_band_gas": {
+      "R": 4.966535664240221,
+      "formation": "gas",
+      "recycling_limiter": false,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 6.053002407957428,
+        "T_over_m": 0.0020000000000000005,
+        "up": 0.9941492545646381,
+        "um": 0.981998920215965,
+        "pairs_per_net": 0.002260472952693672,
+        "f_sym": 0.00458547144852576,
+        "condensed_fraction": 0.0,
+        "anti_fraction": 0.0,
+        "charge_error": 3.6574619710627587e-07,
+        "energy_work_error": 1.5915682105571705e-08,
+        "recycling_factor": 1.0,
+        "hard_elastic_over_H": null,
+        "hard_reverse_over_H": null,
+        "energy_per_net_m": 1.0075128727564187,
+        "kinetic_rate_over_H": 17131.29510879475,
+        "visible_T_GeV": 0.1678914877796473,
+        "conditional_energy_upper_f": 0.007620100802337107
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 1.170652600022678,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 417
+        },
+        {
+          "start_x": 1.170652600022678,
+          "end_x": 6.053002407957428,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 2313
+        }
+      ],
+      "switches": [
+        {
+          "x": 1.170652600022678,
+          "species": 0,
+          "new_active": false
+        }
+      ],
+      "stop": "T=0.002m",
+      "checks": {
+        "max_charge_error": 2.6935276820072573e-06,
+        "max_energy_work_error": 1.3471052406899275e-07
+      },
+      "calls": 3462,
+      "seconds": 19.495891094207764,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "diagnostic_R20_instant": {
+      "R": 20.0,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 17.266104164827713,
+        "T_over_m": 0.0037132001345365107,
+        "up": 0.8611951308217225,
+        "um": 0.8523739714901131,
+        "pairs_per_net": 0.10247407301441142,
+        "f_sym": 0.2078732839788174,
+        "condensed_fraction": 8.866983196079785e-05,
+        "anti_fraction": 0.0,
+        "charge_error": 5.952787505147938e-07,
+        "energy_work_error": 1.71779963586971e-08,
+        "recycling_factor": 0.9999974521186411,
+        "hard_elastic_over_H": 1.0000000000000009,
+        "hard_reverse_over_H": 0.000999658457993797,
+        "energy_per_net_m": 1.2116832059225453,
+        "kinetic_rate_over_H": 1.0000000000000009,
+        "visible_T_GeV": 4.176467092414503e-06,
+        "conditional_energy_upper_f": 0.316774288045536
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.8398229128386814,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 902
+        },
+        {
+          "start_x": 0.8398229128386814,
+          "end_x": 5.790753962689457,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 2619
+        },
+        {
+          "start_x": 5.790753962689457,
+          "end_x": 17.266104164827713,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 2642
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.8398229128386814,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 5.790753962689457,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "kinetic_shape_rate/H=1",
+      "checks": {
+        "max_charge_error": 1.2294083359121188e-06,
+        "max_energy_work_error": 3.824175931477214e-08
+      },
+      "calls": 7957,
+      "seconds": 7.2010369300842285,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    },
+    "diagnostic_R90_instant": {
+      "R": 90.0,
+      "formation": "instant",
+      "recycling_limiter": true,
+      "catalysis": false,
+      "energy_variant": "finite",
+      "rtol": 2e-07,
+      "final": {
+        "x": 17.937068056735903,
+        "T_over_m": 0.003589195814335185,
+        "up": 0.8611951308217225,
+        "um": 0.8589563763081516,
+        "pairs_per_net": 1.1548085572417366,
+        "f_sym": 2.342581299827128,
+        "condensed_fraction": 4.1114367631356326e-05,
+        "anti_fraction": 0.0,
+        "charge_error": 5.837136138886478e-07,
+        "energy_work_error": 1.1894523810340729e-08,
+        "recycling_factor": 0.999999425784097,
+        "hard_elastic_over_H": 1.0000000000000013,
+        "hard_reverse_over_H": 0.00023233914850690328,
+        "energy_per_net_m": 3.327511690522284,
+        "kinetic_rate_over_H": 1.0000000000000013,
+        "visible_T_GeV": 2.1350750623011457e-06,
+        "conditional_energy_upper_f": 2.6410343381176364
+      },
+      "segments": [
+        {
+          "start_x": 0.0,
+          "end_x": 0.07893161164337996,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 324
+        },
+        {
+          "start_x": 0.07893161164337996,
+          "end_x": 6.371669031843363,
+          "active": [
+            false,
+            false
+          ],
+          "nfev": 3286
+        },
+        {
+          "start_x": 6.371669031843363,
+          "end_x": 17.937068056735903,
+          "active": [
+            true,
+            false
+          ],
+          "nfev": 2529
+        }
+      ],
+      "switches": [
+        {
+          "x": 0.07893161164337996,
+          "species": 0,
+          "new_active": false
+        },
+        {
+          "x": 6.371669031843363,
+          "species": 0,
+          "new_active": true
+        }
+      ],
+      "stop": "kinetic_shape_rate/H=1",
+      "checks": {
+        "max_charge_error": 1.4835325428119717e-06,
+        "max_energy_work_error": 2.9773677856503866e-08
+      },
+      "calls": 7975,
+      "seconds": 6.769186496734619,
+      "scope": "Conditional vacuum-mass fast-s moment model on the supplied radiation background; no full hard momentum network, physical formation kernel, in-medium EOS or certified kinetic threshold."
+    }
+  },
+  "full_kinetic_complete": false,
+  "role": "Superseded loose-tolerance attempt after initialization/background repair; retained for numerical audit, not the reported production data."
+}

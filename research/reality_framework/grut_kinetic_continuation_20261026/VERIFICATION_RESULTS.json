@@ -1,0 +1,115 @@
+{
+  "groups": {
+    "network_inventory_and_equilibrium": {
+      "passed": true,
+      "stoichiometry": [
+        {
+          "ch": "A_XXXbXb_XXb",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "B_XXXXb_XX",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "E_XXbs_XXb",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "E2_XXs_XX",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "F_sss_ss",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "G2_Xss_Xs",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "L_sss_XXb",
+          "charge": 0,
+          "inventory": -2,
+          "declared": -2
+        },
+        {
+          "ch": "N_ssss_ss",
+          "charge": 0,
+          "inventory": -2,
+          "declared": -2
+        },
+        {
+          "ch": "H_XXbss_XXb",
+          "charge": 0,
+          "inventory": -2,
+          "declared": -2
+        },
+        {
+          "ch": "J_XXXbs_Xs",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        },
+        {
+          "ch": "K_XXbss_ss",
+          "charge": 0,
+          "inventory": -1,
+          "declared": -1
+        }
+      ],
+      "stationarity_absolute": 6.007116762675663e-40,
+      "scope": "MB-fugacity detailed balance, not the full nonzero-mu Bose collision operator."
+    },
+    "Bose_state_and_initial_matching": {
+      "passed": true,
+      "quadrature_relative": 5.551115123125783e-16,
+      "susceptibility_finite_difference": 2.7104141153699857e-10,
+      "initial_charge": 0.0
+    },
+    "conditional_hard_source_control": {
+      "passed": true,
+      "source_quadrature": 1.3322676295501878e-15,
+      "conservation": 6.439293542825908e-15,
+      "refined_hard_energy_fraction_absolute": 0.0014489574675392233,
+      "scope": "Conservative massless contact cascade in a supplied soft MB gas; no proof of coherent-release thermalization."
+    },
+    "production_moment_conservation": {
+      "passed": true,
+      "energy_work": 2.074589278144856e-09,
+      "charge": 6.62066934609129e-08,
+      "case_count": 13,
+      "scope": "Conservation of the supplied moment recipes; not validation of formation or kinetic closure."
+    },
+    "same_author_method_and_tolerance": {
+      "passed": true,
+      "relative_changes": {
+        "gas_Radau_tolerance": 6.887269483613068e-07,
+        "gas_BDF_vs_Radau": 4.553999512935114e-06,
+        "instant_Radau_tolerance": 9.216525775901374e-08
+      },
+      "scope": "Distinct numerical methods by one author; no independent verifier or critic ran."
+    },
+    "late_radiation_background": {
+      "passed": true,
+      "absolute_ratio_error": 1.3322676295501878e-15,
+      "Tvis_at_x18_GeV": 2.004851234572228e-06,
+      "scope": "Supplied radiation background; no silent 10-keV floor. Not a full late cosmology."
+    }
+  },
+  "full_kinetic_complete": false,
+  "physical_formation_kernel_derived": false,
+  "verdict": "Numerical control checks only. Physical abundance and threshold remain null."
+}
