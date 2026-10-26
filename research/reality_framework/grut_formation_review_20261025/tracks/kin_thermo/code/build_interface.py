@@ -141,7 +141,7 @@ def formation_section():
             r = FM.rule_fragmentation(n_cond_GeV3=fc * C.N_Q0, shape=s)
             r['condensed_fraction_of_net_charge'] = fc
             frag_gas.append(r)
-    H_ref = C.hubble(45.67)
+    H_ref = C.hubble(C.T_vis_of_nQ(C.N_Q0))   # consistent g* = g_s = 106.75 background (T_vis = 43.72 GeV, H = 2.685e-15 GeV)
     return dict(
         rules=dict(
             gas_only=FM.rule_gas_only(),
@@ -205,6 +205,12 @@ def old_proxies_section():
         out['curves'][name] = c
         out['crossings'][name] = crossing(c)
     out['proxy_thresholds'] = [dict(s_channel=r['s_channel'], bracket=r['bracket']) for r in rows if r.get('kind') == 'proxy_threshold']
+    for name, s_ch in (('proxy_isentropic', False), ('proxy_isentropic_s_route', True)):   # the grid is too coarse there
+        thr = [r['bracket'] for r in rows if r.get('kind') == 'proxy_threshold' and bool(r.get('s_channel')) == s_ch]
+        if thr:
+            out['crossings'][name].update(grid_interpolation_R_L=out['crossings'][name].get('R_L'), bisection_bracket=thr[0],
+                                          R_L=float(0.5 * (thr[0][0] + thr[0][1])),
+                                          note='R_L is the bisection midpoint (N = 400); the coarse-grid log interpolation between R = 75 and 90 is kept only as grid_interpolation_R_L')
     out['failures'] = [r for r in rows if 'status' in r]
     out['label'] = 'reference evaluations with our ls_threshold code (reuse stated); equilibrium proxies, not kinetics'
     return out

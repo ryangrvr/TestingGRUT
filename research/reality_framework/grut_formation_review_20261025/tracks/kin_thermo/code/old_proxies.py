@@ -10,8 +10,9 @@ reference curve f_proxy(R) the kinetic solver has to be compared with.
   ke    : two chemical potentials, every reaction conserves energy, lumps/anti-lumps at mu_c with the consistent
           E_c = mu_c (ls_threshold run_ke_consistent choice), N = 500 steps, optional s route.
 Point: |eps| = 0.14571744282991028 (INPUTS.json 225028b), yield 1.00 Y_Q, g* coarse table of lsrelic.
-Usage: OMP_NUM_THREADS=1 python3 -B old_proxies.py <out.json>      (~1 h on 4 cores; resumable: finished rows
-       already in <out.json> are kept and their jobs skipped)
+Usage: OMP_NUM_THREADS=1 python3 -B old_proxies.py <out.json> [R1,R2,...]   (~1.5 h on 4 cores; resumable: finished
+       rows already in <out.json> are kept and their jobs skipped; the optional comma-separated R list restricts the
+       run to those R values, for finishing an interrupted run in short foreground batches)
 """
 import json
 import sys
@@ -90,6 +91,9 @@ if __name__ == '__main__':
     jobs += [(ke, (R, W, True, 500)) for R in R_GRID]
     jobs += [(ke, (R, A, False, 500)) for R in (3.0, 5.0, 7.0, 8.0, 10.0, 15.0)]
     jobs += [(proxy, (R, s)) for s in (False, True) for R in R_GRID]
+    if len(sys.argv) > 2:   # optional R subset (threshold jobs excluded)
+        want = {round(float(x), 6) for x in sys.argv[2].split(',')}
+        jobs = [(f, a) for f, a in jobs if f is not thr and round(float(a[0]), 6) in want]
     rows = []
     # resume: keep every finished (non-failed) row already in the output file and skip its job
     if out.exists():

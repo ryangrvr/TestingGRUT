@@ -17,15 +17,21 @@ CHAIN = {  # the sequential chain each subtracted line represents, in the networ
     'A_XXXbXb_XXb': 'XXb->s (inverse decay) then s XXb->XXb (E); two pairs: XXb->s twice then ss->XXb; nested: XXb->s, s->X Xb*, Xb* X->s ...; XXb->X Xb* (elastic) then Xb* X->s',
     'B_XXXXb_XX': 'XXb->s then s XX->XX (E2); X X->X X* (elastic) etc.',
     'C_XXXbXb_ss': 'XXb->s then s XXb->ss (G); XXb->s twice then ss->ss (elastic)',
-    'H_XXbss_XXb': 'XXb->s then sss->XXb (L) / s ss->ss ...; s s->s s elastic chains',
-    'J_XXXbs_Xs': 'XXb->s then s X s->X s (G2); Xs->Xs elastic chains',
-    'K_XXbss_ss': 'XXb->s then sss->ss (F)',
+    'H_XXbss_XXb': 'XXb->s (pair mass = m_s) then s s s->XXb (L): the only tree chain, opens at 3 m_s = 7.348 m_X (the flagged pair line is off shell below it: G_sub/G_full = 0.99-0.94 up to 7.32 m_X)',
+    'J_XXXbs_Xs': 'X Xb s->X Xb* (E, 3->2 with a real Xb) then Xb* X->s (inverse decay): opens at the threshold 5.449 m_X; XXb->s then s X s->X s (G2) above 2 m_s + m_X = 5.899',
+    'K_XXbss_ss': 'X s s->X* s (G2, 3->2 with a real X) then X* Xb->s (inverse decay): opens at the threshold 6.899 m_X (visible from 6.93 in the table); XXb->s then s s s->s s (F) above 3 m_s = 7.348',
     'D_XXXb_Xs': 'XXb->s then s X->s X (elastic); X Xb->X Xb* then Xb* X->s',
-    'E_XXbs_XXb': 'XXb->s then s s->XXb; s->XXb then ...',
-    'E2_XXs_XX': 'none below 5.7 m_X (no neutral pair in the initial state); X s->X* ... lines at higher energy',
+    'E_XXbs_XXb': 'XXb->s (pair mass = m_s) then s s->XXb: opens at 2 m_s = 4.899 m_X (threshold 4.449; G_sub = G_full to 1-3 % below 4.899)',
+    'E2_XXs_XX': 'none: no neutral pair in the initial state and no factorising X-line chain; G_sub = G_full at every tabulated energy (near-window flags at 9.9-27 m_X are off shell)',
     'G_XXbs_ss': 'XXb->s then ss->ss (elastic)',
     'G2_Xss_Xs': 'Xs->Xs elastic with the u-channel X pole (s->X Xb, Xb X->s)',
-    'F_sss_ss': 'none (no neutral X Xb pair; s s->s* off shell)', 'L_sss_XXb': 'none at tree level below the X-line window', 'N_ssss_ss': 'none'}
+    'F_sss_ss': 'none (no neutral X Xb pair; s s->s* off shell)', 'L_sss_XXb': 'none at tree level (one off-shell window flag at 33 m_X; G_sub = G_full)', 'N_ssss_ss': 'none'}
+_R = M.MS / M.MX
+PHYS_CHAIN = {  # physical opening of the sequential chain, sqrt s/m_X [D]: an internal line is on shell in the physical region only where the
+    # amplitude factorises into two real processes (Coleman-Norton); None = no tree-level chain
+    'A_XXXbXb_XXb': _R + 2, 'B_XXXXb_XX': _R + 2, 'C_XXXbXb_ss': 2 * _R, 'D_XXXb_Xs': 1 + _R, 'E_XXbs_XXb': 2 * _R, 'E2_XXs_XX': None,
+    'F_sss_ss': None, 'G_XXbs_ss': 2 * _R, 'G2_Xss_Xs': 1 + 2 * _R, 'H_XXbss_XXb': 3 * _R, 'J_XXXbs_Xs': 3 + _R, 'K_XXbss_ss': 2 + 2 * _R,
+    'L_sss_XXb': None, 'N_ssss_ss': None}
 
 
 def cols(rows, keys):
@@ -65,7 +71,8 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
     P = k22['params']
     out = {}
     out['meta'] = dict(
-        track='kin_rates (Claude, own code), 26 October 2026; BRIEF_KINETIC.md item: collision kernels of the light sector',
+        track='kin_rates (Claude, own code), 26 October 2026; BRIEF_KINETIC.md item: collision kernels of the light sector; finalised in a third pass '
+              '(documentation and consistency only, no recomputation: chain thresholds, Bose-factor conventions of s <-> X Xb; spot checks in finalise_checks.json)',
         model='U = lP/4 (phi^2-v^2)^2 + g^2 phi^2 |X|^2 + lX |X|^4, phi = v + s; tree amplitudes (Berends-Giele recursion, exact vertices of U)',
         parameters=dict(gX=M.GX, lambdaX=M.LX, lambdaPhi=M.LP, v_GeV=M.V, mX_GeV=M.MX, ms_GeV=M.MS, lam3_sXXb_GeV=M.LAM3,
                         lam_s3_GeV=M.LAM_S3, lam_s4=M.LAM_S4, lam_ssXXb=M.LAM_SSXX, Gamma_s_vac_GeV=M.GAMMA_S_VAC),
@@ -105,8 +112,9 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
         s_decay_open='T < %.2f m_X (one loop), %.2f m_X (daisy): m_s(T) > 2 m_X(T)' % (thermal['oneloop']['T_close_s_decay_over_mX'], thermal['daisy']['T_close_s_decay_over_mX']),
         scheme='one-loop Dolan-Jackiw, no daisy (primary) / Parwani daisy (bracket); mu = 0 in the loops; CW piece dropped (6e-6)')
     mt['width_vs_energy_oneloop'] = thermal['width_vs_energy_oneloop']
-    mt['formulas'] = dict(hiT=thermal['hiT_estimate']['formula'], width_medium='Gamma(E,T) = (m_s/E) Gamma_vac(m_s(T), m_X(T), lam3(T)) <1 + f(E1) + f(E2)>_angle; '
-                          'inverse decay by detailed balance (thermal.width_s_medium, thermal_mc.inverse_decay_bose)')
+    mt['formulas'] = dict(hiT=thermal['hiT_estimate']['formula'], width_medium='Gamma_net(E,T) = (m_s/E) Gamma_vac(m_s(T), m_X(T), lam3(T)) <1 + f(E1) + f(E2)>_angle is the NET (Weldon) damping rate '
+                          'of an s mode, the coefficient of f_s in its collision term (thermal.width_s_medium); the gross forward factor is <(1+f(E1))(1+f(E2))> '
+                          '(thermal_mc.decay_bose) and the inverse decay f1 f2 (1+f_s) (thermal_mc.inverse_decay_bose); see decay_s_XXb.bose_factors')
     out['masses_T'] = mt
     # decay
     dec = k22['decay']
@@ -115,8 +123,22 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
         k = 'db_s_XXb_BE_mup0.0_mum0.0'
         if k in row:
             bose_dec[str(row['T_over_mX'])] = dict(decay_BE_over_MB=row[k]['decay_mc'] / row[k]['decay_MB_analytic'], inverse_BE_quadrature_over_MB=row[k]['inverse_quad'] / row[k]['decay_MB_analytic'])
+    import os
+    fin = json.load(open(f'{RES}/finalise_checks.json')) if os.path.exists(f'{RES}/finalise_checks.json') else {}
+    net_bose = {str(r['T_over_mX']): r['bose_over_MB_quadrature'] for r in fin.get('c_decay_bose', [])}
     out['decay_s_XXb'] = dict(Gamma_vac_GeV=dec['Gamma_s_vac_GeV'], formula=dec['formula'], MB=cols(dec['rows'], ['T_over_mX', 'n_s_eq', 'gamma_decay_MB', 'Gamma_eff_over_Gamma_vac']),
-                              bose_over_MB_mu0=bose_dec, amplitude='M = -lam3 (constant); Gamma_vac = lam3^2 beta/(16 pi m_s)')
+                              bose_over_MB_mu0=bose_dec, amplitude='M = -lam3 (constant); Gamma_vac = lam3^2 beta/(16 pi m_s)',
+                              bose_factors=dict(
+                                  forward_gross='gamma_dec = int dPi_s f_s (m_s/E) Gamma_vac <(1 + f(E1))(1 + f(E2))>_angle: the Boltzmann gain of X and Xb and loss of s '
+                                                '(thermal_mc.decay_bose); bose_over_MB_mu0.decay_BE_over_MB is this quantity over the MB table',
+                                  inverse='gamma_inv = int dPi_1 dPi_2 f_1 f_2 (1 + f_s) |M|^2 (2pi)^4 delta^4 (thermal_mc.inverse_decay_bose); equal to the forward gross rate '
+                                          'in equilibrium with mu_s = mu_+ + mu_- (checked, bose_over_MB_mu0.inverse_BE_quadrature_over_MB and checks.bose_detailed_balance)',
+                                  net_width='Gamma_net(E,T) = (m_s/E) Gamma_vac <1 + f(E1) + f(E2)> (thermal.width_s_medium; masses_T.width_vs_energy_oneloop): the coefficient of '
+                                            'f_s in its collision term, f_s(1+f1)(1+f2) - f1 f2 (1+f_s) = f_s (1+f1+f2) - f1 f2; a solver using Gamma_net adds only the '
+                                            'spontaneous inverse piece f1 f2 (without 1+f_s); a solver using the gross forward factor adds the full inverse f1 f2 (1+f_s)',
+                                  net_width_bose_over_MB_mu0=net_bose,
+                                  net_width_bose_note='ratio of int dPi_s f_s^BE Gamma_net to the MB table (own 2-D quadrature, finalise_checks.py); at T/m_X = 0.3, 1, 3, 7.344, 12 it is '
+                                                      'smaller than the gross forward ratio because the f1 f2 term is removed'))
     # 2->2
     c22 = {}
     for ch, c in k22['sigma'].items():
@@ -148,7 +170,11 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
                        Gt_table_reg0_02=dict(sqrt_s_over_mX=[r['sqrt_s_over_mX'] for r in rows02], G_sub=[r['G'] for r in rows02], G_sub_err=[r['err'] for r in rows02],
                                              G_full_reg=[r['G_full'] for r in rows02], G_full_err=[r.get('err_full') for r in rows02], lines_flagged=[r['lines_flagged'] for r in rows02], N=[r['N'] for r in rows02]),
                        Gt_table_reg0_04=dict(sqrt_s_over_mX=[r['sqrt_s_over_mX'] for r in rows04], G_sub=[r['G'] for r in rows04], G_sub_err=[r['err'] for r in rows04], G_full_reg=[r['G_full'] for r in rows04]),
-                       chain_threshold_sqrt_s_over_mX=tab.chain_threshold(c), chain=CHAIN.get(ch, ''), threshold_power_law_exponent_full=tab.k_th,
+                       chain_threshold_sqrt_s_over_mX=tab.chain_threshold(c),
+                       chain_threshold_note='chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window '
+                                            '(|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX '
+                                            '(Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there',
+                       chain_threshold_physical_sqrt_s_over_mX=PHYS_CHAIN.get(ch), chain=CHAIN.get(ch, ''), threshold_power_law_exponent_full=tab.k_th,
                        thermal_MB=thermal_block(tab, tab04), extrapolation='below first point: power law of G_full between the first two points; above 400 m_X: constant')
     out['channels_n2'] = cn2
     # 2->n
@@ -171,7 +197,10 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
                          table_detailed_balance=bal.get('detailed_balance'), nr_limits=bal.get('nr_limits'), old_s_route=bal.get('old_s_route'))
     out['usage'] = dict(
         solver_recipe=['masses: vacuum for T <= 3 m_X; masses_T tables beyond; s <-> X Xb switched off above T_close',
-                       '1<->2: Gamma(E,T,mu) from masses_T.formulas; inverse decay by detailed balance',
+                       '1<->2: either Gamma_net(E,T,mu) f_s (masses_T.formulas.width_medium) together with the spontaneous inverse piece proportional to f1 f2 alone, '
+                       'or the gross forward (1+f1)(1+f2) f_s together with the inverse f1 f2 (1+f_s); never Gamma_net together with the full inverse (double count); '
+                       'decay_s_XXb.bose_over_MB_mu0 refers to the gross forward rate density, decay_s_XXb.bose_factors.net_width_bose_over_MB_mu0 to Gamma_net; '
+                       'the channel closes above masses_T T_close (m_s(T) < 2 m_X(T))',
                        '2->2 elastic: sigma_nores (XXb, Xs) / sigma_sub (XX, ss) tables; transport columns for momentum relaxation',
                        '2<->2 inelastic ss<->XXb: sigma_sub (no pole); Bose factors from the solver',
                        'n<->2: the on-shell chains are the explicit 1<->2, 2<->2, 3<->2 channels; add the subtracted remainder G_sub where remainder_resolved, '

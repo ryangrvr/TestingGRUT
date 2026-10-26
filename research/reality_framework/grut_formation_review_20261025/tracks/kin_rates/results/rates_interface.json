@@ -1,6 +1,6 @@
 {
  "meta": {
-  "track": "kin_rates (Claude, own code), 26 October 2026; BRIEF_KINETIC.md item: collision kernels of the light sector",
+  "track": "kin_rates (Claude, own code), 26 October 2026; BRIEF_KINETIC.md item: collision kernels of the light sector; finalised in a third pass (documentation and consistency only, no recomputation: chain thresholds, Bose-factor conventions of s <-> X Xb; spot checks in finalise_checks.json)",
   "model": "U = lP/4 (phi^2-v^2)^2 + g^2 phi^2 |X|^2 + lX |X|^4, phi = v + s; tree amplitudes (Berends-Giele recursion, exact vertices of U)",
   "parameters": {
    "gX": 0.1,
@@ -2141,7 +2141,7 @@
   ],
   "formulas": {
    "hiT": "v_T^2 = v^2 - T^2 (lP/4 + g^2/6)/lP;  m_X^2 = g^2 v_T^2 + T^2 (lX/3 + g^2/12)",
-   "width_medium": "Gamma(E,T) = (m_s/E) Gamma_vac(m_s(T), m_X(T), lam3(T)) <1 + f(E1) + f(E2)>_angle; inverse decay by detailed balance (thermal.width_s_medium, thermal_mc.inverse_decay_bose)"
+   "width_medium": "Gamma_net(E,T) = (m_s/E) Gamma_vac(m_s(T), m_X(T), lam3(T)) <1 + f(E1) + f(E2)>_angle is the NET (Weldon) damping rate of an s mode, the coefficient of f_s in its collision term (thermal.width_s_medium); the gross forward factor is <(1+f(E1))(1+f(E2))> (thermal_mc.decay_bose) and the inverse decay f1 f2 (1+f_s) (thermal_mc.inverse_decay_bose); see decay_s_XXb.bose_factors"
   }
  },
  "decay_s_XXb": {
@@ -2383,7 +2383,20 @@
     "inverse_BE_quadrature_over_MB": 15.758983363435814
    }
   },
-  "amplitude": "M = -lam3 (constant); Gamma_vac = lam3^2 beta/(16 pi m_s)"
+  "amplitude": "M = -lam3 (constant); Gamma_vac = lam3^2 beta/(16 pi m_s)",
+  "bose_factors": {
+   "forward_gross": "gamma_dec = int dPi_s f_s (m_s/E) Gamma_vac <(1 + f(E1))(1 + f(E2))>_angle: the Boltzmann gain of X and Xb and loss of s (thermal_mc.decay_bose); bose_over_MB_mu0.decay_BE_over_MB is this quantity over the MB table",
+   "inverse": "gamma_inv = int dPi_1 dPi_2 f_1 f_2 (1 + f_s) |M|^2 (2pi)^4 delta^4 (thermal_mc.inverse_decay_bose); equal to the forward gross rate in equilibrium with mu_s = mu_+ + mu_- (checked, bose_over_MB_mu0.inverse_BE_quadrature_over_MB and checks.bose_detailed_balance)",
+   "net_width": "Gamma_net(E,T) = (m_s/E) Gamma_vac <1 + f(E1) + f(E2)> (thermal.width_s_medium; masses_T.width_vs_energy_oneloop): the coefficient of f_s in its collision term, f_s(1+f1)(1+f2) - f1 f2 (1+f_s) = f_s (1+f1+f2) - f1 f2; a solver using Gamma_net adds only the spontaneous inverse piece f1 f2 (without 1+f_s); a solver using the gross forward factor adds the full inverse f1 f2 (1+f_s)",
+   "net_width_bose_over_MB_mu0": {
+    "0.3": 1.0239640015125286,
+    "1.0": 1.4900890857335016,
+    "3.0": 2.978665507614013,
+    "7.344": 5.247147055700294,
+    "12.0": 6.872714005612602
+   },
+   "net_width_bose_note": "ratio of int dPi_s f_s^BE Gamma_net to the MB table (own 2-D quadrature, finalise_checks.py); at T/m_X = 0.3, 1, 3, 7.344, 12 it is smaller than the gross forward ratio because the f1 f2 term is removed"
+  }
  },
  "channels_22": {
   "XXb_XXb": {
@@ -10303,7 +10316,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 6.912777444537487,
-   "chain": "XXb->s then sss->XXb (L) / s ss->ss ...; s s->s s elastic chains",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 7.348469228349533,
+   "chain": "XXb->s (pair mass = m_s) then s s s->XXb (L): the only tree chain, opens at 3 m_s = 7.348 m_X (the flagged pair line is off shell below it: G_sub/G_full = 0.99-0.94 up to 7.32 m_X)",
    "threshold_power_law_exponent_full": 3.5050160456838584,
    "thermal_MB": {
     "T_over_mX": [
@@ -10980,6 +10995,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 4.008,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 4.449489742783177,
    "chain": "XXb->s then s XX->XX (E2); X X->X X* (elastic) etc.",
    "threshold_power_law_exponent_full": 3.484410842014368,
    "thermal_MB": {
@@ -11657,6 +11674,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 4.008,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 4.449489742783177,
    "chain": "XXb->s (inverse decay) then s XXb->XXb (E); two pairs: XXb->s twice then ss->XXb; nested: XXb->s, s->X Xb*, Xb* X->s ...; XXb->X Xb* (elastic) then Xb* X->s",
    "threshold_power_law_exponent_full": 3.547738272255169,
    "thermal_MB": {
@@ -12191,6 +12210,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": null,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": null,
    "chain": "none",
    "threshold_power_law_exponent_full": 3.53445756366794,
    "thermal_MB": {
@@ -12725,7 +12746,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 5.460388722268745,
-   "chain": "XXb->s then s X s->X s (G2); Xs->Xs elastic chains",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 5.449489742783177,
+   "chain": "X Xb s->X Xb* (E, 3->2 with a real Xb) then Xb* X->s (inverse decay): opens at the threshold 5.449 m_X; XXb->s then s X s->X s (G2) above 2 m_s + m_X = 5.899",
    "threshold_power_law_exponent_full": 4.099869453602014,
    "thermal_MB": {
     "T_over_mX": [
@@ -13259,7 +13282,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 6.912777444537487,
-   "chain": "XXb->s then sss->ss (F)",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 6.898979485566355,
+   "chain": "X s s->X* s (G2, 3->2 with a real X) then X* Xb->s (inverse decay): opens at the threshold 6.899 m_X (visible from 6.93 in the table); XXb->s then s s s->s s (F) above 3 m_s = 7.348",
    "threshold_power_law_exponent_full": 4.282746193717372,
    "thermal_MB": {
     "T_over_mX": [
@@ -13791,7 +13816,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 9.920370533454658,
-   "chain": "none below 5.7 m_X (no neutral pair in the initial state); X s->X* ... lines at higher energy",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": null,
+   "chain": "none: no neutral pair in the initial state and no factorising X-line chain; G_sub = G_full at every tabulated energy (near-window flags at 9.9-27 m_X are off shell)",
    "threshold_power_law_exponent_full": 1.9475509432661775,
    "thermal_MB": {
     "T_over_mX": [
@@ -14433,7 +14460,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 4.458388722268744,
-   "chain": "XXb->s then s s->XXb; s->XXb then ...",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 4.898979485566355,
+   "chain": "XXb->s (pair mass = m_s) then s s->XXb: opens at 2 m_s = 4.899 m_X (threshold 4.449; G_sub = G_full to 1-3 % below 4.899)",
    "threshold_power_law_exponent_full": 2.030243346295207,
    "thermal_MB": {
     "T_over_mX": [
@@ -14965,6 +14994,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": null,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": null,
    "chain": "none (no neutral X Xb pair; s s->s* off shell)",
    "threshold_power_law_exponent_full": 2.1332177845301525,
    "thermal_MB": {
@@ -15497,6 +15528,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 5.910777444537488,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 5.898979485566355,
    "chain": "Xs->Xs elastic with the u-channel X pole (s->X Xb, Xb X->s)",
    "threshold_power_law_exponent_full": 3.318651231209615,
    "thermal_MB": {
@@ -16172,6 +16205,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 3.4563887222687444,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 3.4494897427831774,
    "chain": "XXb->s then s X->s X (elastic); X Xb->X Xb* then Xb* X->s",
    "threshold_power_law_exponent_full": 0.6081922643507189,
    "thermal_MB": {
@@ -16704,7 +16739,9 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 33.26235358911797,
-   "chain": "none at tree level below the X-line window",
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": null,
+   "chain": "none at tree level (one off-shell window flag at 33 m_X; G_sub = G_full)",
    "threshold_power_law_exponent_full": 1.9832471734571258,
    "thermal_MB": {
     "T_over_mX": [
@@ -17236,6 +17273,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 4.908777444537488,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 4.898979485566355,
    "chain": "XXb->s then ss->ss (elastic)",
    "threshold_power_law_exponent_full": 0.7478393754536821,
    "thermal_MB": {
@@ -17770,6 +17809,8 @@
     ]
    },
    "chain_threshold_sqrt_s_over_mX": 4.908777444537488,
+   "chain_threshold_note": "chain_threshold_sqrt_s_over_mX is the first tabulated energy with a line flagged inside the regulator window (|p^2 - m^2| < 25 m Gamma_reg), not a physical threshold; the chain opens physically at chain_threshold_physical_sqrt_s_over_mX (Coleman-Norton factorisation into real processes), confirmed by G_sub/G_full dropping from ~1 there",
+   "chain_threshold_physical_sqrt_s_over_mX": 4.898979485566355,
    "chain": "XXb->s then s XXb->ss (G); XXb->s twice then ss->ss (elastic)",
    "threshold_power_law_exponent_full": 0.6439513722902748,
    "thermal_MB": {
@@ -29007,7 +29048,7 @@
  "usage": {
   "solver_recipe": [
    "masses: vacuum for T <= 3 m_X; masses_T tables beyond; s <-> X Xb switched off above T_close",
-   "1<->2: Gamma(E,T,mu) from masses_T.formulas; inverse decay by detailed balance",
+   "1<->2: either Gamma_net(E,T,mu) f_s (masses_T.formulas.width_medium) together with the spontaneous inverse piece proportional to f1 f2 alone, or the gross forward (1+f1)(1+f2) f_s together with the inverse f1 f2 (1+f_s); never Gamma_net together with the full inverse (double count); decay_s_XXb.bose_over_MB_mu0 refers to the gross forward rate density, decay_s_XXb.bose_factors.net_width_bose_over_MB_mu0 to Gamma_net; the channel closes above masses_T T_close (m_s(T) < 2 m_X(T))",
    "2->2 elastic: sigma_nores (XXb, Xs) / sigma_sub (XX, ss) tables; transport columns for momentum relaxation",
    "2<->2 inelastic ss<->XXb: sigma_sub (no pole); Bose factors from the solver",
    "n<->2: the on-shell chains are the explicit 1<->2, 2<->2, 3<->2 channels; add the subtracted remainder G_sub where remainder_resolved, otherwise treat it as zero with remainder_bound as the systematic; below the chain threshold G_sub is the whole kernel",

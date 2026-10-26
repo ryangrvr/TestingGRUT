@@ -3,7 +3,9 @@
 26 October 2026 · Claude, issue #13 (BRIEF_KINETIC.md) · same-session AI work, not outside replication. Resumed run:
 the code of the interrupted attempt (model, amplitudes, phase space, 2→2 quadrature, thermal masses, MC engine) was
 re-run and checked; one defect found and fixed on resumption (section 4.2); everything else below was produced after
-the resumption.
+the resumption. **Third pass (finalisation, after a second usage-limit cut): no recomputation; the deliverables were re-read
+against results/, the documentation inconsistencies listed in section 9 were corrected, and the independent spot checks of
+`code/finalise_checks.py` (results/finalise_checks.json) were added.**
 
 Codex packets read only through `git show`/`git archive` into the scratchpad: `grut_kinetic_contract_20261026` at
 9877518 (KINETIC_SPEC.md, MATHEMATICS.md, THERMODYNAMIC_CONTROL.json, CLAUDE_HANDOFF.md, VERIFICATION_RESULTS.json;
@@ -87,7 +89,7 @@ broken phase holds at every hidden temperature up to 12 m_X and up to T_c**; abo
 a radial quantum of the broken phase, and no object. **s → X X̄ closes at T = 13.06 m_X (daisy 13.57)**: m_s(T) falls
 faster than 2m_X(T) (m_s/2m_X = 1.055 at 12 m_X); the inverse decay closes with it and only s s ↔ X X̄, the 2→2 and
 the 3↔2 channels connect s to the pairs between 13.1 m_X and T_c. The in-medium rest-frame width is Γ_vac(m_s(T),
-m_X(T), λ₃(T)) × [1 + 2f_B(m_s/2)] (μ = 0): the Bose factor reaches 26 at 12 m_X while the phase-space factor
+m_X(T), λ₃(T)) × [1 + 2f_B(m_s/2)] (μ = 0; this is the net Weldon damping factor, see section 3.2 for the gross/inverse split): the Bose factor reaches 26 at 12 m_X while the phase-space factor
 β(T) and λ₃(T)² reduce it, net 11.6× at 12 m_X (table; the energy-dependent lab width Γ(E,T) = (m_s/E)Γ_rest ⟨1+f₁+f₂⟩
 with the daughter energies is tabulated for E/m_s = 1–100 and is the callable `thermal.width_s_medium(E, T, μ₊, μ₋)`).
 
@@ -140,15 +142,15 @@ the physical width (`check_pole.py`, `results/check_pole.json`) reproduces full 
 −2.000 in √s (the t-channel pieces fall as 1/s²). For a vector daughter with p = 7.7e4 m_X on a bath X at rest
 (√s = 393 m_X) or s (√s = 614 m_X): σ(X X) = 1.3e-10, σ(X X̄) = 2.7e-10, σ(X s) = 2.9e-9 GeV⁻².
 
-MB thermal averages ⟨σv⟩(T) (GeV⁻²) on T/m_X = 0.03–30 (53 points; the transport weight 1 − cosθ also tabulated):
+MB thermal averages ⟨σv⟩(T) (GeV⁻²) on T/m_X = 0.03–30 (51 points; the transport weight 1 − cosθ also tabulated):
 
-| T/m_X | X X̄ (non-res.) | X X | X s (non-res.) | s s | s s → X X̄ | X X̄ → s s | BE/MB: XX̄, XX, Xs, ss, ss→XX̄ |
+| T/m_X | X X̄ (non-res.) | X X | X s (non-res.) | s s | s s → X X̄ | X X̄ → s s | BE/MB: XX̄, XX, Xs, ss, ss→XX̄ (results/mc_checks.json) |
 |---|---|---|---|---|---|---|---|
 | 0.3 | 9.16e-7 | 7.43e-6 | 7.39e-5 | 5.65e-3 | 7.80e-5 | 2.11e-8 | 1.05, 1.05, 1.03, 1.00, 1.00 |
-| 1 | 3.21e-7 | 1.33e-6 | 2.11e-5 | 1.74e-3 | 3.45e-5 | 4.01e-6 | 1.61, 1.99, 1.47, 1.16, 1.17 |
-| 3 | 1.68e-7 | 9.87e-8 | 4.29e-6 | 2.18e-4 | 8.56e-6 | 3.38e-6 | 2.49, 6.14, 2.79, 2.44, 2.23 |
-| 7.344 | 5.57e-8 | 2.26e-8 | 1.26e-6 | 4.40e-5 | 1.87e-6 | 8.94e-7 | 4.17, 6.45, 4.37, 4.15, 4.30 |
-| 12 | 2.53e-8 | 1.08e-8 | 5.84e-7 | 2.05e-5 | 7.48e-7 | 3.67e-7 | 5.59, 5.52, 5.42, 5.36, 5.75 |
+| 1 | 3.21e-7 | 1.33e-6 | 2.11e-5 | 1.74e-3 | 3.45e-5 | 4.01e-6 | 1.61, 2.03, 1.47, 1.16, 1.17 |
+| 3 | 1.68e-7 | 9.87e-8 | 4.29e-6 | 2.18e-4 | 8.56e-6 | 3.38e-6 | 2.50, 5.81, 2.79, 2.44, 2.24 |
+| 7.344 | 5.57e-8 | 2.26e-8 | 1.26e-6 | 4.40e-5 | 1.87e-6 | 8.94e-7 | 4.20, 6.35, 4.37, 4.22, 4.54 |
+| 12 | 2.53e-8 | 1.08e-8 | 5.84e-7 | 2.05e-5 | 7.48e-7 | 3.67e-7 | 5.28, 7.19, 5.42, 4.99, 5.64 |
 
 The X X̄ elastic kernel is dominated by the resonant chain: γ_sub/γ_RIS = +1.9 at T = 0.03 m (sub-threshold
 s-exchange, positive), −1.6e-4 at 0.3 m, −1.4e-4 at 1 m, +2e-6 at 3 m, +2.2e-3 at 12 m: the subtracted remainder is
@@ -159,13 +161,23 @@ the non-resonant columns with the chain carried by the explicit decay/inverse de
 
 ### 3.2 s ↔ X X̄ (`thermal.width_s_medium`, `thermal_mc.decay_bose`, `inverse_decay_bose`)
 
-Forward: Γ(E, T, μ₊, μ₋) = (m_s/E) Γ_vac(m_s(T), m_X(T), λ₃(T)) ⟨1 + f(E₁) + f(E₂)⟩ over the decay angle (lab daughter
-energies E₁, E₂). Rate densities MB: γ_dec = n_s Γ_s⟨m_s/E⟩ = m_s²TΓ_s K₁(m_s/T)/2π² = 1.63e-13, 3.27e-10, 1.04e-8,
-8.26e-8, 2.33e-7 GeV⁴ at T/m = 0.3, 1, 3, 7.344, 12 (vacuum masses; ⟨m/E⟩ = 0.84, 0.60, 0.32, 0.15, 0.098). Bose:
-γ_dec^BE/γ_dec^MB = 1.055, 1.63, 2.65, 4.45, 5.86 at μ = 0 (MC; the inverse decay by exact 2-D quadrature agrees to
-0.04–0.8 %, 4.8 % at 12 m where the quadrature tail is the limit). Inverse decay X X̄ → s follows from detailed
-balance (with Bose factors and μ_s = μ₊ + μ₋, checked in section 5). With in-medium masses the channel closes at
-13.06 m_X (section 2); the interface flags `decay_open(T)`.
+Three Bose factors must be kept apart [D]. The collision term of an s mode is f_s(1+f₁)(1+f₂) − f₁f₂(1+f_s) =
+f_s(1 + f₁ + f₂) − f₁f₂ (identity of Bose functions at E = E₁ + E₂). (i) Gross forward rate (the Boltzmann gain of
+X and X̄, loss of s): factor ⟨(1+f(E₁))(1+f(E₂))⟩ over the decay angle, lab daughter energies E₁, E₂
+(`thermal_mc.decay_bose`). (ii) Inverse decay X X̄ → s: f₁f₂(1+f_s) (`thermal_mc.inverse_decay_bose`). (iii) Net
+(Weldon) damping rate of the s mode, the coefficient of f_s: Γ_net(E, T, μ₊, μ₋) = (m_s/E) Γ_vac(m_s(T), m_X(T), λ₃(T))
+⟨1 + f(E₁) + f(E₂)⟩ (`thermal.width_s_medium`; the Γ(E,T) tabulated in section 2 and `masses_T.width_vs_energy_oneloop`).
+A solver uses (i) with (ii), or (iii) with the spontaneous inverse piece ∝ f₁f₂ alone; (iii) together with the full (ii)
+double counts. Rate densities MB: γ_dec = n_s Γ_s⟨m_s/E⟩ = m_s²TΓ_s K₁(m_s/T)/2π² = 1.63e-13, 3.27e-10, 1.04e-8,
+8.26e-8, 2.33e-7 GeV⁴ at T/m = 0.3, 1, 3, 7.344, 12 (vacuum masses; ⟨m/E⟩ = K₁/K₂ = 0.84, 0.60, 0.32, 0.15, 0.098;
+recomputed in closed form to 1e-16, `finalise_checks.py`). Bose, μ = 0: gross forward γ_dec^BE/γ_dec^MB = **1.024, 1.54,
+3.78, 9.38, 15.26** (MC; the inverse decay by exact 2-D quadrature agrees to 0.02–0.6 %, 3.2 % at 12 m where the
+quadrature tail is the limit); net Γ_net: 1.024, 1.49, 2.98, 5.25, 6.87 (own 2-D quadrature, `finalise_checks.py`;
+the difference is the f₁f₂ term, dominated by slow s quanta whose daughters have E ≲ T). Inverse decay X X̄ → s follows
+from detailed balance (with Bose factors and μ_s = μ₊ + μ₋, checked in section 5). With in-medium masses the channel
+closes at 13.06 m_X (section 2); the interface flags `decay_open(T)` and states the three conventions in
+`decay_s_XXb.bose_factors`. (The interrupted attempt's text quoted 1.055–5.86 for the gross factor, a stale run;
+corrected in the finalisation pass, section 9.)
 
 ### 3.3 n ↔ 2 (`code/kernels_n2.py`, `phasespace.py`, `run_kernels.py`, `run_supplement.py`; `results/kernels_n2.json`, `xsec_2n.json`, `supplement_n2.json`)
 
@@ -182,22 +194,30 @@ for the 4→2 channels A and B (section 4.3).
 
 Channels (incoming first; S_in, S_out), the sequential chain that the subtraction removes, and the energy where it opens:
 
-| key | channel | S_in, S_out | √s_th/m_X | chain opens at √s/m_X | removed chain (network processes) |
+| key | channel | S_in, S_out | √s_th/m_X | chain opens at √s/m_X (physical [D], see below) | removed chain (network processes) |
 |---|---|---|---|---|---|
 | A | X X X̄ X̄ → X X̄ | 4, 1 | 4 | 4.449 | X X̄ → s then s X X̄ → X X̄ (E); two pairs: twice X X̄ → s then s s → X X̄; nested decay/inverse-decay chains; X X̄ → X X̄* then X̄* X → s |
 | B | X X X X̄ → X X | 6, 2 | 4 | 4.449 | X X̄ → s then s X X → X X (E2); elastic + inverse decay |
 | C | X X X̄ X̄ → s s | 4, 2 | 4.899 | 4.899 | X X̄ → s then s X X̄ → s s (G); twice X X̄ → s then s s → s s |
 | D | X X X̄ → X s | 2, 1 | 3.449 | 3.449 | X X̄ → s then s X → s X; X X̄ → X X̄* then X̄* X → s |
-| E | X X̄ s → X X̄ | 1, 1 | 4.449 | 4.449 | X X̄ → s then s s → X X̄ |
-| E2 | X X s → X X | 2, 2 | 4.449 | 5.76 | X-line chains only |
+| E | X X̄ s → X X̄ | 1, 1 | 4.449 | 4.899 (= 2m_s) | X X̄ → s then s s → X X̄ (G̃_sub = G̃_full to 1–3 % below 4.899) |
+| E2 | X X s → X X | 2, 2 | 4.449 | none | – (no neutral pair, no factorising X-line chain; G̃_sub = G̃_full at every energy) |
 | F | s s s → s s | 6, 2 | 7.348 | none | – (s s → s* off shell) |
 | G | X X̄ s → s s | 1, 2 | 4.899 | 4.899 | X X̄ → s then s s → s s |
 | G2 | X s s → X s | 2, 1 | 5.899 | 5.899 | X s → X s with the u-channel X pole |
-| H | X X̄ s s → X X̄ | 2, 1 | 6.899 | 6.899 | X X̄ → s then s s s → X X̄ (L) / s s → s s chains |
-| J | X X X̄ s → X s | 2, 1 | 5.449 | 5.449 | X X̄ → s then s X s → X s (G2) |
-| K | X X̄ s s → s s | 2, 2 | 6.899 | 6.899 | X X̄ → s then s s s → s s (F) |
+| H | X X̄ s s → X X̄ | 2, 1 | 6.899 | 7.348 (= 3m_s) | X X̄ → s then s s s → X X̄ (L): the only tree chain (G̃_sub/G̃_full = 0.99–0.94 up to 7.32) |
+| J | X X X̄ s → X s | 2, 1 | 5.449 | 5.449 | X X̄ s → X X̄* (E, real X̄) then X̄* X → s; X X̄ → s then s X s → X s (G2) above 5.899 |
+| K | X X̄ s s → s s | 2, 2 | 6.899 | 6.899 (visible from 6.93) | X s s → X* s (G2, real X) then X* X̄ → s; X X̄ → s then s s s → s s (F) above 7.348 |
 | L | s s s → X X̄ | 6, 1 | 7.348 | none (X lines at > 14 m_X, 1e-5) | – |
 | N | s s s s → s s | 24, 2 | 9.798 | none | – |
+
+The opening energies are the Coleman–Norton condition [D]: an internal line is on shell in the physical region only where the
+amplitude factorises into two real processes (a t-channel line between one incoming and one outgoing leg, or any line whose
+other side would be a 2→1 or 3→1 process with heavier initial state, never is); they are confirmed by G̃_sub/G̃_full dropping
+from ≈ 1 at that energy in the tables. The interface carries them as `chain_threshold_physical_sqrt_s_over_mX`; its
+`chain_threshold_sqrt_s_over_mX` is the first tabulated point with a line flagged inside the regulator window (|p² − m²| <
+25 mΓ_reg), which for A, B, E, H lies below the physical opening (the flagged line is then off shell and the subtraction changes
+G̃ by ≤ 1 %, an O(Γ_reg²/x²) regulator effect).
 
 and the fourteen reverse 2→n channels (X X̄ → X X̄ X X̄, X X → X X X X̄, s s → X X X̄ X̄, X s → X X X̄, X X̄ → X X̄ s, X X → X X s,
 s s → s s s, s s → X X̄ s, X X̄ → X X̄ s s, X s → X X X̄ s, s s → s s s s, X X̄ → s s s, X s → X s s, s s → X X̄ s s, X X̄ → s s s s).
@@ -301,12 +321,11 @@ correctly carried by the old ½ SV_SS n_s². What the old constants miss is the 
 
 | T/m_X | A: A_eff/A_a (subtracted) | B: A_eff/A_b (subtracted) | A, B: regulated-full/old (chain at Γ_reg = 0.02 m_s) |
 |---|---|---|---|
-| → 0 (threshold, G̃/Φ₄ at δ = 2e-4) | 0.986 ± 0.003 | 1.009 ± 0.003 | – |
-| 0.01 | 1.08 | 0.88 | 1.08, 0.88 |
-| 0.03 | 1.42 | 0.69 | 1.43, 0.69 |
-| 0.1 | 3.6 | 0.29 | 25.7, 0.81 |
-| 0.3 | 1.3 (0.03 of full) | 0.085 (0.16 of full) | 59.3, 0.58 |
-| 1 | 0.007 (0 within error) | 0.001 (0 within error) | 0.61, 0.053 |
+| → 0 (threshold, G̃_sub/Φ₄ at δ = 1e-4, 2e-4; `finalise_checks.py`, independent seed) | 0.987 ± 0.003, 0.980 ± 0.003 | 1.005 ± 0.003, 1.008 ± 0.003 | – (kernels_n2.py self-test at δ = 1e-4: 0.986, 1.009) |
+| 0.03 | 1.40 | 0.69 | 1.43, 0.69 |
+| 0.1 | 3.7 | 0.35 | 25.7, 0.81 |
+| 0.3 | 1.5 (0.025 of full) | 0.092 (0.16 of full) | 59.3, 0.58 |
+| 1 | 0.006 (0 within error) | 0.001 (0 within error) | 0.61, 0.053 |
 | 3, 7.344, 12 | 0 within error | 0 within error | 5.0e-04, 2.1e-04 at 3 m_X (n_eq⁴ outgrows the chain) |
 
 A_eff ≡ S_in γ(T)/n_eq⁴ (A_old is its T → 0 limit; both channels reach it at threshold, with the energy dependence of
@@ -316,7 +335,7 @@ The old s route (ss → X X̄ with n_s = K(T)n₊n₋ and the threshold σv) the
 through the scalar reservoir by 1.6× at T = 0.3 m_X, 3.6× at m_X, 15× at 3 m_X, 68× at 7.3 m_X and 170× at 12 m_X**
 (MB; the Bose factor of the same channel, 1.2–5.7, is a separate correction in the other direction), because
 σ(s s → X X̄) falls as 1/s above threshold while the old constant is held fixed. The old 4→2 constants are the T → 0
-limit of the subtracted kernel (A_eff/A_a = 1.08, 1.42, 3.6 at T = 0.01, 0.03, 0.1 m_X; A_eff/A_b = 0.88, 0.69, 0.29) and
+limit of the subtracted kernel (A_eff/A_a = 1.40, 3.7 at T = 0.03, 0.1 m_X; A_eff/A_b = 0.69, 0.35; results/balance.json `nr_limits`) and
 above T ≈ 0.1 m_X they stand in for a rate that is in reality the resonant chain through real s and X, 10³–10⁵ times
 larger at the regulator width and ×261 more at the physical width: as Codex wrote, not a kernel for the injected
 daughters, and a late limit only for T ≲ 0.03 m_X with the inventory bookkeeping through the explicit s species.
@@ -329,12 +348,13 @@ daughters, and a late limit only for T ≲ 0.03 m_X with the inventory bookkeepi
 | Phase space Φ₃, Φ₄ (massless exact, massive Dalitz, map independence) | 1.4σ, 1.4σ, 0.4σ; weights vs density 2e-12 |
 | MB thermal rates: lab-frame MC vs quadrature, six 2→2 channels × 5 T | 0.1–0.6 % (non-resonant columns) |
 | Detailed balance, Bose, point kinematics: 18 forward/reverse pairs × 20 random on-shell configurations (all 14 n↔2 pairs, s ↔ X X̄, s s ↔ X X̄, X X̄ → X X̄, X s → X s), μ_s = μ₊ + μ₋ and μ₊ + μ₋ = 0 for inventory-changing channels | **360 cases, max residual 4.9e-15**, energy residual 3.4e-16 (Codex: 240 cases, 5.3e-16: CONFIRMED and extended) |
-| Detailed balance, Bose, integrated: s → X X̄ (MC) vs X X̄ → s (exact 2-D quadrature) at 5 T × 3 (μ₊, μ₋) | ratios 0.9955–1.008 (1.048 at 12 m, μ = 0: quadrature tail), all within 2.7σ |
-| Detailed balance, Bose, integrated: s s → X X̄ vs X X̄ → s s by independent MC samplings, 5 T × 3 μ sets (2μ_s = μ₊ + μ₋) | ratios 0.89–1.07, |σ| ≤ 3.0 over 15 cases |
+| Detailed balance, Bose, integrated: s → X X̄ (MC) vs X X̄ → s (exact 2-D quadrature) at 5 T × 3 (μ₊, μ₋) | 15 cases: ratios 0.9939–1.0021 (0.968 at 12 m, μ = 0: quadrature tail), all within 2.1σ |
+| Detailed balance, Bose, integrated: s s → X X̄ vs X X̄ → s s by independent MC samplings, 5 T × 3 μ sets (2μ_s = μ₊ + μ₋) | ratios 0.906–1.046, |σ| ≤ 1.6 over 15 cases |
 | Table-level MB detailed balance γ_{n→2}(T) from G̃ vs γ_{2→n}(T) from σ, 14 pairs × 6 T, regulated-full and subtracted | pole-free channels (F, N, L, E2): γ_{n→2}/γ_{2→n} = 1 ± 0.087 at every T (the interpolation systematic of the two 16-point grids); resonant channels, regulated-full column: within 0.37 for T ≥ m_X, 0.95–2.08 at T ≤ 0.3 m_X where the coarse grids straddle the resonance turn-on; subtracted remainders: consistent within their MC errors in 33 of 42 (T ≥ 1 m_X) cases, the rest are the same interpolation systematic on small numbers |
 | Vanishing internal energy moment of each elastic kernel at a common T (4 channels × 4 T) | (Q₁+Q₂)/(|Q₁|+|Q₂|) ≤ 2.4e-15 |
 | X–s energy exchange at T_X ≠ T_s (closure input; non-resonant kernel) | sign correct, Q_s(T_X = T_s) = 0 to MC noise; e.g. Q_s/(n_X n_s) = −3.5e-6 GeV⁻¹ at (0.5, 7.344), +3.0e-6 at (7.344, 0.5) |
 | RIS normalisation (on-shell piece of X X̄ → X X̄ = decay rate density) | 1 − 1e-6 at every T |
+| Finalisation spot checks (`finalise_checks.py`: closed forms and own quadratures against the interface, no track module imported) | tree masses, λ₃, Γ_vac exact; γ_dec^MB and ⟨m/E⟩ to 1e-16; Gondolo–Gelmini quadrature of the tabulated σ(s) reproduces ⟨σv⟩ to 0.1–0.3 % (X X at T = 1, 7.3; s s → X X̄ at 3; X s at 1); contact limits to 1e-8 at √s ≈ 1e5 m_X; high-T T_c = 18.09 vs 18.14; gross-forward Bose factors of the decay vs the net ones (3.2); 4→2 threshold limits (4.3) |
 | Full Breit–Wigner brute force vs RIS + subtracted (10–1000× width) | section 3.1 |
 | Late limit vs old constants | section 4.3 |
 | Regulator spread of the subtracted n→2 kernels (0.02 vs 0.04 m_s) | tabulated per point and per T; see 3.3 |
@@ -348,10 +368,10 @@ and the energy-loss rate per density is 2.9e-7, 5.8e-7, 7.4e-6 GeV⁻¹; at the 
 
 `meta` (model, units, symmetry and Bose conventions, the subtraction, provenance); `masses_T` (one-loop and daisy
 rows: v_T, m_X(T), m_s(T), λ₃(T), λ_s3(T), decay_open, Γ_s,rest(T), Bose factor; T_c, T_close; validity strings);
-`decay_s_XXb` (Γ_vac, formulas, MB rate table, Bose/MB at 5 T); `channels_22` (σ(s) tables with all prescriptions and
-the transport weight, MB γ and ⟨σv⟩ tables on 53 T, Bose/MB factors, high-energy law); `channels_n2` and `channels_2n`
+`decay_s_XXb` (Γ_vac, formulas, MB rate table, gross-forward Bose/MB at 5 T, `bose_factors` with the gross/inverse/net conventions and the net-width Bose/MB); `channels_22` (σ(s) tables with all prescriptions and
+the transport weight, MB γ and ⟨σv⟩ tables on 51 T, Bose/MB factors, high-energy law); `channels_n2` and `channels_2n`
 (G̃(s) or σ(s) at both regulators with MC errors and the number of flagged lines, chain threshold and the chain
-named, MB thermal tables on 47 T with error, regulated-full, second regulator, `remainder_resolved` flags and
+named, MB thermal tables on 45 T with error, `chain_threshold_physical_sqrt_s_over_mX` and the flagged-point `chain_threshold_sqrt_s_over_mX` with its note, regulated-full, second regulator, `remainder_resolved` flags and
 `remainder_bound`); `hard_particle_on_bath`; `energy_exchange_Xs`; `checks`; `usage` (the solver recipe). The solver
 can also import `code/tables.py` (interpolation and thermal averages), `xsec22.py` (σ, thermal rates with any
 Params), `thermal.py` (masses, widths), `thermal_mc.py` (Bose integrals).
@@ -379,6 +399,31 @@ Params), `thermal.py` (masses, widths), `thermal_mc.py` (Bose integrals).
 (~2.5 h on 4 cores, dominated by `run_kernels.py`; module self-tests `python3 -B model.py | amp.py | phasespace.py |
 xsec22.py | thermal.py`). Scratch outputs in
 /tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/review/kin_rates/prod/.
+
+Finalisation checks (~40 s): `python3 -B finalise_checks.py` (writes results/finalise_checks.json; the 4→2 threshold rows were
+produced by the inline MC call recorded in results/finalise_checks.json `o_threshold_limit_4to2`). The interface alone is
+rebuilt from the stored tables in 9 s: `python3 -B build_interface.py ../results/kernels_n2.json ../results/xsec_2n.json
+../results/supplement_n2.json ../results/balance.json`.
+
+## 9. Finalisation pass (third session; documentation and consistency only)
+
+Found by re-reading NOTES.md against results/ and by the spot checks; no numerical result changed, and the regenerated
+rates_interface.json is numerically identical to the previous one (0 differences over every numeric entry; only strings and
+the new fields differ):
+
+1. The s → X X̄ Bose factors quoted in 3.2 (1.055–5.86) were from a stale run; results/mc_checks.json has 1.024–15.26 for the
+   gross forward rate. The spot check showed that the track's `width_s_medium` (net Weldon factor 1 + f₁ + f₂) and the MC
+   (gross factor (1+f₁)(1+f₂)) are different quantities, and the interface's recipe line ("Γ from formulas + inverse by
+   detailed balance") could be read as a double count; the three conventions are now stated (3.2, `decay_s_XXb.bose_factors`,
+   `usage`), with the net-width Bose/MB values added (1.024, 1.49, 2.98, 5.25, 6.87).
+2. The BE/MB column of the 2→2 table (3.1) was refreshed to results/mc_checks.json (changes up to 30 % at 12 m_X for X X).
+3. The "chain opens at" column (3.3) mixed physical openings with the first flagged MC point: E 4.449 → 4.899, E2 5.76 → none,
+   H 6.899 → 7.348; the chains named for J and K were not the ones that open first. Both energies are now in the interface.
+4. The late-limit table (4.3) was refreshed to results/balance.json (which includes the supplement points): A_eff/A_a at
+   T = 0.1, 0.3 m_X 3.6 → 3.7, 1.3 → 1.5; A_eff/A_b at 0.1 m_X 0.29 → 0.35; the unsupported T = 0.01 row was dropped; the
+   threshold row was reproduced with an independent seed.
+5. Grid counts: 51 (not 53) temperatures in the 2→2 thermal tables, 45 (not 47) in the n ↔ 2 tables; the detailed-balance
+   ranges of section 5 were refreshed.
 
 Credits: Dolan–Jackiw finite-temperature potential; Parwani / Arnold–Espinosa resummation; Berends–Giele recursion;
 real-intermediate-state subtraction as used in leptogenesis Boltzmann networks (Kolb–Wolfram; Giudice et al.);

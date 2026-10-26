@@ -212,8 +212,9 @@ Enqvist–McDonald PLB 425 (1998) 309 [abstract]; Kasuya–Kawasaki PRD 61 (2000
 ## 5. Expansion and the energy equation (`code/expansion.py`)
 
 Visible radiation with g* = 106.75 (task statement), H = √(π²g*/90)T_v²/M_Pl, a ∝ 1/T_v, hidden charge comoving
-(n_Q = Y_Q s_vis). At the case-L coordinate a_ref = 7.0467e12, T_vis = 45.67 GeV, H = 2.685e-15 GeV (2.745e-15 with the
-coarse g* table the old proxies use: 2.2 %). Energy equation
+(n_Q = Y_Q s_vis). At the case-L coordinate a_ref = 7.0467e12, T_vis = 43.72 GeV with g_s = g* = 106.75 (45.67 GeV
+with the coarse g* table that the old proxies use and kin_source quotes), H = 2.685e-15 GeV (2.745e-15 with the
+table: 2.2 %); the fragmentation rule's α_max/H uses this consistent H. Energy equation
 
     dρ_gas/dln a = −3(ρ_gas + P_gas) + [S_parent + S_med − W_obj − W_mf]/H,   S_parent = Γ_A m_A n_A(a),
     dn_A/dln a = −3n_A − Γ_A n_A/H,   W_obj = ω d(n_LQ)/dt + (E − Qω) dn_L/dt,
@@ -228,14 +229,48 @@ R = 40.56262 / 4.053801 to 2e-14; the object-work identity to 2.7e-5.
 |ε| = 0.14571744, yield 1.00 Y_Q, coarse g* table, R grid 1, 1.14445, 2, 3, 5, 7, 8, 9, 10, 12, 15, 20, 25, 30, 40.5626,
 41.707, 48.499, 49.643, 60, 75, 90 (the mediator-only, vector + mediator and broad + mediator points included).
 
-PROXY_TABLE
+| R | isentropic proxy f | isentropic + s route | ke (μ_c = E_c = ω) | ke + s route | ke (μ_c = E_c = 0.923 m) | T_h/m at onset (proxy) | σ/n_Q at onset (ke) |
+|---|---|---|---|---|---|---|---|
+| 1 | 0 (erased) | 0 (erased) | 0 (erased, 213 fb) | 0 (erased, 213 fb) | – | 4.109 | 2.57 |
+| 1.1444 | 0 (erased) | 0 (erased) | 0 (erased, 212 fb) | 0 (erased, 212 fb) | – | 4.161 | 2.67 |
+| 2 | 0 (erased) | 0 (erased) | 0 (erased, 211 fb) | 0 (erased, 211 fb) | – | 4.437 | 3.23 |
+| 3 | 0 (erased) | 0 (erased) | 0 (erased, 208 fb) | 0 (erased, 209 fb) | 0 (erased, 301 fb) | 4.705 | 3.84 |
+| 5 | 0 (erased) | 0 (erased) | 0 (erased, 200 fb) | 0 (erased, 207 fb) | 3.7e-4 | 5.134 | 4.99 |
+| 7 | 0 (erased) | 0 (erased) | 1.6e-26 | 0 (erased, 205 fb) | 0.118 | 5.477 | 6.05 |
+| 8 | 0 (erased) | 0 (erased) | 0.00568 | 0 (erased, 204 fb) | 0.187 | 5.627 | 6.55 |
+| 9 | 0 (erased) | 0 (erased) | 0.050 | 0 (erased, 203 fb) | – | 5.766 | 7.05 |
+| 10 | 0 (erased) | 0 (erased) | 0.104 | 0 (erased, 201 fb) | 0.325 | 5.895 | 7.53 |
+| 12 | 0 (erased) | 0 (erased) | 0.216 | 0 (erased, 196 fb) | – | 6.131 | 8.47 |
+| 15 | 0 (erased) | 0 (erased) | 0.383 | 4.6e-14 | 0.662 | 6.440 | 9.81 |
+| 20 | 0 (erased) | 0 (erased) | 0.653 | 0.0931 | – | 6.874 | 11.93 |
+| 25 | 0 (erased) | 0 (erased) | 0.910 | 0.241 | – | 7.239 | 13.93 |
+| 30 | 0 (erased) | 0 (erased) | 1.16 | 0.389 | – | 7.555 | 15.83 |
+| 40.5626 | 0 (erased) | 0 (erased) | 1.65 | 0.691 | – | 8.117 | 19.63 |
+| 41.707 | 0 (erased) | 0 (erased) | 1.70 | 0.722 | – | 8.172 | 20.02 |
+| 48.499 | 0 (erased) | 0 (erased) | 2.01 | 0.908 | – | 8.474 | 22.32 |
+| 49.643 | 0 (erased) | 0 (erased) | 2.06 | 0.939 | – | 8.522 | 22.70 |
+| 60 | 0 (erased) | 0 (erased) | 2.49 | 1.21 | – | 8.922 | 26.05 |
+| 75 | 4.0e-6 | 1.8e-6 | 3.10 | 1.59 | – | 9.421 | 30.66 |
+| 90 | 0.428 | 0.200 | 3.67 | 1.95 | – | 9.852 | 35.05 |
 
-Crossings f = 0.01 (log-interpolated): PROXY_CROSSINGS. These agree with ls_critic's direct values (proxy 81.9–82.2;
-ke 8.2 at μ_c = 0.861, 7.0 at 0.923; ke + s between 15 and 20) within the grid. The ke runs with ~200 root fallbacks
+"erased" = p_final at lsrelic's floor (f < 1e-30), "fb" = root fallbacks in the ke step solver (those rows mean only
+"erased"); f = 2 m_X Y_Q × pairs per net charge / 4.4e-10 GeV. Proxy: N = 800 ODE steps, s route via the MB K(T)
+factor; ke: N = 500, antilumps on, E_c = μ_c. All 92 rows finished, no failures (`results/old_proxies.json`).
+
+Crossings f = 0.01 [C, reproduction]: **isentropic proxy R_L = 82.03–82.19** (bisection, N = 400) and **83.13–83.28
+with the s route** (the s route lowers f at R = 75–90 by 2×, which moves the crossing by 1.3); the coarse-grid log
+interpolation between R = 75 and 90 would give 84.8 / 85.9 and is not to be used. **ke (μ_c = E_c = ω) R_L = 8.25**
+(grid [8, 9]); **ke + s route 19.55** ([15, 20]); ke at μ_c = E_c = 0.923 m: 6.06 ([5, 7]; ls_critic's 7.0 came from
+the wider [5, 8.9] bracket, the crossing lies in [5, 7] either way). These reproduce ls_critic's direct values at the
+same point (proxy 81.9–82.2; ke 8.2; ke + s between 15 and 20). Both isentropic variants erase everything up to
+R = 60 and rise from 4e-6 (R = 75) to 0.43 / 0.20 (R = 90); the ke curves rise smoothly from R ≈ 7 (15 with s) to
+f = 1.65 (0.69 with s) at R = 40.5626 and 2.01 (0.91) at 48.499, i.e. the central vector source fails the 1 %
+allowance by 69–165× in ke and passes by > 10¹⁸⁰ in the isentropic proxy: that 10× gap in R_L is what the solver
+must replace. The ke runs with ~200 root fallbacks
 sit at the p floor and mean only "erased"; the cumulative energy-work residual of ke is 1–2 % at N = 500 (as in
 ls_threshold). These are equilibrium proxies, not kinetics; they are the comparators the solver must beat.
 
-## 7. The interface (`results/thermo_interface.json`, SIZE MB)
+## 7. The interface (`results/thermo_interface.json`, 1.28 MB)
 
 `meta` (conventions, import recipe, function list, fixed point); `thermodynamics` (series tables for X and s on
 87 × 31 and 87 × 19 (t, u) grids with n, P, ρ, s and the four derivatives; K_Bose/K_MB; Codex control; equilibrium
@@ -289,8 +324,10 @@ callables and parameters, constraints, nucleation barrier, literature); `old_pro
     cd research/reality_framework/grut_formation_review_20261025/tracks/kin_thermo/code
     python3 -B objects.py                                           # ~1 min: coarse E(Q) table, reference profile
     python3 -B objects_refine.py                                    # ~25 min: adaptive continuation, 139 rows
-    OMP_NUM_THREADS=1 python3 -B old_proxies.py ../results/old_proxies.json   # ~1.5 h on 4 cores (reproduction;
-                                                                    #  resumable: finished rows are kept)
+    OMP_NUM_THREADS=1 python3 -B old_proxies.py ../results/old_proxies.json [R1,R2,...]
+                                                                    # ~1.5 h on 4 cores (reproduction; resumable:
+                                                                    #  finished rows are kept; the optional R list
+                                                                    #  runs only those R, for short foreground batches)
     python3 -B checks.py                                            # ~10 s: results/checks.json (23 checks)
     python3 -B build_interface.py                                   # ~4 min: results/thermo_interface.json
 
@@ -300,3 +337,12 @@ marked "not yet available"). Dependencies: numpy 2.5, scipy 1.18; the conversion
 `tracks/conversion/results/`, the old proxies import `tracks/ls_threshold/code/lsrelic.py` unchanged. Module
 self-tests: `python3 -B thermo.py`, `kernels.py`, `formation.py`, `expansion.py`. The reference profile is cached
 in the scratchpad (`profile_Q200000.npz`) for `objects_refine.py`; `objects.py` regenerates it.
+
+**Status (finalising pass, 26 October, third session).** The only computation added was the completion of the ten
+s-route isentropic proxy rows R ≥ 20 that the interrupted run had left out (two foreground batches, same code and
+settings, 47–51 s per row), after which `build_interface.py` was re-run so the interface carries the refined 139-row
+E(Q) table (Q_min, thin-wall and E/Q = m fields), the complete old-proxy curves and crossings, the 23 checks and the
+consistent H at onset (α_max/H = 2.2e13; the first build had used T_vis = 45.67 GeV in H). Spot checks repeated
+independently of the track code (direct Bose quadrature): scalar energy fraction 0.33236563 and n_s/n₋ = 0.98106981
+at T = 12 m, E − Qω = 1148.1075 GeV, E_out = 251.573 MeV, ω₀ = 0.74008 m, T_vis(a_ref) = 43.717 GeV. Nothing else
+was recomputed; nothing was committed.
