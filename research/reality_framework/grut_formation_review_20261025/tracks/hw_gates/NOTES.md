@@ -4,7 +4,7 @@
 
 Packet read: Codex 2908e91 (`origin/codex/grut-concept-checkpoint-20261025`), through `git archive` into the scratchpad
 only. No Codex code was run. Our own earlier tracks are reused where the brief allows (sp_vector, sp_phaseprep,
-gp_stability, gp_matching methods; ls_scaling numbers as [Q, own track]). Nothing was committed.
+gp_stability, gp_matching methods; ls_scaling numbers as [Q, own track]). Nothing was committed by this track (the orchestrator's later WIP commit 75e3348 swept the directory in).
 
 **Scope.** One supplied tree-level working model. Homogeneous classical release, instant at a = 1 into radiation; a
 supplied CP phase; the late-particle decay ledger and the case-L threshold of our sp_critic tables. Nothing here is
