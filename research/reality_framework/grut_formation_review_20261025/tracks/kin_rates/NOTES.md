@@ -202,7 +202,42 @@ Channels (incoming first; S_in, S_out), the sequential chain that the subtractio
 and the fourteen reverse 2→n channels (X X̄ → X X̄ X X̄, X X → X X X X̄, s s → X X X̄ X̄, X s → X X X̄, X X̄ → X X̄ s, X X → X X s,
 s s → s s s, s s → X X̄ s, X X̄ → X X̄ s s, X s → X X X̄ s, s s → s s s s, X X̄ → s s s, X s → X s s, s s → X X̄ s s, X X̄ → s s s s).
 
-TBD-N2-TABLE
+MB thermal rate densities γ(T) in GeV⁴ at μ = 0: **subtracted remainder** (★ = resolved: |γ| > 2σ_MC and regulator spread < 50 %) **/ regulated full** (Γ_reg = 0.02 m_s, 0.05 m_X; not a physical rate above the chain threshold, see text). The 2→n reverses follow (same |M|², independent tabulation).
+
+| n→2 | T = 0.3 m_X | T = 1.0 m_X | T = 3.0 m_X | T = 7.344 m_X | T = 12.0 m_X |
+|---|---|---|---|---|---|
+| A XXX̄X̄ → XX̄ | +1.6e-27★ / 6.6e-26 | +2.1e-21★ / 2.3e-19 | -6.5e-21 / 2.0e-16 | -4.4e-17 / 1.2e-14 | -2.1e-16 / 9.9e-14 |
+| B XXXX̄ → XX | +1.9e-30★ / 1.2e-29 | +7.3e-24★ / 3.7e-22 | -1.2e-20 / 1.6e-18 | -2.2e-18 / 1.8e-16 | -3.0e-17 / 1.7e-15 |
+| C XXX̄X̄ → ss | +2.0e-25★ / 1.2e-23 | +3.8e-19 / 2.9e-17 | +1.1e-16 / 1.2e-14 | -1.1e-15 / 4.5e-13 | -1.1e-14 / 3.6e-12 |
+| D XXX̄ → Xs | -5.4e-22 / 5.9e-20 | -4.0e-18 / 4.6e-15 | +6.6e-16 / 5.2e-13 | -6.2e-14 / 9.8e-12 | -7.1e-13 / 6.0e-11 |
+| E XX̄s → XX̄ | -3.9e-25 / 3.4e-23 | -4.3e-18★ / 1.2e-16 | -3.6e-15★ / 1.1e-13 | -1.7e-13★ / 6.6e-12 | -1.0e-12★ / 5.2e-11 |
+| E2 XXs → XX | +2.6e-27★ / 2.6e-27 | +9.1e-20★ / 9.1e-20 | +4.1e-16★ / 4.1e-16 | +4.9e-14★ / 4.9e-14 | +4.6e-13★ / 4.6e-13 |
+| F sss → ss | +5.5e-28★ / 5.5e-28 | +7.9e-18★ / 7.9e-18 | +1.9e-13★ / 1.9e-13 | +4.3e-11★ / 4.3e-11 | +5.4e-10★ / 5.4e-10 |
+| G XX̄s → ss | -9.7e-23★ / 4.5e-21 | +1.1e-17 / 1.1e-14 | +6.1e-14 / 4.8e-12 | +5.2e-13 / 2.0e-10 | -1.2e-11 / 1.7e-09 |
+| G2 Xss → Xs | +8.8e-28 / 2.5e-25 | +1.8e-18★ / 2.7e-17 | +1.5e-14★ / 9.4e-14 | +2.9e-12★ / 9.1e-12 | +3.4e-11★ / 8.4e-11 |
+| H XX̄ss → XX̄ | -7.8e-33 / 1.1e-30 | -1.4e-22★ / 4.5e-21 | -7.7e-19★ / 4.2e-17 | -6.6e-17 / 5.3e-15 | -2.9e-16 / 5.0e-14 |
+| J XXX̄s → Xs | +2.4e-30 / 1.7e-27 | +1.2e-21 / 1.9e-19 | +4.2e-19 / 7.0e-16 | -1.1e-15 / 6.6e-14 | -1.5e-14 / 5.6e-13 |
+| K XX̄ss → ss | +4.3e-31 / 1.8e-29 | -3.1e-21 / 1.2e-19 | -8.4e-17★ / 2.4e-15 | -1.3e-14 / 5.5e-13 | -8.6e-14 / 6.9e-12 |
+| L sss → XX̄ | +1.1e-28★ / 1.1e-28 | +4.2e-19★ / 4.2e-19 | +3.9e-15★ / 3.9e-15 | +4.7e-13★ / 4.7e-13 | +4.5e-12★ / 4.5e-12 |
+| N ssss → ss | +2.5e-36★ / 2.5e-36 | +6.6e-23★ / 6.6e-23 | +3.0e-17★ / 3.0e-17 | +2.5e-14★ / 2.5e-14 | +5.2e-13★ / 5.2e-13 |
+
+| 2→n | T = 0.3 m_X | T = 1.0 m_X | T = 3.0 m_X | T = 7.344 m_X | T = 12.0 m_X |
+|---|---|---|---|---|---|
+| XX̄ → XX̄XX̄ | -2.2e-28 / 3.2e-26 | -5.8e-22 / 1.7e-19 | -3.6e-19 / 1.8e-16 | -2.4e-17 / 1.2e-14 | -1.1e-16 / 9.5e-14 |
+| XX → XXXX̄ | +1.5e-30★ / 1.2e-29 | +7.4e-24★ / 3.2e-22 | -2.2e-21 / 1.4e-18 | -1.6e-18 / 1.7e-16 | -7.5e-18 / 1.6e-15 |
+| ss → XXX̄X̄ | +1.9e-25 / 1.2e-23 | +2.2e-19 / 3.0e-17 | +6.8e-17 / 1.2e-14 | -8.2e-16 / 4.7e-13 | -4.8e-14 / 3.7e-12 |
+| Xs → XXX̄ | -1.8e-22 / 5.3e-20 | -8.0e-18 / 3.8e-15 | -1.6e-15 / 4.2e-13 | -8.1e-14 / 8.6e-12 | -5.9e-13 / 5.6e-11 |
+| XX̄ → XX̄s | +2.5e-24★ / 2.3e-23 | -1.2e-18 / 1.1e-16 | -3.1e-15★ / 1.0e-13 | -1.7e-13★ / 6.4e-12 | -1.1e-12★ / 5.1e-11 |
+| XX → XXs | +2.5e-27★ / 2.5e-27 | +8.4e-20★ / 8.4e-20 | +3.9e-16★ / 3.9e-16 | +4.7e-14★ / 4.7e-14 | +4.5e-13★ / 4.5e-13 |
+| ss → sss | +5.3e-28★ / 5.3e-28 | +7.6e-18★ / 7.6e-18 | +1.8e-13★ / 1.8e-13 | +4.2e-11★ / 4.2e-11 | +5.3e-10★ / 5.3e-10 |
+| ss → XX̄s | -7.2e-23★ / 4.4e-21 | +1.6e-16 / 1.1e-14 | +1.1e-13 / 4.7e-12 | +1.7e-12 / 2.0e-10 | -3.4e-12 / 1.7e-09 |
+| Xs → Xss | -2.8e-27 / 2.5e-25 | +1.7e-18★ / 2.6e-17 | +1.4e-14★ / 9.1e-14 | +1.9e-12★ / 9.5e-12 | +2.0e-11★ / 9.2e-11 |
+| XX̄ → XX̄ss | +2.4e-32 / 9.6e-31 | -1.3e-22 / 4.2e-21 | -9.6e-19★ / 4.1e-17 | -6.0e-17 / 5.1e-15 | -3.1e-16 / 4.9e-14 |
+| Xs → XXX̄s | -8.8e-30 / 1.4e-27 | -2.9e-21 / 1.8e-19 | -2.0e-17 / 6.3e-16 | -9.1e-16 / 6.1e-14 | +5.7e-15 / 5.2e-13 |
+| ss → XX̄ss | +1.3e-31 / 1.7e-29 | -4.5e-21 / 1.2e-19 | -1.1e-16 / 2.4e-15 | -1.1e-14 / 5.4e-13 | -6.2e-14 / 6.8e-12 |
+| XX̄ → sss | +1.1e-28★ / 1.1e-28 | +4.1e-19★ / 4.1e-19 | +3.7e-15★ / 3.7e-15 | +4.6e-13★ / 4.6e-13 | +4.3e-12★ / 4.3e-12 |
+| ss → ssss | +2.4e-36★ / 2.4e-36 | +6.3e-23★ / 6.3e-23 | +2.8e-17★ / 2.8e-17 | +2.4e-14★ / 2.4e-14 | +5.0e-13★ / 5.0e-13 |
+| XX̄ → ssss | +3.0e-36★ / 3.0e-36 | +1.3e-23★ / 1.3e-23 | +1.4e-18★ / 1.4e-18 | +4.6e-16★ / 4.6e-16 | +6.0e-15★ / 6.0e-15 |
 
 Reading the table: below the chain threshold the subtracted kernel is the whole kernel and is determined to 0.1–1 %;
 above it the regulated full column is dominated by the on-shell chain (it scales as 1/Γ_reg, i.e. ×261 from Γ_reg =
@@ -219,7 +254,7 @@ s s s → s s (F) and s s s s → s s (N) with their reverses s s → s s s, s s
 6λ_φv and the quartic λ_s4 = 6λ_φ with full interference and no physical pole. F and N are the only n→2 channels
 whose kernels are positive and regulator-free at every energy (table); the elastic s s → s s cross section is
 2.5e-2 GeV⁻² at threshold (cubic-dominated: the λ_s3²/m_s² ≈ 0.54 "coupling" against λ_s4 = 0.18) falling to
-λ_s4²/(32π s) at high energy. TBD-SSS
+λ_s4²/(32π s) at high energy. MB rate densities (GeV⁴) at T/m_X = 1, 3, 7.344, 12: s s s → s s 7.9e-18, 1.9e-13, 4.3e-11, 5.4e-10; s s s s → s s 6.6e-23, 3.0e-17, 2.5e-14, 5.2e-13; the pair-producing s s s → X X̄ 4.2e-19, 3.9e-15, 4.7e-13, 4.5e-12. For comparison the 2→2 s s → X X̄ rate is 1.7e-14, 1.5e-11, 8.9e-10, 7.0e-9 and the decay-rate density 3.3e-10, 1.0e-8, 8.3e-8, 2.3e-7 at the same T: the 3→2 and 4→2 scalar self-reactions are 10⁻³–10⁻² of the 2→2 ones at T ≥ 3 m_X and negligible below; they do not supply a large number-changing rate by themselves, as Codex asked to be checked.
 
 ## 4. The overlap subtraction and the old constants
 
@@ -269,10 +304,10 @@ correctly carried by the old ½ SV_SS n_s². What the old constants miss is the 
 | → 0 (threshold, G̃/Φ₄ at δ = 2e-4) | 0.986 ± 0.003 | 1.009 ± 0.003 | – |
 | 0.01 | 1.08 | 0.88 | 1.08, 0.88 |
 | 0.03 | 1.42 | 0.69 | 1.43, 0.69 |
-| 0.1 | 3.6 | 0.29 | TBD-FR01 |
-| 0.3 | 1.3 (0.03 of full) | 0.085 (0.16 of full) | TBD-FR03 |
-| 1 | 0.007 (0 within error) | 0.001 (0 within error) | TBD-FR1 |
-| 3, 7.344, 12 | 0 within error | 0 within error | TBD-FR3 |
+| 0.1 | 3.6 | 0.29 | 25.7, 0.81 |
+| 0.3 | 1.3 (0.03 of full) | 0.085 (0.16 of full) | 59.3, 0.58 |
+| 1 | 0.007 (0 within error) | 0.001 (0 within error) | 0.61, 0.053 |
+| 3, 7.344, 12 | 0 within error | 0 within error | 5.0e-04, 2.1e-04 at 3 m_X (n_eq⁴ outgrows the chain) |
 
 A_eff ≡ S_in γ(T)/n_eq⁴ (A_old is its T → 0 limit; both channels reach it at threshold, with the energy dependence of
 |M|² growing toward the s pole for A (M_a and the s-exchange add) and falling for B (M_b is a cancellation).
@@ -296,7 +331,7 @@ daughters, and a late limit only for T ≲ 0.03 m_X with the inventory bookkeepi
 | Detailed balance, Bose, point kinematics: 18 forward/reverse pairs × 20 random on-shell configurations (all 14 n↔2 pairs, s ↔ X X̄, s s ↔ X X̄, X X̄ → X X̄, X s → X s), μ_s = μ₊ + μ₋ and μ₊ + μ₋ = 0 for inventory-changing channels | **360 cases, max residual 4.9e-15**, energy residual 3.4e-16 (Codex: 240 cases, 5.3e-16: CONFIRMED and extended) |
 | Detailed balance, Bose, integrated: s → X X̄ (MC) vs X X̄ → s (exact 2-D quadrature) at 5 T × 3 (μ₊, μ₋) | ratios 0.9955–1.008 (1.048 at 12 m, μ = 0: quadrature tail), all within 2.7σ |
 | Detailed balance, Bose, integrated: s s → X X̄ vs X X̄ → s s by independent MC samplings, 5 T × 3 μ sets (2μ_s = μ₊ + μ₋) | ratios 0.89–1.07, |σ| ≤ 3.0 over 15 cases |
-| Table-level MB detailed balance γ_{n→2}(T) from G̃ vs γ_{2→n}(T) from σ, 14 pairs × 6 T, regulated-full and subtracted | TBD-TDB |
+| Table-level MB detailed balance γ_{n→2}(T) from G̃ vs γ_{2→n}(T) from σ, 14 pairs × 6 T, regulated-full and subtracted | pole-free channels (F, N, L, E2): γ_{n→2}/γ_{2→n} = 1 ± 0.087 at every T (the interpolation systematic of the two 16-point grids); resonant channels, regulated-full column: within 0.37 for T ≥ m_X, 0.95–2.08 at T ≤ 0.3 m_X where the coarse grids straddle the resonance turn-on; subtracted remainders: consistent within their MC errors in 33 of 42 (T ≥ 1 m_X) cases, the rest are the same interpolation systematic on small numbers |
 | Vanishing internal energy moment of each elastic kernel at a common T (4 channels × 4 T) | (Q₁+Q₂)/(|Q₁|+|Q₂|) ≤ 2.4e-15 |
 | X–s energy exchange at T_X ≠ T_s (closure input; non-resonant kernel) | sign correct, Q_s(T_X = T_s) = 0 to MC noise; e.g. Q_s/(n_X n_s) = −3.5e-6 GeV⁻¹ at (0.5, 7.344), +3.0e-6 at (7.344, 0.5) |
 | RIS normalisation (on-shell piece of X X̄ → X X̄ = decay rate density) | 1 − 1e-6 at every T |

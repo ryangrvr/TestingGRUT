@@ -40,6 +40,9 @@ def thermal_block(tab, tab04=None):
         out['gamma_sub_err'].append(abs(tab.thermal(T, 'sub', shift=1.0) - g))
         out['gamma_full_reg'].append(tab.thermal(T, 'full'))
         out['gamma_sub_reg0_04'].append(tab04.thermal(T, 'sub') if tab04 else None)
+    # resolved flag per T: |gamma_sub| > 2 err and regulator spread < 50 %; bound otherwise
+    out['remainder_resolved'] = [bool(abs(g) > 2 * e and (g4 is None or abs(g4 - g) < 0.5 * (abs(g) + e))) for g, e, g4 in zip(out['gamma_sub'], out['gamma_sub_err'], out['gamma_sub_reg0_04'])]
+    out['remainder_bound'] = [max(abs(g) + e, abs(g4) if g4 is not None else 0.0) for g, e, g4 in zip(out['gamma_sub'], out['gamma_sub_err'], out['gamma_sub_reg0_04'])]
     return out
 
 
@@ -47,7 +50,7 @@ def merge_supplement(chan, supp):
     if not supp:
         return chan
     chan = dict(chan)
-    chan['rows'] = sorted(chan['rows'] + supp['rows'], key=lambda r: (r['freg'], r['sqrt_s_over_mX']))
+    chan['rows'] = sorted(chan['rows'] + [r for r in supp['rows'] if 'freg' in r], key=lambda r: (r['freg'], r['sqrt_s_over_mX']))
     return chan
 
 
@@ -147,10 +150,6 @@ def main(n2path, twonpath, supppath='none', balpath='none'):
                        Gt_table_reg0_04=dict(sqrt_s_over_mX=[r['sqrt_s_over_mX'] for r in rows04], G_sub=[r['G'] for r in rows04], G_sub_err=[r['err'] for r in rows04], G_full_reg=[r['G_full'] for r in rows04]),
                        chain_threshold_sqrt_s_over_mX=tab.chain_threshold(c), chain=CHAIN.get(ch, ''), threshold_power_law_exponent_full=tab.k_th,
                        thermal_MB=thermal_block(tab, tab04), extrapolation='below first point: power law of G_full between the first two points; above 400 m_X: constant')
-        # resolved flag per T: |gamma_sub| > 2 err and regulator spread < 50 %
-        tb = cn2[ch]['thermal_MB']
-        tb['remainder_resolved'] = [bool(abs(g) > 2 * e and (g4 is None or abs(g4 - g) < 0.5 * (abs(g) + e))) for g, e, g4 in zip(tb['gamma_sub'], tb['gamma_sub_err'], tb['gamma_sub_reg0_04'])]
-        tb['remainder_bound'] = [max(abs(g) + e, abs(g4) if g4 is not None else 0.0) for g, e, g4 in zip(tb['gamma_sub'], tb['gamma_sub_err'], tb['gamma_sub_reg0_04'])]
     out['channels_n2'] = cn2
     # 2->n
     c2n = {}

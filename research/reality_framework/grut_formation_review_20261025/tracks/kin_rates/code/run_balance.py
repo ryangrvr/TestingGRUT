@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""kin_rates: table-level checks of the n<->2 kernels (own code).  usage: python3 -B run_balance.py <kernels_n2.json> <xsec_2n.json|none> <kernels_22.json> <out.json>
+"""kin_rates: table-level checks of the n<->2 kernels (own code).  usage: python3 -B run_balance.py <kernels_n2.json> <xsec_2n.json|none> <kernels_22.json> <out.json> [supplement.json]
 1. MB detailed balance from the tables: gamma_{n->2}(T) from Gt against gamma_{2->n}(T) from sigma for every pair,
    for the regulated-full and the subtracted kernels (same |M|^2 -> must agree up to MC/interpolation error).
 2. Late non-relativistic limit against the old threshold constants A_a, A_b of gp_leftovers/amp42.py and the
@@ -23,8 +23,13 @@ SV_SS_OLD = 0.0001260281438027877                                               
 TS = (0.1, 0.3, 1.0, 3.0, 7.344, 12.0)
 
 
-def main(n2path, twonpath, k22path, out):
+def main(n2path, twonpath, k22path, out, supppath='none'):
     n2 = json.load(open(n2path))['channels']
+    if supppath != 'none':
+        supp = json.load(open(supppath))
+        for ch, sp in supp.items():
+            if ch in n2:
+                n2[ch] = dict(n2[ch]); n2[ch]['rows'] = sorted(n2[ch]['rows'] + [r for r in sp['rows'] if 'freg' in r], key=lambda r: (r['freg'], r['sqrt_s_over_mX']))
     twon = json.load(open(twonpath))['channels'] if twonpath != 'none' else {}
     k22 = json.load(open(k22path))
     res = dict(detailed_balance=[], nr_limits={}, ris_content=[], old_s_route=[], regulator_spread=[])
@@ -86,4 +91,4 @@ def main(n2path, twonpath, k22path, out):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:5])
+    main(*sys.argv[1:6])
