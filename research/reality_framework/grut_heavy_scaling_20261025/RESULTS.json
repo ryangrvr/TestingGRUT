@@ -1,0 +1,249 @@
+{
+  "author": "Codex / AInstein; same-author controls",
+  "groups_passed": 4,
+  "groups_total": 4,
+  "groups": {
+    "scalar_homogeneity": {
+      "passed": true,
+      "samples": 40,
+      "scale_factors": [
+        0.07,
+        0.3,
+        2.0,
+        11.0
+      ],
+      "maximum_relative_residuals": {
+        "potential": 6.928994121017092e-16,
+        "force": 4.461524260610738e-16,
+        "source": 7.437444382318136e-14,
+        "number": 2.6285331692325577e-16
+      },
+      "scope": "Polynomial homogeneity on a supplied background; no trajectory or candidate yield."
+    },
+    "normalization_scaling": {
+      "passed": true,
+      "maximum_residual": 5.551115123125783e-16,
+      "scope": "Fixed low-energy core, fixed reduced Planck mass, fixed couplings/g* and heavy-daughter limit.",
+      "rows": [
+        {
+          "scale": 0.1,
+          "yield_ratio": 0.031622776601683784,
+          "alpha_ratio": 99.99999999999999,
+          "beta_ratio": 99.99999999999999,
+          "included_late_rate_ratio": 9999.999999999996,
+          "string_tension_ratio": 0.010000000000000002,
+          "spectator_fraction_ratio": 0.010000000000000002,
+          "conformal_nonrelativistic_deposit_ratio": 1.0
+        },
+        {
+          "scale": 0.3,
+          "yield_ratio": 0.1643167672515498,
+          "alpha_ratio": 11.111111111111109,
+          "beta_ratio": 11.111111111111109,
+          "included_late_rate_ratio": 123.45679012345674,
+          "string_tension_ratio": 0.09,
+          "spectator_fraction_ratio": 0.09,
+          "conformal_nonrelativistic_deposit_ratio": 1.0
+        },
+        {
+          "scale": 1.0,
+          "yield_ratio": 1.0,
+          "alpha_ratio": 1.0,
+          "beta_ratio": 1.0,
+          "included_late_rate_ratio": 1.0,
+          "string_tension_ratio": 1.0,
+          "spectator_fraction_ratio": 1.0,
+          "conformal_nonrelativistic_deposit_ratio": 1.0
+        },
+        {
+          "scale": 3.0,
+          "yield_ratio": 5.196152422706632,
+          "alpha_ratio": 0.11111111111111113,
+          "beta_ratio": 0.11111111111111112,
+          "included_late_rate_ratio": 0.012345679012345684,
+          "string_tension_ratio": 9.0,
+          "spectator_fraction_ratio": 9.0,
+          "conformal_nonrelativistic_deposit_ratio": 1.0
+        },
+        {
+          "scale": 10.0,
+          "yield_ratio": 31.622776601683785,
+          "alpha_ratio": 0.01,
+          "beta_ratio": 0.01,
+          "included_late_rate_ratio": 0.0001,
+          "string_tension_ratio": 100.0,
+          "spectator_fraction_ratio": 100.0,
+          "conformal_nonrelativistic_deposit_ratio": 1.0
+        }
+      ],
+      "included_rate_reference": "Only the matched X6 channels on the unchanged core; not a complete lifetime."
+    },
+    "source_bound_and_quartic": {
+      "passed": true,
+      "kappa_max_lambdaX_001_lambdaY_1": 0.004933885363281902,
+      "quartic_minimizing_absY_over_absX": 0.13512001548070346,
+      "quartic_plants": [
+        {
+          "kappa_over_limit": 0.9,
+          "minimum_quartic_at_X1": 0.00013105955385493305,
+          "analytic_minimum": 0.00013105955385493283
+        },
+        {
+          "kappa_over_limit": 1.0,
+          "minimum_quartic_at_X1": 0.0,
+          "analytic_minimum": -2.168404344971009e-19
+        },
+        {
+          "kappa_over_limit": 1.1,
+          "minimum_quartic_at_X1": -0.0001355081270020043,
+          "analytic_minimum": -0.0001355081270020045
+        }
+      ],
+      "maximum_matching_formula_residual": 1.2212453270876722e-15,
+      "maximum_combined_bound_formula_residual": 3.7508504733012526e-16,
+      "conditional_envelope_rows": [
+        {
+          "cH": 1.0,
+          "r": 0.3,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 29.428309563827117,
+          "eta_minimum": 1.873180873370786e-08,
+          "minimum_kappa_at_u13": 0.004382362274053368,
+          "minimum_kappa_at_u43": 0.014495505983407295,
+          "maximum_u_from_quartic_and_assumed_envelope": 14.636058297238712
+        },
+        {
+          "cH": 1.0,
+          "r": 0.5,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 29.428309563827117,
+          "eta_minimum": 1.873180873370786e-08,
+          "minimum_kappa_at_u13": 0.0030817246840024316,
+          "minimum_kappa_at_u43": 0.01019339703170035,
+          "maximum_u_from_quartic_and_assumed_envelope": 20.81318621862138
+        },
+        {
+          "cH": 1.0,
+          "r": 0.8,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 29.428309563827117,
+          "eta_minimum": 1.873180873370786e-08,
+          "minimum_kappa_at_u13": 0.0016879301254486112,
+          "minimum_kappa_at_u43": 0.005583153491868483,
+          "maximum_u_from_quartic_and_assumed_envelope": 37.99950528498193
+        },
+        {
+          "cH": 10.0,
+          "r": 0.3,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 74.00828044922854,
+          "eta_minimum": 1.1777001250095513e-09,
+          "minimum_kappa_at_u13": 0.001098843338015688,
+          "minimum_kappa_at_u43": 0.0036346356565134293,
+          "maximum_u_from_quartic_and_assumed_envelope": 58.37093196423328
+        },
+        {
+          "cH": 10.0,
+          "r": 0.5,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 74.00828044922854,
+          "eta_minimum": 1.1777001250095513e-09,
+          "minimum_kappa_at_u13": 0.0007727185537955216,
+          "minimum_kappa_at_u43": 0.0025559152164005717,
+          "maximum_u_from_quartic_and_assumed_envelope": 83.00630211040293
+        },
+        {
+          "cH": 10.0,
+          "r": 0.8,
+          "target_epsilon": 0.146,
+          "conformal_quartic_envelope": 74.00828044922854,
+          "eta_minimum": 1.1777001250095513e-09,
+          "minimum_kappa_at_u13": 0.0004232353825165763,
+          "minimum_kappa_at_u43": 0.0013999324190932909,
+          "maximum_u_from_quartic_and_assumed_envelope": 151.54808026985455
+        }
+      ],
+      "scope": "Quartic positivity exact. Epsilon bounds conditional on constant Sigma and the declared leading quartic envelope."
+    },
+    "preparation_response": {
+      "passed": true,
+      "maximum_filter_integral_error": 6.849781405648054e-15,
+      "maximum_energy_solve_error": 1.9826362773756045e-12,
+      "rows": [
+        {
+          "m_times_release_duration": 0.3,
+          "relaxed": {
+            "normalized_free_energy": 0.9955086689356112,
+            "analytic": 0.9955086689356255
+          },
+          "displaced": {
+            "normalized_free_energy": 0.02241240893679236,
+            "analytic": 0.022412408936792486
+          }
+        },
+        {
+          "m_times_release_duration": 1.0,
+          "relaxed": {
+            "normalized_free_energy": 0.9510583078076207,
+            "analytic": 0.9510583078076263
+          },
+          "displaced": {
+            "normalized_free_energy": 0.23938234283578552,
+            "analytic": 0.23938234283578752
+          }
+        },
+        {
+          "m_times_release_duration": 3.0,
+          "relaxed": {
+            "normalized_free_energy": 0.6278120908917312,
+            "analytic": 0.6278120908917892
+          },
+          "displaced": {
+            "normalized_free_energy": 1.5157154215933932,
+            "analytic": 1.5157154215935353
+          }
+        },
+        {
+          "m_times_release_duration": 10.0,
+          "relaxed": {
+            "normalized_free_energy": 0.0032551183903399878,
+            "analytic": 0.0032551183903849453
+          },
+          "displaced": {
+            "normalized_free_energy": 1.0356230415622234,
+            "analytic": 1.0356230415625556
+          }
+        },
+        {
+          "m_times_release_duration": 30.0,
+          "relaxed": {
+            "normalized_free_energy": 0.00011464425619111385,
+            "analytic": 0.00011464425619658456
+          },
+          "displaced": {
+            "normalized_free_energy": 1.0163829139199085,
+            "analytic": 1.0163829139205578
+          }
+        },
+        {
+          "m_times_release_duration": 100.0,
+          "relaxed": {
+            "normalized_free_energy": 1.3554925703631407e-06,
+            "analytic": 1.355492570675875e-06
+          },
+          "displaced": {
+            "normalized_free_energy": 1.00224829091272,
+            "analytic": 1.0022482909147026
+          }
+        }
+      ],
+      "scope": "Canonical driven real oscillator only; neither the full gauge model nor the heavy spot point."
+    }
+  },
+  "physical_status": {
+    "exact_heavy_spot_inputs_received": false,
+    "heavy_spot_independently_reproduced": false,
+    "full_kinetic_or_vector_release_computed": false,
+    "new_successful_cosmology_demonstrated": false
+  }
+}
