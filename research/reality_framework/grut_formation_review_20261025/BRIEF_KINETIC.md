@@ -77,6 +77,11 @@ not to choose whichever threshold keeps the point alive.
    solver must derive the free X̄ population of the releasing condensate from the release spectrum (our certified
    free-mode extraction in tracks/spectrum, scaled as stated), or bracket it with labelled alternatives, or demonstrate
    that the relaxation stage erases its influence on f_sym. Report which of the three applies and the sensitivity.
+   **Matching caveat (Codex, comment 6415201060):** the certified spectrum in tracks/spectrum was extracted from the
+   prepared spherical collapse of the *light-target* condensate (ff49e5d family), not from this heavy-field release.
+   Before it is used here, state and justify the matching (which quantities are carried over, in what units, and why
+   the heavy release's free X̄ fraction should follow it); otherwise treat the release X̄ population as a labelled
+   bracket (for example 0, the light-collapse fraction, and a thermal-onset value) and report the spread.
 7. **Benchmark normalisation.** Use one and the same denominator for the 1% allowance in every run (the net-charge
    mass of the final object population at the fixed yield Y_Q), with the finite-object masses (E(Q), not Q m_X)
    accounted for explicitly, so that runs with different formation rules are compared on the same footing.

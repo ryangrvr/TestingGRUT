@@ -1,0 +1,360 @@
+{
+ "passed": 22,
+ "total": 22,
+ "seconds": 6.9991254806518555,
+ "checks": [
+  {
+   "name": "Bessel series vs direct quadrature (7 quantities, 28 states)",
+   "residual": 1.9984014443252818e-15,
+   "threshold": 1e-09,
+   "passed": true
+  },
+  {
+   "name": "dP/dmu = n, dP/dT = s, analytic dn/dT (finite differences)",
+   "residual": 3.703082285255732e-11,
+   "threshold": 1e-08,
+   "passed": true
+  },
+  {
+   "name": "Codex THERMODYNAMIC_CONTROL reservoir rows (5 T, two ratios)",
+   "residual": 2.786659791809143e-14,
+   "threshold": 1e-09,
+   "passed": true,
+   "rows": [
+    {
+     "T_over_m": 0.3,
+     "n_s_over_nminus": 0.0230498508825063,
+     "scalar_fraction": 0.021215613259849088,
+     "codex": [
+      0.023049850882506346,
+      0.021215613259849126
+     ]
+    },
+    {
+     "T_over_m": 1.0,
+     "n_s_over_nminus": 0.45073872791952774,
+     "scalar_fraction": 0.2358494367724049,
+     "codex": [
+      0.45073872791952774,
+      0.23584943677240486
+     ]
+    },
+    {
+     "T_over_m": 3.0,
+     "n_s_over_nminus": 0.8455630737220089,
+     "scalar_fraction": 0.318947809560242,
+     "codex": [
+      0.8455630737220086,
+      0.31894780956024205
+     ]
+    },
+    {
+     "T_over_m": 12.0,
+     "n_s_over_nminus": 0.9810698062732437,
+     "scalar_fraction": 0.33236563056351903,
+     "codex": [
+      0.9810698062732441,
+      0.332365630563511
+     ]
+    },
+    {
+     "T_over_m": 30.0,
+     "n_s_over_nminus": 0.9959283980621781,
+     "scalar_fraction": 0.33317730165931764,
+     "codex": [
+      0.9959283980621779,
+      0.3331773016593269
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Codex matched-energy states (T/m 8.118 -> 7.344, condensed, species)",
+   "residual": 2.2004620348070603e-13,
+   "threshold": 1e-08,
+   "passed": true,
+   "states": {
+    "False": {
+     "mine": {
+      "T_over_m": 8.117690604178108,
+      "condensed": 0.0044045642248055124,
+      "pinv": 0.04451797806645162,
+      "n_plus": 0.05900792776420368,
+      "n_minus": 0.04451797806645162,
+      "rho_plus": 0.11714516339538236,
+      "P_plus": 0.03889436087140681
+     },
+     "codex": {
+      "T_over_m": 8.11769060417811,
+      "condensed": 0.004404564224805499,
+      "pinv": 0.04451797806645164,
+      "n_plus": 0.05900792776420369,
+      "n_minus": 0.04451797806645164,
+      "rho_plus": 0.11714516339538246,
+      "P_plus": 0.03889436087140684
+     }
+    },
+    "True": {
+     "mine": {
+      "T_over_m": 7.343904194605655,
+      "condensed": 0.007072205615208247,
+      "pinv": 0.06850712020373076,
+      "n_plus": 0.04428844679581487,
+      "n_minus": 0.032466138488465586,
+      "rho_plus": 0.07943932047473341,
+      "P_plus": 0.02635263429969753,
+      "n_s": 0.03604098171526518,
+      "rho_s": 0.06882200139668294,
+      "P_s": 0.022454589776703476,
+      "scalar_fraction_total": 0.32764721357623716,
+      "scalar_fraction_gas": 0.3285274948179176
+     },
+     "codex": {
+      "T_over_m": 7.343904194606052,
+      "condensed": 0.007072205615206939,
+      "pinv": 0.06850712020374237,
+      "n_plus": 0.044288446795821744,
+      "n_minus": 0.03246613848847116,
+      "n_s": 0.03604098171527122,
+      "rho_s": 0.06882200139669796,
+      "P_s": 0.022454589776708417,
+      "scalar_fraction_total": 0.327647213576238
+     }
+    }
+   }
+  },
+  {
+   "name": "two-potential solver at the equilibrium inventory = equilibrium solver",
+   "residual": 7.549516567451064e-15,
+   "threshold": 1e-09,
+   "passed": true,
+   "t": [
+    7.343904194605655,
+    7.343904194605657
+   ],
+   "um": [
+    -0.8611951308217279,
+    -0.8611951308217225
+   ]
+  },
+  {
+   "name": "three-potential Newton round trip (n_Q, n_-, n_s, rho)",
+   "residual": 4.996003610813204e-16,
+   "threshold": 1e-09,
+   "passed": true,
+   "iterations": 9
+  },
+  {
+   "name": "dP_inv/dn_- |T,nQ: Bose exact vs MB 1+K(n_+ + n_-) (reported, no threshold)",
+   "residual": 0.18863186336227034,
+   "threshold": Infinity,
+   "passed": true,
+   "rows": [
+    {
+     "T_over_m": 0.3,
+     "u": 0.0,
+     "bose_exact": 1.0456330746211622,
+     "MB_formula_with_K_MB": 1.047043912812874,
+     "MB_formula_with_K_Bose": 1.0460997017650127,
+     "K_bose": 37.61365231939591,
+     "K_mb": 38.3840526627956
+    },
+    {
+     "T_over_m": 1.0,
+     "u": 0.0,
+     "bose_exact": 1.8354579222558365,
+     "MB_formula_with_K_MB": 2.054268782707858,
+     "MB_formula_with_K_Bose": 1.9014774558390555,
+     "K_bose": 5.003982672633983,
+     "K_mb": 5.852107212219524
+    },
+    {
+     "T_over_m": 3.0,
+     "u": 0.3,
+     "bose_exact": 2.5600920943868575,
+     "MB_formula_with_K_MB": 3.099614312324019,
+     "MB_formula_with_K_Bose": 2.708400510690124,
+     "K_bose": 0.27157206860738753,
+     "K_mb": 0.3337604961527289
+    },
+    {
+     "T_over_m": 7.34,
+     "u": 0.86,
+     "bose_exact": 2.743708979345076,
+     "MB_formula_with_K_MB": 3.3815833472520542,
+     "MB_formula_with_K_Bose": 2.9566562104269054,
+     "K_bose": 0.020149818305702536,
+     "K_mb": 0.024525755455295638
+    },
+    {
+     "T_over_m": 12.0,
+     "u": 0.0,
+     "bose_exact": 2.885428306322458,
+     "MB_formula_with_K_MB": 3.375262485698638,
+     "MB_formula_with_K_Bose": 2.962139612546487,
+     "K_bose": 0.004686456230652164,
+     "K_mb": 0.005673176161552572
+    }
+   ]
+  },
+  {
+   "name": "isentropic expansion via susceptibility Jacobian: s a^3 and n_Q a^3 drift",
+   "residual": 9.647060927875373e-12,
+   "threshold": 1e-09,
+   "passed": true
+  },
+  {
+   "name": "parent decay ledger e1e-7_band: daughters and R vs closed forms",
+   "residual": 2.042810365310288e-14,
+   "threshold": 1e-10,
+   "passed": true,
+   "key": "e1e-7_band",
+   "N_A_left": -4.705207338996996e-18,
+   "daughters_per_sign": 2.065097733471004,
+   "closed_form": 2.0650977334710046,
+   "R_ode": 40.562622885260204,
+   "R_closed": 40.56262288525937,
+   "rel_err_number": -2.220446049250313e-16,
+   "rel_err_R": 2.042810365310288e-14
+  },
+  {
+   "name": "parent decay ledger e1e-6_band: daughters and R vs closed forms",
+   "residual": 2.0650148258027912e-14,
+   "threshold": 1e-10,
+   "passed": true,
+   "key": "e1e-6_band",
+   "N_A_left": -5.0938156718327276e-18,
+   "daughters_per_sign": 0.6526449887956491,
+   "closed_form": 0.6526449887956494,
+   "R_ode": 4.053801019129231,
+   "R_closed": 4.053801019129147,
+   "rel_err_number": -3.3306690738754696e-16,
+   "rel_err_R": 2.0650148258027912e-14
+  },
+  {
+   "name": "Q=200000: omega/m vs archived 0.8611951308217225",
+   "residual": 1.8318679906315083e-14,
+   "threshold": 1e-10,
+   "passed": true,
+   "mine": 0.8611951308217067
+  },
+  {
+   "name": "Q=200000: E/(Q m) vs archived 0.9233161353726057",
+   "residual": 1.3500311979441904e-13,
+   "threshold": 1e-10,
+   "passed": true,
+   "mine": 0.923316135372481
+  },
+  {
+   "name": "Q=200000: E - Q omega vs Codex 1148.1075313763777 GeV",
+   "residual": 1.7554846465372975e-12,
+   "threshold": 1e-08,
+   "passed": true,
+   "mine": 1148.1075313743622
+  },
+  {
+   "name": "dE/dQ = Omega at the reference (finite difference, dOmega=5e-5)",
+   "residual": 3.105043933082641e-08,
+   "threshold": 1e-06,
+   "passed": true,
+   "dOmega": 5e-05,
+   "dEdQ_over_mX": 0.8611951040812196,
+   "dQ_dOmega": -4421135.070974124
+  },
+  {
+   "name": "max |virial| (Derrick identity) over the table",
+   "residual": 3.5515751900345207e-12,
+   "threshold": 1e-09,
+   "passed": true
+  },
+  {
+   "name": "object-number work identity along the table (path integral vs exact dE)",
+   "residual": 6.851237140592659e-05,
+   "threshold": 0.001,
+   "passed": true,
+   "linear_comparator_errors": [
+    -0.1230403541139169,
+    -0.09082593211263823,
+    -0.05486103279502941,
+    -0.01446521314376692,
+    0.02983365164677343
+   ]
+  },
+  {
+   "name": "conversion table: cold sigma v vs Codex 1.13039e-16 cm3/s",
+   "residual": 5.558437774499936e-06,
+   "threshold": 0.0001,
+   "passed": true
+  },
+  {
+   "name": "conversion table: daughter sigma v (p=0.7071) vs Codex 8.1225e-15 cm3/s",
+   "residual": 1.00326369389947e-06,
+   "threshold": 0.001,
+   "passed": true
+  },
+  {
+   "name": "conversion forward = reverse at mu_+ - mu_- = 2 omega (4 states, Bose factors)",
+   "residual": 3.878632607150204e-09,
+   "threshold": 1e-07,
+   "passed": true,
+   "states": [
+    {
+     "t": 0.3,
+     "um": -1.0,
+     "up": 0.722390261643445,
+     "forward": 1.4285728459708814e-05,
+     "reverse": 1.4285728431901437e-05,
+     "relative_residual": 9.732572219905448e-10
+    },
+    {
+     "t": 1.0,
+     "um": -0.8,
+     "up": 0.922390261643445,
+     "forward": 0.0224533709370736,
+     "reverse": 0.022453370910758767,
+     "relative_residual": 5.859884546255309e-10
+    },
+    {
+     "t": 3.0,
+     "um": -0.75,
+     "up": 0.972390261643445,
+     "forward": 1.4604268583782078,
+     "reverse": 1.460426858053623,
+     "relative_residual": 1.1112668931463284e-10
+    },
+    {
+     "t": 0.1,
+     "um": -0.9,
+     "up": 0.822390261643445,
+     "forward": 1.3230307623977143e-11,
+     "reverse": 1.3230307521346138e-11,
+     "relative_residual": 3.878632607150204e-09
+    }
+   ]
+  },
+  {
+   "name": "surface exchange zero at mu_+ = omega",
+   "residual": 0.0,
+   "threshold": 1e-12,
+   "passed": true
+  },
+  {
+   "name": "U_eff continuity at x_c",
+   "residual": 1.8461540074454774e-09,
+   "threshold": 1e-06,
+   "passed": true
+  },
+  {
+   "name": "fragmentation: k at alpha_max inside the band (0 < k < k_max)",
+   "residual": 0.0,
+   "threshold": 0.5,
+   "passed": true,
+   "k_max_over_m": 1.1832159566199232,
+   "alpha_max_over_m": 0.6390096504226936
+  }
+ ],
+ "reproduction_lsthermo_vs_this_track": {
+  "max_rel_diff": 4.440892098500626e-16,
+  "label": "reproduction with our earlier code, not independent"
+ }
+}

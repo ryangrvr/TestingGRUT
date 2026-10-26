@@ -14,10 +14,11 @@ import kernels_n2 as K
 
 QUICK = '--quick' in sys.argv
 OUT = sys.argv[1]
-N6 = 60000 if QUICK else 300000
-N5 = 60000 if QUICK else 200000
-NPTS = 10 if QUICK else 26
-FREGS = (0.02,) if QUICK else (0.02, 0.04)
+N6 = 40000 if QUICK else 200000
+N5 = 40000 if QUICK else 150000
+NPTS = 8 if QUICK else 26
+# (f_reg for s lines, f_reg for X lines); the second pair is the regulator systematic
+FREGS = ((0.02, 0.05),) if QUICK else ((0.02, 0.05), (0.04, 0.1))
 
 
 def grid(sq_th, top_over_m=400.0, npts=NPTS):
@@ -34,12 +35,13 @@ def run_n2(ch):
     N = N6 if len(legs) == 6 else N5
     rows = []
     t0 = time.time()
-    for freg in FREGS:
+    for freg, fregX in FREGS:
         rng = np.random.default_rng(abs(hash((ch, freg))) % (2**32))
         for sq in grid(sq_th):
-            r = K.kernel_n2(ch, sq, N, rng, freg=freg)
+            r = K.kernel_n2(ch, sq, N, rng, freg=freg, fregX=fregX)
             r['sqrt_s_over_mX'] = sq / M.MX
             rows.append(r)
+            print(ch, f'{sq / M.MX:.3f}', f"{r['G']:.3e}", f"{r['err']:.1e}", flush=True)
     return ch, dict(legs=[list(l) if isinstance(l, tuple) else l for l in legs], Sin=spec['Sin'], Sout=spec['Sout'],
                     m_in=m_in, m_out=m_out, sqrt_s_th=sq_th, rows=rows, seconds=time.time() - t0)
 
@@ -55,9 +57,10 @@ def run_2n(ch):
     t0 = time.time()
     rng = np.random.default_rng(abs(hash(ch)) % (2**32))
     for sq in sq_th * (1 + np.geomspace(1e-2, 1e4 * M.MX / sq_th, 10 if QUICK else 22)):
-        r = K.sigma_2n(ch, sq, N, rng, freg=0.02)
+        r = K.sigma_2n(ch, sq, N, rng, freg=0.02, fregX=0.05)
         r['sqrt_s_over_mX'] = sq / M.MX
         rows.append(r)
+        print(ch, f'{sq / M.MX:.3f}', f"{r['sigma']:.3e}", f"{r['err']:.1e}", flush=True)
     return ch, dict(legs=[list(l) if isinstance(l, tuple) else l for l in legs], Sin=spec['Sin'], Sout=spec['Sout'],
                     m_in=m_in, m_out=m_out, sqrt_s_th=sq_th, rows=rows, seconds=time.time() - t0)
 

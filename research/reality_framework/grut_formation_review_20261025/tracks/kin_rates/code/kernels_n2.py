@@ -69,11 +69,42 @@ def is_out(leg):
     return isinstance(leg, tuple) and leg[1] == 'out'
 
 
-def get_amp(legs, freg):
-    key = (tuple(legs), freg)
+def get_amp(legs, freg, fregX=None):
+    """Amplitude with regulated propagators: Gamma_reg,s = max(freg m_s, Gamma_s), Gamma_reg,X = fregX m_X."""
+    fregX = freg if fregX is None else fregX
+    key = (tuple(legs), freg, fregX)
     if key not in _AMP:
-        _AMP[key] = Amplitude(legs, widths=(freg * M.MX, max(freg * M.MS, M.GAMMA_S_VAC)))
+        _AMP[key] = Amplitude(legs, widths=(fregX * M.MX, max(freg * M.MS, M.GAMMA_S_VAC)))
     return _AMP[key]
+
+
+def pairings(sp, freg):
+    """Importance-sampling channels for a list of species sp (3 or 4 bodies): one channel per neutral X Xb pair
+    (Breit-Wigner map of its invariant mass at m_s^2); for 4 bodies with two disjoint neutral pairs both are mapped.
+    Returns a list of channel dicts for phasespace.multichannel (flat single channel if no neutral pair)."""
+    n = len(sp)
+    wid = M.MS * max(freg * M.MS, M.GAMMA_S_VAC) * 3
+    pairs = [(i, j) for i in range(n) for j in range(i + 1, n) if {sp[i], sp[j]} == {'X', 'Xb'}]
+    if not pairs:
+        return [dict(perm=tuple(range(n)))]
+    chans = []
+    if n == 3:
+        for (i, j) in pairs:
+            k = [x for x in range(3) if x not in (i, j)][0]
+            chans.append(dict(perm=(i, j, k), peak12=M.MS**2, width12=wid))
+    else:
+        done = set()
+        for (i, j) in pairs:
+            rest = tuple(x for x in range(4) if x not in (i, j))
+            key = frozenset([(i, j), rest])
+            if key in done:
+                continue
+            done.add(key)
+            ch = dict(perm=(i, j) + rest, peak12=M.MS**2, width12=wid)
+            if {sp[rest[0]], sp[rest[1]]} == {'X', 'Xb'}:
+                ch.update(peak34=M.MS**2, width34=wid)
+            chans.append(ch)
+    return chans
 
 
 def subtracted_M2(A, mom, win=40.0):
@@ -116,7 +147,7 @@ def subtracted_M2(A, mom, win=40.0):
     return M2, M2 - sub + add, sub, add, len(flagged)
 
 
-def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, win=40.0, mix=0.5, ret_mom=False):
+def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=40.0, ret_mom=False):
     """Gt(s) for an n->2 channel: dict with estimate, MC error, unsubtracted value, subtraction size."""
     spec = CHANNELS_N2[ch]
     legs = spec['legs']
@@ -124,27 +155,27 @@ def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, win=40.0, mix=0.5, ret_mom=False):
     m_out = [MASS[species(l)] for l in legs if is_out(l)]
     if sqrt_s <= max(sum(m_in), sum(m_out)):
         return dict(G=0.0, err=0.0, G_full=0.0, sub=0.0)
-    A = get_amp(legs, freg)
+    A = get_amp(legs, freg, fregX)
     sp_in = [species(l) for l in legs if not is_out(l)]
-    kw = {}
-    if len(sp_in) >= 2 and set(sp_in[:2]) == {'X', 'Xb'}:
-        kw.update(peak12=M.MS**2, width12=M.MS * max(freg * M.MS, M.GAMMA_S_VAC) * 3)
-    if len(sp_in) == 4 and set(sp_in[2:]) == {'X', 'Xb'}:
-        kw.update(peak34=M.MS**2, width34=M.MS * max(freg * M.MS, M.GAMMA_S_VAC) * 3)
-    mom_in, w_in = PS.generate(sqrt_s, m_in, N, rng, **kw)
+    if len(m_in) == 2:
+        mom_in, w_in = PS.generate(sqrt_s, m_in, N, rng)
+    else:
+        mom_in, w_in = PS.multichannel(sqrt_s, m_in, N, rng, pairings(sp_in, freg))
+    N = mom_in.shape[0]
     mom_out, w_out = PS.generate(sqrt_s, m_out, N, rng)
     mom = np.concatenate([mom_in, mom_out], 1)
     M2, M2s, sub, add, nfl = subtracted_M2(A, mom, win)
     w = w_in * w_out
     f = w * M2s
     out = dict(G=float(f.mean()), err=float(f.std() / np.sqrt(N)), G_full=float((w * M2).mean()),
-               sub=float((w * sub).mean()), add=float((w * add).mean()), lines_flagged=nfl, N=N, freg=freg)
+               err_full=float((w * M2).std() / np.sqrt(N)),
+               sub=float((w * sub).mean()), add=float((w * add).mean()), lines_flagged=nfl, N=N, freg=freg, fregX=fregX)
     if ret_mom:
         out['mom'] = mom
     return out
 
 
-def sigma_2n(ch, sqrt_s, N, rng, freg=0.02, win=40.0):
+def sigma_2n(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=40.0):
     """2->n cross section (GeV^-2) with final-state RIS subtraction."""
     spec = CHANNELS_2N[ch]
     legs = spec['legs']
@@ -153,18 +184,14 @@ def sigma_2n(ch, sqrt_s, N, rng, freg=0.02, win=40.0):
     s = sqrt_s**2
     if sqrt_s <= sum(m_out):
         return dict(sigma=0.0, err=0.0)
-    A = get_amp(legs, freg)
+    A = get_amp(legs, freg, fregX)
+    sp_out = [species(l) for l in legs if is_out(l)]
+    mom_out, w_out = PS.multichannel(sqrt_s, m_out, N, rng, pairings(sp_out, freg))
+    N = mom_out.shape[0]
     # incoming along z
     p = np.sqrt(kallen(s, m_in[0]**2, m_in[1]**2)) / (2 * sqrt_s)
     E1 = (s + m_in[0]**2 - m_in[1]**2) / (2 * sqrt_s); E2 = sqrt_s - E1
     pin = np.zeros((N, 2, 4)); pin[:, 0] = [E1, 0, 0, p]; pin[:, 1] = [E2, 0, 0, -p]
-    kw = {}
-    sp_out = [species(l) for l in legs if is_out(l)]
-    if len(sp_out) >= 2 and set(sp_out[:2]) == {'X', 'Xb'}:
-        kw.update(peak12=M.MS**2, width12=M.MS * max(freg * M.MS, M.GAMMA_S_VAC) * 3)
-    if len(sp_out) == 4 and set(sp_out[2:]) == {'X', 'Xb'}:
-        kw.update(peak34=M.MS**2, width34=M.MS * max(freg * M.MS, M.GAMMA_S_VAC) * 3)
-    mom_out, w_out = PS.generate(sqrt_s, m_out, N, rng, **kw)
     mom = np.concatenate([pin, mom_out], 1)
     M2, M2s, sub, add, nfl = subtracted_M2(A, mom, win)
     flux = 2 * np.sqrt(kallen(s, m_in[0]**2, m_in[1]**2))

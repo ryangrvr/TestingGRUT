@@ -88,6 +88,68 @@ def generate(sqrt_s, masses, N, rng, peak12=None, width12=None, peak34=None, wid
     raise ValueError('n must be 2, 3 or 4')
 
 
+def _mass2_density(s, lo, hi, peak=None, width=None, mix=0.5):
+    """Density in s of sample_mass2 (per unit s)."""
+    p_flat = 1.0 / (hi - lo)
+    if peak is None:
+        return p_flat * np.ones_like(s)
+    ua = np.arctan((lo - peak) / width); ub = np.arctan((hi - peak) / width)
+    p_tan = width / ((ub - ua) * ((s - peak)**2 + width * width))
+    return mix * p_tan + (1 - mix) * p_flat
+
+
+def _phi2(M2, m1, m2):
+    """Two-body phase-space volume |p*|/(4 pi M) = sqrt(kallen)/(8 pi M^2)."""
+    return np.sqrt(np.clip(kallen(M2, m1 * m1, m2 * m2), 0, None)) / (8 * np.pi * M2)
+
+
+def _msq(p):
+    return p[..., 0]**2 - p[..., 1]**2 - p[..., 2]**2 - p[..., 3]**2
+
+
+def perm_generate(sqrt_s, masses, N, rng, perm, **kw):
+    """generate() with the canonical pairing applied to particles in the order `perm`, un-permuted on output."""
+    pm = [masses[i] for i in perm]
+    mom, w = generate(sqrt_s, pm, N, rng, **kw)
+    out = np.empty_like(mom)
+    out[:, list(perm), :] = mom
+    return out, w
+
+
+def channel_density(mom, masses, sqrt_s, perm, peak12=None, width12=None, peak34=None, width34=None, mix=0.5):
+    """Density per dPhi_n of the generator (pairing `perm`, mass maps) evaluated at arbitrary momenta mom (N,n,4)."""
+    n = len(masses)
+    p = mom[:, list(perm), :]
+    m = [masses[i] for i in perm]
+    s = sqrt_s**2
+    if n == 3:
+        s12 = _msq(p[:, 0] + p[:, 1])
+        lo, hi = (m[0] + m[1])**2, (sqrt_s - m[2])**2
+        d12 = _mass2_density(s12, lo, hi, peak12, width12, mix)
+        return d12 * (2 * np.pi) / (_phi2(s, np.sqrt(s12), m[2]) * _phi2(s12, m[0], m[1]))
+    if n == 4:
+        s12 = _msq(p[:, 0] + p[:, 1]); s34 = _msq(p[:, 2] + p[:, 3])
+        lo12, hi12 = (m[0] + m[1])**2, (sqrt_s - m[2] - m[3])**2
+        lo34, hi34 = (m[2] + m[3])**2 * np.ones_like(s12), (sqrt_s - np.sqrt(s12))**2
+        d12 = _mass2_density(s12, lo12, hi12, peak12, width12, mix)
+        d34 = _mass2_density(s34, lo34, hi34, peak34, width34, mix)
+        return d12 * d34 * (2 * np.pi)**2 / (_phi2(s, np.sqrt(s12), np.sqrt(s34)) * _phi2(s12, m[0], m[1]) * _phi2(s34, m[2], m[3]))
+    if n == 2:
+        return 1.0 / _phi2(s, m[0], m[1]) * np.ones(mom.shape[0])
+    raise ValueError
+
+
+def multichannel(sqrt_s, masses, N, rng, channels):
+    """Multichannel importance sampling: equal-probability mixture of generators `channels` (dicts with perm and
+    mass-map keywords); weights 1/rho_mix such that mean(w f) estimates int dPhi_n f."""
+    k = len(channels)
+    Ni = N // k
+    moms = [perm_generate(sqrt_s, masses, Ni, rng, **ch)[0] for ch in channels]
+    mom = np.concatenate(moms, 0)
+    rho = sum(channel_density(mom, masses, sqrt_s, **ch) for ch in channels) / k
+    return mom, 1.0 / rho
+
+
 def volume_massless(n, s):
     return (2 * np.pi)**(4 - 3 * n) * (np.pi / 2)**(n - 1) * s**(n - 2) / (math.factorial(n - 1) * math.factorial(n - 2))
 
@@ -125,3 +187,15 @@ if __name__ == '__main__':
     mom, w = generate(sq, ms4, 400000, rng)
     mom2, w2 = generate(sq, ms4, 400000, rng, peak12=0.3, width12=0.02, peak34=0.4, width34=0.05)
     print(f'massive Phi_4: flat {w.mean():.6e} +- {w.std()/np.sqrt(len(w)):.1e}; mapped {w2.mean():.6e} +- {w2.std()/np.sqrt(len(w2)):.1e}')
+    # multichannel: volume and a Breit-Wigner-peaked integrand in the (0,3) and (1,2) pairs
+    chans = [dict(perm=(0, 1, 2, 3), peak12=0.3, width12=0.01, peak34=0.3, width34=0.01),
+             dict(perm=(0, 3, 1, 2), peak12=0.3, width12=0.01, peak34=0.3, width34=0.01)]
+    mom3, w3 = multichannel(sq, ms4, 400000, rng, chans)
+    print(f'multichannel Phi_4: {w3.mean():.6e} +- {w3.std()/np.sqrt(len(w3)):.1e}')
+    # density consistency: the single-channel weight must equal 1/channel_density at its own points
+    momc, wc = perm_generate(sq, ms4, 2000, rng, **chans[1])
+    print('   1/density vs weight max rel diff:', np.abs(1 / channel_density(momc, ms4, sq, **chans[1]) / wc - 1).max())
+    f = lambda mm: 1 / ((_msq(mm[:, 0] + mm[:, 3]) - 0.3)**2 + 0.01**2) + 1 / ((_msq(mm[:, 1] + mm[:, 2]) - 0.3)**2 + 0.01**2)
+    for nm, (mm, ww) in (('flat', (mom, w)), ('multichannel', (mom3, w3))):
+        v = ww * f(mm)
+        print(f'   BW-peaked integrand, {nm}: {v.mean():.5e} +- {v.std()/np.sqrt(len(v)):.1e}')

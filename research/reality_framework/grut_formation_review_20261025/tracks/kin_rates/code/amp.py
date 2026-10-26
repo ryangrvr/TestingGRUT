@@ -92,19 +92,26 @@ class Amplitude:
         self.subset_charge = {S: sum(self.charge[i] for i in range(nrec) if S >> i & 1) for S in self.order}
 
     def set_vertices(self, V3, V4):
-        """Store the vertex tensors as (9,3) and (27,3) matrices so that the contractions are BLAS matmuls:
-        K[n,a] = sum_{bc} V3[a,b,c] J1[n,b] J2[n,c] = (J1 x J2)[n, bc] @ V3m[bc, a]."""
+        """Store the vertex tensors as lists of their non-zero entries (7 cubic, 21 quartic) so that each
+        contraction is a handful of vectorised products: K[n,a] = sum V3[a,b,c] J1[n,b] J2[n,c]."""
         self.V3, self.V4 = V3, V4
-        self.V3m = np.ascontiguousarray(V3.reshape(3, 9).T).astype(complex)
-        self.V4m = np.ascontiguousarray(V4.reshape(3, 27).T).astype(complex)
+        self.nz3 = {a: [(b, c, V3[a, b, c]) for b in range(3) for c in range(3) if V3[a, b, c] != 0] for a in range(3)}
+        self.nz4 = {a: [(b, c, d, V4[a, b, c, d]) for b in range(3) for c in range(3) for d in range(3)
+                        if V4[a, b, c, d] != 0] for a in range(3)}
 
-    @staticmethod
-    def _c3(V3m, J1, J2):
-        return (J1[:, :, None] * J2[:, None, :]).reshape(J1.shape[0], 9) @ V3m
+    def _c3(self, J1, J2):
+        K = np.zeros_like(J1)
+        for a, lst in self.nz3.items():
+            for b, c, v in lst:
+                K[:, a] += v * J1[:, b] * J2[:, c]
+        return K
 
-    @staticmethod
-    def _c4(V4m, J1, J2, J3):
-        return (J1[:, :, None, None] * J2[:, None, :, None] * J3[:, None, None, :]).reshape(J1.shape[0], 27) @ V4m
+    def _c4(self, J1, J2, J3):
+        K = np.zeros_like(J1)
+        for a, lst in self.nz4.items():
+            for b, c, d, v in lst:
+                K[:, a] += v * J1[:, b] * J2[:, c] * J3[:, d]
+        return K
 
     def propagating(self, S):
         q = self.subset_charge[S]
@@ -137,9 +144,9 @@ class Amplitude:
             K = np.zeros((N, 3), dtype=complex)
             parts2, parts3 = self.subsets[S]
             for A, B in parts2:
-                K += self._c3(self.V3m, J[A], J[B])
+                K += self._c3(J[A], J[B])
             for A, B, C in parts3:
-                K += self._c4(self.V4m, J[A], J[B], J[C])
+                K += self._c4(J[A], J[B], J[C])
             if S == self.full:
                 amp = -np.einsum('a,na->n', self.pol[nrec], K)
                 if return_invariants:
