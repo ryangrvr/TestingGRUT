@@ -28,7 +28,65 @@ R = 1415 (ls_scaling 1414.9). Gauss residual 6e-12, energy ledger 3e-10.
 
 ## Gate 1: release-induced longitudinal vector / Goldstone production
 
-[PENDING: filled from results/gate1_vector.json and results/gate1b_pieceB.json]
+Code: `code/gate1_vector.py` (piece A, e scan, Floquet), `code/gate1b_pieceB.py` (piece B).
+
+**Headroom [C].** One vector (m_A = 6eh = 3.20e6 GeV, Γ = e²m_A/48π = 2.12e-10 GeV, decay-weighted ⟨a⟩ = 3.1e10,
+T_vis ≈ 12 TeV) deposits 19.64 E_X; with R_L − R_scalar = 87.85 − 1.14 the allowance is 4.42 vectors per comoving H_i³,
+i.e. **1.58e-3 per net charge** (ls_scaling 1.6e-3: CONFIRMED). The same vector sector at this point: F_inf = 266 H,
+F_vac = 240 H (Σ already carries 83% of the Higgs norm during inflation, so the frozen-angle factor (F_vac/F_inf)² is
+0.81, not 2.4e-6 as at 373d37e); m_A,inf = 2.7e-5 H (light); a_* = 204, k_* = 4.9e-3 H_i (exits 5.3 e-folds before
+the end of inflation).
+
+**Piece A: the inflationary Bunch–Davies longitudinal mode (GMR type) [C].** Own longitudinal-Proca mode solver,
+49 modes k = 1e-5…1 H_i, adiabatic start at k/aH = 1000, n_k read at 20 and 30 a_* (changes ≤ 1.7e-3):
+
+| profile | N_A (H_i³) | peak k | per net charge | R_A | R_total | R_total/R_L |
+|---|---|---|---|---|---|---|
+| P0 constant vacuum mass (GMR control) | 2.468 | 6.5e-3 = 1.3 k_* | 8.85e-4 | 48.5 | 49.6 | **0.565** |
+| P1 evolving Higgs norm (X part ∝ a⁻²) | 2.469 | 6.5e-3 | 8.86e-4 | 48.5 | 49.6 | 0.565 |
+| GMR formula √(m/6e-6 eV)(H/1e14)² [R] | 3.26 | — | 1.17e-3 | 64.0 | 65.2 | 0.742 |
+
+Our modes give 0.76 of the GMR formula (sp_vector found 0.94 at 373d37e); a different late cut (1000/k, k up to 10)
+gives 2.62 (+6%). **Piece A alone uses 56–74% of the headroom.** In the frozen pair count it is 8.9e-4 pairs per net
+charge, 0.18 of the 1% allowance (0.0049).
+
+**Piece B: release-induced Goldstone angle [C, E].** At this point the compensating Σ charge N_Σ = 465 = −N_X/6 sits
+on a Higgs of modulus 28.3 H, so the Σ phase winds by only **−0.238 rad** in total (373d37e: 2300 rad), and
+θ_G(∞) = θ_Σ(∞)/6 = −0.301. Separate-universe responses (own releases, symmetric differences, linear over 1e-3–1e-2):
+dθ_Σ(∞)/dδ = 1.07 rad/rad (373d37e: 1.3–1.7e6), dθ_G/dδ = 0.178; dθ_Σ/dln|X| = −1.13, dθ_Σ/dln|Σ| = −1.5e-3,
+dθ_Σ/dln|Y| = −6.7e-3; dε/dδ = 0.047 and dlnN_X/dδ = −0.42 (a smooth map). Every inflationary mode here has m > 3H/2,
+so its amplitude at k_* is ≈ e^{−3N_*/2} = 3.4e-4 of the horizon-exit value (δ: 9.3e-3 rad; ln|X|: 1.4e-3; ln|Σ|:
+4.0e-3) [E, order of magnitude].
+- B1 (k ~ k_*): δθ_G(k_*) = 5.7e-7 rad per ln k against the criterion 5.9e-4 (P0 transfer and the headroom left after
+  piece A): 1e-3 of the criterion, N_A ≈ 2e-6. Radial directions are smaller still.
+- B2 (Hubble-scale patch noise, sp_vector's model with these responses): N_A ≤ 1e-4, ≤ 5e-5 of the remaining allowance.
+**Piece B is negligible at the spot point** (1e-6–1e-4 of the allowance); the 1e-3–0.1 per net charge quoted in
+REVIEW_SCANPOINT was 373d37e's piece B.
+
+**Result at e = 1e-7.** R_total = R_Y + R_Σ + R_casc + R_A = 0.81 + 1e-7 + 0.34 + 48.5 = **49.6 against R_L = 87.85:
+PASS by 1.77** (central). Brackets: R_A 48.5 (own modes) to 64 (GMR formula), R_L 88 (our table) to 80 (Codex's
+calibration, 9% lower [Q ls_scaling]): **R_total/R_L = 0.56–0.81**, a pass by 1.2–1.8 in every bracket. The late
+processed debris of the heavy window is the inflationary vector, not the mediators.
+
+**e dependence [C].** GMR's energy density scales as m^{1/2}, so the vector *number* scales as e^{−1/2} and, with the
+deposit per vector ∝ e^{−1/2}, the vector piece falls as **R_A ∝ 1/e**: R_A = 48.5, 4.8, 0.46, 0.04 at e = 1e-7, 1e-6,
+1e-5, 1e-4 (R_total/R_L = 0.565, 0.065, 0.015, 0.010). For e ≥ 3e-3 the vector is heavy during inflation
+(m_inf = 0.8 H at 3e-3, 2.7 H at 1e-2) and piece A collapses (N_A/GMR = 0.08, 0.015, 0.002 at 3e-3, 5e-3, 1e-2).
+R_Σ and R_casc fall as e^{−1/2}. ls_scaling's "a larger e cuts the deposit as e^{−1/2}" is the per-vector statement;
+**CORRECTED: the vector piece as a whole falls as 1/e.**
+
+**Is a larger e free here? Floquet check [C, E].** The late X orbit has r_max/r_min = 78.6/7.1 and radial frequency
+5.98 per unit a; the X part of a²m_A² is at most 0.21 of the Σ part at a = 1 and falls as a⁻². Transverse Floquet
+exponents (X modulation plus the Σ mass frozen at a = 1, 2, 5): μ_max = 0 for e ≤ 1e-3; 3.6e-3 per unit a at e = 3e-3
+(a = 1; gone at a = 2); 0.050 at e = 1e-2 (a = 1; 1.9e-3 at a = 2; gone at a = 5); 0 at e = 0.03 and 0.1. The growth
+exponent is ≤ 1 even if the band stayed tuned for 10 units of a, and it detunes within Δa ≈ 1. **Unlike 373d37e
+(μ = 0.15 at e = 0.029 [Q sp_vector]) there is no resonance obstruction up to e = 0.1 at this point**, because Σ
+dominates the Higgs norm. Longitudinal modes and backreaction are not included [E]. Side effects of e ≈ 5e-3–1e-2:
+m_A = 1.6–3.2e11 GeV, prompt vector decay, Gμ = 2.4–2.0e-12 if strings formed, the unscreened Coulomb bound of the object
+rises to 0.6–2.4 of its binding margin (so the e-independent Higgs screening becomes load-bearing; gate 5).
+
+**Verdict: PASS, bracketed** (R_total/R_L = 0.56–0.81 at the stated e = 1e-7; < 0.07 for e ≥ 1e-6); piece B negligible
+[C, E]; the larger-e remedy is open at this point [C transverse, E longitudinal].
 
 ## Gate 2: phase holding, and what sets the phase value (`code/gate2_phase.py`, `code/spotmodel.py`)
 
@@ -207,13 +265,66 @@ operators with unit coefficients. The radial companion in the core is 2.7e-27 of
 **Verdict: CONFIRMED** (object unchanged; vector mass, screening energy, decay epoch and Gμ change as tabulated; c6
 unchanged by Planck operators).
 
+## Codex's decisive question, at this point
+
+"Does producing sufficient lasting charge necessarily generate excessive surviving (processed, late) debris?" At
+the spot point, under the benchmark assumptions: **no**. The release that gives ε = −0.146 and 1.00 Y_Q leaves
+R = 1.14 in mediator debris and 48.5 in inflationary longitudinal vectors, 49.6 in all against R_L = 87.9 (pass by
+1.2–1.8 over the brackets). The implication does hold for a holder that enters the Y equation and is switched off
+instantly (R = 657–1415, fail by 6.5–14), and it fails for the same holders switched off adiabatically (R = 4–11 at
+ε = 0.08–0.10). The debris is a sudden-quench quantity, not a structural consequence of the torque. All of this is
+homogeneous, classical and benchmark-dependent (case-L premise, instant reheating).
+
 ## Verdicts
 
-[PENDING: table]
+| # | Claim checked | Source value | This track | Verdict |
+|---|---|---|---|---|
+| 1 | Spot-point release ε, R_central, R_L (ls_scaling) | −0.14572, 1.144, 87.9 | −0.14568, 1.144, 87.85 (own integrator, window 30–60) [C] | CONFIRMED |
+| 2 | Vector headroom 1.6e-3 per net charge; 19.6 E_X per vector (ls_scaling) | [D] | 1.58e-3; 19.64 [C] | CONFIRMED |
+| 3 | Release-induced vector production, "decisive next gate" (ls_scaling: not computed) | 1e-3–0.1 per net charge [Q REVIEW_SCANPOINT, for 373d37e] | piece A 8.9e-4 per net charge (R_A 48.5); piece B ≤ 1e-6 of the allowance; R_total/R_L = 0.56–0.81 [C, E] | new: PASS by 1.2–1.8 |
+| 4 | "A larger e cuts the deposit as e^{−1/2}" (ls_scaling) | e^{−1/2} | per vector, yes; the vector piece falls as 1/e (N_A ∝ e^{−1/2}); e ≥ 1e-6 gives < 0.07 R_L; no Floquet obstruction to e = 0.1 here [C] | CORRECTED (e helps more) |
+| 5 | Relative-phase mass during inflation (ls_scaling) | 1.84 H [D] | 2.53 H, f_eff = 17.1 H (6×6 Hessian) [C] | CORRECTED |
+| 6 | A supplied phase is still needed (ls_scaling) | stated | P(π/2)/P(0) = e^{−43,277}; the action holds δ = 0 where ε = 0 [C] | CONFIRMED (quantified) |
+| 7 | Y-relaxed preparation is "what a heavy Y does during inflation" (ls_scaling) | [A] | true only for a holder that does not enter the Y equation (D3); the DRT A-term gives Codex's state; the switch-off rate decides: instant D1/D2 fail ×14/×6.5, adiabatic D1/D2/D3 pass ×4–30 at ε 0.08–0.10 [C] | CORRECTED (scope) |
+| 8 | Codex 2908e91 (i): a forced Y can carry the X⁶ torque with zero excitation | [A, algebraic] | realised dynamically: N_Y = 0.03–3 for adiabatic switch-off against 50–78 for an instant one, at the same charge [C] | CONFIRMED, with the adiabaticity condition |
+| 9 | Isocurvature and band probability of the held phase | not computed | S/S_max ≈ 1e-30 (m = 2.53 H), 1e-6 even at m = 1 H; σ_δ ≤ 1.2e-4 rad against a band of ±0.85 rad [C] | new: no obstruction |
+| 10 | Gμ at h = 5.33e12 GeV (ls_scaling) | ≈ 9e-12 [E] | 8.89e-12 (ε(β) = ½ ln β + 0.15024(6)) [C] | CONFIRMED |
+| 11 | Do strings form? | not stated | no: T_h,max = 0.25 h, no Σ–visible coupling, Σ at its vev through inflation and release, 0.04 windings [C, A] | new: no network; Gμ not a constraint |
+| 12 | κ at 0.7 of its bound; running unchecked (ls_scaling) | 0.70 | 0.70 → 0.68 at \|X\|_inf (0.79 if matched there); λ_eff > 0; λ_Y pole 5.7e15 GeV [C] | CONFIRMED (safe at one loop) |
+| 13 | Candidate 1 object unchanged; c6 = 1.25e6 (ls_scaling) | Ω 0.86120, E 17064.5, c6 1.2504e6 | same (own solver); Γt₀ = 7.1e-17; Planck shifts ≤ 1.6e-3 [C, D] | CONFIRMED |
+| 14 | Codex 2908e91 (ii): envelope yield ≤ 1.7e-4 Y_Q at the fixed couplings | [D, Codex] | not re-derived here (sibling track hw_envelope) | NOT CHECKED |
 
 ## Limits
 
-[PENDING]
+- Everything is homogeneous (k = 0 releases read as separate universes), classical and tree level, with an instant
+  release into radiation at a = 1 and instant reheating. No lattice; fragmentation, finite-k mediator dynamics and
+  backreaction are not included.
+- Piece A uses the single-Higgs-direction longitudinal Proca reduction (accurate here since F_inf/F_vac = 1.11) with a
+  stationary inflationary background; the two late cuts differ by 6%, our modes and the GMR formula by 24%; the
+  ledger treats the vector's XX̄ pairs (12 TeV) as thermalised injection; R_L carries the ±9% calibration difference
+  between our sp_critic tables and Codex's. The e scan above 3e-3 computes the suppressed production directly but the
+  Floquet check is transverse, X-only modulation with the Σ mass frozen; longitudinal modes are not computed.
+- Piece B uses the P0 conversion rule and e^{−3N/2} heavy-mode amplitudes as orders of magnitude.
+- The holders are tagged test terms with exponential or H-tracking switch-off in radiation and no inflaton
+  dynamics; the D3 state is stationary to 9e-4; the "permanent" D1/D2 runs failed numerically and were not pursued
+  (a permanent Hubble-induced term is unphysical anyway). The classical drift is 1D along the conditional-minimum path.
+- One-loop scalar running without thresholds, Hubble terms or two loops; the matching scale is unstated by Codex.
+- String formation is argued from temperatures and the |Σ| history, not simulated; GW limits are loop-model dependent
+  and retrospective; the NANOGrav and LVK numbers were read from the papers this session, the per-model LVK ranges and
+  the PPTA/Planck numbers are quoted from our earlier track or recalled.
+- The object profile, rates and the c6 ceiling reuse our earlier tracks' code and quoted unit rates.
+
+## Credit (read levels)
+
+Graham, Mardon & Rajendran, PRD 93 (2016) 103520 (longitudinal vector from inflation) [R]; Goldstone equivalence
+(Cornwall–Levin–Tiktopoulos; Lee–Quigg–Thacker) [R]; Starobinsky–Yokoyama equilibrium and Bunch–Davies modes [R];
+Dine–Randall–Thomas Hubble-induced terms and Affleck–Dine [R]; Nielsen–Olesen strings, Hill–Hodges–Turner tension
+fit [R]; one-loop scalar beta functions (Machacek–Vaughn; Cheng–Eichten–Li) [R]; Floquet analysis of λφ⁴ backgrounds
+(Greene, Kofman, Linde & Starobinsky) [R]; Q-ball formation and fragmentation (Kusenko–Shaposhnikov;
+Enqvist–McDonald; Kasuya–Kawasaki) [R]; discrete gauge symmetries (Krauss–Wilczek; Banks–Seiberg) [R]; LVK O3 cosmic
+strings arXiv:2101.12248 [Q abstract]; NANOGrav 15-yr new physics arXiv:2306.16219 [Q §V.4]; Planck 2013 XXV
+[Q via gp_stability]; Codex 2908e91 [Q]; our tracks ls_scaling, sp_vector, sp_phaseprep, gp_stability, gp_matching,
+sp_critic, gp_phase, xcharge [Q where cited].
 
 ## Reproduction
 
