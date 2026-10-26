@@ -42,6 +42,9 @@ CHANNELS_N2 = {
     'F_sss_ss': dict(legs=['s', 's', 's', ('s', 'out'), ('s', 'out')], Sin=6, Sout=2),
     'G_XXbs_ss': dict(legs=['X', 'Xb', 's', ('s', 'out'), ('s', 'out')], Sin=1, Sout=2),
     'G2_Xss_Xs': dict(legs=['X', 's', 's', ('X', 'out'), ('s', 'out')], Sin=2, Sout=1),
+    'K_XXbss_ss': dict(legs=['X', 'Xb', 's', 's', ('s', 'out'), ('s', 'out')], Sin=2, Sout=2),
+    'L_sss_XXb': dict(legs=['s', 's', 's', ('X', 'out'), ('Xb', 'out')], Sin=6, Sout=1),
+    'N_ssss_ss': dict(legs=['s', 's', 's', 's', ('s', 'out'), ('s', 'out')], Sin=24, Sout=2),
     # 2->2 controls for the engine
     'ctrl_XX_XX': dict(legs=['X', 'X', ('X', 'out'), ('X', 'out')], Sin=2, Sout=2),
     'ctrl_XXb_XXb': dict(legs=['X', 'Xb', ('X', 'out'), ('Xb', 'out')], Sin=1, Sout=1),
@@ -56,6 +59,15 @@ CHANNELS_2N = {
     'XXb_XXbXXb': dict(legs=['X', 'Xb', ('X', 'out'), ('Xb', 'out'), ('X', 'out'), ('Xb', 'out')], Sin=1, Sout=4),
     'XX_XXXXb': dict(legs=['X', 'X', ('X', 'out'), ('Xb', 'out'), ('X', 'out'), ('X', 'out')], Sin=2, Sout=6),
     'XXb_ssss': dict(legs=['X', 'Xb', ('s', 'out'), ('s', 'out'), ('s', 'out'), ('s', 'out')], Sin=1, Sout=24),
+    # reverses of the n->2 channels not covered above (for the table-level detailed-balance check)
+    'ss_XXXbXb': dict(legs=['s', 's', ('X', 'out'), ('Xb', 'out'), ('X', 'out'), ('Xb', 'out')], Sin=2, Sout=4),
+    'Xs_XXXb': dict(legs=['X', 's', ('X', 'out'), ('X', 'out'), ('Xb', 'out')], Sin=1, Sout=2),
+    'ss_sss': dict(legs=['s', 's', ('s', 'out'), ('s', 'out'), ('s', 'out')], Sin=2, Sout=6),
+    'ss_XXbs': dict(legs=['s', 's', ('X', 'out'), ('Xb', 'out'), ('s', 'out')], Sin=2, Sout=1),
+    'XXb_XXbss': dict(legs=['X', 'Xb', ('X', 'out'), ('Xb', 'out'), ('s', 'out'), ('s', 'out')], Sin=1, Sout=2),
+    'Xs_XXXbs': dict(legs=['X', 's', ('X', 'out'), ('X', 'out'), ('Xb', 'out'), ('s', 'out')], Sin=1, Sout=2),
+    'ss_ssss': dict(legs=['s', 's', ('s', 'out'), ('s', 'out'), ('s', 'out'), ('s', 'out')], Sin=2, Sout=24),
+    'ss_XXbss': dict(legs=['s', 's', ('X', 'out'), ('Xb', 'out'), ('s', 'out'), ('s', 'out')], Sin=2, Sout=2),
 }
 
 _AMP = {}
@@ -107,12 +119,28 @@ def pairings(sp, freg):
     return chans
 
 
-def subtracted_M2(A, mom, win=40.0):
-    """|M|^2, |M|^2_sub and the subtraction pieces for momenta mom (N, n, 4)."""
+def _compatible(S1, S2):
+    """Two internal lines can belong to the same tree iff their leg sets are disjoint or nested."""
+    inter = S1 & S2
+    return inter == 0 or inter == S1 or inter == S2
+
+
+def subtracted_M2(A, mom, win=25.0, max_order=3):
+    """|M|^2, |M|^2_sub and the subtraction pieces for momenta mom (N, n, 4).
+
+    M is multilinear in the propagators D_S of its internal lines.  For every set T of flagged lines that can
+    coexist in one tree (pairwise disjoint or nested), the coefficient N_T of prod_{S in T} D_S is obtained by
+    inclusion-exclusion over amplitudes with subsets of T switched off, and
+        |M|^2_sub = sum_T (-2)^|T| prod_{S in T} (Im D_S)^2 |N_T|^2        (T = empty gives |M|^2),
+    which is the replacement |D_S|^2 -> Re(D_S^2) for every flagged line (on-shell delta pieces removed, all
+    interference and off-shell pieces kept).  Orders |T| <= max_order are included (3 is enough for the 6-point
+    channels here: at most three lines can be simultaneously on shell).  Nested lines are the sequential chains
+    (e.g. X Xb -> s -> X Xb*, Xb* X -> s) and must be included: skipping them leaves a 1/eps^2 regulator
+    artefact (found and fixed on resumption)."""
     Mfull, inv = A(mom, return_invariants=True)
     M2 = np.abs(Mfull)**2
     N = M2.shape[0]
-    sub = np.zeros(N)
+    corr = np.zeros(N)
     flagged = {}
     for S in A.internal:
         fld = A.propagating(S)
@@ -123,31 +151,49 @@ def subtracted_M2(A, mom, win=40.0):
         m2 = m2c.real; eps = -m2c.imag
         x = inv[S] - m2
         near = np.abs(x) < win * eps
-        if not near.any():
-            continue
-        Moff = A(mom[near], switch={S: 0.0})
-        D = 1.0 / (x[near] + 1j * eps)
-        Nres2 = np.abs(Mfull[near] - Moff)**2 / np.abs(D)**2
-        sub[near] += 2.0 * D.imag**2 * Nres2
-        full_off = np.zeros(N, dtype=complex); full_off[near] = Moff
-        flagged[S] = (near, full_off, D, eps, m2)
-    add = np.zeros(N)
+        if near.any():
+            flagged[S] = (near, 1.0 / (x + 1j * eps))
     keys = list(flagged)
-    for S1, S2 in itertools.combinations(keys, 2):
-        if S1 & S2:
-            continue
-        n1, off1, _, e1, m21 = flagged[S1]; n2, off2, _, e2, m22 = flagged[S2]
-        both = n1 & n2
-        if not both.any():
-            continue
-        Mboth = A(mom[both], switch={S1: 0.0, S2: 0.0})
-        D1 = 1.0 / (inv[S1][both] - m21 + 1j * e1); D2 = 1.0 / (inv[S2][both] - m22 + 1j * e2)
-        N12 = Mfull[both] - off1[both] - off2[both] + Mboth
-        add[both] += 4.0 * D1.imag**2 * D2.imag**2 * np.abs(N12)**2 / (np.abs(D1)**2 * np.abs(D2)**2)
-    return M2, M2 - sub + add, sub, add, len(flagged)
+    pieces = {}
+    cache = {}
+
+    def amp_off(off):
+        """Amplitude with the lines `off` switched off, evaluated once on the rows where all of them are near shell
+        (a superset of every row set that needs it); returns (rows mask, values)."""
+        if off not in cache:
+            mask = np.logical_and.reduce([flagged[S][0] for S in off])
+            cache[off] = (mask, A(mom[mask], switch={S: 0.0 for S in off}))
+        return cache[off]
+    for order in range(1, max_order + 1):
+        for T in itertools.combinations(keys, order):
+            if not all(_compatible(a, b) for a, b in itertools.combinations(T, 2)):
+                continue
+            both = np.logical_and.reduce([flagged[S][0] for S in T])
+            if not both.any():
+                continue
+            # inclusion-exclusion: N_T prod D = sum_{U subset T} (-1)^{|T|-|U|} M(T \ U off), on the rows `both`
+            NTD = np.zeros(N, dtype=complex)
+            for k in range(order + 1):
+                for U in itertools.combinations(T, k):
+                    off = tuple(S for S in T if S not in U)
+                    if not off:
+                        NTD[both] += (-1)**(order - k) * Mfull[both]
+                    else:
+                        mask, vals = amp_off(off)
+                        full_vals = np.zeros(N, dtype=complex); full_vals[mask] = vals
+                        NTD[both] += (-1)**(order - k) * full_vals[both]
+            prodD = np.ones(N, dtype=complex); prodIm2 = np.ones(N)
+            for S in T:
+                D = flagged[S][1]
+                prodD *= D; prodIm2 *= D.imag**2
+            term = np.where(both, (-2.0)**order * prodIm2 * np.abs(NTD)**2 / np.abs(prodD)**2, 0.0)
+            corr += term
+            pieces[order] = pieces.get(order, 0.0) + term
+    sub = -pieces.get(1, np.zeros(N)); add = pieces.get(2, np.zeros(N)); third = pieces.get(3, np.zeros(N))
+    return M2, M2 + corr, sub, add + third, len(flagged)
 
 
-def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=40.0, ret_mom=False):
+def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=25.0, ret_mom=False):
     """Gt(s) for an n->2 channel: dict with estimate, MC error, unsubtracted value, subtraction size."""
     spec = CHANNELS_N2[ch]
     legs = spec['legs']
@@ -175,7 +221,7 @@ def kernel_n2(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=40.0, ret_mom=False
     return out
 
 
-def sigma_2n(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=40.0):
+def sigma_2n(ch, sqrt_s, N, rng, freg=0.02, fregX=0.05, win=25.0):
     """2->n cross section (GeV^-2) with final-state RIS subtraction."""
     spec = CHANNELS_2N[ch]
     legs = spec['legs']

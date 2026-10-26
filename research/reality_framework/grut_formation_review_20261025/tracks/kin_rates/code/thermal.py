@@ -206,3 +206,66 @@ if __name__ == '__main__':
         d = thermal_masses(t * M.MX)
         print(f"T/m={t:5.1f}  vT/v={d['vT']/M.V:.4f} (hiT {d['hiT_vT']/M.V:.4f})  mX/mX0={d['mX']/M.MX:.4f} (hiT {d['hiT_mX']/M.MX:.4f})"
               f"  ms/ms0={d['ms']/M.MS:.4f}  PiX/mX0^2={d['PiX']/M.MX**2:.4f}  ir_s/ms0^2={d['ir_s']/M.MS**2:.2e}  broken={d['broken']}")
+
+
+# ---------------------------------------------------------------- daisy (Parwani-type) bracket, added on resumption
+def Pi_hiT(T, g=M.GX, lX=M.LX, lP=M.LP):
+    """Leading T^2 self-energies: Pi_X = T^2 (lX/3 + g^2/12) (x1 direction), Pi_s = T^2 (lP/4 + g^2/6)."""
+    return T * T * (lX / 3 + g * g / 12), T * T * (lP / 4 + g * g / 6)
+
+
+def dV_dphi_daisy(phi, T, v=M.V, g=M.GX, lX=M.LX, lP=M.LP):
+    """One-loop tadpole with the T^2 self-energies resummed into the loop masses (Parwani scheme):
+    m^2(phi) -> m^2(phi) + Pi inside J_B'.  The tree part is unchanged."""
+    PiX, Pis = Pi_hiT(T, g, lX, lP)
+    ms2 = 3 * lP * phi**2 - lP * v**2 + Pis
+    mx2 = g**2 * phi**2 + PiX
+    d0 = lP * phi * (phi**2 - v**2)
+    if T <= 0:
+        return d0
+    return d0 + T**2 / TWO_PI2 * (6 * lP * phi * JB1(ms2 / T**2) + 4 * g**2 * phi * JB1(mx2 / T**2))
+
+
+def vev_daisy(T, v=M.V, g=M.GX, lX=M.LX, lP=M.LP):
+    if T <= 0:
+        return v
+    f = lambda p: dV_dphi_daisy(p, T, v, g, lX, lP)
+    grid = np.linspace(1e-4 * v, 1.05 * v, 80)
+    vals = [f(p) for p in grid]
+    for i in range(len(grid) - 1):
+        if vals[i] < 0 and vals[i + 1] > 0:
+            return optimize.brentq(f, grid[i], grid[i + 1], xtol=1e-14)
+    return 0.0
+
+
+def thermal_masses_daisy(T, v=M.V, g=M.GX, lX=M.LX, lP=M.LP):
+    """Curvatures at the daisy-resummed minimum, with the resummed loop masses in J_B' and J_B''.  [E] bracket."""
+    vT = vev_daisy(T, v, g, lX, lP)
+    if T <= 0:
+        return dict(T=T, vT=vT, mX=g * vT, ms=np.sqrt(2 * lP) * vT, broken=True)
+    T2 = T * T
+    PiX, Pis = Pi_hiT(T, g, lX, lP)
+    ms2_tree = 3 * lP * vT**2 - lP * v**2
+    mx2_tree = g**2 * vT**2
+    ys, yx = (ms2_tree + Pis) / T2, (mx2_tree + PiX) / T2
+    j1s, j1x = JB1(ys), JB1(yx)
+    tad_s = T2 / TWO_PI2 * (6 * lP * j1s + 4 * g**2 * j1x)
+    j2s, j2x = JB2(ys), JB2(yx)
+    ir_s = 1 / TWO_PI2 * ((6 * lP * vT)**2 * j2s + 2 * (2 * g**2 * vT)**2 * j2x)
+    ms2 = ms2_tree + tad_s + ir_s
+    pi_x = T2 / TWO_PI2 * (8 * lX * j1x + 2 * g**2 * j1s)
+    mx2 = mx2_tree + pi_x
+    return dict(T=T, vT=vT, broken=vT > 0, mX=np.sqrt(max(mx2, 0)), ms=np.sqrt(max(ms2, 0)),
+                mX2_tree=mx2_tree, PiX=pi_x, ms2_tree=ms2_tree, tad_s=tad_s, ir_s=ir_s,
+                lam3=2 * g**2 * vT, lam_s3=6 * lP * vT)
+
+
+def Tc_daisy(v=M.V, g=M.GX, lX=M.LX, lP=M.LP):
+    Thi = np.sqrt(lP * v**2 / (lP / 4 + g**2 / 6))
+    f = lambda T: vev_daisy(T, v, g, lX, lP) - 1e-3 * v
+    Ts = np.linspace(0.6 * Thi, 1.3 * Thi, 57)
+    vs = [vev_daisy(T, v, g, lX, lP) for T in Ts]
+    for i in range(len(Ts) - 1):
+        if vs[i] > 1e-3 * v and vs[i + 1] <= 1e-3 * v:
+            return optimize.brentq(f, Ts[i], Ts[i + 1], xtol=1e-6)
+    return None

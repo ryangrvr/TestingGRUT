@@ -45,6 +45,12 @@ def Z(m, T):
     return m * m * T * kve(2, m / T)
 
 
+def n_bose(m, T, mu=0.0, kmax=60):
+    """Bose number density (one degree) by the Bessel series n = (m^2 T/2pi^2) sum_k e^{k mu/T} K2(k m/T)/k."""
+    k = np.arange(1, kmax + 1)
+    return m * m * T / (2 * np.pi**2) * np.sum(np.exp(k * (mu - m) / T) * kve(2, k * m / T) / k)
+
+
 def Fw(E, m, T, mu, stat):
     if stat == 'MB':
         return np.exp((mu - m) / T) * np.ones_like(E)

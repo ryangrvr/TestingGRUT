@@ -1,0 +1,121 @@
+{
+ "scope": "Exact projection identity behind the torque law (track rp_preparation, own code).\n\nFor a coherent state |alpha> and the charge projector P0 = (1/2pi) int dtheta exp(i theta Q),\nany monomial O of annihilation operators with total charge zero satisfies O|alpha_theta> =\no(alpha)|alpha_theta> with the same eigenvalue for every theta, so\n<alpha|P0 O P0|alpha> / <alpha|P0|alpha> = o(alpha) exactly. For O = c b^2 this gives\n<c b^2>_projected = alpha_c alpha_b^2 = 2 sqrt2 e^{i delta}, hence\nE(delta) = E_0 + 2 G2 Re(alpha_c alpha_b^2) = E_0 + 0.226274 cos(delta) and\nT(delta) = i<[H, L]> = -12 G2 Im(alpha_c alpha_b^2) = -1.357645 sin(delta) = 6 dE/d delta,\nindependent of the projection (truncation apart). Mixed monomials such as n_k = a_k^dag a_k\nare NOT preserved, so mean occupations do change (6, 2, 2 -> 5.83, 1.79, 1.86).\nUsage: python3 projection_identity.py OUT.json\n",
+ "models": [
+  {
+   "cutoffs": [
+    24,
+    12,
+    9
+   ],
+   "neutral_dimension": 58,
+   "rows": [
+    {
+     "delta": 0.3,
+     "cb2_projected": [
+      2.7020989922665803,
+      0.8358571683416866
+     ],
+     "cb2_coherent": [
+      2.702099639102658,
+      0.8358573684315326
+     ],
+     "abs_error": 6.77076700051957e-07,
+     "torque": -0.4012114408040095,
+     "torque_law": -0.4012115368471356,
+     "n_a_projected": 5.8335073496595875,
+     "n_a_coherent": 6.0
+    },
+    {
+     "delta": 1.5707963267948966,
+     "cb2_projected": [
+      1.7319116978810806e-16,
+      2.828426447669491
+     ],
+     "cb2_coherent": [
+      1.7319121124709868e-16,
+      2.8284271247461903
+     ],
+     "abs_error": 6.770766991515131e-07,
+     "torque": -1.3576446948813556,
+     "torque_law": -1.3576450198781713,
+     "n_a_projected": 5.833507349659586,
+     "n_a_coherent": 6.0
+    },
+    {
+     "delta": 2.0,
+     "cb2_projected": [
+      -1.1770407186039304,
+      2.5718808908315722
+     ],
+     "cb2_coherent": [
+      -1.177041000367257,
+      2.5718815064956724
+     ],
+     "abs_error": 6.770766990076481e-07,
+     "torque": -1.2345028275991548,
+     "torque_law": -1.2345031231179227,
+     "n_a_projected": 5.8335073496595875,
+     "n_a_coherent": 6.0
+    }
+   ]
+  },
+  {
+   "cutoffs": [
+    36,
+    18,
+    15
+   ],
+   "neutral_dimension": 124,
+   "rows": [
+    {
+     "delta": 0.3,
+     "cb2_projected": [
+      2.7020996391025904,
+      0.8358573684315113
+     ],
+     "cb2_coherent": [
+      2.702099639102658,
+      0.8358573684315326
+     ],
+     "abs_error": 7.078731856740914e-14,
+     "torque": -0.4012115368471256,
+     "torque_law": -0.4012115368471356,
+     "n_a_projected": 5.833507348140232,
+     "n_a_coherent": 6.0
+    },
+    {
+     "delta": 1.5707963267948966,
+     "cb2_projected": [
+      1.7319121124709432e-16,
+      2.8284271247461192
+     ],
+     "cb2_coherent": [
+      1.7319121124709868e-16,
+      2.8284271247461903
+     ],
+     "abs_error": 7.105427357601002e-14,
+     "torque": -1.3576450198781373,
+     "torque_law": -1.3576450198781713,
+     "n_a_projected": 5.833507348140231,
+     "n_a_coherent": 6.0
+    },
+    {
+     "delta": 2.0,
+     "cb2_projected": [
+      -1.1770410003672276,
+      2.5718815064956084
+     ],
+     "cb2_coherent": [
+      -1.177041000367257,
+      2.5718815064956724
+     ],
+     "abs_error": 7.034574939860551e-14,
+     "torque": -1.2345031231178922,
+     "torque_law": -1.2345031231179227,
+     "n_a_projected": 5.833507348140232,
+     "n_a_coherent": 6.0
+    }
+   ]
+  }
+ ]
+}
