@@ -1,0 +1,67 @@
+{
+  "groups": {
+    "potential_and_dispersion": {
+      "passed": true,
+      "hessian": 5.191958252613554e-10,
+      "cubic_vs_matrix": 2.2728499387111212e-14
+    },
+    "adiabatic_limit_and_endpoint": {
+      "passed": true,
+      "exact_endpoint_growth_roundoff": 4.579669976578771e-16,
+      "adiabatic_endpoint_growth": 0.6390096504226939,
+      "small_amplitude_growth_relative": 6.668355734296139e-05,
+      "scope": "Endpoint is marginal in neutral phi, not nonlinearly stable. No wavelength assigned without positive exponential growth."
+    },
+    "matched_orbit": {
+      "passed": true,
+      "energy": 3.3206770666538432e-12,
+      "charge": 1.1138867606064196e-12,
+      "period_quadrature": 2.475797344914099e-14,
+      "angle_quadrature": 1.3766765505351941e-14
+    },
+    "canonical_evolution_and_charge": {
+      "passed": true,
+      "symplectic": 5.771938482723726e-12,
+      "determinant": 9.055423078052627e-12,
+      "phase_tangent": 1.1363577453114347e-13,
+      "charge_left_vector": 9.307349647450009e-14,
+      "scope": "The tiny k=0 charged exponent from splitting a unit Jordan multiplier is numerical, not a claimed instability."
+    },
+    "method_tolerance_and_direct_growth": {
+      "passed": true,
+      "comparisons": [
+        {
+          "species": "X",
+          "tolerance": 1.0902390101819037e-13,
+          "Radau": 1.1213252548714081e-13
+        },
+        {
+          "species": "phi",
+          "tolerance": 1.6122658763606523e-12,
+          "Radau": 1.5658585539313208e-12
+        }
+      ],
+      "four_period_transfer": [
+        1.354819069197184e-12,
+        3.0641421736254105e-11
+      ],
+      "scope": "Distinct methods by one author, not external independent replication."
+    },
+    "extended_inventory_inequality": {
+      "passed": true,
+      "independent_linear_program": 1.3061447348531251e-16,
+      "random_mixtures_max_residual": -0.001091485590495088,
+      "scope": "Supplied upper object E/Q; no arbitrary transient configurations."
+    },
+    "supplied_seed_roll": {
+      "passed": true,
+      "time_tolerance": 8.881784197001252e-16,
+      "energy": 4.218847493575595e-15,
+      "charge": 4.3298697960381105e-15,
+      "scope": "Homogeneous neutral seeds and one linear charged mode, not nonlinear fragmentation."
+    }
+  },
+  "physical_initial_spectrum_derived": false,
+  "physical_formation_kernel_derived": false,
+  "physical_f_sym": null
+}
