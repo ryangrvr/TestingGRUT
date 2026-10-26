@@ -1,0 +1,100 @@
+{
+  "author_control_groups": {
+    "independent_real_matrix_projection": true,
+    "release_tolerance_and_late_actions": true,
+    "Gauss_and_work": true,
+    "Bose_integrals_vs_adaptive": true,
+    "thermodynamic_constraints": true,
+    "relic_step_quadrature_and_late_cutoff": true,
+    "threshold_resolution": true,
+    "decay_time_dilation_energy_work": true,
+    "changing_mass_Proca_controls": true,
+    "one_reviewer_benchmark_replayed": true
+  },
+  "passed": 10,
+  "total": 10,
+  "numerical_evidence": {
+    "max_C_vs_real_matrix_error": 2.9952380974055843e-14,
+    "max_forced_derivative_FD_error": 1.3491475368982698e-08,
+    "max_release_epsilon_tolerance_shift": 2.009226118815377e-13,
+    "max_particle_action_window_shift": 3.2926930211285566e-06,
+    "max_thermo_constraint_error": 2.828419487739953e-10,
+    "max_initial_energy_error": 1.1592355542887397e-11,
+    "max_520_1040_relic_shift": 0.00010044068113290727,
+    "max_96_128_relic_shift": 1.1102230246251565e-15,
+    "max_late_endpoint_relic_shift": 0.0007482204494980715,
+    "max_threshold_step_shift": 0.001078618715603108,
+    "Proca_start_and_tolerance_shift": 1.9279852092601857e-07,
+    "Proca_late_endpoint_shift": 0.0007394179541531098,
+    "max_scaled_Wronskian_error": 1.675180114616646e-16,
+    "reference_replay_relative_relic_shift": 4.438116540939063e-12
+  },
+  "thermodynamic_quadratures": [
+    {
+      "T_over_m": 0.003,
+      "mu_over_m": 0.8611951308217225,
+      "gauss64_vs_adaptive": 4.966389822401465e-14,
+      "gauss128_vs_adaptive": 4.749735232833616e-14
+    },
+    {
+      "T_over_m": 0.01,
+      "mu_over_m": 0.8611951308217225,
+      "gauss64_vs_adaptive": 2.542407857087733e-15,
+      "gauss128_vs_adaptive": 1.2159603356999868e-14
+    },
+    {
+      "T_over_m": 0.1,
+      "mu_over_m": 0.3,
+      "gauss64_vs_adaptive": 1.2197378109503411e-15,
+      "gauss128_vs_adaptive": 7.35784329674212e-15
+    },
+    {
+      "T_over_m": 1,
+      "mu_over_m": 0.8611951308217225,
+      "gauss64_vs_adaptive": 6.947483961021522e-16,
+      "gauss128_vs_adaptive": 4.979030172065424e-15
+    },
+    {
+      "T_over_m": 10,
+      "mu_over_m": 0.8611951308217225,
+      "gauss64_vs_adaptive": 8.278225307382616e-16,
+      "gauss128_vs_adaptive": 4.96693518442957e-15
+    },
+    {
+      "T_over_m": 30,
+      "mu_over_m": 0.8611951308217225,
+      "gauss64_vs_adaptive": 2.2180236245555536e-15,
+      "gauss128_vs_adaptive": 4.913716741994896e-15
+    },
+    {
+      "T_over_m": 1,
+      "mu_over_m": 1.0,
+      "gauss64_vs_adaptive": 3.779321312173057e-16,
+      "gauss128_vs_adaptive": 4.8777471867942836e-15
+    }
+  ],
+  "physical_verdicts_separate": [
+    {
+      "candidate": 10,
+      "R_lower": 199.4042010902021,
+      "largest_computed_RL_upper": 103.037109375,
+      "lower_injection_exceeds_threshold": true,
+      "conservative_f": 10.849311944396494,
+      "f_after_max_future_erasure_bound": 9.900007281223845,
+      "case_L_passes": false,
+      "raw_yield_over_target": 5.69009662564405
+    },
+    {
+      "candidate": 17,
+      "R_lower": 249.69026892092234,
+      "largest_computed_RL_upper": 93.466796875,
+      "lower_injection_exceeds_threshold": true,
+      "conservative_f": 13.94231636286377,
+      "f_after_max_future_erasure_bound": 12.800552920409993,
+      "case_L_passes": false,
+      "raw_yield_over_target": 5.309416605350421
+    }
+  ],
+  "universal_exclusion_of_all_continuous_phases": false,
+  "full_quantum_kinetic_evolution_completed": false
+}
