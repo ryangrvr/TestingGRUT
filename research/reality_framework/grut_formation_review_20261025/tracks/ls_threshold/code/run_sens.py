@@ -51,12 +51,20 @@ if __name__ == '__main__':
             (ke_mu, (10, 0.6)), (ke_mu, (10, 0.3)),
             (sv_runs, ('ke', 10, 100.0, 1e-8)), (sv_runs, ('proxy', 10, 100.0, 1e-9)), (sv_runs, ('proxy', 10, 1.0, 1e-9))]
     jobs += [(scan, (10, C[10]['ym'], R)) for R in (60, 80, 95, 100, 106, 113.069, 130, 160, 199.404, 240, 300, 400)]
+    rows = []
     with Pool(4, maxtasksperchild=1) as p:   # fresh worker per job: globals are modified
-        res = [p.apply_async(f, (a,)) for f, a in jobs]
-        rows = [r.get() for r in res]
+        res = [(f.__name__, a, p.apply_async(f, (a,))) for f, a in jobs]
+        for name, a, r in res:
+            try:
+                rows.append(r.get())
+            except Exception as exc:          # recorded, not hidden
+                rows.append(dict(kind='failed', job=name, args=list(a), status=repr(exc)))
+            Path(sys.argv[1]).write_text(json.dumps(dict(method=__doc__, rows=rows), indent=1, default=float))
     Path(sys.argv[1]).write_text(json.dumps(dict(method=__doc__, rows=rows), indent=1, default=float))
     for r in rows:
-        if r['kind'] == 'scan':
+        if r['kind'] == 'failed':
+            print('FAILED', r)
+        elif r['kind'] == 'scan':
             print('scan', r['R'], 'f=%.4g' % r['f'], 'maxcond %.3g' % r['max_cond'])
         elif r['kind'] == 'threshold':
             print('R_L', r['candidate'], 'sv x', r['sv_factor'], 'A42 x', r['a42_factor'], r['bracket'])

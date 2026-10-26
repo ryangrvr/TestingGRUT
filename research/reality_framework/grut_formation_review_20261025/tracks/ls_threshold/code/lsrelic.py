@@ -143,7 +143,7 @@ def state_two(nQ, nm, S=None, E=None, antilumps=True, tguess=None):
     lt = brentq(resid, lo, hi, xtol=1e-13, rtol=1e-13)
     t = np.exp(lt); up, um, cp, cm, a, b = at(t)
     return dict(t=t, up=up, um=um, nc=cp * M**3, nac=cm * M**3, npl=a[0] * M**3, nmi=b[0] * M**3,
-                s=(a[3] + b[3]) * M**3, rho=(a[2] + b[2] + EC * cp + ecm * cm) * M**4)
+                s=(a[3] + b[3]) * M**3, rho=(a[2] + b[2] + EC * cp + ecm * cm) * M**4, P=(a[1] + b[1]) * M**4)
 
 
 # ---------------- rates ----------------
@@ -223,27 +223,42 @@ def ke_run(eps, R, ymult=1.0, endT=1e-8, N=1500, antilumps=True, s_channel=False
     p = st0['nmi'] / nq0; sigma = st0['s'] / nq0
     Tv = np.geomspace(tv0, endT, N)
     hist = []; nroot = 0; nfall = 0; Lprev = lna(tv0); sig0 = sigma; tg = st0['t']
+    prev = state_two(nq0, p * nq0, S=sigma * nq0, antilumps=antilumps, tguess=tg)
+    a3prev = 1.0; ew_max = 0.0; ew_sum = 0.0
     for i in range(1, N):
         T = Tv[i]; nq = ye * entropy(T); dl = lna(T) - Lprev; Lprev = lna(T)
         h = hubble(np.sqrt(T * Tv[i - 1])); dt = dl / h
-        st = state_two(nq, p * nq, S=sigma * nq, antilumps=antilumps, tguess=tg)
+        st = state_two(nq, max(p, 1e-290) * nq, S=sigma * nq, antilumps=antilumps, tguess=tg)
         tg = st['t']
+        # energy-work check of the adiabatic step: d(rho a^3) = -P d(a^3)
+        a3 = a3prev * np.exp(3 * dl)
+        res = (st['rho'] * a3 - prev['rho'] * a3prev + 0.5 * (st['P'] + prev['P']) * (a3 - a3prev)) / (st['rho'] * a3)
+        ew_max = max(ew_max, abs(res)); ew_sum += res; a3prev = a3
         r = rate_two(st, s_channel)
         if abs(r * dt / nq) > 1e-10 * p:
             rho = st['rho']; nroot += 1
-            peq = state_single(nq, energy=rho)['nmi'] / nq
+            peq = max(state_single(nq, energy=rho)['nmi'] / nq, 1e-300)
 
             def g(pp):
                 s2 = state_two(nq, pp * nq, E=rho, antilumps=antilumps, tguess=tg)
                 return pp - p + dt * rate_two(s2, s_channel) / nq
             lo, hi = (peq, p) if p > peq else (p, peq)
             if g(lo) * g(hi) < 0:
-                p = brentq(g, lo, hi, xtol=1e-300, rtol=1e-11)
+                try:
+                    if lo > 0 and hi / lo > 10:      # many decades: solve in ln p'
+                        p = np.exp(brentq(lambda x: g(np.exp(x)), np.log(lo), np.log(hi), xtol=1e-13, maxiter=400))
+                    else:
+                        p = brentq(g, lo, hi, xtol=1e-300, rtol=1e-11, maxiter=400)
+                except RuntimeError:
+                    nfall += 1
+                    p = peq if abs(g(peq)) < abs(g(p)) else p
             else:
                 nfall += 1
                 p = peq if abs(g(peq)) < abs(g(p)) else p
+            p = max(p, 1e-290)
             st = state_two(nq, p * nq, E=rho, antilumps=antilumps, tguess=tg)
             sigma = st['s'] / nq
+        prev = st
         if i % max(1, N // 80) == 0 or i == N - 1:
             hist.append(dict(Tvis=T, Th_over_m=st['t'], up=st['up'], um=st['um'], cond=st['nc'] / nq,
                              anticond=st['nac'] / nq, p=p, sigma=sigma,
@@ -254,6 +269,7 @@ def ke_run(eps, R, ymult=1.0, endT=1e-8, N=1500, antilumps=True, s_channel=False
     tail = ye * entropy(endT) / Q * SV / hubble(endT)
     return dict(eps=eps, R=R, ymult=ymult, endT=endT, N=N, antilumps=antilumps, s_channel=s_channel,
                 sigma0=sig0, sigma_final=sigma, p_final=p, f=2 * M * YQ * p / DM, reaction_steps=nroot, root_fallbacks=nfall,
+                energy_work_max_step_residual=ew_max, energy_work_cumulative_residual=ew_sum,
                 tail_conversion_depth_bound=tail, history=hist, runtime=time.perf_counter() - t0)
 
 

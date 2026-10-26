@@ -12,7 +12,10 @@ from run_proxy import C
 
 
 def job(R):
-    r = LR.ke_run(C[10]['eps'], R, C[10]['ym'], N=500, antilumps=True)
+    try:
+        r = LR.ke_run(C[10]['eps'], R, C[10]['ym'], N=500, antilumps=True)
+    except Exception as exc:              # recorded, not hidden
+        return dict(R=R, f=float('nan'), sigma0=float('nan'), status=repr(exc))
     r.pop('history')
     return r
 
