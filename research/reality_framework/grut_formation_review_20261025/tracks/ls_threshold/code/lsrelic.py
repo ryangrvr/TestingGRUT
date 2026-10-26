@@ -228,7 +228,7 @@ def ke_run(eps, R, ymult=1.0, endT=1e-8, N=1500, antilumps=True, s_channel=False
     for i in range(1, N):
         T = Tv[i]; nq = ye * entropy(T); dl = lna(T) - Lprev; Lprev = lna(T)
         h = hubble(np.sqrt(T * Tv[i - 1])); dt = dl / h
-        st = state_two(nq, max(p, 1e-290) * nq, S=sigma * nq, antilumps=antilumps, tguess=tg)
+        st = state_two(nq, max(p, 1e-250) * nq, S=sigma * nq, antilumps=antilumps, tguess=tg)
         tg = st['t']
         # energy-work check of the adiabatic step: d(rho a^3) = -P d(a^3)
         a3 = a3prev * np.exp(3 * dl)
@@ -237,7 +237,7 @@ def ke_run(eps, R, ymult=1.0, endT=1e-8, N=1500, antilumps=True, s_channel=False
         r = rate_two(st, s_channel)
         if abs(r * dt / nq) > 1e-10 * p:
             rho = st['rho']; nroot += 1
-            peq = max(state_single(nq, energy=rho)['nmi'] / nq, 1e-300)
+            peq = max(state_single(nq, energy=rho)['nmi'] / nq, 1e-250)
 
             def g(pp):
                 s2 = state_two(nq, pp * nq, E=rho, antilumps=antilumps, tguess=tg)
@@ -255,7 +255,7 @@ def ke_run(eps, R, ymult=1.0, endT=1e-8, N=1500, antilumps=True, s_channel=False
             else:
                 nfall += 1
                 p = peq if abs(g(peq)) < abs(g(p)) else p
-            p = max(p, 1e-290)
+            p = max(p, 1e-250)
             st = state_two(nq, p * nq, E=rho, antilumps=antilumps, tguess=tg)
             sigma = st['s'] / nq
         prev = st

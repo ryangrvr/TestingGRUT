@@ -1,0 +1,157 @@
+{
+ "G1_symbolic": {
+  "pass_group": true,
+  "residuals": {
+   "nX": "0",
+   "nY": "0",
+   "nS": "0",
+   "gauge": "0",
+   "nD": "0"
+  },
+  "note": "sources -6 Im K, 2 Im K - 4 Im L, 2 Im L; radial terms g(|z|^2) drop out; complex couplings"
+ },
+ "G1_dynamical": {
+  "pass_group": true,
+  "max_rel_error_nX_nY_nS": [
+   5.526369344912316e-07,
+   5.692735356905967e-07,
+   4.0296831631635923e-07
+  ],
+  "gauge_charge_drift_rel": 1.0568963250809992e-11,
+  "charge_change_nX": -0.03697142157311048,
+  "nD_change": -1.8824760545835164,
+  "nD_from_mu_only": -1.882475577609148
+ },
+ "G2_numeric": {
+  "pass_group": true,
+  "samples": 48,
+  "worst_relative_errors": {
+   "force": 1.9129908771021043e-14,
+   "numgrad": 3.045034179949109e-11,
+   "angle": 1.4094448477255946e-10,
+   "gauge": 1.1461406436585807e-13
+  },
+  "note": "dV/dalpha_i equals the source because n_i = -2 r_i^2 alpha_i_dot and the EOM; complex couplings"
+ },
+ "G3_symbolic": {
+  "pass_group": true,
+  "Ystar_solves_linear_system": true,
+  "VY_at_Ystar_equals_DeltaV": true,
+  "nX_source_equals_minus12_Im_alpha6X6": true,
+  "nD_source_equals_same": true,
+  "note": "hence (2 Im K - 4 Im L) = 0 on the forced branch: the forced Y accumulates no net n_Y"
+ },
+ "G3_numeric": {
+  "pass_group": true,
+  "alpha6_M_units": 3.5533004079726e-08,
+  "gap2_over_M2": 0.9292893218813453,
+  "rows": [
+   {
+    "X_over_M": 0.2,
+    "Ystar_over_X": 4.030138222264006e-05,
+    "min_vs_formula_rel": 0.0,
+    "nonlinear_vs_formula_rel": 1.3220482053075846e-10,
+    "source_nX": -2.7289347133229633e-11,
+    "source_nD": -2.7289347133229595e-11,
+    "source_eft": -2.72893471332296e-11,
+    "source_nonlinear": -2.7289347126102225e-11,
+    "source_match_rel": 1.4208508186041878e-15,
+    "nonlinear_source_shift_rel": 2.611777460970188e-10,
+    "nY_source_on_forced_branch": 1.2924697071141057e-26,
+    "instantaneous_excitation_form": 0.0
+   },
+   {
+    "X_over_M": 0.1,
+    "Ystar_over_X": 1.0075345555660015e-05,
+    "min_vs_formula_rel": 0.0,
+    "nonlinear_vs_formula_rel": 2.065642953827925e-12,
+    "source_nX": -4.26396048956713e-13,
+    "source_nD": -4.263960489567124e-13,
+    "source_eft": -4.263960489567125e-13,
+    "source_nonlinear": -4.2639604895497243e-13,
+    "source_match_rel": 1.4208508186041878e-15,
+    "nonlinear_source_shift_rel": 4.080735749312225e-12,
+    "nY_source_on_forced_branch": 2.0194839173657902e-28,
+    "instantaneous_excitation_form": 0.0
+   },
+   {
+    "X_over_M": 0.05,
+    "Ystar_over_X": 2.5188363889150037e-06,
+    "min_vs_formula_rel": 0.0,
+    "nonlinear_vs_formula_rel": 3.219876540391612e-14,
+    "source_nX": -6.662438264948641e-15,
+    "source_nD": -6.6624382649486315e-15,
+    "source_eft": -6.662438264948633e-15,
+    "source_nonlinear": -6.662438264948208e-15,
+    "source_match_rel": 1.4208508186041878e-15,
+    "nonlinear_source_shift_rel": 6.361577931102147e-14,
+    "nY_source_on_forced_branch": 3.1554436208840472e-30,
+    "instantaneous_excitation_form": 0.0
+   },
+   {
+    "X_over_M": 0.025,
+    "Ystar_over_X": 6.297090972287509e-07,
+    "min_vs_formula_rel": 0.0,
+    "nonlinear_vs_formula_rel": 4.699648361386985e-16,
+    "source_nX": -1.0410059788982252e-16,
+    "source_nD": -1.0410059788982237e-16,
+    "source_eft": -1.0410059788982239e-16,
+    "source_nonlinear": -1.0410059788982227e-16,
+    "source_match_rel": 1.4208508186041878e-15,
+    "nonlinear_source_shift_rel": 9.992007221626409e-16,
+    "nY_source_on_forced_branch": 4.930380657631324e-32,
+    "instantaneous_excitation_form": 0.0
+   }
+  ],
+  "max_rel_dev_from_codex_source_values": 0.0
+ },
+ "G4_symbolic": {
+  "pass_group": true,
+  "nX_equals_6I_deltadot": true,
+  "nSigma_equals_minus_nX_over_6": true,
+  "rho_phase_formula": true,
+  "gauge_neutral": true,
+  "nX": "6*f**2*h**2*(-sigmadot + 6*thetadot)/(f**2 + 36*h**2)",
+  "rho": "f**2*h**2*(sigmadot**2 - 12*sigmadot*thetadot + 36*thetadot**2)/(2*(f**2 + 36*h**2))",
+  "note": "second term n_X^2/(72 h^2) is the Sigma phase kinetic cost; no radial quanta are implied"
+ },
+ "G5_bound": {
+  "pass_group": true,
+  "alpha6_GeVm2": 3.5533004079726004e-32,
+  "alpha6_closed_form_rel_dev": 2.220446049250313e-16,
+  "r": 0.07071067811865477,
+  "table": {
+   "ri/M=0.1_cH=1": 1.2201116680281771e-08,
+   "ri/M=1.0_cH=1": 3.858331870716284e-05,
+   "ri/M=2.0_cH=1": 0.0004365204207762658,
+   "ri/M=0.1_cH=10": 5.4889536982333816e-08,
+   "ri/M=1.0_cH=10": 0.00017357595657622028,
+   "ri/M=2.0_cH=10": 0.0019637877751357926
+  },
+  "max_rel_dev_from_codex_table": 0.0,
+  "yield_power_in_ri": 3.5000000000000004,
+  "triangle_integral": 1.0,
+  "extrapolation_to_YQ": {
+   "cH=1": {
+    "ri_over_M": 18.24016200571284,
+    "H_i": 815724843307.6564,
+    "M_over_Hi": 1.2259035730052454,
+    "kappaR2_over_M2": 0.5762593831672339,
+    "omegaX_over_gap": 1.113649507689172,
+    "Y_quartic_force_ratio": 476.9042416780674,
+    "Sigma_forced_shift": 78344.25279582157
+   },
+   "cH=10": {
+    "ri_over_M": 11.869476151626612,
+    "H_i": 167859741518.94366,
+    "M_over_Hi": 5.957354580384278,
+    "kappaR2_over_M2": 0.1543311979945658,
+    "omegaX_over_gap": 0.5763235789532991,
+    "Y_quartic_force_ratio": 9.160904110571547,
+    "Sigma_forced_shift": 1504.9230532140705
+   }
+  },
+  "note": "same entropy convention as our scal.py yield_over_YQ (prompt radiation at H_i, g*=106.75)"
+ },
+ "groups_passed": 7
+}
