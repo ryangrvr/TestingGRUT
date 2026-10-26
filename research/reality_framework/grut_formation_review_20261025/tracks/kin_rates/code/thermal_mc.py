@@ -149,11 +149,14 @@ def inverse_decay_bose(T, P, mu_s=0.0, mu_p=0.0, mu_m=0.0):
             f1 = 1 / np.expm1((E1 - mu_p) / T); f2 = 1 / np.expm1((E2 - mu_m) / T)
             fs = 1 / np.expm1((E1 + E2 - mu_s) / T)
             return p2 * p2 / (2 * E2) * f1 * f2 * (1 + fs) * 2 * np.pi / (2 * p1 * p2)
-        # p2 range where |c0| <= 1
-        pmax = 60 * T + 5 * ms2**0.5
-        return p1 * p1 / (2 * E1) * integrate.quad(g, 1e-9, pmax, limit=400, points=[m, 3 * T])[0]
+        # exact p2 range where |c0| <= 1:  E2 in [E2-, E2+],  E2+- = (a E1 +- p1 sqrt(a^2 - 4 m^4))/(2 m^2), a = ms^2 - 2m^2
+        a = ms2 - 2 * m * m
+        root = p1 * np.sqrt(a * a - 4 * m**4)
+        E2lo = (a * E1 - root) / (2 * m * m); E2hi = (a * E1 + root) / (2 * m * m)
+        p2lo = np.sqrt(max(E2lo * E2lo - m * m, 0)); p2hi = np.sqrt(E2hi * E2hi - m * m)
+        return p1 * p1 / (2 * E1) * integrate.quad(g, p2lo * (1 + 1e-12), p2hi * (1 - 1e-12), limit=400)[0]
     pmax = 60 * T + 5 * ms2**0.5
-    val = integrate.quad(inner, 1e-9, pmax, limit=400, points=[m, 3 * T])[0]
+    val = integrate.quad(inner, 1e-9, pmax, limit=400, points=[m, 3 * T, 10 * T])[0]
     # measure factors: d^3p/((2pi)^3 2E) -> 4 pi p^2 dp /((2pi)^3 2E) for p1; 2 pi p^2 dp dcos/((2pi)^3 2E) for p2
     return val * P.lam3**2 * (4 * np.pi) * (2 * np.pi) / (2 * np.pi)**6
 
