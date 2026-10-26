@@ -99,26 +99,49 @@ explicit (T, μ) derivatives while ρ includes V_eff(v_T, T).
 series through O(ρ²); outer conditions carrying the Yukawa 1/ρ: F′ + (κ + 1/L)F = 0, κ = √(1−Ω²), and
 S′ + (√6 + 1/L)(S−1) = 0; L enlarged until the charge outside L/2 is < 1e-9; collocation (solve_bvp, tol 1e-9);
 continuation in Ω with adaptive steps; Simpson quadrature on 60001 points. Checks: Derrick/virial identity
-E_grad + 3(E_pot − E_kin) = 0 to ≤ VIRIAL_MAX over the table; dE/dQ = Ω m_X (exact for stationary Q-balls) by finite
-differences at the reference (rel. 3e-8 at δΩ = 5e-5) and by splines along the table (≤ IDENTITY_MAX away from Q_min).
+E_grad + 3(E_pot − E_kin) = 0 to ≤ 2.9e-10 over the table; dE/dQ = Ω m_X (exact for stationary Q-balls) by finite
+differences at the reference (rel. 3.1e-8 at δΩ = 5e-5) and by cubic splines E(Ω), Q(Ω) along the table (|dE/dQ − Ω| ≤
+4.6e-4 m_X on both branches, 130 points, excluding |Ω − Ω_min| < 0.012 where dQ/dΩ → 0).
 
 **Reference Q = 200000 [C]:** Ω = **0.8611951308217** (archived 0.8611951308217225: 1.8e-14), E/(Q m_X) =
 **0.923316135372** (archived 0.9233161353726057: 2e-13), E = 17064.5375 GeV, **E − Qω = 1148.10753 GeV** (Codex
 1148.1075313764: 2e-12), F₀ = 2.61992, S₀ = 0.006012, r₅₀ = 3.786/m_X, r₉₀ = 5.813/m_X, r₉₉ = 8.127/m_X, energy
 split kinetic 46.6 % / gradient 10.1 % / potential 43.3 %. All CONFIRMED.
 
-**The branch [C]** (TABLE_ROWS rows, Ω = OMEGA_MIN–0.998, Q = Q_LO–Q_HI):
-- stable branch (dQ/dΩ < 0) from Ω = 0.970 upward in Q; thin-wall limit ω₀ = √(2√(λ_X V₀)) = **0.7401 m_X** [D, from
-  U_eff of section 4], Q → ∞ (E/Q → ω₀);
-- **Q_min = 51978 at Ω = 0.970** (E/Q = 1.0146 m): no stationary object exists below Q_min;
-- E/Q = m_X at Ω = 0.931, **Q ≈ 6.6e4**: objects with 5.2e4 < Q < 6.6e4 are classically stationary but heavier than
+**The branch [C]** (139 rows, Ω = 0.7601–0.998, Q = 5.20e4–3.51e7; coarse run plus adaptive refinement; the
+thin-wall continuation stopped at Ω = 0.7600 when solve_bvp exceeded its mesh-node cap at r₉₀ = 26/m_X, L = 96/m_X):
+- stable branch (dQ/dΩ < 0) for Ω ≤ 0.9675, Q from Q_min upward; thin-wall limit ω₀ = min_|X| √(U/|X|²) =
+  √(2√(λ_X V₀)) = **0.7401 m_X** [D, from U_eff of section 4, attained at |X| = (V₀/λ_X)^{1/4} = 1.53 GeV > x_c],
+  Q → ∞ with E/Q → ω₀; the table approaches it as a surface term, (E/Q − ω₀) Q^{1/3} = 10.7, 10.4, 10.0 m_X at
+  Q = 2e5, 1.4e6, 3.5e7 (E/Q = 0.7706 m at Q = 3.5e7);
+- **Q_min = 5.196e4 at Ω = 0.9675** (E/Q = 1.0146 m; grid step 0.0025): no stationary object exists below Q_min;
+- E/Q = m_X at Ω = 0.9312, **Q = 6.56e4**: objects with 5.2e4 < Q < 6.6e4 are classically stationary but heavier than
   free quanta;
-- the thick-wall branch Ω > 0.970 (dQ/dΩ > 0) is the critical-nucleus branch: its E − Qω is the nucleation barrier
-  (section 4).
+- the thick-wall branch Ω ≥ 0.970 (dQ/dΩ > 0, 13 rows to Ω = 0.998, Q = 1.32e5) is the critical-nucleus branch: its
+  E − Qω is the nucleation barrier (section 4).
+
+| Ω = ω/m_X | Q | E/(Q m_X) | E − Qω (GeV) | r₉₀ m_X | branch |
+|---|---|---|---|---|---|
+| 0.7601 | 3.511e7 | 0.7706 | 33801 | 26.15 | stable |
+| 0.7803 | 4.542e6 | 0.8018 | 8997 | 13.43 | stable |
+| 0.8000 | 1.433e6 | 0.8323 | 4283 | 9.45 | stable |
+| 0.8200 | 6.305e5 | 0.8631 | 2514 | 7.52 | stable |
+| 0.8400 | 3.377e5 | 0.8931 | 1658 | 6.46 | stable |
+| 0.8612 | 2.000e5 | 0.9233 | 1148 | 5.81 | stable (reference) |
+| 0.8800 | 1.368e5 | 0.9481 | 861 | 5.50 | stable |
+| 0.9000 | 9.786e4 | 0.9715 | 647 | 5.37 | stable |
+| 0.9200 | 7.444e4 | 0.9911 | 489 | 5.43 | stable |
+| 0.9400 | 6.025e4 | 1.0058 | 366 | 5.74 | stable |
+| 0.9600 | 5.285e4 | 1.0138 | 263 | 6.49 | stable |
+| 0.9675 | 5.196e4 | 1.0146 | 226 | 7.00 | Q_min |
+| 0.9800 | 5.444e4 | 1.0129 | 166 | 8.53 | thick-wall |
+| 0.9900 | 6.617e4 | 1.0082 | 111 | 11.65 | thick-wall |
+| 0.9980 | 1.317e5 | 1.0019 | 48 | 25.39 | thick-wall |
 
 **Work term.** dρ_L = ω d(n_L Q) + (E − Qω) dn_L; integrated along the table against the exact ΔE for population
-changes (n_L, Q) → (1.3 n_L, Q′): identity to ≤ 7e-5 (path quadrature); the **linear comparator** ωQn_L with
-ω = ω(2e5) errs by −12 % (Q 5.2e4 → 6.3e4), −5.5 % (9e4 → 1.5e5), −1.4 % (1.5e5 → 3e5), +3 % (3e5 → 7.6e5). Per object
+changes (n_L, Q) → (1.3 n_L, Q′) over 20 segments of the stable branch: identity to ≤ 2.7e-5 (path quadrature); the
+**linear comparator** ωQn_L with ω = ω(2e5) errs by −14 % (Q 5.2e4 → 5.5e4), −10 % (7.2e4 → 8.8e4), −4 % (1.4e5 →
+1.9e5), +0.2 % (2.8e5 → 4.2e5), +5 % (6.9e5 → 1.3e6), +10 % (5.5e6 → 8.5e6), +12 % (2.7e7 → 3.2e7). Per object
 at Q_ref, (E − Qω) = 1148 GeV = 12,424 m_X = 6.2 % of E: forming or dissolving a Q = 2e5 object moves 6.2 % more energy
 than the linear booking. Both bookings are callable (`expansion.object_work`); the consistent linear comparator is
 E_c = μ_c = ω, as ls_threshold's `run_ke_consistent` used.
@@ -198,7 +221,7 @@ coarse g* table the old proxies use: 2.2 %). Energy equation
 total d[(ρ_gas + ρ_A + ρ_L)a³] = −P_gas d(a³). Parents for the four sources (band/broad, e = 1e-7/1e-6) from
 DECAY_SOURCE.json [Q]. Checks [C]: isentropic expansion of the equilibrium gas integrated with the susceptibility
 Jacobian conserves s a³ and n_Q a³ to 2e-12 and 1e-11 over three e-folds; the parent ledger reproduces N_A and
-R = 40.56262 / 4.053801 to 2e-14; the object-work identity to 7e-5.
+R = 40.56262 / 4.053801 to 2e-14; the object-work identity to 2.7e-5.
 
 ## 6. The two old proxies at the heavy point, R = 1–90 (`code/old_proxies.py`, reproduction)
 
@@ -223,9 +246,29 @@ extrapolations, surface-exchange parameters and examples, collision bracket); `f
 callables and parameters, constraints, nucleation barrier, literature); `old_proxies` (curves and crossings);
 `checks`. The solver should import `code/thermo.py` etc. directly; the tables are for use without the code.
 
-## 8. Checks summary
+## 8. Checks summary (`results/checks.json`, 23/23 passed, residual and threshold stored separately)
 
-CHECKS_SUMMARY
+| check | residual | threshold |
+|---|---|---|
+| Bessel series vs direct quadrature, 7 quantities × 28 states | 2.0e-15 | 1e-9 |
+| ∂P/∂μ = n, ∂P/∂T = s, analytic ∂n/∂T vs finite differences | 3.7e-11 | 1e-8 |
+| Codex reservoir rows (5 T, two ratios) | 2.8e-14 | 1e-9 |
+| Codex matched-energy states (T/m 8.118 → 7.344, condensed, species n, ρ, P) | 2.2e-13 | 1e-8 |
+| two-potential solver at the equilibrium inventory = equilibrium solver | 7.6e-15 | 1e-9 |
+| three-potential Newton round trip | 5.0e-16 | 1e-9 |
+| ∂P_inv/∂n₋ Bose exact vs MB 1 + K(n₊+n₋) (reported, no threshold) | 0.19 | – |
+| isentropic expansion: s a³ and n_Q a³ drift over 3 e-folds | 9.6e-12 | 1e-9 |
+| parent ledgers e = 1e-7, 1e-6 (daughters, R) vs closed forms | 2.1e-14 | 1e-10 |
+| Q = 2e5: ω/m, E/(Qm), E − Qω vs archived / Codex | 1.8e-14, 1.4e-13, 1.8e-12 | 1e-10, 1e-10, 1e-8 |
+| dE/dQ = Ω at the reference (finite difference) | 3.1e-8 | 1e-6 |
+| max \|virial\| over the table | 2.8e-10 | 1e-9 |
+| dE/dQ = Ω along the table (splines, both branches) | 4.6e-4 | 2e-3 |
+| object-number work identity (path integral vs exact ΔE) | 2.7e-5 | 1e-3 |
+| conversion table vs Codex cold / daughter σv | 5.6e-6, 1.0e-6 | 1e-4, 1e-3 |
+| conversion forward = reverse at μ₊ − μ₋ = 2ω (4 states) | 3.9e-9 | 1e-7 |
+| surface exchange zero at μ₊ = ω | 0 | 1e-12 |
+| U_eff continuity at x_c; k(α_max) inside the band | 1.8e-9; pass | 1e-6 |
+| reproduction: lsthermo.py series vs this series (labelled, not independent) | 4.4e-16 | – |
 
 ## 9. Limits
 
@@ -244,8 +287,16 @@ CHECKS_SUMMARY
 ## 10. Reproduce
 
     cd research/reality_framework/grut_formation_review_20261025/tracks/kin_thermo/code
-    python3 -B objects.py && python3 -B objects_refine.py          # ~3 min: results/objects_EQ.json
-    OMP_NUM_THREADS=1 python3 -B old_proxies.py ../results/old_proxies.json   # ~1 h on 4 cores (reproduction)
-    python3 -B checks.py && python3 -B build_interface.py          # ~2 min: results/checks.json, thermo_interface.json
+    python3 -B objects.py                                           # ~1 min: coarse E(Q) table, reference profile
+    python3 -B objects_refine.py                                    # ~25 min: adaptive continuation, 139 rows
+    OMP_NUM_THREADS=1 python3 -B old_proxies.py ../results/old_proxies.json   # ~1.5 h on 4 cores (reproduction;
+                                                                    #  resumable: finished rows are kept)
+    python3 -B checks.py                                            # ~10 s: results/checks.json (23 checks)
+    python3 -B build_interface.py                                   # ~4 min: results/thermo_interface.json
 
-Module self-tests: `python3 -B thermo.py`, `kernels.py`, `formation.py`, `expansion.py`.
+Order matters: `objects*.py` before `checks.py`, `formation.py` and `build_interface.py` (they read
+`results/objects_EQ.json`); `old_proxies.py` before `build_interface.py` (otherwise the `old_proxies` section is
+marked "not yet available"). Dependencies: numpy 2.5, scipy 1.18; the conversion tables are read from
+`tracks/conversion/results/`, the old proxies import `tracks/ls_threshold/code/lsrelic.py` unchanged. Module
+self-tests: `python3 -B thermo.py`, `kernels.py`, `formation.py`, `expansion.py`. The reference profile is cached
+in the scratchpad (`profile_Q200000.npz`) for `objects_refine.py`; `objects.py` regenerates it.

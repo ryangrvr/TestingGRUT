@@ -10,7 +10,8 @@ reference curve f_proxy(R) the kinetic solver has to be compared with.
   ke    : two chemical potentials, every reaction conserves energy, lumps/anti-lumps at mu_c with the consistent
           E_c = mu_c (ls_threshold run_ke_consistent choice), N = 500 steps, optional s route.
 Point: |eps| = 0.14571744282991028 (INPUTS.json 225028b), yield 1.00 Y_Q, g* coarse table of lsrelic.
-Usage: OMP_NUM_THREADS=1 python3 -B old_proxies.py <out.json>      (~1 h on 4 cores)
+Usage: OMP_NUM_THREADS=1 python3 -B old_proxies.py <out.json>      (~1 h on 4 cores; resumable: finished rows
+       already in <out.json> are kept and their jobs skipped)
 """
 import json
 import sys
@@ -62,6 +63,26 @@ def thr(a):
     return r
 
 
+def _key(r):
+    """Identity of a finished row, for resuming an interrupted run."""
+    k = r.get('kind')
+    if k == 'proxy_threshold':
+        return (k, bool(r.get('s_channel')))
+    if k == 'ke':
+        return (k, round(float(r['R']), 6), round(float(r['mu_c']), 6), bool(r.get('s_channel')))
+    if k == 'proxy':
+        return (k, round(float(r['R']), 6), bool(r.get('s_channel')))
+    return None
+
+
+def _job_key(f, a):
+    if f is thr:
+        return ('proxy_threshold', bool(a[3]))
+    if f is ke:
+        return ('ke', round(float(a[0]), 6), round(float(a[1]), 6), bool(a[2]))
+    return ('proxy', round(float(a[0]), 6), bool(a[1]))
+
+
 if __name__ == '__main__':
     out = Path(sys.argv[1])
     jobs = [(thr, (40.0, 200.0, 10, False)), (thr, (40.0, 200.0, 10, True))]
@@ -70,6 +91,16 @@ if __name__ == '__main__':
     jobs += [(ke, (R, A, False, 500)) for R in (3.0, 5.0, 7.0, 8.0, 10.0, 15.0)]
     jobs += [(proxy, (R, s)) for s in (False, True) for R in R_GRID]
     rows = []
+    # resume: keep every finished (non-failed) row already in the output file and skip its job
+    if out.exists():
+        try:
+            rows = [r for r in json.loads(out.read_text())['rows'] if 'status' not in r]
+        except Exception as exc:
+            print('could not read existing output, starting afresh:', exc)
+            rows = []
+        done = {_key(r) for r in rows}
+        jobs = [(f, a) for f, a in jobs if _job_key(f, a) not in done]
+        print('resuming: %d rows kept, %d jobs to run' % (len(rows), len(jobs)), flush=True)
     with Pool(4, maxtasksperchild=1) as p:   # fresh worker per job: lsrelic globals are modified by ke()
         res = [(f.__name__, a, p.apply_async(f, (a,))) for f, a in jobs]
         for name, a, r in res:
