@@ -1,0 +1,226 @@
+{
+  "author": "Codex / AInstein; same-author mathematical controls",
+  "groups_passed": 4,
+  "groups_total": 4,
+  "groups": {
+    "symbolic_currents": {
+      "pass_group": true,
+      "exact_source_matches": [
+        true,
+        true,
+        true
+      ],
+      "gauge_source": "0",
+      "combined_source_residual": "0",
+      "convention": "n_i=-2 Im(z_i* D_t z_i); phase coordinates z_i=r_i exp(i alpha_i)"
+    },
+    "complex_force_and_phase_checks": {
+      "pass_group": true,
+      "samples": 48,
+      "complex_couplings": true,
+      "max_force_source_relative_error": 1.4905483226251362e-14,
+      "max_angular_difference_relative_error": 7.922728980988972e-11,
+      "max_gauge_source_normalized": 8.004772547049672e-14
+    },
+    "forced_response_distinction": {
+      "pass_group": true,
+      "gap_squared_over_M2": 0.9292893218813453,
+      "matched_alpha6_in_M_units": 3.5533004079726e-08,
+      "examples": [
+        {
+          "X_over_M": 0.2,
+          "abs_Ystar_over_X": 4.030138222264006e-05,
+          "matching_parameter_kappa_X2_over_M2": 4.000000000000001e-05,
+          "quartic_relative_force": 1.2993611272442627e-10,
+          "quadratic_stationarity_residual": 1.0587911840678748e-16,
+          "matrix_relative_error": 0.0,
+          "source_nX": -2.7289347133229633e-11,
+          "source_nD": -2.7289347133229595e-11,
+          "source_effective": -2.72893471332296e-11,
+          "source_match_relative_error": 1.4208508186041878e-15,
+          "instantaneous_free_displacement_energy": 0.0,
+          "full_nonlinear_Y_source": -2.7289347126102225e-11,
+          "full_nonlinear_Y_residual": 6.57380863624445e-17,
+          "nonlinear_relative_source_shift": 2.611777460970188e-10
+        },
+        {
+          "X_over_M": 0.1,
+          "abs_Ystar_over_X": 1.0075345555660015e-05,
+          "matching_parameter_kappa_X2_over_M2": 1.0000000000000003e-05,
+          "quartic_relative_force": 2.0302517613191605e-12,
+          "quadratic_stationarity_residual": 1.0587911840678748e-16,
+          "matrix_relative_error": 0.0,
+          "source_nX": -4.26396048956713e-13,
+          "source_nD": -4.263960489567124e-13,
+          "source_effective": -4.263960489567125e-13,
+          "source_match_relative_error": 1.4208508186041878e-15,
+          "instantaneous_free_displacement_energy": 0.0,
+          "full_nonlinear_Y_source": -4.2639604895497243e-13,
+          "full_nonlinear_Y_residual": 6.358191497705304e-17,
+          "nonlinear_relative_source_shift": 4.080735749312225e-12
+        },
+        {
+          "X_over_M": 0.05,
+          "abs_Ystar_over_X": 2.5188363889150037e-06,
+          "matching_parameter_kappa_X2_over_M2": 2.5000000000000006e-06,
+          "quartic_relative_force": 3.172268377061188e-14,
+          "quadratic_stationarity_residual": 1.0587911840678748e-16,
+          "matrix_relative_error": 0.0,
+          "source_nX": -6.662438264948641e-15,
+          "source_nD": -6.6624382649486315e-15,
+          "source_effective": -6.662438264948633e-15,
+          "source_match_relative_error": 1.4208508186041878e-15,
+          "instantaneous_free_displacement_energy": 0.0,
+          "full_nonlinear_Y_source": -6.662438264948208e-15,
+          "full_nonlinear_Y_residual": 1.4309425757308617e-17,
+          "nonlinear_relative_source_shift": 6.361577931102147e-14
+        },
+        {
+          "X_over_M": 0.025,
+          "abs_Ystar_over_X": 6.297090972287509e-07,
+          "matching_parameter_kappa_X2_over_M2": 6.250000000000002e-07,
+          "quartic_relative_force": 4.956669339158107e-16,
+          "quadratic_stationarity_residual": 1.0587911840678748e-16,
+          "matrix_relative_error": 0.0,
+          "source_nX": -1.0410059788982252e-16,
+          "source_nD": -1.0410059788982237e-16,
+          "source_effective": -1.0410059788982239e-16,
+          "source_match_relative_error": 1.4208508186041878e-15,
+          "instantaneous_free_displacement_energy": 0.0,
+          "full_nonlinear_Y_source": -1.0410059788982227e-16,
+          "full_nonlinear_Y_residual": 4.7362953771363683e-17,
+          "nonlinear_relative_source_shift": 9.992007221626409e-16
+        }
+      ],
+      "scope": "Instantaneous states; no evolved adiabatic orbit or viable cosmology demonstrated."
+    },
+    "conditional_adiabatic_yield_bound": {
+      "pass_group": true,
+      "alpha6_GeV_minus2": 3.5533004079726004e-32,
+      "triangle_integral": 1.0,
+      "quadrature_error": 1.1102230246251565e-14,
+      "yield_power_in_initial_amplitude": 3.5000000000000004,
+      "assumed_envelope": "|X| <= r_i*(1+2/c_H)^(1/4)/a; constant broken Sigma; radiation",
+      "examples": [
+        {
+          "cH": 1.0,
+          "initial_X_over_M": 0.1,
+          "H_i_GeV": 4472135954.999579,
+          "conformal_envelope_over_M": 0.13160740129524923,
+          "yield_upper_bound": 5.892408397069197e-17,
+          "upper_bound_over_required_YQ": 1.2201116680281771e-08,
+          "kappa_X2_over_M2": 1.732050807568877e-05,
+          "X_frequency_over_Y_gap": 0.006105480353411202,
+          "X_frequency_over_Sigma_mass": 0.04161791450287817,
+          "Y_quartic_relative_force_bound": 1.2949680014134448e-11,
+          "Sigma_relative_forced_shift_bound": 2.127330637870913e-09
+        },
+        {
+          "cH": 1.0,
+          "initial_X_over_M": 1.0,
+          "H_i_GeV": 44721359549.9958,
+          "conformal_envelope_over_M": 1.3160740129524924,
+          "yield_upper_bound": 1.86334314386405e-13,
+          "upper_bound_over_required_YQ": 3.858331870716284e-05,
+          "kappa_X2_over_M2": 0.0017320508075688772,
+          "X_frequency_over_Y_gap": 0.061054803534112016,
+          "X_frequency_over_Sigma_mass": 0.4161791450287817,
+          "Y_quartic_relative_force_bound": 1.2949680014134453e-05,
+          "Sigma_relative_forced_shift_bound": 0.002127330637870914
+        },
+        {
+          "cH": 1.0,
+          "initial_X_over_M": 2.0,
+          "H_i_GeV": 89442719099.9916,
+          "conformal_envelope_over_M": 2.6321480259049848,
+          "yield_upper_bound": 2.108132116325968e-12,
+          "upper_bound_over_required_YQ": 0.0004365204207762658,
+          "kappa_X2_over_M2": 0.006928203230275509,
+          "X_frequency_over_Y_gap": 0.12210960706822403,
+          "X_frequency_over_Sigma_mass": 0.8323582900575635,
+          "Y_quartic_relative_force_bound": 0.000828779520904605,
+          "Sigma_relative_forced_shift_bound": 0.13614916082373849
+        },
+        {
+          "cH": 10.0,
+          "initial_X_over_M": 0.1,
+          "H_i_GeV": 1414213562.373095,
+          "conformal_envelope_over_M": 0.10466351393921056,
+          "yield_upper_bound": 2.6508357972565075e-16,
+          "upper_bound_over_required_YQ": 5.4889536982333816e-08,
+          "kappa_X2_over_M2": 1.0954451150103323e-05,
+          "X_frequency_over_Y_gap": 0.004855509810130236,
+          "X_frequency_over_Sigma_mass": 0.03309750919646873,
+          "Y_quartic_relative_force_bound": 3.276038705202107e-12,
+          "Sigma_relative_forced_shift_bound": 5.381768121544753e-10
+        },
+        {
+          "cH": 10.0,
+          "initial_X_over_M": 1.0,
+          "H_i_GeV": 14142135623.730951,
+          "conformal_envelope_over_M": 1.0466351393921056,
+          "yield_upper_bound": 8.382678822438887e-13,
+          "upper_bound_over_required_YQ": 0.00017357595657622028,
+          "kappa_X2_over_M2": 0.0010954451150103324,
+          "X_frequency_over_Y_gap": 0.04855509810130237,
+          "X_frequency_over_Sigma_mass": 0.33097509196468733,
+          "Y_quartic_relative_force_bound": 3.2760387052021077e-06,
+          "Sigma_relative_forced_shift_bound": 0.0005381768121544755
+        },
+        {
+          "cH": 10.0,
+          "initial_X_over_M": 2.0,
+          "H_i_GeV": 28284271247.461903,
+          "conformal_envelope_over_M": 2.0932702787842112,
+          "yield_upper_bound": 9.483918463768637e-12,
+          "upper_bound_over_required_YQ": 0.0019637877751357926,
+          "kappa_X2_over_M2": 0.00438178046004133,
+          "X_frequency_over_Y_gap": 0.09711019620260473,
+          "X_frequency_over_Sigma_mass": 0.6619501839293747,
+          "Y_quartic_relative_force_bound": 0.0002096664771329349,
+          "Sigma_relative_forced_shift_bound": 0.034443315977886434
+        }
+      ],
+      "invalid_regime_extrapolation_to_required_yield": [
+        {
+          "cH": 1.0,
+          "initial_X_over_M": 18.24016200571284,
+          "H_i_GeV": 815724843307.6564,
+          "conformal_envelope_over_M": 24.00540320776208,
+          "yield_upper_bound": 4.829400907698815e-09,
+          "upper_bound_over_required_YQ": 0.9999999999999994,
+          "kappa_X2_over_M2": 0.5762593831672339,
+          "X_frequency_over_Y_gap": 1.113649507689172,
+          "X_frequency_over_Sigma_mass": 7.591175028724037,
+          "Y_quartic_relative_force_bound": 476.9042416780674,
+          "Sigma_relative_forced_shift_bound": 78344.25279582157,
+          "outside_matching_regime": true
+        },
+        {
+          "cH": 10.0,
+          "initial_X_over_M": 11.869476151626612,
+          "H_i_GeV": 167859741518.94366,
+          "conformal_envelope_over_M": 12.423010826468992,
+          "yield_upper_bound": 4.829400907699316e-09,
+          "upper_bound_over_required_YQ": 1.0000000000001033,
+          "kappa_X2_over_M2": 0.1543311979945658,
+          "X_frequency_over_Y_gap": 0.5763235789532991,
+          "X_frequency_over_Sigma_mass": 3.928500960857281,
+          "Y_quartic_relative_force_bound": 9.160904110571547,
+          "Sigma_relative_forced_shift_bound": 1504.9230532140705,
+          "outside_matching_regime": true
+        }
+      ],
+      "scope": "Conditional leading-EFT bound only. No viable low-debris history or full-action exclusion."
+    }
+  },
+  "physical_scope": {
+    "new_release_runs": 0,
+    "new_parameter_scan_points": 0,
+    "successful_genesis_demonstrated": false,
+    "all_preparations_excluded": false,
+    "structural_debris_bound_proved": false,
+    "additional_closure_prediction_derived": false,
+    "pending_debris_review_replicated": false
+  }
+}
