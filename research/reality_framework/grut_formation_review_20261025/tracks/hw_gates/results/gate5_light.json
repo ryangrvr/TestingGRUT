@@ -1,0 +1,114 @@
+{
+ "method": "hw_gates gate 5 (Claude, own code): consequences of h = 5.33e12 GeV (and the spot couplings) for the light sector.\n\nObject: our gp_stability fixed-charge profile solver (own code, reused) at g_X = 0.1, lambda_X = 1e-3, lambda_phi = 0.03,\nv = 0.924089637 GeV, Q = 200000 (none of which changes): Omega, E, binding margin, int n^2.\nGauge sector at the spot point: m_A = 6 e h, screening length vs core radius, local screened energy int n^2/(72 h^2),\nunscreened Coulomb (depends on e only; quoted from gp_stability [C, own earlier]), m_A vs E, Gamma(A -> X Xbar),\ndecay epoch, Z6 arithmetic (unchanged).\nSurvival: c6 = alpha6 M_red^2 at the spot couplings, Gamma t0 with the unit-coefficient X^6 rates [Q], and the\ngauge-invariant Planck-suppressed operators that could shift the late alpha6 (Sigma* X^6/M^3, Sigma* Y X^3/M, ...).\nUsage: python3 -B gate5_light.py <out.json>\n",
+ "object": {
+  "Omega": 0.8611951308218867,
+  "E_GeV": 17064.537454384856,
+  "binding_margin_GeV": 1417.2552931223872,
+  "half_charge_radius_GeVinv": 40.971071136476716,
+  "int_n2_GeV3": 47241.83266110226,
+  "Q": 200000,
+  "mod6": 2,
+  "gp_stability_values_Q": {
+   "Omega": 0.86119513082,
+   "E": 17064.5374544,
+   "margin": 1417.2552931,
+   "int_n2": 47241.833
+  }
+ },
+ "gauge_sector": {
+  "stated_h1e11": {
+   "h_GeV": 100000000000.0,
+   "e": 1e-07,
+   "m_A_GeV": 60000.0,
+   "screening_length_GeVinv": 1.6666666666666667e-05,
+   "mA_times_r50": 2458264.2681886028,
+   "dE_local_screened_GeV": 6.561365647375313e-20,
+   "dE_local_over_margin": 4.629628606233546e-23,
+   "unscreened_coulomb_GeV_scaled": 3.4005e-07,
+   "unscreened_over_margin": 2.3993560062903564e-10,
+   "mA_over_E": 3.516063658940991,
+   "Gamma_A_GeV": 3.978873577240754e-12,
+   "tau_A_s": 1.6542370276977852e-13,
+   "T_vis_at_H_eq_Gamma_GeV": 1682.7642347985025,
+   "beta_string": 5555555555555.556,
+   "sigma_to_AA_open": 1.0,
+   "mA_over_msigma": 4.242640687119285e-07
+  },
+  "spot_h5.33e12": {
+   "h_GeV": 5334019840797.578,
+   "e": 1e-07,
+   "m_A_GeV": 3200411.9044785467,
+   "screening_length_GeVinv": 3.1245978013037455e-07,
+   "mA_times_r50": 131124303.80441746,
+   "dE_local_screened_GeV": 2.306136379755943e-23,
+   "dE_local_over_margin": 1.6271848769569538e-26,
+   "unscreened_coulomb_GeV_scaled": 3.4005e-07,
+   "unscreened_over_margin": 2.3993560062903564e-10,
+   "mA_over_E": 187.54753318298575,
+   "Gamma_A_GeV": 2.1223390605329366e-10,
+   "tau_A_s": 3.101295227703723e-15,
+   "T_vis_at_H_eq_Gamma_GeV": 12289.963311519174,
+   "beta_string": 5555555555555.556,
+   "sigma_to_AA_open": 1.0,
+   "mA_over_msigma": 4.242640687119285e-07
+  },
+  "spot_e5e-3": {
+   "h_GeV": 5334019840797.578,
+   "e": 0.005,
+   "m_A_GeV": 160020595223.92734,
+   "screening_length_GeVinv": 6.249195602607491e-12,
+   "mA_times_r50": 6556215190220.873,
+   "dE_local_screened_GeV": 2.306136379755943e-23,
+   "dE_local_over_margin": 1.6271848769569538e-26,
+   "unscreened_coulomb_GeV_scaled": 850.125,
+   "unscreened_over_margin": 0.5998390015725892,
+   "mA_over_E": 9377376.659149287,
+   "Gamma_A_GeV": 26529.23825666185,
+   "tau_A_s": 2.4810361821629652e-29,
+   "T_vis_at_H_eq_Gamma_GeV": 137405967027.67685,
+   "beta_string": 2222.222222222222,
+   "sigma_to_AA_open": 1.0,
+   "mA_over_msigma": 0.021213203435596423
+  },
+  "spot_e1e-2": {
+   "h_GeV": 5334019840797.578,
+   "e": 0.01,
+   "m_A_GeV": 320041190447.8547,
+   "screening_length_GeVinv": 3.1245978013037455e-12,
+   "mA_times_r50": 13112430380441.746,
+   "dE_local_screened_GeV": 2.306136379755943e-23,
+   "dE_local_over_margin": 1.6271848769569538e-26,
+   "unscreened_coulomb_GeV_scaled": 3400.5,
+   "unscreened_over_margin": 2.3993560062903567,
+   "mA_over_E": 18754753.318298575,
+   "Gamma_A_GeV": 212233.9060532948,
+   "tau_A_s": 3.1012952277037064e-30,
+   "T_vis_at_H_eq_Gamma_GeV": 388642764243.0619,
+   "beta_string": 555.5555555555555,
+   "sigma_to_AA_open": 1.0,
+   "mA_over_msigma": 0.04242640687119285
+  }
+ },
+ "survival": {
+  "alpha6_GeVm2": 2.1088320667010346e-31,
+  "c6": 1250373.981068544,
+  "beta6_GeVm2": -9.37258696311571e-31,
+  "r": 0.44999999999999996,
+  "rate_per_s": 1.6265385974524636e-34,
+  "rate_times_age": 7.083492313129289e-17,
+  "c6_ceiling_1pct": 14856489981754.832,
+  "margin_to_ceiling": 11881637.179509109,
+  "ls_scaling_c6_Q": 1250373.981068544,
+  "planck_shifts_relative_alpha6": {
+   "Sigma* X^6 / M_red^3 (dim 7, gauge invariant)": 1.2387986844989992e-12,
+   "Sigma* Y X^3 / M_red (dim 5; Y integrated out, mixes with kappa)": 0.0015873688793492837,
+   "Y* X^3 |X|^2 / M_red^2 at core (relative kappa shift)": 4.931673195063436e-37,
+   "Sigma* Y^2 |X|^2 / M_red (relative mu shift at core)": 1.257820259964267e-30
+  },
+  "charge_selection": "U(1) gauge: Delta Q_X = 3a + 6b only; X^5-type operators absent; lowest X-only operator after Y, Sigma elimination is X^6 (Z6)",
+  "companion_in_core": {
+   "beta6_X6_over_lamX_X4": 2.7406381538846645e-27,
+   "alpha6_X6_over_lamX_X4": 6.166435846240494e-28
+  }
+ }
+}

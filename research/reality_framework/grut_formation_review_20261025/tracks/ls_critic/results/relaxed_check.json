@@ -1,0 +1,119 @@
+{
+ "method": "ls_critic (Claude): semi-independent check of ls_scaling's Y-relaxed preparation numbers at candidates 10 / 17.\n\nls_scaling (scal.relaxed_initial: Nelder-Mead + BFGS on V; scalrel.c release; internal C projection; R_L from a\nlog-interpolated table) reported R_lower 148.9 / 192.8 with the Y-relaxed preparation.  Here:\n  * the conditional minimum (arg X = 0, Sigma = -|Sigma| e^{i delta}; free |X|, complex Y, |Sigma|) is found by\n    solving the analytic stationarity equations with scipy root (hybr) from the aligned radial minimum, and its\n    4x4 Hessian is checked;\n  * the release uses our sp_yledger yrelease.c via ymodel.run (separate binary build) to a = 1000, and the late state\n    is projected with ls_ledger's Python projection (ls_project.project) as well as the C window means;\n  * the decay ledger is re-written here in closed form (widths and <a> = sqrt(pi H/(2 Gamma))).\nUsage: python3 -B relaxed_check.py <out.json>     (~3 min)\n",
+ "rows": [
+  {
+   "candidate": 10,
+   "delta": 0.5235987755982988,
+   "prep": {
+    "x": 75.33749718194123,
+    "Y": [
+     -5.9796560536743515,
+     -0.22171180033571722
+    ],
+    "s": 2.650000323852625,
+    "grad_norm": 1.1436482767251642e-13,
+    "hess_eigs": [
+     39.62137264998172,
+     80.71919435047872,
+     166.50893993892288,
+     434.0565017682733
+    ],
+    "torque_X": -284.4091916106613,
+    "success": true
+   },
+   "window": {
+    "eps": 0.164868911425625,
+    "NX": 2826.56587269533,
+    "EX": 33155.4654656,
+    "NYH": 17.4556335874159,
+    "NYL": 16.3199094377309,
+    "Nsig": 14.8108696544368
+   },
+   "snapshot": {
+    "NYH": 17.45501816240781,
+    "NYL": 16.32027093365957,
+    "Nsig": 14.810809155544858,
+    "EX": 33172.18839693581,
+    "NX": 2826.524392480534
+   },
+   "ledger_window": {
+    "R_Y": 97.78008841244952,
+    "R_Sigma": 51.0749464806948,
+    "R_cascade": 30.097677316227372,
+    "R_lower": 148.8550348931443,
+    "R_central": 178.95271220937167
+   },
+   "ledger_snapshot": {
+    "R_Y": 97.73006026662159,
+    "R_Sigma": 51.048989796561045,
+    "R_cascade": 30.08144371835179,
+    "R_lower": 148.77905006318264,
+    "R_central": 178.86049378153442
+   },
+   "yield_over_YQ": 5.970174242153348,
+   "controls": {
+    "steps": 38677441,
+    "rejects": 225,
+    "max_gauss": 6.32548e-11,
+    "max_ledger": 5.21286e-08
+   }
+  },
+  {
+   "candidate": 17,
+   "delta": 0.6544984694978736,
+   "prep": {
+    "x": 75.32450342862522,
+    "Y": [
+     -5.9633610675568365,
+     -0.26597653115165487
+    ],
+    "s": 2.589586888293164,
+    "grad_norm": 9.998222537511686e-14,
+    "hess_eigs": [
+     39.613106420975775,
+     76.31722932427078,
+     165.6876803359255,
+     432.7132818621774
+    ],
+    "torque_X": -341.0149386459613,
+    "success": true
+   },
+   "window": {
+    "eps": 0.157831918500502,
+    "NX": 2699.14350568183,
+    "EX": 33044.7797701667,
+    "NYH": 18.455485081391,
+    "NYL": 20.6512738224674,
+    "Nsig": 22.8587840486672
+   },
+   "snapshot": {
+    "NYH": 18.455400906198296,
+    "NYL": 20.651020945042067,
+    "Nsig": 22.85950150642336,
+    "EX": 33060.77722213917,
+    "NX": 2699.2066866276273
+   },
+   "ledger_window": {
+    "R_Y": 113.5931588851555,
+    "R_Sigma": 79.09203550009056,
+    "R_cascade": 31.928248635645968,
+    "R_lower": 192.68519438524606,
+    "R_central": 224.61344302089202
+   },
+   "ledger_snapshot": {
+    "R_Y": 113.53721485591268,
+    "R_Sigma": 79.05624566137259,
+    "R_cascade": 31.912653637909774,
+    "R_lower": 192.59346051728528,
+    "R_central": 224.50611415519506
+   },
+   "yield_over_YQ": 5.701037145166892,
+   "controls": {
+    "steps": 39032255,
+    "rejects": 250,
+    "max_gauss": 7.25987e-11,
+    "max_ledger": 5.62648e-08
+   }
+  }
+ ]
+}

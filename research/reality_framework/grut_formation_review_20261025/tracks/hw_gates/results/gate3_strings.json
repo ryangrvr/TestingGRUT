@@ -1,0 +1,165 @@
+{
+ "method": "hw_gates gate 3 (Claude, own code): Z6 strings (U(1) -> Z6 by Sigma, charge 6) at h = 5.33e12 GeV.\n\nTension: mu = pi h^2 eps(beta), beta = m_s^2/m_v^2 = 2 lambda_Sigma/(36 e^2) (independent of h). eps(beta) is re-derived\nwith our gp_stability Nielsen-Olesen solver in s = ln(m_v r) (own code, reused) at beta = 1e4, 1e6, 1e8 and the\nlarge-beta law eps = (1/2) ln beta + c is refitted. G mu = mu/M_Pl^2.\nFormation: (i) hidden temperature if all X energy thermalised at release, versus h; (ii) visible reheating temperature\nand the absence of a Sigma-visible coupling; (iii) |Sigma| during inflation (aligned minimum) and its radial mass;\n(iv) min |Sigma|/vev along the release (own hwgrel run: phase slips?); (v) Sigma winding during the release.\nLimits are quoted inputs (read levels in the JSON), retrospective only.\nUsage: python3 -B gate3_strings.py <out.json>\n",
+ "NO_scan": [
+  {
+   "beta": 100.0,
+   "eps": 2.5403312926460284,
+   "eps_minus_half_ln_beta": 0.23774619965198251,
+   "nodes": 4000
+  },
+  {
+   "beta": 10000.0,
+   "eps": 4.7583531014336415,
+   "eps_minus_half_ln_beta": 0.15318291544554974,
+   "nodes": 4000
+  },
+  {
+   "beta": 1000000.0,
+   "eps": 7.058056312810682,
+   "eps_minus_half_ln_beta": 0.1503010338285451,
+   "nodes": 5590
+  },
+  {
+   "beta": 100000000.0,
+   "eps": 9.3605812274001,
+   "eps_minus_half_ln_beta": 0.15024085542391674,
+   "nodes": 16031
+  }
+ ],
+ "asymptotic_constant": 0.15024085542391674,
+ "constant_uncertainty": 6.0178404628352666e-05,
+ "gp_stability_constant_Q": 0.15023983484400993,
+ "spot": {
+  "e": 1e-07,
+  "h_GeV": 5334019840797.578,
+  "beta": 5555555555555.556,
+  "eps": 14.823150627434154,
+  "mu_GeV2": 1.3249504837163679e+27,
+  "Gmu": 8.888724803566216e-12,
+  "m_v_GeV": 3200411.9044785467,
+  "m_s_GeV": 7543443200823.112
+ },
+ "stated_point_control": {
+  "e": 1e-07,
+  "h_GeV": 100000000000.0,
+  "beta": 5555555555555.556,
+  "eps": 14.823150627434154,
+  "mu_GeV2": 4.656830111420207e+23,
+  "Gmu": 3.1241379829735495e-15,
+  "m_v_GeV": 60000.0,
+  "m_s_GeV": 141421356237.3095
+ },
+ "e_scan_at_spot_h": [
+  {
+   "e": 1e-07,
+   "h_GeV": 5334019840797.578,
+   "beta": 5555555555555.556,
+   "eps": 14.823150627434154,
+   "mu_GeV2": 1.3249504837163679e+27,
+   "Gmu": 8.888724803566216e-12,
+   "m_v_GeV": 3200411.9044785467,
+   "m_s_GeV": 7543443200823.112
+  },
+  {
+   "e": 1e-05,
+   "h_GeV": 5334019840797.578,
+   "beta": 555555555.5555555,
+   "eps": 10.217980441446063,
+   "mu_GeV2": 9.133225768779624e+26,
+   "Gmu": 6.127227502103418e-12,
+   "m_v_GeV": 320041190.44785476,
+   "m_s_GeV": 7543443200823.112
+  },
+  {
+   "e": 0.001,
+   "h_GeV": 5334019840797.578,
+   "beta": 55555.55555555554,
+   "eps": 5.612810255457972,
+   "mu_GeV2": 5.01694670039557e+26,
+   "Gmu": 3.365730200640621e-12,
+   "m_v_GeV": 32004119044.78547,
+   "m_s_GeV": 7543443200823.112
+  },
+  {
+   "e": 0.005,
+   "h_GeV": 5334019840797.578,
+   "beta": 2222.222222222222,
+   "eps": 4.003372343023871,
+   "mu_GeV2": 3.5783689012572366e+26,
+   "Gmu": 2.400628310251943e-12,
+   "m_v_GeV": 160020595223.92734,
+   "m_s_GeV": 7543443200823.112
+  },
+  {
+   "e": 0.01,
+   "h_GeV": 5334019840797.578,
+   "beta": 555.5555555555555,
+   "eps": 3.310225162463926,
+   "mu_GeV2": 2.958807166203542e+26,
+   "Gmu": 1.9849815499092217e-12,
+   "m_v_GeV": 320041190447.8547,
+   "m_s_GeV": 7543443200823.112
+  }
+ ],
+ "formation": {
+  "rho_release_H4": 35094.86106207303,
+  "T_hidden_max_if_instantly_thermalised_GeV": 1355223408859.1265,
+  "T_hidden_max_over_h": 0.2540716850157956,
+  "T_RH_visible_GeV": 308063695308316.9,
+  "T_RH_over_h": 57.75450870131243,
+  "sigma_visible_coupling": "none at tree level (Sigma couples to Y via mu and to the hidden vector; the Higgs portal is on phi, kappa_portal <~ 1e-9) [Q 7737487/gp_walls]",
+  "abs_Sigma_inflation_over_vev": 1.0009360779333762,
+  "Sigma_radial_mass_over_H": 56.568542494923804,
+  "Sigma_radial_mode_m2_hessian": 3209.909932281063,
+  "note": "U(1) broken by Sigma (and X) throughout inflation; no thermal restoration: T_h,max < h and the visible bath does not couple to Sigma"
+ },
+ "release": {
+  "min_absSigma_over_vev": 1.0,
+  "thetaS_release_rad": -1.5707963267949,
+  "thetaS_a60_rad": -1.80371265816389,
+  "thetaS_tail_rad": -0.004839167930047146,
+  "total_winding_rad": -0.23775549929903708,
+  "NS_late": 464.560121284526,
+  "windings": 0.03706978546420463
+ },
+ "limits_quoted": {
+  "LVK_O3_2101_12248": {
+   "model_A_BOS_excluded_above": [
+    9.6e-09,
+    1e-06
+   ],
+   "model_B_LRS_excluded_above": [
+    4e-15,
+    6.3e-15
+   ],
+   "model_C1_excluded_above": [
+    2.1e-15,
+    4.5e-15
+   ],
+   "model_C2_excluded_above": [
+    4.2e-15,
+    7e-15
+   ],
+   "read_level": "[Q] as recorded by our gp_stability track from the arXiv abstract/body; re-read of the abstract attempted this session (see NOTES)"
+  },
+  "PTA": {
+   "NANOGrav_12p5yr_NG_strings_Gmu_upper": "~1e-10 (Blanco-Pillado, Olum, Wachter 2021) [R]",
+   "NANOGrav_15yr_new_physics": "stable strings fit the signal for G mu ~ 1e-11..1e-10 with specific loop models; not an upper limit [R, see NOTES]",
+   "PPTA_2016": "G mu < 1.5e-11 for one loop model [R]"
+  },
+  "Planck_2013_XXV": {
+   "NG": 1.5e-07,
+   "AH": 3.2e-07,
+   "read_level": "[Q via gp_stability]"
+  }
+ },
+ "comparison": {
+  "Gmu": 8.888724803566216e-12,
+  "over_LVK_modelB_low": 2222.181200891554,
+  "over_LVK_modelC1_low": 4232.726096936294,
+  "over_LVK_modelA_low": 0.0009259088337048142,
+  "over_PTA_1em10": 0.08888724803566216,
+  "over_PPTA_1p5em11": 0.5925816535710811,
+  "over_Planck_NG": 5.9258165357108114e-05
+ }
+}
