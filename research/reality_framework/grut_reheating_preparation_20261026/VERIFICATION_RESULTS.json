@@ -1,0 +1,110 @@
+{
+  "mathematical_groups": {
+    "Jordan_geometry_and_gauge_algebra": {
+      "source": "REHEATING_VERIFICATION.json",
+      "passed": true,
+      "random_states": 50,
+      "max_linear_system_error": 1.3687455506079175e-15,
+      "max_gauge_Ward_error": 1.4863153868035932e-16
+    },
+    "reheating_conservation_and_radiation_reference": {
+      "source": "REHEATING_VERIFICATION.json",
+      "passed": true,
+      "checks": {
+        "max_Friedmann": 1.2685176254738516e-09,
+        "max_Gauss": 7.994219839663403e-14,
+        "max_trace": 3.161360062620133e-14,
+        "max_total_work": 2.220446049250313e-14,
+        "max_hidden_work": 2.0095036745715333e-14
+      },
+      "RD_reference_relative_errors": {
+        "NX": 3.684475229359663e-07,
+        "EX": 2.392857142430316e-07,
+        "epsilon": 5.595697460947235e-07,
+        "NY": 2.5205637577130346e-10
+      }
+    },
+    "independent_Radau_tolerance_and_phase_controls": {
+      "source": "REHEATING_VERIFICATION.json",
+      "passed": true,
+      "Radau_state_error": 3.2061945360371023e-12,
+      "tighter_relative_change": 3.1323743598932197e-10,
+      "phase_response_for_1e8_perturbation": 4.3523062931427603e-10,
+      "relative_charge_derivative_wrt_phase": 0.03857827709484468
+    },
+    "long_window_and_matter_growth_controls": {
+      "source": "REHEATING_VERIFICATION.json",
+      "passed": true,
+      "long_relative_changes": {
+        "late_NX": 0.00014039473874805086,
+        "late_EX": 0.0025539942843968433,
+        "late_epsilon": 0.002212039117028719,
+        "late_NYL": 1.0541118555806861e-07
+      },
+      "matter_origin_growth_relative_error": 9.980904991380157e-14,
+      "scope": "Instantaneous vacuum criteria and homogeneous response only; finite-k/gauge/metric fluctuation certification remains open."
+    },
+    "gauge_projected_boundary_state": {
+      "source": "BOUNDARY_RESULTS.json",
+      "passed": true
+    },
+    "clock_constraint_and_physical_probability": {
+      "source": "BOUNDARY_RESULTS.json",
+      "passed": true
+    },
+    "phase_not_selected_by_energy_entropy_or_charge": {
+      "source": "BOUNDARY_RESULTS.json",
+      "passed": true
+    },
+    "cutoff_and_real_boundary_phase_controls": {
+      "source": "BOUNDARY_RESULTS.json",
+      "passed": true,
+      "cutoff_relative_changes": {
+        "energy": 3.7379754465716175e-05,
+        "light_charge": 3.977099117336014e-05,
+        "light_charge_torque": 0.0010159402250428107
+      },
+      "real_boundary_phase_probability_error": 2.220446049250313e-16
+    },
+    "inverse_decay_source_moments": {
+      "source": "PORTAL_RESULTS.json",
+      "passed": true,
+      "max_number_error": 1.7174341104819746e-07,
+      "min_energy_bound_ratio": 1.0000004097870776
+    },
+    "source_quadrature_refinement_and_lower_bound": {
+      "source": "PORTAL_RESULTS.json",
+      "passed": true,
+      "number_Bessel_integral_error": 2.2368773500147654e-12,
+      "energy_Bessel_integral_error": 9.325873406851315e-14,
+      "refinement_R_change": 2.149391775674303e-13
+    },
+    "portal_width_and_operator_normalizations": {
+      "source": "PORTAL_RESULTS.json",
+      "passed": true,
+      "one_loop_mixing_charge_trace": 0.0,
+      "isolated_beta_b_Hphi_over_lambda_HX": 0.00012665147955292222,
+      "mixed_scalar_trace_derivative_error": 6.995537482623604e-11,
+      "minimum_energy_weight_increment": 2.5922375357367855e-11,
+      "Higgs_scalar_vs_complex_scalar_width_factor": 1.999989069493015
+    }
+  },
+  "passed_groups": 11,
+  "other_checks": {
+    "internal_source_hashes": 13,
+    "finite_JSON": true,
+    "Python_AST": true,
+    "local_Markdown_links": true,
+    "boundary_norm_purity_effect_controls": true
+  },
+  "physical_claims": {
+    "complete_cosmological_point": false,
+    "derived_initial_phase": false,
+    "full_fluctuation_stability": false,
+    "full_hidden_kinetics": false,
+    "complete_core_lifetime": false,
+    "new_observational_evidence": false,
+    "new_closure_law": false
+  },
+  "authorship": "Same-author calculations with distinct numerical methods; Claude review pending."
+}

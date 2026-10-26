@@ -1,0 +1,16 @@
+# Reheating, preparation and matching protocol
+
+26 October 2026, America/Chicago. Parent04c53f522fe3d275a5f4f0e3caa61eead5c6f940.
+User explicitly requested running the review's next calculations. Claude retains the hidden-plasma solver.
+
+A. Integrate one explicit Jordan-frame nonminimal model: xi_X=-5/6, the full X/Y/Sigma tree potential, a canonical quadratic inflaton and radiation with Gamma*I_dot^2 transfer. Evolve the metric and check Friedmann, trace, energy-work and Gauss constraints. The inflaton oscillator is a post-inflationary surrogate, not a fitted slow-roll inflation model. The phase/preparation remain supplied. Hidden particle decay/backreaction and spatial fragmentation are not computed.
+
+Production choices, fixed before runs: m_I/H_i=2,10 and Gamma_I/H_i=.03,.1,.3; end at Gamma*t=25. Compare xi=0 at m_I/H_i=2,Gamma/H_i=.1 only as a supplied-initial-state control. Reproduce the published radiation release through a=40 in the eta=H_i/M_red->0 limit. Tighten/independently integrate one central case. Test a declared +/-1e-8 phase displacement at that same case, without tuning to restore a pass. No new point is called cosmologically viable.
+
+B. Implement a Gaussian/coherent boundary state for finite charged bosonic modes, project exactly to total gauge charge0, and embed its dynamics in an internal-clock propagation constraint. Check normalization, positivity, Gauss, constraint and observation matching. Compare CP-conjugate relative phases: equal initial energy, occupations and entanglement need not select the charge-transfer sign. This is a finite constrained state-kernel example, not a full gravitational Wheeler-DeWitt solution or a derived cosmic phase.
+
+C. Reuse, credit and rescale the existing included cold-core leakage rates with the full mediator denominator; do not replace them by a free6-body n^6 estimate or claim a complete hot-core lifetime. Derive current field-content kinetic-mixing source, symmetry conditions, Higgs-portal loop matching and zero-momentum scattering/width benchmarks. Use an explicitly identified primary experimental bound, not a fabricated complete exclusion or detector likelihood.
+
+D. Publish actual results, source pins and numerical controls. Keep code checks, conditional physical outcomes and unsolved questions separate. No new observational evidence, vacuum selection, subjective-consciousness mechanism, microscopic gravity or closure-based law is presumed.
+
+Portal-source amendment before running that calculation: a mixing coefficient that permits A->SM also permits thermal inverse production. Include the linear decay/inverse-decay number equation and its energy moment, with Maxwell-Boltzmann SM distributions, g*=106.75 and declared g_Y=.37. Use the already computed primordial finite band; vary epsilon_BX over0 and logarithmic samples1e-12 through1e-2 as a diagnostic source scan, not a search for a viable point. Compare to analytic integrated number and prompt-energy bounds. Use the original prompt-radiation benchmark for its conformal-energy normalization, and report yields per visible entropy separately. Also report the vacuum-mass Higgs-decay source at the earlier illustrative scalar portal; it is not a thermal-mass-certified source or a full kinetic exclusion.

@@ -1,0 +1,45 @@
+{
+  "groups": {
+    "Jordan_geometry_and_gauge_algebra": {
+      "passed": true,
+      "random_states": 50,
+      "max_linear_system_error": 1.3687455506079175e-15,
+      "max_gauge_Ward_error": 1.4863153868035932e-16
+    },
+    "reheating_conservation_and_radiation_reference": {
+      "passed": true,
+      "checks": {
+        "max_Friedmann": 1.2685176254738516e-09,
+        "max_Gauss": 7.994219839663403e-14,
+        "max_trace": 3.161360062620133e-14,
+        "max_total_work": 2.220446049250313e-14,
+        "max_hidden_work": 2.0095036745715333e-14
+      },
+      "RD_reference_relative_errors": {
+        "NX": 3.684475229359663e-07,
+        "EX": 2.392857142430316e-07,
+        "epsilon": 5.595697460947235e-07,
+        "NY": 2.5205637577130346e-10
+      }
+    },
+    "independent_Radau_tolerance_and_phase_controls": {
+      "passed": true,
+      "Radau_state_error": 3.2061945360371023e-12,
+      "tighter_relative_change": 3.1323743598932197e-10,
+      "phase_response_for_1e8_perturbation": 4.3523062931427603e-10,
+      "relative_charge_derivative_wrt_phase": 0.03857827709484468
+    },
+    "long_window_and_matter_growth_controls": {
+      "passed": true,
+      "long_relative_changes": {
+        "late_NX": 0.00014039473874805086,
+        "late_EX": 0.0025539942843968433,
+        "late_epsilon": 0.002212039117028719,
+        "late_NYL": 1.0541118555806861e-07
+      },
+      "matter_origin_growth_relative_error": 9.980904991380157e-14,
+      "scope": "Instantaneous vacuum criteria and homogeneous response only; finite-k/gauge/metric fluctuation certification remains open."
+    }
+  },
+  "physical_modes_stability_certified": false
+}
