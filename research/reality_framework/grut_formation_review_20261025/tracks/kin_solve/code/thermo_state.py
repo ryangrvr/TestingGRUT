@@ -89,89 +89,102 @@ class Inverter:
         state = dict(t=t, up=up, um=um, us=us, X=X, Xb=Xb, S=S, n_c=nc, n_cb=ncb)
         return F, J, state
 
-    def invert(self, n_Q, P_tot, rho_tot, guess=None, tol=1e-11, itmax=60):
+    def invert(self, n_Q, P_tot, rho_tot, guess=None, tol=1e-11, itmax=120):
         """Returns the state dict (m_X units) with keys t, up, um, us, n_plus, n_minus, n_s, n_c, n_cb, rho_gas,
         P_gas, s_gas, active_p, active_m, iterations."""
         if guess is None:
             guess = self.last if self.last is not None else dict(t=3.0, up=0.3, um=-0.3, n_c=0.0, n_cb=0.0)
         lt = np.log(guess['t']); up = min(guess['up'], self.cap_p); um = min(guess['um'], self.cap_m)
         nc = max(guess.get('n_c', 0.0), 0.0); ncb = max(guess.get('n_cb', 0.0), 0.0)
-        act_p = nc > 0 or up >= self.cap_p - 1e-12
-        act_m = ncb > 0 or um >= self.cap_m - 1e-12
-        if act_p:
-            up = self.cap_p
-        if act_m:
-            um = self.cap_m
         targets = (n_Q, P_tot, rho_tot)
         scale = np.array([max(abs(n_Q), 1e-300), max(P_tot, 1e-300), max(rho_tot, 1e-300)])
+        # initial active set from the capacity at the guess temperature
+        t0 = np.exp(lt)
+        Xb0 = species(t0, 1.0, um)
+        cap_n = species(t0, 1.0, self.cap_p)['n']
+        act_p = (nc > 0) or (n_Q + Xb0['n'] + ncb > cap_n)
+        if act_p:
+            up = self.cap_p; nc = max(n_Q + Xb0['n'] + ncb - cap_n, 0.0)
+        act_m = ncb > 0
+        if act_m:
+            um = self.cap_m
         switches = 0
-        total_it = 0
-        for outer in range(8):
-            converged = False
-            for it in range(itmax):
-                F, J, st = self._eval(lt, up, um, nc, ncb, act_p, act_m, targets)
-                total_it += 1
-                if np.max(np.abs(F) / scale) < tol:
-                    converged = True
-                    break
-                if not np.all(np.isfinite(F)):
-                    raise RuntimeError('non-finite residual in inversion at t=%.3g up=%.3g um=%.3g' % (np.exp(lt), up, um))
-                try:
-                    dx = np.linalg.solve(J, -F)
-                except np.linalg.LinAlgError:
-                    dx = np.linalg.lstsq(J, -F, rcond=None)[0]
-                if not np.all(np.isfinite(dx)):
-                    dx = np.sign(-F) * 1e-3
-                # trust region: |d ln t| <= 0.7, |d u| <= max(0.5, t) (potentials), condensates free
-                t_now = np.exp(lt)
-                cap_step = 1.0
-                cap_step = min(cap_step, 0.7 / max(abs(dx[0]), 1e-300))
-                if not act_p:
-                    cap_step = min(cap_step, max(0.5, t_now) / max(abs(dx[1]), 1e-300))
-                if not act_m:
-                    cap_step = min(cap_step, max(0.5, t_now) / max(abs(dx[2]), 1e-300))
-                dx = dx * min(1.0, cap_step)
-                # damped step keeping potentials below the masses and condensates >= 0 (switching handled outside)
-                lam = 1.0
-                for _ in range(40):
-                    nlt = lt + lam * dx[0]
-                    nup = up if act_p else up + lam * dx[1]
-                    nnc = nc + lam * dx[1] if act_p else nc
-                    num = um if act_m else um + lam * dx[2]
-                    nncb = ncb + lam * dx[2] if act_m else ncb
-                    ok = (nup < 1.0 - 1e-9) and (num < 1.0 - 1e-9) and (nup + num < RS - 1e-9) and abs(lam * dx[0]) < 2.0
-                    if ok:
-                        break
-                    lam *= 0.5
-                lt, up, um, nc, ncb = nlt, nup, num, nnc, nncb
-                if np.max(np.abs(lam * dx)) < 1e-14:
-                    converged = True
-                    break
-            # active-set consistency
-            changed = False
-            if act_p and nc < 0:
-                act_p = False; nc = 0.0; up = self.cap_p - 1e-6; changed = True
-            elif (not act_p) and up > self.cap_p:
-                act_p = True; nc = 0.0; up = self.cap_p; changed = True
-            if act_m and ncb < 0:
-                act_m = False; ncb = 0.0; um = self.cap_m - 1e-6; changed = True
-            elif (not act_m) and um > self.cap_m:
-                act_m = True; ncb = 0.0; um = self.cap_m; changed = True
-            if not changed and converged:
+        converged = False
+        for it in range(itmax):
+            F, J, st = self._eval(lt, up, um, nc, ncb, act_p, act_m, targets)
+            if not np.all(np.isfinite(F)):
+                raise RuntimeError('non-finite residual in inversion at t=%.3g up=%.3g um=%.3g' % (np.exp(lt), up, um))
+            if np.max(np.abs(F) / scale) < tol:
+                # consistency of the active set at convergence
+                if act_p and nc < 0:
+                    act_p = False; nc = 0.0; up = self.cap_p - 1e-4; switches += 1; continue
+                if act_m and ncb < 0:
+                    act_m = False; ncb = 0.0; um = self.cap_m - 1e-4; switches += 1; continue
+                converged = True
                 break
-            switches += 1
+            try:
+                dx = np.linalg.solve(J, -F)
+            except np.linalg.LinAlgError:
+                dx = np.linalg.lstsq(J, -F, rcond=None)[0]
+            if not np.all(np.isfinite(dx)):
+                dx = np.sign(-F) * 1e-3
+            t_now = np.exp(lt)
+            cap_step = min(1.0, 0.7 / max(abs(dx[0]), 1e-300))
+            if not act_p:
+                cap_step = min(cap_step, max(0.5, t_now) / max(abs(dx[1]), 1e-300))
+            if not act_m:
+                cap_step = min(cap_step, max(0.5, t_now) / max(abs(dx[2]), 1e-300))
+            dx = dx * cap_step
+            # condensates may not step below zero: stop at the floor; deactivate only if the floor is pushed again
+            floor_p = floor_m = False
+            if act_p and dx[1] < 0 and nc + dx[1] < 0:
+                if nc <= 0:
+                    floor_p = True
+                else:
+                    dx = dx * (nc / (-dx[1]))
+            if act_m and dx[2] < 0 and ncb + dx[2] < 0:
+                if ncb <= 0:
+                    floor_m = True
+                else:
+                    dx = dx * (ncb / (-dx[2]))
+            if floor_p:
+                act_p = False; nc = 0.0; up = self.cap_p - 1e-4; switches += 1; continue
+            if floor_m:
+                act_m = False; ncb = 0.0; um = self.cap_m - 1e-4; switches += 1; continue
+            lam = 1.0
+            for _ in range(40):
+                nlt = lt + lam * dx[0]
+                nup = up if act_p else up + lam * dx[1]
+                nnc = nc + lam * dx[1] if act_p else nc
+                num = um if act_m else um + lam * dx[2]
+                nncb = ncb + lam * dx[2] if act_m else ncb
+                if (nup < 1.0 - 1e-9) and (num < 1.0 - 1e-9) and (nup + num < RS - 1e-9):
+                    break
+                lam *= 0.5
+            lt, up, um, nc, ncb = nlt, nup, num, nnc, nncb
+            # on-the-fly switching
+            if (not act_p) and up > self.cap_p:
+                act_p = True; up = self.cap_p
+                tn = np.exp(lt)
+                nc = max(n_Q + species(tn, 1.0, um)['n'] + ncb - species(tn, 1.0, self.cap_p)['n'], 0.0)
+                switches += 1
+            if (not act_m) and um > self.cap_m:
+                act_m = True; um = self.cap_m
+                tn = np.exp(lt)
+                ncb = max(P_tot - species(tn, 1.0, self.cap_m)['n'] - species(tn, RS, min(up + um, RS - 1e-9))['n'], 0.0)
+                switches += 1
         F, J, st = self._eval(lt, up, um, nc, ncb, act_p, act_m, targets)
         resid = float(np.max(np.abs(F) / scale))
-        if resid > 1e-6:
-            raise RuntimeError('inversion did not converge: resid=%.2e targets=%r state t=%.4g up=%.4g um=%.4g nc=%.3g' % (
-                resid, targets, st['t'], up, um, nc))
+        if resid > 1e-6 or nc < -1e-12 * max(n_Q, 1e-300):
+            raise RuntimeError('inversion did not converge: resid=%.2e targets=%r state t=%.4g up=%.4g um=%.4g nc=%.3g it=%d' % (
+                resid, targets, st['t'], up, um, nc, it))
         X, Xb, S = st['X'], st['Xb'], st['S']
-        out = dict(t=st['t'], up=up, um=um, us=st['us'], n_plus=X['n'], n_minus=Xb['n'], n_s=S['n'], n_c=nc, n_cb=ncb,
+        out = dict(t=st['t'], up=up, um=um, us=st['us'], n_plus=X['n'], n_minus=Xb['n'], n_s=S['n'], n_c=max(nc, 0.0), n_cb=max(ncb, 0.0),
                    rho_gas=X['rho'] + Xb['rho'] + S['rho'], P_gas=X['P'] + Xb['P'] + S['P'],
                    rho_X=X['rho'], rho_Xb=Xb['rho'], rho_s=S['rho'],
                    s_gas=(X['rho'] + Xb['rho'] + S['rho'] + X['P'] + Xb['P'] + S['P'] - up * X['n'] - um * Xb['n'] - st['us'] * S['n']) / st['t'],
-                   active_p=act_p, active_m=act_m, iterations=total_it, switches=switches, residual=resid)
-        self.last = dict(t=out['t'], up=up, um=um, n_c=nc, n_cb=ncb)
+                   active_p=act_p, active_m=act_m, iterations=it + 1, switches=switches, residual=resid)
+        self.last = dict(t=out['t'], up=up, um=um, n_c=max(nc, 0.0), n_cb=max(ncb, 0.0))
         return out
 
 
@@ -223,9 +236,9 @@ if __name__ == '__main__':
     st = inv2.invert(nq, P, rho, guess=dict(t=7.0, up=0.5, um=-0.5, n_c=0.0, n_cb=0.0))
     print('saturation cap at onset: t=%.6f up=%.7f um=%.6f n_c=%.5e active=%s' % (st['t'], st['up'], st['um'], st['n_c'] * MX ** 3, st['active_p']))
     # low temperature, NR: n_tot small
-    st = inv.invert(1e-4 / MX ** 3, 1e-9 / MX ** 3, (1.0e-4 * 0.95 + 1e-9 * 1.5) / MX ** 4 * 1.0, guess=dict(t=0.2, up=0.8, um=-0.8, n_c=0.0, n_cb=0.0))
+    st = inv.invert(1e-4 / MX ** 3, 1e-9 / MX ** 3, (1.0e-4 * 0.95 + 1e-9 * 1.5) * MX / MX ** 4, guess=dict(t=0.2, up=0.8, um=-0.8, n_c=0.0, n_cb=0.0))
     print('   n_-=%.3e n_s=%.3e rho_gas=%.4e' % (st['n_minus'] * MX ** 3, st['n_s'] * MX ** 3, st['rho_gas'] * MX ** 4))
     # very late: tiny inventory
-    st = inv.invert(1e-8 / MX ** 3, 1e-40 / MX ** 3, (1.0e-8 * 0.93) / MX ** 4, guess=dict(t=0.02, up=0.86, um=-0.86, n_c=0.0, n_cb=0.0))
+    st = inv.invert(1e-8 / MX ** 3, 1e-40 / MX ** 3, (1.0e-8 * 0.93) * MX / MX ** 4, guess=dict(t=0.02, up=0.86, um=-0.86, n_c=0.0, n_cb=0.0))
     print('very late state: t=%.5f up=%.6f um=%.4f n_c/n_Q=%.6f active=%s it=%d' % (st['t'], st['up'], st['um'], st['n_c'] / (1e-8 / MX ** 3), st['active_p'], st['iterations']))
     print('late NR state: t=%.5f up=%.6f um=%.6f n_c/n_tot=%.4f active=%s it=%d' % (st['t'], st['up'], st['um'], st['n_c'] / (1e-4 / MX ** 3), st['active_p'], st['iterations']))
