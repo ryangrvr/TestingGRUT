@@ -1,0 +1,160 @@
+{
+ "thermal_masses": {
+  "rows": [
+   {
+    "Th_over_m": 11.99,
+    "phi_and_X_in_bath": {
+     "Tc_over_m": 18.090680674665816,
+     "v_T_over_v": 0.7488210919690882,
+     "mX_T_over_m": 0.853494665738717
+    },
+    "X_only_bath": {
+     "Tc_over_m": 42.42640687119284,
+     "v_T_over_v": 0.9592357779908847,
+     "mX_T_over_m": 0.9838970022878976
+    }
+   },
+   {
+    "Th_over_m": 12.4,
+    "phi_and_X_in_bath": {
+     "Tc_over_m": 18.090680674665816,
+     "v_T_over_v": 0.7281330769699847,
+     "mX_T_over_m": 0.8423564829954385
+    },
+    "X_only_bath": {
+     "Tc_over_m": 42.42640687119284,
+     "v_T_over_v": 0.9563355989284189,
+     "mX_T_over_m": 0.9827670685931184
+    }
+   },
+   {
+    "Th_over_m": 12.68,
+    "phi_and_X_in_bath": {
+     "Tc_over_m": 18.090680674665816,
+     "v_T_over_v": 0.7132464121497173,
+     "mX_T_over_m": 0.8344458706897118
+    },
+    "X_only_bath": {
+     "Tc_over_m": 42.42640687119284,
+     "v_T_over_v": 0.954293688779531,
+     "mX_T_over_m": 0.9819727988991231
+    }
+   },
+   {
+    "Th_over_m": 13.05,
+    "phi_and_X_in_bath": {
+     "Tc_over_m": 18.090680674665816,
+     "v_T_over_v": 0.692554149507459,
+     "mX_T_over_m": 0.823600327828978
+    },
+    "X_only_bath": {
+     "Tc_over_m": 42.42640687119284,
+     "v_T_over_v": 0.9515185232038312,
+     "mX_T_over_m": 0.9808949994775179
+    }
+   }
+  ],
+  "note": "one-loop high-T estimate [E]; corrections fall as T_h^2 and are <1% for T_h < 1.5 m, before the 4->2 freeze-out (T_h ~ 0.4 m)"
+ },
+ "s_route": {
+  "m_s": 0.22635480881631756,
+  "Gamma_s_to_XXbar_GeV": 1.733277037751546e-05,
+  "Gamma_over_H_at_onset": 19085296625.143227,
+  "sigma_v_ss_GeV2": 0.0001260281438027877,
+  "sigma_v_ss_cm3s": 1.4707484381785323e-21,
+  "table": [
+   {
+    "Th_over_m": 10,
+    "K_GeV_minus3": 12.387323020446784,
+    "route_over_threshold42": 0.9185330408487878
+   },
+   {
+    "Th_over_m": 3,
+    "K_GeV_minus3": 422.95350851764493,
+    "route_over_threshold42": 1070.8413218027565
+   },
+   {
+    "Th_over_m": 1,
+    "K_GeV_minus3": 7416.004308961189,
+    "route_over_threshold42": 329215.14394536446
+   },
+   {
+    "Th_over_m": 0.3,
+    "K_GeV_minus3": 48641.675488840585,
+    "route_over_threshold42": 14163053.958034156
+   },
+   {
+    "Th_over_m": 0.1,
+    "K_GeV_minus3": 20378.138367070722,
+    "route_over_threshold42": 2485815.382679211
+   },
+   {
+    "Th_over_m": 0.05,
+    "K_GeV_minus3": 738.0520585712263,
+    "route_over_threshold42": 3260.7225691939234
+   },
+   {
+    "Th_over_m": 0.03,
+    "K_GeV_minus3": 4.195726522280374,
+    "route_over_threshold42": 0.10537903175400487
+   },
+   {
+    "Th_over_m": 0.02,
+    "K_GeV_minus3": 0.004426118475303504,
+    "route_over_threshold42": 1.1726973045992694e-07
+   },
+   {
+    "Th_over_m": 0.015,
+    "K_GeV_minus3": 3.857158549785152e-06,
+    "route_over_threshold42": 8.905839001675286e-14
+   },
+   {
+    "Th_over_m": 0.01,
+    "K_GeV_minus3": 2.2374952480710582e-12,
+    "route_over_threshold42": 2.996843755109742e-26
+   }
+  ],
+  "note": "threshold 4->2 coefficients evaluate the s propagator at p^2 = 4 m_X^2 < m_s^2; in a plasma pairs with p^2 = m_s^2 exist, giving the resonant (on-shell) route"
+ },
+ "extra_dof": {
+  "g_X_Xbar": 2,
+  "g_with_s": 3,
+  "g_with_s_and_D": 4,
+  "sigma_factor_with_s": 1.1066819197003215,
+  "sigma_factor_with_s_and_D": 1.189207115002721,
+  "equivalent_R_factor_with_s_and_D": 1.2599210498948732,
+  "note": "at fixed onset energy, s ~ g^(1/4) rho^(3/4); sigma ~ (1+R)^(3/4) so a sigma factor F equals a (1+R) factor F^(4/3); this lowers R_L, it cannot rescue"
+ },
+ "vector_timing": {
+  "m_A": 60000.0,
+  "Gamma_A": 3.978873577297383e-12,
+  "mean_a": 414341556451.7793,
+  "H_at_mean": 2.533029591058444e-12,
+  "T_vis_at_mean_decay": 1342.6516024265272,
+  "onset_T_vis_raw": [
+   26.42,
+   "cand10"
+  ],
+  "note": "vectors decay at T_vis ~ TeV, before the light-scale onset (T_vis 21-46 GeV), so injecting R at the onset is consistent"
+ },
+ "sink_needed": [
+  {
+   "T_vis": 1.3e-08,
+   "n_Q": 1.0354510370048984e-31,
+   "sigma_v_needed_GeV2": 0.0004068707114603908,
+   "sigma_v_needed_cm3s": 4.748181202742761e-21
+  },
+  {
+   "T_vis": 1e-06,
+   "n_Q": 4.713022471574411e-26,
+   "sigma_v_needed_GeV2": 5.289319248985081e-06,
+   "sigma_v_needed_cm3s": 6.17263556356559e-23
+  },
+  {
+   "T_vis": 0.0001,
+   "n_Q": 4.7130224715744127e-20,
+   "sigma_v_needed_GeV2": 5.289319248985081e-08,
+   "sigma_v_needed_cm3s": 6.172635563565589e-25
+  }
+ ]
+}
