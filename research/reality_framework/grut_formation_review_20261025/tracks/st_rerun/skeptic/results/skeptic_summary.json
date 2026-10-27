@@ -1,0 +1,31 @@
+{
+ "track": "st_rerun_skeptic",
+ "subject": "st_rerun findings on Codex b73de64 grut_source_timing_20261026",
+ "independence": "Own C background (rp_reheating rpreheat.c, constraint H), own cosmic-time tangent equations with sympy Hessian, own seed (rp.prepare), Dormand-Prince 5(4) max-norm integrator, own Floquet (Radau from apoapsis), own widths and clocks. Shares no code with Codex's tangent engine or with st_rerun's reruns of it.",
+ "refuted": [],
+ "checks": {
+  "R3": {"st_rerun": [133.61, 147.33], "ours_18k": [133.601, 147.320], "ours_band_0.01": [133.592, 147.312]},
+  "R4": {"st_rerun": [771.95, 781.82], "ours_18k": [771.942, 781.810], "ours_band_0.01": [771.933, 781.792]},
+  "R5": {"st_rerun_max": [1.6e-3, 2.6e-3], "ours_quiet3": [1.585e-3, 2.588e-3], "ours_quiet5": [1.441e-3, 1.944e-3]},
+  "R6": {"st_rerun": [119.58, 134.42, 737.43, 751.08], "ours_18k": [119.579, 134.414, 737.422, 751.071], "ours_band_0.01": [119.393, 134.148, 737.259, 750.758], "note": "dense-k shift up to 0.31 tau, st_rerun said <=0.28"},
+  "R7": {"st_rerun": 56.46, "ours": 56.457, "ours_band": 56.456, "excursion_tau": [56.46, 57.0], "YL_fN": 5.679e-6},
+  "R8": {"st_rerun": [55.17, 563.47, 576.82], "ours": [55.167, 563.468, 576.811]},
+  "R9": {"C_own": [1.98580527538, 1.47586778751], "tau_star_own": [0.193674, -0.169062], "a_H_vs_codex_max_rel": [1.2e-10, 4.7e-10]},
+  "R10": {"YL_median_tau": 6890793.56, "median_a": [5231.40, 4509.97], "A_e1e-6": 4.355172e17, "A_e1e-7": 4.355172e20},
+  "R11": {"fN": [1.3479e-5, 1.4837e-5], "fE": [3.7161e-8, 4.3067e-8], "mean_a": [5568.653, 4800.711]},
+  "R12": {"mu_over_k": [0.439798, 0.439789, 0.439722], "peak": [2.13, 0.631777], "edge1": 3.13949, "band2": [5.57118, 5.97645], "peak2": [5.775, 0.16027]},
+  "R13": {"Q_cube_2.13": [209371.3, 134402.5], "codex": [209368.9, 134402.7]},
+  "agreement_with_codex_arrays": {"amplitude_env_rel": [4.8e-9, 5.1e-7], "charge_env_rel_constant": [1.123e-5, 1.17e-6], "cause": "Codex sparse 6-sample normalization"},
+  "tolerance_1e-12_vs_1e-10": 3.2e-11,
+  "N1": {"quiet3_through80": 0.2018, "tau": 69.61, "k": 2.13, "band": 0.2036, "quiet5": 0.1185, "charges_18k": [0.3426, 0.1878]},
+  "N2": {"max_over_k": {"quiet3": [0.554, 0.478, 0.546], "quiet5": [0.535, 0.572, 0.448]}, "k2.13_quiet5_150_800": 0.433},
+  "N3": {"E_tau": [1702, 1429]}
+ },
+ "new_issues": [
+  "Unit-threshold times are periapsis-spike dominated (|X| = 0.11-0.24 of orbit max); orbit-scale criterion: 0.03 rad unity at tau 196.3/234.0, 1e-6 seed only 0.41/0.34 by tau 800. Ordering vs Y_L median unchanged.",
+  "gauge3 row 0.03-rad 10% bracket [82.5,83.0] has the same undersampling; own engine 56.46 (e-sensitivity <=1.1e-6).",
+  "Codex late_NX_normalization_through80 is a 6-sample trapezoid; dense mean differs by 1.12e-5 (quiet3), 1.1e-6 (quiet5); negligible.",
+  "Rest-clock 'upper bound' only vs time dilation with vacuum width; in-medium/stimulated Y_L->XXX not computed; ~7e4 (tau134) or 1.3e4 (tau772) enhancement would be needed to change the ordering.",
+  "Minor st_rerun details: tau 40-80 spacing is 1.49-3.22 (not 1.89-3.22); N2 code takes max over all k though labelled k~2; dense-k charge shift up to 0.31 tau."
+ ]
+}

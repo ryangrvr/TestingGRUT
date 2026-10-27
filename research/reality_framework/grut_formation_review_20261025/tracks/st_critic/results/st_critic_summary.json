@@ -1,0 +1,209 @@
+{
+ "track": "st_critic",
+ "packet": "grut_source_timing_20261026 @ b73de64",
+ "own_checks": {
+  "settle.py": "own code on Codex published arrays: growth-rate window choice; orbit-scale normalisation",
+  "neutral_extend.py": "reproduction-type: Codex modes.c -DNEUTRAL_SECTOR, seeds, energy ratio, extended tau 80->800; reproduces Codex tau<=80 maxima to 3e-9"
+ },
+ "contradictions_settled": [
+  {
+   "item": "late growth per conformal time",
+   "st_rerun": "0.45-0.58 (20-tau windows)",
+   "st_physics": "0.6335/0.5599",
+   "resolution": "one-radial-period windows give 0.633 (3,.5) / 0.563 (5,1) max-over-k amplitude in every sub-range; radial period 24-45 tau > 20 tau; st_rerun N2/N3 CORRECTED; 1e-9 [E] crossing ~1494/1487"
+  },
+  {
+   "item": "orbit-scale crossing",
+   "st_rerun_skeptic": "196.3/234.0; 1e-6 0.41/0.34 by 800 (radial, +-8 tau window)",
+   "st_clocks_skeptic_st_physics": "197.5/215.5; 0.34/0.19",
+   "resolution": "definition: +-8 tau window under-reads late r_max by 0.49-0.51; full |dchi_X|/r_max(period) 197.5/215.5; radial-only 219/234.5; 1e-6 by 800 0.34/0.11 (k 2.13); [E] crossing ~900-965"
+  },
+  {
+   "item": "'certainly lost small-perturbation control'",
+   "resolution": "locally true at pericentre (|dchi|/|chi| 1.26-1.52, nonlinear remainder 23-39% of linear force); orbit-scale reaches 1 ~60-70 tau later; keep sentence, name pericentre criterion; st_physics '<=7%' withdrawn"
+  },
+  {
+   "item": "Q_cube",
+   "resolution": "CONFIRMED at stated k=2.13 + note ((5,1) crossings at k=2.0: 1.62e5; own peak 1.93e5)"
+  },
+  {
+   "item": "vacuum floor",
+   "resolution": "8-25x the 0.03 seed; band RMS amplitude=1 at tau 69.3/66.9, charge 61.2/57.5 (dense), not 83.5/80.5"
+  },
+  {
+   "item": "light charge -0.5%",
+   "resolution": "Codex accurate; st_physics oscillation qualifier wrong for late epoch (0.31-0.35% p-p)"
+  },
+  {
+   "item": "condensate-assisted Y_L->XX [E]",
+   "resolution": "0.77-1.76e-3 by unit sample, << 1"
+  }
+ ],
+ "unresolved_item_filled": {
+  "item": "neutral delta-phi channel (st_physics P8 partially refuted by skeptic)",
+  "codex_prior": "2cbc7f1 neutral control through tau 80: phi/X energy <= 0.0017169 (3,.5), 0.0016724 (5,1)",
+  "ours": {
+   "(3,.5)": {
+    "1pct": 202.5,
+    "10pct": 427.5,
+    "unity": [
+     696.5,
+     697.0
+    ],
+    "mu_phi": 0.2018,
+    "k_peak": 7.07
+   },
+   "(5,1)": {
+    "1pct": [
+     194.5,
+     195.0
+    ],
+    "10pct": 409.5,
+    "unity": [
+     664.5,
+     665.0
+    ],
+    "mu_phi": 0.1849,
+    "k_peak": 6.19
+   }
+  },
+  "label": "[C] reproduction-type",
+  "consequence": "prescribed background fails via phi before the 1e-6 crossings (772/782); ordering vs heating unaffected"
+ },
+ "most_important_point": "Vacuum-level fluctuations of the same model, not the supplied seeds, control linear breakdown: X vacuum = 8-25x the 0.03 seed (band RMS unit modulation at tau ~57-69) and Codex's own neutral control fails at tau ~665-697 (before the 1e-6 crossings). Start the nonlinear release from vacuum-seeded X/Y/Sigma and delta-phi by tau <~ 50, sampled at <= 0.05 tau.",
+ "verdicts": [
+  {
+   "item": "7 verification groups",
+   "verdict": "CONFIRMED",
+   "ours": "2.6613e-9; 3.73e-9; 6.94e-10; 1.789e-8",
+   "codex": "2.6613e-9; 3.8e-9; 7e-10; 1.8e-8",
+   "method": "reproduction"
+  },
+  {
+   "item": "direct vector = full transfer",
+   "verdict": "CONFIRMED",
+   "ours": "Ward 3.9e-16; 4 formulations <=3e-8 in band",
+   "codex": "stated",
+   "method": "diff + independent"
+  },
+  {
+   "item": "phase-current sign",
+   "verdict": "CONFIRMED",
+   "ours": "ratio -0.9999999986/-1.0000000017",
+   "codex": "stated",
+   "method": "independent"
+  },
+  {
+   "item": "0.03 rad unit |X|",
+   "verdict": "CONFIRMED (pericentre criterion)",
+   "ours": "133.60/147.32; orbit-scale 197.5/215.5",
+   "codex": "134/147.5",
+   "method": "independent"
+  },
+  {
+   "item": "1e-6 rad unit |X|",
+   "verdict": "CONFIRMED (linear; after phi failure)",
+   "ours": "771.94/781.81",
+   "codex": "772/782",
+   "method": "independent"
+  },
+  {
+   "item": "local charge unity",
+   "verdict": "CONFIRMED",
+   "ours": "119.58/134.41; 737.42/751.07",
+   "codex": "120/134.5",
+   "method": "independent"
+  },
+  {
+   "item": "1e-9 none by 800",
+   "verdict": "CONFIRMED",
+   "ours": "max 1.6e-3/1.4e-3; [E] ~1494/1487",
+   "codex": "none",
+   "method": "independent + [E]"
+  },
+  {
+   "item": "10% warning (3,.5) 0.03",
+   "verdict": "CORRECTED",
+   "ours": "56.46 (k 2.13); gauge3 same; SOURCE_CLOCKS 5.68e-6 not 8.35e-6",
+   "codex": "[82.5,83.0] k 2.4",
+   "method": "4 codes dense"
+  },
+  {
+   "item": "other 10% warnings",
+   "verdict": "CONFIRMED",
+   "ours": "55.17; 563.47/576.81",
+   "codex": "brackets",
+   "method": "independent"
+  },
+  {
+   "item": "C, tau*",
+   "verdict": "CONFIRMED",
+   "ours": "1.98580528/1.47586779",
+   "codex": "1.9858052758/1.4758677865",
+   "method": "independent"
+  },
+  {
+   "item": "widths, medians",
+   "verdict": "CONFIRMED",
+   "ours": "6.890794e6; 4.355172e17/e20",
+   "codex": "same",
+   "method": "independent"
+  },
+  {
+   "item": "Y_L fractions at unit samples",
+   "verdict": "CONFIRMED",
+   "ours": "1.3479/1.4837e-5; 3.7161/4.3067e-8",
+   "codex": "same",
+   "method": "independent"
+  },
+  {
+   "item": "auxiliary quartic",
+   "verdict": "CONFIRMED ((3,.5) orbit)",
+   "ours": "0.4398; 3.1395; 5.571-5.976",
+   "codex": "0.440; 3.135-3.140; 5.57-5.98",
+   "method": "independent"
+  },
+  {
+   "item": "k=0 symmetry wording",
+   "verdict": "CORRECTED (wording)",
+   "ours": "Jordan blocks; seed k->0 relative X/Sigma phase",
+   "codex": "symmetry limit",
+   "method": "independent"
+  },
+  {
+   "item": "Q_cube k=2.13",
+   "verdict": "CONFIRMED + note",
+   "ours": "2.0937e5/1.3440e5",
+   "codex": "1.34-2.09e5",
+   "method": "independent"
+  },
+  {
+   "item": "late growth = quartic resonance",
+   "verdict": "NEW",
+   "ours": "0.633/0.563 per eta",
+   "codex": "not claimed",
+   "method": "own analysis"
+  },
+  {
+   "item": "neutral phi to tau 800",
+   "verdict": "NEW",
+   "ours": "phi/X energy 1 at 697/665",
+   "codex": "<=0.17% through 80",
+   "method": "reproduction-type"
+  },
+  {
+   "item": "vacuum floor",
+   "verdict": "NEW [C/E]",
+   "ours": "8-25x 0.03 seed; tau 57-69",
+   "codex": "supplied controls",
+   "method": "independent + Codex engine"
+  },
+  {
+   "item": "conditional ordering",
+   "verdict": "CONFIRMED with qualifiers",
+   "ours": "first 1% X heat tau 9.99e4 vs breakdowns <=782",
+   "codex": "stated",
+   "method": "derivation"
+  }
+ ]
+}

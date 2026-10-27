@@ -1,0 +1,30 @@
+{
+  "track": "st_response_skeptic",
+  "target": "tracks/st_response (review of Codex b73de64 grut_source_timing_20261026)",
+  "method": "independent code sk_tangent.py: cosmic-time physical-field tangent, dual-number Hessian-vector products, simplified geometry (f=1), e=0, all 18 Codex momenta, 0.002 tau grid + Codex sample times; controls: rtol 1e-12 (<=9e-13), nonlinear two-point antisymmetric finite difference (6.4e-9, identical crossings), seed swap (<4e-11). Reproduction: Codex response.c at rtol 2e-10/2e-12 for k=2.13 (3,.5). Tool use: st_response st_tangent.py at e=0/1e-7 for k=0.1,0.2,0.8.",
+  "checks": [
+    {"claim_id": "R1", "refuted": false, "recomputed": "[133.5,134.0], a 23.0527; fine 133.602 (k 2.13), earliest over all 18 k"},
+    {"claim_id": "R2", "refuted": false, "recomputed": "[147.0,147.5], a 20.8777; fine 147.322 (k 2.0), earliest over all 18 k"},
+    {"claim_id": "R3", "refuted": false, "recomputed": "fine 771.942 in [771.5,772.0]; 781.812 in [781.5,782.0]"},
+    {"claim_id": "R4", "refuted": false, "recomputed": "119.580 / 134.414; 1e-6: 737.422 / 751.072, all inside brackets"},
+    {"claim_id": "R5", "refuted": false, "recomputed": "no crossing over all 18 k; max 1e-9|A| 1.59e-3 / 1.44e-3; charge 2.6e-3 / 1.9e-3"},
+    {"claim_id": "R6", "refuted": false, "recomputed": "first continuous 10% crossing 56.458 (k 2.13) is the earliest of all 18 k; nonlinear FD identical; Codex bracket [82.5,83.0] is correct as a first-sampled value by Codex's own stated definition"},
+    {"claim_id": "R6b", "refuted": false, "recomputed": "55.168 (k 0.02) in [53.07,55.29] over all 18 k; 563.468; 576.812"},
+    {"claim_id": "R7", "refuted": false, "recomputed": "old-archive ratio -1.0000000017; same-sign scaled error 1.84, opposite 3.2e-8"},
+    {"claim_id": "R8", "refuted": false, "recomputed": "amplitude env-rel 8.7e-9 (3,.5) / 2.9e-8 (5,1); attribution of residual to Codex integration noise not established: Codex code at rtol 2e-12 is 1.1e-8 from st_response (archive 5.5e-9); own e=0 vs st_response e=0 4.9e-9..1.2e-8"},
+    {"claim_id": "R9", "refuted": false, "recomputed": "C 1.98580528 / 1.47586779; final a 56.360618 / 48.599254"},
+    {"claim_id": "R10", "refuted": false, "recomputed": "-0.4974% / -0.5037%"},
+    {"claim_id": "R11", "refuted": false, "recomputed": "e=1e-7 effect: amplitude 2.4e-7..1.1e-6 at k 0.1-0.8; charge 2.4e-7..4.2e-6 at k 0.02-0.8; st_response charge matches Codex to 2.8e-11..1.4e-10 -> gauge term tested to ~1e-4, caveat too pessimistic"},
+    {"claim_id": "R12", "refuted": false, "recomputed": "Codex response.c rtol 2e-12 vs 2e-10: 1.57e-8 env, identical k 2.13 brackets [Reproduction]"},
+    {"claim_id": "N1", "refuted": false, "recomputed": "own 4-point seed vs Codex 4.8e-10; seed swap changes responses <4e-11"},
+    {"claim_id": "N2", "refuted": false, "recomputed": "window 65.158-80, 6 samples; fine-grid shift +1.12e-5 / -1.17e-6"},
+    {"claim_id": "X1", "refuted": false, "recomputed": "now checked over all 18 k: every max-over-k first continuous crossing lies in Codex's bracket except the (3,.5) 0.03 10% level"}
+  ],
+  "new_issues": [
+    "SOURCE_CLOCKS.json quiet3 0.03 rad amplitude_10percent evaluated at tau 83.0: Y_L number 8.35e-6, energy 1.81e-8; at the continuous crossing 56.458: 5.68e-6, 1.01e-8 (strengthens ordering).",
+    "TIMING.png upper-right panel plots archived samples: (3,.5) pre-80 max 0.089 vs true 0.202, so the 10% line appears crossed near 83 instead of 56.5.",
+    "REPORT's 1.35-1.48e-5 / 3.72-4.31e-8 are sampled-time values; continuous crossings give 1.344-1.482e-5 / 3.70-4.30e-8 (reproduced with own a(tau), agree to 2.3e-7 relative at sampled times).",
+    "Growth rate 0.01545368 is a Codex-grid quantity; fine grid 0.015469 (3,.5), 0.016129 (5,1).",
+    "st_response's per-column (5,1) 10% correction concerns brackets Codex never reported."
+  ]
+}

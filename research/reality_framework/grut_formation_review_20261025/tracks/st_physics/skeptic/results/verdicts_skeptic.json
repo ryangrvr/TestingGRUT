@@ -1,0 +1,95 @@
+{
+ "track": "st_physics_skeptic",
+ "target": "tracks/st_physics (review of Codex b73de64)",
+ "checks": {
+  "P1": {
+   "refuted": false,
+   "recomputed": "0.63355 (0.63270-0.63390) / 0.55994 (0.55921-0.56026), quadrature eta",
+   "source": "k2"
+  },
+  "P2": {
+   "refuted": false,
+   "recomputed": "vector strobe k2.13 0.63357 vs Floquet 0.63315; 0.54704 vs 0.54743; charge fits <=0.1%; amplitude fits up to 1.5% (k1.2)",
+   "source": "k1,k2"
+  },
+  "P3": {
+   "refuted": false,
+   "recomputed": "0.631778@2.12780, mu/k 0.43980, edge 3.13949, 5.57118-5.97645; (5,1) 0.563131@1.88748, 2.78589, 4.92716-5.28682",
+   "source": "k1"
+  },
+  "P4": {
+   "refuted": false,
+   "recomputed": "M-I rank 2 at k=0 (sv 265, 5.6e-3, 3e-12, 1e-14): two Jordan blocks; seed theta X/Y/S = 0/0.169/1.000 not 1:3:6",
+   "source": "k1,k4b"
+  },
+  "P5": {
+   "refuted": false,
+   "recomputed": "continuous first crossing in same pericentre passages; peaks 1.585/1.373 (0.03); previous passages 0.945/0.829; dchi>=rmax 197.5/215.5",
+   "source": "k3"
+  },
+  "P6": {
+   "refuted": false,
+   "recomputed": "a 77.017 tau 1493.7 / a 66.257 tau 1487.1",
+   "source": "k6"
+  },
+  "P7": {
+   "refuted": false,
+   "recomputed": "log10 seed -723.17 / -741.19",
+   "source": "k6"
+  },
+  "P8": {
+   "refuted": true,
+   "recomputed": "declared g_X^2 phi^2|X|^2 gives dphi Floquet band k 6.7-7.3 mu 0.206 (3,.5), 5.95-6.45 mu 0.185 (5,1); backreaction g^2<dphi^2>~lam rmin^2 after d_eta~8 (tau~150), O(1) by d_eta~16 (tau~400) [E]; Y sextic at actual a=1 0.141 not 0.25",
+   "source": "k5,k6"
+  },
+  "P9": {
+   "refuted": false,
+   "recomputed": "independent equations: weight 87.65/193.97; vacuum A 0.306/0.736, B 0.255/0.603, C 0.241/0.565, D 0.253/0.601 (8-25x); band RMS amplitude=1 at tau 69.3/66.9 (not 83.5/80.5, coarse-grid artefact), charge 61.2/57.5",
+   "source": "k4,k4b",
+   "sub_number_refuted": "band RMS amplitude crossing 83.5/80.5"
+  },
+  "P10": {
+   "refuted": false,
+   "recomputed": "|x| threshold 203.4 vs 76.4 at a=1",
+   "source": "k6 constants"
+  },
+  "P11": {
+   "refuted": false,
+   "recomputed": "E_circ 12611.9 (0.11970, 0.8803) / 7011.1 (0.10854, 0.8915)",
+   "source": "k6"
+  },
+  "P12": {
+   "refuted": false,
+   "recomputed": "pairs 1.361-2.625/1.509-2.853; gas 1.046-2.481/1.193-2.701; eq 0.1067/0.1159",
+   "source": "k6"
+  },
+  "P13": {
+   "refuted": true,
+   "recomputed": "2.0937e5/1.3440e5 exact at the stated k=2.13 (REPORT says 'at k/H_i=2.13'); own-peak 2.100e5/1.932e5 is a clarification; verdict should be CONFIRMED + note",
+   "source": "k6"
+  },
+  "P14": {
+   "refuted": false,
+   "recomputed": "C 1.985805/1.475868; tail 6.08e-10/1.99e-9",
+   "source": "k2"
+  },
+  "P15": {
+   "refuted": true,
+   "recomputed": "endpoint -0.50% confirmed; but tau>=200 L oscillates only 0.31/0.35% p-p within [-0.58,-0.28]%/[-0.68,-0.33]%; 1.6-1.8% p-p is from tau 20-64; offset of 64-80 window, outside late band, not a late trend",
+   "source": "k2"
+  },
+  "P16": {
+   "refuted": false,
+   "recomputed": "ordering correct; wording item 3 refuted: |dchi|/|chi| 1.52/1.26, cubic 16%/8% of k^2 d, quadratic 31%/18%, total remainder 39%/23% of linear force (49%/28% max over period), not <=7%",
+   "source": "k3",
+   "sub_item_refuted": "wording item 3"
+  }
+ },
+ "new_issues": [
+  "Pre-tau80 published grid gaps up to 3.2 tau: 0.03-seed 0.1 threshold on (3,.5) first reached at tau 56.5 (a 14.95) with dense sampling vs published bracket [82.5,83.0] (propagated to SOURCE_CLOCKS tau 83); unit crossings unaffected",
+  "delta-phi parametric resonance from declared g_X=0.1 omitted from six-field system: mu_phi 0.206/0.185 at k~7.0/6.2; strongly g-dependent (0.81 at g=0.05)",
+  "Positive: independent physical-variable equations reproduce Codex published amplitude/charge responses to <=3.4e-9/6.6e-9 through tau 300",
+  "Reviewer's (5,1) seed weight 86.5 at k=2.8 is out of band; in-band 194-221",
+  "Y_L clocks independently reproduced: F_N 1.3479e-5/1.4837e-5, F_E 3.7161e-8/4.3066e-8"
+ ]
+}

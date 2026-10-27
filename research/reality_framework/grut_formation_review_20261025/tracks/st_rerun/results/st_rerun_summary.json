@@ -1,0 +1,208 @@
+{
+ "track": "st_rerun",
+ "packet": "b73de64 research/reality_framework/grut_source_timing_20261026",
+ "kind": "reproduction with Codex code + code audit; sensitivity reruns use Codex integrator; clock arithmetic own code on Codex arrays",
+ "reproduction": {
+  "npz_bitwise_identical": true,
+  "raw_sha256_identical": true,
+  "source_clocks_bitwise": true,
+  "response_checks": {
+   "direct_vector": [
+    2.6613032621416326e-09,
+    2.6613032621416326e-09
+   ],
+   "background": [
+    2.0111245091496813e-11,
+    2.0111245091496813e-11
+   ],
+   "radau": [
+    3.48831428333156e-10,
+    3.397232155987013e-10
+   ],
+   "archive_amp": [
+    1.9939846324026643e-08,
+    1.9939846324026643e-08
+   ],
+   "archive_charge": [
+    3.3769829491546824e-08,
+    3.3769829491546824e-08
+   ]
+  },
+  "only_differences": "wall-clock seconds; Radau nfev/error (SciPy 1.18.1); quartic stable-mode mu at 1e-13 and IR mu/k at 1e-11",
+  "seven_groups_pass": true,
+  "max_friedmann": 3.7311400782896485e-09,
+  "max_gauss": 6.939444574527442e-10,
+  "late_tolerance": 1.788743259111228e-08
+ },
+ "crossings_published_vs_dense": {
+  "quiet3": {
+   "0.03_unity": [
+    [
+     133.5,
+     134.0
+    ],
+    133.61
+   ],
+   "0.03_charge": [
+    [
+     119.5,
+     120.0
+    ],
+    119.58
+   ],
+   "0.03_10pct": [
+    [
+     82.5,
+     83.0
+    ],
+    56.46
+   ],
+   "1e-6_unity": [
+    [
+     771.5,
+     772.0
+    ],
+    771.95
+   ],
+   "1e-6_charge": [
+    [
+     737.0,
+     737.5
+    ],
+    737.43
+   ],
+   "1e-6_10pct": [
+    [
+     563.0,
+     563.5
+    ],
+    563.47
+   ]
+  },
+  "quiet5": {
+   "0.03_unity": [
+    [
+     147.0,
+     147.5
+    ],
+    147.33
+   ],
+   "0.03_charge": [
+    [
+     134.0,
+     134.5
+    ],
+    134.42
+   ],
+   "0.03_10pct": [
+    [
+     53.069,
+     55.293
+    ],
+    55.17
+   ],
+   "1e-6_unity": [
+    [
+     781.5,
+     782.0
+    ],
+    781.82
+   ],
+   "1e-6_charge": [
+    [
+     751.0,
+     751.5
+    ],
+    751.08
+   ],
+   "1e-6_10pct": [
+    [
+     576.5,
+     577.0
+    ],
+    576.82
+   ]
+  }
+ },
+ "dense_k_shift": {
+  "amplitude_unity_max_shift_tau": 0.02,
+  "local_charge_max_shift_tau": 0.28
+ },
+ "clocks": {
+  "late_C": [
+   1.9858052758033182,
+   1.475867786472805
+  ],
+  "tau_star": [
+   0.19367410283348363,
+   -0.1690618754554407
+  ],
+  "median_tau": {
+   "YL": 6890793.564853669,
+   "A_e1e_6": 4.355172180607203e+17,
+   "A_e1e_7": 4.3551721806072263e+20
+  },
+  "YL_fN_at_003_unity": [
+   1.3479e-05,
+   1.4837e-05
+  ],
+  "YL_fE_at_003_unity": [
+   3.7161e-08,
+   4.3067e-08
+  ],
+  "own_fE_max_rel_diff": 4.6e-07
+ },
+ "audit": {
+  "ward_identity_max_rel": 3.9e-16,
+  "projected_rhs_vs_generator": 6e-16,
+  "local_charge_identity": 4.1e-15,
+  "background_total_gauge_charge_max": 5.8e-10,
+  "tangent_ln_growth_k2p13": {
+   "tau80": 2.84,
+   "tau134": 4.25,
+   "tau400": 8.86,
+   "tau772": 14.58
+  },
+  "seed_scale_rel_to_peak": [
+   2.1e-09,
+   9.7e-08
+  ],
+  "rtol_2e12_vs_2e10_rel_to_peak": [
+   6.9e-08,
+   6.5e-09
+  ]
+ },
+ "new": {
+  "prior_2cbc7f1_quiet3_amp_through80": [
+   0.0888,
+   0.2018
+  ],
+  "growth_slope_per_eta": [
+   0.45,
+   0.58
+  ],
+  "quartic_mu_peak": 0.6318,
+  "E_1e9_unity_tau_if_growth_persisted": [
+   1429,
+   1704
+  ]
+ },
+ "verdicts": {
+  "0.03 unity": "CONFIRMED",
+  "1e-6 unity": "CONFIRMED",
+  "1e-9 none": "CONFIRMED",
+  "local charge 0.03": "CONFIRMED",
+  "10pct quiet3 0.03": "CORRECTED 82.5-83 -> 56.46",
+  "other 10pct": "CONFIRMED",
+  "late C / tau_*": "CONFIRMED",
+  "medians": "CONFIRMED",
+  "YL fractions": "CONFIRMED",
+  "quartic": "CONFIRMED",
+  "Q_cube": "CONFIRMED",
+  "seven groups": "CONFIRMED",
+  "direct vector/Ward": "CONFIRMED",
+  "sign convention": "CONFIRMED",
+  "DOP853 includes tangent": "CONFIRMED",
+  "conditional ordering": "CONFIRMED as stated"
+ }
+}

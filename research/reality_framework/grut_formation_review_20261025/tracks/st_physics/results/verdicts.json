@@ -1,0 +1,150 @@
+{
+ "track": "st_physics",
+ "packet": "b73de64 grut_source_timing_20261026",
+ "claims": [
+  {
+   "id": "P1",
+   "label": "[D,C]",
+   "claim": "Effective late growth per conformal time between the 0.03 and 1e-6 unit samples (brief hand estimate 0.634 / 0.560)",
+   "codex": "(implied by crossings a=23.053->55.365, 20.878->48.050)",
+   "ours": "0.6335 (bracket 0.6327-0.6339) / 0.5599 (0.5592-0.5603); charge crossings 0.6338/0.5601",
+   "verdict": "CONFIRMED",
+   "source": "own s2 on published arrays"
+  },
+  {
+   "id": "P2",
+   "label": "[C]",
+   "claim": "Late full-system growth is quantitatively the quartic self-resonance",
+   "codex": "not claimed (auxiliary diagnostic only)",
+   "ours": "matched-orbit Floquet peak 0.6318@2.128 (tau10) / 0.6331@2.129 (late) for (3,.5); 0.5631@1.887 / 0.5645@1.889 for (5,1); per-k late fits within <=0.5% for 1.2<=k<=2.8 and 5.8; X-only tangent reproduces full tangent to 0.15-0.17% over x4.6e3-1.3e4",
+   "verdict": "NEW",
+   "source": "own s1,s2,s3"
+  },
+  {
+   "id": "P3",
+   "label": "[C]",
+   "claim": "Auxiliary orbit mu/k ~ 0.440 as k->0; edge 3.135-3.140; second band 5.57-5.98",
+   "codex": "0.440; 3.135-3.140; 5.57-5.98",
+   "ours": "0.4398 (tau10), 0.4405 (late), flat to k=0.002; edge 3.1395; 5.571-5.976 [(3,.5)]; (5,1): 0.442, 2.786, 4.927-5.287",
+   "verdict": "CONFIRMED",
+   "source": "own s1"
+  },
+  {
+   "id": "P4",
+   "label": "[D]",
+   "claim": "Exactly k=0 is a symmetry/zero-growth limit",
+   "codex": "symmetry/zero-growth",
+   "ours": "unit multipliers with Jordan blocks: no exponential growth but secular linear dephasing; full-system seed at k->0 is a physical relative X/Sigma phase (not a symmetry); late k<=0.1 response grows ~1/eta",
+   "verdict": "CORRECTED",
+   "source": "own s1,s2"
+  },
+  {
+   "id": "P5",
+   "label": "[C]",
+   "claim": "0.03 rad unit amplitude by sampled tau 134/147.5; 1e-6 by 772/782",
+   "codex": "134/147.5; 772/782",
+   "ours": "same samples; all four at pericentre passages (r/r_min 1.007,1.038,1.14,1.09); |dchi_X|=r_max at tau 197.5/215.5 (0.03), ~916/930 (1e-6, extrapolated)",
+   "verdict": "CONFIRMED",
+   "source": "own s2 (wording note)"
+  },
+  {
+   "id": "P6",
+   "label": "[D/E]",
+   "claim": "1e-9 seed not reached by tau 800",
+   "codex": "not reached",
+   "ours": "extrapolated unit crossing tau ~1494/1487 (a 77.0/66.3); 0.1 at ~1197/1199; max response through 800 1.6e-3/1.4e-3",
+   "verdict": "CONFIRMED",
+   "source": "own s5"
+  },
+  {
+   "id": "P7",
+   "label": "[D/E]",
+   "claim": "Seed below which unit crossing comes after the Y_L median",
+   "codex": "-",
+   "ours": "10^-723 (3,.5), 10^-741 (5,1)",
+   "verdict": "NEW",
+   "source": "own s5"
+  },
+  {
+   "id": "P8",
+   "label": "[E/A]",
+   "claim": "Quartic-dominated era validity",
+   "codex": "-",
+   "ours": "Y sextic/quartic 6.3e-3 (tau10) -> 9e-9 (a=5.2e3); Y terms <=7e-3; e^2/lambda <=1e-9; R=0; phi pinned to a~1.2e12-1.2e13; vacuum mass at a~2.5-2.9e12; caveat: thermal phi bath would give a^2 m_T^2 ~6.6-8.8e3",
+   "verdict": "NEW",
+   "source": "own s5"
+  },
+  {
+   "id": "P9",
+   "label": "[E]",
+   "claim": "Physical (vacuum) seed vs 0.03/1e-6 (brief premise: dtheta ~ (k/2pi)/|chi_X| ~3e-3)",
+   "codex": "seeds supplied, not physical",
+   "ours": "naive 3.14e-3 per ln k at k=2.13 but supplied seed is Sigma phase (X phase 0, dln|X|=-0.043/rad); 1 supplied rad = 1/88 (3,.5), 1/194 (5,1) X-rad in growing mode; six-field adiabatic vacuum = 0.31/0.74 supplied rad per ln k; band RMS charge=1 at tau 62.5/57.6, amplitude=1 at 83.5/80.5",
+   "verdict": "CORRECTED",
+   "source": "Codex engine with own seeds (s4,s4b); reproduction-type"
+  },
+  {
+   "id": "P10",
+   "label": "[D/E]",
+   "claim": "Bound lumps (Q-balls) at phi=0",
+   "codex": "not established (earlier packet)",
+   "ours": "none: V<0 needs |x|>203 (Y_L) / 330 (Y_H) H_i vs |x|<=76.4 (a=1), <=16 after tau10",
+   "verdict": "NEW",
+   "source": "own s5"
+  },
+  {
+   "id": "P11",
+   "label": "[D/E]",
+   "claim": "Circular-orbit energy at fixed charge and released fraction",
+   "codex": "-",
+   "ours": "E_circ 1.2612e4 (E 1.0536e5, L 8304): 0.1197, release 0.880 (late 0.884); (5,1) 0.1085, 0.891 (0.895)",
+   "verdict": "NEW",
+   "source": "own s5"
+  },
+  {
+   "id": "P12",
+   "label": "[E]",
+   "claim": "Xbar per net charge if released energy sits in waves near k~2",
+   "codex": "-",
+   "ours": "pairs 1.36-2.62 (3,.5), 1.51-2.85 (5,1); all-gas 1.05-2.48 / 1.19-2.70; equilibrated massless end-point 0.096-0.107 / 0.105-0.116; kin_source bracket 0.13-2.59",
+   "verdict": "NEW",
+   "source": "own s5"
+  },
+  {
+   "id": "P13",
+   "label": "[D]",
+   "claim": "Wavelength-cube charge 1.34-2.09e5 at the primary peak",
+   "codex": "1.34-2.09e5 at k=2.13",
+   "ours": "2.094e5/1.344e5 at k=2.13; at (5,1) own peak k=1.887: 1.93e5 -> 1.93-2.10e5 at each own peak",
+   "verdict": "CORRECTED",
+   "source": "own s5"
+  },
+  {
+   "id": "P14",
+   "label": "[C]",
+   "claim": "Late C and radiation tail",
+   "codex": "C 1.986/1.476",
+   "ours": "1.98581/1.47587; a(tau) after 80 matches sqrt(2C(tau-tau*)) to 6e-10/2e-9",
+   "verdict": "CONFIRMED",
+   "source": "own s2"
+  },
+  {
+   "id": "P15",
+   "label": "[C]",
+   "claim": "Light charge -0.5% from 64-80 mean to 800",
+   "codex": "-0.5%",
+   "ours": "-0.50%/-0.50%, but L oscillates 1.6-1.8% peak-to-peak; not a trend",
+   "verdict": "CONFIRMED",
+   "source": "own s1"
+  },
+  {
+   "id": "P16",
+   "label": "[A]",
+   "claim": "Conditional time ordering stated correctly without reading the linear extension as nonlinear history",
+   "codex": "yes",
+   "ours": "ordering correct and conservative; wording items: title \"breakup response\", seed called \"phase\" (is Sigma preparation phase), pericentre qualifier, \"certainly lost control\" slightly strong, Floquet relevance understated, k=0 wording, reference-object juxtaposition",
+   "verdict": "CONFIRMED",
+   "source": "audit (NOTES s5)"
+  }
+ ]
+}

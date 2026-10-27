@@ -1,0 +1,215 @@
+{
+  "track": "st_clocks",
+  "date": "2026-10-27",
+  "verdicts": [
+    {
+      "id": "W1",
+      "claim": "Gamma_YL = 3 kappa^2 m_L/(256 pi^3), m_L = H_i sqrt(M_Y^2 - sqrt2 mu h) = 1.3414e4 GeV",
+      "verdict": "CONFIRMED",
+      "codex": 13413.681870567107,
+      "own": 13413.681870567108,
+      "method": "independent: own amplitude (kap/sqrt2)*3! per channel, own Dalitz phase-space quadrature (ratio 0.9999999999999999), two conjugate channels",
+      "label": "[D][C]"
+    },
+    {
+      "id": "W2",
+      "claim": "Gamma_A = e^2 m_A beta^3/(48 pi), m_A = 6 e h H_i",
+      "verdict": "CONFIRMED",
+      "codex": [
+        2.1223251086667907e-10,
+        2.1223251086668018e-07
+      ],
+      "own": [
+        2.1223251086667904e-10,
+        2.1223251086668013e-07
+      ],
+      "method": "independent: own polarisation sum, charge-1 complex X, one channel; Sigma = h/sqrt2, charge 6",
+      "label": "[D][C]"
+    },
+    {
+      "id": "W3",
+      "claim": "vector medians differ by 1000 for 10x in e (Gamma ~ e^3 at fixed h)",
+      "verdict": "CONFIRMED",
+      "codex": 1000,
+      "own": 1000.0000000000051,
+      "method": "derivation",
+      "label": "[D]"
+    },
+    {
+      "id": "M1",
+      "claim": "decay-number medians tau = 6.89e6, 4.36e17, 4.36e20",
+      "verdict": "CONFIRMED",
+      "codex": [
+        6890793.564853669,
+        4.355172180607203e+17,
+        4.3551721806072263e+20
+      ],
+      "own": [
+        6890793.564853669,
+        4.3551721806072045e+17,
+        4.355172180607227e+20
+      ],
+      "method": "ln2/gamma from own widths",
+      "label": "[C]"
+    },
+    {
+      "id": "C1",
+      "claim": "late C = a^2 H/H_i = 1.986 (3,0.5), 1.476 (5,1)",
+      "verdict": "CONFIRMED",
+      "codex": [
+        1.9858052758033182,
+        1.475867786472805
+      ],
+      "own": [
+        1.9858052753805728,
+        1.475867787507
+      ],
+      "method": "independent: own reheating engine rpreheat.c to tau 800 (rtol 1e-10, 1e-12)",
+      "label": "[C]",
+      "extra": {
+        "rel": [
+          -2.1288359963733683e-10,
+          7.007370239620059e-10
+        ],
+        "drift_64_800": [
+          7.265238129775316e-12,
+          7.745326785304147e-12
+        ],
+        "a2_linear_resid": [
+          8.18251421201767e-12,
+          1.0814678965110812e-11
+        ],
+        "tau_star": [
+          0.19367398932354263,
+          -0.16906150164743394
+        ]
+      }
+    },
+    {
+      "id": "A1",
+      "claim": "a at medians",
+      "verdict": "CONFIRMED",
+      "codex": [
+        [
+          5231.400162663705,
+          4509.9668502361765
+        ],
+        [
+          1315182412.692751,
+          1133812888.0816882
+        ],
+        [
+          41589719627.04647,
+          35854311667.91722
+        ]
+      ],
+      "own": [
+        [
+          5231.400162106907,
+          4509.966851816204
+        ],
+        [
+          1315182412.5527606,
+          1133812888.4789405
+        ],
+        [
+          41589719622.61959,
+          35854311680.47945
+        ]
+      ],
+      "method": "sqrt(2C(tau-tau*)) with own C, tau*",
+      "label": "[C]"
+    },
+    {
+      "id": "F1",
+      "claim": "Y_L rest-clock number fraction at 0.03-rad unit samples 1.35-1.48e-5",
+      "verdict": "CONFIRMED",
+      "codex": [
+        1.3479013025494275e-05,
+        1.4836963218937289e-05
+      ],
+      "own": [
+        1.3479013025494277e-05,
+        1.483696321893729e-05
+      ],
+      "method": "1-exp(-gamma tau)",
+      "label": "[C]"
+    },
+    {
+      "id": "F2",
+      "claim": "Y_L injected conformal-energy fraction at unit samples 3.72-4.31e-8",
+      "verdict": "CONFIRMED",
+      "codex": [
+        3.716110939033356e-08,
+        4.306670117272683e-08
+      ],
+      "own": [
+        3.716111785361917e-08,
+        4.306670951669499e-08
+      ],
+      "method": "independent: own a(tau), spline+Simpson, own mpmath tail; rel 1.9-2.3e-7 (Codex PCHIP interpolation)",
+      "label": "[C]"
+    },
+    {
+      "id": "F3",
+      "claim": "closed tail and late limit sqrt(pi C/(2 gamma))",
+      "verdict": "CONFIRMED",
+      "codex": "formula",
+      "own": {
+        "tail_closed_vs_quad": [
+          0.0,
+          0.0
+        ],
+        "late_limit_rel": [
+          1.946640182381998e-08,
+          -1.7007256380985325e-08
+        ],
+        "mean_a": [
+          5568.652907865163,
+          4800.710995242062
+        ]
+      },
+      "method": "derivation + mpmath quadrature",
+      "label": "[D][C]"
+    },
+    {
+      "id": "Q1",
+      "claim": "wavelength cube |N_X|(2pi/k)^3 at k=2.13 = 1.34-2.09e5; N_X = a^3 n_X/H_i^3",
+      "verdict": "CONFIRMED (geometric only)",
+      "codex": [
+        209368.93816073053,
+        134402.683308517
+      ],
+      "own": [
+        209371.28989746832,
+        134402.52667537486
+      ],
+      "method": "own N_X; units derived",
+      "label": "[D][C]"
+    },
+    {
+      "id": "T1",
+      "claim": "linear control lost well before substantial prescribed decay heating",
+      "verdict": "CONFIRMED (qualified: X-sector heating)",
+      "codex": "statement",
+      "own": {
+        "YL_first_percent_tau": 99913.54154824626,
+        "YH_cascade_tau_half": 19.780442430071776,
+        "YH_cascade_done_by_unit_sample": [
+          0.9908649280381867,
+          0.994308046894089
+        ],
+        "condensate_assisted_YL_fraction_by_134_E": [
+          0.0011212505499561907,
+          0.001143999452094819
+        ],
+        "R_Y_homogeneous_C": [
+          0.008038208052484922,
+          0.029376427667825805
+        ]
+      },
+      "method": "enumeration of source_interface.json (= Codex ks_common SRC) + own widths on own background",
+      "label": "[C][A][E]"
+    }
+  ]
+}
