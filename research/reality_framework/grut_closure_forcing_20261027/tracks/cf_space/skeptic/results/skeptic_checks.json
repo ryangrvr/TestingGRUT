@@ -1,0 +1,155 @@
+{
+ "constants": {
+  "M_P_reduced_GeV": 2.4353234593382036e+18,
+  "M_P_nonreduced_GeV": 1.2208901282098643e+19,
+  "T0_GeV": 2.348654180597668e-13,
+  "g_s0_Neff3.044": 3.9370909090909088,
+  "H0_GeV_h0.6736": 1.4368694143222132e-42
+ },
+ "A_heavy_window": {
+  "V_quarter": 749989442364244.0,
+  "r": 2.89474680178622e-07,
+  "T_inst_106.75": 308083582849702.56,
+  "N_min_exact": 58.42117844545742,
+  "N_min_LiddleLeach67": 58.525261515387285,
+  "N_star_k0.05": 53.01611638138247
+ },
+ "B_TCC_single": {
+  "standard_reduced": {
+   "H_max": 0.1125568226043364,
+   "V_quarter_max": 689040187.254644,
+   "r_max": 2.0623776439322036e-31,
+   "N_TCC_heavy": 16.720368171541377,
+   "deficit_heavy": 41.70081027391605
+  },
+  "standard_nonreduced": {
+   "H_max": 0.3296996185520239,
+   "V_quarter_max": 1179282522.5907674,
+   "r_max": 1.7695442696716477e-30,
+   "N_TCC_heavy": 18.332453885305995,
+   "deficit_heavy": 40.08872456015143
+  },
+  "relaxed_TBBN_4.7MeV": {
+   "N_min_floor_any_history": 19.316996123959655,
+   "H_end_max_reduced": 9937836074.3363,
+   "H_end_max_nonreduced": 49820921785.15864,
+   "heavy_over_bound_reduced": 13.41841412984927,
+   "heavy_over_bound_nonreduced": 2.676586366166436,
+   "margin_efolds_reduced": 2.5966279524182774,
+   "margin_efolds_nonreduced": 0.9845422386536598
+  },
+  "relaxed_TBBN_5.0MeV": {
+   "N_min_floor_any_history": 19.37887152767774,
+   "H_end_max_reduced": 9341565909.876127,
+   "H_end_max_nonreduced": 46831666478.04914,
+   "heavy_over_bound_reduced": 14.27490864877581,
+   "heavy_over_bound_nonreduced": 2.847432304432378,
+   "margin_efolds_reduced": 2.6585033561363645,
+   "margin_efolds_nonreduced": 1.0464176423717468
+  },
+  "preinflation_radiation_from_Planck_density_N_max_heavy": 8.360184085770689
+ },
+ "C_composite_TCC": {
+  "random_two_stage_histories_with_horizon_solved_by_stage1_patch_and_TCC_ok": 0,
+  "best_TCC_margin_among_horizon_solving_histories_(negative=violated)": -3.5019732804143544,
+  "analytic_requirement": "e^{N_min(last stage)} < M_P/H_1; N_min floor 19.38 > ln(M_P/H_i) = 16.72",
+  "stage2_only_min_log10_dilution": 25.248410909947445,
+  "stage2_only_at_T_rh2_GeV": 0.004999999999999999,
+  "stage2_only_N2": 19.37887152767774,
+  "track_claimed_log10_dilution": 54.331295378568505,
+  "stage2_only_required_H_boost_log10": 16.832273939964963,
+  "stage2_only_required_H_GeV": 9.062895241551889e+27,
+  "stage2_only_composite_TCC_ln_margin_end_stage1_(0_by_construction_N1=N_TCC)": 0.0,
+  "stage2_only_composite_TCC_ln_margin_end_stage2": 20.428630022613632,
+  "stage2_only_log10_number_of_stage1_patches_in_our_Hubble_volume": 30.079843888066502
+ },
+ "D_BF_vs_diamond": {
+  "chi_event_horizon": 1.1498328935929891,
+  "chi_particle_horizon": 3.178755398407691,
+  "S_rad_today_Hubble_sphere": 3.1592689882302133e+88,
+  "S_Lambda": 3.312593218645471e+122,
+  "S_rad_in_eternal_observer_diamond_max": 2.5622732683170183e+90,
+  "ratio_diamond_to_S_Lambda": 7.734946910761168e-33,
+  "BF_Delta_(1/3)ln(S_L/S_H0)": 26.111761275397697,
+  "note": "radiation entropy inside the causal diamond of an eternal comoving observer is bounded by the comoving ball of radius chi_EH + chi_P for ANY N >= N_min + ln(chi_EH+chi_P): the covariant N-bound does not cap N"
+ },
+ "E_countermodel": {
+  "delta=1.0": {
+   "eta_at_max": 3.141592653589793,
+   "area_radius_Gpc": 8.901201247030878,
+   "capacity_A_over_4G": 9.072530307226216e+122
+  },
+  "delta=0.1": {
+   "eta_at_max": 3.141592653589793,
+   "area_radius_Gpc": 154.81438418681753,
+   "capacity_A_over_4G": 2.7444404179359265e+125
+  },
+  "delta=0.01": {
+   "eta_at_max": 3.1415926535897936,
+   "area_radius_Gpc": 4495.1066297505895,
+   "capacity_A_over_4G": 2.313722041600362e+128
+  }
+ },
+ "F_curvature": {
+  "Planck18_TTTEEE_lowE_eq46b_upper_err": {
+   "P_OmK_lt_0": 0.9927462288751322,
+   "z_zero": -2.4444444444444446
+  },
+  "DESI_DR2_Table5_CMB_only": {
+   "P_OmK_lt_0": 0.9527255132487673,
+   "z_zero": -1.6718749999999998
+  },
+  "DESI_DR2+CMB_LCDM+OmK_Table5": {
+   "P_OmK_lt_0": 0.01826810701154065,
+   "z_zero": 2.090909090909091
+  },
+  "Chudaykin+_2511.20757_CMB+BAO": {
+   "P_OmK_lt_0": 0.022750131948179195,
+   "z_zero": 2.0
+  },
+  "Chudaykin+_2511.20757_CMBPR4+FS+BAO": {
+   "P_OmK_lt_0": 0.022750131948179195,
+   "z_zero": 2.0
+  },
+  "Chudaykin+_2511.20757_CMB+FS+BAO": {
+   "P_OmK_lt_0": 0.012224472655044684,
+   "z_zero": 2.2500000000000004
+  },
+  "ExpQuintessence_2504.04226_OmK_free": {
+   "P_OmK_lt_0": 0.0013498980316300933,
+   "z_zero": 3.0
+  },
+  "DESI_DR2+CMB+DESY5_w0wa+OmK": {
+   "P_OmK_lt_0": 0.2691503745093614,
+   "z_zero": 0.6153846153846154
+  }
+ },
+ "G_TCC_plus_compact": {
+  "V_quarter_TCC_limit": 689040187.254644,
+  "V_quarter_for_OmK_floor_0.001": 217893639.11136004,
+  "V_quarter_for_OmK_floor_0.0001": 148449208.22474727,
+  "V_quarter_max_null_topology_T3_ell1": 376327497.5069353
+ },
+ "H_family_floors": {
+  "H_min_c6": 38681926.71660434,
+  "H_min_yield_eps1": 36973871189.53404,
+  "relaxed_bound_reduced": 9341565909.876127,
+  "yield_floor_over_relaxed_bound_reduced": 3.957995002791168,
+  "relaxed_bound_nonreduced": 46831666478.04914,
+  "yield_floor_over_relaxed_bound_nonreduced": 0.7895057761154917
+ },
+ "I_gauss": {
+  "FFT_zero_mode_of_divE": 0.0,
+  "allowed_residues": 6,
+  "Z6_flat_bundles_T3": 216
+ },
+ "J_late": {
+  "S_Lambda": 3.312593218645471e+122,
+  "ln_MP_over_HL": 138.8721056821446,
+  "t_TCC_yr": 2436179903849.775,
+  "rho_Lambda_GeV4": 2.5151824145616726e-47,
+  "premise_rho_vac_min_GeV4": -2.72e-47,
+  "LQT_2506.24011_mean_OmL_-0.69_GeV4": -2.5830446847288623e-47,
+  "LQT_2506.24011_bestfit_OmL_-1.61_GeV4": -6.027104264367347e-47
+ }
+}

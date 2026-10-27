@@ -1,0 +1,191 @@
+{
+ "method": "cf_scale_skeptic: P4-SM re-check with an independent SM running code (own code).\n\n1. Two-loop SM RGEs (g1 GUT-normalised, g2, g3 + 3-loop pure-QCD term, y_t, lambda with V = lambda |H|^4) from the\n   NNLO MS-bar matching at mu = M_t of Buttazzo et al. arXiv:1307.3536 eqs. (55)-(60) [Q, re-fetched 27 Oct 2026].\n   Compared with their NNLO fit lambda(M_Pl) eq. (61) [Q] (M_Pl = 1.22e19 GeV): central value and slopes.\n2. PDG 2026 inputs (pdglive, fetched 27 Oct 2026): M_h = 125.13 +- 0.11, M_t = 172.60 +- 0.27 (direct; +-0.3 MC-pole\n   added as cf_scale did) or 172.1 +- 0.6 (pole from cross sections); alpha_s = 0.1180 +- 0.0009 (PDG value as cited;\n   pdglive QCD page returned HTTP 500 on 27 Oct 2026, not re-verified).\n3. The comparator. cf_scale fixed lambda(M_P) = 0 \"in advance\". Under the stated postulate (beta_lambda += A_lam lambda\n   above M_P, sharp switch) the prediction is the critical-surface value lambda_crit(M_P; A_lam), which equals 0 only\n   when A_lam dominates the SM one-loop terms. Computed here for A_lam = 0.0237 ... 2.83 under three transplanckian\n   treatments of the other SM couplings:\n     (a) frozen: g1, g2, g3, y_t held at their M_P values (quasi-static fixed point);\n     (b) g1, y_t at fixed points (frozen), g2, g3 on their Gaussian branch with beta += -f_g g (f_g = 9.83e-3);\n     (c) as (b) but y_t also on its Gaussian branch, beta_yt += -f_y y_t, f_y = 0.01 or 0.03 [supplied, illustrative].\n   One-loop SM betas are used above M_P (the gravity parametrisation is one-loop-level anyway).\n4. Absolute stability (the q-vacuum P_q reading) versus lambda(M_P) = 0: the M_t thresholds at PDG M_h, alpha_s.\nUsage: python3 -B sm_two_loop.py <out.json>\n",
+ "reproduction": {
+  "lambda_MPl_2loop": -0.015056460306994049,
+  "lambda_MPl_Buttazzo_NNLO": -0.0143,
+  "couplings_MPl_2loop": {
+   "g1": 0.6153269401581781,
+   "g2": 0.5053947808538131,
+   "g3": 0.4873216478870454,
+   "yt": 0.38310219114400035,
+   "lam": -0.015056460306994049
+  },
+  "Buttazzo_MPl": {
+   "g1": 0.6154,
+   "g2": 0.5055,
+   "g3": 0.4873,
+   "yt": 0.3825,
+   "lam": -0.0143
+  },
+  "slopes_2loop": {
+   "dlam_dMt": -0.006494445976698878,
+   "dlam_dMh": 0.0027993791052323535,
+   "dlam_per_0p0007_als": 0.0018504888541615288
+  },
+  "slopes_Buttazzo": {
+   "dlam_dMt": -0.0066,
+   "dlam_dMh": 0.0029,
+   "dlam_per_0p0007_als": 0.0018
+  },
+  "lambda_MPred_minus_lambda_MPl": -0.00024645571018011743
+ },
+ "pdg2026": {
+  "mt_direct": {
+   "Mt": 172.6,
+   "sigma_Mt": 0.4036087214122113,
+   "lambda_MPl_formula": -0.010502571428571429,
+   "sigma": 0.003555784493940393,
+   "lambda_MPl_2loop": -0.011367026170079763,
+   "lambda_MPred_2loop": -0.011583693553206906,
+   "lambda_MPred_formula_shifted": -0.010719238811698572,
+   "couplings_MPred_2loop": {
+    "g1": 0.6055353817392765,
+    "g2": 0.509554030710857,
+    "g3": 0.49571359417675864,
+    "yt": 0.389139697705084,
+    "lam": -0.011583693553206906
+   },
+   "pull_vs_0_formula": -2.9536580314328487
+  },
+  "mt_xsec": {
+   "Mt": 172.1,
+   "sigma_Mt": 0.6,
+   "lambda_MPl_formula": -0.007202571428571429,
+   "sigma": 0.004607524212345166,
+   "lambda_MPl_2loop": -0.008137568993388728,
+   "lambda_MPred_2loop": -0.00833598387245094,
+   "lambda_MPred_formula_shifted": -0.00740098630763364,
+   "couplings_MPred_2loop": {
+    "g1": 0.6053946684084272,
+    "g2": 0.5095377674559978,
+    "g3": 0.49571618978182125,
+    "yt": 0.3866045700734481,
+    "lam": -0.00833598387245094
+   },
+   "pull_vs_0_formula": -1.56321944207547
+  }
+ },
+ "comparator_scan": [
+  {
+   "A_lam": 0.0237,
+   "frozen": 0.00029192593363835457,
+   "g23_gaussian_yt_FP": 0.017085582742778736,
+   "g23_yt_gaussian_fy0.01": -0.012516973850531767,
+   "g23_yt_gaussian_fy0.03": 0.4412739210699932,
+   "pull_mt_direct": {
+    "frozen": -3.0966906920544974,
+    "g23_gaussian_yt_FP": -7.8196025664269095,
+    "g23_yt_gaussian_fy0.01": 0.5055804258938679,
+    "g23_yt_gaussian_fy0.03": -127.11489142605747
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.669641197035926,
+    "g23_gaussian_yt_FP": -5.314474308090299,
+    "g23_yt_gaussian_fy0.01": 1.110354999153474,
+    "g23_yt_gaussian_fy0.03": -97.37874109819545
+   }
+  },
+  {
+   "A_lam": 0.056,
+   "frozen": 9.786514618831354e-05,
+   "g23_gaussian_yt_FP": 0.006067039080884926,
+   "g23_yt_gaussian_fy0.01": -0.004137482326139339,
+   "g23_yt_gaussian_fy0.03": null,
+   "pull_mt_direct": {
+    "frozen": -3.0421146096792153,
+    "g23_gaussian_yt_FP": -4.720836687709818,
+    "g23_yt_gaussian_fy0.01": -1.850999827682348,
+    "g23_yt_gaussian_fy0.03": null
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.6275229620562628,
+    "g23_gaussian_yt_FP": -2.923050377561343,
+    "g23_yt_gaussian_fy0.01": -0.7082988240735089,
+    "g23_yt_gaussian_fy0.03": null
+   }
+  },
+  {
+   "A_lam": 0.1,
+   "frozen": 5.133941960807109e-05,
+   "g23_gaussian_yt_FP": 0.002501706939098201,
+   "g23_yt_gaussian_fy0.01": -0.0018917924709037882,
+   "g23_yt_gaussian_fy0.03": -0.0035261514488582235,
+   "pull_mt_direct": {
+    "frozen": -3.029030091576521,
+    "g23_gaussian_yt_FP": -3.718151584643926,
+    "g23_yt_gaussian_fy0.01": -2.482559434025914,
+    "g23_yt_gaussian_fy0.03": -2.022925566804873
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.6174251905772583,
+    "g23_gaussian_yt_FP": -2.149243886814326,
+    "g23_yt_gaussian_fy0.01": -1.1956950376883095,
+    "g23_yt_gaussian_fy0.03": -0.840979814798017
+   }
+  },
+  {
+   "A_lam": 0.3,
+   "frozen": 1.624033901120086e-05,
+   "g23_gaussian_yt_FP": 0.0003698632878156736,
+   "g23_yt_gaussian_fy0.01": -0.00033513124694416625,
+   "g23_yt_gaussian_fy0.03": -0.0007394919268878696,
+   "pull_mt_direct": {
+    "frozen": -3.019159110740454,
+    "g23_gaussian_yt_FP": -3.1186091616102694,
+    "g23_yt_gaussian_fy0.01": -2.9203422149037808,
+    "g23_yt_gaussian_fy0.03": -2.806623095920952
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.6098074160460192,
+    "g23_gaussian_yt_FP": -1.686556431896439,
+    "g23_yt_gaussian_fy0.01": -1.5335470276548047,
+    "g23_yt_gaussian_fy0.03": -1.445786082446903
+   }
+  },
+  {
+   "A_lam": 1.0,
+   "frozen": 4.786575223934346e-06,
+   "g23_gaussian_yt_FP": 4.0102256736796444e-05,
+   "g23_yt_gaussian_fy0.01": -3.561928733918363e-05,
+   "g23_yt_gaussian_fy0.03": -9.115000244100881e-05,
+   "pull_mt_direct": {
+    "frozen": -3.015937947082537,
+    "g23_gaussian_yt_FP": -3.0258698430039703,
+    "g23_yt_gaussian_fy0.01": -3.004574529914827,
+    "g23_yt_gaussian_fy0.03": -2.988957521854733
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.6073215335504745,
+    "g23_gaussian_yt_FP": -1.6149863183427582,
+    "g23_yt_gaussian_fy0.01": -1.5985519947046762,
+    "g23_yt_gaussian_fy0.03": -1.5864998138494917
+   }
+  },
+  {
+   "A_lam": 2.83,
+   "frozen": 1.68317843081399e-06,
+   "g23_gaussian_yt_FP": 6.230047187674335e-06,
+   "g23_yt_gaussian_fy0.01": -3.785812788336903e-06,
+   "g23_yt_gaussian_fy0.03": -1.1782898331922215e-05,
+   "pull_mt_direct": {
+    "frozen": -3.0150651729314575,
+    "g23_gaussian_yt_FP": -3.016343897433634,
+    "g23_yt_gaussian_fy0.01": -3.013527118184756,
+    "g23_yt_gaussian_fy0.03": -3.011278082688591
+   },
+   "pull_mt_xsec": {
+    "frozen": -1.6066479837979186,
+    "g23_gaussian_yt_FP": -1.6076348193623804,
+    "g23_yt_gaussian_fy0.01": -1.6054610141875372,
+    "g23_yt_gaussian_fy0.03": -1.6037253563428842
+   }
+  }
+ ],
+ "stability_vs_SW": {
+  "Mt_absolute_stability_2loop": 170.7953644521412,
+  "Mt_lambda_MPl_zero_2loop": 170.8302687500382,
+  "Mt_lambda_MPred_zero_2loop": 170.8044884638673,
+  "Mt_lambda_MPl_zero_formula": 171.00870129870128,
+  "Mt_stability_Buttazzo_at_PDG": 170.96214285714285
+ }
+}

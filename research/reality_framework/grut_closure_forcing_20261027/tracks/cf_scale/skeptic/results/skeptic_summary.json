@@ -1,0 +1,33 @@
+{
+ "track": "cf_scale_skeptic", "date": "2026-10-27", "labels": "[D] derived, [C] computed (own code), [Q] quoted, [A] argued, [R] recalled",
+ "checks": {
+  "P4-M": {"refuted": false, "verdict_should_be": "INCONSISTENT WITH GRUT BRANCH (heavy window robustly via kappa = 0; the Candidate-1 kill holds only at fixed points where xi is irrelevant)",
+           "recomputed": {"betas_MV_tensor_vs_track_max_rel": 1.4e-14, "monotonicity_cases": 60, "monotonicity_min_derivative": 9.45e-07,
+                          "closed_form_critical_surface": "lam_i(M_P) = -s_i e^4/[16pi^2 (A + 4 f_g)], s = (6, 486, 7776, 108, 432, 3888); matches track to <= 1e-4",
+                          "CW_stationary_point_below_MP": "none unless A_lam + 4 f_g > 4 (A = 10: only at 0.86 M_P)",
+                          "bounce_exponent_lamS_heavy_e": 1.83e26,
+                          "theta_xi": {"pure_gravity": 1.108, "SM_content": -0.0185, "U1D": -0.0278}}},
+  "P4-S": {"refuted": false, "verdict_should_be": "INCONSISTENT WITH GRUT BRANCH (analytic for every A_lam >= 0 and e* > 0)",
+           "recomputed": {"homotopy_real_FP_counts": {"0.0237": 0, "0.1": 0, "0.5": 0, "0.78": 0, "0.79": 8, "1": 8, "2.83": 12, "10": 16},
+                          "track_counts": {"1": 7, "2.83": 6, "10": 4}, "max_lamS": {"1": -0.816, "2.83": -0.1998, "10": -0.0520},
+                          "A_crit": 0.7828, "e_at_h_from_e_star": 0.284}},
+  "P4-SM": {"refuted": false, "verdict_should_be": "STANDARD (retrospectively disfavoured; the pull depends on A_lam and the transplanckian treatment)",
+            "recomputed": {"PDG2026_verified": {"m_h": "125.13 +- 0.11", "m_t_direct": "172.60 +- 0.27", "m_t_xsec_pole": "172.1 +- 0.6"},
+                           "own_2loop_lambda_MPl_ref": -0.01506, "Buttazzo_NNLO_ref": -0.0143,
+                           "own_slopes": {"Mt": -0.00649, "Mh": 0.0028, "als_per_0.0007": 0.00185},
+                           "lambda_MPred_minus_MPl": -0.00025,
+                           "comparator_lambda_crit_MP": {"A=0.0237": {"frozen": 0.0003, "g2_g3_asympt_free": 0.0171}, "A=0.056": {"frozen": 0.0001, "g2_g3_asympt_free": 0.0061},
+                                                          "A=0.1": {"frozen": 0.0001, "g2_g3_asympt_free": 0.0025}, "A>=0.3": {"both": "|lambda| <= 4e-4"}},
+                           "pull_direct_range": [-3.0, -7.8], "pull_xsec_range": [-1.6, -5.3],
+                           "Mt_threshold_2loop": {"absolute_stability": 170.80, "lambda_MPl_zero": 170.83, "lambda_MPred_zero": 170.80}}},
+  "P4b": {"refuted": false, "verdict_should_be": "STANDARD",
+          "recomputed": {"pole_spot_GeV": 5.731e15, "common_max_4pi": 0.5661, "strict1": 0.3722, "unitarity_8pi_over_3": 0.5536, "kappa_floor": 0.2415,
+                         "C1": {"lamX": 0.1741, "lamphi": 0.1931, "g": 0.5698, "ms_over_mX": 6.215}, "e_max_MY": 0.2511}}
+ },
+ "missed_postulates": {
+  "TAF": {"b0_minimal_SU2_embedding": -4.167, "verdict": "INCONSISTENT WITH GRUT BRANCH (minimal embedding); STANDARD principle"},
+  "classical_scale_invariance": {"m_Sigma_at_e1e-7_GeV": 0.374, "m_A_GeV": 3.2e6, "lam_Sigma_CW": 8.2e-28, "e_needed_for_lamSigma_0.24": "~0.4", "portal_for_EW": 5.5e-22,
+                                 "verdict": "INCONSISTENT WITH GRUT BRANCH (heavy spot); STANDARD principle; UNTESTABLE portal"},
+  "multiple_point_principle": {"verdict": "STANDARD (same SM near-criticality family as P4-SM)"}
+ }
+}

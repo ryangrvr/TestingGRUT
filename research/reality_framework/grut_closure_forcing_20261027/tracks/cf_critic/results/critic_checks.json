@@ -1,0 +1,1010 @@
+{
+ "track": "cf_critic",
+ "date": "2026-10-27",
+ "method": "cf_critic quick checks (Claude, synthesis critic, 27 October 2026). Own code; reads sibling results read-only.\n\nA. Near-criticality line: reconcile cf_vacuum (P3a, SMDR line), cf_scale (P4-SM, Buttazzo eq. 61e fit) and the\n   q-vacuum HANDOFF figure on one error budget.\nB. Final-vacuum sign required by each capacity/vacuum strengthening (analytic bookkeeping, pairwise compatibility).\nC. The P3a Sigma corner after reheating (new): thermal response of a light, portal-coupled Sigma to the visible bath\n   (T_RH from hw_gates gate 3). + portal: hidden U(1) restoration temperature, condensate tracking, Kibble Z6 strings\n   and their G mu (gate-3 law for type II; gp_stability Nielsen-Olesen solver for type I). - portal: thermal push of\n   |Sigma| and the Higgs thermal-mass shift.\nD. Portal gap: P3a loop stabiliser vs invisible width vs the dark-matter chain's detector-level portal.\nE. P4b band vs the P3a hidden-sector bound and the Higgs-threshold window.\nF. TCC at the heavy window (one-line reproduction).\nUsage: python3 -B critic_checks.py <out.json>\nLabels: [C] computed here, [D] derived here, [Q] quoted from the sibling file named, [E] estimate.\n",
+ "A_near_criticality": {
+  "lambda_MPl_Buttazzo_fit": -0.010502571428571429,
+  "mt_crit_Buttazzo_fit": 171.00870129870128,
+  "mt_crit_SMDR": 170.997,
+  "difference_GeV": 0.01170129870126857,
+  "z_by_budget": {
+   "no MC-pole term; SMDR theory 0.113+0.032": {
+    "sigma_GeV": 0.4644037420176543,
+    "z_SMDR": 3.4517379059771707,
+    "z_Buttazzo": 3.4265415140393474
+   },
+   "no MC-pole term; Buttazzo-fit theory 0.0003/0.0066": {
+    "sigma_GeV": 0.4516015404119868,
+    "z_SMDR": 3.549589309499689,
+    "z_Buttazzo": 3.523678639021033
+   },
+   "no MC-pole term; Bednyakov upward 0.36": {
+    "sigma_GeV": 0.5757411185593747,
+    "z_SMDR": 2.7842374781412578,
+    "z_Buttazzo": 2.7639135889416333
+   },
+   "0.3 GeV MC-pole; SMDR theory 0.113+0.032": {
+    "sigma_GeV": 0.5528750632828361,
+    "z_SMDR": 2.899389222732819,
+    "z_Buttazzo": 2.87822476899206
+   },
+   "0.3 GeV MC-pole; Buttazzo-fit theory 0.0003/0.0066": {
+    "sigma_GeV": 0.5421659813216607,
+    "z_SMDR": 2.9566591324897957,
+    "z_Buttazzo": 2.935076629890234
+   },
+   "0.3 GeV MC-pole; Bednyakov upward 0.36": {
+    "sigma_GeV": 0.649213243549452,
+    "z_SMDR": 2.4691424827316792,
+    "z_Buttazzo": 2.451118668803772
+   },
+   "0.6 GeV MC-pole; SMDR theory 0.113+0.032": {
+    "sigma_GeV": 0.7587297513607859,
+    "z_SMDR": 2.1127417201249736,
+    "z_Buttazzo": 2.0973194980751826
+   },
+   "0.6 GeV MC-pole; Buttazzo-fit theory 0.0003/0.0066": {
+    "sigma_GeV": 0.7509620172169026,
+    "z_SMDR": 2.134595310080751,
+    "z_Buttazzo": 2.1190135650217474
+   },
+   "0.6 GeV MC-pole; Bednyakov upward 0.36": {
+    "sigma_GeV": 0.8315514629895133,
+    "z_SMDR": 1.9277219406686266,
+    "z_Buttazzo": 1.9136502936063977
+   }
+  },
+  "xsec_pole_172.1+-0.6": {
+   "z_SMDR": 1.5557911949760717
+  },
+  "EW_subfield_alpha_s_0.1221+-0.0027": {
+   "mt_crit_SMDR": 172.61422222222222,
+   "z": -0.012856362828080357
+  },
+  "reading": "Same line to 0.01 GeV. cf_vacuum 3.45 sigma (no MC-pole term) and cf_scale 2.95 sigma (0.3 GeV MC-pole term included) differ only by error budget; HANDOFF 3.1 sits between. P3a is the one-sided form (M_t <= line); P4-SM/MPP are the equality form; the equality comparator is A_lambda-dependent (cf_scale skeptic: lambda_crit(M_P) = +0.017 at A = 0.0237 with AF g2, g3)."
+ },
+ "B_final_vacuum_sign": {
+  "final_vacuum_required": {
+   "P2-BF (Banks-Fischler capacity)": "Lambda_inf > 0, eternal de Sitter, finite S_Lambda",
+   "P_q (q-theory final-state equilibrium, cf_vacuum P3a)": "Lambda_inf = 0 (Minkowski end state); today a non-equilibrium residual",
+   "P2-TCC (late-time)": "no eternal dS: acceleration ends within ~2.4e12 yr; Lambda_inf <= 0 or a rolling field",
+   "P1-time (finite four-volume)": "Lambda_inf < 0 / recollapse"
+  },
+  "pairwise": {
+   "P2-BF (Banks-Fischler capacity) & P_q (q-theory final-state equilibrium, cf_vacuum P3a)": "INCOMPATIBLE (opposite final-vacuum sign)",
+   "P2-BF (Banks-Fischler capacity) & P2-TCC (late-time)": "INCOMPATIBLE (opposite final-vacuum sign)",
+   "P2-BF (Banks-Fischler capacity) & P1-time (finite four-volume)": "INCOMPATIBLE (opposite final-vacuum sign)",
+   "P_q (q-theory final-state equilibrium, cf_vacuum P3a) & P2-TCC (late-time)": "compatible",
+   "P_q (q-theory final-state equilibrium, cf_vacuum P3a) & P1-time (finite four-volume)": "INCOMPATIBLE (opposite final-vacuum sign)",
+   "P2-TCC (late-time) & P1-time (finite four-volume)": "compatible"
+  },
+  "candidate1_premise": "Candidate 1 H0 exclusion of the 100 GeV r=1 preparation needs total vacuum >= -(2.28 meV)^4 [Q cf_space 3.7]. Supplied [A] by BF (Lambda_inf>0 plus monotone roll), by P_q only if the present residual is positive (calibrated, i.e. supplied), and reversed by finite four-volume (Luu-Qiu-Tye best fit -6.0e-47 GeV^4 < -(2.28 meV)^4 = -2.7e-47 GeV^4 [C here]).",
+  "minus_2p28meV_4_GeV4": -2.7023362559999997e-47
+ },
+ "C_sigma_corner_after_reheating": {
+  "solver_eps": {
+   "10.0": {
+    "eps": 1.626934676848236,
+    "nodes": 6000,
+    "seconds": 0.6879949569702148
+   },
+   "1.0": {
+    "eps": 0.9999999999386527,
+    "nodes": 6000,
+    "seconds": 0.5115690231323242
+   },
+   "0.01": {
+    "eps": 0.4398028705032884,
+    "nodes": 6218,
+    "seconds": 0.9145712852478027
+   },
+   "0.0001": {
+    "eps": 0.25250766251077933,
+    "nodes": 7409,
+    "seconds": 1.0422358512878418
+   },
+   "1e-06": {
+    "eps": 0.17103490983805117,
+    "nodes": 11184,
+    "seconds": 11.495295524597168
+   },
+   "1e-08": {
+    "eps": 0.1275267509084518,
+    "nodes": 30857,
+    "seconds": 57.14389991760254
+   }
+  },
+  "rows": [
+   {
+    "M_Sigma_GeV": 300.0,
+    "lam_Sigma": 1.5816448448413125e-21,
+    "beta": 8.78691580467396e-09,
+    "string_type": "I",
+    "eps": 0.12663769830917518,
+    "eps_method": "[E] extrapolation eps ~ 1/ln(1/beta)",
+    "Gmu": 7.593916731904473e-14,
+    "plus_portal": [
+     {
+      "delta": 0.007156359075567029,
+      "lam_HSigma": 6.728690344994019e-12,
+      "T_c_GeV": 200317019.79262415,
+      "T_c_over_h": 3.7554746867758557e-05,
+      "T_RH_over_T_c": 1537562.810782895,
+      "thermal_mass_over_H_at_T_c": 3763.1913546294213,
+      "lamHS_over_lamS": 4254235941.109215,
+      "radiation_fraction_at_T_c": 1.7892397399943702e-25,
+      "T_Sigma_quanta_thermalise_E_GeV": 1.6114454033904855e-07,
+      "T_th_over_T_c": 8.044475726818997e-16,
+      "coherent_amplitude_at_T_c_over_vev": 6.503799343916368e-07,
+      "vacuum_fluct_over_coherent_at_T_c": 1.3763296968215074e-05
+     },
+     {
+      "delta": 0.12266163511876776,
+      "lam_HSigma": 2.7857289376061348e-11,
+      "T_c_GeV": 98449540.58324754,
+      "T_c_over_h": 1.8456981736641834e-05,
+      "T_RH_over_T_c": 3128506.219280521,
+      "thermal_mass_over_H_at_T_c": 15579.89819243157,
+      "lamHS_over_lamS": 17612860097.46157,
+      "radiation_fraction_at_T_c": 1.0438832027044105e-26,
+      "T_Sigma_quanta_thermalise_E_GeV": 2.762054363081796e-06,
+      "T_th_over_T_c": 2.8055533288611356e-14,
+      "coherent_amplitude_at_T_c_over_vev": 3.196413655300245e-07,
+      "vacuum_fluct_over_coherent_at_T_c": 2.8004423533722872e-05
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.03237316840639946,
+      "lam_HSigma": -1.4311234037798606e-11,
+      "Sigma_over_vev_at_T_RH": 2242364.126153407,
+      "T_star_GeV": 137355033.64851788,
+      "thermal_mass_over_H_at_T_RH": 0.0035694122268348128,
+      "Higgs_m2_over_T2_at_T_RH": 0.10319019386453138,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.12266163511876776,
+      "lam_HSigma": -2.7857289376061348e-11,
+      "Sigma_over_vev_at_T_RH": 3128506.219280681,
+      "T_star_GeV": 98449540.58324754,
+      "thermal_mass_over_H_at_T_RH": 0.004979979933047587,
+      "Higgs_m2_over_T2_at_T_RH": 0.07309403829373991,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 1000.0,
+    "lam_Sigma": 1.7573831609347915e-20,
+    "beta": 9.763239782971065e-08,
+    "string_type": "I",
+    "eps": 0.14905445645682275,
+    "eps_method": "solver interpolation",
+    "Gmu": 8.93815306157048e-14,
+    "plus_portal": [
+     {
+      "delta": 0.0077691583388458715,
+      "lam_HSigma": 2.336954260512931e-11,
+      "T_c_GeV": 358291710.7989446,
+      "T_c_over_h": 6.717129936238182e-05,
+      "T_RH_over_T_c": 859634.7353758184,
+      "thermal_mass_over_H_at_T_c": 3921.0034724823427,
+      "lamHS_over_lamS": 1329792109.3484547,
+      "radiation_fraction_at_T_c": 1.8312354073229914e-24,
+      "T_Sigma_quanta_thermalise_E_GeV": 1.943815029270012e-06,
+      "T_th_over_T_c": 5.425230254240473e-15,
+      "coherent_amplitude_at_T_c_over_vev": 1.1632847753212488e-06,
+      "vacuum_fluct_over_coherent_at_T_c": 2.56497015150578e-05
+     },
+     {
+      "delta": 0.13600408864180766,
+      "lam_HSigma": 9.777756290630188e-11,
+      "T_c_GeV": 175162954.84285173,
+      "T_c_over_h": 3.283894916438915e-05,
+      "T_RH_over_T_c": 1758362.6645047388,
+      "thermal_mass_over_H_at_T_c": 16405.377296615217,
+      "lamHS_over_lamS": 5563815853.014764,
+      "radiation_fraction_at_T_c": 1.0460830977415047e-25,
+      "T_Sigma_quanta_thermalise_E_GeV": 3.4027726043666795e-05,
+      "T_th_over_T_c": 1.942632566012313e-13,
+      "coherent_amplitude_at_T_c_over_vev": 5.687108923469212e-07,
+      "vacuum_fluct_over_coherent_at_T_c": 5.246586211997431e-05
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.03764562127421533,
+      "lam_HSigma": -5.144230978882444e-11,
+      "Sigma_over_vev_at_T_RH": 1275407.8327025662,
+      "T_star_GeV": 241491381.8958193,
+      "thermal_mass_over_H_at_T_RH": 0.006767346211604282,
+      "Higgs_m2_over_T2_at_T_RH": 0.10143270957525385,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.13600408864180766,
+      "lam_HSigma": -9.777756290630188e-11,
+      "Sigma_over_vev_at_T_RH": 1758362.6645050235,
+      "T_star_GeV": 175162954.84285167,
+      "thermal_mass_over_H_at_T_RH": 0.009329916761645959,
+      "Higgs_m2_over_T2_at_T_RH": 0.06864655378604945,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 10000.0,
+    "lam_Sigma": 1.7573831609347916e-18,
+    "beta": 9.763239782971066e-06,
+    "string_type": "I",
+    "eps": 0.2113473816342438,
+    "eps_method": "solver interpolation",
+    "Gmu": 1.2673591190185124e-13,
+    "plus_portal": [
+     {
+      "delta": 0.008770504390635534,
+      "lam_HSigma": 2.482993091332116e-10,
+      "T_c_GeV": 1099193398.1592317,
+      "T_c_over_h": 0.00020607300302947725,
+      "T_RH_over_T_c": 280205.46749625076,
+      "thermal_mass_over_H_at_T_c": 4166.031273169208,
+      "lamHS_over_lamS": 141289227.4449333,
+      "radiation_fraction_at_T_c": 1.622159593282217e-22,
+      "T_Sigma_quanta_thermalise_E_GeV": 0.0002194348152689155,
+      "T_th_over_T_c": 1.9963258116032432e-13,
+      "coherent_amplitude_at_T_c_over_vev": 3.56880973428322e-06,
+      "vacuum_fluct_over_coherent_at_T_c": 8.360744754019208e-05
+     },
+     {
+      "delta": 0.1608955228583557,
+      "lam_HSigma": 1.0634943959251937e-09,
+      "T_c_GeV": 531121966.99479353,
+      "T_c_over_h": 9.957292219624926e-05,
+      "T_RH_over_T_c": 579904.4647743204,
+      "thermal_mass_over_H_at_T_c": 17843.58936692643,
+      "lamHS_over_lamS": 605157952.7821907,
+      "radiation_fraction_at_T_c": 8.84248211662055e-24,
+      "T_Sigma_quanta_thermalise_E_GeV": 0.0040255471935817,
+      "T_th_over_T_c": 7.579327242590141e-12,
+      "coherent_amplitude_at_T_c_over_vev": 1.7244219707623168e-06,
+      "vacuum_fluct_over_coherent_at_T_c": 0.00017303135641916372
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.047874173122314304,
+      "lam_HSigma": -5.801146979307874e-10,
+      "Sigma_over_vev_at_T_RH": 428297.74131810106,
+      "T_star_GeV": 719125903.0527663,
+      "thermal_mass_over_H_at_T_RH": 0.022725586458089825,
+      "Higgs_m2_over_T2_at_T_RH": 0.09802319229247491,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.1608955228583557,
+      "lam_HSigma": -1.0634943959251937e-09,
+      "Sigma_over_vev_at_T_RH": 579904.4647751825,
+      "T_star_GeV": 531121966.99479353,
+      "thermal_mass_over_H_at_T_RH": 0.030769877541588792,
+      "Higgs_m2_over_T2_at_T_RH": 0.0603494090470553,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 100000.0,
+    "lam_Sigma": 1.7573831609347915e-16,
+    "beta": 0.0009763239782971066,
+    "string_type": "I",
+    "eps": 0.3451807653834581,
+    "eps_method": "solver interpolation",
+    "Gmu": 2.0699002151613786e-13,
+    "plus_portal": [
+     {
+      "delta": 0.009569757373515411,
+      "lam_HSigma": 2.5936638535051178e-09,
+      "T_c_GeV": 3400987393.524365,
+      "T_c_over_h": 0.0006376054356063677,
+      "T_RH_over_T_c": 90561.93521518075,
+      "thermal_mass_over_H_at_T_c": 4351.717595796406,
+      "lamHS_over_lamS": 14758670.227188759,
+      "radiation_fraction_at_T_c": 1.4866790535951636e-20,
+      "T_Sigma_quanta_thermalise_E_GeV": 0.02394318328678847,
+      "T_th_over_T_c": 7.040068226179663e-12,
+      "coherent_amplitude_at_T_c_over_vev": 1.1042166862092095e-05,
+      "vacuum_fluct_over_coherent_at_T_c": 0.00027021786245990395
+     },
+     {
+      "delta": 0.1855261612387909,
+      "lam_HSigma": 1.1419992148402276e-08,
+      "T_c_GeV": 1620798269.1972158,
+      "T_c_over_h": 0.0003038616927628826,
+      "T_RH_over_T_c": 190029.8179319706,
+      "thermal_mass_over_H_at_T_c": 19160.76391661096,
+      "lamHS_over_lamS": 64982938.28152835,
+      "radiation_fraction_at_T_c": 7.668545363196217e-22,
+      "T_Sigma_quanta_thermalise_E_GeV": 0.46417967662672915,
+      "T_th_over_T_c": 2.8638954362694266e-10,
+      "coherent_amplitude_at_T_c_over_vev": 5.262332042848103e-06,
+      "vacuum_fluct_over_coherent_at_T_c": 0.0005670092084849155
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.05824821820540323,
+      "lam_HSigma": -6.398888585641447e-09,
+      "Sigma_over_vev_at_T_RH": 142246.34755009215,
+      "T_star_GeV": 2165257704.765661,
+      "thermal_mass_over_H_at_T_RH": 0.0754762717070958,
+      "Higgs_m2_over_T2_at_T_RH": 0.09456517726390602,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.1855261612387909,
+      "lam_HSigma": -1.1419992148402276e-08,
+      "Sigma_over_vev_at_T_RH": 190029.81793460177,
+      "T_star_GeV": 1620798269.1972156,
+      "thermal_mass_over_H_at_T_RH": 0.10083030192382955,
+      "Higgs_m2_over_T2_at_T_RH": 0.05213919625202385,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 1000000.0,
+    "lam_Sigma": 1.7573831609347916e-14,
+    "beta": 0.09763239782971066,
+    "string_type": "I",
+    "eps": 0.7169867171248168,
+    "eps_method": "solver interpolation",
+    "Gmu": 4.299460192678598e-13,
+    "plus_portal": [
+     {
+      "delta": 0.01019131636497058,
+      "lam_HSigma": 2.676568532099148e-08,
+      "T_c_GeV": 10586994392.128395,
+      "T_c_over_h": 0.001984813346855717,
+      "T_RH_over_T_c": 29092.298398590166,
+      "thermal_mass_over_H_at_T_c": 4490.817251337321,
+      "lamHS_over_lamS": 1523042.0955413166,
+      "radiation_fraction_at_T_c": 1.396007868433422e-18,
+      "T_Sigma_quanta_thermalise_E_GeV": 2.549830117276007,
+      "T_th_over_T_c": 2.408455150568369e-10,
+      "coherent_amplitude_at_T_c_over_vev": 3.437335841600128e-05,
+      "vacuum_fluct_over_coherent_at_T_c": 0.0008680533017137815
+     },
+     {
+      "delta": 0.2105604839101399,
+      "lam_HSigma": 1.2166107821024127e-07,
+      "T_c_GeV": 4965763550.673973,
+      "T_c_over_h": 0.0009309642952144682,
+      "T_RH_over_T_c": 62024.7011072843,
+      "thermal_mass_over_H_at_T_c": 20412.616463601615,
+      "lamHS_over_lamS": 6922854.441459824,
+      "radiation_fraction_at_T_c": 6.756803352173572e-20,
+      "T_Sigma_quanta_thermalise_E_GeV": 52.68146372412559,
+      "T_th_over_T_c": 1.0608935199295877e-08,
+      "coherent_amplitude_at_T_c_over_vev": 1.6122608930759653e-05,
+      "vacuum_fluct_over_coherent_at_T_c": 0.0018506872797165363
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.06885412910958073,
+      "lam_HSigma": -6.957099598482323e-08,
+      "Sigma_over_vev_at_T_RH": 46903.25252595865,
+      "T_star_GeV": 6566708777.808956,
+      "thermal_mass_over_H_at_T_RH": 0.2488698438905099,
+      "Higgs_m2_over_T2_at_T_RH": 0.09102987361970691,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.2105604839101399,
+      "lam_HSigma": -1.2166107821024127e-07,
+      "Sigma_over_vev_at_T_RH": 62024.701115345604,
+      "T_star_GeV": 4965763550.673973,
+      "thermal_mass_over_H_at_T_RH": 0.32910463249623484,
+      "Higgs_m2_over_T2_at_T_RH": 0.043794422011709105,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 10000000.0,
+    "lam_Sigma": 1.7573831609347917e-12,
+    "beta": 9.763239782971066,
+    "string_type": "II",
+    "eps": 1.6204107667748784,
+    "eps_method": "solver interpolation",
+    "Gmu": 9.716904680569642e-13,
+    "plus_portal": [
+     {
+      "delta": 0.010658152262932994,
+      "lam_HSigma": 2.737185219422134e-07,
+      "T_c_GeV": 33106233499.127605,
+      "T_c_over_h": 0.006206642950717586,
+      "T_RH_over_T_c": 9303.383908293772,
+      "thermal_mass_over_H_at_T_c": 4592.521527497026,
+      "lamHS_over_lamS": 155753.46801241473,
+      "radiation_fraction_at_T_c": 1.3348615673912404e-16,
+      "T_Sigma_quanta_thermalise_E_GeV": 266.6630753211676,
+      "T_th_over_T_c": 8.054769363243769e-09,
+      "coherent_amplitude_at_T_c_over_vev": 0.00010748777110106365,
+      "vacuum_fluct_over_coherent_at_T_c": 0.002775935062970698
+     },
+     {
+      "delta": 0.23672900022762433,
+      "lam_HSigma": 1.289997765432104e-06,
+      "T_c_GeV": 15249913766.984013,
+      "T_c_over_h": 0.0028590014561274864,
+      "T_RH_over_T_c": 20196.83551698623,
+      "thermal_mass_over_H_at_T_c": 21643.922618509263,
+      "lamHS_over_lamS": 734044.6830877367,
+      "radiation_fraction_at_T_c": 6.0098922487372735e-18,
+      "T_Sigma_quanta_thermalise_E_GeV": 5922.873089170144,
+      "T_th_over_T_c": 3.883873167855634e-07,
+      "coherent_amplitude_at_T_c_over_vev": 4.951270703566238e-05,
+      "vacuum_fluct_over_coherent_at_T_c": 0.006026313051821192
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.07998315771173141,
+      "lam_HSigma": -7.498294593332233e-07,
+      "Sigma_over_vev_at_T_RH": 15398.205099748373,
+      "T_star_GeV": 20002331353.187077,
+      "thermal_mass_over_H_at_T_RH": 0.8170326546197133,
+      "Higgs_m2_over_T2_at_T_RH": 0.08732019731697867,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.23672900022762433,
+      "lam_HSigma": -1.289997765432104e-06,
+      "Sigma_over_vev_at_T_RH": 20196.83554174259,
+      "T_star_GeV": 15249913766.98401,
+      "thermal_mass_over_H_at_T_RH": 1.0716491997127955,
+      "Higgs_m2_over_T2_at_T_RH": 0.03507158306401087,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 100000000.0,
+    "lam_Sigma": 1.7573831609347915e-10,
+    "beta": 976.3239782971066,
+    "string_type": "II",
+    "eps": 3.592137238154046,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 2.1540498161548434e-12,
+    "plus_portal": [
+     {
+      "delta": 0.01426784765337115,
+      "lam_HSigma": 3.166959122490686e-06,
+      "T_c_GeV": 97328636218.78883,
+      "T_c_over_h": 0.01824683843621838,
+      "T_RH_over_T_c": 3164.5362759181667,
+      "thermal_mass_over_H_at_T_c": 5313.607513126978,
+      "lamHS_over_lamS": 18020.88009541476,
+      "radiation_fraction_at_T_c": 9.971481460156818e-15,
+      "T_Sigma_quanta_thermalise_E_GeV": 35697.6335072065,
+      "T_th_over_T_c": 3.667742084350221e-07,
+      "coherent_amplitude_at_T_c_over_vev": 0.0003160020656454183,
+      "vacuum_fluct_over_coherent_at_T_c": 0.00944231399344137
+     },
+     {
+      "delta": 0.26489620758153587,
+      "lam_HSigma": 1.3645865814953308e-05,
+      "T_c_GeV": 46887957931.13526,
+      "T_c_over_h": 0.008790393312923746,
+      "T_RH_over_T_c": 6568.850800718645,
+      "thermal_mass_over_H_at_T_c": 22895.393439885403,
+      "lamHS_over_lamS": 77648.77983521116,
+      "radiation_fraction_at_T_c": 5.37084240091058e-16,
+      "T_Sigma_quanta_thermalise_E_GeV": 662760.632537333,
+      "T_th_over_T_c": 1.413498607703784e-05,
+      "coherent_amplitude_at_T_c_over_vev": 0.00015223362964654307,
+      "vacuum_fluct_over_coherent_at_T_c": 0.01960007610229024
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.09226470278572522,
+      "lam_HSigma": -8.053432436527592e-06,
+      "Sigma_over_vev_at_T_RH": 5046.373231092351,
+      "T_star_GeV": 61033933072.88852,
+      "thermal_mass_over_H_at_T_RH": 2.6776183446281916,
+      "Higgs_m2_over_T2_at_T_RH": 0.08322634786373455,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.26489620758153587,
+      "lam_HSigma": -1.3645865814953308e-05,
+      "Sigma_over_vev_at_T_RH": 6568.850876835459,
+      "T_star_GeV": 46887957931.135254,
+      "thermal_mass_over_H_at_T_RH": 3.485448845539406,
+      "Higgs_m2_over_T2_at_T_RH": 0.025682512093157972,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 300000000.0,
+    "lam_Sigma": 1.5816448448413125e-09,
+    "beta": 8786.91580467396,
+    "string_type": "II",
+    "eps": 4.690749526822156,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 2.812840235767845e-12,
+    "plus_portal": [
+     {
+      "delta": 0.03784429456399485,
+      "lam_HSigma": 1.5473362065666086e-05,
+      "T_c_GeV": 132096337853.92422,
+      "T_c_over_h": 0.024764967726644962,
+      "T_RH_over_T_c": 2331.631633426469,
+      "thermal_mass_over_H_at_T_c": 8653.871610526194,
+      "lamHS_over_lamS": 9783.0825397585,
+      "radiation_fraction_at_T_c": 3.383453754177277e-14,
+      "T_Sigma_quanta_thermalise_E_GeV": 852165.3801290429,
+      "T_th_over_T_c": 6.451090120843402e-06,
+      "coherent_amplitude_at_T_c_over_vev": 0.0004288842138114423,
+      "vacuum_fluct_over_coherent_at_T_c": 0.020871302535597124
+     },
+     {
+      "delta": 0.2793461486719393,
+      "lam_HSigma": 4.203933377080315e-05,
+      "T_c_GeV": 80141083400.26749,
+      "T_c_over_h": 0.015024575065666946,
+      "T_RH_over_T_c": 3843.2223140992874,
+      "thermal_mass_over_H_at_T_c": 23511.56752492935,
+      "lamHS_over_lamS": 26579.502919330153,
+      "radiation_fraction_at_T_c": 4.583718842213677e-15,
+      "T_Sigma_quanta_thermalise_E_GeV": 6290224.7145356415,
+      "T_th_over_T_c": 7.848938955714999e-05,
+      "coherent_amplitude_at_T_c_over_vev": 0.0002601983227281412,
+      "vacuum_fluct_over_coherent_at_T_c": 0.03440211330091029
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.09888631942698366,
+      "lam_HSigma": -2.5012239991413807e-05,
+      "Sigma_over_vev_at_T_RH": 2964.448521635531,
+      "T_star_GeV": 103897913988.42006,
+      "thermal_mass_over_H_at_T_RH": 4.718831376893387,
+      "Higgs_m2_over_T2_at_T_RH": 0.08101913977351051,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.2793461486719393,
+      "lam_HSigma": -4.203933377080315e-05,
+      "Sigma_over_vev_at_T_RH": 3843.222444198447,
+      "T_star_GeV": 80141083400.26749,
+      "thermal_mass_over_H_at_T_RH": 6.11767043469605,
+      "Higgs_m2_over_T2_at_T_RH": 0.020865860805147254,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 1000000000.0,
+    "lam_Sigma": 1.7573831609347917e-08,
+    "beta": 97632.39782971067,
+    "string_type": "II",
+    "eps": 5.894722331148092,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 3.5348108136922116e-12,
+    "plus_portal": [
+     {
+      "delta": 0.06527607310205487,
+      "lam_HSigma": 6.773922694613504e-05,
+      "T_c_GeV": 210446520160.98282,
+      "T_c_over_h": 0.03945379080633349,
+      "T_RH_over_T_c": 1463.5547300301894,
+      "thermal_mass_over_H_at_T_c": 11365.466092638371,
+      "lamHS_over_lamS": 3854.550814638683,
+      "radiation_fraction_at_T_c": 2.1795364149663228e-13,
+      "T_Sigma_quanta_thermalise_E_GeV": 16331834.983086633,
+      "T_th_over_T_c": 7.760563097262648e-05,
+      "coherent_amplitude_at_T_c_over_vev": 0.0006832679226005936,
+      "vacuum_fluct_over_coherent_at_T_c": 0.043669410310430964
+     },
+     {
+      "delta": 0.2961581685207392,
+      "lam_HSigma": 0.00014428629572230833,
+      "T_c_GeV": 144194709018.3692,
+      "T_c_over_h": 0.027033128799844246,
+      "T_RH_over_T_c": 2136.0007041642793,
+      "thermal_mass_over_H_at_T_c": 24208.735109544294,
+      "lamHS_over_lamS": 8210.292378445187,
+      "radiation_fraction_at_T_c": 4.8039052599006537e-14,
+      "T_Sigma_quanta_thermalise_E_GeV": 74097691.65513134,
+      "T_th_over_T_c": 0.0005138724725724292,
+      "coherent_amplitude_at_T_c_over_vev": 0.00046816463967002986,
+      "vacuum_fluct_over_coherent_at_T_c": 0.06373379092669486
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.10711862724178615,
+      "lam_HSigma": -8.677522036553196e-05,
+      "Sigma_over_vev_at_T_RH": 1656.4822682309682,
+      "T_star_GeV": 185936222820.39362,
+      "thermal_mass_over_H_at_T_RH": 8.789335201169363,
+      "Higgs_m2_over_T2_at_T_RH": 0.07827502790661768,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.2961581685207392,
+      "lam_HSigma": -0.00014428629572230833,
+      "Sigma_over_vev_at_T_RH": 2136.0009382465864,
+      "T_star_GeV": 144194709018.36917,
+      "thermal_mass_over_H_at_T_RH": 11.333673749427003,
+      "Higgs_m2_over_T2_at_T_RH": 0.015261838855955778,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 3000000000.0,
+    "lam_Sigma": 1.5816448448413123e-07,
+    "beta": 878691.580467396,
+    "string_type": "II",
+    "eps": 6.993334619816201,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 4.193601233305213e-12,
+    "plus_portal": [
+     {
+      "delta": 0.09061205966502772,
+      "lam_HSigma": 0.0002394294025800879,
+      "T_c_GeV": 335810584519.6892,
+      "T_c_over_h": 0.06295661502056416,
+      "T_RH_over_T_c": 917.1837166494714,
+      "thermal_mass_over_H_at_T_c": 13390.698808183522,
+      "lamHS_over_lamS": 1513.800037732934,
+      "radiation_fraction_at_T_c": 1.4131057277595317e-12,
+      "T_Sigma_quanta_thermalise_E_GeV": 204037256.2319811,
+      "T_th_over_T_c": 0.0006075962630058732,
+      "coherent_amplitude_at_T_c_over_vev": 0.0010902941055834065,
+      "vacuum_fluct_over_coherent_at_T_c": 0.08210052804431642
+     },
+     {
+      "delta": 0.31256897160598024,
+      "lam_HSigma": 0.0004446900505286572,
+      "T_c_GeV": 246407779605.15176,
+      "T_c_over_h": 0.04619568421543903,
+      "T_RH_over_T_c": 1249.960534904964,
+      "thermal_mass_over_H_at_T_c": 24870.423036842105,
+      "lamHS_over_lamS": 2811.567034021935,
+      "radiation_fraction_at_T_c": 4.0965173177249963e-13,
+      "T_Sigma_quanta_thermalise_E_GeV": 703832531.624384,
+      "T_th_over_T_c": 0.0028563730120543186,
+      "coherent_amplitude_at_T_c_over_vev": 0.0008000252584582849,
+      "vacuum_fluct_over_coherent_at_T_c": 0.11188861957246667
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.11607668808984055,
+      "lam_HSigma": -0.0002709923211632014,
+      "Sigma_over_vev_at_T_RH": 975.7674246477775,
+      "T_star_GeV": 315649153644.6535,
+      "thermal_mass_over_H_at_T_RH": 15.53233173164984,
+      "Higgs_m2_over_T2_at_T_RH": 0.07528897999878972,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.31256897160598024,
+      "lam_HSigma": -0.0004446900505286572,
+      "Sigma_over_vev_at_T_RH": 1249.9609349175296,
+      "T_star_GeV": 246407779605.15176,
+      "thermal_mass_over_H_at_T_RH": 19.89696661801649,
+      "Higgs_m2_over_T2_at_T_RH": 0.009791526112415211,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 10000000000.0,
+    "lam_Sigma": 1.7573831609347917e-06,
+    "beta": 9763239.782971067,
+    "string_type": "II",
+    "eps": 8.197307424142137,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 4.915571811229579e-12,
+    "plus_portal": [
+     {
+      "delta": 0.12031926100990843,
+      "lam_HSigma": 0.0009196674251813666,
+      "T_c_GeV": 571145112764.6003,
+      "T_c_over_h": 0.1070763241028497,
+      "T_RH_over_T_c": 539.2675050813984,
+      "thermal_mass_over_H_at_T_c": 15430.422531562765,
+      "lamHS_over_lamS": 523.3163977127075,
+      "radiation_fraction_at_T_c": 1.1824505665823203e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 3010343947.9708767,
+      "T_th_over_T_c": 0.005270716461880331,
+      "coherent_amplitude_at_T_c_over_vev": 0.0018543672492357154,
+      "vacuum_fluct_over_coherent_at_T_c": 0.16090613807108015
+     },
+     {
+      "delta": 0.3319740317067695,
+      "lam_HSigma": 0.001527619812897318,
+      "T_c_GeV": 443153542855.0241,
+      "T_c_over_h": 0.08308090417229548,
+      "T_RH_over_T_c": 695.0187016800201,
+      "thermal_mass_over_H_at_T_c": 25630.80798033474,
+      "lamHS_over_lamS": 869.2582510491011,
+      "radiation_fraction_at_T_c": 4.285623716423696e-12,
+      "T_Sigma_quanta_thermalise_E_GeV": 8305868975.954458,
+      "T_th_over_T_c": 0.0187426437402345,
+      "coherent_amplitude_at_T_c_over_vev": 0.0014388102040747536,
+      "vacuum_fluct_over_coherent_at_T_c": 0.20737903567474894
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.12888120937366132,
+      "lam_HSigma": -0.0009518270160363881,
+      "Sigma_over_vev_at_T_RH": 548.6161457797418,
+      "T_star_GeV": 561413502014.1881,
+      "thermal_mass_over_H_at_T_RH": 29.10966306553944,
+      "Higgs_m2_over_T2_at_T_RH": 0.07102070413974224,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.3319740317067695,
+      "lam_HSigma": -0.001527619812897318,
+      "Sigma_over_vev_at_T_RH": 695.0194210847499,
+      "T_star_GeV": 443153542855.02405,
+      "thermal_mass_over_H_at_T_RH": 36.87786806078625,
+      "Higgs_m2_over_T2_at_T_RH": 0.0033230103496516006,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 20000000000.0,
+    "lam_Sigma": 7.029532643739167e-06,
+    "beta": 39052959.13188427,
+    "string_type": "II",
+    "eps": 8.890454604702082,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 5.331222288331248e-12,
+    "plus_portal": [
+     {
+      "delta": 0.13898343013721542,
+      "lam_HSigma": 0.0019768546320742936,
+      "T_c_GeV": 779120255488.9059,
+      "T_c_over_h": 0.14606678955547542,
+      "T_RH_over_T_c": 395.31766480224144,
+      "thermal_mass_over_H_at_T_c": 16584.094109002395,
+      "lamHS_over_lamS": 281.22134603571027,
+      "radiation_fraction_at_T_c": 4.094634251334007e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 13909258559.935633,
+      "T_th_over_T_c": 0.01785251822416994,
+      "coherent_amplitude_at_T_c_over_vev": 0.0025296112191198245,
+      "vacuum_fluct_over_coherent_at_T_c": 0.23590903644381508
+     },
+     {
+      "delta": 0.34393766082769134,
+      "lam_HSigma": 0.003109804504594812,
+      "T_c_GeV": 621191233865.2047,
+      "T_c_over_h": 0.1164587989998509,
+      "T_RH_over_T_c": 495.82154932153213,
+      "thermal_mass_over_H_at_T_c": 26088.559941650637,
+      "lamHS_over_lamS": 442.3913597391927,
+      "radiation_fraction_at_T_c": 1.654620526400668e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 34420778421.058846,
+      "T_th_over_T_c": 0.055410921057086227,
+      "coherent_amplitude_at_T_c_over_vev": 0.002016854655406509,
+      "vacuum_fluct_over_coherent_at_T_c": 0.2958855481629846
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.13931358230166904,
+      "lam_HSigma": -0.001979201227269047,
+      "Sigma_over_vev_at_T_RH": 395.5534871770202,
+      "T_star_GeV": 778658245345.9681,
+      "thermal_mass_over_H_at_T_RH": 41.97620196474346,
+      "Higgs_m2_over_T2_at_T_RH": 0.06754309243233345,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.34393766082769134,
+      "lam_HSigma": -0.003109804504594812,
+      "Sigma_over_vev_at_T_RH": 495.8225577478343,
+      "T_star_GeV": 621191233865.2048,
+      "thermal_mass_over_H_at_T_RH": 52.61683357116984,
+      "Higgs_m2_over_T2_at_T_RH": -0.0006651032879477492,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 30000000000.0,
+    "lam_Sigma": 1.5816448448413125e-05,
+    "beta": 87869158.0467396,
+    "string_type": "II",
+    "eps": 9.295919712810248,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 5.574362230842581e-12,
+    "plus_portal": [
+     {
+      "delta": 0.15099214575879988,
+      "lam_HSigma": 0.0030907342101897657,
+      "T_c_GeV": 934657062623.6853,
+      "T_c_over_h": 0.17522629595494663,
+      "T_RH_over_T_c": 329.5326300059298,
+      "thermal_mass_over_H_at_T_c": 17285.71781861936,
+      "lamHS_over_lamS": 195.41265665743444,
+      "radiation_fraction_at_T_c": 8.48020404460519e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 33999914853.602467,
+      "T_th_over_T_c": 0.03637688753793927,
+      "coherent_amplitude_at_T_c_over_vev": 0.003034600852674303,
+      "vacuum_fluct_over_coherent_at_T_c": 0.2949769216373797
+     },
+     {
+      "delta": 0.3512387426151944,
+      "lam_HSigma": 0.004713957770561238,
+      "T_c_GeV": 756815952621.9991,
+      "T_c_over_h": 0.14188525545969238,
+      "T_RH_over_T_c": 406.96816568536883,
+      "thermal_mass_over_H_at_T_c": 26364.008772467885,
+      "lamHS_over_lamS": 298.0414842141247,
+      "radiation_fraction_at_T_c": 3.645509591663135e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 79090785035.13492,
+      "T_th_over_T_c": 0.10450464840378142,
+      "coherent_amplitude_at_T_c_over_vev": 0.002457194651370127,
+      "vacuum_fluct_over_coherent_at_T_c": 0.3642923516136202
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.14803682184233366,
+      "lam_HSigma": -0.0030603377337386725,
+      "Sigma_over_vev_at_T_RH": 327.9097219720936,
+      "T_star_GeV": 939287284273.0771,
+      "thermal_mass_over_H_at_T_RH": 52.19667557852189,
+      "Higgs_m2_over_T2_at_T_RH": 0.06463518379186078,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.3512387426151944,
+      "lam_HSigma": -0.004713957770561238,
+      "Sigma_over_vev_at_T_RH": 406.96939428084005,
+      "T_star_GeV": 756815952621.9991,
+      "thermal_mass_over_H_at_T_RH": 64.78150134438319,
+      "Higgs_m2_over_T2_at_T_RH": -0.003099037775475197,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 40000000000.0,
+    "lam_Sigma": 2.8118130574956667e-05,
+    "beta": 156211836.52753708,
+    "string_type": "II",
+    "eps": 9.583601785262028,
+    "eps_method": "gate-3 large-beta law",
+    "Gmu": 5.746872765432916e-12,
+    "plus_portal": [
+     {
+      "delta": 0.16177346037901302,
+      "lam_HSigma": 0.004265567855514511,
+      "T_c_GeV": 1060799803809.4923,
+      "T_c_over_h": 0.19887510382630152,
+      "T_RH_over_T_c": 290.34696169241874,
+      "thermal_mass_over_H_at_T_c": 17892.205525997833,
+      "lamHS_over_lamS": 151.7016874270307,
+      "radiation_fraction_at_T_c": 1.4071190962335549e-10,
+      "T_Sigma_quanta_thermalise_E_GeV": 64760205913.0551,
+      "T_th_over_T_c": 0.06104847086178883,
+      "coherent_amplitude_at_T_c_over_vev": 0.003444155207173676,
+      "vacuum_fluct_over_coherent_at_T_c": 0.34653382869451493
+     },
+     {
+      "delta": 0.3565633494712233,
+      "lam_HSigma": 0.00633273868675339,
+      "T_c_GeV": 870614857541.0024,
+      "T_c_over_h": 0.16321988330352502,
+      "T_RH_over_T_c": 353.7729655452089,
+      "thermal_mass_over_H_at_T_c": 26563.089830899495,
+      "lamHS_over_lamS": 225.21905109842638,
+      "radiation_fraction_at_T_c": 6.384125729710282e-11,
+      "T_Sigma_quanta_thermalise_E_GeV": 142737355550.81613,
+      "T_th_over_T_c": 0.16395005703666593,
+      "coherent_amplitude_at_T_c_over_vev": 0.002826671615392865,
+      "vacuum_fluct_over_coherent_at_T_c": 0.4222337975379441
+     }
+    ],
+    "minus_portal": [
+     {
+      "delta": 0.1575638003759083,
+      "lam_HSigma": -0.004209702845976754,
+      "Sigma_over_vev_at_T_RH": 288.4411303217192,
+      "T_star_GeV": 1067815296219.4673,
+      "thermal_mass_over_H_at_T_RH": 61.21866934080213,
+      "Higgs_m2_over_T2_at_T_RH": 0.06145935192220948,
+      "c_H_E": 0.11398125
+     },
+     {
+      "delta": 0.3565633494712233,
+      "lam_HSigma": -0.00633273868675339,
+      "Sigma_over_vev_at_T_RH": 353.77437887819343,
+      "T_star_GeV": 870614857541.0024,
+      "thermal_mass_over_H_at_T_RH": 75.08513204213445,
+      "Higgs_m2_over_T2_at_T_RH": -0.004874149479402776,
+      "c_H_E": 0.11398125
+     }
+    ]
+   },
+   {
+    "M_Sigma_GeV": 100000000000.0,
+    "lam_Sigma": 0.00017573831609347915,
+    "window": "none"
+   },
+   {
+    "M_Sigma_GeV": 7540000000000.0,
+    "lam_Sigma": 0.9991004451220039,
+    "window": "none"
+   }
+  ],
+  "Gmu_range": [
+   7.593916731904473e-14,
+   5.746872765432916e-12
+  ],
+  "limits_Q_hw_gates_gate3": {
+   "LVK O3 model B (LRS)": 4e-15,
+   "LVK O3 model C-1": 2.1e-15,
+   "LVK O3 model A (BOS)": 9.6e-09,
+   "NANOGrav 15-yr most stringent (log10 < -10.10)": 7.943282347242822e-11,
+   "reference (lam_Sigma=1) gate 3": 8.89e-12
+  },
+  "Gmu_over_LVK_B": [
+   18.984791829761182,
+   1436.718191358229
+  ],
+  "Gmu_over_NANOGrav": [
+   0.0009560174748843447,
+   0.07234884162751312
+  ],
+  "T_RH_GeV": 308000000000000.0,
+  "h_GeV": 5334000000000.0,
+  "c_H_estimate": 0.11398125
+ },
+ "D_portal_gap": {
+  "need_over_invisible": [
+   23.16831683168317,
+   24.509803921568626
+  ],
+  "need_over_detector_level": [
+   780000000.0,
+   1170000000.0
+  ],
+  "note": "P3a loop stabilisation by phi needs b >= 0.117; the DM chain already strains at b ~ 1e-10 (>= 97-99% erasure of onset pairs uncomputed). Gap ~1e9."
+ },
+ "E_P4b_vs_P3a": {
+  "min_lamS_lamY_in_band": 0.058080999999999994,
+  "P3a_hidden_bound": 0.000905,
+  "margin": 64.17790055248618,
+  "M_Sigma_band_GeV": [
+   3703194565776.9595,
+   5675135363319.539
+  ],
+  "Lambda_lambda_GeV": 49400000000.0,
+  "M_Sigma_over_Lambda_lambda": [
+   74.96345274852145,
+   114.88128265829026
+  ],
+  "reading": "P4b repair keeps the hidden-sector P3a pass but leaves no Higgs escape; the Sigma corner (lam_Sigma <~ 3e-5) is a different branch, outside the common-lambda band."
+ },
+ "F_TCC": {
+  "N_max_TCC": 16.72023534285294,
+  "N_min_heavy": 58.4,
+  "deficit": 41.67976465714706
+ },
+ "runtime_s": 72.22657465934753
+}

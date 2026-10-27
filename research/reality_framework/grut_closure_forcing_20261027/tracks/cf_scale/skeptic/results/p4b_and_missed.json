@@ -1,0 +1,96 @@
+{
+ "method": "cf_scale_skeptic: (1) independent P4b re-check (closed forms + own integration with betas retyped from the\nMachacek-Vaughn check); (2) nonminimal-coupling relevance at the two Eichhorn-Pauly fixed points (their eq. 32,\nquoted) -> whether GRUT's xi_X = -5/6 survives P4-M; (3) missed postulates: total asymptotic freedom (minimal SU(2)\nembedding of hidden charges 1, 3, 6) and classical scale invariance (Coleman-Weinberg breaking of the charge-6 Sigma).\nUsage: python3 -B p4b_and_missed.py <out.json>\n",
+ "P4b": {
+  "analytic": {
+   "pole_lam1_GeV": 5731080445016550.0,
+   "common_max_4pi": 0.5661010218851518,
+   "common_max_strict1": 0.3721772641840653,
+   "common_max_unitarity_8pi_over_3": 0.5536307960339508,
+   "kappa_floor_lamY": 0.2414836171529219
+  },
+  "numeric": {
+   "pole_spot_GeV": 5731080446931888.0,
+   "common_max_4pi": 0.5661018371582032,
+   "common_max_strict1": 0.37217941284179684,
+   "C1_lamX_max": 0.17409790802001954,
+   "C1_lamphi_max": 0.1931218338012695,
+   "C1_g_max": 0.5698363708403235,
+   "C1_ms_over_mX_max_at_g0.1": 6.214850501842655,
+   "e_max_MY_lam0.3": 0.25113871002197263
+  },
+  "track": {
+   "pole": 5730000000000000.0,
+   "common_max_4pi": 0.566,
+   "strict": 0.372,
+   "floor": 0.241,
+   "lamX": 0.174,
+   "lamphi": 0.193,
+   "g": 0.57,
+   "ms_ratio": 6.2,
+   "e_max": 0.25
+  }
+ },
+ "xi_relevance": {
+  "source": "Eichhorn-Pauly arXiv:2009.13543 eq. (32) gravitational part and eq. (41) [Q]; eq. (41) overall normalisation as rendered by ar5iv, not independently verified",
+  "discriminant_of_51_144_104": -480,
+  "rows": {
+   "pure_gravity": {
+    "beta_xi_grav_coeff": -1.1077859427110224,
+    "theta_xi": 1.1077859427110224,
+    "xi_relevant": true,
+    "A_lam": 2.830902608641306,
+    "eq41_linear_xixi_coeff_times_g2": 786.6726391333947
+   },
+   "SM_content": {
+    "beta_xi_grav_coeff": 0.01852632904007131,
+    "theta_xi": -0.01852632904007131,
+    "xi_relevant": false,
+    "A_lam": 0.023746447143969802,
+    "eq41_linear_xixi_coeff_times_g2": 1.6524369768665905
+   },
+   "U1D_deBrito": {
+    "beta_xi_grav_coeff": 0.027778683072847164,
+    "theta_xi": -0.027778683072847164,
+    "xi_relevant": false,
+    "A_lam": 0.05609832037074012,
+    "eq41_linear_xixi_coeff_times_g2": 3.560993541564435
+   }
+  }
+ },
+ "TAF_SU2": {
+  "T_half": 0.5,
+  "T_3half": 5.0,
+  "T_3": 28.0,
+  "b0": -4.166666666666666,
+  "asymptotically_free": false,
+  "note": "16pi^2 beta_g = -b0 g^3; q = 2T3 is the minimal normalisation admitting charge 1"
+ },
+ "scale_invariance_CW": {
+  "e=1e-07": {
+   "lam_at_mu_eq_MA": 8.20701587502936e-28,
+   "m_Sigma": 0.37402055555179436,
+   "m_A": 3198000.0,
+   "ratio": 1.1695452018505139e-07
+  },
+  "e=3e-06": {
+   "lam_at_mu_eq_MA": 6.647682858773783e-22,
+   "m_Sigma": 336.618499996615,
+   "m_A": 95940000.0,
+   "ratio": 3.5086356055515426e-06
+  },
+  "e=0.01": {
+   "lam_at_mu_eq_MA": 8.207015875029359e-08,
+   "m_Sigma": 3740205555.517944,
+   "m_A": 319800000000.0,
+   "ratio": 0.01169545201850514
+  },
+  "e=0.3": {
+   "lam_at_mu_eq_MA": 0.06647682858773779,
+   "m_Sigma": 3366184999966.1494,
+   "m_A": 9594000000000.0,
+   "ratio": 0.3508635605551542
+  },
+  "note": "w = h = 5.33e12 GeV taken as the generated scale; heavy spot needs lambda_Sigma = O(0.24-1) at h, i.e. m_Sigma ~ sqrt(2 lam) h; Higgs portal needed for the EW scale ~ (m_h/h)^2 ~ 5e-22",
+  "portal_for_EW_scale": 5.511482985965665e-22
+ }
+}

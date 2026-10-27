@@ -117,8 +117,12 @@ def run_full(MS, delta, lamS, sign=+1, mu_max=MPL):
     Y0 = Y_at(MS).copy()
     lHS0 = sign * np.sqrt(delta * lamS)
     Z0 = np.concatenate([Y0[:6], [Y0[6] + delta], [Y0[7]], [lamS, lHS0]])
+    blow = lambda t, Z: 4 * np.pi * 2 - max(abs(Z[6]), abs(Z[8]), abs(Z[9]))
+    blow.terminal = True
     sol = solve_ivp(rhs_full, (np.log(MS), np.log(mu_max)), Z0, method='DOP853', rtol=1e-9, atol=1e-14,
-                    dense_output=True)
+                    dense_output=True, events=blow)
+    if sol.status == 1:
+        sol.success = False
     return sol
 
 
@@ -154,21 +158,30 @@ def stable(MS, delta, lamS, w, sign=+1, nh=600, return_detail=False):
 
 def delta_min(MS, lamS_of_delta, w_of_delta, sign=+1, lo=1e-5, hi=2.0):
     """smallest delta in [lo, hi] giving stability (bisection on a monotone-in-delta assumption, checked on a grid)."""
-    grid_d = np.logspace(np.log10(lo), np.log10(hi), 40)
+    grid_d = np.logspace(np.log10(lo), np.log10(hi), 24)
     okv = [stable(MS, d, lamS_of_delta(d), w_of_delta(d), sign) for d in grid_d]
     if not any(okv):
         return None, None
     i = okv.index(True)
     a, b = (grid_d[i - 1] if i > 0 else lo), grid_d[i]
-    for _ in range(30):
+    for _ in range(16):
         m = np.sqrt(a * b)
         if stable(MS, m, lamS_of_delta(m), w_of_delta(m), sign):
             b = m
         else:
             a = m
-    # largest stable delta on the grid (perturbativity upper edge)
+    # largest stable delta (perturbativity upper edge), refined by bisection between grid points
     j = len(okv) - 1 - okv[::-1].index(True)
-    return float(b), float(grid_d[j])
+    if j == len(okv) - 1:
+        return float(b), float(grid_d[j])
+    a2, b2 = grid_d[j], grid_d[j + 1]
+    for _ in range(16):
+        m = np.sqrt(a2 * b2)
+        if stable(MS, m, lamS_of_delta(m), w_of_delta(m), sign):
+            a2 = m
+        else:
+            b2 = m
+    return float(b), float(a2)
 
 
 def mixing_angle(lamH, lamS, lamHS, w, v=VEW):
@@ -179,26 +192,26 @@ def mixing_angle(lamH, lamS, lamHS, w, v=VEW):
 
 # ---------------- C1: generic EEGLS (free w), fixed lam_HS, positive and negative portal
 gen = {}
-for MS in (1e3, 1e6, 1e8, 1e9, 1e10, 3e10, 1e11, 3e11):
+for MS in (1e3, 1e8, 1e10, 3e10, 1e11, 3e11):
     row = {}
-    for lHS_fix in (0.01, 0.1, 0.5):
+    for lHS_fix in (0.01, 0.1, 1.0):
         for sign in (+1, -1):
             lamS_of = lambda d, L=lHS_fix: L ** 2 / d
             w_of = lambda d, L=lHS_fix, M=MS: M / np.sqrt(2 * L ** 2 / d)
             dmin, dmax = delta_min(MS, lamS_of, w_of, sign)
-            row[f'lamHS={lHS_fix:g}, sign={sign:+d}'] = {'delta_min': dmin, 'delta_max_grid': dmax}
+            row[f'lamHS={lHS_fix:g}, sign={sign:+d}'] = {'delta_min': dmin, 'delta_max': dmax}
     gen[f'{MS:.0e}'] = row
     print('generic', MS, row)
 out['C1_generic_EEGLS_free_vev'] = gen
 
 # ---------------- C2: GRUT Sigma with the heavy-reference vev h = 5.334e12 GeV, M_Sigma free (lam_Sigma = M^2/(2 h^2))
 grut = {}
-for MS in (1e6, 1e7, 3e7, 1e8, 2e8, 3e8, 5e8, 7e8, 1e9, 3e9, 1e10, 3e10, 1e11, 7.54e12):
+for MS in (3e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 3e8, 1e9, 3e9, 1e10, 2e10, 3e10, 4e10, 1e11, 7.54e12):
     lamS = MS ** 2 / (2 * W_GRUT ** 2)
     row = {'lam_Sigma': lamS}
     for sign in (+1, -1):
         dmin, dmax = delta_min(MS, lambda d, L=lamS: L, lambda d: W_GRUT, sign)
-        r = {'delta_min': dmin, 'delta_max_grid': dmax}
+        r = {'delta_min': dmin, 'delta_max': dmax}
         if dmin is not None:
             for lab, d in (('at_delta_min', dmin), ('at_delta_max', dmax)):
                 lHS = sign * np.sqrt(d * lamS)
@@ -211,10 +224,10 @@ for MS in (1e6, 1e7, 3e7, 1e8, 2e8, 3e8, 5e8, 7e8, 1e9, 3e9, 1e10, 3e10, 1e11, 7
             r['why_unstable_at_delta=0.5'] = stable(MS, 0.5, lamS, W_GRUT, sign, return_detail=True)[1]
         row[f'sign={sign:+d}'] = r
     grut[f'{MS:.3g}'] = row
-    print('GRUT', MS, {k: (v.get('delta_min'), v.get('delta_max_grid')) if isinstance(v, dict) else v for k, v in row.items()})
+    print('GRUT', MS, {k: (v.get('delta_min'), v.get('delta_max')) if isinstance(v, dict) else v for k, v in row.items()})
 out['C2_GRUT_Sigma_fixed_vev'] = grut
 # analytic edge for the positive branch: h_c = sqrt(w M_S) (2 delta)^(-1/4) <= Lambda  =>  M_S <= sqrt(2 delta) Lambda^2 / w
-out['C2_analytic_edge'] = {f'M_S,max(delta={d})': np.sqrt(2 * d) * LAM_LAMBDA ** 2 / W_GRUT for d in (0.0105, 0.02, 0.1, 0.5, 1.0)}
+out['C2_tree_only_edge_estimate_SUPERSEDED_by_numerics_(ignores_8delta^2_running)'] = {f'M_S,max(delta={d})': np.sqrt(2 * d) * LAM_LAMBDA ** 2 / W_GRUT for d in (0.0105, 0.02, 0.1, 0.5, 1.0)}
 
 # ---------------- C3: the heavy-reference point itself: lam_Sigma = 1 (M_Sigma = sqrt(2) h = 7.54e12 GeV)
 MS_ref = np.sqrt(2) * W_GRUT
@@ -251,9 +264,11 @@ def rhs_light(t, Z, kind):
 def light_ok(p0, q0, kind):
     Y0 = Y_at(MT).copy()
     Z0 = np.concatenate([Y0[:8], [p0, q0]])
+    blow = lambda t, Z, kind: 4 * np.pi * 2 - max(abs(Z[6]), abs(Z[8]), abs(Z[9]))
+    blow.terminal = True
     sol = solve_ivp(rhs_light, (np.log(MT), np.log(MPL)), Z0, args=(kind,), method='DOP853', rtol=1e-9, atol=1e-14,
-                    dense_output=True)
-    if not sol.success:
+                    dense_output=True, events=blow)
+    if not sol.success or sol.status == 1:
         return False
     Z = sol.sol(np.linspace(np.log(MT), np.log(MPL), 800))
     return bool(Z[6].min() >= 0 and np.abs(Z[6:]).max() < 4 * np.pi)

@@ -1,0 +1,114 @@
+{
+ "hidden_sector_P3a": {
+  "r_at_vacuum": 0.45,
+  "tachyon_onset_s_over_svac": 2.222222222222222,
+  "lamS_min_lamSY0_lamY1": 0.0009051190482202362,
+  "lamS_min_lamSY0.03_lamY1": 0.00020205735382210243,
+  "lamSY_threshold_mu2_over_MY2": 0.056953125000000014,
+  "window_point_lamS2.8e-5_lamSY0: Vmin/s_vac^4, (s/svac, y/svac, phase)": [
+   -27.561689029221693,
+   [
+    32.66989634500632,
+    2.7761605797686384,
+    3.141592653367694
+   ]
+  ],
+  "window_point_lamS2.8e-5_lamSY0: depth GeV^4": -5.577671392357392e+51,
+  "window_point depth / rho_Lambda": 2.2310685569429567e+98,
+  "lamSY_needed_at_lamS=2.8e-05": 0.04691079031407061,
+  "lamSY_needed_at_lamS=1.8e-10": 0.056927649002516074
+ },
+ "CW_Y_threshold": {
+  "coeff_s4 (= delta lambda_Sigma, |Sigma|=s)": "-mu**4/(24*pi**2*M2**2)",
+  "numeric": -1.3693804717017527e-05,
+  "track value": -1.37e-05,
+  "coeff_s2 (= delta m_Sigma^2)": "log((M2/muR**2)**(mu**2/(8*pi**2)))"
+ },
+ "mixing_identity": [
+  {
+   "lam_S": 1.3128534416365097e-09,
+   "w": 5653514125803.239,
+   "delta": 0.0578883432900307,
+   "theta*M_S": 83.77875170488451,
+   "sqrt(2 delta) v": 83.77875170486878
+  },
+  {
+   "lam_S": 3.065451655562737e-05,
+   "w": 3623741920.4321723,
+   "delta": 0.15643423648731922,
+   "theta*M_S": 137.7222877301448,
+   "sqrt(2 delta) v": 137.7222877274484
+  },
+  {
+   "lam_S": 1.8924566420966926e-06,
+   "w": 11117206734.797249,
+   "delta": 0.20100657174859,
+   "theta*M_S": 156.11457572438928,
+   "sqrt(2 delta) v": 156.11457571912885
+  },
+  {
+   "lam_S": 1.8862147315975275e-14,
+   "w": 585552100704.7191,
+   "delta": 0.1969645895664052,
+   "theta*M_S": 154.53716177727424,
+   "sqrt(2 delta) v": 154.53697345594276
+  },
+  {
+   "lam_S": 1.9829746623034062e-11,
+   "w": 875272970524.792,
+   "delta": 0.11402777473995068,
+   "theta*M_S": 117.58275986400007,
+   "sqrt(2 delta) v": 117.58275980300007
+  },
+  {
+   "lam_S": 3.427511296351098e-10,
+   "w": 467959734.8602114,
+   "delta": 0.14929888421583662,
+   "theta*M_S": 134.55882973852457,
+   "sqrt(2 delta) v": 134.54470345947541
+  }
+ ],
+ "band_sqrt2delta_v": [
+  29.13314328389575,
+  208.9245979965021
+ ],
+ "valley_identity_holds": true,
+ "portal_betas_scalar_part": {
+  "16pi^2 dlam/dlnmu (scalar part)": "2*b**2 + lHX**2 + 24*lam**2",
+  "16pi^2 db/dlnmu (scalar part)": "2*b*(4*b + 6*lam + 3*lphi)",
+  "16pi^2 dlamHX/dlnmu (scalar part)": "4*lHX*(lHX + 2*lX + 3*lam)"
+ },
+ "portal_loop_stabilisation": {
+  "b_needed": 0.11807183683065599,
+  "lamHX_needed": 0.17610549447580737,
+  "track": {
+   "b": 0.117,
+   "lamHX": 0.175
+  },
+  "Gamma_inv_max_GeV": 0.0004876707726763718,
+  "b_max": 0.005029683868816228,
+  "lamHX_max": 0.0071130471417290885,
+  "Gamma(h->phiphi) at b_needed": 0.2687435123109009,
+  "ratio b_needed/b_max": 23.475001592584196,
+  "ratio lamHX_needed/lamHX_max": 24.7580946627887
+ },
+ "hidden_landau_pole": {
+  "lambda_Sigma=1 at h": {
+   "pole_GeV": 1.4325294394503968e+16,
+   "lambda=4pi_GeV": 7642373960842004.0
+  },
+  "lambda_Y=1 at M_Y": {
+   "pole_GeV": 1.0743970795877974e+16,
+   "lambda=4pi_GeV": 5731780470631503.0
+  },
+  "check 20 lam^2": "O(2) model, V = lam (phi.phi/2)^2: 16pi^2 beta = 20 lam^2 [D: 1/2 Tr M^4 above with x1,x2]"
+ },
+ "xX_check_lX_beta_coefficient": "2*lHX**2 + 20*lX**2",
+ "inflation": {
+  "H_i/h_max": 0.49388747925309506,
+  "h_rms_60efolds": 164394596022.0874,
+  "P(|h|>h_max) per Hubble patch (Gaussian)": 0.1005092571037493,
+  "patches ~ e^(3N), N=60": "e^180 = 1.5e78",
+  "xi_H window (quoted, abstracts)": "lower ~0.05-0.07 (2011.03763); upper ~1 from post-inflation curvature-induced Higgs production (1506.04065; 1602.00483)"
+ }
+}

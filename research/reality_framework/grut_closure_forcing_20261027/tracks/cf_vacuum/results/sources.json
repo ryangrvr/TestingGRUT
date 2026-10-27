@@ -1,0 +1,67 @@
+{
+ "PDG 2026 (Int. J. Mod. Phys. A 41, 2630011 (2026)), pdglive read 2026-10-27": {
+  "S126M Higgs mass": "125.13 +- 0.11 GeV (S = 1.5)",
+  "Q007TP top direct": "172.60 +- 0.27 GeV (S = 1.5)",
+  "Q007TP4 top pole from cross sections": "172.1 +- 0.6 GeV",
+  "QCD review (rev. Aug 2025) eq. (9.25)": "alpha_s(MZ) = 0.1180 +- 0.0009; eq. (9.23) FLAG 2024 0.1183 +- 0.0007",
+  "read level": "pdglive pages (WebFetch); QCD review PDF text (pdftotext) lines around eqs. (9.23)-(9.25)"
+ },
+ "ATLAS+CMS 2402.08713": {
+  "value": "m_t = 172.52 +- 0.14 (stat) +- 0.30 (syst) GeV",
+  "read level": "abstract"
+ },
+ "Buttazzo et al. 1307.3536 (JHEP 12 (2013) 089)": {
+  "used": "stability formula Mh > 129.6 + 2.0 (Mt - 173.34) - 0.5 (as-0.1184)/0.0007 +- 0.3; quoted Mt < 171.53 +- 0.42; Lambda_V fit; 2.8 sigma",
+  "read level": "TeX artv2.tex lines 1470-1545 (scratchpad qtheory/vacua_dl)"
+ },
+ "Bednyakov-Kniehl-Pikelner-Veretin 1507.08833": {
+  "used": "criterion lambda = beta_lambda = 0; Mt,crit = 171.44 at (125.7, 0.1185)",
+  "read level": "via track vacua (TeX)"
+ },
+ "Hiller-Hoehne-Litim-Steudtner 2401.08811": {
+  "used": "PDG 2024 line 171.04 (lambda>0), 171.10 (eff); alpha_s > 0.1213; 5 sigma with 2-3x errors",
+  "read level": "via track vacua / v_vacua (TeX table)"
+ },
+ "Martin-Robertson 1907.02500 (SMDR v1.3)": {
+  "used": "matching and RG running",
+  "read level": "code (built by v_vacua)"
+ },
+ "Elias-Miro, Espinosa, Giudice, Lee, Strumia 1203.0237 (JHEP 06 (2012) 031)": {
+  "used": "potential, RGEs (verified here by sympy), matching delta = lam_HS^2/lam_S, stability conditions (condp, condm), \"mass smaller than Lambda_I\"; footnote: heavier than Lambda_I needs sizable couplings",
+  "read level": "TeX art.tex sections 1-2 and conclusions (scratchpad closure/cf_vacuum/dl/eegls)"
+ },
+ "Lebedev 1203.0156": {
+  "used": "Higgs-portal singlet stabilisation (credit only)",
+  "read level": "TeX downloaded, not read beyond title [R]"
+ },
+ "Butenschoen, Dehnadi, Hoang, Mateu, Preisser, Stewart 1608.01318": {
+  "used": "m_MC differs from pole mass by 900/600 MeV (NLL/NNLL), agrees with MSR(1 GeV)",
+  "read level": "abstract"
+ },
+ "Mantziris-Markkanen-Rajantie 2011.03763": {
+  "used": "xi_H >~ 0.051-0.066 from inflation vacuum decay",
+  "read level": "abstract"
+ },
+ "Espinosa et al. 1505.04825": {
+  "used": "AdS patches lethal; H_inf bounds",
+  "read level": "abstract"
+ },
+ "Detering-Enguita-Gavela-Steingasser-You 2503.22787; Enguita-Gavela-Steingasser 2503.03825; Benevedes-Steingasser-Trifinopoulos 2408.10297": {
+  "used": "opposite selection principle (metastability bound) - credit/contrast",
+  "read level": "abstract"
+ },
+ "Froggatt-Nielsen hep-ph/9511371; Klinkhamer 1302.1496; Shaposhnikov-Wetterich 0912.0208; Kawai-Okada 1110.2303; Hamada-Kawai-Kawana 1509.05955; Arkani-Hamed-Hall-Kolda-Murayama astro-ph/0005111; Klinkhamer-Volovik 1102.3152": {
+  "used": "credit for criticality/MPP, final-state condition -> MPP chain, global-minimum reading",
+  "read level": "via tracks vacua / v_vacua"
+ },
+ "GRUT internal": {
+  "heavy reference": "git show 04c53f5:.../THEORY_DATA.json",
+  "portal bounds": "grut_formation_review_20261025/tracks/rp_portals/NOTES.md (b_max = 5.0501e-3, lam_HX,max = 7.1419e-3)",
+  "gate 4 hidden stability": "grut_formation_review_20261025/tracks/hw_gates/NOTES.md"
+ },
+ "Code reused (copied unchanged, credited)": {
+  "smdr_common.py, smdr_driver.c": "q-vacuum construction tracks/v_vacua/code",
+  "sm_rge.py": "q-vacuum construction tracks/vacua/code"
+ },
+ "search record": "arXiv API: abs:\"electroweak vacuum\" AND (metastability OR stability) 2024-01..2026-10 (31 hits, titles/abstracts scanned); abs:\"vacuum stability\" AND abs:\"top quark mass\" (sorted by date). No 2024-2026 paper changes the SM line beyond Hiller et al. 2401.08811."
+}

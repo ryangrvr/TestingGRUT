@@ -1,0 +1,133 @@
+{
+ "track": "cf_critic",
+ "date": "2026-10-27",
+ "labels": "[D][C][Q][E][A]; all data comparisons retrospective",
+ "answer": {
+  "a": "Closure as defined (DEF 1.1) forces nothing beyond standard unitary QM (FORMAL_CORE s3-4; Codex 2908e91).",
+  "b": "Every strengthening is STANDARD (relabelled published physics), UNTESTABLE, or INCONSISTENT WITH GRUT BRANCH; none DISTINCTIVE-TESTABLE; none GRUT-native. Only testable restriction on measured parameters: SM near-criticality line (P_q / MPP / AS), published, retrospectively disfavoured 2.5-3.7 sigma (direct m_t), 1.6 (xsec), ~0 (EW alpha_s)."
+ },
+ "final_verdicts": {
+  "DEF1.1": "STANDARD",
+  "P1-S3": "STANDARD",
+  "P1-T3": "STANDARD",
+  "P1-Gauss": "STANDARD",
+  "P1-QG": "UNTESTABLE",
+  "P2-BF": "STANDARD",
+  "P2-TCC": "INCONSISTENT WITH GRUT BRANCH (conditional on homogeneity premise)",
+  "P2-weak": "STANDARD",
+  "P1+P2": "UNTESTABLE",
+  "P1-time": "STANDARD",
+  "P3a-SM": "STANDARD (testable, retrospectively disfavoured)",
+  "P3a-GRUTref": "STANDARD (conditional)",
+  "P3a-Sigma-corner": "UNTESTABLE (heavy-window results not established; visible bath controls Sigma)",
+  "P3d-MPP": "STANDARD",
+  "P3v-volume": "STANDARD",
+  "P4-M": "INCONSISTENT WITH GRUT BRANCH",
+  "P4-S": "INCONSISTENT WITH GRUT BRANCH",
+  "P4-SM": "STANDARD",
+  "P4b": "STANDARD",
+  "TAF": "INCONSISTENT WITH GRUT BRANCH",
+  "classical scale invariance": "INCONSISTENT WITH GRUT BRANCH",
+  "P5": "STANDARD",
+  "P6a": "STANDARD",
+  "P6b": "UNTESTABLE",
+  "P6c": "STANDARD",
+  "P7a-d": "STANDARD",
+  "no-boundary": "UNTESTABLE (measure-dependent)",
+  "CPT-symmetric whole": "INCONSISTENT WITH GRUT BRANCH",
+  "two-time boundary": "not scored"
+ },
+ "ranking": [
+  "P_q/near-criticality (P3a, MPP, P4-SM): testable, not distinctive",
+  "P2-TCC: falsifiable, removes GRUT inflationary DM",
+  "P1-S3: testable via Omega_K sign, no GRUT number",
+  "P5 / CPT-symmetric: testable only vs other theories or with non-GRUT DM",
+  "BF, finite 4-volume, P1-T3/Gauss/QG, P4b, P6, P7: retrodiction/consistency/unobservable",
+  "P4-M, P4-S, TAF, CSI: remove GRUT dark sector"
+ ],
+ "near_criticality": {
+  "mt_crit_SMDR": 170.997,
+  "mt_crit_Buttazzo": 171.00870129870128,
+  "z": {
+   "no MC-pole term; SMDR theory 0.113+0.032": 3.4517379059771707,
+   "no MC-pole term; Buttazzo-fit theory 0.0003/0.0066": 3.549589309499689,
+   "no MC-pole term; Bednyakov upward 0.36": 2.7842374781412578,
+   "0.3 GeV MC-pole; SMDR theory 0.113+0.032": 2.899389222732819,
+   "0.3 GeV MC-pole; Buttazzo-fit theory 0.0003/0.0066": 2.9566591324897957,
+   "0.3 GeV MC-pole; Bednyakov upward 0.36": 2.4691424827316792,
+   "0.6 GeV MC-pole; SMDR theory 0.113+0.032": 2.1127417201249736,
+   "0.6 GeV MC-pole; Buttazzo-fit theory 0.0003/0.0066": 2.134595310080751,
+   "0.6 GeV MC-pole; Bednyakov upward 0.36": 1.9277219406686266
+  },
+  "z_xsec": 1.5557911949760717,
+  "z_EW_alpha_s": -0.012856362828080357
+ },
+ "final_vacuum_sign": {
+  "P2-BF (Banks-Fischler capacity) & P_q (q-theory final-state equilibrium, cf_vacuum P3a)": "INCOMPATIBLE (opposite final-vacuum sign)",
+  "P2-BF (Banks-Fischler capacity) & P2-TCC (late-time)": "INCOMPATIBLE (opposite final-vacuum sign)",
+  "P2-BF (Banks-Fischler capacity) & P1-time (finite four-volume)": "INCOMPATIBLE (opposite final-vacuum sign)",
+  "P_q (q-theory final-state equilibrium, cf_vacuum P3a) & P2-TCC (late-time)": "compatible",
+  "P_q (q-theory final-state equilibrium, cf_vacuum P3a) & P1-time (finite four-volume)": "INCOMPATIBLE (opposite final-vacuum sign)",
+  "P2-TCC (late-time) & P1-time (finite four-volume)": "compatible"
+ },
+ "sigma_corner": {
+  "T_c_plus_GeV": [
+   100000000.0,
+   1100000000000.0
+  ],
+  "radiation_fraction_at_T_c": [
+   1e-26,
+   1e-10
+  ],
+  "mT_over_H_at_T_c": [
+   4000.0,
+   30000.0
+  ],
+  "Gmu_if_strings": [
+   7.593916731904473e-14,
+   5.746872765432916e-12
+  ],
+  "Gmu_over_LVK_modelB": [
+   18.984791829761182,
+   1436.718191358229
+  ],
+  "strings": "undecided, lean no (coherent charged condensate; Sigma quanta thermalise below T_c)",
+  "minus_portal": "|Sigma|_T=(delta/lam_S)^{1/4} T/sqrt6, 3e2-3e6 vev at T_RH; Higgs m^2/T^2 -> c_H - delta/3 ~ 0 near delta_max [E]"
+ },
+ "portal_gap": {
+  "need_over_invisible": [
+   23.16831683168317,
+   24.509803921568626
+  ],
+  "need_over_detector_level": [
+   780000000.0,
+   1170000000.0
+  ],
+  "note": "P3a loop stabilisation by phi needs b >= 0.117; the DM chain already strains at b ~ 1e-10 (>= 97-99% erasure of onset pairs uncomputed). Gap ~1e9."
+ },
+ "P4b_vs_P3a": {
+  "min_lamS_lamY_in_band": 0.058080999999999994,
+  "P3a_hidden_bound": 0.000905,
+  "margin": 64.17790055248618,
+  "M_Sigma_band_GeV": [
+   3703194565776.9595,
+   5675135363319.539
+  ],
+  "Lambda_lambda_GeV": 49400000000.0,
+  "M_Sigma_over_Lambda_lambda": [
+   74.96345274852145,
+   114.88128265829026
+  ],
+  "reading": "P4b repair keeps the hidden-sector P3a pass but leaves no Higgs escape; the Sigma corner (lam_Sigma <~ 3e-5) is a different branch, outside the common-lambda band."
+ },
+ "TCC": {
+  "N_max_TCC": 16.72023534285294,
+  "N_min_heavy": 58.4,
+  "deficit": 41.67976465714706
+ },
+ "next_calculation": {
+  "what": "Re-solve heavy-window release in the P_q Sigma corner with visible bath (Higgs thermal mass) and dynamical Sigma radial mode; lam_S in {1.8e-10,1.8e-6,2.8e-5}, lam_SY=0.06, lam_HS=+-2 sqrt(delta lam_S) at delta_min/max, quiet inflaton corner",
+  "failure": "For both portal signs: no corner point reaches Y_Q for Gamma_I/m_I in perturbative range with m_I<=5 H_i, or all that do fail debris gate or (+) form strings with Gmu above LVK model-B/C edge -> P_q + heavy window implies absolute SM stability, falsifiable by >=5 sigma short-distance top mass above the frozen line.",
+  "runner_up": "Refreeze line in m_t(m_t)/y_t with asymmetric theory error and c6>=0."
+ }
+}

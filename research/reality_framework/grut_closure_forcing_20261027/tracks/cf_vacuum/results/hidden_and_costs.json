@@ -1,0 +1,205 @@
+{
+ "inputs": {
+  "H_i": 133349619398.33566,
+  "M_Y": 4000488581950.07,
+  "h": 5333984775933.427,
+  "mu": 954710753970.2344,
+  "r = sqrt2 mu h / M_Y^2": 0.45000000000000007
+ },
+ "Y_mass2_at_our_vacuum_over_MY2": 0.5499999999999999,
+ "s_where_Y_turns_tachyonic_over_s0": 2.222222222222222,
+ "lamSigma_crit_for_absolute_stability_tree": {
+  "lamY=1, lamSY=0": 0.0009051515633398843,
+  "lamY=1, lamSY=0.01": 0.000614513323465068,
+  "lamY=1, lamSY=0.03": 0.0002020616141811469,
+  "lamY=1, lamSY=0.05": 1.3419256747274638e-05,
+  "lamY=1, lamSY=0.05695": 0.0,
+  "lamY=2, lamSY=0": 0.0004525746176449553,
+  "lamY=2, lamSY=0.01": 0.0003072572208876424,
+  "lamY=2, lamSY=0.03": 0.00010103099094953871,
+  "lamY=2, lamSY=0.05": 6.709611116472009e-06,
+  "lamY=2, lamSY=0.05695": 0.0,
+  "lamY=12.6, lamSY=0": 7.202952763510279e-05,
+  "lamY=12.6, lamSY=0.01": 4.890131797523636e-05,
+  "lamY=12.6, lamSY=0.03": 1.6079590571096925e-05,
+  "lamY=12.6, lamSY=0.05": 1.06786837019184e-06,
+  "lamY=12.6, lamSY=0.05695": 0.0
+ },
+ "analytic_lamSY_removing_the_Y_branch (mu^2/M_Y^2)": 0.056953125000000014,
+ "reference_point_lamSigma=1_lamY=1: min V, s/s0": [
+  3.5467146179948307e+40,
+  1.0000066192402057
+ ],
+ "Sigma_window_needs_lam_SigmaY": {
+  "M_Sigma=1e+06": {
+   "lam_Sigma": 1.7573831609347916e-14,
+   "min_lam_SigmaY (lam_Y = 1)": 0.05695295333862305,
+   "depth_without_lamSY_GeV4": -5.071917233819649e+53,
+   "depth/rho_Lambda": -2.0126655689760514e+100
+  },
+  "M_Sigma=1e+08": {
+   "lam_Sigma": 1.7573831609347915e-10,
+   "min_lam_SigmaY (lam_Y = 1)": 0.056927967071533206,
+   "depth_without_lamSY_GeV4": -5.0713482912988316e+53,
+   "depth/rho_Lambda": -2.012439798134457e+100
+  },
+  "M_Sigma=1e+09": {
+   "lam_Sigma": 1.7573831609347917e-08,
+   "min_lam_SigmaY (lam_Y = 1)": 0.056701374053955075,
+   "depth_without_lamSY_GeV4": -5.015017348643607e+53,
+   "depth/rho_Lambda": -1.9900862494617488e+100
+  },
+  "M_Sigma=1e+10": {
+   "lam_Sigma": 1.7573831609347917e-06,
+   "min_lam_SigmaY (lam_Y = 1)": 0.05443639755249024,
+   "depth_without_lamSY_GeV4": -1.1051285971018898e+53,
+   "depth/rho_Lambda": -4.385430940880515e+99
+  },
+  "M_Sigma=3e+10": {
+   "lam_Sigma": 1.5816448448413125e-05,
+   "min_lam_SigmaY (lam_Y = 1)": 0.04940462112426758,
+   "depth_without_lamSY_GeV4": -1.0647224691745647e+52,
+   "depth/rho_Lambda": -4.2250891633911297e+98
+  },
+  "M_Sigma=4e+10": {
+   "lam_Sigma": 2.8118130574956667e-05,
+   "min_lam_SigmaY (lam_Y = 1)": 0.0468897819519043,
+   "depth_without_lamSY_GeV4": -5.550607162060481e+51,
+   "depth/rho_Lambda": -2.2026218897065402e+98
+  }
+ },
+ "radiative_costs": {
+  "delta_lamSigma_from_mu^4 (threshold at M_Y)": -1.3693804717017529e-05,
+  "lamSY=0, M_Sigma=1e+06": {
+   "|loop delta lam_Sigma|": 1.3693804717017529e-05,
+   "lam_Sigma needed": 1.7573831609347916e-14,
+   "quartic tuning lam/loop": 1.2833417718823323e-09,
+   "delta m_Sigma^2 (log) GeV^2": 3.5098013500973196e+23,
+   "m_Sigma^2": 1000000000000.0,
+   "mass tuning": 2.8491640986241917e-12
+  },
+  "lamSY=0, M_Sigma=1e+09": {
+   "|loop delta lam_Sigma|": 1.3693804717017529e-05,
+   "lam_Sigma needed": 1.7573831609347917e-08,
+   "quartic tuning lam/loop": 0.0012833417718823325,
+   "delta m_Sigma^2 (log) GeV^2": 1.914947703370344e+23,
+   "m_Sigma^2": 1e+18,
+   "mass tuning": 5.222074724233884e-06
+  },
+  "lamSY=0, M_Sigma=3e+10": {
+   "|loop delta lam_Sigma|": 1.3693804717017529e-05,
+   "lam_Sigma needed": 1.5816448448413125e-05,
+   "quartic tuning lam/loop": 1.1550075946940992,
+   "delta m_Sigma^2 (log) GeV^2": 1.1296836301211515e+23,
+   "m_Sigma^2": 9e+20,
+   "mass tuning": 0.007966832270584293
+  },
+  "lamSY=0.057, M_Sigma=1e+06": {
+   "|loop delta lam_Sigma|": 0.00033964594009770104,
+   "lam_Sigma needed": 1.7573831609347916e-14,
+   "quartic tuning lam/loop": 5.174162130214984e-11,
+   "delta m_Sigma^2 (log) GeV^2": 5.26470202514598e+23,
+   "m_Sigma^2": 1000000000000.0,
+   "mass tuning": 1.8994427324161276e-12
+  },
+  "lamSY=0.057, M_Sigma=1e+09": {
+   "|loop delta lam_Sigma|": 0.00019775576236270853,
+   "lam_Sigma needed": 1.7573831609347917e-08,
+   "quartic tuning lam/loop": 8.886634401638996e-05,
+   "delta m_Sigma^2 (log) GeV^2": 2.8724215550555164e+23,
+   "m_Sigma^2": 1e+18,
+   "mass tuning": 3.481383149489256e-06
+  },
+  "lamSY=0.057, M_Sigma=3e+10": {
+   "|loop delta lam_Sigma|": 0.0001278927632399392,
+   "lam_Sigma needed": 1.5816448448413125e-05,
+   "quartic tuning lam/loop": 0.12366961231997105,
+   "delta m_Sigma^2 (log) GeV^2": 1.6945254451817274e+23,
+   "m_Sigma^2": 9e+20,
+   "mass tuning": 0.005311221513722862
+  }
+ },
+ "Higgs_mass_tuning_from_Sigma_portal": {
+  "M_Sigma=1e+03 at_delta_min": {
+   "lam_HSigma": 2.336954260512931e-11,
+   "theta": 0.031041153727508722,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 332448027337113.6,
+   "tuning m_h^2/(2 delta m_H^2)": 2.3548819082212126e-11
+  },
+  "M_Sigma=1e+03 at_delta_max": {
+   "lam_HSigma": 9.777756290630188e-11,
+   "theta": 0.1288315167490772,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 1390953963253690.8,
+   "tuning m_h^2/(2 delta m_H^2)": 5.628337570344262e-12
+  },
+  "M_Sigma=1e+06 at_delta_min": {
+   "lam_HSigma": 2.676568532099148e-08,
+   "theta": 3.515227750715577e-05,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 3.8076052388532915e+17,
+   "tuning m_h^2/(2 delta m_H^2)": 2.0560845883166524e-14
+  },
+  "M_Sigma=1e+06 at_delta_max": {
+   "lam_HSigma": 1.2166107821024127e-07,
+   "theta": 0.00015978159646681922,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 1.730713610364956e+18,
+   "tuning m_h^2/(2 delta m_H^2)": 4.5234280259396286e-15
+  },
+  "M_Sigma=1e+09 at_delta_min": {
+   "lam_HSigma": 6.773922694613504e-05,
+   "theta": 8.896421169614704e-08,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 9.636377036596707e+20,
+   "tuning m_h^2/(2 delta m_H^2)": 8.124171999775646e-18
+  },
+  "M_Sigma=1e+09 at_delta_max": {
+   "lam_HSigma": 0.00014428629572230833,
+   "theta": 1.8949605916966443e-07,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 2.052573094611297e+21,
+   "tuning m_h^2/(2 delta m_H^2)": 3.814119200214187e-18
+  },
+  "M_Sigma=3e+10 at_delta_min": {
+   "lam_HSigma": 0.0030907342101897657,
+   "theta": 4.51018388159663e-09,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 4.3967847747922755e+22,
+   "tuning m_h^2/(2 delta m_H^2)": 1.7805644012606612e-19
+  },
+  "M_Sigma=3e+10 at_delta_max": {
+   "lam_HSigma": 0.004713957770561238,
+   "theta": 6.878888610097308e-09,
+   "delta m_H^2 = lam_HSigma h^2/2 (GeV^2)": 6.705933394817806e+22,
+   "tuning m_h^2/(2 delta m_H^2)": 1.167437549566163e-19
+  }
+ },
+ "inflation_vs_barrier": {
+  "Mt=172.32999999999998": {
+   "h_max_2loop": 803192483440.2847,
+   "H_i/h_max": 0.16602448621924867,
+   "Lambda_lambda": 139250323955.0955,
+   "H_i/Lambda_lambda": 0.9576252005082397
+  },
+  "Mt=172.6": {
+   "h_max_2loop": 269246654946.79257,
+   "H_i/h_max": 0.4952693634195295,
+   "Lambda_lambda": 49448546273.50358,
+   "H_i/Lambda_lambda": 2.696734877922781
+  },
+  "Mt=172.87": {
+   "h_max_2loop": 104434542702.7397,
+   "H_i/h_max": 1.2768727276175205,
+   "Lambda_lambda": 20121703937.74535,
+   "H_i/Lambda_lambda": 6.62715343645383
+  },
+  "Mt=172.1": {
+   "h_max_2loop": 2396442855421.0557,
+   "H_i/h_max": 0.05564481502101418,
+   "Lambda_lambda": 387956398688.9573,
+   "H_i/Lambda_lambda": 0.34372321180671717
+  },
+  "Mt=171.5": {
+   "h_max_2loop": 135308114694311.77,
+   "H_i/h_max": 0.0009855256626670119,
+   "Lambda_lambda": 16669947348290.24,
+   "H_i/Lambda_lambda": 0.007999402554322568
+  }
+ },
+ "inflation_note": "random-walk Higgs during N = 60 e-folds: h_rms ~ sqrt(N) H/(2 pi) = 1.64e+11 GeV; with H_i ~ 0.5 h_max the SM direction is not safe without a Hubble-induced Higgs mass (xi_H R |H|^2 with xi_H >~ 0.05-0.07, Mantziris-Markkanen-Rajantie 2011.03763 [Q abstract]) or a stabiliser"
+}

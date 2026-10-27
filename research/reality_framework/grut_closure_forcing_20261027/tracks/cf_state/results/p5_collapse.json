@@ -1,0 +1,322 @@
+{
+ "part_A": {
+  "params": {
+   "Delta": 1.0,
+   "gamma": 0.5,
+   "t": 3.0,
+   "dt": 0.001,
+   "ntraj": 20000,
+   "K_ancillas": 12
+  },
+  "rho_lindblad": [
+   [
+    [
+     0.4999999999999999,
+     1.3877787807814457e-17
+    ],
+    [
+     0.024893534183931698,
+     6.938893903907228e-18
+    ]
+   ],
+   [
+    [
+     0.024893534183931837,
+     6.938893903907228e-18
+    ],
+    [
+     0.4999999999999999,
+     -1.3877787807814457e-17
+    ]
+   ]
+  ],
+  "rho_qsd_avg": [
+   [
+    [
+     0.49940458963190276,
+     0.0
+    ],
+    [
+     0.024820585228591,
+     -0.0017498009353461733
+    ]
+   ],
+   [
+    [
+     0.024820585228591,
+     0.0017498009353461733
+    ],
+    [
+     0.5005954103680974,
+     0.0
+    ]
+   ]
+  ],
+  "rho_random_unitary_avg": [
+   [
+    [
+     0.49698196540846223,
+     0.0
+    ],
+    [
+     0.0281451674222911,
+     0.0006597809731807558
+    ]
+   ],
+   [
+    [
+     0.0281451674222911,
+     -0.0006597809731807558
+    ],
+    [
+     0.5030180345917911,
+     0.0
+    ]
+   ]
+  ],
+  "dev_qsd": 0.001751320891048715,
+  "dev_ru": 0.0033178953644403836,
+  "sampling_error_scale": 0.007071067811865475,
+  "rho_collision_model": [
+   [
+    [
+     0.49999999999999833,
+     7.833825772245296e-19
+    ],
+    [
+     0.018638463726302994,
+     -4.49654237572531e-20
+    ]
+   ],
+   [
+    [
+     0.018638463726302994,
+     -4.49654237572531e-20
+    ],
+    [
+     0.49999999999999833,
+     7.833825772245296e-19
+    ]
+   ]
+  ],
+  "rho_lindblad_same_trotter": [
+   [
+    [
+     0.4999999999999992,
+     -9.241838984647805e-20
+    ],
+    [
+     0.018638463726302953,
+     2.0049964019364554e-18
+    ]
+   ],
+   [
+    [
+     0.01863846372630295,
+     -2.361617453656343e-18
+    ],
+    [
+     0.4999999999999992,
+     -2.4071530070542954e-18
+    ]
+   ]
+  ],
+  "dev_collision_vs_trotter_lindblad": 8.881841502404365e-16,
+  "dev_collision_vs_exact_lindblad": 0.0062550704576288425,
+  "reversal_fidelity_closed_whole": 0.9999999999999988,
+  "qsd_final_abs_L_mean": 0.7684905260527589,
+  "ru_final_abs_L_mean": 0.5330055018250142,
+  "born_check": {
+   "p_up": 0.3,
+   "fraction_collapsed_up": 0.30625,
+   "n": 4000,
+   "stderr": 0.007245688373094719,
+   "fraction_with_abs_L_gt_0p99": 0.97375
+  }
+ },
+ "part_B": {
+  "rC": 1e-07,
+  "lambda_values": {
+   "GRW": 1e-16,
+   "Adler": 4e-08,
+   "bound_LPF": 3.8e-09,
+   "bound_cantilever": 2e-10,
+   "bound_bulk_heating": 3.3e-11,
+   "bound_Xray_GranSasso_white": 5.2e-13,
+   "bound_Majorana_mp_nuclei_white": 4.939999999999999e-15
+  },
+  "integral_check_point_limit": {
+   "integral": 89460045.96271046,
+   "point": 89460077.54381357
+  },
+  "molecule_Fein": {
+   "GRW": {
+    "rate": 5.1838123872499886e-08,
+    "exponent_over_flight": 3.4426131055520373e-10
+   },
+   "Adler": {
+    "rate": 20.73524954899996,
+    "exponent_over_flight": 0.13770452422208154
+   },
+   "bound_LPF": {
+    "rate": 1.969848707154996,
+    "exponent_over_flight": 0.013081929801097745
+   },
+   "bound_cantilever": {
+    "rate": 0.10367624774499977,
+    "exponent_over_flight": 0.0006885226211104075
+   },
+   "bound_bulk_heating": {
+    "rate": 0.017106580877924965,
+    "exponent_over_flight": 0.00011360623248321726
+   },
+   "bound_Xray_GranSasso_white": {
+    "rate": 0.00026955824413699945,
+    "exponent_over_flight": 1.7901588148870596e-06
+   },
+   "bound_Majorana_mp_nuclei_white": {
+    "rate": 2.5608033193014937e-06,
+    "exponent_over_flight": 1.700650874142706e-08
+   },
+   "flight_time": 0.006641083527674394,
+   "sensitivity_exponent": 0.10536051565782628,
+   "lambda_reaching_sensitivity": 3.060480873900911e-08,
+   "DP_continuum_EG_J": 9.201824036530083e-47,
+   "DP_time_s": 1146046494107.7324
+  },
+  "macroscopic_proposed": {
+   "radius_m": 1.0276129531741364e-06,
+   "GRW": {
+    "rate": 29724701.836339206,
+    "time": 3.364205318209364e-08
+   },
+   "Adler": {
+    "rate": 1.1889880734535684e+16,
+    "time": 8.410513295523409e-17
+   },
+   "bound_LPF": {
+    "rate": 1129538669780890.0,
+    "time": 8.853171890024641e-16
+   },
+   "bound_cantilever": {
+    "rate": 59449403672678.41,
+    "time": 1.682102659104682e-14
+   },
+   "bound_bulk_heating": {
+    "rate": 9809151605991.938,
+    "time": 1.0194561570331406e-13
+   },
+   "bound_Xray_GranSasso_white": {
+    "rate": 154568449548.9639,
+    "time": 6.469625611941083e-12
+   },
+   "bound_Majorana_mp_nuclei_white": {
+    "rate": 1468400270.7151566,
+    "time": 6.810132223095879e-10
+   },
+   "DP_EG_J": 7.767248930457922e-33,
+   "DP_time_s": 0.013577160035528611,
+   "protocol_time_s": 2.5,
+   "DP_granular_EG_J_at_R0_bound": 1.0472065424591582e-40
+  },
+  "white_CSL_heating": {
+   "GRW": {
+    "per_nucleon_W": 5.023015143345134e-44,
+    "earth_W": 180588346.08013165,
+    "temperature_rate_K_per_s_gas": 2.4254367056580555e-21
+   },
+   "Adler": {
+    "per_nucleon_W": 2.009206057338054e-35,
+    "earth_W": 7.223533843205267e+16,
+    "temperature_rate_K_per_s_gas": 9.701746822632223e-13
+   },
+   "bound_LPF": {
+    "per_nucleon_W": 1.908745754471151e-36,
+    "earth_W": 6862357151045003.0,
+    "temperature_rate_K_per_s_gas": 9.216659481500612e-14
+   },
+   "bound_cantilever": {
+    "per_nucleon_W": 1.0046030286690268e-37,
+    "earth_W": 361176692160263.3,
+    "temperature_rate_K_per_s_gas": 4.850873411316111e-15
+   },
+   "bound_bulk_heating": {
+    "per_nucleon_W": 1.6575949973038946e-38,
+    "earth_W": 59594154206443.445,
+    "temperature_rate_K_per_s_gas": 8.003941128671584e-16
+   },
+   "bound_Xray_GranSasso_white": {
+    "per_nucleon_W": 2.61196787453947e-40,
+    "earth_W": 939059399616.6847,
+    "temperature_rate_K_per_s_gas": 1.261227086942189e-17
+   },
+   "bound_Majorana_mp_nuclei_white": {
+    "per_nucleon_W": 2.4813694808124957e-42,
+    "earth_W": 8921064296.358501,
+    "temperature_rate_K_per_s_gas": 1.1981657325950792e-19
+   }
+  }
+ },
+ "quoted": {
+  "CSL_GRW_lambda": [
+   1e-16,
+   "s^-1 at r_C=1e-7 m",
+   "GRW 1986; Carlesso et al. arXiv:2203.04231 (Nat. Phys. 18, 243 (2022))"
+  ],
+  "CSL_Adler_lambda": [
+   4e-08,
+   "s^-1 at r_C=1e-7 m (x10^{+-2})",
+   "Adler 2007 via arXiv:2203.04231"
+  ],
+  "CSL_bound_LPF": [
+   3.8e-09,
+   "s^-1 at r_C=1e-7 m",
+   "LISA Pathfinder, via arXiv:2203.04231"
+  ],
+  "CSL_bound_cantilever": [
+   2e-10,
+   "s^-1 at r_C=1e-7 m",
+   "Vinante et al. PRL 125, 100404 (2020), via arXiv:2203.04231"
+  ],
+  "CSL_bound_bulkheat": [
+   3.3e-11,
+   "s^-1 at r_C=1e-7 m",
+   "Adler & Vinante PRA 97, 052119 (2018), via arXiv:2203.04231"
+  ],
+  "CSL_bound_Xray_GranSasso": [
+   5.2e-13,
+   "s^-1 at r_C=1e-7 m (white noise)",
+   "Donadi et al. EPJC 81, 773 (2021), via arXiv:2203.04231"
+  ],
+  "CSL_bound_Majorana_mp_nuclei": [
+   0.494,
+   "lambda/r_C^2 in s^-1 m^-2 (m-p CSL, coherent nuclei, white noise)",
+   "Arnquist et al. (Majorana) PRL 129, 080401 (2022), arXiv:2202.01343"
+  ],
+  "CSL_bound_Majorana_mp_electrons": [
+   17.4,
+   "lambda/r_C^2 in s^-1 m^-2 (m-p CSL, quasi-free electrons)",
+   "arXiv:2202.01343"
+  ],
+  "CSL_bound_atomint_2026": [
+   1.27e-05,
+   "s^-1 at r_C=1e-5 m",
+   "Zhu et al. arXiv:2605.26860 (2026)"
+  ],
+  "DP_R0_bound_Majorana": [
+   2.54e-10,
+   "m, 95% CL lower bound",
+   "arXiv:2202.01343 with erratum PRL 130, 239902 (2023)"
+  ],
+  "DP_R0_bound_GranSasso": [
+   5.4e-11,
+   "m",
+   "Donadi et al. Nat. Phys. 17, 74 (2021), arXiv:2111.13490"
+  ],
+  "DP_R0_upper_effective": [
+   0.0001,
+   "m, \"effective collapse\" upper bound (somewhat arbitrary)",
+   "Figurato et al. NJP 26, 113004 (2024), arXiv:2406.18494"
+  ]
+ }
+}

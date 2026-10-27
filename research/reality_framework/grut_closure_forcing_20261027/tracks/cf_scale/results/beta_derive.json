@@ -1,0 +1,61 @@
+{
+ "method": "cf_scale: sympy derivation of the one-loop beta functions of the GRUT hidden sector (own code).\n\nFields (real components): X = (x1 + i x2)/sqrt2, Y, Sigma likewise, phi real. Hidden U(1) charges 1, 3, 6, gauge e.\nTree quartic potential (GRUT THEORY.md sec. 2 normalisation, plus all gauge-invariant Z2_phi-even quartics):\n  V4 = lam_X|X|^4 + lam_Y|Y|^4 + lam_S|S|^4 + 2 kap Re(Y* X^3) + l_XY|X|^2|Y|^2 + l_XS|X|^2|S|^2 + l_YS|Y|^2|S|^2\n       + g2 phi^2|X|^2 + l_pY phi^2|Y|^2 + l_pS phi^2|S|^2 + (lam_phi/4) phi^4          (g2 = g^2 of Candidate 1)\n(The tree term lam_S(|S|^2 - h^2/2)^2 has quartic lam_S|S|^4; kap is taken real, as in hw_gates gate 4.)\n\nMethod [D]: the one-loop RG of the quartic part of V in Landau gauge,\n  16 pi^2 mu dV4/dmu = (1/2) Tr[(V4'')^2] + (3/2) Tr[(M_A^2)^2] - 3 e^2 sum_i q_i^2 phi_i dV4/dphi_i,\nwith V4'' the field-dependent scalar mass matrix (all real components, Goldstones included) and\nM_A^2 = 2 e^2 sum_z q_z^2 |z|^2 the vector mass. Equivalent to the Machacek-Vaughn tensor formula\nLambda^2 - 3 g^2 Lambda^S + 3 g^4 A. Gauge: 16 pi^2 de/dmu = (e^3/3) sum_z q_z^2 (complex scalars).\nThe result is projected on the 11-operator basis (closure checked: zero residual).\nControls: scalar QED 16pi^2 beta = 20 lam^2 - 12 e^2 lam + 6 e^4; lone real phi^4/4: 18 lam^2; hw_gates gate 4 numbers.\nUsage: python3 -B beta_derive.py <out.json>\n",
+ "convention": "16 pi^2 beta_i = expression below; beta = d/d ln mu",
+ "beta_16pi2": {
+  "lam_X": "6*e**4 - 12*e**2*lam_X + 2*g2**2 + 18*kap**2 + l_XS**2 + l_XY**2 + 20*lam_X**2",
+  "lam_Y": "486*e**4 - 108*e**2*lam_Y + l_XY**2 + l_YS**2 + 2*l_pY**2 + 20*lam_Y**2",
+  "lam_S": "7776*e**4 - 432*e**2*lam_S + l_XS**2 + l_YS**2 + 2*l_pS**2 + 20*lam_S**2",
+  "kap": "-36*e**2*kap + 6*kap*l_XY + 12*kap*lam_X",
+  "l_XY": "108*e**4 - 60*e**2*l_XY + 4*g2*l_pY + 36*kap**2 + 2*l_XS*l_YS + 4*l_XY**2 + 8*l_XY*lam_X + 8*l_XY*lam_Y",
+  "l_XS": "432*e**4 - 222*e**2*l_XS + 4*g2*l_pS + 4*l_XS**2 + 8*l_XS*lam_S + 8*l_XS*lam_X + 2*l_XY*l_YS",
+  "l_YS": "3888*e**4 - 270*e**2*l_YS + 2*l_XS*l_XY + 4*l_YS**2 + 8*l_YS*lam_S + 8*l_YS*lam_Y + 4*l_pS*l_pY",
+  "g2": "-6*e**2*g2 + 8*g2**2 + 8*g2*lam_X + 6*g2*lam_phi + 2*l_XS*l_pS + 2*l_XY*l_pY",
+  "l_pY": "-54*e**2*l_pY + 2*g2*l_XY + 2*l_YS*l_pS + 8*l_pY**2 + 8*l_pY*lam_Y + 6*l_pY*lam_phi",
+  "l_pS": "-216*e**2*l_pS + 2*g2*l_XS + 2*l_YS*l_pY + 8*l_pS**2 + 8*l_pS*lam_S + 6*l_pS*lam_phi",
+  "lam_phi": "4*g2**2 + 4*l_pS**2 + 4*l_pY**2 + 18*lam_phi**2"
+ },
+ "beta_e_16pi2": "46*e**3/3",
+ "control_scalarQED_lamX": "6*e**4 - 12*e**2*lam + 20*lam**2",
+ "control_real_phi4": "18*lam**2",
+ "X_phi_sector_16pi2": {
+  "lam_X": "6*e**4 - 12*e**2*lam_X + 2*g2**2 + 20*lam_X**2",
+  "g2": "-6*e**2*g2 + 8*g2**2 + 8*g2*lam_X + 6*g2*lam_phi",
+  "lam_phi": "4*g2**2 + 18*lam_phi**2"
+ },
+ "invariant_surfaces": {
+  "phi_portals_zero": {
+   "g2": "0",
+   "l_pY": "0",
+   "l_pS": "0"
+  },
+  "lam_phi_on_decoupled_surface": "0",
+  "kap_zero": "0"
+ },
+ "inhomogeneous_at_zero_quartics_16pi2": {
+  "lam_X": "6*e**4",
+  "lam_Y": "486*e**4",
+  "lam_S": "7776*e**4",
+  "kap": "0",
+  "l_XY": "108*e**4",
+  "l_XS": "432*e**4",
+  "l_YS": "3888*e**4",
+  "g2": "0",
+  "l_pY": "0",
+  "l_pS": "0",
+  "lam_phi": "0"
+ },
+ "beta_V_at_zero_quartics_16pi2": "3*e**4*(36*s1**2 + 36*s2**2 + x1**2 + x2**2 + 9*y1**2 + 9*y2**2)**2/2",
+ "numeric_beta_at_spot_e0": {
+  "lam_X": 2.7567277668187932e-06,
+  "lam_Y": 0.12665147955292222,
+  "lam_S": 0.12665147955292222,
+  "kap": 2.628285223409638e-07,
+  "l_XY": 2.7271229834732976e-06,
+  "l_XS": 0.0,
+  "l_YS": 0.0,
+  "g2": 1.6971298260091576e-05,
+  "l_pY": 0.0,
+  "l_pS": 0.0,
+  "lam_phi": 0.00010512072802892544
+ }
+}
