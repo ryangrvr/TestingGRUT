@@ -1,0 +1,120 @@
+{
+  "groups": {
+    "spatial_operator_and_U1": {
+      "passed": true,
+      "FFT_vs_stencil": 7.616866928223517e-16,
+      "charge_Ward": 2.05596856412066e-17,
+      "C_vs_FFT_time_reference_absolute": 2.6754709558929335e-12
+    },
+    "matched_initial_state": {
+      "passed": true,
+      "errors": [
+        [
+          0.0,
+          2.220446049250313e-16
+        ],
+        [
+          0.0,
+          2.220446049250313e-16
+        ],
+        [
+          0.0,
+          2.220446049250313e-16
+        ]
+      ]
+    },
+    "homogeneous_time_convergence": {
+      "passed": true,
+      "rows": [
+        {
+          "dt": 0.08,
+          "state_relative": 7.106435558729502e-05,
+          "energy": 1.5371223662796751e-06,
+          "charge": 9.347755279752641e-15
+        },
+        {
+          "dt": 0.04,
+          "state_relative": 4.473059563136739e-06,
+          "energy": 9.20580169871954e-08,
+          "charge": 8.754247008022316e-15
+        },
+        {
+          "dt": 0.02,
+          "state_relative": 2.800765225211166e-07,
+          "energy": 5.759768217927785e-09,
+          "charge": 1.3502313181864926e-14
+        }
+      ]
+    },
+    "charged_and_neutral_linear_modes": {
+      "passed": true,
+      "rows": [
+        {
+          "kind": "X",
+          "dt": 0.04,
+          "relative": 1.8715809094239926e-06,
+          "k_effective": 0.3414400989607815,
+          "energy": 4.359163785494502e-08,
+          "charge": 3.4720233896223245e-14
+        },
+        {
+          "kind": "X",
+          "dt": 0.02,
+          "relative": 1.1823729827354286e-07,
+          "k_effective": 0.3414400989607815,
+          "energy": 2.724220293792712e-09,
+          "charge": 3.650075871141418e-14
+        },
+        {
+          "kind": "phi",
+          "dt": 0.04,
+          "relative": 5.769709656523406e-06,
+          "k_effective": 0.3414400989607815,
+          "energy": 4.359161798195288e-08,
+          "charge": 8.309115804224331e-15
+        },
+        {
+          "kind": "phi",
+          "dt": 0.02,
+          "relative": 3.617414684883568e-07,
+          "k_effective": 0.3414400989607815,
+          "energy": 2.724191983105584e-09,
+          "charge": 9.941263551482683e-15
+        }
+      ],
+      "scope": "Plane modes in a genuine 3D grid, compared with continuum time ODE at the exact discrete momentum."
+    },
+    "periodic_component_merge": {
+      "passed": true,
+      "count": 1
+    },
+    "energy_and_spectral_bookkeeping": {
+      "passed": true,
+      "energy_relative": 2.220446049250313e-16,
+      "charge_Parseval": 8.881784197001252e-16,
+      "reference_charge": 6.661338147750939e-16,
+      "scope": "Reference particle charge identity holds even in interacting fields and does not certify particle numbers."
+    },
+    "boundary_centred_candidate": {
+      "passed": true,
+      "count": 1,
+      "centre_error": 0.0,
+      "scope": "Synthetic Gaussian candidate tests wrapping and moments, not a stationary soliton.",
+      "charge_conjugation_error": 0.0
+    },
+    "nonlinear_conservation": {
+      "passed": true,
+      "charge": 7.46574055015125e-12,
+      "energy": 0.00027281381280785943,
+      "scope": "Discrete cold Hamiltonian conservation, not convergence of a quantum plasma or object abundance."
+    },
+    "snapshot_and_spectral_consistency": {
+      "passed": true,
+      "energy_reconstruction": 2.2870594307278225e-14,
+      "charge_spectrum_Parseval": 3.552713678800501e-15
+    }
+  },
+  "independent_reviewer_ran": false,
+  "physical_population_converged": false,
+  "physical_f_sym": null
+}
