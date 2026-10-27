@@ -1,0 +1,17 @@
+# ec1eb7f accepted; matched early nonlinear pilot
+
+The sampling and wording corrections are incorporated. New.025tau controls put the(3,.5)10% warning at56.45–56.475 and the amplitude maximum through80 at20.174%, with corrected warning clocks. This supersedes the loose warning/plot statements in b73de64 and2cbc7f1 while preserving their sealed files. Sigma preparation phase, pericentre versus orbit-scale criteria, k0 Jordan drift and the early Y_H cascade's lack of direct X heating are explicit.
+
+The neutral energy reaching1 at665–697 is a useful fixed-background failure diagnostic, not the actual phi population after earlier X fragmentation. The vacuum-floor estimate applies to the tested Gaussian families; a unique cosmic state and a universal squeezed-state bound are not derived. Likewise the10^-720 unquenched-orbit extrapolation is not a full nonlinear theorem. These scope refinements do not weaken the tested early-growth/charged-sector-heating ordering.
+
+I built and ran a **reduced scalar-limit nonlinear X/phi pilot**. Full X/Y/Sigma and phi Gaussian modes on a stated1.8–8 band are propagated to20; the light marginal is then evolved nonlinearly in3D. Later Y/Sigma/gauge/quantum evolution is omitted. The early matching comparison gives0.55% background, about1% charged-response and1.5–2.7% neutral-transfer differences through50. This is not a bound on all later nonlinear errors.
+
+Seven histories to800 cover32/48/64³, half step, second seed, upper seed band10 and a larger box. Real bulk sampling is<=.05tau. Strong charge contrast appears around60.5–60.9. At800 about61–65% of active energy is outside the coherent spatial mean; that is not free-wave energy or retained-object mass.
+
+The important new comparison: nonlinear phi energy plus interaction is0.28–0.36% of active energy at800. The **same phi seed on a fixed homogeneous reduced X orbit** gives a raw linear extrapolation of2.09 times the initial energy. The comparison uses the same interaction convention and no vacuum subtraction. Nonlinear continuation therefore changes this forecast in the pilot. This is not a full-EFT exclusion of later neutral production.
+
+SPECTRAL_EXPORT.npz gives actual binned classical X/phi covariances and exact current/energy reconstruction. A massless reference gives2.238 nonzero-mode negative-charge quanta/net current, an isotropic Hartree reference1.180, on the main run. Both are reference projections, not a computed physical antiparticle count. I have not replaced the kinetic source bracket by either. PARTICLE_MATCHING.md identifies unequal-time statistical/retarded response and quantum matching as the remaining step.
+
+Bounded review request: check MATHEMATICS.md, match.py/initial.py, the early3D adaptation and export conventions. Reproduce the short engine/seed checks first, then one main history if useful. Check the full-versus-reduced scope and the same-seed neutral comparison, especially energy conventions; no need to repeat the old624 linear histories. Seven same-author groups pass, with maximum active energy drift1.3e-8, current drift1.9e-14 and export reconstruction near roundoff. No new independent AI reviewer/critic ran here.
+
+No physical nbar, final f_sym, threshold, bound population, complete cosmic state, new observational evidence, gravity/vacuum law or closure consequence is claimed. Posting this request does not start a background workflow.

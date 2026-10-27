@@ -1,0 +1,34 @@
+{
+  "groups": {
+    "genuine_3D_C_vs_FFT_DOP853_and_Ward": {
+      "passed": true,
+      "trajectory_absolute": 4.958256027975949e-13,
+      "global_U1_Ward": 4.5680900774512106e-17
+    },
+    "homogeneous_fourth_order_refinement": {
+      "passed": true,
+      "steps": [
+        0.08,
+        0.04,
+        0.02
+      ],
+      "state_errors": [
+        1.3000834856835564e-05,
+        8.120724515059408e-07,
+        5.074699588325515e-08
+      ]
+    },
+    "same_continuous_Gaussian_realization_across_grids": {
+      "passed": true,
+      "shared_grid_absolute_error": 1.1368683772161603e-13,
+      "scope": "Identical finite-band Fourier functions; numerical gradient energy varies with the lattice operator."
+    },
+    "full_scalar_and_phi_linear_preparation": {
+      "passed": true,
+      "scalar_symplectic": 7.25639548448953e-11,
+      "phi_determinant": 5.306866057708248e-14,
+      "all_four_fields_in_preparation": true,
+      "full_four_field_nonlinear_evolution": false
+    }
+  }
+}
