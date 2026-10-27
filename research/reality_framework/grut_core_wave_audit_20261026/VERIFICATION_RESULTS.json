@@ -1,0 +1,70 @@
+{
+  "groups": {
+    "kinetic_identity_and_unique_rotation_minimum": {
+      "passed": true,
+      "relative_error": 9.558645214171027e-17,
+      "exact_node_relative_error": 7.168983910628271e-17,
+      "trial_excesses": [
+        72.50269098014144,
+        0.7250269098014144,
+        0.7250269098014286,
+        72.50269098014144
+      ]
+    },
+    "local_energy_charge_equations": {
+      "passed": true,
+      "energy_difference_checks": [
+        {
+          "step": 1e-05,
+          "X": 1.0675286468612792e-11,
+          "phi": 3.794418520580474e-11
+        },
+        {
+          "step": 2e-06,
+          "X": 1.2249569211748142e-10,
+          "phi": 1.850980226721442e-10
+        },
+        {
+          "step": 4e-07,
+          "X": 8.684888377587615e-10,
+          "phi": 1.2401042028083983e-09
+        }
+      ],
+      "charge_relative": 5.098469915203547e-16
+    },
+    "independent_boundary_bonds": {
+      "passed": true,
+      "boundary_relative": 1.4719713817996825e-15,
+      "global_flux_divergence_means": [
+        -2.0715531654813416e-17,
+        -1.139354241014738e-16,
+        7.250436079184695e-17
+      ]
+    },
+    "stationary_rotation_control_not_bound_object": {
+      "passed": true,
+      "maximum_residual": 5.921189464667502e-16,
+      "localized": false,
+      "bound_object_certified": false
+    },
+    "symmetric_forward_FFT_global_energy": {
+      "passed": true,
+      "forward_relative": 0.0,
+      "FFT_relative": 0.0,
+      "local_allocation_difference_nonzero": true
+    },
+    "conjugation_and_neutral_parity": {
+      "passed": true,
+      "scaled_error": 0.0
+    },
+    "production_reconstruction": {
+      "passed": true,
+      "kinetic_identity_relative": 5.835239561031461e-16,
+      "energy_relative": 2.220446049250313e-16,
+      "charge_relative": 0.0,
+      "unique_snapshots": 27
+    }
+  },
+  "independent_reviewer_ran": false,
+  "physical_f_sym": null
+}
