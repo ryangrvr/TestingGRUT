@@ -1,0 +1,136 @@
+{
+ "track": "en_neutral",
+ "review_of": "Codex 7d9c93b grut_early_nonlinear_20261027",
+ "claims": [
+  {
+   "id": "C3a",
+   "label": "[C]",
+   "claim": "phi energy + interaction 0.28-0.36% of active energy at tau 800 (seven histories)",
+   "verdict": "CONFIRMED",
+   "our_value": "0.2773-0.3648% (published curves); N48 0.30979302403% reproduced to 3e-15 (Codex engine); independent N32 0.27733026% vs 0.27733222% (7e-6)",
+   "codex_value": "0.28-0.36%",
+   "method": "reproduction + independent numpy lattice",
+   "evidence": "results/conventions.json, reproduction_N48_run_info.json, indep_N32_full.json"
+  },
+  {
+   "id": "C3b",
+   "label": "[C]",
+   "claim": "phi Hamiltonian alone 0.19-0.27%",
+   "verdict": "CONFIRMED",
+   "our_value": "0.188-0.267%",
+   "codex_value": "0.19-0.27%",
+   "method": "own arithmetic on published curves",
+   "evidence": "results/conventions.json"
+  },
+  {
+   "id": "C3c",
+   "label": "[C]",
+   "claim": "same phi seed on fixed homogeneous reduced orbit extrapolates to 2.09x initial active energy by tau 800",
+   "verdict": "CONFIRMED",
+   "our_value": "2.0917128 (max rel diff 2.4e-8 over 1561 samples); unit at 702.5; ensemble expectation 2.184, unit 698.5",
+   "codex_value": "2.0917129; 702.5",
+   "method": "independent (own generator, RK4, real-space FD4 energy)",
+   "evidence": "results/fixed_orbit.json"
+  },
+  {
+   "id": "C3d",
+   "label": "[A]",
+   "claim": "both curves use the same convention: interaction included, no vacuum subtraction, same discrete momenta",
+   "verdict": "CONFIRMED",
+   "our_value": "same rho0 denominator and modes; tau 20: 0.08032% vs 0.08038% of rho0; lamP phi^4 <=1e-6 of rho0; control uses homogeneous |chi|^2",
+   "codex_value": "stated",
+   "method": "code reading + independent",
+   "evidence": "results/fixed_orbit.json initial_tau20"
+  },
+  {
+   "id": "N1",
+   "label": "[C]",
+   "claim": "share of the seeded initial phi energy in the final 0.28-0.36%",
+   "verdict": "NEW",
+   "our_value": "seed 0.079-0.128% of rho0 = 25-35% of final (N48 26%); ensemble zero-point ~0.042% of rho0; net rise over seed 0.198-0.243% in all seven",
+   "codex_value": "not stated",
+   "method": "own arithmetic",
+   "evidence": "results/conventions.json"
+  },
+  {
+   "id": "N2",
+   "label": "[A]",
+   "claim": "reconciliation with critic phi/X=1 at tau 665-697 (2cbc7f1 convention)",
+   "verdict": "NEW",
+   "our_value": "same fixed-background physics: ensemble, zero-point-subtracted box control 2.18 at 800, unit 698.5 vs critic 2.22/2.17, 696.5-697.0 on (3,.5); realization 2.09/702.5 is 4% below ensemble",
+   "codex_value": "fixed-background failure diagnostic",
+   "method": "independent",
+   "evidence": "results/fixed_orbit.json"
+  },
+  {
+   "id": "F1",
+   "label": "[C]",
+   "claim": "mu_phi ~0.20 at k~7 on the matched reduced orbit",
+   "verdict": "CONFIRMED",
+   "our_value": "0.2062 per s at k_lat 7.01, half-max band 6.74-7.27; late fit of control 0.192",
+   "codex_value": "n/a (earlier reviews 0.202/0.206)",
+   "method": "independent Floquet monodromy",
+   "evidence": "results/fixed_orbit.json"
+  },
+  {
+   "id": "M_a",
+   "label": "[C]",
+   "claim": "hypothesis (a) pump depletion of the coherent zero mode",
+   "verdict": "REFUTED",
+   "our_value": "zero mode stays eccentric (rmax/rmin 8.06 -> 2.7-3.7; modulation depth 0.88-0.97); free-orbit mu 0.206 -> 0.147-0.150; measured zero-mode pump alone drives linear phi to 2.71x rho0",
+   "codex_value": "n/a",
+   "method": "own analysis of reproduction history",
+   "evidence": "results/floquet_periods_N48.json, hartree_control_N48.json, mechanism_N48.json"
+  },
+  {
+   "id": "M_b",
+   "label": "[C]",
+   "claim": "hypothesis (b) detuning by X fluctuation (Hartree) mass",
+   "verdict": "CONFIRMED",
+   "our_value": "g2S 0.2 -> 6.8 (tau 70-84) -> 14.9 -> 24-48; matched-band mu 0.205 -> 0.099 (70-84) -> 0 from tau 84; mu_max any k <=0.06 after 118, <=0.013 after 418; same-seed linear phi on measured homogeneous mass 0.194% at 800",
+   "codex_value": "n/a",
+   "method": "own analysis",
+   "evidence": "results/floquet_periods_N48.json, hartree_control_N48.json"
+  },
+  {
+   "id": "M_c",
+   "label": "[C]",
+   "claim": "hypothesis (c) band leaves lattice or seeded band",
+   "verdict": "REFUTED",
+   "our_value": "residual Hartree bands at k 3-5 inside lattice and seed band; S carried by k_lat 1.8-4 (87-99%, tau 60-200) and k<1.8 (56-73%, tau 400-800), <=0.08% at k>8",
+   "codex_value": "n/a",
+   "method": "own analysis",
+   "evidence": "results/xspec_N48.json"
+  },
+  {
+   "id": "N3",
+   "label": "[C]",
+   "claim": "phi band growth at k~7 before tau ~70 that then stops",
+   "verdict": "NEW",
+   "our_value": "band energy tracks linear within ~5% to tau 66 (x2.9), peaks ~1.0e-3 rho0 near tau 90, falls to 1.6e-4 by 800; band occupation peaks ~5.3 then 0.9-1.0; 64% of late phi energy at k_lat>8",
+   "codex_value": "n/a",
+   "method": "own spectra of reproduction snapshots",
+   "evidence": "results/mechanism_N48.json"
+  },
+  {
+   "id": "N4",
+   "label": "[C]",
+   "claim": "counterfactual without X seed noise",
+   "verdict": "NEW",
+   "our_value": "phi follows linear resonance to 3.7% at tau 400, X fragments (S/X2 0.59 at 500), phi saturates at 4.3-5.9%",
+   "codex_value": "n/a",
+   "method": "independent numpy N32",
+   "evidence": "results/indep_N32_noXnoise.json"
+  },
+  {
+   "id": "C3e",
+   "label": "[A]",
+   "claim": "nonlinear continuation changes the neutral forecast in the pilot; not a full-EFT exclusion",
+   "verdict": "CONFIRMED",
+   "our_value": "correctly scoped; mechanism is fragmentation-induced detuning after tau 70-84; open: Y/Sigma/gauge, quantum (seed 25-35%, 64% of late phi in unseeded UV), non-conformal masses/phi bias, box IR, single history",
+   "codex_value": "stated",
+   "method": "argument from the above",
+   "evidence": "NOTES.md section 4"
+  }
+ ]
+}

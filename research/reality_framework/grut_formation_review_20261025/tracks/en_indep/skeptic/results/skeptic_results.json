@@ -1,0 +1,40 @@
+{
+  "track": "en_indep_skeptic",
+  "target": "tracks/en_indep (independent N48 3D evolution of Codex 7d9c93b, grut_early_nonlinear_20261027)",
+  "date": "2026-10-27",
+  "provenance": {
+    "published_packet": "git archive 7d9c93b -> $SP/review/en_indep_skeptic/pub (pristine, read-only)",
+    "codex_engine_runs": "early3d.cpp copied verbatim from the pristine archive, compiled with Codex flags (-O3 -ffp-contract=off -fopenmp), 2 threads, restarted from en_rerun's Codex-engine N48 snapshots at tau 100 and 740 (read-only)",
+    "independent_code": ["code/linear_phi_moments.py"],
+    "reproduction_code": ["code/refcycle_codex.py (Codex analyze.spectral exec'd from the archive)", "Codex early3d.cpp twins (own twin design: code/snap2init.py, code/twin_analyze.py)"],
+    "own_analysis_of_published_data": ["code/control_cycles.py", "code/published_checks.py"],
+    "e7d_MATCH_L12_sha256_now": "4462a2a36dc71985f3955289b7ef973a82c54d7cc1b10071d35b823f696ad947 (equals published; en_indep's overwrite warning is stale)"
+  },
+  "checks": {
+    "1a": {"refuted": false, "verdict_on_reviewer": "CONFIRMED; reviewer's 'controls NOT CHECKED (no control curves are published)' is factually wrong",
+           "numbers": "Codex N48 curve interpolated 60.5503; published dtau=0.5 control curves interpolate 60.45-60.86 vs reported dense thresholds 60.5-60.9 (box16 60.86 vs 60.9)"},
+    "1b": {"refuted": false, "verdict_on_reviewer": "CONFIRMED; controls checkable",
+           "numbers": "control curves interpolate 69.21-69.28 vs reported 69.2-69.25 (coarse-grid linear interpolation biases late by <=0.04 on this convex rise)"},
+    "2a": {"refuted": false, "numbers": "Codex-engine restart from tau 740 gives 0.6272176034 at 800; N48 swing 600-800 46.71-72.70 percent; last-cycle mean 60.74 percent (en_indep 60.7)"},
+    "2b": {"refuted": false, "numbers": "1.05462 at 800; swing 1.0467-1.1421; last-cycle mean 1.0659 (en_indep 1.066)"},
+    "3a": {"refuted": false, "numbers": "0.30979 percent at 800; range 600-800 0.2694-0.3440; max after tau 200 0.34397 percent"},
+    "3b": {"refuted": false, "verdict_on_reviewer": "reviewer NOT CHECKED; skeptic CONFIRMS Codex",
+           "numbers": "own moment-equation RK4: 2.091701 (h=0.002), 2.091541 (h=0.004), Richardson ~2.09171 vs Codex 2.0917129; first unit crossing tau 702.5 = Codex 702.5; max 2.10943 vs 2.10944",
+           "departure": "linear/nonlinear phi+interaction agree within 0.6 percent to tau 40 and 3 percent to tau 60; 18 percent at tau 91; window-mean ratio 1.23 (100-120), 1.70 (120-150), 2.38 (150-200); 26 at 400; 675 at 800"},
+    "4": {"refuted": false, "verdict_on_reviewer": "numbers CONFIRMED; label CORRECTED overstated (tau-800 values and the 1.896 ratio are exact as stated) -> CONFIRMED at tau 800 + NEW phase qualification",
+          "numbers": "Codex analyze.spectral on Codex-engine fields, tau 752-800 every 4: massless 1.2626-2.7475 (13-sample mean 1.978), Hartree 1.0923-1.2357 (mean 1.174), ratio 1.0375-2.5136; max rel diff vs en_indep 1.4e-7; one-period trapezoid 740-788: massless 1.91, Hartree 1.175, mean ratio 1.65"},
+    "5": {"refuted": false, "numbers": "not checked by either track beyond the clock; C=a^2 H bitwise equality reflects the same arithmetic, not an independent matching check"},
+    "6": {"refuted": false, "numbers": "ledger residual (Codex-engine N48 trace) max 4.82e-7 at tau 22.65; tau>=150 only 1.36e-7; half-resolution 1.95e-6 (x4, trapezoid order 2) -> quadrature-limited, max captured by reviewer's tau<=150 window"},
+    "N1": {"refuted": false, "verdict_on_reviewer": "headline CONFIRMED (no rapid divergence; pointwise agreement); 'no exponential growth is resolved' CORRECTED to 'slow growth resolved'",
+           "numbers": "Codex N48 vs Codex halfstep48 published curves: flat differences tau 40-800 (E_phi 6.4e-6..6.5e-6). Codex-engine twins from tau 100 (Delta eta 18.4): IR (|k|<=2.5, 1e-8) X x5.3, phi x20.5; mid band X x1.0, phi x4.2; white 1e-6 X total x0.71 (en_indep 0.72) but its IR band x4.6 (6.5e-8 -> 3.0e-7), phi x2.2 (en_indep 2.2). Effective rates <= 0.10 (X) and 0.15 (phi) per unit eta vs orbit frequency 7.0 per unit eta."},
+    "N2": {"refuted": true, "verdict_on_reviewer": "oscillation facts CONFIRMED; inference 'seed/box/cutoff effects cannot be separated from orbit phase' and premise 'only the N48 curve is published' REFUTED",
+           "numbers": "all 7 histories at the same orbit phase at tau 800: 0.248-0.267 cycle after last outside-mean maximum (tau 786.5-787.5); period 0.889-0.893 in eta. tau-800 spread vs last-cycle-mean spread: outside 60.94-64.93 vs 60.28-63.09 percent; Q0/Q 1.0543-1.1585 vs 1.0655-1.1759; phi+int 0.277-0.365 vs 0.280-0.369 percent; E_phi 0.188-0.267 vs 0.189-0.268 percent; extremes and phi ordering preserved; seed2 Q0/Q offset +0.110 and box16 +0.075 persist in cycle means"}
+  },
+  "new_issues_codex_packet": [
+    "N32 is under-resolved (boundary-shell energy 1.21 percent vs 0.18 percent at N48) and alone sets the lower ends of the neutral ranges: phi+interaction 0.277 percent (N32) vs 0.310-0.365 percent for the other six; E_phi 0.188 vs 0.226-0.267 percent. N48->N64 still moves E_phi by +1.8 percent.",
+    "All seven histories are phase-locked at tau 800 (0.25 cycle after the outside-mean maximum); Codex's tau-800 values share a common phase bias relative to cycle means (outside-mean +2.0 points, Q0/Q -0.011) and the packet does not state the +/-13-point orbit oscillation, although FIELD_CURVES.npz contains all it needs.",
+    "Linear-vs-nonlinear neutral comparison: the curves separate from tau ~70-90 (18 percent at 91; x2.4 by 150-200), so the forecast change is established by tau ~200; the 2.09x endpoint is an energy-nonconserving extrapolation that passes the total active energy at tau 702.5 and is not the review's 665-697 calculation.",
+    "After tau ~40 Codex's step is sample-limited (Delta s = 0.05/a, 8.9e-4 at tau 800), not hmax = 0.004; truncation error accumulates almost only before tau ~40-60, which is why N48/halfstep and own/Codex differences are flat afterwards.",
+    "Hartree reference across controls at tau 800 is 1.174-1.266 (seed2 1.212, box16 1.266), comparable to its own cycle variation 1.08-1.24; massless 2.06-2.41 across controls vs 1.26-2.75 over a cycle."
+  ]
+}

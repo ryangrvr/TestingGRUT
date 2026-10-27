@@ -1,0 +1,161 @@
+{
+ "A_clock": {
+  "a_match": 8.869218738806,
+  "C_match": 1.9857962750634526,
+  "max_rel_a_deviation_20_240": 2.0644627194421616e-06,
+  "a_full_240": 30.86125944482513,
+  "a_clock_240": 30.861195732905532,
+  "note": "a(s)=a_m+C s with d tau=a d eta gives a(tau)=sqrt(a_m^2+2C(tau-20)); compared with the full quiet(3,.5) background"
+ },
+ "B_energy": {
+  "own_FD4_energy_tau20": 105467.43730088256,
+  "cpp_trace_rho_tau20": 105467.43730088297,
+  "rel20": 3.885780586188048e-15,
+  "own_FD4_energy_tau800": 105467.43742874796,
+  "cpp_trace_rho_tau800": 105467.43742874755,
+  "rel800": 3.774758283725532e-15,
+  "snapshot_eta": 23.915481855003456,
+  "trace_eta_last": 23.915481855003456,
+  "file_params_nu_g2_lx_lp": [
+   0.0,
+   0.01,
+   0.001,
+   0.03
+  ]
+ },
+ "C_initial_covariance": {
+  "independent_pairs": 7384,
+  "whitened_cov_max_abs_dev_from_identity": 0.024367850297696742,
+  "whitened_cov_diag": [
+   1.0087515336569521,
+   1.0072762251635454,
+   0.9940166884015571,
+   0.9827415495036601,
+   0.9983198859198283,
+   1.0055936627659083
+  ],
+  "whitened_pseudo_cov_max_abs": 0.021610918599860567,
+  "expected_statistical_sigma": 0.011637351602893193,
+  "mean_whitened_norm2_per_component": 1.0006623295672463,
+  "max_abs_coefficient_outside_band_excluding_k0": 1.8947806286936004e-14,
+  "note": "E[c c^dag]=C_light/V and E[c c^T]=0 are the intended complex-Gaussian moments for one +-n pair; whitened coefficients should give identity and zero pseudo-covariance within ~1/sqrt(pairs)",
+  "specified_X_fluct_variance": 11.439736780355206,
+  "empirical_X_fluct_variance": 11.883456387536238,
+  "specified_piX_fluct_variance": 78.34188087048622,
+  "empirical_piX_fluct_variance": 78.23000905341088
+ },
+ "D_symplectic": {
+  "full_12x12_symplectic_eigs_max_abs_dev_from_half": 3.556860361797476e-11,
+  "light_X_marginal_symplectic_eigs_min": 0.500001702662124,
+  "light_X_marginal_symplectic_eigs_max": 0.5199962447901316,
+  "light_X_marginal_mean_occupation_excess": 0.00040870107780496253,
+  "k_of_max_mixedness": 1.8137993642342176,
+  "note": "Full scalar covariance at tau20 remains pure (1/2). X-marginal symplectic eigenvalue nu>1/2 measures heavy-field entanglement retained in the light marginal (nu-1/2 = thermal-like excess per mode)"
+ },
+ "E_zero_point": {
+  "tau20_projections": {
+   "massless": {
+    "mass2": 0.0,
+    "nminus_over_net": 0.0018500187773620792,
+    "nplus_over_net": 0.0013071580481488069,
+    "charge_identity": -0.0005428607292132723
+   },
+   "isotropic_Hartree": {
+    "mass2": 14.548869982167366,
+    "nminus_over_net": 0.002412870494742904,
+    "nplus_over_net": 0.0018700097655296312,
+    "charge_identity": -0.0005428607292132725
+   }
+  },
+  "net_current_density": 8113.477086664833,
+  "net_charge_total": 14020088.405756831,
+  "seeded_modes": 14768,
+  "half_quantum_per_seeded_mode_nminus_per_net": 0.0005266728558550339,
+  "full_lattice_half_quantum_nminus_per_net": 0.00394401935278061,
+  "note": "Classical seeding gives n=1/2 per seeded mode per charge sign (no subtraction)."
+ },
+ "F_tau800": {
+  "own_projection": {
+   "massless": {
+    "mass2": 0.0,
+    "nminus_over_net": 2.2375153750516925,
+    "nplus_over_net": 2.182890562281316,
+    "charge_identity": -0.05462481277037671
+   },
+   "isotropic_Hartree_with_zero_mode(Codex)": {
+    "mass2": 19.263622047656735,
+    "nminus_over_net": 1.1799624221211245,
+    "nplus_over_net": 1.1253376093507486,
+    "charge_identity": -0.054624812770375814
+   },
+   "Hartree_fluctuations_only": {
+    "mass2": 9.160998163727049,
+    "nminus_over_net": 1.1834456991165283,
+    "nplus_over_net": 1.1288208863461522,
+    "charge_identity": -0.054624812770376036
+   },
+   "tangential_lambda_r2": {
+    "mass2": 9.642119796958733,
+    "nminus_over_net": 1.1796317643413923,
+    "nplus_over_net": 1.1250069515710162,
+    "charge_identity": -0.054624812770376036
+   },
+   "radial_3lambda_r2": {
+    "mass2": 28.88512429835474,
+    "nminus_over_net": 1.2308457885315671,
+    "nplus_over_net": 1.1762209757611912,
+    "charge_identity": -0.054624812770376036
+   }
+  },
+  "mass2_scan": {
+   "m2=0": 2.2375153750516925,
+   "m2=1": 1.662420086715243,
+   "m2=2": 1.4715554402558775,
+   "m2=5": 1.2624670495908148,
+   "m2=10": 1.1772148066156376,
+   "m2=19.26": 1.1799481128860674,
+   "m2=30": 1.237745435589134,
+   "m2=50": 1.3703271424531858,
+   "m2=100": 1.6855435275988708
+  },
+  "X2_total": 9621.502250698002,
+  "X2_zero_mode": 5051.311941964843,
+  "zero_mode_fraction_of_X2": 0.5250024175381126,
+  "phi2": 2.061754626073017,
+  "net_current_density": 8113.477086664833,
+  "zero_point_seeded_share_of_massless": 0.00023538289914225345,
+  "nminus_per_net_by_k_bin": {
+   "edges": [
+    0.0,
+    1.0,
+    1.8,
+    3.0,
+    4.4,
+    6.0,
+    8.0,
+    10.0,
+    1000000000.0
+   ],
+   "massless": [
+    1.0656494882076406,
+    0.8080953197352456,
+    0.23225540278051973,
+    0.08873650045682763,
+    0.030590107204248346,
+    0.009468998098910657,
+    0.0020203966424379985,
+    0.000699161925861602
+   ],
+   "Hartree": [
+    0.19696407936905005,
+    0.6386635770402886,
+    0.2175389525088019,
+    0.08454445400497393,
+    0.030135712098665113,
+    0.009405338840863392,
+    0.0020136230085699217,
+    0.0006966852499116496
+   ]
+  }
+ }
+}

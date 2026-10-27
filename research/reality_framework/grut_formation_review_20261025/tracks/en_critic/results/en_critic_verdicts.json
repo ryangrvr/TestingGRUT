@@ -1,0 +1,49 @@
+{
+  "track": "en_critic",
+  "review_of": "Codex 7d9c93b, research/reality_framework/grut_early_nonlinear_20261027 (issue #13)",
+  "role": "completeness critic over en_rerun, en_indep, en_neutral, en_particles and their skeptics",
+  "consolidated_verdicts": [
+    {"item": "1a charge contrast reaches 1", "label": "[C]", "verdict": "CONFIRMED", "codex": "60.5-60.9", "ours": "60.50-60.90 (rerun, all seven); N48 60.55 interpolated in two independent engines; controls 60.45-60.86 interpolated", "method": "reproduction + two independent engines (en_indep, en_rerun skeptic)"},
+    {"item": "1b X variance reaches 1/2", "label": "[C]", "verdict": "CONFIRMED (instantaneous pericentre crossing, as Codex caveats)", "codex": "69.2-69.25", "ours": "69.21-69.28; orbit-averaged share convention-dependent: ratio-of-means <=0.47-0.50, mean-of-ratio up to 0.51-0.53 late", "method": "reproduction + independent; convention settled across three tracks"},
+    {"item": "2 energy outside mean / Q0/Q at tau 800", "label": "[C]", "verdict": "CONFIRMED as same-phase tau-800 values", "codex": "61-65%; 1.05-1.16", "ours": "60.94-64.93%; 1.054-1.159; last-cycle means 60.3-63.1%, 1.066-1.176; N48 swing 46.9-72.7% within one orbit", "method": "reproduction + independent engines"},
+    {"item": "3a phi + interaction at tau 800", "label": "[C]", "verdict": "CONFIRMED", "codex": "0.28-0.36% (E_phi 0.19-0.27%)", "ours": "0.277-0.365%; independent N48 0.309795% vs 0.309793%; N32 (under-resolved) alone sets the low end", "method": "reproduction + independent engines"},
+    {"item": "3b same-seed fixed-orbit linear control", "label": "[C]", "verdict": "CONFIRMED (N48); grid-dependent", "codex": "2.0917, first unit 702.5", "ours": "2.0917128 (two independent codes); N32 0.995, N64 2.197, continuum 2.255", "method": "independent (en_neutral, en_indep skeptic, en_neutral skeptic)"},
+    {"item": "3c nonlinear continuation changes the neutral forecast", "label": "[C]/[A]", "verdict": "CONFIRMED and robust to X seed amplitude; value seed-dependent", "codex": "0.3% vs 2.09x", "ours": "X seed x1/x0.1/x0.01/x0: phi+int at tau 800 0.310/0.796/2.64/5.78% (tau 700-800 means 0.311/0.811/2.40/6.67%; max 7.9% at tau 474 for x0); never approaches the 2.09x control", "method": "new control: Codex engine, own initial data (en_critic)"},
+    {"item": "3d energy conventions of the two curves", "label": "[A]/[C]", "verdict": "CONFIRMED", "codex": "same convention", "ours": "tau 20: 0.08032% vs 0.08038%; same rho0, same modes, interaction included, no vacuum subtraction", "method": "independent (en_neutral, en_rerun)"},
+    {"item": "4a reference projections at tau 800", "label": "[C]", "verdict": "CONFIRMED", "codex": "2.238 / 1.180", "ours": "2.237515 / 1.179962 (four own codes incl. en_critic)", "method": "independent projection codes on reproduced snapshots"},
+    {"item": "4b 'roughly 1.9-fold' gap larger than grid/time changes", "label": "[C]", "verdict": "CORRECTED", "codex": "~1.9x", "ours": "true at fixed tau, but an orbit-phase sample: instantaneous ratio 0.96-2.54, orbit mean ~1.6 (1.54-1.65 by window); measured spectra gapped (m2 8-20), wave count flat 1.15-1.21 for m2 5-26", "method": "settles en_indep (CORRECTED) vs its skeptic (CONFIRMED)"},
+    {"item": "5 matching errors through tau 50", "label": "[C]", "verdict": "CONFIRMED (now by own integration, not only reproduction)", "codex": "0.547%; 0.977/1.031%; 2.717/1.482%; force 0.206%", "ours": "0.5470872%; 0.9774883/1.0307871%; 2.7171576/1.4820005%; 0.2056958% (agree to <=1.4e-9 relative)", "method": "own DOP853 on Codex full equations (reheating.rhs, modes.generator e=0, neutral.mass) + own reduced tangents"},
+    {"item": "5b frozen-Sigma quadratic-Y estimate formula", "label": "[D]/[C]", "verdict": "CONFIRMED", "codex": "3 k^2 max|chi|^2 / (4 lX (M_Y^2 - sqrt2 mu h) a^2), max ~0.45%", "ours": "derived; exact static quadratic-Y solution / bound = 0.38-1.00 over 2000 random phases (bound tight)", "method": "own derivation + own numerics"},
+    {"item": "5c gauge omission (e=0) in-box", "label": "[E]", "verdict": "NEW (supports scope)", "codex": "gauge a separate dependency", "ours": "Coulomb energy of measured charge fluctuations <=2.1e-10 (e_X=1e-7) / 2.1e-8 (1e-6) of rho; gauge matters only at k <~1.4e-5 / 1.4e-4 H_i, far outside the box", "method": "own estimate on reproduced trace"},
+    {"item": "6 verification groups", "label": "[C]", "verdict": "CONFIRMED", "codex": "1.30e-8; 1.87e-14; 4.5e-16/2.3e-16", "ours": "1.293e-8; <=4.3e-14 (thread round-off); 3.6e-15/2.4e-15 own; f-scan runs 1.27e-8", "method": "reproduction + independent"},
+    {"item": "D1 dense corrections", "label": "[C]", "verdict": "CONFIRMED", "codex": "56.45-56.475; 20.174%; 5.68e-6/1.01e-8", "ours": "bitwise (en_rerun); independent: REVIEW_TIMING four codes 56.46, 20.2%", "method": "reproduction + earlier independent review"},
+    {"item": "M1 fixed-charge energy bound and scaling (MATHEMATICS.md)", "label": "[D]/[C]", "verdict": "CONFIRMED, and stronger than stated", "codex": "homogeneous circular lower bound (3/4) lX^(1/3)|nQ|^(4/3)", "ours": "bound holds for ALL lattice states at fixed Q (Cauchy-Schwarz, FD4 symbol >=0, Jensen); E_min/E = 0.11594 constant to 2e-9; margins of E0 over bound(Q0) >= 0.11; scaling E->E/R at fixed Q verified", "method": "own derivation + published curves + tau-800 snapshot"},
+    {"item": "M2 early3d adaptation from 8159556", "label": "[D]", "verdict": "CONFIRMED", "codex": "same FD4/Yoshida", "ours": "diff: clock, output schedule, diagnostics only; latent: energy diagnostic drops nu while the kick keeps (phi^2-nu^2), harmless since nu=0 in every input", "method": "own code diff"},
+    {"item": "N-a particle budget", "label": "[C]/[E]", "verdict": "NEW", "codex": "projections 2.24/1.18; zero mode excluded", "ours": "lab-frame Xbar budget ~1.74 per net charge (zero mode 0.52-0.61 + waves 1.12-1.24); equals tau-20 orbit content 1.739 (own Hann 1.72-1.73); X-seed scan shifts partition (zero mode 0.60->0.80-0.98, waves 1.18->0.85) with sum 1.65-1.81 (single-phase uncertainty)", "method": "tracks en_particles(+skeptic) + own zero-mode spectra and tau-800 projections on f-scan"}
+  ],
+  "contradictions_settled": [
+    "Claim 4: values CONFIRMED; the 1.9-fold characterization CORRECTED (en_indep CORRECTED vs its skeptic CONFIRMED; en_particles CORRECTED vs en_rerun CONFIRMED).",
+    "Neutral-suppression mechanism: not separable (en_neutral 'detuning dominant' refuted by its skeptic's factorial). Own seed scan: the nonlinear phi curve leaves the linear control 19.5-26 tau after X charge contrast reaches 1 for X seed x1, x0.1, x0.01; with no X seed it leaves at tau 304, before contrast 1 at 370, once phi itself reaches ~1.5%.",
+    "No-X-seed counterfactual: en_neutral 4.3-5.9% (N32) CORRECTED to 5.5-7.8% over tau 700-800, 5.78% at 800, max 7.9% (N48); N32 under-resolves the k~7 band (its linear control reaches only 0.995).",
+    "1b orbit-averaged share: convention-dependent (ratio of means <=0.47-0.50; mean of ratio up to 0.51-0.53); not a contradiction.",
+    "en_rerun N3 'floor' depends on the allowed transformation class (1.06 one omega per shell, 0.889 with shear, 0.67 per mode); not a bound; withdraw as a floor.",
+    "Shared $SP/e7d packet tree: identical to git 7d9c93b now (diff -rq clean); en_neutral/en_indep warnings are stale.",
+    "Machine: 4 CPUs (nproc reported 2 under OMP_NUM_THREADS=2)."
+  ],
+  "stronger_than_evidence": [
+    "en_particles 7b 'measured dispersion picks Hartree' (refuted: count flat in m2).",
+    "en_neutral M_a/M_b mechanism attribution (refuted by factorial; both depletion and detuning suffice).",
+    "en_indep claim-4 CORRECTED label (should be CONFIRMED + phase qualification) and N1 'no exponential growth' (slow IR growth x5-20 resolved).",
+    "en_rerun claim-3 sentence 'agree within 4% to tau 100' (separation from fragmentation, tau 70-90) and N2 tau 600-800 statistics (aliased).",
+    "en_neutral counterfactual magnitude (N32).",
+    "en_neutral skeptic 'above-half-quantum phi energy 0.067-0.072% of rho0' is single-track, not cross-checked.",
+    "Codex: '0.28-0.36%' is conditional on the vacuum-like X seed; '1.9-fold' gap is one orbit phase."
+  ],
+  "x_seed_scan": "results/xseed_scan.json",
+  "zero_mode": ["results/zero_mode_refs.json", "results/zero_mode_prefragmentation.json"],
+  "matching": ["results/background_match.json", "results/tangent_match.json"],
+  "math": "results/math_checks.json",
+  "physical_nbar": null,
+  "physical_f_sym": null,
+  "validation_or_exclusion_claimed": false
+}

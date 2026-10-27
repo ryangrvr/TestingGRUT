@@ -1,0 +1,27 @@
+{
+ "track": "en_rerun",
+ "packet": "research/reality_framework/grut_early_nonlinear_20261027 @ 7d9c93b",
+ "kind": "REPRODUCTION (Codex code rerun, all scripts + all seven histories, threads=2) + line-by-line audit + independent own-code checks",
+ "reproduction_max_relative_difference": {"preparation_matching_engine_files": "bitwise or <=2e-16", "nonlinear_histories_all_seven": "<=3.5e-12", "artefacts": "segment-relative conformal_light_crossings; halfstep decimated curve 15602 vs 15601 samples"},
+ "claims": [
+  {"id": "1a", "claim": "charge-contrast RMS = mean at tau 60.5-60.9", "verdict": "CONFIRMED", "codex": "60.5-60.9", "ours": "60.50-60.90; first orbit cycle with mean contrast>=1: tau 56.65-69.6 (mean 1.11-1.16) in all seven"},
+  {"id": "1b", "claim": "X fluctuation variance half at tau 69.2", "verdict": "CONFIRMED (instantaneous pericentre crossing)", "codex": "69.2", "ours": "69.20-69.25; orbit-averaged fraction that cycle 2.6-3.0%; cycle average never >=0.5 by 800 (max 0.466-0.496)"},
+  {"id": "2", "claim": "61-65% outside mean; Q0/Q 1.05-1.16 at 800", "verdict": "CONFIRMED (instantaneous)", "codex": "61-65%; 1.05-1.16", "ours": "60.94-64.93%; 1.054-1.159; last-orbit swing 47-75% and 1.05-1.21; tau 700-800 means 60.1-63.0%, 1.07-1.18"},
+  {"id": "3", "claim": "phi+interaction 0.28-0.36%; fixed-orbit control 2.09x", "verdict": "CONFIRMED", "codex": "0.28-0.36%; 2.09", "ours": "0.277-0.365% (700-800 means 0.279-0.367%); 2.0917 (max 2.109, first>=1 at 702.5); same convention, 8.032e-4 vs 8.038e-4 at tau 20; agree within 4% to tau 100"},
+  {"id": "4", "claim": "reference n-/Q 2.238 massless, 1.180 Hartree", "verdict": "CONFIRMED at tau 800; NEW phase/IR qualification", "codex": "2.238 / 1.180", "ours": "2.237515 / 1.179962 (own code); tau 600-800 snapshots: massless 1.25-2.64 (mean 1.98), Hartree 1.08-1.22 (mean 1.16); k<1.8 carries 1.874 / 0.836; seeded zero-point 5.27e-4 per net charge; per-shell projection floor 1.060"},
+  {"id": "5", "claim": "matching 0.547%, ~1%, 1.5-2.7%, 0.206%, ~0.45%", "verdict": "CONFIRMED (scope: 2 momenta, e=0, through tau 50)", "codex": "0.55%, 0.98-1.03%, 1.48-2.72%, 0.206%, 0.45%", "ours": "0.5471%, 0.977/1.031%, 1.482/2.717%, 0.2057%, 0.4469%"},
+  {"id": "6", "claim": "seven groups pass; energy 1.3e-8; current 1.9e-14; export round-off", "verdict": "CONFIRMED", "codex": "1.30e-8, 1.87e-14, 4.5e-16/2.3e-16", "ours": "1.293e-8; <=4.3e-14 (thread-dependent reductions); 4.4e-16/2.2e-16; halfstep 7.818e-10 (ratio 16.04)"}
+ ],
+ "audit": {
+  "a_early3d": "CONFIRMED: forces=dH; FD4 (-1,16,-30,16,-1)/12; matched energy (own FD4 energy = C++ to 3.9e-15); Yoshida w1=1/(2-2^(1/3)); a(s) only maps s->tau/output schedule (late steps .05/a<hmax for tau>39.6)/frozen estimate; clock vs full background <=2.1e-6 (20-240); current exact per sub-step",
+  "b_initial_match": "CONFIRMED: covariance/transfer; full 12x12 pure to 3.6e-11; X marginal symplectic eigs 0.500002-0.520; whitened empirical covariance diag 0.983-1.009 (sigma .012), pseudo-cov <=0.022; no factor-2 error; FD4/continuum mismatch at k=8: keff2/k2 .589/.875/.954 (N32/48/64)",
+  "c_export": "CONFIRMED: n_pm formula, k0 removal, weights; Hartree includes zero mode (52.5% of <|chi_X|^2>) but excluding it gives 1.183 vs 1.180; 2 lambda = mean of radial 3 lambda and tangential lambda; radial-only 1.231; zero-point included = 5.27e-4 per net charge"
+ },
+ "new": [
+  "N1 eccentric coherent orbit (|chi-bar|^2 314<->20344), common pericentre clock in all controls; single-instant numbers orbit-modulated",
+  "N2 reference gap IR(k<1.8)- and orbit-phase-dominated; 26 box modes carry 1.07 of massless 2.24",
+  "N3 per-shell equal-time projection floor n-/Q 1.06 (0.93-1.09 over 600-800); Hartree within ~11%",
+  "N4 lower seed edge 1.8 untested; k=1.737 shell (omega^2>0 at tau 0) grows 22.2x vs 22.4x band max on reduced orbit",
+  "N5 trajectory thread-independent; restarts reproduce to <=1e-12"
+ ]
+}

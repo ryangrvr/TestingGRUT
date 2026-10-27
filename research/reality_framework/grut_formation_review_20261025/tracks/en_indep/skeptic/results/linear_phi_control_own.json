@@ -1,0 +1,32 @@
+{
+ "method": "Skeptic (en_indep_skeptic): independent recomputation of Codex's fixed-homogeneous-orbit linear phi control (claim 3b).\nOwn code and own method, nothing imported from Codex:\n  * homogeneous reduced X orbit  Xbar'' = -lambda_X |Xbar|^2 Xbar  from the spatial mean of the tau=20 field;\n  * linear phi with Omega_k^2(s) = K_FD4^2 + g^2 |Xbar(s)|^2, evolved as SECOND MOMENTS per shell\n    (A=<phi^2>, B=<phi pi>, D=<pi^2>:  A'=2B, B'=D-Omega^2 A, D'=-2 Omega^2 B) -- Codex uses 2x2 transfer matrices + DOP853;\n  * fixed-step classical RK4 in conformal time s (own stepper), step h, two step sizes for convergence;\n  * shells = unique FD4 symbol values, moments from a full complex FFT (Codex: rfft with half-space weights).\nEnergy convention copied from LINEAR_PHI_CONTROL.json scope: (K_phi + G_phi + g^2/2 |Xbar|^2 phi^2) summed over all phi\nmodes (incl. the k=0 mode), no lambda_phi quartic, no vacuum subtraction, divided by the total active energy at tau=20.\nusage: linear_phi_moments.py INITIAL.bin OUT.json\n",
+ "nshells": 422,
+ "rho_tau20": 105467.43730088254,
+ "phi_zero_mode_included": false,
+ "fraction_tau20": 0.0008032190812650908,
+ "fraction_tau800_h004": 2.0915407435872906,
+ "fraction_tau800_h002": 2.0917009996516116,
+ "first_tau_fraction_ge_1": 702.5,
+ "max_fraction": 2.109429266219764,
+ "rows": {
+  "20.5": 0.0009355327300766743,
+  "50": 0.0016247674122538771,
+  "60.5": 0.0017036176883957544,
+  "100": 0.0013950874669398097,
+  "150": 0.003078046326400051,
+  "200": 0.007034529496797603,
+  "250": 0.01556629819967358,
+  "300": 0.01572567173869558,
+  "350": 0.029635077393101696,
+  "400": 0.08141638915225599,
+  "450": 0.06733948004715437,
+  "500": 0.1982397869431091,
+  "550": 0.3034125072259386,
+  "600": 0.23298090745061467,
+  "650": 0.4742363378463921,
+  "700": 0.9660170402089395,
+  "702.5": 1.0122856350517555,
+  "750": 1.5299541911528587,
+  "800": 2.0917009996516116
+ }
+}
