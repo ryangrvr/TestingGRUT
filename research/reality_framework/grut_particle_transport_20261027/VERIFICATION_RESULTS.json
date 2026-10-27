@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "groups": {
+    "discrete_engine_and_tangents": {
+      "passed": true,
+      "evidence": {
+        "passed": true,
+        "FFT_DOP853_max_absolute": 1.548403627538164e-09,
+        "reviewed_engine_max_absolute": 5.329070518200751e-15,
+        "tangent_finite_difference_errors": [
+          8.668265039091239e-08,
+          2.1669600336338135e-08
+        ],
+        "tangent_symplectic_relative": 4.321778917356994e-16,
+        "homogeneous_errors": [
+          0.044734281353165845,
+          0.002803372431081887,
+          0.0001753278068782394
+        ],
+        "homogeneous_refinement_ratios": [
+          15.957309438154759,
+          15.98932012552211
+        ],
+        "scope": "Same-author independent formulas and reviewed-engine comparison; not external replication."
+      }
+    },
+    "Gaussian_and_transfer_canonical": {
+      "passed": true,
+      "initial_pure_covariance_error": 2.5972046016302504e-14,
+      "scalar_transfer_symplectic": 7.156608639036222e-11,
+      "phi_determinant": 7.793765632868599e-14
+    },
+    "nonlinear_conservation": {
+      "passed": true,
+      "evidence": {
+        "maximum_energy_relative_drift": 1.3508387075589212e-08,
+        "maximum_charge_relative_drift": 1.1102230246251565e-15,
+        "averaged_export_energy_relative_error": 1.3322676295501878e-15,
+        "averaged_export_charge_relative_error": 5.88418203051333e-15
+      }
+    },
+    "averaged_export_reconstruction": {
+      "passed": true,
+      "energy_relative": 1.3322676295501878e-15,
+      "charge_relative": 5.88418203051333e-15
+    },
+    "time_refinement_of_action": {
+      "passed": true,
+      "maximum_action_absolute_difference": 1.72911729379166e-09,
+      "scope": "A numerical check of the stated classical statistic, not a particle-definition or state-selection test."
+    },
+    "coherent_action_and_matching": {
+      "passed": true,
+      "lab_charge_identity": 8.815170815523743e-14,
+      "review_action_reproduction_absolute": 1.2079226507921703e-13,
+      "charge_relative": 6.357494530817576e-10,
+      "work_relative": 2.859037069936918e-10,
+      "slow_free_action_maximum_difference": 1.0812996889653093e-05,
+      "fixed_quartic_radial_action_maximum_difference": 4.804110218525892e-07,
+      "scope": "Controlled homogeneous matching histories, not a cosmological transition."
+    },
+    "matrix_response_free_control": {
+      "passed": true,
+      "evidence": {
+        "passed": true,
+        "exact_frequency": 1.2541202921170822,
+        "maximum_response_absolute_error": 2.161931467181688e-10,
+        "maximum_cross_response": 0.0,
+        "maximum_anomalous_response": 0.0,
+        "scope": "Exact free-background test of the discrete tangent and normal/conjugate response convention; no particle assignment in the nonlinear state."
+      }
+    },
+    "nonlinear_response_canonical_transform": {
+      "passed": true,
+      "maximum_canonical_sum_deviation": 0.003965513398303422,
+      "scope": "Finite-window/probe canonical transform check; does not certify poles or populations."
+    }
+  },
+  "infrared_robustness_observations": [
+    {
+      "s": [
+        14.0,
+        24.0
+      ],
+      "minimum": 1.7504862907946874,
+      "maximum": 1.7516832501123363
+    },
+    {
+      "s": [
+        24.0,
+        34.0
+      ],
+      "minimum": 1.7413038869117001,
+      "maximum": 1.7453732605221632
+    }
+  ],
+  "IR_spatial_refinement_observations": [
+    {
+      "s": [
+        14.0,
+        24.0
+      ],
+      "relative_total_action_difference": 0.000520557746315653,
+      "relative_wave_action_difference": 0.00258954292780611
+    },
+    {
+      "s": [
+        24.0,
+        34.0
+      ],
+      "relative_total_action_difference": 0.0015975052078437413,
+      "relative_wave_action_difference": 0.007098022595669606
+    }
+  ],
+  "independent_reviewer_of_this_packet": false,
+  "physical_particle_population_certified": false
+}

@@ -1,0 +1,89 @@
+{
+  "case": {
+    "tag": "IR12_s1_w1",
+    "N": 32,
+    "L": 12.0,
+    "seed": 1,
+    "width": 1,
+    "hmax": 0.004
+  },
+  "initial": {
+    "N": 32,
+    "L": 12.0,
+    "seed": 1,
+    "IR_width": 1,
+    "nonzero_modes": 14938,
+    "nQ": 8112.665383318339,
+    "rho": 105481.24746711776,
+    "q_RMS_over_mean": 0.04380649626248623,
+    "p_RMS_over_mean": 0.021868502394940464,
+    "state_rule": "Explicit positive widths for unstable initial IR modes; no ground-state claim or charge/energy retuning.",
+    "tag": "IR12_s1_w1",
+    "width": 1,
+    "hmax": 0.004,
+    "threads": 2
+  },
+  "seconds": 262.75058126199997,
+  "output_ds": 0.04,
+  "end_s": 34.0,
+  "end_tau": 1469.3436841060795,
+  "energy_max_relative_drift": 1.3484658945017713e-08,
+  "charge_max_relative_drift": 6.661338147750939e-16,
+  "export_checks": [
+    {
+      "window": "14_24_conformal",
+      "charge_relative": 5.440092820663267e-15,
+      "energy_relative": 2.220446049250313e-16
+    },
+    {
+      "window": "14_24_cosmic",
+      "charge_relative": 8.881784197001252e-16,
+      "energy_relative": 2.220446049250313e-16
+    },
+    {
+      "window": "24_34_conformal",
+      "charge_relative": 5.662137425588298e-15,
+      "energy_relative": 4.440892098500626e-16
+    },
+    {
+      "window": "24_34_cosmic",
+      "charge_relative": 1.5543122344752192e-15,
+      "energy_relative": 6.661338147750939e-16
+    }
+  ],
+  "statistical_band_maximum_k": 8.0,
+  "temporal_field_storage": "complex64 selected full-space psi Fourier coefficients; no vacuum subtraction",
+  "names": [
+    "rho",
+    "nQ",
+    "Ephi",
+    "Emix",
+    "outside_mean",
+    "Q0_over_Q",
+    "Hartree_m2",
+    "charge_contrast",
+    "X_variance_fraction",
+    "q0",
+    "q1",
+    "qphi",
+    "p0",
+    "p1",
+    "pphi",
+    "ref_0",
+    "ref_7",
+    "ref_12",
+    "ref_20",
+    "ref_26",
+    "ref_H",
+    "tail_0",
+    "tail_7",
+    "tail_12",
+    "tail_20",
+    "tail_26",
+    "tail_H"
+  ],
+  "initial_file_sha256": "170220d215163454384868412c9f0e58a96ff9288e5455afd15f5f478cf14697",
+  "final_file_sha256": "1b29bced68d99b9c925f3ef5683e86ed39435e11b9ae652e1bb8af6ae1e1f5a0",
+  "physical_nbar": null,
+  "physical_f_sym": null
+}
