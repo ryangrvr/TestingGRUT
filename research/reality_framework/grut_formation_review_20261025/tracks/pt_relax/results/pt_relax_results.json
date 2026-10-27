@@ -1,0 +1,928 @@
+{
+ "track": "pt_relax",
+ "date": "2026-10-27",
+ "packet": "Codex 5f5513b grut_particle_transport_20261027",
+ "author": "Claude (same-session AI review; not outside replication)",
+ "labels": {
+  "D": "derived",
+  "C": "computed",
+  "Q": "quoted",
+  "E": "estimate",
+  "A": "argued",
+  "R": "recalled"
+ },
+ "provenance": {
+  "evolution": "Codex FD4/Yoshida engine (fieldstep.cpp) from a private git-archive copy of 5f5513b: reproduction tool",
+  "initial_field": "Codex prepare.initialize (same copy); nQ, rho equal to published RUN_IR12_s1_w1.json to all digits",
+  "independent": "own driver, Hann estimator, shell spectra, fits, equilibrium solver, rate estimates; BM6 integrator of tracks/en_indep for the cross-check"
+ },
+ "reproduction_of_codex_windows": {
+  "IR12_s1_w1_14_24": {
+   "codex": [
+    0.670554,
+    1.079999,
+    1.750553
+   ],
+   "ours": [
+    0.6705539128384287,
+    1.0799987881662596,
+    1.7505527010046884
+   ]
+  },
+  "IR12_s1_w1_24_34": {
+   "codex": [
+    0.411473,
+    1.329973,
+    1.741447
+   ],
+   "ours": [
+    0.41147334847671224,
+    1.3299734140035526,
+    1.741446762480265
+   ]
+  },
+  "IR12_fine_s1_w1_14_24": {
+   "codex": [
+    0.668662,
+    1.082803,
+    1.751464
+   ],
+   "ours": [
+    0.6686616832861519,
+    1.0828027526669426,
+    1.7514644359530944
+   ]
+  },
+  "IR12_fine_s1_w1_24_34": {
+   "codex": [
+    0.404752,
+    1.339481,
+    1.744233
+   ],
+   "ours": [
+    0.40475210144322943,
+    1.3394810821679002,
+    1.7442331836111296
+   ]
+  },
+  "order": "coherent, waves k<=8, total (Codex band definition)"
+ },
+ "long_continuation": {
+  "N32_IR12_s1_w1": {
+   "s_end": 1004.0,
+   "tau_end": 1009781.9046159418,
+   "total_all_modes_24_34": 1.7510319419918687,
+   "total_all_modes_994_1004": 0.8316349479348841,
+   "total_codex_band_994_1004": 0.6696475701926541,
+   "coherent_994_1004": 0.15212766128336352,
+   "waves_k_le_8_994_1004": 0.5175199089092906,
+   "k_gt_8_994_1004": 0.16198737774223004,
+   "slopes": {
+    "29-99": -0.00048633588275236655,
+    "99-199": -0.0006512259497947274,
+    "199-299": -0.0022230462722179337,
+    "299-499": -0.0012256216353779782,
+    "499-699": -0.0009300447673369824,
+    "699-1000": -0.0005925644739912077
+   },
+   "exp_fit_s_ge_299": {
+    "A_inf": 0.50971482629235,
+    "dA": 0.9400608700433213,
+    "Gamma": 0.0015396443193942157,
+    "Gamma_err": 1.9930819862238335e-05,
+    "rms_resid": 0.0026362227552430492
+   },
+   "energy_drift_max": 1.4149035765242957e-07,
+   "charge_drift_max": 3.9968028886505635e-15,
+   "window_means": {
+    "14-24": {
+     "r2": 10060.11759024709,
+     "mH2": 20.139074421853728,
+     "mphi2": 100.77072907470686,
+     "phi_total_frac": 0.002460857837616444,
+     "E_uv_frac": 0.00494330897247711,
+     "outside_mean": 0.5669391004755224
+    },
+    "24-34": {
+     "r2": 10103.914837071405,
+     "mH2": 20.22920743564284,
+     "mphi2": 101.23154822421432,
+     "phi_total_frac": 0.002839919867620686,
+     "E_uv_frac": 0.012122419388886481,
+     "outside_mean": 0.6426259853378911
+    },
+    "194-204": {
+     "r2": 9912.587224713141,
+     "mH2": 19.964530139595475,
+     "mphi2": 100.38007345865412,
+     "phi_total_frac": 0.01805685043635093,
+     "E_uv_frac": 0.0899292149683811,
+     "outside_mean": 0.6501726748382598
+    },
+    "494-504": {
+     "r2": 7709.283838520817,
+     "mH2": 16.80847290446106,
+     "mphi2": 89.60198543198295,
+     "phi_total_frac": 0.16411251973758018,
+     "E_uv_frac": 0.20430483099388994,
+     "outside_mean": 0.7319202661614025
+    },
+    "994-1004": {
+     "r2": 5844.219418030598,
+     "mH2": 14.161937494122396,
+     "mphi2": 80.70368210285679,
+     "phi_total_frac": 0.2649564473908369,
+     "E_uv_frac": 0.31327111413756203,
+     "outside_mean": 0.8102710261082966
+    },
+    "244-254": {
+     "r2": 9441.950995853203,
+     "mH2": 19.12404966735749,
+     "mphi2": 96.58083903939175,
+     "phi_total_frac": 0.030114707449700472,
+     "E_uv_frac": 0.10310214678576961,
+     "outside_mean": 0.6646243320538381
+    }
+   },
+   "phi_number_per_net": [
+    [
+     0.0,
+     0.0005860606083192463
+    ],
+    [
+     50.0,
+     0.002428891489557481
+    ],
+    [
+     100.0,
+     0.004030321830005934
+    ],
+    [
+     150.0,
+     0.006957276907238091
+    ],
+    [
+     200.0,
+     0.012432305257454972
+    ],
+    [
+     250.0,
+     0.021273022103824913
+    ],
+    [
+     300.0,
+     0.037312693235993184
+    ],
+    [
+     350.0,
+     0.05937480046856074
+    ],
+    [
+     400.0,
+     0.08418798551907372
+    ],
+    [
+     450.0,
+     0.10559193310063172
+    ],
+    [
+     500.0,
+     0.12192251177416334
+    ],
+    [
+     550.0,
+     0.13547987818350868
+    ],
+    [
+     600.0,
+     0.14680566755494098
+    ],
+    [
+     650.0,
+     0.15792131887844157
+    ],
+    [
+     700.0,
+     0.16826695784260992
+    ],
+    [
+     750.0,
+     0.17484117944593958
+    ],
+    [
+     800.0,
+     0.18702675248625905
+    ],
+    [
+     850.0,
+     0.19151855944574547
+    ],
+    [
+     900.0,
+     0.20054693463347426
+    ],
+    [
+     950.0,
+     0.20576842161519904
+    ],
+    [
+     1000.0,
+     0.211649595807804
+    ]
+   ]
+  },
+  "N48_IR12_fine_s1_w1": {
+   "s_end": 254.0,
+   "tau_end": 66330.59780065359,
+   "total_all_modes_24_34": 1.7500873374816388,
+   "total_all_modes_244_254": 1.6900406171609623,
+   "slopes": {
+    "29-99": -0.0003412360608170808,
+    "99-199": -0.00023537775113554216,
+    "199-299": -0.0002547362171638466,
+    "299-499": null,
+    "499-699": null,
+    "699-1000": null
+   },
+   "energy_drift_max": 5.009313297499318e-08,
+   "window_means": {
+    "14-24": {
+     "r2": 10049.678251197533,
+     "mH2": 20.118354756457975,
+     "mphi2": 100.6677667985415,
+     "phi_total_frac": 0.0028029106092781263,
+     "E_uv_frac": 0.0035495929958520673,
+     "outside_mean": 0.5684915319233823
+    },
+    "24-34": {
+     "r2": 10093.757828036143,
+     "mH2": 20.207010062094874,
+     "mphi2": 101.11302793456473,
+     "phi_total_frac": 0.003172276587780968,
+     "E_uv_frac": 0.009391072762107378,
+     "outside_mean": 0.6469508849332714
+    },
+    "194-204": {
+     "r2": 10206.95442003549,
+     "mH2": 20.449656605201262,
+     "mphi2": 102.3912740865274,
+     "phi_total_frac": 0.0063306184996312085,
+     "E_uv_frac": 0.11844198152933046,
+     "outside_mean": 0.630340586646006
+    },
+    "494-504": {
+     "r2": null,
+     "mH2": null,
+     "mphi2": null,
+     "phi_total_frac": null,
+     "E_uv_frac": null,
+     "outside_mean": null
+    },
+    "994-1004": {
+     "r2": null,
+     "mH2": null,
+     "mphi2": null,
+     "phi_total_frac": null,
+     "E_uv_frac": null,
+     "outside_mean": null
+    },
+    "244-254": {
+     "r2": 10141.361907313432,
+     "mH2": 20.338438026022814,
+     "mphi2": 101.91504697569789,
+     "phi_total_frac": 0.009070201019053,
+     "E_uv_frac": 0.12928265146501344,
+     "outside_mean": 0.6178506271146567
+    }
+   },
+   "N32_same_time_total_all_234_244": 1.5896918201193726
+  },
+  "integrator_crosscheck_s894_904": {
+   "field_maxdiff_over_rms_codex_h004_vs_codex_h002": [
+    4.333750384266198e-05,
+    2.1664269813146222e-05,
+    0.0002802080538112531,
+    5.054480912712362e-05,
+    7.301852377941058e-05,
+    0.0004056686493449438
+   ],
+   "total_minus_all_reldiff_codex_h004_vs_codex_h002": -1.7580341515888165e-08,
+   "field_maxdiff_over_rms_codex_h004_vs_bm6_h004": [
+    4.621434896003191e-05,
+    2.3102265244181786e-05,
+    0.00029880607249216867,
+    5.389995253164617e-05,
+    7.786499439723025e-05,
+    0.00043259439660869116
+   ],
+   "total_minus_all_reldiff_codex_h004_vs_bm6_h004": -1.8754939268283977e-08
+  },
+  "classical_lattice_RJ_endpoint_estimate": [
+   [
+    32,
+    3,
+    0.4077881736783546
+   ],
+   [
+    32,
+    2,
+    0.611682260517532
+   ],
+   [
+    48,
+    3,
+    0.3071577689348314
+   ]
+  ],
+  "occupations": {
+   "IR12_s1_w1": {
+    "occX_min": 10.890248361025252,
+    "occX_max": 478118.18827283266,
+    "occX_at_k8": 93.79372216275081,
+    "occX_last_shell": 10.890248361025252,
+    "occphi_min": 4.671007467376453,
+    "occphi_max": 32.94977942593504,
+    "quad_energy_fraction_phi_in_shells_occ_lt_1": 0.0,
+    "quad_energy_fraction_X_in_shells_occ_lt_1": 0.0
+   },
+   "IR12_fine_s1_w1": {
+    "occX_min": 0.10169814280938805,
+    "occX_max": 722105.3459904161,
+    "occX_at_k8": 35.01139651834433,
+    "occX_last_shell": 0.10169814280938805,
+    "occphi_min": 0.11746045771089843,
+    "occphi_max": 6.051449493577644,
+    "quad_energy_fraction_phi_in_shells_occ_lt_1": 0.012901456529535237,
+    "quad_energy_fraction_X_in_shells_occ_lt_1": 0.0010520687654127247
+   }
+  }
+ },
+ "onset": {
+  "kappa": 1.44067458242127e-24,
+  "rows": [
+   {
+    "case": "brief |chi_X| = 60",
+    "r2": 3600.0,
+    "a_onset": 4998829261280.228,
+    "s_onset": 2517292092871.727,
+    "tau_onset": 6.29175668652943e+24,
+    "Gamma_crit": 3.972522707363689e-13,
+    "Gamma_crit_over_Teq": 2.2627653277446546e-14,
+    "s_onset_over_34": 74038002731.52138,
+    "m_X_conformal_at_onset": 3.464101615137755
+   },
+   {
+    "case": "brief |chi_X| = 110",
+    "r2": 12100.0,
+    "a_onset": 9164520312347.084,
+    "s_onset": 4615035503601.889,
+    "tau_onset": 2.11472933075017e+25,
+    "Gamma_crit": 2.1668305676511735e-13,
+    "Gamma_crit_over_Teq": 1.2342356333142705e-14,
+    "s_onset_over_34": 135736338341.23203,
+    "m_X_conformal_at_onset": 6.350852961085884
+   },
+   {
+    "case": "measured <r^2>, N32/N48 s 24-34 (classical medium)",
+    "r2": 10104.0,
+    "a_onset": 8374593230728.535,
+    "s_onset": 4217246923001.7417,
+    "tau_onset": 1.7658863766859265e+25,
+    "Gamma_crit": 2.3712151985832087e-13,
+    "Gamma_crit_over_Teq": 1.3506539625385764e-14,
+    "s_onset_over_34": 124036674205.93358,
+    "m_X_conformal_at_onset": 5.803447251418764
+   },
+   {
+    "case": "measured <r^2>, N32 s 994-1004",
+    "r2": 5844.2,
+    "a_onset": 6369122294711.544,
+    "s_onset": 3207339229447.976,
+    "tau_onset": 1.0213967896504246e+25,
+    "Gamma_crit": 3.1178491842040444e-13,
+    "Gamma_crit_over_Teq": 1.7759397619241797e-14,
+    "s_onset_over_34": 94333506748.46988,
+    "m_X_conformal_at_onset": 4.413690821372366
+   },
+   {
+    "case": "equilibrium r_c^2 + <|dpsi|^2>",
+    "r2": 3927.1894528818116,
+    "a_onset": 5221051527157.52,
+    "s_onset": 2629197965930.2266,
+    "tau_onset": 6.863589027621386e+24,
+    "Gamma_crit": 3.803441250747331e-13,
+    "Gamma_crit_over_Teq": 2.1664558322981303e-14,
+    "s_onset_over_34": 77329351939.12431,
+    "m_X_conformal_at_onset": 3.618097775020189
+   },
+   {
+    "case": "kin_source a_ref (heavy spot point, case-L coordinate)",
+    "a_onset": 7047000000000.0,
+    "s_onset": 3548702396355.3145,
+    "tau_onset": 1.2503852893573688e+25,
+    "Gamma_crit": 2.8179314248133274e-13,
+    "Gamma_crit_over_Teq": 1.6051053684879365e-14,
+    "s_onset_over_34": 104373599892.80336,
+    "m_X_conformal_at_onset": 4.883448264769067
+   }
+  ],
+  "statement": "Reduced conformal Hamiltonian is s-independent (no masses, R = 0): a constant conformal rate gives Gamma_c * s_onset e-folds; Gamma_phys/H = Gamma_c a / C. Survival of the budget needs Gamma_c < 1/s_onset."
+ },
+ "equilibrium": [
+  {
+   "model": "free massless BE, 2 dof thermal",
+   "T": 19.40288740375188,
+   "condensate_energy_fraction": 0.11590551221172238,
+   "mu": 2.0093450489645726,
+   "Xbar_per_net": 0.10966317320923884,
+   "r_c2": 4037.4675257984404
+  },
+  {
+   "model": "free massless BE, 3 dof thermal",
+   "T": 17.53248793384642,
+   "condensate_energy_fraction": 0.11590551221172238,
+   "mu": 2.0093450489645726,
+   "Xbar_per_net": 0.0809081673650862,
+   "r_c2": 4037.4675257984404
+  },
+  {
+   "T": 17.556052581569233,
+   "rc2": 3880.558705034311,
+   "mu": 2.039420804636352,
+   "M_X": 2.8354533893925846,
+   "M_phi": 6.398487921978644,
+   "dpsi": 46.63074784750039,
+   "phi2": 18.541701765427455,
+   "n_plus": 759.5150390594503,
+   "n_minus": 560.9418124007834,
+   "charge": 8112.665383318342,
+   "energy": 105481.24746711776,
+   "Ephi_frac": 0.2878395145460896,
+   "model": "Hartree BE, circular condensate, phi equilibrium",
+   "Xbar_per_net": 0.06914396020255187,
+   "residual": [
+    4.440892098500626e-16,
+    -1.1102230246251565e-16
+   ],
+   "r2_total": 3927.1894528818116,
+   "condensate_charge_fraction": 0.9755230596510266
+  },
+  {
+   "T": 19.40255634365728,
+   "rc2": 3919.5237587877496,
+   "mu": 2.008567817609708,
+   "M_X": 2.820260349103461,
+   "M_phi": null,
+   "dpsi": 57.41045957483831,
+   "phi2": 0.0,
+   "n_plus": 1010.6699739295777,
+   "n_minus": 770.6338728689469,
+   "charge": 8112.665383318342,
+   "energy": 105481.24746711775,
+   "Ephi_frac": 0.0,
+   "model": "Hartree BE, circular condensate, phi none",
+   "Xbar_per_net": 0.09499145304988939,
+   "residual": [
+    4.440892098500626e-16,
+    -2.220446049250313e-16
+   ],
+   "r2_total": 3976.9342183625877,
+   "condensate_charge_fraction": 0.9704121777838635
+  },
+  {
+   "T": 19.38607551488106,
+   "rc2": 3919.730234637022,
+   "mu": 2.008568601600379,
+   "M_X": 2.820297513024455,
+   "M_phi": null,
+   "dpsi": 57.30879634894041,
+   "phi2": 0.0,
+   "n_plus": 1008.1947636608555,
+   "n_minus": 768.5764563781288,
+   "charge": 8112.665383318335,
+   "energy": 105164.8037247164,
+   "Ephi_frac": 0.0,
+   "model": "Hartree BE, X only, phi holding 0.003 of the energy (decoupled)",
+   "Xbar_per_net": 0.09473784755852416,
+   "residual": [
+    -4.440892098500626e-16,
+    -1.1102230246251565e-16
+   ],
+   "r2_total": 3977.0390309859627,
+   "condensate_charge_fraction": 0.9704636767374327
+  },
+  {
+   "T": 19.122207803028523,
+   "rc2": 3923.011316086336,
+   "mu": 2.008581155452132,
+   "M_X": 2.820888082523615,
+   "M_phi": null,
+   "dpsi": 55.693470975542965,
+   "phi2": 0.0,
+   "n_plus": 969.1119042471985,
+   "n_minus": 736.1331230453341,
+   "charge": 8112.665383318346,
+   "energy": 100207.18509376186,
+   "Ephi_frac": 0.0,
+   "model": "Hartree BE, X only, phi holding 0.05 of the energy (decoupled)",
+   "Xbar_per_net": 0.0907387508622021,
+   "residual": [
+    8.881784197001252e-16,
+    -3.3306690738754696e-16
+   ],
+   "r2_total": 3978.704787061879,
+   "condensate_charge_fraction": 0.9712820916192453
+  },
+  {
+   "T": 18.82895644667458,
+   "rc2": 3926.6031830578936,
+   "mu": 2.0085951105143636,
+   "M_X": 2.821534600362027,
+   "M_phi": null,
+   "dpsi": 53.92556746215743,
+   "phi2": 0.0,
+   "n_plus": 926.872872960763,
+   "n_minus": 701.163444062655,
+   "charge": 8112.66538331833,
+   "energy": 94933.12272040595,
+   "Ephi_frac": 0.0,
+   "model": "Hartree BE, X only, phi holding 0.1 of the energy (decoupled)",
+   "Xbar_per_net": 0.08642824656671058,
+   "residual": [
+    -1.1102230246251565e-15,
+    -4.440892098500626e-16
+   ],
+   "r2_total": 3980.528750520051,
+   "condensate_charge_fraction": 0.9721781414327487
+  }
+ ],
+ "after_onset": [
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.532488,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.845775070272159,
+   "T_phys_GeV": 0.44779305274903697,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.07891945377189177
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.532488,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.845775070272159,
+   "T_phys_GeV": 0.44779305274903697,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.06355438553450334
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.532488,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.845775070272159,
+   "T_phys_GeV": 0.44779305274903697,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.061601005786860855
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.556053,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.852288161256791,
+   "T_phys_GeV": 0.448394920737655,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.07924250259507232
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.556053,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.852288161256791,
+   "T_phys_GeV": 0.448394920737655,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.06383177072138355
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 17.556053,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 4.852288161256791,
+   "T_phys_GeV": 0.448394920737655,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.06187225468724463
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 19.402887,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 5.3627315253777885,
+   "T_phys_GeV": 0.49556446306277835,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.10738241628581638
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 19.402887,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 5.3627315253777885,
+   "T_phys_GeV": 0.49556446306277835,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.0881775943483648
+  },
+  {
+   "at": "a_onset (equilibrium r^2)",
+   "a": 5221051527157.52,
+   "T_conf": 19.402887,
+   "m_conf": 3.618097775020189,
+   "T_over_mX": 5.3627315253777885,
+   "T_phys_GeV": 0.49556446306277835,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.08570594990440886
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.532488,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.5901860835683683,
+   "T_phys_GeV": 0.33176537560747654,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.07767313665401201
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.532488,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.5901860835683683,
+   "T_phys_GeV": 0.33176537560747654,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.05836968930926063
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.532488,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.5901860835683683,
+   "T_phys_GeV": 0.33176537560747654,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.056018126705640575
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.556053,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.595011567268074,
+   "T_phys_GeV": 0.33221129355569873,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.07799373214119744
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.556053,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.595011567268074,
+   "T_phys_GeV": 0.33221129355569873,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.058631298859025176
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 17.556053,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.595011567268074,
+   "T_phys_GeV": 0.33221129355569873,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.05627204297634012
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 19.402887,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.973193929375546,
+   "T_phys_GeV": 0.3671587337418639,
+   "mu_over_m": 0.0,
+   "Xbar_per_net": 0.10593813986460532
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 19.402887,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.973193929375546,
+   "T_phys_GeV": 0.3671587337418639,
+   "mu_over_m": 0.8611951308217225,
+   "Xbar_per_net": 0.08166495186196705
+  },
+  {
+   "at": "a_ref",
+   "a": 7047000000000.0,
+   "T_conf": 19.402887,
+   "m_conf": 4.883448264769067,
+   "T_over_mX": 3.973193929375546,
+   "T_phys_GeV": 0.3671587337418639,
+   "mu_over_m": 0.99,
+   "Xbar_per_net": 0.07866150466412482
+  }
+ ],
+ "heavy_spot_injection": {
+  "N_X": 2788.1767940228406,
+  "E_X": 38386.25063336385,
+  "rows": [
+   {
+    "R": 0.0,
+    "phi": "equilibrium",
+    "T_conf": 13.780810500662389,
+    "T_over_mX_at_a_ref": 2.8219425605636204,
+    "T_phys_GeV_at_a_ref": 0.2607727877485337,
+    "Xbar_per_net": 0.09897584241498082,
+    "condensate_charge_fraction": 0.9689368835379515
+   },
+   {
+    "R": 0.0,
+    "phi": "none",
+    "T_conf": 15.234337652440352,
+    "T_over_mX_at_a_ref": 3.119586166673718,
+    "T_phys_GeV_at_a_ref": 0.2882777249522713,
+    "Xbar_per_net": 0.13590840884662994,
+    "condensate_charge_fraction": 0.9626220515819781
+   },
+   {
+    "R": 0.80557,
+    "phi": "equilibrium",
+    "T_conf": 16.1159170166492,
+    "T_over_mX_at_a_ref": 3.300110115410694,
+    "T_phys_GeV_at_a_ref": 0.3049597559848633,
+    "Xbar_per_net": 0.1615286860166982,
+    "condensate_charge_fraction": 0.9568548621974505
+   },
+   {
+    "R": 0.80557,
+    "phi": "none",
+    "T_conf": 17.820803930036927,
+    "T_over_mX_at_a_ref": 3.6492254988350235,
+    "T_phys_GeV_at_a_ref": 0.3372211467919382,
+    "Xbar_per_net": 0.22167759763306819,
+    "condensate_charge_fraction": 0.9485195254143642
+   },
+   {
+    "R": 1.14445,
+    "phi": "equilibrium",
+    "T_conf": 16.852328034072137,
+    "T_over_mX_at_a_ref": 3.450907457267609,
+    "T_phys_GeV_at_a_ref": 0.3188947820802358,
+    "Xbar_per_net": 0.1856554201266611,
+    "condensate_charge_fraction": 0.9525964700394164
+   },
+   {
+    "R": 1.14445,
+    "phi": "none",
+    "T_conf": 18.636355742045723,
+    "T_over_mX_at_a_ref": 3.8162287653367852,
+    "T_phys_GeV_at_a_ref": 0.35265374559014967,
+    "Xbar_per_net": 0.2547549582557959,
+    "condensate_charge_fraction": 0.9436052889934218
+   },
+   {
+    "R": 4.0538,
+    "phi": "equilibrium",
+    "T_conf": 20.985485798109377,
+    "T_over_mX_at_a_ref": 4.297267967289863,
+    "T_phys_GeV_at_a_ref": 0.3971060797597649,
+    "Xbar_per_net": 0.36645389477310697,
+    "condensate_charge_fraction": 0.9244935613196275
+   },
+   {
+    "R": 4.0538,
+    "phi": "none",
+    "T_conf": 23.21292574961962,
+    "T_over_mX_at_a_ref": 4.753388280384975,
+    "T_phys_GeV_at_a_ref": 0.4392556852325248,
+    "Xbar_per_net": 0.5026358260172433,
+    "condensate_charge_fraction": 0.911869086401096
+   },
+   {
+    "R": 40.56262,
+    "phi": "equilibrium",
+    "T_conf": 35.64674587608545,
+    "T_over_mX_at_a_ref": 7.2995031263572,
+    "T_phys_GeV_at_a_ref": 0.6745395197055748,
+    "Xbar_per_net": 1.8593315654700828,
+    "condensate_charge_fraction": 0.7567224342925154
+   },
+   {
+    "R": 40.56262,
+    "phi": "none",
+    "T_conf": 39.442134554015105,
+    "T_over_mX_at_a_ref": 8.076697533291117,
+    "T_phys_GeV_at_a_ref": 0.7463592494729471,
+    "Xbar_per_net": 2.5526229994246106,
+    "condensate_charge_fraction": 0.7423435324883043
+   },
+   {
+    "R": 48.49912,
+    "phi": "equilibrium",
+    "T_conf": 37.240891343135175,
+    "T_over_mX_at_a_ref": 7.625941614208185,
+    "T_phys_GeV_at_a_ref": 0.7047053620919326,
+    "Xbar_per_net": 2.1242237537318256,
+    "condensate_charge_fraction": 0.7308137471613402
+   },
+   {
+    "R": 48.49912,
+    "phi": "none",
+    "T_conf": 41.20654562850997,
+    "T_over_mX_at_a_ref": 8.438001877851077,
+    "T_phys_GeV_at_a_ref": 0.7797470095476028,
+    "Xbar_per_net": 2.9169035558829526,
+    "condensate_charge_fraction": 0.7185448838157203
+   }
+  ],
+  "note": "massless-phase (pre-onset) Hartree equilibrium at the heavy spot release with injected conformal energy R E_X; R values from kin_source (Y debris 0.806, mediators 1.144, vectors e=1e-6 4.05, e=1e-7 band 40.56 / broad 48.50)"
+ },
+ "phi_vacuum_energy": {
+  "a": 5221051527157.52,
+  "V0_conformal": 12852.347499021784,
+  "V0_over_rho": 0.12184485685977797,
+  "note": "lambda_phi v^4/4 in conformal units at the onset; same order as the hidden energy [E]"
+ },
+ "rates": {
+  "T_eq": 17.556052581569233,
+  "r_c": 62.294130582538116,
+  "Gamma_crit": 3.803441250747331e-13,
+  "rates": [
+   {
+    "process": "2<->4 X only (|Phi|^4 vertex 4 lambda_X), thermal f~1",
+    "formula": "c (4 lambda_X)^4 T",
+    "Gamma_low": 1.4342257585396372e-13,
+    "Gamma_high": 1.4342257585396374e-11,
+    "efolds_to_onset_low": 0.37708634470371505,
+    "efolds_to_onset_high": 37.70863447037151
+   },
+   {
+    "process": "2<->4 with two g^2 vertices (phi phi Phi Phi* vertex 2 g^2), thermal",
+    "formula": "c (2 g^2)^4 T",
+    "Gamma_low": 8.963910990872732e-11,
+    "Gamma_high": 8.963910990872732e-09,
+    "efolds_to_onset_low": 235.6789654398219,
+    "efolds_to_onset_high": 23567.896543982188
+   },
+   {
+    "process": "2<->4 mixed g^2 x lambda_phi (X Xbar -> 4 phi)",
+    "formula": "c (2g^2)^2 (6 lambda_phi)^2 T",
+    "Gamma_low": 7.260767902606913e-09,
+    "Gamma_high": 7.260767902606911e-07,
+    "efolds_to_onset_low": 19089.996200625574,
+    "efolds_to_onset_high": 1908999.6200625568
+   },
+   {
+    "process": "2<->4 phi self (vertex 6 lambda_phi), thermal phi",
+    "formula": "c (6 lambda_phi)^4 T",
+    "Gamma_low": 5.881222001111598e-07,
+    "Gamma_high": 5.8812220011115987e-05,
+    "efolds_to_onset_low": 1546289.692250671,
+    "efolds_to_onset_high": 154628969.22506714
+   },
+   {
+    "process": "2<->2 X Xbar <-> phi phi (number-conserving; converts Xbar to phi)",
+    "formula": "n_X (2g^2)^2/(32 pi <s>)",
+    "Gamma_low": 1.5755004620382573e-07,
+    "Gamma_high": 1.4179504158344315e-06,
+    "efolds_to_onset_low": 414230.26101131184,
+    "efolds_to_onset_high": 3728072.349101806
+   },
+   {
+    "process": "condensate-assisted 1<->2, X cubic vertex ~ 2 lambda_X r_c",
+    "formula": "v3^2/(16 pi omega), omega = 3T, x (0.1-1) kinematic factor",
+    "Gamma_low": 5.863221026812494e-07,
+    "Gamma_high": 5.863221026812493e-06,
+    "efolds_to_onset_low": 1541556.8797494743,
+    "efolds_to_onset_high": 15415568.797494743,
+    "caveat": "with a circular (single-sign) condensate these conserve total number including condensate quanta; they equilibrate X with the condensate, not the X-bar number by themselves"
+   },
+   {
+    "process": "condensate-assisted 1<->2, phi phi X vertex ~ 2 g^2 r_c",
+    "formula": "v3^2/(16 pi omega), omega = 3T, x (0.1-1) kinematic factor",
+    "Gamma_low": 5.863221026812493e-05,
+    "Gamma_high": 0.0005863221026812493,
+    "efolds_to_onset_low": 154155687.97494742,
+    "efolds_to_onset_high": 1541556879.749474,
+    "caveat": "with a circular (single-sign) condensate these conserve total number including condensate quanta; they equilibrate X with the condensate, not the X-bar number by themselves"
+   }
+  ],
+  "classical_over_occupied_note": "In the present medium f ~ 1e2-1e3 at k <= 8: classical rates carry Bose enhancement f^(n-1); measured directly in the long run instead of estimated."
+ }
+}

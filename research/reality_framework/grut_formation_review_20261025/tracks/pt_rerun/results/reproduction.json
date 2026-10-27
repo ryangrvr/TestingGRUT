@@ -1,0 +1,304 @@
+{
+ "label": "REPRODUCTION: Codex 5f5513b scripts run in place in $SP/f55 (pt_rerun only), outputs compared with copies of the published files taken before any run.",
+ "verify.py": {
+  "identical_json": true,
+  "FFT_DOP853_max_absolute": 1.548403627538164e-09,
+  "reviewed_engine_max_absolute": 5.329070518200751e-15,
+  "tangent_fd": [
+   8.668265039091239e-08,
+   2.1669600336338135e-08
+  ],
+  "symplectic": 4.321778917356994e-16,
+  "homogeneous_refinement_ratios": [
+   15.957309438154759,
+   15.98932012552211
+  ],
+  "seconds": 4.5
+ },
+ "prepare.py": {
+  "PREPARATION_L12_npz_arrays": "bitwise identical (all 11 arrays)",
+  "PREPARATION_L24_npz_arrays": "bitwise identical (all 11 arrays)",
+  "PREPARATION_RESULTS": "identical after sorting the per-batch check list by kmin (thread completion order differs)",
+  "expected_handoff": {
+   "L12_w1": [
+    0.043344174069718945,
+    0.022000402012059713
+   ],
+   "L12_w3": [
+    0.04282495155541693,
+    0.021744983440240524
+   ],
+   "L24_w1": [
+    0.04376236890253653,
+    0.02213681569961438
+   ],
+   "L24_w3": [
+    0.043263327455742524,
+    0.0218865797722966
+   ]
+  },
+  "seconds": 48
+ },
+ "pt_production.py IR12_s1_w1": {
+  "seconds": 58.09365936799986,
+  "threads": 2,
+  "energy_max_relative_drift": [
+   1.3484658945017713e-08,
+   1.3484658722973109e-08
+  ],
+  "charge_max_relative_drift": [
+   6.661338147750939e-16,
+   4.440892098500626e-16
+  ],
+  "initial_rho": [
+   105481.24746711776,
+   105481.24746711778
+  ],
+  "initial_sha_equal": false,
+  "final_sha_equal": false,
+  "note": "initial field differs from Codex only at the last ulp (rho differs by 2e-11 of 1.05e5): a platform FFT round-off difference; byte hashes therefore differ, all physics outputs agree to <=3.5e-13 relative",
+  "trace_max_relative_by_column_max": 3.21e-13,
+  "export_checks": [
+   {
+    "window": "14_24_conformal",
+    "charge_relative": 4.884981308350689e-15,
+    "energy_relative": 1.1102230246251565e-16
+   },
+   {
+    "window": "14_24_cosmic",
+    "charge_relative": 1.5543122344752192e-15,
+    "energy_relative": 2.220446049250313e-16
+   },
+   {
+    "window": "24_34_conformal",
+    "charge_relative": 5.662137425588298e-15,
+    "energy_relative": 5.551115123125783e-16
+   },
+   {
+    "window": "24_34_cosmic",
+    "charge_relative": 1.7763568394002505e-15,
+    "energy_relative": 7.771561172376096e-16
+   }
+  ]
+ },
+ "analyze.py IR12_s1_w1": {
+  "14_24": {
+   "max_relative_field_diff": 3.490042029650435e-13,
+   "where": "/shells[15]/negative_frequency_action_per_net",
+   "headline": {
+    "coherent_negative_frequency_action": {
+     "published": 0.6705539104209468,
+     "rerun": 0.6705539104209468,
+     "abs_diff": 0.0
+    },
+    "wave_negative_frequency_action": {
+     "published": 1.0799987889594245,
+     "rerun": 1.0799987889594511,
+     "abs_diff": 2.6645352591003757e-14
+    },
+    "total_negative_frequency_action": {
+     "published": 1.7505526993803713,
+     "rerun": 1.750552699380398,
+     "abs_diff": 2.6645352591003757e-14
+    },
+    "spectral_charge_ratio": {
+     "published": 1.000098836057423,
+     "rerun": 1.0000988360573821,
+     "abs_diff": 4.085620730620576e-14
+    },
+    "equal_time_full_charge_ratio": {
+     "published": 0.9999999999999993,
+     "rerun": 0.9999999999999996,
+     "abs_diff": 2.220446049250313e-16
+    },
+    "omitted_k_gt8_Hartree_negative_reference": {
+     "published": 0.003363110753794591,
+     "rerun": 0.0033631107537945926,
+     "abs_diff": 1.734723475976807e-18
+    },
+    "low_wave_fraction_kcenters_le1p6": {
+     "published": 0.6979015703189269,
+     "rerun": 0.6979015703189096,
+     "abs_diff": 1.7208456881689926e-14
+    },
+    "fundamental_shell_wave_fraction": {
+     "published": 0.09138276529883242,
+     "rerun": 0.09138276529883017,
+     "abs_diff": 2.248201624865942e-15
+    },
+    "frequency_resolution": {
+     "published": 0.6258152696394009,
+     "rerun": 0.6258152696394009,
+     "abs_diff": 0.0
+    }
+   },
+   "spectrum_max_abs_diff_over_max": 1.7677368894041286e-14
+  },
+  "24_34": {
+   "max_relative_field_diff": 3.38942307899596e-13,
+   "where": "/equal_time/pphi/hann2_mean",
+   "headline": {
+    "coherent_negative_frequency_action": {
+     "published": 0.41147335058342316,
+     "rerun": 0.41147335058342316,
+     "abs_diff": 0.0
+    },
+    "wave_negative_frequency_action": {
+     "published": 1.3299734140602688,
+     "rerun": 1.3299734140602733,
+     "abs_diff": 4.440892098500626e-15
+    },
+    "total_negative_frequency_action": {
+     "published": 1.741446764643692,
+     "rerun": 1.7414467646436964,
+     "abs_diff": 4.440892098500626e-15
+    },
+    "spectral_charge_ratio": {
+     "published": 1.0008377431743745,
+     "rerun": 1.000837743174367,
+     "abs_diff": 7.549516567451064e-15
+    },
+    "equal_time_full_charge_ratio": {
+     "published": 0.9999999999999993,
+     "rerun": 0.9999999999999997,
+     "abs_diff": 3.3306690738754696e-16
+    },
+    "omitted_k_gt8_Hartree_negative_reference": {
+     "published": 0.009660712183723722,
+     "rerun": 0.009660712183723703,
+     "abs_diff": 1.9081958235744878e-17
+    },
+    "low_wave_fraction_kcenters_le1p6": {
+     "published": 0.7821475123436007,
+     "rerun": 0.782147512343598,
+     "abs_diff": 2.6645352591003757e-15
+    },
+    "fundamental_shell_wave_fraction": {
+     "published": 0.3042262335899123,
+     "rerun": 0.3042262335899113,
+     "abs_diff": 9.992007221626409e-16
+    },
+    "frequency_resolution": {
+     "published": 0.6258152696394009,
+     "rerun": 0.6258152696394009,
+     "abs_diff": 0.0
+    }
+   },
+   "spectrum_max_abs_diff_over_max": 1.6877376333359787e-15
+  },
+  "AVERAGE_max_rel_diff_per_array": 7.420422248924929e-15,
+  "AVERAGE_worst_array": "24_34_cosmic_covk"
+ },
+ "summarize (adapted, one case)": {
+  "max_relative_difference_vs_published_RESULTS_row": 4.0852169638821484e-14,
+  "table_line": "0.6706 + 1.0800 = 1.7506 | 0.4115 + 1.3300 = 1.7414"
+ },
+ "coherent.py": {
+  "identical_json": true,
+  "lab_negative_per_coherent_charge": 1.7377883531120057,
+  "radial_action_per_coherent_charge": 1.763725279396997,
+  "lab_per_full_net_charge": 1.7387317301645944,
+  "radial_per_full_net_charge": 1.7646827365883024,
+  "summary": [
+   {
+    "duration": 0.0,
+    "mean": 8.421494230749133,
+    "minimum": 0.07693913569092221,
+    "maximum": 18.17569609823104,
+    "spread": 18.09875696254012
+   },
+   {
+    "duration": 0.2,
+    "mean": 4.087684244645263,
+    "minimum": 0.110719632502501,
+    "maximum": 8.738111151405187,
+    "spread": 8.627391518902686
+   },
+   {
+    "duration": 2.0,
+    "mean": 1.7786258281839964,
+    "minimum": 1.2454773255180625,
+    "maximum": 2.3310799866707788,
+    "spread": 1.0856026611527163
+   },
+   {
+    "duration": 20.0,
+    "mean": 1.7637252851380818,
+    "minimum": 1.7635604216781358,
+    "maximum": 1.7639165462719915,
+    "spread": 0.00035612459385570006
+   },
+   {
+    "duration": 80.0,
+    "mean": 1.7637252784479496,
+    "minimum": 1.7637161033915687,
+    "maximum": 1.7637360923938867,
+    "spread": 1.998900231803269e-05
+   }
+  ],
+  "fixed_quartic": [
+   {
+    "radial_phase": 0.0,
+    "duration": 80.0,
+    "quadratic_negative_projection_per_charge": 1.7618746229106228,
+    "final_radial_action_per_charge": 1.7637247989859752,
+    "quartic_fraction_of_final_energy": 0.0013183363558776722,
+    "charge_relative_error": 7.157207049246495e-10,
+    "work_identity_relative": 2.1744986939745145e-10
+   },
+   {
+    "radial_phase": 0.25,
+    "duration": 80.0,
+    "quadratic_negative_projection_per_charge": 1.764235387636153,
+    "final_radial_action_per_charge": 1.7637253976993104,
+    "quartic_fraction_of_final_energy": 0.00027625645832501765,
+    "charge_relative_error": 7.795573075952689e-10,
+    "work_identity_relative": 2.0420034968283417e-10
+   },
+   {
+    "radial_phase": 0.5,
+    "duration": 80.0,
+    "quadratic_negative_projection_per_charge": 1.7648607561855578,
+    "final_radial_action_per_charge": 1.7637257576229226,
+    "quartic_fraction_of_final_energy": 2.9769546129615583e-07,
+    "charge_relative_error": 7.659076706190149e-10,
+    "work_identity_relative": 2.183133264850497e-10
+   },
+   {
+    "radial_phase": 0.75,
+    "duration": 80.0,
+    "quadratic_negative_projection_per_charge": 1.7639346814083314,
+    "final_radial_action_per_charge": 1.7637251604443436,
+    "quartic_fraction_of_final_energy": 0.00040892191496576225,
+    "charge_relative_error": 7.696780990329444e-10,
+    "work_identity_relative": 2.2634292711325957e-10
+   }
+  ],
+  "seconds": 51
+ },
+ "check_response_free.py": {
+  "passed": true,
+  "exact_frequency": 1.2541202921170822,
+  "maximum_response_absolute_error": 2.161931467181688e-10,
+  "maximum_cross_response": 0.0,
+  "maximum_anomalous_response": 0.0,
+  "scope": "Exact free-background test of the discrete tangent and normal/conjugate response convention; no particle assignment in the nonlinear state."
+ },
+ "check_results.py": {
+  "all_groups_identical": true,
+  "passed": true,
+  "note": "Run with REPO patched so the review reference resolves to our tracks/en_particles/skeptic/results/sk_orbit_tau20.json; groups 3-5 and 8 read the published RESULTS.json (all eight histories), so they are re-evaluations of published aggregates, not regenerated histories."
+ },
+ "not_rerun": [
+  "base48",
+  "base48_half",
+  "IR12_s2_w1",
+  "IR12_s1_w3",
+  "IR12_fine_s1_w1",
+  "IR24_s1_w1",
+  "IR24_s2_w1",
+  "response.py (3 tangent probes)",
+  "plot.py",
+  "package.py"
+ ]
+}

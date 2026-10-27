@@ -1,0 +1,131 @@
+{
+ "track": "pt_rerun",
+ "verdicts": [
+  {
+   "id": "C1a",
+   "claim": "Eight-history classical budget 1.75049-1.75168 (s14-24), 1.74130-1.74537 (s24-34)",
+   "label": "[C]/[Q]",
+   "codex": "IR12_s1_w1: 0.6706+1.0800=1.7506; 0.4115+1.3300=1.7414",
+   "ours": "regenerated 1.7505527/1.7414468, all outputs <=3.5e-13 rel; other 7 quoted",
+   "verdict": "CONFIRMED",
+   "method": "reproduction"
+  },
+  {
+   "id": "C1b",
+   "claim": "Hann A_- normalisation equals free antiparticle occupation",
+   "label": "[D]/[C]",
+   "codex": "stated",
+   "ours": "free tones m|B|^2 to <=1.5e-3 (m>=1), <=7e-6 (m>=2); 53% bias at m=0.2; orbit 1.737785-1.737794 vs 1.737788",
+   "verdict": "CONFIRMED",
+   "method": "independent"
+  },
+  {
+   "id": "C1c",
+   "claim": "k<=8 statistic plus separately reported k>8 tail",
+   "label": "[C]",
+   "codex": "tail reported separately",
+   "ours": "with tail 1.7530-1.7546 / 1.7501-1.7513; drift -0.14..-0.17% (vs -0.36..-0.53%)",
+   "verdict": "NEW",
+   "method": "arithmetic on published+reproduced"
+  },
+  {
+   "id": "C2a",
+   "claim": "Hessian eigenvalues and obstruction k",
+   "label": "[C]",
+   "codex": "-2.83238,-1.99965; 1.683,1.414",
+   "ours": "-2.832376,-1.999649; 1.682967,1.414090",
+   "verdict": "CONFIRMED",
+   "method": "reproduction"
+  },
+  {
+   "id": "C2b",
+   "claim": "C_qq=1/2 Omega^-1, C_pp=1/2 Omega pure; normalisation",
+   "label": "[D]",
+   "codex": "pure Gaussian",
+   "ours": "symplectic eigenvalues 1/2 +-2.9e-15; whitening <|w|^2> 0.9991-1.0031, p 0.06-0.95 in 6 cases",
+   "verdict": "CONFIRMED",
+   "method": "independent"
+  },
+  {
+   "id": "C2c",
+   "claim": "Handoff RMS 4.3% X, 2.2% momentum",
+   "label": "[C]",
+   "codex": "4.3-4.4% / 2.2%",
+   "ours": "boxes 4.28-4.38% / 2.17-2.21%; continuum 4.39-4.44% / 2.21-2.24%; sigma 0.1-30 -> 4.25-4.40%",
+   "verdict": "CONFIRMED",
+   "method": "independent+reproduction"
+  },
+  {
+   "id": "C2d",
+   "claim": "Continuity with old band at k=1.8",
+   "label": "[C]",
+   "codex": "old stable prescription kept",
+   "ours": "continuous at 1.8 (4e-12); jumps x2.4 at 1.414 and x5.8 at 1.683 (integrable 1/Omega squeeze)",
+   "verdict": "NEW",
+   "method": "independent"
+  },
+  {
+   "id": "C3a",
+   "claim": "Lab 1.737788 and J_r 1.763725 per coherent charge",
+   "label": "[C]",
+   "codex": "1.737788/1.763725; 1.738732/1.764683 per full Q",
+   "ours": "1.737788353 (Hann 400) / 1.763725279 (r-quadrature), diffs 1.4e-10 / 7e-16",
+   "verdict": "CONFIRMED",
+   "method": "independent"
+  },
+  {
+   "id": "C3b",
+   "claim": "Slow free matching returns J_r; mass-only ramp 5e-7",
+   "label": "[C]",
+   "codex": "spread 2e-5 at T=80; 4.8e-7",
+   "ours": "smoothstep ramp, m_out 10/30/100: <=1.7e-5 (T=80), <=2.2e-6 (T=200); fixed quartic 8.7e-8",
+   "verdict": "CONFIRMED",
+   "method": "independent"
+  },
+  {
+   "id": "C3c",
+   "claim": "Sudden matching 0.077-18.18",
+   "label": "[C]",
+   "codex": "0.077-18.18",
+   "ours": "64 phases at m_out=30: 0.013-18.30; scales with m_out (3.68: 1.30-2.03; 100: 0.55-62.1)",
+   "verdict": "CORRECTED",
+   "method": "independent"
+  },
+  {
+   "id": "C4",
+   "claim": "Matrix response 0.44-1.70, canonical sum 0.4%",
+   "label": "[C]",
+   "codex": "0.44-1.70",
+   "ours": "free control reproduced 2.16e-10, zero mixing; nonlinear probes not rerun",
+   "verdict": "NOT CHECKED",
+   "method": "reproduction (free control only)"
+  },
+  {
+   "id": "C5",
+   "claim": "Averaged export keeps <v0 v0^T>; reconstruction",
+   "label": "[C]",
+   "codex": "6e-15/1.4e-15",
+   "ours": "5.7e-15/7.8e-16; <v0v0^T> from trace to 1.5e-15; squared mean would lose 113-129% of Q and 28-33% of energy",
+   "verdict": "CONFIRMED",
+   "method": "independent+reproduction"
+  },
+  {
+   "id": "C6",
+   "claim": "Chemical relaxation is the deciding next calculation",
+   "label": "[A]",
+   "codex": "argued",
+   "ours": "-",
+   "verdict": "NOT CHECKED",
+   "method": "-"
+  },
+  {
+   "id": "VG",
+   "claim": "Eight verification groups pass",
+   "label": "[C]",
+   "codex": "8 pass",
+   "ours": "8 pass, identical JSON",
+   "verdict": "CONFIRMED",
+   "method": "reproduction"
+  }
+ ]
+}

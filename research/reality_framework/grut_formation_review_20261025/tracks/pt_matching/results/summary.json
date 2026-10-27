@@ -1,0 +1,27 @@
+{
+ "track": "pt_matching",
+ "packet": "research/reality_framework/grut_particle_transport_20261027 at 5f5513b",
+ "method": "independent code only (own C symplectic integrator: position-Verlet composed to order 8 (Kahan-Li) in extended phase space; mpmath tanh-sinh quadrature; numpy FFT). No Codex module imported or run. Input: MATCH_L12.npz light_mean_q/p (tau=20 mean field) and Codex's WINDOW_base48_24_34.json coherent share.",
+ "verdicts": [
+  {"id": "3a", "label": "D", "claim": "free massive basis: n+ = m|A|^2, n- = m|B|^2; harmonic orbit E/m = 2 J_r + q so n- = J_r", "codex": "stated", "ours": "derived; harmonic family member gives A_-/q = J_r/q = 1.982382394205 exactly", "verdict": "CONFIRMED"},
+  {"id": "3b", "label": "C", "claim": "starting orbit: lab negative-frequency statistic and radial action per coherent charge", "codex": "1.737788 / 1.763725 (1.738732 / 1.764683 per original net charge)", "ours": "1.7377883531122 / 1.7637252793970 (1.7387317301648 / 1.7646827365883); spectral identities to 2e-14", "verdict": "CONFIRMED"},
+  {"id": "3c", "label": "D", "claim": "why they differ (new)", "codex": "-", "ours": "J_r = sum_n n w_n |c_n|^2, q = sum_n w_n |c_n|^2, w_n = Omega + n w_r; with 0 < Omega < w_r: J_r - A_- = sum_{n>=1} n w_n|c_n|^2 + sum_{n<=-2}(|n|-1)|w_n||c_n|^2 >= 0, zero only for the two-harmonic (harmonic) ellipse. Quartic orbit: 0.025937 = 0.016534 (n>=1) + 0.009403 (n<=-2)", "verdict": "NEW"},
+  {"id": "3d", "label": "C", "claim": "slow free matching m=30 f(s/T), lambda=lambda_X(1-f) returns J_r", "codex": "T=80 mean 1.7637252784, spread 2.0e-5; T=20 spread 3.56e-4", "ours": "T=80 mean 1.7637252794, spread 1.99889e-5; T=20 spread 3.5612e-4", "verdict": "CONFIRMED"},
+  {"id": "3e", "label": "C", "claim": "fixed-quartic mass-only ramp agrees to 5e-7", "codex": "5e-7", "ours": "final J_r/q - J0 = -4.80e-7, +1.19e-7, +4.79e-7, -1.18e-7", "verdict": "CONFIRMED"},
+  {"id": "3f", "label": "C", "claim": "sudden matching 0.077-18.18 per coherent charge", "codex": "0.0769-18.176 (8 phases)", "ours": "8 phases identical; continuous phase (512): 0.00535-18.312, phase mean 8.42", "verdict": "CORRECTED (range is an 8-phase sample)"},
+  {"id": "3g", "label": "C", "claim": "T dependence of slow matching (new)", "codex": "-", "ours": "cosine ramp: max|n- - J_r| ~ T^-2.02 (1.9e-4 at T=20, 1.1e-5 at 80, 7.1e-7 at 320) from the f'' jump at the ramp ends; C-infinity ramp: 3.0e-3, 9.7e-7, 2.7e-10, 4e-13 at T=10,20,40,80", "verdict": "NEW"},
+  {"id": "3h", "label": "C", "claim": "'slow matching to massive particles gives about 1.76' applied to the physical (phi-condensation) transition", "codex": "about 1.76 (conditional on adiabatic continuation)", "ours": "homogeneous X+phi model, eps<=3e-3 (240 runs, tau-20 orbit): n-/q = 0.724 +- 0.026 (std 0.41, range 0.002-1.44, never above J_r), plus N_phi/q = 0.459 +- 0.017 phi quanta; late orbit: 0.166 +- 0.011 vs J_r 0.4805 (+0.141 phi quanta). J_r is not conserved; outcome chaotic; no eps trend (slope -0.011 +- 0.037 per decade)", "verdict": "CORRECTED (premise of adiabatic continuation fails in this model; counting rule itself CONFIRMED)"},
+  {"id": "3i", "label": "C", "claim": "controls (new)", "codex": "-", "ours": "imposed slaved mass g M(s): J_r kept to 4e-6 (eps=1e-4); Born-Oppenheimer phi (phi at its instantaneous minimum): J_r kept to <=5.3e-4. The loss comes from phi's finite inertia (m_phi comparable to the orbital frequency), not from the mass switch-on or the attractive effective quartic", "verdict": "NEW"},
+  {"id": "3j", "label": "C/E", "claim": "waves switch mass adiabatically? (new)", "codex": "not addressed", "ours": "smooth envelope g M(s): |beta_k|^2 <= 1e-5 (adiabatic). Actual phi(s) of the homogeneous runs: k=6 band |beta|^2 = 1.9 (eps=1e-3), 300 (1e-4) by M = 2 M_c,peri; |beta|^2 >> 1 for all k=0.25-8 by 4-8 M_c,peri (linear modes, no backreaction). Not adiabatic in this model.", "verdict": "NEW"},
+  {"id": "3k", "label": "E", "claim": "fate of the phi quanta (new)", "codex": "-", "ours": "m_phi/m_X = sqrt(2 lambda_phi)/g = 2.449 > 2, so phi -> X Xbar is open; Gamma ~ g^4 v^2 sqrt(1-4m_X^2/m_phi^2)/(4 pi m_phi) ~ 1.9e-4 m_X, Gamma/H ~ 2e11 at H/m_X ~ 1e-15. If phi decays only to X Xbar: n-/q -> 1.18 (tau-20 orbit), 0.31 (late orbit)", "verdict": "NEW"}
+ ],
+ "key_numbers": {
+  "J_r_per_q_tau20": 1.763725279396996, "A_minus_per_q_tau20": 1.737788353112182,
+  "late_orbit_A_match": {"A_minus_per_q": 0.4717671, "J_r_per_q": 0.4804918, "rmax_over_rmin": 3.336},
+  "late_orbit_ratio_match": {"rmax_over_rmin": 3.9646, "J_r_per_q": 0.6463227, "A_minus_per_q": 0.6351522},
+  "M_c_peri_tau20": 10.2174, "M_c_apo_tau20": 82.3778, "floquet_first_unstable_over_Mperi": 0.732,
+  "slow_limit_tau20": {"nminus_per_q": [0.724, 0.026], "Nphi_per_q": [0.459, 0.017], "sum": [1.184, 0.009]},
+  "slow_limit_late": {"nminus_per_q": [0.166, 0.011], "Nphi_per_q": [0.141, 0.006], "sum": [0.306, 0.005]}
+ },
+ "files": ["orbit_spectral.json", "matching_ramps.json", "floquet.json", "transition_scan.json", "transition_controls.json", "transition_chaos.json", "waves_switch_on.json"]
+}

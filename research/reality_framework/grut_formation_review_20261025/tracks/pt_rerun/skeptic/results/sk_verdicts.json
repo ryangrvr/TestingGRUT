@@ -1,0 +1,140 @@
+{
+ "key": "pt_rerun_skeptic",
+ "target": "tracks/pt_rerun (Codex 5f5513b review)",
+ "method": "independent own code only; no Codex script run",
+ "checks": [
+  {
+   "claim_id": "C1a",
+   "refuted": false,
+   "recomputed": "explicit-matrix DFT of rerun psi: 1.7505527/1.7414468 (diff 2.6e-14/8e-15); coherent part of all 8 histories x 2 windows from published traces <=4.6e-9",
+   "files": [
+    "sk_spectrum.json",
+    "sk_traces.json"
+   ]
+  },
+  {
+   "claim_id": "C1b",
+   "refuted": false,
+   "recomputed": "4x zero-padded grid changes total by 7.8e-7/4.0e-6",
+   "files": [
+    "sk_spectrum.json"
+   ]
+  },
+  {
+   "claim_id": "C1c",
+   "refuted": true,
+   "recomputed": "incl-tail ranges 1.75299-1.75459 (s14-24) and 1.75013-1.75176 (s24-34; upper end IR12_s2_w1 1.741795+0.009964); refinement fine-coarse -0.048%/-0.056% (sign flips from +0.052%/+0.160%); decline -0.145..-0.170% confirmed",
+   "files": [
+    "RESULTS.json via git show"
+   ]
+  },
+  {
+   "claim_id": "C2a",
+   "refuted": false,
+   "recomputed": "same eigenvalues; 15/60 are (shell,direction) pairs; lattice vectors below obstructions L12 146+80=226, L24 1140+690=1830",
+   "files": [
+    "sk_ir_alt.json"
+   ]
+  },
+  {
+   "claim_id": "C2b",
+   "refuted": false,
+   "recomputed": "width-3 factor rebuilt from width-1 transfer 1.1e-15; canonical pair algebra gives <|c_k|^2>=1/(2 Omega V)",
+   "files": [
+    "sk_ir.json"
+   ]
+  },
+  {
+   "claim_id": "C2c",
+   "refuted": false,
+   "recomputed": "continuum by spline-in-k^2 transfer + exact singular state factor (no integrator): 4.43726%/2.23501% (w1), 4.39021%/2.21098% (w3); alt pure rules on k<1.8: clamp 4.325%, |k^2+lam| 4.664%, sigma=300 4.665%",
+   "files": [
+    "sk_ir.json",
+    "sk_ir_alt.json"
+   ]
+  },
+  {
+   "claim_id": "C2d",
+   "refuted": false,
+   "recomputed": "per-mode tau=20 X variance diverges as c (k-k0)^-1/2, c=2.47 (1.414), 13.76 (1.683); x2.39/x5.82 are nearest-L24-shell ratios (L12: x2.35/x3.36); (k0b,1.8) share 11.66% (w1), 11.92% (w3)",
+   "files": [
+    "sk_ir.json"
+   ]
+  },
+  {
+   "claim_id": "C3a",
+   "refuted": false,
+   "recomputed": "J_r (u-cubic, mpmath) 1.7637252793969964; T_r, dtheta to <=2e-15; lab via KL8 symplectic 1.737788353112 (<=1.5e-13)",
+   "files": [
+    "sk_coherent.json"
+   ]
+  },
+  {
+   "claim_id": "C3b",
+   "refuted": false,
+   "recomputed": "C-infinity ramp m_out=30: max dev 0.14 (T5), 2.9e-3 (10), 9.6e-7 (20), 2.9e-10 (40), 2.9e-11 (80)",
+   "files": [
+    "sk_coherent.json"
+   ]
+  },
+  {
+   "claim_id": "C3c",
+   "refuted": false,
+   "recomputed": "exact extremes at turning points: m_out=30 0.00535-18.312; m_out=25.92 min 0; 10: 0.2445-5.7795; 100: 0.5293-62.197; 3.678: 1.2973-2.0284",
+   "files": [
+    "sk_coherent.json"
+   ]
+  },
+  {
+   "claim_id": "Q-coherent-qualification",
+   "refuted": true,
+   "recomputed": "late coherent J_r variants vs lab: bare quartic +0.013..+0.023 (x1.02-1.06), fluctuation-Hartree -0.039..-0.055 (x0.90-0.92); -3.2%..+1.3% of total; instantaneous J_q swings x3-5 within windows",
+   "files": [
+    "sk_traces.json"
+   ]
+  },
+  {
+   "claim_id": "C5",
+   "refuted": false,
+   "recomputed": "all 8 histories: <v0v0^T> vs traces <=1.5e-15; coherent charge share 101-129% (not 113-129%); coherent kinetic 26-33%, own quartic +7-11%; squared mean keeps 0.35-0.49% of Q",
+   "files": [
+    "sk_traces.json"
+   ]
+  },
+  {
+   "claim_id": "design-note",
+   "refuted": false,
+   "recomputed": "identical SeedSequence and 14-normal draws in old initial.py and prepare.initialize",
+   "files": []
+  }
+ ],
+ "new_issues": [
+  "N1 late coherent matching ambiguity -3.2..+1.3% of total",
+  "N2 tail-included total still declines -0.22% over s14-34 (5-unit windows), residual growing",
+  "N3 tail differs x1.6-2.1 N32 vs N48",
+  "N4 correct incl-tail ranges",
+  "N5 handoff RMS 4.33-4.67% across pure state rules"
+ ],
+ "tail_arithmetic": {
+  "incl_s14_24": [
+   1.7529949,
+   1.754588
+  ],
+  "incl_s24_34": [
+   1.7501297,
+   1.7517594
+  ],
+  "refine_k8": [
+   0.0520829,
+   0.1600061
+  ],
+  "refine_incl": [
+   -0.0484952,
+   -0.0558368
+  ],
+  "base48_to_fine_incl_percent": [
+   0.004,
+   -0.0187
+  ]
+ }
+}
