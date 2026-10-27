@@ -1,0 +1,169 @@
+{
+ "heavy_window": {
+  "H_i_GeV": 133350000000.0,
+  "V_GeV4": 3.163043946076875e+59,
+  "V_quarter_GeV": 749939633961273.8,
+  "r_if_H_i_is_H_at_pivot_exit": 2.8953823366189593e-07,
+  "epsilon_equiv_r_over_16": 1.8096139603868496e-08,
+  "T_instant_SM_GeV": 308063122360025.94,
+  "T_instant_GRUTdof_GeV": 301243345095924.8,
+  "H_over_M_P": 5.4763860369609856e-08,
+  "efolds": {
+   "instant_SM": {
+    "N_min_today_Hubble": 58.41886577266438,
+    "N_star_k0.05": 53.01380370858943,
+    "N_flat_Ok_1e-3_from_Oki_1": 61.87274341215545,
+    "N_flat_Ok_1e-4_from_Oki_1": 63.024035958652476
+   },
+   "instant_GRUTdof": {
+    "N_min_today_Hubble": 58.41140366896103,
+    "N_star_k0.05": 53.006341604886074,
+    "N_flat_Ok_1e-3_from_Oki_1": 61.8652813084521,
+    "N_flat_Ok_1e-4_from_Oki_1": 63.01657385494912
+   },
+   "TRH_2e14_matter_era": {
+    "N_min_today_Hubble": 58.27486999327939,
+    "N_star_k0.05": 52.869807929204434,
+    "N_flat_Ok_1e-3_from_Oki_1": 61.72874763277046,
+    "N_flat_Ok_1e-4_from_Oki_1": 62.88004017926748
+   },
+   "TRH_5e14_cap_at_instant": {
+    "N_min_today_Hubble": 58.41140366896103,
+    "N_star_k0.05": 53.006341604886074,
+    "N_flat_Ok_1e-3_from_Oki_1": 61.8652813084521,
+    "N_flat_Ok_1e-4_from_Oki_1": 63.01657385494912
+   }
+  },
+  "N_min_central": 58.41140366896103,
+  "N_star_central": 53.006341604886074,
+  "H_max_from_BK18_r0.036": 47020940345425.49,
+  "H_max_from_r0.032": 44331767701357.984,
+  "r_gaugepoint_H4.7e13": 0.03596794259880215,
+  "r_scanpoint_range": [
+   1.4654209297837e-06,
+   5.8616837191348e-06
+  ]
+ },
+ "TCC": {
+  "N_TCC_max_heavy": 16.72023534285294,
+  "N_min_heavy": 58.41140366896103,
+  "deficit_efolds_heavy": 41.691168326108084,
+  "standard_instant_reheating": {
+   "H_max_GeV": 0.11272051239906443,
+   "V_quarter_max_GeV": 689495242.0296085,
+   "r_max": 2.0688346870905398e-31,
+   "T_rh_max_GeV": 283233539.7318013,
+   "N_at_bound": 44.51932229606057,
+   "note": "BBLV 1909.11106 quote V^{1/4} < 6e8 GeV and r < 1e-30 [Q]; this is our own reproduction"
+  },
+  "standard_instant_reheating_GRUTdof": {
+   "H_max_GeV": 0.11328266428696006,
+   "V_quarter_max_GeV": 691212405.0853993
+  },
+  "standard_analytic_V_quarter_GeV": 689495242.0296077,
+  "most_relaxed_w-1/3_until_TBBN": {
+   "H_max_GeV": 9361328465.900925,
+   "V_quarter_max_GeV": 198700307118030.78,
+   "r_max": 1.4269043050653034e-09,
+   "N_min_at_bound": 19.376625382944965,
+   "note": "minimised over w in [-1/3,1], T_rh in [5 MeV, T_inst]; optimum is w=-1/3, T_rh=T_BBN (Mizuno-Mukohyama-Pi-Zhang 1910.02979 give r <~ 1e-8 at the BBN reheating bound [Q via search])"
+  },
+  "heavy_over_relaxed_H": 14.244773109471971,
+  "heavy_over_standard_H": 1183014494539.3877,
+  "heavy_over_standard_Vquarter": 1087664.6976616406,
+  "heavy_own_reheating_N_min": [
+   58.27486999327939,
+   58.41140366896103
+  ],
+  "branches": {
+   "heavy_spot": {
+    "H": 133350000000.0,
+    "N_TCC": 16.72023534285294,
+    "N_min_instant": 58.41140366896103,
+    "H_over_H_TCC_std": 1183014494539.3877,
+    "H_over_H_TCC_relaxed": 14.244773109471971
+   },
+   "scanpoint_lo": {
+    "H": 300000000000.0,
+    "N_TCC": 15.909430118824764,
+    "N_min_instant": 58.81680628097512,
+    "H_over_H_TCC_std": 2661449931472.1885,
+    "H_over_H_TCC_relaxed": 32.04673365460511
+   },
+   "scanpoint_hi": {
+    "H": 600000000000.0,
+    "N_TCC": 15.216282938264818,
+    "N_min_instant": 59.16337987125509,
+    "H_over_H_TCC_std": 5322899862944.377,
+    "H_over_H_TCC_relaxed": 64.09346730921023
+   },
+   "gaugepoint": {
+    "H": 47000000000000.0,
+    "N_TCC": 10.855309712788769,
+    "N_min_instant": 61.343866483993125,
+    "H_over_H_TCC_std": 416960489263976.2,
+    "H_over_H_TCC_relaxed": 5020.654939221467
+   }
+  },
+  "family_floors": {
+   "H_min_from_c6_survival_fixed_eps": 38681926.71660434,
+   "H_min_from_yield_with_eps_le_1": 36973871189.53404,
+   "required_eps_cH32_over_lambdaX_boost_to_reach_H_TCC_std": 1.2867231025325215e+18,
+   "note": "uniform scaling (M_Y,h,mu,H)->s(...) at fixed kappa, lambdas, e, c_H, delta [Q ls_scaling]"
+  },
+  "multistage": {
+   "N2_min": 41.691168326108084,
+   "log10_dilution_min_e^{3N2}": 54.31873304438511,
+   "log10_H_boost_needed_via_Y~H^1.5": 36.21248869625674
+  },
+  "late_dS_lifetime_bound": {
+   "ln_MP_over_HL": 138.87197285292078,
+   "t_max_yr": 2436177573677.8223,
+   "one_over_HL_yr": 17542615141.343002
+  }
+ },
+ "Banks_Fischler": {
+  "rho_Lambda_GeV4": 2.514514329236687e-47,
+  "H_Lambda_GeV": 1.1889606037891031e-42,
+  "S_dS_Lambda": 3.311713317155194e+122,
+  "log10_dimH_eq_S_over_ln10": 1.4382588192860143e+122,
+  "eq3.2_heavy_reduced": 84.12964653979837,
+  "eq3.2_heavy_nonreduced": 84.66705268561158,
+  "eq2.8_kappa1/3_heavy": 61.07586875503392,
+  "eq2.8_kappa1_heavy": 81.43449167337856,
+  "BF_check_eq2.9_kappa1": 85.96317680511105,
+  "BF_check_eq2.8_kappa1/3": 64.47238260383328,
+  "BF_check_eq3.2_nonreduced": 88.33228859843179,
+  "BF_check_eq3.2_reduced": 87.7948824526186,
+  "s0_GeV3": 2.2215199801367872e-38,
+  "S_rad_in_today_Hubble_volume": 3.1368007358650154e+88,
+  "Delta_Nmax_minus_Nmin": 26.114051809719076,
+  "own_N_max_heavy": 84.5254554786801,
+  "curvature_floor_factor_e^{-2Delta}": 2.077891171231944e-23,
+  "topology_ceiling_factor_e^{Delta}": 219375741171.21426,
+  "heavy_window_compatible": true
+ },
+ "weak_bounds": {
+  "ADNTV_0704.1814_S_dS_inflation_heavy": 2.632701515462381e+16,
+  "DvaliGomezZell_1701.08776_MP2_over_H2_heavy": 333435542154531.0,
+  "note": "N_e bounded by ~S_dS(H_inf) or ~M_P^2/H^2 [R]; ~1e14-1e16 e-folds at the heavy point: not binding"
+ },
+ "finite_N_Lambda": {
+  "Lambda_GeV2": 4.240881952087646e-84,
+  "S_from_3pi_over_G_Lambda": 3.311713317155194e+122,
+  "consistency_with_S_dS": 1.0,
+  "log10_recurrence_time_in_Hubble_units": 1.4382588192860143e+122,
+  "note": "Lambda = 3 pi/(G ln N) relabels Lambda by N: N supplied (Banks hep-th/0007146, Fischler 2000) [R]"
+ },
+ "candidate1": {
+  "V1loop_GeV4": -8.943838595359561e-07,
+  "V1loop_over_rho_Lambda": -3.556885117482937e+40,
+  "T_rh_max_under_TCC_std_GeV": 283233539.7318013,
+  "mX_GeV": 0.09240896373753621,
+  "TCC_reheating_room_over_mX": 3065000712.8773026
+ },
+ "H0_sensitivity": {
+  "N_min_heavy_H0_DESI_CMB": 58.399450453520416,
+  "N_min_heavy_H0_Planck": 58.41140366896103
+ }
+}

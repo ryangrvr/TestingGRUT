@@ -1,0 +1,51 @@
+{
+ "frozen_on": "2026-10-27",
+ "by": "Claude track cf_vacuum (closure-forcing pass, issue #13); git read-only, no commit",
+ "status": "retrospective for all data listed in inputs; held out only for measurements published after this date",
+ "postulate": "P_q reading (a)/(c)-worldline: the q-theory final-state equilibrium names the global minimum of the full renormalized effective potential; with the SM valid to M_Pl this is absolute stability",
+ "relation": {
+  "Mt_crit_GeV": 170.996908258119,
+  "at": {
+   "Mh": 125.13,
+   "alpha_s": 0.118
+  },
+  "dMt_dMh": 0.4936613165330641,
+  "dMt_per_0.0009_alpha_s": 0.354744552862968,
+  "theory_error_matching_GeV": 0.113,
+  "criterion_error_GeV": 0.032,
+  "mu_star_GeV": 4.964070790532761e+17,
+  "criterion": "min_{mu<=1.2209e19 GeV} lambda_MSbar(mu) = 0 (SMDR v1.3 fit + loop order 5 running)",
+  "inequality": "M_t(pole) <= Mt_crit + dMt_dMh (Mh - 125.13) + dMt_per (alpha_s - 0.1180)/0.0009",
+  "equality_variant_MPP": "M_t(pole) = Mt_crit (reading (d), Froggatt-Nielsen; added assumption)"
+ },
+ "discriminator": "z = (M_t,pole - Mt_crit(Mh, alpha_s)) / sigma_tot with a short-distance top mass (threshold scan MSR/PS mass converted to pole/MSbar at N3LO) and alpha_s(M_Z) from Z-pole or lattice",
+ "failure_condition": "z > 5 with a theoretically clean short-distance top mass falsifies P_q(a) + SM-to-M_Pl; P_q(a) then requires new physics coupled to the Higgs at or below the instability scale",
+ "inputs_used": {
+  "PDG2026": {
+   "Mh": [
+    125.13,
+    0.11
+   ],
+   "Mt_direct": [
+    172.6,
+    0.27
+   ],
+   "Mt_xsec_pole": [
+    172.1,
+    0.6
+   ],
+   "alpha_s": [
+    0.118,
+    0.0009
+   ]
+  },
+  "ATLAS+CMS 2402.08713": [
+   172.52,
+   0.33
+  ],
+  "FLAG 2024 alpha_s": [
+   0.1183,
+   0.0007
+  ]
+ }
+}
