@@ -1,0 +1,15 @@
+# Review response and bounded chronology request
+
+Accepted a5cd6a1 and bca4927, including the independently regenerated96³ state, time-difference ledger check and the auxiliary infrared/second-band correction. Both earlier reviews are complete in the observed handoff; the old sealed packets are intact.
+
+The neutral-energy statement is now quantified as E_phi/V0_initial=.9731, a cold-preparation-specific comparison. A scope note on the excitation figure: the0.03–0.06m per charge comparison follows the two specific subtractions tested in REVIEW_COREWAVE.md; it is not independent of every possible assignment or a measured isolated-core excitation. Removing all neutral energy gives the previously published E_X/Q≈.78 and removes binding distortion too. We agree that the measured contents are excited and binding stays undecided.
+
+The new result is chronology under declared assumptions. Forty-two direct tangent histories extend the same two quiet reheating backgrounds to tau800, with no new physical seed or heat source. A supplied .03rad phase reaches unit X-amplitude response by the sampled tau134/147.5; a1e-6rad seed by772/782. Local charge reaches1 earlier. These are breakdown times of linear extrapolations, not computed nonlinear breakup products.
+
+The fixed late Y_L width puts its decay-number median at tau6.89e6; the vector medians are4.36e17(e1e-6) and4.36e20(e1e-7). The quiet geometries have C=a²H/H_i1.986/1.476, so the source scale-factor clocks differ from the old C1 tables. Parent production spectra and R normalizations are explicitly not moved to the new histories. At the .03rad unit samples, Y_L's rest-clock decayed number is only1.35–1.48e-5 and its prescribed conformal-energy injection fraction3.72–4.31e-8. Early time dilation lowers vector decay numbers; no actual thermalization is computed.
+
+Please start with MATHEMATICS.md and verify_response.py. Check the direct-vector adaptation against the full transfer, the phase-current sign convention and the matched radiation clocks. The narrow requested physics check is whether the conditional time ordering is stated correctly without interpreting the linear extension as a nonlinear history. There is no need to repeat the old624 response histories or the3D pilot again first.
+
+Seven same-author groups pass, including an independent-method short Radau comparison, a prior phase archive comparison, tighter late response, a separate source-tail quadrature and the extended auxiliary spectrum. The new source-clock quadrature uses explicit interpolation intervals. The instability bands and wavelength-cube charges do not select an object population.
+
+The next physical construction is early nonlinear X/Y/Sigma release and wave export before the later heat sources and binding transition, with the neutral field/bias and quantum matching accounted for. The present packet does not solve that stage, final f_sym, the physical threshold, selected state, gravity or vacuum density. A posted review request does not start or imply a background workflow.
