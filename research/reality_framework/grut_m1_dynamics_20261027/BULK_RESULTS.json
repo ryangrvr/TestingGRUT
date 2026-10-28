@@ -1,0 +1,93 @@
+{
+  "scope": "Fixed-potential coexistence and global classical energy-charge lower bound.",
+  "bulk": {
+    "S": 0.1511721078446304,
+    "F": 2.406476756777611,
+    "Omega": 0.7758647074595397,
+    "energy_per_charge_over_mX": 0.7758647074595397,
+    "canonical_charge_density_over_mX3": 449.3133678845478
+  },
+  "stationary_quartic_descending": [
+    2.1,
+    3.76,
+    2.864,
+    -0.288,
+    -0.036
+  ],
+  "stationary_quartic_roots": [
+    [
+      -0.9334688748772206,
+      0.8040450895140415
+    ],
+    [
+      -0.9334688748772206,
+      -0.8040450895140415
+    ],
+    [
+      0.1511721078446304,
+      0.0
+    ],
+    [
+      -0.07471054856637788,
+      0.0
+    ]
+  ],
+  "bounded_minimizer_S_difference": 4.788068358463349e-09,
+  "direct_three_equation_difference": 0.0,
+  "direct_three_equation_residual": 2.220446049250313e-16,
+  "sampled_potential_bound_min_margin": 6.6571245627145e-08,
+  "bound": "E >= Omega_bulk*m_X*abs(Q) for the classical M1 scalar Hamiltonian",
+  "proof": "U(-S)>U(S) for S>0; S>1 gives Omega^2>=1; minimize F^2 analytically then S in [0,1]. Complete kinetic squares and add nonnegative gradients.",
+  "constant_density_phi_minimum": "unique positive S in (0,1] at every F>=0: F^2=b(1-S^2)+3c(S-2+1/S) decreases strictly on (0,1). No negative root because base V_phi derivative and F^2*S are both negative there.",
+  "uniform_controls": [
+    {
+      "F": 0.1,
+      "S": 0.9983322212035693,
+      "Omega": 0.9988329309215093,
+      "E_over_Q": 0.9994167598115532,
+      "density_over_bulk": 0.0022230207296618024,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.22368251298303798
+    },
+    {
+      "F": 0.5,
+      "S": 0.9576229546388392,
+      "Omega": 0.9705883387158638,
+      "E_over_Q": 0.9854835393883573,
+      "density_over_bulk": 0.05400397629418288,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.21270657859888553
+    },
+    {
+      "F": 1.0,
+      "S": 0.8212478761806626,
+      "Omega": 0.8800273144233928,
+      "E_over_Q": 0.9432416607184915,
+      "density_over_bulk": 0.19586047897188713,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.1774486435760868
+    },
+    {
+      "F": 1.5,
+      "S": 0.5635593046914886,
+      "Omega": 0.7366132566716092,
+      "E_over_Q": 0.8810083037660317,
+      "density_over_bulk": 0.36886946749756805,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.11934461441173294
+    },
+    {
+      "F": 2.0,
+      "S": 0.26631384411551695,
+      "Omega": 0.6862383431196364,
+      "E_over_Q": 0.8051387009772624,
+      "density_over_bulk": 0.6109218128546462,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.036358944716221475
+    },
+    {
+      "F": 2.63,
+      "S": 0.11792767571299154,
+      "Omega": 0.8399981766046093,
+      "E_over_Q": 0.7832799257178353,
+      "density_over_bulk": 1.293124977587883,
+      "minimum_Q_weighted_energy_fraction_left_outside_ground_bulk": 0.00946688152578401
+    }
+  ],
+  "formed_mass_distribution": null
+}

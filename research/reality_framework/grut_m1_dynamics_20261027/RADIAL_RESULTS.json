@@ -1,0 +1,106 @@
+{
+  "scope": "Open-boundary nonlinear survival, with an explicit absorbing receiver.",
+  "cases": {
+    "radial_main": {
+      "tag": "radial_main",
+      "params": {
+        "h": 0.2,
+        "dt": 0.025,
+        "L": 200.0,
+        "ab": 100.0,
+        "amp": 0.05
+      },
+      "code_sha256": "de41b7289f8bd3aaaec9b08a38692fe73cc55c19c4f37b4472a86db39887d882",
+      "seconds": 0.7217154502868652,
+      "receiver_energy_balance_relative_error": 9.608009717831933e-06,
+      "receiver_charge_balance_relative_error": 6.994405055138486e-15,
+      "initial_E_over_Q": 0.9427862105568625,
+      "final_E_over_Q": 0.937853068265324,
+      "final_core20_E_over_Q": 0.937824677662667,
+      "final_core20_Q": 200405.607741699,
+      "absorbed_Q_over_original": -0.0020229554589248334,
+      "absorbed_energy_over_initial": 0.003214272936349036
+    },
+    "radial_unperturbed": {
+      "tag": "radial_unperturbed",
+      "params": {
+        "h": 0.2,
+        "dt": 0.025,
+        "L": 200.0,
+        "ab": 100.0,
+        "amp": 0.0
+      },
+      "code_sha256": "de41b7289f8bd3aaaec9b08a38692fe73cc55c19c4f37b4472a86db39887d882",
+      "seconds": 0.6769399642944336,
+      "receiver_energy_balance_relative_error": 3.865081976694995e-08,
+      "receiver_charge_balance_relative_error": 4.218847493575595e-15,
+      "initial_E_over_Q": 0.9373227986064009,
+      "final_E_over_Q": 0.9373226290277171,
+      "final_core20_E_over_Q": 0.9373225893268017,
+      "final_core20_Q": 199999.89782805936,
+      "absorbed_Q_over_original": 3.215863856384984e-07,
+      "absorbed_energy_over_initial": 4.859476296581401e-07
+    },
+    "radial_fine": {
+      "tag": "radial_fine",
+      "params": {
+        "h": 0.1,
+        "dt": 0.0125,
+        "L": 200.0,
+        "ab": 100.0,
+        "amp": 0.05
+      },
+      "code_sha256": "de41b7289f8bd3aaaec9b08a38692fe73cc55c19c4f37b4472a86db39887d882",
+      "seconds": 2.6400556564331055,
+      "receiver_energy_balance_relative_error": 2.393967628355753e-06,
+      "receiver_charge_balance_relative_error": 1.199040866595169e-14,
+      "initial_E_over_Q": 0.9428190281973272,
+      "final_E_over_Q": 0.9378955601590008,
+      "final_core20_E_over_Q": 0.9378650444294256,
+      "final_core20_Q": 200400.9762383961,
+      "absorbed_Q_over_original": -0.0020012948901527725,
+      "absorbed_energy_over_initial": 0.003229812380766608
+    },
+    "radial_half": {
+      "tag": "radial_half",
+      "params": {
+        "h": 0.2,
+        "dt": 0.0125,
+        "L": 200.0,
+        "ab": 100.0,
+        "amp": 0.05
+      },
+      "code_sha256": "de41b7289f8bd3aaaec9b08a38692fe73cc55c19c4f37b4472a86db39887d882",
+      "seconds": 1.354572057723999,
+      "receiver_energy_balance_relative_error": 2.4029737941688722e-06,
+      "receiver_charge_balance_relative_error": 9.43689570931383e-15,
+      "initial_E_over_Q": 0.9427862105568625,
+      "final_E_over_Q": 0.9378534784067566,
+      "final_core20_E_over_Q": 0.9378250876079589,
+      "final_core20_Q": 200405.93747148168,
+      "absorbed_Q_over_original": -0.002024609645101372,
+      "absorbed_energy_over_initial": 0.003216577233598594
+    },
+    "radial_boundary": {
+      "tag": "radial_boundary",
+      "params": {
+        "h": 0.2,
+        "dt": 0.025,
+        "L": 300.0,
+        "ab": 200.0,
+        "amp": 0.05
+      },
+      "code_sha256": "de41b7289f8bd3aaaec9b08a38692fe73cc55c19c4f37b4472a86db39887d882",
+      "seconds": 1.2183456420898438,
+      "receiver_energy_balance_relative_error": 9.608009717387844e-06,
+      "receiver_charge_balance_relative_error": 8.881784197001252e-15,
+      "initial_E_over_Q": 0.9427862105568625,
+      "final_E_over_Q": 0.9378818469994262,
+      "final_core20_E_over_Q": 0.9378245124612357,
+      "final_core20_Q": 200405.5882273816,
+      "absorbed_Q_over_original": -0.0020190983343386006,
+      "absorbed_energy_over_initial": 0.0031875302751671005
+    }
+  },
+  "physical_cosmic_p": null
+}

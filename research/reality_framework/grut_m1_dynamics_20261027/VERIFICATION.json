@@ -1,0 +1,163 @@
+{
+  "groups": [
+    {
+      "name": "changed_3D_force_and_independent_evolution",
+      "pass": true,
+      "details": {
+        "potential_directional_derivative_relative_error": 6.50584031092194e-11,
+        "spatial_Hamiltonian_integration_by_parts_error": 2.220446049250313e-16,
+        "independent_DOP853_uniform_orbit_errors": [
+          4.909257525831379e-06,
+          3.066459746126071e-07,
+          1.9162015973961388e-08
+        ],
+        "time_order_ratios": [
+          16.00952868216632,
+          16.002803412193053
+        ],
+        "compiled_vs_python_initial_energy_errors": [
+          8.881784197001252e-16,
+          8.881784197001252e-16,
+          8.881784197001252e-16
+        ],
+        "uniform_charge_drifts": [
+          2.220446049250313e-16,
+          1.1102230246251565e-15,
+          4.440892098500626e-16
+        ],
+        "lattice_cold_mode": {
+          "k": 0.39269908169872414,
+          "k_lattice_squared": 0.15359547920896832,
+          "predicted_growth": 0.11348045925429148,
+          "evolved_time": 16.0,
+          "projection_relative_error": 1.340313490896402e-07
+        },
+        "pass": true
+      }
+    },
+    {
+      "name": "all_3D_conservation",
+      "pass": true,
+      "max_energy_drift": 4.906130736204162e-05,
+      "max_charge_drift": 7.571721027943568e-13,
+      "histories": 13,
+      "source_hash_matched": true,
+      "M1_couplings_unchanged": true
+    },
+    {
+      "name": "cold_time_refinement",
+      "pass": true,
+      "field_RMS_difference": 0.00029366257428956944,
+      "energy_drift_ratio": 16.013496369837544
+    },
+    {
+      "name": "supplied_object_survival_and_grid_control",
+      "pass": true,
+      "fine_core": {
+        "radius": 12.0,
+        "Q": 200313.42159922802,
+        "E": 187894.1427982316,
+        "E_over_Q": 0.9380007654911712,
+        "shell_X_rms_over_v": 0.012915962504185275,
+        "shell_phi_deviation_rms_over_v": 0.0002625039022763754,
+        "shell_mean_charge_over_global": 0.016178859513983915,
+        "shell_energy_per_volume": 0.018116079760854296
+      },
+      "coarse_core": {
+        "radius": 12.0,
+        "Q": 200301.81207709791,
+        "E": 187852.03807328653,
+        "E_over_Q": 0.9378449257412641,
+        "shell_X_rms_over_v": 0.013045250676519179,
+        "shell_phi_deviation_rms_over_v": 0.0002772419086492149,
+        "shell_mean_charge_over_global": 0.016992332267948686,
+        "shell_energy_per_volume": 0.019035391710384403
+      }
+    },
+    {
+      "name": "bulk_minimum_and_bound",
+      "pass": true,
+      "bulk": {
+        "S": 0.1511721078446304,
+        "F": 2.406476756777611,
+        "Omega": 0.7758647074595397,
+        "energy_per_charge_over_mX": 0.7758647074595397,
+        "canonical_charge_density_over_mX3": 449.3133678845478
+      },
+      "positive_stationary_roots": [
+        0.1511721078446304
+      ]
+    },
+    {
+      "name": "independent_radial_evolution_and_receiver",
+      "pass": true,
+      "details": {
+        "DOP853_errors": [
+          0.00015207997558391861,
+          3.8014420499166146e-05,
+          9.503256844234365e-06
+        ],
+        "second_order_ratios": [
+          4.000586450798441,
+          4.000146594188869
+        ],
+        "main_vs_fine_core_charge_relative": -2.3110647227264636e-05,
+        "main_vs_half_core_charge_relative": 1.6453121567394646e-06,
+        "main_vs_far_absorber_core_charge_relative": -9.737410844312677e-08,
+        "receiver_energy_time_refinement_ratio": 3.998383062331772,
+        "max_receiver_charge_balance": 2.59015031645049e-13,
+        "max_receiver_energy_balance": 0.00015482614801609618,
+        "pulse40_negative_emission_relative_grid_difference": 0.0080390962376502,
+        "pass": true
+      }
+    },
+    {
+      "name": "exterior_charge_identity_and_weak_interaction",
+      "pass": true,
+      "max_charge_identity_error": 3.329509422063043e-16,
+      "interaction_max": 9.366274136549114e-05
+    },
+    {
+      "name": "archived_full_field_energy_charge",
+      "pass": true,
+      "reconstruction": [
+        {
+          "tag": "cold64",
+          "energy": 2.7755575615628914e-15,
+          "charge": 6.772360450213455e-15,
+          "positive_vs_signed_gradient": 2.220446049250313e-16
+        },
+        {
+          "tag": "dilute64",
+          "energy": 1.7763568394002505e-15,
+          "charge": 1.1102230246251565e-14,
+          "positive_vs_signed_gradient": 0.0
+        },
+        {
+          "tag": "ellipse96",
+          "energy": 4.9960036108132044e-15,
+          "charge": 1.2434497875801753e-14,
+          "positive_vs_signed_gradient": 0.0
+        },
+        {
+          "tag": "object96_perturbed",
+          "energy": 1.7541523789077473e-14,
+          "charge": 1.1834977442504169e-13,
+          "positive_vs_signed_gradient": 1.1102230246251565e-16
+        }
+      ]
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "independent_author_review": false,
+  "physical_status": {
+    "actual_cosmic_eta": null,
+    "actual_cosmic_pair_ratio": null,
+    "actual_final_abundance": null,
+    "formed_isolated_object_population_certified": false,
+    "hot_spatial_convergence_certified": false,
+    "vacuum_density_predicted": false,
+    "reason": "finite local scalar controls; source/expansion/quantum chemistry and core-wave matching remain"
+  }
+}
