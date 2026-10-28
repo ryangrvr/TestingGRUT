@@ -1,0 +1,61 @@
+{
+  "same_author": true,
+  "groups": [
+    {
+      "name": "distinct_legal_states",
+      "pass": true,
+      "diagnostics": {
+        "constraint_or_purity_error": 4.440892098500626e-16,
+        "opposite_local_charges": [
+          -3.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "complex_heavy_matching",
+      "pass": true,
+      "diagnostics": {
+        "complex_phase_matrix_error": 4.421074456386353e-16,
+        "coefficient_ratio": 0.45000000000000007
+      }
+    },
+    {
+      "name": "fixed_charge_and_cold_mass_ledger",
+      "pass": true,
+      "diagnostics": {
+        "endpoint_relative_errors": [
+          1.1102230246251565e-16,
+          1.1102230246251565e-16
+        ],
+        "linear_solve_eta_error": 5.551115123125783e-17
+      }
+    },
+    {
+      "name": "vacuum_constant_and_constraint",
+      "pass": true,
+      "diagnostics": {
+        "relative_Friedmann_error": 1.9292582086623083e-16,
+        "allowed_vacuum_offsets": 3
+      }
+    },
+    {
+      "name": "halo_integral",
+      "pass": true,
+      "diagnostics": {
+        "max_inverse_speed_absolute_error_s_per_km": 4.336808689942018e-19
+      }
+    },
+    {
+      "name": "profile_node_and_recoil_quadrature",
+      "pass": true,
+      "diagnostics": {
+        "decimated_node_relative_change": 6.217248937900877e-15,
+        "trapezoid_node_relative_change": 1.4210854715202004e-14,
+        "order8_vs16_best_mass_relative_change": 7.2865238287533884e-09,
+        "order8_vs16_KL_relative_change": 1.7022272480460288e-11
+      }
+    }
+  ],
+  "all_pass": true
+}
