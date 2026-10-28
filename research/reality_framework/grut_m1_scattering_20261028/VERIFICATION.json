@@ -1,0 +1,128 @@
+{
+  "groups": [
+    {
+      "name": "vacuum_vertex_and_decay_normalization",
+      "pass": true,
+      "width_over_mX": 0.00018756589919939712,
+      "old_kinetic_already_agrees": true
+    },
+    {
+      "name": "coupled_flux_and_null_controls",
+      "pass": true,
+      "monopole_unitarity": 2.382538610845586e-13,
+      "controls": [
+        {
+          "k": 1.0,
+          "ell": 0,
+          "h": 0.05,
+          "R": 60.0,
+          "Rfar": 500.0,
+          "incoming_energy": 1.4142135623730951,
+          "outgoing_X_energy": 3.177654546277938,
+          "outgoing_phi_energy": 2.2959340543255164,
+          "P_X": 0.0,
+          "P_antiparticle": 0.9999999999999998,
+          "P_phi": 0.0,
+          "unitarity_error": 2.220446049250313e-16,
+          "core_charge_change_per_incident": -0.0,
+          "anti_survival_after_one_vacuum_phi_decay": 0.9999999999999998,
+          "outgoing_energy_gain": -2.220446049250313e-16,
+          "rotating_energy_balance": 2.220446049250313e-16,
+          "control": "vacuum"
+        },
+        {
+          "k": 1.0,
+          "ell": 0,
+          "h": 0.05,
+          "R": 60.0,
+          "Rfar": 500.0,
+          "incoming_energy": 1.4142135623730951,
+          "outgoing_X_energy": 3.177654546277938,
+          "outgoing_phi_energy": 2.2959340543255164,
+          "P_X": 0.0,
+          "P_antiparticle": 1.0,
+          "P_phi": 0.0,
+          "unitarity_error": 0.0,
+          "core_charge_change_per_incident": -0.0,
+          "anti_survival_after_one_vacuum_phi_decay": 1.0,
+          "outgoing_energy_gain": 0.0,
+          "rotating_energy_balance": 0.0,
+          "control": "uncoupled_well"
+        }
+      ],
+      "forward_response_unchanged_by_inverse_generalization": 0.0
+    },
+    {
+      "name": "full_open_channel_unitarity_and_reverse_detailed_balance",
+      "pass": true,
+      "reciprocity_error": 9.810276421948019e-14,
+      "full_matrix_unitarity_error": 9.403589023311807e-14,
+      "inverse_cross_section_balance_error": 2.5768276401549883e-13
+    },
+    {
+      "name": "separate_continuum_collocation",
+      "pass": true,
+      "largest_absolute_probability_difference_FD025": 0.0010644695967312323,
+      "scope": "same author, separate continuum method; FD2 truncation remains reported"
+    },
+    {
+      "name": "angular_sum_and_source_quadrature",
+      "pass": true,
+      "spacing_change": 0.003481576633089567,
+      "l32_to_l48_change": 9.026512870491388e-11,
+      "exterior_matching_change": 1.2734047845630592e-05
+    },
+    {
+      "name": "resolved_low_k_resonance_and_rate_padding",
+      "pass": true,
+      "padding16_to32_change": 1.66862650268218e-05,
+      "resonance_mesh_source_average_change": 3.300523843974279e-05,
+      "all_possible_resonances_certified": false
+    },
+    {
+      "name": "source_reproduction_and_flux_transform",
+      "pass": true,
+      "pulse_history_reproduction": "exact at printed precision",
+      "padding_relative_range": 0.00016823426773810248,
+      "largest_source_FFT_time_identity": 3.637978807091713e-12
+    },
+    {
+      "name": "nonlinear_packet_receiver",
+      "pass": true,
+      "max_energy_error": 3.9248952606874e-05,
+      "max_absolute_charge_error": 9.208711571062622e-09
+    },
+    {
+      "name": "finite_packets_match_linear_channels",
+      "pass": true,
+      "max_absolute_probability_difference": 0.0019429284985510858,
+      "max_number_flux_error": 9.253498828232232e-05,
+      "max_core_shift_error_per_incident": 9.768667163937618e-05,
+      "caution": "coarse/fine packet PX differs by about4% relative; no sub-percent full packet continuum certification"
+    },
+    {
+      "name": "limited_vacuum_kernel_quadrature_and_balance",
+      "pass": true,
+      "Gauss_vs_adaptive_quadrature": 1.0547118733938987e-14,
+      "full_medium_operator_complete": false
+    },
+    {
+      "name": "conditional_cold_charge_and_finite_mass_ledger",
+      "pass": true,
+      "conditional_mass_ratios": [
+        1.000275155750366,
+        1.0011274534942456,
+        1.0049031477571977,
+        1.0248176488410778
+      ],
+      "processing_assumptions_have_not_been_dynamically_established": true
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "independent_author_review": false,
+  "actual_final_abundance": null,
+  "actual_capture_history": null,
+  "complete_quantum_capture_operator": false,
+  "fixed_M1_couplings_retuned": false
+}
