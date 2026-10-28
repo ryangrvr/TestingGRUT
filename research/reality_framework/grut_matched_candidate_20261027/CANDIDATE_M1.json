@@ -1,0 +1,90 @@
+{
+  "name": "GRUT-M1",
+  "status": "specified conditional EFT candidate; single-vacuum binding and repaired mass normalization",
+  "parent": "1fcc6b7d37a2c18c8756af5efaed7e30cee461d0",
+  "heavy": {
+    "H_GeV": 134284273491.30815,
+    "M_Y_GeV": 4028528204739.244,
+    "h_GeV": 5371370939652.326,
+    "mu_GeV": 961402368973.181,
+    "kappa": 0.0034586847211042523,
+    "lambda_X": 0.001,
+    "lambda_Y": 1.0,
+    "lambda_Sigma": 1.0,
+    "e": 1e-06
+  },
+  "light_renormalized_targets": {
+    "gX": 0.1,
+    "lambdaX": 0.001,
+    "lambdaPhi": 0.03,
+    "vPhi_GeV": 0.924089637375362,
+    "mX_GeV": 0.09240896373753621,
+    "Q_reference": 200000
+  },
+  "binding_potential_deformation": {
+    "epsilon": 0.002,
+    "Vphi": "lambda_phi/4*(phi^2-v^2)^2-epsilon*v*(phi-v)^3",
+    "vacuum_and_curvature_at_plus_v_unchanged": true,
+    "one_stationary_vacuum": true,
+    "new_supplied_coupling": true
+  },
+  "reheating": {
+    "mI_over_H": 3.0,
+    "GammaI_over_H": 0.5,
+    "mI_GeV": 402852820473.92444,
+    "GammaI_GeV": 67142136745.654076,
+    "xiX": -0.8333333333333334
+  },
+  "SM_Higgs_curvature": {
+    "xiH": 0.1,
+    "status": "supplied stabilizing choice motivated by the prior review; no inflation/reheating survival probability computed here"
+  },
+  "preparation": {
+    "initial_fields_H_units": [
+      76.39978266076902,
+      0.0,
+      -2.111509854283515,
+      -0.9393290404896636,
+      0.0,
+      -28.293142125868524
+    ],
+    "physical_field_velocities": "zero at the selected initial slice",
+    "Sigma_phase_convention": "-pi/2 relative to real X",
+    "state_is_supplied": true,
+    "physical_phase_holder_derived": false,
+    "phase_power_requirement": {
+      "definition": "derivative of ln absolute homogeneous charge yield versus supplied Sigma preparation phase",
+      "dlnY_dphase": -0.21996870110818634,
+      "phase_step_rad": 0.001,
+      "uncorrelated_CDI_beta_benchmark": 0.038,
+      "curvature_power_benchmark": 2.1e-09,
+      "allowed_charge_isocurvature_power": 8.295218295218296e-11,
+      "required_phase_sqrt_power_if_linear_transfer": 4.140502195878647e-05,
+      "phase_holder_constructed": false,
+      "half_step_dlnY_dphase": -0.2199686733206363,
+      "late_population_response_held_fixed": true,
+      "full_isocurvature_transfer_computed": false,
+      "early_deformation_cubic_coefficient_epsilon_v_over_H": 1.3763184822013812e-14,
+      "early_background_force_epsilon_v3_over_H3": 6.517737036021695e-37
+    }
+  },
+  "SM_portals_at_matching": {
+    "epsilon_BX": 0.0,
+    "b_Hphi": 0.0,
+    "lambda_HX": 0.0,
+    "status": "no non-gravitational portal in conservative candidate"
+  },
+  "vacuum_density_GeV4_input": 2.52e-47,
+  "EFT_cutoff_GeV_declared": 1000000000000000.0,
+  "higher_operators": "matching inputs assumed negligible for this conditional calculation; no UV completion derived",
+  "other_phi_odd_scalar_operators": "renormalized matching choices at the reference scale, not all-order zeros after dropping phi parity",
+  "final_population_matching_hypothesis": {
+    "Q": 200000,
+    "eta": 1.0,
+    "p": 0.0,
+    "YQ_target": 5.079414232725842e-09,
+    "actual_formation_computed": false
+  },
+  "calibrated_quantity": "early physical scale, using the target mass budget",
+  "physical_final_abundance": null
+}
