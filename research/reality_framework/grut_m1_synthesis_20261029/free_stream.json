@@ -1,0 +1,124 @@
+{
+  "background": {
+    "initial_T_MeV": 2.0,
+    "T0_K": 2.7255,
+    "H0_km_s_Mpc": 67.4,
+    "Omega_m": 0.315,
+    "Omega_gamma": 5.4433868397185844e-05,
+    "Omega_radiation_today": 9.206480043488026e-05,
+    "N_eff": 3.044,
+    "a_initial": 8.394521281378524e-11,
+    "a_equality": 0.0002922692077297786,
+    "z_equality": 3420.5030990351997,
+    "electron_g_rho_initial": 3.4831873005615526,
+    "electron_g_s_initial": 3.47531905513814,
+    "definition": "Standard background; instantaneous neutrino decoupling at 2 MeV, equilibrium e\u00b1 and photons, entropy transfer, and constant Neff. Neglects residual neutrino heating details and interactions of M1 species."
+  },
+  "populations": {
+    "64": {
+      "number": 13175.013334926694,
+      "charge_fraction": 0.06587506667463347,
+      "mass_fraction_of_cold_plus_held": 0.06966327950255179,
+      "rms_velocity_c": 0.0684490190062295,
+      "mean_velocity_c": 0.059187363146293644,
+      "kinetic_energy_mX": 31.09379705657834,
+      "fraction_floor_bin": 0.08396391263510022,
+      "negative_clipped_weight": 4.3308791108986646e-11,
+      "mean_free_streaming_Mpc": 3.448235833395815e-05,
+      "rms_free_streaming_Mpc": 3.992566198849374e-05,
+      "p10_Mpc": 6.178082626696694e-06,
+      "p50_Mpc": 3.306692801547113e-05,
+      "p90_Mpc": 6.427916310826944e-05,
+      "max_Mpc": 0.00022485280549356719,
+      "cold_total_mX": 189019.93513523662,
+      "held_unassigned_mX": 104.28395129216369
+    },
+    "96": {
+      "number": 13189.13146074248,
+      "charge_fraction": 0.0659456573037124,
+      "mass_fraction_of_cold_plus_held": 0.06973732853379469,
+      "rms_velocity_c": 0.06837528835889453,
+      "mean_velocity_c": 0.06096097016012166,
+      "kinetic_energy_mX": 31.038545373806038,
+      "fraction_floor_bin": 0.02756354232224572,
+      "negative_clipped_weight": 4.2149145807375255e-11,
+      "mean_free_streaming_Mpc": 3.5506253902713384e-05,
+      "rms_free_streaming_Mpc": 3.986483725928677e-05,
+      "p10_Mpc": 1.212166863098523e-05,
+      "p50_Mpc": 3.405930174830741e-05,
+      "p90_Mpc": 6.135816177154588e-05,
+      "max_Mpc": 0.00020709628031977237,
+      "cold_total_mX": 189021.56489218646,
+      "held_unassigned_mX": 104.28403319975496
+    }
+  },
+  "psd": {
+    "64": {
+      "p_scale_in_mX": 0.05,
+      "log_smoothing_sigma": 0.18,
+      "number_integral_q2f": 1.0000000000000002,
+      "q_mean_from_smoothed_psd": 1.207552331825758,
+      "q_mean_from_nodes": 1.1881475868643383,
+      "q2_mean_from_smoothed_psd": 2.0194499614937933,
+      "q2_mean_from_nodes": 1.8927393628579008,
+      "warning": "Smoothed construction is an additional phase-space ansatz; moments shift by lognormal-kernel factors. Zero or negative numerical node weights clipped; no angular or perturbation correlations are derived."
+    },
+    "96": {
+      "p_scale_in_mX": 0.05,
+      "log_smoothing_sigma": 0.18,
+      "number_integral_q2f": 0.9999999999999999,
+      "q_mean_from_smoothed_psd": 1.2433959452581989,
+      "q_mean_from_nodes": 1.22341521186234,
+      "q2_mean_from_smoothed_psd": 2.013232397053614,
+      "q2_mean_from_nodes": 1.8869119201486233,
+      "warning": "Smoothed construction is an additional phase-space ansatz; moments shift by lognormal-kernel factors. Zero or negative numerical node weights clipped; no angular or perturbation correlations are derived."
+    },
+    "maxwell96": {
+      "q0": 1.1215798144131706,
+      "target_node_mean_q2": 1.8869119201486233,
+      "mean_q2_from_psd": 1.8869119201496292,
+      "mean_q_from_psd": 1.2655672968193477,
+      "scope": "Moment-matched Maxwell-like ansatz, not the measured M1 distribution."
+    }
+  },
+  "scope": "Per-particle collisionless trajectories from the conditional a/a0=10 M1 kinetic output to equality. Spectrum is a numerical homogeneous-population model, not a derived relic phase space. Paths are not matter-power transfer functions.",
+  "delayed_ballistic_mean_Mpc": {
+    "1": 3.550625390271331e-05,
+    "2": 3.369373256310663e-05,
+    "4": 3.189485982098847e-05,
+    "10": 2.955862416071416e-05
+  },
+  "collisionless_through_today": {
+    "mean_free_streaming_Mpc": 3.960971218438007e-05,
+    "rms_free_streaming_Mpc": 4.447219524554885e-05,
+    "p10_Mpc": 1.3522406701941998e-05,
+    "p50_Mpc": 3.799528714700338e-05,
+    "p90_Mpc": 6.84499126490955e-05,
+    "max_Mpc": 0.00023108104101136968
+  },
+  "toy_ballistic_at_equality": {
+    "1.0": {
+      "delta_power_fraction": -1.678190919562894e-11,
+      "bound_on_abs_fraction_small_perturbation": 1.6782004606566515e-11
+    },
+    "10.0": {
+      "delta_power_fraction": -1.678200467480906e-09,
+      "bound_on_abs_fraction_small_perturbation": 1.6782004606566512e-09
+    },
+    "100.0": {
+      "delta_power_fraction": -1.6781992295822334e-07,
+      "bound_on_abs_fraction_small_perturbation": 1.6782004606566513e-07
+    },
+    "1000.0": {
+      "delta_power_fraction": -1.6780773304803098e-05,
+      "bound_on_abs_fraction_small_perturbation": 1.678200460656651e-05
+    },
+    "10000.0": {
+      "delta_power_fraction": -0.0016659527556429632,
+      "bound_on_abs_fraction_small_perturbation": 0.0016782004606566512
+    }
+  },
+  "checks": {
+    "mean_path_4500_vs_9000_fraction": -8.574768672886535e-09
+  }
+}

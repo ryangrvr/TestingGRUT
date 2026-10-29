@@ -1,0 +1,76 @@
+{
+  "inflation_H_GeV": 134284273491.30815,
+  "mX_GeV": 0.09240896373753621,
+  "T_GeV": 0.02,
+  "gstar": 10.75,
+  "H_at_T_GeV": 1.7835852653582465e-22,
+  "H_over_mX_at_20MeV": 1.930099844452384e-21,
+  "duration_mXt": 20000.0,
+  "delta_ln_a_constant_H": 3.860199688904768e-17,
+  "canonical_closed_volume_fractional_abs_work_upper": 1.1580599066714305e-16,
+  "initial_total_field_energy_mX": 191803.58926384902,
+  "canonical_energy_gronwall_abs_work_upper_mX": 2.221200466821384e-11,
+  "sampled_regional_flat_pressure_diagnostics": {
+    "20": {
+      "signed_integral_mX_time": 14323.690259149585,
+      "absolute_integral_mX_time_sampled": 74504114.74712104,
+      "absolute_expansion_work_mX_sampled": 4.3140114085344267e-13,
+      "max_abs_pressure_mX_sampled": 30166.745263051576
+    },
+    "60": {
+      "signed_integral_mX_time": 42258.025177201154,
+      "absolute_integral_mX_time_sampled": 74504262.94895771,
+      "absolute_expansion_work_mX_sampled": 4.314019989864684e-13,
+      "max_abs_pressure_mX_sampled": 30166.756613511392
+    }
+  },
+  "positivity_proof": {
+    "neutral_potential_factor": "(s-1)^2*(0.75*s^2+1.3*s+0.95)",
+    "quadratic_discriminant": -1.1599999999999995,
+    "field_potential": "neutral term + 0.5*s^2*(x^2+y^2)+0.025*(x^2+y^2)^2",
+    "claim": "In minimally coupled canonical scalar model V>=0, |trace(Tij)/3|<=K+G+V pointwise. For a comoving volume without boundary flux, |dE/dt|<=3HE and Gronwall gives the stated bound. Curvature improvement, boundary transport, interactions and H evolution require their own treatment."
+  },
+  "density": {
+    "ncore_over_mX3": 1.2141071422639381e-15,
+    "d_mean_separation_mX_inverse": 93737.7076527619,
+    "spherical_wigner_seitz_radius_mX_inverse": 58150.23295817529,
+    "volume_per_core_mX_inverse_cubed": 823650537246083.6,
+    "probe_radius_mX_inverse": 60.0,
+    "maximum_swept_uniform_free_streaming_probability": 2.7462456567412456e-07,
+    "v_0p7_swept_probability": 1.922371959718872e-07,
+    "poisson_probability_one_center_within_causal_distance": 0.04057569413988915,
+    "scope": "Cylinder estimate assumes uniform independent particle bath, ballistic trajectories, geometric first crossing and v<=1; it does not bound coherent focusing, correlations, re-encounters, long-range scattering or the actual physical mean density at this time."
+  },
+  "calibration": {
+    "baseline_H_GeV": 134284273491.30815,
+    "yield_proportional_to_H_power": 1.5,
+    "scenarios": {
+      "through_20000": {
+        "mass_increase_fraction": 0.008944364105298863,
+        "H_ratio_if_H_three_halves_yield_scaling": 0.9940811854655369,
+        "H_shift_percent": -0.5918814534463079,
+        "H_new_GeV": 133489469781.61798
+      },
+      "hypothetical_kept_gas_heat": {
+        "mass_increase_fraction": 0.008575493100120712,
+        "H_ratio_if_H_three_halves_yield_scaling": 0.9943235506499101,
+        "H_shift_percent": -0.5676449350089929,
+        "H_new_GeV": 133522015614.32112
+      },
+      "hypothetical_fully_cooled": {
+        "mass_increase_fraction": 0.008409936530420273,
+        "H_ratio_if_H_three_halves_yield_scaling": 0.9944323769557161,
+        "H_shift_percent": -0.5567623044283931,
+        "H_new_GeV": 133536629275.73302
+      }
+    },
+    "scope": "Sensitivity under fixed dimensionless early history, fixed light mass and entropy factors, with final composition supplied; no formation or physical abundance prediction."
+  },
+  "review_arithmetic_correction": {
+    "prior_two_trajectory_cold_per_remainder_ratio": 0.3368502039098395,
+    "hypothetical_if_current_gas_heat_is_retained_percent": 0.8575493100120711,
+    "hypothetical_if_current_gas_heat_also_fully_redshifts_percent": 0.8409936530420273,
+    "current_gas_kinetic_percent": 0.016555656970043808,
+    "scope": "Both are hypothetical. The earlier synthesis called 0.841% an arithmetic error without considering complete later cooling; that statement was too broad. Neither value is a dynamical prediction."
+  }
+}

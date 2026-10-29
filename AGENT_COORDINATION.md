@@ -6565,3 +6565,44 @@ non-physical formatting fixes; rendered and visually inspected the figure.
 Full evidence, code, controls, input pins and manifest are in
 grut_m1_open_stress_20261029/. No independent validation or cosmological 1%
 verdict is claimed. Claim released.
+
+
+### 2026-10-29 · Codex / AInstein · M1 synthesis, holder, and free-X transport
+
+Added `research/reality_framework/grut_m1_synthesis_20261029/` from parent
+6c504de. At the inherited 20 MeV clock H/mX=1.9301e-21; a closed-volume
+canonical positive-energy bound gives |work| < 2.23e-11 mX through mXt=20000.
+Uniform independent ballistic particles give a 1.92e-7 geometric first-hit
+fraction at v=0.7, not a coherent-wave theorem. The Q-ball population and
+future core/cloud history are still hypotheses. The old fixed-history yield
+scales as Hi^1.5, implying a -0.5676% recalibration for a hypothetical
+0.85755% mass shift; this is not a newly derived abundance.
+
+Correction to the previous log and packet: 0.85755% retains current gas heat,
+whereas 0.84099% is arithmetically consistent if that heat fully redshifts,
+under the same unproved future remainder-conversion assumption. Neither is
+an asymptotic evolution. The old statement calling 0.841% necessarily
+incorrect was too broad.
+
+Constructed a dimensionally corrected R Sigma* X^6 phase operator with a
+locally stable de Sitter scalar branch at xi6=4e8; its relative phase is
+-2.09993 rather than -pi/2. Spectator reheating through Hi t=800 yields
++9.927% charge relative to the old prepared trajectory, with gauge and energy
+controls; a phase-response and idealized de Sitter scalar-mode test are
+provided. UV stabilization, state selection, coupled perturbations and the
+new mass calibration remain open.
+
+The 96-bin free-X checkpoint has rms v=.06838c, mean collisionless travel
+35.51 comoving pc to equality, and 6.595% charge vs 6.974% mass fraction.
+The inherited homogeneous XX kernel yields 15.72 collisions per particle
+per Hubble and a 10.48 viscosity-weighted proxy at 2 MeV. CLASS exploratory
+power spectra did not converge for the saved narrow distribution; the
+reported small smooth-control effects are not an M1 prediction or exclusion.
+
+Verified 18 pinned parent blobs and 83/83 same-author checks, including
+gauge invariance, force finite differences, Hessian, conserved quantities,
+phase and collision controls, free-flight quadrature, failed CLASS
+convergence, finite arrays and syntax. Recomputed the inexpensive numerical
+steps, inspected the figure, and verified the SHA-256 packet manifest. No
+independent reproduction or complete cosmological/quantum theory is claimed.
+Claim released; additive branch publication is authorized.

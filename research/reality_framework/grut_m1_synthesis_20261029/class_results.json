@@ -1,0 +1,206 @@
+{
+  "class_version": "3.4.1",
+  "class_commit": "814ce59c380a5cccd0bed1747a384ff7bfc1f9cf",
+  "cosmology": {
+    "h": 0.674,
+    "omega_b": 0.0224,
+    "omega_dark_total": 0.12,
+    "N_ur": 3.044,
+    "recombination": "RECFAST",
+    "A_s": 2.1e-09,
+    "n_s": 0.965,
+    "z": 0
+  },
+  "runs": {
+    "cold": {
+      "settings": {
+        "warm": false,
+        "kmax": 20
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.046925528678e-05,
+      "k_max_h_Mpc": 33.14081163792
+    },
+    "coldtight": {
+      "settings": {
+        "warm": false,
+        "kmax": 20,
+        "tol": 1e-07
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.046925528678e-05,
+      "k_max_h_Mpc": 33.14081163792
+    },
+    "coldrk": {
+      "settings": {
+        "warm": false,
+        "kmax": 2,
+        "evolver": 0
+      },
+      "points": 117,
+      "k_min_h_Mpc": 1.046925528678e-05,
+      "k_max_h_Mpc": 3.314081163792
+    },
+    "coldrk20": {
+      "settings": {
+        "warm": false,
+        "kmax": 20,
+        "evolver": 0
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.046925528678e-05,
+      "k_max_h_Mpc": 33.14081163792
+    },
+    "warm96fast20": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_96.dat",
+        "kmax": 20,
+        "qbins": 30,
+        "trigger": 0.1,
+        "baseline": "cold"
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 33.14081163827,
+      "percent_difference_from_baseline": {
+        "0.01": 0.00015461067907731116,
+        "0.1": 0.0001737073474090135,
+        "0.3": 0.0002706553513615367,
+        "1.0": 0.000313512946025814,
+        "2.0": 0.004524367042613817,
+        "5.0": 0.002542130196415471,
+        "10.0": 0.0030707279570649022,
+        "20.0": 0.002144625225717512
+      }
+    },
+    "warm96q60": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_96.dat",
+        "kmax": 20,
+        "qbins": 60,
+        "trigger": 0.1,
+        "baseline": "cold"
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 33.14081163804,
+      "percent_difference_from_baseline": {
+        "0.01": 1.80156068082499e-05,
+        "0.1": 9.314218928447593e-05,
+        "0.3": 0.00021859357505856514,
+        "1.0": -6.473239323305358e-05,
+        "2.0": 0.004656499392007291,
+        "5.0": 0.002523451276806695,
+        "10.0": -0.001634270271619862,
+        "20.0": -0.0043186135349862
+      }
+    },
+    "warm96rk": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_96.dat",
+        "kmax": 2,
+        "qbins": 30,
+        "evolver": 0,
+        "baseline": "coldrk"
+      },
+      "points": 117,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 3.314081163827,
+      "percent_difference_from_baseline": {
+        "0.01": 0.01660749009976758,
+        "0.1": 0.10979964034310367,
+        "0.3": 0.13164262936055846,
+        "1.0": 0.12916195257890464,
+        "2.0": 0.12148961518729773
+      }
+    },
+    "warm96rkq60": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_96.dat",
+        "kmax": 2,
+        "qbins": 60,
+        "evolver": 0,
+        "baseline": "coldrk"
+      },
+      "points": 117,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 3.314081163804,
+      "percent_difference_from_baseline": {
+        "0.01": -0.006564137351606878,
+        "0.1": -0.042017025924876224,
+        "0.3": -0.050110502876897695,
+        "1.0": -0.049082233118914784,
+        "2.0": -0.04613861301957441
+      }
+    },
+    "warm96rkq120": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_96.dat",
+        "kmax": 2,
+        "qbins": 120,
+        "evolver": 0,
+        "baseline": "coldrk"
+      },
+      "points": 117,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 3.314081163786,
+      "percent_difference_from_baseline": {
+        "0.01": 0.07814371222202421,
+        "0.1": 0.5138759145688307,
+        "0.3": 0.6157417390902102,
+        "1.0": 0.6039646758398963,
+        "2.0": 0.5679733535884046
+      }
+    },
+    "warm96maxwell": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_maxwell96.dat",
+        "kmax": 20,
+        "baseline": "cold"
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 33.14081163797,
+      "percent_difference_from_baseline": {
+        "0.01": 0.0005964882548408667,
+        "0.1": 0.00371758421841201,
+        "0.3": 0.002599629171043167,
+        "1.0": 0.004036563892865667,
+        "2.0": 0.005918866184058535,
+        "5.0": 0.0014395778352880165,
+        "10.0": -0.010369045534941179,
+        "20.0": 0.026896107751948777
+      }
+    },
+    "warm96maxwellrk": {
+      "settings": {
+        "warm": true,
+        "psd": "psd_maxwell96.dat",
+        "kmax": 20,
+        "qbins": 30,
+        "evolver": 0,
+        "baseline": "coldrk20"
+      },
+      "points": 127,
+      "k_min_h_Mpc": 1.04692552868e-05,
+      "k_max_h_Mpc": 33.14081163797,
+      "percent_difference_from_baseline": {
+        "0.01": -0.00027235242987653314,
+        "0.1": -0.000812217118822216,
+        "0.3": -0.0007890488832679156,
+        "1.0": -0.0007134615948848052,
+        "2.0": -0.0006497888858722211,
+        "5.0": -0.0005450656934146761,
+        "10.0": -0.0003912115167129122,
+        "20.0": -0.0002642490249328617
+      }
+    }
+  },
+  "scope": "Exploratory CLASS linear matter spectra using a selected one-point velocity distribution, collisionless adiabatic ncdm present from early times, and a fixed population. Momentum-bin and solver controls are not converged for the narrow distribution; positive percent differences are numerical artifacts at this scale. M1 gas collisions and core formation/perturbations are not included. Not a prediction or likelihood."
+}
