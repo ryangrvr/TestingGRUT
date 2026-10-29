@@ -144,6 +144,13 @@ before then—including repeated interactions with its parent core and
 Mean-density occupation numbers and mean-density optical time do not bound
 that local stage.
 
+The resonance is also angularly selective. Two oppositely charged particles
+with `p=m_X` each require a 90-degree relative angle to reach the h pole; a
+narrow outward plume need not contain such pairs. A kinematic cone study of
+the direct charged source marginals is in `BEAM_KINEMATICS.json` and
+`LOCAL_SOURCE_ANALYSIS.md`. It is a support calculation, not a collision rate
+or a measurement of the plume's angular distribution.
+
 ## Numerical checks and known failures
 
 `VERIFICATION.json` reports 50 **same-author engineering checks**, all passing;

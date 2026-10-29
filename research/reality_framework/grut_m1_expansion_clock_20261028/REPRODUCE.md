@@ -38,6 +38,7 @@ python "$P/code/summary.py" profiled96_to10 profiled_h005_96_to10 profiled_h0025
 python "$P/code/freeflight.py" profiled64_to10 profiled96_to10 profiled_h005_64_to10 profiled_h005_96_to10 profiled_h0025_64_to10 profiled_h0025_96_to10
 python "$P/code/figure.py"
 python "$P/code/verify.py"
+python "$P/code/beam_kinematics.py"
 ```
 
 The committed files also include the fixed-core `expansion.py` results, the

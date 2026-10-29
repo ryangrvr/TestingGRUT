@@ -6508,5 +6508,7 @@ synchronous local source reaches at most 0.51% of volume by the end of the
 radial run at the supplied density, so the uncomputed local mixing history is a
 material obstacle. Corrected the prior neutral-event ledger statement. No final
 cosmological pass, formation history or independent replication is claimed.
+The direct charged source marginals also show strong angular sensitivity of
+resonance support in a hypothetical common cone; this is not a collision rate.
 Report and reproducible artifacts are in grut_m1_expansion_clock_20261028.
 Claim released.

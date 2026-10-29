@@ -31,6 +31,31 @@ This is one representative length, not the mean of the distribution. At such
 distances neutral decay can produce charged daughters in a still-localized
 cloud, including inward-going particles that can encounter the parent core.
 
+## Why the directions matter to the resonance
+
+For `X Xbar -> h`, write `p_i/m_X=sinh(y_i)` and `E_i/m_X=cosh(y_i)`.
+If both momenta are exactly outward and collinear, then
+
+    s/m_X^2 = 2 + 2 cosh(y_1-y_2).
+
+The `m_h^2=6 m_X^2` pole therefore requires
+`|y_1-y_2|=arcosh(2)=1.31696`. For example, two particles each with
+`p=m_X` instead require a relative angle of 90 degrees to hit the pole; they
+cannot do so if their directions are both within 20 degrees of the same
+outward direction. Neutral decay daughters or subsequent scattering can of
+course produce broader directions.
+
+`BEAM_KINEMATICS.json` applies this purely kinematic test to independent draws
+from the time-integrated **direct charged** energy marginals of the fine
+source. If both momenta are restricted to a hypothetical common cone of
+half-angle 10 degrees, 0.142% of those energy pairs have *some* allowed
+relative angle that reaches the exact pole. At 20 degrees this is 6.14%; in a
+90-degree cone it is 82.05%. These are not collision probabilities or rate
+ratios: real angles and time overlap have not been measured; h-decay daughters
+are excluded; and finite-bin, wave/coherence and scattering weights matter.
+The calculation demonstrates why the homogeneous isotropic rate cannot be
+assumed to hold inside an unresolved plume.
+
 ## Concrete continuation
 
 1. Reconstruct a time- and angle-resolved flux from the fine radial fields
