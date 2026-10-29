@@ -1,0 +1,559 @@
+{
+  "same_author": true,
+  "independent_replication": false,
+  "checks": [
+    {
+      "name": "FRW_optical_time_integral",
+      "pass": true,
+      "numerical": 566134.6645761575,
+      "analytic": 566134.6645761575
+    },
+    {
+      "name": "held_out_stationary_family",
+      "pass": true,
+      "max_energy_error_mX": 4.484239616431296e-05,
+      "max_omega_error": 1.5235454009498994e-08
+    },
+    {
+      "name": "early_expanding_versus_static",
+      "pass": true,
+      "relative_differences": {
+        "Nplus": 0.0009159974376605762,
+        "Nminus": 0.013365090794055567,
+        "gas_kinetic_mX": 0.002328543378267156
+      },
+      "note": "Differences include real redshift and 8 versus 12 angular nodes; close agreement is not exact equivalence."
+    },
+    {
+      "name": "supplied_kernel_matches_inherited_operator",
+      "pass": true,
+      "max_matrix_difference": 0.0,
+      "max_omission_difference": 0.0
+    },
+    {
+      "name": "profiled_jacobian_directional_difference",
+      "pass": true,
+      "population_relative_error": 8.852144896353751e-14,
+      "work_row_absolute_error": 1.9113599591946695e-11
+    },
+    {
+      "name": "profiled_kernel_unitarity_and_reciprocity",
+      "pass": true,
+      "max_error": 6.22037090413396e-13,
+      "charge_nodes": [
+        186000,
+        189000,
+        192000,
+        195000,
+        198000,
+        201000,
+        204000
+      ]
+    },
+    {
+      "name": "selected_population_weighted_kernel_holdouts",
+      "pass": true,
+      "rows": [
+        {
+          "tau": 0.0,
+          "Q": 201600.15026915385,
+          "coverage_ranked_by_interpolated_rate": 0.986016385181999,
+          "relative_total_rate_error": 0.0004135446897859385,
+          "sampled_bins": 72
+        },
+        {
+          "tau": 1.0000000000971665,
+          "Q": 197499.7387164865,
+          "coverage_ranked_by_interpolated_rate": 0.9967424425940071,
+          "relative_total_rate_error": -0.0005061362650445878,
+          "sampled_bins": 200
+        },
+        {
+          "tau": 9.999999999924105,
+          "Q": 193974.24997126905,
+          "coverage_ranked_by_interpolated_rate": 0.9968138545126988,
+          "relative_total_rate_error": 0.0006386198388537156,
+          "sampled_bins": 200
+        },
+        {
+          "tau": 100.00000000000927,
+          "Q": 190169.62472367458,
+          "coverage_ranked_by_interpolated_rate": 0.9993897361638263,
+          "relative_total_rate_error": 0.00024928635916698916,
+          "sampled_bins": 200
+        },
+        {
+          "tau": 999.999999999953,
+          "Q": 188381.8147906652,
+          "coverage_ranked_by_interpolated_rate": 0.9999272467588929,
+          "relative_total_rate_error": 0.00018163847917884723,
+          "sampled_bins": 200
+        }
+      ],
+      "interpretation": "Direct stationary scattering at sampled populated nodes, not a bound on unvisited momenta or on rate cancellation."
+    },
+    {
+      "name": "fixed_ledger_expanding64_replay",
+      "pass": true,
+      "drift_mX": 8.731149137020111e-11,
+      "minimum_population": -1.47745027755239e-10
+    },
+    {
+      "name": "fixed_ledger_expanding96",
+      "pass": true,
+      "drift_mX": 5.820766091346741e-11,
+      "minimum_population": -1.0100919490770543e-10
+    },
+    {
+      "name": "fixed_ledger_ringdown005early_expanding64",
+      "pass": true,
+      "drift_mX": 8.731149137020111e-11,
+      "minimum_population": -9.480740114181473e-11
+    },
+    {
+      "name": "fixed_ledger_ringdown01_expanding64",
+      "pass": true,
+      "drift_mX": 8.731149137020111e-11,
+      "minimum_population": -5.53440108034358e-10
+    },
+    {
+      "name": "fixed_ledger_ringdown005_expanding64",
+      "pass": true,
+      "drift_mX": 1.1641532182693481e-10,
+      "minimum_population": -1.0003883366655422e-10
+    },
+    {
+      "name": "fixed_ledger_ringdown005_expanding96",
+      "pass": true,
+      "drift_mX": 1.4551915228366852e-10,
+      "minimum_population": -1.57753640122459e-10
+    },
+    {
+      "name": "fixed_refinement_expanding96",
+      "pass": true,
+      "relative_difference": {
+        "Nplus": 5.645459022085575e-05,
+        "Qcore": 3.6855474665475896e-06,
+        "gas_kinetic_mX": 0.0009101423476121084
+      },
+      "interpretation": "selected integrated observables only, not a bound on the distribution or physical model"
+    },
+    {
+      "name": "fixed_refinement_ringdown005_expanding96",
+      "pass": true,
+      "relative_difference": {
+        "Nplus": 5.502664617607067e-05,
+        "Qcore": 3.7901352598623816e-06,
+        "gas_kinetic_mX": 0.0009046476987852881
+      },
+      "interpretation": "selected integrated observables only, not a bound on the distribution or physical model"
+    },
+    {
+      "name": "free_streaming_energy_refinement",
+      "pass": true,
+      "two_to_ten_control": {
+        "expanding32": {
+          "a_over_a0": 5.0,
+          "exact_kinetic_mX": 28.41649320398296,
+          "upwind_kinetic_mX": 28.85614119704302,
+          "relative_kinetic_error": 0.015471578069261452,
+          "exact_positive_above_reverse_threshold": 0.0,
+          "upwind_positive_above_reverse_threshold": -4.610694775790509e-26,
+          "floor_particle_count": 7291.561116415404,
+          "number_absolute_error": 7.148628355935216e-10
+        },
+        "expanding64_replay": {
+          "a_over_a0": 5.0,
+          "exact_kinetic_mX": 28.396143468875362,
+          "upwind_kinetic_mX": 28.61141830445908,
+          "relative_kinetic_error": 0.007581129311438955,
+          "exact_positive_above_reverse_threshold": 0.0,
+          "upwind_positive_above_reverse_threshold": -3.782935812432738e-26,
+          "floor_particle_count": 3684.003091856406,
+          "number_absolute_error": -5.384208634495735e-10
+        },
+        "expanding96": {
+          "a_over_a0": 5.0,
+          "exact_kinetic_mX": 28.38471924600804,
+          "upwind_kinetic_mX": 28.52692374744085,
+          "relative_kinetic_error": 0.005009896353046035,
+          "exact_positive_above_reverse_threshold": 0.0,
+          "upwind_positive_above_reverse_threshold": -1.6394553425347192e-25,
+          "floor_particle_count": 1971.1118282940922,
+          "number_absolute_error": -4.7093635657802224e-09
+        },
+        "ringdown005_expanding96": {
+          "a_over_a0": 5.0,
+          "exact_kinetic_mX": 30.048923702545743,
+          "upwind_kinetic_mX": 30.199885195324875,
+          "relative_kinetic_error": 0.005023856903278782,
+          "exact_positive_above_reverse_threshold": 0.0,
+          "upwind_positive_above_reverse_threshold": 1.9818879594534012e-25,
+          "floor_particle_count": 2060.3628193900618,
+          "number_absolute_error": -5.091351340524852e-09
+        }
+      },
+      "threshold_is_engineering_only": true
+    },
+    {
+      "name": "hybrid_ledger_hybrid32",
+      "pass": true,
+      "defect_mX": -0.018354859926134913,
+      "drift_after_defect_mX": 9.857467375695705e-07,
+      "minimum_population": -4.794992846075274e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_hybrid64",
+      "pass": true,
+      "defect_mX": -0.006914608223823945,
+      "drift_after_defect_mX": 1.7002748791128397e-06,
+      "minimum_population": -3.5538297878723445e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_hybrid96",
+      "pass": true,
+      "defect_mX": -0.006625869296418737,
+      "drift_after_defect_mX": 1.9253056962043047e-06,
+      "minimum_population": -3.769658924546285e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_hybrid_h005_64",
+      "pass": true,
+      "defect_mX": -0.007399110473922657,
+      "drift_after_defect_mX": 9.256473276764154e-07,
+      "minimum_population": -5.866165005777193e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_hybrid_h005_96",
+      "pass": true,
+      "defect_mX": -0.007530438354885201,
+      "drift_after_defect_mX": 7.680791895836592e-07,
+      "minimum_population": -2.1284968032250087e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_hybrid64_fineomega",
+      "pass": true,
+      "defect_mX": -0.0017891240758724381,
+      "drift_after_defect_mX": 4.4354237616062164e-07,
+      "minimum_population": -4.768910578307365e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled32",
+      "pass": true,
+      "defect_mX": 0.0028694839178344815,
+      "drift_after_defect_mX": 6.671762093901634e-07,
+      "minimum_population": -4.901496691125966e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled64",
+      "pass": true,
+      "defect_mX": 0.0015675586229112603,
+      "drift_after_defect_mX": 8.875795174390078e-07,
+      "minimum_population": -7.443159834919758e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled96",
+      "pass": true,
+      "defect_mX": 0.0008031380490819033,
+      "drift_after_defect_mX": 1.4827819541096687e-06,
+      "minimum_population": -5.860366846129785e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h005_64",
+      "pass": true,
+      "defect_mX": 0.0012800807161835676,
+      "drift_after_defect_mX": 1.3632234185934067e-06,
+      "minimum_population": -7.671733556480183e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h005_96",
+      "pass": true,
+      "defect_mX": 0.0005442080558923285,
+      "drift_after_defect_mX": 9.892100933939219e-07,
+      "minimum_population": -2.611367711254259e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled64_to10",
+      "pass": true,
+      "defect_mX": 0.0015675586233698953,
+      "drift_after_defect_mX": 8.875795174390078e-07,
+      "minimum_population": -1.8598025470730815e-10,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h005_64_to10",
+      "pass": true,
+      "defect_mX": 0.0012800807164152221,
+      "drift_after_defect_mX": 1.3632234185934067e-06,
+      "minimum_population": -8.165086002879156e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled96_to10",
+      "pass": true,
+      "defect_mX": 0.000803138049070754,
+      "drift_after_defect_mX": 1.4827819541096687e-06,
+      "minimum_population": -5.860366846129785e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h005_96_to10",
+      "pass": true,
+      "defect_mX": 0.0005442080559506615,
+      "drift_after_defect_mX": 9.892683010548353e-07,
+      "minimum_population": -6.816454248914231e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled64_fineomega",
+      "pass": true,
+      "defect_mX": 0.0003577377651005104,
+      "drift_after_defect_mX": 6.103364285081625e-07,
+      "minimum_population": -1.4025323379466105e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled64_tight",
+      "pass": true,
+      "defect_mX": 0.001567509494332177,
+      "drift_after_defect_mX": 2.75962520390749e-07,
+      "minimum_population": -1.90667674275747e-12,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled64_angles12",
+      "pass": true,
+      "defect_mX": 0.0015675626714964975,
+      "drift_after_defect_mX": 1.3861572369933128e-06,
+      "minimum_population": -3.380429493636023e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025_32",
+      "pass": true,
+      "defect_mX": 0.0024643526990922276,
+      "drift_after_defect_mX": 1.1626980267465115e-06,
+      "minimum_population": -5.2199250750132155e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025_64",
+      "pass": true,
+      "defect_mX": 0.0012901689276947495,
+      "drift_after_defect_mX": 9.61212208494544e-07,
+      "minimum_population": -3.131574274169889e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025_96",
+      "pass": true,
+      "defect_mX": 0.0005517637048016635,
+      "drift_after_defect_mX": 9.667128324508667e-07,
+      "minimum_population": -2.548724661902622e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025early_64",
+      "pass": true,
+      "defect_mX": 0.001568256610054657,
+      "drift_after_defect_mX": 1.3659591786563396e-06,
+      "minimum_population": -1.6332889443889789e-10,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025_64_to10",
+      "pass": true,
+      "defect_mX": 0.0012901689277940577,
+      "drift_after_defect_mX": 9.61212208494544e-07,
+      "minimum_population": -1.7465603273017283e-10,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "hybrid_ledger_profiled_h0025_96_to10",
+      "pass": true,
+      "defect_mX": 0.0005517637049366866,
+      "drift_after_defect_mX": 9.667419362813234e-07,
+      "minimum_population": -9.729087958325146e-11,
+      "interpretation": "energy defect is explicitly measured; it is not a bound on projection diffusion or profile error"
+    },
+    {
+      "name": "profiled_resolution_profiled96",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 9.02751831489877,
+        "Qcore": 9.027518314891495,
+        "gas_kinetic_mX": 0.5059421612212418,
+        "stationary_cold_excess_fraction": 5.5685841300334715e-06
+      },
+      "interpretation": "Selected scalar outputs only; moving-grid exchange remains numerically diffusive."
+    },
+    {
+      "name": "profiled_resolution_profiled_h005_96",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 12.752589769994302,
+        "Qcore": 12.752589770010673,
+        "gas_kinetic_mX": 0.6624346774229934,
+        "stationary_cold_excess_fraction": 7.856656294658038e-06
+      },
+      "interpretation": "Selected scalar outputs only; moving-grid exchange remains numerically diffusive."
+    },
+    {
+      "name": "profiled_resolution_profiled_h0025_96",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 12.822260716815435,
+        "Qcore": 12.822260716813616,
+        "gas_kinetic_mX": 0.6653899162205335,
+        "stationary_cold_excess_fraction": 7.899350372930769e-06
+      },
+      "interpretation": "Selected scalar outputs only; moving-grid exchange remains numerically diffusive."
+    },
+    {
+      "name": "profiled_control_profiled64_fineomega",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 0.22730542254430475,
+        "gas_kinetic_mX": 0.009423513876186007,
+        "stationary_cold_excess_fraction": 1.4021353078597087e-07
+      }
+    },
+    {
+      "name": "profiled_control_profiled64_tight",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 0.00043420539805083536,
+        "gas_kinetic_mX": 1.637674915855314e-05,
+        "stationary_cold_excess_fraction": 2.678401944677944e-10
+      }
+    },
+    {
+      "name": "profiled_control_profiled64_angles12",
+      "pass": true,
+      "absolute_differences": {
+        "Nplus": 1.0359395850191504,
+        "gas_kinetic_mX": 0.04141546137498153,
+        "stationary_cold_excess_fraction": 6.390196538585968e-07
+      }
+    },
+    {
+      "name": "aligned_vs_off_grid_exchange_control",
+      "pass": true,
+      "rows": [
+        {
+          "shift_bins": 32,
+          "Omega": 0.8817204919524214,
+          "cycles": 10,
+          "number_error": 0.0,
+          "mean_energy_error": 0.0,
+          "spurious_variance_mX2": 0.0
+        },
+        {
+          "shift_bins": 32,
+          "Omega": 0.88435,
+          "cycles": 10,
+          "number_error": -2.220446049250313e-16,
+          "mean_energy_error": 1.1102230246251565e-15,
+          "spurious_variance_mX2": 0.004888692065710475
+        },
+        {
+          "shift_bins": 64,
+          "Omega": 0.8817204919524214,
+          "cycles": 10,
+          "number_error": 0.0,
+          "mean_energy_error": 0.0,
+          "spurious_variance_mX2": 0.0
+        },
+        {
+          "shift_bins": 64,
+          "Omega": 0.88435,
+          "cycles": 10,
+          "number_error": -2.220446049250313e-16,
+          "mean_energy_error": 1.1102230246251565e-15,
+          "spurious_variance_mX2": 0.0021707072557240205
+        },
+        {
+          "shift_bins": 96,
+          "Omega": 0.8817204919524214,
+          "cycles": 10,
+          "number_error": 4.440892098500626e-16,
+          "mean_energy_error": 2.6645352591003757e-15,
+          "spurious_variance_mX2": 3.9513148613196426e-17
+        },
+        {
+          "shift_bins": 96,
+          "Omega": 0.88435,
+          "cycles": 10,
+          "number_error": -3.3306690738754696e-16,
+          "mean_energy_error": 2.220446049250313e-16,
+          "spurious_variance_mX2": 0.001303553530899081
+        }
+      ],
+      "interpretation": "Off-grid round trips demonstrably diffuse despite conserving number and mean energy; finer hybrid results are still approximate."
+    },
+    {
+      "name": "radial_source_energy_moments",
+      "pass": true,
+      "loaded_gas_energy_mX": 2807.799781275558,
+      "signed_energy_mX": 2807.798025213791,
+      "difference_mX": 0.0017560617670824286,
+      "source_is_not_positivity_certified": true,
+      "sha256": {
+        "ringdown_h0025.json": "dc59d8ae668085f40737e8f95ed1d5c048636772dfdbd501e884b542be081eda",
+        "ringdown_h0025_spectrum_0_1000.npz": "7e9a4ee5eeb7b1bf73f9e9771a020d1f27c04f66eba51a0d3dd531ad52143b1c",
+        "ringdown_h0025_spectrum_1000_10000.npz": "9c77e0a7d7382a7df3684ab0b951c37507d69de404e3d7dea7f98e41447ca71c",
+        "ringdown_h005.json": "5001ea9c7c730a4e5da23c6028b17efced9ea7d8ab47946c4bf2b1f580953be5",
+        "ringdown_h005_spectrum_0_1000.npz": "9d2c9981f3e7bdac31f6e2f4b52975ea12b1ac93fa3e0438da80022049f05741",
+        "ringdown_h005_spectrum_1000_10000.npz": "7be2737e945660f66a81f199a8952b92d38369083ede65df50dcc0cd82318994",
+        "ringdown_h01.json": "4e10aa080569da8fcf36b76d03ac6b5e8cab7c9684b5a59c34bf725b733309ce",
+        "ringdown_h01_dt.json": "fd6c84be69bc1a40e57f9a24027ce4b2b497decda0032155f66af9195c9881a5",
+        "ringdown_h01_spectrum_0_1000.npz": "4d84fd3250be4c2f98850dcb7abd08212b24bf8609287d302fc85a80977c2d62",
+        "ringdown_h01_spectrum_1000_10000.npz": "9006956c9117e63d40c002bdeedb821e921428468b49536ba46fe7c87c5c8c29"
+      }
+    },
+    {
+      "name": "finest_radial_source_energy_moments",
+      "pass": true,
+      "loaded_gas_energy_mX": 2817.9106909429624,
+      "signed_energy_mX": 2817.909384259525,
+      "difference_mX": 0.0013066834376331826,
+      "source_is_not_positivity_certified": true
+    },
+    {
+      "name": "radial_resolution_trend",
+      "pass": true,
+      "rows": [
+        {
+          "spacing": 0.1,
+          "late_probe_energy_mX": 277.7900565203705,
+          "late_core_excess_mX": 224.13606327754678
+        },
+        {
+          "spacing": 0.05,
+          "late_probe_energy_mX": 312.5091627103512,
+          "late_core_excess_mX": 203.18204303475795
+        },
+        {
+          "spacing": 0.025,
+          "late_probe_energy_mX": 321.6232056491222,
+          "late_core_excess_mX": 197.54254842249793
+        }
+      ],
+      "last_relative_change": 0.02833764099943113,
+      "interpretation": "Improving resolution trend, not proof of continuum convergence or of a quantum particle source."
+    }
+  ],
+  "all_engineering_checks_pass": true,
+  "limitations": "Tolerances validate selected controls, not missing physics, local inhomogeneity, formation, late excitation or the final 1% mass criterion."
+}

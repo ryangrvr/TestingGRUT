@@ -1,0 +1,89 @@
+{
+  "configuration": {
+    "shift_bins": 64,
+    "angles": 12,
+    "tau_final": 1000,
+    "rtol": 2e-07,
+    "atol": 1e-09
+  },
+  "channel_order": [
+    "X_to_Xbar",
+    "Xbar_to_X",
+    "X_to_h_then_pair",
+    "Xbar_to_h_then_pair"
+  ],
+  "stoichiometry_rows_Nplus_Nminus_Qcore": [
+    [
+      -1.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      -1.0,
+      1.0,
+      0.0
+    ],
+    [
+      2.0,
+      -2.0,
+      1.0,
+      -1.0
+    ]
+  ],
+  "integrated_supported_events": {
+    "X_to_Xbar": 8127.735782269356,
+    "Xbar_to_X": 9878.316803990641,
+    "X_to_h_then_pair": 56.13208833312723,
+    "Xbar_to_h_then_pair": 9786.500724573843
+  },
+  "decomposition": {
+    "net_forward_exchange": 1750.5810217212857,
+    "core_charge_change_exchange": -3501.1620434425713,
+    "core_charge_change_neutral": -9730.368636240717,
+    "total_neutral_events": 9842.63281290697,
+    "core_charge_change_total": -13231.530679683288,
+    "net_antiparticle_loss": 1694.448933388156,
+    "gas_total_number_increase": 9842.63281290696
+  },
+  "initial": {
+    "Nplus": 94.85926867712638,
+    "Nminus": 1695.0095368561076,
+    "Qcore": 201600.150268179
+  },
+  "final": {
+    "Nplus": 11631.941014972243,
+    "Nminus": 0.5606034679515345,
+    "Qcore": 188368.6195884957
+  },
+  "checks": {
+    "operator_stoichiometry_error": 5.684341886080802e-14,
+    "integrated_stoichiometry_error": 1.2732925824820995e-11,
+    "maximum_bin_population_difference_from_parent": 5.315043114961782e-06,
+    "endpoint_species_relative_difference_from_parent": 1.2696109941146005e-08,
+    "invariant_relative_drift": 6.661338147750939e-16,
+    "minimum_population": -1.3025218445824312e-26,
+    "omitted_events": 0.0005600532603970995,
+    "initial_omitted_support": {
+      "plus": {
+        "number": 0.0001300371011365473,
+        "energy": 0.0012830650355239055
+      },
+      "minus": {
+        "number": 0.0,
+        "energy": 0.0
+      },
+      "neutral": {
+        "number": 6.680637975523898e-07,
+        "energy": 7.084304628934791e-06
+      }
+    }
+  },
+  "solver": {
+    "success": true,
+    "nfev": 1211,
+    "steps": 423,
+    "seconds": 38.928474499000004
+  }
+}

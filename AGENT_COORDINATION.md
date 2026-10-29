@@ -6494,3 +6494,19 @@ and exploratory long runs. Rendered and inspected the scientific figure.
 Report, reproducible code/data, input pins, manifest, and bounded reviewer
 handoff prepared. No independent-author replication or final cosmological
 cleanup is claimed. Claim released.
+
+### 2026-10-28 · Codex / AInstein · M1 expanding-core continuation
+
+Worked in an isolated branch from c481530. Recomputed an h=0.025 radial pulse
+through m_X t=10000, seven stationary-charge scattering tables, and 64/96-node
+expanding, quasistatic-core trajectories. Ran 50 same-author engineering
+checks, direct populated-kernel holdouts and source/energy controls; all pass
+with the disclosed roundoff and moving-grid diffusion limits. The fine supplied
+source gives 0.8052% conditional cold mass and a 0.9277% modeled total excess
+at a factor-ten expansion, including 199.37 m_X of unassigned energy. A
+synchronous local source reaches at most 0.51% of volume by the end of the
+radial run at the supplied density, so the uncomputed local mixing history is a
+material obstacle. Corrected the prior neutral-event ledger statement. No final
+cosmological pass, formation history or independent replication is claimed.
+Report and reproducible artifacts are in grut_m1_expansion_clock_20261028.
+Claim released.

@@ -1,0 +1,145 @@
+{
+  "configuration": {
+    "h": 0.1,
+    "dt": 0.0125,
+    "L": 200.0,
+    "tmax_mX": 10000.0,
+    "absorber_start": 100,
+    "probe": 60,
+    "amplitude": 0.1
+  },
+  "source_code_sha256": "2e4ff06e329b91afd417ca51354063f107e53818d88720fbe943eece72941ac0",
+  "history_sha256": "c8c14bca3728c7544f49d58efc60da247a316abbd9a227554d90351cb2341b52",
+  "original_history_scaled_error": null,
+  "initial_pulse_energy_mX": 191803.19357514963,
+  "initial_stationary_lattice": {
+    "Q": 200000,
+    "Omega": 0.8817100680938559,
+    "energy_mX": 187476.13022785168,
+    "energy_inside20_mX": 187476.08765228014,
+    "max_stationary_equation_residual": 1.3322676295501878e-13
+  },
+  "late_1000_to_10000": {
+    "probe_energy_mX": 277.7900565203705,
+    "probe_charge": 82.04364910527548,
+    "absorber_energy_mX": 290.77671524967633,
+    "absorber_charge": 79.96709907323928
+  },
+  "checks": {
+    "max_relative_global_energy_drift": 5.183659643526184e-06,
+    "final_global_energy_error_mX": -0.9113933667094898,
+    "late_global_energy_change_mX": -0.19638097969618684,
+    "max_relative_global_charge_drift": 1.9229062786507711e-13
+  },
+  "checkpoints": [
+    {
+      "mX_t": 1000,
+      "core20_charge": 201593.16007226554,
+      "core20_energy_mX": 189303.98270205813,
+      "lattice_stationary_at_core20_charge": {
+        "Q": 201593.16007226554,
+        "Omega": 0.8813854287637664,
+        "energy_mX": 188880.57639603142,
+        "energy_inside20_mX": 188880.53389552367,
+        "max_stationary_equation_residual": 1.5187850976872141e-13
+      },
+      "core20_excess_over_same_grid_stationary_mX": 423.4488065344631
+    },
+    {
+      "mX_t": 3000,
+      "core20_charge": 201564.2527287842,
+      "core20_energy_mX": 189209.73550552505,
+      "lattice_stationary_at_core20_charge": {
+        "Q": 201564.2527287842,
+        "Omega": 0.8813912853668862,
+        "energy_mX": 188855.0978000564,
+        "energy_inside20_mX": 188855.05529825602,
+        "max_stationary_equation_residual": 1.2187473252822656e-13
+      },
+      "core20_excess_over_same_grid_stationary_mX": 354.6802072690334
+    },
+    {
+      "mX_t": 10000,
+      "core20_charge": 201509.56455914778,
+      "core20_energy_mX": 189030.98937991206,
+      "lattice_stationary_at_core20_charge": {
+        "Q": 201509.56455914778,
+        "Omega": 0.8814023685452961,
+        "energy_mX": 188806.8958208871,
+        "energy_inside20_mX": 188806.85331663452,
+        "max_stationary_equation_residual": 1.3752887717544127e-13
+      },
+      "core20_excess_over_same_grid_stationary_mX": 224.13606327754678
+    }
+  ],
+  "signed_spectrum_diagnostics": {
+    "0_1000": {
+      "plus": {
+        "signed_number": 93.64743821256029,
+        "negative_number_weight": 8.944057752814905e-06,
+        "frequency_times_number_energy_mX": 157.15691062059523,
+        "direct_energy_flux_mX": 157.1280593498554
+      },
+      "minus": {
+        "signed_number": 1685.0904930196202,
+        "negative_number_weight": 0.0007400739364881051,
+        "frequency_times_number_energy_mX": 2319.553253462968,
+        "direct_energy_flux_mX": 2319.450701675564
+      },
+      "neutral": {
+        "signed_number": 5.235094601000146,
+        "negative_number_weight": 1.6305761414513984e-07,
+        "frequency_times_number_energy_mX": 15.593998933893955,
+        "direct_energy_flux_mX": 15.593998933893953
+      },
+      "all_frequency_direct_energy_flux_mX": 2492.4119461063983,
+      "all_frequency_charge_flux": -1591.5934976662195
+    },
+    "1000_10000": {
+      "plus": {
+        "signed_number": 88.43580710573352,
+        "negative_number_weight": 0.007418296676699935,
+        "frequency_times_number_energy_mX": 223.11518400448458,
+        "direct_energy_flux_mX": 223.05827416813406
+      },
+      "minus": {
+        "signed_number": 6.2335090671143645,
+        "negative_number_weight": 0.061914369352773786,
+        "frequency_times_number_energy_mX": 13.1379775077004,
+        "direct_energy_flux_mX": 13.140418609942538
+      },
+      "neutral": {
+        "signed_number": 13.47371519867375,
+        "negative_number_weight": 5.468939435564017e-05,
+        "frequency_times_number_energy_mX": 41.32760808401645,
+        "direct_energy_flux_mX": 41.32760808401643
+      },
+      "all_frequency_direct_energy_flux_mX": 277.78483330693143,
+      "all_frequency_charge_flux": 82.04575894448311
+    },
+    "3000_10000": {
+      "plus": {
+        "signed_number": 57.919303488417476,
+        "negative_number_weight": 0.011447484644942245,
+        "frequency_times_number_energy_mX": 145.31707506391672,
+        "direct_energy_flux_mX": 145.28067503395008
+      },
+      "minus": {
+        "signed_number": 3.9424978002728306,
+        "negative_number_weight": 0.04569431088743324,
+        "frequency_times_number_energy_mX": 8.503339711006857,
+        "direct_energy_flux_mX": 8.511402060394005
+      },
+      "neutral": {
+        "signed_number": 8.811577228563259,
+        "negative_number_weight": 0.0025819336080320264,
+        "frequency_times_number_energy_mX": 26.927015498853187,
+        "direct_energy_flux_mX": 26.92701549885318
+      },
+      "all_frequency_direct_energy_flux_mX": 180.75351263340409,
+      "all_frequency_charge_flux": 53.96605952024573
+    }
+  },
+  "seconds": 31.30175750999979,
+  "interpretation": "Classical isolated radial evolution only; no quantum or portal decay, imposed heat injection, gas collisions or expansion."
+}
