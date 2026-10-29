@@ -1,0 +1,55 @@
+{
+  "configuration": {
+    "source": "source_t400",
+    "power": 17,
+    "seed": 19,
+    "nsteps": 129,
+    "dt": 10.0,
+    "rmax": 46868.85,
+    "tend": 100000.0,
+    "chunk_size": 8192,
+    "tag": "daughter_131072_step129"
+  },
+  "result": {
+    "neutral_source_count": 16.63196856535483,
+    "samples": 131072,
+    "seed": 19,
+    "time_horizon_mX_inverse": 100000.0,
+    "outer_radius_mX_inverse": 46868.85,
+    "time_step": 10.0,
+    "trajectory_steps_per_segment": 129,
+    "rows": [
+      {
+        "daughter": "positive",
+        "mean_exposure_per_parent": 6.468910780964085e-09,
+        "events_per_reference_core": 1.0759072076107961e-07,
+        "max_sample_exposure": 9.652924506405386e-05,
+        "standard_error_iid_diagnostic": 2.225121926396781e-08,
+        "direct_matching_surface_hits_per_core": 0.02563215370332089,
+        "fraction_decayed_inside_domain_before_horizon": 0.9999618530273438,
+        "nonzero_exposure_samples": 111872,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 1297998,
+          "max_inverse_jacobian": 3.6401538303422902
+        }
+      },
+      {
+        "daughter": "antiparticle",
+        "mean_exposure_per_parent": 1.514593868679052e-08,
+        "events_per_reference_core": 2.519067761314915e-07,
+        "max_sample_exposure": 7.387831624824815e-06,
+        "standard_error_iid_diagnostic": 3.978394350967511e-09,
+        "direct_matching_surface_hits_per_core": 0.02588593740335377,
+        "fraction_decayed_inside_domain_before_horizon": 0.9999618530273438,
+        "nonzero_exposure_samples": 112477,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 1300320,
+          "max_inverse_jacobian": 4.319800082047152
+        }
+      }
+    ],
+    "scope": "Unattenuated NWA scattering of direct h-decay daughters against primary radial beams; point-source radial targets, finite local horizon. No daughter-daughter collisions, rescattering, core boundary physics, finite-width effects, or interactions before r0."
+  }
+}

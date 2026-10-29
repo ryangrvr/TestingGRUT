@@ -1,0 +1,55 @@
+{
+  "configuration": {
+    "source": "source_t800",
+    "power": 17,
+    "seed": 37,
+    "nsteps": 65,
+    "dt": 10.0,
+    "rmax": 46868.85,
+    "tend": 100000.0,
+    "chunk_size": 8192,
+    "tag": "daughter_131072_t800"
+  },
+  "result": {
+    "neutral_source_count": 16.679851722053463,
+    "samples": 131072,
+    "seed": 37,
+    "time_horizon_mX_inverse": 100000.0,
+    "outer_radius_mX_inverse": 46868.85,
+    "time_step": 10.0,
+    "trajectory_steps_per_segment": 65,
+    "rows": [
+      {
+        "daughter": "positive",
+        "mean_exposure_per_parent": 2.758347355211596e-08,
+        "events_per_reference_core": 4.6008824882847756e-07,
+        "max_sample_exposure": 0.00028161532308939024,
+        "standard_error_iid_diagnostic": 7.013624431742984e-08,
+        "direct_matching_surface_hits_per_core": 0.02659674842765178,
+        "fraction_decayed_inside_domain_before_horizon": 0.999969482421875,
+        "nonzero_exposure_samples": 110588,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 642850,
+          "max_inverse_jacobian": 3.765782748109035
+        }
+      },
+      {
+        "daughter": "antiparticle",
+        "mean_exposure_per_parent": 1.5570796994824406e-08,
+        "events_per_reference_core": 2.5971858506786677e-07,
+        "max_sample_exposure": 1.0008241471510357e-05,
+        "standard_error_iid_diagnostic": 4.4142270881702215e-09,
+        "direct_matching_surface_hits_per_core": 0.02825109163128562,
+        "fraction_decayed_inside_domain_before_horizon": 0.999969482421875,
+        "nonzero_exposure_samples": 112420,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 643110,
+          "max_inverse_jacobian": 3.644550042665018
+        }
+      }
+    ],
+    "scope": "Unattenuated NWA scattering of direct h-decay daughters against primary radial beams; point-source radial targets, finite local horizon. No daughter-daughter collisions, rescattering, core boundary physics, finite-width effects, or interactions before r0."
+  }
+}

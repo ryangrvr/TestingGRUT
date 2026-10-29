@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "source": "source_t400",
+    "power": 15,
+    "seed": 19,
+    "nsteps": 65,
+    "dt": 10.0,
+    "rmax": 46868.85,
+    "tend": 100000.0,
+    "tag": "daughter_32768_s19"
+  },
+  "result": {
+    "neutral_source_count": 16.63196856535483,
+    "samples": 32768,
+    "seed": 19,
+    "time_horizon_mX_inverse": 100000.0,
+    "outer_radius_mX_inverse": 46868.85,
+    "time_step": 10.0,
+    "trajectory_steps_per_segment": 65,
+    "rows": [
+      {
+        "daughter": "positive",
+        "mean_exposure_per_parent": 5.979297347533708e-09,
+        "events_per_reference_core": 9.944748552709013e-08,
+        "max_sample_exposure": 4.465563000536083e-05,
+        "standard_error_iid_diagnostic": 3.469470804162694e-08,
+        "direct_matching_surface_hits_per_core": 0.028931341803748328,
+        "fraction_decayed_inside_domain_before_horizon": 1.0,
+        "nonzero_exposure_samples": 27982,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 164515,
+          "max_inverse_jacobian": 3.5577902306465963
+        }
+      },
+      {
+        "daughter": "antiparticle",
+        "mean_exposure_per_parent": 1.5185674671027762e-08,
+        "events_per_reference_core": 2.5256766377223876e-07,
+        "max_sample_exposure": 7.403685045566546e-06,
+        "standard_error_iid_diagnostic": 9.435237247320623e-09,
+        "direct_matching_surface_hits_per_core": 0.025378370003288006,
+        "fraction_decayed_inside_domain_before_horizon": 1.0,
+        "nonzero_exposure_samples": 28129,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 163995,
+          "max_inverse_jacobian": 3.555119619059555
+        }
+      }
+    ],
+    "scope": "Unattenuated NWA scattering of direct h-decay daughters against primary radial beams; point-source radial targets, finite local horizon. No daughter-daughter collisions, rescattering, core boundary physics, finite-width effects, or interactions before r0."
+  }
+}

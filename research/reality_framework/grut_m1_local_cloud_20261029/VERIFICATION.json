@@ -1,0 +1,277 @@
+{
+  "same_author": true,
+  "independent_replication": false,
+  "checks": [
+    {
+      "name": "monochromatic_outgoing_flux",
+      "pass": true,
+      "expected_charge": 217.7103376890332,
+      "actual_charge": 217.71033768903314,
+      "relative_charge_error": -2.220446049250313e-16,
+      "plus_signed_relative_error": -0.000359100982222027,
+      "anti_fraction": 0.0,
+      "apparent_incoming_fraction_k_gt_0_1": 0.000222839553800497
+    },
+    {
+      "name": "ballistic_rectangular_pulse_analytic_overlap",
+      "pass": true,
+      "analytic": 14.167716292582295,
+      "numeric": 14.16771629258255,
+      "relative_error": 1.7985612998927536e-14
+    },
+    {
+      "name": "general_resonance_roots_against_brent",
+      "pass": true,
+      "max_absolute_error": 4.1300296516055823e-13,
+      "cases": [
+        {
+          "Ed": 1.1,
+          "mu": -1.0,
+          "roots": [
+            1.4062746066802096
+          ],
+          "absolute_error": 4.1300296516055823e-13
+        },
+        {
+          "Ed": 1.4,
+          "mu": -0.5,
+          "roots": [
+            1.1978315811882148
+          ],
+          "absolute_error": 3.774758283725532e-15
+        },
+        {
+          "Ed": 1.4,
+          "mu": 0.0,
+          "roots": [
+            1.4285714285714286
+          ],
+          "absolute_error": 0.0
+        },
+        {
+          "Ed": 1.4,
+          "mu": 0.5,
+          "roots": [
+            2.0579823723001613
+          ],
+          "absolute_error": 0.0
+        },
+        {
+          "Ed": 2.5,
+          "mu": 0.9,
+          "roots": [
+            1.0422250546361282,
+            3.96403276764172
+          ],
+          "absolute_error": 0.0
+        },
+        {
+          "Ed": 2.5,
+          "mu": -0.8,
+          "roots": [],
+          "absolute_error": 0.0
+        }
+      ]
+    },
+    {
+      "name": "daughter_root_rate_against_independent_roots",
+      "pass": true,
+      "maximum_relative_error": 3.219646771412954e-15,
+      "cases": 5
+    },
+    {
+      "name": "time_frequency_partition_source_t200",
+      "pass": true,
+      "max_absolute_parseval_error": 9.094947017729282e-13,
+      "max_signed_negative_fraction": 4.196108583216264e-05,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "time_frequency_partition_source_t400",
+      "pass": true,
+      "max_absolute_parseval_error": 4.547473508864641e-13,
+      "max_signed_negative_fraction": 3.8678752429981864e-05,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "time_frequency_partition_source_t800",
+      "pass": true,
+      "max_absolute_parseval_error": 4.547473508864641e-13,
+      "max_signed_negative_fraction": 3.510928689315738e-05,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "time_frequency_partition_source_h005_r40",
+      "pass": true,
+      "max_absolute_parseval_error": 9.094947017729282e-13,
+      "max_signed_negative_fraction": 0.00015997156324556034,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "time_frequency_partition_source_h005_r60",
+      "pass": true,
+      "max_absolute_parseval_error": 0.0,
+      "max_signed_negative_fraction": 3.782684386493238e-05,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "time_frequency_partition_source_h005_r80",
+      "pass": true,
+      "max_absolute_parseval_error": 2.2737367544323206e-12,
+      "max_signed_negative_fraction": 7.259777880697831e-05,
+      "interpretation": "Small signed-bin weight does not prove an incoherent quantum source."
+    },
+    {
+      "name": "neutral_decay_kinematics",
+      "pass": true,
+      "solid_angle_and_independent_root_max_absolute_error": 4.6629367034256575e-15,
+      "two_daughter_energy_and_radial_momentum_max_absolute_error_mX": 1.5543122344752192e-15,
+      "largest_sampled_inward_daughter_energy_mX": 1.224744871391589,
+      "analytic_inward_energy_upper_bound_mX": 1.224744871391589,
+      "min_positive_reverse_exchange_threshold_mX": 2.763440983904843,
+      "energies_above_three_can_be_backward": false
+    },
+    {
+      "name": "QMC_return_vs_analytic_all_time",
+      "pass": true,
+      "relative_difference": 0.003496231420116236,
+      "analytic_all_time_crossings_per_species": 0.02563719269526803,
+      "finite_time_QMC": [
+        {
+          "tag": "daughter_262144_s19",
+          "hits": [
+            0.025949383328361986,
+            0.025568707778312667
+          ]
+        },
+        {
+          "tag": "daughter_262144_s37",
+          "hits": [
+            0.02506114037824691,
+            0.026076275178378426
+          ]
+        },
+        {
+          "tag": "daughter_262144_s59",
+          "hits": [
+            0.025251478153271566,
+            0.025378370003288006
+          ]
+        }
+      ],
+      "caveat": "Finite horizon versus all-time, windowed neutral source and uniform within-bin energy."
+    },
+    {
+      "name": "continuous_energy_quadrature",
+      "pass": true,
+      "gauss64": 6.028647552911701e-05,
+      "gauss128": 6.0292025034123176e-05
+    },
+    {
+      "name": "fine_energy_quadrature",
+      "pass": true,
+      "gauss32": 6.595781268606156e-05,
+      "gauss64": 6.59472798298712e-05
+    },
+    {
+      "name": "straight_ray_geometric_cone",
+      "pass": true,
+      "max_sampled_sin_angle_above_geometric_bound": -9.80715508802632e-12,
+      "support_fraction_monotonically_nonincreasing": true
+    },
+    {
+      "name": "cross_source_angular_kernel_against_direct_quad",
+      "pass": true,
+      "max_relative_error": 4.302969621505781e-06,
+      "rows": [
+        {
+          "energies": [
+            1.1,
+            1.1
+          ],
+          "angular_quad": 1.79132955950505e-06,
+          "transformed_quad": 1.7913297250477035e-06,
+          "relative_difference": 9.241328746689703e-08
+        },
+        {
+          "energies": [
+            1.1,
+            1.4
+          ],
+          "angular_quad": 0.00014633993596468282,
+          "transformed_quad": 0.00014633993596486157,
+          "relative_difference": 1.2214673716925972e-12
+        },
+        {
+          "energies": [
+            1.4,
+            1.8
+          ],
+          "angular_quad": 0.0042501410570043455,
+          "transformed_quad": 0.004250159345232201,
+          "relative_difference": 4.302969621505781e-06
+        },
+        {
+          "energies": [
+            1.8,
+            2.5
+          ],
+          "angular_quad": 0.0010177995188823858,
+          "transformed_quad": 0.0010178012513729184,
+          "relative_difference": 1.7021923279791906e-06
+        }
+      ]
+    },
+    {
+      "name": "poisson_profile_number_and_resolution",
+      "pass": true,
+      "max_number_relative_error": 0.002332813974915915,
+      "max_cross_moment_relative_difference_dr2p5_vs_dr5": 0.003043927476040542
+    },
+    {
+      "name": "poisson_cross_source_pole_quadrature",
+      "pass": true,
+      "gauss32": 1.5452421221159342e-06,
+      "gauss64": 1.545224891262116e-06
+    },
+    {
+      "name": "neutral_decay_sample_energy_and_charge",
+      "pass": true,
+      "max_energy_error_mX": 8.881784197001252e-16,
+      "max_charge_error": 0
+    },
+    {
+      "name": "smooth_sample_nwa_vs_finite_width",
+      "pass": true,
+      "samples": [
+        {
+          "Eminus": 1.15,
+          "finite_width": 0.01307756878673488,
+          "NWA": 0.013081348444645865,
+          "relative_difference": -0.00028893488519010635
+        },
+        {
+          "Eminus": 1.4,
+          "finite_width": 0.0023000342212742856,
+          "NWA": 0.002297998904519758,
+          "relative_difference": 0.0008856909159200566
+        },
+        {
+          "Eminus": 1.8,
+          "finite_width": 1.1840107739518541e-05,
+          "NWA": 1.0973575415909482e-05,
+          "relative_difference": 0.07896535912559188
+        },
+        {
+          "Eminus": 2.5,
+          "finite_width": 0.00027922629474241335,
+          "NWA": 0.00027897525082290524,
+          "relative_difference": 0.0008998788199583441
+        }
+      ],
+      "interpretation": "One sampled case differs by about 8%; no universal NWA bound follows."
+    }
+  ],
+  "all_engineering_checks_pass": true,
+  "limitations": "These tests do not validate local angular distributions, wave-to-particle conversion, hidden channels, finite-time quantum coherence or the final cosmological mass budget."
+}

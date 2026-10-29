@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "source": "source_t400",
+    "power": 15,
+    "seed": 37,
+    "nsteps": 65,
+    "dt": 10.0,
+    "rmax": 46868.85,
+    "tend": 100000.0,
+    "tag": "daughter_32768_s37"
+  },
+  "result": {
+    "neutral_source_count": 16.63196856535483,
+    "samples": 32768,
+    "seed": 37,
+    "time_horizon_mX_inverse": 100000.0,
+    "outer_radius_mX_inverse": 46868.85,
+    "time_step": 10.0,
+    "trajectory_steps_per_segment": 65,
+    "rows": [
+      {
+        "daughter": "positive",
+        "mean_exposure_per_parent": 7.3590965634858565e-09,
+        "events_per_reference_core": 1.2239626271330752e-07,
+        "max_sample_exposure": 7.404400511640534e-05,
+        "standard_error_iid_diagnostic": 5.370709110889953e-08,
+        "direct_matching_surface_hits_per_core": 0.024870802603222247,
+        "fraction_decayed_inside_domain_before_horizon": 0.9998779296875,
+        "nonzero_exposure_samples": 27965,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 163865,
+          "max_inverse_jacobian": 3.597283309425147
+        }
+      },
+      {
+        "daughter": "antiparticle",
+        "mean_exposure_per_parent": 1.5709463168564378e-08,
+        "events_per_reference_core": 2.612792975981622e-07,
+        "max_sample_exposure": 7.064360534156436e-06,
+        "standard_error_iid_diagnostic": 9.712859819311602e-09,
+        "direct_matching_surface_hits_per_core": 0.02690107220348529,
+        "fraction_decayed_inside_domain_before_horizon": 0.9998779296875,
+        "nonzero_exposure_samples": 28107,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 164645,
+          "max_inverse_jacobian": 3.5878482627605064
+        }
+      }
+    ],
+    "scope": "Unattenuated NWA scattering of direct h-decay daughters against primary radial beams; point-source radial targets, finite local horizon. No daughter-daughter collisions, rescattering, core boundary physics, finite-width effects, or interactions before r0."
+  }
+}

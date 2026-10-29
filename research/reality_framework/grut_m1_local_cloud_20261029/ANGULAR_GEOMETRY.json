@@ -1,0 +1,77 @@
+{
+  "rows": [
+    {
+      "r_over_matching_radius": 1,
+      "maximum_individual_radial_angle_deg": 90.0,
+      "minimum_relative_angle_cosine": -1.0,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.8273318576160531
+    },
+    {
+      "r_over_matching_radius": 1.25,
+      "maximum_individual_radial_angle_deg": 53.13010235415599,
+      "minimum_relative_angle_cosine": -0.28,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.7126052358956863
+    },
+    {
+      "r_over_matching_radius": 1.5,
+      "maximum_individual_radial_angle_deg": 41.810314895778596,
+      "minimum_relative_angle_cosine": 0.11111111111111116,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.6826333850545472
+    },
+    {
+      "r_over_matching_radius": 2,
+      "maximum_individual_radial_angle_deg": 30.000000000000004,
+      "minimum_relative_angle_cosine": 0.5,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.666773906907735
+    },
+    {
+      "r_over_matching_radius": 3,
+      "maximum_individual_radial_angle_deg": 19.47122063449069,
+      "minimum_relative_angle_cosine": 0.7777777777777778,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.05760677877562197
+    },
+    {
+      "r_over_matching_radius": 4,
+      "maximum_individual_radial_angle_deg": 14.477512185929925,
+      "minimum_relative_angle_cosine": 0.875,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.0043842947649268115
+    },
+    {
+      "r_over_matching_radius": 5,
+      "maximum_individual_radial_angle_deg": 11.536959032815489,
+      "minimum_relative_angle_cosine": 0.92,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.002989486723040926
+    },
+    {
+      "r_over_matching_radius": 10,
+      "maximum_individual_radial_angle_deg": 5.739170477266787,
+      "minimum_relative_angle_cosine": 0.98,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 0.00025936902211144247
+    },
+    {
+      "r_over_matching_radius": 20,
+      "maximum_individual_radial_angle_deg": 2.8659839825988622,
+      "minimum_relative_angle_cosine": 0.995,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 1.5717673747242545e-05
+    },
+    {
+      "r_over_matching_radius": 50,
+      "maximum_individual_radial_angle_deg": 1.1459919983885924,
+      "minimum_relative_angle_cosine": 0.9992,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 1.1332357164680472e-05
+    },
+    {
+      "r_over_matching_radius": 100,
+      "maximum_individual_radial_angle_deg": 0.5729673448571527,
+      "minimum_relative_angle_cosine": 0.9998,
+      "kinematically_supported_fraction_of_independent_energy_pairs": 2.9657314270183597e-07
+    }
+  ],
+  "tests": {
+    "max_sampled_sin_angle_above_geometric_bound": -9.80715508802632e-12,
+    "support_fraction_monotonically_nonincreasing": true
+  },
+  "geometry": "At radius r>=r0, a free outward trajectory originating at the r0 surface has impact parameter b<=r0, hence sin(theta_r)<=r0/r. For two such rays, cos(gamma)>=1-2(r0/r)^2.",
+  "source": "source_t400; positive projections of signed time-windowed direct charged flux marginals",
+  "scope": "Kinematic support only, independent draws from time-integrated marginals. It does not know actual angular/time correlations, finite-width rate, h-daughter emission, rescattering, or core evolution."
+}

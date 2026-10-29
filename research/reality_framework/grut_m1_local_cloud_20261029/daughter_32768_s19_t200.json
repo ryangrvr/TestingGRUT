@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "source": "source_t200",
+    "power": 15,
+    "seed": 19,
+    "nsteps": 65,
+    "dt": 10.0,
+    "rmax": 46868.85,
+    "tend": 100000.0,
+    "tag": "daughter_32768_s19_t200"
+  },
+  "result": {
+    "neutral_source_count": 16.550814453708536,
+    "samples": 32768,
+    "seed": 19,
+    "time_horizon_mX_inverse": 100000.0,
+    "outer_radius_mX_inverse": 46868.85,
+    "time_step": 10.0,
+    "trajectory_steps_per_segment": 65,
+    "rows": [
+      {
+        "daughter": "positive",
+        "mean_exposure_per_parent": 1.4780200157720676e-09,
+        "events_per_reference_core": 2.4462435039910856e-08,
+        "max_sample_exposure": 1.972299353101628e-06,
+        "standard_error_iid_diagnostic": 2.120561061336044e-09,
+        "direct_matching_surface_hits_per_core": 0.01818326783244346,
+        "fraction_decayed_inside_domain_before_horizon": 0.9998779296875,
+        "nonzero_exposure_samples": 28000,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 168480,
+          "max_inverse_jacobian": 3.534701736515469
+        }
+      },
+      {
+        "daughter": "antiparticle",
+        "mean_exposure_per_parent": 1.4459595357059926e-08,
+        "events_per_reference_core": 2.393180798304043e-07,
+        "max_sample_exposure": 4.246058799064494e-06,
+        "standard_error_iid_diagnostic": 7.443489502014503e-09,
+        "direct_matching_surface_hits_per_core": 0.023234175563677757,
+        "fraction_decayed_inside_domain_before_horizon": 0.9998779296875,
+        "nonzero_exposure_samples": 28114,
+        "diagnostics": {
+          "near_tangent": 0,
+          "two_roots": 168285,
+          "max_inverse_jacobian": 3.5878914366252133
+        }
+      }
+    ],
+    "scope": "Unattenuated NWA scattering of direct h-decay daughters against primary radial beams; point-source radial targets, finite local horizon. No daughter-daughter collisions, rescattering, core boundary physics, finite-width effects, or interactions before r0."
+  }
+}

@@ -6512,3 +6512,14 @@ The direct charged source marginals also show strong angular sensitivity of
 resonance support in a hypothetical common cone; this is not a collision rate.
 Report and reproducible artifacts are in grut_m1_expansion_clock_20261028.
 Claim released.
+
+### 2026-10-29 · Codex / AInstein · M1 local-plume continuation
+
+Added the isolated local-cloud packet with time-resolved source diagnostics,
+continuous-energy collinear and finite-width controls, explicit neutral decay
+worldlines, matching-radius comparisons, first passage and a separately
+assumed Poisson-center ensemble. The verification script passes 20 same-author
+engineering checks; the manifest script checks the packet hashes. The
+midpoint resonance alias and slow-tail/window sensitivities are retained
+in ATTEMPTS.md. These calculations do not establish formation, physical
+mixing, a complete local interaction rate or a cosmological 1% pass.
