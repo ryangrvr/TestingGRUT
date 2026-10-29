@@ -1,0 +1,62 @@
+PASS fine radial replay reaches t=20000
+PASS parent 0–1000 history reproduced
+PASS parent core checkpoint at t=10000: {'E20_mX': 0.0, 'Q20': 0.0}
+PASS parent core checkpoint at t=15000: {'E20_mX': 0.0, 'Q20': 0.0}
+PASS parent core checkpoint at t=20000: {'E20_mX': 0.0, 'Q20': 0.0}
+PASS radial conserved charge 0.1
+PASS radial energy plus absorber 0.1
+PASS radial conserved charge 0.05
+PASS radial energy plus absorber 0.05
+PASS radial conserved charge 0.025
+PASS radial energy plus absorber 0.025
+PASS early pressure mean changes with grid: [2.472361790682771, -1.814325916768705, -2.886312362970283]
+PASS early virial residual decreases under refinement: [5.157244881616038, 1.3301030051523015, 0.37443504127850247]
+PASS same-lattice stationary pressure approaches zero quadratically: [13.044560217340175, 3.2601270063467678, 0.8149685008267883]
+PASS late stress restart matches the saved core state
+PASS late pressure mean depends on window endpoints
+PASS monopole reproduces radial solver
+PASS angular budget quad02
+PASS angular budget quad01
+PASS angular budget quad005
+PASS angular budget quad_l6
+PASS angular budget quad_nq16
+PASS angular budget quad01_t1000
+PASS angular budget quad005_t1000
+PASS angular budget quad_l6_t1000
+PASS angular neutral l=2 radial refinement
+PASS angular neutral l=2 truncation control
+PASS neutral quadrupole fraction changes over time
+PASS modal Parseval axis_spec005
+PASS modal Parseval axis_spec005_t1000
+PASS modal Parseval axis_spec005_t1000_w100
+PASS modal Parseval axis_spec005_t1000_w500
+PASS synthetic Hankel decomposition axis_direction005_t1000
+PASS synthetic Hankel decomposition axis_direction005_t1000_k02
+PASS synthetic Hankel decomposition axis_direction005_t1000_k05
+PASS positive gradient proxy depends on cutoff: 0.0264788 vs 0.00352219
+PASS feedback pre-return agreement reflect_80
+PASS feedback cell is much denser than assumed cosmological density reflect_80
+PASS feedback energy conservation reflect_80
+PASS feedback pre-return agreement reflect_120
+PASS feedback cell is much denser than assumed cosmological density reflect_120
+PASS feedback energy conservation reflect_120
+PASS feedback pre-return agreement reflect160_retry
+PASS feedback cell is much denser than assumed cosmological density reflect160_retry
+PASS feedback energy conservation reflect160_retry
+PASS parent ledger closes with generator defect
+PASS timing injection energy matches and is covered timing_sensitivity_a40.json
+PASS timing ledger closes timing_sensitivity_a40.json
+PASS timing changes added work timing_sensitivity_a40.json
+PASS timing injection energy matches and is covered timing_sensitivity.json
+PASS timing ledger closes timing_sensitivity.json
+PASS timing changes added work timing_sensitivity.json
+PASS archived fine stress includes full t=20000
+53/53 checks passed
+
+Additional checks performed:
+- All 34 restored parent inputs match their Git blob IDs (code/check_inputs.py).
+- JSON and deliverable NPZ arrays contain only finite numeric values.
+- Both C++ programs compile with -O3 -std=c++17 -Wall -Wextra without warnings.
+- After clarifying non-physical output-loop indentation, 50-unit radial and axisymmetric history/trace outputs match earlier builds byte-for-byte.
+- Python sources compile, reproduce.sh passes bash -n, and diagnostics.png was rendered and visually inspected.
+- These checks were made by the implementation author; they are not independent replication.

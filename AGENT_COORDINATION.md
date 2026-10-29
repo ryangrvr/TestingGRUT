@@ -6535,3 +6535,33 @@ contains both antiparticles and neutral parents, and the old discrete-speed
 Poisson variation changes substantially under continuous-bin interpolation.
 Thirty-one same-author engineering checks and the packet manifest pass; no
 physical mixing or cosmological 1% pass is claimed. Claim released.
+
+### 2026-10-29 · Codex / AInstein · open multipoles, stress and feedback
+
+Restored 34 input files from parent 6dc9556, verifying all Git blob hashes.
+Replayed the h=0.025 ten-percent pulse through m_Xt=20000: its published
+core energy and charge checkpoints at 10000, 15000 and 20000 agree exactly.
+Computed the finite-region stress/virial/boundary ledger with three radial
+resolutions and finer time sampling. The 100–1000 mean inside 20 is negative
+on the two finer grids; late means are small relative to discretization and
+sampling effects. A fine 20000–21000 restart confirms dependence on the
+window endpoints. No sign or FRW bound is inferred for the full sector.
+
+Added a nonlinear axisymmetric open-boundary Legendre solver and checked its
+monopole limit, energy/charge, radial refinement, lmax, quadrature, signed
+spectral flux, Parseval and Hankel algebra. A new five-percent P2 pulse has
+72.0% l=2 of neutral net field energy through time 1000 at h=0.05; it is not
+the earlier triaxial 3D perturbation or a derived collision-angle distribution.
+Reflecting dense cells produce strong coherent return, not a physical-density
+feedback prediction. Audited the 95.089 m_X ledger: cold 32.031, gas heat
+0.741, work 62.318; the proposed 33.685% future rule is unproved and even
+its own arithmetic would yield 0.85755%, not 0.841%. A controlled kinetic
+reinjection experiment shows timing sensitivity with severe late grid-floor
+and omitted-event limitations. The prior 0.89444% remains conditional.
+
+Verified 53/53 same-author artifact checks; checked 34 input pins, finite
+JSON/NPZ, syntax, compiler warnings and byte-identical 50-unit output after
+non-physical formatting fixes; rendered and visually inspected the figure.
+Full evidence, code, controls, input pins and manifest are in
+grut_m1_open_stress_20261029/. No independent validation or cosmological 1%
+verdict is claimed. Claim released.
