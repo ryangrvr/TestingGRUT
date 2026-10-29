@@ -1,0 +1,132 @@
+{
+  "verification_kind": "same-author, method/normalization/control checks",
+  "checks": [
+    {
+      "name": "exact_inherited_pulse_history",
+      "pass": true,
+      "error": 0.0
+    },
+    {
+      "name": "inherited_scattering_and_reciprocity",
+      "pass": true,
+      "probability_difference": 1.9761969838327786e-14,
+      "reciprocity_error": 2.4764783830274624e-13,
+      "unitarity_error": 2.425837311723397e-13
+    },
+    {
+      "name": "independent_resonant_normalization",
+      "pass": true,
+      "thermal_error": 7.771561172376096e-16,
+      "sampled_finite_width_difference": 0.00018302207458820163
+    },
+    {
+      "name": "closed_two_state_exchange_no_grid_diffusion",
+      "pass": true,
+      "incident_E": 1.3874758255650288,
+      "matched_E": 3.1509168094698716,
+      "outside_pair_generator": 0.0,
+      "number_column_error": 0.0
+    },
+    {
+      "name": "analytic_jacobian_directional_check",
+      "pass": true,
+      "relative_error": 1.5311598079594548e-11
+    },
+    {
+      "name": "event_and_trajectory_ledgers",
+      "pass": true,
+      "event_energy_error": 1.1368683772161603e-13,
+      "invariant_relative_drift": 1.5147138453620229e-15,
+      "minimum_population": 4.5611214498391535e-27,
+      "charge_note": "Qcore is reconstructed algebraically, so charge closure alone is not an independent ODE test"
+    },
+    {
+      "name": "graded_translated_grid_refinement",
+      "pass": true,
+      "relative_changes_64_to_96": {
+        "Nplus": 0.0002193817123630204,
+        "Nminus": 0.0029651629705509386,
+        "gas_kinetic_mX": 0.00012072547531549738
+      },
+      "coarse_32": {
+        "tau": 1000.0,
+        "Nplus": 11682.169948338316,
+        "Nminus": 0.5596529073397547,
+        "Qcore": 188318.389704569,
+        "gas_energy_mX": 14202.77482209569,
+        "gas_kinetic_mX": 2520.0452208500333,
+        "gas_invariant_E_minus_Omega_Q": 3902.8596456118175,
+        "total_tangent_energy_mX": 191382.85775085771,
+        "core_charge_fraction": 0.941591948522845,
+        "positive_number_above_reverse_threshold": 9.572490890402445,
+        "tangent_cold_mass_excess_fraction": 0.007375797091621061,
+        "min_bin_number": 3.3241314567468527e-26,
+        "omitted_event_integral": 0.0010506205351301018
+      }
+    },
+    {
+      "name": "energy_support_and_elastic_angle_controls",
+      "pass": true,
+      "relative_changes": {
+        "translated_full_64_range": {
+          "Nplus": 2.703765500378097e-07,
+          "Nminus": 1.5669382702476753e-07,
+          "gas_kinetic_mX": 2.7135445779258305e-07
+        },
+        "translated_full_64_angles": {
+          "Nplus": 6.06685488024894e-06,
+          "Nminus": 6.710478894111915e-06,
+          "gas_kinetic_mX": 3.307217723014233e-06
+        }
+      },
+      "primary_omitted_event_integral": 0.0002719009059751081
+    },
+    {
+      "name": "gas_only_thermal_distribution_resolution",
+      "pass": true,
+      "rows": [
+        {
+          "channel": "resonant",
+          "T": 0.2,
+          "L1_residual_per_event": 0.005354296597364726
+        },
+        {
+          "channel": "identical_elastic",
+          "T": 0.2,
+          "L1_residual_per_event": 0.0021267900339656523
+        },
+        {
+          "channel": "resonant",
+          "T": 0.5,
+          "L1_residual_per_event": 0.0019278250684410159
+        },
+        {
+          "channel": "identical_elastic",
+          "T": 0.5,
+          "L1_residual_per_event": 0.0025916115593850654
+        }
+      ],
+      "meaning": "finite-grid residual per collision; not exact discrete detailed balance or a bound on every nonthermal history"
+    },
+    {
+      "name": "ODE_tolerance_control_on_aligned_mesh",
+      "pass": true,
+      "relative_change": 1.8225405118421634e-07
+    },
+    {
+      "name": "stationary_mass_BVP_and_initial_heat_remainder",
+      "pass": true,
+      "residual_energy_retained_mX": 419.3498474162416,
+      "frozen_profile_not_self_consistent": true
+    },
+    {
+      "name": "syntax_and_finite_saved_arrays",
+      "pass": true,
+      "python_files": 8
+    }
+  ],
+  "all_checks_pass": true,
+  "selection_of_numerical_tolerances": "engineering checks, not preregistered empirical evidence",
+  "independent_author_review": false,
+  "complete_cosmological_cleanup": false
+}

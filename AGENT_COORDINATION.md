@@ -6462,3 +6462,35 @@ Verificationactuallyrun:10/10same-authorgroups coveringcanonicalnormalization, f
 Before committing the scattering packet, checked the inverse source implied by its fast outgoingX. Generalized only the incident column of the same real symmetric radial matrix; all9archivedforwardmonopole probabilities recheck unchanged. Directpartialwaves throughl32give sigma_inverse=.30318/m² at matchedkbar1 vsforward2.75822/m²; per-fast-particle inverse/forwardrate.14755at sameobjectdensity. IncomingX->phi addsanother negative-particle sourceaftervacdecay when open. Fullopen-channelS matricesunitary/reciprocal<1e-13 and kbar²sigma_f=kX²sigma_r<2.6e-13relative. Inverseexchangeopens abovepositiveXenergy2.76344m, whichitsconvertedX exceed. ForwardGamma/H isnotnetcleanup.
 
 Updatedreport/derivation/Argonhandoff andfigurereviewerlabels toincludeinverseenergyresolvedterms. Thecoldcompletionassumptionsremainexplicitlyideal, includingcooling/redistribution suppressinginverses; no resultreclassifiedasactualcosmologicalerasure.11/11same-authorverificationgroups nowpass, addingfullmatrixreciprocity andforward-responseunchangedchecks. Twelveinheritedpins/oldgitdecayreference, finitearchives/JSON, syntax/locallinks andfinalmanifestauditpass. Rerendered/viewedthefigure. No M1parameter,oldhistory,scope/failurethresholdchanged. Claimreleased; finaladditivepublicationandboundedArgon/manualreviewhandoffauthorized.
+
+### 2026-10-28 · Codex / AInstein · reconstructed M1 forward/reverse kinetic diagnostic
+
+Ryan requested builder continuation and supplied a second shared conversation.
+Both shared pages were recovered; the latter confirms the stalled progress
+updates but exposes no unfinished solver or numerical arrays. Added
+research/reality_framework/grut_m1_kinetics_20261028/ from bf8ab3b on a new
+branch. Inherited inputs and M1 parameters are unchanged.
+
+Regenerated the 10% pulse history exactly. Implemented reciprocal core reactions,
+prompt neutral decay, leading resonant X Xbar redistribution counted once, and
+ordinary identical-charge elastic collisions with both daughter energies.
+At tau=1000 the primary fixed-profile experiment has Nbar=0.558941 from
+1695.0095, Nplus=11629.3892, Qcore/Q0=0.94185585, and gas kinetic energy
+2526.2895mX. Re-solved stationary cold-mass excess is 0.726635%, conditional on
+later cooling with unchanged composition. The original pulse/core/matching
+remainder 419.35mX is retained explicitly; its release is not evolved.
+
+Twelve same-author verification groups pass: exact source replay, inherited
+scattering and reciprocity, independent finite-width/thermal normalization,
+no-diffusion two-state exchange, Jacobian, energy/positivity, translated graded
+grid refinement, support/angular controls, gas thermal stationarity resolution,
+ODE tolerance, stationary BVP/heat ledger, and finite arrays/syntax. Fixed-core
+invariant drift 1.52e-15; 64-to-96 block refinement changes final Nplus 0.022%
+and Nbar 0.297%. Sampled finite-Q cross-section changes reach 7.54%, so a
+self-consistent evolving-Q/expansion history remains open. Preserved the
+rejected endpoint handling, arbitrary-grid diffusion, uniform-grid convergence
+and exploratory long runs. Rendered and inspected the scientific figure.
+
+Report, reproducible code/data, input pins, manifest, and bounded reviewer
+handoff prepared. No independent-author replication or final cosmological
+cleanup is claimed. Claim released.

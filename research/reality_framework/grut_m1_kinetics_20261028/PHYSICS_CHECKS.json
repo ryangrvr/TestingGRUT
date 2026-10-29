@@ -1,0 +1,145 @@
+{
+  "finite_width_comparison": [
+    {
+      "Ei": 1.4,
+      "Ej": 1.4,
+      "finite_width_sigma_v": 0.00834666686007872,
+      "narrow_width_sigma_v": 0.008348194764003494,
+      "relative_difference": -0.00018302207458820163
+    },
+    {
+      "Ei": 1.2,
+      "Ej": 2.0,
+      "finite_width_sigma_v": 0.005695806983256015,
+      "narrow_width_sigma_v": 0.005696677969839083,
+      "relative_difference": -0.0001528937720683965
+    },
+    {
+      "Ei": 1.5,
+      "Ej": 3.0,
+      "finite_width_sigma_v": 0.0011037181064218315,
+      "narrow_width_sigma_v": 0.0011038431406440112,
+      "relative_difference": -0.0001132717299912045
+    },
+    {
+      "Ei": 2.0,
+      "Ej": 4.0,
+      "finite_width_sigma_v": 0.00029267207912534593,
+      "narrow_width_sigma_v": 0.00029270061379336364,
+      "relative_difference": -9.748755784244612e-05
+    }
+  ],
+  "thermal_inverse_decay_normalization": [
+    {
+      "T": 0.15,
+      "inverse_decay_reaction_density": 2.194412012991842e-13,
+      "decay_reaction_density": 2.1944120129918437e-13,
+      "relative_error": -7.771561172376096e-16
+    },
+    {
+      "T": 0.3,
+      "inverse_decay_reaction_density": 2.228529525352713e-09,
+      "decay_reaction_density": 2.2285295253527138e-09,
+      "relative_error": -3.3306690738754696e-16
+    },
+    {
+      "T": 0.8,
+      "inverse_decay_reaction_density": 1.700919049512175e-06,
+      "decay_reaction_density": 1.7009190495121759e-06,
+      "relative_error": -4.440892098500626e-16
+    }
+  ],
+  "stationary_mass_checks": [
+    {
+      "case": "initial_stationary_core",
+      "Q": 201600.15013814188,
+      "Omega": 0.8813943857430724,
+      "stationary_energy_mX": 188890.62184958326,
+      "BVP_residual": 1.995755586864246e-09,
+      "tangent_energy_error_mX": 0.2614226628502365
+    },
+    {
+      "case": "translated_full_96",
+      "Q": 188371.16977028272,
+      "Omega": 0.8842125591665309,
+      "stationary_energy_mX": 177212.34524915842,
+      "BVP_residual": 1.9992799387529192e-09,
+      "tangent_energy_error_mX": 14.274945109966211,
+      "cold_mass_excess_fraction": 0.007266349849360809,
+      "tangent_cold_mass_excess_fraction": 0.007342491012440666
+    },
+    {
+      "case": "translated_full_64",
+      "Q": 188368.6195974273,
+      "Omega": 0.8842131306425746,
+      "stationary_energy_mX": 177210.0903535629,
+      "BVP_residual": 1.9993131593295807e-09,
+      "tangent_energy_error_mX": 14.281301040871767,
+      "cold_mass_excess_fraction": 0.007267942562312113,
+      "tangent_cold_mass_excess_fraction": 0.007344117627306801
+    },
+    {
+      "case": "aligned_full_64_long",
+      "Q": 190046.44034740157,
+      "Omega": 0.8838396160436661,
+      "stationary_energy_mX": 178693.3274562266,
+      "BVP_residual": 1.9983353548777676e-09,
+      "tangent_energy_error_mX": 10.413135452457936,
+      "cold_mass_excess_fraction": 0.00622414389902759,
+      "tangent_cold_mass_excess_fraction": 0.006279686546551089
+    }
+  ],
+  "source_energy_ledger": {
+    "pulse_initial_lattice_energy_mX": 191801.94737125497,
+    "reference_stationary_energy_mX": 187479.9981052459,
+    "outgoing_on_shell_spectral_energy_mX": 2491.9756742554664,
+    "recorded_probe_energy_mX": 2491.6597010230157,
+    "postpulse_stationary_core_energy_mX": 188890.62184958326,
+    "unprocessed_core_and_matching_energy_mX": 419.3498474162416,
+    "unprocessed_energy_over_reference": 0.0022367711310773033,
+    "caution": "This remainder is retained, not erased. Its release into the gas is uncomputed; it includes residual core excitation and finite-grid/spectral matching error."
+  },
+  "clock": {
+    "T_SM_GeV": 0.02,
+    "gstar": 10.75,
+    "gstar_entropy": 10.75,
+    "ncore_GeV3": 9.580745732664342e-19,
+    "ncore_over_mX3": 1.2141071422639381e-15,
+    "H_GeV": 1.7835852653582465e-22,
+    "H_mX2_over_ncore": 1.5897277738217889e-06,
+    "H_times_duration_tau1000": 0.001589727773821789,
+    "H_times_duration_tau10000": 0.015897277738217887,
+    "h_width_over_mX": 0.00018756589919939715,
+    "assumed_eta": 1,
+    "assumed_Q": 200000.0,
+    "formation_epoch_derived": false,
+    "max_sampled_h_core_conversion_over_vacuum_decay": 8.566790736645198e-10,
+    "maximum_resolved_MB_occupation": 4.642290901760076e-09
+  },
+  "finite_Q_kernel_sensitivity": [
+    {
+      "incident_antiparticle_k": 0.4,
+      "exchange_sigma_reference": 7.007507739776055,
+      "exchange_sigma_at_final_charge": 7.07946487474614,
+      "exchange_relative_change": 0.010268577309111127,
+      "neutral_sigma_reference": 0.0,
+      "neutral_sigma_at_final_charge": 0.0
+    },
+    {
+      "incident_antiparticle_k": 1.0,
+      "exchange_sigma_reference": 2.7582189758033517,
+      "exchange_sigma_at_final_charge": 2.705313037699141,
+      "exchange_relative_change": -0.01918119575288668,
+      "neutral_sigma_reference": 0.0,
+      "neutral_sigma_at_final_charge": 0.0
+    },
+    {
+      "incident_antiparticle_k": 1.5,
+      "exchange_sigma_reference": 1.4999053590224034,
+      "exchange_sigma_at_final_charge": 1.3868858143033915,
+      "exchange_relative_change": -0.07535111734828048,
+      "neutral_sigma_reference": 50.44452053654042,
+      "neutral_sigma_at_final_charge": 49.80710779372658
+    }
+  ]
+}
