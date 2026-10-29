@@ -1,0 +1,149 @@
+{
+  "configuration": {
+    "source": "source_t400",
+    "nv": 2001,
+    "dt": 10.0,
+    "chunk": 128,
+    "times": [
+      100000.0,
+      200000.0,
+      500000.0,
+      1000000.0,
+      10000000.0
+    ],
+    "tag": "mixing_cont_nv2001"
+  },
+  "source_time_width": 400.0,
+  "ncore_over_mX3": 1.2141071422639381e-15,
+  "rows": [
+    {
+      "mX_t": 100000.0,
+      "N_via_radial_integral": [
+        206.6902301694679,
+        1687.658813821487
+      ],
+      "N_via_source": [
+        206.69597736865722,
+        1687.6562663151212
+      ],
+      "relative_number_error": [
+        -2.780508485211719e-05,
+        1.509493619433755e-06
+      ],
+      "density_cv": [
+        0.6527106580760257,
+        1.1622253933223177
+      ],
+      "mean_density_product_ratio": 1.0459216013214125,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 200000.0,
+      "N_via_radial_integral": [
+        206.68041496796678,
+        1687.658218411432
+      ],
+      "N_via_source": [
+        206.69597736865722,
+        1687.6562663151212
+      ],
+      "relative_number_error": [
+        -7.52912605681555e-05,
+        1.1566907016646866e-06
+      ],
+      "density_cv": [
+        0.2731787281724951,
+        0.41067104333556187
+      ],
+      "mean_density_product_ratio": 1.0058146303301223,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 500000.0,
+      "N_via_radial_integral": [
+        206.64439646817482,
+        1687.680656006432
+      ],
+      "N_via_source": [
+        206.69597736865722,
+        1687.6562663151212
+      ],
+      "relative_number_error": [
+        -0.00024954960971690365,
+        1.4451812135884978e-05
+      ],
+      "density_cv": [
+        0.08963787495814508,
+        0.10385134557821947
+      ],
+      "mean_density_product_ratio": 1.0003665954314025,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 1000000.0,
+      "N_via_radial_integral": [
+        206.61418277400992,
+        1687.6540605540183
+      ],
+      "N_via_source": [
+        206.69597736865722,
+        1687.6562663151212
+      ],
+      "relative_number_error": [
+        -0.00039572417271294125,
+        -1.3069966597889504e-06
+      ],
+      "density_cv": [
+        0.04108724454371895,
+        0.03671189913161695
+      ],
+      "mean_density_product_ratio": 1.0000456384735423,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 10000000.0,
+      "N_via_radial_integral": [
+        206.84810607733286,
+        1687.6136560544953
+      ],
+      "N_via_source": [
+        206.69597736865722,
+        1687.6562663151212
+      ],
+      "relative_number_error": [
+        0.0007360022706406344,
+        -2.5248186776183346e-05
+      ],
+      "density_cv": [
+        0.001985136612646781,
+        0.0011608070701368631
+      ],
+      "mean_density_product_ratio": 1.0000000456567615,
+      "max_velocity": 0.9921567416492215
+    }
+  ],
+  "mono_shell_control": {
+    "mX_t": 10000000.0,
+    "velocity": 0.7,
+    "duration_mX_inverse": 200.0,
+    "radius_inner": 6999920.0125,
+    "radius_outer": 7000060.0125,
+    "effective_shell_core_count": 104.66217469037511,
+    "exact_poisson_cv": 0.0977473794008869,
+    "solid_ball_core_count": 1744374.5560411988,
+    "incorrect_ball_cv": 0.0007571468647843766
+  },
+  "asymptotic_check": {
+    "mX_t": 10000000000.0,
+    "density_cv": [
+      6.368930614714305e-08,
+      3.67072398884731e-08
+    ],
+    "source_total": [
+      206.69597736865722,
+      1687.6562663151212
+    ],
+    "scope": "Independent one-dimensional asymptotic integral for the same piecewise-linear source."
+  },
+  "scope": "Synchronous identical direct-primary sources with continuous piecewise-linear energy flux, flat bin endcaps, independent homogeneous Poisson centers, and free radial streaming. Daughters, interactions, physical wave matching, actual core correlations and source variation omitted. Pointwise CV is not a collision rate or a guarantee for every point."
+}

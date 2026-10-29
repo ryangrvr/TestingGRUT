@@ -1,0 +1,82 @@
+{
+  "configuration": {
+    "trace": ".work/late_h0025_trace.csv",
+    "width": 800.0,
+    "bins": 280,
+    "emax": 8.0,
+    "h": 0.025,
+    "probe": 60.0,
+    "tag": "late_h0025_t800"
+  },
+  "trace_sha256": "074984892bfe9a57cf886ff448728de639ab165eebb304f68fdd81a4be93fb11",
+  "samples": 40001,
+  "sample_dt_mX_inverse": 0.25,
+  "probe_actual_mX_inverse": 60.0125,
+  "window_partition_max_error": 4.440892098500626e-16,
+  "raw_flux": {
+    "charge": 50.972689898506474,
+    "charged_energy_mX": 130.2386062193665,
+    "neutral_energy_mX": 9.776934942041006
+  },
+  "partitioned_all_frequency_flux": {
+    "charge": 50.97268989850648,
+    "charged_energy_mX": 130.2386062193665,
+    "neutral_energy_mX": 9.77693494204101
+  },
+  "parseval_error": {
+    "charge": 7.105427357601002e-15,
+    "charged_energy_mX": 0.0,
+    "neutral_energy_mX": 3.552713678800501e-15
+  },
+  "species": {
+    "plus": {
+      "signed_number": 52.46658263082716,
+      "signed_energy_mX": 127.17008034747215,
+      "negative_bin_weight": 0.0021166949715759873,
+      "positive_projection_number": 52.468699325798745,
+      "outside_support": {
+        "number": 0.000266651255681941,
+        "energy_mX": 0.0026519826483967033
+      },
+      "split_k_gt_0.1": {
+        "out": 52.47404637830414,
+        "in": 0.00698331533425867,
+        "net_from_components": 52.467063062969885,
+        "net_direct": 52.46706306296986
+      }
+    },
+    "minus": {
+      "signed_number": 1.4919836900336638,
+      "signed_energy_mX": 3.178500577967869,
+      "negative_bin_weight": 0.0073409446115937985,
+      "positive_projection_number": 1.4993246346452576,
+      "outside_support": {
+        "number": -0.00016057383378439605,
+        "energy_mX": -0.0016592545766365785
+      },
+      "split_k_gt_0.1": {
+        "out": 1.5206368965604657,
+        "in": 0.03155563488185885,
+        "net_from_components": 1.489081261678607,
+        "net_direct": 1.4890812616786067
+      }
+    },
+    "neutral": {
+      "signed_number": 3.236630868415774,
+      "signed_energy_mX": 9.772117841955598,
+      "negative_bin_weight": 0.001097001879539921,
+      "positive_projection_number": 3.2377278702953145,
+      "outside_support": {
+        "number": 1.098532763252094e-05,
+        "energy_mX": 0.00010884970205855585
+      },
+      "split_k_gt_0.1": {
+        "out": 3.239746982853473,
+        "in": 0.002793076611109443,
+        "net_from_components": 3.2369539062423636,
+        "net_direct": 3.2368448228339024
+      }
+    }
+  },
+  "scope": "Time-frequency windowed radial field flux; positive projection is a model sensitivity, not a certified time-local particle flux. Off-shell, finite-window interference and missing earlier/later sources are retained as limitations."
+}

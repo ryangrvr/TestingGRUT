@@ -6523,3 +6523,15 @@ engineering checks; the manifest script checks the packet hashes. The
 midpoint resonance alias and slow-tail/window sensitivities are retained
 in ATTEMPTS.md. These calculations do not establish formation, physical
 mixing, a complete local interaction rate or a cosmological 1% pass.
+
+### 2026-10-29 · Codex / AInstein · M1 late-core and matching review
+
+Extended both radial resolutions from m_Xt=10000 to 20000, reproduced the
+3D disturbed initial states and early trace, tested flux matching and Poisson
+spectral assumptions, and reran the conditional expanding-core ledger with
+the late source and a recomputed held remainder. The fine 96-node modeled
+total is 0.89444%, conditional on the documented assumptions. The late source
+contains both antiparticles and neutral parents, and the old discrete-speed
+Poisson variation changes substantially under continuous-bin interpolation.
+Thirty-one same-author engineering checks and the packet manifest pass; no
+physical mixing or cosmological 1% pass is claimed. Claim released.

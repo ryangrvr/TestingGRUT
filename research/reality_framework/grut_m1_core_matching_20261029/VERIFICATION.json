@@ -1,0 +1,209 @@
+{
+  "same_author": true,
+  "independent_replication": false,
+  "checks": [
+    {
+      "name": "restart_state_h005",
+      "pass": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "late_energy_ledger_h005",
+      "pass": true,
+      "max_drift_mX": 0.03504603391047567
+    },
+    {
+      "name": "late_charge_ledger_h005",
+      "pass": true,
+      "max_drift": 1.3387762010097504e-08
+    },
+    {
+      "name": "late_antiparticle_neutral_window_stability_h005",
+      "pass": true,
+      "direct_antiparticles": [
+        1.6679635746373696,
+        1.6684658010092452,
+        1.665113607439586
+      ],
+      "neutral_parents": [
+        3.5869509379138633,
+        3.586849194376377,
+        3.5867860819979347
+      ],
+      "limitation": "Window stability is not a quantum particle identification or a bound on future emission."
+    },
+    {
+      "name": "restart_state_h0025",
+      "pass": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "name": "late_energy_ledger_h0025",
+      "pass": true,
+      "max_drift_mX": 0.008098373567918316
+    },
+    {
+      "name": "late_charge_ledger_h0025",
+      "pass": true,
+      "max_drift": 4.156026989221573e-08
+    },
+    {
+      "name": "late_antiparticle_neutral_window_stability_h0025",
+      "pass": true,
+      "direct_antiparticles": [
+        1.5024338639660062,
+        1.502851403167834,
+        1.4993246346452576
+      ],
+      "neutral_parents": [
+        3.237887511505292,
+        3.2377893036291225,
+        3.2377278702953145
+      ],
+      "limitation": "Window stability is not a quantum particle identification or a bound on future emission."
+    },
+    {
+      "name": "shell_energy_flux_consistency",
+      "pass": true,
+      "delta_energy_mX": 1.032604352936377,
+      "in_minus_out_integrated_probe_energy_mX": 1.0349893559599366,
+      "energy_residual_boundary_matching_mX": -0.0023850030235594843
+    },
+    {
+      "name": "shell_charge_flux_consistency",
+      "pass": true,
+      "delta_charge": 0.29545380735427174,
+      "in_minus_out_integrated_probe_charge": 0.2940561013701881,
+      "charge_residual_boundary_matching": 0.0013977059840836192
+    },
+    {
+      "name": "source_remainder_identity_h005_64",
+      "pass": true,
+      "error_mX": 0.0
+    },
+    {
+      "name": "transport_ledger_h005_64",
+      "pass": true,
+      "max_energy_plus_work_minus_generator_defect_drift_mX": 1.2971577234566212e-06,
+      "minimum_saved_population": -8.670313660155738e-11,
+      "max_generator_defect": 1.7053025658242404e-13
+    },
+    {
+      "name": "source_remainder_identity_h005_96",
+      "pass": true,
+      "error_mX": 0.0
+    },
+    {
+      "name": "transport_ledger_h005_96",
+      "pass": true,
+      "max_energy_plus_work_minus_generator_defect_drift_mX": 6.011105142533779e-07,
+      "minimum_saved_population": -9.384051803823344e-11,
+      "max_generator_defect": 1.7053025658242404e-13
+    },
+    {
+      "name": "source_remainder_identity_h0025_64",
+      "pass": true,
+      "error_mX": 0.0
+    },
+    {
+      "name": "transport_ledger_h0025_64",
+      "pass": true,
+      "max_energy_plus_work_minus_generator_defect_drift_mX": 1.2206437531858683e-06,
+      "minimum_saved_population": -8.971892458957912e-11,
+      "max_generator_defect": 1.7053025658242404e-13
+    },
+    {
+      "name": "source_remainder_identity_h0025_96",
+      "pass": true,
+      "error_mX": 0.0
+    },
+    {
+      "name": "transport_ledger_h0025_96",
+      "pass": true,
+      "max_energy_plus_work_minus_generator_defect_drift_mX": 8.47328919917345e-07,
+      "minimum_saved_population": -3.012615300304338e-11,
+      "max_generator_defect": 1.7053025658242404e-13
+    },
+    {
+      "name": "mass_decomposition_parent",
+      "pass": true,
+      "error_percent": 5.156477467238574e-10
+    },
+    {
+      "name": "mass_decomposition_through_20000",
+      "pass": true,
+      "error_percent": -1.6653345369377348e-15
+    },
+    {
+      "name": "late_transport_energy_node_comparison",
+      "pass": true,
+      "percent_64": 0.8935965411088542,
+      "percent_96": 0.8944364105298863
+    },
+    {
+      "name": "3d_initial_and_archived_trace",
+      "pass": true,
+      "max_common_time_relative_difference": 0.0,
+      "limitation": "Same numerical code and same initial data; not independent replication."
+    },
+    {
+      "name": "3d_conservation",
+      "pass": true,
+      "max_relative_energy_drift": 2.3069437138367732e-08,
+      "max_relative_charge_drift": 7.440714711037799e-13
+    },
+    {
+      "name": "angular_quadrature_orthonormality",
+      "pass": true,
+      "max_error": 7.327471962526033e-15
+    },
+    {
+      "name": "angular_snapshot_precision_at_r20",
+      "pass": true,
+      "max_l2_fraction_difference": 1.7842457707417658e-06
+    },
+    {
+      "name": "weak_neutral_difference_requires_double_snapshot",
+      "pass": true,
+      "power_float32": 0.0,
+      "power_float64": 1.1389570826232065e-15,
+      "limitation": "This precision contrast does not establish physical signal accuracy at such a small amplitude."
+    },
+    {
+      "name": "continuous_mixing_number_and_radius_resolution",
+      "pass": true,
+      "max_number_error": 7.541206750061313e-06,
+      "max_cv_relative_difference": 5.164297829873821e-05
+    },
+    {
+      "name": "continuous_mixing_asymptotic_control",
+      "pass": true,
+      "relative_difference": 0.00043468025204285166,
+      "finite": [
+        6.366162166349457e-08,
+        3.6707189146613915e-08
+      ],
+      "asymptotic": [
+        6.368930614714305e-08,
+        3.67072398884731e-08
+      ]
+    },
+    {
+      "name": "discrete_shell_sweep_vs_parent_spatial_grid",
+      "pass": true,
+      "max_relative_difference": 0.00016862433239572816
+    },
+    {
+      "name": "mono_speed_shell_vs_direct_radial_quad",
+      "pass": true,
+      "relative_difference": 1.1102230246251565e-16
+    },
+    {
+      "name": "clock_conversion",
+      "pass": true,
+      "optical_time_one_mX_t": 823650537246083.6
+    }
+  ],
+  "all_pass": true,
+  "scope": "Checks code consistency and selected numerical controls, not the physical angular distribution, quantum source positivity, mixing, future emission, formation, or a cosmological 1% verdict."
+}

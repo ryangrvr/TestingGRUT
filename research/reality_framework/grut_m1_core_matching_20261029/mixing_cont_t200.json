@@ -1,0 +1,105 @@
+{
+  "configuration": {
+    "source": "source_t200",
+    "nv": 4001,
+    "dt": 10.0,
+    "chunk": 128,
+    "times": [
+      100000.0,
+      1000000.0,
+      10000000.0
+    ],
+    "tag": "mixing_cont_t200"
+  },
+  "source_time_width": 200.0,
+  "ncore_over_mX3": 1.2141071422639381e-15,
+  "rows": [
+    {
+      "mX_t": 100000.0,
+      "N_via_radial_integral": [
+        205.51616538000556,
+        1685.5181975811465
+      ],
+      "N_via_source": [
+        205.51587346488216,
+        1685.5182119189117
+      ],
+      "relative_number_error": [
+        1.4204018330410406e-06,
+        -8.506443327505053e-09
+      ],
+      "density_cv": [
+        0.6501380665016121,
+        1.1419752019185643
+      ],
+      "mean_density_product_ratio": 1.045036654855555,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 1000000.0,
+      "N_via_radial_integral": [
+        205.52037618451806,
+        1685.52106632886
+      ],
+      "N_via_source": [
+        205.51587346488216,
+        1685.5182119189117
+      ],
+      "relative_number_error": [
+        2.190935210988343e-05,
+        1.6934910154198235e-06
+      ],
+      "density_cv": [
+        0.04014012366004643,
+        0.03607930016301198
+      ],
+      "mean_density_product_ratio": 1.0000447261944567,
+      "max_velocity": 0.9921567416492215
+    },
+    {
+      "mX_t": 10000000.0,
+      "N_via_radial_integral": [
+        205.502588826249,
+        1685.5193702328488
+      ],
+      "N_via_source": [
+        205.51587346488216,
+        1685.5182119189117
+      ],
+      "relative_number_error": [
+        -6.464045043919064e-05,
+        6.872153197612363e-07
+      ],
+      "density_cv": [
+        0.0017767812660544533,
+        0.0011408253002286864
+      ],
+      "mean_density_product_ratio": 1.000000044741694,
+      "max_velocity": 0.9921567416492215
+    }
+  ],
+  "mono_shell_control": {
+    "mX_t": 10000000.0,
+    "velocity": 0.7,
+    "duration_mX_inverse": 200.0,
+    "radius_inner": 6999920.0125,
+    "radius_outer": 7000060.0125,
+    "effective_shell_core_count": 104.66217469037511,
+    "exact_poisson_cv": 0.0977473794008869,
+    "solid_ball_core_count": 1744374.5560411988,
+    "incorrect_ball_cv": 0.0007571468647843766
+  },
+  "asymptotic_check": {
+    "mX_t": 10000000000.0,
+    "density_cv": [
+      5.6615601966759166e-08,
+      3.6075708905060486e-08
+    ],
+    "source_total": [
+      205.51587346488216,
+      1685.5182119189117
+    ],
+    "scope": "Independent one-dimensional asymptotic integral for the same piecewise-linear source."
+  },
+  "scope": "Synchronous identical direct-primary sources with continuous piecewise-linear energy flux, flat bin endcaps, independent homogeneous Poisson centers, and free radial streaming. Daughters, interactions, physical wave matching, actual core correlations and source variation omitted. Pointwise CV is not a collision rate or a guarantee for every point."
+}
