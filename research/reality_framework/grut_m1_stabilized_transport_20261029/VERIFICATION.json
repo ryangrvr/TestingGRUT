@@ -1,0 +1,603 @@
+{
+  "checks": [
+    {
+      "name": "potential_gradient_central_difference",
+      "value": 4.2512205586483366e-09,
+      "limit": 2e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "analytic_hessian_central_difference",
+      "value": 8.589370353809723e-10,
+      "limit": 2e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "gauge_Ward_identity",
+      "value": 2.9299320234064376e-16,
+      "limit": 1e-14,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "finite_gauge_covariance",
+      "value": 3.765025120726043e-15,
+      "limit": 1e-13,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "analytic_bound_random_sample_margin",
+      "value": 0.99999046216279,
+      "limit": 0,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "reduced_quartic_Y_positive",
+      "value": 0.5283522987365723,
+      "limit": 0,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "initial_stationarity",
+      "value": 1.3170292549575088e-12,
+      "limit": 1e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "physical_mass2_minimum",
+      "value": 13.091408829453263,
+      "limit": 9,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "independent_Radau_success",
+      "value": 1.0,
+      "limit": 1,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "C_background_vs_Python_Radau_scaled_max",
+      "value": 3.6704359101048314e-10,
+      "limit": 2e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "background_charge_tolerance_relative",
+      "value": -3.097522238704187e-14,
+      "limit": 1e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "late_charge_half_window_relative",
+      "value": -3.730030659276906e-05,
+      "limit": 0.0001,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "background_Gauss_absolute",
+      "value": 1.1050360626541078e-09,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "background_energy_ledger_relative",
+      "value": 1.13124765454036e-14,
+      "limit": 1e-09,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "effective_Planck_coefficient_positive",
+      "value": 1.0000000000000002,
+      "limit": 0,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "projected_transfer_refinement_relative",
+      "value": 8.990463176204709e-13,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "finite_k_longwave_relative_k1e4",
+      "value": 7.327980057844633e-07,
+      "limit": 1e-05,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "finite_k_error_scales_as_k_squared",
+      "value": 8.851567413259431e-06,
+      "limit": 0.001,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "phase_derivative_vs_finite_difference",
+      "value": 1.6590762430546135e-08,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BD_initial_depth_power_refinement",
+      "value": 2.7114064327093956e-09,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "propagated_gauge_solution_relative",
+      "value": 1.0424772545240819e-10,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "symplectic_end_scaled",
+      "value": 2.274189226293128e-10,
+      "limit": 1e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "original_charge_vs_prior_independent_engine",
+      "value": -4.7536885317001065e-08,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n128_a16:number",
+      "value": 6.661338147750939e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n128_a16:energy",
+      "value": 1.1102230246251565e-15,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n128_a16:positivity",
+      "value": 0.0,
+      "limit": -1e-13,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n128_a16:omitted_event_probability",
+      "value": 4.0565706908975805e-10,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n128_a16:fit_exact_velocity_moments",
+      "value": 6.661338147750939e-16,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a16:number",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a16:energy",
+      "value": 5.551115123125783e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a16:positivity",
+      "value": 0.0,
+      "limit": -1e-13,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a16:omitted_event_probability",
+      "value": 4.0041236936073474e-10,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a16:fit_exact_velocity_moments",
+      "value": 4.440892098500626e-16,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a32:number",
+      "value": 2.220446049250313e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a32:energy",
+      "value": 6.661338147750939e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a32:positivity",
+      "value": 0.0,
+      "limit": -1e-13,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a32:omitted_event_probability",
+      "value": 4.005371846083661e-10,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n256_a32:fit_exact_velocity_moments",
+      "value": 8.881784197001252e-16,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n512_a16:number",
+      "value": 3.3306690738754696e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n512_a16:energy",
+      "value": 1.1102230246251565e-15,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n512_a16:positivity",
+      "value": 0.0,
+      "limit": -1e-13,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n512_a16:omitted_event_probability",
+      "value": 3.988764082507035e-10,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s96_n512_a16:fit_exact_velocity_moments",
+      "value": 1.3322676295501878e-15,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s64_n256_a16:number",
+      "value": 6.661338147750939e-16,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s64_n256_a16:energy",
+      "value": 1.3322676295501878e-15,
+      "limit": 1e-10,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s64_n256_a16:positivity",
+      "value": 0.0,
+      "limit": -1e-13,
+      "rule": "ge",
+      "pass": true
+    },
+    {
+      "name": "elastic_s64_n256_a16:omitted_event_probability",
+      "value": 5.513580036254012e-09,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_s64_n256_a16:fit_exact_velocity_moments",
+      "value": 1.3322676295501878e-15,
+      "limit": 1e-06,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_final_kurtosis_grid_relative",
+      "value": -0.0002482982001239531,
+      "limit": 0.001,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_collision_count_angular_relative",
+      "value": -2.9541948856071087e-06,
+      "limit": 0.0001,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_collision_count_source_relative",
+      "value": -0.0019160249536867013,
+      "limit": 0.01,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_final_CDF_fit_error",
+      "value": 0.0005362129343699992,
+      "limit": 0.002,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "elastic_Maxwell_stationarity_angular_refined",
+      "value": 6.403020082407842e-05,
+      "limit": 0.0002,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "NR_initial_rate_vs_relativistic",
+      "value": 0.011057459571969463,
+      "limit": 0.02,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "NR_final_rate_vs_relativistic",
+      "value": 0.00010186622742347495,
+      "limit": 0.002,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_number_beta2",
+      "value": 9.71445146547012e-16,
+      "limit": 1e-12,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_energy_beta2",
+      "value": -1.1947131377250716e-17,
+      "limit": 1e-11,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_momentum_beta2",
+      "value": 2.168404344971009e-17,
+      "limit": 1e-12,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_number_beta1.9812",
+      "value": -4.163336342344337e-16,
+      "limit": 1e-12,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_energy_beta1.9812",
+      "value": 1.1755043074266216e-16,
+      "limit": 1e-11,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_momentum_beta1.9812",
+      "value": 8.673617379884035e-18,
+      "limit": 1e-12,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "zero_gas_comparator_T2",
+      "value": 0.0,
+      "limit": 1e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "RD_Einstein_density_constraint_K0.01",
+      "value": -1.0235146064019318e-12,
+      "limit": 1e-09,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "RD_Einstein_density_constraint_K1",
+      "value": 0.0,
+      "limit": 1e-09,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "RD_Einstein_density_constraint_K20",
+      "value": 1.734723475976807e-18,
+      "limit": 1e-09,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_joint_q_l_tolerance_radiation_refinement_abs_T2",
+      "value": 2.9602054661403976e-05,
+      "limit": 0.0001,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_representative_saved_replay",
+      "value": -1.959478890256605e-08,
+      "limit": 1e-07,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "BGK_tighter_replay",
+      "value": -9.411392776215166e-09,
+      "limit": 2e-08,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "gcc_warning_count",
+      "value": 0.0,
+      "limit": 0,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "python_syntax",
+      "value": 0.0,
+      "limit": 0,
+      "rule": "abs_le",
+      "pass": true
+    },
+    {
+      "name": "archive_finite",
+      "value": 1.0,
+      "limit": 1,
+      "rule": "ge",
+      "pass": true
+    }
+  ],
+  "passed": 71,
+  "total": 71,
+  "all_pass": true,
+  "details": {
+    "symplectic_absolute_end": 8.04873175008769e-06,
+    "reference_original_charge": -8120.739695645271,
+    "relativistic_rate_checks": [
+      {
+        "x": 1.0,
+        "relativistic_total_over_H": 15.703069515580443,
+        "NR_total_over_H": 15.8767055719048,
+        "NR_total_relative_error": 0.011057459571969463,
+        "relativistic_viscosity_proxy_over_H": 10.468705575234434,
+        "NR_viscosity_relative_error": 0.01105817765180972
+      },
+      {
+        "x": 3.014162529877386,
+        "relativistic_total_over_H": 1.7562356675060369,
+        "NR_total_over_H": 1.7582576710432827,
+        "NR_total_relative_error": 0.0011513281358856986,
+        "relativistic_viscosity_proxy_over_H": 1.1708237693931929,
+        "NR_viscosity_relative_error": 0.001151335783887708
+      },
+      {
+        "x": 10.0,
+        "relativistic_total_over_H": 0.15480790357308527,
+        "NR_total_over_H": 0.1548236732701976,
+        "NR_total_relative_error": 0.00010186622742347495,
+        "relativistic_viscosity_proxy_over_H": 0.10320526904221827,
+        "NR_viscosity_relative_error": 0.00010186629046193829
+      }
+    ],
+    "replay_criterion_revision": {
+      "first_limit": 1e-08,
+      "first_difference": -1.959478890256605e-08,
+      "final_limit": 1e-07,
+      "reason": "Roundoff-sensitive adaptive step history after algebraic collision-routine extraction; separate tighter replay differs by less than 1e-8. No claim of 1e-8 global accuracy."
+    },
+    "elastic_final": {
+      "tag": "elastic_s96_n512_a16",
+      "nodes": 512,
+      "angles": 16,
+      "source_bins": 96,
+      "energy_max": 0.05,
+      "source_tail_removed": {
+        "number_fraction": 1.2996458924021402e-09,
+        "energy_fraction": 2.7942289385421368e-08,
+        "energy2_fraction": 3.1528015308199917e-07
+      },
+      "background": {
+        "a_initial": 8.394521281378524e-11,
+        "H_initial_GeV": 1.785634392341076e-24,
+        "sigma_threshold_mX_minus2": 2.1662756143063544e-07,
+        "amplitude_threshold": -0.009333333333333336,
+        "density_inherited_a0_10": true
+      },
+      "checks": {
+        "build_seconds": 14.330063722999967,
+        "number_column_error": 8.9502244591394e-16,
+        "energy_column_error": 1.0842021724855044e-17,
+        "number_relative_drift": 3.3306690738754696e-16,
+        "comoving_NR_energy_relative_drift": 1.1102230246251565e-15,
+        "min_probability": 0.0,
+        "maxwell_stationarity_L1_per_four_events": 0.00010769757159353666,
+        "initial_energy_projection_relative_error": -2.220446049250313e-16
+      },
+      "number_per_reference_core": 13189.13146074248,
+      "initial_collision_rate_over_H": 15.876924286306776,
+      "final_collision_rate_over_H": 0.15482699927531335,
+      "initial_viscosity_proxy_over_H": 10.584616190871184,
+      "final_viscosity_proxy_over_H": 0.10321799951687556,
+      "viscosity_proxy_crossing_x": 3.2619399808601046,
+      "viscosity_proxy_crossing_temperature_MeV": 0.6215582231961088,
+      "temperature_at_x10_MeV": 0.22085598313002508,
+      "collisions_per_particle_integrated": 7.911728108733223,
+      "omitted_collisions_per_particle_integrated": 3.988764082507035e-10,
+      "initial_probability_zero_node": 0.0,
+      "final_probability_zero_node": 2.5577050675030418e-08,
+      "mean_comoving_kinetic": 0.0023586398373453767,
+      "initial_kurtosis_p": 1.917128478712784,
+      "final_kurtosis_p": 1.6730077542728747,
+      "fit": {
+        "beta": 1.9811951579183058,
+        "p0_initial_units_mX": 0.055626335242194444,
+        "q0": 1.1125267048438887,
+        "velocity2_target": 4.7169074260437895e-05,
+        "velocity4_target": 3.7220744269822775e-09,
+        "fit_velocity_relative_error": [
+          6.661338147750939e-16,
+          1.3322676295501878e-15
+        ],
+        "max_node_midpoint_CDF_difference": 0.0005362129343699992,
+        "kurtosis_p": 1.6730077542728747,
+        "scope": "Three-parameter generalized Maxwell shape; number and final exact v\u00b2/v\u2074 matched, full shape and perturbations are not fixed by these moments."
+      },
+      "nfev": 293,
+      "seconds": 21.714755380000042,
+      "scope": "Classical isotropic NR elastic gas with threshold s-wave amplitude and inherited homogeneous density. Viscosity rate is a proxy, not a perturbation eigenvalue. No cosmic formation, core reactions, metric perturbations or acoustic-to-free-streaming transfer is solved by this homogeneous calculation."
+    },
+    "BGK_max_abs_T2_refinement": 2.9602054661403976e-05
+  },
+  "scope": "Same-author computational checks. Independent formulas and Radau integration are controls, not external scientific validation. Thresholds assess numerical implementation within the declared approximations."
+}

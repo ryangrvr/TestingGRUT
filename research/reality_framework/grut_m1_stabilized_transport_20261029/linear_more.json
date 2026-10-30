@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "k_Mpc_inverse": 100000.0,
+      "nq": 96,
+      "Lmax": 260,
+      "collision_multiplier": 1,
+      "radiation_average_K": 450.0,
+      "initial_thermal_seed": 0.6666666666666666,
+      "rtol": 1e-08,
+      "fgas_of_matter": 0.058767411685782034,
+      "T2_z0": 0.8930822838242916,
+      "T2_equality": 0.8958948203805565,
+      "initial_k_over_aH": 4.266261269205941,
+      "nfev": 27694,
+      "seconds": 10.640357197999947
+    },
+    {
+      "k_Mpc_inverse": 300000.0,
+      "nq": 96,
+      "Lmax": 260,
+      "collision_multiplier": 1,
+      "radiation_average_K": 450.0,
+      "initial_thermal_seed": 0.6666666666666666,
+      "rtol": 1e-08,
+      "fgas_of_matter": 0.058767411685782034,
+      "T2_z0": 0.8497788934566803,
+      "T2_equality": 0.8668452284986553,
+      "initial_k_over_aH": 12.798783807617824,
+      "nfev": 22063,
+      "seconds": 8.984890996999866
+    },
+    {
+      "k_Mpc_inverse": 1000000.0,
+      "nq": 96,
+      "Lmax": 260,
+      "collision_multiplier": 1,
+      "radiation_average_K": 450.0,
+      "initial_thermal_seed": 0.6666666666666666,
+      "rtol": 1e-08,
+      "fgas_of_matter": 0.058767411685782034,
+      "T2_z0": 0.7640781712342791,
+      "T2_equality": 0.8343764837145938,
+      "initial_k_over_aH": 42.66261269205941,
+      "nfev": 21970,
+      "seconds": 7.637557318000063
+    }
+  ],
+  "scope": "Conditional parsec-scale response with a conserving BGK gas hierarchy.\n\nThis is an explicitly simplified test cosmology, NOT the full M1 power\nspectrum: prescribed adiabatic formation matching at 2 MeV; all other matter\n(including baryons) cold; radiation a single barotropic perfect fluid;\nMaxwell gas with the measured second moment; relaxation-time collision\noperator matched to the homogeneous viscosity proxy, not the exact XX\nlinearized collision integral. Radiation oscillations are averaged after a\ncontrolled k/(aH) threshold. Phi=Psi; gas gravitational anisotropic stress\nand O(v\u00b2) background-energy corrections are neglected.\n",
+  "background_parameters": {
+    "h": 0.674,
+    "Omega_m": 0.315,
+    "Omega_r": 9.206480043488026e-05,
+    "a_initial": 8.394521281378524e-11,
+    "sigma2_comoving_initial_mX": 0.0015724265582302511,
+    "gas_fraction_of_total_matter": 0.058767411685782034
+  },
+  "columns": [
+    "ln(a/a_initial)",
+    "delta_mixture",
+    "delta_cold_comparator",
+    "delta_gas",
+    "T2"
+  ]
+}

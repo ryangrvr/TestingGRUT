@@ -1,0 +1,61 @@
+{
+  "tag": "elastic_s96_n128_a16",
+  "nodes": 128,
+  "angles": 16,
+  "source_bins": 96,
+  "energy_max": 0.05,
+  "source_tail_removed": {
+    "number_fraction": 1.2996458924021402e-09,
+    "energy_fraction": 2.7942289385421368e-08,
+    "energy2_fraction": 3.1528015308199917e-07
+  },
+  "background": {
+    "a_initial": 8.394521281378524e-11,
+    "H_initial_GeV": 1.785634392341076e-24,
+    "sigma_threshold_mX_minus2": 2.1662756143063544e-07,
+    "amplitude_threshold": -0.009333333333333336,
+    "density_inherited_a0_10": true
+  },
+  "checks": {
+    "build_seconds": 0.4353854109999702,
+    "number_column_error": 3.4669397344297415e-16,
+    "energy_column_error": 6.938893903907228e-18,
+    "number_relative_drift": 6.661338147750939e-16,
+    "comoving_NR_energy_relative_drift": 1.1102230246251565e-15,
+    "min_probability": 0.0,
+    "maxwell_stationarity_L1_per_four_events": 0.0002829428430375904,
+    "initial_energy_projection_relative_error": -2.220446049250313e-16
+  },
+  "number_per_reference_core": 13189.13146074248,
+  "initial_collision_rate_over_H": 15.87591063684467,
+  "final_collision_rate_over_H": 0.15481250856575965,
+  "initial_viscosity_proxy_over_H": 10.583940424563114,
+  "final_viscosity_proxy_over_H": 0.10320833904383976,
+  "viscosity_proxy_crossing_x": 3.261788756647885,
+  "viscosity_proxy_crossing_temperature_MeV": 0.6215861417975476,
+  "temperature_at_x10_MeV": 0.22085598313002508,
+  "collisions_per_particle_integrated": 7.911045279254664,
+  "omitted_collisions_per_particle_integrated": 4.0565706908975805e-10,
+  "initial_probability_zero_node": 0.0186720904188153,
+  "final_probability_zero_node": 8.056351275952563e-05,
+  "mean_comoving_kinetic": 0.002358639837345379,
+  "initial_kurtosis_p": 1.9181590706954843,
+  "final_kurtosis_p": 1.6751051379252924,
+  "fit": {
+    "beta": 1.9750701105302624,
+    "p0_initial_units_mX": 0.055477316532191734,
+    "q0": 1.1095463306438347,
+    "velocity2_target": 4.7169069594447266e-05,
+    "velocity4_target": 3.726739157926711e-09,
+    "fit_velocity_relative_error": [
+      6.661338147750939e-16,
+      0.0
+    ],
+    "max_node_midpoint_CDF_difference": 0.0010147097497442553,
+    "kurtosis_p": 1.6751051379252937,
+    "scope": "Three-parameter generalized Maxwell shape; number and final exact v\u00b2/v\u2074 matched, full shape and perturbations are not fixed by these moments."
+  },
+  "nfev": 293,
+  "seconds": 1.3132192919999852,
+  "scope": "Classical isotropic NR elastic gas with threshold s-wave amplitude and inherited homogeneous density. Viscosity rate is a proxy, not a perturbation eigenvalue. No cosmic formation, core reactions, metric perturbations or acoustic-to-free-streaming transfer is solved by this homogeneous calculation."
+}

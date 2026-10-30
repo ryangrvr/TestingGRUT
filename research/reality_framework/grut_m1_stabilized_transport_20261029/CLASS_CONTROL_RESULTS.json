@@ -1,0 +1,63 @@
+{
+  "scope": "CLASS collisionless, adiabatic back-extrapolation controls; no formation matching or self-scattering; not the M1 spectrum.",
+  "rows": [
+    {
+      "tag": "warmrk20",
+      "k_h_Mpc_inverse": 1.0,
+      "power_ratio": 1.0000031575793498
+    },
+    {
+      "tag": "warmrk20",
+      "k_h_Mpc_inverse": 10.0,
+      "power_ratio": 1.0000035929978814
+    },
+    {
+      "tag": "warmrk120",
+      "k_h_Mpc_inverse": 1.0,
+      "power_ratio": 1.0000014370883465
+    },
+    {
+      "tag": "warmrk120",
+      "k_h_Mpc_inverse": 10.0,
+      "power_ratio": 1.0000015101979214
+    }
+  ],
+  "attempts": [
+    {
+      "tag": "coldmicro",
+      "status": "timeout",
+      "seconds": 240.0017649360002,
+      "log_tail": ""
+    },
+    {
+      "tag": "warmmicro",
+      "status": 1,
+      "seconds": 104.11548622700002,
+      "log_tail": "Reading input parameters\n -> matched budget equations by adjusting Omega_Lambda = 0.686442\nComputing sources (optimal Boltzmann hierarchy)\n\n\nError in perturbations_init \n=>operator()(L:1047) :error in perturbations_solve(ppr, pba, pth, ppt, index_md, index_ic, index_k, &pw);\n=>perturbations_solve(L:3237) :error in generic_evolver(perturbations_derivs, interval_limit[index_interval], interval_limit[index_interval+1], ppw->pv->y, ppw->pv->used_in_sources, ppw->pv->pt_size, &ppaw, ppr->tol_perturbations_integration, ppr->smallest_allowed_variation, perturbations_timescale, ppr->perturbations_integration_stepsize, ppt->tau_sampling, tau_actual_size, perturbations_sources, perhaps_print_variables, ppt->error_message);\n=>evolver_ndf15(L:497) :condition (absh <= hmin) is true; Step size too small: step:5.83705e-13, minimum:5.83705e-13, in interval: [0.14041:364.816]\n\n"
+    },
+    {
+      "tag": "coldrk20",
+      "status": 0,
+      "seconds": 3.125110553000013,
+      "log_tail": "Reading input parameters\n -> matched budget equations by adjusting Omega_Lambda = 0.686442\nComputing sources (optimal Boltzmann hierarchy)\n"
+    },
+    {
+      "tag": "warmrk20",
+      "status": 0,
+      "seconds": 11.89816165000002,
+      "log_tail": "Reading input parameters\n -> matched budget equations by adjusting Omega_Lambda = 0.686442\nComputing sources (optimal Boltzmann hierarchy)\n"
+    },
+    {
+      "tag": "coldrk_refined",
+      "status": 0,
+      "seconds": 3.2741878969999902,
+      "log_tail": "Reading input parameters\n -> matched budget equations by adjusting Omega_Lambda = 0.686442\nComputing sources (optimal Boltzmann hierarchy)\n"
+    },
+    {
+      "tag": "warmrk120",
+      "status": 0,
+      "seconds": 15.610754251999992,
+      "log_tail": "Reading input parameters\n -> matched budget equations by adjusting Omega_Lambda = 0.686442\nComputing sources (optimal Boltzmann hierarchy)\n"
+    }
+  ]
+}

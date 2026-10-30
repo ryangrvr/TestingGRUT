@@ -6606,3 +6606,37 @@ convergence, finite arrays and syntax. Recomputed the inexpensive numerical
 steps, inspected the figure, and verified the SHA-256 packet manifest. No
 independent reproduction or complete cosmological/quantum theory is claimed.
 Claim released; additive branch publication is authorized.
+
+### 2026-10-29 · Codex / AInstein · bounded cubic holder and conditional interacting transport
+
+Added `research/reality_framework/grut_m1_stabilized_transport_20261029/`
+from parent 94f660d0. The dimension-five R Sigma* Y^2 holder has an explicit
+fixed-curvature scalar lower bound including the mixed quartic. The selected
+complex coefficient encodes -pi/2 and gives five scalar mass-squared values
+above 13 Hi^2. Reheating yields +1.80645% charge and a conditional -1.18646%
+Hi refit at fixed mass per charge. This is not a UV completion or state law.
+
+Propagated an assumed de Sitter scalar vacuum through the scalar/longitudinal
+transfer; direct phase perturbations and finite-k controls agree. Metric,
+inflaton/radiation and longitudinal-vector vacuum inputs remain absent, so
+the output is not actual CDI. A static equilibrium derivative 0.7159456 per
+ln R disproves the inference that small hidden backreaction universally
+suppresses the forward curvature response by the Planck-coefficient shift.
+
+The inherited gas accumulates 7.91173 elastic collisions per particle and a
+viscosity-proxy H crossing at 0.62156 MeV. Grid/angular/source controls and
+relativistic rate comparisons quantify errors. A conserving BGK hierarchy
+gives conditional T^2=0.893210 at k=1e5/Mpc; full formation matching, exact
+linearized collisions and complete cosmological species remain missing.
+High-k CLASS failure/timeout are retained alongside moderate-k controls.
+
+Reconstructed the 64-state record circuit for the later selection proposal.
+Four orthogonal histories maximize the classical-pointer objective; quantum
+tripartite information also invalidates the claimed pure-state selection.
+No consciousness or unique cosmic-decision inference is established.
+
+Verified 71 dynamics controls plus 8 later-note checks, 30 exact parent
+blobs, finite archives, source syntax, document links and the packet manifest.
+The Python/Radau background is a distinct integrator control, not external
+review. The small replay-threshold revision is disclosed. Figure inspected;
+earlier packets unchanged. Claim released for additive branch publication.
