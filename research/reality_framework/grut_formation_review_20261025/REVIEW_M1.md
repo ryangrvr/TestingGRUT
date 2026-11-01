@@ -2,8 +2,8 @@
 
 1 November 2026. Claude, issue #13. Brief: [BRIEF_M1.md](BRIEF_M1.md). Four tracks, each with an adversarial skeptic,
 then a completeness critic: `tracks/m1_vacuum`, `m1_ledger`, `m1_holder`, `m1_transport`, `m1_critic`. The transition
-check under the M1 potential (`tracks/pt_m1tilt`) is included where relevant and is **preliminary** until its skeptic
-reports. Each track's NOTES.md and SKEPTIC.md give methods, commands and full numbers.
+check under the M1 potential (`tracks/pt_m1tilt`) is included where relevant, updated later on 1 November with its
+skeptic's corrections. Each track's NOTES.md and SKEPTIC.md give methods, commands and full numbers.
 
 Claude was unavailable 27–31 October; the later M1 packets were handed to a third AI ("Argon"/Gemini) and had no
 independent review until now. This is same-session AI work on one supplied model. It is not outside replication.
@@ -77,7 +77,7 @@ conditional recipes:
 | Equilibrium X̄ at the pilot's own energy, 0.069–0.110 per charge, before annihilation | REVIEW_TRANSPORT, pt_relax | 0.147–0.235 | ×15–23 |
 | Same with the e = 10⁻⁷ vector heat (2.3–2.9) | pt_relax | 4.9–6.2 | ×490–620 |
 | The 1.75 plateau | 5f5513b | 3.73 | ×370 |
-| Coherent-orbit inventory after the M1 transition, slow limit: 1.67 (τ-20) / 0.35 (late) pairs per charge (preliminary) | pt_m1tilt | 3.56 / 0.75 | ×356 / ×75 |
+| Coherent-orbit inventory after the M1 transition, resonance-captured cases: 1.4–1.7 (τ-20) / 0.35 (late) pairs per charge; no slow-limit value exists | pt_m1tilt | 3.0–3.6 / 0.75 | ×300–360 / ×75 |
 | Cold dilute masks 30–32% of charge, read as η | ed73791 | 0.045–0.047 | ×4.5 |
 | Hot elliptic control 0.6% | ed73791 | 0.066 | ×6.6 |
 | Pulses 5/10/20/40%, charge-conserving η, emitted X̄ and φ as pairs | bf8ab3b | 0.0043 / 0.0176 / 0.072 / 0.311 | 5% passes; others ×1.8–31 |
@@ -105,15 +105,19 @@ clock**, a static kinetics window, and the 2 MeV matching of the transport hiera
 The parsec-scale curve is neither distinctive nor testable: amplitude from the pulse, scale from the clock, generic
 mixed shape, 3.5 decades in k below any probe, and not robust below 30 pc inside the model.
 
-## The transition under the M1 potential (preliminary; `tracks/pt_m1tilt`)
+## The transition under the M1 potential (`tracks/pt_m1tilt` and its skeptic)
 
 Under V_φ with the ε = 0.002 tilt, the φ-condensation transition of the coherent X orbit is deterministic (the untilted
-chaotic split disappears) and adiabatic for ramp rates ε_rate ≥ 10⁻⁴ (τ-20 orbit) / 10⁻³ (late), returning J_r to
-2×10⁻⁴. Below a sharp threshold it deterministically loses radial action, growing as the rate slows: at
-ε_rate = 10⁻⁵–10⁻⁶ the τ-20 orbit gives 1.49–1.52 X̄ (0.85 J_r) plus 0.16–0.18 φ quanta per charge; the late orbit
-0.11–0.15 (0.23–0.30 J_r) plus 0.22–0.25. A tilt-driven φ oscillation slaved to the radial frequency releases a free φ
-component where that regime ends. The physical rate is ~10⁻¹², ten decades beyond the scan [E]. The adversarial check
-is still running; this paragraph will be updated.
+chaotic split disappears; two independent integrators agree run by run to 10⁻⁶) and adiabatic for ramp rates
+ε_rate ≥ 10⁻⁴ (τ-20 orbit) / 10⁻³ (late), returning J_r to 2×10⁻⁴. Below that it loses radial action by resonance
+capture: the tilt-driven φ oscillation locks to the radial motion and a 2ω_φ = 3ω_r subharmonic resonance converts
+radial action into φ quanta at the exact rate 2n₋ + 3N_φ = 2J_r. Capture is a phase-dependent window, not a threshold;
+captured runs give 1.49–1.52 X̄ plus 0.16–0.18 φ quanta per charge (τ-20) and 0.11–0.15 plus 0.22–0.25 (late). There is
+no slow limit: at 10⁻⁷ the outcome scatters over 0.40–1.29 and at 3×10⁻⁸ a 5:4 resonance takes over. The loss also
+depends on the supplied tilt within ±5%: none for ε ≤ 0.0018, 14% at 0.002, about 50% at 0.0022–0.0025, about 1% at
+0.004 (τ-20, rate 10⁻⁵); the late orbit loses 50–65% at 0.002 and 93–95% above 0.0025. Nothing follows for the physical
+rate ~10⁻¹² except that the antiparticle content after the transition is not J_r and must be computed on the lattice at
+the actual rate, with ε treated as the sensitive input it is.
 
 ## Most valuable next calculation
 

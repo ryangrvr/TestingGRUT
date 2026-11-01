@@ -2,7 +2,7 @@
 
 1 November 2026. Claude, issue #13. Brief: [BRIEF_TRANSPORT.md](BRIEF_TRANSPORT.md). Four tracks, each with an
 adversarial skeptic: `tracks/pt_rerun`, `pt_matching`, `pt_relax`, `pt_response`; plus `tracks/pt_m1tilt` (the same
-transition under Codex's later M1 potential; its skeptic is still running, so that part is **preliminary**). The
+transition under Codex's later M1 potential; updated later on 1 November with its skeptic's corrections). The
 synthesis below replaces the critic, whose run the usage limit stopped. Each track's NOTES.md and SKEPTIC.md give
 methods, commands and full numbers.
 
@@ -71,14 +71,22 @@ annihilation era is set by the actual energy per charge at onset, which the vect
   2g²/λ_X = 20 = n(n+1) the φ_k equation is exactly Lamé n = 4, with four gaps; gap 2 is the early pilot's k ≈ 7
   neutral band). The loss of radial action comes from φ growing out of that state, not from φ's inertia: a linear tilt
   β = 0.3 conserves J_r, β ≤ 0.1 gives the chaotic loss, β = 1 gives deterministic resonance capture.
-- **Under Codex's M1 potential** (V_φ = λ_φ/4(φ² − v²)² − εv(φ − v)³, ε = 0.002; `tracks/pt_m1tilt`, 767 runs, own
-  integrator; skeptic pending): the chaotic split disappears and the transition is deterministic. It is adiabatic for
-  ε_rate ≥ 10⁻⁴ (τ-20 orbit) / 10⁻³ (late orbit), returning J_r to 2×10⁻⁴. Below a sharp threshold it **deterministically
-  loses radial action, and the loss grows as the rate slows**: at ε_rate = 10⁻⁵–10⁻⁶ the τ-20 orbit gives 1.49–1.52 X̄
-  (0.85 J_r) plus 0.16–0.18 φ quanta per charge; the late orbit 0.11–0.15 (0.23–0.30 J_r) plus 0.22–0.25. The
-  mechanism is a tilt-driven φ oscillation slaved to the radial frequency up to ≈5.6 M_peri (τ-20) / 2 M_peri (late),
-  with a free φ component released where that regime ends. A linear tilt of the same size (β = 0.2) releases nothing,
-  so the loss is specific to the M1 shape. The physical rate is ε ~ 10⁻¹²–10⁻¹³, ten decades beyond the scan [E].
+- **Under Codex's M1 potential** (V_φ = λ_φ/4(φ² − v²)² − εv(φ − v)³, ε = 0.002; `tracks/pt_m1tilt`, 767 runs plus
+  the skeptic's 155 with an independent order-8 symplectic integrator; run-by-run agreement ≤ 1.3×10⁻⁶): the chaotic
+  split disappears and the transition is deterministic and phase-smooth down to ramp rates of 3×10⁻⁷. It is
+  adiabatic for ε_rate ≥ 10⁻⁴ (τ-20 orbit) / 10⁻³ (late orbit), returning J_r to 2×10⁻⁴. Below that it loses radial
+  action through **resonance capture**: the tilt-driven φ oscillation locks to the radial motion, and a 2ω_φ = 3ω_r
+  subharmonic resonance exchanges radial action for φ quanta at the exact rate 2n₋ + 3N_φ = 2J_r (to 10⁻⁵ in every
+  captured run). Capture is a window, not a threshold: the fraction of phases captured rises from 0 to 1 over a factor
+  2 in rate, and the loss per captured run rises from 19–49% to 69–73% between 10⁻⁴ and 10⁻⁵. Typical captured values:
+  τ-20 orbit 1.49–1.52 X̄ (0.85 J_r) plus 0.16–0.18 φ quanta per charge; late orbit 0.11–0.15 (0.23–0.30 J_r) plus
+  0.22–0.25. **There is no slow limit:** at 3×10⁻⁷ the τ-20 value plateaus at 1.49, at 10⁻⁷ it scatters over
+  0.40–1.29 (loss 27–77%), and at 3×10⁻⁸ a 5:4 resonance takes over (1.30). The loss is also specific to the tilt:
+  none for ε ≤ 0.0018, 14% at 0.002, about 50% at 0.0022–0.0025, 63–70% at 0.003, about 1% at 0.004 (τ-20 orbit at
+  10⁻⁵); the late orbit loses 50–65% at 0.002 and 93–95% for ε ≥ 0.0025. A linear tilt of the same size (β = 0.2)
+  releases nothing. The physical rate is ~10⁻¹²–10⁻¹³, five decades beyond the scan, and nothing about it follows from
+  these runs [A]. What does follow: under M1 the coherent orbit's antiparticle content after the transition is not
+  J_r, depends on the supplied ε within ±5%, and must be computed at the actual rate on the lattice.
 - Waves: with the actual φ(s) the wave modes are parametrically amplified (\|β_k\|² ≫ 1 for k from 0.25 to 8 by
   4–8 M_peri), so the wave switch-on is not adiabatic either and needs a lattice treatment of the transition.
 
