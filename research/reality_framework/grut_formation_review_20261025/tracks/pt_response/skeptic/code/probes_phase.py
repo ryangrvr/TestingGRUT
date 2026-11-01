@@ -8,7 +8,7 @@ shells) and pt_response/probe_study.py (Hutchinson over shells 1-4 jointly):
   family B: M random-phase unit-modulus probes supported on shells 2-4.
 Each probe kicks pi_1 and pi_2 separately (2 tangents per probe).  All 4M tangents ride on one background.
 Delays 0..6 step 0.04 (151 samples), hmax 0.004 as response.py.  Chunked with restart files.
-Usage: python3 -B probes_phase.py <s0> <M> <outdir> <max_samples_this_call> [seed]
+Usage: python3 -B probes_phase.py <s0> <M> <outdir> <max_samples_this_call> [seed] [families: AB (default) | A | B]
 """
 import sys, os, time, pickle
 sys.path.insert(0, '.')
@@ -16,9 +16,10 @@ from pt_common import *  # noqa  (Codex module from our copy; engine only)
 
 s0 = float(sys.argv[1]); M = int(sys.argv[2]); outdir = Path(sys.argv[3]); budget = int(sys.argv[4])
 seed = int(sys.argv[5]) if len(sys.argv) > 5 else 424242
+FAMS = sys.argv[6] if len(sys.argv) > 6 else 'AB'
 outdir.mkdir(parents=True, exist_ok=True)
 N, L = 48, 12.
-tag = f'skp_s{s0:g}_M{M}_seed{seed}'
+tag = f'skp_s{s0:g}_M{M}_seed{seed}' + ('' if FAMS == 'AB' else f'_{FAMS}')
 ck = outdir / f'ckpt_{tag}.pkl'
 mm = np.fft.fftfreq(N) * N
 nx, ny, nz = np.meshgrid(mm, mm, mm, indexing='ij')
@@ -33,7 +34,7 @@ if not ck.exists():
     z = np.load(WORK / 'base48' / f'state_s{s0:g}.npy').copy()
     rng = np.random.default_rng([seed, int(round(s0 * 100)), M])
     pats = []; fams = []
-    for fam, shells_ in (('A', (1,)), ('B', (2, 3, 4))):
+    for fam, shells_ in [x for x in (('A', (1,)), ('B', (2, 3, 4))) if x[0] in FAMS]:
         for j in range(M):
             coef = np.zeros((N, N, N), complex)
             for ix in np.flatnonzero(np.isin(shell, shells_)):

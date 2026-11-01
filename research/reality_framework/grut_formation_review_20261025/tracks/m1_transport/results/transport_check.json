@@ -1,0 +1,251 @@
+{
+ "conventions": "independent code; see module docstring",
+ "background": {
+  "T0_GeV": 2.3486541805581e-13,
+  "Omega_gamma_h2": 2.4736323818559625e-05,
+  "Omega_r_h2": 4.183690747883726e-05,
+  "Omega_m_h2": 0.143,
+  "h_assumed": 0.674,
+  "a_equality": 0.0002925657865652955,
+  "z_equality": 3417.034664066291,
+  "a_at_2MeV": 8.394521281237274e-11,
+  "H_at_2MeV_GeV": 1.7859349018710206e-24,
+  "H_over_mX_at_2MeV": 1.932642494448382e-23,
+  "g_s_gamma_e_at_2MeV": 5.4753190526227,
+  "codex_a_initial": 8.394521281378524e-11,
+  "codex_H_initial_GeV": 1.785634392341076e-24,
+  "codex_z_eq": 3420.5
+ },
+ "collisions_2MeV": {
+  "entropy_density_GeV3": 3.772382126638599e-08,
+  "n_X_GeV3": 1.2636171496005749e-17,
+  "n_X_over_mX3": 1.6013018706745444e-14,
+  "codex_n_core_over_mX3_at_20MeV": 1.2141071422639381e-15,
+  "implied_n_X_over_mX3_codex": 1.601301870674545e-14,
+  "sigma_mX2": 2.1662756143063538e-07,
+  "mean_v_maxwell": 0.0630181328635716,
+  "mean_vrel_maxwell": 0.08912109817109261,
+  "Gamma_per_particle_maxwell_GeV": 2.856811276130527e-23,
+  "Gamma_over_H_maxwell": 15.996166899127235,
+  "codex_Gamma_over_H": {
+   "96bin_relativistic_kernel": 15.72,
+   "NR_threshold_elastic_py": 15.876924286306776
+  },
+  "checkpoint_reproduction": {
+   "source": "late_kin_h0025_96.npz (Codex 6c504de), weights = plus+minus clipped at 0; own integrals",
+   "N_plus": 13189.13146074248,
+   "v_rms": 0.06837528835889453,
+   "mean_v": 0.06096097016012166,
+   "mean_vrel_isotropic_NR": 0.08809778598503486,
+   "kurtosis_p4_over_p2sq": 1.9170773100679175,
+   "Gamma_over_H": 15.812494650310624,
+   "ratio_vrel_checkpoint_over_maxwell_same_vrms": 0.9888749957028067
+  }
+ },
+ "integrated_maxwell_shape": {
+  "Gamma_over_H_initial": 15.996166899127235,
+  "Gamma_over_H_at_x10": 0.15420597130622718,
+  "collisions_per_particle_x1_to_10": 7.901240088752202,
+  "collisions_x1_to_3.262": 7.2383772680980085,
+  "viscosity_proxy_crossing_x": 3.2555897770795257,
+  "viscosity_proxy_crossing_T_MeV": 0.6227308443310726,
+  "total_rate_crossing_x": 3.9815703230650845,
+  "total_rate_crossing_T_MeV": 0.5127031501492787,
+  "T_at_x10_MeV": 0.22085598311307947,
+  "pure_RD_estimate_collisions": 7.918102615067982,
+  "codex": {
+   "collisions_x1_to_10": 7.91173,
+   "viscosity_crossing_x": 3.26194,
+   "viscosity_crossing_T_MeV": 0.62156,
+   "T_at_x10_MeV": 0.22086
+  }
+ },
+ "integrated_checkpoint_shape_frozen": {
+  "Gamma_over_H_initial": 15.812494650310624,
+  "Gamma_over_H_at_x10": 0.15243533727187547,
+  "collisions_per_particle_x1_to_10": 7.810515945606359,
+  "collisions_x1_to_3.262": 7.155264292408379,
+  "viscosity_proxy_crossing_x": 3.2369570675627184,
+  "viscosity_proxy_crossing_T_MeV": 0.6262134611216654,
+  "total_rate_crossing_x": 3.958831460112422,
+  "total_rate_crossing_T_MeV": 0.5155290388022613,
+  "T_at_x10_MeV": 0.22085598311307947,
+  "pure_RD_estimate_collisions": 7.827184851903759,
+  "codex": {
+   "collisions_x1_to_10": 7.91173,
+   "viscosity_crossing_x": 3.26194,
+   "viscosity_crossing_T_MeV": 0.62156,
+   "T_at_x10_MeV": 0.22086
+  }
+ },
+ "free_streaming": {
+  "I_eq_pc_per_unit_v": 580.4599176088947,
+  "I_today_pc_per_unit_v": 647.5297518897356,
+  "I_from_0.62MeV_pc_per_unit_v": 530.1323933485039,
+  "I_from_0.2MeV_pc_per_unit_v": 483.21059160761325,
+  "I_from_x36_pc_per_unit_v": 432.05514160574734,
+  "I_20MeV_to_2MeV_pc_per_unit_v_at_2MeV": 98.27513185028475,
+  "comoving_Hubble_radius_at_2MeV_pc": 42.65543408751383,
+  "ln_aeq_over_ai": 15.064035753056077,
+  "codex_I_eq_from_rms_pc": 582.9591502529269,
+  "maxwellian_v_rms_0.0684": {
+   "mean_pc_to_eq": 36.57950020985514,
+   "rms_pc_to_eq": 39.703458364448394,
+   "p10_pc_to_eq": 17.523194915393347,
+   "p50_pc_to_eq": 35.25921860677135,
+   "p90_pc_to_eq": 57.313371846184744,
+   "mean_pc_to_today": 40.806115937702906,
+   "mean_pc_from_0.62MeV_to_eq": 33.40795359931922,
+   "rms_pc_from_0.62MeV_to_eq": 36.26105570503767,
+   "mean_pc_from_0.2MeV_to_eq": 30.451029263013602,
+   "mean_pc_if_dragged_by_cores_until_x36": 27.227308318100228,
+   "codex": {
+    "mean_pc": 35.51,
+    "rms_pc": 39.86,
+    "median_pc": 34.06,
+    "p10_pc": 12.12,
+    "p90_pc": 61.36,
+    "mean_today_pc": 39.61,
+    "delayed_x2": 33.69,
+    "delayed_x4": 31.89,
+    "delayed_x10": 29.56
+   }
+  },
+  "checkpoint_reproduction_exact_relativistic": {
+   "mean_pc": 35.50269371572722,
+   "rms_pc": 39.86084015041122,
+   "p10_pc": 12.120453098767767,
+   "p50_pc": 34.05588649243012,
+   "p90_pc": 61.35200979534707,
+   "mean_pc_NR_formula": 35.385399716502505,
+   "mean_pc_to_today": 39.605406491882405
+  }
+ },
+ "free_streaming_scales": {
+  "lambda_fs_mean_Mpc": 3.657950020985514e-05,
+  "k_1_over_lambda_Mpc^-1": 27337.716323706987,
+  "k_2pi_over_lambda_Mpc^-1": 171767.93753695927,
+  "comoving_aH_at_2MeV_Mpc^-1": 23443.67186484035,
+  "k_fs_at_2MeV_aH_over_vrms_Mpc^-1": 342743.74071404024,
+  "codex_BGK_P_mix_over_P_cold": {
+   "1e4": 0.997879,
+   "3e4": 0.979835,
+   "1e5": 0.89321,
+   "3e5": 0.849806,
+   "1e6": 0.764169
+  },
+  "implied_gas_transfer_T_gas": {
+   "1e4": 0.9819447054612322,
+   "3e4": 0.8275600857483718,
+   "1e5": 0.0657726808769508,
+   "3e5": -0.3298317775934556,
+   "1e6": -1.1411934322705641
+  },
+  "note_T_gas": "T_gas = (sqrt(P_mix/P_cold)-(1-f))/f ignores the slowed growth of the cold part; it goes negative where that effect dominates (k >= 3e5)."
+ },
+ "halo_masses": {
+  "rho_m_Msun_Mpc3": 39687737661.0,
+  "table": {
+   "10000": {
+    "lambda_pc": 628.3185307179587,
+    "M_half_wavelength_sphere_Msun": 5.154595267671941,
+    "M_full_wavelength_sphere_Msun": 41.23676214137553
+   },
+   "30000": {
+    "lambda_pc": 209.43951023931953,
+    "M_half_wavelength_sphere_Msun": 0.19091093583970148,
+    "M_full_wavelength_sphere_Msun": 1.5272874867176118
+   },
+   "100000": {
+    "lambda_pc": 62.831853071795855,
+    "M_half_wavelength_sphere_Msun": 0.005154595267671939,
+    "M_full_wavelength_sphere_Msun": 0.04123676214137551
+   },
+   "300000": {
+    "lambda_pc": 20.943951023931955,
+    "M_half_wavelength_sphere_Msun": 0.0001909109358397015,
+    "M_full_wavelength_sphere_Msun": 0.001527287486717612
+   },
+   "1e+06": {
+    "lambda_pc": 6.283185307179586,
+    "M_half_wavelength_sphere_Msun": 5.1545952676719415e-06,
+    "M_full_wavelength_sphere_Msun": 4.123676214137553e-05
+   },
+   "1e+07": {
+    "lambda_pc": 0.6283185307179586,
+    "M_half_wavelength_sphere_Msun": 5.154595267671941e-09,
+    "M_full_wavelength_sphere_Msun": 4.123676214137553e-08
+   },
+   "20": {
+    "lambda_pc": 314159.2653589793,
+    "M_half_wavelength_sphere_Msun": 644324408.4589926,
+    "M_full_wavelength_sphere_Msun": 5154595267.671941
+   },
+   "27": {
+    "lambda_pc": 232710.56693257726,
+    "M_half_wavelength_sphere_Msun": 261880570.42483062,
+    "M_full_wavelength_sphere_Msun": 2095044563.398645
+   },
+   "40": {
+    "lambda_pc": 157079.63267948964,
+    "M_half_wavelength_sphere_Msun": 80540551.05737408,
+    "M_full_wavelength_sphere_Msun": 644324408.4589926
+   }
+  },
+  "definition": "M(k) = (4 pi/3) rho_m (pi/k)^3 (half-mode convention, Schneider et al 2012 arXiv:1112.0330); full-wavelength sphere is 8x larger"
+ },
+ "equivalent_thermal_WDM": {
+  "gas_v_rms_today_c": 5.7418525563662955e-12,
+  "thermal_relic_mass_with_same_v_rms_today_eV": 1901186.4447933126,
+  "k_half_mode_of_that_relic_Mpc^-1": 27627.760977613827,
+  "k_half_mode_Lyman_alpha_bound_5.3keV_Mpc^-1": 40.32500947589695,
+  "k_half_mode_3.5keV_Mpc^-1": 25.441563202156,
+  "gas_half_mode_from_codex_BGK_Mpc^-1_approx": 50000.0,
+  "thermal_mass_with_k_half_5e4_keV": 3244.2826650127995,
+  "formula": "Viel et al 2005 (astro-ph/0501562) alpha, nu = 1.12, T^2 = 1/2; v_rms = 3.597 T_w/m, T_w from Omega h^2 = (m/94 eV)(T_w/T_nu)^3"
+ },
+ "lyman_alpha_toy": {
+  "10 h/Mpc": {
+   "k_Mpc^-1": 6.74,
+   "no_gravity_bound_abs_dP_over_P": 1.4027871432213725e-09,
+   "two_f_times_k_lambda_squared": 7.144336254382079e-09
+  },
+  "20 h/Mpc": {
+   "k_Mpc^-1": 13.48,
+   "no_gravity_bound_abs_dP_over_P": 5.61114857288549e-09,
+   "two_f_times_k_lambda_squared": 2.8577345017528317e-08
+  },
+  "30 h/Mpc": {
+   "k_Mpc^-1": 20.220000000000002,
+   "no_gravity_bound_abs_dP_over_P": 1.2625084288992356e-08,
+   "two_f_times_k_lambda_squared": 6.42990262894387e-08
+  }
+ },
+ "gas_core_elastic_estimate": {
+  "sigma_100_mX2": {
+   "Gamma_over_H_2MeV": 429696.2773477471,
+   "x_decouple_sqrt": 655.5122251703222,
+   "T_decouple_MeV": 0.004268176253740507,
+   "fractional_energy_transfer_to_cores_per_Hubble": 2.291957977393199
+  },
+  "sigma_300_mX2": {
+   "Gamma_over_H_2MeV": 1289088.8320432412,
+   "x_decouple_sqrt": 1135.3804789775281,
+   "T_decouple_MeV": 0.002464232709045844,
+   "fractional_energy_transfer_to_cores_per_Hubble": 6.875873932179597
+  },
+  "sigma_1000_mX2": {
+   "Gamma_over_H_2MeV": 4296962.7734774705,
+   "x_decouple_sqrt": 2072.911665623374,
+   "T_decouple_MeV": 0.0013497158416864762,
+   "fractional_energy_transfer_to_cores_per_Hubble": 22.919579773931986
+  },
+  "sigma_2560_mX2": {
+   "Gamma_over_H_2MeV": 11000224.700102326,
+   "x_decouple_sqrt": 3316.6586649973983,
+   "T_decouple_MeV": 0.0008435724010540464,
+   "fractional_energy_transfer_to_cores_per_Hubble": 58.67412422126589
+  },
+  "note": "s-wave unitarity bound 4 pi/k^2 at k = m_X v_rms = 0.0684 m_X is 2686/m_X^2; geometric 4 pi R^2 with R ~ 10/m_X is ~1260/m_X^2. Codex bf8ab3b found 99% elastic reflection of l=0 Xbar packets at k=0.4-1; X has the same diagonal potential S^2+2aF^2. Not computed here: the actual X-core phase shifts at k ~ 0.07."
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "method": "m1_ledger (Claude, own code): the included cold X^6 charge-loss normalisation on the OLD and the M1 profile.\nItem 4 of the brief.  Independent re-derivation and quadrature of the vacuum-Born pair channel; the coherent forced\nchannel (6e-5 of the total) is taken from Codex's numbers [Q] and not recomputed.\n\nOperator in the light theory: (A X^6 + h.c.), A = kappa^2 mu (h/sqrt2) / (M_Y^4 (1 - r^2)) GeV^-2 (dimension-6 remnant\nof the dimension-7 kappa^2 mu X^6 Sigma^*/M_Y^4 after Sigma -> h/sqrt2).  With X = (v/sqrt2) F(r) e^{-i Omega t} + chi,\nX^6 -> C(6,4) X0^4 chi^2 = 15 X0^4 chi^2 creates two anti-X from four condensate quanta (core loses 4, -2 escapes).\nAmplitude  <Xbar k1, Xbar k2| = 2 * 15 * A (v/sqrt2)^4 Ft4(k1+k2) * 2 pi delta(E1+E2-4 Omega) / sqrt(2E1 2E2),\nFt4(q) = int d^3x F^4 e^{-iq.x}.  Two-body phase space at fixed total momentum q and energy W = 4 Omega gives\n(pi/2) beta(s), s = W^2 - q^2, beta = sqrt(1 - 4 m^2/s); identical particles 1/2.  Rate per object\n  Gamma = (900 / (32 pi^3)) |A|^2 (v/sqrt2)^8 m_X^-3 * I,   I = int_0^{qmax} q^2 |Ft4(q)|^2 beta dq  (m_X units).\nThis reproduces Codex's prefactor 225/(8 pi^3) exactly; the quadrature here is a different substitution\n(q = qmax (1 - u^2), Gauss-Legendre in u) on a different radial grid, so the integrals are an independent check.\nOutput: ../results/charge_loss.json\n",
+ "profiles": {
+  "old": {
+   "W_over_mX": 3.44478052328689,
+   "qmax": 2.8047304422380237,
+   "I": 3149626.589328209,
+   "events_per_second_c1": 5.1998506467920157e-42,
+   "born_fractional_core_rate_c1": 1.0399701293584032e-46,
+   "lda_fractional_core_rate_c1": 1.0490129712016715e-46,
+   "F0": 2.6199231342487512,
+   "int_r2_F8": 15730.766501098815,
+   "int_r2_F4_sq_check": 12.418702414543386,
+   "grid": {
+    "dr": 0.01,
+    "rmax": 80.0,
+    "gauss_nodes": 240
+   },
+   "quadrature_relative_change": 1.9984014443252818e-15,
+   "source": "d71cc01 grut_portal_debris_window_20261023/data/profile_Q200000_lambda0.03_refined.csv; Omega [Q FIXED_YIELD_RESULTS refinement]",
+   "sha256": "7a737d670a8da512f3a333d22176c28dcac89bd490e858b513ad5adf9c6a8b15"
+  },
+  "M1": {
+   "W_over_mX": 3.5268819678096857,
+   "qmax": 2.9049778682222556,
+   "I": 2868466.5109466882,
+   "events_per_second_c1": 4.735671680187572e-42,
+   "born_fractional_core_rate_c1": 9.471343360375144e-47,
+   "lda_fractional_core_rate_c1": 9.545007880744432e-47,
+   "F0": 2.6309605904405573,
+   "int_r2_F8": 14148.910079773661,
+   "int_r2_F4_sq_check": 2.3382064139022147,
+   "grid": {
+    "dr": 0.01,
+    "rmax": 80.0,
+    "gauss_nodes": 240
+   },
+   "quadrature_relative_change": 6.661338147750939e-15,
+   "source": "d4747cb grut_matched_candidate_20261027/PROFILE_M1.csv; Omega [Q DEFORMATION_RESULTS primary]",
+   "sha256": "c08176e9be8628f99ef7c2f863e5c2d574c575c286fb82f0befe402b16fe29c7"
+  }
+ },
+ "codex_quoted": {
+  "old": {
+   "coherent_c1": 3.91958726382564e-50,
+   "born_c1": 1.0399701293581432e-46,
+   "included_c1": 1.0403620880845258e-46,
+   "A": 2.10886e-31,
+   "Omega_codex": 0.861195130748691
+  },
+  "M1": {
+   "coherent_c1": 6.099550997404576e-51,
+   "born_c1": 9.471343360338484e-47,
+   "included_c1": 9.471953315438225e-47,
+   "dimensionless_integral": 2868466.5109355855,
+   "events_c1": 4.735671680169242e-42,
+   "A": 2.079605512546138e-31,
+   "included_rate_times_age": 6.271629359413795e-17,
+   "relative_A_change": 0.9861279158192362,
+   "uniform_scale": 1.0070090495735164
+  }
+ },
+ "chain": {
+  "A_old_GeV_minus2": 2.10886e-31,
+  "A_new_codex": 2.079605512546138e-31,
+  "A_new_predicted_lambda_minus2": 2.0796057165545546e-31,
+  "A_ratio_predicted": 0.9861279158192362,
+  "A_ratio_codex": 0.9861279158192362,
+  "c6_old": 1250390.54335,
+  "c6_new": 1233044.8995126376,
+  "born_profile_ratio_ours": 0.910732250186683,
+  "born_profile_ratio_codex": 0.9107322501833857,
+  "born_vs_codex": {
+   "old": 2.5002222514558525e-13,
+   "M1": 3.870459508448221e-12,
+   "I_M1": 3.870681553053146e-12
+  },
+  "coherent_share_of_total": {
+   "old": 0.00037675222008927986,
+   "M1": 6.439591491084516e-05
+  },
+  "included_c1": {
+   "old_ours": 1.0403620880847858e-46,
+   "old_codex": 1.0403620880845258e-46,
+   "M1_ours": 9.471953315474884e-47,
+   "M1_codex": 9.471953315438225e-47
+  },
+  "Gamma_t0_old_ours": 7.083679968300075e-17,
+  "Gamma_t0_old_review_quote": 7.08e-17,
+  "Gamma_t0_new_ours": 6.271629359438094e-17,
+  "Gamma_t0_new_codex": 6.271629359413795e-17,
+  "Gamma_t0_new_from_old_times_factors": 6.2716305899265e-17,
+  "ratio_new_over_old_ours": 0.8853631710500813,
+  "ratio_new_over_old_codex": 0.8858233558494061,
+  "decomposition": {
+   "profile_factor": 0.9104477589059314,
+   "coupling_factor": 0.9724482663579906,
+   "note": "profile factor = Born(M1)/Born(old) at fixed c6 (W = 4 Omega rises from 3.4448 to 3.5269 and the F^4 source changes); coupling factor = (A_new/A_old)^2 = lambda^-4 from the coordinated heavy-scale change"
+  },
+  "neutral_response_remark": "the modified neutral (s) response enters only the coherent forced channel, which is 6e-5 of the total; it cannot move Gamma t0 at the quoted precision"
+ }
+}

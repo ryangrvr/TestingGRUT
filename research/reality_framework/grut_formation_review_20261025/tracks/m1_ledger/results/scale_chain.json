@@ -1,0 +1,361 @@
+{
+ "method": "m1_ledger (Claude): the mass-normalisation scale chain.  Item 2 of the brief.\n\nPart A [D]: reconstruct Codex's chain from the numbers quoted in d4747cb MATCHED_RESULTS.json /\nDEFORMED_MATCHED_RESULTS.json and 1fcc6b7 ABUNDANCE_LEDGER.json; test the H_i^{3/2} exponent implied by its own rows.\nPart B [C, own engine]: run our rp_reheating C engine (tracks/rp_reheating/code/rp.py, Claude's own code) on the\n(3, 0.5) and (5, 1) histories at three coordinated scales lambda = H_i/H_old with all heavy scales co-scaled\n(dimensionless M_Y/H_i, h/H_i, mu/H_i, m_I/H_i, Gamma_I/H_i fixed; only eta^2 = (H_i/M_red)^2 and the unit\nconversion change) and measure d ln Y / d ln H_i directly.\nUsage: OMP_NUM_THREADS=1 python3 -B scale_chain.py            (single process, ~1 min)\nOutput: ../results/scale_chain.json\n",
+ "partA_codex_numbers": {
+  "targets": {
+   "YQ_old": 4.8294009076988175e-09,
+   "target_old_object": 5.156893366446489e-09,
+   "target_M1_object": 5.079414232725842e-09,
+   "old_object_fraction_of_D": 0.9364942349053573
+  },
+  "yield_over_YQ_is_relative_to_YQ_old": {
+   "b3_g0.5_baseline": 1.0,
+   "b3_g0.5_matched_oldobj": 1.0,
+   "b5_g1_baseline": 1.0,
+   "M1_b3_g0.5_matched": 1.0,
+   "M1_b5_g1_matched": 1.0
+  },
+  "implied_exponents": {
+   "b3_g0.5_matched_oldobj": {
+    "Y_ratio": 1.0259461823675051,
+    "scale": 1.0172235041614452,
+    "H_ratio": 1.0172235041614452,
+    "exponent_Y": 1.5000000001778024,
+    "exponent_T": 0.500000009910795,
+    "scale_predicted_from_3_2": 1.0172235041635043
+   },
+   "M1_b3_g0.5_matched": {
+    "Y_ratio": 1.0105319754381847,
+    "scale": 1.0070090495735164,
+    "H_ratio": 1.0070090495735164,
+    "exponent_Y": 1.500000000187227,
+    "exponent_T": 0.5000000003871876,
+    "scale_predicted_from_3_2": 1.0070090495743944
+   },
+   "M1_b5_g1_matched": {
+    "Y_ratio": 1.0091317105850943,
+    "scale": 1.006078579112091,
+    "H_ratio": 1.006078579112091,
+    "exponent_Y": 1.500000000152827,
+    "exponent_T": 0.5000000019605826,
+    "scale_predicted_from_3_2": 1.0060785791127123
+   }
+  },
+  "naive_reading": {
+   "ratio_to_YQ_old": 1.0517690143778422,
+   "scale_if_old_point_gave_YQ_old": 1.0342215465094102,
+   "resolution": "the old heavy point on the (3,0.5) history already yields 1.040807 x 4.8294e-9 = 5.0265e-9, so the needed factor is 5.07941/5.02648 = 1.010532 = 1.00700905^{3/2}; the 1.722% / 1.628% repairs are the OLD-object targets 5.15689e-9 = 1.0678 x 4.8294e-9 (3,0.5)/(5,1), superseded by M1"
+  },
+  "chain": [
+   "1. supplied Y_Q,old = 4.8294e-9 with v-calibrated mass per net charge D/Y_Q,old = 0.98592 m_X (old target, not an object E/Q)",
+   "2. old object E/Q = 0.923316 m_X delivers 0.936494 D at Y_Q,old (1fcc6b7); needs x1.0678 -> 5.15689e-9",
+   "3. (3,0.5) history at H_old = 1.3335e11 actually yields 1.040807 Y_Q,old = 5.02648e-9 (ours at tau=80: 1.04542; see Part B); (5,1): 1.042251",
+   "4. old-object repair: scale = (5.15689/5.02648)^{2/3} = 1.017224 [1.722%]; (5,1): (5.15689/5.03345)^{2/3} = 1.016277 [1.628%]",
+   "5. M1 object E/Q = 0.9374 m_X -> target 5.07941e-9; scale = (5.07941/5.02648)^{2/3} = 1.0070090 [0.7009%]; (5,1): 1.0060786 [0.6079%]",
+   "6. Y propto H_i^{3/2}: n_Q = N_X H_i^3/a^3 at fixed dimensionless N_X, a; rho_r = r M_red^2 H_i^2 -> T propto (H_i M_red)^{1/2}, s propto (H_i M_red)^{3/2}; dimensionless history depends on the scale only through eta^2 = (H_i/M_red)^2 (hidden back-reaction ~1e-9)"
+  ]
+ },
+ "partB_own_engine": {
+  "engine": "tracks/rp_reheating/code/rpreheat.c + rp.py (Claude, own code); rtol 1e-10, atol 1e-13; late = tau-weighted last 20%",
+  "runs": [
+   {
+    "b": 3.0,
+    "gamma": 0.5,
+    "end": 80.0,
+    "lam": 1.0,
+    "eta2": 2.999063282921626e-15,
+    "Y": 5.048754984446361e-09,
+    "Y_over_YQ_old": 1.0454205564913566,
+    "Tvis_end_GeV": 24384027322614.902,
+    "NX": -8156.734641992738,
+    "eps": -0.1991704409441678,
+    "NYL": 0.006815644022351365,
+    "NYH": 9.695032578508668e-06,
+    "final_a": 17.803360536806654,
+    "Rr_end": 11.83026777485602,
+    "dilution": 2.798369058108926,
+    "half_window_charge_change": 0.0004210017695074342,
+    "checks": {
+     "steps": 40091,
+     "rejects": 24,
+     "max_gauss": 2.83924e-14,
+     "max_H_consistency": 2.00345e-13,
+     "max_hidden_work": 1.19357e-14
+    },
+    "seconds": 0.10246419906616211
+   },
+   {
+    "b": 3.0,
+    "gamma": 0.5,
+    "end": 800.0,
+    "lam": 1.0,
+    "eta2": 2.999063282921626e-15,
+    "Y": 5.02647551601343e-09,
+    "Y_over_YQ_old": 1.0408072578941303,
+    "Tvis_end_GeV": 7702499483250.013,
+    "NX": -8120.740082437151,
+    "eps": -0.19925422938768328,
+    "NYL": 0.006815590075284904,
+    "NYH": 9.693968711834627e-06,
+    "final_a": 56.360617836834265,
+    "Rr_end": 11.830267774857113,
+    "dilution": 2.79836905810912,
+    "half_window_charge_change": 0.00026170139231396217,
+    "checks": {
+     "steps": 336344,
+     "rejects": 151,
+     "max_gauss": 4.2303e-14,
+     "max_H_consistency": 5.19927e-13,
+     "max_hidden_work": 3.39162e-14
+    },
+    "seconds": 0.49112367630004883
+   },
+   {
+    "b": 3.0,
+    "gamma": 0.5,
+    "end": 800.0,
+    "lam": 1.0070090495735164,
+    "eta2": 3.04125178367973e-15,
+    "Y": 5.079414232688103e-09,
+    "Y_over_YQ_old": 1.0517690143700278,
+    "Tvis_end_GeV": 7729445948778.372,
+    "NX": -8120.740082450156,
+    "eps": -0.1992542293877295,
+    "NYL": 0.006815590074084263,
+    "NYH": 9.693968681222409e-06,
+    "final_a": 56.36061783684843,
+    "Rr_end": 11.830267774863664,
+    "dilution": 2.798369058110282,
+    "half_window_charge_change": 0.00026170139222359,
+    "checks": {
+     "steps": 336347,
+     "rejects": 150,
+     "max_gauss": 3.81387e-14,
+     "max_H_consistency": 1.44453e-12,
+     "max_hidden_work": 3.09618e-14
+    },
+    "seconds": 0.5621168613433838
+   },
+   {
+    "b": 3.0,
+    "gamma": 0.5,
+    "end": 800.0,
+    "lam": 1.0172235041614452,
+    "eta2": 3.103261710199826e-15,
+    "Y": 5.1568933664194626e-09,
+    "Y_over_YQ_old": 1.0678122328172364,
+    "Tvis_end_GeV": 7768548315265.757,
+    "NX": -8120.740082464268,
+    "eps": -0.19925422938783643,
+    "NYL": 0.006815590074944466,
+    "NYH": 9.693968703116606e-06,
+    "final_a": 56.360617836847226,
+    "Rr_end": 11.830267774856544,
+    "dilution": 2.798369058109019,
+    "half_window_charge_change": 0.0002617013922658895,
+    "checks": {
+     "steps": 336343,
+     "rejects": 150,
+     "max_gauss": 6.06239e-14,
+     "max_H_consistency": 1.39698e-12,
+     "max_hidden_work": 2.94255e-14
+    },
+    "seconds": 0.4750175476074219
+   },
+   {
+    "b": 3.0,
+    "gamma": 0.5,
+    "end": 800.0,
+    "lam": 1.05,
+    "eta2": 3.3064672694210924e-15,
+    "Y": 5.408134949635914e-09,
+    "Y_over_YQ_old": 1.1198355765027717,
+    "Tvis_end_GeV": 7892713297963.735,
+    "NX": -8120.740082514468,
+    "eps": -0.19925422938803067,
+    "NYL": 0.006815590073765631,
+    "NYH": 9.693968672987033e-06,
+    "final_a": 56.360617836870354,
+    "Rr_end": 11.830267774854578,
+    "dilution": 2.79836905810867,
+    "half_window_charge_change": 0.0002617013923100764,
+    "checks": {
+     "steps": 336345,
+     "rejects": 149,
+     "max_gauss": 2.83183e-14,
+     "max_H_consistency": 4.0725e-13,
+     "max_hidden_work": 5.28241e-14
+    },
+    "seconds": 0.44992756843566895
+   },
+   {
+    "b": 5.0,
+    "gamma": 1.0,
+    "end": 800.0,
+    "lam": 1.0,
+    "eta2": 2.999063282921626e-15,
+    "Y": 5.033450221815974e-09,
+    "Y_over_YQ_old": 1.0422514754970684,
+    "Tvis_end_GeV": 7700753423085.906,
+    "NX": -5210.315329234398,
+    "eps": -0.18425442639493295,
+    "NYL": 0.017768186761619006,
+    "NYH": 4.333223502514565e-06,
+    "final_a": 48.59925395373969,
+    "Rr_end": 6.5345571784216405,
+    "dilution": 1.7929623945788458,
+    "half_window_charge_change": 8.194410076556302e-05,
+    "checks": {
+     "steps": 351122,
+     "rejects": 39,
+     "max_gauss": 1.01831e-13,
+     "max_H_consistency": 3.73717e-11,
+     "max_hidden_work": 6.15691e-14
+    },
+    "seconds": 0.5894525051116943
+   },
+   {
+    "b": 5.0,
+    "gamma": 1.0,
+    "end": 800.0,
+    "lam": 1.0070090495735164,
+    "eta2": 3.04125178367973e-15,
+    "Y": 5.086462395922053e-09,
+    "Y_over_YQ_old": 1.0532284424375369,
+    "Tvis_end_GeV": 7727693780188.028,
+    "NX": -5210.315329239087,
+    "eps": -0.18425442639506034,
+    "NYL": 0.017768186761684998,
+    "NYH": 4.333223504011997e-06,
+    "final_a": 48.59925395373663,
+    "Rr_end": 6.534557178417085,
+    "dilution": 1.7929623945779085,
+    "half_window_charge_change": 8.194410075645919e-05,
+    "checks": {
+     "steps": 351120,
+     "rejects": 39,
+     "max_gauss": 3.78231e-14,
+     "max_H_consistency": 3.73948e-11,
+     "max_hidden_work": 5.43604e-14
+    },
+    "seconds": 0.5753154754638672
+   },
+   {
+    "b": 5.0,
+    "gamma": 1.0,
+    "end": 800.0,
+    "lam": 1.0172235041614452,
+    "eta2": 3.103261710199826e-15,
+    "Y": 5.164049039210502e-09,
+    "Y_over_YQ_old": 1.0692939223534337,
+    "Tvis_end_GeV": 7766787282658.324,
+    "NX": -5210.315329251684,
+    "eps": -0.18425442639525613,
+    "NYL": 0.017768186761284718,
+    "NYH": 4.333223503919014e-06,
+    "final_a": 48.59925395375325,
+    "Rr_end": 6.534557178421508,
+    "dilution": 1.7929623945788187,
+    "half_window_charge_change": 8.194410077932979e-05,
+    "checks": {
+     "steps": 351121,
+     "rejects": 39,
+     "max_gauss": 7.50825e-14,
+     "max_H_consistency": 3.50431e-11,
+     "max_hidden_work": 4.92789e-14
+    },
+    "seconds": 0.483051061630249
+   },
+   {
+    "b": 5.0,
+    "gamma": 1.0,
+    "end": 800.0,
+    "lam": 1.05,
+    "eta2": 3.3064672694210924e-15,
+    "Y": 5.415639243663838e-09,
+    "Y_over_YQ_old": 1.121389453302679,
+    "Tvis_end_GeV": 7890924118709.427,
+    "NX": -5210.315329279407,
+    "eps": -0.1842544263957738,
+    "NYL": 0.017768186759900103,
+    "NYH": 4.3332235036330365e-06,
+    "final_a": 48.5992539537715,
+    "Rr_end": 6.534557178418261,
+    "dilution": 1.7929623945781503,
+    "half_window_charge_change": 8.19441007087196e-05,
+    "checks": {
+     "steps": 351121,
+     "rejects": 39,
+     "max_gauss": 3.02704e-14,
+     "max_H_consistency": 3.80172e-11,
+     "max_hidden_work": 3.71069e-14
+    },
+    "seconds": 0.5013637542724609
+   }
+  ],
+  "exponents": {
+   "b3_lam1.00701": {
+    "Y_ratio": 1.010531975438062,
+    "exponent": 1.50000000016983,
+    "NX_ratio": 1.0000000000016014,
+    "a_ratio": 1.0000000000002514,
+    "Rr_ratio": 1.0000000000005538
+   },
+   "b3_lam1.01722": {
+    "Y_ratio": 1.025946182367853,
+    "exponent": 1.5000000001976626,
+    "NX_ratio": 1.0000000000033393,
+    "a_ratio": 1.00000000000023,
+    "Rr_ratio": 0.9999999999999519
+   },
+   "b3_lam1.05000": {
+    "Y_ratio": 1.0759298304361748,
+    "exponent": 1.500000000198438,
+    "NX_ratio": 1.0000000000095208,
+    "a_ratio": 1.0000000000006404,
+    "Rr_ratio": 0.9999999999997857
+   },
+   "b5_lam1.00701": {
+    "Y_ratio": 1.0105319754383015,
+    "exponent": 1.5000000002037746,
+    "NX_ratio": 1.0000000000009,
+    "a_ratio": 0.9999999999999369,
+    "Rr_ratio": 0.9999999999993029
+   },
+   "b5_lam1.01722": {
+    "Y_ratio": 1.0259461823678093,
+    "exponent": 1.5000000001951657,
+    "NX_ratio": 1.0000000000033176,
+    "a_ratio": 1.0000000000002789,
+    "Rr_ratio": 0.9999999999999798
+   },
+   "b5_lam1.05000": {
+    "Y_ratio": 1.0759298304354699,
+    "exponent": 1.5000000001850082,
+    "NX_ratio": 1.0000000000086384,
+    "a_ratio": 1.0000000000006546,
+    "Rr_ratio": 0.9999999999994829
+   }
+  },
+  "comparison_with_codex": {
+   "b3_g0_5_tau800_ours": 5.02647551601343e-09,
+   "codex": 5.026475516056739e-09,
+   "rel": -8.616107827208452e-12,
+   "b5_g1_tau800_ours": 5.033450221815974e-09,
+   "codex_b5": 5.033450222058231e-09,
+   "rel_b5": -4.8129500385130086e-11,
+   "b3_g0_5_tau80_ours": 1.0454205564913566,
+   "rp_reheating_extra_json": 1.0454205564913566,
+   "tau80_over_tau800": 1.0044324235464697,
+   "NX_tau80_over_tau800": 1.0044324235463997,
+   "M1_scale_from_our_tau800": 1.0070090495793007,
+   "codex_scale": 1.0070090495735164,
+   "M1_scale_b5_from_our_tau800": 1.0060785791443725,
+   "codex_scale_b5": 1.006078579112091,
+   "oldobj_scale_from_our_tau800": 1.0172235041672884,
+   "codex_oldobj_scale": 1.0172235041614452,
+   "our_Y_at_codex_M1_scale": 5.079414232688103e-09,
+   "our_Y_at_codex_M1_scale_over_target": 0.9999999999925703
+  },
+  "seconds_total": 5.003032922744751
+ }
+}

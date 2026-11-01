@@ -1,0 +1,88 @@
+{
+ "XX_to_XX": {
+  "convention": "U contains lambda_X |X|^4 with lambda_X = 1e-3 (Codex); M = -4 lambda_X + 2 g3^2/m_phi^2 at threshold",
+  "M_contact": -0.004,
+  "M_phi_t_plus_u": 0.013333333333333338,
+  "M_total": 0.009333333333333338,
+  "ratio_exchange_over_contact_amplitude": 3.3333333333333344,
+  "sigma_contact_only_mX2": 3.978873577297383e-08,
+  "sigma_contact_only_formula": "lambda_X^2/(8 pi m_X^2)",
+  "sigma_contact_only_check": 3.978873577297383e-08,
+  "sigma_phi_exchange_only_mX2": 4.42097064144154e-07,
+  "sigma_total_mX2": 2.1662756143063552e-07,
+  "sigma_total_formula": "(4 lambda_X - g_h^2/3)^2/(128 pi m_X^2), g_h = 2 g = 0.2, m_phi^2 = 6 m_X^2",
+  "sigma_total_check": 2.1662756143063544e-07,
+  "codex_sigma_mX2": 2.16627561e-07,
+  "ratio_total_over_codex": 1.0000000019879074,
+  "ratio_codex_over_contact_only": 5.444444433621399
+ },
+ "XX_to_XX_task_convention_V_lambda_X4_over_4": {
+  "M_contact": -0.001,
+  "sigma_contact_only_mX2": 2.4867959858108644e-09,
+  "sigma_contact_only_formula": "lambda^2/(128 pi m_X^2)",
+  "note": "Codex and all M1 packets use U = lambda_X|X|^4 (no 1/4); the 1/4 convention would make the contact piece 16x smaller in sigma."
+ },
+ "XX_velocity_dependence": {
+  "0.05": {
+   "p_cm_over_mX": 0.025,
+   "abs_t_max_over_mphi2": 0.0004166666666666668,
+   "M_total_backward": 0.009330556712480915,
+   "M_total_threshold": 0.009333333333333338,
+   "fractional_change_of_sigma_at_backward_angle": -0.0005949016793326267
+  },
+  "0.0684": {
+   "p_cm_over_mX": 0.0342,
+   "abs_t_max_over_mphi2": 0.0007797600000000001,
+   "M_total_backward": 0.009328138983679422,
+   "M_total_threshold": 0.009333333333333338,
+   "fractional_change_of_sigma_at_backward_angle": -0.0011127651918912962
+  },
+  "0.1": {
+   "p_cm_over_mX": 0.05,
+   "abs_t_max_over_mphi2": 0.0016666666666666672,
+   "M_total_backward": 0.009322240709927904,
+   "M_total_threshold": 0.009333333333333338,
+   "fractional_change_of_sigma_at_backward_angle": -0.002375578208503426
+  },
+  "0.2": {
+   "p_cm_over_mX": 0.1,
+   "abs_t_max_over_mphi2": 0.006666666666666669,
+   "M_total_backward": 0.009289183222958061,
+   "M_total_threshold": 0.009333333333333338,
+   "fractional_change_of_sigma_at_backward_angle": -0.009438361546978302
+  }
+ },
+ "XXbar_to_XXbar": {
+  "M_contact": -0.004,
+  "M_t": 0.006666666666666669,
+  "M_s_threshold": 0.020000000000000014,
+  "M_total": 0.022666666666666682,
+  "sigma_total_mX2_threshold": 2.555321030753212e-06,
+  "sigma_without_s_channel_mX2": 3.5367765131532356e-08,
+  "ratio_to_XX_sigma": 11.795918367346944,
+  "resonance": {
+   "sqrt_s_pole_mX": 2.449489742783178,
+   "Gamma_phi_mX": 0.00018756589919939715,
+   "Gamma_phi_GeV": 1.7332770377515462e-05,
+   "kinetic_energy_per_particle_at_pole_mX": 0.22474487139158894,
+   "lab_speed_each_at_pole_c": 0.5773502691896257,
+   "peak_sigma_unitarity_s_wave_mX2_at_pole": 25.132741228718356,
+   "note": "at v ~ 0.07 the gas is at s - 4 = v^2 ~ 0.005 << 2 = m_phi^2 - 4: far below the pole; Codex kinetics used the resonance only at the 20 MeV source clock (k ~ m_X)."
+  },
+  "note": "relevant only if antiparticles are present; the 2 MeV checkpoint has N_minus = -1.4e-13 (solver residual)."
+ },
+ "M1_tilt": {
+  "m_phi_over_mX": 2.449489742783178,
+  "m_phi_GeV": 0.2263548088163176,
+  "m_phi2_formula": "U''(v) = 2 lambda_phi v^2; the -eps v (phi-v)^3 term has zero second derivative at v",
+  "phi_cubic_candidate1_over_v": 0.18,
+  "phi_cubic_M1_over_v": 0.16799999999999998,
+  "phi_cubic_fractional_change": -0.06666666666666667,
+  "XX_elastic_tree_amplitude_changed_by_tilt": false,
+  "reason": "tree XX->XX uses only the h X X* vertex 2 g^2 v and the X quartic; the phi cubic enters XX elastic scattering first at one loop (and at tree level only in phi phi -> phi phi, X Xbar -> phi phi)."
+ },
+ "SIDM_units": {
+  "sigma_cm2": 9.878282859286442e-33,
+  "sigma_over_m_cm2_per_g": 5.996513806046789e-08
+ }
+}

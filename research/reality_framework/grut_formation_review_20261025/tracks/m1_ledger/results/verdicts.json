@@ -1,0 +1,38 @@
+{
+ "track": "m1_ledger",
+ "date": "2026-11-01",
+ "scope": "Codex GRUT-M1 (d4747cb and parents) mass-normalisation chain, frozen mass test and included charge-loss normalisation; same-session AI review of one supplied model; no validation/exclusion/prediction",
+ "independence": {
+  "own_code": ["code/frozen_test.py", "code/scale_chain.py (Part B uses our own tracks/rp_reheating engine)", "code/born_ratio.py (own derivation and quadrature of the Born pair channel)"],
+  "reconstruction_from_codex_numbers": ["code/scale_chain.py Part A"],
+  "quoted_from_codex": ["coherent forced-radiation channel rates (6e-5 of the total)", "A_old = 2.10886e-31 GeV^-2", "all packet population fractions"],
+  "codex_code_run": false
+ },
+ "claims": [
+  {"id": 1, "label": "[D]", "claim": "frozen test (rho/s)/D = 1 + 0.0667805(1-eta) + 2.13356 p; eta >= 0.85026 at p=0, p <= 0.004687 at eta=1", "codex": "0.0667805, 2.13356, 0.85026, 0.004687", "ours": "0.06678047, 2.13356093, 0.8502556, 0.0046870", "verdict": "CONFIRMED"},
+  {"id": 2, "label": "[D]", "claim": "Y_Q = D/eps_Q = 5.07941423e-9 with eps_Q = 0.0866241617 GeV = 0.93739999 m_X", "codex": "5.07941423e-9", "ours": "5.079414233e-9; Y_Q eps_Q = 4.4000e-10 GeV", "verdict": "CONFIRMED"},
+  {"id": 3, "label": "[D]", "claim": "old Y_Q 4.8294e-9: all charge in old objects gives 0.936494 D, multiplier 1.0678", "codex": "0.936494, 1.0678122", "ours": "0.9364942, 1.0678122; D/Y_Q,old = 0.98592 m_X is a v-calibrated mass per charge, not an object E/Q; explains kin_solve's 2.0286 = 2/0.98592", "verdict": "CONFIRMED"},
+  {"id": 4, "label": "[C]", "claim": "+0.7009% coordinated scale from the old heavy point yields Y_Q,M1", "codex": "1.00700905", "ours": "1.0070090496 from our tau=800 run; old point already gives 1.040807 Y_Q,old = 5.02648e-9, so 1.0518 = 1.040807 x 1.00700905^1.5", "verdict": "CONFIRMED"},
+  {"id": 5, "label": "[C]", "claim": "1.722%/1.628% repairs (old object) and 0.6079% for (5,1)", "codex": "1.0172235, 1.016277, 1.0060786", "ours": "1.0172235042, 1.016277, 1.0060785791", "verdict": "CONFIRMED"},
+  {"id": 6, "label": "[D][C]", "claim": "Y propto H_i^{3/2} at fixed dimensionless history", "codex": "root estimate verified by ODE rerun", "ours": "exponent 1.5000000002 in our engine at lambda = 1.007, 1.0172, 1.05 on (3,0.5) and (5,1); N_X, a, rho_r a^4 unchanged to 1e-11", "verdict": "CONFIRMED"},
+  {"id": 7, "label": "[C]", "claim": "baseline yields at H_old: 5.026475516e-9 (3,0.5), 5.033450222e-9 (5,1)", "codex": "5.026475516e-9, 5.033450222e-9", "ours": "5.026475516e-9 (-8.6e-12), 5.033450222e-9 (-4.8e-11)", "verdict": "CONFIRMED"},
+  {"id": 8, "label": "[C]", "claim": "our rp_reheating yr_b3_g0.5 = 1.0454 Y_Q vs Codex 1.0408", "codex": "1.040807", "ours": "1.0454206 at tau=80 window 64-80; 1.0408073 at tau=800; ratio 1.004432 = charge-clock drift of the homogeneous estimator", "verdict": "CORRECTED"},
+  {"id": 9, "label": "[E][A]", "claim": "do computed populations satisfy 0.0667805(1-eta)+2.13356p <= 0.01", "codex": "eta, p not computed", "ours": "no formation-type population passes: pt_relax 0.069-0.110 -> 0.147-0.235 (x15-23); 1.9-2.9 -> 4.05-6.19 (x405-619); plateau 1.75 -> 3.73; kin R=5 0.0050 pass, R=7 0.0303 (x3.0), e=1e-7 1.569 (x157), crossing R 5.82 -> 5.77; masks 30-32% -> 0.045-0.047 (x4.5-4.7); hot 0.6% -> 0.0664 (x6.6); pulses raw 0.0045/0.018/0.074/0.311; idealised completions 0.00015/0.0006/0.0026/0.0137; 10% kinetics 0.0039 frozen / 0.0073 re-solved with 1.35% gas heat still present", "verdict": "NEW"},
+  {"id": 10, "label": "[D]", "claim": "cold-completion mass excess 0.0275/0.1127/0.4903/2.482%", "codex": "0.0275/0.1127/0.4903/2.482%", "ours": "frozen formula 0.0146/0.060/0.261/1.368%; with re-solved E(Q_f) 0.0275/0.1127/0.4903/2.482%; fixed eps_Q understates by 1.9x", "verdict": "CONFIRMED"},
+  {"id": 11, "label": "[D]", "claim": "A changes by 0.98613 under the coordinated scale", "codex": "2.0796055e-31 GeV^-2, 0.9861279", "ours": "A propto lambda^-2 (kappa^2 mu h / M_Y^4): 2.0796057e-31, 0.9861279", "verdict": "CONFIRMED"},
+  {"id": 12, "label": "[C]", "claim": "vacuum-Born X6 pair channel on the M1 profile", "codex": "I = 2868466.51, 9.4713e-47 s^-1 at c6=1", "ours": "I = 2868466.51 (4e-12), 9.4713e-47; old profile I = 3149626.59, 1.03997e-46; profile factor 0.91073", "verdict": "CONFIRMED"},
+  {"id": 13, "label": "[C]", "claim": "included coherent + Born loss Gamma t0 = 6.27e-17 (was 7.08e-17)", "codex": "6.2716e-17", "ours": "6.27163e-17 = 7.0837e-17 x 0.91045 (profile) x 0.97245 (lambda^-4 coupling); neutral-response change immaterial (coherent channel 6e-5 of total)", "verdict": "CONFIRMED"}
+ ],
+ "corrections": [
+  "Our rp_reheating 1.0454 Y_Q for (3,0.5) is the tau=80 window; at tau=800 our engine gives 1.0408 as Codex does; the difference is the late charge clock of the homogeneous estimator.",
+  "The brief's '+3.42% needed' reading treats 4.8294e-9 as what the old point delivered; the old point delivered 1.0408 x 4.8294e-9 on the (3,0.5) history.",
+  "The frozen formula with fixed eps_Q understates the excess of reduced-Q completions by 1.9x; Codex's own cold-completion numbers use the re-solved E(Q) and are right."
+ ],
+ "uncertified": [
+  "homogeneous charge estimator drift 0.44% (tau 80 vs 800) exceeds the 0.7% calibration's natural precision scale",
+  "3/2 exponent assumes a spectator hidden sector and g*=106.75 at T ~ 7.7e12 GeV",
+  "1% tolerance is a program benchmark; eta and p are uncomputed; a Q distribution changes eps_Q",
+  "Gamma t0 is the cold vacuum-Born ground-state channel only"
+ ],
+ "compute": "one thread, foreground, about 7 s total; ODE/quadrature only"
+}

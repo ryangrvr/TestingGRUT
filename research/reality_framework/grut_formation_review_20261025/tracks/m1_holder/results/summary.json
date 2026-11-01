@@ -1,0 +1,172 @@
+{
+ "track": "m1_holder",
+ "date": "2026-11-01",
+ "claims": [
+  {
+   "id": "1",
+   "label": "D",
+   "claim": "Operator dimension 5; mu_eff(R)/H = mu/H + (10i - mu/H) R/(12H^2) <=> xi = 30.74672874, alpha = 2.19214407",
+   "verdict": "CONFIRMED",
+   "codex": "xi 30.746728738599167, alpha 2.192144074179184",
+   "own": "xi 30.7467287385992, alpha 2.19214407417918 (mu = 7.159456 H_i)"
+  },
+  {
+   "id": "2",
+   "label": "E",
+   "claim": "Naturalness of xi ~ 31",
+   "verdict": "NEW",
+   "codex": "\"dimension five, not UV-complete\"",
+   "own": "one-loop Y-loop size 1.51e-03, required/loop 20345; graviton (M_Y/M_Pl)^2 2.7e-12; tuned Re u(12)=0; holder term = 1.72 mu at R=12"
+  },
+  {
+   "id": "3",
+   "label": "E",
+   "claim": "EFT control at the prepared point",
+   "verdict": "CONFIRMED (Y) with caveat (X)",
+   "codex": "not stated",
+   "own": "|Y|/M_Y 0.192, |S|/M_Y 0.946, |X|/M_Y 2.907, kappa^2 X^6/M_Y^2 = 0.10 lambda_X X^4"
+  },
+  {
+   "id": "4",
+   "label": "D",
+   "claim": "Phase encoded in complex coefficient (supplied CP-odd input); no selection law claimed",
+   "verdict": "CONFIRMED",
+   "codex": "stated in REPORT.md and STABILIZED_CANDIDATE.json",
+   "own": "alpha is a rephasing-invariant CP phase; consistent with REVIEW_REHEATING item 3; d delta_eq/dlnR = 0.7159456 (Codex 0.715945616)"
+  },
+  {
+   "id": "5",
+   "label": "C",
+   "claim": "Stationary point (87.19556, 5.75425, 28.38718) H_i, arg S - 6 arg X = -pi/2",
+   "verdict": "CONFIRMED",
+   "codex": "[87.19556213287578, 5.75424796328559, 28.387181944361622]",
+   "own": "[87.19556213287582, 5.754247963285605, 28.38718194436162], delta residual 0.0e+00, V = -32480.5853114062"
+  },
+  {
+   "id": "6",
+   "label": "C",
+   "claim": "Physical Hessian (13.0914, 14.5892, 538.147, 1546.66, 3239.89) H_i^2 + gauge zero",
+   "verdict": "CONFIRMED",
+   "codex": "[13.091408829453263, 14.589249978666821, 538.1466434275541, 1546.6597219731073, 3239.885251158698]",
+   "own": "[13.091408829452917, 14.589249978667548, 538.1466434275553, 1546.659721973108, 3239.8852511586965] (sympy exact; FD to 2e-7; gauge null residual 1.1e-13)"
+  },
+  {
+   "id": "7",
+   "label": "C",
+   "claim": "V bounded below at fixed R: >= -285370 H_i^4 at R = 12",
+   "verdict": "CONFIRMED (loose)",
+   "codex": "-285369.684",
+   "own": "chain re-derived -285369.684; B = 0.5283522987; global search: single minimum = prepared point V = -32480.585; bounds at R=0,3,-1.063: -79965, -62035, -96554"
+  },
+  {
+   "id": "8",
+   "label": "C",
+   "claim": "Effective Planck coefficient shift 4.81e-11",
+   "verdict": "CONFIRMED",
+   "codex": "1.000000000048067",
+   "own": "1.000000000048067"
+  },
+  {
+   "id": "9",
+   "label": "C",
+   "claim": "Sextic holder (94f660d): delta = -2.09993, lightest 10.669, amplitudes (86.657, 3.823, 28.338)",
+   "verdict": "CONFIRMED",
+   "codex": "-2.09993, 10.669",
+   "own": "-2.099927, 10.66925, [86.6572, 3.8228, 28.3376]"
+  },
+  {
+   "id": "10",
+   "label": "C",
+   "claim": "Late charge -8267.437 vs -8120.740: +1.80645 %",
+   "verdict": "CONFIRMED",
+   "codex": "-8267.437032 / -8120.739696, ratio 1.018064529",
+   "own": "-8267.437810 / -8120.740082, ratio 1.018064576 (own engine, W80; rtol 1e-12 1.018064576)"
+  },
+  {
+   "id": "11",
+   "label": "C",
+   "claim": "Window dependence of the result ~3.7e-5",
+   "verdict": "CORRECTED",
+   "codex": "3.7e-5 (holder N_X alone, W80 vs W90)",
+   "own": "ratio 1.018065 (640-800), 1.018293 (720-800), 1.019612 (800-1000); N_YL 3.08 vs 0.0068 drives a slow X<->Y charge exchange"
+  },
+  {
+   "id": "12",
+   "label": "C",
+   "claim": "H_i refit 0.98813541 -> 1.32691046e11 GeV (fully cooled 0.98263384)",
+   "verdict": "CONFIRMED",
+   "codex": "0.9881354099844972",
+   "own": "0.9881353793 -> 1.326910415e+11 GeV; fully cooled 0.9826338140; +-0.1 % from the window drift"
+  },
+  {
+   "id": "13",
+   "label": "C",
+   "claim": "Phase sensitivity d ln|N_X|/d arg Sigma = 0.554384",
+   "verdict": "CONFIRMED",
+   "codex": "0.5543843 (tangent), 0.55438437/0.55438432 (FD)",
+   "own": "0.5543820 / 0.5543819 (steps 1e-3, 5e-4); original: Sigma-only -0.11650, re-prepared -0.2199687 (= d4747cb -0.21996870)"
+  },
+  {
+   "id": "14",
+   "label": "C",
+   "claim": "Late fractional charge response row (perturbations.json)",
+   "verdict": "CONFIRMED",
+   "codex": "12-component canonical row",
+   "own": "own FD row along the five eigenvectors agrees to norm rel. diff 3.9e-06; gauge direction 1.8e-10"
+  },
+  {
+   "id": "15",
+   "label": "C",
+   "claim": "Finite-k projected response errors 7.33e-5 (k=1e-3 H_i), 7.33e-7",
+   "verdict": "NOT CHECKED",
+   "codex": "as stated",
+   "own": "not run"
+  },
+  {
+   "id": "16",
+   "label": "D/C",
+   "claim": "Pure time shift = adiabatic mode, zero charge-to-entropy perturbation at k -> 0 (new packet: residual 4e-12 with curvature forcing, 3.02 without)",
+   "verdict": "CONFIRMED (theorem + own numbers; new packet numbers NOT CHECKED)",
+   "codex": "4e-12 / 3.02 (unpushed packet)",
+   "own": "full shift d lnN_X/d eps = -8.99e-07 = late drift rate (charge-entropy -8.98e-07); scalar-only -0.4806 / -0.2480 / -0.1271 at t0 = 3/6/12; background-only cancels it"
+  },
+  {
+   "id": "17",
+   "label": "C",
+   "claim": "Spectator charge power 1.23575e-10 (4), 7.59235e-16 (8), 1.76119e-31 (20), 1.44301e-70 (50) and e^{-3 Delta N} scaling",
+   "verdict": "CONFIRMED",
+   "codex": "as stated",
+   "own": "exact Hankel modes: 1.235743e-10, 7.592291e-16, 1.761177e-31, 1.443003e-70 (own row; Codex row reproduces table to 1.4e-9); ratio/e^{3dN} = 0.99975, 1.00005, 0.99993, 1.00007"
+  },
+  {
+   "id": "18",
+   "label": "Q",
+   "claim": "Hidden-scalar charge power 3.435e-70 at 50 e-folds (unpushed packet)",
+   "verdict": "NOT CHECKED",
+   "codex": "3.435e-70",
+   "own": "packet not on the remote; 2.38x f8186fa; matches neither incoherent (1.27e-70) nor position-only (6.04e-71) conventions"
+  },
+  {
+   "id": "19",
+   "label": "A",
+   "claim": "No resolved correlated charge-entropy signal; proxies are not P_CDI",
+   "verdict": "CONFIRMED as expectation",
+   "codex": "as stated",
+   "own": "heavy spectator (m^2 >= 13 H^2) tracks the local clock: adiabatic by Weinberg; missing: formation response, metric/radiation/delta R, light longitudinal vector (m_A ~ 2.7e-4 H_i), inflation history, correlated transfer"
+  },
+  {
+   "id": "20",
+   "label": "C/E",
+   "claim": "Y excitation by the holder",
+   "verdict": "NEW",
+   "codex": "not reported",
+   "own": "N_YL 0.0068 -> 3.08 light-Y free quanta, eps -0.199 -> -0.152; R_central ~ 10 under the rp_reheating ledger scaling [E]"
+  }
+ ],
+ "files": [
+  "results/holder_point.json",
+  "results/stationary_point.json",
+  "results/charge_transfer.json",
+  "results/isocurvature.json"
+ ]
+}
