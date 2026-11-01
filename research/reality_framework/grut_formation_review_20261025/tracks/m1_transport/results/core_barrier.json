@@ -1,0 +1,80 @@
+{
+ "k_over_mX": 0.0684,
+ "unitarity_s_wave_4pi_over_k2": 2685.9483717979833,
+ "profile": {
+  "columns": [
+   "rho",
+   "F",
+   "Fprime",
+   "S",
+   "Sprime"
+  ],
+  "F0": 2.6309605904405573,
+  "S0": 0.1257717809745518,
+  "barrier_center": 0.40020926657977585,
+  "barrier_max": 0.40020926657977585,
+  "r_barrier_edge_mX^-1": 3.1500000000000004,
+  "r_half_F_mX^-1": 4.65,
+  "r_where_F_below_0.01F0": 11.5
+ },
+ "hard_sphere": {
+  "R_3.6": {
+   "kR": 0.24624000000000001,
+   "sigma_mX2": 159.7809413948309,
+   "sigma_over_4piR2": 0.9810928485672753
+  },
+  "R_4.65": {
+   "kR": 0.31806,
+   "sigma_mX2": 263.5015006503168,
+   "sigma_over_4piR2": 0.9697668248498136
+  },
+  "R_6": {
+   "kR": 0.4104,
+   "sigma_mX2": 431.09496050449127,
+   "sigma_over_4piR2": 0.9529290820318774
+  },
+  "R_10": {
+   "kR": 0.684,
+   "sigma_mX2": 1129.4529240550057,
+   "sigma_over_4piR2": 0.8987900792647461
+  },
+  "R_15": {
+   "kR": 1.026,
+   "sigma_mX2": 2380.4231158805687,
+   "sigma_over_4piR2": 0.8419024567613425
+  },
+  "R_20": {
+   "kR": 1.368,
+   "sigma_mX2": 4025.6954403218824,
+   "sigma_over_4piR2": 0.8008866608871646
+  }
+ },
+ "rates": {
+  "R_3.6": {
+   "Gamma_over_H_2MeV": 686572.7570847739,
+   "x_dec_RD": 828.5968604120908
+  },
+  "R_4.65": {
+   "Gamma_over_H_2MeV": 1132256.139049861,
+   "x_dec_RD": 1064.07525065188
+  },
+  "R_6": {
+   "Gamma_over_H_2MeV": 1852398.9971215394,
+   "x_dec_RD": 1361.0286540413244
+  },
+  "R_10": {
+   "Gamma_over_H_2MeV": 4853217.169059637,
+   "x_dec_RD": 2203.001854075397
+  },
+  "R_15": {
+   "Gamma_over_H_2MeV": 10228589.514064051,
+   "x_dec_RD": 3198.2166146251025
+  },
+  "R_20": {
+   "Gamma_over_H_2MeV": 17298263.444421124,
+   "x_dec_RD": 4159.118108977085
+  }
+ },
+ "codex_XX_rate_for_comparison": 15.9,
+ "note": "For X at k = 0.068 m_X the core interior (S^2 + 2 a F^2 > 1 + k^2) is classically forbidden, so the core acts as a nearly hard sphere of radius ~ r_barrier_edge (3.6/m_X) to r_half_F (4.65/m_X); the field tail extends to ~12/m_X; the anomalous (X Xbar) and neutral couplings add inelastic channels that Codex found to be ~1 % at k = 0.4-1. Codex evolve.c/elastic.py include only XX self-scattering."
+}

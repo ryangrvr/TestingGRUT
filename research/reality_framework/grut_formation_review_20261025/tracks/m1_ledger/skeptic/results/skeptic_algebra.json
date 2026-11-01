@@ -1,0 +1,365 @@
+{
+ "method": "m1_ledger_skeptic (Claude, own code, algebra only, no engine runs): adversarial recomputation of the m1_ledger\ntrack's numbers from Codex's raw packet inputs, read through git show.  Everything here is mpmath (50 digits) or\nplain arithmetic on quoted [Q] numbers; no Codex code is imported, no reheating engine is run.\n\nChecks: (1) frozen-test coefficients from (v, g, M, Q, D); (2) the old target decomposition (object + released pairs);\n(3) Codex's own yield formula re-evaluated from its row numbers (g* = 106.75) -- a convention check that does not use\nany engine; (4) the H_i^{3/2} exponent from Codex's scale_0.5 / scale_2.0 control rows (factor 4 in scale, not used\nby m1_ledger); (5) the lambda chain; (6) the clock/window ambiguity of lambda from Codex's charge_clock entries;\n(7) the D = 4.4e-10 GeV target against the Planck-2018 value; (8) A from the M1 heavy parameters and the hw_gates\nformula alpha6 = kappa^2 mu <Sigma>/(M_Y^4 - 4 mu^2 <Sigma>^2); (9) the Gamma t0 chain from Codex's quoted channel\nrates (old and new); (10) the pulse rows of m1_ledger re-read with the charge-conserving (eta > 1) bookkeeping;\n(11) the cold-completion and 10%-kinetics rows.\nOutput: ../results/skeptic_algebra.json\n",
+ "results": {
+  "frozen": {
+   "mX_GeV": 0.0924089637375362,
+   "mX_matches_codex": 1.0821461030990908e-16,
+   "eps_GeV": 0.08662416173210513,
+   "eps_over_mX": 0.9373999905262296,
+   "YQ_new": 5.079414232725842e-09,
+   "YQ_new_rel_codex": -5.327764729947604e-17,
+   "c_eta": 0.06678046736338084,
+   "c_eta_rel_codex": -1.6694887238270467e-15,
+   "c_p": 2.133560934726762,
+   "c_p_rel_codex": -1.5138000945423758e-16,
+   "eta_min": 0.8502556152297384,
+   "p_max": 0.004686999952631148,
+   "eta_min_rel_codex": -2.799524388776299e-16,
+   "p_max_rel_codex": 2.303414678886362e-16,
+   "identity_check": "(rho/s)/D = eta + (1-eta)/r + 2p/r = 1 + (1/r - 1)(1-eta) + (2/r) p  [exact]",
+   "m1_ledger_values": {
+    "c_eta": 0.06678047,
+    "c_p": 2.13356093,
+    "eta_min": 0.8502556,
+    "p_max": 0.004687,
+    "YQ": 5.079414233e-09
+   }
+  },
+  "old_target": {
+   "D_over_YQ_old_GeV": 0.09110860920628301,
+   "over_mX": 0.9859282641135712,
+   "d71cc01_late_mass_per_charge_GeV": 0.09110860920628304,
+   "identity_YQ_old_times_late_mass_over_D": 2.95094828272298e-16,
+   "decomposition_object_plus_pairs_GeV": 18221.664280338304,
+   "remainder_D_particles_GeV": 0.05756091830435912,
+   "implied_mD_GeV": 0.09287050557401803,
+   "released_pairs_per_charge": 0.03130605663144649,
+   "codex_required_pairs_eta1": 0.031306064370482646,
+   "old_object_fraction": 0.9364942349053572,
+   "rel_codex": -9.503910686167872e-17,
+   "old_multiplier": 1.0678122328228328,
+   "rel_codex_mult": 3.427758037951929e-17,
+   "kin_f_coefficient": 2.028545151607111,
+   "old_pair_max_1pct": 0.0049296413205678555,
+   "rel_codex_pair_max": 3.4570077867053915e-17,
+   "old_core_fraction_no_pairs": 0.18350321746045561,
+   "rel_codex_core_frac": -1.47050321545834e-14,
+   "reading": "D/Y_Q,old = 0.98593 m_X = object 0.923316 m_X + 2 x 0.031306 m_X released pairs (+1e-6 D particles): the old target was object + scalar-release debris, calibrated through v (d71cc01 scale_status), as m1_ledger says"
+  },
+  "codex_yield_formula_from_rows": {
+   "b3_g0.5_baseline": {
+    "Y_from_row_numbers": 5.026475516056737e-09,
+    "rel_to_row_Y": -3.196483253310896e-16,
+    "H_over_H0": 1.0
+   },
+   "b5_g1_baseline": {
+    "Y_from_row_numbers": 5.03345022205823e-09,
+    "rel_to_row_Y": -2.6147802709901325e-16,
+    "H_over_H0": 1.0
+   },
+   "scale_0.5": {
+    "Y_from_row_numbers": 1.777127461776791e-09,
+    "rel_to_row_Y": -2.607597692690442e-16,
+    "H_over_H0": 0.5
+   },
+   "scale_2.0": {
+    "Y_from_row_numbers": 1.4217019699288572e-08,
+    "rel_to_row_Y": 4.7076251933686244e-20,
+    "H_over_H0": 2.0
+   },
+   "b3_g0.5_matched_oldobj": {
+    "Y_from_row_numbers": 5.156893366462144e-09,
+    "rel_to_row_Y": -2.7050641105534373e-16,
+    "H_over_H0": 1.0172235041614452
+   },
+   "M1_b3_g0.5_matched": {
+    "Y_from_row_numbers": 5.0794142327324865e-09,
+    "rel_to_row_Y": 2.4481128834189935e-17,
+    "H_over_H0": 1.0070090495735164
+   },
+   "M1_b5_g1_matched": {
+    "Y_from_row_numbers": 5.079414232730543e-09,
+    "rel_to_row_Y": -3.912818363203429e-16,
+    "H_over_H0": 1.006078579112091
+   }
+  },
+  "exponent_from_codex_rows": {
+   "Y_scale2_over_scale05": {
+    "lambda_ratio": 4.0,
+    "exponent": 1.5000000002574583
+   },
+   "T_scale2_over_scale05": {
+    "lambda_ratio": 4.0,
+    "exponent": 0.49999999960553637
+   },
+   "Y_scale2_over_base": {
+    "lambda_ratio": 2.0,
+    "exponent": 1.5000000007916279
+   },
+   "Y_scale05_over_base": {
+    "lambda_ratio": 0.5,
+    "exponent": 1.4999999997232887
+   },
+   "NX_spread_over_factor4": {
+    "s05": 1.9242716601242108e-10,
+    "s2": 5.474001082212339e-10
+   },
+   "a_spread_over_factor4": {
+    "s05": -3.9255531336045684e-10,
+    "s2": 1.5364061521740612e-10
+   },
+   "Y_M1_b3": {
+    "lambda_ratio": 1.0070090495735164,
+    "exponent": 1.50000000018725
+   },
+   "Y_M1_b5": {
+    "lambda_ratio": 1.006078579112091,
+    "exponent": 1.5000000001528044
+   },
+   "Y_oldobj_b3": {
+    "lambda_ratio": 1.0172235041614452,
+    "exponent": 1.5000000001778
+   },
+   "eta2_effect_expected": "(lambda^2-1) x 3e-15 ~ 1e-14 relative; the observed 1e-10 spread in N_X and a over a factor 4 is integrator noise (rtol 2e-11)"
+  },
+  "lambda_chain": {
+   "old_point_yield_over_YQ_old": 1.040807257903098,
+   "b5": 1.0422514755472314,
+   "lambda_M1_b3": 1.0070090495735162,
+   "codex": 1.0070090495735164,
+   "lambda_M1_b5": 1.006078579112091,
+   "codex_b5": 1.006078579112091,
+   "lambda_oldobj_b3": 1.0172235041614455,
+   "codex_oldobj_b3": 1.0172235041614452,
+   "lambda_oldobj_b5": 1.0162835956038307,
+   "codex_oldobj_b5": 1.0162835956038305,
+   "identity_1p0518": {
+    "lhs": 1.0517690143778422,
+    "rhs": 1.0517690143778424
+   },
+   "brief_naive_scale": 1.0342215465094102,
+   "H_M1_GeV": 134284273491.30812,
+   "codex_H": 134284273491.30815,
+   "note": "m1_ledger quotes the (5,1) old-object repair as 1.016277 (+1.628%); Codex row b5_g1_matched has 1.0162835956 (+1.628%): same to 5 digits"
+  },
+  "clock_ambiguity": {
+   "entries": {
+    "tau_20": {
+     "NX": -8117.881574752486,
+     "Y_over_window": 0.9996479991079715,
+     "lambda_if_this_clock": 1.0072454309694114
+    },
+    "tau_50": {
+     "NX": -8104.618318826644,
+     "Y_over_window": 0.9980147420659915,
+     "lambda_if_this_clock": 1.0083440402048227
+    },
+    "tau_80": {
+     "NX": -8147.109179920771,
+     "Y_over_window": 1.0032471298363703,
+     "lambda_if_this_clock": 1.004835005263871
+    },
+    "tau_200": {
+     "NX": -8133.914222541242,
+     "Y_over_window": 1.001622283178865,
+     "lambda_if_this_clock": 1.0059214172527273
+    },
+    "tau_800": {
+     "NX": -8116.072835674296,
+     "Y_over_window": 0.9994252682903597,
+     "lambda_if_this_clock": 1.0073950744851756
+    }
+   },
+   "lambda_window_640_800": 1.0070090495735162,
+   "lambda_min": 1.004835005263871,
+   "lambda_max": 1.0083440402048227,
+   "codex_instantaneous_tau80_over_tau800": 1.003824059354181,
+   "m1_ledger_window_ratio_tau80_over_tau800": 1.0044324235464697,
+   "our_engine_NX_window_64_80": 8156.734641992738,
+   "our_engine_NX_window_640_800": 8120.740082437151,
+   "remark": "m1_ledger pairs its window ratio 1.00443 with Codex instantaneous clocks (-8147.1/-8116.1 = 1.00382): different estimators of the same drift; the window ratio is the right one for the quoted yields"
+  },
+  "target_D": {
+   "D_codex": 4.4e-10,
+   "D_planck2018": 4.3733259546209184e-10,
+   "codex_over_planck": 0.0060992584718953255,
+   "planck_fractional_uncertainty": 0.01,
+   "lambda_shift_if_D_planck": -0.004045616543576194,
+   "lambda_band_from_Och2": 0.006655604652112435,
+   "remark": "the +0.7009% calibration step is the same size as the rounding of the target (0.61%) and smaller than its +-1% observational band; m1_ledger did not raise this; [R] inputs recalled, not fetched"
+  },
+  "A_coupling": {
+   "A_from_M1_parameters": 2.0796055125461385e-31,
+   "codex_A": 2.079605512546138e-31,
+   "rel": 1.4355778057216302e-16,
+   "r_squared": 0.2025000000000001,
+   "r": 0.4500000000000001,
+   "two_A_over_B": 0.4500000000000001,
+   "A_old_full": 2.108859793121751e-31,
+   "A_old_over_lambda2": 2.079605512546138e-31,
+   "rel_to_codex_new": 3.9387808572915115e-17,
+   "m1_ledger_used_A_old": 2.10886e-31,
+   "m1_ledger_A_new": 2.0796057165545546e-31,
+   "heavy_ratios": {
+    "MY_over_H": 30.0,
+    "h_over_H": 40.0,
+    "mu_over_H": 7.159456159513795
+   },
+   "scaling": "kappa fixed, mu,h,M_Y ~ lambda: A ~ lambda^-2 exactly since r^2 is invariant"
+  },
+  "gamma_t0": {
+   "c6_old": 1250390.4206872315,
+   "c6_new": 1233044.8995126374,
+   "codex_c6_new": 1233044.8995126376,
+   "Gamma_t0_old": 7.083678578486523e-17,
+   "codex_old_e160356": 7.08367857848652e-17,
+   "rel_old": 5.225990852160219e-16,
+   "m1_ledger_old": 7.083679968300075e-17,
+   "m1_ledger_old_rel": 1.9619940961479139e-07,
+   "Gamma_t0_new": 6.27162935941382e-17,
+   "codex_new": 6.271629359413795e-17,
+   "rel_new": 3.8600248080005664e-15,
+   "ratio_new_over_old": 0.8853633447543855,
+   "profile_factor": 0.9104477589026352,
+   "coupling_factor": 0.9724482663579906,
+   "lambda_minus4": 0.9724482663579908,
+   "codex_relative_included_change_at_fixed_profile": 0.9724482663579905,
+   "coherent_share_new": 6.439591491084516e-05,
+   "coherent_share_old": 0.00037675222008927986,
+   "age_check_13p8Gyr_julian": 4.3549488e+17
+  },
+  "pulse_rows": {
+   "rows": {
+    "5%": {
+     "p": 0.002088,
+     "Nplus_over_Q0": 0.0,
+     "eta_charge_conserving": 1.002088,
+     "term_m1_ledger_eta1": 0.0044548752317094785,
+     "term_charge_conserving": 0.004315437615854739,
+     "ratio": 0.9686999952631148,
+     "coefficient_on_Nbar": 2.066780467363381,
+     "coefficient_on_Nplus": 0.06678046736338084
+    },
+    "10%": {
+     "p": 0.008448,
+     "Nplus_over_Q0": 0.000474295,
+     "eta_charge_conserving": 1.007973705,
+     "term_m1_ledger_eta1": 0.018024322776571684,
+     "term_charge_conserving": 0.017491835030053957,
+     "ratio": 0.970457267486917,
+     "coefficient_on_Nbar": 2.066780467363381,
+     "coefficient_on_Nplus": 0.06678046736338084
+    },
+    "20%": {
+     "p": 0.03447,
+     "Nplus_over_Q0": 0.0,
+     "eta_charge_conserving": 1.03447,
+     "term_m1_ledger_eta1": 0.07354384542003148,
+     "term_charge_conserving": 0.07124192271001574,
+     "ratio": 0.9686999952631148,
+     "coefficient_on_Nbar": 2.066780467363381,
+     "coefficient_on_Nplus": 0.06678046736338084
+    },
+    "40%": {
+     "p": 0.1459,
+     "Nplus_over_Q0": 0.0,
+     "eta_charge_conserving": 1.1459,
+     "term_m1_ledger_eta1": 0.3112865403766345,
+     "term_charge_conserving": 0.3015432701883173,
+     "ratio": 0.9686999952631148,
+     "coefficient_on_Nbar": 2.066780467363381,
+     "coefficient_on_Nplus": 0.06678046736338084
+    }
+   },
+   "remark": "m1_ledger reads the emitted Xbar as p with eta = 1; charge conservation makes the core charge rise, eta = 1 + (Nbar - Nplus)/Q0 (ed73791 remark), so the frozen term is (c_p - c_eta) Nbar/Q0 + c_eta Nplus/Q0 = 2.0668 Nbar/Q0 + 0.0668 Nplus/Q0: 3% below m1_ledger rows; verdict unchanged (5% passes, 10% fails x1.75)"
+  },
+  "cold_completion": {
+   "5%": {
+    "eta": 0.9978184837848375,
+    "Qf_plus_Nf_minus_Q": 5.6e-12,
+    "excess_from_masses": 0.0002751557503659785,
+    "codex_excess": 0.00027515575036596296,
+    "rel": 5.654462417811714e-14,
+    "frozen_term": 0.0001456826724093454,
+    "frozen_over_actual": 0.5294553074597792,
+    "EQ_over_mX_final": 0.9375216239335299
+   },
+   "10%": {
+    "eta": 0.9910506553154678,
+    "Qf_plus_Nf_minus_Q": 1.27e-11,
+    "excess_from_masses": 0.0011274534942458422,
+    "codex_excess": 0.0011274534942455894,
+    "rel": 2.242872178462589e-13,
+    "frozen_term": 0.0005976414206290517,
+    "frozen_over_actual": 0.5300807737784486,
+    "EQ_over_mX_final": 0.9379011211497
+   },
+   "20%": {
+    "eta": 0.9608704698571912,
+    "Qf_plus_Nf_minus_Q": 8e-12,
+    "excess_from_masses": 0.004903147757197927,
+    "codex_excess": 0.00490314775719769,
+    "rel": 4.8377354100533583e-14,
+    "frozen_term": 0.00261308831064627,
+    "frozen_over_actual": 0.5329409677304136,
+    "EQ_over_mX_final": 0.9396341123676689
+   },
+   "40%": {
+    "eta": 0.7951924919391913,
+    "Qf_plus_Nf_minus_Q": -1e-11,
+    "excess_from_masses": 0.024817648841077906,
+    "codex_excess": 0.024817648841077844,
+    "rel": 2.5731301212373008e-15,
+    "frozen_term": 0.013677141107830196,
+    "frozen_over_actual": 0.551105432888225,
+    "EQ_over_mX_final": 0.9505328004426522
+   }
+  },
+  "kinetics_10pct": {
+   "eta": 0.94185585,
+   "p": 2.795e-06,
+   "charge_closure": 0.0,
+   "free_X_from_ledger": 11629.389,
+   "codex_free_X": 11629.389,
+   "frozen_term": 0.003888856814259081,
+   "m1_ledger_frozen": 0.003888856814259084,
+   "gas_kinetic_over_reference_mass": 0.01347497880057484,
+   "codex_quoted": 0.013475,
+   "gas_rest_plus_kinetic_check": 14156.237,
+   "codex_gas_energy": 14156.238,
+   "codex_resolved_excess": 0.007266,
+   "total_if_heat_stays": 0.02074097880057484
+  },
+  "kin_translation": {
+   "new_term_per_old_f": 1.0517690143778422,
+   "equals_YQ_ratio": 1.0517690143778422,
+   "rel": 0.0,
+   "rows": {
+    "R4.9665": {
+     "f": 0.0045855,
+     "p": 0.0022604870275463903,
+     "term": 0.0048228868154295956
+    },
+    "R5": {
+     "f": 0.0047584,
+     "p": 0.0023457205259790085,
+     "term": 0.005004737678015524
+    },
+    "R7": {
+     "f": 0.0288444,
+     "p": 0.014219254610698746,
+     "term": 0.03033764615832023
+    },
+    "R41.7": {
+     "f": 1.4921315,
+     "p": 0.7355673098120895,
+     "term": 1.5693776770771313
+    }
+   },
+   "crossing_R": {
+    "old": 5.824275035164813,
+    "new": 5.768255724199123
+   }
+  }
+ }
+}

@@ -36,12 +36,12 @@ def series(wins, key='all', wn='hann'):
 
 def summary(s, A):
     out = {}
-    for a, b in [(29, 99), (99, 199), (199, 249), (29, 249)]:
+    for a, b in [(29, 99), (99, 199), (199, 249), (29, 249), (249, 349), (349, 449), (449, 499), (249, 499), (29, 499)]:
         m = (s >= a) & (s <= b)
         if m.sum() >= 3 and s[m].max() >= b - 1e-6:
             out[f'dlnA_ds_{a}_{b}'] = float(np.polyfit(s[m], np.log(A[m]), 1)[0])
             out[f'dA_ds_{a}_{b}'] = float(np.polyfit(s[m], A[m], 1)[0])
-    for t in [99, 149, 199, 249]:
+    for t in [99, 149, 199, 249, 299, 349, 399, 449, 499]:
         i = np.flatnonzero(abs(s - t) < 1e-6)
         if len(i): out[f'drop_29_to_{t}'] = float(A[0] - A[i[0]]); out[f'A_{t}'] = float(A[i[0]])
     out['A_29'] = float(A[0])
@@ -64,7 +64,7 @@ def main():
         # cascade front: largest shell with occupation >= 1 and minimum occupation, at s ~ 100, 200, 250
         fr = {}
         for o in occs:
-            if any(abs(o['s'] - t) < 1e-6 for t in [34, 100, 150, 200, 250]):
+            if any(abs(o['s'] - t) < 1e-6 for t in [34, 100, 150, 200, 250, 300, 400, 500]):
                 ox = np.array(o['X']); op = np.array(o['phi'])
                 fr[f"s{o['s']:.0f}"] = dict(occX_min=float(ox[1:].min()), occphi_min=float(op[1:].min()),
                                            occX_last=float(ox[-1]), occX_shell_of_min=int(np.argmin(ox[1:]) + 1))
@@ -112,6 +112,24 @@ def main():
             energy_frac_X_shells_occ_lt1=float(EXs[lowX].sum() / Et), energy_frac_phi_shells_occ_lt1=float(EPs[lowP].sum() / Et),
             Aminus_in_X_shells_occ_lt1=float(sm[:len(lowX)][lowX].sum()), first_X_shell_occ_lt1=int(np.argmax(lowX)) if lowX.any() else None)
         print('N64 s250 occ<1:', res['N64_quantum_unreliable_s250'])
+    late = {}
+    for t in [299, 349, 399, 449, 499]:
+        y = {N: res['runs'][N]['all_modes'].get(f'drop_29_to_{t}') for N in (48, 64) if N in res['runs']}
+        if len(y) == 2 and None not in y.values():
+            late[f'drop_29_to_{t}'] = dict(N48=y[48], N64=y[64], N64_minus_N48=y[64] - y[48])
+            print('late drop', t, {k: round(v, 5) for k, v in late[f'drop_29_to_{t}'].items()})
+    res['late_N48_vs_N64'] = late
+    # same-window split at s = 494-504 and energy bookkeeping on N48/N64
+    sp = {}
+    for N in (48, 64):
+        if N not in res['runs']: continue
+        W = [w for w in res['runs'][N]['windows'] if abs(w['s'][1] - 504) < 1e-6]
+        if W:
+            w = W[0]
+            sp[N] = dict(all=w['hann'], tot8=w['hann_tot8'], coh=w['coh'], band=w['band'], uv=w['uv'],
+                         phi_frac=w['phi_frac'], uv_quad_frac=w['uv_quad_frac'], dE=w['dE'])
+            print('split 494-504 N%d' % N, {k: round(v, 5) for k, v in sp[N].items()})
+    res['split_494_504'] = sp
     res['continuum_extrapolation'] = fits
     json.dump(res, open(os.path.join(OUT, 'cutoff_scan.json'), 'w'), indent=1)
 

@@ -1,0 +1,75 @@
+{
+ "track": "pt_relax_skeptic",
+ "date": "2026-11-01",
+ "packet": "Codex 5f5513b grut_particle_transport_20261027; target track pt_relax",
+ "author": "Claude (same-session AI adversarial review; not outside replication)",
+ "provenance": {
+  "reproduction_tool": "Codex FD4/Yoshida engine + prepare.initialize from private git-archive copy of 5f5513b",
+  "own_code": ["scan.py", "analyze_scan.py", "equilibria.py", "refit_n32.py", "mc24.py", "mc24_checks.py", "recheck_scalars.py", "efolds_corrected.py"]
+ },
+ "cutoff_scan": {
+  "setup": "L = 12, seed 1, width 1, N = 32/40/48/64, h <= 0.004, ds = 0.04, 10-s Hann windows, all-mode A_- per net charge",
+  "A_24_34": {"32": 1.7510, "40": 1.7505, "48": 1.7501, "64": 1.7497},
+  "A_244_254": {"32": 1.5655, "40": 1.6772, "48": 1.6900, "64": 1.6941},
+  "A_494_504": {"32_pt_relax": 1.202, "48": 1.5229, "64": 1.4889},
+  "drop_29_to_249": {"32": 0.1855, "40": 0.0733, "48": 0.0600, "64": 0.0556, "aitken_continuum": 0.0578},
+  "drop_29_to_499": {"48": 0.2272, "64": 0.2608},
+  "dA_ds_29_249": {"32": -7.39e-4, "40": -3.29e-4, "48": -2.61e-4, "64": -2.42e-4},
+  "dA_ds_249_499": {"48": -7.07e-4, "64": -7.91e-4},
+  "dA_ds_449_499": {"48": -6.42e-4, "64": -1.364e-3},
+  "checks": {"charge_sum_rule_max_err": 4.6e-9, "energy_drift_max": 2.0e-7, "blackman_harris_minus_hann_max": 7.4e-5, "match_pt_relax_long_run_windows": 0.0},
+  "phi_energy_fraction_s250": {"32": 0.0334, "40": 0.0129, "48": 0.0099, "64": 0.0078},
+  "phi_energy_fraction_s500": {"48": 0.0869, "64": 0.0891},
+  "min_occupation_X": {"32_s200": 14.2, "32_s250": 10.9, "48_s200": 0.176, "48_s250": 0.102, "48_s500": 0.077, "64_s250": 0.0027, "64_s500": 0.022},
+  "N64_s250_shells_occ_lt1": {"energy_frac_X": 0.0061, "energy_frac_phi": 0.0050, "A_minus": 0.0024, "first_shell": 35}
+ },
+ "mc24": {
+  "model": "one real scalar, lambda phi^4/4!, thermal mass on all lines, mu = 0, T = 1; Gamma_chem = 4 R_eq/(T chi); c_eff = Gamma_chem/(lambda^4 T)",
+  "c_eff_bose": {"1.0": 3.07e-10, "0.5": 8.47e-9, "0.36": 3.02e-8, "0.16": 4.11e-7, "0.08": 2.68e-6},
+  "c_eff_boltzmann": {"1.0": 1.74e-10, "0.5": 2.38e-9, "0.36": 5.56e-9, "0.16": 2.36e-8, "0.08": 5.16e-8},
+  "pt_relax_c_bracket": [3.19e-5, 3.19e-3],
+  "checks": {"const_M2_massless_boltzmann_2to4_ratio_to_analytic": 0.99943, "three_body_massive_weight_vs_dalitz": [[0.04574, 0.04577], [0.30553, 0.30559], [0.72994, 0.73016]], "two_to_two_massless_boltzmann": [6.3816e-6, 6.3824e-6], "convergence_4M_events_seed777": {"0.36": 3.015e-8, "0.16": 4.136e-7}}
+ },
+ "efolds_corrected": {
+  "X_only": {"pt_relax": [0.38, 38], "corrected": 4.9e-3},
+  "g2_two_vertices": {"pt_relax": [2.4e2, 2.4e4], "corrected": [0.22, 3.0]},
+  "mixed_g2_lambda_phi": {"pt_relax": [1.9e4, 1.9e6], "corrected": [18, 250]},
+  "phi_self": {"pt_relax": [1.5e6, 1.5e8], "corrected": [1.5e3, 2.0e4]},
+  "XXbar_to_phiphi_2to2_own_route": {"Gamma_per_Xbar": 2.0e-6, "efolds": 5.2e6, "pt_relax_Gamma": [1.6e-7, 1.4e-6]}
+ },
+ "equilibria": {
+  "quantum_hartree_phi_eq": {"T": 17.5561, "mu": 2.0394, "M_X": 2.8355, "M_phi": 6.3985, "Xbar_per_net": 0.06914, "phi_share": 0.288, "condensate_charge": 0.976},
+  "quantum_hartree_phi_absent": {"T": 19.4026, "Xbar_per_net": 0.09499},
+  "free_BE_2dof": {"T": 19.403, "Xbar_per_net_mu0": 0.1097, "Xbar_per_net_with_condensate_mu": 0.0960},
+  "free_BE_3dof": {"T": 17.532, "Xbar_per_net_mu0": 0.0809},
+  "rj_lattice_selfconsistent_Xbar_per_net": {"32": 0.3757, "40": 0.3327, "48": 0.2961, "64": 0.2405},
+  "rj_lattice_T_cl": {"32": 1643.4, "40": 842.8, "48": 487.4, "64": 205.3},
+  "massive_phase_heavy_release_at_a_ref_Xbar_per_net": {"R0": [0.073, 0.083], "R1.14": [0.175, 0.188], "R4.05": [0.392, 0.410], "R40.56": [2.256, 2.308], "R48.50": [2.593, 2.650]},
+  "massive_phase_pilot_Xbar_per_net_range": [0.042, 0.096],
+  "hartree_gap_MX_minus_mu": 0.796
+ },
+ "scalars": {
+  "kappa": 1.44067e-24,
+  "a_onset": {"chi60": 4.9988e12, "chi110": 9.1645e12, "equilibrium": 5.2211e12},
+  "s_onset": {"chi60": 2.5173e12, "chi110": 4.6150e12, "equilibrium": 2.6292e12},
+  "Gamma_crit": {"chi60": 3.97e-13, "chi110": 2.17e-13, "equilibrium": 3.80e-13},
+  "T_hidden_GeV_at_onset": 0.448, "T_over_mX_at_onset": 4.85, "T_hidden_GeV_at_a_ref": 0.332, "T_over_mX_at_a_ref": 3.60,
+  "V0_over_rho": {"a_onset": 0.122, "a_ref": 0.404},
+  "FD4_omega_max": {"32": 10.67, "40": 13.33, "48": 16.0, "64": 21.33},
+  "bose_peaks_at_T17.56": {"number": 28.0, "energy": 49.5},
+  "cascade_s_to_3T": {"p_max_s^1/7": 1.1e8, "p_max_s^1/5": 2.6e6},
+  "engine_autonomous": true
+ },
+ "refit_n32": {
+  "free_fit_A_inf_by_start": {"29": 0.168, "199": 0.599, "299": 0.510, "399": 0.533, "499": 0.576, "599": 0.642, "699": 0.543},
+  "free_fit_Gamma_by_start": {"29": 9.9e-4, "199": 1.85e-3, "299": 1.54e-3, "399": 1.62e-3, "499": 1.80e-3, "599": 2.20e-3, "699": 1.60e-3},
+  "fixed_A_inf_0.376_Gamma": {"299": 1.25e-3, "499": 1.21e-3, "max_abs_resid": 0.012}
+ },
+ "verdicts": {
+  "C1": "CONFIRMED", "C1b": "CONFIRMED decay; CORRECTED N32 magnitudes and fit precision", "C2": "CONFIRMED",
+  "C3": "CORRECTED (2<->4 rows: c_eff 80-1e5 below bracket; X-only 5e-3, g2 0.2-3, mixed 18-250, phi self 1.5e3-2e4 e-folds)",
+  "C4": "CONFIRMED", "C5": "CONFIRMED, qualified (margin 1e1-1e4 through lambda_phi; conditional on phi)",
+  "C6": "CONFIRMED (pilot, heavy); CORRECTED (N32 RJ end point 0.376; free-BE top 0.096 with condensate mu)",
+  "C7": "CONFIRMED", "C8": "NOT CHECKED", "C9": "CONFIRMED"
+ }
+}

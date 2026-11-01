@@ -1,0 +1,95 @@
+{
+ "method": "m1_ledger_skeptic (Claude, own code): the vacuum-Born X^6 pair integral on the M1 and old profiles with a\ndifferent numerical method from both Codex (CubicSpline to linspace(0,70,12001), Simpson; q = qmax sin(theta)\nGauss-Legendre) and m1_ledger (CubicSpline to dr = 0.01 up to 80, Simpson; q = qmax(1-u^2) Gauss-Legendre).\n\nHere: (A) the profile's NATIVE grid (no interpolation; M1 dr = 0.05 to 160, old dr = 0.075 to 120), Simpson for\nthe spherical transform Ft4(q) = 4 pi int r^2 F^4 j0(qr) dr, and scipy.integrate.quad with the algebraic endpoint\nweight (qmax - q)^{1/2} for the q integral (beta = sqrt((qmax-q)(qmax+q)/(W^2-q^2))); (B) a trapezoid variant on a\n2x refined spline grid; (C) the Parseval identity int_0^inf q^2 |Ft4|^2 dq = 2 pi^2 int r^2 F^8 dr as an absolute\nnormalisation check of the transform; (D) the rate prefactor re-derived (see NOTES) and the c6 = 1 rate.\n\nOwn derivation of the prefactor (same as m1_ledger's and Codex's, done again from scratch):\n  L = A X^6 + h.c., X = X0 + chi, X0 = (v/sqrt2) F e^{-i Omega t}.  The chi^2 term is C(6,2) A X0^4 chi^2 = 15 A X0^4 chi^2;\n  chi contains b^dagger, so chi^2 creates two anti-X with <k1 k2|chi^2|0> = 2 e^{i(k1+k2).x}/sqrt(2E1 2E2 (2pi)^6).\n  Amplitude: 30 A (v/sqrt2)^4 Ft4(q) 2pi delta(E1+E2-W), W = 4 Omega m_X, q = k1+k2.\n  Rate = (1/2)_identical int d^3k1 d^3k2/((2pi)^6 2E1 2E2) |30 A (v/sqrt2)^4 Ft4|^2 2pi delta(E1+E2-W)\n       = 450 A^2 (v/sqrt2)^8 (2pi/(2pi)^6) int d^3q |Ft4(q)|^2 (pi/2) beta(s),  s = W^2 - q^2, beta = sqrt(1-4m^2/s)\n       = 450 A^2 (v/sqrt2)^8 (4 pi^3 / (64 pi^6)) I = (900/(32 pi^3)) A^2 (v/sqrt2)^8 I / m_X^3,  I = int q^2 |Ft4|^2 beta dq.\n  The two-body factor: int d^3k1 d^3k2/(2E1 2E2) delta^4(P-k1-k2) = (pi/2) beta  (CM frame: 4pi k^2/(4E^2) x E/(2k)).\n  Each event absorbs 4 condensate quanta (core charge -4) and emits two anti-X (charge -2): X-number violation 6 = Z6.\nOutput: ../results/skeptic_born.json\n",
+ "results": {
+  "gaussian_control": {
+   "L": 3.0,
+   "q": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    3.0
+   ],
+   "max_rel_err": 0.4537381548062789
+  },
+  "M1": {
+   "native_quad": {
+    "grid": {
+     "points": 3201,
+     "dr": 0.05,
+     "rmax": 160.0
+    },
+    "W": 3.5268819678096857,
+    "qmax": 2.9049778682222556,
+    "I": 2868466.5178635777,
+    "quad_abs_err": 6.118025754486771e-08,
+    "parseval_lhs": 3509640.1652481877,
+    "parseval_tail_60_120": 1.326211628994476e-15,
+    "parseval_rhs": 3509640.1652481873,
+    "parseval_rel": 2.220446049250313e-16,
+    "events_per_second_c1": 4.735671691606955e-42,
+    "born_fractional_core_rate_c1": 9.471343383213911e-47,
+    "F0": 2.6309605904405573,
+    "codex_I": 2868466.5109355855,
+    "rel_I_codex": 2.415225131002785e-09,
+    "m1_I": 2868466.5109466882,
+    "rel_I_m1": 2.411354449449732e-09,
+    "rel_born_codex": 2.415225131002785e-09,
+    "rel_born_m1": 2.411354671494337e-09
+   },
+   "spline_trapezoid": {
+    "I": 2868466.511368488,
+    "rel_I_codex": 1.509177227632108e-10,
+    "rel_I_m1": 1.4704704121015766e-10,
+    "dr": 0.025,
+    "rmax": 100.0,
+    "nq": 4001
+   }
+  },
+  "old": {
+   "native_quad": {
+    "grid": {
+     "points": 1601,
+     "dr": 0.075,
+     "rmax": 120.0
+    },
+    "W": 3.44478052328689,
+    "qmax": 2.8047304422380237,
+    "I": 3149626.6311931117,
+    "quad_abs_err": 9.99407474061381e-08,
+    "parseval_lhs": 3902019.988188269,
+    "parseval_tail_60_120": 8.109897742851444e-10,
+    "parseval_rhs": 3902019.9881882686,
+    "parseval_rel": 4.440892098500626e-16,
+    "events_per_second_c1": 5.199850715908539e-42,
+    "born_fractional_core_rate_c1": 1.0399701431817078e-46,
+    "F0": 2.6199231342487512,
+    "codex_I": null,
+    "rel_I_codex": null,
+    "m1_I": 3149626.589328209,
+    "rel_I_m1": 1.3292021039390534e-08,
+    "rel_born_codex": 1.3292270839571074e-08,
+    "rel_born_m1": 1.3292020817345929e-08
+   },
+   "spline_trapezoid": {
+    "I": 3149626.589843963,
+    "rel_I_codex": null,
+    "rel_I_m1": 1.63750790704853e-10,
+    "dr": 0.025,
+    "rmax": 100.0,
+    "nq": 4001
+   }
+  },
+  "profile_factor_native": 0.9107322402773096,
+  "m1_ledger_profile_factor": 0.910732250186683,
+  "Gamma_t0": {
+   "old": 7.083678672609224e-17,
+   "M1": 6.271629374560242e-17,
+   "codex_old": 7.08367857848652e-17,
+   "codex_M1": 6.271629359413795e-17,
+   "rel_old": 1.3287263733730015e-08,
+   "rel_M1": 2.415073696582226e-09,
+   "ratio": 0.8853633351285443
+  }
+ }
+}

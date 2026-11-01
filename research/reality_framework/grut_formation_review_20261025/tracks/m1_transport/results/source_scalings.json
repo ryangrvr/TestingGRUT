@@ -1,0 +1,127 @@
+{
+ "xbar_emission_scaling": {
+  "pulses": [
+   0.05,
+   0.1,
+   0.2,
+   0.4
+  ],
+  "direct_xbar_over_Q0": [
+   0.002088,
+   0.008448,
+   0.03447,
+   0.1459
+  ],
+  "receiver_negative_over_Q": [
+   0.002,
+   0.00799,
+   0.0304,
+   0.0949
+  ],
+  "local_log_slopes_d_ln_Xbar_d_ln_A": [
+   2.0164881227885694,
+   2.0286595588961784,
+   2.0815666794379837
+  ],
+  "note": "Xbar emission ~ A^2.0-2.1 over 5-40 %; nothing in M1 fixes A"
+ },
+ "chain_multiplication_10pct": {
+  "source_X_plus": 94.859,
+  "source_Xbar": 1695.01,
+  "Q_core_after_pulse": 201600.151,
+  "free_X_at_tau_1000": 11629.389,
+  "free_X_final_checkpoint": 13189.13146074248,
+  "free_X_if_only_one_charge_exchange_per_Xbar": 1789.869,
+  "multiplication_factor_final_over_one_exchange": 7.3687691449723305,
+  "core_charge_released_beyond_one_exchange": 11399.262460742479,
+  "free_charge_fraction_final": 0.0659456573037124,
+  "free_charge_fraction_one_exchange_only": 0.008949345,
+  "eta_equivalent_final": 0.9340543426962876,
+  "note": "The 6.6 % is 0.85 % emitted antiparticles times a ~7.4x catalytic chain (X-core neutral production, h->X Xbar, Xbar charge exchange) run at the supplied 20 MeV density for tau <= 1000 plus the 10000-20000 source window; the chain is density-clock dependent."
+ },
+ "frozen_mass_test_with_this_gas": {
+  "eta": 0.9340543426962876,
+  "p": 0.0,
+  "lhs": 0.004403883967570565,
+  "budget": 0.01,
+  "codex_stationary_cold_excess_pct_at_checkpoint": 0.8222566687221544,
+  "codex_total_pct": 0.8944364105298863
+ },
+ "velocity_origin": {
+  "KE_per_particle_at_2MeV_mX": 0.0023533426341372393,
+  "v_rms_from_KE_NR": 0.06860528600825506,
+  "codex_v_rms": 0.06837528835889453,
+  "KE_per_particle_at_20MeV_tau1000_mX": 0.2172331667639633,
+  "v_rms_at_20MeV_NR_estimate": 0.6591406022450191,
+  "pulse_energy_excess_pct": 2.305,
+  "pulse_energy_excess_mX": 4321.413956325919,
+  "note": "v_rms(2 MeV) = v_rms(20 MeV)/10 by redshift; v_rms(20 MeV) ~ 0.66 c is set by the pulse energy shared among the chain-produced particles. Changing the formation clock T_f changes v at 2 MeV as T_f/20 MeV and lambda_fs in proportion."
+ },
+ "clock_scaling": {
+  "T_form_2_MeV": {
+   "v_rms_at_2MeV": 0.006840000000000001,
+   "lambda_fs_mean_pc_approx": 3.657950540198877,
+   "k_half_approx_Mpc^-1_2.7e4_scaled": 270000.0,
+   "M_half_mode_Msun_approx": 4.123676214137553e-05
+  },
+  "T_form_20_MeV": {
+   "v_rms_at_2MeV": 0.0684,
+   "lambda_fs_mean_pc_approx": 36.57950540198877,
+   "k_half_approx_Mpc^-1_2.7e4_scaled": 27000.0,
+   "M_half_mode_Msun_approx": 0.04123676214137551
+  },
+  "T_form_200_MeV": {
+   "v_rms_at_2MeV": 0.6839999999999999,
+   "lambda_fs_mean_pc_approx": 365.7950540198877,
+   "k_half_approx_Mpc^-1_2.7e4_scaled": 2700.0,
+   "M_half_mode_Msun_approx": 41.23676214137553
+  },
+  "T_form_2000_MeV": {
+   "v_rms_at_2MeV": 6.840000000000001,
+   "lambda_fs_mean_pc_approx": 3657.950540198877,
+   "k_half_approx_Mpc^-1_2.7e4_scaled": 270.0,
+   "M_half_mode_Msun_approx": 41236.76214137553
+  }
+ },
+ "gas_fraction_vs_pulse_same_chain": {
+  "0.05": {
+   "Xbar_emitted_over_Q": 0.002088,
+   "f_free_if_same_chain_factor": 0.01624704661921186,
+   "P_suppression_plateau_(1-f)^2_approx": 0.9677698732854232
+  },
+  "0.1": {
+   "Xbar_emitted_over_Q": 0.008448,
+   "f_free_if_same_chain_factor": 0.06573517712600661,
+   "P_suppression_plateau_(1-f)^2_approx": 0.8728507592597742
+  },
+  "0.2": {
+   "Xbar_emitted_over_Q": 0.03447,
+   "f_free_if_same_chain_factor": 0.2682163299637131,
+   "P_suppression_plateau_(1-f)^2_approx": 0.5355073397317773
+  },
+  "0.4": {
+   "Xbar_emitted_over_Q": 0.1459,
+   "f_free_if_same_chain_factor": 1.1352701636700242,
+   "P_suppression_plateau_(1-f)^2_approx": 0.018298017179315135
+  }
+ },
+ "mass_scales": {
+  "lambda_fs_mean_pc": 36.57950540198877,
+  "M_in_lambda_fs_sphere_Msun": 0.008136889900574823,
+  "M_in_lambda_fs_cube_Msun": 0.0019425393736065058,
+  "BGK_half_suppression_k_Mpc^-1_interp": 50084.896657216384,
+  "BGK_half_suppression_target_ratio": 0.9429593926523411,
+  "BGK_half_suppression_M_half_mode_Msun": 0.04102742164012063,
+  "k_half_thermal_relic_same_vrms_Mpc^-1": 27627.76,
+  "ratio_BGK_khalf_over_thermal_khalf": 1.812846812670169
+ },
+ "antiparticle_content": {
+  "Xbar_per_core_at_tau_1000": 0.559,
+  "fraction_of_gas_number": 4.8067873557243644e-05,
+  "Xbar_emitted_in_10000_20000_window_per_core": 1.503,
+  "h_emitted_in_window_per_core": 3.238,
+  "checkpoint_solver_Nminus_residual": -1.377686108445133e-13,
+  "Gamma_Xbar_core_over_H_at_20MeV_codex": 1300000.0,
+  "note": "the source is antiparticle emission; the checkpoint gas is >99.99 % positive X because Xbar convert on cores within tau ~ 100 (Gamma/H ~ 1e6); late emission (1.5 Xbar + 3.2 h per core per 1e4/m_X) continues at a low level and is not in the transport."
+ }
+}

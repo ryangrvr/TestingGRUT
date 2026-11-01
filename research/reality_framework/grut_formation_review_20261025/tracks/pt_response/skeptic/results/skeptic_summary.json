@@ -1,18 +1,90 @@
 {
  "track": "pt_response_skeptic (SKEPTIC of tracks/pt_response, Codex 5f5513b claim 4)",
  "date": "2026-11-01",
- "independence": "Codex engine used only for background states and tangents (make_states.py, probes_phase.py); all probe designs, estimators, closures, Goldstone analysis, transform/free-map checks, J_r identity and toy are our own code. An earlier interrupted run of this key (27 Oct) wrote part of the code and the s0=20.12/20.24/20.68 projections; all its analyses were re-run on 1 Nov (counting_checks.json identical).",
+ "independence": "Codex engine used only for background states and tangents (make_states.py, probes_phase.py); all probe designs, estimators, closures, Goldstone analysis, transform/free-map checks, J_r identity and toy are our own code. An earlier interrupted run of this key (27 Oct) wrote part of the code and the s0=20.12/20.24/20.68 projections; all its analyses were re-run on 1 Nov (counting_checks.json identical). Resumed 1 Nov: transform_nyquist.py and initial_slope_check.py (both independent, no Codex code) added to back two statements that had been written without a stored computation; four wordings tightened, no verdict changed.",
  "checks": {
-  "R1": {"pt_response": "0.46-1.31", "skeptic": "0.28-1.31 over six phases (shell 1: 1.309/0.522/0.283/0.501/0.923/1.258 at s0=20/20.12/20.24/20.44/20.68/20.92); orbit-locked; window-dependent (0-2: 0.16-0.58, 2-6: 0.30-1.72)", "verdict": "REFUTED (range); per-phase values CONFIRMED", "label": "[C]"},
-  "R2": {"pt_response": "identity, tests only the transform (0.397%)", "skeptic": "identity confirmed; residual is Floquet-sideband f-sum weight beyond |w|=20; Nyquist grid gives <=3.4e-5; clean lines 1e-5..1e-14", "verdict": "CONFIRMED, refined", "label": "[D/C]"},
-  "R3": {"pt_response": "2.161928e-10", "skeptic": "2.1619489e-10 exact discrete Yoshida map (50 digits); omega 1.2541202921170822", "verdict": "CONFIRMED", "label": "[C]"},
-  "R4": {"pt_response": "definitions", "skeptic": "algebra confirmed; initial slopes = instantaneous 1/2 tr Hbar(s0) (= Hartree m2) to 3e-4: an O(t^3) identity", "verdict": "CONFIRMED", "label": "[D]"},
-  "R5": {"pt_response": "UV Floquet-HFB quasiparticles (poles <=2.3%); IR every homogeneous closure fails (poles 8-20% low); bare BdG parametrically unstable k2<=7 rates 0.19-0.82", "skeptic": "bare Goldstone defect -6.00 (tachyonic) explains most of the bare instability (circular estimate 0.78, k2<6); genuine band of consistent eccentric orbits k2<~4, rate <=0.30-0.38. meanH Goldstone defect +5.03 (HFB gap): IR poles median +11.4%; tangential repair -> median 3.5%, 0-6 normal error 0.52-1.22 (median 0.84 vs 1.24), but UV ratio x1.9-2.7. meanH phase-pattern correlation 0.87. UV poles: own 2-pole fits give 5.5% (shell 5); <=2.4% only k>=3.1; <=0.6% k>=4.7 confirmed; UV ratio -27..+21% confirmed", "verdict": "CONFIRMED with corrections", "label": "[C/D]"},
-  "R6": {"pt_response": "ratio 0.71-0.80 ... 0.055-0.08; 97-99.8% antiparticle", "skeptic": "0.705/0.804/0.800 (shell 1), 0.054-0.080 (shell 15), |v/u| 0.0188-0.0499; antiparticle fraction 99.35-99.96%", "verdict": "CONFIRMED; minor correction", "label": "[D/C]"},
-  "R7": {"pt_response": "J_r/lab 0.6237/0.6075, 0.4798/0.4760, 1.6815/1.6657", "skeptic": "starting orbit J_r 1.7637252794, lab 1.7377883531 (3 routes); like-for-like Hann^2: 0.6160 (+1.4%), 0.4783 (+0.5%), 1.6911 (+1.5%); uniform 0.6424/0.4872/1.5502; per-period drift -25..-41% within windows", "verdict": "CONFIRMED (direction); numbers CORRECTED", "label": "[D/C]"},
-  "N1": {"pt_response": "circular basis 1.770-1.775; Floquet basis undefined", "skeptic": "1.7625-1.7668 with like-for-like J_r; toy: conversion is exchange with condensate, total conserved to 0.15-2%", "verdict": "CORRECTED (number), CONFIRMED (sector-wise)", "label": "[E/C]"},
-  "N2": {"pt_response": "S/Q 4.483-4.504; A+-A-=Q to 2e-4", "skeptic": "S/Q 4.4828-4.5035; identity to 1.02e-3 (18 windows)", "verdict": "CONFIRMED; tolerance CORRECTED", "label": "[D/C]"}
+  "R1": {
+   "pt_response": "0.46-1.31",
+   "skeptic": "0.28-1.31 over six phases (shell 1: 1.309/0.522/0.283/0.501/0.923/1.258 at s0=20/20.12/20.24/20.44/20.68/20.92); orbit-locked; window-dependent (0-2: 0.16-0.58, 2-6: 0.30-1.72)",
+   "verdict": "REFUTED (range); per-phase values CONFIRMED",
+   "label": "[C]"
+  },
+  "R2": {
+   "pt_response": "identity, tests only the transform (0.397%)",
+   "skeptic": "identity confirmed; on the Nyquist grid (+-78.5) all 45 published shell sums give |Z-1| <= 3.4e-5 (low-noise traces <= 5.1e-5); on Codex's +-20 grid undamped lines <= 1.9e-5, Gaussian-damped <= 2e-6, Lorentzian-damped 1.0-3.6%, so the published 0.1-0.4% is weight beyond |w|=20 (effective widths 0.01-0.12)",
+   "verdict": "CONFIRMED, refined",
+   "label": "[D/C]"
+  },
+  "R3": {
+   "pt_response": "2.161928e-10",
+   "skeptic": "2.1619489e-10 exact discrete Yoshida map (50 digits); omega 1.2541202921170822",
+   "verdict": "CONFIRMED",
+   "label": "[C]"
+  },
+  "R4": {
+   "pt_response": "definitions; slopes 0.986-0.997 consistent with w^2 = k^2 + Hartree m^2",
+   "skeptic": "algebra confirmed; 20 low-noise slopes = 1 - D^2(kappa_bar^2 + 1/2 tr HbarX(s0))/6 - (1/2 tr HbarX)' D^3/12 to <= 1.4e-4 (3.3e-4 without drift term); Codex single probes to <= 1.3e-3 (shell 1); 1/2 tr HbarX is identically Codex's Hartree m2 and swings 15.7-25.3 with phase: an O(D^3) identity, not a dispersion test; shell mode counts match Codex exactly",
+   "verdict": "CONFIRMED; reading corrected",
+   "label": "[D/C]"
+  },
+  "R5": {
+   "pt_response": "UV Floquet-HFB quasiparticles (poles <=2.3%); IR every homogeneous closure fails (poles 8-20% low); bare BdG parametrically unstable k2<=7 rates 0.19-0.82",
+   "skeptic": "bare Goldstone defect -6.00 (tachyonic) explains most of the bare instability (circular estimate 0.78, k2<6); genuine band of consistent eccentric orbits k2<~4, rate <=0.30-0.38. meanH Goldstone defect +5.03 (HFB gap): IR poles median +11.4%; tangential repair -> median 3.5%, 0-6 normal error 0.52-1.22 (median 0.84 vs 1.24), but UV ratio x1.9-2.7. meanH phase-pattern correlation 0.87. UV poles: own 2-pole fits give 5.5% (shell 5); <=2.4% only k>=3.1; <=0.6% k>=4.7 confirmed; UV ratio -27..+21% confirmed",
+   "verdict": "CONFIRMED with corrections",
+   "label": "[C/D]"
+  },
+  "R6": {
+   "pt_response": "ratio 0.71-0.80 ... 0.055-0.08; 97-99.8% antiparticle",
+   "skeptic": "0.705/0.804/0.800 (shell 1), 0.054-0.080 (shell 15), |v/u| 0.0188-0.0499; antiparticle fraction 99.35-99.93% (|w|-weighted action), 99.75-99.96% (amplitude^2)",
+   "verdict": "CONFIRMED; minor correction",
+   "label": "[D/C]"
+  },
+  "R7": {
+   "pt_response": "J_r/lab 0.6237/0.6075, 0.4798/0.4760, 1.6815/1.6657",
+   "skeptic": "starting orbit J_r 1.7637252794, lab 1.7377883531 (3 routes); like-for-like Hann^2: 0.6160 (+1.4%), 0.4783 (+0.5%), 1.6911 (+1.5%); uniform 0.6424/0.4872/1.5502; per-period drift -25..-41% within windows",
+   "verdict": "CONFIRMED (direction); numbers CORRECTED",
+   "label": "[D/C]"
+  },
+  "N1": {
+   "pt_response": "circular basis 1.770-1.775; Floquet basis undefined",
+   "skeptic": "1.7625-1.7668 with like-for-like J_r; toy: conversion is exchange with condensate, total conserved to 0.15-2%",
+   "verdict": "CORRECTED (number), CONFIRMED (sector-wise)",
+   "label": "[E/C]"
+  },
+  "N2": {
+   "pt_response": "S/Q 4.483-4.504; A+-A-=Q to 2e-4",
+   "skeptic": "S/Q 4.4828-4.5035; identity to 1.02e-3 over 18 windows (1.2e-4 only for base48/base48_half 14-24; other 14-24 windows up to 5.0e-4; all 24-34 windows 5.4e-4..1.02e-3)",
+   "verdict": "CONFIRMED; tolerance CORRECTED",
+   "label": "[D/C]"
+  }
  },
  "identity_derived": "J_r - A_- = sum_{n>=1} n w_n |c_n|^2 + sum_{n<=-2} |n+1||w_n||c_n|^2 >= 0 (w_0>0>w_-1); starting orbit 0.02594 = 0.01653 + 0.00940 per charge",
- "files": ["circular_bare.json", "closures_phase.json", "closures_uv.json", "counting_checks.json", "emulate_whitenoise.json", "exact_shell1.json", "jr_identity.json", "meas_traces.json", "phase_probes_all.json", "phase_probes_2092.json", "toy_exchange.json", "transform_free.json"]
+ "files": [
+  "circular_bare.json",
+  "closures_phase.json",
+  "closures_uv.json",
+  "counting_checks.json",
+  "emulate_whitenoise.json",
+  "exact_shell1.json",
+  "initial_slope.json",
+  "jr_identity.json",
+  "meas_traces.json",
+  "phase_probes_2092.json",
+  "phase_probes_all.json",
+  "toy_exchange.json",
+  "transform_free.json",
+  "transform_nyquist.json"
+ ],
+ "new_issues": [
+  "IR ratio range 0.28-1.31 over one radial period; orbit-locked; window-dependent (0-2: 0.16-0.58, 2-6: 0.30-1.72)",
+  "meanH (HFB) closure is gapped (Goldstone defect +5.0): IR poles 11-12% high; bare closure tachyonic (-6.0): most of the 'parametric' instability; genuine band k2 <~ 4 at rate <= 0.30-0.38",
+  "Goldstone-repaired closures fix IR poles (median 3.5%) but break the UV ratio (x1.9-2.7); no homogeneous closure fits both",
+  "meanH reproduces the phase pattern of the IR ratio (corr 0.87) but not the apocentre amplitude",
+  "UV pole agreement <= 5.5% at k = 2.6 by pt_response's own fits; <= 2.4% only for k >= 3.1",
+  "J_r comparison used sin^2 not the like-for-like sin^4 weight: excess +0.5-1.5%; J_r drifts 25-41% per window; quasiparticle-basis total 1.7625-1.7668",
+  "Identity J_r - A_- >= 0 derived; excess = harmonic weight (0.02594 per charge for the starting orbit)",
+  "Canonical-sum residual is weight beyond |w|=20; Nyquist grid <= 3.4e-5; implied effective widths 0.01-0.12",
+  "Initial slopes are the O(D^3) identity about the instantaneous mean Hessian (= Hartree m2, swinging 15.7-25.3 with phase); not a dispersion test",
+  "Charge identity holds to 1.0e-3 (2e-4 only in 2 of 18 windows); radial antiparticle fraction 99.35-99.93% / 99.75-99.96%"
+ ]
 }
