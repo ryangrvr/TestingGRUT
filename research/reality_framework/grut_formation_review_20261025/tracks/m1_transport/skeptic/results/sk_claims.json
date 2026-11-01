@@ -1,0 +1,94 @@
+{
+ "track": "m1_transport_skeptic",
+ "checks": [
+  {
+   "claim_id": "T1",
+   "refuted": false,
+   "recomputed": "sigma = 2.16627561e-07/m_X^2 (real-component basis, M = +0.009333: contact -0.0040, h exchange +0.013333); finite-v sigma/sigma_thr = 0.9977 at v_rel 0.068",
+   "reason": "number confirmed by a different method; but the reviewer correction 1 (\"not a contact cross section\") corrects the task text, not Codex: f8186fa DERIVATIONS.md and c481530 DERIVATION.md state the amplitude as 4 lambda_X - g_h^2/3 (contact plus t,u exchange). Misdirected, not wrong."
+  },
+  {
+   "claim_id": "T2",
+   "refuted": false,
+   "recomputed": "Gamma = 1.8756590e-04 m_X = 1.73328e-05 GeV (h -> phi_a phi_a identical-particle widths summed); m_phi = sqrt6 m_X",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T3",
+   "refuted": false,
+   "recomputed": "sigma(XXbar) = 2.5553e-06/m_X^2 (s +0.020, t +0.00667, contact -0.004)",
+   "reason": "confirmed; irrelevant for the 2 MeV transport as the reviewer says"
+  },
+  {
+   "claim_id": "T4",
+   "refuted": false,
+   "recomputed": "Gamma/H = 15.990 (own background, Maxwellian), 15.812 with Codex's checkpoint shape; H(2 MeV) = 1.78593e-24 GeV; n_X = 1.6013e-14 m_X^3",
+   "reason": "confirmed (Codex 15.72 relativistic; the 1.1% NR excess and 1.1% shape effect account for the spread)"
+  },
+  {
+   "claim_id": "T5",
+   "refuted": false,
+   "recomputed": "7.898 collisions over x = 1-10 (frozen Maxwellian)",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T6",
+   "refuted": false,
+   "recomputed": "viscosity proxy crosses H at x = 3.2550, T = 0.6228 MeV; total rate at x = 3.981",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T7",
+   "refuted": false,
+   "recomputed": "Maxwellian mean/rms to equality 36.57/39.69 pc, to today 40.79; Codex distribution 35.50/39.86; z_eq = 3417.0; I_eq = 580.5 pc per unit v",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T8",
+   "refuted": false,
+   "recomputed": "own two-fluid code reproduces the reviewer's toy to 4 digits: 0.8857/0.9905 (3e4), 0.8838/0.9116 (1e5), 0.8691/0.8881 (3e5), 0.7985/0.7954 (1e6) erased/clustered; plateau (1-f)^2 = 0.8859",
+   "reason": "NOT CHECKED stands; toy magnitudes verified; nothing to refute"
+  },
+  {
+   "claim_id": "T9",
+   "refuted": false,
+   "recomputed": "M_hm(1e5) = 5.15e-03 Msun; thermal-equivalent m = 1.90 MeV; k_hm(T=1/2) = 27636/Mpc, (T^2=1/2) = 19926/Mpc; warm T at the BGK half-suppression point = 0.508",
+   "reason": "numbers and literature citations check out; but the verdict is OVERSTATED: Codex wrote \"can now be challenged\" with explicit disclaimers (\"not an observational M1 fit\", \"not nonlinear structure predictions\"); \"testable\" is the reviewer paraphrase, so the observability point is NEW, not a CORRECTION. Minor: transport_check.json labels the half-mode formula \"T^2 = 1/2\" while the code uses T = 1/2 (Schneider 2012 convention, 27628/Mpc; T^2 = 1/2 would be 19926/Mpc)."
+  },
+  {
+   "claim_id": "T10",
+   "refuted": false,
+   "recomputed": "|dP/P| <= 1.40e-09 (10 h/Mpc), 1.26e-08 (30 h/Mpc)",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T11",
+   "refuted": true,
+   "recomputed": "p(2 MeV) = p_f a_f/a(2 MeV) ~ p_f (2 MeV/T_f): with p_f = 0.68 m_X fixed by the pulse, lambda_rms to equality = 394 pc (T_f = 2 MeV, gas semi-relativistic v = 0.56), 46 pc (20 MeV, incl. 6 pc before 2 MeV), 4.6 pc (200 MeV), 0.33 pc (2 GeV); reviewer table: 3.66 / 36.6 / 366 / 3658 pc",
+   "reason": "the formation-clock scaling is INVERTED: the reviewer wrote v_rms(2 MeV) ~ T_f/20 MeV and lambda_fs ~ T_f, M_hm ~ T_f^3 (200 MeV -> 366 pc, 40 Msun; 2 MeV -> 3.7 pc). Redshift gives v(2 MeV) ~ 20 MeV/T_f and lambda_fs ~ 1/T_f (times a log): an earlier clock makes the gas colder and the dip smaller-scale. The rest of T11 (0.845% x 7.37 chain, f ~ A^2, v set by the pulse) is confirmed; 0.66 is p/m, the velocity is 0.57."
+  },
+  {
+   "claim_id": "T12",
+   "refuted": false,
+   "recomputed": "Xbar fraction 0.559/11629 = 4.8e-5; checkpoint N_minus = -1.4e-13",
+   "reason": "confirmed"
+  },
+  {
+   "claim_id": "T13",
+   "refuted": false,
+   "recomputed": "coupled three-channel elastic X-core scattering at k = 0.0684 m_X (own solver, validated on vacuum/square barrier/hard sphere): delta_0 = -0.3559, delta_1 = -0.0268, delta_2 = +0.0033; sigma_el = 332/m_X^2 (a_s = 5.43/m_X); Gamma/H(2 MeV) = 1.43e+06, x_dec = 1194 (T ~ 2.3 keV); uncoupled diagonal potential would give 1561/m_X^2; k-scan 0.02-0.1: 332-342, resonance 1333 at k = 0.15; reviewer hard sphere 160-265, Gamma/H 0.7-1.1e6, x_dec 830-1060",
+   "reason": "magnitude CONFIRMED (even 25-100% larger), mechanism CORRECTED: the interior is not classically forbidden. The anomalous Bogoliubov coupling aF^2 = 0.69 at the centre exceeds the diagonal excess S^2+2aF^2-E^2 = 0.40; the charged 2x2 block of the radial operator has a negative eigenvalue (-0.12) at r = 0 and a slow X propagates inside the condensate as a gapless phonon with k_in = 0.22 m_X. The hard-sphere shortcut lands near the coupled answer by accident; the diagonal barrier taken literally (with its attractive S^2-1 < 0 shell) would give 1561/m_X^2. The two-stage fluid-toy numbers (0.32-0.73 at 3e5, 0.006-0.60 at 1e6) are reproduced by independent code and three integrators; their mechanism is the mixture pressure f c_s^2 bending the frictionless Mezsaros growth over ~7 e-folds (dark-acoustic-like), i.e. a toy result, not a solver artefact."
+  }
+ ],
+ "new_issues": [
+  "T11 clock scaling inverted (lambda_fs ~ 1/T_f, not T_f); the clock_scaling block of results/source_scalings.json and NOTES section 4 should be corrected (200 MeV -> ~5 pc, ~4e-5 Msun; 2 MeV -> ~400 pc, ~40 Msun).",
+  "T13 mechanism: core interior is propagating (Bogoliubov phonon), not forbidden; the X-core elastic cross section is nevertheless geometric, 332/m_X^2 at k = 0.068 (coupled three-channel), with a resonance near k = 0.15 (1333/m_X^2).",
+  "Codex already measured the same geometric size for the antiparticle: bf8ab3b gives sigma_X(charge exchange) = 2.76/m_X^2 at 1.30% of events at k = 1, i.e. sigma_tot(Xbar, k=1) ~ 210/m_X^2; the gas-core elastic channel omitted from f8186fa was implicit in Codex own numbers.",
+  "T9 verdict overstated: \"testable\" is the reviewer paraphrase; Codex said \"can now be challenged\" and disclaimed observational status. The observability analysis is NEW, not CORRECTED.",
+  "T1 correction misdirected: Codex never called sigma a contact cross section; the lambda|X|^4/4 convention belongs to the task text.",
+  "transport_check.json label \"T^2 = 1/2\" for the Viel/Schneider half-mode is inconsistent with the code (T = 1/2); the number (2.76e4/Mpc) is the standard convention and the comparison with the BGK half-suppression point (warm T = 0.51 there) is apples-to-apples.",
+  "T11 wording: 0.66 c is p_rms/m_X at the 20 MeV clock, not v_rms (v = 0.57); harmless since only p redshifts.",
+  "Two-stage toy interpretation: with Gamma_Xcore/H ~ 1e6 the gas is diffusive (mean free path << wavelength) and the coupled mixture is a fluid with c_eff^2 = f c_s^2; even k = 0.14 k_J,eff ~ 3e5/Mpc modes lose O(1) of their Mezsaros growth during ~7 coupled e-folds; this strengthens the reviewer conclusion that the k >= 3e5/Mpc part of the BGK curve is not robust, but it is a fluid toy with an isothermal c_s and no radiation perturbations."
+ ],
+ "reproduction": "cd tracks/m1_transport/skeptic; export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 SP=<scratchpad>; python3 -I code/sk_xsec.py; python3 -I code/sk_rates.py; python3 -I code/sk_xcore.py (~2 min); python3 -I code/sk_mixture_check.py (~8 min, imports the reviewer mixture.py); python3 -I code/sk_trace_two_stage.py"
+}

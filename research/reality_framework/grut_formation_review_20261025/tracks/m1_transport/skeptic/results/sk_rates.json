@@ -1,0 +1,165 @@
+{
+ "background": {
+  "a_2MeV": 8.394521281237274e-11,
+  "H_2MeV_GeV": 1.7859348998304018e-24,
+  "H_over_mX": 1.9326424922401342e-23,
+  "a_eq": 0.0002925657866669504,
+  "z_eq": 3417.034662878661,
+  "g_rho_e_2MeV": 3.483187300561554,
+  "g_s_e_2MeV": 3.4753190551381405,
+  "H_2MeV_pure_g_10.75_formula": 1.7835852653582462e-24,
+  "codex_H_initial": 1.785634392341076e-24,
+  "reviewer_H_initial": 1.7859349018710206e-24,
+  "codex_z_eq": 3420.5,
+  "reviewer_z_eq": 3417.0
+ },
+ "T4_collision_rate": {
+  "n_X_over_mX3": 1.6013018706745444e-14,
+  "codex_n_X_from_ncore": 1.601301870674545e-14,
+  "Gamma_over_H_maxwell": 15.990387801382232,
+  "codex": 15.72,
+  "codex_NR": 15.876924286306776,
+  "reviewer_maxwell": 16.0,
+  "reproduction_codex_shape": {
+   "N_plus": 13189.13146074248,
+   "N_minus_raw": -1.377686108445133e-13,
+   "v_rms": 0.06837528835889453,
+   "mean_v": 0.06096097016012166,
+   "mean_vrel_iso_NR": 0.08809778598503486,
+   "Gamma_over_H": 15.812494668378067,
+   "fraction_floor_bin": 0.02756354232224572,
+   "p_rms_mX": 0.06868245627794305
+  }
+ },
+ "T5_T6": {
+  "collisions_x1_10": 7.898384678850189,
+  "codex": 7.91173,
+  "reviewer": 7.901,
+  "viscosity_crossing_x": 3.2550047890371983,
+  "viscosity_crossing_T_MeV": 0.6228395653358668,
+  "codex_T": 0.62156,
+  "reviewer_T": 0.6227,
+  "total_rate_crossing_x": 3.980856558664057,
+  "T_at_x10_MeV": 0.22085598301377213,
+  "codex_T_x10": 0.22086,
+  "pure_RD_collisions": 7.915241961684204
+ },
+ "T7_free_streaming": {
+  "I_eq_pc_per_v": 580.4599177788227,
+  "I_today_pc_per_v": 647.5297346813096,
+  "comoving_Hubble_radius_2MeV_pc": 42.655434136252154,
+  "ln_aeq_ai": 15.064035753403537,
+  "maxwell_mean_pc_eq": 36.56628473107147,
+  "maxwell_rms_pc_eq": 39.68911425890722,
+  "maxwell_mean_pc_today": 40.791372366927256,
+  "codex": {
+   "mean": 35.51,
+   "rms": 39.86,
+   "today": 39.61
+  },
+  "reviewer_maxwell": {
+   "mean": 36.58,
+   "rms": 39.7,
+   "today": 40.81
+  },
+  "reproduction_codex_distribution": {
+   "mean_pc": 35.50269372658819,
+   "rms_pc": 39.86084016276469
+  },
+  "from_x_1000_pc_per_v": 302.7016820606767,
+  "maxwell_mean_from_x1000_pc": 19.068803126252313
+ },
+ "T11_clock_scaling": {
+  "rows": {
+   "T_f_2_MeV": {
+    "a_f": 8.394521281237274e-11,
+    "p_rms_at_2MeV_mX": 0.6837528835889453,
+    "v_rms_at_2MeV": 0.564426572509913,
+    "lambda_rms_pc_to_eq": 393.9691968226028,
+    "part_before_2MeV_pc": 0.0,
+    "reviewer_lambda_fs_mean_pc": 3.66,
+    "reviewer_v_rms_at_2MeV": 0.00684
+   },
+   "T_f_20_MeV": {
+    "a_f": 8.394521281237274e-12,
+    "p_rms_at_2MeV_mX": 0.06837528835889453,
+    "v_rms_at_2MeV": 0.06821601322944724,
+    "lambda_rms_pc_to_eq": 46.120187897313066,
+    "part_before_2MeV_pc": 6.434467465095726,
+    "reviewer_lambda_fs_mean_pc": 36.6,
+    "reviewer_v_rms_at_2MeV": 0.0684
+   },
+   "T_f_200_MeV": {
+    "a_f": 7.170273519581336e-13,
+    "p_rms_at_2MeV_mX": 0.005840351141992201,
+    "v_rms_at_2MeV": 0.005840251538223342,
+    "lambda_rms_pc_to_eq": 4.564137850756598,
+    "part_before_2MeV_pc": 1.1740502257549494,
+    "reviewer_lambda_fs_mean_pc": 366.0,
+    "reviewer_v_rms_at_2MeV": 0.684
+   },
+   "T_f_2000_MeV": {
+    "a_f": 4.378626254610679e-14,
+    "p_rms_at_2MeV_mX": 0.0003566490842592804,
+    "v_rms_at_2MeV": 0.00035664906157665594,
+    "lambda_rms_pc_to_eq": 0.334902712821539,
+    "part_before_2MeV_pc": 0.1278822151789822,
+    "reviewer_lambda_fs_mean_pc": 3658.0,
+    "reviewer_v_rms_at_2MeV": 6.84
+   }
+  },
+  "statement": "p(2 MeV) = p_f a_f/a(2 MeV) ~ p_f (2 MeV/T_f): an EARLIER clock (larger T_f) gives a COLDER gas at 2 MeV and a SHORTER free-streaming length, lambda_fs ~ 1/T_f (times a log); the reviewer wrote v_rms(2 MeV) ~ T_f/20 MeV and lambda_fs ~ T_f, which is inverted."
+ },
+ "T11_velocity_origin": {
+  "mean_E_minus_1_at_20MeV": 0.21723316676396331,
+  "p_if_monoenergetic": 0.6940148285665275,
+  "v_if_monoenergetic": 0.5701576719369048,
+  "reviewer_NR_v_rms_0.66_is_p_over_m_not_v": true,
+  "p_over_10_vs_checkpoint_p_rms": 0.06940148285665275
+ },
+ "T9_scales": {
+  "halo_masses": {
+   "10000": {
+    "M_half_mode_Msun": 5.154595267671941,
+    "lambda_pc": 628.3185307179587
+   },
+   "30000": {
+    "M_half_mode_Msun": 0.19091093583970148,
+    "lambda_pc": 209.43951023931953
+   },
+   "50000": {
+    "M_half_mode_Msun": 0.04123676214137551,
+    "lambda_pc": 125.66370614359171
+   },
+   "100000": {
+    "M_half_mode_Msun": 0.005154595267671939,
+    "lambda_pc": 62.831853071795855
+   },
+   "300000": {
+    "M_half_mode_Msun": 0.0001909109358397015,
+    "lambda_pc": 20.943951023931955
+   },
+   "1e+06": {
+    "M_half_mode_Msun": 5.1545952676719415e-06,
+    "lambda_pc": 6.283185307179586
+   },
+   "40": {
+    "M_half_mode_Msun": 80540551.05737408,
+    "lambda_pc": 157079.63267948964
+   }
+  },
+  "thermal_equivalent_mass_eV": 1901701.75503283,
+  "k_half_mode_T_eq_half_Mpc^-1": 27636.073239269237,
+  "k_half_mode_T2_eq_half_Mpc^-1": 19925.81850147756,
+  "reviewer_k_half_27627": 27627.76,
+  "reviewer_label": "'T^2 = 1/2' in transport_check.json, but the code uses 2**(1.12/5), i.e. T = 1/2",
+  "k_half_5.3keV_T_half": 40.32500947589695,
+  "k_half_5.3keV_T2_half": 29.074637808722645,
+  "BGK_half_suppression_target": 0.9429593926523411,
+  "warm_T_at_BGK_half_suppression_ignoring_backreaction": 0.5075665782621726
+ },
+ "T10_lya_toy": {
+  "10 h/Mpc": 1.401773725606685e-09,
+  "30 h/Mpc": 1.2615963530460165e-08
+ }
+}

@@ -1,0 +1,96 @@
+{
+ "track": "m1_critic",
+ "date": "2026-11-01",
+ "scope": "Completeness critic of the four M1 review tracks and their skeptics; one supplied model; no validation, exclusion or new theory claimed; data comparisons retrospective.",
+ "remote_check": "git ls-remote origin on 2026-11-01: f8186fa is the newest codex/grut-m1-* head; the brief's newer isocurvature packet (4e-12 / 3.02 / 3.435e-70 / 38 checks) does not exist on the remote.",
+ "coverage_gaps": [
+  "ed73791 3D runs (object survival E/Q 0.943, masks 30-52 %, pulse emission 0.002/0.008/0.030/0.095 Q): NOT CHECKED by any track (3D excluded); root input of the gas chain",
+  "c481530 / bf8ab3b kinetics chain (1695 Xbar -> 0.559; free X x7.37; three-channel Xbar scattering): only re-read as ledger arithmetic",
+  "94f660d sextic holder charge change +9.927 %: NOT CHECKED (point reproduced)",
+  "f8186fa final kurtosis 1.67301, BGK hierarchy, finite-k controls, CLASS, 64/96-bin dependence: NOT CHECKED",
+  "newer isocurvature packet numbers: packet absent"
+ ],
+ "contradictions_settled": [
+  {"item": "holder late-charge drift cause", "settled_for": "skeptic (X <-> Sigma)", "evidence": "Gauss arithmetic: 6 dN_Sigma = -dN_X to 4e-4, Y share 4e-4; results/critic_checks.json C"},
+  {"item": "EFT control of Option 1A", "settled_for": "skeptic (not established)", "evidence": "Lambda_eff = M_Y/xi = 0.9757 H_i; amplitudes 5.9/29/89 Lambda_eff; results/critic_checks.json A"},
+  {"item": "formation-clock scaling of lambda_fs", "settled_for": "skeptic (lambda ~ 1/T_f)", "evidence": "own quadrature [E]: 388/32.6/1.3/0.075 pc for T_f = 2/20/200/2000 MeV; results/critic_checks.json E"},
+  {"item": "core interior for a slow X", "settled_for": "skeptic mechanism (propagating phonon), size agreed by both", "evidence": "Bogoliubov relation: c_s^2 = 0.308, k_in = 0.216 at k = 0.0684; results/critic_checks.json D"},
+  {"item": "M1V-10 CORRECTED label", "settled_as": "CORRECTED (wording of REPORT/HANDOFF)"},
+  {"item": "T9 CORRECTED on 'testable'", "settled_as": "CONFIRMED + NEW (Codex never wrote 'testable')"},
+  {"item": "lambda precision", "settled_for": "skeptic band 0.994-1.011", "evidence": "D rounding +0.61 % vs Planck (own recomputation), clock +-0.2 %, history -0.09 %; results/critic_checks.json F"}
+ ],
+ "overstated": [
+  "Codex: fixed-Q Hessian 'positive 0.2233-0.2244' is the free-X box mode; stability rests on VK (holds)",
+  "Codex: lambda = 1.0070090495735164 and '+0.7009 % by actual ODE rerun' -> meaningful to +-1 %; the rerun cannot fail by construction",
+  "Codex: +1.80645 %, H_i = 1.32691046e11 GeV, 0.554384305 -> 4, 4 and 5 significant digits",
+  "Codex: 'V bounded below at fixed R' -> true for the written polynomial; lambda_X margin 1.6; fails under a tree-level completion with g1 <= 4 pi",
+  "Codex: 71/71 and 38/38 checks -> same-author",
+  "m1_holder 3 'CONFIRMED for Y' -> not established; m1_holder 11/20 cause -> refuted",
+  "m1_transport T11 clock direction inverted; T13 premise wrong (size right); T9 -> CONFIRMED + NEW; T1 correction addressed to the task text",
+  "m1_vacuum M1V-10 -> CORRECTED (wording); roll time 1.9059 -> 1.9079",
+  "m1_ledger (5,1) 1.016277 -> 1.0162836; pulse rows 2-3 % high",
+  "Brief: mu = 7.2 H_i -> 7.159456; '+3.42 % needed' misreading; 'newer packet' absent"
+ ],
+ "supplied_inputs": {
+  "light": {"g_X": 0.1, "lambda_X": 0.001, "lambda_phi": 0.03, "v_GeV": 0.924089637375362, "m_X_GeV": 0.09240896373753621, "epsilon_tilt": 0.002, "Q_reference": 200000},
+  "heavy": {"M_Y_over_H": 30, "h_over_H": 40, "mu_over_H": 7.159456, "kappa": 0.0034586847211042523, "lambda_Y": 1.0, "lambda_Sigma": 1.0, "e": 1e-06, "xi_X": -0.8333333333333334, "cutoff_GeV": 1e15, "SM_portals": 0, "xi_H": 0.1},
+  "holder": {"xi": 30.746728738599167, "alpha_rad": 2.192144074179184, "equivalent": "mu_eff(12 H_i^2) = 10 i H_i; alpha is the supplied CP-odd sign; Lambda_eff = M_Y/xi = 0.976 H_i", "superseded": "sextic xi6 = 4e8, Lambda = 1e15 GeV"},
+  "reheating": {"m_I_over_H": 3.0, "Gamma_I_over_H": 0.5, "alternative": [5.0, 1.0], "prepared_state": "supplied amplitudes, zero velocities, arg Sigma - 6 arg X = -pi/2", "g_star": 106.75, "homogeneous": true, "H_i_GeV_is_calibrated_output": 134284273491.30815},
+  "targets": {"D_rho_DM_over_s_GeV": 4.4e-10, "D_planck_recalled_GeV": 4.3733e-10, "rho_vac_GeV4_input_underived": 2.52e-47, "matching_hypothesis": {"eta": 1.0, "p": 0.0}, "tolerance": 0.01, "tolerance_is": "program benchmark, not a confidence interval"},
+  "formation_and_gas": {"pulse": "10 % radial Gaussian on one prepared Q = 2e5 core (5/20/40 % controls)", "formation_clock_MeV": 20, "n_core_mX3": 1.2141071e-15, "kinetics_window": "static background, tau <= 1000", "checkpoint": "inherited 96-bin at 2 MeV", "BGK_matching": "equal density and velocity perturbations, assumed temperature perturbation, all else cold, radiation one fluid", "gas_fraction_of_matter": 0.058767411685782034}
+ },
+ "parsec_curve": {"distinctive": false, "testable_now_or_planned": false, "why": "amplitude set by supplied pulse (f ~ A^2) times unreviewed chain; scale set by supplied clock (lambda_fs ~ 1/T_f); shape is the generic mixed cold+warm curve; k = 1e4-1e6/Mpc is M_hm 5 to 5e-6 Msun, 3.5 decades in k below current probes; sub-30 pc part not robust (gas-core scattering, Gamma/H ~ 1e6, omitted)"},
+ "frozen_test": {
+  "coefficients": {"c_eta": 0.06678046736338095, "c_p": 2.133560934726762, "eta_min_p0": 0.8502556152297386, "p_max_eta1": 0.004686999952631147},
+  "populations_computed": {
+   "pt_relax equilibrium Xbar 0.07-0.11 (no annihilation)": "term 0.149-0.235 (x15-23)",
+   "pt_m1tilt coherent tau-20 slow limit 1.49-1.52 Xbar + 0.16-0.18 phi": "p ~ 1.67 pre-annihilation, term 3.56 (x356)",
+   "pt_m1tilt coherent late orbit slow limit 0.11-0.15 + 0.22-0.25 phi": "p ~ 0.35, term 0.75 (x75)",
+   "ed73791 masks 0.31 / 0.494 read as eta": "0.046 / 0.034 (x4.6 / 3.4); masks are not eta",
+   "pulses 5/10/20/40 % charge-conserving": "0.00433 / 0.01755 / 0.0721 / 0.311 (5 % passes)",
+   "kin_solve gas-only R = 5 / 7": "0.0050 (passes, conditional) / 0.0303",
+   "10 % pulse kinetics tau = 1000": "0.0039 frozen / 0.0073 re-solved E(Q); 1.35 % still in gas heat",
+   "Codex idealised cold completions": "0.0275/0.1127/0.4903/2.482 % (first three pass)"
+  },
+  "needs": "eta from a formation ensemble (charge-weighted y_Q, membership by E/Q < m_X); p from the Xbar inventory after the phi transition plus annihilation/conversion/capture at the actual heat R(e)",
+  "meaning_of_failure": "not a falsification: H_i refits by [1 + c_eta(1-eta) + c_p p]^(-2/3) (0.91 at p 0.07, 0.69 at 0.35, 0.36 at 1.67); but pairs would then be 13 / 43 / 78 % of the dark matter"
+ },
+ "next_calculation": {
+  "what": "formation ensemble under the M1 potential: expanding 3D evolution from the matched coherent release with the deformed cubic and the actual density clock, returning y_Q and eta (Q >= 7.13e4, membership by E/Q < m_X), the Xbar inventory and p after annihilation at the actual heat R(e), and the free-X fraction and velocity distribution",
+  "failure_condition": "with re-solved E(Q)/Q: 0.0668(1-eta) + 2.134 p > 0.01 (M1 calibration at Q = 2e5, eta = 1, p = 0 wrong; composition not as claimed); hard version: no objects above Q = 7.13e4, or p >~ 0.1 surviving",
+  "cheap_precursors": ["follow the X <-> Sigma exchange past tau = 1000 to freeze-out (fixes the late-charge input to < 0.2 %)", "solve the X-core three-channel elastic problem at k ~ 0.07 m_X (fixes the gas decoupling temperature)"]
+ },
+ "verdict_table": [
+  {"n": 1, "item": "One-vacuum potential: discriminant, threshold, V >= 0, no walls", "verdict": "CONFIRMED", "ours": "-9/62500 exact; eps > 0.001716; V(-v) = 160 m_X^4", "codex": "-0.000144; 0.001715729", "method": "exact algebra, two passes"},
+  {"n": 2, "item": "Hidden tree bound lambda_Y,eff 0.758516, margin 2445.04", "verdict": "CONFIRMED", "ours": "same; brute-force slack 1.03-3.5", "codex": "same", "method": "algebra + minimisation"},
+  {"n": 3, "item": "Bulk Omega 0.77586471, n 449.31", "verdict": "CONFIRMED", "ours": "30-digit identical; spinodal 233.2", "codex": "same", "method": "algebra"},
+  {"n": 4, "item": "Q = 2e5 object Omega, E/Qm, mass", "verdict": "CONFIRMED", "ours": "0.8817204919524, 0.9373999905, 17324.832346 GeV (1e-13)", "codex": "same", "method": "two own BVP solvers"},
+  {"n": 5, "item": "Fixed-Q radial Hessian positive 0.2233-0.2244", "verdict": "CORRECTED (wording)", "ours": "box mode -> 0.22257; VK holds; Q_min 5.67e4; bound for Q > 7.13e4", "codex": "0.2243/0.2233", "method": "own Hessian, secular test"},
+  {"n": 6, "item": "Cold-fluid growth F = 1", "verdict": "CONFIRMED", "ours": "0.114280 at k 0.41923 = -c_s^2 below spinodal", "codex": "0.11428 at 0.42", "method": "own 6x6 / cubic"},
+  {"n": 7, "item": "Frozen-test coefficients", "verdict": "CONFIRMED", "ours": "0.0667805, 2.13356 (2e-15)", "codex": "same", "method": "algebra"},
+  {"n": 8, "item": "Calibration lambda 1.00700905, Y_Q 5.07941423e-9", "verdict": "CONFIRMED (arithmetic); precision CORRECTED", "ours": "band 0.994-1.011", "codex": "8 digits", "method": "own engine tau 800; 50-digit arithmetic"},
+  {"n": 9, "item": "Y_Q ~ H_i^3/2 verified by ODE rerun", "verdict": "CONFIRMED (by construction)", "ours": "1.5000000002", "codex": "as stated", "method": "own engine; Codex control rows"},
+  {"n": 10, "item": "Gamma t0 6.27e-17", "verdict": "CONFIRMED", "ours": "6.27163e-17; I 2868466.51", "codex": "6.2716e-17", "method": "own Born, three quadratures"},
+  {"n": 11, "item": "Holder (xi, alpha), point, Hessian, bound", "verdict": "CONFIRMED (bound fragile)", "ours": "identical to 1e-14; lambda_X margin 1.6; completion g1 <= 4pi breaks B > 0", "codex": "as stated", "method": "mpmath / sympy"},
+  {"n": 12, "item": "EFT control of the holder", "verdict": "NEW (not established)", "ours": "Lambda_eff = M_Y/xi = 0.976 H_i; amplitudes 6-89 Lambda_eff", "codex": "dimension 5, not UV-complete", "method": "algebra"},
+  {"n": 13, "item": "Holder charge +1.80645 %", "verdict": "CONFIRMED to 4 digits", "ours": "1.0180646; running windows 1.0175-1.0208", "codex": "1.01806453", "method": "three ODE codes"},
+  {"n": 14, "item": "Cause of the late drift", "verdict": "SETTLED: X <-> Sigma", "ours": "6 dN_Sigma = -dN_X to 4e-4", "codex": "not reported", "method": "Gauss arithmetic"},
+  {"n": 15, "item": "H_i refit 1.32691046e11 GeV", "verdict": "CONFIRMED to 4 digits", "ours": "1.3269 +- 0.0015e11", "codex": "9 digits", "method": "arithmetic"},
+  {"n": 16, "item": "Phase slope 0.554384305", "verdict": "CORRECTED", "ours": "0.554382", "codex": "0.5543843", "method": "own FD, two codes"},
+  {"n": 17, "item": "Time shift = adiabatic mode; 4e-12 / 3.02", "verdict": "theorem CONFIRMED; numbers NOT CHECKED", "ours": "-9e-7 = drift rate", "codex": "packet absent", "method": "own restarts; Weinberg 2003"},
+  {"n": 18, "item": "Spectator power table", "verdict": "CONFIRMED", "ours": "1.4e-9 with Codex row; e^-3N to 1e-4", "codex": "1.236e-10 ... 1.443e-70", "method": "exact Hankel, x-ODE"},
+  {"n": 19, "item": "Hidden-scalar power 3.435e-70", "verdict": "NOT CHECKED", "ours": "1.443e-70 (f8186fa definition)", "codex": "3.435e-70", "method": "-"},
+  {"n": 20, "item": "sigma(XX) 2.16627561e-7; Gamma(phi -> X Xbar) 1.875659e-4", "verdict": "CONFIRMED", "ours": "same (contact + phi exchange)", "codex": "same", "method": "own Feynman rules x2"},
+  {"n": 21, "item": "Gamma_coll/H 15.72; 7.91; 0.62156 MeV; 35.51 pc", "verdict": "CONFIRMED", "ours": "16.0/7.90/0.6227/36.6 (Maxwell); repro 15.81/7.81/-/35.50", "codex": "as stated", "method": "own + repro"},
+  {"n": 22, "item": "Kurtosis 1.91713 -> 1.67301", "verdict": "initial CONFIRMED (repro); final NOT CHECKED", "ours": "1.91708", "codex": "as stated", "method": "reproduction from npz"},
+  {"n": 23, "item": "BGK curve 0.9979 ... 0.7642", "verdict": "NOT CHECKED (magnitudes agree)", "ours": "fluid toy 0.88-0.91 (1e5), 0.78-0.80 (1e6)", "codex": "as stated", "method": "two fluid toys"},
+  {"n": 24, "item": "Conditional forecast, not yet distinctive", "verdict": "CONFIRMED + NEW", "ours": "unobservable: M_hm 5-5e-6 Msun; f ~ A^2; lambda_fs ~ 1/T_f", "codex": "as stated", "method": "halo-mass conversion; literature [R]"},
+  {"n": 25, "item": "Gas source 6.595 %, v 0.0684 c", "verdict": "CORRECTED (interpretation); root NOT CHECKED", "ours": "0.845 % supplied pulse x 7.37 unreviewed chain", "codex": "6.5946 %", "method": "ledger arithmetic"},
+  {"n": 26, "item": "Gas-core elastic scattering", "verdict": "NEW", "ours": "sigma 160-332/m_X^2; Gamma/H ~ 1e6; decoupling 2-3 keV; interior propagating", "codex": "omitted", "method": "hard sphere, coupled solve, dispersion"},
+  {"n": 27, "item": "94f660d H/m_X 1.9301e-21; refit -0.567645 %; FOLLOWUP -1.186/-1.74 %", "verdict": "CONFIRMED", "ours": "1.930100e-21; -0.567645 %; -1.18646/-1.7366 %", "codex": "same", "method": "arithmetic"},
+  {"n": 28, "item": "Sextic holder point; +9.927 % charge", "verdict": "point CONFIRMED; charge NOT CHECKED", "ours": "-2.099927, 10.66925", "codex": "as stated", "method": "own point solve"},
+  {"n": 29, "item": "ed73791 3D survival, masks, pulse emission", "verdict": "NOT CHECKED (3D)", "ours": "-", "codex": "as stated", "method": "-"},
+  {"n": 30, "item": "c481530 kinetics chain", "verdict": "NOT CHECKED", "ours": "ledger arithmetic only", "codex": "as stated", "method": "-"},
+  {"n": 31, "item": "Frozen test vs computed populations", "verdict": "NEW", "ours": "no formation-type population passes (x1.75-360); passes conditional", "codex": "eta, p remain to compute", "method": "ledger + pt_m1tilt + kin_solve"}
+ ]
+}

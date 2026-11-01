@@ -1,0 +1,154 @@
+{
+ "method": "m1_ledger_skeptic, second pass (Claude, own code, algebra only; no engine, no Codex code run).\n\nExtra adversarial checks on tracks/m1_ledger that the first skeptic pass did not make:\n (1) the basis of the H_i^{3/2} exponent: r = rho_rad/(M_red^2 H_i^2) rebuilt from Codex's (T_vis, H) row numbers\n     must be the same number on every row of a history (T ~ (H_i M_red)^{1/2} is then exact, not assumed);\n (2) the history dependence of the calibration: lambda(3,0.5) vs lambda(5,1);\n (3) the sensitivity of lambda to the target D (dlnlambda = 2/3 dlnD) and the clock band, combined;\n (4) the pulse rows of m1_ledger re-read with the ACTUAL N_plus and N_phi of bf8ab3b SOURCE_RESULTS.json for all four\n     pulses (the first pass had N_plus only for the 10% pulse and set it to zero elsewhere);\n (5) the interpolation dependence of the kin_solve crossing R (log-linear vs linear between the R = 5 and R = 7 points);\n (6) Codex's late_half_window_relative_charge_change translated into a lambda shift.\nInputs are [Q] numbers read through git show (d4747cb MATCHED/DEFORMED_MATCHED_RESULTS.json, CONSEQUENCES.json;\nbf8ab3b SOURCE_RESULTS.json; REVIEW_KINETIC.md).  Output: ../results/skeptic_extra.json\n",
+ "results": {
+  "radiation_constant_from_rows": {
+   "rows": {
+    "b3_g0.5_baseline": {
+     "r_rad": 1.1724426095244892e-06,
+     "T_over_sqrt_HM": 0.013517186464421163
+    },
+    "b3_g0.5_matched_oldobj": {
+     "r_rad": 1.1724426103182108e-06,
+     "T_over_sqrt_HM": 0.013517186466708884
+    },
+    "scale_0.5": {
+     "r_rad": 1.1724426113664613e-06,
+     "T_over_sqrt_HM": 0.013517186469730226
+    },
+    "scale_2.0": {
+     "r_rad": 1.1724426088018945e-06,
+     "T_over_sqrt_HM": 0.013517186462338451
+    },
+    "M1_b3_g0.5_matched": {
+     "r_rad": 1.1724426095371723e-06,
+     "T_over_sqrt_HM": 0.01351718646445772
+    },
+    "b5_g1_baseline": {
+     "r_rad": 1.1713798594004554e-06,
+     "T_over_sqrt_HM": 0.013514122289450838
+    },
+    "M1_b5_g1_matched": {
+     "r_rad": 1.1713798594561266e-06,
+     "T_over_sqrt_HM": 0.013514122289611406
+    }
+   },
+   "b3_spread": 2.1873708132333954e-09,
+   "b5_spread": 4.752616284602116e-11,
+   "remark": "r is the same on every (3,0.5) row (baseline, scale 0.5, 2.0, old-object match, M1 match) to the spread quoted, so T_vis ~ (H_i M_red)^{1/2} exactly and Y ~ H_i^{3/2} follows from N_X, a unchanged; the engine run adds nothing"
+  },
+  "history_dependence": {
+   "lambda_b3": 1.0070090495735164,
+   "lambda_b5": 1.006078579112091,
+   "relative": -0.0009239941406876814,
+   "remark": "the two supplied reheating histories differ by -0.092% in lambda; the quoted +0.7009% is the (3,0.5) choice"
+  },
+  "lambda_band": {
+   "values": {
+    "codex_4.4e-10_tau20": 1.0072454309694114,
+    "codex_4.4e-10_tau50": 1.0083440402048227,
+    "codex_4.4e-10_tau80": 1.004835005263871,
+    "codex_4.4e-10_tau200": 1.0059214172527273,
+    "codex_4.4e-10_tau800": 1.0073950744851756,
+    "codex_4.4e-10_window": 1.0070090495735162,
+    "planck_central_tau20": 1.00317050219044,
+    "planck_central_tau50": 1.0042646668741537,
+    "planck_central_tau80": 1.000769828143011,
+    "planck_central_tau200": 1.001851844925552,
+    "planck_central_tau800": 1.0033195403059212,
+    "planck_central_window": 1.0029350771030308,
+    "planck_minus_1pct_tau20": 0.9964715026733867,
+    "planck_minus_1pct_tau50": 0.9975583607141401,
+    "planck_minus_1pct_tau80": 0.9940868599130115,
+    "planck_minus_1pct_tau200": 0.9951616511741801,
+    "planck_minus_1pct_tau800": 0.9966195455380491,
+    "planck_minus_1pct_window": 0.9962376497140887,
+    "planck_plus_1pct_tau20": 1.0098472084516807,
+    "planck_plus_1pct_tau50": 1.0109486554629534,
+    "planck_plus_1pct_tau80": 1.0074305564668935,
+    "planck_plus_1pct_tau200": 1.008519774725366,
+    "planck_plus_1pct_tau800": 1.0099972385059366,
+    "planck_plus_1pct_window": 1.0096102164679643
+   },
+   "min": 0.9940868599130115,
+   "max": 1.0109486554629534,
+   "dlnlambda_per_dlnD": 0.6666666666666666,
+   "D_planck_GeV": 4.3733259546209184e-10,
+   "remark": "every value is a legal reading of the same calculation (target rounding, clock choice); the spread is -0.59% to 1.09% against the quoted +0.7009%"
+  },
+  "pulse_rows_actual_Nplus_Nphi": {
+   "rows": {
+    "5%": {
+     "Nminus_over_Q0": 0.002088038448280454,
+     "Nplus_over_Q0": 8.488384231246768e-05,
+     "Nphi_over_Q0": 4.296962284803155e-06,
+     "eta": 1.002003154605968,
+     "free_X_over_Q0": 8.488384231246768e-05,
+     "term_m1_ledger": 0.0044548752317094785,
+     "term_first_skeptic_pass": 0.004315437615854739,
+     "term_with_actual_Nplus": 0.004321185662671012,
+     "term_with_Nplus_and_phi_pairs": 0.004330353493539861,
+     "ratio_to_m1_ledger": 0.9720482097268898,
+     "factor_over_1pct": 0.4330353493539862
+    },
+    "10%": {
+     "Nminus_over_Q0": 0.008447531814366986,
+     "Nplus_over_Q0": 0.0004467811236575878,
+     "Nphi_over_Q0": 2.7515873253869305e-05,
+     "eta": 1.0080007506907094,
+     "free_X_over_Q0": 0.0004467811236575878,
+     "term_m1_ledger": 0.018024322776571684,
+     "term_first_skeptic_pass": 0.017491835030053957,
+     "term_with_actual_Nplus": 0.01748903000361142,
+     "term_with_Nplus_and_phi_pairs": 0.01754773679587077,
+     "ratio_to_m1_ledger": 0.9735587302442015,
+     "factor_over_1pct": 1.7547736795870768
+    },
+    "20%": {
+     "Nminus_over_Q0": 0.034469316149022655,
+     "Nplus_over_Q0": 0.004123361004053799,
+     "Nphi_over_Q0": 0.00026842649486619137,
+     "eta": 1.030345955144969,
+     "free_X_over_Q0": 0.004123361004053799,
+     "term_m1_ledger": 0.07354384542003148,
+     "term_first_skeptic_pass": 0.07124192271001574,
+     "term_with_actual_Nplus": 0.07151586931513182,
+     "term_with_Nplus_and_phi_pairs": 0.07208857359842397,
+     "ratio_to_m1_ledger": 0.98021218752846,
+     "factor_over_1pct": 7.208857359842397
+    },
+    "40%": {
+     "Nminus_over_Q0": 0.1459287921802507,
+     "Nplus_over_Q0": 0.05298352173029947,
+     "Nphi_over_Q0": 0.0029475970751292424,
+     "eta": 1.0929452704499512,
+     "free_X_over_Q0": 0.05298352173029947,
+     "term_m1_ledger": 0.3112865403766345,
+     "term_first_skeptic_pass": 0.3015432701883173,
+     "term_with_actual_Nplus": 0.3051410416477795,
+     "term_with_Nplus_and_phi_pairs": 0.3114299196185901,
+     "ratio_to_m1_ledger": 1.0004606021249172,
+     "factor_over_1pct": 31.14299196185901
+    }
+   },
+   "remark": "charge-conserving bookkeeping with the measured N_plus (not zero) and the emitted phi counted as future pairs: the first skeptic pass underestimated the 20%/40% rows by 0.4%/1.2% (N_plus set to 0); net effect on m1_ledger rows -3.0/-2.9/-2.3/+0.2%; verdicts unchanged"
+  },
+  "kin_crossing_interpolation": {
+   "log_linear": {
+    "old": 5.824275035164813,
+    "new": 5.768255724199123
+   },
+   "linear": {
+    "old": 5.43524038860749,
+    "new": 5.3943694286716495
+   },
+   "conv_new_term_per_f": 1.0517690143778422,
+   "allowed_f_new": 0.009507791029492675,
+   "remark": "with only the R = 5 and R = 7 points, the crossing is 5.82 (log-linear, m1_ledger and REVIEW_KINETIC) or 5.44 (linear); the M1 shift (-0.056 log-linear, -0.041 linear) is robust in sign, the absolute R is not"
+  },
+  "half_window_to_lambda": {
+   "codex_late_half_window_relative_charge_change": 0.0002617013414302205,
+   "lambda_shift": 0.00017445995210598996,
+   "remark": "the drift inside the averaging window moves lambda by 1.7e-4, i.e. the 8th quoted digit of lambda is noise at the 4th"
+  }
+ }
+}

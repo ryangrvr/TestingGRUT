@@ -1,11 +1,12 @@
 {
  "track": "m1_ledger_skeptic",
  "date": "2026-11-01",
- "scope": "adversarial recomputation of tracks/m1_ledger; algebra and quadrature only, no engine runs, no Codex code run; packets read via git show",
+ "scope": "adversarial recomputation of tracks/m1_ledger; algebra and quadrature only, no engine runs, no Codex code run; packets read via git show; second pass re-ran every script (results identical; the stale Gaussian-control key in skeptic_born.json was regenerated) and added skeptic_extra.py",
  "independence": {
   "own_code": [
    "skeptic/code/skeptic_algebra.py",
-   "skeptic/code/skeptic_born.py"
+   "skeptic/code/skeptic_born.py",
+   "skeptic/code/skeptic_extra.py (second pass)"
   ],
   "reproduction": [],
   "codex_code_run": false,
@@ -63,8 +64,8 @@
   {
    "claim_id": "9",
    "refuted": false,
-   "recomputed": "pulse rows with charge-conserving eta = 1 + (Nbar-Nplus)/Q0: terms 0.00432/0.01749/0.07124/0.3015 (m1_ledger 0.00445/0.01802/0.07354/0.3113, 3% high); kin rows and crossing R 5.824 -> 5.768 reproduced; mask rows are not eta by Codex's own statement",
-   "reason": "verdict (no formation-type population passes unconditionally) stands; the pulse rows should use the coefficient c_p - c_eta = 2.0668 on Nbar/Q0 (core charge rises), and the frozen formula also ignores the pulsed core's 2.3% excitation energy (c481530)"
+   "recomputed": "pulse rows with charge-conserving eta = 1 + (Nbar-Nplus)/Q0, the ACTUAL Nplus of bf8ab3b SOURCE_RESULTS (17.0/89.4/824.7/10596.7) and the emitted phi counted as future pairs: terms 0.00433/0.01755/0.07209/0.3114 (m1_ledger 0.00445/0.01802/0.07354/0.3113; ratio 0.972/0.974/0.980/1.0005); kin rows and crossing R 5.824 -> 5.768 (log-linear; 5.435 -> 5.394 linear) reproduced; mask rows are not eta by Codex's own statement",
+   "reason": "verdict (no formation-type population passes unconditionally) stands; the 5-20%% pulse rows are 2-3%% high (coefficient c_p - c_eta = 2.0668 on Nbar/Q0 because the core charge rises), the 40%% row is right to 0.05%% once the 589.5 emitted phi are counted as pairs; the frozen formula also ignores the pulsed core's 2.3%% excitation energy (c481530); the absolute crossing R depends on the interpolation between two points"
   },
   {
    "claim_id": "10",
@@ -94,11 +95,13 @@
  "new_issues": [
   "N1 [E,R]: the target D = 4.4e-10 GeV is a rounded value; Omega_c h^2 = 0.1200 +- 0.0012 (Planck 2018), rho_c/h^2 = 1.05368e-5 GeV cm^-3 and s0 = 2891.2 cm^-3 give D = 4.3733e-10 GeV (Codex 0.61% high, +-1% band); at the Planck value lambda shifts by -0.40% and the band is +-0.67%: the +0.7009% calibration step is inside the target's own rounding and uncertainty. Not raised by Codex or m1_ledger.",
   "N2 [C]: lambda = 1.00700905 is quoted to 1e-8 but Codex's own charge_clock entries (tau 20/50/80/200/800 instantaneous N_X) give lambda = 1.00484-1.00834 (window average 1.00701): -0.22/+0.13% absolute, i.e. a third of the calibration step; m1_ledger gave the 0.44% Y drift but not its lambda band.",
-  "N3 [D]: m1_ledger's pulse rows read the emitted Xbar as p at eta = 1; charge conservation makes eta = 1 + (Nbar - Nplus)/Q0 > 1 (ed73791), so the frozen term is 2.0668 Nbar/Q0 + 0.0668 Nplus/Q0, 3% below the table (10%: 0.01749 vs 0.01802; x1.75 not x1.8).",
+  "N3 [D]: m1_ledger's pulse rows read the emitted Xbar as p at eta = 1; charge conservation makes eta = 1 + (Nbar - Nplus)/Q0 > 1 (ed73791), so the frozen term is 2.0668 Nbar/Q0 + 0.0668 Nplus/Q0 (+ 2.1336 Nphi/Q0 if each emitted phi decays to a pair). With the actual Nplus and Nphi of bf8ab3b SOURCE_RESULTS: 0.00433/0.01755/0.07209/0.3114 vs m1_ledger 0.00445/0.01802/0.07354/0.3113 (ratios 0.972/0.974/0.980/1.0005): the 5-20% rows are 2-3% high, the 40% row is right because the phi pairs compensate. Verdicts unchanged (x1.75 not x1.8 for 10%).",
   "N4 [D]: m1_ledger's (5,1) old-object repair \"1.016277\" is a transcription slip for 1.0162836 (Codex row b5_g1_matched uniform_scale 1.0162835956); superseded number, +1.628% unchanged.",
   "N5 [C]: Codex's scale_0.5 and scale_2.0 control rows (not used by m1_ledger) already fix the exponent over a factor 4: 1.50000000026 (Y), 0.4999999996 (T_vis), with N_X and a unchanged to 5e-10; m1_ledger's own-engine measurement adds nothing beyond this and the \"ODE rerun\" cannot fail.",
   "N6 [A]: the frozen formula applied to pulsed states uses eps_Q for an excited core; c481530 gives 2.305% excess energy in the full 10% pulse and 0.2237% unprocessed remainder, so the eta-row readings of pulses are lower bounds on the mass excess, not only the kinetics row.",
-  "N7 [A]: T_vis at tau = 800 (7.7e12 GeV) exceeds M_Y = 4.03e12 GeV; g* = 106.75 is the SM count and holds only because the conservative candidate has zero SM portals; the \"separately tested portal extension\" would need g* and the yield recomputed (m1_ledger lists g* as an assumption; the reason is this)."
+  "N7 [A]: T_vis at tau = 800 (7.7e12 GeV) exceeds M_Y = 4.03e12 GeV; g* = 106.75 is the SM count and holds only because the conservative candidate has zero SM portals; the \"separately tested portal extension\" would need g* and the yield recomputed (m1_ledger lists g* as an assumption; the reason is this).",
+  "N8 [D]: the kin_solve crossing \"R = 5.82 -> 5.77\" rests on a log-linear interpolation between the only two points (R = 5, f = 0.0047584; R = 7, f = 0.0288444); a linear interpolation gives 5.44 -> 5.39. The M1 shift is robust in sign (-0.056 / -0.041), the absolute crossing R is not determined to better than +-0.2 by those two points.",
+  "N9 [C,E]: the two supplied reheating histories give lambda = 1.0070090 (3,0.5) and 1.0060786 (5,1), a -0.092% history dependence; combined with the clock choice (N2) and the target D at its Planck value +-1% (N1) every legal reading of the same calculation lies in lambda = 0.9941-1.0109 (-0.59% to +1.09%), against the quoted +0.7009% to eight digits. Codex's own half-window drift (2.6e-4) alone moves lambda by 1.7e-04. Also: r = rho_rad/(M_red^2 H_i^2) rebuilt from Codex's (T_vis, H) rows is identical on every (3,0.5) row to 2.2e-09 (scale 0.5, 1, 2, both matches), so T_vis ~ (H_i M_red)^{1/2} and the 3/2 exponent hold by construction of the estimator."
  ],
  "refuted_count": 0
 }
