@@ -153,8 +153,8 @@ def history_B(Q, SQ, stick, sigma_m=None, a_lo=1e-14, a_hi=1.0, n=8000):
         a = math.exp(la)
         nQ = NQ0 / a**3
         Teq, nveq = vapour_T(nQ, SQ, Delta)
-        if Teq is None:
-            continue
+        if Teq is None or (Nv is None and Teq > 0.05):
+            continue          # start the NR two-phase model only once T_h < 0.05 m_X (equilibrium assumed before)
         Neq = min(nveq / nQ, 1.0)
         if Nv is None:
             Nv, Tv = Neq, Teq

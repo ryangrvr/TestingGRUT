@@ -26,7 +26,7 @@ Our γ(ss → XX̄) equals the kin_rates table to 10⁻⁶ at all 45 temperature
 
 ## 1. Heat budget at e = 10⁻⁶ and the relaxed plasma at onset [C]
 
-**Sources** (kin_source, R in units of the release energy E_X):
+**Sources** (kin_source, R in units of the release energy E_X; the X-sector energy per charge before onset is (1 + R) E_X/N_X, i.e. the last column of the table below in m_X at a_on):
 - Vectors (R ∝ 1/e): band 4.0538, broad 4.7905. The ratio R(10⁻⁷)/R(10⁻⁶) = 10.006.
 - Mediators at e = 10⁻⁶: Y_L 0.80557 plus cascade vectors 0.10716 (∝ 1/e) plus σ 4×10⁻⁸, which is 0.91273. The
   brief's 1.144 is the e = 10⁻⁷ value.
@@ -46,12 +46,12 @@ Our γ(ss → XX̄) equals the kin_rates table to 10⁻⁶ at all 45 temperature
 
 | R | T_conf | X̄/charge before onset (φ eq / φ absent) | charge in condensate | a_on | T_h/m_X at a_on | n_Q / n_cond at a_on (m_X³) | E/Q at a_on (m_X) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 0 | 13.78 | 0.099 / 0.136 | 0.969 | 3.74×10¹² | 5.31 | 159.8 / 154.8 | 5.2 |
-| 0.913 (mediators, 10⁻⁶) | 16.36 | 0.169 / 0.232 | 0.955 | 3.76×10¹² | 6.28 | 157.5 / 150.5 | |
-| 1.144 | 16.85 | 0.186 / 0.255 | 0.953 | 3.77×10¹² | 6.46 | 157.0 / 149.6 | |
+| 0 | 13.78 | 0.099 / 0.136 | 0.969 | 3.74×10¹² | 5.31 | 159.8 / 154.8 | 5.31 |
+| 0.913 (mediators, 10⁻⁶) | 16.36 | 0.169 / 0.232 | 0.955 | 3.76×10¹² | 6.28 | 157.5 / 150.5 | 10.1 |
+| 1.144 | 16.85 | 0.186 / 0.255 | 0.953 | 3.77×10¹² | 6.46 | 157.0 / 149.6 | 11.3 |
 | **4.97 (10⁻⁶ band)** | **21.89** | **0.417 / 0.572** | **0.917** | **3.81×10¹²** | **8.28** | **151.0 / 138.5** | **31.1** |
-| 5.70 (10⁻⁶ broad) | 22.54 | 0.457 / 0.627 | 0.912 | 3.82×10¹² | 8.51 | 150.1 / 136.9 | |
-| 41.7 (10⁻⁷ band) | 35.89 | 1.898 / 2.606 | 0.753 | 4.04×10¹² | 12.8 | 127.1 / 95.7 | |
+| 5.70 (10⁻⁶ broad) | 22.54 | 0.457 / 0.627 | 0.912 | 3.82×10¹² | 8.51 | 150.1 / 136.9 | 34.9 |
+| 41.7 (10⁻⁷ band) | 35.89 | 1.898 / 2.606 | 0.753 | 4.04×10¹² | 12.8 | 127.1 / 95.7 | 210 |
 
 - The pilot state (n_Q = 8112.7, ρ(1 + R)) gives X̄/charge 0.069 (R = 0), 0.133 (1.14), 0.302 (4.97) and 1.385
   (41.7), with T_h/m_X = 4.75–11.8 at its onset (a = 5.3–5.7×10¹²).
@@ -67,7 +67,7 @@ Our γ(ss → XX̄) equals the kin_rates table to 10⁻⁶ at all 45 temperature
   for F² ≥ 3, and Ω(n) turns down where φ turns on.
 - **[D]** With the M1 tilt, φ_eq has exactly one root for every F and every thermal mass: F² + t_φ − t_lin/S is
   strictly decreasing on (0, 1). So the transition is a **crossover**, with no metastable φ ≈ 0 state. The curvature
-  criterion (λ_φ − 6ε) would put it at 76.4 m_X³, but φ is already 0.56–0.67 v at the untilted onset.
+  criterion (λ_φ − 6ε) would put it at 76.4 m_X³, but φ is already 0.5–0.8 v at the untilted onset.
 - **[C]** Along the relaxed history (R = 4.97; thermal masses from the Hartree state):
 
   | a/a_on | 0.50 | 0.68 (n_c = 449, bulk) | 0.84 (n_c = 233, spinodal) | 1.0 | 1.5 | 2.0 |
@@ -183,3 +183,22 @@ Q = 2×10⁵ [E]. Objects of different Q have a different E/Q (0.94 → 0.78), a
 3. **No coherent X̄.** The transition does not create antiparticles from the circular condensate [C]; the X̄ budget at
    onset is thermal (0.42 per charge at R = 4.97).
 4. **The M1 cubic is a small upward correction.** It raises p by about 6%, through ss → XX̄ (−9.6%) [C].
+
+## Reproduce
+
+```bash
+T=research/reality_framework/grut_working_theory_v2_20261101/tracks/fx_chain/code
+python3 -B $T/heat_onset.py                       # items 1-2, 25 s  -> results/heat_onset.json
+python3 -B $T/frag_m1.py                          # item 2b, 1 min   -> results/frag_m1.json
+cd $T/transition && python3 -B circ_scan.py A && python3 -B circ_scan.py B && python3 -B circ_scan.py C   # 4 + 3 + 9 min (2 workers)
+cd $T/kin && python3 -B cubic_m1.py               # 2 min -> results/cubic_m1.json (needed by m1_kin.py)
+python3 -B m1_kin.py m1_gas_relaxed_R497 --budget # ~35 s per gas case; object rules: FX_RTOL_OBJ=2e-6 (default), 5-20 s
+python3 -B m1_kin.py repro_gas_R497 repro_gas_R5 m1_gas_relaxed_R114 ... m1_gas_relaxed_Rx<R> m1_inst_relaxed_R497_capx<k>
+python3 -B assemble.py                            # -> results/kin_m1.json
+```
+Case outputs go to the scratchpad (`wt2/fx_chain/kin_<case>.json`; caches in `wt2/fx_chain/kwork`); all inputs are read
+in place from `grut_formation_review_20261025/tracks` (kin_source, kin_rates, kin_thermo, m1_vacuum, pt_m1tilt MATCH file
+via the scratchpad copy of 5f5513b used by pt_m1tilt).
+
+Credits: Q-ball formation by fragmentation of a condensate (Kusenko–Shaposhnikov; Enqvist–McDonald; Kasuya–Kawasaki);
+Bose thermodynamics by Bessel series (Kolb–Turner); Vakhitov–Kolokolov stability as used in REVIEW_M1.
