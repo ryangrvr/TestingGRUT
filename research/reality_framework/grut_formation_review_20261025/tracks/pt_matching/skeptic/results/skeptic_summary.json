@@ -1,0 +1,83 @@
+{
+ "track": "pt_matching_skeptic",
+ "checks": [
+  {
+   "claim_id": "3a",
+   "refuted": false,
+   "reason": "Closed form and spectral series agree; harmonic member Omega/omega_r = 0.5 exactly.",
+   "recomputed": "A-/q = J_r/q = 1.98238239420 (scipy)"
+  },
+  {
+   "claim_id": "3b",
+   "refuted": false,
+   "reason": "scipy quad + DOP853/FFT reproduce to 2e-12.",
+   "recomputed": "J_r/q 1.7637252793970, A-/q 1.737788353110; per net 1.7646827365883/1.7387317301624"
+  },
+  {
+   "claim_id": "3c",
+   "refuted": false,
+   "reason": "Torus-cycle derivation checked (zero winding since Omega = dtheta/T_r); two-harmonic central orbit must be the harmonic ellipse.",
+   "recomputed": "0.0259369 = 0.0165336 + 0.0094033"
+  },
+  {
+   "claim_id": "3d",
+   "refuted": false,
+   "reason": "Non-symplectic DOP853 reproduces.",
+   "recomputed": "T=80 mean 1.76372527937 spread 1.99890e-5; T=20 spread 3.56125e-4"
+  },
+  {
+   "claim_id": "3e",
+   "refuted": false,
+   "reason": "Reproduced.",
+   "recomputed": "-4.796e-7, +1.190e-7, +4.790e-7, -1.181e-7"
+  },
+  {
+   "claim_id": "3f",
+   "refuted": false,
+   "reason": "Continuous-phase optimisation reproduces the track's correction; mean equals closed form.",
+   "recomputed": "0.0053510-18.31206, mean 8.42149"
+  },
+  {
+   "claim_id": "3g",
+   "refuted": false,
+   "reason": "Reproduced.",
+   "recomputed": "cosine slope -2.04; C-inf 3.04e-3, 9.65e-7, 2.72e-10"
+  },
+  {
+   "claim_id": "floquet",
+   "refuted": false,
+   "reason": "Independent u''=4E-3 lam u^2 Hill solve; exact Lame n=4 (four gaps).",
+   "recomputed": "onset 0.73376 (tau20), 0.73259 (late) M_c,peri; nu/omega_r 0.0475 @0.87, 0.153 @1.75"
+  },
+  {
+   "claim_id": "3h_tau20",
+   "refuted": false,
+   "reason": "Own DOP853 C code; run-by-run 1.1e-6 at eps 1e-2; distributions agree at eps<=1e-3.",
+   "recomputed": "n-/q 0.704+-0.017, Nphi 0.475+-0.011, sum 1.178 (560 runs, eps 1e-3..3e-6)"
+  },
+  {
+   "claim_id": "3h_late",
+   "refuted": true,
+   "reason": "96-run grid sample is low; 8x larger random ensembles in both codes disagree by ~2.7 sigma.",
+   "recomputed": "n-/q 0.197+-0.004 (own, 736) / 0.189+-0.006 (track code, 384); Nphi 0.124-0.131; sum 0.32"
+  },
+  {
+   "claim_id": "3i_mechanism",
+   "refuted": true,
+   "reason": "Tilt beta=0.3 keeps J_r to <=4e-4 at eps 1e-3..1e-5 with the same m_phi, so finite inertia is not sufficient.",
+   "recomputed": "beta=0.3: 1.7636/1.7636/1.7633 vs J_r 1.7637"
+  },
+  {
+   "claim_id": "3j",
+   "refuted": false,
+   "reason": "Numbers reproduce; smooth reference is an initial-vacuum mismatch.",
+   "recomputed": "k=6 1.84, k=1 0.0086; smooth 5e-9 (not 1e-5)"
+  },
+  {
+   "claim_id": "3k",
+   "refuted": false,
+   "reason": "Gamma formula reproduces; Gamma/H assumption not derived but conclusion unchanged.",
+   "recomputed": "Gamma 1.8757e-4 m_X; Gamma/H ~1e8-1e9; totals 1.178/0.321"
+  }
+ ]
+}

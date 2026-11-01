@@ -106,6 +106,7 @@ for s0 in sorted({v[0] for v in measured.values()} | {20., 20.24, 20.44, 20.68})
             for key, (ss, Nmeas, Ameas) in measured.items():
                 if abs(ss - s0) > 1e-9: continue
                 k = n - 1
+                if k >= Nmeas.shape[1] or np.isnan(Nmeas[0, k]): continue
                 row[f'{key[0]}:{key[1]}'] = dict(
                     meas_ratio=float(np.linalg.norm(Ameas[:, k]) / np.linalg.norm(Nmeas[:, k])),
                     normal_rel_err=float(np.linalg.norm(Nmeas[:, k] - Nm) / np.linalg.norm(Nmeas[:, k])),
