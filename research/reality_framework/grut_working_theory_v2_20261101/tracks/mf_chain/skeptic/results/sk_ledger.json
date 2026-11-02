@@ -1,0 +1,329 @@
+{
+ "method": "mf_chain SKEPTIC: independent ledger, S/Q, relic, H_i calibration and isocurvature from the stored release and vector\noutputs (mf_chain's and the skeptic's), with\n  (a) my own yield/entropy/abundance arithmetic (no chain_mfi function is used for it):\n        rho_r a^4 = (pi^2/30) g T^4 a^4 = 3 K^2 M_P^2 H_i^2,  s a^3 = (2 pi^2/45) g (T a)^3,  Y = |N_X| H_i^3/(s a^3),\n        rho_DM/s = M m_X Y = 4.4e-10 GeV  (BRIEF_DECISIVE target; Planck 2018 Omega_c h^2 = 0.120 gives 4.37e-10) -> H_req;\n  (b) the pair fraction p(S/Q) from the case-L network computed INSIDE the inherited map's gap (sk_pmap.json) instead of\n      the log-linear bridge between two different recipes;\n  (c) D = d ln Omega/d ln s_* recomputed from the c0 = 0.99 / 1.01 releases with (b), and beta_iso at the H_i of the\n      self-consistent point that actually belongs to each e (the track evaluated the e = 3e-6 derivative at the 1e-6 H_i).\n[C] arithmetic on [C] inputs; ledger (dq_heat), closed form (dq_entropy) and the case-L recipe are inherited [Q].\nUsage: python3 -B sk_ledger.py -> ../results/sk_ledger.json\n",
+ "p_map": {
+  "track": {
+   "6.742": 0.016610581067220388,
+   "8": 0.031172212681986423,
+   "10": 0.07082790178769034,
+   "12": 0.1384930190547575,
+   "14": 0.24414582851551622,
+   "15": 0.31466521427932864,
+   "16": 0.39896304220911866,
+   "17.13": 0.5127812377232968,
+   "21.8": 0.7617495073060185
+  },
+  "skeptic": {
+   "6.742": 0.030805401666354634,
+   "8": 0.07133986443664041,
+   "10": 0.1551766344122904,
+   "12": 0.2501146026452249,
+   "14": 0.3503748788059327,
+   "15": 0.4017158128734596,
+   "16": 0.4536334108418349,
+   "17.13": 0.5128525319286319,
+   "21.8": 0.761748568961852
+  },
+  "slope_track_14_16": 3.677809931340107,
+  "slope_skeptic_14_16": 1.9342698229715463,
+  "wt_vs_caseL_at_6p742": [
+   0.016610581067220388,
+   0.030805401666354627
+  ]
+ },
+ "cases": {
+  "HFa exported (design 1.30e11)": {
+   "tag": "HFa_raw",
+   "K": 2.048186911778211,
+   "N_X": 5403.599154415209,
+   "E_Ec": 21.183788506741973,
+   "R_Y": 9.418004819254783,
+   "S_per_Q_inf_mine": 10.86096585546907,
+   "S_per_Q_inf_track": 10.86096585546907,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 14.693300033331639,
+     "S_per_Q_track": 14.693300033331639,
+     "branch": "free X",
+     "p_track_map": 0.2916431083593559,
+     "p_skeptic_map": 0.3856000007029268,
+     "M_track": 1.5832862167187118,
+     "M_track_recomputed": 1.5832862167187118,
+     "M_skeptic": 1.7712000014058535,
+     "asym_share_skeptic": 0.5645889787749947,
+     "H_req_track_GeV": 128127813777.93958,
+     "H_req_mine_trackmap_GeV": 128127812995.1987,
+     "H_req_mine_skepticmap_GeV": 118897109882.64542
+    },
+    "3e-06": {
+     "S_per_Q_mine": 12.25333620811823,
+     "S_per_Q_track": 12.25333620811823,
+     "branch": "free X",
+     "p_track_map": 0.14955391967713252,
+     "p_skeptic_map": 0.26180602254818036,
+     "M_track": 1.299107839354265,
+     "M_track_recomputed": 1.299107839354265,
+     "M_skeptic": 1.5236120450963608,
+     "asym_share_skeptic": 0.6563350580079951,
+     "H_req_track_GeV": 146190640080.16196,
+     "H_req_mine_trackmap_GeV": 146190639187.07416,
+     "H_req_mine_skepticmap_GeV": 131451870121.04471
+    }
+   }
+  },
+  "HFa unblocked sc 1e-6": {
+   "tag": "itHFa_track_it1",
+   "K": 2.0376270141248347,
+   "N_X": 5434.306328442389,
+   "E_Ec": 21.086183521660036,
+   "R_Y": 9.421508514275448,
+   "S_per_Q_inf_mine": 10.825967983101462,
+   "S_per_Q_inf_track": 10.825967983101462,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 14.59503747301765,
+     "S_per_Q_track": 14.59503747301765,
+     "branch": "free X",
+     "p_track_map": 0.284533933410833,
+     "p_skeptic_map": 0.38050585053376557,
+     "M_track": 1.569067866821666,
+     "M_track_recomputed": 1.569067866821666,
+     "M_skeptic": 1.761011701067531,
+     "asym_share_skeptic": 0.5678553977771963,
+     "H_req_track_GeV": 127752574321.1307,
+     "H_req_mine_trackmap_GeV": 127752573540.6822,
+     "H_req_mine_skepticmap_GeV": 118292165497.63219
+    },
+    "3e-06": {
+     "S_per_Q_mine": 12.194256371254113,
+     "S_per_Q_track": 12.194256371254113,
+     "branch": "free X",
+     "p_track_map": 0.1469189451870402,
+     "p_skeptic_map": 0.25905357783845145,
+     "M_track": 1.2938378903740804,
+     "M_track_recomputed": 1.2938378903740804,
+     "M_skeptic": 1.518107155676903,
+     "asym_share_skeptic": 0.6587150296081135,
+     "H_req_track_GeV": 145281696418.581,
+     "H_req_mine_trackmap_GeV": 145281695531.04596,
+     "H_req_mine_skepticmap_GeV": 130595794475.92033
+    }
+   },
+   "iso": {
+    "1e-06": {
+     "D_trackmap": 1.3631131531740919,
+     "D_skepticmap": 2.4943170374137624,
+     "D_charge_only": 4.5389555954991865
+    },
+    "3e-06": {
+     "D_trackmap": 3.02859883311167,
+     "D_skepticmap": 3.1506343662776795,
+     "D_charge_only": 4.5389555954991865
+    }
+   }
+  },
+  "HFa unblocked sc 3e-6": {
+   "tag": "e3U",
+   "K": 2.373485217062329,
+   "N_X": 5009.003725309665,
+   "E_Ec": 22.512498754203598,
+   "R_Y": 8.6949644508509,
+   "S_per_Q_inf_mine": 10.770517251385135,
+   "S_per_Q_inf_track": 10.770517251385133,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 15.903595094268402,
+     "S_per_Q_track": 15.903595094268399,
+     "branch": "free X",
+     "p_track_map": 0.39019319109353984,
+     "p_skeptic_map": 0.44849959445052534,
+     "M_track": 1.7803863821870785,
+     "M_track_recomputed": 1.7803863821870798,
+     "M_skeptic": 1.8969991889010507,
+     "asym_share_skeptic": 0.5271483540165925,
+     "H_req_track_GeV": 144425867724.896,
+     "H_req_mine_trackmap_GeV": 144425866842.58923,
+     "H_req_mine_skepticmap_GeV": 138444719349.6957
+    },
+    "3e-06": {
+     "S_per_Q_mine": 12.552465406604579,
+     "S_per_Q_track": 12.552465406604576,
+     "branch": "free X",
+     "p_track_map": 0.16342650139670425,
+     "p_skeptic_map": 0.27598471015575965,
+     "M_track": 1.3268530027934085,
+     "M_track_recomputed": 1.3268530027934085,
+     "M_skeptic": 1.5519694203115193,
+     "asym_share_skeptic": 0.644342592651906,
+     "H_req_track_GeV": 175700347435.0198,
+     "H_req_mine_trackmap_GeV": 175700346361.65536,
+     "H_req_mine_skepticmap_GeV": 158270163939.11258
+    }
+   },
+   "iso": {
+    "1e-06": {
+     "D_trackmap": -0.16231792370637307,
+     "D_skepticmap": 1.9134752676913644,
+     "D_charge_only": 4.399590490025995
+    },
+    "3e-06": {
+     "D_trackmap": 2.403231649289398,
+     "D_skepticmap": 2.679219211735399,
+     "D_charge_only": 4.399590490025995
+    }
+   }
+  },
+  "HFa Pauli P0 sc 1e-6": {
+   "tag": "itHFa_P0_it2",
+   "K": 7.8399694892398255,
+   "N_X": 3674.638600048647,
+   "E_Ec": 30.07483045299732,
+   "R_Y": 10.697146322272635,
+   "S_per_Q_inf_mine": 15.42960731876643,
+   "S_per_Q_inf_track": 15.42960731876643,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 61.506852176640365,
+     "S_per_Q_track": 61.506852176640365,
+     "branch": "free X",
+     "p_track_map": 2.9084043877868515,
+     "p_skeptic_map": 2.9084043877868515,
+     "M_track": 6.816808775573703,
+     "M_track_recomputed": 6.816808775573703,
+     "M_skeptic": 6.816808775573703,
+     "asym_share_skeptic": 0.14669620828784946,
+     "H_req_track_GeV": 239636375997.02005,
+     "H_req_mine_trackmap_GeV": 239636374533.0664,
+     "H_req_mine_skepticmap_GeV": 239636374533.0664
+    },
+    "3e-06": {
+     "S_per_Q_mine": 30.198316938112512,
+     "S_per_Q_track": 30.198316938112512,
+     "branch": "free X",
+     "p_track_map": 1.1904045506844807,
+     "p_skeptic_map": 1.1904038235673755,
+     "M_track": 3.3808091013689614,
+     "M_track_recomputed": 3.3808091013689614,
+     "M_skeptic": 3.380807647134751,
+     "asym_share_skeptic": 0.29578731012617776,
+     "H_req_track_GeV": 382466191715.30115,
+     "H_req_mine_trackmap_GeV": 382466189378.7912,
+     "H_req_mine_skepticmap_GeV": 382466299055.81415
+    }
+   },
+   "iso": {
+    "1e-06": {
+     "D_trackmap": -0.06734912031590139,
+     "D_skepticmap": -0.06734912031590139,
+     "D_charge_only": 4.541778099221298
+    },
+    "3e-06": {
+     "D_trackmap": 0.45957134781811637,
+     "D_skepticmap": 0.45956641509018925,
+     "D_charge_only": 4.541778099221298
+    }
+   }
+  },
+  "HFb Pauli P0 sc 1e-6": {
+   "tag": "itHFb_P0_it0",
+   "K": 7.854672761746703,
+   "N_X": 3781.8559168831353,
+   "E_Ec": 29.338429199165297,
+   "R_Y": 10.758089462656342,
+   "S_per_Q_inf_mine": 15.203792869523642,
+   "S_per_Q_inf_track": 15.203792869523642,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 59.96100902237588,
+     "S_per_Q_track": 59.96100902237588,
+     "branch": "free X",
+     "p_track_map": 2.823627197902054,
+     "p_skeptic_map": 2.823627197902054,
+     "M_track": 6.647254395804108,
+     "M_track_recomputed": 6.647254395804108,
+     "M_skeptic": 6.647254395804108,
+     "asym_share_skeptic": 0.1504380516309443,
+     "H_req_track_GeV": 239514665563.51642,
+     "H_req_mine_trackmap_GeV": 239514664100.3063,
+     "H_req_mine_skepticmap_GeV": 239514664100.3063
+    },
+    "3e-06": {
+     "S_per_Q_mine": 29.50323175961592,
+     "S_per_Q_track": 29.50323175961592,
+     "branch": "free X",
+     "p_track_map": 1.153030444339773,
+     "p_skeptic_map": 1.1530296888842504,
+     "M_track": 3.306060888679546,
+     "M_track_recomputed": 3.306060888679546,
+     "M_skeptic": 3.306059377768501,
+     "asym_share_skeptic": 0.3024749061449019,
+     "H_req_track_GeV": 381551423879.2516,
+     "H_req_mine_trackmap_GeV": 381551421548.33,
+     "H_req_mine_skepticmap_GeV": 381551537797.5455
+    }
+   },
+   "iso": {
+    "1e-06": {
+     "D_trackmap": -0.011372608444242014,
+     "D_skepticmap": -0.011372608444242014,
+     "D_charge_only": 4.584785087013064
+    },
+    "3e-06": {
+     "D_trackmap": 0.5912982934303669,
+     "D_skepticmap": 0.5912935380669566,
+     "D_charge_only": 4.584785087013064
+    }
+   }
+  },
+  "HFa Pauli P0 sc 3e-6": {
+   "tag": "e3P",
+   "K": 7.746857311665441,
+   "N_X": 3473.0827224190525,
+   "E_Ec": 30.85795818964883,
+   "R_Y": 9.543087186368584,
+   "S_per_Q_inf_mine": 14.548172788347685,
+   "S_per_Q_inf_track": 14.548172788347685,
+   "by_e": {
+    "1e-06": {
+     "S_per_Q_mine": 62.991027366853814,
+     "S_per_Q_track": 62.991027366853814,
+     "branch": "free X",
+     "p_track_map": 2.9901248619176624,
+     "p_skeptic_map": 2.9901248619176624,
+     "M_track": 6.980249723835325,
+     "M_track_recomputed": 6.980249723835325,
+     "M_skeptic": 6.980249723835325,
+     "asym_share_skeptic": 0.14326135017567054,
+     "H_req_track_GeV": 242012073032.76898,
+     "H_req_mine_trackmap_GeV": 242012071554.30203,
+     "H_req_mine_skepticmap_GeV": 242012071554.30203
+    },
+    "3e-06": {
+     "S_per_Q_mine": 30.191672250685773,
+     "S_per_Q_track": 30.191672250685773,
+     "branch": "free X",
+     "p_track_map": 1.1900457527145119,
+     "p_skeptic_map": 1.1900450253175077,
+     "M_track": 3.3800915054290237,
+     "M_track_recomputed": 3.3800915054290237,
+     "M_skeptic": 3.3800900506350153,
+     "asym_share_skeptic": 0.2958501060680708,
+     "H_req_track_GeV": 392462982671.19586,
+     "H_req_mine_trackmap_GeV": 392462980273.6148,
+     "H_req_mine_skepticmap_GeV": 392463092884.56946
+    }
+   },
+   "iso": {
+    "1e-06": {
+     "D_trackmap": -0.15113888748864468,
+     "D_skepticmap": -0.15113888748864468,
+     "D_charge_only": 4.560260491857421
+    },
+    "3e-06": {
+     "D_trackmap": 0.3204809873316436,
+     "D_skepticmap": 0.3204758649389602,
+     "D_charge_only": 4.560260491857421
+    }
+   }
+  }
+ }
+}

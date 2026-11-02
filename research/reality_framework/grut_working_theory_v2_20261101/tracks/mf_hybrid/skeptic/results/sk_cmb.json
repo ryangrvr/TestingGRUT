@@ -1,0 +1,100 @@
+{
+ "label": "C (skeptic, independent MS on the track potential)",
+ "note": "Independent CMB check of the HF benchmarks [C, given the track's potential].\n\nMethod (differs from the track's inflation.py):\n- the potential is re-implemented from the exported parameters (sk_common), derivatives by Richardson differences;\n- background in e-folds with LSODA; Mukhanov variable v_k = z zeta_k (not zeta) with z''/z built from the exact\n  background including V''; Bunch-Davies at k/aH = 400, read at k/aH = 1e-3; 7 wavenumbers, quadratic fit in ln k;\n- tensor modes integrated too (exact r, not 2H^2/pi^2 mP^2 / P_zeta);\n- N_* recomputed from K with my own bookkeeping, and the n_s sensitivity to K (dn_s/dN_*) for the Pauli-blocking K range.\nUsage: python3 -B sk_cmb.py -> ../results/sk_cmb.json\n",
+ "HFa": {
+  "track": {
+   "ns": 0.9649015331035006,
+   "As": 2.099965061725692e-09,
+   "r": 2.750483187398881e-07,
+   "alpha_s": 0.00010683340987050732,
+   "Nstar": 52.644453115070185,
+   "K": 2.0481855289913504
+  },
+  "mine": {
+   "As": 2.0998975044648345e-09,
+   "ns": 0.964900776601955,
+   "alpha_s": 0.00010688710686654168,
+   "r": 2.7505666573118436e-07,
+   "H_star": 1.0000023486582263,
+   "eps_star": 1.76406790163585e-08,
+   "sigma_star_MP": 0.021108904817551646,
+   "N_total_from_start": 61.0214694488704,
+   "Nstar": 52.644453115070185
+  },
+  "Nstar_mine_gs0_3909": 52.6425910805135,
+  "Nstar_mine_gs0_3931": 52.644461833723135,
+  "pulls": {
+   "planck": 0.00018490522737285312,
+   "act": -2.7644774700132677
+  },
+  "r_over_BK": 7.640462936977343e-06,
+  "K_sensitivity": {
+   "K=3.26": {
+    "Nstar": 52.412075382734834,
+    "ns": 0.9649257441584771,
+    "As": 2.0828458462484952e-09,
+    "dns": 2.496755652214855e-05
+   },
+   "K=5.00": {
+    "Nstar": 52.19822002420709,
+    "ns": 0.9649489771680245,
+    "As": 2.067286372573048e-09,
+    "dns": 4.820056606957834e-05
+   },
+   "K=8.00": {
+    "Nstar": 51.96321820958422,
+    "ns": 0.9649747915573449,
+    "As": 2.050334170050555e-09,
+    "dns": 7.401495538994496e-05
+   }
+  }
+ },
+ "HFb": {
+  "track": {
+   "ns": 0.9742998806532842,
+   "As": 2.099855063619656e-09,
+   "r": 2.7506237965594414e-07,
+   "alpha_s": 0.00014334386047506844,
+   "Nstar": 52.644668015897196,
+   "K": 2.0473034296668464
+  },
+  "mine": {
+   "As": 2.0997820082183808e-09,
+   "ns": 0.9742993183115692,
+   "alpha_s": 0.00014337728042995726,
+   "r": 2.7507144781836845e-07,
+   "H_star": 1.000001717658067,
+   "eps_star": 1.751831124053662e-08,
+   "sigma_star_MP": 0.019061661309822443,
+   "N_total_from_start": 60.95036843240346,
+   "Nstar": 52.644668015897196
+  },
+  "Nstar_mine_gs0_3909": 52.64280598240567,
+  "Nstar_mine_gs0_3931": 52.644676735615306,
+  "pulls": {
+   "planck": 2.2379329313260143,
+   "act": -0.00020049659729845027
+  },
+  "r_over_BK": 7.640873550510236e-06,
+  "K_sensitivity": {
+   "K=3.26": {
+    "Nstar": 52.41207490147079,
+    "ns": 0.9743327915553472,
+    "As": 2.08727548544198e-09,
+    "dns": 3.347324377800387e-05
+   },
+   "K=5.00": {
+    "Nstar": 52.19821954294305,
+    "ns": 0.9743638019920874,
+    "As": 2.0758565464186566e-09,
+    "dns": 6.44836805181459e-05
+   },
+   "K=8.00": {
+    "Nstar": 51.96321772832018,
+    "ns": 0.9743981385274194,
+    "As": 2.063396348885032e-09,
+    "dns": 9.882021585017053e-05
+   }
+  }
+ }
+}

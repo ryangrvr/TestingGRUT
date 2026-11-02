@@ -1,0 +1,113 @@
+{
+ "method": "mf_chain SKEPTIC: fill the gap of the inherited pair-fraction map p(S/Q) between wt_critic's gas map (S/Q <= 6.74) and\ninf_chain's case-L runs (S/Q >= 17.1).  The exported/unblocked HF relics (S/Q(1e-6) = 14.5-15.9) and the isocurvature\nderivative D sit INSIDE that gap, where chain_mfi.p_of_SQ log-linearly interpolates (slope d ln p/d ln(S/Q) = 3.68).\n\nMethod: the reviewed case-L conditional moment network (fx_chain's M1-patched copy of Codex 34f23f8 moment_controls, via\nm1_kin.py; imported READ-ONLY, work directory redirected to this skeptic's scratch), gas-only rule, a_ref start, exactly\nas inf_chain/code/pmap_kin.py, at R_spot = W(S/Q)/13.0412 - 1.  [C] on a conditional recipe (forced-equilibrium start,\nno objects, MB fugacities), inherited, not validated.\nUsage: python3 -B sk_pmap.py SQ1 [SQ2 ...]  -> ../results/sk_pmap.json\n",
+ "rows": {
+  "6.742": {
+   "S_per_Q": 6.742,
+   "R_spot": 8.000179759359513,
+   "W": 117.37314427775928,
+   "p": 0.030805401666354627,
+   "stop": "T=0.002m",
+   "T0_over_m": 5.128332674240631,
+   "cond_fraction0": 0.6335645367515953,
+   "max_charge_error": 5.535573570636387e-07,
+   "max_energy_work_error": 2.1414586104384625e-08,
+   "seconds": 25.458904504776
+  },
+  "17.131": {
+   "S_per_Q": 17.131,
+   "R_spot": 29.999373732315572,
+   "W": 404.2690327178738,
+   "p": 0.5033727638049026,
+   "stop": "T=0.002m",
+   "T0_over_m": 6.848417812933537,
+   "cond_fraction0": 0.34678394720983235,
+   "max_charge_error": 8.253800066748695e-07,
+   "max_energy_work_error": 2.0961380409190156e-08,
+   "seconds": 23.209060668945312
+  },
+  "8": {
+   "S_per_Q": 8.0,
+   "R_spot": 10.285184372122107,
+   "W": 147.17234643371881,
+   "p": 0.07109283966498119,
+   "stop": "T=0.002m",
+   "T0_over_m": 5.397013696303568,
+   "cond_fraction0": 0.5941976504084788,
+   "max_charge_error": 7.248288222960753e-07,
+   "max_energy_work_error": 2.529375164872505e-08,
+   "seconds": 27.78187894821167
+  },
+  "10": {
+   "S_per_Q": 10.0,
+   "R_spot": 14.166909803804998,
+   "W": 197.79470413338174,
+   "p": 0.1539440580819891,
+   "stop": "T=0.002m",
+   "T0_over_m": 5.778049260744675,
+   "cond_fraction0": 0.5349222288580824,
+   "max_charge_error": 5.037425361287262e-07,
+   "max_energy_work_error": 1.585042375129575e-08,
+   "seconds": 26.90857434272766
+  },
+  "12": {
+   "S_per_Q": 12.0,
+   "R_spot": 18.317483179608423,
+   "W": 251.92316164190936,
+   "p": 0.24721977237645992,
+   "stop": "T=0.002m",
+   "T0_over_m": 6.115982621952265,
+   "cond_fraction0": 0.4789695610071414,
+   "max_charge_error": 5.644112484048946e-07,
+   "max_energy_work_error": 1.6373194799967905e-08,
+   "seconds": 22.733933448791504
+  },
+  "14": {
+   "S_per_Q": 14.0,
+   "R_spot": 22.70586151617308,
+   "W": 309.1528812047164,
+   "p": 0.3452512496109597,
+   "stop": "T=0.002m",
+   "T0_over_m": 6.421067053654637,
+   "cond_fraction0": 0.42572475930192927,
+   "max_charge_error": 8.130270521267136e-07,
+   "max_energy_work_error": 2.2200750127154834e-08,
+   "seconds": 22.989420413970947
+  },
+  "15": {
+   "S_per_Q": 15.0,
+   "R_spot": 24.98170558854065,
+   "W": 338.8326189212763,
+   "p": 0.39529561359438364,
+   "stop": "T=0.002m",
+   "T0_over_m": 6.563530066980566,
+   "cond_fraction0": 0.3999738132079694,
+   "max_charge_error": 6.608312884681666e-07,
+   "max_energy_work_error": 1.7676866415072823e-08,
+   "seconds": 23.302791833877563
+  },
+  "16": {
+   "S_per_Q": 16.0,
+   "R_spot": 27.308671432489646,
+   "W": 369.17904588538397,
+   "p": 0.44580846026132825,
+   "stop": "T=0.002m",
+   "T0_over_m": 6.700180332121274,
+   "cond_fraction0": 0.37474257601292277,
+   "max_charge_error": 4.6965167688206577e-07,
+   "max_energy_work_error": 1.2301619944921072e-08,
+   "seconds": 23.67883014678955
+  },
+  "21.797": {
+   "S_per_Q": 21.797,
+   "R_spot": 41.706641965556535,
+   "W": 556.9458592012159,
+   "p": 0.7438771106925102,
+   "stop": "T=0.002m",
+   "T0_over_m": 7.401870770904645,
+   "cond_fraction0": 0.2369924074603648,
+   "max_charge_error": 6.223795321336212e-07,
+   "max_energy_work_error": 1.4489903943371019e-08,
+   "seconds": 25.415470600128174
+  }
+ }
+}

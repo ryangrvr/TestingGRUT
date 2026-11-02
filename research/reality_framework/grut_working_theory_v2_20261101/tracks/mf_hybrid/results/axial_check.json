@@ -1,0 +1,102 @@
+{
+ "label": "C",
+ "note": "Non-perturbative fermion production from an axial (mass-phase) coupling  -(M/2) Nbar exp(i gamma5 phi/f) N  [C].\n\nRotating the phase away gives an axial chemical potential mu5 = phidot/(2f). Per helicity h and momentum k the\ntwo-level Hamiltonian is H = [[p, M], [M, -p]] with p = h k - mu5(t). For phi = Sigma cos(m t), one half-period\n(turning point to turning point) is integrated exactly for a grid of k; n_k is the occupation in the free basis at the\nnext turning point (mu5 = 0 there, so the particle number is unambiguous). Units: m = 1.\n  A = Sigma/(2 f) = mu5_max/m,  Mh = M/m,  S = Sigma/m.\nEnergy produced per half-period (one Majorana species; only one helicity crosses per half-period):\n  eps = (1/2 pi^2) int k^2 n_k sqrt(k^2 + M^2) dk,  fraction F = eps / (S^2/2).\nLandau-Zener check: two crossings with P = exp(-pi M^2/|mu5dot|), |mu5dot| = sqrt(A^2 - k^2) (m = 1) at the crossing,\naveraged Stueckelberg phase: n_LZ = 2 P (1 - P).\nThe produced number does not depend on S at fixed A, so F = eps(A, Mh)/(S^2/2) with S = 2 A f/m.\nAlso: perturbative pseudoscalar width Gamma = (M/f)^2 m beta/(16 pi), beta = sqrt(1 - 4M^2/m^2) (Majorana).\nUsage: python3 -B axial.py  -> ../results/axial_check.json\n",
+ "checks": [
+  {
+   "A": 5,
+   "Mh": 0.3,
+   "eps": 2.1190668162455037,
+   "num": 0.4944092878358989,
+   "eps_LZ": 1.6436683562459675,
+   "nmax": 0.32791548194947895,
+   "norm_err": 4.404299147608981e-11,
+   "S": 10.0,
+   "F": 0.04238133632491008,
+   "F_LZ": 0.03287336712491935
+  },
+  {
+   "A": 5,
+   "Mh": 1.0,
+   "eps": 7.018905327594619,
+   "num": 1.5945052249177032,
+   "eps_LZ": 3.04915587444028,
+   "nmax": 0.9963985748549032,
+   "norm_err": 1.3225498474156439e-10,
+   "S": 10.0,
+   "F": 0.1403781065518924,
+   "F_LZ": 0.060983117488805604
+  },
+  {
+   "A": 10,
+   "Mh": 0.42,
+   "eps": 32.404463117586566,
+   "num": 3.813444143401871,
+   "eps_LZ": 25.89148621795422,
+   "nmax": 0.8344689417317914,
+   "norm_err": 8.033762544101819e-11,
+   "S": 20.0,
+   "F": 0.16202231558793284,
+   "F_LZ": 0.1294574310897711
+  },
+  {
+   "A": 10,
+   "Mh": 1.0,
+   "eps": 93.77369577211316,
+   "num": 11.134204612326323,
+   "eps_LZ": 56.45404290270047,
+   "nmax": 0.9980867154789482,
+   "norm_err": 1.1187528681233516e-10,
+   "S": 20.0,
+   "F": 0.46886847886056576,
+   "F_LZ": 0.28227021451350237
+  },
+  {
+   "A": 20,
+   "Mh": 0.42,
+   "eps": 274.73070658696713,
+   "num": 16.21702305858046,
+   "eps_LZ": 238.55168317646206,
+   "nmax": 0.8716148686898197,
+   "norm_err": 1.059331511399364e-10,
+   "S": 40.0,
+   "F": 0.3434133832337089,
+   "F_LZ": 0.2981896039705776
+  },
+  {
+   "A": 20,
+   "Mh": 2.0,
+   "eps": 1057.496284205188,
+   "num": 68.14567328706188,
+   "eps_LZ": 756.2662902645486,
+   "nmax": 0.9997259008779342,
+   "norm_err": 1.7582779676672544e-10,
+   "S": 40.0,
+   "F": 1.321870355256485,
+   "F_LZ": 0.9453328628306857
+  },
+  {
+   "A": 40,
+   "Mh": 1.0,
+   "eps": 10239.213460223122,
+   "num": 305.9690287504001,
+   "eps_LZ": 8409.551005014999,
+   "nmax": 0.9598758374971147,
+   "norm_err": 1.8725254680163061e-10,
+   "S": 80.0,
+   "F": 3.1997542063197257,
+   "F_LZ": 2.627984689067187
+  },
+  {
+   "A": 40,
+   "Mh": 2.0,
+   "eps": 18343.390963598213,
+   "num": 576.7513746582339,
+   "eps_LZ": 14347.326165079745,
+   "nmax": 0.9950997806429149,
+   "norm_err": 2.2328661142267947e-10,
+   "S": 80.0,
+   "F": 5.732309676124442,
+   "F_LZ": 4.48353942658742
+  }
+ ]
+}

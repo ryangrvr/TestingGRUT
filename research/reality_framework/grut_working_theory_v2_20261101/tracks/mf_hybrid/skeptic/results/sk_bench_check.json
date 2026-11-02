@@ -1,0 +1,160 @@
+{
+ "label": "C (skeptic audit of the exported JSON)",
+ "note": "Internal-consistency audit of the exported bench_HFa.json / bench_HFb.json histories [C].\n\nChecks (independent of the track's code; reads only the JSON):\n- N(t) against the integral of H dt; eps_H against -dH/dt / H^2; K_running = a^2 H; a = e^N;\n- R against 6 H^2 (2 - eps) (homogeneous part) and against 3 H^2 (f_sig + f_chi) (fluid part: cycle mean);\n- energy fractions: sum, f_SM <= f_rad, positivity;\n- spectator: f_s in the fluid part against the full s energy (potential + kinetic, s' from the s column), the jump of\n  s at the homogeneous -> fluid switch (t = 0.6) and at the exact -> envelope switch (t ~ 60);\n- continuity of H, eps and the fractions at t = 0.6; time ordering; file size.\nUsage: python3 -B sk_bench_check.py -> ../results/sk_bench_check.json\n",
+ "HFa": {
+  "rows": 3249,
+  "t_range": [
+   -6.111372,
+   30000.56
+  ],
+  "size_MB": 0.569476,
+  "t_monotonic": true,
+  "max_abs_N_minus_intHdt": 0.00027037555931830326,
+  "max_rel_a_minus_expN": 9.377203225024999e-07,
+  "max_rel_K_minus_a2H": 1.4250812878646713e-06,
+  "eps_fd_vs_column_median_abs": 0.00014195785205939337,
+  "eps_fd_vs_column_p95_abs": 0.005540301641598044,
+  "R_hom_max_abs_dev": 1.0453964259582449e-05,
+  "R_fluid_max_rel_dev_from_3H2_fm": 0.18646077752517676,
+  "fraction_sum_range_hom": [
+   0.9999998999999999,
+   1.0000001
+  ],
+  "fraction_sum_range_fluid": [
+   0.9999999031500001,
+   1.0000000979
+  ],
+  "f_SM_le_f_rad": true,
+  "switch": {
+   "t": [
+    0.599411,
+    0.6000112
+   ],
+   "H": [
+    0.5783255,
+    0.5779405
+   ],
+   "eps": [
+    1.97713,
+    1.863217
+   ],
+   "R": [
+    0.04589549,
+    0.2741251
+   ],
+   "f_chi": [
+    0.1984904,
+    0.1974057
+   ],
+   "s": [
+    0.5410202,
+    0.5399052
+   ],
+   "f_s": [
+    2.893386e-05,
+    2.932798e-05
+   ]
+  },
+  "f_s_exact_part": {
+   "column_min_max": [
+    5.32617e-11,
+    0.0001237138
+   ],
+   "full_energy_min_max": [
+    4.340005361496945e-05,
+    0.00012467137427801627
+   ],
+   "note": "column = potential energy only (oscillates to ~0); full = potential + kinetic"
+  },
+  "s_envelope_switch": {
+   "t": 60.25039,
+   "envelope": 0.0266724,
+   "max_abs_s_before": 0.02750329
+  },
+  "spectator_fraction_at_decay": {
+   "f_s_over_a_late": 7.35121004398344e-06,
+   "a_dec_t_eq_1_over_Gamma": 1801.0060134628914,
+   "f_s_at_a_dec": 0.013239573495442981,
+   "f_s_at_Gamma_eq_H": 0.009361792198645413,
+   "track_value": 0.0243
+  }
+ },
+ "HFb": {
+  "rows": 3249,
+  "t_range": [
+   -6.130818,
+   30000.55
+  ],
+  "size_MB": 0.566666,
+  "t_monotonic": true,
+  "max_abs_N_minus_intHdt": 0.00027164521223976834,
+  "max_rel_a_minus_expN": 9.76177129796696e-07,
+  "max_rel_K_minus_a2H": 1.4894639992490966e-06,
+  "eps_fd_vs_column_median_abs": 0.00014193827378028434,
+  "eps_fd_vs_column_p95_abs": 0.005713818589035455,
+  "R_hom_max_abs_dev": 1.0274578659874578e-05,
+  "R_fluid_max_rel_dev_from_3H2_fm": 0.44848057929850116,
+  "fraction_sum_range_hom": [
+   0.9999998999999999,
+   1.0000001
+  ],
+  "fraction_sum_range_fluid": [
+   0.999999905051886,
+   1.0000000974726
+  ],
+  "f_SM_le_f_rad": true,
+  "switch": {
+   "t": [
+    0.5994108,
+    0.600011
+   ],
+   "H": [
+    0.5782069,
+    0.5778288
+   ],
+   "eps": [
+    1.9413,
+    1.833035
+   ],
+   "R": [
+    0.1177479,
+    0.334484
+   ],
+   "f_chi": [
+    0.1981635,
+    0.197103
+   ],
+   "s": [
+    0.5406861,
+    0.5395676
+   ],
+   "f_s": [
+    2.726011e-05,
+    2.705026e-05
+   ]
+  },
+  "f_s_exact_part": {
+   "column_min_max": [
+    3.002026e-12,
+    0.0001236464
+   ],
+   "full_energy_min_max": [
+    4.3269750919316334e-05,
+    0.00012430815361085966
+   ],
+   "note": "column = potential energy only (oscillates to ~0); full = potential + kinetic"
+  },
+  "s_envelope_switch": {
+   "t": 60.25037,
+   "envelope": 0.02663013,
+   "max_abs_s_before": 0.02744313
+  },
+  "spectator_fraction_at_decay": {
+   "f_s_over_a_late": 7.329944428001604e-06,
+   "a_dec_t_eq_1_over_Gamma": 1800.6181488746051,
+   "f_s_at_a_dec": 0.013198430967301975,
+   "f_s_at_Gamma_eq_H": 0.00933270003800175,
+   "track_value": 0.0243
+  }
+ }
+}

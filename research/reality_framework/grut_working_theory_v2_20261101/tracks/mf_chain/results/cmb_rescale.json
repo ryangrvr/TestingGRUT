@@ -1,0 +1,235 @@
+{
+ "method": "mf_chain: CMB side of the H_i iteration [C on the inherited capacity definition, D for r and N_*].\n\nRescaling the hybrid's V0 at fixed (m_chi, m_sig)/H_i and fixed kappa = mu_R^2/(g 2 sigma_c)^2 = 10 raises the waterfall's\nX = g^2 sigma_c = m_sig m_chi^2/(4 sqrt3 M_P) in H_i units proportionally to H_i, so the chi one-loop term weighs more on\nthe clock.  The e-fold capacity N_max (largest number of e-folds before sigma_c for which the retuned tree clock (c1, m2)\nmeets A_s and n_s with a monotonic potential, pivot within 0.2 M_P) is computed with the mf_hybrid skeptic's\nsk_structure.nmax (imported READ-ONLY; its module constant mP = M_P/H is patched per H), regression at the design H\nagainst the skeptic's (250, 600, kappa = 10) value 74.3.  N_* comes from mf_hybrid's Nstar_from_K (read-only) with the\nhistory's own K; r = 2 H_*^2/(pi^2 A_s M_P^2) with H_* = H_i (1 + 2.35e-6, the bench's exit value).\nUsage: python3 -B cmb_rescale.py H_GeV:K:ns [...]   -> results/cmb_rescale.json",
+ "rows": [
+  {
+   "H_GeV": 130000000000.0,
+   "mP": 18730769.230769232,
+   "X": 0.2889715156364913,
+   "Nmax": 74.29953592573433,
+   "dl_at_Nmax": 0.0347600701426551,
+   "sigma_c_MP": 0.005773502691896257,
+   "K": 2.048,
+   "ns_target": 0.9649,
+   "Nstar": 52.64450773882754,
+   "r": 2.75043743411673e-07,
+   "capacity_ok": true
+  },
+  {
+   "H_GeV": 128400000000.0,
+   "mP": 18964174.45482866,
+   "X": 0.2854149431363499,
+   "Nmax": 74.94626867166161,
+   "dl_at_Nmax": 0.0347600701426551,
+   "sigma_c_MP": 0.005773502691896257,
+   "K": 2.038,
+   "ns_target": 0.9649,
+   "Nstar": 52.64076309541605,
+   "r": 2.683150993124942e-07,
+   "capacity_ok": true
+  },
+  {
+   "H_GeV": 221360000000.0,
+   "mP": 11000180.701120347,
+   "X": 0.49205180539456717,
+   "Nmax": 51.22631454844981,
+   "dl_at_Nmax": 0.026444694727364777,
+   "sigma_c_MP": 0.005773502691896259,
+   "K": 5.807,
+   "ns_target": 0.9649,
+   "Nstar": 52.389535491732765,
+   "r": 7.974681703012032e-07,
+   "capacity_ok": false
+  },
+  {
+   "H_GeV": 239970000000.0,
+   "mP": 10147101.721048465,
+   "X": 0.5334191892868371,
+   "Nmax": 48.570896852048534,
+   "dl_at_Nmax": 0.026444694727364777,
+   "sigma_c_MP": 0.005773502691896257,
+   "K": 7.84,
+   "ns_target": 0.9649,
+   "Nstar": 52.27980990777164,
+   "r": 9.371928543282017e-07,
+   "capacity_ok": false
+  },
+  {
+   "H_GeV": 251920000000.0,
+   "mP": 9665766.9101302,
+   "X": 0.5599823401472684,
+   "Nmax": 47.039999218966145,
+   "dl_at_Nmax": 0.02503745263588533,
+   "sigma_c_MP": 0.005773502691896258,
+   "K": 9.639,
+   "ns_target": 0.9649,
+   "Nstar": 52.200819471183856,
+   "r": 1.0328573892402653e-06,
+   "capacity_ok": false
+  },
+  {
+   "H_GeV": 239960000000.0,
+   "mP": 10147524.587431239,
+   "X": 0.5333969607087112,
+   "Nmax": 53.653657824579824,
+   "dl_at_Nmax": 0.02503745263588533,
+   "sigma_c_MP": 0.005773502691896257,
+   "K": 7.855,
+   "ns_target": 0.9743,
+   "Nstar": 52.27883335272704,
+   "r": 9.37114746787506e-07,
+   "capacity_ok": true
+  },
+  {
+   "H_GeV": 127750000000.0,
+   "mP": 19060665.362035226,
+   "X": 0.28397008555816744,
+   "Nmax": 84.63739465682374,
+   "dl_at_Nmax": 0.03291032922819847,
+   "sigma_c_MP": 0.005773502691896257,
+   "K": 2.032,
+   "ns_target": 0.9743,
+   "Nstar": 52.63969971687217,
+   "r": 2.6560538950961347e-07,
+   "capacity_ok": true
+  }
+ ],
+ "regression_design": {
+  "H_GeV": 130000000000.0,
+  "mP": 18730769.230769232,
+  "X": 0.2889715156364913,
+  "Nmax": 74.29953592573433,
+  "dl_at_Nmax": 0.0347600701426551,
+  "sigma_c_MP": 0.005773502691896257
+ },
+ "extra_rows_regular_0p1": [
+  {
+   "H": 175210000000.0,
+   "K": 2.373,
+   "ns": 0.9649,
+   "Nstar": 52.72008750571107,
+   "r": 4.996119814528006e-07,
+   "X": 0.38946691734361266,
+   "Nmax_by_kappa": [
+    [
+     3,
+     47.6
+    ],
+    [
+     10,
+     60.2
+    ],
+    [
+     15,
+     69.0
+    ],
+    [
+     20,
+     79.8
+    ],
+    [
+     30,
+     144.4
+    ],
+    [
+     50,
+     118.8
+    ],
+    [
+     100,
+     90.1
+    ],
+    [
+     300,
+     84.0
+    ]
+   ],
+   "regular": 0.1
+  },
+  {
+   "H": 391920000000.0,
+   "K": 7.747,
+   "ns": 0.9649,
+   "Nstar": 52.53104840002866,
+   "r": 2.4998267931541133e-06,
+   "X": 0.8711824339096437,
+   "Nmax_by_kappa": [
+    [
+     3,
+     21.4
+    ],
+    [
+     10,
+     38.4
+    ],
+    [
+     15,
+     49.1
+    ],
+    [
+     20,
+     50.2
+    ],
+    [
+     30,
+     43.1
+    ],
+    [
+     50,
+     34.5
+    ],
+    [
+     100,
+     30.8
+    ],
+    [
+     300,
+     23.0
+    ]
+   ],
+   "regular": 0.1
+  },
+  {
+   "H": 72528000000.0,
+   "K": 1.751,
+   "ns": 0.9649,
+   "Nstar": 52.431065187635774,
+   "r": 8.561038873018653e-08,
+   "X": 0.1612194314314111,
+   "Nmax_by_kappa": [
+    [
+     3,
+     98.6
+    ],
+    [
+     10,
+     109.6
+    ],
+    [
+     15,
+     114.9
+    ],
+    [
+     20,
+     119.5
+    ],
+    [
+     30,
+     127.5
+    ],
+    [
+     50,
+     142.6
+    ],
+    [
+     100,
+     194.7
+    ],
+    [
+     300,
+     250.8
+    ]
+   ],
+   "regular": 0.1
+  }
+ ]
+}

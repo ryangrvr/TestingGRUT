@@ -1,0 +1,163 @@
+{
+ "label": "D (relations) / C (N_max scan at n_s = 0.9649, H = 1.3e11 GeV)",
+ "note": "Structural results for the non-supersymmetric hybrid with a heavy waterfall [D + C].\n\n1. Mass relations (V0-dominated, lam v^4/4 = 3 M_P^2 H^2):  v = sqrt(24) M_P/m_chi,  sigma_c = 2 sqrt(3) M_P/m_sig,\n   X = g^2 sigma_c (half the slope of M_chi^2 at sigma_c) = m_sig m_chi^2 / (4 sqrt(3) M_P)   [D].\n2. One-loop flatness: with the full chi loop, the clock (tree c1, m2 retuned for A_s and n_s at each pivot) can supply\n   the needed e-folds only while g^2 sigma_* is O(1) H. N_max(n_s) is the largest number of e-folds before sigma_c at\n   which A_s and n_s can both be met with a monotonic potential [C]. Renormalisation scale mu^2 = kappa M_chi^2(2 sigma_c)\n   (equivalently the tree quartic) is scanned.\n3. Perturbative reheating bound: a field holding V0 with mass m oscillates with amplitude sqrt(6) H M_P/m; a channel\n   with y A < m/2 has Gamma <= m^3/(64 pi A^2); Gamma >= H needs m >= (384 pi)^(1/5) (M_P/H)^(2/5) H   [D].\nUsage: python3 -B structure.py -> ../results/structure.json\n",
+ "rows": [
+  {
+   "m_chi": 250,
+   "m_sig": 600,
+   "X": 0.2889715156364913,
+   "sigma_c_MP": 0.005773502691896257,
+   "v_MP": 0.019595917942265423,
+   "lam": 2.3195704680347486e-07,
+   "g": 0.0016346697462105398,
+   "X_formula": 0.2889715156364913,
+   "Nmax_kappa1": [
+    55.78324416780463,
+    0.02912673572985976
+   ],
+   "Nmax_kappa10": [
+    72.95294387643226,
+    0.02912673572985976
+   ],
+   "Nmax_kappa100": [
+    73.35412549327974,
+    0.01799315289569933
+   ]
+  },
+  {
+   "m_chi": 300,
+   "m_sig": 600,
+   "X": 0.41611898251654755,
+   "sigma_c_MP": 0.005773502691896257,
+   "v_MP": 0.01632993161855452,
+   "lam": 4.809861322516855e-07,
+   "g": 0.001961603695452648,
+   "X_formula": 0.4161189825165475,
+   "Nmax_kappa1": [
+    46.92128320889806,
+    0.01799315289569933
+   ],
+   "Nmax_kappa10": [
+    70.54699473273355,
+    0.02912673572985976
+   ],
+   "Nmax_kappa100": [
+    53.57002404455147,
+    0.12355076835646472
+   ]
+  },
+  {
+   "m_chi": 300,
+   "m_sig": 750,
+   "X": 0.5201487281456844,
+   "sigma_c_MP": 0.0046188021535170055,
+   "v_MP": 0.01632993161855452,
+   "lam": 4.809861322516855e-07,
+   "g": 0.00245200461931581,
+   "X_formula": 0.5201487281456844,
+   "Nmax_kappa1": [
+    38.013277091022196,
+    0.01799315289569933
+   ],
+   "Nmax_kappa10": [
+    61.79800032639567,
+    0.01799315289569933
+   ],
+   "Nmax_kappa100": [
+    34.78880632639391,
+    0.006866543572027084
+   ]
+  },
+  {
+   "m_chi": 1000,
+   "m_sig": 100,
+   "X": 0.7705907083639768,
+   "sigma_c_MP": 0.03464101615137753,
+   "v_MP": 0.004898979485566356,
+   "lam": 5.9381003981689564e-05,
+   "g": 0.0010897798308070266,
+   "X_formula": 0.7705907083639769,
+   "Nmax_kappa1": [
+    89.30498992689539,
+    0.07632396180736398
+   ],
+   "Nmax_kappa10": [
+    148.65932973483126,
+    0.04714942062654641
+   ],
+   "Nmax_kappa100": [
+    148.51002559768838,
+    0.02912673572985976
+   ]
+  },
+  {
+   "m_chi": 4000,
+   "m_sig": 3,
+   "X": 0.3698835400147089,
+   "sigma_c_MP": 1.1547005383792512,
+   "v_MP": 0.001224744871391589,
+   "lam": 0.015201537019312528,
+   "g": 0.0001307735796968432,
+   "X_formula": 0.3698835400147089,
+   "Nmax_kappa1": [
+    170.3721222728129,
+    0.2
+   ],
+   "Nmax_kappa10": [
+    171.316097569431,
+    0.2
+   ],
+   "Nmax_kappa100": [
+    172.28243245989117,
+    0.2
+   ]
+  },
+  {
+   "m_chi": 4000,
+   "m_sig": 10,
+   "X": 1.232945133382363,
+   "sigma_c_MP": 0.3464101615137754,
+   "v_MP": 0.001224744871391589,
+   "lam": 0.015201537019312528,
+   "g": 0.0004359119323228106,
+   "X_formula": 1.2329451333823631,
+   "Nmax_kappa1": [
+    169.9494841028909,
+    0.2
+   ],
+   "Nmax_kappa10": [
+    326.609749628277,
+    0.2
+   ],
+   "Nmax_kappa100": [
+    413.7997683316224,
+    0.12355076835646472
+   ]
+  },
+  {
+   "m_chi": 4000,
+   "m_sig": 30,
+   "X": 3.6988354001470896,
+   "sigma_c_MP": 0.11547005383792514,
+   "v_MP": 0.001224744871391589,
+   "lam": 0.015201537019312528,
+   "g": 0.001307735796968432,
+   "X_formula": 3.698835400147089,
+   "Nmax_kappa1": [
+    107.66979309062013,
+    0.07632396180736398
+   ],
+   "Nmax_kappa10": [
+    85.35794689481348,
+    0.01799315289569933
+   ],
+   "Nmax_kappa100": [
+    53.77697305599433,
+    0.011115339327095
+   ]
+  }
+ ],
+ "N_needed": "N_* = 52.6 on the benchmarks (K = 2.05)",
+ "m_min_perturbative_fast_over_H": 3352.111567463524,
+ "quiet_clock": "for heavy chi (lam >~ 6e-3, m_chi >~ 3000 H) X <~ 1 gives m_sig = X/sqrt(lam) <~ 13 H: the clock is quiet and holds V0 on the adiabatic valley (G4)"
+}
