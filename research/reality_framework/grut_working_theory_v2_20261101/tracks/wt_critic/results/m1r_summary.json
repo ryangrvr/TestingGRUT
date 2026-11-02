@@ -1,0 +1,37 @@
+{
+ "track": "wt_critic",
+ "date": "2026-11-02",
+ "note": "Consistency critic of fx_holder, fx_chain, fx_formation, fx_observables. Every repair is a model choice, not a consequence of closure. Same-session AI work; no validation or exclusion claimed.",
+ "consistency": {
+  "invariant_c_Nc_over_E34": {"spot": 6.97713, "fx_holder_runs": [6.97709, 6.97735], "label": "C"},
+  "heat_budget_provenance": "fx_chain/fx_formation used the kin_source instant-release spot point (lambda=1, eps=0.1457, R_med=0.913); M1r release is (3,0.5) trilinear lambda=0.5 (eps=0.1274, R_med=0.397); settled with E/E_c=|eps|^-4/3 and GMR vector transfer nu",
+  "cascade_scaling": {"ratio_1e6_over_1e7": 0.31623, "exponent": -0.5, "label": "C"},
+  "vector_scaling": {"ratio_1e6_over_1e7": 0.09994, "exponent": -1.0003, "label": "C"},
+  "survival_threshold_S_per_Q": {"bulk": 3.4716, "Q2e5": 2.9284, "binding": 2.5531, "label": "Q fx_chain skeptic = fx_formation"},
+  "p_wrong_in_fx_formation": {"used": 2.26e-3, "correct_spot": 9.10e-4}
+ },
+ "m1r_release": {"eps": 0.1274, "E_over_Ec": 15.61, "R_med_e1e6": 0.397, "S_per_Q_no_vectors": 1.852, "label": "C (ledger E)"},
+ "m1r_e1e6": {"nu_transfer": 0.960, "S_per_Q_band": 4.681, "S_per_Q_broad": 5.126, "margin_bulk": [1.348, 1.477],
+              "T_onset_over_mX": 8.145, "nQ_onset_mX3": 151.5, "p_band": 5.63e-4, "p_broad": 1.32e-3,
+              "nu_crit_bulk_band": 0.515, "e_crit_bulk": [1.86e-6, 2.20e-6], "e_crit_Q2e5_band": 2.90e-6,
+              "planck_bc": {"H_i_GeV": 1.076e11, "nu": 0.664, "S_per_Q_band": 3.89, "label": "E (same release assumed)"},
+              "label": "C/E"},
+ "releases_S_per_Q_e1e6_nu1_band": {"spot": 4.94, "orig_l1_b3": 4.13, "option1A_l1_b3_codexM1": 5.94, "tri_l1_b3": 4.75,
+   "tri_l05_b3_M1r": 4.78, "option1A_l05_b3": 7.13, "tri_l05_b5": 7.39, "opposite_branch_l1": 8.16},
+ "calibration": {"M_per_charge": [1.0011, 1.0026], "Y_target": 4.756e-9, "H_i_GeV": 1.293e11, "H_i_GeV_planck_bc": 1.076e11,
+                 "g_I": 8.0e-7, "H_i_if_Qmatter_relic_GeV": [1.499e11, 1.525e11], "label": "D on C"},
+ "frozen_test_as_written": {"eta": 0.0, "p": [5.6e-4, 1.3e-3], "value": [0.068, 0.070], "allowance": 0.01, "status": "fails x6.8-7.0 (premise Q=2e5 retired)"},
+ "chain": [
+  {"stage": 1, "name": "inflation and preparation", "numbers": "prep (90.80, 6.89, 28.58) H_i, lightest 10.19 H_i^2; g_I 8.0e-7 (prop. H_i), alpha_I 2.192144; GMR vectors nu 0.96", "source": "fx_holder [C], hw_gates [C], this track [E]", "supplied": "inflaton model and sign, alpha_I, sequestering, inflaton quartic, portal renormalisation condition, xi_H", "open": "GMR abundance on M1r background"},
+  {"stage": 2, "name": "reheating and charge release", "numbers": "Y/Y_Q(H_M1) 0.990733; N_X 8045.5, E_X 1.887e5, eps 0.1274, N_YL 0.567", "source": "fx_holder [C]", "supplied": "(3,0.5) history; clock phi_I", "open": "finite-k Y (FX17), condensate instability, X<->Sigma freeze-out"},
+  {"stage": 3, "name": "debris decays", "numbers": "R_med 0.397 E_X; vectors 52.8-62.5 nu E_c per charge; W 72.5-81.8 E_c", "source": "fx_holder ledger [E], kin_source [C], this track", "supplied": "e=1e-6, eps_BX=0", "open": "nu"},
+  {"stage": 4, "name": "pre-onset relaxation", "numbers": "S/Q 4.68-5.13; Xbar 0.40-0.43 per charge; condensed 92%", "source": "this track [C]", "supplied": "thermalisation, phi-channel relaxation [E/Q]", "open": "-"},
+  {"stage": 5, "name": "phi crossover and spinodal decomposition", "numbers": "onset n_Q 151.5 m_X^3, T_h 8.15 m_X (T_vis ~80 GeV); spinodal at 0.84 a_on; lumps 4e11-1.2e13; no Xbar from circular condensate", "source": "fx_chain [C/E], skeptic [C], this track [C]", "supplied": "tilt 0.002", "open": "entropy production (only raises S/Q)"},
+  {"stage": 6, "name": "two-phase era and evaporation", "numbers": "S/Q > 3.47 -> eta = 0 below T_h 0.80 m_X (T_vis ~7.5 GeV)", "source": "fx_formation + fx_chain skeptic [C], kinetics [E]", "supplied": "-", "open": "-"},
+  {"stage": 7, "name": "Xbar freeze-out in pure gas", "numbers": "p 5.6e-4 - 1.3e-3 at T_h 0.1-0.2 m_X (T_vis 1.2-1.6 GeV)", "source": "fx_chain network [C] mapped [E]", "supplied": "-", "open": "one-temperature moment recipe"},
+  {"stage": 8, "name": "free cold asymmetric X gas to today", "numbers": "z 0.11; T_s 0.10 m_X; lambda_fs 0.3-0.5 pc; sigma/m 6.0e-8 cm^2/g; Delta N_eff ~ 0; Xbar inert", "source": "fx_formation skeptic [E], this track [D]", "supplied": "-", "open": "-"},
+  {"stage": 9, "name": "calibration", "numbers": "M 1.0011-1.0026; Y 4.756e-9; H_i 1.293e11 GeV (1.076e11 Planck BC)", "source": "this track [D on C]", "supplied": "D, 1% tolerance, portal BC", "open": "yield-side precision (portal BC, clock, history)"}
+ ],
+ "decisive_calculation": {"what": "S/Q of the actual M1r release end-to-end: GMR longitudinal vectors on the lambda=0.5 trilinear inflationary background through the (3,0.5) matter era, finite-k Y_L production, relaxed Hartree S/Q, under the adopted portal renormalisation condition",
+                          "failure_condition": "S/Q <= 3.4716 (vector heat < 0.515 of transferred estimate at e=1e-6): relic becomes Q-matter (M 0.78-0.80), H_i -> 1.50-1.52e11 GeV, calibration not statable to 1% until sticking and <Q> are computed"}
+}

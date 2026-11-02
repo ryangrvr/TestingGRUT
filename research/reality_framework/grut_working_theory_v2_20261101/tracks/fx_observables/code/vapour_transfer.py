@@ -368,7 +368,7 @@ def main():
     t0 = time.time()
     ks = [1.0, 3.0, 10.0, 20.0, 50.0, 100.0, 300.0, 1000.0, 3000.0]
     mode = sys.argv[1] if len(sys.argv) > 1 else 'A'
-    part = os.path.join(RES, '_parts')
+    part = os.path.join(os.environ.get('SP', '/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad'), 'wt2', 'fx_observables', 'parts')
     os.makedirs(part, exist_ok=True)
     if mode == 'A':
         hA = history_A()

@@ -1,0 +1,91 @@
+{
+ "runs": [
+  {
+   "delta": 0.0,
+   "eps_rate": 0.001,
+   "epst": 0.002,
+   "rtol": 1e-11,
+   "r0": 63.55468505759057,
+   "M_c": 36.6933145262618,
+   "chi0": 1.0818613518615405,
+   "r_eq_start": 63.524013926935574,
+   "delta_eff_start": 0.00048282733975645454,
+   "Jr_over_q_start_est": 2.797466880195537e-07,
+   "nminus_over_q": 3.0773834321795614e-07,
+   "nminus_spread": 1.50232569989177e-08,
+   "Nphi_over_q": 9.336453701873807e-06,
+   "q_drift": -3.3762793671954228e-09,
+   "nfev": 1609969,
+   "sec": 23.778364896774292,
+   "label": "circular start of fx_chain (r0 from chi=0), eps 1e-3"
+  },
+  {
+   "delta": 0.0,
+   "eps_rate": 0.0001,
+   "epst": 0.002,
+   "rtol": 1e-11,
+   "r0": 63.55468505759057,
+   "M_c": 36.6933145262618,
+   "chi0": 1.0818613518615405,
+   "r_eq_start": 63.524013926935574,
+   "delta_eff_start": 0.00048282733975645454,
+   "Jr_over_q_start_est": 2.797466880195537e-07,
+   "nminus_over_q": 2.8155370385803e-07,
+   "nminus_spread": 1.2755988261628994e-09,
+   "Nphi_over_q": 6.307886846153988e-08,
+   "q_drift": -3.548256821694906e-08,
+   "nfev": 15582508,
+   "sec": 220.3475203514099,
+   "label": "same, eps 1e-4"
+  },
+  {
+   "delta": -0.000482827,
+   "eps_rate": 0.001,
+   "epst": 0.002,
+   "rtol": 1e-11,
+   "r0": 63.55468505759057,
+   "M_c": 36.6933145262618,
+   "chi0": 1.0830962999246645,
+   "r_eq_start": 63.523943915458844,
+   "delta_eff_start": 8.693447858372959e-07,
+   "Jr_over_q_start_est": 9.069124279949926e-13,
+   "nminus_over_q": 8.912498042684626e-10,
+   "nminus_spread": 6.216982144984142e-10,
+   "Nphi_over_q": 9.283517997794464e-06,
+   "q_drift": -4.134160347391003e-09,
+   "nfev": 1531126,
+   "sec": 21.460466146469116,
+   "label": "start at the true radial equilibrium with chi0, eps 1e-3"
+  },
+  {
+   "delta": 0.01,
+   "eps_rate": 0.001,
+   "epst": 0.002,
+   "rtol": 1e-11,
+   "r0": 63.55468505759057,
+   "M_c": 36.6933145262618,
+   "chi0": 1.0567749139504554,
+   "r_eq_start": 63.525418881275534,
+   "delta_eff_start": 0.01046530725178563,
+   "Jr_over_q_start_est": 0.0001314271870491323,
+   "nminus_over_q": 0.00013266646496117577,
+   "nminus_spread": 3.33530152441828e-07,
+   "Nphi_over_q": 1.0667612382463743e-05,
+   "q_drift": -9.88206183549778e-11,
+   "nfev": 2855203,
+   "sec": 41.70531702041626,
+   "label": "delta = 0.01, eps 1e-3, phase 0"
+  }
+ ],
+ "fx_chain_values": {
+  "circular eps 1e-3": 2.835e-07,
+  "circular eps 1e-4": 2.835e-07,
+  "delta 0.01 eps 1e-3 phase 0": 0.0001307,
+  "tilt 0.0018 / 0.002 / 0.0022 at 1e-3": [
+   1.946e-07,
+   2.835e-07,
+   3.969e-07
+  ]
+ },
+ "note": "independent scipy DOP853 integration, instantaneous free-field n_- measure; N_phi measure here is crude (floor ~1e-5) and not compared"
+}

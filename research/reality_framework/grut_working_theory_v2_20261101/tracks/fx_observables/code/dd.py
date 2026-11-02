@@ -140,7 +140,6 @@ def main():
                 coup_label = 'b'
             elif which == 'phi1':
                 Ft0 = V / MX**3 * F0                          # int (phi - v) d^3x  [GeV^-2]
-                coup = lambda fN: (MN * M / (M + MN))**2 / math.pi * (fN * MN * Ft0 / (VH * MH**2))**2 * VH**2 / VH**2 * GEV2_TO_CM2
                 # A phi |H|^2 -> A v_H h phi : source A v_H (phi - v); same algebra with b v_H -> A v_H / ... (A in GeV)
                 coup = lambda fN: (MN * M / (M + MN))**2 / math.pi * (fN * MN * Ft0 / MH**2)**2 * GEV2_TO_CM2   # per (A/GeV)^2
                 coup_label = 'A_tri [GeV]'
