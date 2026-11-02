@@ -1,0 +1,97 @@
+{
+ "method": "dq_heat SKEPTIC (Claude, own code, written fresh): longitudinal-vector modes in cosmic time, Stueckelberg variable.\n\nIndependent of dq_heat/code/vector_modes.py in formulation, time variable, initial state, background handling and read-out:\n  * variable: the Stueckelberg (Goldstone-gauge) angle theta_k (A_L = 0 gauge, A_0 integrated out),\n        S = 1/2 int dt [ p(t) theta_dot^2 - q(t) theta^2 ],  p = a^3 F^2 k^2/(k^2 + a^2 e^2 F^2),  q = a F^2 k^2;\n  * cosmic time t = tau (H_i units), pair (theta, pi = p theta_dot);\n  * initial state: the exact massless de Sitter Goldstone mode u = aF theta = e^{-ik eta}(1 - i/(k eta))/sqrt(2k),\n    eta = -1/a (H = 1), started at k/aH = 50 (dq_heat: adiabatic vacuum at k/aH = 1000 in conformal time);\n  * background: splines in t of ln a(t) and F^2(t) from the recorded rptri_dq run (dense tau <= 200, coarse to 2000; no\n    conformal-time reconstruction), then exact radiation a(t) = (a_end^2 + 2K(t - t_end))^{1/2}, F^2 = 72|Sigma|^2 + 2chi^2/a^2;\n  * read-out: (i) the cosmic adiabatic number (|pi|^2/p + q|theta|^2)/(2 Omega) - 1/2, Omega^2 = q/p, and (ii) the conformal\n    canonical number of u = sqrt(P_eta) theta (P_eta = p/a), each at two late times.\nUsage: python3 -B sk_modes.py e variant [kmin kmax nk | list]  -> ../results/sk_modes_<variant>_<e>.json\n",
+ "e": 1e-06,
+ "variant": "full",
+ "K": 1.9858052754013398,
+ "rows": [
+  {
+   "k": 0.01,
+   "e": 1e-06,
+   "variant": "full",
+   "n_cos": [
+    5833076.777673446,
+    5829722.930498869
+   ],
+   "n_conf": [
+    5833075.276983652,
+    5829722.946217952
+   ],
+   "wronskian": [
+    0.9999999999695446,
+    0.9999999980244167,
+    0.9999999917900362
+   ],
+   "a_reads": [
+    2728.8770185996086,
+    5457.754037199217
+   ]
+  },
+  {
+   "k": 0.1,
+   "e": 1e-06,
+   "variant": "full",
+   "n_cos": [
+    7362.910807870718,
+    7362.5993252808785
+   ],
+   "n_conf": [
+    7362.88250209886,
+    7362.595653407858
+   ],
+   "wronskian": [
+    0.9999999999695446,
+    0.9999999985112046,
+    0.9999999935292551
+   ],
+   "a_reads": [
+    2728.8770185996086,
+    5457.754037199217
+   ]
+  },
+  {
+   "k": 0.5,
+   "e": 1e-06,
+   "variant": "full",
+   "n_cos": [
+    9.305606579967876,
+    9.556105554335547
+   ],
+   "n_conf": [
+    9.612981657337446,
+    9.61329207877333
+   ],
+   "wronskian": [
+    0.9999999999695446,
+    1.0000000000686957,
+    1.0000000000835891
+   ],
+   "a_reads": [
+    115.85656527656802,
+    142.5926957250068
+   ]
+  },
+  {
+   "k": 4.45,
+   "e": 1e-06,
+   "variant": "full",
+   "n_cos": [
+    0.041944697340518866,
+    0.04216085421806459
+   ],
+   "n_conf": [
+    0.04173291345742325,
+    0.0417329219393352
+   ],
+   "wronskian": [
+    0.9999999999695445,
+    0.9999999999809296,
+    0.9999999998695137
+   ],
+   "a_reads": [
+    115.85656527656802,
+    142.5926957250068
+   ]
+  }
+ ],
+ "seconds": 11.90970230102539
+}

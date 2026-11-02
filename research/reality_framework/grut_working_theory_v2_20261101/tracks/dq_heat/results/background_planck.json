@@ -1,0 +1,84 @@
+{
+ "method": "dq_heat (Claude, own code): the M1r release with the induced inflaton portals vanishing at M_P instead of at M_Y.\n\nV_c = c (|u|^2 - mu^2)(|Sigma|^2 + 2|Y|^2), c = -ln(M_P/M_Y)/(4 pi^2) = -0.3371983 (fx_holder SKEPTIC N1), in rptri_cp.c.\nPreparation: conditional minimum at u = 10 i with the c term, i.e. M_Y^2 -> M_Y^2 + 2c', h^2 -> h^2 - c'/lambda_Sigma,\nc' = c(|10 i|^2 - mu^2) (exact completion of the square at fixed u).  Controls: c = 0 in rptri_cp.c reproduces rptri_dq.c;\nN_X(400-1000) is compared with the skeptic's independent code (-10606.160).  Writes ../results/background_planck.json and\nthe scratch npz in the format of background.py (for vector_modes.py with DQ_BG=planck).\n",
+ "c": -0.33719832310397263,
+ "c_prime_at_slice": -16.435783889419415,
+ "prep_effective": {
+  "M": 29.447044541365454,
+  "h": 40.40880557228633
+ },
+ "prep": {
+  "z": [
+   [
+    96.47722349207997,
+    -8.065824601707445e-62
+   ],
+   [
+    -8.606647396734145,
+    5.1455210020567135e-46
+   ],
+   [
+    -3.0325889130238166e-45,
+    -29.016616720317433
+   ]
+  ],
+  "amps": [
+   96.47722349207997,
+   8.606647396734145,
+   29.016616720317433
+  ],
+  "hessian_eig": [
+   -1.8935417999211402e-13,
+   9.276761877294264,
+   25.771488722944056,
+   504.0569244903608,
+   1547.1390472371072,
+   1733.757612779767
+  ],
+  "F_inf": 283.84936047003214,
+  "skeptic_amps": [
+   96.47722349207996,
+   8.606647396734143,
+   29.016616720317433
+  ],
+  "F_vac": 240.0
+ },
+ "control_c0": {
+  "NX_400_1000": -8045.485140302082,
+  "rptri_dq_NX_400_1000": -8045.485140302082,
+  "rel": 0.0
+ },
+ "validation": {
+  "NX_400_1000": -10606.16025730126,
+  "checks": {
+   "steps": 1317272,
+   "rejects": 628,
+   "max_gauss": 3.53452e-12,
+   "max_H_consistency": 3.98471e-12,
+   "max_hidden_work": 5.79725e-13,
+   "min_mL2": 319.668
+  },
+  "NYL": 1.4077312808984088,
+  "NYH": 0.02343316272729622,
+  "Nsig": 0.0018850116098868789,
+  "EX": 233871.62495921223,
+  "eps": -0.14293591911634684,
+  "NS": 1767.693369306617,
+  "yield_over_YQ": 1.3060583339704894,
+  "Rr_end": 11.83026777519379,
+  "K_late": 1.985805275381064,
+  "skeptic_NX_400_1000": -10606.160254392727,
+  "skeptic_NYL": 1.407731893097742,
+  "skeptic_NYH": 0.02343329962747681,
+  "skeptic_Y_over_YQ": 1.3060583336393292,
+  "rel_diff_NX_vs_skeptic": 2.742306381975368e-10
+ },
+ "late": {
+  "a_end": 89.12043482898824,
+  "H_end": 0.0002500242115935066,
+  "eta_end": 44.615850347352996,
+  "K_end": 1.9858052754439328,
+  "chi2_mean_late": 7110.368378715944,
+  "absS_late": 28.284271251916426
+ },
+ "seconds": 8.127052783966064
+}

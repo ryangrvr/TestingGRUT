@@ -1,0 +1,197 @@
+{
+ "release": {
+  "N_X_sk": 8047.825918932946,
+  "E_X_sk": 188737.66387779498,
+  "eps_sk": 0.12737394203805671,
+  "E_over_Ec_sk": 15.603638503701909,
+  "E_per_charge": 23.45200626591331,
+  "dq": {
+   "N_X": 8047.840302004927,
+   "E_X": 188737.70931829128,
+   "eps": 0.1273741466807691,
+   "E_over_Ec": 15.603605078079994
+  },
+  "rel_dN": -1.78719649523984e-06,
+  "rel_dE": -2.407600285803113e-07,
+  "c_definition": 6.97756759594737,
+  "E_over_Ec_rel_diff": 2.142173026520311e-06
+ },
+ "yield": {
+  "Y_over_YQ_sk": 0.9910212420831107,
+  "Y_over_YQ_dq": 0.9910230132359666
+ },
+ "ledger": {
+  "m_L": 22.248595461286985,
+  "Gamma_L": 1.0059032737467659e-07,
+  "a_mean_L": 5568.6530162992985,
+  "R_Y": 0.37858406725066346,
+  "R_casc_plus_Sigma_e1e6": 0.01841389113096883,
+  "dq": {
+   "R_Y": 0.3785839760987034,
+   "R_casc_plus_Sigma": 0.018413886697442924
+  },
+  "dq_heat": {
+   "R_Y_hom": 0.37883994745548166,
+   "R_cascade": 0.01855662421470789,
+   "NYH_window": 0.010377131381878653,
+   "NYH_late_dq": 0.010303911565136449
+  },
+  "note": "dq_entropy takes N_YH, N_sigma from a >= 315 windows; Y_H decays at <a> = 9.4 and sigma at a = 2.2, so the ledger should use their values at those epochs (not recorded); effect <= 1e-3 in R at e = 1e-6"
+ },
+ "R_crit": {
+  "bulk": {
+   "W_crit_sk": 49.060858602497945,
+   "R_crit_dq_release": 2.1442002253324643,
+   "R_crit_sk_release": 2.144193489925983,
+   "dq": 2.1442002253299783
+  },
+  "Q_2e5": {
+   "W_crit_sk": 39.31273260897355,
+   "R_crit_dq_release": 1.5194647270456874,
+   "R_crit_sk_release": 1.5194593299278716,
+   "dq": 1.5194647269397332
+  },
+  "binding": {
+   "W_crit_sk": 32.915601608404835,
+   "R_crit_dq_release": 1.1094869707158108,
+   "R_crit_sk_release": 1.109482451839404,
+   "dq": 1.109486970705586
+  }
+ },
+ "W_crit_dq_heat": 49.05678346694957,
+ "direct_heat_branch": [
+  {
+   "e": 1e-07,
+   "R_total_dq_heat": 36.72296785377232,
+   "W_frozen": 588.5203102307015,
+   "W_window": 588.7047751833295,
+   "SQ_hartree_frozen": 22.71872920535142,
+   "SQ_hartree_window": 22.724080255894496,
+   "SQ_final_lo": 22.72272920535142,
+   "SQ_final_hi": 22.725529205351418,
+   "branch": "free X",
+   "margin": 6.545282873251556
+  },
+  {
+   "e": 1e-06,
+   "R_total_dq_heat": 4.005838964030603,
+   "W_frozen": 78.0989121941423,
+   "W_window": 78.12114129903725,
+   "SQ_hartree_frozen": 4.949907716062994,
+   "SQ_hartree_window": 4.9509788066843035,
+   "SQ_final_lo": 4.953907716062994,
+   "SQ_final_hi": 4.956707716062994,
+   "branch": "free X",
+   "margin": 1.4269732758149276
+  },
+  {
+   "e": 1.5e-06,
+   "R_total_dq_heat": 2.795713017420476,
+   "W_frozen": 59.219682920979395,
+   "W_window": 59.235911321794426,
+   "SQ_hartree_frozen": 4.009070309415404,
+   "SQ_hartree_window": 4.009909088355809,
+   "SQ_final_lo": 4.013070309415403,
+   "SQ_final_hi": 4.015870309415404,
+   "branch": "free X",
+   "margin": 1.1559650307844582
+  },
+  {
+   "e": 2e-06,
+   "R_total_dq_heat": 2.1911573496791896,
+   "W_frozen": 49.78798278129551,
+   "W_window": 49.80121334566869,
+   "SQ_hartree_frozen": 3.5109721238751135,
+   "SQ_hartree_window": 3.511686818286351,
+   "SQ_final_lo": 3.5149721238751135,
+   "SQ_final_hi": 3.5177721238751136,
+   "branch": "free X",
+   "margin": 1.0124878325328182
+  },
+  {
+   "e": 3e-06,
+   "R_total_dq_heat": 1.5861524585915772,
+   "W_frozen": 40.349274287998576,
+   "W_window": 40.35950478834662,
+   "SQ_hartree_frozen": 2.98765721295177,
+   "SQ_hartree_window": 2.988240332342072,
+   "SQ_final_lo": 2.99165721295177,
+   "SQ_final_hi": 2.99445721295177,
+   "branch": "Q-matter",
+   "margin": 0.8617469557292938
+  },
+  {
+   "e": 5e-06,
+   "R_total_dq_heat": 1.1027837063463497,
+   "W_frozen": 32.80821666281208,
+   "W_window": 32.81605026153858,
+   "SQ_hartree_frozen": 2.5466102724290227,
+   "SQ_hartree_window": 2.5470811341457145,
+   "SQ_final_lo": 2.5506102724290227,
+   "SQ_final_hi": 2.553410272429023,
+   "branch": "Q-matter",
+   "margin": 0.7347033704268878
+  },
+  {
+   "e": 1e-05,
+   "R_total_dq_heat": 0.7406489214041897,
+   "W_frozen": 27.15853560947851,
+   "W_window": 27.164573474721585,
+   "SQ_hartree_frozen": 2.1988591589771342,
+   "SQ_hartree_window": 2.1992402411931358,
+   "SQ_final_lo": 2.2028591589771342,
+   "SQ_final_hi": 2.2056591589771344,
+   "branch": "Q-matter",
+   "margin": 0.6345336510916437
+  }
+ ],
+ "e_crit_direct_heat": {
+  "bulk_hartree": 2.0526711951727465e-06,
+  "bulk_with_increments_hi": 2.0620347620043953e-06,
+  "bulk_with_increments_lo": 2.058169567338219e-06,
+  "Q_2e5_hartree": 3.174379782048779e-06,
+  "Q_2e5_with_increments_hi": 3.1956109408080896e-06,
+  "Q_2e5_with_increments_lo": 3.1868363128836215e-06,
+  "binding_hartree": 4.9529277429556765e-06,
+  "binding_with_increments_hi": 5.002556307175863e-06,
+  "binding_with_increments_lo": 4.982010044080293e-06
+ },
+ "e_crit_dq_heat": {
+  "bulk_Q_inf": 2.0589520194109514e-06,
+  "Q_2e5": 3.201740940720007e-06,
+  "Q_bind_71263": 4.963766421161139e-06
+ },
+ "readings": {
+  "nu": 0.9595359932628308,
+  "H_freeX": 129297288614.2138,
+  "Y_freeX": 4.756020989707733e-09,
+  "W_vec_transfer_band": 50.727143949271955,
+  "W_vec_transfer_broad": 59.94582443361471,
+  "W_vec_direct_dq_heat": 56.30744423390504,
+  "SQ_B_band_1e6": 4.678839639402539,
+  "SQ_A_1e6": 5.656460775331923,
+  "SQ_B_band_2e6": 3.3635177645220145,
+  "SQ_B_broad_2e6": 3.613064797821477,
+  "direct_over_transfer_band": 1.1100061988550642,
+  "direct_over_transfer_broad": 0.9393055273809956
+ },
+ "H_ledger": {
+  "freeX": 129297288614.2138,
+  "Qmatter": [
+   149900667065.4524,
+   152445745680.13995
+  ],
+  "Q2e5": 135094140180.90984
+ },
+ "ideal_gas_law": {
+  "formula": "S/Q = (4/3)(3 pi^2/30)^(1/4)(3/4)^(3/4) lX^(1/4) (W-1)^(3/4)",
+  "prefactor": 0.19046256137279147,
+  "W_crit_bulk_ideal": 48.96928763534599
+ },
+ "spinodal_increment": {
+  "dE": 0.051412494689032195,
+  "a_sp_over_a_on": 0.8519070573198264,
+  "T_sp": 8.704629262410288,
+  "dSQ": 0.005526345595320819
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "method": "dq_heat (Claude, own code), item 1, piece B (gate1b_pieceB.py adapted to M1r): the release-induced Goldstone angle.\n\nIn each superhorizon patch the release converts a perturbation of the prepared state into a late gauge-orbit offset\nalpha_G = Delta theta_Sigma(inf)/6 (late F is Sigma dominated), which adds to the inflationary Goldstone angle of piece A.\nSeparate-universe responses d alpha_G / d q_alpha along every physical eigenmode alpha of the inflationary 6x6 Hessian at the\nM1r prepared point (canonical real components; the gauge zero mode is piece A itself and is excluded), by symmetric\ndifferences of rptri_dq runs (amplitudes 1e-3 and 1e-2 H_i), theta_Sigma window mean over tau = 300-400 plus the analytic\nradiation tail -N_Sigma / (|Sigma|^2 (2K)^{3/2} t^{1/2}).\nSuperhorizon power of each heavy mode at the end of inflation: the exact de Sitter BD mode (ymodes.bd_desitter),\nP_alpha(k) = k^3 |delta r_alpha(k)|^2 / (2 pi^2) (gate1b used the order-of-magnitude e^{-3N/2}).\nPiece-A Goldstone power: P_theta = (H/2pi F_inf)^2 (massless BD, F_inf = 275.93 H_i).\nN_A,B = int dlnk [dN_A/dlnk]_A(k) * P_B(k)/P_theta, restricted to k <= 0.3 (superhorizon during the release), with the\npiece-A spectra of vector_modes.json.  Usage: python3 -B sep_universe.py\n",
+ "base": {
+  "theta_S_inf": -1.8166192568781059,
+  "N_Sigma": 1344.9212838132723,
+  "winding_total": -0.24582293008320932
+ },
+ "K": 1.9858052754013398,
+ "F_inf": 275.9320047322796,
+ "P_theta_pieceA": 3.326872144859822e-07,
+ "hessian_eigs": [
+  -8.629399968948755e-14,
+  10.19148131703186,
+  18.75734908453996,
+  471.1552348409892,
+  1536.2773723501489,
+  1665.744425150561
+ ],
+ "responses": [
+  {
+   "mode": 1,
+   "m2": 10.19148131703186,
+   "vec": [
+    0.9822104816569173,
+    -4.440892098500626e-16,
+    -0.18712403391080196,
+    -2.6525512970441854e-17,
+    5.700490897393832e-16,
+    -0.01572150298906942
+   ],
+   "dthetaS_dq_amp1e-03": -0.005304287727936341,
+   "dalphaG_dq_amp1e-03": -0.0008840479546560568,
+   "dNS_dq_amp1e-03": 28.25371231608642,
+   "dthetaS_dq_amp1e-02": -0.005304287734775315,
+   "dalphaG_dq_amp1e-02": -0.0008840479557958858,
+   "dNS_dq_amp1e-02": 28.253712242360507
+  },
+  {
+   "mode": 2,
+   "m2": 18.75734908453996,
+   "vec": [
+    6.662549506176245e-16,
+    0.8833379930059901,
+    -1.1102230246251565e-16,
+    -0.007334895914750559,
+    -0.4686791966943583,
+    2.590416925274611e-17
+   ],
+   "dthetaS_dq_amp1e-03": 0.02010020228060405,
+   "dalphaG_dq_amp1e-03": 0.0033500337134340086,
+   "dNS_dq_amp1e-03": -66.51252960045895,
+   "dthetaS_dq_amp1e-02": 0.02010020220991615,
+   "dalphaG_dq_amp1e-02": 0.0033500337016526918,
+   "dNS_dq_amp1e-02": -66.51253447664658
+  },
+  {
+   "mode": 3,
+   "m2": 471.1552348409892,
+   "vec": [
+    -0.18768747345214887,
+    1.1102230246251565e-16,
+    -0.9755882559032433,
+    -6.510047663793985e-18,
+    -1.972898484906549e-18,
+    -0.114021784115213
+   ],
+   "dthetaS_dq_amp1e-03": -0.00019201079515251962,
+   "dalphaG_dq_amp1e-03": -3.20017991920866e-05,
+   "dNS_dq_amp1e-03": 1.2667908924868243,
+   "dthetaS_dq_amp1e-02": -0.00019201025382997727,
+   "dalphaG_dq_amp1e-02": -3.200170897166288e-05,
+   "dNS_dq_amp1e-02": 1.2667875305737653
+  },
+  {
+   "mode": 4,
+   "m2": 1536.2773723501489,
+   "vec": [
+    4.911781477969498e-19,
+    -0.05608033020455359,
+    6.938893903907228e-18,
+    -0.9943493670687992,
+    -0.09013508070682488,
+    -5.693660427473687e-17
+   ],
+   "dthetaS_dq_amp1e-03": 2.1882750500523684e-05,
+   "dalphaG_dq_amp1e-03": 3.647125083420614e-06,
+   "dNS_dq_amp1e-03": -0.09561084084452887,
+   "dthetaS_dq_amp1e-02": 2.188278451775716e-05,
+   "dalphaG_dq_amp1e-02": 3.6471307529595265e-06,
+   "dNS_dq_amp1e-02": -0.09561030981330987
+  },
+  {
+   "mode": 5,
+   "m2": 1665.744425150561,
+   "vec": [
+    -0.005998502516061401,
+    0.0,
+    -0.11494412067007326,
+    -5.322568237691847e-17,
+    -4.445992522549742e-18,
+    0.9933538478764493
+   ],
+   "dthetaS_dq_amp1e-03": -7.233615928470272e-06,
+   "dalphaG_dq_amp1e-03": -1.2056026547450454e-06,
+   "dNS_dq_amp1e-03": 0.008148601523316756,
+   "dthetaS_dq_amp1e-02": -7.234000620748304e-06,
+   "dalphaG_dq_amp1e-02": -1.2056667701247175e-06,
+   "dNS_dq_amp1e-02": 0.00815164144114533
+  }
+ ],
+ "per_e": [
+  {
+   "e": 1e-07,
+   "N_A_pieceA": 6.442856790320022,
+   "N_A_pieceB_SU": 0.00030531794872423165,
+   "ratio_B_over_A": 4.7388597738654107e-05,
+   "PB_over_Ptheta_at_kstar": 6.090995193558107e-08,
+   "k_star": 0.006903573466664359,
+   "R_vec_pieceB_SU": 0.001719077268366847
+  },
+  {
+   "e": 1e-06,
+   "N_A_pieceA": 2.0248521110686934,
+   "N_A_pieceB_SU": 0.00030198833584801823,
+   "ratio_B_over_A": 0.00014914093439082437,
+   "PB_over_Ptheta_at_kstar": 2.5348912070157447e-06,
+   "k_star": 0.021831016148963874,
+   "R_vec_pieceB_SU": 0.0005376915736669007
+  },
+  {
+   "e": 1.5e-06,
+   "N_A_pieceA": 1.6502232042320852,
+   "N_A_pieceB_SU": 0.000300371014117436,
+   "ratio_B_over_A": 0.0001820184162646111,
+   "PB_over_Ptheta_at_kstar": 5.343126781322449e-06,
+   "k_star": 0.026737425065710467,
+   "R_vec_pieceB_SU": 0.00043667210831624853
+  },
+  {
+   "e": 2e-06,
+   "N_A_pieceA": 1.4271865368853862,
+   "N_A_pieceB_SU": 0.0002985498391734629,
+   "ratio_B_over_A": 0.0002091876790156679,
+   "PB_over_Ptheta_at_kstar": 5.343126781322449e-06,
+   "k_star": 0.030873719118250768,
+   "R_vec_pieceB_SU": 0.00037587626735040834
+  },
+  {
+   "e": 3e-06,
+   "N_A_pieceA": 1.1620980753704293,
+   "N_A_pieceB_SU": 0.00029491295896558536,
+   "ratio_B_over_A": 0.00025377630788311835,
+   "PB_over_Ptheta_at_kstar": 1.1262750831095636e-05,
+   "k_star": 0.03781242915086208,
+   "R_vec_pieceB_SU": 0.0003031630662323946
+  },
+  {
+   "e": 5e-06,
+   "N_A_pieceA": 0.8967138353079107,
+   "N_A_pieceB_SU": 0.0002880587173322426,
+   "ratio_B_over_A": 0.0003212381765397095,
+   "PB_over_Ptheta_at_kstar": 2.3741454457848498e-05,
+   "k_star": 0.0488156361269789,
+   "R_vec_pieceB_SU": 0.0002293713031863209
+  },
+  {
+   "e": 1e-05,
+   "N_A_pieceA": 0.6299554822470103,
+   "N_A_pieceB_SU": 0.0002716079907387858,
+   "ratio_B_over_A": 0.00043115426152015975,
+   "PB_over_Ptheta_at_kstar": 0.00010547613897356136,
+   "k_star": 0.06903573466664359,
+   "R_vec_pieceB_SU": 0.00015292750548627767
+  }
+ ],
+ "seconds": 21.446475982666016
+}
