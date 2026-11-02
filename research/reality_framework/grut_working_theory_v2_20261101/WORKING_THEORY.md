@@ -2,7 +2,10 @@
 
 2 November 2026; **updated 3 November 2026 with the decisive pass** (`tracks/dq_heat`, `dq_entropy`, `qm_micro`,
 `qm_transfer`, `higgs_reheat`, each with a skeptic, and the combiner `tracks/dq_critic`; brief BRIEF_DECISIVE.md).
-Where the update changes a statement, the section says so. Claude, for the owner (issue #13). This replaces the physical picture in
+Where the update changes a statement, the section says so. **Updated again with the inflaton-sector pass**
+(`tracks/inf_potential`, `inf_reheat`, `inf_chain`, `inf_higgs`, each with a skeptic, and the combiner
+`tracks/inf_critic`; brief BRIEF_INFLATON.md); its results are marked "Inflaton pass" and supersede earlier statements
+where they conflict. Claude, for the owner (issue #13). This replaces the physical picture in
 `research/reality_framework/grut_closed_whole_theory_20261019/WORKING_THEORY.md` and the dark-matter picture assembled
 in Codex's M1 packets (d4747cb → f8186fa). It rests on:
 - the reviews in `research/reality_framework/grut_formation_review_20261025/`: REVIEW_M1.md, REVIEW_TRANSPORT.md,
@@ -51,6 +54,29 @@ the Q-matter branch, visible only to proposed gravitational direct detection.
 
 The open inputs now sit mainly in the inflaton sector: its history decides the branch, and its decay channel to the
 Standard Model is not realisable as written (section 7).
+
+**Inflaton pass (supersedes the paragraphs above where they conflict).** We built explicit inflaton potentials and
+reheating channels and pushed each one through the whole M1r chain on its own release (section 4a):
+- **M1r's assumed history is not realisable on any single-field plateau or hilltop tried** [C/E]. That history is
+  m_I = 3 H_i and Γ_I = 0.5 H_i at H_i ≈ 1.3×10¹¹ GeV. A quiet inflaton (m_I ≤ 4 H_i) needs H_i ≥ 4×10¹² GeV; a
+  low-scale plateau gives a heavy inflaton (m_I = 42–256 H_i) that drives the mediators; and no perturbative,
+  radiatively acceptable channel decays that fast. The gap is at least ×9 in H_i (×80 in r).
+- **On every explicit benchmark the relic is free X at e = 10⁻⁶, with no critical coupling at any e** [C]. S/Q is
+  155–987, and the relic is a mostly symmetric X X̄ gas (about 49% X̄ by number), not the asymmetric gas of section 3.
+  The CP-odd holder then sets only 1–6% of the dark matter; the hidden entropy sets the rest.
+- **The earlier "rolling embeddings give Q-matter" result does not survive** [C]. It changed only the horizon-exit
+  factor on M1r's own release. The benchmarks' own releases leave a large heavy Y_H remnant whose decays dominate the
+  heat. In M1r's own engine, m_I = 3 H_i sits at a sharp minimum of S/Q(m_I): Q-matter at e ≤ 10⁻⁵ exists only for
+  m_I ≈ 2–4 H_i with fast decay.
+- **Two benchmarks are consistent:** the T-models TB1 (α = 0.3) and TB2 (α = 1), reheating slowly through
+  right-handed neutrinos. They pass CMB, dark matter, reheating and Higgs together, but only with an added Higgs–inflaton
+  portal λ_IH ≈ 3×10⁻¹⁰–2×10⁻⁹ and a tuned induced inflaton–Σ portal. They give H_i ≈ 7.5×10¹²–1.06×10¹³ GeV,
+  r = 1.3–4.2×10⁻³ and n_s ≈ 0.962. Their n_s sits at −3.6σ against ACT DR6 (retrospective).
+
+So the M1r Lagrangian survives an explicit inflaton, but the M1r picture does not, as far as tested. That picture is a
+branch point in e, a CP-set asymmetric relic, Q-matter as an option, and r ~ 10⁻⁷. Recovering it needs an inflaton
+sector beyond a single field, such as a two-scale potential, a waterfall field or a spectator holder field [A], that
+gives a quiet, fast, low-scale history. That is now the open item (section 8).
 
 ## 1. The foundation: what closure does and does not do
 
@@ -128,7 +154,68 @@ made inside the framework.
 | 11 | X̄ freeze-out | Annihilation in a pure gas | p ≈ 6×10⁻⁴–1.3×10⁻³ pairs per charge (d ln p/d ln(S/Q) ≈ 9.5, so any entropy production raises it) | [C/E] fx_chain, wt_critic |
 | 12 | Today | A cold, asymmetric gas of free X (92 MeV complex scalar) with a 0.1% X̄ admixture. Both are stable, and every annihilation channel at rest is closed: no lighter hidden states, and m_A = 6eh ≈ 3×10⁷ GeV | free-streaming 0.3–0.5 pc (cold); σ/m ≈ 6×10⁻⁸ cm²/g; ΔN_eff ≈ 10⁻⁸ | [C] wt_critic, fx_observables |
 
+**Inflaton pass.** This table is M1r with its supplied history (m_I, Γ_I) = (3, 0.5) H_i. With an explicit
+single-field inflaton the history differs from stage 2 onward (section 4a): reheating is slow (T_RH ≈ 1–2×10¹¹ GeV
+after 12–13 matter-era e-folds) and the relic at stage 12 is a mostly symmetric X X̄ gas.
+
 ## 4. The branch point: what decides what the dark matter is
+
+### 4a. Inflaton pass: explicit inflaton sectors through the whole chain
+
+Benchmarks at e = 10⁻⁶, with the slice and the holder one e-fold before the end of inflation (S1). Each release is
+re-solved with the benchmark's own inflaton, and g_I is re-fixed there. Every potential, slice, width, portal
+condition and ledger is a model choice [C unless marked].
+
+| | HT6t | T1 (E1) | TB1 | TB2 |
+|---|---|---|---|---|
+| potential | tilted p = 6 hilltop, v = 0.347 M_P (not reflection-even) | T-model, α = 6.1×10⁻⁵ (E1: E-model) | T-model, α = 0.3 | T-model, α = 1 |
+| m_I/H_i | 42 | 128 (256) | 2.2 | 1.5 |
+| n_s; r | 0.9649; 2.7×10⁻⁷ | 0.9618; 2.7×10⁻⁷ | 0.9619; 1.32×10⁻³ | 0.9622; 4.22×10⁻³ |
+| H_i (GeV) | 1.29×10¹¹ | 1.29×10¹¹ | 7.47×10¹² | 1.06×10¹³ |
+| reheating | Γ_I = 0.5 H_i assumed, no realisable channel | same; fragments by ~0.4 H_i⁻¹ | Majorana N, y = 4.1×10⁻⁴; Γ_I = 7.5×10⁻⁹ H_i | y = 2.6×10⁻⁴; Γ_I = 2.1×10⁻⁹ H_i |
+| T_RH (GeV); K (M1r: 1.99) | nominal; 12.3 | nominal; 15.2 | 2.0×10¹¹; 2000 | 1.3×10¹¹; 2589 |
+| S/Q at 10⁻⁶ (e → ∞) | 155 (61) | 646 (337) | 615 (5.1) | 987 (7.9) |
+| branch; e_crit | free X; none | free X; none | free X; none | free X; none |
+| relic mass per charge | 17 m_X | 72 m_X | 69 m_X | 110 m_X |
+| H_i the dark matter needs / H_i of the potential | 0.21 | 0.076 | 1 (Γ_I absorbs it) | 1 |
+| Higgs, ξ_H = 0.1, gravitational only | M_t,crit ≈ 172.9 GeV | 172.87–172.92 GeV | passes inflation to ≈ 173.1; fails after inflation at central M_t [E] | same |
+| Higgs with λ_IH ≥ λ_min | safe | safe | safe | safe |
+| ACT DR6 n_s pull (retrospective) | −2.8σ | −3.7σ | −3.7σ | −3.6σ |
+
+- **Why the branch point disappears.**
+  - HT6t and T1 are heavy (m_I ≫ 4 H_i). The trilinear holder then drives the light mediator Y_L, and the release
+    leaves a heavy Y_H remnant 10³–10⁴ times M1r's. Its cascade vectors dominate the heat (R ≈ 630–690).
+  - TB1 and TB2 are quiet, but the dark matter then calibrates Γ_I to about 10⁻⁹ H_i. Reheating is slow (K ≈ 2000),
+    and the vectors cross H = m_A in the matter era, giving R_vec ≈ 2–3×10³.
+  - At such heat the pair fraction is p ≈ 0.05 S/Q, so the relic is mostly symmetric. The abundance is fixed through
+    Γ_I ∝ M⁻² by the hidden entropy, not by the CP-odd charge. α_I and sign(φ_I) then control only 1–6% of it.
+- **The quiet / fast / low-scale triangle does not close** [C/E, inf_critic quiet_scan]. A quiet single-field
+  α-attractor needs α ≥ 0.07, i.e. H_i ≥ 4.1×10¹² GeV and r ≥ 3×10⁻⁴. A quiet release that also matches the dark
+  matter needs H_i ≤ 4.5×10¹¹ GeV at Γ = 10⁻³ H_i, and extrapolates to 1.2–1.7×10¹¹ at Γ = 0.1–0.5. Fast reheating
+  at an amplitude of order M_P would in any case be non-perturbative.
+- **Reheating channel** [D/C, inf_reheat]. Keeping the reflection φ_I → −φ_I forces N → ±iγ5N on the singlet fermions,
+  a Z4 subgroup of lepton number. The Majorana width is Γ = y²mβ³/16π, so Γ_I/m_I = 1/6 would need N_f y² ≈ 8. One-loop
+  flatness caps y at 4–9×10⁻⁴. Realisable channels give Γ_I/m_I ~ 10⁻⁷–10⁻⁶ for the quiet members, and about 10⁻⁹ H_i
+  once the dark matter is fitted. An axial coupling M_N N̄ e^{iγ5φ_I/f} N avoids kinematic blocking and the one-loop
+  inflaton potential.
+- **Higgs** [C/E, inf_higgs and skeptic]. The benchmark's own H(N) at the end of inflation dominates the bubble count.
+  The minimum ξ_EW (tree, RG-improved) rises to 0.070 / 0.079 at M_t = 172.57 / 172.86 GeV for the low-scale
+  benchmarks, and to 0.087 / 0.094 / 0.101 at 172.57 / 172.86 / 173.15 for TB1. ξ_H = 0.1 still passes at +1σ, by a
+  margin of ×1.3–1.5 for the low-scale benchmarks but only about 7% for TB1, which fails from about 173.1 GeV. With gravitational reheating only, the critical top mass falls with H_i (172.92 at 1.29×10¹¹,
+  172.56 at 5×10¹¹ GeV). At the TB scale central M_t fails after inflation [E]. The R-even portal λ_IH ≥ λ_min keeps the
+  Higgs heavy through inflation and reheating. α_s ± 0.0009 moves M_t,crit by ∓0.3 GeV, as much as the whole margin.
+- **Caveats.**
+  - The pair-fraction recipe is extrapolated to S/Q ≈ 600.
+  - The induced inflaton–Σ portal must be tuned below |A_IΣ| ≈ 10⁻⁶ H_i, or inflaton quanta leak into long-lived
+    vectors (R_leak up to 2×10⁶).
+  - TB1's "no e_crit" has a ×2.4 margin on the matter-era Y_L deposit. A Y_L width 3.8× larger would open a Q-matter
+    branch at e ≳ 10⁻⁴.
+  - The HT6t calibration iteration contracts towards a fixed point near 2×10⁹ GeV (r ~ 7×10⁻¹¹). A third step is
+    needed.
+- **Bonus, not a test.** In TB1/TB2 the N decays can give non-thermal leptogenesis. The CP asymmetry needed,
+  ε₁ ≈ 1–2×10⁻⁸, is about 10⁻⁵ of the Davidson–Ibarra bound [E]; it carries its own CP phase.
+
+### 4b. The static-slice result
 
 **Decisive-pass result (supersedes the transferred estimates below).** S/Q(e) for the actual M1r release (portals
 vanish at M_Y):
@@ -151,6 +238,10 @@ vanish at M_Y):
     H_i, S/Q(10⁻⁶) = 4.3–8.0 [E].
   - **Consequence.** The statement below that "everything uncomputed can only raise S/Q" is **false**: the inflaton
     history can lower it.
+  - **Inflaton pass.** The rolling-embedding numbers above change only the horizon-exit factor on M1r's own release.
+    Applied consistently on HT6t at S1 they give S/Q = 3.58 (margin ×1.03). But the benchmarks' own releases are not
+    M1r's, and on them S/Q is 155–987 (section 4a). The Q-matter side at e = 10⁻⁶ is therefore not reached by any
+    explicit single-field inflaton tried.
 - **Post-relaxation entropy production** is +0.1–0.2% of S/Q (crossover adiabatic; spinodal latent heat
   ΔS/Q ≈ +0.005; evaporation reversible; X̄ burn-out zero).
 
@@ -193,6 +284,10 @@ spot point. This is the decisive calculation (section 8).
     ⟨Q⟩ are computed.
 - **Supplied-input sensitivity:** H_i ∝ φ_I(slice)^{−2.23}; the inflaton history moves it by −16% or +21%; the portal
   renormalisation condition by −17%. The 1% program tolerance cannot be met until those inputs are fixed.
+- **Inflaton pass.** With an explicit inflaton the potential fixes H_i, so the abundance is fitted through the decay
+  width instead: Γ_I = (Y_req/(c_Y M))², checked to 10⁻⁴ [C]. TB1 needs Γ_I = 7.5×10⁻⁹ H_i and TB2 2.1×10⁻⁹ H_i. The
+  fit still does not predict the abundance. HT6t and T1 have no consistent point near their design H_i: the dark
+  matter needs 2.7×10¹⁰ and 9.9×10⁹ GeV against 1.29×10¹¹.
 
 ## 6. What an observer could see
 
@@ -221,6 +316,14 @@ spot point. This is the decisive calculation (section 8).
   - Q-matter, H_i = 1.483–1.499×10¹¹: r = 3.6×10⁻⁷;
   - with portals vanishing at M_P: 1.9×10⁻⁷ / 2.5×10⁻⁷.
   - These are floors that assume H at CMB exit equals H_i.
+- **Inflaton pass: the inflation observables of the consistent benchmarks** [C].
+  - TB1 (TB2): r = 1.3×10⁻³ (4.2×10⁻³), n_t = −r/8, n_s = 0.962, α_s = −7.2×10⁻⁴.
+  - That r is at the level planned CMB polarisation surveys aim for (r ~ 10⁻³) [R]. In these benchmarks it is
+    consistent with the dark matter, because the slow decay absorbs the higher scale. The "overproduce about 10³-fold"
+    statement below assumed M1r's fixed fast decay.
+  - The relic is free X X̄ with mass per charge 69 (110) m_X. There are no objects, so the Planck-mass-object signature
+    does not arise.
+  - These are properties of chosen benchmarks, not predictions of GRUT.
 
 *Original section, kept for the record:*
 
@@ -261,9 +364,33 @@ on two uncomputed quantities, the sticking probability and ⟨Q⟩, and its shap
 | Higgs survival during inflation | **computed** (higgs_reheat + skeptic). ξ_H = 0.1 is safe during inflation: ξ_min = 0.044–0.055, a margin of about ×2. With gravitational-only reheating it is safe only below a critical top mass of 172.79–172.89 GeV (PDG 172.57 ± 0.29, so +0.8 to +1.1σ). At M_t + 1σ it fails at both H_i once the field normalisation is fixed (D = +13, +27). Above the critical mass, survival needs a Higgs-coupled plasma within τ ≈ 8–10 H_i⁻¹ |
 | **The inflaton's decay channel to the Standard Model** (new) | **not realisable as written.** The reflection-even inflaton needed for the CP-sign bookkeeping forbids φ_I\|H\|²; M1r has zero SM portals; and a gauge-singlet inflaton has no renormalizable Yukawa to chiral SM fermions, so the decay must go through singlets (e.g. right-handed neutrinos). The supplied fast decay Γ_I/m_I = 1/6 needs N_f y² ≈ 4 and is kinematically blocked at φ_I ≈ 0.8 M_P (y φ_I ≫ m_I) except near zero crossings, i.e. it is non-perturbative. The reheating history, and with it K, the vector heat and the Higgs plasma timing, must be constructed |
 | **The inflaton's history before the slice** (new) | not supplied. It decides the branch at e = 10⁻⁶ and sets H_i and r. The engine's post-inflation oscillator (m_I = 3 H_i, amplitude 0.82 M_P) is phenomenological; a potential that inflates at H ≈ 1.3–1.5×10¹¹ GeV with r ~ 10⁻⁷ must be a plateau or hilltop shape, not this quadratic |
+| **Inflaton pass: the decay channel** | **constructed, but slow.** Realisations that keep the reflection: a scalar Yukawa −(y/2)φ_I N̄N with a soft M_N, or an axial coupling M_N N̄ e^{iγ5φ_I/f} N, with N → ±iγ5N. Breaking the reflection with Aφ_I\|H\|² fast enough needs A = 6.1 H_i, which makes the Higgs tachyonic. No perturbative, radiatively acceptable channel gives Γ_I/m_I = 1/6. The consistent benchmarks reheat at Γ_I ≈ 10⁻⁹ H_i (T_RH ≈ 1–2×10¹¹ GeV), and the scalar-Yukawa version induces R-odd terms above the no-portal bound unless the axial form is used [C/E] |
+| **Inflaton pass: the potential** | **constructed, but it breaks the M1r picture.** Low-scale plateaus (HT6t, T1/E1) are heavy and loud; quiet plateaus (TB1/TB2) are high-scale. None reproduces the branch point or the asymmetric relic (section 4a). A non-single-field sector is the remaining route [A] |
+| **Inflaton pass: Higgs** | with an R-even portal λ_IH ≈ 3×10⁻¹⁰–2×10⁻⁹, safe on every benchmark. Without it, ξ_H = 0.1 survives inflation at the TB scale only up to M_t ≈ 173.1 GeV and fails after inflation at central M_t [E] |
 | TCC tension (closure pass) | unresolved by choice: TCC is not adopted |
 
 ## 8. The decisive calculations
+
+**Status after the inflaton pass.** The explicit inflaton sector was built: four benchmarks, two realisable reheating
+channels, Higgs survival on each, all run through the full chain (section 4a). None reproduces M1r's picture. The open
+items, ranked:
+1. **An inflaton sector beyond a single field** [A]: a two-scale potential, a waterfall field or a spectator. It
+   must:
+   - carry the holder on a quiet field (m ≈ 2–4 H_i);
+   - sit at H_i ≈ 1.2–1.5×10¹¹ GeV with r ≈ 3×10⁻⁷;
+   - empty into the Standard Model within about a Hubble time (K ≈ 2), non-perturbatively;
+   - then be run through the full chain.
+
+   It is the only route found back to the free-X / Q-matter choice and a CP-set relic.
+2. **The pair fraction at S/Q ~ 10²–10³.** It fixes the relic mass per charge and T_RH in TB1/TB2.
+3. **The renormalisation condition of the induced inflaton–Σ portal A_IΣ.** Above about 10⁻⁶ H_i it dominates the
+   TB ledger.
+4. **Higgs survival after inflation at H ≈ 10¹³ GeV** without the portal, and the α_s sensitivity of the critical top
+   mass.
+5. **The HT6t fixed point near 2×10⁹ GeV.** It needs a third calibration step.
+
+If item 1 fails too, the consistent version of M1r is TB1/TB2: a high-scale, slowly reheated universe whose dark
+matter is a symmetric free X X̄ gas. In that version the Q-matter branch and the CP-set relic are gone, and r ≈ 10⁻³.
 
 **Status after the decisive pass.** Items 1–3 below have been computed:
 - **S/Q end to end:** free X at e = 10⁻⁶ on the static slice; Q-matter above 2.06×10⁻⁶.
@@ -306,6 +433,18 @@ That construction decides the branch, H_i and r together.
    field's evolution through reheating with ξ_H = 0.1.
 
 ## 9. Bottom line for the owner
+
+**After the inflaton pass.** We gave M1r a real inflaton, and that changed the picture. The single-field versions we
+built fall into two kinds:
+- **Low-scale inflatons.** They break the dark-matter story outright: they miss the abundance by ×5–13 in H_i.
+- **Quiet, high-scale inflatons.** They make the model consistent, given an added Higgs–inflaton coupling, but turn it
+  into something plainer. The dark matter is a hot-born, mostly symmetric gas of 92 MeV scalars. There are no
+  Q-matter objects, and the matter–antimatter phase sets only a few percent of the relic. The inflation scale is about
+  10¹³ GeV, with r ≈ 10⁻³: near future CMB reach, but chosen, not predicted.
+
+The richer picture, an either/or branch with Planck-mass nuggets as an option, now depends on one construction. That
+is an inflaton sector with more than one field that holds the phase on a quiet field and still reheats fast at a low
+scale. That is the next calculation. Nothing here validates or excludes anything; every inflaton is a model choice.
 
 **After the decisive pass (3 November).** The dark-matter sector is now worked out end to end at the level of
 homogeneous, linear and kinetic calculations, every one adversarially checked. Its outcome is a clean either/or set
