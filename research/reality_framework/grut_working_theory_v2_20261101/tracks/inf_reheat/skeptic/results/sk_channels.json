@@ -1,0 +1,762 @@
+{
+ "method": "inf_reheat SKEPTIC (Claude, own code): channel-level checks by other methods, and the omitted effects.\n\nSections (keys of ../results/sk_channels.json):\n  gk            Greene-Kofman production after one zero crossing by an exact 2x2 matrix-exponential propagator (vectorised\n                over k; piecewise-constant mass at the midpoint), not an RK integration as in fermion_modes.py [C]\n  width         Majorana width from an explicit two-component spinor sum for -(y/2) phi Nbar N (vertex y, identical 1/2) [C]\n  s1_odd        S1 soft breaking: R-odd one-loop inflaton terms (tadpole + cubic from (M + y phi)^4 ln) against the tree slope\n                at phi_*, and the log-divergent induced A phi |H|^2 ~ y y_nu^2 M_N ln/(8 pi^2), at B1-B3 and F0 [C/E]\n  portal        lambda_IH conventions (mass^2 lambda phi^2 vs (lambda/2) phi^2 |H|^2), the window, and the condensate annihilation\n                phi phi -> H H* through the oscillating portal mass as an early Higgs-coupled plasma [C/E]\n  s2_eft        S2 axial EFT: mu5_max/(4 pi f), phidot/f^2, rho^{1/4}/(4 pi f), winding, xi_psi during inflation [C]\n  optionB       Option B numbers recomputed; the stability bounds at the benchmark H_i [C]\n  cmb           n_s of B1-B3 (track and Mukhanov-Sasaki) against Planck 2018, CMB-SPA (SPT-3G D1) and P-ACT-LB (ACT DR6) [Q/C]\n  p_feedback    the omitted symmetric component: with H_i = H_end fixed by the inflaton, the DM calibration moves Gamma by\n                (1+2p)^{-2}, not H_i by (1+2p)^{-2/3}; consequences for T_RH, y, K, S/Q [D/E]\n  sq_rolling    S/Q(1e-6) with the rolling-slice x0 (sk_tmodel) in the track's own rescaling [E]\nUsage: sk_channels.py (after sk_tmodel.py) -> ../results/sk_channels.json\n",
+ "gk": [
+  {
+   "yPhi": 60.0,
+   "m": 3.0,
+   "steps": 15708,
+   "max_abs_dev": 0.001083004195678805,
+   "N_ratio": 1.0069120899785682,
+   "n_at_k0": 1.0000000000000182
+  },
+  {
+   "yPhi": 300.0,
+   "m": 3.0,
+   "steps": 78540,
+   "max_abs_dev": 0.00021645901175632032,
+   "N_ratio": 1.0010354908148145,
+   "n_at_k0": 1.0000000000000262
+  }
+ ],
+ "width": {
+  "sum_spins": 13.5,
+  "expected_2mphi2beta2": 13.500000000000002,
+  "Gamma_over_y2m": 0.01292177098644825,
+  "formula_beta3_over_16pi": 0.012921770986448254
+ },
+ "optionB": {
+  "A": 6.139960247678931,
+  "mH2": 94556775.3482027,
+  "growth": 7767.168377853363,
+  "dlam": 2.0943951023931953,
+  "int_sqrt_cos": 2.3962804694711846
+ },
+ "s1_odd": [
+  {
+   "mu_MN": {
+    "mu": 0.8035530476756919,
+    "odd_slope": -1885019.1677175292,
+    "ratio_to_tree": -33.58553820520946
+   },
+   "mu_yphistar": {
+    "mu": 18328.96260894623,
+    "odd_slope": 31836.322949282083,
+    "ratio_to_tree": 0.5672303279659414
+   },
+   "V_CW_even_over_Vtree_at_phistar_mu_yphi": 255.2012414594522,
+   "odd_over_even_size": 0.00017536247191283672,
+   "tree_slope": 56125.918131785176,
+   "alpha": 0.3,
+   "A_ind": {
+    "ynu2": 0.0067618993186996795,
+    "A_no_log": 6.407901774348518e-07,
+    "A_log_MP": 1.7038190575573638e-05,
+    "log_MP": 26.589344180928688
+   },
+   "A_max_inflation_branch_no_portal": 1.5549039813802618e-06,
+   "lam_min_phi_slice": 4.8602622268335316e-05
+  },
+  {
+   "mu_MN": {
+    "mu": 0.619255972182784,
+    "odd_slope": -790716.7679977836,
+    "ratio_to_tree": -5.207403433857171
+   },
+   "mu_yphistar": {
+    "mu": 15612.32908608196,
+    "odd_slope": 13220.407111382996,
+    "ratio_to_tree": 0.08706530097133156
+   },
+   "V_CW_even_over_Vtree_at_phistar_mu_yphi": 114.27540016348712,
+   "odd_over_even_size": 0.0001586581909126773,
+   "tree_slope": 151844.72991985807,
+   "alpha": 1.0,
+   "A_ind": {
+    "ynu2": 0.006696971746084181,
+    "A_no_log": 3.632351912790473e-07,
+    "A_log_MP": 9.665194773767295e-06,
+    "log_MP": 26.608640918666453
+   },
+   "A_max_inflation_branch_no_portal": 1.6050316836045667e-06,
+   "lam_min_phi_slice": 4.61848141645222e-05
+  },
+  {
+   "mu_MN": {
+    "mu": 0.5433722751907514,
+    "odd_slope": -1403252.8326273663,
+    "ratio_to_tree": -2.84936497693342
+   },
+   "mu_yphistar": {
+    "mu": 20752.494853834156,
+    "odd_slope": 22523.29242069862,
+    "ratio_to_tree": 0.04573450991622607
+   },
+   "V_CW_even_over_Vtree_at_phistar_mu_yphi": 206.46798709375466,
+   "odd_over_even_size": 0.00010473387012364152,
+   "tree_slope": 492479.1467527593,
+   "alpha": 3.0,
+   "A_ind": {
+    "ynu2": 0.0066172853648440106,
+    "A_no_log": 3.460757115342838e-07,
+    "A_log_MP": 9.216889547787305e-06,
+    "log_MP": 26.63258137049077
+   },
+   "A_max_inflation_branch_no_portal": 1.6212711801693328e-06,
+   "lam_min_phi_slice": 4.464059160485152e-05
+  }
+ ],
+ "portal": [
+  {
+   "rows": [
+    {
+     "lam_track": 1.5114482174111112e-10,
+     "lam_lagrangian_half": 3.0228964348222224e-10,
+     "q": 0.07323295223979255,
+     "beta": 0.9238690900340886,
+     "Gamma_eff_over_Hi": 2.615621701335546e-12,
+     "Gamma_eff_over_GammaI": 7.26329522708532e-07,
+     "SM_energy_first_Hubble_time": 0.27053058573222327,
+     "m2_induced": 0.00047134596114526426,
+     "T_inst": 0.2962562352391398
+    },
+    {
+     "lam_track": 3.0228964348222224e-10,
+     "lam_lagrangian_half": 6.045792869644445e-10,
+     "q": 0.1464659044795851,
+     "beta": 0.8408734691027122,
+     "Gamma_eff_over_Hi": 9.52259110121849e-12,
+     "Gamma_eff_over_GammaI": 2.6443193394384706e-06,
+     "SM_energy_first_Hubble_time": 0.9849100682203785,
+     "m2_induced": 0.0017160107109163983,
+     "T_inst": 0.4092253705927034
+    },
+    {
+     "lam_track": 6.045792869644445e-10,
+     "lam_lagrangian_half": 1.209158573928889e-09,
+     "q": 0.2929318089591702,
+     "beta": 0.6435342897481529,
+     "Gamma_eff_over_Hi": 2.91511820793869e-11,
+     "Gamma_eff_over_GammaI": 8.094964250869842e-06,
+     "SM_energy_first_Hubble_time": 3.0150714679788986,
+     "m2_induced": 0.005253164832174843,
+     "T_inst": 0.5412997283498254
+    },
+    {
+     "lam_track": 1.0319454365720871e-09,
+     "lam_lagrangian_half": 2.0638908731441742e-09,
+     "q": 0.49999999999999983,
+     "beta": 1.8250120749944284e-08,
+     "Gamma_eff_over_Hi": 2.4085582908306293e-18,
+     "Gamma_eff_over_GammaI": 6.688302795857042e-13,
+     "SM_energy_first_Hubble_time": 2.4911426788358163e-07,
+     "m2_induced": 4.34032269263666e-10,
+     "T_inst": 0.009177260446614448
+    },
+    {
+     "lam_track": 2.0638908731441742e-09,
+     "lam_lagrangian_half": 4.1277817462883485e-09,
+     "q": 0.9999999999999997,
+     "beta": 0.0,
+     "Gamma_eff_over_Hi": 0.0,
+     "Gamma_eff_over_GammaI": 0.0,
+     "SM_energy_first_Hubble_time": 0.0,
+     "m2_induced": 0.0,
+     "T_inst": 0.0
+    }
+   ],
+   "lam_open_max": 1.0319454365720875e-09,
+   "note": "Track convention: (lambda/2) phi^2 |H|^2 is said to give m_H^2 = lambda phi^2; for a canonical complex doublet it gives lambda phi^2/2. The window in the Lagrangian coefficient of (lambda/2) phi^2 |H|^2 is twice the quoted one.",
+   "alpha": 0.3
+  },
+  {
+   "rows": [
+    {
+     "lam_track": 1.482561800708942e-10,
+     "lam_lagrangian_half": 2.965123601417884e-10,
+     "q": 0.08462044084363642,
+     "beta": 0.9114598829969025,
+     "Gamma_eff_over_Hi": 2.2539588288116256e-12,
+     "Gamma_eff_over_GammaI": 1.4724338227724288e-06,
+     "SM_energy_first_Hubble_time": 0.09686329359227629,
+     "m2_induced": 0.0002841654981986282,
+     "T_inst": 0.22916759888100813
+    },
+    {
+     "lam_track": 2.965123601417884e-10,
+     "lam_lagrangian_half": 5.930247202835768e-10,
+     "q": 0.16924088168727283,
+     "beta": 0.8133377137606828,
+     "Gamma_eff_over_Hi": 8.045245895885837e-12,
+     "Gamma_eff_over_GammaI": 5.255682587542691e-06,
+     "SM_energy_first_Hubble_time": 0.34574234687601507,
+     "m2_induced": 0.0010142959484935362,
+     "T_inst": 0.31499346971996794
+    },
+    {
+     "lam_track": 5.930247202835768e-10,
+     "lam_lagrangian_half": 1.1860494405671535e-09,
+     "q": 0.33848176337454566,
+     "beta": 0.5683629766715181,
+     "Gamma_eff_over_Hi": 2.2488173500757846e-11,
+     "Gamma_eff_over_GammaI": 1.4690750714532181e-05,
+     "SM_energy_first_Hubble_time": 0.9664233988277541,
+     "m2_induced": 0.0028351729165298416,
+     "T_inst": 0.40729142392387285
+    },
+    {
+     "lam_track": 8.760068997090511e-10,
+     "lam_lagrangian_half": 1.7520137994181022e-09,
+     "q": 0.5000000000000001,
+     "beta": 0.0,
+     "Gamma_eff_over_Hi": 0.0,
+     "Gamma_eff_over_GammaI": 0.0,
+     "SM_energy_first_Hubble_time": 0.0,
+     "m2_induced": 0.0,
+     "T_inst": 0.0
+    },
+    {
+     "lam_track": 1.7520137994181022e-09,
+     "lam_lagrangian_half": 3.5040275988362044e-09,
+     "q": 1.0000000000000002,
+     "beta": 0.0,
+     "Gamma_eff_over_Hi": 0.0,
+     "Gamma_eff_over_GammaI": 0.0,
+     "SM_energy_first_Hubble_time": 0.0,
+     "m2_induced": 0.0,
+     "T_inst": 0.0
+    }
+   ],
+   "lam_open_max": 8.76006899709051e-10,
+   "note": "Track convention: (lambda/2) phi^2 |H|^2 is said to give m_H^2 = lambda phi^2; for a canonical complex doublet it gives lambda phi^2/2. The window in the Lagrangian coefficient of (lambda/2) phi^2 |H|^2 is twice the quoted one.",
+   "alpha": 1.0
+  },
+  {
+   "rows": [
+    {
+     "lam_track": 1.4474900926930967e-10,
+     "lam_lagrangian_half": 2.8949801853861934e-10,
+     "q": 0.0897194691691517,
+     "beta": 0.9058482553174657,
+     "Gamma_eff_over_Hi": 2.034723261907207e-12,
+     "Gamma_eff_over_GammaI": 1.2544657717084173e-06,
+     "SM_energy_first_Hubble_time": 0.05629065577833922,
+     "m2_induced": 0.00021448349599007582,
+     "T_inst": 0.2000886635479606
+    },
+    {
+     "lam_track": 2.8949801853861934e-10,
+     "lam_lagrangian_half": 5.789960370772387e-10,
+     "q": 0.1794389383383034,
+     "beta": 0.8007010199340283,
+     "Gamma_eff_over_Hi": 7.194162958437751e-12,
+     "Gamma_eff_over_GammaI": 4.435409648284789e-06,
+     "SM_energy_first_Hubble_time": 0.19902664813843676,
+     "m2_induced": 0.0007583484451844857,
+     "T_inst": 0.2743729000437169
+    },
+    {
+     "lam_track": 5.789960370772387e-10,
+     "lam_lagrangian_half": 1.1579920741544774e-09,
+     "q": 0.3588778766766068,
+     "beta": 0.5312666436421417,
+     "Gamma_eff_over_Hi": 1.9093363008623372e-11,
+     "Gamma_eff_over_GammaI": 1.1771610817812525e-05,
+     "SM_energy_first_Hubble_time": 0.5282182323712523,
+     "m2_induced": 0.002012662520238044,
+     "T_inst": 0.3502004931338218
+    },
+    {
+     "lam_track": 8.066755778303182e-10,
+     "lam_lagrangian_half": 1.6133511556606364e-09,
+     "q": 0.5000000000000002,
+     "beta": 0.0,
+     "Gamma_eff_over_Hi": 0.0,
+     "Gamma_eff_over_GammaI": 0.0,
+     "SM_energy_first_Hubble_time": 0.0,
+     "m2_induced": 0.0,
+     "T_inst": 0.0
+    },
+    {
+     "lam_track": 1.6133511556606364e-09,
+     "lam_lagrangian_half": 3.2267023113212727e-09,
+     "q": 1.0000000000000004,
+     "beta": 0.0,
+     "Gamma_eff_over_Hi": 0.0,
+     "Gamma_eff_over_GammaI": 0.0,
+     "SM_energy_first_Hubble_time": 0.0,
+     "m2_induced": 0.0,
+     "T_inst": 0.0
+    }
+   ],
+   "lam_open_max": 8.066755778303179e-10,
+   "note": "Track convention: (lambda/2) phi^2 |H|^2 is said to give m_H^2 = lambda phi^2; for a canonical complex doublet it gives lambda phi^2/2. The window in the Lagrangian coefficient of (lambda/2) phi^2 |H|^2 is twice the quoted one.",
+   "alpha": 3.0
+  }
+ ],
+ "s2_eft": [
+  {
+   "f": 99.64639587911405,
+   "four_pi_f": 1252.1935410020997,
+   "mu5_max": 2282.1496910583505,
+   "mu5_over_4pif": 1.8225215322800679,
+   "phidot_end_over_f2": 67.9843715828407,
+   "phidot_end_over_4pif_sq": 0.4305160623721208,
+   "rho_end_quarter_over_4pif": 0.7261352074110967,
+   "Phi1_over_f": 1420.0367341394299,
+   "winding_cmb_to_end": 2630.3389497995613,
+   "xi_psi_cmb": 30.548939130750245,
+   "xi_psi_end": 3387.198802168268,
+   "xi_W_descB_cmb": 0.1823255500827124,
+   "xi_W_descB_end": 20.215853722501006,
+   "alpha": 0.3
+  },
+  {
+   "f": 103.39763191518176,
+   "four_pi_f": 1299.3329632932662,
+   "mu5_max": 1417.6892179222668,
+   "mu5_over_4pif": 1.091090011546399,
+   "phidot_end_over_f2": 49.13115543902853,
+   "phidot_end_over_4pif_sq": 0.31112667642487835,
+   "rho_end_quarter_over_4pif": 0.6172931242971041,
+   "Phi1_over_f": 1144.6714134424299,
+   "winding_cmb_to_end": 2995.439488353243,
+   "xi_psi_cmb": 41.022855860491305,
+   "xi_psi_end": 2540.0225628261264,
+   "xi_W_descB_cmb": 0.244837135872882,
+   "xi_W_descB_end": 15.159642991452092,
+   "alpha": 1.0
+  },
+  {
+   "f": 82.56259407885376,
+   "four_pi_f": 1037.5121560777725,
+   "mu5_max": 1424.5154088760364,
+   "mu5_over_4pif": 1.3730108129636738,
+   "phidot_end_over_f2": 68.42855632949606,
+   "phidot_end_over_4pif_sq": 0.4333288951400579,
+   "rho_end_quarter_over_4pif": 0.728503494808755,
+   "Phi1_over_f": 1310.8098019686033,
+   "winding_cmb_to_end": 4669.5945794836825,
+   "xi_psi_cmb": 76.04707732052036,
+   "xi_psi_end": 2824.8195598170814,
+   "xi_W_descB_cmb": 0.45387255987196445,
+   "xi_W_descB_end": 16.85939986078352,
+   "alpha": 3.0
+  }
+ ],
+ "cmb": [
+  {
+   "alpha": 0.3,
+   "ns_track": 0.9618097840500133,
+   "ns_MS": 0.9628011562931971,
+   "dN_bookkeeping": -0.5078573629074867,
+   "ns_corrected": 0.9624488506491099,
+   "pull_planck2018": -0.5836069883071621,
+   "pull_cmb_spa_spt3g": -1.983716450296713,
+   "pull_p_act_lb": -3.4856321620265165
+  },
+  {
+   "alpha": 1.0,
+   "ns_track": 0.9621764854607303,
+   "ns_MS": 0.9631251686163128,
+   "dN_bookkeeping": -0.5719735606357546,
+   "ns_corrected": 0.9627329963307601,
+   "pull_planck2018": -0.5159532545809121,
+   "pull_cmb_spa_spt3g": -1.889001223079963,
+   "pull_p_act_lb": -3.4020599027176197
+  },
+  {
+   "alpha": 3.0,
+   "ns_track": 0.9626265424586835,
+   "ns_MS": 0.9634930774381645,
+   "dN_bookkeeping": -0.6271511675469341,
+   "ns_corrected": 0.9630703259537273,
+   "pull_planck2018": -0.4356366776839657,
+   "pull_cmb_spa_spt3g": -1.7765580154242382,
+   "pull_p_act_lb": -3.302845307727274
+  }
+ ],
+ "p_feedback": [
+  {
+   "alpha": 0.3,
+   "p": 0.01,
+   "Gamma_over_m": 1.0768776102184622e-06,
+   "T_RH_GeV": 3544904104016.2266,
+   "K": 83.0139462115298,
+   "y_S1": 0.009128977861200302,
+   "y_over_ynat": 13.866394986848423,
+   "z_RH": 1.1563565020335864,
+   "SQ": 193.06626196632016,
+   "N_matter_era": 8.729553671909526
+  },
+  {
+   "alpha": 0.3,
+   "p": 0.1,
+   "Gamma_over_m": 7.78044073382839e-07,
+   "T_RH_GeV": 3013168488413.793,
+   "K": 92.51349939957852,
+   "y_S1": 0.007759631182020258,
+   "y_over_ynat": 11.78643573882116,
+   "z_RH": 1.3604194141571604,
+   "SQ": 201.06328841094984,
+   "N_matter_era": 8.94624557790656
+  },
+  {
+   "alpha": 0.3,
+   "p": 1.0,
+   "Gamma_over_m": 1.2448705174125422e-07,
+   "T_RH_GeV": 1205267395365.517,
+   "K": 170.41132291874789,
+   "y_S1": 0.003103852472808103,
+   "y_over_ynat": 4.714574295528464,
+   "z_RH": 3.401048535392901,
+   "SQ": 252.77335939695345,
+   "N_matter_era": 10.167966553738767
+  },
+  {
+   "alpha": 0.3,
+   "p": 10.0,
+   "Gamma_over_m": 2.540552076352127e-09,
+   "T_RH_GeV": 172181056480.78815,
+   "K": 623.5871270091426,
+   "y_S1": 0.00044340749611544326,
+   "y_over_ynat": 0.6735106136469234,
+   "z_RH": 23.80733974775031,
+   "SQ": 411.058642511679,
+   "N_matter_era": 12.76251341914585
+  },
+  {
+   "alpha": 0.3,
+   "p": 30.0,
+   "Gamma_over_m": 3.0109741082270574e-10,
+   "T_RH_GeV": 59275445673.71396,
+   "K": 1269.5140201391932,
+   "y_S1": 0.00015264848226925098,
+   "y_over_ynat": 0.23186430961615398,
+   "z_RH": 69.15465355298899,
+   "SQ": 536.6066338203639,
+   "N_matter_era": 14.184315321079035
+  },
+  {
+   "alpha": 1.0,
+   "p": 0.01,
+   "Gamma_over_m": 5.939907137860068e-07,
+   "T_RH_GeV": 2620088907850.704,
+   "K": 125.53198225490185,
+   "y_S1": 0.006779986168012914,
+   "y_over_ynat": 9.34313066106572,
+   "z_RH": 1.5494942752720704,
+   "SQ": 204.60943723902022,
+   "N_matter_era": 9.348944665749409
+  },
+  {
+   "alpha": 1.0,
+   "p": 0.1,
+   "Gamma_over_m": 4.2915829071038997e-07,
+   "T_RH_GeV": 2227075571673.0986,
+   "K": 139.8970112247691,
+   "y_S1": 0.005762988242810977,
+   "y_over_ynat": 7.9416610619058625,
+   "z_RH": 1.8229344414965534,
+   "SQ": 213.08410093683628,
+   "N_matter_era": 9.565636571746442
+  },
+  {
+   "alpha": 1.0,
+   "p": 1.0,
+   "Gamma_over_m": 6.86653265136624e-08,
+   "T_RH_GeV": 890830228669.2394,
+   "K": 257.6924979588486,
+   "y_S1": 0.002305195297124391,
+   "y_over_ynat": 3.176664424762345,
+   "z_RH": 4.557336103741384,
+   "SQ": 267.88278192541844,
+   "N_matter_era": 10.78735754757865
+  },
+  {
+   "alpha": 1.0,
+   "p": 10.0,
+   "Gamma_over_m": 1.4013331941563753e-09,
+   "T_RH_GeV": 127261461238.46277,
+   "K": 942.9756292108974,
+   "y_S1": 0.00032931361387491295,
+   "y_over_ynat": 0.45380920353747783,
+   "z_RH": 31.901352726189685,
+   "SQ": 435.6231119865539,
+   "N_matter_era": 13.381904412985733
+  },
+  {
+   "alpha": 1.0,
+   "p": 30.0,
+   "Gamma_over_m": 1.6608114448346184e-10,
+   "T_RH_GeV": 43811322721.438,
+   "K": 1919.7329933259837,
+   "y_S1": 0.0001133702605143143,
+   "y_over_ynat": 0.1562293979391317,
+   "z_RH": 92.66583410940814,
+   "SQ": 568.67099610888,
+   "N_matter_era": 14.803706314918918
+  },
+  {
+   "alpha": 3.0,
+   "p": 0.01,
+   "Gamma_over_m": 7.172800039593701e-07,
+   "T_RH_GeV": 2862010753764.4053,
+   "K": 137.59193087177363,
+   "y_S1": 0.007450464368981891,
+   "y_over_ynat": 9.28124658830495,
+   "z_RH": 1.4016388942337175,
+   "SQ": 249.8606673735507,
+   "N_matter_era": 9.405117369790595
+  },
+  {
+   "alpha": 3.0,
+   "p": 0.1,
+   "Gamma_over_m": 5.18234802860645e-07,
+   "T_RH_GeV": 2432709140699.7446,
+   "K": 153.3370185975418,
+   "y_S1": 0.0063328947136346075,
+   "y_over_ynat": 7.889059600059209,
+   "z_RH": 1.6489869343926087,
+   "SQ": 260.2115781020985,
+   "N_matter_era": 9.621809275787628
+  },
+  {
+   "alpha": 3.0,
+   "p": 1.0,
+   "Gamma_over_m": 8.29175684577032e-08,
+   "T_RH_GeV": 973083656279.8978,
+   "K": 282.4492032104754,
+   "y_S1": 0.002533157885453843,
+   "y_over_ynat": 3.1556238400236833,
+   "z_RH": 4.122467335981522,
+   "SQ": 327.14188102877796,
+   "N_matter_era": 10.843530251619836
+  },
+  {
+   "alpha": 3.0,
+   "p": 10.0,
+   "Gamma_over_m": 1.692195274647004e-09,
+   "T_RH_GeV": 139011950897.12827,
+   "K": 1033.567982099531,
+   "y_S1": 0.00036187969792197754,
+   "y_over_ynat": 0.4508034057176691,
+   "z_RH": 28.85727135187065,
+   "SQ": 532.0143590509457,
+   "N_matter_era": 13.43807711702692
+  },
+  {
+   "alpha": 3.0,
+   "p": 30.0,
+   "Gamma_over_m": 2.0055310833628832e-10,
+   "T_RH_GeV": 47856573259.66711,
+   "K": 2104.1631348863493,
+   "y_S1": 0.00012458153535018898,
+   "y_over_ynat": 0.15519461508313198,
+   "z_RH": 83.82350249829094,
+   "SQ": 694.5130911003412,
+   "N_matter_era": 14.859879018960104
+  }
+ ],
+ "sq_rolling": [
+  {
+   "alpha": 0.3,
+   "x0_static": 3.9609608115207258,
+   "x0_rolling": 2.3154576239983222,
+   "R_vec_factor": 0.5845696875524886,
+   "R_vec": 422.8700764778125,
+   "SQ": 129.24804795249986,
+   "R_vec_with_feff_0p4": 169.148030591125,
+   "SQ_with_feff_0p4": 65.71134415719045,
+   "SQ_track": 192.75549647419766
+  },
+  {
+   "alpha": 1.0,
+   "x0_static": 4.8182764640358835,
+   "x0_rolling": 2.208371737343793,
+   "R_vec_factor": 0.45833230073602244,
+   "R_vec": 319.5189125783957,
+   "SQ": 113.79419577245598,
+   "R_vec_with_feff_0p4": 127.8075650313583,
+   "SQ_with_feff_0p4": 57.610286850244506,
+   "SQ_track": 203.81212644466623
+  },
+  {
+   "alpha": 3.0,
+   "x0_static": 5.691962210662488,
+   "x0_rolling": 2.1577809775085597,
+   "R_vec_factor": 0.3790926393479017,
+   "R_vec": 311.2931971878213,
+   "SQ": 120.42516384875971,
+   "R_vec_with_feff_0p4": 124.51727887512853,
+   "SQ_with_feff_0p4": 60.88398217197477,
+   "SQ_track": 248.74777772876445
+  }
+ ],
+ "induced_sigma_leak": [
+  {
+   "alpha": 0.3,
+   "g_I": 3.824656845528283e-05,
+   "ReGmu": -0.00015940194867126902,
+   "vanish_at_MY_log_MY_over_mI": {
+    "A_ISigma": 9.018664385584904e-06,
+    "Gamma_hid": 1.0494657431733404e-17,
+    "BR": 2.914251521727456e-12,
+    "R_inf": 0.07261487520639917
+   },
+   "vanish_at_MP_log_MP_over_MY": {
+    "A_ISigma": 3.906377484980967e-05,
+    "Gamma_hid": 1.9689388657089163e-16,
+    "BR": 5.467527761535325e-11,
+    "R_inf": 1.362352710915186
+   }
+  },
+  {
+   "alpha": 1.0,
+   "g_I": 3.9479578736037296e-05,
+   "ReGmu": -0.00016454082124002685,
+   "vanish_at_MY_log_MY_over_mI": {
+    "A_ISigma": 1.039524380237597e-05,
+    "Gamma_hid": 6.38146111861331e-18,
+    "BR": 4.168789185340842e-12,
+    "R_inf": 0.09265348953964463
+   },
+   "vanish_at_MP_log_MP_over_MY": {
+    "A_ISigma": 3.92775121173965e-05,
+    "Gamma_hid": 9.110426552276993e-17,
+    "BR": 5.95152849465724e-11,
+    "R_inf": 1.322757900696138
+   }
+  },
+  {
+   "alpha": 3.0,
+   "g_I": 3.9879027849603986e-05,
+   "ReGmu": -0.00016620562332997084,
+   "vanish_at_MY_log_MY_over_mI": {
+    "A_ISigma": 1.1050774610400097e-05,
+    "Gamma_hid": 4.872120558838838e-18,
+    "BR": 3.003803313759402e-12,
+    "R_inf": 0.06023788520783959
+   },
+   "vanish_at_MP_log_MP_over_MY": {
+    "A_ISigma": 3.917495873197893e-05,
+    "Gamma_hid": 6.122794439000644e-17,
+    "BR": 3.7748799528312616e-11,
+    "R_inf": 0.7570095692698139
+   }
+  }
+ ],
+ "s1_induced_portal": [
+  {
+   "alpha": 0.3,
+   "ynu2": 0.0067618993186996795,
+   "lam_ind_nolog": 3.7127321883763556e-09,
+   "lam_ind_logMP": 9.871911400835148e-08,
+   "window": [
+    1.5114482174111112e-10,
+    2.0638908731441742e-09
+   ],
+   "lam_ind_logMP_at_rolling_Gamma": 3.36830918157808e-08
+  },
+  {
+   "alpha": 1.0,
+   "ynu2": 0.006696971746084181,
+   "lam_ind_nolog": 2.028227644866508e-09,
+   "lam_ind_logMP": 5.396838110356545e-08,
+   "window": [
+    1.482561800708942e-10,
+    1.7520137994181022e-09
+   ],
+   "lam_ind_logMP_at_rolling_Gamma": 1.1392859516928779e-08
+  },
+  {
+   "alpha": 3.0,
+   "ynu2": 0.0066172853648440106,
+   "lam_ind_nolog": 2.4200657385289858e-09,
+   "lam_ind_logMP": 6.445259770331005e-08,
+   "window": [
+    1.4474900926930967e-10,
+    1.6133511556606364e-09
+   ],
+   "lam_ind_logMP_at_rolling_Gamma": 9.310160063943202e-09
+  }
+ ],
+ "pauli": [
+  {
+   "alpha": 0.3,
+   "T_RH_over_Hi": 0.7087988065858601,
+   "block_factor_vs_efolds_before_RH": {
+    "0.0": 0.812275948357853,
+    "1.0": 0.6522289376208178,
+    "2.0": 0.4895846193034242,
+    "3.0": 0.35228746009539447
+   }
+  },
+  {
+   "alpha": 1.0,
+   "T_RH_over_Hi": 0.4076433851396657,
+   "block_factor_vs_efolds_before_RH": {
+    "0.0": 0.9085427890490044,
+    "1.0": 0.7794899586519375,
+    "2.0": 0.6154066415167136,
+    "3.0": 0.45673945621110407
+   }
+  },
+  {
+   "alpha": 3.0,
+   "T_RH_over_Hi": 0.3954226177474705,
+   "block_factor_vs_efolds_before_RH": {
+    "0.0": 0.8796358441322485,
+    "1.0": 0.7372567089406978,
+    "2.0": 0.5710673033898364,
+    "3.0": 0.41870695398808716
+   }
+  }
+ ],
+ "rolling_selfconsistent": [
+  {
+   "alpha": 0.3,
+   "Gamma_shift": 0.3412013180439531,
+   "Gamma_over_m": 3.822763152016955e-07,
+   "T_RH_GeV": 2112078292898.34,
+   "y_S1": 0.0054391079169521074,
+   "y_S1_over_ynat": 8.261693685675752,
+   "y_axial": 0.004710405630005586,
+   "f_GeV": 870237773930277.8,
+   "mu5_max_over_4pif": 0.6218467489774444,
+   "z_RH": 1.9408243167631536,
+   "N_matter_era": 9.420005235785426,
+   "K": 81.92521908502705,
+   "H_i": 5101309641748.885
+  },
+  {
+   "alpha": 1.0,
+   "Gamma_shift": 0.21110248786351132,
+   "Gamma_over_m": 1.304587913129501e-07,
+   "T_RH_GeV": 1227899651427.5576,
+   "y_S1": 0.00317742753974557,
+   "y_S1_over_ynat": 4.378640300178103,
+   "y_axial": 0.0027517329681039527,
+   "f_GeV": 1475365818731997.0,
+   "mu5_max_over_4pif": 0.23033181592047214,
+   "z_RH": 3.306306634014086,
+   "N_matter_era": 10.359482188661435,
+   "K": 123.88563148419736,
+   "H_i": 6555952539477.8
+  },
+  {
+   "alpha": 3.0,
+   "Gamma_shift": 0.14444972577831516,
+   "Gamma_over_m": 1.0779678023327911e-07,
+   "T_RH_GeV": 1109506354384.9077,
+   "y_S1": 0.0028882971699638197,
+   "y_S1_over_ynat": 3.598030528988455,
+   "y_axial": 0.002501338722867368,
+   "f_GeV": 1603743448065612.5,
+   "mu5_max_over_4pif": 0.19833103542326425,
+   "z_RH": 3.6155769386424668,
+   "N_matter_era": 10.668596367033354,
+   "K": 135.78741398799266,
+   "H_i": 7382609991985.892
+  }
+ ]
+}

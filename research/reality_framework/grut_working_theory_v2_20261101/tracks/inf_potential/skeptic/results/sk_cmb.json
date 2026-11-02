@@ -1,0 +1,94 @@
+{
+ "method": "inf_potential SKEPTIC (Claude, own independent code): recompute the CMB numbers of the three benchmarks.\n\nIndependent of inf_common.py: background in COSMIC time t (not e-folds), scalar modes as the flat-gauge field\nperturbation Q (Sasaki-Mukhanov variable), Q'' + 3H Q' + [k^2/a^2 + V'' - a^-3 d/dt(a^3 phidot^2/H)] Q = 0,\nR = H Q/phidot; tensors u'' + 3H u' + k^2/a^2 u = 0 with P_t = 2 * 4 * k^3/(2 pi^2) |u|^2 (u = v_t/a, BD).\nBunch-Davies start at k/aH = 250, read-out at k/aH = 2e-3.  Units M_P = 1; V = V0 v(phi); V0 is fixed by A_s at the pivot.\nN_* (pivot exit before eps_H = 1) is recomputed from our own reheating model: matter-like inflaton (cycle averaged)\nwith constant width Gamma, radiation g* = 106.75, entropy conservation to T0 = 2.7255 K, g_s0 = 3.909\n(and 3.938 as a variant), and also instant reheating.  The pivot is k_* = 0.05 Mpc^-1.\nOnly the benchmark SHAPE parameters are taken from the track's bench_*.json (read-only).\nOutput: ../results/sk_cmb.json\n",
+ "runs": {
+  "HT6t": {
+   "benchmark": "HT6t",
+   "params": {
+    "vev": 0.3469421539393091,
+    "p": 6,
+    "beta": 1.5529238776548362e-05
+   },
+   "V0_MP4_skeptic": 8.424409062573809e-15,
+   "V0_MP4_track": 8.424409062494637e-15,
+   "Hend_GeV": 123397216662.09453,
+   "Hend_over_Hi": 0.9565675710239886,
+   "phi_S1": 0.09201186225974987,
+   "phi_end": 0.26939273463546337,
+   "Nstar_skeptic": {
+    "instant": 53.019686217646765,
+    "Gamma0.5Hi": 52.81665106540764,
+    "Gamma0.5Hi_gs3.938": 52.81911486325248
+   },
+   "Nstar_track": 52.78932729381616,
+   "Nstar_used": 52.81665106540764,
+   "As_at_trackcal": 2.1020196236601238e-09,
+   "ns": 0.9649260603733432,
+   "alpha_s": -0.0009527000962050074,
+   "r": 2.707105530419731e-07,
+   "n_t": -3.510074196005601e-08,
+   "ns_SR": 0.9636483439165953,
+   "r_SR": 2.813246198171993e-07,
+   "H_S1_for_As2p1": 128938013408.85255,
+   "Hstar_over_HS1": 1.0002701386291373,
+   "m_I_over_Hi": 42.372416378945935
+  },
+  "T1": {
+   "benchmark": "T1",
+   "params": {
+    "alpha": 6.0967783372331265e-05
+   },
+   "V0_MP4_skeptic": 8.421045044654798e-15,
+   "V0_MP4_track": 8.421045044640837e-15,
+   "Hend_GeV": 127310976397.05092,
+   "Hend_over_Hi": 0.9869067937755885,
+   "phi_S1": 0.09597066157153854,
+   "phi_end": 0.02132146212556058,
+   "Nstar_skeptic": {
+    "instant": 53.00387595155938,
+    "Gamma0.5Hi": 52.79735024477502,
+    "Gamma0.5Hi_gs3.938": 52.79981404261981
+   },
+   "Nstar_track": 52.68864876621283,
+   "Nstar_used": 52.79735024477502,
+   "As_at_trackcal": 2.108741163098954e-09,
+   "ns": 0.9618492020823497,
+   "alpha_s": -0.0007228666069274679,
+   "r": 2.697407364682194e-07,
+   "n_t": -3.507396367257469e-08,
+   "ns_SR": 0.9607909734257527,
+   "r_SR": 2.81185552367189e-07,
+   "H_S1_for_As2p1": 128732356670.59227,
+   "Hstar_over_HS1": 1.0000719239357638,
+   "m_I_over_Hi": 128.08002991607032
+  },
+  "E1": {
+   "benchmark": "E1",
+   "params": {
+    "alpha": 6.09689716097892e-05
+   },
+   "V0_MP4_skeptic": 8.42104282988551e-15,
+   "V0_MP4_track": 8.421042829871975e-15,
+   "Hend_GeV": 127371170645.25679,
+   "Hend_over_Hi": 0.9873734158547038,
+   "phi_S1": 0.0893630346852249,
+   "phi_end": 0.015688882202226355,
+   "Nstar_skeptic": {
+    "instant": 53.00363946957875,
+    "Gamma0.5Hi": 52.79706067516587,
+    "Gamma0.5Hi_gs3.938": 52.79952447301066
+   },
+   "Nstar_track": 52.687489316064614,
+   "Nstar_used": 52.79706067516587,
+   "As_at_trackcal": 2.108811058732549e-09,
+   "ns": 0.9618501710262469,
+   "alpha_s": -0.0007228306660130678,
+   "r": 2.6973172509148954e-07,
+   "n_t": -3.5072793750116545e-08,
+   "ns_SR": 0.9607919964868832,
+   "r_SR": 2.811758547009964e-07,
+   "H_S1_for_As2p1": 128730223263.67683,
+   "Hstar_over_HS1": 1.0000717924312787,
+   "m_I_over_Hi": 256.15752995536246
+  }
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "method": "inf_chain (Claude, own driver): the pair fraction p = X-bar per net charge after freeze-out at LARGE hidden heat,\nfrom the reviewed case-L conditional moment network (Codex 34f23f8 moment_controls over our kin_solve modules), as copied\nand M1-patched in tracks/fx_chain/code/kin (m1_kin.py; imported READ-ONLY, nothing there is modified or written: the\nwork directory is redirected to this track's scratch).  Gas-only recipe (rule a), M1 inputs, start at a_ref\n(forced chemical + kinetic equilibrium), energy rho_c (1 + R) in spot units, i.e. W = 13.0412 (1 + R).\nThis extends the p(S/Q) map used by dq_critic (wt_critic gas-only map to S/Q = 6.74 plus the REVIEW_KINETIC anchor at\nS/Q = 21.8) to S/Q ~ 10^2-10^3.  [C] on a conditional recipe (forced equilibrium start, no objects, MB fugacities);\nthe recipe's validity at these temperatures is not established [E].\nUsage: python3 -B pmap_kin.py R1 [R2 ...]   -> merges into ../results/pmap_kin.json\n",
+ "rows": {
+  "41.707": {
+   "R_spot": 41.707,
+   "W": 556.9505284,
+   "S_per_Q_closed_form": 21.79713734357875,
+   "p": 0.7438843557228119,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.0019999999999999987,
+   "visible_T_GeV_stop": 0.06020553236554652,
+   "initial_t": 7.401885889395232,
+   "cond_fraction0": 0.23698929183223497,
+   "max_charge_error": 7.674437373372811e-07,
+   "max_energy_work_error": 1.782770775449194e-08,
+   "seconds": 27.36240792274475
+  },
+  "100.0": {
+   "R_spot": 100.0,
+   "W": 1317.1612,
+   "S_per_Q_closed_form": 41.608775427103964,
+   "p": 1.780789405424379,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.0020000000000000005,
+   "visible_T_GeV_stop": 0.04592686916530655,
+   "initial_t": 9.146724508106184,
+   "cond_fraction0": 0.0,
+   "max_charge_error": 1.2458523102054642e-06,
+   "max_energy_work_error": 2.305665680601976e-08,
+   "seconds": 9.532068014144897
+  },
+  "300.0": {
+   "R_spot": 300.0,
+   "W": 3925.4012,
+   "S_per_Q_closed_form": 94.4312451625062,
+   "p": 4.543070189881549,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.002000000000000002,
+   "visible_T_GeV_stop": 0.03329642877307488,
+   "initial_t": 11.996435612339658,
+   "cond_fraction0": 0.0,
+   "max_charge_error": 6.492261200863325e-07,
+   "max_energy_work_error": 8.934718076503145e-09,
+   "seconds": 12.436970233917236
+  },
+  "3000.0": {
+   "R_spot": 3000.0,
+   "W": 39136.6412,
+   "S_per_Q_closed_form": 530.1016499067407,
+   "p": 26.845567625897147,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.001999999999999997,
+   "visible_T_GeV_stop": 0.01713831803767904,
+   "initial_t": 21.29099425990498,
+   "cond_fraction0": 0.0,
+   "max_charge_error": 6.214623816669373e-07,
+   "max_energy_work_error": 4.630875460875927e-09,
+   "seconds": 15.584227323532104
+  },
+  "1000.0": {
+   "R_spot": 1000.0,
+   "W": 13054.2412,
+   "S_per_Q_closed_form": 232.62293436915292,
+   "p": 11.684549404379283,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.002000000000000002,
+   "visible_T_GeV_stop": 0.023518412915628423,
+   "initial_t": 16.185831589357015,
+   "cond_fraction0": 0.0,
+   "max_charge_error": 1.0506590735204213e-06,
+   "max_energy_work_error": 1.130463422871486e-08,
+   "seconds": 13.974632024765015
+  },
+  "10000.0": {
+   "R_spot": 10000.0,
+   "W": 130425.04119999999,
+   "S_per_Q_closed_form": 1307.7296071865874,
+   "p": 65.83102022585068,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.0020000000000000005,
+   "visible_T_GeV_stop": 0.012082451128748244,
+   "initial_t": 28.76211927272932,
+   "cond_fraction0": 0.0,
+   "max_charge_error": 7.057761136630702e-07,
+   "max_energy_work_error": 3.6052425489430107e-09,
+   "seconds": 17.557960033416748
+  },
+  "30.0": {
+   "R_spot": 30.0,
+   "W": 404.2772,
+   "S_per_Q_closed_form": 17.13126030489702,
+   "p": 0.5033859970367478,
+   "stop": "T=0.002m",
+   "T_over_m_stop": 0.0019999999999999987,
+   "visible_T_GeV_stop": 0.06732165809737027,
+   "initial_t": 6.848451209872717,
+   "cond_fraction0": 0.34677757937671577,
+   "max_charge_error": 1.2167074401325806e-06,
+   "max_energy_work_error": 3.091488753881322e-08,
+   "seconds": 27.970908164978027
+  }
+ },
+ "self_consistent": {
+  "600": {
+   "S_per_Q": 600.0,
+   "R_spot": 3538.762849728319,
+   "W": 46162.75527587695,
+   "p_fixed_yield": 30.379709544268437,
+   "p_self_consistent": 33.023273380975986,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 30.379709544268437,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.016337152312676077
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.015178251574163368,
+     "p": 32.979152416266594,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08247356915151915
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.01457728771040728,
+     "p": 33.00834266702149,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08378402390157508
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.014279427560766045,
+     "p": 33.023273380975986,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08446170465756143
+    }
+   ]
+  },
+  "646": {
+   "S_per_Q": 646.0,
+   "R_spot": 3905.0754072318678,
+   "W": 50939.91060079223,
+   "p_fixed_yield": 32.700938068902076,
+   "p_self_consistent": 35.592266042525345,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 32.700938068902076,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.015876606342334572
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.014117071000442955,
+     "p": 35.54397871532843,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08242895983420004
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.013549048246304388,
+     "p": 35.57592436768899,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08376058948007714
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.013267665418374689,
+     "p": 35.592266042525345,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08444933646628786
+    }
+   ]
+  },
+  "958": {
+   "S_per_Q": 958.0,
+   "R_spot": 6604.0141899773025,
+   "W": 86137.31105433199,
+   "p_fixed_yield": 48.37303541281829,
+   "p_self_consistent": 53.01661635857662,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 48.37303541281829,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.01362946676749306
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.009590155308361933,
+     "p": 52.938789469828826,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08219218790011908
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.00917141341403963,
+     "p": 52.99026984270924,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08363666798247665
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.008964566823044806,
+     "p": 53.01661635857662,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08438447872735161
+    }
+   ]
+  },
+  "155": {
+   "S_per_Q": 155.0,
+   "R_spot": 581.6516802612142,
+   "W": 7598.477092622547,
+   "p_fixed_yield": 7.68517748778165,
+   "p_self_consistent": 8.174509736050998,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 7.68517748778165,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.027494270678281738
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.05726204479984064,
+     "p": 8.16644201212872,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08331885282751963
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.05565083309160193,
+     "p": 8.17177908057678,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08425190284637897
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.054844374430316124,
+     "p": 8.174509736050998,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.0847331411673838
+    }
+   ]
+  },
+  "302": {
+   "S_per_Q": 302.0,
+   "R_spot": 1416.5393507131992,
+   "W": 18486.414180520973,
+   "p_fixed_yield": 15.240571956590376,
+   "p_self_consistent": 16.381256309949066,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 15.240571956590376,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.021275980984727445
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.029776554580900175,
+     "p": 16.362329732736253,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08288176031255202
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.028769615443675,
+     "p": 16.37484968417867,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08400185717440617
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.028268101235857313,
+     "p": 16.381256309949066,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08458026760760975
+    }
+   ]
+  },
+  "447": {
+   "S_per_Q": 447.0,
+   "R_spot": 2389.8439257938144,
+   "W": 31179.473805062295,
+   "p_fixed_yield": 22.631269801938128,
+   "p_self_consistent": 24.478639432399888,
+   "history": [
+    {
+     "it": 0,
+     "YQ_factor": 1.0,
+     "p": 22.631269801938128,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.018302191774450624
+    },
+    {
+     "it": 1,
+     "YQ_factor": 0.020262614374967364,
+     "p": 24.44788583841066,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08264899737029431
+    },
+    {
+     "it": 2,
+     "YQ_factor": 0.019511243057249238,
+     "p": 24.46822930906007,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08387668825078817
+    },
+    {
+     "it": 3,
+     "YQ_factor": 0.01913805343429173,
+     "p": 24.478639432399888,
+     "stop": "T=0.002m",
+     "visible_T_GeV_stop": 0.08451115672812697
+    }
+   ]
+  }
+ }
+}

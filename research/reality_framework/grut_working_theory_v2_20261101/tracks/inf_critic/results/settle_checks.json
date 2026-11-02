@@ -1,0 +1,460 @@
+{
+ "K1_SQ_closed_form": {
+  "HT6t": {
+   "W": 7598.985967689754,
+   "SQ_closed": 155.00778783840624,
+   "SQ_track": 155.00778783840624,
+   "rel": 0.0,
+   "W_check": 7598.985967689754
+  },
+  "HT6t_cal1": {
+   "W": 47998.10370504056,
+   "SQ_closed": 617.8073518683615,
+   "SQ_track": 617.8073518683615,
+   "rel": 0.0,
+   "W_check": 47998.10370504056
+  },
+  "HT6t_Send": {
+   "W": 18457.284108000218,
+   "SQ_closed": 301.6429352531253,
+   "SQ_track": 301.6429352531253,
+   "rel": 0.0,
+   "W_check": 18457.284108000218
+  },
+  "T1": {
+   "W": 50939.780434211956,
+   "SQ_closed": 645.9987617119057,
+   "SQ_track": 645.9987617119057,
+   "rel": 0.0,
+   "W_check": 50939.780434211956
+  },
+  "T1_cal1": {
+   "W": 31208.793088671035,
+   "SQ_closed": 447.3152792311934,
+   "SQ_track": 447.3152792311934,
+   "rel": 0.0,
+   "W_check": 31208.793088671035
+  },
+  "TB1": {
+   "W": 47667.146766038066,
+   "SQ_closed": 614.6090172631784,
+   "SQ_track": 614.6090172631784,
+   "rel": 0.0,
+   "W_check": 47667.146766038066
+  },
+  "TB2": {
+   "W": 89644.50652020174,
+   "SQ_closed": 987.1138414496315,
+   "SQ_track": 987.1138414496315,
+   "rel": 0.0,
+   "W_check": 89644.50652020174
+  }
+ },
+ "K2_iteration_secant": {
+  "HT6t": {
+   "mismatch_ln": [
+    -1.5645259152719986,
+    -0.9888927104224
+   ],
+   "contraction": 0.6320717993670801,
+   "secant_fixed_point_GeV": 2039578219.0877335,
+   "slope_dlnHreq_dlnHpot": 0.6227393914915683,
+   "r_at_fixed_point": 6.773655925025834e-11
+  },
+  "T1": {
+   "mismatch_ln": [
+    -2.5709721865269617,
+    0.13559493694042216
+   ],
+   "contraction": -0.05274072494871783,
+   "secant_fixed_point_GeV": 11830610712.989916,
+   "slope_dlnHreq_dlnHpot": -0.07611585972877287,
+   "r_at_fixed_point": 2.278162215536236e-09
+  }
+ },
+ "K3_Gamma_decomposition": {
+  "chain_Y_over_YQ_at_Gamma1e6": 0.00038011457028541695,
+  "static_formula_same_physical_Gamma": 0.0015068194149731044,
+  "rolling_release_yield_ratio": 0.25226285678845045,
+  "Gamma_cal_if_M1_over_Hi": 3.537959812713708e-05,
+  "Gamma_cal_if_M1_over_mI": 1.60251936573945e-05,
+  "Gamma_cal_chain_over_Hi": 7.512248636886893e-09,
+  "M": 68.62930459347389,
+  "M_squared": 4709.981448983816,
+  "predicted_Gamma_cal": 7.51162154466028e-09,
+  "inf_reheat_B1_Gamma_over_m": 1.12e-06,
+  "inf_reheat_skeptic_B1_Gamma_over_m": 3.8e-07,
+  "note": "Gamma_cal = (Y_req/(cY M))^2: the symmetric relic (M^2 ~ 4.7e3) dominates; the computed rolling-release yield per unit Gamma^{1/2} is below the static oscillator formula, which pushes the other way."
+ },
+ "K4_reheating_temperatures": {
+  "HT6t": {
+   "Gamma_GeV": 64500000000.0,
+   "T_RH_GeV": 214251099922044.8,
+   "m_I_GeV": 5466041712858.341
+  },
+  "HT6t_cal1": {
+   "Gamma_GeV": 14025000000.0,
+   "T_RH_GeV": 99906705456976.84,
+   "m_I_GeV": 3362210494908.1226
+  },
+  "HT6t_Send": {
+   "Gamma_GeV": 64500000000.0,
+   "T_RH_GeV": 214251099922044.8,
+   "m_I_GeV": 5466041712858.341
+  },
+  "T1": {
+   "Gamma_GeV": 64500000000.0,
+   "T_RH_GeV": 214251099922044.8,
+   "m_I_GeV": 16522323859159.377
+  },
+  "T1_cal1": {
+   "Gamma_GeV": 5215000000.0,
+   "T_RH_GeV": 60921467920932.58,
+   "m_I_GeV": 16952023212436.76
+  },
+  "TB1": {
+   "Gamma_GeV": 56089.86961166029,
+   "T_RH_GeV": 199795369213.09018,
+   "m_I_GeV": 16484056175901.393,
+   "T_max_GeV": 13098827727663.566
+  },
+  "TB2": {
+   "Gamma_GeV": 22403.75364736414,
+   "T_RH_GeV": 126270993385.27847,
+   "m_I_GeV": 16344667789340.537,
+   "T_max_GeV": 11368050869097.584
+  }
+ },
+ "K5_leptogenesis": {
+  "TB1": {
+   "T_RH_GeV": 199795369213.09018,
+   "T_max_GeV": 13098827727663.566,
+   "m_I_GeV": 16484056175901.393,
+   "T_RH_over_mI": 0.012120522223479067,
+   "Y_L_needed": 2.454642857142857e-10,
+   "eps1_needed_nonthermal": 1.3501304162114331e-08,
+   "by_M_N": [
+    {
+     "M_N_GeV": 1000000000000.0,
+     "z_RH": 5.005121009253512,
+     "eps_DI": 0.00019713008210946214,
+     "eps_need_over_DI": 6.84893143534397e-05,
+     "washout_exponent": 9.580359647214431,
+     "eps_need_with_washout_over_DI": 0.9915626236619335,
+     "Gamma_N_GeV": 65710027.36982071,
+     "Gamma_N_over_Gamma_I": 1171.513284391029
+    },
+    {
+     "M_N_GeV": 2000000000000.0,
+     "z_RH": 10.010242018507023,
+     "eps_DI": 0.0003942601642189243,
+     "eps_need_over_DI": 3.424465717671985e-05,
+     "washout_exponent": 0.27510407475283455,
+     "eps_need_with_washout_over_DI": 4.5088833988547675e-05,
+     "Gamma_N_GeV": 262840109.47928283,
+     "Gamma_N_over_Gamma_I": 4686.053137564116
+    },
+    {
+     "M_N_GeV": 4000000000000.0,
+     "z_RH": 20.020484037014047,
+     "eps_DI": 0.0007885203284378486,
+     "eps_need_over_DI": 1.7122328588359924e-05,
+     "washout_exponent": 6.064321490492439e-05,
+     "eps_need_with_washout_over_DI": 1.712336697289735e-05,
+     "Gamma_N_GeV": 1051360437.9171313,
+     "Gamma_N_over_Gamma_I": 18744.212550256463
+    },
+    {
+     "M_N_GeV": 7417825279155.627,
+     "z_RH": 37.127113147673626,
+     "eps_DI": 0.0014622765063535925,
+     "eps_need_over_DI": 9.233071928223666e-06,
+     "washout_exponent": 9.892607795713263e-12,
+     "eps_need_with_washout_over_DI": 9.233071928315005e-06,
+     "Gamma_N_GeV": 3615637211.3150177,
+     "Gamma_N_over_Gamma_I": 64461.501450225835
+    }
+   ]
+  },
+  "TB2": {
+   "T_RH_GeV": 126270993385.27847,
+   "T_max_GeV": 11368050869097.584,
+   "m_I_GeV": 16344667789340.537,
+   "T_RH_over_mI": 0.007725516052863939,
+   "Y_L_needed": 2.454642857142857e-10,
+   "eps1_needed_nonthermal": 2.1182126348982578e-08,
+   "by_M_N": [
+    {
+     "M_N_GeV": 1000000000000.0,
+     "z_RH": 7.919475195295223,
+     "eps_DI": 0.00019713008210946214,
+     "eps_need_over_DI": 0.00010745253145697263,
+     "washout_exponent": 1.33499559342258,
+     "eps_need_with_washout_over_DI": 0.0004083173846828531,
+     "Gamma_N_GeV": 65710027.36982071,
+     "Gamma_N_over_Gamma_I": 2932.991872884286
+    },
+    {
+     "M_N_GeV": 2000000000000.0,
+     "z_RH": 15.838950390590446,
+     "eps_DI": 0.0003942601642189243,
+     "eps_need_over_DI": 5.3726265728486314e-05,
+     "washout_exponent": 0.0022952663054034393,
+     "eps_need_with_washout_over_DI": 5.384972344589703e-05,
+     "Gamma_N_GeV": 262840109.47928283,
+     "Gamma_N_over_Gamma_I": 11731.967491537143
+    },
+    {
+     "M_N_GeV": 4000000000000.0,
+     "z_RH": 31.67790078118089,
+     "eps_DI": 0.0007885203284378486,
+     "eps_need_over_DI": 2.6863132864243157e-05,
+     "washout_exponent": 1.5679032893092725e-09,
+     "eps_need_with_washout_over_DI": 2.6863132906361955e-05,
+     "Gamma_N_GeV": 1051360437.9171313,
+     "Gamma_N_over_Gamma_I": 46927.86996614857
+    },
+    {
+     "M_N_GeV": 7355100505203.242,
+     "z_RH": 58.24853600986044,
+     "eps_DI": 0.0014499115665140615,
+     "eps_need_over_DI": 1.4609253997407263e-05,
+     "washout_exponent": 1.9915157426161333e-20,
+     "eps_need_with_washout_over_DI": 1.4609253997407263e-05,
+     "Gamma_N_GeV": 3554748431.7891994,
+     "Gamma_N_over_Gamma_I": 158667.5379376627
+    }
+   ]
+  }
+ },
+ "K6_portal_and_channels": {
+  "TB1": {
+   "m_I_GeV": 16484056175901.393,
+   "lam_min": 3.055195330590118e-10,
+   "y_S1": 0.00041355326680239045,
+   "A_ind_GeV": 138399.08340459017,
+   "A_phi_star_over_Hstar2": 0.017098877511099096,
+   "S1_loop_mass2_over_Hstar2_per_log": 17.6832868555838,
+   "portal_mass2_over_Hstar2_at_lam_min": 188.41965123450981,
+   "min_m2_at_zero_crossing_over_Hi2": -5.623005350124753e-07,
+   "S2_f_GeV_at_MN": {
+    "1e+12": 2409043971888570.0,
+    "4e+12": 9043875479163398.0
+   }
+  },
+  "TB2": {
+   "m_I_GeV": 16344667789340.537,
+   "lam_min": 3.0037446169204926e-10,
+   "y_S1": 0.0002624805438213415,
+   "A_ind_GeV": 87841.3244254949,
+   "A_phi_star_over_Hstar2": 0.0041195448041818645,
+   "S1_loop_mass2_over_Hstar2_per_log": 3.299452218233127,
+   "portal_mass2_over_Hstar2_at_lam_min": 85.75359486819444,
+   "min_m2_at_zero_crossing_over_Hi2": -1.1421413147828785e-07,
+   "S2_f_GeV_at_MN": {
+    "1e+12": 3795375629452165.0,
+    "4e+12": 1.4230425808864146e+16
+   }
+  },
+  "HT6t": {
+   "m_I_GeV": 5466041712858.341,
+   "lam_min": 3.3593611314246904e-11
+  },
+  "T1": {
+   "m_I_GeV": 16522323859159.377,
+   "lam_min": 3.0693970483151645e-10
+  }
+ },
+ "K7_Higgs_inflation_TB1": {
+  "H_i_GeV": 7466455428038.676,
+  "H_plateau_GeV": 8987399166117.441,
+  "lam_min": 3.055195330590118e-10,
+  "N0": [
+   58.8,
+   60.0
+  ],
+  "by_Mt": {
+   "172.57": {
+    "N0=58.8": {
+     "log10N_no_portal": -35.27046277565024,
+     "B_end_no_portal": 252.75744707801707,
+     "log10N_lam_min": -89631.8273253785,
+     "B_end_lam_min": 206556.4536625007,
+     "log10N_0p1_lam_min": -1541.2399732836386,
+     "B_end_0p1": 3720.380392477251
+    },
+    "N0=60": {
+     "log10N_no_portal": -33.70700264079852,
+     "B_end_no_portal": 252.75744707801707,
+     "log10N_lam_min": -89630.26386524364,
+     "B_end_lam_min": 206556.4536625007,
+     "log10N_0p1_lam_min": -1539.6765131487869,
+     "B_end_0p1": 3720.380392477251
+    }
+   },
+   "172.86": {
+    "N0=58.8": {
+     "log10N_no_portal": -13.559592071569776,
+     "B_end_no_portal": 202.76631983893353,
+     "log10N_lam_min": -73313.1949324029,
+     "B_end_lam_min": 168981.41397638532,
+     "log10N_0p1_lam_min": -1233.2297298579997,
+     "B_end_0p1": 3011.1605974759073
+    },
+    "N0=60": {
+     "log10N_no_portal": -11.99613193671806,
+     "B_end_no_portal": 202.76631983893353,
+     "log10N_lam_min": -73311.63147226804,
+     "B_end_lam_min": 168981.41397638532,
+     "log10N_0p1_lam_min": -1231.666269723148,
+     "B_end_0p1": 3011.1605974759073
+    }
+   },
+   "173.15": {
+    "N0=58.8": {
+     "log10N_no_portal": 1.108711693351616,
+     "B_end_no_portal": 168.99130225306612,
+     "log10N_lam_min": -61928.822705247934,
+     "B_end_lam_min": 142767.92819304287,
+     "log10N_0p1_lam_min": -1022.0268516409557,
+     "B_end_0p1": 2524.847998495905
+    },
+    "N0=60": {
+     "log10N_no_portal": 2.672171828203332,
+     "B_end_no_portal": 168.99130225306612,
+     "log10N_lam_min": -61927.259245113084,
+     "B_end_lam_min": 142767.92819304287,
+     "log10N_0p1_lam_min": -1020.463391506104,
+     "B_end_0p1": 2524.847998495905
+    }
+   },
+   "173.75": {
+    "N0=58.8": {
+     "log10N_no_portal": 20.097504617651946,
+     "B_end_no_portal": 125.26799122599971,
+     "log10N_lam_min": -46721.9938097685,
+     "B_end_lam_min": 107752.91066660086,
+     "log10N_0p1_lam_min": -744.6507715826493,
+     "B_end_0p1": 1886.1659714005257
+    },
+    "N0=60": {
+     "log10N_no_portal": 21.660964752503663,
+     "B_end_no_portal": 125.26799122599971,
+     "log10N_lam_min": -46720.43034963366,
+     "B_end_lam_min": 107752.91066660086,
+     "log10N_0p1_lam_min": -743.0873114477976,
+     "B_end_0p1": 1886.1659714005257
+    }
+   },
+   "174.60": {
+    "N0=58.8": {
+     "log10N_no_portal": 34.868181813816676,
+     "B_end_no_portal": 91.25727873578539,
+     "log10N_lam_min": -34494.05061936939,
+     "B_end_lam_min": 79597.0309584098,
+     "log10N_0p1_lam_min": -525.5841152533925,
+     "B_end_0p1": 1381.7463541647292
+    },
+    "N0=60": {
+     "log10N_no_portal": 36.43164194866839,
+     "B_end_no_portal": 91.25727873578539,
+     "log10N_lam_min": -34492.48715923454,
+     "B_end_lam_min": 79597.0309584098,
+     "log10N_0p1_lam_min": -524.0206551185407,
+     "B_end_0p1": 1381.7463541647292
+    }
+   }
+  },
+  "regression_vs_inf_chain_skeptic_log10N_xi01": {
+   "172.28": -70.54684329759337,
+   "172.57": -35.25968156702407,
+   "172.86": -13.54472548396392,
+   "173.15": 1.1259088975779508
+  }
+ },
+ "K8_Higgs_post_inflation_extrapolation": {
+  "table_H": [
+   129000000000.0,
+   150000000000.0,
+   200000000000.0,
+   300000000000.0,
+   500000000000.0,
+   1000000000000.0
+  ],
+  "table_Mtcrit": [
+   172.917,
+   172.873,
+   172.79,
+   172.684,
+   172.561,
+   172.447
+  ],
+  "slope_low": -0.2894740153742383,
+  "slope_high": -0.1644672346613339,
+  "HT6t": {
+   "H_i_consistent_GeV": 26985143911.903275,
+   "Mtcrit_grav_only_extrapolated": 173.36975463207324
+  },
+  "T1": {
+   "H_i_consistent_GeV": 9863491543.363472,
+   "Mtcrit_grav_only_extrapolated": 173.66109467547184
+  },
+  "T1_cal1": {
+   "H_i_consistent_GeV": 11944622844.673658,
+   "Mtcrit_grav_only_extrapolated": 173.60567748393402
+  },
+  "TB1": {
+   "H_i_consistent_GeV": 7466455428038.676,
+   "Mtcrit_grav_only_extrapolated": 172.11635171977468
+  },
+  "TB2": {
+   "H_i_consistent_GeV": 10604555120818.209,
+   "Mtcrit_grav_only_extrapolated": 172.05864620994026
+  }
+ },
+ "K9_ns_pulls": {
+  "HT6t": {
+   "n_s": 0.9648999998230735,
+   "pull_Planck2018": -4.212535082664155e-08,
+   "pull_ACT_DR6": -2.7647059343901614,
+   "r": 2.709703811099294e-07
+  },
+  "HT6t_cal1": {
+   "n_s": 0.9649000003099382,
+   "pull_Planck2018": 7.379480624453414e-08,
+   "pull_ACT_DR6": -2.7647057911946735,
+   "r": 1.2805161507178023e-08
+  },
+  "HT6t_Send": {
+   "n_s": 0.9648999998230735,
+   "pull_Planck2018": -4.212535082664155e-08,
+   "pull_ACT_DR6": -2.7647059343901614,
+   "r": 2.709703811099294e-07
+  },
+  "T1": {
+   "n_s": 0.9617704559097535,
+   "pull_Planck2018": -0.7451295452967764,
+   "pull_ACT_DR6": -3.685160026543099,
+   "r": 2.708630328686075e-07
+  },
+  "T1_cal1": {
+   "n_s": 0.9607831434922353,
+   "pull_Planck2018": -0.9802039304201717,
+   "pull_ACT_DR6": -3.9755460316955284,
+   "r": 1.7704218775032418e-09
+  },
+  "TB1": {
+   "n_s": 0.961850295628048,
+   "pull_Planck2018": -0.7261200885599894,
+   "pull_ACT_DR6": -3.6616777564564797,
+   "r": 0.001315031850875881
+  },
+  "TB2": {
+   "n_s": 0.9621531821789163,
+   "pull_Planck2018": -0.6540042431151567,
+   "pull_ACT_DR6": -3.5725934767893333,
+   "r": 0.004224373813520002
+  }
+ },
+ "method": "inf_critic (Claude, own code; issue #13 inflaton-sector pass, 3 November 2026): quick checks that settle the\ncontradictions between the build, chain and skeptic tracks, plus the per-benchmark derived quantities the final verdict\nneeds (T_RH, leptogenesis by-product, portal window, Higgs extrapolations, retrospective n_s pulls).\n\nInputs, all READ-ONLY: tracks/inf_chain/results/summary.json and chain_*.json; tracks/inf_chain/skeptic/results/\nsk_higgs_TB.json; tracks/inf_higgs/code (ih_inflation, ih_common, smpot via higgs_reheat) for one inflation check.\nEvery input is a model choice; nothing here is a validation or an exclusion.\n\nChecks (labels):\n  K1 [C]  S/Q from the dq_entropy closed form at inf_chain's W for every row (ledger re-derivation of the final step).\n  K2 [C]  secant fixed points of the one-step calibration iterations (HT6t, T1) in ln H.\n  K3 [C/E] decomposition of the Gamma_cal disagreement inf_reheat (1e-6) / its skeptic (1e-7) / inf_chain (3.4e-9).\n  K4 [C]  T_RH = (90/pi^2 g*)^{1/4} (Gamma M_P)^{1/2}; T_max from a perturbative-decay fluid ODE.\n  K5 [E]  non-thermal leptogenesis from phi_I -> N N for TB1/TB2; Davidson-Ibarra fraction; inverse-decay washout.\n  K6 [E]  R-even portal window lam_min = (20/3)(m_I/M_P)^2 at TB; S1 induced loop terms; S2 decay constant f.\n  K7 [C]  Higgs during inflation on the TB1 history with and without lam_IH = lam_min (inf_higgs criterion, tree).\n  K8 [E]  post-inflation gravitational-only M_t,crit extrapolated in ln H_i from the inf_higgs skeptic's N6 table.\n  K9 [R/C] n_s pulls: Planck 2018 0.9649 +- 0.0042; ACT DR6 P-ACT-LB 0.9743 +- 0.0034 (arXiv:2503.14452, as quoted by\n          the inf_potential skeptic; retrospective).\nOutput ../results/settle_checks.json\n"
+}

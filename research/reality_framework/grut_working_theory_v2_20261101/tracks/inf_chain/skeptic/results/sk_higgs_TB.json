@@ -1,0 +1,110 @@
+{
+ "method": "inf_chain SKEPTIC (Claude, own code): Higgs survival DURING INFLATION at the quiet T-models' own Hubble scale\n(TB1 H_i = 7.5e12, H_* = 9.0e12; TB2 H_i = 1.06e13, H_* = 1.6e13 GeV), which the track did not recompute ('Higgs\nsurvival at the new H_i not recomputed').  inf_higgs computed it only at H_i = 1.29-1.50e11 GeV.\n\nCriterion: inf_higgs's (Mantziris-Markkanen-Rajantie arXiv:2011.03763 form), re-implemented here:\n    <N> = (4 pi/3) int dN_b e^{3(N_0 - N_b)} (H(N_b)/H_p)^3 e^{-B(N_b)},  B = 8 pi^2 DeltaV_b/(3 H^4),\n    survival if <N> < 1; N_0 = N_obs + 1 (exit of today's horizon + 1);\n    tree RG-improved barrier V = xi(mu) R phi^2/2 + lam(mu) phi^4/4, phi = e^{Gamma} h, mu^2 = h^2 + R,\n    R = 6(2 - eps_H) H^2 along the benchmark's own H(N) (my sk_cmb_fluid background).\nSM running: higgs_reheat/code/smpot.py (3-loop, imported read-only; PDG 2024 M_h = 125.20, alpha_s = 0.1180).\nRegression: HT6t at H_i = 1.29e11, N_0 = 55.76 against inf_higgs inflation_HN.json (tree MD xi_min_HN).\nOutput ../results/sk_higgs_TB.json.  Labels: [C] own code on a model criterion [E].\n",
+ "rows": {
+  "HT6t": {
+   "H_i_GeV": 129000000000.0,
+   "H_plateau_GeV": 129034841229.20512,
+   "N0": 55.76,
+   "by_Mt": {
+    "172.28": {
+     "xi_EW_min": 0.05961473504253932,
+     "log10N_at_xi01": -225.9792135246478,
+     "lam_at_10Hp": -0.0023060445394013688,
+     "B_end": 684.3095884632561,
+     "B_plateau": 2425.162881720143,
+     "inf_higgs_tree_MD_xi_min_HN": 0.0596136648258921
+    },
+    "172.57": {
+     "xi_EW_min": 0.07020971756735069,
+     "log10N_at_xi01": -115.48332994123045,
+     "lam_at_10Hp": -0.004120918843824235,
+     "B_end": 429.8834140868738,
+     "B_plateau": 1579.6592263832658,
+     "inf_higgs_tree_MD_xi_min_HN": 0.07020871413735905
+    },
+    "172.86": {
+     "xi_EW_min": 0.0789702761282138,
+     "log10N_at_xi01": -63.23964890947376,
+     "lam_at_10Hp": -0.005948570095640817,
+     "B_end": 309.58789294001497,
+     "B_plateau": 1159.8912955075084,
+     "inf_higgs_tree_MD_xi_min_HN": 0.07897095665888541
+    },
+    "173.15": {
+     "xi_EW_min": 0.08661717080339446,
+     "log10N_at_xi01": -33.2140801345568,
+     "B_end": 240.45146587022373,
+     "B_plateau": 911.7606744004008
+    }
+   }
+  },
+  "TB1": {
+   "H_i_GeV": 7456764284608.558,
+   "H_plateau_GeV": 8975733902024.725,
+   "N0": 58.81754418930031,
+   "by_Mt": {
+    "172.28": {
+     "xi_EW_min": 0.0781319141847751,
+     "log10N_at_xi01": -70.54684329759337,
+     "lam_at_10Hp": -0.005882107072015263,
+     "B_end": 334.0369475705295,
+     "B_plateau": 1224.428858695048
+    },
+    "172.57": {
+     "xi_EW_min": 0.08645203232845174,
+     "log10N_at_xi01": -35.25968156702407,
+     "lam_at_10Hp": -0.007765016662648112,
+     "B_end": 252.78525499565083,
+     "B_plateau": 943.7578075324363
+    },
+    "172.86": {
+     "xi_EW_min": 0.09384688868590912,
+     "log10N_at_xi01": -13.54472548396392,
+     "lam_at_10Hp": -0.009659316569010796,
+     "B_end": 202.78472082382933,
+     "B_plateau": 766.1837922896872
+    },
+    "173.15": {
+     "xi_EW_min": 0.10058647992420883,
+     "log10N_at_xi01": 1.1259088975779508,
+     "B_end": 169.00433679487026,
+     "B_plateau": 643.9594525708636
+    }
+   }
+  },
+  "TB2": {
+   "H_i_GeV": 10587626086750.24,
+   "H_plateau_GeV": 16074669700295.303,
+   "N0": 59.09746246791934,
+   "by_Mt": {
+    "172.28": {
+     "xi_EW_min": 0.07884179412521167,
+     "log10N_at_xi01": -66.84710894259318,
+     "lam_at_10Hp": -0.006219581439073483,
+     "B_end": 325.3647903257947,
+     "B_plateau": 1169.1478715470525
+    },
+    "172.57": {
+     "xi_EW_min": 0.08707969960769796,
+     "log10N_at_xi01": -33.07775325223223,
+     "lam_at_10Hp": -0.008108366475871808,
+     "B_end": 247.60797531453116,
+     "B_plateau": 909.6736106067204
+    },
+    "172.86": {
+     "xi_EW_min": 0.0944184217057945,
+     "log10N_at_xi01": -12.120543562577833,
+     "lam_at_10Hp": -0.010008296155584125,
+     "B_end": 199.35221676541778,
+     "B_plateau": 743.1426389135449
+    },
+    "173.15": {
+     "xi_EW_min": 0.10111667400016149,
+     "log10N_at_xi01": 2.1181883155530374,
+     "B_end": 166.56632607941387,
+     "B_plateau": 627.3946369040284
+    }
+   }
+  }
+ }
+}

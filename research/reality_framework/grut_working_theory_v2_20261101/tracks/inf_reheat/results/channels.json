@@ -1,0 +1,352 @@
+{
+ "method": "inf_reheat items 1-2 (Claude, own code): reheating channels for M1r, family-independent numbers.\n\nUnits: H_i = 1 (the slice Hubble rate), M_P = M_P/H_i.  GeV conversions use H_i = 1.291e11 GeV unless stated.\nSections (keys of ../results/channels.json):\n  widths      decay-width conventions (Dirac trace computed with explicit gamma matrices; Majorana by Wick counting) [D/C]\n  optionB     reflection broken by A phi_I |H|^2: the A needed for Gamma/m = 1/6, Higgs mass^2 +-A phi_I, tachyonic growth,\n              tree quartic shift, one-loop flatness, the stability bounds on A and what a safe A gives [C/E]\n  blocking    singlet-fermion channel at the engine amplitude: y needed, y Phi vs m/2, open fraction, unblocking epoch,\n              Greene-Kofman per-crossing production and energy fraction (checked numerically in fermion_modes.py) [C/E]\n  seesaw      type-I seesaw N: y_nu^2 = mt M/v^2, Gamma_N = mt M^2/(8 pi v^2) in H_i units; M needed for tau_N < 8 [C]\n  hidden      inflaton -> hidden leakage through the holder itself (2-body Y_L Y_L, 4-body Y_L + 3X off-shell, 6-body) and the\n              heat it deposits, R_inf = 3 M_P^2 K^2 BR / E_X [C/E]\n  higgs_portal  the reflection-even portal (lambda_IH/2) phi_I^2 |H|^2: Higgs held through reheating; window [E]\n  thermalisation  Harigaya-Mukaida (1312.3097) condition and Davidson-Sarkar (hep-ph/0009078) timescale [Q/E]\nLabels in the JSON: each block carries its label.\n",
+ "H_i_GeV": 129100000000.0,
+ "MP_over_Hi": 18861347.792408984,
+ "widths": {
+  "label": "D (trace computed)",
+  "dirac_check": {
+   "trace": 16.72,
+   "expected": 16.72,
+   "Gamma_Dirac_over_y2m": 0.03562097415734351,
+   "analytic": 0.03562097415734351
+  },
+  "conventions": {
+   "Dirac, L = -y phi psibar psi": "Gamma = y^2 m beta^3 / (8 pi)",
+   "Majorana, L = -(y/2) phi Nbar N  [m_N(phi) = M + y phi; adopted]": "Gamma = y^2 m beta^3 / (16 pi): vertex 2 x (y/2) = y, identical-particle 1/2",
+   "Majorana, L = -y phi N^T C N = -y phi Nbar N": "Gamma = y^2 m beta^3 / (4 pi): vertex 2y, identical 1/2; here m_N(phi) = M + 2 y phi"
+  },
+  "Nf_y2_for_Gamma_over_m_1_6": {
+   "dirac": 4.1887902047863905,
+   "majorana_half": 8.377580409572781,
+   "majorana_full": 2.0943951023931953
+  },
+  "note": "WORKING_THEORY \"N_f y^2 = 4\" is the Dirac normalisation (8 pi/6 = 4.19); with the adopted Majorana normalisation it is 8.38."
+ },
+ "optionB": {
+  "label": "C (numbers) / E (criteria)",
+  "A_for_Gamma_over_m_1_6": 6.139960247678931,
+  "A_GeV": 792668867975.35,
+  "mH2_during_inflation_H2": 94556775.3482027,
+  "mH_during_inflation_GeV": 1255372378595761.0,
+  "tachyonic_growth_exponent_per_half_cycle": 7767.231683008061,
+  "tree_quartic_shift": 2.0943951023931953,
+  "CW_over_V_inflation": 0.05305164769729843,
+  "CW_slope_over_tree_slope": 705.7270129197943,
+  "A_max_inflation_branch": 3.246705603627396e-08,
+  "A_max_inflation_branch_GeV": 4191.496934282968,
+  "A_max_resonance": 5.844070086529313e-07,
+  "A_max_resonance_GeV": 75446.94481709343,
+  "at_A_max_resonance": {
+   "A": 5.844070086529313e-07,
+   "Gamma_hh": 4.5297028904061684e-15,
+   "Gamma_over_m": 1.5099009634687227e-15,
+   "T_RH_GeV": 20400517.413652472,
+   "T_SM_tau8_GeV_instant": 32934639419.796196,
+   "T_SM_tau8_over_Hi": 0.2551095230038435
+  },
+  "at_A_max_inflation": {
+   "A": 3.246705603627396e-08,
+   "Gamma_hh": 1.398056447656225e-17,
+   "Gamma_over_m": 4.6601881588540835e-18,
+   "T_RH_GeV": 1133362.0785362485,
+   "T_SM_tau8_GeV_instant": 7762768956.557224,
+   "T_SM_tau8_over_Hi": 0.060129891220427764
+  }
+ },
+ "blocking": {
+  "label": "C (formulae evaluated) / E (Pauli saturation and back-reaction not solved)",
+  "b": 3.0,
+  "Phi_over_MP": 0.8164965809277259,
+  "note": "y = sqrt(16 pi/6) = 2.89 is the Majorana coupling for Gamma/m = 1/6 (N_f = 1).",
+  "rows": [
+   {
+    "y": 1.0,
+    "Gamma0_over_m": 0.019894367886486918,
+    "yPhi_over_half_m": 10266817.322793765,
+    "open_fraction": 6.200750946977481e-08,
+    "a_unblock": 47237.89717392423,
+    "tau_unblock_matter": 6844544.215195837,
+    "GK_n_per_crossing_H3": 2531995405.607018,
+    "GK_energy_fraction_per_crossing": 36.53619409663612,
+    "perturbative_fraction_per_half_period": 0.0625,
+    "kF_over_m": 1278.285854863507
+   },
+   {
+    "y": 0.1,
+    "Gamma0_over_m": 0.00019894367886486922,
+    "yPhi_over_half_m": 1026681.7322793765,
+    "open_fraction": 6.200750946978451e-07,
+    "a_unblock": 10177.096435566147,
+    "tau_unblock_matter": 684453.8215195838,
+    "GK_n_per_crossing_H3": 80068725.06800047,
+    "GK_energy_fraction_per_crossing": 0.11553759037936821,
+    "perturbative_fraction_per_half_period": 0.0006250000000000001,
+    "kF_over_m": 404.2294802144108
+   },
+   {
+    "y": 0.01,
+    "Gamma0_over_m": 1.9894367886486917e-06,
+    "yPhi_over_half_m": 102668.17322793764,
+    "open_fraction": 6.2007509470755156e-06,
+    "a_unblock": 2192.588960458354,
+    "tau_unblock_matter": 68444.78215195838,
+    "GK_n_per_crossing_H3": 2531995.405607017,
+    "GK_energy_fraction_per_crossing": 0.0003653619409663611,
+    "perturbative_fraction_per_half_period": 6.25e-06,
+    "kF_over_m": 127.82858548635069
+   },
+   {
+    "y": 0.001,
+    "Gamma0_over_m": 1.9894367886486915e-08,
+    "yPhi_over_half_m": 10266.817322793764,
+    "open_fraction": 6.200750956781879e-05,
+    "a_unblock": 472.37897173924244,
+    "tau_unblock_matter": 6843.878215195839,
+    "GK_n_per_crossing_H3": 80068.72506800047,
+    "GK_energy_fraction_per_crossing": 1.155375903793682e-06,
+    "perturbative_fraction_per_half_period": 6.25e-08,
+    "kF_over_m": 40.42294802144107
+   },
+   {
+    "y": 0.0001,
+    "Gamma0_over_m": 1.989436788648692e-10,
+    "yPhi_over_half_m": 1026.6817322793765,
+    "open_fraction": 0.0006200751927418673,
+    "a_unblock": 101.77096435566149,
+    "tau_unblock_matter": 683.7878215195841,
+    "GK_n_per_crossing_H3": 2531.995405607018,
+    "GK_energy_fraction_per_crossing": 3.6536194096636122e-09,
+    "perturbative_fraction_per_half_period": 6.25e-10,
+    "kF_over_m": 12.782858548635069
+   },
+   {
+    "y": 2.8944050182330705,
+    "Gamma0_over_m": 0.16666666666666666,
+    "yPhi_over_half_m": 29716327.58037649,
+    "open_fraction": 2.1423231745095596e-08,
+    "a_unblock": 95939.34699061628,
+    "tau_unblock_matter": 19810884.386917643,
+    "GK_n_per_crossing_H3": 12468145651.900127,
+    "GK_energy_fraction_per_crossing": 520.7407472817774,
+    "perturbative_fraction_per_half_period": 0.5235987755982988,
+    "kF_over_m": 2174.7414616351393
+   }
+  ]
+ },
+ "seesaw": {
+  "label": "C",
+  "mt_eV": 0.05,
+  "rows": [
+   {
+    "M_over_Hi": 0.25,
+    "M_GeV": 32275000000.0,
+    "ynu2": 5.324008167383188e-05,
+    "Gamma_N_over_Hi": 5.295888855629108e-07,
+    "tau_N_over_Hi": 1888257.1505198407
+   },
+   {
+    "M_over_Hi": 0.5,
+    "M_GeV": 64550000000.0,
+    "ynu2": 0.00010648016334766376,
+    "Gamma_N_over_Hi": 2.118355542251643e-06,
+    "tau_N_over_Hi": 472064.28762996016
+   },
+   {
+    "M_over_Hi": 1.0,
+    "M_GeV": 129100000000.0,
+    "ynu2": 0.00021296032669532752,
+    "Gamma_N_over_Hi": 8.473422169006572e-06,
+    "tau_N_over_Hi": 118016.07190749004
+   },
+   {
+    "M_over_Hi": 1.5,
+    "M_GeV": 193650000000.0,
+    "ynu2": 0.0003194404900429913,
+    "Gamma_N_over_Hi": 1.9065199880264793e-05,
+    "tau_N_over_Hi": 52451.58751444001
+   },
+   {
+    "M_over_Hi": 3.0,
+    "M_GeV": 387300000000.0,
+    "ynu2": 0.0006388809800859826,
+    "Gamma_N_over_Hi": 7.626079952105917e-05,
+    "tau_N_over_Hi": 13112.896878610003
+   },
+   {
+    "M_over_Hi": 10.0,
+    "M_GeV": 1291000000000.0,
+    "ynu2": 0.0021296032669532753,
+    "Gamma_N_over_Hi": 0.0008473422169006573,
+    "tau_N_over_Hi": 1180.1607190749003
+   },
+   {
+    "M_over_Hi": 30.0,
+    "M_GeV": 3873000000000.0,
+    "ynu2": 0.006388809800859826,
+    "Gamma_N_over_Hi": 0.007626079952105916,
+    "tau_N_over_Hi": 131.12896878610005
+   },
+   {
+    "M_over_Hi": 100.0,
+    "M_GeV": 12910000000000.0,
+    "ynu2": 0.02129603266953275,
+    "Gamma_N_over_Hi": 0.08473422169006574,
+    "tau_N_over_Hi": 11.801607190749003
+   }
+  ],
+  "M_for_tau_N_8_over_Hi": 121.4578486078041,
+  "note": "Gamma_N = (y_nu^dag y_nu)_11 M / (8 pi) = mt M^2 / (8 pi v^2), v = 174.1 GeV; at rest (boost E/M lengthens it)."
+ },
+ "hidden": {
+  "label": "C (rates in the narrow off-shell factorisation) / E (O(1) factors)",
+  "m_YL": 22.248595461286985,
+  "m_YH": 36.124783736376884,
+  "m_sigma": 40.0,
+  "thresholds": {
+   "two_body": 44.49719092257397,
+   "LH": 58.373379197663866,
+   "four_body": 22.248595461286985,
+   "sigma_pair": 80.0
+  },
+  "rows": [
+   {
+    "b": 3.0,
+    "g_I": 7.986046119105713e-07,
+    "A_L": 2.6298315389381906e-05,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 7.314813198850968e-40,
+    "Gamma_hidden": 7.314813198850968e-40
+   },
+   {
+    "b": 5.0,
+    "g_I": 1.3310076865176186e-06,
+    "A_L": 4.383052564896983e-05,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 7.450867022008464e-38,
+    "Gamma_hidden": 7.450867022008464e-38
+   },
+   {
+    "b": 10.0,
+    "g_I": 2.6620153730352373e-06,
+    "A_L": 8.766105129793966e-05,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 4.330709110944706e-35,
+    "Gamma_hidden": 4.330709110944706e-35
+   },
+   {
+    "b": 20.0,
+    "g_I": 5.3240307460704745e-06,
+    "A_L": 0.00017532210259587933,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 4.057974362001855e-32,
+    "Gamma_hidden": 4.057974362001855e-32
+   },
+   {
+    "b": 25.0,
+    "g_I": 6.6550384325880944e-06,
+    "A_L": 0.0002191526282448492,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 7.255261315990521e-25,
+    "Gamma_6X": 0.0,
+    "Gamma_hidden": 7.255261315990521e-25
+   },
+   {
+    "b": 30.0,
+    "g_I": 7.986046119105713e-06,
+    "A_L": 0.000262983153893819,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 1.342416123427779e-22,
+    "Gamma_6X": 0.0,
+    "Gamma_hidden": 1.342416123427779e-22
+   },
+   {
+    "b": 40.0,
+    "g_I": 1.0648061492140949e-05,
+    "A_L": 0.00035064420519175866,
+    "Gamma_YLYL": 0.0,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 1.8694332817884575e-20,
+    "Gamma_6X": 0.0,
+    "Gamma_hidden": 1.8694332817884575e-20
+   },
+   {
+    "b": 50.0,
+    "g_I": 1.3310076865176189e-05,
+    "A_L": 0.0004383052564896984,
+    "Gamma_YLYL": 1.7430713725415567e-11,
+    "Gamma_YLYH": 0.0,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 0.0,
+    "Gamma_hidden": 1.7430713725415567e-11
+   },
+   {
+    "b": 100.0,
+    "g_I": 2.6620153730352378e-05,
+    "A_L": 0.0008766105129793968,
+    "Gamma_YLYL": 6.845429192925672e-11,
+    "Gamma_YLYH": 2.398215350121868e-10,
+    "Gamma_YL_3X_offshell": 0.0,
+    "Gamma_6X": 0.0,
+    "Gamma_hidden": 3.0827582694144357e-10
+   }
+  ],
+  "R_inf_formula": "R_inf = 3 M_P^2 K^2 (Gamma_hid/Gamma_I) / E_X = 5.655e+09 K^2 BR (M_P/H_i = 1.886e+07, E_X = 188737.7)",
+  "R_inf_coefficient": 5654680128.23423,
+  "note": "Hidden decay products thermalise into the hidden plasma before onset; R_inf adds to R_total (S/Q closed form). The induced portals A_ISigma phi |Sigma|^2 etc. (renormalisation condition) are not included; they obey the same bound."
+ },
+ "higgs_portal": {
+  "label": "E (criteria) / C (numbers)",
+  "lam_min": 8.432877821300424e-14,
+  "ratio_in_MD_per_lambda": 118583480182070.42,
+  "lam_max_q1": 1.5179180078340767e-13,
+  "lam_max_q350": 5.3127130274192685e-11,
+  "q_at_lam_min": 0.5555555555555555,
+  "note": "q_max = 1: no broad resonance (conservative).  q_max = 350: the q of the bound lambda < 3e-8 of Enqvist et al. 1608.08848 at their m = 1.6e13 GeV, phi_end ~ sqrt(2) M_P (transferred, not recomputed)."
+ },
+ "thermalisation": {
+  "label": "Q (abstract-level condition) / E",
+  "alpha": 0.025,
+  "rows": [
+   {
+    "Gamma_over_Hi": 0.01,
+    "lhs": 0.0027334051848581947,
+    "rhs": 2.6638199548084262e-05,
+    "margin": 102.61223473171154
+   },
+   {
+    "Gamma_over_Hi": 0.0001,
+    "lhs": 0.0027334051848581947,
+    "rhs": 1.0604858250727274e-05,
+    "margin": 257.75028012946234
+   },
+   {
+    "Gamma_over_Hi": 1e-06,
+    "lhs": 0.0027334051848581947,
+    "rhs": 4.221870112317945e-06,
+    "margin": 647.4394313749898
+   },
+   {
+    "Gamma_over_Hi": 1e-08,
+    "lhs": 0.0027334051848581947,
+    "rhs": 1.6807567648592727e-06,
+    "margin": 1626.2943228951149
+   },
+   {
+    "Gamma_over_Hi": 1e-10,
+    "lhs": 0.0027334051848581947,
+    "rhs": 6.691213200467747e-07,
+    "margin": 4085.0666433212996
+   }
+  ]
+ }
+}

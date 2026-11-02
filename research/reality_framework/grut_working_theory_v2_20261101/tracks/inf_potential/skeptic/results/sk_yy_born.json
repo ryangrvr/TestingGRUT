@@ -1,0 +1,83 @@
+{
+ "method": "inf_potential SKEPTIC (Claude, independent method): holder-induced Y-pair production phi_I -> YY in first-order\n(Born) perturbation theory, computed in the TIME DOMAIN on our own post-inflation background (sk_cmb background +\nGamma_I = 0.5 H_i friction and radiation), instead of the track's per-period Fourier (harmonic) decomposition.\nFor a heavy real field with V = m^2 y^2/2 + dm2(t) y^2/2,  beta_k = (i/2) Int dt dm2(t)/w_k(t) exp(-2 i Int w_k dt);\nfor the off-diagonal  V = -c' phi y_L y_H,  beta_LH = (i/2) Int dt c' phi(t)/sqrt(w_L w_H) exp(-i Int (w_L + w_H) dt);\nw_k = sqrt(k^2/a^2 + m^2) (m >> H, the 9H^2/4 terms dropped).  Comoving numbers N = (1/2 pi^2) Int k^2 |beta_k|^2 dk,\na = 1 at eps_H = 1.  Late-vacuum couplings (u = mu, Sigma = h/sqrt2) as in the track:\ndm2_L = -sqrt2 h Re(G) phi, dm2_H = +sqrt2 h Re(G) phi, c' = sqrt2 h Im(G), |G phihat_I(S1)| = |10i - mu|.\nThis includes every harmonic, the amplitude decay and the expansion automatically.  A smooth switch-on window\nsin^2(pi t/2 t_on) suppresses the spurious boundary term at eps_H = 1 (t_on varied).  Not included (as in the track):\nsecond order in c (phi phi -> YY), Y/Sigma condensates in the first H_i^-1.\nOutput ../results/sk_yy_born.json.  Label [C] (Born) on our background.\n",
+ "runs": [
+  {
+   "benchmark": "HT6t",
+   "gamma": 0.5,
+   "t_max": 12.0,
+   "t_on": 0.15,
+   "channels": {
+    "LL": {
+     "N": 1.016595561426828,
+     "spectrum_peak_k": 31.5
+    },
+    "HH": {
+     "N": 0.23973815114102803,
+     "spectrum_peak_k": 36.0
+    },
+    "LH": {
+     "N": 1.3867333091884908,
+     "spectrum_peak_k": 24.0
+    }
+   },
+   "N_YL": 2.4033288706153186,
+   "N_YH": 1.626471460329519,
+   "track": {
+    "N_YL": 2.945158902047957,
+    "N_YH": 1.9979678105819467
+   }
+  },
+  {
+   "benchmark": "HT6t",
+   "gamma": 0.5,
+   "t_max": 12.0,
+   "t_on": 0.3,
+   "channels": {
+    "LL": {
+     "N": 0.8565344220748079,
+     "spectrum_peak_k": 42.0
+    },
+    "HH": {
+     "N": 0.2379568351049715,
+     "spectrum_peak_k": 20.5
+    },
+    "LH": {
+     "N": 1.133406438852855,
+     "spectrum_peak_k": 30.0
+    }
+   },
+   "N_YL": 1.989940860927663,
+   "N_YH": 1.3713632739578265,
+   "track": {
+    "N_YL": 2.945158902047957,
+    "N_YH": 1.9979678105819467
+   }
+  },
+  {
+   "benchmark": "HT6t",
+   "gamma": 0.5,
+   "t_max": 12.0,
+   "t_on": 0.6,
+   "channels": {
+    "LL": {
+     "N": 0.491629550117687,
+     "spectrum_peak_k": 44.0
+    },
+    "HH": {
+     "N": 0.19616064574635123,
+     "spectrum_peak_k": 25.5
+    },
+    "LH": {
+     "N": 0.7280309013836486,
+     "spectrum_peak_k": 36.0
+    }
+   },
+   "N_YL": 1.2196604515013356,
+   "N_YH": 0.9241915471299997,
+   "track": {
+    "N_YL": 2.945158902047957,
+    "N_YH": 1.9979678105819467
+   }
+  }
+ ]
+}
