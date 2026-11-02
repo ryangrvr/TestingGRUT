@@ -1,6 +1,8 @@
 # GRUT working theory, version 2: the corrected physical picture
 
-2 November 2026. Claude, for the owner (issue #13). This replaces the physical picture in
+2 November 2026; **updated 3 November 2026 with the decisive pass** (`tracks/dq_heat`, `dq_entropy`, `qm_micro`,
+`qm_transfer`, `higgs_reheat`, each with a skeptic, and the combiner `tracks/dq_critic`; brief BRIEF_DECISIVE.md).
+Where the update changes a statement, the section says so. Claude, for the owner (issue #13). This replaces the physical picture in
 `research/reality_framework/grut_closed_whole_theory_20261019/WORKING_THEORY.md` and the dark-matter picture assembled
 in Codex's M1 packets (d4747cb → f8186fa). It rests on:
 - the reviews in `research/reality_framework/grut_formation_review_20261025/`: REVIEW_M1.md, REVIEW_TRANSPORT.md,
@@ -34,8 +36,21 @@ hidden sector cools.
   free X particles.
 - **S/Q < 3.47.** The dark matter is macroscopic Q-matter (Q ~ 10¹²–10²⁰) with a few-percent warm vapour.
 
-At the declared hidden gauge coupling e = 10⁻⁶ the first case holds: S/Q ≈ 4.7–5.1. Either way the abundance is
-fitted (H_i is calibrated to it), and the conservative model has no non-gravitational signature.
+The decisive pass computed S/Q for the actual repaired release, with nothing borrowed. At the declared hidden gauge
+coupling e = 10⁻⁶ it is 4.955 on the static end-of-inflation slice M1r specifies, so the dark matter is free X. The
+critical coupling is e_crit = 2.06×10⁻⁶.
+
+But the branch at e = 10⁻⁶ is **not robust**. It depends on the inflaton's history before the slice, which M1r does
+not supply: every rolling-inflaton embedding tried gives S/Q = 3.1–3.4, which is Q-matter. The Q-matter branch, where
+it holds, is distinctive in kind: the objects ripen to Q ~ 10²⁰. That is about 0.2–7 Planck masses, roughly 1 nm
+across.
+
+Either way the abundance is fitted (H_i is calibrated to it). Small-scale clustering is CDM-like in both branches, to
+4–6 decades below current bounds. The conservative model's only distinctive observable is the Planck-mass objects of
+the Q-matter branch, visible only to proposed gravitational direct detection.
+
+The open inputs now sit mainly in the inflaton sector: its history decides the branch, and its decay channel to the
+Standard Model is not realisable as written (section 7).
 
 ## 1. The foundation: what closure does and does not do
 
@@ -106,7 +121,7 @@ made inside the framework.
 | 4 | Prethermal plateau | Number-conserving 2↔2 scattering moves X̄ from the coherent orbit into waves | about 1.75 X̄ per net charge, constant over the pilot's span | [C] REVIEW_EARLY, 5f5513b |
 | 5 | Chemical relaxation | The hidden sector is scale-free before φ condenses, so rates are constant in conformal time, with about 10¹² conformal units available. The φ channels (mixed g²λ_φ 2↔4, φ self-interactions, XX̄ ↔ φφ) relax the plateau | 10–10⁴ e-folds available; the plateau is not protected | [C/E] pt_relax and its skeptic |
 | 6 | Heat injection | Mediator (Y_L) and longitudinal-vector decays heat the hidden plasma, all well before φ onset | total R = 4.97 (band) to 5.70 (broad) in units of the X energy; all sources finish 10³–10⁸ times before onset | [C] fx_chain, kin_source |
-| 7 | Relaxed plasma before onset | Circular condensate holding 92% of the charge, plus a Hartree X, X̄, φ gas | T_h ≈ 8.3 m_X at onset; X̄ ≈ 0.42–0.57 per charge; **S/Q = 4.68–5.13** | [C] fx_chain, wt_critic |
+| 7 | Relaxed plasma before onset | Circular condensate holding 92% of the charge, plus a Hartree X, X̄, φ gas | heat R_total = 4.006 (vectors 3.608, Y_L 0.379, finite-k Y ≤ 4×10⁻⁴, cascade 0.019); **S/Q = 4.955** on the static slice (band 4.92–4.99); frozen yield Y/Y_Q = 0.99102 after the X ↔ Σ exchange freezes (decays as a⁻²) | [C] dq_heat, dq_entropy, dq_critic |
 | 8 | φ crossover | The tilt makes φ condensation a crossover: no metastable φ ≈ 0 state and no walls. A circular condensate makes no X̄ and no φ quanta in the transition (resonance capture needs radial action) | onset a ≈ 3.8×10¹² (T_vis ≈ 120 → 80 GeV) | [C] fx_chain; pt_m1tilt |
 | 9 | Spinodal decomposition | The condensate density passes the spinodal (233 m_X³) at T_h ≈ 10 m_X and decomposes quasi-statically into lumps | first lumps Q ≈ 4×10¹¹–10¹³, Γ/H ≈ 10⁷ | [C/E] fx_formation, fx_chain |
 | 10 | **Evaporation** | Objects carry charge but no entropy, so they can coexist with the cooling vapour only if S/Q < min_T(s_gas/q_gas) = **3.47** (bulk; 2.93 for Q = 2×10⁵). At S/Q ≈ 4.9 every lump evaporates | evaporated by T_h ≈ 0.8 m_X (T_vis ≈ 7.5 GeV); re-formation impossible (fugacity 0.09–0.11 fixed by adiabatic expansion; nucleation barrier ≥ 10⁵ T; no small bound states below Q_min = 5.7×10⁴) | [C] fx_formation and both skeptics |
@@ -114,6 +129,32 @@ made inside the framework.
 | 12 | Today | A cold, asymmetric gas of free X (92 MeV complex scalar) with a 0.1% X̄ admixture. Both are stable, and every annihilation channel at rest is closed: no lighter hidden states, and m_A = 6eh ≈ 3×10⁷ GeV | free-streaming 0.3–0.5 pc (cold); σ/m ≈ 6×10⁻⁸ cm²/g; ΔN_eff ≈ 10⁻⁸ | [C] wt_critic, fx_observables |
 
 ## 4. The branch point: what decides what the dark matter is
+
+**Decisive-pass result (supersedes the transferred estimates below).** S/Q(e) for the actual M1r release (portals
+vanish at M_Y):
+
+| e | 10⁻⁷ | **10⁻⁶** | 1.5×10⁻⁶ | 2×10⁻⁶ | 3×10⁻⁶ | 5×10⁻⁶ | 10⁻⁵ | → ∞ |
+|---|---|---|---|---|---|---|---|---|
+| S/Q | 22.7 | **4.955** | 4.015 | 3.516 | 2.993 | 2.552 | 2.204 | 1.84 |
+| Branch | free X | **free X (×1.43)** | free X | free X (0.4–2.2% margin) | Q-matter | Q-matter | Q-matter | Q-matter |
+
+- **Critical couplings:** e_crit = 2.06×10⁻⁶ (bulk), 3.19×10⁻⁶ (Q = 2×10⁵), 4.99×10⁻⁶ (binding objects). With the
+  induced portals vanishing at M_P instead: S/Q(10⁻⁶) = 4.09 and e_crit = 1.46×10⁻⁶.
+- **Vector heat scaling, settled:** R_vec ∝ 1/e (computed exponent −1.007). N_A ∝ e^{−1/2} and the deposit per
+  vector ∝ e^{−1/2}; an old code comment claiming otherwise was wrong.
+- **The branch at e = 10⁻⁶ is not robust:**
+  - **Inflaton history before the slice.** The vector number is set when the relevant modes left the horizon, 3–4
+    e-folds before the slice, through the Higgs norm F there. Free X at 10⁻⁶ needs a horizon-exit factor
+    f_eff ≥ 0.47. Every rolling-inflaton embedding tried gives 0.35–0.44, hence S/Q(10⁻⁶) = 3.1–3.4, which is
+    Q-matter, with e_crit = 0.75–0.93×10⁻⁶. Any history obeys S/Q(10⁻⁶) ≤ 5.14.
+  - **Inflaton decay history.** The vector heat scales as K² (K = a²H in radiation). Over (m_I, Γ_I) = (2–4, 0.25–1)
+    H_i, S/Q(10⁻⁶) = 4.3–8.0 [E].
+  - **Consequence.** The statement below that "everything uncomputed can only raise S/Q" is **false**: the inflaton
+    history can lower it.
+- **Post-relaxation entropy production** is +0.1–0.2% of S/Q (crossover adiabatic; spinodal latent heat
+  ΔS/Q ≈ +0.005; evaporation reversible; X̄ burn-out zero).
+
+*Original section (transferred estimates), kept for the record:*
 
 The decisive number is the hidden entropy per charge after relaxation.
 
@@ -155,6 +196,34 @@ spot point. This is the decisive calculation (section 8).
 
 ## 6. What an observer could see
 
+**Decisive-pass corrections (supersede the table below where they conflict).**
+- **The Q-matter relic, benchmark e = 3×10⁻⁶, S/Q = 2.99:**
+  - X sticking on Q-matter is high: s̄ = 0.86–0.97 at T_h = 0.1–0.5 m_X, 0.47 at freeze-out.
+  - Ripening sets ⟨Q⟩ ≈ 1.2×10²⁰ (0.4–1.5×10²⁰ across the whole branch).
+  - The vapour holds 12–17.5% of the charge.
+  - The mass per charge is M = 0.80–0.82 m_X. An energy-conservation correction rules out net capture after
+    freeze-out, because the objects have no heat capacity and no light neutral exists.
+- **Small-scale power is CDM-like in every e range.** A new kinetic Boltzmann code (validated against CLASS fits)
+  gives 1 − P/P_ΛCDM ≈ 10⁻⁸–10⁻⁵ at k = 10–100/Mpc. That is 4–6 decades below current Lyman-α, satellite and lensing
+  bounds, and 2 decades below a 20 keV-class future probe.
+  - The "O(10%) deficit near 10–50/Mpc" scenario does not occur.
+  - A testable warm-vapour signal would need ⟨Q⟩ ≈ 4×10⁷–3×10¹² at s ≈ 1, which ripening never produces. In practice
+    the effective thermalising capture is ζ_eff ≈ 4–6×10⁻⁹, limited by phonon trapping.
+- **What is distinctive instead: the objects themselves.** At Q ~ 10²⁰ each object weighs 0.2–7 Planck masses (≈ 0.7
+  at the benchmark, ≈ 1.5×10⁻⁸ kg) and is about 1 nm across. They arrive at roughly 0.3 per m² per year at the local
+  dark-matter density.
+  - Only proposed gravitational direct detection reaches such objects (arXiv:1903.00492; Windchime, 2203.07242), and
+    no scheduled experiment does.
+  - This is the conservative model's one distinctive prediction, and it exists only in the Q-matter branch.
+- **Free-X branch:** unchanged; CDM-like, with no non-gravitational signature.
+- **Tensor ratio:**
+  - free X, H_i = 1.290–1.292×10¹¹ GeV: r = 2.7×10⁻⁷;
+  - Q-matter, H_i = 1.483–1.499×10¹¹: r = 3.6×10⁻⁷;
+  - with portals vanishing at M_P: 1.9×10⁻⁷ / 2.5×10⁻⁷.
+  - These are floors that assume H at CMB exit equals H_i.
+
+*Original section, kept for the record:*
+
 | Channel | Free-X branch (e = 10⁻⁶) | Q-matter branch (e ≳ 2×10⁻⁶) |
 |---|---|---|
 | Large-scale structure | CDM on every accessible scale (free streaming 0.3–0.5 pc) | CDM-like only if ζ = s·⟨Q⟩^{−1/3} ≲ 10⁻⁵ (sticking s). For ⟨Q⟩ ~ 10¹² and s ~ 1 the warm vapour gives an O(10%) deficit near k ≈ 10–50/Mpc, near current Lyman-α and satellite reach. The vapour is not tightly coupled (its diffusion length exceeds the acoustic scale), so a kinetic or two-fluid transfer calculation is needed [C/E] |
@@ -189,10 +258,40 @@ on two uncomputed quantities, the sticking probability and ⟨Q⟩, and its shap
 | CP sign | **not fixable by closure**; supplied (α_I and the sign of φ_I) |
 | Vacuum density | **not fixed**; measured input |
 | Distinctive prediction | **none yet** |
-| Higgs survival during inflation | supplied ξ_H = 0.1; not computed through reheating |
+| Higgs survival during inflation | **computed** (higgs_reheat + skeptic). ξ_H = 0.1 is safe during inflation: ξ_min = 0.044–0.055, a margin of about ×2. With gravitational-only reheating it is safe only below a critical top mass of 172.79–172.89 GeV (PDG 172.57 ± 0.29, so +0.8 to +1.1σ). At M_t + 1σ it fails at both H_i once the field normalisation is fixed (D = +13, +27). Above the critical mass, survival needs a Higgs-coupled plasma within τ ≈ 8–10 H_i⁻¹ |
+| **The inflaton's decay channel to the Standard Model** (new) | **not realisable as written.** The reflection-even inflaton needed for the CP-sign bookkeeping forbids φ_I\|H\|²; M1r has zero SM portals; and a gauge-singlet inflaton has no renormalizable Yukawa to chiral SM fermions, so the decay must go through singlets (e.g. right-handed neutrinos). The supplied fast decay Γ_I/m_I = 1/6 needs N_f y² ≈ 4 and is kinematically blocked at φ_I ≈ 0.8 M_P (y φ_I ≫ m_I) except near zero crossings, i.e. it is non-perturbative. The reheating history, and with it K, the vector heat and the Higgs plasma timing, must be constructed |
+| **The inflaton's history before the slice** (new) | not supplied. It decides the branch at e = 10⁻⁶ and sets H_i and r. The engine's post-inflation oscillator (m_I = 3 H_i, amplitude 0.82 M_P) is phenomenological; a potential that inflates at H ≈ 1.3–1.5×10¹¹ GeV with r ~ 10⁻⁷ must be a plateau or hilltop shape, not this quadratic |
 | TCC tension (closure pass) | unresolved by choice: TCC is not adopted |
 
 ## 8. The decisive calculations
+
+**Status after the decisive pass.** Items 1–3 below have been computed:
+- **S/Q end to end:** free X at e = 10⁻⁶ on the static slice; Q-matter above 2.06×10⁻⁶.
+- **The Q-matter microphysics and observable:** CDM-like; Planck-mass objects.
+- **X ↔ Σ freeze-out:** Y/Y_Q = 0.99102.
+- **Higgs survival:** above.
+
+The free-X failure condition ("vector heat below about 0.5 of the transfer") is not met on the static slice, but it
+**is met** on every rolling-inflaton path tried.
+
+**The open inputs that now decide everything, ranked:**
+1. **The inflaton's potential and history before the slice.** It decides the branch at e = 10⁻⁶ and sets H_i and r.
+2. **The inflaton's decay channel and history.** It sets K and hence the vector heat, the Higgs plasma timing, and
+   whether reheating is perturbative at all.
+3. **The induced-portal renormalisation condition** (M_Y vs M_P): 17% in H_i, and e_crit 2.06 vs 1.46×10⁻⁶.
+4. **The top mass, together with the Higgs decay criterion:** survival without a Higgs-coupled plasma fails at
+   M_t + 1σ.
+5. **Dephasing of the X ↔ Σ exchange at fragmentation:** a lattice with Y and Σ; H_i +1.5%/−0.4%.
+6. **Completeness of chemical relaxation before onset:** the one omitted process that could lower S/Q.
+7. **Interior trapping in Q-matter** (perfect vs Beliaev): f_v 0.12 vs 0.175, M up to 0.818.
+8. **The pair-fraction map p(S/Q).**
+
+The next construction is therefore an **explicit inflaton sector**, consistent with H ≈ 1.3–1.5×10¹¹ GeV,
+n_s ≈ 0.965 and A_s. It needs a realisable reheating channel to the Standard Model (for example through singlet
+fermions that decay to SM states) that preserves the CP-sign bookkeeping and gives the Higgs a plasma mass in time.
+That construction decides the branch, H_i and r together.
+
+*Original section, kept for the record:*
 
 1. **S/Q of the actual M1r release, end to end.** Compute the inflationary longitudinal-vector abundance on the
    λ = 0.5, trilinear-held background through the (3, 0.5) era, the finite-k Y_L production, and the relaxed Hartree
@@ -207,6 +306,25 @@ on two uncomputed quantities, the sticking probability and ⟨Q⟩, and its shap
    field's evolution through reheating with ξ_H = 0.1.
 
 ## 9. Bottom line for the owner
+
+**After the decisive pass (3 November).** The dark-matter sector is now worked out end to end at the level of
+homogeneous, linear and kinetic calculations, every one adversarially checked. Its outcome is a clean either/or set
+by one number, the entropy per charge:
+- **A cold asymmetric gas of 92 MeV scalars.** Ordinary-looking dark matter.
+- **Planck-mass, nanometre Q-matter nuggets.** Distinctive in kind, detectable only by proposed gravitational
+  sensors.
+
+Which one nature would pick in this model depends on the inflaton, which the model does not yet describe properly.
+In particular, it has no realisable way to reheat the Standard Model, and that same gap makes the Higgs's survival
+marginal. Small-scale clustering gives no signal in either branch.
+
+So the honest state of the theory:
+- the foundation adds no law;
+- the matter sector is a consistent hidden-sector model whose remaining freedom has been pushed into one place, the
+  inflaton sector;
+- its one distinctive possible signature (Planck-mass objects) is real but far from testable.
+
+*Original section, kept for the record:*
 
 The foundation organises physics but does not yet add any. The matter sector is now a coherent, internally
 consistent, renormalizable model with a definite history, at the level of the calculations done here. Its dark matter

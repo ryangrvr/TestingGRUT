@@ -1,0 +1,101 @@
+{
+ "method": "dq_critic quick check (Claude, own driver, 2 Nov 2026) of the one contradiction between dq_heat and its skeptic:\ndoes a Hubble rate that grows with phi_I cancel the horizon-exit sensitivity of the vector heat?\n\ndq_heat [E]: factor s^2 (F(1)/F(s))^2 = 1.06-1.15 (fixed-H condensate).  SKEPTIC [C]: re-solve the held minimum at\nR = 12 h_r^2 -> f = [h_r F(1,1)/F(s, h_r)]^2 = 0.77-0.46 along H ~ phi_I.\nHere: dq_heat's own model (code/dq_model.py, imported read-only, unchanged) at lambda = 0.5, stationary point at\nu = mu + s (10i - mu), R = 12 h_r^2, F = (2 sum q^2 |z|^2)^{1/2}; plus the physical reason: |X|^2 at the held minimum\nfor xi_X R |X|^2 with xi_X = -5/6, i.e. |X| ~ H when X dominates its own stabilisation.\nOutput: ../results/exit_check.json\n",
+ "F11": 275.9320047322796,
+ "z11": [
+  90.79986663693572,
+  6.88772550732482,
+  28.576239631186507
+ ],
+ "rows": [
+  {
+   "s": 1.0,
+   "h_r": 1.5,
+   "absz": [
+    196.12508765053505,
+    26.746918323457233,
+    31.993826029459807
+   ],
+   "F": 404.35975395250586,
+   "F_over_Hexit": 269.5731693016706,
+   "f": 1.0477334836028112,
+   "dq_heat_estimate": null,
+   "grad": 8.335656630071462e-12,
+   "lightest_m2_over_Hexit2": 12.726629209860732
+  },
+  {
+   "s": 1.0,
+   "h_r": 2.0,
+   "absz": [
+    288.61114285896025,
+    42.273054030464785,
+    36.00456888473514
+   ],
+   "F": 540.4578336126538,
+   "F_over_Hexit": 270.2289168063269,
+   "f": 1.0426547154479577,
+   "dq_heat_estimate": null,
+   "grad": 1.3116919128020487e-11,
+   "lightest_m2_over_Hexit2": 16.013170805213196
+  },
+  {
+   "s": 1.5,
+   "h_r": 1.0,
+   "absz": [
+    177.46032517209704,
+    28.774910189905444,
+    34.24680782570913
+   ],
+   "F": 402.905707537529,
+   "F_over_Hexit": 402.905707537529,
+   "f": 0.4690264267667691,
+   "dq_heat_estimate": null,
+   "grad": 2.0740369397660857e-11,
+   "lightest_m2_over_Hexit2": 20.016241516241305
+  },
+  {
+   "s": 2.0,
+   "h_r": 1.0,
+   "absz": [
+    273.4586245631376,
+    49.185233389269804,
+    44.27877420801504
+   ],
+   "F": 578.1595946329926,
+   "F_over_Hexit": 578.1595946329926,
+   "f": 0.22777637555993455,
+   "dq_heat_estimate": null,
+   "grad": 6.168855444140685e-11,
+   "lightest_m2_over_Hexit2": 47.27309796755365
+  },
+  {
+   "s": 1.5,
+   "h_r": 1.5,
+   "absz": [
+    260.38711713595086,
+    41.862197565432865,
+    38.70656210545975
+   ],
+   "F": 524.4207647229363,
+   "F_over_Hexit": 349.6138431486242,
+   "f": 0.622912307325595,
+   "dq_heat_estimate": 1.0553094602252304,
+   "grad": 4.644697667971802e-11,
+   "lightest_m2_over_Hexit2": 20.940793737547
+  },
+  {
+   "s": 2.0,
+   "h_r": 2.0,
+   "absz": [
+    402.20399677946284,
+    67.94066051446546,
+    51.86936900057107
+   ],
+   "F": 774.8122185978707,
+   "F_over_Hexit": 387.40610929893535,
+   "f": 0.5073074290101308,
+   "dq_heat_estimate": 0.9111055022397382,
+   "grad": 7.285182988714683e-11,
+   "lightest_m2_over_Hexit2": 28.367171543561565
+  }
+ ]
+}

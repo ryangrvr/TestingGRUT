@@ -1,0 +1,59 @@
+{
+ "notes": "qm_micro SKEPTIC (Claude, 2 Nov 2026): independent quadrature of the thermal-flux sticking average on qm_micro's\nverified s(E, mu) table (stick_thermal.json; point values reproduced by sk_scatter.py to 1e-9).  Gauss-Laguerre in\nthe kinetic energy (weight e^{-eps/T}) with p^2 = 2 eps + eps^2, monotone (PCHIP) interpolation in ln eps, and the\ntable's own 16 Gauss-Legendre mu nodes, plus a check of the mu quadrature against a 64-point PCHIP re-integration.",
+ "rows": [
+  {
+   "T_h": 0.005,
+   "s_X": 0.38037295530890924,
+   "s_X_fine_mu": 0.38037165017962926,
+   "d_Xbar": 0.47197670461395674,
+   "d_Xbar_fine_mu": 0.4719751155220051,
+   "qm_s_X": 0.37996447163212344,
+   "qm_d_Xbar": 0.4713773299192868
+  },
+  {
+   "T_h": 0.01,
+   "s_X": 0.48853364657822373,
+   "s_X_fine_mu": 0.4885312782475447,
+   "d_Xbar": 0.5893698095373169,
+   "d_Xbar_fine_mu": 0.5893669794229461,
+   "qm_s_X": 0.48830152184275794,
+   "qm_d_Xbar": 0.5890168526763507
+  },
+  {
+   "T_h": 0.1,
+   "s_X": 0.8645510203094599,
+   "s_X_fine_mu": 0.8645016710607349,
+   "d_Xbar": 0.9088206629745267,
+   "d_Xbar_fine_mu": 0.908838642871332,
+   "qm_s_X": 0.8642480828851091,
+   "qm_d_Xbar": 0.9083067961551261
+  },
+  {
+   "T_h": 0.3,
+   "s_X": 0.9493613665503801,
+   "s_X_fine_mu": 0.9488634661203803,
+   "d_Xbar": 0.9660488717075032,
+   "d_Xbar_fine_mu": 0.9660589016232265,
+   "qm_s_X": 0.9484654851238887,
+   "qm_d_Xbar": 0.9649351901242642
+  },
+  {
+   "T_h": 0.5,
+   "s_X": 0.9670820472041816,
+   "s_X_fine_mu": 0.9663761307667863,
+   "d_Xbar": 0.9796041542385799,
+   "d_Xbar_fine_mu": 0.9794756631196867,
+   "qm_s_X": 0.9659090248116758,
+   "qm_d_Xbar": 0.9769578815938864
+  },
+  {
+   "T_h": 1.0,
+   "s_X": 0.9827176763390991,
+   "s_X_fine_mu": 0.9819953035530874,
+   "d_Xbar": 0.9826918206322399,
+   "d_Xbar_fine_mu": 0.9823436402520705,
+   "qm_s_X": 0.9816379830479185,
+   "qm_d_Xbar": 0.9828569944535817
+  }
+ ]
+}
