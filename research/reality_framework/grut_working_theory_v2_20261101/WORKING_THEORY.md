@@ -5,7 +5,9 @@
 Where the update changes a statement, the section says so. **Updated again with the inflaton-sector pass**
 (`tracks/inf_potential`, `inf_reheat`, `inf_chain`, `inf_higgs`, each with a skeptic, and the combiner
 `tracks/inf_critic`; brief BRIEF_INFLATON.md); its results are marked "Inflaton pass" and supersede earlier statements
-where they conflict. Claude, for the owner (issue #13). This replaces the physical picture in
+where they conflict. **Updated a third time with the multi-field pass** (`tracks/mf_gemini`, `mf_hybrid`, `mf_ideal`,
+`mf_chain`, `mf_higgs`, skeptics, combiner `tracks/mf_critic`; brief BRIEF_MULTIFIELD.md); its results are marked
+"Multi-field pass" and supersede earlier statements where they conflict. Claude, for the owner (issue #13). This replaces the physical picture in
 `research/reality_framework/grut_closed_whole_theory_20261019/WORKING_THEORY.md` and the dark-matter picture assembled
 in Codex's M1 packets (d4747cb → f8186fa). It rests on:
 - the reviews in `research/reality_framework/grut_formation_review_20261025/`: REVIEW_M1.md, REVIEW_TRANSPORT.md,
@@ -78,6 +80,32 @@ branch point in e, a CP-set asymmetric relic, Q-matter as an option, and r ~ 10�
 sector beyond a single field, such as a two-scale potential, a waterfall field or a spectator holder field [A], that
 gives a quiet, fast, low-scale history. That is now the open item (section 8).
 
+**Multi-field pass (supersedes the paragraph above where they conflict; section 4b).**
+- **The external two-field waterfall proposal fails its own requirements** [C, two independent codes].
+  - Its waterfall field must oscillate at 3H_i and also carry the vacuum energy. That forces a vev of 1.63 M_P.
+  - The fast neutrino channel is then kinematically blocked, and its loop swamps the potential.
+  - The waterfall lasts ≥ 17 e-folds, overproducing primordial black holes and making walls.
+  - Its Higgs portal either makes the Higgs tachyonic or hits a Landau pole.
+- **A repaired sector works for the CMB and the Higgs** [C]. It is a heavy, small-field hybrid that reheats through
+  axially coupled singlet neutrinos, with the phase holder on a light spectator field s.
+  - n_s = 0.9649 (HFa, Planck) or 0.9743 (HFb, ACT), r ≈ 3×10⁻⁷, a fast waterfall, no PBHs.
+  - ξ_H = 0.1 survives with the medium masses to at least 174.6 GeV.
+  - Open: walls (not excluded without a lattice) and Pauli blocking. The blocking slows reheating to K ≈ 2.5–10.
+- **At the holder strength M1r inherited, the relic is free X with no critical coupling** [C]. S/Q = 14.7 unblocked
+  and 61.5 at the Pauli-corrected self-consistent point. The abrupt end of inflation over-excites Y_L.
+- **New: the holder amplitude decides the branch, on M1r's own history too** [C]. Write the holder strength at the
+  slice as c0 in units of M1r's calibration μ_eff = 10i H_i.
+  - On M1r's supplied history, e_crit ∝ c0^−4.9, and c0 = 1.10 already puts e = 10⁻⁶ at the Q-matter threshold. The
+    decisive pass's "free X at 10⁻⁶" is a c0 = 1 statement.
+  - On the Pauli-corrected hybrid, self-consistent at H_i ≈ 8.4–8.9×10¹⁰ GeV with r ≈ 1.2×10⁻⁷:
+    - c0 = 1.36 recovers M1r's picture: free X at 10⁻⁶, Q-matter at 3×10⁻⁶, e_crit = 2.2×10⁻⁶.
+    - c0 = 1.40 gives Q-matter at 10⁻⁶ (S/Q = 2.88, e_crit = 0.60×10⁻⁶, M = 0.807 m_X).
+  - These points are tuned (±3% in amplitude, ±5° in phase) and move with the uncomputed thermalisation rate. They
+    need s_* ≥ 1.4×10¹⁶ GeV for isocurvature and a small induced holder portal.
+
+So the M1r picture can be realised by an explicit inflaton sector, but only by choosing the holder strength as well
+as e. The dark-matter branch is a surface in (e, c0), and nothing in GRUT fixes either.
+
 ## 1. The foundation: what closure does and does not do
 
 | Statement | Status |
@@ -123,6 +151,7 @@ made inside the framework.
 | g, λ_X, λ_φ, v, ε | supplied. ε is sensitive: the one-vacuum window is ε ∈ (0.0017, 0.058), and the coherent-orbit transition depends on ε within ±5% |
 | M_Y/H_i, h/H_i, μ/H_i, κ, λ_Y = λ_Σ = 0.5 | supplied (perturbative band) |
 | e | supplied. **It selects the dark-matter branch** (section 4) |
+| Holder strength c0 (μ_eff at the slice in units of 10i H_i) and phase | supplied (inherited from Codex's Option 1A as c0 = 1). **Multi-field pass: it co-selects the branch with e**; e_crit ∝ c0^−4.9 on M1r's history (section 4b) |
 | α_I and the sign of φ_I during inflation | supplied: this is the CP sign. α_I ≡ α_I + π only if the inflaton sector is reflection-even (a fermionic decay channel is needed; φ_I\|H\|² would break it) |
 | Inflaton history (m_I, Γ_I), sequestering of all other inflaton–hidden portals (≲ 5×10⁻¹⁵), inflaton quartic ≥ 1.4×10⁻²³ | supplied (an approximate shift symmetry) |
 | Renormalisation condition of the induced portals (λ_IΣ, A_IΣ, λ_IY, A_IY) | supplied. Vanishing at M_Y versus at M_P moves H_i by 17% |
@@ -215,7 +244,51 @@ condition and ledger is a model choice [C unless marked].
 - **Bonus, not a test.** In TB1/TB2 the N decays can give non-thermal leptogenesis. The CP asymmetry needed,
   ε₁ ≈ 1–2×10⁻⁸, is about 10⁻⁵ of the Davidson–Ibarra bound [E]; it carries its own CP phase.
 
-### 4b. The static-slice result
+### 4b. Multi-field pass: a hybrid sector with a spectator holder
+
+Conventions: a = 1 and H = H_i at σ = σ_c (the static-slice analogue of M1r's). c0 is the holder strength at the slice
+in units of M1r's calibration, μ_eff = μ + c0(10i − μ). Portals vanish at M_Y unless stated. Every architecture,
+closure and rescaling rule is a model choice [C unless marked; full table in `tracks/mf_critic/NOTES.md` §3].
+
+| | proposal as written | HFa / HFb, exported (c0 = 1) | HFa Pauli, self-consistent (c0 = 1) | HFa Pauli, strong holder (c0 = 1.36 / 1.40) | M1r's supplied history (c0 = 1 / 1.1 / 1.2) |
+|---|---|---|---|---|---|
+| sector | χ with m_χ = 3H, v = 1.63 M_P, λ = 4.8×10⁻¹⁵ | heavy hybrid m_χ = 250, m_σ = 600 H_i; biased waterfall; axial singlet-ν reheating; spectator s (HFa: mass from χ; HFb: from ξ_s R) | same | same | single oscillator (3, 0.5) |
+| n_s; r | ≥ 0.972 (log) or hilltop; 2.75×10⁻⁷ | 0.9649 / 0.9743; 2.75×10⁻⁷ | retuned; 9.4×10⁻⁷ | retuned; 1.27 / 1.15×10⁻⁷ | —; 2.7×10⁻⁷ at c0 = 1 |
+| H_i (GeV) | not self-consistent | 1.28×10¹¹ (≈ 1.11×10¹¹ gap-filled) | 2.40×10¹¹ | 8.85 / 8.40×10¹⁰ | 1.29 / 0.96 / 0.72×10¹¹ |
+| waterfall; defects | ≥ 17 e-folds; PBH overclosure; walls | fast; no PBH; walls not excluded | same | same | none |
+| K | no route below 2.2 | 2.05 (Pauli blocking ignored) | 7.84 | 6.50 | 1.99 |
+| S/Q at 10⁻⁶ / 3×10⁻⁶ | not run | 14.7 / 12.3 | 61.5 / 30.2 | 4.16 / 3.28 ; **2.88 / 2.12** | 4.955 / 2.99 ; 3.51 / 2.40 ; 2.12 / 1.64 |
+| e_crit | — | none | none | 2.2×10⁻⁶ ; **0.60×10⁻⁶** | 2.06 ; 1.02 ; 0.32 ×10⁻⁶ |
+| relic, mass per charge | — | free X X̄, 1.6–1.8 m_X | free X X̄, 6.8 m_X | free X, 1.000 ; **Q-matter, 0.807 m_X** | 1.002 ; 1.000 ; 0.798 |
+| Higgs, ξ_H = 0.1 | portal fails | safe to ≥ 174.6 GeV with media; 172.88 gravitational only | gravitational only fails at +1σ (172.74); safe with media | safe [E] | needs a plasma by τ ≈ 8–10 |
+
+- **Why c0 = 1 fails on the hybrid.** The waterfall ends inflation in about 0.2 H_i⁻¹, and the spectator's mass turns
+  on as fast. That leaves N_YL = 5–11 against M1r's 0.57, so R_Y = 9–15. M1r's own oscillating curvature also pumps X
+  through ξ_X R, which no abrupt end reproduces, so ε (charge per energy) falls.
+- **Why a stronger holder rescues it.** At c0 ≈ 1.3–1.4 the release becomes much more efficient (ε ≈ 0.45–0.64,
+  E/E_c ≈ 2.3–3.1). That enlarges the heat budget Q-matter can tolerate, even though N_YH and the cascade heat grow.
+- **Costs of the strong-holder points.**
+  - The window is ±3% in |μ_eff| and ±5° in phase; purely imaginary μ_eff from 12i to 16i stays free X.
+  - Isocurvature: D = d ln Ω/d ln s_* ≈ 9, so s_* ≥ 1.36×10¹⁶ GeV (Planck β_iso < 0.038).
+  - The induced holder portal must be ≲ 1/16π² or vanish at M_Y.
+  - At a thermalisation rate Γ_th = 10 H_i the point moves to c0 ≈ 1.25–1.30 at H_i ≈ 5×10¹⁰ GeV, where the axial
+    effective theory sits at or over its cutoff.
+- **Further caveats.**
+  - Walls are not excluded. If they percolate, they dominate at t ~ 23 H_i⁻¹, before the bias removes them at
+    t ~ 150.
+  - Four seesaw singlets at m̃ = 0.05 eV give Σm_ν = 0.20 eV for a real Casas–Ibarra matrix, in retrospective tension
+    with cosmological bounds.
+  - The inherited pair-fraction map has an unsampled gap (S/Q 6.7–17); filling it moves H_i by 2–13%.
+  - At c0 = 1.40, ⟨Q⟩ ≈ 10²⁰ is transferred from qm_micro, not recomputed.
+- **Higgs** [C, mf_higgs and skeptic]. During inflation ξ_H = 0.1 is safe with a cap above 177 GeV. After inflation,
+  gravitational-only survival is marginal (critical M_t 172.74–172.92 GeV, ∓0.33 GeV with α_s). Two independent
+  positive medium masses make it safe to at least 174.6 GeV: the singlet-neutrino gas through seesaw mixing, and the
+  SM gas.
+
+### 4c. The static-slice result
+
+**Multi-field pass.** The results below are at the holder strength c0 = 1. On the same history e_crit ∝ c0^−4.9, with
+e_crit = 2.86 / 2.06 / 1.02 / 0.32 ×10⁻⁶ at c0 = 0.9 / 1.0 / 1.1 / 1.2 (section 4b).
 
 **Decisive-pass result (supersedes the transferred estimates below).** S/Q(e) for the actual M1r release (portals
 vanish at M_Y):
@@ -367,9 +440,26 @@ on two uncomputed quantities, the sticking probability and ⟨Q⟩, and its shap
 | **Inflaton pass: the decay channel** | **constructed, but slow.** Realisations that keep the reflection: a scalar Yukawa −(y/2)φ_I N̄N with a soft M_N, or an axial coupling M_N N̄ e^{iγ5φ_I/f} N, with N → ±iγ5N. Breaking the reflection with Aφ_I\|H\|² fast enough needs A = 6.1 H_i, which makes the Higgs tachyonic. No perturbative, radiatively acceptable channel gives Γ_I/m_I = 1/6. The consistent benchmarks reheat at Γ_I ≈ 10⁻⁹ H_i (T_RH ≈ 1–2×10¹¹ GeV), and the scalar-Yukawa version induces R-odd terms above the no-portal bound unless the axial form is used [C/E] |
 | **Inflaton pass: the potential** | **constructed, but it breaks the M1r picture.** Low-scale plateaus (HT6t, T1/E1) are heavy and loud; quiet plateaus (TB1/TB2) are high-scale. None reproduces the branch point or the asymmetric relic (section 4a). A non-single-field sector is the remaining route [A] |
 | **Inflaton pass: Higgs** | with an R-even portal λ_IH ≈ 3×10⁻¹⁰–2×10⁻⁹, safe on every benchmark. Without it, ξ_H = 0.1 survives inflation at the TB scale only up to M_t ≈ 173.1 GeV and fails after inflation at central M_t [E] |
+| **Multi-field pass: the inflaton sector** | **constructed** (HFa/HFb: heavy hybrid, biased waterfall, axial singlet-ν reheating, spectator holder). It passes the CMB and the Higgs. It recovers M1r's branch structure only at a tuned holder strength (c0 ≈ 1.36–1.40), self-consistent at H_i ≈ 8.4–8.9×10¹⁰ GeV. Open: walls, Pauli blocking and thermalisation (K), the axial UV completion, Σm_ν |
+| **Multi-field pass: the external waterfall proposal** | fails as written (Planckian waterfall vev, blocked and loop-unstable reheating, PBH overclosure, walls, portal Landau pole) [C] |
 | TCC tension (closure pass) | unresolved by choice: TCC is not adopted |
 
 ## 8. The decisive calculations
+
+**Status after the multi-field pass.** Item 1 below has been built: HFa/HFb (section 4b). The open items, ranked:
+1. **A computed post-waterfall history.** This means a 3D lattice of the biased waterfall with the axial singlet
+   channel, its Pauli blocking and the thermalisation rate. It decides:
+   - whether walls form;
+   - K, and hence H_i (5×10¹⁰–2.4×10¹¹ GeV);
+   - where a self-consistent branch point exists in (e, c0), and whether it lies inside the axial effective theory.
+2. **The holder strength c0 and phase.** They co-decide the branch with e. Unless a principle fixes them, the
+   dark-matter type is a supplied choice.
+3. **The pair-fraction map across S/Q ≈ 6.7–17**, and ⟨Q⟩ recomputed on the hybrid's thermal history.
+4. **The completion of the reheating sector:**
+   - the axial couplings' UV completion and their anomalous SU(2) couplings;
+   - the seesaw masses (Σm_ν);
+   - the N_s soft mass;
+   - the induced holder-portal renormalisation condition.
 
 **Status after the inflaton pass.** The explicit inflaton sector was built: four benchmarks, two realisable reheating
 channels, Higgs survival on each, all run through the full chain (section 4a). None reproduces M1r's picture. The open
@@ -433,6 +523,20 @@ That construction decides the branch, H_i and r together.
    field's evolution through reheating with ξ_H = 0.1.
 
 ## 9. Bottom line for the owner
+
+**After the multi-field pass.** A two-field inflaton sector can give M1r a history that works:
+- the CMB tilt of Planck or of ACT, r ≈ 10⁻⁷, a fast waterfall without black holes, and a Higgs that survives;
+- dark matter that comes in M1r's two forms, a cold gas of 92 MeV scalars or Planck-mass nanometre Q-matter nuggets,
+  depending on e.
+
+But it works only if the strength of the inflaton coupling that sets the matter–antimatter sign is chosen about 40%
+above the value M1r inherited, to within a few percent. The design proposed from outside (a waterfall field doing
+everything at 3H) does not work as written. The repaired design still has two uncomputed pieces: whether walls form,
+and how fast reheating really is. Both need a lattice.
+
+The pass also showed that this holder strength decides the branch on M1r's own history: 10% more and M1r at e = 10⁻⁶
+is already at the Q-matter threshold. So the dark-matter type is not a consequence of GRUT. It is set by two supplied
+numbers, e and the holder strength, which closure does not fix. Nothing here validates or excludes anything.
 
 **After the inflaton pass.** We gave M1r a real inflaton, and that changed the picture. The single-field versions we
 built fall into two kinds:
