@@ -1,0 +1,173 @@
+{
+ "method": "mf_chain SKEPTIC: independent recomputation of the s -> A_L A_L hidden-heat leak (track E1) and its effect on the\nskeptic's strong-holder points.\n\n[D] (re-derived here): the holder u = mu + G_eff c (c = s/s_*) induces A (s/s_*)|Sigma|^2 with A = 2 mu Re(G_eff) c_L\n(G_eff = c0 (10i - mu), so |A| = 2 mu^2 c0 c_L).  In the linear basis Sigma = (h + sigma + i pi)/sqrt2 the s -> pi pi amplitude\nis the direct A_s plus sigma exchange, A_s [1 + m_sig^2/(m_s^2 - m_sig^2)] = A_s m_s^2/(m_s^2 - m_sig^2) (A_s = A/s_*), so\nGamma = A_s^2 m_s^3/[32 pi (m_sig^2 - m_s^2)^2] (identical pions), h-independent; pi = A_L by equivalence (m_s >> m_A).\ns quanta: n_s a^3 = rho_s a^3/m_s = 3 M_P^2 K^2 (f_s/a)/m_s in radiation; BR = Gamma/Gamma_s, Gamma_s = 1.3e-6 H_i (H_i/1.3e11 GeV)\n(track's rescaling of mf_hybrid's light-s Yukawa); each A_L decays non-relativistically deep in radiation (the leak A_L\nare produced at a ~ 2e3 with p = m_s/2 and become non-relativistic at a ~ 1e7, long before their decay at a ~ 1e9), so it\ndeposits the same m_A <a_A> as an inflationary vector.  R_leak = 2 n_s a^3 BR dep_A/E_X.\nUsage: python3 -B sk_leak.py -> ../results/sk_leak.json\n",
+ "cases": {
+  "HFa exported, c0 = 1": {
+   "bench": "/home/user/TestingGRUT/research/reality_framework/grut_working_theory_v2_20261101/tracks/mf_hybrid/results/bench_HFa.json",
+   "H_i_GeV": 130002426398.55379,
+   "K": 2.048186911778211,
+   "E_X": 150652.2869167993,
+   "f_s_over_a": 7.351213616571171e-06,
+   "n_s_a3": 10819152214.973673,
+   "Gamma_s": 1.300024263985538e-06,
+   "dep_A": 341228.9803000216,
+   "c0": 1.0,
+   "e": 1e-06,
+   "S_per_Q_noleak": 14.693300033331639,
+   "rows": {
+    "1/16pi^2": {
+     "c_L": 0.006332573977646111,
+     "A": 0.6491877791771271,
+     "Gamma_leak": 1.4162068839858732e-17,
+     "BR": 1.0893695781062958e-11,
+     "R_leak": 0.5339107302770392,
+     "S_per_Q_with_leak": 15.071074975851472,
+     "R_total_noleak": 14.56178577920982
+    },
+    "1/4pi^2": {
+     "c_L": 0.025330295910584444,
+     "A": 2.5967511167085084,
+     "Gamma_leak": 2.265931014377397e-16,
+     "BR": 1.7429913249700733e-10,
+     "R_leak": 8.542571684432627,
+     "S_per_Q_with_leak": 20.41967841963353,
+     "R_total_noleak": 14.56178577920982
+    },
+    "ln(MP/MY)/4pi^2": {
+     "c_L": 0.33801917368289486,
+     "A": 34.65224685208552,
+     "Gamma_leak": 4.035049145837089e-14,
+     "BR": 3.1038260266517434e-08,
+     "R_leak": 1521.2156221796147,
+     "S_per_Q_with_leak": 461.7106435098081,
+     "R_total_noleak": 14.56178577920982
+    }
+   }
+  },
+  "HFa Pauli sc 2.40e11, c0 = 1": {
+   "bench": "/home/user/TestingGRUT/research/reality_framework/grut_working_theory_v2_20261101/tracks/mf_chain/results/histories/bench_itHFa_P0_it2.json",
+   "H_i_GeV": 239966176310.95163,
+   "K": 7.8399694892398255,
+   "E_X": 127903.95135378458,
+   "f_s_over_a": 5.114740232873213e-07,
+   "n_s_a3": 3237055869.394476,
+   "Gamma_s": 2.3996617631095167e-06,
+   "dep_A": 667603.0315995938,
+   "c0": 1.0,
+   "e": 1e-06,
+   "S_per_Q_noleak": 61.506852176640365,
+   "rows": {
+    "1/16pi^2": {
+     "c_L": 0.006332573977646111,
+     "A": 0.6491877791771271,
+     "Gamma_leak": 4.8252947551852796e-17,
+     "BR": 2.010822870691823e-11,
+     "R_leak": 0.6794982548437042,
+     "S_per_Q_with_leak": 61.9318689783392,
+     "R_total_noleak": 72.71651452447585
+    },
+    "1/4pi^2": {
+     "c_L": 0.025330295910584444,
+     "A": 2.5967511167085084,
+     "Gamma_leak": 7.720471608296447e-16,
+     "BR": 3.2173165931069167e-10,
+     "R_leak": 10.871972077499267,
+     "S_per_Q_with_leak": 68.19656494766197,
+     "R_total_noleak": 72.71651452447585
+    },
+    "ln(MP/MY)/4pi^2": {
+     "c_L": 0.3224930988379111,
+     "A": 33.060581585555234,
+     "Gamma_leak": 1.2514230629470585e-13,
+     "BR": 5.214997722535055e-08,
+     "R_leak": 1762.254598913177,
+     "S_per_Q_with_leak": 686.2713379559798,
+     "R_total_noleak": 72.71651452447585
+    }
+   }
+  },
+  "HFa Pauli sc 8.40e10, c0 = 1.40 (skeptic)": {
+   "bench": "/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/wt2/mf_chain_skeptic/hist/bench_skP0_H084.json",
+   "H_i_GeV": 84001532646.27129,
+   "K": 6.499117478252637,
+   "E_X": 948301.7667327054,
+   "f_s_over_a": 7.874667276381123e-07,
+   "n_s_a3": 27948885765.82231,
+   "Gamma_s": 8.400153264627129e-07,
+   "dep_A": 607838.6568747553,
+   "c0": 1.4,
+   "e": 1e-06,
+   "S_per_Q_noleak": 2.8754139337407114,
+   "rows": {
+    "1/16pi^2": {
+     "c_L": 0.006332573977646111,
+     "A": 0.9088628908479779,
+     "Gamma_leak": 1.1589221840541402e-17,
+     "BR": 1.3796440940361618e-11,
+     "R_leak": 0.4943144627589324,
+     "S_per_Q_with_leak": 2.9410498407581254,
+     "R_total_noleak": 15.629468567965592
+    },
+    "1/4pi^2": {
+     "c_L": 0.025330295910584444,
+     "A": 3.6354515633919116,
+     "Gamma_leak": 1.8542754944866244e-16,
+     "BR": 2.2074305504578589e-10,
+     "R_leak": 7.909031404142919,
+     "S_per_Q_with_leak": 3.8756152474590095,
+     "R_total_noleak": 15.629468567965592
+    },
+    "ln(MP/MY)/4pi^2": {
+     "c_L": 0.34908137163612923,
+     "A": 50.10081298478908,
+     "Gamma_leak": 3.521657204647805e-14,
+     "BR": 4.1923725600072445e-08,
+     "R_leak": 1502.0905744050197,
+     "S_per_Q_with_leak": 86.75976647812529,
+     "R_total_noleak": 15.629468567965592
+    }
+   }
+  },
+  "HFa Pauli 8.40e10, c0 = 1.36 (skeptic)": {
+   "bench": "/tmp/claude-0/-home-user-TestingGRUT/553831ba-02d6-5e13-9e04-654a9685bce7/scratchpad/wt2/mf_chain_skeptic/hist/bench_skP0_H084.json",
+   "H_i_GeV": 84001532646.27129,
+   "K": 6.499117478252637,
+   "E_X": 804245.6179507435,
+   "f_s_over_a": 7.874667276381123e-07,
+   "n_s_a3": 27948885765.82231,
+   "Gamma_s": 8.400153264627129e-07,
+   "dep_A": 607838.6511593873,
+   "c0": 1.36,
+   "e": 1e-06,
+   "S_per_Q_noleak": 4.16445737738558,
+   "rows": {
+    "1/16pi^2": {
+     "c_L": 0.006332573977646111,
+     "A": 0.8828953796808929,
+     "Gamma_leak": 1.0936441181768054e-17,
+     "BR": 1.3019335287394315e-11,
+     "R_leak": 0.5500256146642301,
+     "S_per_Q_with_leak": 4.24571768274784,
+     "R_total_noleak": 20.43384431451185
+    },
+    "1/4pi^2": {
+     "c_L": 0.025330295910584444,
+     "A": 3.5315815187235717,
+     "Gamma_leak": 1.7498305890828886e-16,
+     "BR": 2.0830936459830904e-10,
+     "R_leak": 8.800409834627681,
+     "S_per_Q_with_leak": 5.41047415987697,
+     "R_total_noleak": 20.43384431451185
+    },
+    "ln(MP/MY)/4pi^2": {
+     "c_L": 0.34908137163612923,
+     "A": 48.669361185223686,
+     "Gamma_leak": 3.3232944723043786e-14,
+     "BR": 3.956230758668062e-08,
+     "R_leak": 1671.3819920567107,
+     "S_per_Q_with_leak": 111.80087979823331,
+     "R_total_noleak": 20.43384431451185
+    }
+   }
+  }
+ }
+}

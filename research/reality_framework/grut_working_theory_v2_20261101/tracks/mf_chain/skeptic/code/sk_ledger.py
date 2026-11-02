@@ -74,6 +74,14 @@ def p_skeptic(s):
     return _loglog(rows, s) * sc_factor(s)
 
 
+def M_relic(s, pf):
+    """mass per net charge (m_X): free X 1 + 2p; Q-matter: qm_micro / dq_critic table [Q] (mid of its lo/hi band)."""
+    if s > SQB:
+        return 1 + 2 * pf(s)
+    S = [1.5, 2.5, 3.0, 3.2]; lo = [0.7883, 0.7974, 0.8023, 0.8048]; hi = [0.7944, 0.8076, 0.8152, 0.8182]
+    return 0.5 * (float(np.interp(s, S, lo)) + float(np.interp(s, S, hi)))
+
+
 # ------------------------------------------------------------------ independent ledger and calibration
 def ledger(rel, vec):
     r = rel['result']
@@ -119,6 +127,9 @@ CASES = [  # (label, base tag, engine dir, has iso variants, H_i of that history
     ('HFa Pauli P0 sc 1e-6', 'itHFa_P0_it2', MFC, True),
     ('HFb Pauli P0 sc 1e-6', 'itHFb_P0_it0', MFC, True),
     ('HFa Pauli P0 sc 3e-6', 'e3P', SKE, True),
+    ('HFa unblocked at 1.12e11 (skeptic-map iteration step)', 'skUH112', SKE, False),
+    ('HFa Pauli P0 at 8.40e10, c0 = 1.40 (skeptic)', 'skP0H084_C1.400', SKE, False),
+    ('HFa Pauli P0 at 8.40e10, c0 = 1.36 (skeptic)', 'skP0H084_C1.360', SKE, False),
 ]
 
 
@@ -141,7 +152,7 @@ def main():
             b = L['by_e'][e]
             s = b['S_per_Q']
             pt, ps = p_track(s), p_skeptic(s)
-            Mt, Ms = 1 + 2 * pt, 1 + 2 * ps
+            Mt, Ms = M_relic(s, p_track), M_relic(s, p_skeptic)
             row['by_e'][e] = dict(S_per_Q_mine=s, S_per_Q_track=ch[lab_e]['S_per_Q'], branch='free X' if s > SQB else 'Q-matter',
                                   p_track_map=pt, p_skeptic_map=ps, M_track=ch[lab_e]['M'], M_track_recomputed=Mt, M_skeptic=Ms,
                                   asym_share_skeptic=1 / Ms,
@@ -162,7 +173,7 @@ def main():
                     lab_e = 'e1e-6' if e == '1e-06' else 'e3e-6'
                     lo = {}
                     for mapname, pf in (('track', p_track), ('skeptic', p_skeptic)):
-                        lnO = {c0: math.log((1 + 2 * pf(LL['by_e'][e]['S_per_Q'])) * LL['N_X'] * LL['K'] ** -1.5) for c0, (LL, cc) in v.items()}
+                        lnO = {c0: math.log(M_relic(LL['by_e'][e]['S_per_Q'], pf) * LL['N_X'] * LL['K'] ** -1.5) for c0, (LL, cc) in v.items()}
                         lo[mapname] = (lnO['1.01'] - lnO['0.99']) / (math.log(1.01) - math.log(0.99))
                     DN = (math.log(v['1.01'][0]['N_X']) - math.log(v['0.99'][0]['N_X'])) / (math.log(1.01) - math.log(0.99))
                     isd[e] = dict(D_trackmap=lo['track'], D_skepticmap=lo['skeptic'], D_charge_only=DN)

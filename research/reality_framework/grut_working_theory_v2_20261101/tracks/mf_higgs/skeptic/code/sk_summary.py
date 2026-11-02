@@ -28,7 +28,7 @@ summary = dict(
                       controls=pd.get('controls_EXP')),
         'H5_H8': dict(refuted=False, recomputed=dict(plasma=R['plasma'], medium_factor=R['medium'])),
         'H4': dict(refuted=False, recomputed=R['windows']),
-        'H9': dict(refuted=False, recomputed=R['upper']),
+        'H9': dict(refuted=False, recomputed=dict(upper=R['upper'], lower_edge_grav=pd.get('lower_edge_grav'))),
         'H10': dict(refuted=False, recomputed=dict(virial=R['g6']['virial'], floquet=R['g6']['floquet'])),
         'H3': dict(refuted=False, recomputed=R['ns']),
     })
