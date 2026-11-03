@@ -25,7 +25,7 @@ principle would have to act.
 | CP sign of the dark charge | supplied (CP-odd) | same as the holder state | the preparation theorem: no CP-even principle can fix it | supplied | a CP-odd law, which is itself a supplied phase |
 | end of inflation (waterfall) | emergent | t ≈ 0.19 H_i⁻¹ after the slice | instability at σ = σ_c | computed; no walls, no PBHs (e2e_lattice) | — |
 | dark charge and its release | emergent | t ≲ 3 H_i⁻¹ | holder switch-off; ε up to 0.6–0.8 | computed | — |
-| reheating closure (Pauli blocking) | emergent (Fermi statistics) | t ≈ 0.3–3 H_i⁻¹ | **computation in progress** (lf_fermion) | open: P0 vs GM moves K from 9 to 16 | the lf_fermion result |
+| reheating closure (Pauli blocking) | emergent (Fermi statistics) | t ≈ 0.3–3 H_i⁻¹ | **computed** (lf_fermion, with skeptic). Fermions on 1+1D lattice rays give more production than either closure (beyond P0) | K ≈ 5.5 (was 8.8 with P0, 15.3 with GM) | a 3D fermion run with varied spacing (the hot spots are 1–2 cells wide) |
 | SM thermal bath | emergent | thermal at t ≈ 6 H_i⁻¹; dominant at t ≈ 4400 H_i⁻¹; T_RH ≈ 2–3×10¹² GeV | kinetic network (e2e_kinetic) | computed under the closure | — |
 | baryon asymmetry | emergent (leptogenesis) | T ≈ 2–3×10¹² GeV; sphalerons below 10¹² GeV | supplied lepton CP phase δ ≈ 10⁻³ | magnitude fitted through δ | a common CP source (below) |
 | neutrino masses | supplied (seesaw singlets), fitted | — | Δm² data | Σm_ν = 0.0588 eV | — |

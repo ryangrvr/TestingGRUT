@@ -1,0 +1,113 @@
+{
+ "run": "REC_H84_P0",
+ "label": "C/A",
+ "note": "Calibrated closure table kappa_j(t) for the drain (model choice), from calib_seq_<RUN>.json:\nt <= 0.45: kappa_hom,j = geometric mean of the sequential fits over windows ending 0.25-0.45 (pre-fragmentation);\nt >= 0.55: kappa_frag,j = geometric mean over windows ending 0.55-1.10 (fragmented stage), held constant after 1.1\n(extrapolation [A]); linear in between.  Variants: 'mid' (mean fit), 'lo' (fits to Q - sem), 'hi' (Q + sem, capped\nat 1e3).  Claude, lf_fermion (issue #13 context). Usage: python3 -B kappa_table.py RUN -> ../results/kappa_<RUN>.json",
+ "t_switch": [
+  0.65,
+  0.75
+ ],
+ "table": {
+  "mid": {
+   "N2": {
+    "k_hom": 2.18831120132791,
+    "k_frag": 13.985172294758694,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N3": {
+    "k_hom": 3.108048507203057,
+    "k_frag": 11.182922484134677,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N4": {
+    "k_hom": 4.1667643371862795,
+    "k_frag": 12.40870318947982,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N1": {
+    "k_hom": 3.456500769690514,
+    "k_frag": 141.73113562730654,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   }
+  },
+  "lo": {
+   "N2": {
+    "k_hom": 1.8233098141275794,
+    "k_frag": 4.136423918860856,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N3": {
+    "k_hom": 2.613970455547891,
+    "k_frag": 3.413429252905943,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N4": {
+    "k_hom": 3.5386770818784523,
+    "k_frag": 4.056647678478459,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N1": {
+    "k_hom": 2.738679556526115,
+    "k_frag": 4.200443027404425,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   }
+  },
+  "hi": {
+   "N2": {
+    "k_hom": 2.6004660923703002,
+    "k_frag": 64.3801104184929,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N3": {
+    "k_hom": 3.6416519561710823,
+    "k_frag": 39.19949968415532,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N4": {
+    "k_hom": 5.025759058152903,
+    "k_frag": 70.82029359158899,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   },
+   "N1": {
+    "k_hom": 5.95144521785792,
+    "k_frag": 999.9999999999998,
+    "t_sw": [
+     0.65,
+     0.75
+    ]
+   }
+  }
+ }
+}

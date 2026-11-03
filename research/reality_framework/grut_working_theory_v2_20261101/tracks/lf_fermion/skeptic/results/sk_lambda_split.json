@@ -1,0 +1,142 @@
+{
+ "label": "C",
+ "note": "Skeptic S2: split lf_fermion's output-level lambda_PB into the common-mode (homogeneous-control) closure deficit and\nthe locality part. Read-only on results/cmp_REC_P0.json. Claude, lf_fermion skeptic (issue #13 context).\nlambda_out = (P0 - Q)/(P0 - GM) (lf_fermion). r_hom = Q_hom/closure_hom (same line-mean history, P0 = GM there).\nlambda_loc = (r_hom P0 - Q)/(r_hom P0 - r_hom GM): both closures first corrected by the common-mode factor [model choice].\nAlso with Q(N1) divided by 1.15 (sk_measure_bias: N1 Q biased high by 14-23% after t = 0.4).\nUsage: python3 -B sk_lambda_split.py -> ../results/sk_lambda_split.json",
+ "species": {
+  "N2": {
+   "0.6": {
+    "Q_over_P0": 3.062440617802578,
+    "r_hom": 1.5821238449392494,
+    "extra_factor_over_hom": 1.9356516416830631,
+    "lambda_out": -2.901566668192593,
+    "lambda_loc": -1.3163315312514505,
+    "lambda_loc_N1corr": -1.3163315312514505
+   },
+   "0.7": {
+    "Q_over_P0": 3.365374305292327,
+    "r_hom": 1.5827078050559755,
+    "extra_factor_over_hom": 2.126339615273019,
+    "lambda_out": -3.1560748559086163,
+    "lambda_loc": -1.5028539588949468,
+    "lambda_loc_N1corr": -1.5028539588949468
+   },
+   "0.9": {
+    "Q_over_P0": 3.5780497098772632,
+    "r_hom": 1.5898740375461167,
+    "extra_factor_over_hom": 2.25052401975177,
+    "lambda_out": -3.418284214409459,
+    "lambda_loc": -1.658093131439598,
+    "lambda_loc_N1corr": -1.658093131439598
+   },
+   "1.1": {
+    "Q_over_P0": 3.6369154983102376,
+    "r_hom": 1.5822164264630225,
+    "extra_factor_over_hom": 2.298620743333077,
+    "lambda_out": -3.4596961065868386,
+    "lambda_loc": -1.7038214279226642,
+    "lambda_loc_N1corr": -1.7038214279226642
+   }
+  },
+  "N3": {
+   "0.6": {
+    "Q_over_P0": 2.4522715696839743,
+    "r_hom": 2.1096538054345477,
+    "extra_factor_over_hom": 1.1624047335950716,
+    "lambda_out": -2.218899377728207,
+    "lambda_loc": -0.24813524538846163,
+    "lambda_loc_N1corr": -0.24813524538846163
+   },
+   "0.7": {
+    "Q_over_P0": 2.642160460219738,
+    "r_hom": 2.1088648478259784,
+    "extra_factor_over_hom": 1.2528827833341394,
+    "lambda_out": -2.341490003858344,
+    "lambda_loc": -0.3605753053179289,
+    "lambda_loc_N1corr": -0.3605753053179289
+   },
+   "0.9": {
+    "Q_over_P0": 2.819182037757432,
+    "r_hom": 2.1123734905468536,
+    "extra_factor_over_hom": 1.3346039658107993,
+    "lambda_out": -2.5682873604428362,
+    "lambda_loc": -0.4723876546215706,
+    "lambda_loc_N1corr": -0.4723876546215706
+   },
+   "1.1": {
+    "Q_over_P0": 2.8604420386901617,
+    "r_hom": 2.1100547964334933,
+    "extra_factor_over_hom": 1.355624528578597,
+    "lambda_out": -2.588918119412909,
+    "lambda_loc": -0.494873135845182,
+    "lambda_loc_N1corr": -0.494873135845182
+   }
+  },
+  "N4": {
+   "0.6": {
+    "Q_over_P0": 2.3433174181502783,
+    "r_hom": 2.48318438113163,
+    "extra_factor_over_hom": 0.9436743545730536,
+    "lambda_out": -2.255537869799254,
+    "lambda_loc": 0.0945752839833645,
+    "lambda_loc_N1corr": 0.0945752839833645
+   },
+   "0.7": {
+    "Q_over_P0": 2.4224469320068294,
+    "r_hom": 2.481770837736243,
+    "extra_factor_over_hom": 0.9760961387621404,
+    "lambda_out": -2.195385215937703,
+    "lambda_loc": 0.03689289377663144,
+    "lambda_loc_N1corr": 0.03689289377663144
+   },
+   "0.9": {
+    "Q_over_P0": 2.563184966943392,
+    "r_hom": 2.4790031354170696,
+    "extra_factor_over_hom": 1.0339579366898057,
+    "lambda_out": -2.385843945566314,
+    "lambda_loc": -0.051829015355564785,
+    "lambda_loc_N1corr": -0.051829015355564785
+   },
+   "1.1": {
+    "Q_over_P0": 2.5797435448866466,
+    "r_hom": 2.474744523557304,
+    "extra_factor_over_hom": 1.042428226562317,
+    "lambda_out": -2.373388889703469,
+    "lambda_loc": -0.06374368919484973,
+    "lambda_loc_N1corr": -0.06374368919484973
+   }
+  },
+  "N1": {
+   "0.6": {
+    "Q_over_P0": 2.488539193178322,
+    "r_hom": 1.7116111165912804,
+    "extra_factor_over_hom": 1.4539162366123883,
+    "lambda_out": -1.7451897157913143,
+    "lambda_loc": -0.5321794357830774,
+    "lambda_loc_N1corr": -0.3098406773150004
+   },
+   "0.7": {
+    "Q_over_P0": 3.178171700047247,
+    "r_hom": 1.7047111059421693,
+    "extra_factor_over_hom": 1.8643462161823117,
+    "lambda_out": -2.5143061725873763,
+    "lambda_loc": -0.9977317337070299,
+    "lambda_loc_N1corr": -0.7170293925954999
+   },
+   "0.9": {
+    "Q_over_P0": 3.8523471626626247,
+    "r_hom": 1.704654637284455,
+    "extra_factor_over_hom": 2.2598989134828398,
+    "lambda_out": -3.326297661755857,
+    "lambda_loc": -1.4692457022148262,
+    "lambda_loc_N1corr": -1.125496926829977
+   },
+   "1.1": {
+    "Q_over_P0": 4.204945890649696,
+    "r_hom": 1.6725437733640243,
+    "extra_factor_over_hom": 2.5141021464521645,
+    "lambda_out": -3.792452038716303,
+    "lambda_loc": -1.7916557620800302,
+    "lambda_loc_N1corr": -1.4036164437142291
+   }
+  }
+ }
+}
