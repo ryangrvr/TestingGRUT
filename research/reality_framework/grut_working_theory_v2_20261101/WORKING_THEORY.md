@@ -106,6 +106,33 @@ gives a quiet, fast, low-scale history. That is now the open item (section 8).
 So the M1r picture can be realised by an explicit inflaton sector, but only by choosing the holder strength as well
 as e. The dark-matter branch is a surface in (e, c0), and nothing in GRUT fixes either.
 
+**End-to-end pass: model M2 is complete** (tracks `e2e_*`; brief BRIEF_E2E.md). The full card is
+`tracks/e2e_card/CANDIDATE_M2.json`, and the write-up, with the Lagrangian, history and observables ledger, is
+`tracks/e2e_card/END_TO_END.md`.
+- **What M2 is.** M1r's hidden sector plus the HFa/HFb hybrid inflaton, the spectator holder, four seesaw singlets
+  and a massless N_s.
+- **Every link from CMB exit to today now has a computed number** under stated closures [C].
+  - A 3D lattice shows no wall network forms.
+  - A kinetic network gives reheating with K ≈ 9–16 and T_RH ≈ 2–3×10¹² GeV.
+  - The neutrino fit gives Σm_ν = 0.0588 eV.
+  - Leptogenesis reaches η_B with a lepton CP phase δ ≈ 10⁻³ (the integrator corrected an overcount by ×540 in
+    e2e_sm).
+  - The Higgs is safe with the media to at least 174.6 GeV.
+  - Gravitational waves come out at Ω_GW h² ~ 10⁻¹²–10⁻¹¹ at GHz frequencies. There are no PBHs, and ΔN_eff ≲ 0.02.
+- **Two benchmarks, each a self-consistent root:**
+  - **M2-X:** c0 = 1.55, H_i = 1.12×10¹¹ GeV, r = 2.05×10⁻⁷. Free X at 10⁻⁶ (S/Q = 4.03), e_crit = 1.7×10⁻⁶.
+  - **M2-Q:** c0 = 1.45, H_i = 9.9×10¹⁰ GeV, r = 1.59×10⁻⁷. Q-matter at 10⁻⁶ (S/Q = 2.43): ⟨Q⟩ = 7.5×10¹⁹,
+    objects of 9.6 μg (0.44 Planck masses) and 0.73 nm, about 0.3 crossings per m² per year.
+- **What stays supplied or open:**
+  - c0 and its phase (windows of a few percent and a few degrees);
+  - s_* ≥ 1.1–1.4×10¹⁶ GeV, an initial condition that no equilibrium supplies;
+  - the Pauli-blocking closure, which sets K and how robust M2-Q is;
+  - an axial completion that holds only at strong coupling;
+  - the lepton phase δ ≈ 10⁻³;
+  - n_s, which is fitted (HFa to Planck, HFb to ACT).
+
+  M2 is complete as a model. It is not a consequence of GRUT, and it is not natural.
+
 ## 1. The foundation: what closure does and does not do
 
 | Statement | Status |
@@ -523,6 +550,15 @@ That construction decides the branch, H_i and r together.
    field's evolution through reheating with ξ_H = 0.1.
 
 ## 9. Bottom line for the owner
+
+**After the end-to-end pass.** There is now one complete, explicit model, M2, with a number for every step from the
+CMB to today. It comes in two versions:
+- **M2-X:** ordinary-looking dark matter, a cold gas of 92 MeV scalars;
+- **M2-Q:** dark matter made of nanometre, roughly 10-microgram nuggets.
+
+Both fit every current bound we checked. Getting either requires choosing a handful of numbers, mainly the strength
+and phase of the coupling that sets the matter–antimatter sign, to within a few percent. The model fits the data; it
+does not predict it, and GRUT's foundation does not fix those numbers.
 
 **After the multi-field pass.** A two-field inflaton sector can give M1r a history that works:
 - the CMB tilt of Planck or of ACT, r ≈ 10⁻⁷, a fast waterfall without black holes, and a Higgs that survives;
