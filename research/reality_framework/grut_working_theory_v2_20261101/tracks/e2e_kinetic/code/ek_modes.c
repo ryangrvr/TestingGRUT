@@ -431,24 +431,52 @@ static void run_dephased(void) {
             if (rhoP[s->par] <= 0) continue;
             if (res) {
                 double kr = s->kres_m * m, qr = kr * a;
-                double Ntot = s->Gpert * rhoP[s->par] / m;           /* decays per volume per time (2 N each) */
+                double Ntot = s->Gpert * rhoP[s->par] / m;           /* decays per volume per time; each fills the pair (k,h),(-k,h): R_i = g_i Ntot / (w_i/a^3) per entry (resumed run: a factor 1/2 removed) */
                 if (dshell == 0) {
                     int ib = -1;
                     for (int i = 0; i < s->nq - 1; i++) if (s->q[i] <= qr && qr < s->q[i + 1]) { ib = (qr - s->q[i] < s->q[i + 1] - qr) ? i : i + 1; break; }
-                    if (ib >= 0) R[j][ib] = Ntot / (2.0 * s->w[ib] / (a * a * a));
+                    if (ib >= 0) R[j][ib] = Ntot / (s->w[ib] / (a * a * a));
                 } else {
                     /* products spread as a Gaussian in ln k of width dshell (fragmented / moving parents); each bin
                        receives the share g_i of the decays: R_i = g_i Ntot / (2 w_i / a^3) */
-                    double gs = 0;
+                    double gs = 0, hw = fabs(dshell);
+                    if (dshell <= -1.0e5) {
+                        /* omega-Lorentzian variant (resumed run): the pair-energy line 2 omega - m of HWHM fac G(k_res)
+                           written in omega (HWHM G/2), weight per bin L(x) d omega, d omega = (k^2/omega) d ln k, kept
+                           over the kinematic range of chi -> N + N*(-> L H): M < omega < (m^2 + M^2 - (m_L + m_H)^2)/(2m)
+                           (k = 0 to s* = (m_L + m_H)^2), no cut in units of the width; fac = -dshell/1e5 */
+                        double Gk, Geqk, feqk, Tc2 = Tcal2(); rates(s, kr, Tc2, Tof(rho_th), &Gk, &Geqk, &feqk);
+                        double hwo = 0.5 * (-dshell / 1.0e5) * Gk; if (hwo < 1e-9 * m) hwo = 1e-9 * m;
+                        double smin = pow(sqrt(kL * Tc2) + sqrt(kH * Tc2), 2.0);
+                        double ommax = (m * m + s->M * s->M - smin) / (2.0 * m);
+                        for (int i = 0; i < s->nq; i++) {
+                            double k = s->q[i] / a, om = sqrt(k * k + s->M * s->M);
+                            if (om > ommax) continue;
+                            double dl = (i + 1 < s->nq) ? log(s->q[i + 1] / s->q[i]) : log(s->q[i] / s->q[i - 1]);
+                            double x = (om - 0.5 * m) / hwo;
+                            R[j][i] = (k * k / om) * dl / (1.0 + x * x); gs += R[j][i];
+                        }
+                        if (gs > 0) for (int i = 0; i < s->nq; i++) if (R[j][i] > 0) R[j][i] = (R[j][i] / gs) * Ntot / (s->w[i] / (a * a * a));
+                        goto shell_done;
+                    }
+                    if (dshell <= -100.0) {
+                        /* self-consistent natural line (added in the resumed run): both final-state N have removal
+                           rate G(k_res); the pair-energy Lorentzian has HWHM G, i.e. G/2 in omega, and in ln k
+                           HWHM = (G/2) omega / k^2 = G / (m beta^2), beta^2 = 4 kres_m^2; times fac = -dshell/1000 */
+                        double Gk, Geqk, feqk; rates(s, kr, Tcal2(), Tof(rho_th), &Gk, &Geqk, &feqk);
+                        hw = (-dshell / 1000.0) * Gk / (m * 4.0 * s->kres_m * s->kres_m);
+                        if (hw < 1e-6) hw = 1e-6;
+                    }
                     for (int i = 0; i < s->nq; i++) {
                         /* dshell > 0: Gaussian of width dshell; dshell < 0: Lorentzian of HWHM |dshell| (natural line of
                            damped final states), cut at |x| < LCUT */
-                        double x = log(s->q[i] / qr) / fabs(dshell);
+                        double x = log(s->q[i] / qr) / hw;
                         if (fabs(x) < (dshell > 0 ? 5 : LCUT)) { double dl = (i + 1 < s->nq) ? log(s->q[i + 1] / s->q[i]) : log(s->q[i] / s->q[i - 1]);
                             R[j][i] = (dshell > 0 ? exp(-0.5 * x * x) : 1.0 / (1.0 + x * x)) * dl; gs += R[j][i]; }
                     }
-                    for (int i = 0; i < s->nq; i++) if (R[j][i] > 0) R[j][i] = (R[j][i] / gs) * Ntot / (2.0 * s->w[i] / (a * a * a));
+                    for (int i = 0; i < s->nq; i++) if (R[j][i] > 0) R[j][i] = (R[j][i] / gs) * Ntot / (s->w[i] / (a * a * a));
                 }
+                shell_done: ;
             } else {
                 for (int i = 0; i < s->nq; i++) R[j][i] = (m / (2 * M_PI)) * pp_lookup(s, s->q[i] / a, A);
             }

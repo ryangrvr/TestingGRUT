@@ -324,7 +324,7 @@ if __name__ == '__main__':
     ap.add_argument('--tend', type=float, default=1e8); ap.add_argument('--lam', default='SU2')
     ap.add_argument('--KL', type=float, default=1.0); ap.add_argument('--cBB', type=float, default=1.0)
     ap.add_argument('--dk', type=float, default=0.05); ap.add_argument('--cdt', type=float, default=0.04)
-    ap.add_argument('--dshell', type=float, default=0.0); ap.add_argument('--nqlog', type=int, default=0)
+    ap.add_argument('--dshell', type=float, default=-1.0e5); ap.add_argument('--nqlog', type=int, default=6400)   # reference (resumed run): omega-Lorentzian natural line, 6400 log bins
     ap.add_argument('--state', default=None, help='lattice hand-over JSON (NOTES.md section 6): t, a, H, rho_sig, rho_chi, '
                     'rho_h, n_h, rho_th and per-species E_N, n_N lists (physical, H_i units); t0 is then the state t')
     ap.add_argument('--out', default=None, help='export: path of the fluid json (default ../results/fluid_<name>.json)')

@@ -1,0 +1,685 @@
+{
+ "method": "e2e_relic item 1 (Claude): the corrected pair-fraction map p(S/Q) = (Xbar per net charge after freeze-out) of the free-X\nbranch, as a callable function plus a table (../results/pmap.json).\n\nWhat changed against the inherited maps (chain_mfi.p_of_SQ, inf_chain chain.p_of_SQ):\n  * The gap 6.74 < S/Q < 17.1 is filled with the reviewed case-L conditional moment network (fx_chain/code/kin/m1_kin.py,\n    read-only; driver code/pmap_runs.py), not bridged log-linearly.\n  * ONE start convention throughout the central map: the 'relaxed' onset start (x0 = ln(a_on/a_ref) interpolated over\n    fx_chain's heat_onset rows, R = 0 ... 49.6), which is the convention of the M1r gas map below the gap.  The inherited\n    maps switched at S/Q = 6.74 from 'relaxed' (wt_critic/fx_chain gas map) to 'aref' (forced equilibrium at a_ref:\n    inf_chain pmap_kin, mf_chain skeptic).  The two differ x1.85 at 6.74 (the 'junction' the mf_chain skeptic found),\n    x1.41 at 8, x1.07 at 14, x1.03 at 21.8.  Above S/Q = 21.8 no relaxed rows exist (the onset table ends at R = 49.6);\n    there the aref rows of inf_chain are used times 1 - 0.0280 (21.797/S)^2, a two-parameter fit of the computed\n    relaxed/aref ratio at S/Q = 14-21.8 [E].  Every one of these is a model choice.\n  * The visible-clock yield dependence is explicit: p(S/Q, f) = p(S/Q, 1) f^beta(S/Q), f = Y_Q / 5.07941423e-9, with\n    beta computed at S/Q = 5, 7, 10, 21.8 (pmap_runs.py, f = 0.1 and 10) and at 155-958 from inf_chain's self-consistent\n    runs.  beta = -0.38 (S/Q = 5) ... -0.02 (S/Q >= 155).  The abundance-calibrated yield f = 0.9374/(1 + 2p) is solved by\n    p_selfconsistent().  This replaces inf_chain's sc_ratio interpolation (identical where both exist).\n[C] on a conditional recipe (forced chemical equilibrium at the start, no objects, MB fugacities): inherited, not validated.\nUsage: python3 -B pmap.py   -> writes ../results/pmap.json and prints the table.\n       from pmap import p_of_SQ, p_selfconsistent, M_freeX\n",
+ "rows_relaxed": [
+  [
+   3.6388366029832127,
+   7.544122020366876e-05,
+   "fx_chain gas map (wt_critic S/Q), relaxed"
+  ],
+  [
+   4.314953051486718,
+   0.0002698829640998089,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   4.936310238047122,
+   0.0009101892722290548,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   5.2682376922802785,
+   0.0017163247840089558,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   5.573114471699787,
+   0.002990076314594871,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   5.872535041261307,
+   0.004967989559836962,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   6.16695544373095,
+   0.007831057621247556,
+   "fx_chain gas map, relaxed"
+  ],
+  [
+   6.742,
+   0.016618986077024223,
+   "e2e_relic network, relaxed (= gas map 0.016617)"
+  ],
+  [
+   7.0,
+   0.022011356178076858,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   7.5,
+   0.03486343500701146,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   8.0,
+   0.050444186483864645,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   9.0,
+   0.08759137134643431,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   10.0,
+   0.129946303964089,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   12.0,
+   0.22293447922712467,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   14.0,
+   0.3214958560962796,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   16.0,
+   0.4228011813397113,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   17.131,
+   0.48080997258747643,
+   "e2e_relic network, relaxed"
+  ],
+  [
+   21.797,
+   0.7230608321005416,
+   "e2e_relic network, relaxed"
+  ]
+ ],
+ "rows_aref": [
+  [
+   6.742,
+   0.030805401666354627,
+   "mf_chain skeptic sk_pmap"
+  ],
+  [
+   8.0,
+   0.07109283966498119,
+   "sk_pmap"
+  ],
+  [
+   10.0,
+   0.1539440580819891,
+   "sk_pmap"
+  ],
+  [
+   12.0,
+   0.24721977237645992,
+   "sk_pmap"
+  ],
+  [
+   14.0,
+   0.3452512496109597,
+   "sk_pmap"
+  ],
+  [
+   15.0,
+   0.39529561359438364,
+   "sk_pmap"
+  ],
+  [
+   16.0,
+   0.44580846026132825,
+   "sk_pmap"
+  ],
+  [
+   17.13126030489702,
+   0.5033859970367478,
+   "inf_chain pmap_kin"
+  ],
+  [
+   21.79713734357875,
+   0.7438843557228119,
+   "inf_chain pmap_kin"
+  ],
+  [
+   41.608775427103964,
+   1.780789405424379,
+   "inf_chain pmap_kin"
+  ],
+  [
+   94.4312451625062,
+   4.543070189881549,
+   "inf_chain pmap_kin"
+  ],
+  [
+   232.62293436915292,
+   11.684549404379283,
+   "inf_chain pmap_kin"
+  ],
+  [
+   530.1016499067407,
+   26.845567625897147,
+   "inf_chain pmap_kin"
+  ],
+  [
+   1307.7296071865874,
+   65.83102022585068,
+   "inf_chain pmap_kin"
+  ]
+ ],
+ "aref_low": [
+  4.936310238047122,
+  0.003216211852310832
+ ],
+ "beta_points": [
+  [
+   5.0,
+   -0.3832
+  ],
+  [
+   7.0,
+   -0.1924
+  ],
+  [
+   10.0,
+   -0.0832
+  ],
+  [
+   21.797,
+   -0.0351
+  ],
+  [
+   155.0,
+   -0.02127
+  ],
+  [
+   302.0,
+   -0.02022
+  ],
+  [
+   447.0,
+   -0.01985
+  ],
+  [
+   600.0,
+   -0.01963
+  ],
+  [
+   958.0,
+   -0.01943
+  ]
+ ],
+ "ratio_fit": {
+  "form": "p_relaxed/p_aref = 1 - c (S0/S)^2",
+  "S0": 21.797,
+  "c": 0.02799
+ },
+ "YQ_M1": 5.07941423e-09,
+ "table": [
+  {
+   "S_per_Q": 3.4716,
+   "p_fixed_yield": 5.306226788871558e-05,
+   "p_aref_fixed_yield": null,
+   "beta": -0.3832,
+   "p_selfconsistent": 5.4395412120502306e-05,
+   "YQ_factor_selfconsistent": 0.9372980305746987,
+   "M_selfconsistent": 1.000108790824241,
+   "asym_share": 0.999891221009915,
+   "Xbar_over_X": 5.4392453420582246e-05,
+   "p_inherited_chain_mfi": 5.306226788871558e-05
+  },
+  {
+   "S_per_Q": 3.6,
+   "p_fixed_yield": 6.962335131665787e-05,
+   "p_aref_fixed_yield": null,
+   "beta": -0.3832,
+   "p_selfconsistent": 7.137350723719678e-05,
+   "YQ_factor_selfconsistent": 0.9372662080470434,
+   "M_selfconsistent": 1.0001427470144744,
+   "asym_share": 0.9998572733593275,
+   "Xbar_over_X": 7.13684134232248e-05,
+   "p_inherited_chain_mfi": 6.962335131665787e-05
+  },
+  {
+   "S_per_Q": 4.0,
+   "p_fixed_yield": 0.0001531042845268761,
+   "p_aref_fixed_yield": null,
+   "beta": -0.3832,
+   "p_selfconsistent": 0.00015696323458640348,
+   "YQ_factor_selfconsistent": 0.9371058176794147,
+   "M_selfconsistent": 1.0003139264691727,
+   "asym_share": 0.9996861720497277,
+   "Xbar_over_X": 0.0001569386009959597,
+   "p_inherited_chain_mfi": 0.0001531042845268761
+  },
+  {
+   "S_per_Q": 4.16,
+   "p_fixed_yield": 0.00020529776015658667,
+   "p_aref_fixed_yield": null,
+   "beta": -0.3832,
+   "p_selfconsistent": 0.00021048086167938258,
+   "YQ_factor_selfconsistent": 0.9370055565261279,
+   "M_selfconsistent": 1.0004209617233588,
+   "asym_share": 0.999579215410847,
+   "Xbar_over_X": 0.0002104365688090508,
+   "p_inherited_chain_mfi": 0.00020529776015658667
+  },
+  {
+   "S_per_Q": 4.5,
+   "p_fixed_yield": 0.00039442532002700246,
+   "p_aref_fixed_yield": null,
+   "beta": -0.3832,
+   "p_selfconsistent": 0.00040444335829632115,
+   "YQ_factor_selfconsistent": 0.936642362434829,
+   "M_selfconsistent": 1.0008088867165927,
+   "asym_share": 0.9991917670523026,
+   "Xbar_over_X": 0.00040427984999609717,
+   "p_inherited_chain_mfi": 0.00039442532002700246
+  },
+  {
+   "S_per_Q": 4.955,
+   "p_fixed_yield": 0.0009443391131186028,
+   "p_aref_fixed_yield": 0.0033055229976228172,
+   "beta": -0.3832,
+   "p_selfconsistent": 0.0009687427491741067,
+   "YQ_factor_selfconsistent": 0.9355873131483552,
+   "M_selfconsistent": 1.0019374854983483,
+   "asym_share": 0.9980662610927421,
+   "Xbar_over_X": 0.0009678051949089258,
+   "p_inherited_chain_mfi": 0.0009443391131186028
+  },
+  {
+   "S_per_Q": 5.0,
+   "p_fixed_yield": 0.0010313274038738253,
+   "p_aref_fixed_yield": 0.003529379854335249,
+   "beta": -0.3832,
+   "p_selfconsistent": 0.0010580512640885466,
+   "YQ_factor_selfconsistent": 0.9354205542003742,
+   "M_selfconsistent": 1.002116102528177,
+   "asym_share": 0.9978883659060677,
+   "Xbar_over_X": 0.001056932974818483,
+   "p_inherited_chain_mfi": 0.0010313274038738253
+  },
+  {
+   "S_per_Q": 5.5,
+   "p_fixed_yield": 0.0026247675126752027,
+   "p_aref_fixed_yield": 0.007042280050212429,
+   "beta": -0.32915339428513574,
+   "p_selfconsistent": 0.002685948585549961,
+   "YQ_factor_selfconsistent": 0.9323912898676031,
+   "M_selfconsistent": 1.0053718971710999,
+   "asym_share": 0.9946568059180735,
+   "Xbar_over_X": 0.0026787535911308264,
+   "p_inherited_chain_mfi": 0.0026247675126752027
+  },
+  {
+   "S_per_Q": 6.0,
+   "p_fixed_yield": 0.0060664574902541115,
+   "p_aref_fixed_yield": 0.01323138865976529,
+   "beta": -0.2798127090139436,
+   "p_selfconsistent": 0.006198522125399197,
+   "YQ_factor_selfconsistent": 0.9259213125160152,
+   "M_selfconsistent": 1.0123970442507984,
+   "asym_share": 0.9877547605248369,
+   "Xbar_over_X": 0.006160337139341073,
+   "p_inherited_chain_mfi": 0.0060664574902541115
+  },
+  {
+   "S_per_Q": 6.5,
+   "p_fixed_yield": 0.012207150176254058,
+   "p_aref_fixed_yield": 0.023635335243860838,
+   "beta": -0.2344236784732054,
+   "p_selfconsistent": 0.012465301258702566,
+   "YQ_factor_selfconsistent": 0.9145985081312642,
+   "M_selfconsistent": 1.0249306025174052,
+   "asym_share": 0.9756758140930016,
+   "Xbar_over_X": 0.012311830581458577,
+   "p_inherited_chain_mfi": 0.012203507460205338
+  },
+  {
+   "S_per_Q": 6.742,
+   "p_fixed_yield": 0.016618986077024223,
+   "p_aref_fixed_yield": 0.030805401666354634,
+   "beta": -0.2136951119652569,
+   "p_selfconsistent": 0.016970777808196197,
+   "YQ_factor_selfconsistent": 0.9066276472877579,
+   "M_selfconsistent": 1.0339415556163924,
+   "asym_share": 0.9671726555219479,
+   "Xbar_over_X": 0.01668757665266655,
+   "p_inherited_chain_mfi": 0.016610581067220388
+  },
+  {
+   "S_per_Q": 7.0,
+   "p_fixed_yield": 0.022011356178076855,
+   "p_aref_fixed_yield": 0.037012624717178436,
+   "beta": -0.1924,
+   "p_selfconsistent": 0.02247618545927894,
+   "YQ_factor_selfconsistent": 0.8970743797440911,
+   "M_selfconsistent": 1.044952370918558,
+   "asym_share": 0.9569814164074838,
+   "Xbar_over_X": 0.021982111445640194,
+   "p_inherited_chain_mfi": 0.019075151254334434
+  },
+  {
+   "S_per_Q": 7.5,
+   "p_fixed_yield": 0.03486343500701145,
+   "p_aref_fixed_yield": 0.05185802578432562,
+   "beta": -0.1712770652539326,
+   "p_selfconsistent": 0.035670128059301344,
+   "YQ_factor_selfconsistent": 0.8749787890883609,
+   "M_selfconsistent": 1.0713402561186027,
+   "asym_share": 0.9334102721230099,
+   "Xbar_over_X": 0.034441592059956484,
+   "p_inherited_chain_mfi": 0.02458531858780285
+  },
+  {
+   "S_per_Q": 8,
+   "p_fixed_yield": 0.050444186483864645,
+   "p_aref_fixed_yield": 0.07109283966498119,
+   "beta": -0.15151787939580472,
+   "p_selfconsistent": 0.05170594914769873,
+   "YQ_factor_selfconsistent": 0.8495467571532997,
+   "M_selfconsistent": 1.1034118982953975,
+   "asym_share": 0.9062798774826036,
+   "Xbar_over_X": 0.04916388386849116,
+   "p_inherited_chain_mfi": 0.031172212681986423
+  },
+  {
+   "S_per_Q": 9,
+   "p_fixed_yield": 0.0875913713464343,
+   "p_aref_fixed_yield": 0.10688928193810089,
+   "beta": -0.11545729338534907,
+   "p_selfconsistent": 0.08994930004042613,
+   "YQ_factor_selfconsistent": 0.7944750506034998,
+   "M_selfconsistent": 1.1798986000808522,
+   "asym_share": 0.8475304572202011,
+   "Xbar_over_X": 0.08252613221283772,
+   "p_inherited_chain_mfi": 0.04807381787042828
+  },
+  {
+   "S_per_Q": 10,
+   "p_fixed_yield": 0.12994630396408896,
+   "p_aref_fixed_yield": 0.1539440580819891,
+   "beta": -0.0832,
+   "p_selfconsistent": 0.1332404163154702,
+   "YQ_factor_selfconsistent": 0.7401612214379718,
+   "M_selfconsistent": 1.2664808326309405,
+   "asym_share": 0.7895895257432652,
+   "Xbar_over_X": 0.1175747126533642,
+   "p_inherited_chain_mfi": 0.07082790178769034
+  },
+  {
+   "S_per_Q": 11,
+   "p_fixed_yield": 0.17230803456899965,
+   "p_aref_fixed_yield": 0.19719912889959854,
+   "beta": -0.07731640830495776,
+   "p_selfconsistent": 0.17728275596757825,
+   "YQ_factor_selfconsistent": 0.6920300212603198,
+   "M_selfconsistent": 1.3545655119351565,
+   "asym_share": 0.73824410203046,
+   "Xbar_over_X": 0.1505863863790939,
+   "p_inherited_chain_mfi": 0.10056450632335666
+  },
+  {
+   "S_per_Q": 12,
+   "p_fixed_yield": 0.22293447922712464,
+   "p_aref_fixed_yield": 0.24721977237645995,
+   "beta": -0.07194510991813902,
+   "p_selfconsistent": 0.2301591798698633,
+   "YQ_factor_selfconsistent": 0.6419148220312126,
+   "M_selfconsistent": 1.4603183597397267,
+   "asym_share": 0.684782186932328,
+   "Xbar_over_X": 0.1870970713677977,
+   "p_inherited_chain_mfi": 0.1384930190547575
+  },
+  {
+   "S_per_Q": 12.2,
+   "p_fixed_yield": 0.23186026515305339,
+   "p_aref_fixed_yield": 0.2562340700936185,
+   "beta": -0.07092473975532274,
+   "p_selfconsistent": 0.2394813600755805,
+   "YQ_factor_selfconsistent": 0.6338226023070977,
+   "M_selfconsistent": 1.478962720151161,
+   "asym_share": 0.6761495650801749,
+   "Xbar_over_X": 0.19321094111570786,
+   "p_inherited_chain_mfi": 0.1471736174743063
+  },
+  {
+   "S_per_Q": 13,
+   "p_fixed_yield": 0.26961061746258635,
+   "p_aref_fixed_yield": 0.29403664036069843,
+   "beta": -0.06700399438269919,
+   "p_selfconsistent": 0.27894518710927907,
+   "YQ_factor_selfconsistent": 0.6017111444521934,
+   "M_selfconsistent": 1.5578903742185581,
+   "asym_share": 0.6418936894077689,
+   "Xbar_over_X": 0.21810566232299736,
+   "p_inherited_chain_mfi": 0.18589975738150566
+  },
+  {
+   "S_per_Q": 14,
+   "p_fixed_yield": 0.3214958560962796,
+   "p_aref_fixed_yield": 0.3452512496109597,
+   "beta": -0.06242923594246516,
+   "p_selfconsistent": 0.33325398366553755,
+   "YQ_factor_selfconsistent": 0.5624935604144752,
+   "M_selfconsistent": 1.666507967331075,
+   "asym_share": 0.6000571372013945,
+   "Xbar_over_X": 0.2499553631554258,
+   "p_inherited_chain_mfi": 0.24414582851551622
+  },
+  {
+   "S_per_Q": 14.7,
+   "p_fixed_yield": 0.355338033454267,
+   "p_aref_fixed_yield": 0.37993375527280737,
+   "beta": -0.059417370837432676,
+   "p_selfconsistent": 0.36860501089311726,
+   "YQ_factor_selfconsistent": 0.53960084747828,
+   "M_selfconsistent": 1.7372100217862345,
+   "asym_share": 0.5756356384427139,
+   "Xbar_over_X": 0.2693289940920024,
+   "p_inherited_chain_mfi": 0.2921325042148209
+  },
+  {
+   "S_per_Q": 15,
+   "p_fixed_yield": 0.37037352736524776,
+   "p_aref_fixed_yield": 0.39529561359438364,
+   "beta": -0.058170237727047616,
+   "p_selfconsistent": 0.3843066812761648,
+   "YQ_factor_selfconsistent": 0.5300197430663994,
+   "M_selfconsistent": 1.7686133625523297,
+   "asym_share": 0.5654147035035827,
+   "Xbar_over_X": 0.2776167206835122,
+   "p_inherited_chain_mfi": 0.31466521427932864
+  },
+  {
+   "S_per_Q": 15.9,
+   "p_fixed_yield": 0.4173983251495944,
+   "p_aref_fixed_yield": 0.44063071394186615,
+   "beta": -0.054573240379846635,
+   "p_selfconsistent": 0.43338835508010826,
+   "YQ_factor_selfconsistent": 0.5021489688093042,
+   "M_selfconsistent": 1.8667767101602166,
+   "asym_share": 0.5356827062162002,
+   "Xbar_over_X": 0.30235236218023226,
+   "p_inherited_chain_mfi": 0.3898688890874709
+  },
+  {
+   "S_per_Q": 16,
+   "p_fixed_yield": 0.4228011813397113,
+   "p_aref_fixed_yield": 0.44580846026132825,
+   "beta": -0.054186210965636646,
+   "p_selfconsistent": 0.4390243512976881,
+   "YQ_factor_selfconsistent": 0.4991350856390279,
+   "M_selfconsistent": 1.8780487025953763,
+   "asym_share": 0.5324675545517251,
+   "Xbar_over_X": 0.3050847269553036,
+   "p_inherited_chain_mfi": 0.39896304220911866
+  },
+  {
+   "S_per_Q": 17.131,
+   "p_fixed_yield": 0.48080997258747643,
+   "p_aref_fixed_yield": 0.5033723973299984,
+   "beta": -0.04996992479080792,
+   "p_selfconsistent": 0.4993495948470701,
+   "YQ_factor_selfconsistent": 0.4690050432989849,
+   "M_selfconsistent": 1.9986991896941402,
+   "asym_share": 0.5003254142275554,
+   "Xbar_over_X": 0.33304413898081087,
+   "p_inherited_chain_mfi": 0.5128913388174743
+  },
+  {
+   "S_per_Q": 19,
+   "p_fixed_yield": 0.5729910017629198,
+   "p_aref_fixed_yield": 0.5953901840111255,
+   "beta": -0.04357772458442969,
+   "p_selfconsistent": 0.5945652362899632,
+   "YQ_factor_selfconsistent": 0.42820654672924235,
+   "M_selfconsistent": 2.1891304725799263,
+   "asym_share": 0.4568023754296762,
+   "Xbar_over_X": 0.3728698097503517,
+   "p_inherited_chain_mfi": 0.6079186775224709
+  },
+  {
+   "S_per_Q": 21.797,
+   "p_fixed_yield": 0.7230608321005416,
+   "p_aref_fixed_yield": 0.7438767563717188,
+   "beta": -0.0351,
+   "p_selfconsistent": 0.7483553988176431,
+   "YQ_factor_selfconsistent": 0.37545397764509664,
+   "M_selfconsistent": 2.496710797635286,
+   "asym_share": 0.400526965697081,
+   "Xbar_over_X": 0.4280339107962443,
+   "p_inherited_chain_mfi": 0.7616045952333674
+  },
+  {
+   "S_per_Q": 25,
+   "p_fixed_yield": 0.8739207795860572,
+   "p_aref_fixed_yield": 0.895148479108479,
+   "beta": -0.03413339615175244,
+   "p_selfconsistent": 0.9073418042740792,
+   "YQ_factor_selfconsistent": 0.3330392080856372,
+   "M_selfconsistent": 2.814683608548158,
+   "asym_share": 0.3552797184603672,
+   "Xbar_over_X": 0.47571012297893145,
+   "p_inherited_chain_mfi": 0.9189739432761901
+  },
+  {
+   "S_per_Q": 30,
+   "p_fixed_yield": 1.124376426692184,
+   "p_aref_fixed_yield": 1.1449932944286305,
+   "beta": -0.032847996835733716,
+   "p_selfconsistent": 1.172352033147473,
+   "YQ_factor_selfconsistent": 0.28026395801359094,
+   "M_selfconsistent": 3.344704066294946,
+   "asym_share": 0.29898011309195954,
+   "Xbar_over_X": 0.5396694528597549,
+   "p_inherited_chain_mfi": 1.179708467164155
+  },
+  {
+   "S_per_Q": 41.6,
+   "p_fixed_yield": 1.7665957988429344,
+   "p_aref_fixed_yield": 1.7802823362854112,
+   "beta": -0.030543274210442388,
+   "p_selfconsistent": 1.8559063754378815,
+   "YQ_factor_selfconsistent": 0.19894678536039642,
+   "M_selfconsistent": 4.7118127508757635,
+   "asym_share": 0.21223254252073886,
+   "Xbar_over_X": 0.6498484654117294,
+   "p_inherited_chain_mfi": 1.8460787121960278
+  },
+  {
+   "S_per_Q": 61.5,
+   "p_fixed_yield": 2.7698952011929805,
+   "p_aref_fixed_yield": 2.7830728803147555,
+   "beta": -0.027787098961933647,
+   "p_selfconsistent": 2.9273396798496703,
+   "YQ_factor_selfconsistent": 0.13675329666314348,
+   "M_selfconsistent": 6.8546793596993405,
+   "asym_share": 0.1458857442522099,
+   "Xbar_over_X": 0.7453747112502686,
+   "p_inherited_chain_mfi": 2.9080278325007445
+  },
+  {
+   "S_per_Q": 94.4,
+   "p_fixed_yield": 4.534568559035281,
+   "p_aref_fixed_yield": 4.54135246237908,
+   "beta": -0.02476607046962675,
+   "p_selfconsistent": 4.815659943446612,
+   "YQ_factor_selfconsistent": 0.08817343565797696,
+   "M_selfconsistent": 10.631319886893223,
+   "asym_share": 0.09406169794898615,
+   "Xbar_over_X": 0.8280504689537682,
+   "p_inherited_chain_mfi": 4.784773357888975
+  },
+  {
+   "S_per_Q": 155,
+   "p_fixed_yield": 7.629706543746839,
+   "p_aref_fixed_yield": 7.635867543797987,
+   "beta": -0.02127,
+   "p_selfconsistent": 8.117140692511592,
+   "YQ_factor_selfconsistent": 0.054391591912736945,
+   "M_selfconsistent": 17.234281385023184,
+   "asym_share": 0.0580238872546791,
+   "Xbar_over_X": 0.8903164891574663,
+   "p_inherited_chain_mfi": 8.12206011887307
+  },
+  {
+   "S_per_Q": 232.6,
+   "p_fixed_yield": 11.680469569787899,
+   "p_aref_fixed_yield": 11.683342328815128,
+   "beta": -0.020631036484255207,
+   "p_selfconsistent": 12.50945534013579,
+   "YQ_factor_selfconsistent": 0.036027642030166,
+   "M_selfconsistent": 26.01891068027158,
+   "asym_share": 0.038433584414363425,
+   "Xbar_over_X": 0.9259777707670376,
+   "p_inherited_chain_mfi": 12.506683968682072
+  },
+  {
+   "S_per_Q": 302,
+   "p_fixed_yield": 15.205937020747555,
+   "p_aref_fixed_yield": 15.2087182944496,
+   "beta": -0.02022,
+   "p_selfconsistent": 16.348148598077984,
+   "YQ_factor_selfconsistent": 0.027819080373929553,
+   "M_selfconsistent": 33.69629719615597,
+   "asym_share": 0.02967685126287641,
+   "Xbar_over_X": 0.9423569613583554,
+   "p_inherited_chain_mfi": 16.347018552637543
+  },
+  {
+   "S_per_Q": 530,
+   "p_fixed_yield": 26.839097275988415,
+   "p_aref_fixed_yield": 26.840368699773542,
+   "beta": -0.019722711500415598,
+   "p_selfconsistent": 29.126224697994402,
+   "YQ_factor_selfconsistent": 0.015820443029100895,
+   "M_selfconsistent": 59.252449395988805,
+   "asym_share": 0.016876939437843675,
+   "Xbar_over_X": 0.9668063287044867,
+   "p_inherited_chain_mfi": 29.11500093951681
+  },
+  {
+   "S_per_Q": 958,
+   "p_fixed_yield": 48.32425595359055,
+   "p_aref_fixed_yield": 48.32529039524561,
+   "beta": -0.01943,
+   "p_selfconsistent": 52.98329530261275,
+   "YQ_factor_selfconsistent": 0.008763483950459462,
+   "M_selfconsistent": 106.9665906052255,
+   "asym_share": 0.009348713409877984,
+   "Xbar_over_X": 0.9814757510745811,
+   "p_inherited_chain_mfi": 52.964288046778904
+  },
+  {
+   "S_per_Q": 1307.7,
+   "p_fixed_yield": 65.82902772578079,
+   "p_aref_fixed_yield": 65.82953968648714,
+   "beta": -0.01943,
+   "p_selfconsistent": 72.6155551405594,
+   "YQ_factor_selfconsistent": 0.006410400619967531,
+   "M_selfconsistent": 146.2311102811188,
+   "asym_share": 0.00683849010020899,
+   "Xbar_over_X": 0.9864159144342438,
+   "p_inherited_chain_mfi": 72.14886187802385
+  }
+ ]
+}

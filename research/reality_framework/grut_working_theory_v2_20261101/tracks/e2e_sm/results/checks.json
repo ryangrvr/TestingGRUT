@@ -1,0 +1,124 @@
+{
+ "uv": {
+  "sigma_f1200": {
+   "theta_dot_over_f_max": 7.433892099733333,
+   "lambda_needed_m_rho_ge_2thetadot": 110.52550350095532,
+   "lambda_needed_drho_over_f_le_0p1": 263.1559607165603,
+   "lam_1": {
+    "m_rho_over_f": 1.4142135623730951,
+    "thetadot_over_mrho_max": 5.256555514330541,
+    "t_ok": 6.980052,
+    "condensate_fraction_left_at_t_ok": 0.83686612,
+    "rho2_over_f2_at_max": 7.950688005176278,
+    "mu5_reduction_at_max": 2.819696438479908
+   },
+   "lam_12.6": {
+    "m_rho_over_f": 5.0132565492620005,
+    "thetadot_over_mrho_max": 1.4828469332629053,
+    "t_ok": 1.446661,
+    "condensate_fraction_left_at_t_ok": 0.71947501,
+    "rho2_over_f2_at_max": 2.6558455545271342,
+    "mu5_reduction_at_max": 1.6296765183701747
+   },
+   "lam_79": {
+    "m_rho_over_f": 12.566370614359172,
+    "thetadot_over_mrho_max": 0.5915703370421744,
+    "t_ok": 0.2633052,
+    "condensate_fraction_left_at_t_ok": 0.6644512,
+    "rho2_over_f2_at_max": 1.4746337400974707,
+    "mu5_reduction_at_max": 1.2143449839718
+   }
+  },
+  "chi_f2000": {
+   "theta_dot_over_f_max": 11.1355422847,
+   "lambda_needed_m_rho_ge_2thetadot": 248.00060394868336,
+   "lambda_needed_drho_over_f_le_0p1": 590.4776284492461,
+   "lam_1": {
+    "m_rho_over_f": 1.4142135623730951,
+    "thetadot_over_mrho_max": 7.87401746170091,
+    "t_ok": 8.66085,
+    "condensate_fraction_left_at_t_ok": 0.84927822,
+    "rho2_over_f2_at_max": 11.646761950196195,
+    "mu5_reduction_at_max": 3.412735259318571
+   },
+   "lam_12.6": {
+    "m_rho_over_f": 5.0132565492620005,
+    "thetadot_over_mrho_max": 2.221219316282399,
+    "t_ok": 1.886492,
+    "condensate_fraction_left_at_t_ok": 0.74326783,
+    "rho2_over_f2_at_max": 3.680822299665936,
+    "mu5_reduction_at_max": 1.918546924019826
+   },
+   "lam_79": {
+    "m_rho_over_f": 12.566370614359172,
+    "thetadot_over_mrho_max": 0.8861382993094113,
+    "t_ok": 0.4256238,
+    "condensate_fraction_left_at_t_ok": 0.63244493,
+    "rho2_over_f2_at_max": 1.849252448953105,
+    "mu5_reduction_at_max": 1.3598722178767773
+   }
+  },
+  "vacuum_phase_chi": {
+   "v_over_Hi": 367046.6168416639,
+   "v_over_f": 183.52330842083194,
+   "v_over_f_mod_2pi": 1.3109345126239376,
+   "note": "N2-4 mass phase in the +v vacuum (opposite sign in the -v vacuum); N1: sigma -> 0, phase 0"
+  },
+  "thermal_restoration": {
+   "T_max_GeV": 55023033000000.0,
+   "f1_GeV": 156000000000000.0,
+   "f2_GeV": 260000000000000.0,
+   "Tmax_over_f1": 0.35271175,
+   "note": "lambda-dominated restoration needs T >~ sqrt(3) f"
+  }
+ },
+ "Ns_dark_radiation": {
+  "s_star_3e-3MP|Gs_1.3e-6": {
+   "rhoDR_over_rhoSM": 0.0003224385569220303,
+   "DeltaNeff": 0.0009263659740369931,
+   "t_decay": 769230.7692307692,
+   "a_decay": 5012.548933911466
+  },
+  "s_star_3e-3MP|Gs_8.4e-7(H=8.4e10)": {
+   "rhoDR_over_rhoSM": 0.00040807204910995497,
+   "DeltaNeff": 0.0011723909970929008,
+   "t_decay": 1190476.1904761905,
+   "a_decay": 6235.778186755966
+  },
+  "s_star_1.4e16GeV|Gs_1.3e-6": {
+   "rhoDR_over_rhoSM": 0.0011843023733515469,
+   "DeltaNeff": 0.0034025007186389944,
+   "t_decay": 769230.7692307692,
+   "a_decay": 5012.548933911466
+  },
+  "s_star_1.4e16GeV|Gs_8.4e-7(H=8.4e10)": {
+   "rhoDR_over_rhoSM": 0.0014988303535182115,
+   "DeltaNeff": 0.004306139605657822,
+   "t_decay": 1190476.1904761905,
+   "a_decay": 6235.778186755966
+  }
+ },
+ "Ns_dark_radiation_note": "DeltaN_eff = 2.873 rho_DR/rho_SM (g* = 106.75 -> today); f_s from mf_chain at turn-on scaled as s_*^2; the s energy is diluted by nothing before reheating ends (matter era), then grows ~a. Bounds [Q]: Planck 2018 N_eff = 2.99 +- 0.17 (1807.06209), ACT DR6 2.86 +- 0.13 (2503.14454).",
+ "timing": {
+  "T_lepto_GeV": 2600000000000.0,
+  "sphaleron_rate_over_H_at_T_lepto": 0.20265656834686066,
+  "T_sph_eq_GeV_est": 526907077701.8377,
+  "note": "B-L is conserved by sphalerons; conversion Y_B = (28/79) Y_{B-L} applies once they are in equilibrium (T <~ 1e12 GeV), long before BBN",
+  "N_lifetimes_s": [
+   9.499206234665896e-36,
+   2.0333642261353103e-36,
+   1.4847732912249042e-35,
+   4.116322701688555e-35
+  ],
+  "s_lifetime_s": 3.894674556213018e-30
+ },
+ "Ns_soft_variant": {
+  "M_soft_Hi": 1.0,
+  "mtilde_s_eV": 1e-05,
+  "Gamma_Ns_over_Hi": 1.7064986552608127e-09,
+  "eps_s_max": 1.2824337394285006e-05,
+  "Y_Ns": 0.0013057427036251062,
+  "etaB_max": 4.178266551311871e-08,
+  "note": "needs its own CP phase <~ etaB_obs/etaB_max; breaks N_s -> i g5 N_s softly"
+ }
+}

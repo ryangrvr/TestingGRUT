@@ -1,0 +1,511 @@
+{
+ "label": "e2e_sm parameter card for M2 (SM side). Status: supplied = model choice; fitted = to a named datum; derived/computed. Nothing here is fixed by closure; nothing is a GRUT prediction.",
+ "H_i_reference_GeV": {
+  "value": 130000000000.0,
+  "status": "supplied (e2e_kinetic history scale); M2 points at 8.4-8.9e10 rescale",
+  "note": "rates ~ H_i; see lepto case S1_HFa_rescaled_8.4e10"
+ },
+ "light_neutrinos": {
+  "ordering": {
+   "value": "normal",
+   "status": "supplied",
+   "note": "IO needs sum m >= 0.0995 eV, above DESI DR2+CMB 0.0642 (retrospective)"
+  },
+  "m1_eV": {
+   "value": 0.0,
+   "status": "supplied",
+   "note": "window: m1 <~ 4.2e-3 eV keeps sum m < 0.0642 eV (sum = 0.0641 at m1 = 4.2 meV)"
+  },
+  "dm21_eV2": {
+   "value": 7.49e-05,
+   "status": "fitted",
+   "note": "NuFIT 6.0 IC24 (arXiv:2410.05380)"
+  },
+  "dm31_eV2": {
+   "value": 0.002513,
+   "status": "fitted",
+   "note": "NuFIT 6.0 IC24 NO (arXiv:2410.05380)"
+  },
+  "masses_eV": {
+   "value": [
+    0.0,
+    0.008654478609367522,
+    0.050129831437977126
+   ],
+   "status": "derived",
+   "note": ""
+  },
+  "sum_mnu_eV": {
+   "value": 0.05878431004734465,
+   "status": "derived",
+   "note": "Planck 2018+BAO < 0.12 (1807.06209); DESI DR2+CMB < 0.0642 (2503.14744, LCDM, 95%); retrospective: below both"
+  },
+  "PMNS": {
+   "value": {
+    "th12_deg": 33.68,
+    "th13_deg": 8.56,
+    "th23_deg": 43.3,
+    "delta_deg": 212,
+    "majorana": "0, 0 (irrelevant, unflavoured)"
+   },
+   "status": "fitted (NuFIT 6.0 IC24) / supplied (Majorana)",
+   "note": "drop out of h^dag h in the unflavoured regime [D]"
+  }
+ },
+ "singlets": {
+  "content": {
+   "value": "four axial Majorana N1..N4 (mf_hybrid), masses -(M_j/2) Nbar e^{i g5 phi_j/f_j} N, + massless N_s",
+   "status": "supplied",
+   "note": ""
+  },
+  "M_over_Hi": {
+   "value": [
+    250.0,
+    400.0,
+    200.0,
+    120.0
+   ],
+   "status": "supplied (mf_hybrid)",
+   "note": ""
+  },
+  "M_GeV": {
+   "value": [
+    32500000000000.0,
+    52000000000000.0,
+    26000000000000.0,
+    15600000000000.0
+   ],
+   "status": "derived at H_i ref",
+   "note": ""
+  },
+  "f_over_Hi": {
+   "value": [
+    1200,
+    2000,
+    2000,
+    2000
+   ],
+   "status": "supplied (mf_hybrid)",
+   "note": "UV: see uv block"
+  },
+  "mtilde_eV": {
+   "value": [
+    0.04999999999997347,
+    0.09121568995257767,
+    0.04999999999997346,
+    0.049999999999973475
+   ],
+   "status": "supplied (scenario S1)",
+   "note": "all >= 0.05 eV: mf_hybrid rates and the mf_higgs-skeptic N-gas medium mass are kept or raised (N2 x1.82)"
+  },
+  "CP_parities_at_delta0": {
+   "value": [
+    1.0,
+    -1.0,
+    1.0,
+    1.0
+   ],
+   "status": "supplied",
+   "note": "CP-conserving R requires sum_j eta_j mt_j = sum m_i [D]"
+  },
+  "CI_R0_re": {
+   "value": [
+    [
+     0.755054338621283,
+     0.0,
+     0.12840862353970361,
+     0.64296513990209
+    ],
+    [
+     0.28480969717009025,
+     0.0,
+     0.8190502888531543,
+     -0.4980362042332237
+    ],
+    [
+     -0.9916683056006147,
+     0.0,
+     0.938932815809179,
+     0.9770302661547946
+    ]
+   ],
+   "status": "computed (least-norm solution of the m-tilde conditions)",
+   "note": ""
+  },
+  "CI_R0_im": {
+   "value": [
+    [
+     0.0,
+     1.1582696954284035e-08,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -7.307943101853535e-10,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     1.3489214216990641,
+     0.0,
+     0.0
+    ]
+   ],
+   "status": "computed",
+   "note": ""
+  },
+  "CI_A_odd": {
+   "value": [
+    [
+     0.0,
+     0.6,
+     -0.3,
+     0.8
+    ],
+    [
+     -0.6,
+     0.0,
+     0.5,
+     -0.7
+    ],
+    [
+     0.3,
+     -0.5,
+     0.0,
+     0.4
+    ],
+    [
+     -0.8,
+     0.7,
+     -0.4,
+     0.0
+    ]
+   ],
+   "status": "supplied (CP-odd direction; R = R0 exp(delta A))",
+   "note": ""
+  },
+  "tuning_sum_mt_over_sum_m": {
+   "value": 4.1034025874996445,
+   "status": "derived",
+   "note": "cancellation in m_nu at the x4 level"
+  },
+  "y2": {
+   "value": [
+    0.05361123638725386,
+    0.15648594932085416,
+    0.04288898910980308,
+    0.02573339346588185
+   ],
+   "status": "derived",
+   "note": ""
+  },
+  "Gamma_rest_over_Hi": {
+   "value": [
+    0.5332808297687212,
+    2.490551235884176,
+    0.3412997310519814,
+    0.12286790317871332
+   ],
+   "status": "derived",
+   "note": ""
+  },
+  "K_washout": {
+   "value": [
+    46.29629629627173,
+    84.45897217831266,
+    46.29629629627172,
+    46.296296296271734
+   ],
+   "status": "derived (mt/m*, m* = 1.08e-3 eV)",
+   "note": ""
+  },
+  "one_loop_mnu": {
+   "value": {
+    "universal_fraction": 0.22172565435039548,
+    "sv_tree_plus_loop_eV": [
+     0.0,
+     0.00675081454038694,
+     0.039702566980099344
+    ],
+    "sv_nonuniversal_loop_eV": [
+     0.0,
+     1.3719657246415748e-05,
+     0.0006893414266807203
+    ]
+   },
+   "status": "estimate [E]",
+   "note": "universal 22% absorbed in the fit; non-universal <= 7e-4 eV (1.4% of m3) -> R re-tuned at that level"
+  },
+  "alternative_S2": {
+   "value": [
+    0.03,
+    0.03,
+    0.03,
+    0.02878431004734465
+   ],
+   "status": "supplied alternative",
+   "note": "tuning x2, rates x0.6 (needs an e2e_kinetic rerun)"
+  }
+ },
+ "CP_phase": {
+  "delta_explicit": {
+   "value": 3.5226533621900744e-06,
+   "status": "fitted to eta_B (Planck 2018, 6.12e-10 [R])",
+   "note": "window over washout x0.5..x2 and H_i 1.3e11..8.4e10: 1.6e-06 .. 7.8e-06"
+  },
+  "eps_per_unit_delta": {
+   "value": [
+    0.020693291738661634,
+    0.003167008299996141,
+    0.009612937625285986,
+    0.006674101072132283
+   ],
+   "status": "computed (Covi-Roulet-Vissani, hep-ph/9605319)",
+   "note": ""
+  },
+  "eps_at_fit": {
+   "value": [
+    7.28952937179765e-08,
+    1.1156272436065278e-08,
+    3.386304704623715e-08,
+    2.3510544581343165e-08
+   ],
+   "status": "derived",
+   "note": ""
+  },
+  "vacuum_phase_chi": {
+   "value": {
+    "v_over_Hi": 367046.6168416639,
+    "v_over_f": 183.52330842083194,
+    "v_over_f_mod_2pi": 1.3109345126239376,
+    "note": "N2-4 mass phase in the +v vacuum (opposite sign in the -v vacuum); N1: sigma -> 0, phase 0"
+   },
+   "status": "derived from the hybrid (v/f mod 2pi = 1.31 rad)",
+   "note": "enters the relative phase of N1 vs N2-4: an O(1) contribution that the Yukawa phases must cancel to ~1e-6 for the fit [A]"
+  },
+  "relation_to_DM_sign": {
+   "value": "independent",
+   "status": "derived [D/A]",
+   "note": "the baryon sign is set by delta (sigma/chi/N sector); the DM sign by alpha + sign(s_*) (holder); they are uncorrelated supplied inputs"
+  }
+ },
+ "baryogenesis": {
+  "etaB_per_unit_delta": {
+   "value": 0.00017373267735304858,
+   "status": "computed [C on Q/E rates]",
+   "note": ""
+  },
+  "etaB_thermal_only_per_unit_delta": {
+   "value": 3.2095152992645183e-07,
+   "status": "computed",
+   "note": ""
+  },
+  "etaB_at_delta_0p1": {
+   "value": 1.7373267735304858e-05,
+   "status": "computed",
+   "note": "overproduced x3e+04 at an O(0.1) phase"
+  },
+  "dominant_source": {
+   "value": "non-thermal N4 from the late chi-remnant decays (chi -> N4 N4) at T ~ T_RH ~ M4/5",
+   "status": "computed",
+   "note": ""
+  },
+  "washout_survival": {
+   "value": {
+    "0.3": 1.5143531982708706e-52,
+    "1": 2.2155083824517277e-52,
+    "3": 6.759625556996349e-52,
+    "10": 3.27653675672053e-50,
+    "30": 1.1005133375540969e-45,
+    "100": 1.9085517446647324e-35,
+    "300": 2.772825215118197e-23,
+    "1000": 2.6644343322834413e-14,
+    "3000": 1.278241338997202e-09,
+    "10000": 0.047679789874903435,
+    "30000": 0.9035088452786602
+   },
+   "status": "computed",
+   "note": "asymmetry present at t (H_i^-1) survives by this"
+  },
+  "spontaneous_rotating_phases": {
+   "value": "erased: survival from t <= 30 H_i^-1 <= 1e-45; no tree-level theta W Wtilde coupling in the mass-phase basis",
+   "status": "computed (survival) / argued (basis)",
+   "note": ""
+  },
+  "sphaleron_conversion": {
+   "value": 0.35443037974683544,
+   "status": "quoted [R] (Harvey-Turner)",
+   "note": ""
+  },
+  "flavour": {
+   "value": "unflavoured (T ~ 2-3e12 GeV, at the edge of tau equilibration)",
+   "status": "estimate [E]",
+   "note": ""
+  }
+ },
+ "Ns": {
+  "choice": {
+   "value": "massless dark radiation: no soft mass, no seesaw Yukawa; N_s -> i g5 N_s exact",
+   "status": "supplied",
+   "note": ""
+  },
+  "DeltaNeff": {
+   "value": {
+    "s_star_3e-3MP|Gs_1.3e-6": {
+     "rhoDR_over_rhoSM": 0.0003224385569220303,
+     "DeltaNeff": 0.0009263659740369931,
+     "t_decay": 769230.7692307692,
+     "a_decay": 5012.548933911466
+    },
+    "s_star_3e-3MP|Gs_8.4e-7(H=8.4e10)": {
+     "rhoDR_over_rhoSM": 0.00040807204910995497,
+     "DeltaNeff": 0.0011723909970929008,
+     "t_decay": 1190476.1904761905,
+     "a_decay": 6235.778186755966
+    },
+    "s_star_1.4e16GeV|Gs_1.3e-6": {
+     "rhoDR_over_rhoSM": 0.0011843023733515469,
+     "DeltaNeff": 0.0034025007186389944,
+     "t_decay": 769230.7692307692,
+     "a_decay": 5012.548933911466
+    },
+    "s_star_1.4e16GeV|Gs_8.4e-7(H=8.4e10)": {
+     "rhoDR_over_rhoSM": 0.0014988303535182115,
+     "DeltaNeff": 0.004306139605657822,
+     "t_decay": 1190476.1904761905,
+     "a_decay": 6235.778186755966
+    }
+   },
+   "status": "computed on the e2e_kinetic history",
+   "note": "Planck 2018 2.99 +- 0.17 (1807.06209); ACT DR6 2.86 +- 0.13 (2503.14454)"
+  },
+  "soft_variant": {
+   "value": {
+    "M_soft_Hi": 1.0,
+    "mtilde_s_eV": 1e-05,
+    "Gamma_Ns_over_Hi": 1.7064986552608127e-09,
+    "eps_s_max": 1.2824337394285006e-05,
+    "Y_Ns": 0.0013057427036251062,
+    "etaB_max": 4.178266551311871e-08,
+    "note": "needs its own CP phase <~ etaB_obs/etaB_max; breaks N_s -> i g5 N_s softly"
+   },
+   "status": "estimate [E]",
+   "note": "not adopted: adds a second CP phase and an s-odd piece"
+  }
+ },
+ "uv": {
+  "completion": {
+   "value": "Phi_a = (rho_a/sqrt2) e^{i theta_a}, sigma = f1 theta_1, chi = f2 theta_2; M_j = y_j <rho_a>/sqrt2; the hybrid potential is a monodromy (multi-branched) potential on the angles",
+   "status": "supplied [A]",
+   "note": ""
+  },
+  "radial_test": {
+   "value": {
+    "sigma_f1200": {
+     "theta_dot_over_f_max": 7.433892099733333,
+     "lambda_needed_m_rho_ge_2thetadot": 110.52550350095532,
+     "lambda_needed_drho_over_f_le_0p1": 263.1559607165603,
+     "lam_1": {
+      "m_rho_over_f": 1.4142135623730951,
+      "thetadot_over_mrho_max": 5.256555514330541,
+      "t_ok": 6.980052,
+      "condensate_fraction_left_at_t_ok": 0.83686612,
+      "rho2_over_f2_at_max": 7.950688005176278,
+      "mu5_reduction_at_max": 2.819696438479908
+     },
+     "lam_12.6": {
+      "m_rho_over_f": 5.0132565492620005,
+      "thetadot_over_mrho_max": 1.4828469332629053,
+      "t_ok": 1.446661,
+      "condensate_fraction_left_at_t_ok": 0.71947501,
+      "rho2_over_f2_at_max": 2.6558455545271342,
+      "mu5_reduction_at_max": 1.6296765183701747
+     },
+     "lam_79": {
+      "m_rho_over_f": 12.566370614359172,
+      "thetadot_over_mrho_max": 0.5915703370421744,
+      "t_ok": 0.2633052,
+      "condensate_fraction_left_at_t_ok": 0.6644512,
+      "rho2_over_f2_at_max": 1.4746337400974707,
+      "mu5_reduction_at_max": 1.2143449839718
+     }
+    },
+    "chi_f2000": {
+     "theta_dot_over_f_max": 11.1355422847,
+     "lambda_needed_m_rho_ge_2thetadot": 248.00060394868336,
+     "lambda_needed_drho_over_f_le_0p1": 590.4776284492461,
+     "lam_1": {
+      "m_rho_over_f": 1.4142135623730951,
+      "thetadot_over_mrho_max": 7.87401746170091,
+      "t_ok": 8.66085,
+      "condensate_fraction_left_at_t_ok": 0.84927822,
+      "rho2_over_f2_at_max": 11.646761950196195,
+      "mu5_reduction_at_max": 3.412735259318571
+     },
+     "lam_12.6": {
+      "m_rho_over_f": 5.0132565492620005,
+      "thetadot_over_mrho_max": 2.221219316282399,
+      "t_ok": 1.886492,
+      "condensate_fraction_left_at_t_ok": 0.74326783,
+      "rho2_over_f2_at_max": 3.680822299665936,
+      "mu5_reduction_at_max": 1.918546924019826
+     },
+     "lam_79": {
+      "m_rho_over_f": 12.566370614359172,
+      "thetadot_over_mrho_max": 0.8861382993094113,
+      "t_ok": 0.4256238,
+      "condensate_fraction_left_at_t_ok": 0.63244493,
+      "rho2_over_f2_at_max": 1.849252448953105,
+      "mu5_reduction_at_max": 1.3598722178767773
+     }
+    },
+    "vacuum_phase_chi": {
+     "v_over_Hi": 367046.6168416639,
+     "v_over_f": 183.52330842083194,
+     "v_over_f_mod_2pi": 1.3109345126239376,
+     "note": "N2-4 mass phase in the +v vacuum (opposite sign in the -v vacuum); N1: sigma -> 0, phase 0"
+    },
+    "thermal_restoration": {
+     "T_max_GeV": 55023033000000.0,
+     "f1_GeV": 156000000000000.0,
+     "f2_GeV": 260000000000000.0,
+     "Tmax_over_f1": 0.35271175,
+     "note": "lambda-dominated restoration needs T >~ sqrt(3) f"
+    }
+   },
+   "status": "computed",
+   "note": "weakly coupled (lambda <= 4pi) completion is not frozen at the slice amplitude: theta-dot/m_rho = 1.5-2.2; strong coupling (m_rho = 4 pi f) gives 0.6-0.9"
+  }
+ },
+ "other": {
+  "lifetimes_s": {
+   "value": {
+    "T_lepto_GeV": 2600000000000.0,
+    "sphaleron_rate_over_H_at_T_lepto": 0.20265656834686066,
+    "T_sph_eq_GeV_est": 526907077701.8377,
+    "note": "B-L is conserved by sphalerons; conversion Y_B = (28/79) Y_{B-L} applies once they are in equilibrium (T <~ 1e12 GeV), long before BBN",
+    "N_lifetimes_s": [
+     9.499206234665896e-36,
+     2.0333642261353103e-36,
+     1.4847732912249042e-35,
+     4.116322701688555e-35
+    ],
+    "s_lifetime_s": 3.894674556213018e-30
+   },
+   "status": "computed",
+   "note": ""
+  },
+  "BBN": {
+   "value": "no new state lives past ~1e-29 s; N_s is the only new light state (dark radiation)",
+   "status": "derived",
+   "note": ""
+  },
+  "higgs_medium": {
+   "value": "N-gas y^2 per species >= mf_higgs-skeptic values (S1)",
+   "status": "derived",
+   "note": ""
+  }
+ }
+}

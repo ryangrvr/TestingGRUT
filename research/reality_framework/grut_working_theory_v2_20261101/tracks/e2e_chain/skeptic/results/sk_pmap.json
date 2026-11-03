@@ -1,0 +1,113 @@
+{
+ "method": "e2e_chain_skeptic (Claude): robustness of e2e_relic's gap fill of p(S/Q) to the relaxed-start interpolation.\n\ne2e_relic's 'relaxed' rows in the gap (S/Q 7-21.8, R = 8-48) take x0 = ln(a_on/a_ref) LINEARLY in R between fx_chain's\nheat_onset rows R = 5.703 (x0 = -0.6119) and 41.707 (-0.5565).  The computed x0(R) is concave (slope 3.6e-3 below\nR = 5.7, 1.5e-3 across the gap, 1.0e-3 above 41.7), so the rule is a choice.  Here the same network (fx_chain's\nm1_kin, READ-ONLY; work dir redirected to this track's scratch) is re-run with\n   (i) e2e_relic's rule (regression), (ii) x0 interpolated in ln(1 + R) (concave), (iii) x0 + 0.03 (a bracket),\nat S/Q = 7, 10, 14.  Output results/sk_pmap.json.  [C] on the inherited conditional recipe.\n",
+ "rows": [
+  {
+   "S_per_Q": 7.0,
+   "R": 8.458091713490537,
+   "rule": "linR",
+   "x0": -0.6076845455910748,
+   "p": 0.022011356178076858,
+   "stop": "T=0.002m",
+   "dQ": 2.7443504779789407e-07,
+   "seconds": 15.316571235656738,
+   "p_e2e_relic": 0.022011356178076858,
+   "ratio_to_e2e_relic": 1.0
+  },
+  {
+   "S_per_Q": 7.0,
+   "R": 8.458091713490537,
+   "rule": "ln1pR",
+   "x0": -0.6016203822622237,
+   "p": 0.022033006213382913,
+   "stop": "T=0.002m",
+   "dQ": 4.250104971292856e-07,
+   "seconds": 16.71806788444519,
+   "p_e2e_relic": 0.022011356178076858,
+   "ratio_to_e2e_relic": 1.000983584797361
+  },
+  {
+   "S_per_Q": 7.0,
+   "R": 8.458091713490537,
+   "rule": "linR+0.03",
+   "x0": -0.5776845455910747,
+   "p": 0.02212690839189769,
+   "stop": "T=0.002m",
+   "dQ": 8.824261741313677e-07,
+   "seconds": 16.240206241607666,
+   "p_e2e_relic": 0.022011356178076858,
+   "ratio_to_e2e_relic": 1.0052496635321326
+  },
+  {
+   "S_per_Q": 10.0,
+   "R": 14.166909803804998,
+   "rule": "linR",
+   "x0": -0.5988954475735262,
+   "p": 0.129946303964089,
+   "stop": "T=0.002m",
+   "dQ": 4.975042950938757e-07,
+   "seconds": 17.448984146118164,
+   "p_e2e_relic": 0.129946303964089,
+   "ratio_to_e2e_relic": 1.0
+  },
+  {
+   "S_per_Q": 10.0,
+   "R": 14.166909803804998,
+   "rule": "ln1pR",
+   "x0": -0.5874843461860535,
+   "p": 0.1300200521029289,
+   "stop": "T=0.002m",
+   "dQ": 4.12841640873296e-07,
+   "seconds": 17.910303592681885,
+   "p_e2e_relic": 0.129946303964089,
+   "ratio_to_e2e_relic": 1.0005675277910198
+  },
+  {
+   "S_per_Q": 10.0,
+   "R": 14.166909803804998,
+   "rule": "linR+0.03",
+   "x0": -0.5688954475735262,
+   "p": 0.13015189978320524,
+   "stop": "T=0.002m",
+   "dQ": 4.962519052353898e-07,
+   "seconds": 17.292489528656006,
+   "p_e2e_relic": 0.129946303964089,
+   "ratio_to_e2e_relic": 1.0015821598063541
+  },
+  {
+   "S_per_Q": 14.0,
+   "R": 22.70586151617308,
+   "rule": "linR",
+   "x0": -0.5857491741453282,
+   "p": 0.3214958560962796,
+   "stop": "T=0.002m",
+   "dQ": 5.147585420139933e-07,
+   "seconds": 16.635066032409668,
+   "p_e2e_relic": 0.3214958560962796,
+   "ratio_to_e2e_relic": 1.0
+  },
+  {
+   "S_per_Q": 14.0,
+   "R": 22.70586151617308,
+   "rule": "ln1pR",
+   "x0": -0.5741157840085348,
+   "p": 0.3215759061042642,
+   "stop": "T=0.002m",
+   "dQ": 5.013736500414367e-07,
+   "seconds": 14.230744361877441,
+   "p_e2e_relic": 0.3214958560962796,
+   "ratio_to_e2e_relic": 1.0002489923476978
+  },
+  {
+   "S_per_Q": 14.0,
+   "R": 22.70586151617308,
+   "rule": "linR+0.03",
+   "x0": -0.5557491741453282,
+   "p": 0.32171444701828594,
+   "stop": "T=0.002m",
+   "dQ": 1.1833989254084187e-06,
+   "seconds": 15.646503925323486,
+   "p_e2e_relic": 0.3214958560962796,
+   "ratio_to_e2e_relic": 1.0006799183188877
+  }
+ ]
+}

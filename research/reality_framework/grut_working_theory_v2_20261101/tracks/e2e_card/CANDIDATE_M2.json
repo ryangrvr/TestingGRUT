@@ -1,0 +1,1169 @@
+{
+ "label": "CANDIDATE_M2: full parameter card of M2 (M1r hidden sector + HFa multi-field inflaton sector). Every entry is a model choice or follows from model choices; nothing is fixed by closure; nothing is a GRUT prediction. Data comparisons are retrospective.",
+ "conventions": "H_i units unless stated; slice a = 1, H = H_i at sigma = sigma_c; c0 = holder strength at the slice in units of M1r calibration mu_eff = 10i H_i; status words: supplied (model choice), fitted (to named datum), derived (algebra), computed (numerical), estimate, open.",
+ "common": {
+  "gravity_and_vacuum": {
+   "M_P_reduced": {
+    "value": 2.435e+18,
+    "units": "GeV",
+    "status": "measured input",
+    "source": "standard",
+    "window": null
+   },
+   "rho_vac": {
+    "value": 2.52e-47,
+    "units": "GeV^4",
+    "status": "measured input, underived",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "vacuum_constant": {
+    "value": "V(true vacuum) = rho_vac (constant added)",
+    "units": null,
+    "status": "supplied",
+    "source": "mf_hybrid",
+    "window": null
+   }
+  },
+  "inflaton_sector_HFa": {
+   "architecture": {
+    "value": "V = (lam/4)(chi^2 - v^2)^2 + (1/2) g^2 sigma^2 chi^2 - c chi + c1 (sigma - sigma_c) - (1/2) m2 (sigma - sigma_c)^2 + V_1loop + V_s + V_N + const",
+    "units": null,
+    "status": "supplied",
+    "source": "mf_hybrid NOTES s3",
+    "window": null
+   },
+   "v": {
+    "value": 0.019596,
+    "units": "M_P",
+    "status": "supplied (fixed under the V0 rescaling)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "lam_design": {
+    "value": 2.3196e-07,
+    "units": "1",
+    "status": "supplied at H_ref = 1.3e11 GeV; scales as (H_i/H_ref)^2 under the V0 rescaling [A]",
+    "source": "mf_hybrid; mf_chain cmb_rescale",
+    "window": null
+   },
+   "g_design": {
+    "value": 0.0016347,
+    "units": "1",
+    "status": "supplied at H_ref; scales as H_i/H_ref",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "sigma_c": {
+    "value": 0.0057735,
+    "units": "M_P",
+    "status": "derived (sqrt(lam) v / g)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "m_chi": {
+    "value": 250.0,
+    "units": "H_i",
+    "status": "derived (sqrt(2 lam) v), held fixed in H_i units",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "m_sigma": {
+    "value": 600.0,
+    "units": "H_i",
+    "status": "derived (g v)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "c_bias": {
+    "value": 100000.0,
+    "units": "H_i^3",
+    "status": "supplied (soft Z2 breaking)",
+    "source": "mf_hybrid",
+    "window": "not scanned; walls absent at this value (e2e_lattice)"
+   },
+   "c1": {
+    "value": 22546.0,
+    "units": "H_i^3",
+    "status": "fitted: A_s = 2.1e-9 with m2 (Planck 2018, 1807.06211)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "m2": {
+    "value": 0.021963,
+    "units": "H_i^2",
+    "status": "fitted: n_s = 0.9649 (Planck 2018) [HFa]",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "mu_R_factor_kappa": {
+    "value": 10.0,
+    "units": "1",
+    "status": "supplied: mu_R^2 = kappa g^2 (2 sigma_c)^2 (one-loop renormalisation condition; loop gives 58% of eta at the pivot)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "higgs_portals_sigma_chi_s": {
+    "value": 0.0,
+    "units": "1",
+    "status": "supplied (no tree portals)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "hidden_portals_sigma_chi": {
+    "value": 0.0,
+    "units": "1",
+    "status": "supplied (sequestered)",
+    "source": "mf_hybrid",
+    "window": null
+   }
+  },
+  "inflaton_sector_HFb_alternative": {
+   "c1": {
+    "value": 17500.0,
+    "units": "H_i^3",
+    "status": "fitted: A_s",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "m2": {
+    "value": 0.0098,
+    "units": "H_i^2",
+    "status": "fitted: n_s = 0.9743 (ACT DR6 P-ACT, 2503.14452)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "spectator_mass": {
+    "value": "m_s^2 = m_s0^2 + xi_s R, m_s0 = 3 H_i, xi_s = -3/4",
+    "units": null,
+    "status": "supplied",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "note": "HFb reproduces HFa to < 1% in the waterfall (e2e_lattice), K (e2e_kinetic, e2e_chain) and S/Q (e2e_chain); only n_s differs"
+  },
+  "spectator_holder": {
+   "mass_mechanism_HFa": {
+    "value": "m_s^2 = g_s^2 chi^2, g_s v = 3 H_i (g_s = 8.17e-6 at H_ref)",
+    "units": null,
+    "status": "supplied",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "holder_term": {
+    "value": "-(g_h e^{i alpha} s Sigma* Y^2 + h.c.)",
+    "units": null,
+    "status": "supplied; the only s-odd term [D/A]",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "alpha_plus_sign_s": {
+    "value": "the DM sign",
+    "units": null,
+    "status": "supplied (CP sign; not fixable by closure)",
+    "source": "WORKING_THEORY s2/s7",
+    "window": null
+   },
+   "lambda_s": {
+    "value": 1e-14,
+    "units": "1",
+    "status": "supplied: required for boundedness, lambda_s >= 7.48 g_h^4 (V_min(|u|) -> -7.48 |u|^4) [C, e2e_chain skeptic]",
+    "source": "e2e_chain/SKEPTIC.md",
+    "window": ">= 3.1e-15 (M2-X card s_*), >= 1.4e-15 (M2-Q card s_*)"
+   },
+   "y_s": {
+    "value": 0.0046,
+    "units": "1",
+    "status": "supplied (s Nbar_s N_s; largest y_s keeping s light)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "Gamma_s": {
+    "value": 1.3e-06,
+    "units": "H_i",
+    "status": "derived [E]",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "initial_condition_s_dot": {
+    "value": 0.0,
+    "units": "-",
+    "status": "supplied (frozen during the observable e-folds; drift 4 H per e-fold, 0.2% of c0 over 50 e-folds)",
+    "source": "e2e_chain skeptic",
+    "window": null
+   },
+   "naturalness": {
+    "value": "s_* is a pre-observable initial condition: no de Sitter equilibrium sits in the window (tree V_min(|u(s)|) tachyonic, m2_eff = -6.3e-4 H^2 at M2-X); P_SY(window) <~ exp(-6e7)",
+    "units": null,
+    "status": "computed [C/D]",
+    "source": "e2e_chain + skeptic",
+    "window": null
+   }
+  },
+  "singlet_neutrinos": {
+   "content": {
+    "value": "four axial Majorana N_j: -(M_j/2) Nbar_j exp(i gamma5 phi_j/f_j) N_j, phi_1 = sigma, phi_2..4 = chi; plus massless N_s",
+    "units": null,
+    "status": "supplied",
+    "source": "mf_hybrid; e2e_sm",
+    "window": null
+   },
+   "M_j": {
+    "value": [
+     250.0,
+     400.0,
+     200.0,
+     120.0
+    ],
+    "units": "H_i",
+    "status": "supplied",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "f_j": {
+    "value": [
+     1200.0,
+     2000.0,
+     2000.0,
+     2000.0
+    ],
+    "units": "H_i",
+    "status": "supplied",
+    "source": "mf_hybrid",
+    "window": "f/f_edge = 1.4-1.5 (axial EFT edge)"
+   },
+   "mtilde_j_S1": {
+    "value": [
+     0.05,
+     0.09122,
+     0.05,
+     0.05
+    ],
+    "units": "eV",
+    "status": "supplied (scenario S1; N2 fixed by the CP-even sum rule sum eta_j mt_j = sum m_i [D])",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "CP_parities_delta0": {
+    "value": [
+     1,
+     -1,
+     1,
+     1
+    ],
+    "units": "-",
+    "status": "supplied",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "CI_R0": {
+    "value": "3x4 least-norm CP-even solution; column 2 imaginary (sm_card.json CI_R0_re/_im); max|R| = 1.35; cancellation x4.1 in m_nu",
+    "units": null,
+    "status": "computed",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "CI_CP_odd_direction": {
+    "value": "R(delta) = R0 exp(delta A), A = where(eta_j eta_k > 0, i, 1) * A_ODD (A_ODD real antisymmetric in sm_card.json)",
+    "units": null,
+    "status": "supplied",
+    "source": "e2e_sm sm_seesaw.family",
+    "window": null,
+    "note": "sm_card.json stores only A_ODD; the i pattern is needed to reproduce eps (e2e_card check)"
+   },
+   "y2_jj": {
+    "value": [
+     0.0536,
+     0.1565,
+     0.0429,
+     0.0257
+    ],
+    "units": "1",
+    "status": "derived (mt M / v_EW^2) at H_ref; scale as H_i",
+    "source": "e2e_sm; reproduced e2e_card",
+    "window": null
+   },
+   "Gamma_rest": {
+    "value": [
+     0.533,
+     2.49,
+     0.341,
+     0.123
+    ],
+    "units": "H_i",
+    "status": "derived; reproduced e2e_card",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "eps_per_unit_delta": {
+    "value": [
+     0.0207,
+     0.00317,
+     0.00961,
+     0.00667
+    ],
+    "units": "1",
+    "status": "computed (Covi-Roulet-Vissani, hep-ph/9605319); reproduced by own code to 3e-4",
+    "source": "e2e_sm; e2e_card",
+    "window": null
+   },
+   "K_washout": {
+    "value": [
+     46.3,
+     84.5,
+     46.3,
+     46.3
+    ],
+    "units": "1",
+    "status": "derived (mt/m*, m* = 1.08e-3 eV)",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "N_s": {
+    "value": "massless dark radiation; no soft mass, no seesaw Yukawa; N_s -> i gamma5 N_s exact",
+    "units": null,
+    "status": "supplied",
+    "source": "e2e_sm",
+    "window": null,
+    "note": "supersedes e2e_chain spectator.decay \"N_s -> L H\": the s energy goes to dark radiation, so the chain's +0.07%/+0.26% H_req entropy shift is dropped"
+   }
+  },
+  "axial_UV_completion": {
+   "construction": {
+    "value": "Phi_a = (rho_a/sqrt2) e^{i theta_a}, sigma = f1 theta_1, chi = f2 theta_2; M_j = y_j <rho_a>/sqrt2; hybrid potential = monodromy on the angles (0811.1989, 0808.0706)",
+    "units": null,
+    "status": "supplied [A]",
+    "source": "e2e_sm",
+    "window": null
+   },
+   "radial_mass": {
+    "value": "m_rho = 4 pi f (strongly coupled edge)",
+    "units": null,
+    "status": "supplied [A]; weak coupling fails",
+    "source": "e2e_sm",
+    "window": "theta-dot/m_rho = 0.6-0.9 (e2e_sm) / 0.92 for sigma with the bench peak theta-dot/f1 = 11.6 (e2e_card); weak coupling needs lambda >= 270 (sigma, e2e_card) / 248 (chi)"
+   },
+   "thermal_restoration": {
+    "value": "none: T_max/f1 = 0.27-0.35",
+    "units": null,
+    "status": "derived",
+    "source": "e2e_sm; e2e_chain T_max",
+    "window": null
+   },
+   "theta_WWtilde": {
+    "value": "absent in the mass-phase basis (N gauge singlet: chiral N rotation anomaly-free) [A]; consistent with the field-redefinition bookkeeping of 2006.03148",
+    "units": null,
+    "status": "argued",
+    "source": "e2e_sm; e2e_card",
+    "window": null
+   }
+  },
+  "standard_model": {
+   "M_t": {
+    "value": 172.57,
+    "units": "GeV",
+    "status": "measured input (PDG 2024 [R]), +-0.29",
+    "source": "mf_higgs/e2e_higgs",
+    "window": null
+   },
+   "M_h": {
+    "value": 125.2,
+    "units": "GeV",
+    "status": "measured input [R]",
+    "source": "e2e_higgs",
+    "window": null
+   },
+   "alpha_s_MZ": {
+    "value": 0.118,
+    "units": "1",
+    "status": "measured input [R], +-0.0009",
+    "source": "e2e_higgs",
+    "window": null
+   },
+   "xi_H_at_Mt": {
+    "value": 0.1,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2; e2e_higgs",
+    "window": "lower edge 0.046-0.055 (inflation, Hawking-Moss); upper ~111 [Q mf_higgs skeptic]; own HM estimate 0.039/0.044 (e2e_card)"
+   },
+   "light_nu": {
+    "value": "normal ordering, m1 = 0; dm21^2 = 7.49e-5, dm31^2 = 2.513e-3 eV^2",
+    "units": "eV^2",
+    "status": "fitted: NuFIT 6.0 IC24 (2410.05380)",
+    "source": "e2e_sm",
+    "window": "m1 <~ 4.2 meV (sum < 0.0642 eV, DESI DR2+CMB 2503.14744)"
+   },
+   "PMNS": {
+    "value": "th12 33.68, th13 8.56, th23 43.3, delta_CP 212 deg; Majorana phases 0",
+    "units": "deg",
+    "status": "fitted (NuFIT 6.0) / supplied",
+    "source": "e2e_sm",
+    "window": null
+   }
+  },
+  "hidden_sector_M1r": {
+   "g_phiX": {
+    "value": 0.1,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "lambda_X": {
+    "value": 0.001,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "lambda_phi": {
+    "value": 0.03,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "v_phi": {
+    "value": "10 m_X",
+    "units": null,
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "eps_tilt": {
+    "value": 0.002,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": "(0.0017, 0.058) one-vacuum window; coherent-orbit transition sensitive at +-5%"
+   },
+   "m_X": {
+    "value": 0.0924,
+    "units": "GeV",
+    "status": "derived (g v_phi); v_phi set by the choice m_X = 92.4 MeV [supplied]",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "m_phi": {
+    "value": "sqrt(6) m_X",
+    "units": null,
+    "status": "derived",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "M_Y": {
+    "value": 30.0,
+    "units": "H_i",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "h_Sigma": {
+    "value": 40.0,
+    "units": "H_i",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "mu_SigmaYY": {
+    "value": 7.16,
+    "units": "H_i",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "kappa_YXXX": {
+    "value": 0.00346,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "lambda_Y_lambda_Sigma": {
+    "value": 0.5,
+    "units": "1",
+    "status": "supplied (perturbative to M_P)",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "charges": {
+    "value": "X 1, Y 3, Sigma 6",
+    "units": null,
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "e_hidden": {
+    "value": 1e-06,
+    "units": "1",
+    "status": "supplied (declared); with c0 it selects the branch",
+    "source": "WORKING_THEORY s2; e2e_chain",
+    "window": "M2-X needs e < e_crit = 1.7e-6; M2-Q needs e > 0.43e-6 (P0)"
+   },
+   "m_A": {
+    "value": "6 e h = 240 e H_i (2.4-2.7e7 GeV at e = 1e-6)",
+    "units": null,
+    "status": "derived",
+    "source": "e2e_relic",
+    "window": null
+   },
+   "xi_X": {
+    "value": -0.8333333333333334,
+    "units": "1",
+    "status": "supplied",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   },
+   "c_L_induced_holder_portal": {
+    "value": 0.0,
+    "units": "1",
+    "status": "supplied: induced holder portals vanish at M_Y (c_L = 1/16pi^2 variant shifts S/Q by +0.05-0.1)",
+    "source": "e2e_chain",
+    "window": "<~ 1/16 pi^2"
+   },
+   "D_target": {
+    "value": 4.4e-10,
+    "units": "GeV per unit entropy",
+    "status": "supplied (rounded; Planck 2018 Omega_c h^2 = 0.120 gives 4.37e-10 [R])",
+    "source": "WORKING_THEORY s2",
+    "window": null
+   }
+  },
+  "initial_conditions": {
+   "sigma_at_CMB_exit": {
+    "value": 0.0212,
+    "units": "M_P",
+    "status": "on the slow-roll attractor (derived from N_*)",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "chi_during_inflation": {
+    "value": "chi_min = c / M_chi^2(sigma) > 0 everywhere",
+    "units": null,
+    "status": "derived",
+    "source": "mf_hybrid",
+    "window": null
+   },
+   "higgs": {
+    "value": "h ~ 0 with de Sitter fluctuations (12 xi H^2 mass)",
+    "units": null,
+    "status": "derived",
+    "source": "e2e_higgs",
+    "window": null
+   },
+   "hidden_state_at_slice": {
+    "value": "M1r release state prepared by the spectator holder (mf_ideal MODE 5 engine IC): Y at the held minimum, Sigma at h/sqrt2, vectors Bunch-Davies, X empty",
+    "units": null,
+    "status": "supplied/derived",
+    "source": "mf_ideal; e2e_chain",
+    "window": null
+   },
+   "N_and_SM": {
+    "value": "empty at the slice",
+    "units": null,
+    "status": "supplied",
+    "source": "e2e_kinetic",
+    "window": null
+   },
+   "slice": {
+    "value": "a = 1, H = H_i at sigma = sigma_c; eps_H = 1 at t = 0.19 H_i^-1",
+    "units": null,
+    "status": "convention",
+    "source": "mf_hybrid",
+    "window": null
+   }
+  },
+  "closures_and_rules (model choices)": {
+   "Pauli_blocking": {
+    "value": "GM (box-mean saturation) for M2-X; P0 (local per-site) for M2-Q",
+    "units": null,
+    "status": "supplied closure [A]; OPEN which is physical",
+    "source": "e2e_lattice; e2e_chain",
+    "window": null
+   },
+   "lattice_to_kinetic_handover": {
+    "value": "moments at t_sw = 3 H_i^-1, energy-conserving (degenerate sphere; dephased start)",
+    "units": null,
+    "status": "supplied",
+    "source": "e2e_chain",
+    "window": null
+   },
+   "H_i_interpolation": {
+    "value": "root of ln(H_req/H_i) interpolated in ln H between the 8.4e10 and 1.3e11 GeV final histories",
+    "units": null,
+    "status": "supplied; +-2% systematic (linear-in-H rule)",
+    "source": "e2e_chain; skeptic",
+    "window": null
+   },
+   "relic_rule": {
+    "value": "e2e_relic relic(): free X if S/Q > 3.4716 (M = 1 + 2p, relaxed-start p-map); Q-matter below (qm_micro + skeptic ripening)",
+    "units": null,
+    "status": "supplied",
+    "source": "e2e_relic",
+    "window": null
+   },
+   "seed_rule": {
+    "value": "Q = 2e5 seed/nucleation assumed for 2.93 < S/Q < 3.47 (bulk-only band)",
+    "units": null,
+    "status": "supplied [A]",
+    "source": "e2e_chain skeptic",
+    "window": null
+   },
+   "leptogenesis_source": {
+    "value": "non-thermal N = excess of the kinetic f_Nj over equilibrium; thermal N evolved separately",
+    "units": null,
+    "status": "supplied [A] (corrects e2e_sm)",
+    "source": "e2e_card",
+    "window": null
+   }
+  }
+ },
+ "M2-X": {
+  "closure": {
+   "value": "GM (box-mean Pauli saturation)",
+   "units": null,
+   "status": "supplied closure [A]",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "c0": {
+   "value": 1.55,
+   "units": "units of M1r calibration (mu_eff = mu + c0 (10i - mu))",
+   "status": "supplied (tuned)",
+   "source": "e2e_chain; skeptic",
+   "window": "self-consistent free X with e_crit at c0 1.45-1.60 (H_i 1.0-1.5e11); e_crit ~ 2e-6 only near 1.55; e_crit 1.3-3.8e-6 over delta -2..+6"
+  },
+  "holder_phase_delta": {
+   "value": 0.0,
+   "units": "deg",
+   "status": "supplied (tuned)",
+   "source": "e2e_chain; skeptic",
+   "window": "-2..+6 deg (delta = -4 loses e_crit)"
+  },
+  "mu_eff_slice": {
+   "value": [
+    -3.9377008877325865,
+    15.5
+   ],
+   "units": "H_i (re, im)",
+   "status": "derived",
+   "source": "e2e_chain m2_points.json (NOTES/digest components were wrong; skeptic)",
+   "window": null,
+   "note": "|mu_eff| = 15.992 H_i, arg 104.25 deg"
+  },
+  "g_h_s_star": {
+   "value": 19.065,
+   "units": "H_i",
+   "status": "derived from c0",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "s_star": {
+   "value": 1.5e+16,
+   "units": "GeV",
+   "status": "supplied initial condition (card value)",
+   "source": "e2e_card",
+   "window": ">= 1.13e+16 GeV (beta_iso < 0.038, Planck 2018 1807.06211; D = 5.77 +-10%)"
+  },
+  "g_h": {
+   "value": 0.00014272338627449856,
+   "units": "1",
+   "status": "derived (g_h s_* / s_*)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "lambda_s_min": {
+   "value": 3.1037173431261224e-15,
+   "units": "1",
+   "status": "derived bound",
+   "source": "e2e_chain skeptic formula",
+   "window": null
+  },
+  "H_i": {
+   "value": 112292200058.61414,
+   "units": "GeV",
+   "status": "fitted: Omega_DM (D = 4.4e-10 GeV) through the self-consistent chain",
+   "source": "e2e_chain",
+   "window": "+-2% (interpolation rule)"
+  },
+  "V0_quarter": {
+   "value": 688184032625963.2,
+   "units": "GeV",
+   "status": "derived",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "lam": {
+   "value": 1.7307150766160506e-07,
+   "units": "1",
+   "status": "derived (V0 rescaling [A])",
+   "source": "e2e_card",
+   "window": null
+  },
+  "g": {
+   "value": 0.001412031226429358,
+   "units": "1",
+   "status": "derived (V0 rescaling [A])",
+   "source": "e2e_card",
+   "window": null
+  },
+  "M_N_GeV": {
+   "value": [
+    28073050014653.535,
+    44916880023445.66,
+    22458440011722.83,
+    13475064007033.695
+   ],
+   "units": "GeV",
+   "status": "derived",
+   "source": "e2e_card",
+   "window": null
+  },
+  "K": {
+   "value": 15.662562516885384,
+   "units": "1",
+   "status": "computed (lattice to t = 3, kinetic network after)",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "T_RH": {
+   "value": 2720000000000.0,
+   "units": "GeV",
+   "status": "computed (interpolated in ln H between final histories)",
+   "source": "e2e_chain histories; e2e_card",
+   "window": null
+  },
+  "N_star": {
+   "value": 51.55415992719928,
+   "units": "e-folds",
+   "status": "computed",
+   "source": "e2e_chain; skeptic",
+   "window": null
+  },
+  "n_s_HFa": {
+   "value": 0.9649000765457891,
+   "units": "1",
+   "status": "fitted target (retuned through m2), not an output",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "r": {
+   "value": 2.0520938994715206e-07,
+   "units": "1",
+   "status": "computed (MS modes)",
+   "source": "e2e_chain; skeptic",
+   "window": "+-4-5% from the H_i rule"
+  },
+  "alpha_s_running": {
+   "value": 9.464787958369818e-05,
+   "units": "1",
+   "status": "computed (MS modes)",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "capacity_N_max": {
+   "value": 82.21313006067258,
+   "units": "e-folds",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "S_per_Q_1e-6": {
+   "value": 4.0252023428261134,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain; skeptic",
+   "window": null
+  },
+  "S_per_Q_3e-6": {
+   "value": 3.053134239953377,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "e_crit_bulk": {
+   "value": 1.7199981443438802e-06,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "e_crit_Q2e5": {
+   "value": 3.768654639401913e-06,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "release": {
+   "value": {
+    "eps": 0.7412911590043475,
+    "E_over_Ec": 1.4908221946621112,
+    "N_YL": 35.442396765210894,
+    "N_YH": 23.052813105187184,
+    "N_sigma": 3.9567492263979482
+   },
+   "units": "-",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "ledger_1e-6": {
+   "value": {
+    "R_vec": 5.632857521868867,
+    "R_Y": 13.679374868683478,
+    "R_casc": 19.58654916134152,
+    "R_leak_cL0": 0.0,
+    "dR_grav": 0.027075627092741795
+   },
+   "units": "heat ratios",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "relic": {
+   "value": {
+    "branch": "free X (asymmetric)",
+    "M_over_mX": 1.0003290272231742,
+    "p": 0.00016451361158705723,
+    "m_X_GeV": 0.0924,
+    "n_local_cm3": 3.2464383092972726,
+    "sigma_over_m_XX_cm2_g": 6e-08,
+    "sigma_over_m_XXbar_cm2_g": 7.07e-07,
+    "annihilation": "X Xbar -> phi phi closed; no signal"
+   },
+   "units": "-",
+   "status": "computed",
+   "source": "e2e_relic relic(); e2e_chain",
+   "window": null
+  },
+  "CP_phase_delta_lepton": {
+   "value": 0.0008217861348794336,
+   "units": "rad",
+   "status": "fitted: eta_B = 6.12e-10 (Planck 2018 [R])",
+   "source": "e2e_card (corrected e2e_sm source)",
+   "window": "9.5e-05 - 1.9e-03 (washout x0.5 - x2); e2e_sm uncorrected value 4.0e-06"
+  },
+  "etaB_per_unit_delta": {
+   "value": 7.447193059417924e-07,
+   "units": "1",
+   "status": "computed [C on Q/E rates]",
+   "source": "e2e_card",
+   "window": null
+  },
+  "beta_iso_at_card_s_star": {
+   "value": 0.021669348937295753,
+   "units": "1",
+   "status": "derived",
+   "source": "e2e_card",
+   "window": "< 0.038"
+  },
+  "s_energy_fraction_at_decay": {
+   "value": 0.002723209057443637,
+   "units": "1",
+   "status": "derived (scaled from e2e_chain by (s_*/floor)^2)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "DeltaN_eff_Ns": {
+   "value": 0.007788377904288801,
+   "units": "1",
+   "status": "derived [E] (N_s dark radiation)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "Mt_crit_grav_only": {
+   "value": 172.961,
+   "units": "GeV",
+   "status": "computed+interpolated [E] (quadratic in ln H_i through e2e_higgs nodes)",
+   "source": "e2e_higgs; e2e_card",
+   "window": "alpha_s 0.1171/0.1189: 172.63/173.28"
+  },
+  "higgs_with_media": {
+   "value": "D < 0 for M_t <= 174.6 GeV on every history (N gas + SM medium)",
+   "units": null,
+   "status": "computed [C on E]",
+   "source": "e2e_higgs",
+   "window": null
+  }
+ },
+ "M2-Q": {
+  "closure": {
+   "value": "P0 (local per-site Pauli blocking)",
+   "units": null,
+   "status": "supplied closure [A]",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "c0": {
+   "value": 1.45,
+   "units": "units of M1r calibration (mu_eff = mu + c0 (10i - mu))",
+   "status": "supplied (tuned)",
+   "source": "e2e_chain; skeptic",
+   "window": "1.40 (bistable: free X 1.04e11 and Q-matter 1.17e11) - 1.50; GM + fragment-spread pocket c0 1.485-1.52, delta +2..+3.5 deg (bulk-only)"
+  },
+  "holder_phase_delta": {
+   "value": 0.0,
+   "units": "deg",
+   "status": "supplied (tuned)",
+   "source": "e2e_chain; skeptic",
+   "window": "at least -4..+4 deg at c0 1.45 (skeptic; e2e_chain had 0..+4)"
+  },
+  "mu_eff_slice": {
+   "value": [
+    -3.2217552717812064,
+    14.5
+   ],
+   "units": "H_i (re, im)",
+   "status": "derived",
+   "source": "e2e_chain m2_points.json (NOTES/digest components were wrong; skeptic)",
+   "window": null,
+   "note": "|mu_eff| = 14.854 H_i, arg 102.53 deg"
+  },
+  "g_h_s_star": {
+   "value": 17.835,
+   "units": "H_i",
+   "status": "derived from c0",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "s_star": {
+   "value": 1.5e+16,
+   "units": "GeV",
+   "status": "supplied initial condition (card value)",
+   "source": "e2e_card",
+   "window": ">= 1.36e+16 GeV (beta_iso < 0.038, Planck 2018 1807.06211; D = 7.87 +-10%)"
+  },
+  "g_h": {
+   "value": 0.00011754872807332077,
+   "units": "1",
+   "status": "derived (g_h s_* / s_*)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "lambda_s_min": {
+   "value": 1.4281483906448936e-15,
+   "units": "1",
+   "status": "derived bound",
+   "source": "e2e_chain skeptic formula",
+   "window": null
+  },
+  "H_i": {
+   "value": 98863522349.30258,
+   "units": "GeV",
+   "status": "fitted: Omega_DM (D = 4.4e-10 GeV) through the self-consistent chain",
+   "source": "e2e_chain",
+   "window": "+-2% (interpolation rule)"
+  },
+  "V0_quarter": {
+   "value": 645725349872884.8,
+   "units": "GeV",
+   "status": "derived",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "lam": {
+   "value": 1.3415243337645628e-07,
+   "units": "1",
+   "status": "derived (V0 rescaling [A])",
+   "source": "e2e_card",
+   "window": null
+  },
+  "g": {
+   "value": 0.0012431707691108072,
+   "units": "1",
+   "status": "derived (V0 rescaling [A])",
+   "source": "e2e_card",
+   "window": null
+  },
+  "M_N_GeV": {
+   "value": [
+    24715880587325.645,
+    39545408939721.03,
+    19772704469860.516,
+    11863622681916.31
+   ],
+   "units": "GeV",
+   "status": "derived",
+   "source": "e2e_card",
+   "window": null
+  },
+  "K": {
+   "value": 9.045035118500007,
+   "units": "1",
+   "status": "computed (lattice to t = 3, kinetic network after)",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "T_RH": {
+   "value": 2400000000000.0,
+   "units": "GeV",
+   "status": "computed (interpolated in ln H between final histories)",
+   "source": "e2e_chain histories; e2e_card",
+   "window": null
+  },
+  "N_star": {
+   "value": 51.76466257249178,
+   "units": "e-folds",
+   "status": "computed",
+   "source": "e2e_chain; skeptic",
+   "window": null
+  },
+  "n_s_HFa": {
+   "value": 0.9648997615161177,
+   "units": "1",
+   "status": "fitted target (retuned through m2), not an output",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "r": {
+   "value": 1.5907115020498795e-07,
+   "units": "1",
+   "status": "computed (MS modes)",
+   "source": "e2e_chain; skeptic",
+   "window": "+-4-5% from the H_i rule"
+  },
+  "alpha_s_running": {
+   "value": 7.380039140351397e-05,
+   "units": "1",
+   "status": "computed (MS modes)",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "capacity_N_max": {
+   "value": 89.48510156835475,
+   "units": "e-folds",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "S_per_Q_1e-6": {
+   "value": 2.432903831823091,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain; skeptic",
+   "window": null
+  },
+  "S_per_Q_3e-6": {
+   "value": 1.7485257427855978,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "e_crit_bulk": {
+   "value": 4.348211619136693e-07,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "e_crit_Q2e5": {
+   "value": 6.31734801925245e-07,
+   "units": "1",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "release": {
+   "value": {
+    "eps": 0.6148237362066551,
+    "E_over_Ec": 1.9131382962530938,
+    "N_YL": 6.358404958420209,
+    "N_YH": 9.244402149053702,
+    "N_sigma": 1.5439838132056996
+   },
+   "units": "-",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "ledger_1e-6": {
+   "value": {
+    "R_vec": 3.169902071093689,
+    "R_Y": 3.734096454559807,
+    "R_casc": 8.240837142401329,
+    "R_leak_cL0": 0.0,
+    "dR_grav": 0.027896209747699473
+   },
+   "units": "heat ratios",
+   "status": "computed",
+   "source": "e2e_chain",
+   "window": null
+  },
+  "relic": {
+   "value": {
+    "branch": "Q-matter",
+    "M_over_mX": 0.8018794809488838,
+    "Q_mean": 7.519023992762914e+19,
+    "f_v": {
+     "perfect": 0.09438346640949376,
+     "beliaev": 0.13773955762687548
+    },
+    "object_mass_ug": 9.61,
+    "object_mass_over_MPl": 0.44,
+    "radius_nm": 0.73,
+    "n_local_m3": 4.91e-14,
+    "crossing_rate_m2_yr": "0.55 (n<v>A, normal) / 0.27 (isotropic flat plane)",
+    "impulse_1mg_1mm_kg_m_s": 3.6e-27,
+    "sigma_over_m_contact_cm2_g": 7e-09,
+    "Pk": "CDM-like (zeta ~ 1e-7) [Q qm_transfer fit]"
+   },
+   "units": "-",
+   "status": "computed",
+   "source": "e2e_relic relic(); e2e_chain",
+   "window": null
+  },
+  "CP_phase_delta_lepton": {
+   "value": 0.0009168987600706784,
+   "units": "rad",
+   "status": "fitted: eta_B = 6.12e-10 (Planck 2018 [R])",
+   "source": "e2e_card (corrected e2e_sm source)",
+   "window": "1.1e-04 - 2.1e-03 (washout x0.5 - x2); e2e_sm uncorrected value 4.5e-06"
+  },
+  "etaB_per_unit_delta": {
+   "value": 6.674673657022118e-07,
+   "units": "1",
+   "status": "computed [C on Q/E rates]",
+   "source": "e2e_card",
+   "window": null
+  },
+  "beta_iso_at_card_s_star": {
+   "value": 0.031241516736055908,
+   "units": "1",
+   "status": "derived",
+   "source": "e2e_card",
+   "window": "< 0.038"
+  },
+  "s_energy_fraction_at_decay": {
+   "value": 0.0072797279574480225,
+   "units": "1",
+   "status": "derived (scaled from e2e_chain by (s_*/floor)^2)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "DeltaN_eff_Ns": {
+   "value": 0.020820021958301342,
+   "units": "1",
+   "status": "derived [E] (N_s dark radiation)",
+   "source": "e2e_card",
+   "window": null
+  },
+  "Mt_crit_grav_only": {
+   "value": 172.993,
+   "units": "GeV",
+   "status": "computed+interpolated [E] (quadratic in ln H_i through e2e_higgs nodes)",
+   "source": "e2e_higgs; e2e_card",
+   "window": "alpha_s 0.1171/0.1189: 172.67/173.32"
+  },
+  "higgs_with_media": {
+   "value": "D < 0 for M_t <= 174.6 GeV on every history (N gas + SM medium)",
+   "units": null,
+   "status": "computed [C on E]",
+   "source": "e2e_higgs",
+   "window": null
+  }
+ }
+}

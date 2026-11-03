@@ -1,0 +1,597 @@
+{
+ "regression": {
+  "qmatter_SQ2p99": {
+   "Q_mean": 1.2575800000000002e+20,
+   "f_v": {
+    "perfect": 0.119248,
+    "beliaev": 0.17472000000000001
+   },
+   "M": {
+    "perfect": 0.8025936853648648,
+    "beliaev": 0.8150269183126692
+   },
+   "reference": "qm_micro+skeptic: <Q> 1.17-1.27e20, f_v 0.120 (perfect) / 0.175 (Beliaev), M 0.8023-0.8152"
+  },
+  "qmatter_SQ3p0_at_ref": {
+   "Q_mean": 1.267e+20,
+   "f_v": {
+    "perfect": 0.1197,
+    "beliaev": 0.1754
+   },
+   "M": {
+    "perfect": 0.802694994517093,
+    "beliaev": 0.8151793303115967
+   },
+   "reference": "this track rerun: <Q> 1.267e20, f_v 0.1197 / 0.1751; skeptic M 0.8027 / 0.8152"
+  },
+  "qmatter_SQ2p88_calibrated": {
+   "M_central": 0.8074786292728124,
+   "reference": "WORKING_THEORY 4b: M = 0.807 m_X (c0 = 1.40 HFa)"
+  },
+  "freeX_SQ4p955": {
+   "M": 1.001937485505458,
+   "p": 0.0009687427527289743,
+   "reference": "WORKING_THEORY 4b: M = 1.002 (M1r, c0 = 1)"
+  }
+ },
+ "benchmarks": {
+  "M1r_Qmatter_e3e-6_SQ2.99": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 2.99,
+     "H_i_GeV": 149000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "Q-matter",
+    "Q_mean": 1.220111675783853e+20,
+    "Q_mean_range": [
+     1.1273211728560331e+20,
+     1.220111675783853e+20
+    ],
+    "Q_capture_eff": 9.687686705723793e+19,
+    "objects_per_charge": 9.845537842495067e-21,
+    "f_v": {
+     "perfect": 0.11938101358047527,
+     "beliaev": 0.17521813197993602
+    },
+    "M": {
+     "perfect": 0.8026234984026365,
+     "beliaev": 0.8151385672697159
+    },
+    "M_central": 0.8088810328361762,
+    "M_range": [
+     0.8026234984026365,
+     0.8151385672697159
+    ],
+    "p": 0.0,
+    "Xbar_over_X": "~exp(-170)",
+    "YQ_over_ref": 0.9704764490964798,
+    "flags": [],
+    "Y_Q": 5.8864563024117266e-09,
+    "r_hv": 1.7600504344211062e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000008014,
+    "m_A_GeV": 35760000.0,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "object_mass_GeV": 8.747831394787472e+18,
+    "object_mass_kg": 1.5594425910068114e-08,
+    "object_mass_ug": 15.594425910068114,
+    "object_mass_range_kg": [
+     1.4408456910848253e-08,
+     1.5594425910068114e-08
+    ],
+    "object_mass_over_M_Planck": 0.716512695081409,
+    "object_mass_over_reduced_M_Planck": 3.5920619612462406,
+    "radius_nm": 0.857813574853134,
+    "mass_fraction_in_objects": 0.8512615020391694,
+    "n_local_per_cm3": 2.91933439370953e-20,
+    "n_local_per_m3": 2.91933439370953e-14,
+    "flux_per_m2_per_yr": 0.3260351046844099,
+    "mean_separation_m": 32476.71184960418,
+    "event_rate_per_yr": {
+     "A=1 m^2": 0.3260351046844099,
+     "A=(10 cm)^2": 0.003260351046844099,
+     "A=(3 m)^2": 2.9343159421596887
+    },
+    "impulse_on_sensor": {
+     "sensor_mass_kg": 1e-06,
+     "b_m": 0.001,
+     "impulse_kg_m_s": 5.8820479149609204e-27,
+     "crossing_time_s": 2.825683054961325e-09,
+     "note": "I = 2 G M_obj m_s/(b v) (straight-line flyby); detectability is the proposals' claim, not assessed here"
+    },
+    "self_interaction": {
+     "sigma_geo_cm2": 9.246890041956663e-14,
+     "sigma_over_m_cm2_g": 5.929612346926257e-09,
+     "note": "contact (merger) cross-section pi(2R)^2 per object mass; upper estimate"
+    },
+    "vapour": {
+     "f_v_mass_perfect": 0.1487384979608306,
+     "zeta": 1.0233507120749369e-07,
+     "sigma_p": [
+      4.261906859481695e-11,
+      9.084590937316245e-11
+     ],
+     "m_eff_Lya_keV": [
+      234.13203788345425,
+      161.58355109955835
+     ],
+     "note": "qm_transfer fit m_eff = 19.3 keV (sigma_p/1e-8)^-0.49 (f_v/0.1)^-0.45, sigma_p = C (zeta T_f)^0.99, C = 0.038 (track) / 0.081 (skeptic, converged); fit not portable at <~15% [qm_transfer skeptic R5]; qm_transfer: |dP/P| <= 1e-3 (numerical floor) at k <= 136/Mpc at these zeta"
+    }
+   }
+  },
+  "HFa_c0_1.40_e1e-6_SQ2.88": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 2.88,
+     "H_i_GeV": 84000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "Q-matter",
+    "Q_mean": 1.1215414776836183e+20,
+    "Q_mean_range": [
+     1.043128043578871e+20,
+     1.1215414776836183e+20
+    ],
+    "Q_capture_eff": 8.905039332807929e+19,
+    "objects_per_charge": 1.1664082340510909e-20,
+    "f_v": {
+     "perfect": 0.11439608292368493,
+     "beliaev": 0.16768916045319907
+    },
+    "M": {
+     "perfect": 0.8015061995115829,
+     "beliaev": 0.8134510590340419
+    },
+    "M_central": 0.8074786292728124,
+    "M_range": [
+     0.8015061995115829,
+     0.8134510590340419
+    ],
+    "p": 0.0,
+    "Xbar_over_X": "~exp(-170)",
+    "YQ_over_ref": 0.9721619421619973,
+    "flags": [],
+    "Y_Q": 5.896679715135883e-09,
+    "r_hv": 1.698243757959134e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000005713,
+    "m_A_GeV": 20160000.0,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "object_mass_GeV": 8.041112911024345e+18,
+    "object_mass_kg": 1.433458578090345e-08,
+    "object_mass_ug": 14.33458578090345,
+    "object_mass_range_kg": [
+     1.3332372202613655e-08,
+     1.433458578090345e-08
+    ],
+    "object_mass_over_M_Planck": 0.6586271755037575,
+    "object_mass_over_reduced_M_Planck": 3.301867001116145,
+    "radius_nm": 0.8340616767775468,
+    "mass_fraction_in_objects": 0.8572736143608185,
+    "n_local_per_cm3": 3.198339423335911e-20,
+    "n_local_per_m3": 3.198339423335911e-14,
+    "flux_per_m2_per_yr": 0.35719475334875017,
+    "mean_separation_m": 31503.476558800474,
+    "event_rate_per_yr": {
+     "A=1 m^2": 0.35719475334875017,
+     "A=(10 cm)^2": 0.003571947533487502,
+     "A=(3 m)^2": 3.2147527801387517
+    },
+    "impulse_on_sensor": {
+     "sensor_mass_kg": 1e-06,
+     "b_m": 0.001,
+     "impulse_kg_m_s": 5.406849914875981e-27,
+     "crossing_time_s": 2.825683054961325e-09,
+     "note": "I = 2 G M_obj m_s/(b v) (straight-line flyby); detectability is the proposals' claim, not assessed here"
+    },
+    "self_interaction": {
+     "sigma_geo_cm2": 8.741907315656576e-14,
+     "sigma_over_m_cm2_g": 6.098472219059552e-09,
+     "note": "contact (merger) cross-section pi(2R)^2 per object mass; upper estimate"
+    },
+    "vapour": {
+     "f_v_mass_perfect": 0.1427263856391815,
+     "zeta": 1.0524930674732734e-07,
+     "sigma_p": [
+      4.382044208756643e-11,
+      9.340673181823372e-11
+     ],
+     "m_eff_Lya_keV": [
+      235.29287624415812,
+      162.38469043217924
+     ],
+     "note": "qm_transfer fit m_eff = 19.3 keV (sigma_p/1e-8)^-0.49 (f_v/0.1)^-0.45, sigma_p = C (zeta T_f)^0.99, C = 0.038 (track) / 0.081 (skeptic, converged); fit not portable at <~15% [qm_transfer skeptic R5]; qm_transfer: |dP/P| <= 1e-3 (numerical floor) at k <= 136/Mpc at these zeta"
+    }
+   }
+  },
+  "HFa_c0_1.36_e3e-6_SQ3.28": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 3.28,
+     "H_i_GeV": 88500000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "Q-matter",
+    "Q_mean": 1.4708958490661832e+20,
+    "Q_mean_range": [
+     1.4708958490661832e+20,
+     1.5759598382851962e+20
+    ],
+    "Q_capture_eff": 1.1678913041585496e+20,
+    "objects_per_charge": 6.83883417468764e-21,
+    "f_v": {
+     "perfect": 0.13317139518952203,
+     "beliaev": 0.1950805424962021
+    },
+    "M": {
+     "perfect": 0.8057144096188247,
+     "beliaev": 0.819590434461338
+    },
+    "M_central": 0.8126524220400813,
+    "M_range": [
+     0.8057144096188247,
+     0.819590434461338
+    ],
+    "p": 0.0,
+    "Xbar_over_X": "~exp(-170)",
+    "YQ_over_ref": 0.9659726239627241,
+    "flags": [
+     "S/Q in (3.2, 3.47): linear extrapolation of the qm_micro tables [E]"
+    ],
+    "Y_Q": 5.859138205338646e-09,
+    "r_hv": 1.9217973313510758e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000000053,
+    "m_A_GeV": 21240000.0,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "object_mass_GeV": 1.054587800633685e+19,
+    "object_mass_kg": 1.879973513486222e-08,
+    "object_mass_ug": 18.79973513486222,
+    "object_mass_range_kg": [
+     1.879973513486222e-08,
+     2.0142573358780948e-08
+    ],
+    "object_mass_over_M_Planck": 0.8637861352497811,
+    "object_mass_over_reduced_M_Planck": 4.3303814997026775,
+    "radius_nm": 0.9129640875149244,
+    "mass_fraction_in_objects": 0.8347163789058656,
+    "n_local_per_cm3": 2.3745288303286777e-20,
+    "n_local_per_m3": 2.3745288303286776e-14,
+    "flux_per_m2_per_yr": 0.26519050282164747,
+    "mean_separation_m": 34791.58259718543,
+    "event_rate_per_yr": {
+     "A=1 m^2": 0.26519050282164747,
+     "A=(10 cm)^2": 0.0026519050282164747,
+     "A=(3 m)^2": 2.386714525394827
+    },
+    "impulse_on_sensor": {
+     "sensor_mass_kg": 1e-06,
+     "b_m": 0.001,
+     "impulse_kg_m_s": 7.091055707311438e-27,
+     "crossing_time_s": 2.825683054961325e-09,
+     "note": "I = 2 G M_obj m_s/(b v) (straight-line flyby); detectability is the proposals' claim, not assessed here"
+    },
+    "self_interaction": {
+     "sigma_geo_cm2": 1.0474112948043306e-13,
+     "sigma_over_m_cm2_g": 5.571415167770165e-09,
+     "note": "contact (merger) cross-section pi(2R)^2 per object mass; upper estimate"
+    },
+    "vapour": {
+     "f_v_mass_perfect": 0.16528362109413441,
+     "zeta": 9.615319426670787e-08,
+     "sigma_p": [
+      4.0069487006304556e-11,
+      8.541127493449129e-11
+     ],
+     "m_eff_Lya_keV": [
+      230.13100661424895,
+      158.8222850789705
+     ],
+     "note": "qm_transfer fit m_eff = 19.3 keV (sigma_p/1e-8)^-0.49 (f_v/0.1)^-0.45, sigma_p = C (zeta T_f)^0.99, C = 0.038 (track) / 0.081 (skeptic, converged); fit not portable at <~15% [qm_transfer skeptic R5]; qm_transfer: |dP/P| <= 1e-3 (numerical floor) at k <= 136/Mpc at these zeta"
+    }
+   }
+  },
+  "HFa_c0_1.40_e3e-6_SQ2.12": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 2.12,
+     "H_i_GeV": 84000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "Q-matter",
+    "Q_mean": 6.279015900786569e+19,
+    "Q_mean_range": [
+     6.0237969291819794e+19,
+     6.279015900786569e+19
+    ],
+    "Q_capture_eff": 4.985538625224536e+19,
+    "objects_per_charge": 2.823652158259227e-20,
+    "f_v": {
+     "perfect": 0.08134301157191373,
+     "beliaev": 0.11928494273437762
+    },
+    "M": {
+     "perfect": 0.7940978396947929,
+     "beliaev": 0.8026019655354417
+    },
+    "M_central": 0.7983499026151173,
+    "M_range": [
+     0.7940978396947929,
+     0.8026019655354417
+    ],
+    "p": 0.0,
+    "Xbar_over_X": "~exp(-170)",
+    "YQ_over_ref": 0.983278121430593,
+    "flags": [],
+    "Y_Q": 5.964105260160993e-09,
+    "r_hv": 1.2643903151541306e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 0.9999999999999659,
+    "m_A_GeV": 20160000.0,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "object_mass_GeV": 4.50186433876903e+18,
+    "object_mass_kg": 8.02530212572953e-09,
+    "object_mass_ug": 8.02530212572953,
+    "object_mass_range_kg": [
+     7.69910302260443e-09,
+     8.02530212572953e-09
+    ],
+    "object_mass_over_M_Planck": 0.36873629642477235,
+    "object_mass_over_reduced_M_Planck": 1.8485696530021043,
+    "radius_nm": 0.6874222440832002,
+    "mass_fraction_in_objects": 0.8975655045187159,
+    "n_local_per_cm3": 5.981291995778857e-20,
+    "n_local_per_m3": 5.981291995778857e-14,
+    "flux_per_m2_per_yr": 0.6679985568607034,
+    "mean_separation_m": 25570.25143640413,
+    "event_rate_per_yr": {
+     "A=1 m^2": 0.6679985568607034,
+     "A=(10 cm)^2": 0.006679985568607034,
+     "A=(3 m)^2": 6.0119870117463305
+    },
+    "impulse_on_sensor": {
+     "sensor_mass_kg": 1e-06,
+     "b_m": 0.001,
+     "impulse_kg_m_s": 3.027056712943954e-27,
+     "crossing_time_s": 2.825683054961325e-09,
+     "note": "I = 2 G M_obj m_s/(b v) (straight-line flyby); detectability is the proposals' claim, not assessed here"
+    },
+    "self_interaction": {
+     "sigma_geo_cm2": 5.938230160875807e-14,
+     "sigma_over_m_cm2_g": 7.399385179328685e-09,
+     "note": "contact (merger) cross-section pi(2R)^2 per object mass; upper estimate"
+    },
+    "vapour": {
+     "f_v_mass_perfect": 0.10243449548128411,
+     "zeta": 1.2770086220067888e-07,
+     "sigma_p": [
+      5.306541859405653e-11,
+      1.1311312910838367e-10
+     ],
+     "m_eff_Lya_keV": [
+      248.71319297703926,
+      171.64656870472558
+     ],
+     "note": "qm_transfer fit m_eff = 19.3 keV (sigma_p/1e-8)^-0.49 (f_v/0.1)^-0.45, sigma_p = C (zeta T_f)^0.99, C = 0.038 (track) / 0.081 (skeptic, converged); fit not portable at <~15% [qm_transfer skeptic R5]; qm_transfer: |dP/P| <= 1e-3 (numerical floor) at k <= 136/Mpc at these zeta"
+    }
+   }
+  },
+  "M1r_freeX_e1e-6_SQ4.955": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 4.955,
+     "H_i_GeV": 129000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "free X",
+    "p": 0.0009687427527289743,
+    "p_aref": 0.003390944421809502,
+    "M_central": 1.001937485505458,
+    "M_range": [
+     1.001937485505458,
+     1.006781888843619
+    ],
+    "Xbar_over_X": 0.0009678051984569157,
+    "asym_share": 0.99806626108566,
+    "YQ_over_M1": 0.9355873041890612,
+    "flags": [
+     "Y_Q exponent beta held constant outside S/Q = 5-958 [E]"
+    ],
+    "Y_Q": 4.752235466305257e-09,
+    "r_hv": 2.3547326735542547e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.000000000000787,
+    "m_A_GeV": 30959999.999999996,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "particle_mass_GeV": 0.0924089637375362,
+    "Xbar_fraction_of_particles": 0.0009668694571700374,
+    "n_local_per_cm3": 3.2464383092972726,
+    "flux_per_cm2_per_s": 114890390.96572374,
+    "self_interaction": {
+     "sigma_XX_cm2": 9.877760279350895e-33,
+     "sigma_XXbar_cm2": 1.1651725390744525e-31,
+     "sigma_over_m_XX": 5.996190120921279e-08,
+     "sigma_over_m_XXbar": 7.073056918147957e-07,
+     "sigma_over_m_mix_cm2_g": 6.121248476679508e-08
+    },
+    "annihilation": "X Xbar -> phi phi closed (m_phi = 2.45 m_X); no light hidden state; no annihilation signal [D]",
+    "P_k": "CDM-like (free streaming 0.3-0.5 pc comoving) [Q WORKING_THEORY section 6]",
+    "direct_detection": "none at zero portals [Q WORKING_THEORY section 6]"
+   }
+  },
+  "HFa_c0_1.36_e1e-6_SQ4.16": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 4.16,
+     "H_i_GeV": 88500000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "free X",
+    "p": 0.00021048086245137028,
+    "p_aref": null,
+    "M_central": 1.0004209617249027,
+    "M_range": [
+     1.0004209617249027,
+     1.0004209617249027
+    ],
+    "Xbar_over_X": 0.0002104365695807136,
+    "asym_share": 0.9995792154093044,
+    "YQ_over_M1": 0.9370055475577388,
+    "flags": [
+     "Y_Q exponent beta held constant outside S/Q = 5-958 [E]"
+    ],
+    "Y_Q": 4.759439311853721e-09,
+    "r_hv": 1.979926753731148e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000000018,
+    "m_A_GeV": 21240000.0,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "particle_mass_GeV": 0.0924089637375362,
+    "Xbar_fraction_of_particles": 0.00021039229534781443,
+    "n_local_per_cm3": 3.2464383092972726,
+    "flux_per_cm2_per_s": 114890390.96572374,
+    "self_interaction": {
+     "sigma_XX_cm2": 9.877760279350895e-33,
+     "sigma_XXbar_cm2": 1.1651725390744525e-31,
+     "sigma_over_m_XX": 5.996190120921279e-08,
+     "sigma_over_m_XXbar": 7.073056918147957e-07,
+     "sigma_over_m_mix_cm2_g": 6.023423619194257e-08
+    },
+    "annihilation": "X Xbar -> phi phi closed (m_phi = 2.45 m_X); no light hidden state; no annihilation signal [D]",
+    "P_k": "CDM-like (free streaming 0.3-0.5 pc comoving) [Q WORKING_THEORY section 6]",
+    "direct_detection": "none at zero portals [Q WORKING_THEORY section 6]"
+   }
+  },
+  "HF_exported_c0_1_SQ14.7": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 14.7,
+     "H_i_GeV": 111000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "free X",
+    "p": 0.3686050111082166,
+    "p_aref": 0.39411904411505627,
+    "M_central": 1.7372100222164333,
+    "M_range": [
+     1.7372100222164333,
+     1.7882380882301125
+    ],
+    "Xbar_over_X": 0.26932899420683964,
+    "asym_share": 0.5756356383001647,
+    "YQ_over_M1": 0.5396008421787556,
+    "flags": [],
+    "Y_Q": 2.740856196282756e-09,
+    "r_hv": 4.029058608535651e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000000873,
+    "m_A_GeV": 26639999.999999996,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "particle_mass_GeV": 0.0924089637375362,
+    "Xbar_fraction_of_particles": 0.21218218084991758,
+    "n_local_per_cm3": 3.2464383092972726,
+    "flux_per_cm2_per_s": 114890390.96572374,
+    "self_interaction": {
+     "sigma_XX_cm2": 9.877760279350895e-33,
+     "sigma_XXbar_cm2": 1.1651725390744525e-31,
+     "sigma_over_m_XX": 5.996190120921279e-08,
+     "sigma_over_m_XXbar": 7.073056918147957e-07,
+     "sigma_over_m_mix_cm2_g": 2.7638304636106254e-07
+    },
+    "annihilation": "X Xbar -> phi phi closed (m_phi = 2.45 m_X); no light hidden state; no annihilation signal [D]",
+    "P_k": "CDM-like (free streaming 0.3-0.5 pc comoving) [Q WORKING_THEORY section 6]",
+    "direct_detection": "none at zero portals [Q WORKING_THEORY section 6]"
+   }
+  },
+  "HFa_Pauli_c0_1_SQ61.5": {
+   "relic": {
+    "inputs": {
+     "S_per_Q": 61.5,
+     "H_i_GeV": 240000000000.0,
+     "r_hv": null,
+     "e": 1e-06,
+     "Y_Q": null
+    },
+    "branch": "free X",
+    "p": 2.9273396806476906,
+    "p_aref": 2.9412663963499313,
+    "M_central": 6.854679361295381,
+    "M_range": [
+     6.854679361295381,
+     6.8825327926998625
+    ],
+    "Xbar_over_X": 0.7453747113020075,
+    "asym_share": 0.14588574421824194,
+    "YQ_over_M1": 0.13675329532150565,
+    "flags": [],
+    "Y_Q": 6.946266342554483e-10,
+    "r_hv": 4.2719538006710076e-08,
+    "Y_Q_calibrated": true,
+    "Omega_over_target": 1.0000000000001885,
+    "m_A_GeV": 57599999.99999999,
+    "vector_screened": true
+   },
+   "observables": {
+    "rho_loc_GeV_cm3": 0.3,
+    "mean_speed_km_s": 353.8967324180974,
+    "particle_mass_GeV": 0.0924089637375362,
+    "Xbar_fraction_of_particles": 0.427057127890879,
+    "n_local_per_cm3": 3.2464383092972726,
+    "flux_per_cm2_per_s": 114890390.96572374,
+    "self_interaction": {
+     "sigma_XX_cm2": 9.877760279350895e-33,
+     "sigma_XXbar_cm2": 1.1651725390744525e-31,
+     "sigma_over_m_XX": 5.996190120921279e-08,
+     "sigma_over_m_XXbar": 7.073056918147957e-07,
+     "sigma_over_m_mix_cm2_g": 3.7674520073093865e-07
+    },
+    "annihilation": "X Xbar -> phi phi closed (m_phi = 2.45 m_X); no light hidden state; no annihilation signal [D]",
+    "P_k": "CDM-like (free streaming 0.3-0.5 pc comoving) [Q WORKING_THEORY section 6]",
+    "direct_detection": "none at zero portals [Q WORKING_THEORY section 6]"
+   }
+  }
+ }
+}

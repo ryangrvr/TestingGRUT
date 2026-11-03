@@ -8,7 +8,7 @@ this track, [E] estimate, [A] argued.
 Physics constants and rates (units H_i = 1, the H at sigma = sigma_c; a = 1 there):
   * seesaw (mf_hybrid's completion, 4 singlets at m~ = 0.05 eV) [Q mf_hybrid]: h_j^2 = sum_i |h_ji|^2 = m~_j M_j / v^2,
     Gamma_rest,j = h_j^2 M_j / (8 pi), v = 174.1 GeV.  e2e_sm's completion enters ONLY through m~_j (the rates are linear
-    in h_j^2), so every result is also reported against m~ (scan in ek_runs.py).
+    in h_j^2), so every result is also reported against m~ (ek_scan.py, ek_extra.py).
   * in-medium N damping [Q Besak-Bodeker arXiv:1202.1288, leading order]: total production rate
     Gamma_prod/(h^2 T^4) = G12 + G22, G22 = {y_t^2 c_Q + (3 g^2 + g'^2) [ln 1/(3 g^2 + g'^2) + c_V]}/(1536 pi),
     c_Q = 2.52, c_V = 3.17; G12 = 4.3e-4 (their Table 2 falls from 5.4e-4 at 1e8 GeV to 5.0e-4 at 6.7e9 GeV; extrapolated
