@@ -160,7 +160,8 @@ def run_history(name, tag, H_GeV=C.H_REF, mnu=C.MNU_REF, t0=0.19, t_coh=3.0, t_e
                 print(tag, 'coherent leg to t = %.4g done (%.0fs)' % (cur['t'], time.time() - t1), flush=True)
             if ileg < len(legs) and time.time() - T_GLOBAL[0] > BUDGET[0]:
                 raise Incomplete(tag)
-        recs.extend(crec)
+        # the first record of every later leg repeats the previous leg's last row without collision diagnostics: drop it
+        recs.extend([crec[0]] + [{k: v[1:] for k, v in r.items()} for r in crec[1:]])
         s1 = dict(last, occ=occ)
         info['coherent_seconds'] = time.time() - t1
         if verbose:
@@ -192,7 +193,8 @@ def run_history(name, tag, H_GeV=C.H_REF, mnu=C.MNU_REF, t0=0.19, t_coh=3.0, t_e
     C.write_input(inp, dict(st2, t_end=t_end), spec, mpar, sm, dict(coherent=0), [(ql, wl)] * 4, occ2, tables=tabs,
                   KLscale=KLscale, winv=winv, dshell=dshell)
     t1 = time.time()
-    recs.append(C.run_engine(inp, C.SP / ('%s_dep' % tag), timeout=3600))
+    rd = C.run_engine(inp, C.SP / ('%s_dep' % tag), timeout=3600)
+    recs.append({k: v[1:] for k, v in rd.items()} if recs else rd)
     info['dephased_seconds'] = time.time() - t1
     rec = {k: np.concatenate([r[k] for r in recs]) for k in recs[0]}
     o = np.argsort(rec['t'], kind='stable')
