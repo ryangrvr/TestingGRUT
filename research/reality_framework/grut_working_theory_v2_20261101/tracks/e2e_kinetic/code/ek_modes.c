@@ -67,7 +67,10 @@ static double rho_h, n_h, rho_th;      /* SM: hard energy and number, thermal en
 static double lam_eff, gstar, kH, kL, cBB, wthermal_inv = 1.0, KLc0 = 34.0, KLc1 = 21.0, KLl = 0.037, KLscale = 1.0;
 static double gsum_f = 73.0;           /* g_b + g_f/2 of the SM (Tcal^2 normalisation) */
 static double Apert = 1.0, cdt = 0.04, ckcut = 1.3;
-static double dshell = 0.0;            /* relative (log) Gaussian width of the perturbative shell; 0: one bin */
+#ifndef LCUT
+#define LCUT 40.0               /* Lorentzian shell cut |x| < LCUT (model choice; -DLCUT=... variants) */
+#endif
+static double dshell = 0.0;            /* log width of the perturbative shell; 0: one bin; >0 Gaussian sigma; <0 Lorentzian HWHM */
 static double inj_E = 0, inj_N = 0, inv_E = 0;   /* SM injections since the last SM update (physical) */
 static double t_end;
 static Spec S[NSP];
@@ -429,7 +432,7 @@ static void run_dephased(void) {
             if (res) {
                 double kr = s->kres_m * m, qr = kr * a;
                 double Ntot = s->Gpert * rhoP[s->par] / m;           /* decays per volume per time (2 N each) */
-                if (dshell <= 0) {
+                if (dshell == 0) {
                     int ib = -1;
                     for (int i = 0; i < s->nq - 1; i++) if (s->q[i] <= qr && qr < s->q[i + 1]) { ib = (qr - s->q[i] < s->q[i + 1] - qr) ? i : i + 1; break; }
                     if (ib >= 0) R[j][ib] = Ntot / (2.0 * s->w[ib] / (a * a * a));
@@ -438,9 +441,11 @@ static void run_dephased(void) {
                        receives the share g_i of the decays: R_i = g_i Ntot / (2 w_i / a^3) */
                     double gs = 0;
                     for (int i = 0; i < s->nq; i++) {
-                        double x = log(s->q[i] / qr) / dshell;
-                        if (fabs(x) < 5) { double dl = (i + 1 < s->nq) ? log(s->q[i + 1] / s->q[i]) : log(s->q[i] / s->q[i - 1]);
-                            R[j][i] = exp(-0.5 * x * x) * dl; gs += R[j][i]; }
+                        /* dshell > 0: Gaussian of width dshell; dshell < 0: Lorentzian of HWHM |dshell| (natural line of
+                           damped final states), cut at |x| < LCUT */
+                        double x = log(s->q[i] / qr) / fabs(dshell);
+                        if (fabs(x) < (dshell > 0 ? 5 : LCUT)) { double dl = (i + 1 < s->nq) ? log(s->q[i + 1] / s->q[i]) : log(s->q[i] / s->q[i - 1]);
+                            R[j][i] = (dshell > 0 ? exp(-0.5 * x * x) : 1.0 / (1.0 + x * x)) * dl; gs += R[j][i]; }
                     }
                     for (int i = 0; i < s->nq; i++) if (R[j][i] > 0) R[j][i] = (R[j][i] / gs) * Ntot / (2.0 * s->w[i] / (a * a * a));
                 }

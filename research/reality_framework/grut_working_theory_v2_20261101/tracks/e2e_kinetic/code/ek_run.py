@@ -325,7 +325,27 @@ if __name__ == '__main__':
     ap.add_argument('--KL', type=float, default=1.0); ap.add_argument('--cBB', type=float, default=1.0)
     ap.add_argument('--dk', type=float, default=0.05); ap.add_argument('--cdt', type=float, default=0.04)
     ap.add_argument('--dshell', type=float, default=0.0); ap.add_argument('--nqlog', type=int, default=0)
+    ap.add_argument('--state', default=None, help='lattice hand-over JSON (NOTES.md section 6): t, a, H, rho_sig, rho_chi, '
+                    'rho_h, n_h, rho_th and per-species E_N, n_N lists (physical, H_i units); t0 is then the state t')
+    ap.add_argument('--out', default=None, help='export: path of the fluid json (default ../results/fluid_<name>.json)')
     a = ap.parse_args()
-    r = run_history(a.name, a.tag, a.H, a.mnu * 1e-9, a.t0, a.tcoh, a.tend, a.lam, KLscale=a.KL, cBBscale=a.cBB, dk_m=a.dk, cdt=a.cdt,
-                    dshell=a.dshell, nqlog=a.nqlog or None)
+    state, occ0, t0 = None, None, a.t0
+    if a.state:
+        import ek_scan as SC
+        z = json.load(open(a.state))
+        spec_, _ = C.species(a.name, a.H, a.mnu * 1e-9)
+        state = {k: float(z[k]) for k in ('t', 'a', 'H', 'rho_sig', 'rho_chi', 'rho_h', 'n_h', 'rho_th')}
+        occ0 = []
+        for j, s in enumerate(spec_):
+            q, w = C.grid_linear(state['a'] * 3e4, 6000)
+            occ0.append((q, w, SC.occ_from_moments(float(z['E_N'][j]), float(z['n_N'][j]), q, w, state['a'], s['M'])))
+        t0 = state['t']
+    r = run_history(a.name, a.tag, a.H, a.mnu * 1e-9, t0, max(a.tcoh, t0 + 2.0) if a.state else a.tcoh, a.tend, a.lam, KLscale=a.KL,
+                    cBBscale=a.cBB, dk_m=a.dk, cdt=a.cdt, dshell=a.dshell, nqlog=a.nqlog or None, state=state, occ0=occ0)
     C.dump(C.SP / ('run_%s.json' % a.tag), jsonable(r, keep_rec=True))
+    if a.cmd == 'export':
+        note = ('kinetic history from t0 = %.4g H_i^-1 (%s); coherent mode stage to t_coh = %.4g, dephased rate equations after. '
+                'Lattice splice: see NOTES.md section 6 (switch at t_sw in [0.45, 3] H_i^-1 by moments, or splice this file at '
+                't >= t_sw when the lattice fractions agree with the state_tcoh/history rows).' %
+                (t0, 'lattice hand-over state' if a.state else 'homogeneous bench state at the first chi turning point', r['info']['t_coh']))
+        export_fluid(r, a.name, a.out or (C.RES / ('fluid_%s.json' % a.name)), note)

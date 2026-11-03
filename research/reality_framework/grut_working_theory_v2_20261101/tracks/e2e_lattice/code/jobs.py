@@ -156,7 +156,8 @@ if __name__ == '__main__':
     rd = LC.RUNS / tag
     if not (rd / 'run.par').exists():
         create(tag)
-    done = LC.run(tag, budget=budget)
+    import os
+    done = LC.run(tag, budget=budget, threads=int(os.environ.get('LAT_THREADS', '2')))
     if done and not (LC.RES / 'runs' / ('%s.json' % tag)).exists():
         o = summarize(tag)
         print(json.dumps(o['head'], indent=0))
