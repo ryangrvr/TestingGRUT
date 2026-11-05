@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_emergence_synthesis_20261105/ | Codex | Evidence-labelled emergence synthesis and finite illustrations; no cosmological rerun or claim promotion | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
