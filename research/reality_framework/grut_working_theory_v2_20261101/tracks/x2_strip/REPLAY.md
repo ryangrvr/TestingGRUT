@@ -46,3 +46,15 @@ Q-matter table separately lists all self-consistent bracketed Q roots and the
 subset that would also satisfy the bulk band. An isolated passing c0 is
 reported as an isolated point. Neither interpolated roots nor the extended
 reading constitute a new lattice simulation at their root scale.
+
+The exact rebuilt benchmark bytes, their SHA-256 digests and the replay
+checks are also archived in `results/restored_histories/`. To restore those
+verified inputs instead of recomputing the tables and kinetics, use
+`python -B code/restore_histories.py "$scan_work"` in an empty work directory.
+This is a byte-for-byte restore, not an independent reconstruction.
+
+After both computed grids finish, `python -B code/analyze_blind.py "$scan_work"
+--seal-only` writes their lossless archives before any root evaluation.
+The ordinary analysis command then refuses a grid that differs from its
+sealed archive. Runtime-dependent fields such as `seconds` are preserved,
+so whole-file hashes of a separately timed repeat need not coincide.
