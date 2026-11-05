@@ -5874,3 +5874,12 @@ Findings:
 - Empirical reach: with gravity-only coupling and the all-DM calibration, the surviving cold class is indistinguishable from collisionless CDM by current or planned observations.
 
 Verification actually run: separate-code audit agents plus adversarial verifiers (same session; not outside replication). The wall packet's code/verify.py passes with 0 failures after the corrections. Runs used Codex's binary at 2 threads, each job <= 15 min. No new branch, spend or external contact beyond the issue comment the owner requested.
+
+
+### 2026-11-04 · Codex · completed registered M2-X grid and separate H55 scalar lattice
+
+Recovered the exact 800c3bf checkpoint and verified the pre-registration blob against 6d836ca. Rebuilt four archived hand-over histories using the unchanged dephased solver, splice and anh correction. The original rounded N1 table mass .41667 was required; the rational 250/600 preliminary input did not reproduce the archived table. All four table summaries and 24 history checks now match exactly; five baseline quantities on each computed node agree within 2.42e-16 relative. Kept the 26 original rows and computed all 244 missing rows in isolated CPU workers. An interrupted scratch trace stopped workers at 226/270. Recovered the complete rows and reference tables into fresh scratch, checked all 200 already-computed continuation rows exactly, and ran only the final 44. Sealed both lossless grids before root evaluation.
+
+Unchanged fp_lf.nd and root give zero strict M2-X points. There are 37 self-consistent bracketed free-X roots; 32 have no threshold, three one-node thresholds, and two numeric thresholds, 2.18356e-5 and 2.52898e-5, above the registered band. Two isolated bracketed Q roots are at (c0, delta) = (1.380, 0) and (1.395, +2 deg). Fifteen in-band computed-pair extrapolations are separately flagged and excluded. The fresh A-node grid was not run.
+
+After the strict result, completed the separately committed H55 scalar control with transferred H84 drain, N64, same L/dt/seed/cutoff. The unchanged engine reached t=3.0000625 in 9204 steps. Final sampled f_rad=.6695852 vs proxy .8321434, f_chi=.317327 vs .157878. Corrected only the export assertion to respect the six-step diagnostic cadence; no second lattice evolution or input change. Verified the raw diagnostic digest and independent final radiation sum. Syntax, link, artifact hash and original-row checks passed. No new kinetic splice at H55, full 3D Dirac test, co-genesis calculation or external review. Claim released.

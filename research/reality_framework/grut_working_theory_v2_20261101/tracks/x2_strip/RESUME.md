@@ -1,5 +1,10 @@
 # x2_strip: paused (owner's weekly limit)
 
+**Update, 4 November 2026:** the computed-node portion has been completed.
+See [RESULTS.md](RESULTS.md) and [REPLAY.md](REPLAY.md). The original pause
+instructions below record the state at `800c3bf`; the extended proxy-node
+sweep is still separate.
+
 **State.** The pre-registration was committed first (6d836ca). The fresh scans on the two computed nodes were
 stopped partway: see the key counts in `results/scan_x2_hLF84_mid.json` and `results/scan_x2_hLF_mid.json`. The [A]
 nodes (hLF55_mid, hLF270_mid) have not started. **No scan output has been analysed or inspected**, so the test is

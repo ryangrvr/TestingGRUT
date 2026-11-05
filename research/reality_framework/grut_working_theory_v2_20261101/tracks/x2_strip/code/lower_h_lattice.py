@@ -38,7 +38,12 @@ def main():
         print('Checkpointed scalar lattice; rerun this command to finish.',flush=True)
         return 75
     data=L.load_diag(TAG);head=E.head(data);block=E.lattice_block(data)
-    assert abs(data['t'][-1]-3)<cfg['dt']
+    t_done,steps,seconds=(rd/'done.flag').read_text().split()
+    t_done=float(t_done);t_last=float(data['t'][-1])
+    # The engine writes diagnostics every ndiag steps, and its final state
+    # to the restart/done files. The export uses the original last-row rule.
+    assert 3.<=t_done<3.+cfg['dt']
+    assert 0<=t_done-t_last<=(info['ndiag']+1)*cfg['dt']
     assert all(np.all(np.isfinite(x)) for x in data.values())
     vals={k:{'H55_fresh_scalar_lattice':head[k],'H84_reused_lattice':prior['head'][k]}
           for k in ('f_rad','f_grad_max','t_fcoh_lt_0p1','budget_absmax','m_s2_mean_3','R_cyc_3')}
@@ -48,6 +53,8 @@ def main():
     p.write_bytes(gzip.compress((rd/'diag.txt').read_bytes(),mtime=0))
     summary={'scope':'H55 scalar lattice on transferred H84 fermion drain; independent of strict verdict',
              'run':info,'held_kappa':cfg['kappa'],'comparison':vals,'lattice_block':block,
+             'termination':{'t':t_done,'steps':int(steps),'wall_seconds':float(seconds),'last_diag_t':t_last,
+                            'H84_last_diag_t':hist['t'][-1]},
              'diag_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
              'full_3D_Dirac_evolved':False,'new_kinetic_splice_computed':False,'used_in_registered_verdict':False}
     (out/'lower_H_lattice.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n')
