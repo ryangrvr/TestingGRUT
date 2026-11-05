@@ -1,0 +1,168 @@
+{
+  "meaning": "Dependency graph, not an evenly spaced timeline. Branches overlap; open arrows are not demonstrated.",
+  "cross_cutting_open": [
+    "origin of laws/state",
+    "vacuum density",
+    "experience"
+  ],
+  "nodes": [
+    {
+      "id": "laws",
+      "x": 0.25,
+      "y": 0.9,
+      "label": "Quantum and gravity framework",
+      "status": "ADOPTED",
+      "sources": [
+        "R04",
+        "S01"
+      ]
+    },
+    {
+      "id": "state",
+      "x": 0.75,
+      "y": 0.9,
+      "label": "Initial state and orientation",
+      "status": "OPEN",
+      "sources": [
+        "R04"
+      ]
+    },
+    {
+      "id": "early",
+      "x": 0.5,
+      "y": 0.76,
+      "label": "Expansion and early interactions",
+      "status": "CONDITIONAL",
+      "sources": [
+        "R07"
+      ]
+    },
+    {
+      "id": "ordinary",
+      "x": 0.25,
+      "y": 0.6,
+      "label": "Ordinary matter history",
+      "status": "STANDARD",
+      "sources": [
+        "S06",
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "dark",
+      "x": 0.75,
+      "y": 0.6,
+      "label": "Candidate dark sector",
+      "status": "OPEN",
+      "sources": [
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "id": "structure",
+      "x": 0.5,
+      "y": 0.44,
+      "label": "Persistent physical structures",
+      "status": "STANDARD",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "id": "records",
+      "x": 0.25,
+      "y": 0.28,
+      "label": "Records and correlations",
+      "status": "CONDITIONAL",
+      "sources": [
+        "W01",
+        "S04"
+      ]
+    },
+    {
+      "id": "agency",
+      "x": 0.75,
+      "y": 0.28,
+      "label": "Information use and feedback",
+      "status": "CONDITIONAL",
+      "sources": [
+        "W01",
+        "S10"
+      ]
+    },
+    {
+      "id": "experience",
+      "x": 0.5,
+      "y": 0.11,
+      "label": "Subjective experience",
+      "status": "OPEN",
+      "sources": [
+        "S11"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "laws",
+      "target": "early",
+      "label": "dynamics",
+      "conditional_or_open": false
+    },
+    {
+      "source": "state",
+      "target": "early",
+      "label": "preparation",
+      "conditional_or_open": true
+    },
+    {
+      "source": "early",
+      "target": "ordinary",
+      "label": "thermal history",
+      "conditional_or_open": false
+    },
+    {
+      "source": "early",
+      "target": "dark",
+      "label": "candidate history",
+      "conditional_or_open": true
+    },
+    {
+      "source": "ordinary",
+      "target": "structure",
+      "label": "assembly",
+      "conditional_or_open": false
+    },
+    {
+      "source": "dark",
+      "target": "structure",
+      "label": "possible contribution",
+      "conditional_or_open": true
+    },
+    {
+      "source": "structure",
+      "target": "records",
+      "label": "interactions",
+      "conditional_or_open": false
+    },
+    {
+      "source": "structure",
+      "target": "agency",
+      "label": "organization",
+      "conditional_or_open": true
+    },
+    {
+      "source": "records",
+      "target": "agency",
+      "label": "usable information",
+      "conditional_or_open": false
+    },
+    {
+      "source": "agency",
+      "target": "experience",
+      "label": "unknown bridge",
+      "conditional_or_open": true
+    }
+  ]
+}

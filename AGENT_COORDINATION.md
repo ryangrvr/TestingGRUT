@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_emergence_synthesis_20261105/ | Codex | Evidence-labelled emergence synthesis and finite illustrations; no cosmological rerun or claim promotion | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -5884,3 +5883,12 @@ Recovered the exact 800c3bf checkpoint and verified the pre-registration blob ag
 Unchanged fp_lf.nd and root give zero strict M2-X points. There are 37 self-consistent bracketed free-X roots; 32 have no threshold, three one-node thresholds, and two numeric thresholds, 2.18356e-5 and 2.52898e-5, above the registered band. Two isolated bracketed Q roots are at (c0, delta) = (1.380, 0) and (1.395, +2 deg). Fifteen in-band computed-pair extrapolations are separately flagged and excluded. The fresh A-node grid was not run.
 
 After the strict result, completed the separately committed H55 scalar control with transferred H84 drain, N64, same L/dt/seed/cutoff. The unchanged engine reached t=3.0000625 in 9204 steps. Final sampled f_rad=.6695852 vs proxy .8321434, f_chi=.317327 vs .157878. Corrected only the export assertion to respect the six-step diagnostic cadence; no second lattice evolution or input change. Verified the raw diagnostic digest and independent final radiation sum. Syntax, link, artifact hash and original-row checks passed. No new kinetic splice at H55, full 3D Dirac test, co-genesis calculation or external review. Claim released.
+
+
+### 2026-11-05 · Codex · GRUT emergence-and-interaction synthesis
+
+Added research/reality_framework/grut_emergence_synthesis_20261105/ as an evidence-labelled account of the whole/part relation, cosmic emergence, records, information use, conditional matter candidates and open foundations. The scope was published before the reconstructed finite checks. This packet replaces an unavailable unsaved draft after a workspace reset; no unpublished old draft or local commit is used as evidence.
+
+Verification actually run: four finite illustrations pass all 48 checks (correlation-dependent local futures, an eight-reading constrained record history, the product/Gibbs entropy identity, and a supplied controller intervention). Fourteen pinned source files match exact Git blob and SHA-256 identities. All 37 archive/source/package checks pass; saved roots reaggregate to zero strict M2-X passes, 37 bracketed free-X roots, two isolated Q roots and 15 excluded extrapolation diagnostics. The first self-link audit failure is preserved and corrected. The standalone HTML has 83 MathML expressions, an embedded map and 25 resolving internal anchors; Python sources parse and the final diagram was visually inspected.
+
+Interpretive checks distinguish unitary charge-flipping symmetry from antiunitary time reversal, fixed-background energy shifts from gravitational vacuum stress, physical records from consciousness, and a failed registered grid from a field-content exclusion. No legacy result or register is changed. No cosmological solver, kinetic splice, full 3D fermion run, vacuum-density mechanism or empirical test ran. New calculations and review are same-author only; no independent Claude/Argon review is claimed. Claim released.

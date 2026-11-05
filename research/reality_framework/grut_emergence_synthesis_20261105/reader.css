@@ -1,0 +1,27 @@
+:root { color-scheme: light; }
+body { max-width: 960px; margin: 3rem auto; padding: 0 2rem 4rem;
+       color: #22343d; background: #fbfcf8; font: 17px/1.7 system-ui, sans-serif; }
+h1,h2,h3 { line-height: 1.25; color: #173e49; }
+h1 { margin-top: 2.3rem; font-size: 2rem; }
+h2 { margin-top: 2.7rem; padding-top: .7rem; border-top: 1px solid #cfdad8; font-size: 1.5rem; }
+h3 { margin-top: 2rem; font-size: 1.15rem; }
+header { border-bottom: 4px solid #5f8b89; margin-bottom: 2rem; padding-bottom: 1rem; }
+header h1 { font-size: 2.5rem; margin-bottom: .6rem; }
+.subtitle { font-size: 1.2rem; color: #51666e; }
+.author,.date { color: #51666e; font-size: .9rem; margin: .25rem 0; }
+a { color: #186983; text-underline-offset: 3px; }
+p { margin: 1.1em 0; }
+table { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; font-size: .9rem; }
+th,td { border: 1px solid #d5dfdd; padding: .65rem .75rem; text-align: left; vertical-align: top; min-width: 120px; }
+th { background: #e7efec; }
+tr:nth-child(even) { background: #f0f4f2; }
+figure { margin: 2rem auto; max-width: 760px; }
+img { max-width: 100%; height: auto; }
+figcaption { font-size: .85rem; color: #51666e; text-align: center; }
+math[display=block] { display: block; overflow-x: auto; margin: 1.6rem 0; }
+pre { background: #eaf0ee; padding: 1rem; overflow-x: auto; }
+nav { font-size: .93rem; background: #f0f4f2; padding: 1rem 1.5rem; }
+@media (max-width: 600px) { body { margin: 1rem auto; padding: 0 1rem 2rem; font-size: 16px; } header h1 { font-size: 2rem; } }
+@media print { body { max-width: none; margin: 0; font-size: 10pt; background: white; }
+  nav { display: none; } h2,h3 { break-after: avoid; } tr,figure { break-inside: avoid; }
+  table { display: table; font-size: 8pt; } th,td { min-width: 0; } }

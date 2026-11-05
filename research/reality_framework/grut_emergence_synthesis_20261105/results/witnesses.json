@@ -1,0 +1,366 @@
+{
+  "scope": "same-author finite mathematical illustrations; analytic answers known",
+  "whole_parts": {
+    "local_trace_distance": 0.7071067811865472,
+    "local_entropy_cycle_nats": [
+      -0.0,
+      0.6931471805599453,
+      -0.0
+    ]
+  },
+  "records": {
+    "record_entropy_nats": [
+      1.1102230246251564e-16,
+      0.6108643020548934,
+      0.6108643020548934,
+      0.6108643020548934,
+      0.6108643020548934,
+      0.6108643020548934,
+      1.1102230246251564e-16,
+      1.1102230246251564e-16
+    ],
+    "system_record_quantum_MI_nats": [
+      1.1102230246251565e-16,
+      1.2217286041097866,
+      0.6108643020548934,
+      0.6108643020548934,
+      0.6108643020548934,
+      1.2217286041097866,
+      1.1102230246251565e-16,
+      1.1102230246251565e-16
+    ],
+    "physical_dimension": 8,
+    "clock_readings": 8
+  },
+  "entropy_identity": [
+    {
+      "t": 0.7,
+      "delta_S_A": 0.07267481029309192,
+      "beta_delta_E_B": 0.09939120748575508,
+      "mutual_information": 0.15965425271143985,
+      "relative_entropy": 0.01241176506740721
+    },
+    {
+      "t": 2.1,
+      "delta_S_A": 0.03757947756316515,
+      "beta_delta_E_B": 0.10409735972995178,
+      "mutual_information": 0.12220775184678967,
+      "relative_entropy": 0.01946908544632714
+    }
+  ],
+  "agency": {
+    "success_with_memory": 0.9,
+    "success_scrambled": 0.5,
+    "passive_success": 0.5,
+    "mutual_information_bits": 0.5310044064107189,
+    "supplied_inputs": [
+      "sensor error .1",
+      "policy action=memory",
+      "uniform environment",
+      "success function action=environment"
+    ],
+    "not_demonstrated": [
+      "origin of controller",
+      "life",
+      "conscious experience",
+      "zero energetic cost of preparing/scrambling memory"
+    ]
+  },
+  "checks": [
+    {
+      "name": "same initial marginal 0",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "same other marginal 0",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "same initial marginal 1",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "same other marginal 1",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "same mean energy",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "different local futures",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "unitarity",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "global purity",
+      "max_absolute_error": 5.551115123125783e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "reverse recovers preparation",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "constant energy shift invisible here",
+      "max_absolute_error": 1.414517817592289e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "local entropy can rise and fall",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "history isometry",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "constraint annihilates all histories",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "physical-space dimension",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "constraint positive",
+      "max_absolute_error": 6.910402776323731e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "history norm",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 0",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 0",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 1",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 1",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 2",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 2",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 3",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 3",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 4",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 4",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 5",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 5",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 6",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 6",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conditional history 7",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "maximally mixed conditional 7",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "blank-record entropy",
+      "max_absolute_error": 1.1102230246251564e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "written-record entropy",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "copied-record quantum MI",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "coherent pre-copy quantum MI",
+      "max_absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "erased record",
+      "max_absolute_error": 1.1102230246251564e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "entropy identity t=0.7",
+      "max_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "total entropy t=0.7",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "total Hamiltonian energy t=0.7",
+      "max_absolute_error": 8.355534721610418e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "entropy identity t=2.1",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "total entropy t=2.1",
+      "max_absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "total Hamiltonian energy t=2.1",
+      "max_absolute_error": 8.326672684688674e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "informative controller success",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "scrambling destroys advantage",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "passive control",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "memory marginals preserved",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "environment marginals preserved",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    }
+  ],
+  "check_count": 48,
+  "all_checks_pass": true,
+  "source_sha256": "883dbaf05903440aaf2b8853a42412aa6cba7b9dc66d2790d308ea419b6b81d5",
+  "runtime": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  }
+}
