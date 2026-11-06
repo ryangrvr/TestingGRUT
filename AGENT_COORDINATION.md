@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_working_theory_v2_20261101/tracks/x11_h55/ | Codex | Evolve three-axis H55 production, test the abundance interface and axial CP matching | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
