@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/feedback_source/ | Codex | Reciprocal source matching and a bounded single-mode feedback gate | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6119,3 +6118,20 @@ still shifts transient signed work. The observable screen compares the
 H55 perturbation, M1 multi-target recoil, Higgs-decay freeze-in and DFSZ
 axion tests. No H55 cosmology run. Claims released.
 [Report](research/reality_framework/grut_research_reset_20261106/strong_drive/REPORT.md)
+
+### 2026-11-06 · Codex · Matched source misses feedback gate and cogenesis comparator
+
+Restored the full force and matched the continuum vacuum kernel. The
+first gate missed. The split static artifact scales as dt^2 times
+the fourth power of a common cutoff, while coarse momentum sampling
+produces a separate late force shift. Qualified the fourth-order
+refinement with halving ratios 16.51 and 16.06. The refined radial
+cutoff shifts the force by 4.36% against a 3% gate. The other refined
+force checks pass. Work and outgoing energy agree to 1.50e-6 relative.
+Both qualifications replayed byte for byte and both gate misses
+reproduced from the archived histories. Verified the live command
+blocks on the miss. The independent-observable screen gives
+4.78e-12 GeV^-1 at 110 micro-eV for a fixed leading-order ALP
+cogenesis benchmark and identifies the transfer yield required for
+an independent test. Claims released.
+[Report](research/reality_framework/grut_research_reset_20261106/feedback_source/REPORT.md)

@@ -32,9 +32,9 @@ def curve_difference(first, second, key):
     return float(np.max(np.abs(interpolated-second[key][keep])))
 
 
-def prescribed(directory):
+def prescribed(directory, cases=CASES):
     rows, traces = {}, {}
-    for case, config in CASES.items():
+    for case, config in cases.items():
         rows[case], traces[case] = load(directory, case)
         if rows[case]["config"] != vars(config):
             raise ValueError("Unexpected prescribed run configuration for "+case)
@@ -54,6 +54,10 @@ def prescribed(directory):
     result = dict(passed=max(relative.values()) < LIMIT_FORCE and closure < LIMIT_ENERGY,
                   force_peak=peak, relative_shifts=relative,
                   fine_peaks=raw_peaks, boundary_absolute_shifts=diagnostic_shifts,
+                  transverse_linear_replacement_shift=curve_difference(
+                      traces["base"], traces["transverse"], "linear_match")/peak,
+                  transverse_relative_work_shift=abs(rows["transverse"]["work"]["local_match"] /
+                                                     rows["base"]["work"]["local_match"]-1),
                   fine_work=rows["fine"]["work"],
                   fine_energy=rows["fine"]["outgoing"]["energy"],
                   fine_number=rows["fine"]["outgoing"]["number"],
@@ -62,11 +66,11 @@ def prescribed(directory):
     return result
 
 
-def live(directory):
+def live(directory, cases=CASES):
     rows, traces = {}, {}
     for case in LIVE_CASES:
         rows[case], traces[case] = load(directory, "live_"+case)
-        if rows[case]["config"] != dict(vars(CASES[case]), wave=1.3):
+        if rows[case]["config"] != dict(vars(cases[case]), wave=1.3):
             raise ValueError("Unexpected live run configuration for "+case)
     fine = traces["fine"]
     signal = rows["fine"]["amplitude_departure"]

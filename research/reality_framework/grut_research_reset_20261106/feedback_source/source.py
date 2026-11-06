@@ -30,9 +30,15 @@ CASES = {
 
 
 class System:
-    def __init__(self, config):
+    def __init__(self, config, *, fold=False):
         self.config = config
         self.grid = Grid.quadrature(config)
+        if fold:
+            if config.bloch_nodes % 2:
+                raise ValueError("Bloch folding requires an even quadrature order.")
+            positive = self.grid.z[:, config.bands] > 0
+            self.grid = Grid(**{key: value[positive] for key, value in vars(self.grid).items()})
+            self.grid.weight *= 2
         self.weight = self.grid.weight[:, None]
         n = self.grid.z.shape[1]
         links = np.full(n-1, .5)
@@ -125,9 +131,14 @@ def evolve_driven(system, pulse):
 def driven(case, directory):
     system = System(CASES[case])
     trace, out = evolve_driven(system, Pulse())
+    finite_linear = system.tangent(trace["amplitude"])
+    return record_driven(system, trace, out, finite_linear, directory, case,
+                         lambda speed, force: system.config.dt*np.dot(speed, force))
+
+
+def record_driven(system, trace, out, finite_linear, directory, case, integrate):
     a, v, acc, raw = (trace[key] for key in ("amplitude", "speed", "acceleration", "raw"))
     dt = system.config.dt
-    finite_linear = system.tangent(a)
     continuum, before = continuum_force(a, dt, system.config.wave)
     local_match = raw+system.a*a-system.b*acc
     full_linear_match = raw-finite_linear+continuum
@@ -135,7 +146,7 @@ def driven(case, directory):
                  linear_match=full_linear_match, finite_linear=finite_linear,
                  continuum_linear=continuum, nonlinear=raw-finite_linear)
     terms = ("old", "raw", "local_match", "linear_match", "nonlinear")
-    work = {term: float(dt*np.dot(v, trace[term])) for term in terms}
+    work = {term: float(integrate(v, trace[term])) for term in terms}
     peak = {term: float(np.max(np.abs(trace[term]))) for term in terms}
     row = dict(case=case, config=vars(system.config), match=system.match,
                work=work, peak_force=peak, outgoing=out,
