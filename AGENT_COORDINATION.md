@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_working_theory_v2_20261101/tracks/x7_regulator/ | Codex | Test the spatial cutoff completion and H55 coherent overlap | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
