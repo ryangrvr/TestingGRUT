@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/bounded_route/ | Codex | Bounded physical ALP handoff and conditional next observable | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6154,3 +6153,25 @@ retrospective physical interpretation remains unresolved and the
 prospective interval stays unopened. H55 feedback stays paused.
 Claims released.
 [Report](research/reality_framework/grut_research_reset_20261106/alp_conversion/REPORT.md)
+
+### 2026-11-06 · Codex · Bounded physical ALP route, scalar exclusion and vector tensor test
+
+Matched the physical ALP covariance at two seams. The ODE tolerance
+comparison changes the covariance by less than 4.9e-6 relative. The
+larger box samples the narrow shell very differently. Three full
+windows retain a rotating mean and fail the particle gate. The spacing
+and volume controls hit the six-minute cap and preserve partial
+histories. Recomputed all five energy residuals and replayed the
+decision from the archived traces. Physical C remains unset.
+
+The frozen 40 GeV Higgs-portal comparator overproduces dark matter
+by at least 4.76 at the ATLAS invisible-width ceiling in standard
+equilibrium freeze-out. Replayed the conservative bound byte for
+byte from the pinned SM width table.
+
+At the separately fixed 1 meV mass, the prompt-radiation Proca
+transfer gives r = 0.01345 at nearly constant inflationary H.
+Recovered both transfer limits and replayed the fine transfer and
+spectrum byte for byte. BK18 allows the flat-H value. This is a
+conditional benchmark test. Claims released.
+[Report](research/reality_framework/grut_research_reset_20261106/bounded_route/REPORT.md)

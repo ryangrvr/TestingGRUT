@@ -27,6 +27,7 @@ S_OVER_H_GMAX = 12.
 DM_YIELD = .44e-9/M
 WIDTH_SOURCE = ("https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/blob/"
                 "9da32dcda3b65d4763b4af191d553018247adcfa/data/lhc-hxswg/sm/br/BR.txt")
+WIDTH_SHA256 = "e6961790e6bac9af569e3771523f7d3401c89dde833e617a4ac563973123d04b"
 
 
 def sigma_per_lambda_squared(energy, width, pole_width):
@@ -50,9 +51,12 @@ def exact_thermal_weight(energy, x):
 def integrals():
     low = 2*VEV**2*WIDTH_ENVELOPE/(2*M*(HIGGS**2-95**2)**2)
     breakpoints = (95., 110., 120., HIGGS-.05, HIGGS, HIGGS+.05, 130., 140.)
-    middle = sum(quad(lambda e: thermal_upper_weight(e)*sigma_per_lambda_squared(
-        e, WIDTH_ENVELOPE, MIN_POLE_WIDTH), a, b, epsabs=1e-15, epsrel=1e-9)[0]
-        for a, b in zip(breakpoints, breakpoints[1:]))
+    def weighted_upper(e):
+        width = MIN_POLE_WIDTH if abs(e-HIGGS) <= .05 else 0.
+        return thermal_upper_weight(e)*sigma_per_lambda_squared(e, WIDTH_ENVELOPE, width)
+
+    middle = sum(quad(weighted_upper, a, b, epsabs=1e-15, epsrel=1e-9)[0]
+                 for a, b in zip(breakpoints, breakpoints[1:]))
     # A deliberately loose cross-section-times-velocity ceiling, 1 GeV^-2,
     # above 140 GeV. The Boltzmann weight renders its contribution small.
     tail = quad(thermal_upper_weight, 140, 300, epsabs=1e-19, epsrel=1e-8)[0]
@@ -107,10 +111,12 @@ def main():
     decision = json.loads((DIRECTORY / "route_decision.json").read_text())
     if decision["decision"] != "close_ALP_lane":
         raise SystemExit("The conditional replacement is still closed.")
+    digest = hashlib.sha256(args.width_table.read_bytes()).hexdigest()
+    if digest != WIDTH_SHA256:
+        raise ValueError("Expected the pinned SM Higgs-width table.")
     table = np.loadtxt(args.width_table, skiprows=1)
     result = relic_bound(table)
-    result.update(width_table=WIDTH_SOURCE, width_sha256=hashlib.sha256(
-        args.width_table.read_bytes()).hexdigest())
+    result.update(width_table=WIDTH_SOURCE, width_sha256=digest)
     write_json(DIRECTORY / "portal.json", result)
     print(json.dumps(result, indent=2))
 
