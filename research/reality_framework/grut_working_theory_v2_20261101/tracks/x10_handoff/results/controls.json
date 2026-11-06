@@ -1,0 +1,103 @@
+{
+  "homogeneous": {
+    "steps": [
+      {
+        "steps": 50,
+        "max_state_error": 7.064340070267415e-05
+      },
+      {
+        "steps": 100,
+        "max_state_error": 1.7661891660379957e-05
+      },
+      {
+        "steps": 200,
+        "max_state_error": 4.415538013462169e-06
+      }
+    ],
+    "axial_rotation_error": 9.018757727424408e-16
+  },
+  "spatial_ode": {
+    "comparisons": [
+      {
+        "steps": 40,
+        "max_error": 2.5724376142774445e-05
+      },
+      {
+        "steps": 80,
+        "max_error": 6.4313181808095255e-06
+      },
+      {
+        "steps": 160,
+        "max_error": 1.6078435151521795e-06
+      }
+    ],
+    "reversal_error": 1.3877787807814457e-13
+  },
+  "action": {
+    "field_variation_error": 7.353750143275061e-13,
+    "pressure_relative_error": 1.4965810146705394e-08,
+    "vacuum_table": [
+      {
+        "a": 1.031,
+        "energy": 1.5206946812895694e-11,
+        "loga_derivative": 3.721638641707159e-08,
+        "subtraction": 6.842360011916071e-12
+      },
+      {
+        "a": 1.072,
+        "energy": 3.991278418880029e-10,
+        "loga_derivative": 2.3905991408668115e-08,
+        "subtraction": 2.2742890903870716e-11
+      },
+      {
+        "a": 1.117,
+        "energy": 2.5976110151759713e-11,
+        "loga_derivative": 4.4410837229946765e-08,
+        "subtraction": 1.7740808821997689e-12
+      },
+      {
+        "a": 1.163,
+        "energy": 3.1562885638436455e-10,
+        "loga_derivative": 5.220500520763949e-08,
+        "subtraction": 2.213626504321553e-11
+      },
+      {
+        "a": 1.204,
+        "energy": 8.395240058689524e-11,
+        "loga_derivative": 6.478449288138677e-08,
+        "subtraction": 6.165928878587579e-12
+      },
+      {
+        "a": 1.251,
+        "energy": 2.544791044556405e-10,
+        "loga_derivative": 5.8665857949335987e-08,
+        "subtraction": 1.9903578785118725e-11
+      }
+    ]
+  },
+  "vacuum": {
+    "static": {
+      "ledger": {
+        "energy_pressure_error": 1.4432899320127035e-14,
+        "momentum_error": 9.251858538542968e-17,
+        "reciprocal_quantum_work_error": 1.4358884451818686e-14,
+        "integrated_scalar_to_quantum_work": -1.0830315493817864e-33
+      },
+      "max_quantum_energy": 2.19824158875781e-14,
+      "max_quantum_pressure": 6.661338147750939e-15,
+      "max_quantum_work": 6.621101368656557e-33
+    },
+    "massless": {
+      "ledger": {
+        "energy_pressure_error": 1.7135515228972054e-10,
+        "momentum_error": 6.120901302611763e-16,
+        "reciprocal_quantum_work_error": 4.692560402295519e-13,
+        "integrated_scalar_to_quantum_work": 0.0
+      },
+      "max_quantum_energy": 2.164433015903102e-10,
+      "max_quantum_pressure": 1.4389789306930582e-08,
+      "max_quantum_work": 0.0
+    }
+  },
+  "scientific_acceptance": false
+}

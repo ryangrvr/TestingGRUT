@@ -1,0 +1,3433 @@
+{
+  "scope": "finite one-axis Gaussian vacuum bath and scalar, averaged FRW stress",
+  "boundaries": [
+    1.25,
+    2.25,
+    3.25
+  ],
+  "cases": {
+    "reference": {
+      "parameters": {
+        "longitudinal": 1,
+        "transverse": 2,
+        "cutoff": 5.5,
+        "bath_bins": 8,
+        "dt": 0.01
+      },
+      "dimension": 204,
+      "recurrence": 9.827984018128891,
+      "ledger": {
+        "energy_pressure_error": 1.0053084964489756e-07,
+        "momentum_error": 1.1693787855267734e-15,
+        "reciprocal_quantum_work_error": 8.639199386193845e-08,
+        "integrated_scalar_to_quantum_work": 0.017025147869048594
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.792016397865467,
+        "P": -1.292699101417361,
+        "H": 0.04830476517509234,
+        "rho_q": 0.0018530841553019428,
+        "P_q": 0.00025064637381729443,
+        "rho_scalar": 1.7901633137101651,
+        "gradient": 0.005603073638003673,
+        "bath_energy": 4.2223925321493994e-05,
+        "interaction_energy": 5.0975930654117985e-06,
+        "daughter_plus": 1.662303064325373e-05,
+        "daughter_minus": -9.257483949794067e-06,
+        "bath_holes": 7.365546671356249e-06,
+        "sterile_count": 0.0006745031604631354,
+        "momentum": -0.06743712188768809,
+        "work": 0.005077521696515197,
+        "daughter_total": 7.365546693459662e-06,
+        "daughter_difference": 2.5880514593047796e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.333147868785035,
+        "a": 1.2367894803791473,
+        "rho": 1.6519067076894463,
+        "P": -1.4257287182681837,
+        "H": 0.046377983965960816,
+        "rho_q": 0.009190693527752234,
+        "P_q": 0.002253209942434316,
+        "rho_scalar": 1.642716014161694,
+        "gradient": 0.002064139558408774,
+        "bath_energy": 0.0015256078353311742,
+        "interaction_energy": -0.0002238837540744972,
+        "daughter_plus": 0.00028063989225685174,
+        "daughter_minus": 0.00017222200828078413,
+        "bath_holes": 0.000452861900519852,
+        "sterile_count": 0.006502881983565477,
+        "momentum": -0.06743712188768958,
+        "work": 0.003328760000526067,
+        "daughter_total": 0.0004528619005376359,
+        "daughter_difference": 0.00010841788397606761
+      },
+      "max_abs_work": 0.005938846924221243,
+      "handoffs": {
+        "1.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.006669787898725777,
+              "P": 0.002179692675573644,
+              "work": -0.0028401121926292724,
+              "momentum": -2.6649914615715697e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0777850130754354,
+              "bath_energy": 5.720363952637388,
+              "daughter_plus": 3.345255546878705,
+              "daughter_minus": 5.466109991976998,
+              "daughter_total": 4.1518100646520555,
+              "daughter_difference": 0.023725643407980144
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006669787898725777,
+              "P": 0.0022922573403834513,
+              "work": 0.0028401121926292724
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 5.6486652466603005e-08,
+            "momentum_error": 3.309167879089658e-16,
+            "reciprocal_quantum_work_error": 5.11459471170565e-08,
+            "integrated_scalar_to_quantum_work": 0.006840064979826739,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.005997055223445823,
+              "bath_energy": 0.01025263990242078,
+              "daughter_plus": 0.0012194520485045272,
+              "daughter_minus": 0.0011136064485827235,
+              "daughter_total": 0.0023330584970872505,
+              "daughter_difference": 0.00010584559992180367
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": -1.2760197918246128e-15,
+              "P": 0.00013854710414608898,
+              "work": -0.0030914491644520497,
+              "momentum": 0.00048192345753619056
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.3753692493071958,
+              "bath_energy": 0.6876917107288791,
+              "daughter_plus": 0.8779536487994946,
+              "daughter_minus": 1.501437640575679,
+              "daughter_total": 1.1150627212719988,
+              "daughter_difference": 0.11245181989898279
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.000103930488328672,
+              "P": 0.0017644967881993779,
+              "work": 0.0030914491644520497
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 4.871778069848176e-08,
+            "momentum_error": 6.795728227007511e-16,
+            "reciprocal_quantum_work_error": 5.5433476415147196e-08,
+            "integrated_scalar_to_quantum_work": 0.006777060909414815,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.004061900055061215,
+              "bath_energy": 0.0025747556975114516,
+              "daughter_plus": 0.0005270287096624518,
+              "daughter_minus": 0.0004308026140490897,
+              "daughter_total": 0.0009578313237115414,
+              "daughter_difference": 9.622609561336205e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.006820912664757822,
+              "P": 0.0022736375549192315,
+              "work": 0.0,
+              "momentum": 2.531741888492991e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.19539035971495416,
+              "bath_energy": 5.968152390209282,
+              "daughter_plus": 3.702897756912118,
+              "daughter_minus": 5.385661767636424,
+              "daughter_total": 4.342847810218671,
+              "daughter_difference": 1.0298240281023963
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006820912664757822,
+              "P": 0.0022736375549192315,
+              "work": 0.0001822860911899149
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2144312422357473e-07,
+            "momentum_error": 8.99958558206903e-16,
+            "reciprocal_quantum_work_error": 3.424547847968605e-08,
+            "integrated_scalar_to_quantum_work": 0.01189167869002805,
+            "pauli_roundoff_clip": 2.1804780203638074e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.00777348243351823,
+              "bath_energy": 0.01063066788428493,
+              "daughter_plus": 0.0013198207197948066,
+              "daughter_minus": 0.0010997514938241668,
+              "daughter_total": 0.0024195722136189732,
+              "daughter_difference": 0.0002200692259706398
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 1.2760197918246128e-14,
+              "P": -1.7950959316241446e-06,
+              "work": -7.242745616228369e-07,
+              "momentum": 5.628812448793988e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0003955032310196906,
+              "bath_energy": 0.0013374215552200963,
+              "daughter_plus": 0.006761376977847654,
+              "daughter_minus": 0.007775694148282124,
+              "daughter_total": 0.001232972886246214,
+              "daughter_difference": 0.02985354122277353
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.3262484399494178e-07,
+              "P": 3.1612108329874624e-06,
+              "work": 3.0447955150148184e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2594586396019736e-07,
+            "momentum_error": 6.862353013546703e-16,
+            "reciprocal_quantum_work_error": 3.4628955919247086e-08,
+            "integrated_scalar_to_quantum_work": 0.012424119969150016,
+            "pauli_roundoff_clip": 1.6564527527407336e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.006505453894400917,
+              "bath_energy": 0.0015235674545273897,
+              "daughter_plus": 0.0002787423801502806,
+              "daughter_minus": 0.00017356115394277842,
+              "daughter_total": 0.00045230353409305904,
+              "daughter_difference": 0.0001051812262075022
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.006820912664657144,
+              "P": 0.002273637554885672,
+              "work": 0.0,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.19851076801718592,
+              "bath_energy": 5.931250329448947,
+              "daughter_plus": 3.7053132943798124,
+              "daughter_minus": 5.3937309166985,
+              "daughter_total": 4.347413399041244,
+              "daughter_difference": 1.0232587931447692
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006820912664657144,
+              "P": 0.002273637554885672,
+              "work": 0.0001833955924034158
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.214146199135513e-07,
+            "momentum_error": 2.3822432423126285e-16,
+            "reciprocal_quantum_work_error": 3.425020238035919e-08,
+            "integrated_scalar_to_quantum_work": 0.011887407388763883,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.007793774080448181,
+              "bath_energy": 0.010574369811249096,
+              "daughter_plus": 0.0013204986159694827,
+              "daughter_minus": 0.0011011411788807545,
+              "daughter_total": 0.0024216397948502374,
+              "daughter_difference": 0.00021935743708872816
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.00040880178335201344,
+              "P": 0.00013626726111725274,
+              "work": -3.9875618494519155e-18,
+              "momentum": -5.3299829231431393e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.02181307721698256,
+              "bath_energy": 0.3356330699130966,
+              "daughter_plus": 0.248723156911587,
+              "daughter_minus": 0.21128917917119894,
+              "daughter_total": 0.2344871286284966,
+              "daughter_difference": 0.3081870994638224
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.00040880178335201344,
+              "P": 0.00013626726111725274,
+              "work": 1.9832382285710807e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2521659842334998e-07,
+            "momentum_error": 4.195646364259199e-16,
+            "reciprocal_quantum_work_error": 3.449316525580173e-08,
+            "integrated_scalar_to_quantum_work": 0.012386321379795536,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.006644729850405915,
+              "bath_energy": 0.0020376522765868503,
+              "daughter_plus": 0.00035044153221430355,
+              "daughter_minus": 0.00020861065504564644,
+              "daughter_total": 0.0005590521872599499,
+              "daughter_difference": 0.00014183087716865712
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 4.022990025527082e-05,
+              "P": 1.3409966751756939e-05,
+              "work": -1.9937809247259577e-18,
+              "momentum": -5.3299829231431393e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.006340864048225063,
+              "bath_energy": 0.006577930559963091,
+              "daughter_plus": 0.012342232868189584,
+              "daughter_minus": 0.053927570055035325,
+              "daughter_total": 0.012859972338872355,
+              "daughter_difference": 0.11761193680678451
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.022990025527082e-05,
+              "P": 1.4435157576439952e-05,
+              "work": 1.0725503965945076e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2650580316631022e-07,
+            "momentum_error": 7.994652760631573e-16,
+            "reciprocal_quantum_work_error": 3.466792047007736e-08,
+            "integrated_scalar_to_quantum_work": 0.012439917428272605,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.0065441158741449176,
+              "bath_energy": 0.0015356431777337183,
+              "daughter_plus": 0.00028410361515918944,
+              "daughter_minus": 0.00016293449386420327,
+              "daughter_total": 0.0004470381090233927,
+              "daughter_difference": 0.00012116912129498617
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 1.2633061982324274e-06,
+              "P": 4.2110206607747584e-07,
+              "work": 0.0,
+              "momentum": 2.798241034650148e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0004718128353843479,
+              "bath_energy": 0.007294958750222723,
+              "daughter_plus": 0.008315182885238383,
+              "daughter_minus": 0.005248975789242335,
+              "daughter_total": 0.007149113619419577,
+              "daughter_difference": 0.013185858501761181
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.2633061982324274e-06,
+              "P": 8.813611201169027e-07,
+              "work": 2.724433819297154e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2599032173099545e-07,
+            "momentum_error": 4.397230356544725e-16,
+            "reciprocal_quantum_work_error": 3.44780159001561e-08,
+            "integrated_scalar_to_quantum_work": 0.01241374574118757,
+            "pauli_roundoff_clip": 1.0880185641326534e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006499813840378641,
+              "bath_energy": 0.0015367370815589317,
+              "daughter_plus": 0.00028297346428586106,
+              "daughter_minus": 0.00017312599743262466,
+              "daughter_total": 0.0004560994617184857,
+              "daughter_difference": 0.0001098474668532364
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 1.2988394534911146e-08,
+              "P": 4.329464844970382e-09,
+              "work": -2.492226155907447e-18,
+              "momentum": 2.531741888492991e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.5528045991159546e-05,
+              "bath_energy": 0.0005904896080533064,
+              "daughter_plus": 0.0006391798765811853,
+              "daughter_minus": 0.0003186725927562956,
+              "daughter_total": 0.0005172919279076262,
+              "daughter_difference": 0.0011483062869539094
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.2988394534911146e-08,
+              "P": 4.756508163336016e-08,
+              "work": 3.7641713319552654e-08
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 1.2609264654628305e-07,
+            "momentum_error": 6.196105067676442e-16,
+            "reciprocal_quantum_work_error": 3.446887202865824e-08,
+            "integrated_scalar_to_quantum_work": 0.012417480218947625,
+            "pauli_roundoff_clip": 1.929567616798522e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.0065026509488752895,
+              "bath_energy": 0.001526508690903902,
+              "daughter_plus": 0.00028081927162854824,
+              "daughter_minus": 0.00017227689071469267,
+              "daughter_total": 0.0004530961623432409,
+              "daughter_difference": 0.00010854238091385557
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 3.881233672238754e-10,
+              "P": 1.2937449827528487e-10,
+              "work": -4.486007080633405e-18,
+              "momentum": 2.265242742335834e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 1.2961097107690543e-06,
+              "bath_energy": 5.1117744272870736e-05,
+              "daughter_plus": 3.537761109147169e-05,
+              "daughter_minus": 3.298079588617331e-05,
+              "daughter_total": 3.446610953295164e-05,
+              "daughter_difference": 3.918495645734809e-05
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 3.881233672238754e-10,
+              "P": 1.4890207301994744e-09,
+              "work": 3.4365216406636283e-09
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 1.2609535082752643e-07,
+            "momentum_error": 5.929605999695324e-16,
+            "reciprocal_quantum_work_error": 3.4468400531296966e-08,
+            "integrated_scalar_to_quantum_work": 0.012417513007145829,
+            "pauli_roundoff_clip": 2.169375790117556e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.006502890412013964,
+              "bath_energy": 0.001525529849699987,
+              "daughter_plus": 0.00028062996388788673,
+              "daughter_minus": 0.00017221632826188192,
+              "daughter_total": 0.00045284629214976865,
+              "daughter_difference": 0.00010841363562600481
+            }
+          }
+        },
+        "2.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.005957977506228698,
+              "P": 0.0018949338590741487,
+              "work": -0.0031374624306273052,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.10176079238279223,
+              "bath_energy": 5.579208942384547,
+              "daughter_plus": 3.074128568317298,
+              "daughter_minus": 4.891522401825939,
+              "daughter_total": 3.7652779352046086,
+              "daughter_difference": 0.18719511817670884
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005957977506228698,
+              "P": 0.0021756649530529715,
+              "work": 0.0031374624306273052
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.83551051527553e-08,
+            "momentum_error": 2.221668662057803e-16,
+            "reciprocal_quantum_work_error": 3.169265640104394e-08,
+            "integrated_scalar_to_quantum_work": 0.002872230042239752,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.00584114356014607,
+              "bath_energy": 0.010037292712782793,
+              "daughter_plus": 0.0011433630024531283,
+              "daughter_minus": 0.001014649819873692,
+              "daughter_total": 0.0021580128223268203,
+              "daughter_difference": 0.0001287131825794363
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": 7.791158924516057e-16,
+              "P": 0.00015389726977182048,
+              "work": -0.003011590369563496,
+              "momentum": 0.0007762292773316627
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.45380510526995493,
+              "bath_energy": 1.5743228923712504,
+              "daughter_plus": 1.827412898737484,
+              "daughter_minus": 3.1374097693543503,
+              "daughter_total": 2.325600738410761,
+              "daughter_difference": 0.25351954179032504
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 5.6528039191831026e-05,
+              "P": 0.0013362416920300927,
+              "work": 0.003011590369563496
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.730707287541435e-08,
+            "momentum_error": 4.410997330209148e-16,
+            "reciprocal_quantum_work_error": 3.808171035422991e-08,
+            "integrated_scalar_to_quantum_work": 0.0034116559374968063,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.0035518409404554523,
+              "bath_energy": 0.003927407175273991,
+              "daughter_plus": 0.0007934848512673204,
+              "daughter_minus": 0.0007125530195587421,
+              "daughter_total": 0.0015060378708260625,
+              "daughter_difference": 8.093183170857833e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.005741613600340056,
+              "P": 0.0019138712001133954,
+              "work": 5.072369091481808e-19,
+              "momentum": 5.410823391723226e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.17463264538388792,
+              "bath_energy": 5.778856462196671,
+              "daughter_plus": 3.1283451670957048,
+              "daughter_minus": 5.1758623270724415,
+              "daughter_total": 3.907009737601466,
+              "daughter_difference": 0.12413961076991803
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005741613600340056,
+              "P": 0.0019138712001133954,
+              "work": 0.0001527096638293151
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 6.582547507072434e-08,
+            "momentum_error": 5.204501263278632e-16,
+            "reciprocal_quantum_work_error": 4.0255620822407024e-08,
+            "integrated_scalar_to_quantum_work": 0.008448408123320424,
+            "pauli_roundoff_clip": 2.2648549702353193e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.00763849746697474,
+              "bath_energy": 0.010341876533312606,
+              "daughter_plus": 0.0011585783428928332,
+              "daughter_minus": 0.0010636194128340528,
+              "daughter_total": 0.002222197755726886,
+              "daughter_difference": 9.495893005878045e-05
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 9.868801304387006e-15,
+              "P": -3.8363873490483365e-07,
+              "work": -1.1629504012407648e-06,
+              "momentum": 6.4326323037319e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0005411175721441559,
+              "bath_energy": 0.003203145401393162,
+              "daughter_plus": 0.0036192243331646017,
+              "daughter_minus": 0.0021051119698648935,
+              "daughter_total": 0.00304341199023917,
+              "daughter_difference": 0.0060243946095721495
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.328994789431925e-07,
+              "P": 2.2599536706471216e-06,
+              "work": 2.224184571730558e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": true,
+            "energy_pressure_error": 6.448380229784334e-08,
+            "momentum_error": 2.2349053139726146e-16,
+            "reciprocal_quantum_work_error": 4.166291218777343e-08,
+            "integrated_scalar_to_quantum_work": 0.008802249316161605,
+            "pauli_roundoff_clip": 1.4521717162097048e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.006506400807276364,
+              "bath_energy": 0.0015207210916091038,
+              "daughter_plus": 0.00027962419352993905,
+              "daughter_minus": 0.00017185946166967808,
+              "daughter_total": 0.00045148365519961714,
+              "daughter_difference": 0.00010776473186026097
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.005741613600256172,
+              "P": 0.001913871200085347,
+              "work": 5.072369091481808e-19,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.17701539218831963,
+              "bath_energy": 5.738178931913149,
+              "daughter_plus": 3.1316719692212756,
+              "daughter_minus": 5.169016806776486,
+              "daughter_total": 3.9064680363395023,
+              "daughter_difference": 0.10465405575168192
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005741613600256172,
+              "P": 0.001913871200085347,
+              "work": 0.00015372770582794417
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 6.584151779343017e-08,
+            "momentum_error": 3.040832198769791e-16,
+            "reciprocal_quantum_work_error": 4.0288715414466015e-08,
+            "integrated_scalar_to_quantum_work": 0.00844679060680543,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.0076539921882406775,
+              "bath_energy": 0.010279818574390143,
+              "daughter_plus": 0.0011595119762829132,
+              "daughter_minus": 0.0010624404635809564,
+              "daughter_total": 0.0022219524398638694,
+              "daughter_difference": 9.707151270195685e-05
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.0003799698496346267,
+              "P": 0.00012665661654491885,
+              "work": -4.0578952731854465e-18,
+              "momentum": 2.3525319094448807e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.017741484046223138,
+              "bath_energy": 0.2922911724034177,
+              "daughter_plus": 0.05106561351838169,
+              "daughter_minus": 0.08389265691414928,
+              "daughter_total": 0.00025860770755476234,
+              "daughter_difference": 0.26544707454304356
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.0003799698496346267,
+              "P": 0.00012665661654491885,
+              "work": 1.9939229379117947e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 6.416566111777655e-08,
+            "momentum_error": 1.9988926041059307e-16,
+            "reciprocal_quantum_work_error": 4.1521119115225664e-08,
+            "integrated_scalar_to_quantum_work": 0.008792326547557001,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.0066182527605313755,
+              "bath_energy": 0.0019715295381479633,
+              "daughter_plus": 0.0002663088439810231,
+              "daughter_minus": 0.00018667017013454973,
+              "daughter_total": 0.0004529790141155728,
+              "daughter_difference": 7.963867384647334e-05
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 5.499982793275197e-05,
+              "P": 1.8333275977583992e-05,
+              "work": -5.072369091481808e-19,
+              "momentum": -2.3525319094448807e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0042548552161869755,
+              "bath_energy": 0.1110991431554145,
+              "daughter_plus": 0.11014500762415073,
+              "daughter_minus": 0.12109734277156424,
+              "daughter_total": 0.1143101474873462,
+              "daughter_difference": 0.0927472030805005
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 5.499982793275197e-05,
+              "P": 1.8825807152077608e-05,
+              "work": 1.7619160820249582e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 6.426666143699578e-08,
+            "momentum_error": 2.8816930964455193e-16,
+            "reciprocal_quantum_work_error": 4.141338650771949e-08,
+            "integrated_scalar_to_quantum_work": 0.00881597221366385,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.006530550804893499,
+              "bath_energy": 0.001356114112034694,
+              "daughter_plus": 0.00024972880918457997,
+              "daughter_minus": 0.00015136638071119884,
+              "daughter_total": 0.0004010951898957788,
+              "daughter_difference": 9.836242847338113e-05
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 7.141563453194138e-06,
+              "P": 2.3805211510647126e-06,
+              "work": 0.0,
+              "momentum": 5.410823391723226e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.00029744182826071263,
+              "bath_energy": 0.0075670626778474425,
+              "daughter_plus": 0.0017408006836330486,
+              "daughter_minus": 0.012569041089434263,
+              "daughter_total": 0.003701188773665303,
+              "daughter_difference": 0.024472010682916205
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 7.141563453194138e-06,
+              "P": 2.3805211510647126e-06,
+              "work": 2.6603431121080533e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 6.428019416748754e-08,
+            "momentum_error": 1.9408249647673892e-16,
+            "reciprocal_quantum_work_error": 4.1525650805831715e-08,
+            "integrated_scalar_to_quantum_work": 0.008795821480616278,
+            "pauli_roundoff_clip": 1.0458300891968975e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006504816212671632,
+              "bath_energy": 0.001514063465219408,
+              "daughter_plus": 0.0002811284303731472,
+              "daughter_minus": 0.00017005734278219807,
+              "daughter_total": 0.00045118577315534524,
+              "daughter_difference": 0.00011107108759094911
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 3.928428298497014e-07,
+              "P": 1.309476100364689e-07,
+              "work": -3.043421454889085e-18,
+              "momentum": 6.587089346445666e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 2.5147621004794935e-05,
+              "bath_energy": 0.0005681074283186235,
+              "daughter_plus": 0.0005362362090143114,
+              "daughter_minus": 0.00029026763142281944,
+              "daughter_total": 0.00022191930339059832,
+              "daughter_difference": 0.0018491390810467922
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 3.928428298497014e-07,
+              "P": 1.309476100364689e-07,
+              "work": 4.7997204275711066e-08
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 6.4280584521903e-08,
+            "momentum_error": 1.9408380628477099e-16,
+            "reciprocal_quantum_work_error": 4.152090415701455e-08,
+            "integrated_scalar_to_quantum_work": 0.008797647542901884,
+            "pauli_roundoff_clip": 1.9517720772910252e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.006502718451553915,
+              "bath_energy": 0.001526474544475127,
+              "daughter_plus": 0.00028079038152877374,
+              "daughter_minus": 0.0001721720178063616,
+              "daughter_total": 0.00045296239933513533,
+              "daughter_difference": 0.00010861836372241216
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 2.8544914216482018e-08,
+              "P": 9.514971275641356e-09,
+              "work": -1.4709870365297245e-17,
+              "momentum": 2.3525319094448807e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 1.4968659498693887e-06,
+              "bath_energy": 3.834383066409827e-05,
+              "daughter_plus": 2.383627973599644e-05,
+              "daughter_minus": 1.0113063300231708e-05,
+              "daughter_total": 1.0925447469976404e-05,
+              "daughter_difference": 7.776487364586379e-05
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.8544914216482018e-08,
+              "P": 9.514971275641356e-09,
+              "work": 1.1332587986555915e-09
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 6.428061261054552e-08,
+            "momentum_error": 3.8816775397819006e-16,
+            "reciprocal_quantum_work_error": 4.152051165502206e-08,
+            "integrated_scalar_to_quantum_work": 0.00879769393363114,
+            "pauli_roundoff_clip": 2.2470914018413168e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.006502891717508094,
+              "bath_energy": 0.001525666332979672,
+              "daughter_plus": 0.00028063320284587483,
+              "daughter_minus": 0.00017222374997285557,
+              "daughter_total": 0.0004528569528187304,
+              "daughter_difference": 0.00010840945287301926
+            }
+          }
+        },
+        "3.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.005342982310921014,
+              "P": 0.0015595201885587697,
+              "work": -0.0023617417536455055,
+              "momentum": 2.075913676707594e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.010356532567443781,
+              "bath_energy": 4.815012477612447,
+              "daughter_plus": 2.9255825774979147,
+              "daughter_minus": 5.855392866269721,
+              "daughter_total": 4.039780550908687,
+              "daughter_difference": 1.7284264596584105
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005342982310921014,
+              "P": 0.0019510700138686112,
+              "work": 0.0025610254192183312
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.744559963157144e-08,
+            "momentum_error": 1.8583929483868636e-16,
+            "reciprocal_quantum_work_error": 1.2870542277754013e-08,
+            "integrated_scalar_to_quantum_work": 0.0006025773959439944,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.006570229292610516,
+              "bath_energy": 0.008871428598394094,
+              "daughter_plus": 0.0011016750715943891,
+              "daughter_minus": 0.0011806495269827324,
+              "daughter_total": 0.0022823245985771215,
+              "daughter_difference": -7.897445538834324e-05
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": 0.0,
+              "P": 8.0415270026276e-05,
+              "work": -0.002107189521953267,
+              "momentum": 0.0010091750760064429
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.49029083611432644,
+              "bath_energy": 2.7713980700570553,
+              "daughter_plus": 3.044480329222222,
+              "daughter_minus": 5.2817165705440505,
+              "daughter_total": 3.8952944913797585,
+              "daughter_difference": 0.5093735586109918
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.0856880511117673e-05,
+              "P": 0.0008025324969748598,
+              "work": 0.0022350759883128504
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.1129870408920226e-08,
+            "momentum_error": 1.7126287832837652e-16,
+            "reciprocal_quantum_work_error": 1.9052826086749756e-08,
+            "integrated_scalar_to_quantum_work": 0.0011490280626881904,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.0033145785386903695,
+              "bath_energy": 0.0057536744458319125,
+              "daughter_plus": 0.0011350425238278808,
+              "daughter_minus": 0.0010818498432297763,
+              "daughter_total": 0.002216892367057657,
+              "daughter_difference": 5.319268059810443e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.004830932285820123,
+              "P": 0.001610310761940085,
+              "work": -1.2883051534723656e-18,
+              "momentum": 6.435332397793542e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.1974983992908642,
+              "bath_energy": 4.918013958757588,
+              "daughter_plus": 3.1389563265165945,
+              "daughter_minus": 5.5381849712257205,
+              "daughter_total": 4.051375708730113,
+              "daughter_difference": 0.6722227923066445
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.004830932285820123,
+              "P": 0.001610310761940085,
+              "work": 0.00010681859942573388
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.44473593275552e-08,
+            "momentum_error": 1.4461533050039271e-16,
+            "reciprocal_quantum_work_error": 4.242117306401741e-08,
+            "integrated_scalar_to_quantum_work": 0.005000920098364405,
+            "pauli_roundoff_clip": 2.2182256032010628e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.0077871907660970584,
+              "bath_energy": 0.009028568465079836,
+              "daughter_plus": 0.001161556257529432,
+              "daughter_minus": 0.0011260193462557344,
+              "daughter_total": 0.0022875756037851664,
+              "daughter_difference": 3.5536911273697635e-05
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 5.2768979086228096e-15,
+              "P": 7.56383878861486e-07,
+              "work": -1.3686712035179413e-06,
+              "momentum": 7.571301677325698e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 5.63178021380086e-05,
+              "bath_energy": 0.011826051620023455,
+              "daughter_plus": 0.004084850952328801,
+              "daughter_minus": 0.032088273297233884,
+              "daughter_total": 0.009671678569483508,
+              "daughter_difference": 0.0615459254133024
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.811736196216883e-08,
+              "P": 1.4064384926503774e-06,
+              "work": 1.6719430493525159e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.349404079233125e-08,
+            "momentum_error": 2.802483463555237e-16,
+            "reciprocal_quantum_work_error": 4.189852828979864e-08,
+            "integrated_scalar_to_quantum_work": 0.00512685649873326,
+            "pauli_roundoff_clip": 1.0080825063596421e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.006503248211586354,
+              "bath_energy": 0.0015075659183186355,
+              "daughter_plus": 0.0002817862643879986,
+              "daughter_minus": 0.00016669570141127185,
+              "daughter_total": 0.00044848196579927045,
+              "daughter_difference": 0.00011509056297672674
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.004830932285751655,
+              "P": 0.0016103107619172626,
+              "work": -1.2883051534723656e-18,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.20076685320468232,
+              "bath_energy": 4.8897731051828215,
+              "daughter_plus": 3.1520106675130344,
+              "daughter_minus": 5.575918352435934,
+              "daughter_total": 4.073815413924805,
+              "daughter_difference": 0.6983711521210472
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.004830932285751655,
+              "P": 0.0016103107619172626,
+              "work": 0.00010657501704773363
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.448010202499745e-08,
+            "momentum_error": 1.8593399635766042e-16,
+            "reciprocal_quantum_work_error": 4.24099056157194e-08,
+            "integrated_scalar_to_quantum_work": 0.005001585703243266,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.00780844513616734,
+              "bath_energy": 0.008985483997589732,
+              "daughter_plus": 0.0011652198263801571,
+              "daughter_minus": 0.0011325178649469819,
+              "daughter_total": 0.002297737691327139,
+              "daughter_difference": 3.270196143317526e-05
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.00035390555063735115,
+              "P": 0.0001179685168790291,
+              "work": 5.1532206138894625e-18,
+              "momentum": 2.075913676707594e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.06651140706411296,
+              "bath_energy": 0.8058074629086825,
+              "daughter_plus": 0.37658901470058237,
+              "daughter_minus": 0.6675830309540624,
+              "daughter_total": 0.48725315716292783,
+              "daughter_difference": 0.08565551580444092
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.00035390555063735115,
+              "P": 0.0001179685168790291,
+              "work": 9.98253991818092e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.349000046870003e-08,
+            "momentum_error": 2.697733037023932e-16,
+            "reciprocal_quantum_work_error": 4.166444026401042e-08,
+            "integrated_scalar_to_quantum_work": 0.005138930300265912,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.0069353978142642865,
+              "bath_energy": 0.002754954014512995,
+              "daughter_plus": 0.00038632579276753713,
+              "daughter_minus": 0.0002871944985658656,
+              "daughter_total": 0.0006735202913334028,
+              "daughter_difference": 9.913129420167151e-05
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 7.300067321138964e-05,
+              "P": 2.433355773712988e-05,
+              "work": 2.061288245555785e-18,
+              "momentum": 6.227741030122783e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0017169129455782948,
+              "bath_energy": 0.18712779890040437,
+              "daughter_plus": 0.037696329185700185,
+              "daughter_minus": 0.07175191756672696,
+              "daughter_total": 0.05064756623434817,
+              "daughter_difference": 0.01640103564996518
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 7.300067321138964e-05,
+              "P": 2.433355773712988e-05,
+              "work": 4.6881058897737525e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.336299428535199e-08,
+            "momentum_error": 1.8162918765894056e-16,
+            "reciprocal_quantum_work_error": 4.184388123599176e-08,
+            "integrated_scalar_to_quantum_work": 0.005126457467522831,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.006514046865826628,
+              "bath_energy": 0.0018110914715419074,
+              "daughter_plus": 0.00029121898601800546,
+              "daughter_minus": 0.00018457926762212312,
+              "daughter_total": 0.0004757982536401286,
+              "daughter_difference": 0.00010663971839588234
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 1.7671240783463833e-05,
+              "P": 5.89041359444397e-06,
+              "work": -2.8342713376392043e-18,
+              "momentum": 2.179709360542974e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.00011212281567545408,
+              "bath_energy": 0.025541181377109156,
+              "daughter_plus": 0.0022370795343711856,
+              "daughter_minus": 0.0033166696341365614,
+              "daughter_total": 0.0026476443773860445,
+              "daughter_difference": 0.0005221486734932188
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.7671240783463833e-05,
+              "P": 5.89041359444397e-06,
+              "work": 1.300956839382407e-07
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 8.340304002985022e-08,
+            "momentum_error": 2.0758769933854073e-16,
+            "reciprocal_quantum_work_error": 4.1831070282030964e-08,
+            "integrated_scalar_to_quantum_work": 0.005124623845314717,
+            "pauli_roundoff_clip": 1.0835776720341528e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006503611105003479,
+              "bath_energy": 0.0015645736617637066,
+              "daughter_plus": 0.0002800120784973558,
+              "daughter_minus": 0.00017165080477558924,
+              "daughter_total": 0.00045166288327294505,
+              "daughter_difference": 0.00010836127372176657
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 2.7548129428046004e-06,
+              "P": 9.182709809348667e-07,
+              "work": 2.3189492762502582e-18,
+              "momentum": 1.5984535310648476e-15
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.6426880152104793e-07,
+              "bath_energy": 0.00449202976027891,
+              "daughter_plus": 2.7928907497539424e-05,
+              "daughter_minus": 4.3028226271783417e-05,
+              "daughter_total": 9.441245756529978e-07,
+              "daughter_difference": 0.00014064444511399557
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.7548129428046004e-06,
+              "P": 9.182709809348667e-07,
+              "work": 5.501530376388844e-09
+            },
+            "jump_pass": false,
+            "terminal_pass": true,
+            "energy_pressure_error": 8.340372081860892e-08,
+            "momentum_error": 3.373350431700411e-16,
+            "reciprocal_quantum_work_error": 4.1832239601853504e-08,
+            "integrated_scalar_to_quantum_work": 0.005124629870192302,
+            "pauli_roundoff_clip": 1.9384494009955233e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.00650287961476845,
+              "bath_energy": 0.0015324609111299966,
+              "daughter_plus": 0.0002806477302224427,
+              "daughter_minus": 0.00017221459787324284,
+              "daughter_total": 0.00045286232809568555,
+              "daughter_difference": 0.00010843313234919986
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 4.013564852626152e-07,
+              "P": 1.3378549504356425e-07,
+              "work": -1.0048780197084452e-17,
+              "momentum": 2.802483463555252e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.600874215825173e-08,
+              "bath_energy": 0.0006653977749109628,
+              "daughter_plus": 1.105564592661414e-06,
+              "daughter_minus": 1.2387078452148479e-06,
+              "daughter_total": 2.140448893500368e-07,
+              "daughter_difference": 4.829445675762621e-06
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502881983565477,
+              "bath_energy": 0.0015256078353311742,
+              "daughter_plus": 0.00028063989225685174,
+              "daughter_minus": 0.00017222200828078413,
+              "daughter_total": 0.0004528619005376359,
+              "daughter_difference": 0.00010841788397606761
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.013564852626152e-07,
+              "P": 1.3378549504356425e-07,
+              "work": 3.4553850218683347e-11
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 8.340391921546342e-08,
+            "momentum_error": 1.7645259169975348e-16,
+            "reciprocal_quantum_work_error": 4.1832337864687534e-08,
+            "integrated_scalar_to_quantum_work": 0.005124632455617087,
+            "pauli_roundoff_clip": 2.233768725545815e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.006502882217726077,
+              "bath_energy": 0.0015266229713901903,
+              "daughter_plus": 0.0002806395819913236,
+              "daughter_minus": 0.0001722222216135369,
+              "daughter_total": 0.0004528618036048605,
+              "daughter_difference": 0.00010841736037778667
+            }
+          }
+        }
+      },
+      "static_projection": {
+        "bare": {
+          "rho_change": 0.015296546407081557,
+          "count_change": -1.6263032587282567e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "dressed": {
+          "rho_change": 0.0,
+          "count_change": -5.963111948670274e-19,
+          "pauli_roundoff_clip": 3.1086244689504383e-15
+        },
+        "separated": {
+          "rho_change": 0.015270243740078016,
+          "count_change": 1.8892222855559915e-16,
+          "pauli_roundoff_clip": 2.6645352591003757e-15
+        },
+        "dressed_half": {
+          "rho_change": 2.6645352591003757e-15,
+          "count_change": 1.1118493278838848e-16,
+          "pauli_roundoff_clip": 3.1086244689504383e-15
+        },
+        "r0": {
+          "rho_change": 0.015270243740074463,
+          "count_change": -1.0842021724855044e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r1": {
+          "rho_change": 0.0008574312133040607,
+          "count_change": -1.0462550964485118e-17,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r2": {
+          "rho_change": 5.946693436786887e-05,
+          "count_change": -2.168404344971009e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r4": {
+          "rho_change": 5.283431887548318e-07,
+          "count_change": 7.106945240642482e-17,
+          "pauli_roundoff_clip": 1.7763568394002505e-15
+        },
+        "r6": {
+          "rho_change": 3.064414499931445e-09,
+          "count_change": 1.183406671267928e-16,
+          "pauli_roundoff_clip": 2.4424906541753444e-15
+        },
+        "r7": {
+          "rho_change": 9.734879569123223e-11,
+          "count_change": 2.2659825404947043e-16,
+          "pauli_roundoff_clip": 2.6645352591003757e-15
+        }
+      },
+      "boundary_spreads": {
+        "bare": {
+          "sterile_count": 0.112117324950236,
+          "bath_energy": 0.9053514750249411,
+          "daughter_plus": 0.4196729693807904,
+          "daughter_minus": 0.9638704644437827,
+          "daughter_total": 0.38653212944744675,
+          "daughter_difference": 1.9156215778351193
+        },
+        "dressed": {
+          "sterile_count": 0.11492158680713065,
+          "bath_energy": 2.0837063593281764,
+          "daughter_plus": 2.1665266804227277,
+          "daughter_minus": 3.7802789299683717,
+          "daughter_total": 2.78023177010776,
+          "daughter_difference": 0.396921738712009
+        },
+        "separated": {
+          "sterile_count": 0.02286575390697631,
+          "bath_energy": 1.050138431451694,
+          "daughter_plus": 0.5745525898164134,
+          "daughter_minus": 0.362322644153279,
+          "daughter_total": 0.4358380726172042,
+          "daughter_difference": 1.7020468204090409
+        },
+        "dressed_half": {
+          "sterile_count": 0.00048479977000614723,
+          "bath_energy": 0.01048863006480336,
+          "daughter_plus": 0.010846227930176455,
+          "daughter_minus": 0.039863967445516006,
+          "daughter_total": 0.008438705683237294,
+          "daughter_difference": 0.09139946663607593
+        },
+        "r0": {
+          "sterile_count": 0.023751461016362697,
+          "bath_energy": 1.0414772242661257,
+          "daughter_plus": 0.5736413251585369,
+          "daughter_minus": 0.4069015456594489,
+          "daughter_total": 0.44094536270174195,
+          "daughter_difference": 1.7216299452658164
+        },
+        "r1": {
+          "sterile_count": 0.048769923017889814,
+          "bath_energy": 0.5135162905052649,
+          "daughter_plus": 0.42765462821896405,
+          "daughter_minus": 0.5836903740399131,
+          "daughter_total": 0.48699454945537307,
+          "daughter_difference": 0.573634174006866
+        },
+        "r2": {
+          "sterile_count": 0.004623951102646768,
+          "bath_energy": 0.29822694205581884,
+          "daughter_plus": 0.14784133680985093,
+          "daughter_minus": 0.1928492603382912,
+          "daughter_total": 0.16495771372169438,
+          "daughter_difference": 0.21035913988728502
+        },
+        "r4": {
+          "sterile_count": 0.0007692546636450605,
+          "bath_energy": 0.0331082440549566,
+          "daughter_plus": 0.010552262419609569,
+          "daughter_minus": 0.0178180168786766,
+          "daughter_total": 0.01085030239308488,
+          "daughter_difference": 0.024994159356409425
+        },
+        "r6": {
+          "sterile_count": 3.51637771896385e-05,
+          "bath_energy": 0.003923922331960286,
+          "daughter_plus": 0.0006112509690836458,
+          "daughter_minus": 0.000608940224179115,
+          "daughter_total": 0.0005163478033319732,
+          "daughter_difference": 0.0017084946359327965
+        },
+        "r7": {
+          "sterile_count": 1.460857207711137e-06,
+          "bath_energy": 0.0007165155191838335,
+          "daughter_plus": 3.4272046498810275e-05,
+          "daughter_minus": 4.309385918640502e-05,
+          "daughter_total": 3.4252064643601605e-05,
+          "daughter_difference": 7.293542797010118e-05
+        }
+      },
+      "passes_all_boundaries": {
+        "bare": false,
+        "dressed": false,
+        "separated": false,
+        "dressed_half": false,
+        "r0": false,
+        "r1": false,
+        "r2": false,
+        "r4": false,
+        "r6": false,
+        "r7": true
+      }
+    },
+    "half_step": {
+      "parameters": {
+        "longitudinal": 1,
+        "transverse": 2,
+        "cutoff": 5.5,
+        "bath_bins": 8,
+        "dt": 0.005
+      },
+      "dimension": 204,
+      "recurrence": 9.827984018128891,
+      "ledger": {
+        "energy_pressure_error": 2.5131596359528885e-08,
+        "momentum_error": 2.176128733757403e-15,
+        "reciprocal_quantum_work_error": 2.1598426792447268e-08,
+        "integrated_scalar_to_quantum_work": 0.017024930519281476
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.7920163975145602,
+        "P": -1.2926991001165398,
+        "H": 0.048304765170362904,
+        "rho_q": 0.0018530838043950837,
+        "P_q": 0.00025064767463837495,
+        "rho_scalar": 1.7901633137101651,
+        "gradient": 0.005603073638003673,
+        "bath_energy": 4.2225352531843896e-05,
+        "interaction_energy": 5.096548796221581e-06,
+        "daughter_plus": 1.6622750731397828e-05,
+        "daughter_minus": -9.256999041372491e-06,
+        "bath_holes": 7.365751689136779e-06,
+        "sterile_count": 0.0006745006816920965,
+        "momentum": -0.067437124021841,
+        "work": 0.005077493310570932,
+        "daughter_total": 7.365751690025337e-06,
+        "daughter_difference": 2.587974977277032e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.3331483489144302,
+        "a": 1.2367894828403985,
+        "rho": 1.6519069093972556,
+        "P": -1.4257285604562222,
+        "H": 0.04637798679747714,
+        "rho_q": 0.00919055417536443,
+        "P_q": 0.0022531745302176655,
+        "rho_scalar": 1.642716355221891,
+        "gradient": 0.0020641412744450945,
+        "bath_energy": 0.0015255896400432204,
+        "interaction_energy": -0.00022387830489877433,
+        "daughter_plus": 0.00028063758192038463,
+        "daughter_minus": 0.00017222106698143121,
+        "bath_holes": 0.00045285864890021177,
+        "sterile_count": 0.006502790743766357,
+        "momentum": -0.06743712402184351,
+        "work": 0.0033287117156053426,
+        "daughter_total": 0.00045285864890181585,
+        "daughter_difference": 0.00010841651493895342
+      },
+      "max_abs_work": 0.0059387893009140635,
+      "handoffs": {
+        "1.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.006669792596777419,
+              "P": 0.0021796923053041223,
+              "work": -0.002840074128626705,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.07778064304637475,
+              "bath_energy": 5.720348160337915,
+              "daughter_plus": 3.3452571443956645,
+              "daughter_minus": 5.4660937957806555,
+              "daughter_total": 4.151806278171928,
+              "daughter_difference": 0.023719908597723164
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006669792596777419,
+              "P": 0.0022922299016868374,
+              "work": 0.002840074128626705
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.412118200150303e-08,
+            "momentum_error": 1.7075309556651251e-15,
+            "reciprocal_quantum_work_error": 1.278636422721869e-08,
+            "integrated_scalar_to_quantum_work": 0.006840001764111571,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.005996999498120196,
+              "bath_energy": 0.010252493530895038,
+              "daughter_plus": 0.0012194424578254748,
+              "daughter_minus": 0.001113597572711357,
+              "daughter_total": 0.002333040030536832,
+              "daughter_difference": 0.00010584488511411775
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": -8.93214033171478e-16,
+              "P": 0.00013854517010607778,
+              "work": -0.003091410413128646,
+              "momentum": 0.0004819202411437458
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.3753651067962399,
+              "bath_energy": 0.6877067757445605,
+              "daughter_plus": 0.8779650569106778,
+              "daughter_minus": 1.5014470536344007,
+              "daughter_total": 1.1150737772141583,
+              "daughter_difference": 0.11244433579055291
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.00010398292039512015,
+              "P": 0.0017646823106887838,
+              "work": 0.003091410413128646
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.2179711683657501e-08,
+            "momentum_error": 1.1592715152736678e-15,
+            "reciprocal_quantum_work_error": 1.3858191272129268e-08,
+            "integrated_scalar_to_quantum_work": 0.006776998330162178,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.004061870001758898,
+              "bath_energy": 0.002574747972506648,
+              "daughter_plus": 0.0005270275725023901,
+              "daughter_minus": 0.0004308018805744739,
+              "daughter_total": 0.000957829453076864,
+              "daughter_difference": 9.622569192791624e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.006820915203846374,
+              "P": 0.002273638401282125,
+              "work": -1.4953359930326081e-18,
+              "momentum": 1.1992463951106898e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.19538924853465994,
+              "bath_energy": 5.968137955188108,
+              "daughter_plus": 3.702899090859267,
+              "daughter_minus": 5.385639587203903,
+              "daughter_total": 4.342841298954687,
+              "daughter_difference": 1.0298435707061153
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006820915203846374,
+              "P": 0.002273638401282125,
+              "work": 0.00018230224825903496
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.0359602165574984e-08,
+            "momentum_error": 4.830660852120279e-16,
+            "reciprocal_quantum_work_error": 8.562801635279483e-09,
+            "integrated_scalar_to_quantum_work": 0.011891414735633257,
+            "pauli_roundoff_clip": 2.877698079828406e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.007773366140569008,
+              "bath_energy": 0.010630519074826927,
+              "daughter_plus": 0.0013198102288743201,
+              "daughter_minus": 0.001099741663067122,
+              "daughter_total": 0.0024195518919414424,
+              "daughter_difference": 0.0002200685658071981
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 1.531224056865391e-14,
+              "P": -1.7950923867825865e-06,
+              "work": -7.241990298853245e-07,
+              "momentum": 5.628619235991942e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0003954231464431412,
+              "bath_energy": 0.001335525138036332,
+              "daughter_plus": 0.006760414609531744,
+              "daughter_minus": 0.007776463074360741,
+              "daughter_total": 0.0012320746046104384,
+              "daughter_difference": 0.02985243695232896
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.3253168657628342e-07,
+              "P": 3.1610935053475844e-06,
+              "work": 3.044632858988281e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.148461025226368e-08,
+            "momentum_error": 3.9974879837022383e-16,
+            "reciprocal_quantum_work_error": 8.657688811174096e-09,
+            "integrated_scalar_to_quantum_work": 0.012423851372418346,
+            "pauli_roundoff_clip": 1.5853984791647235e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.006505362097742919,
+              "bath_energy": 0.0015235521767286149,
+              "daughter_plus": 0.0002787403555115864,
+              "daughter_minus": 0.00017356033774943932,
+              "daughter_total": 0.0004523006932610257,
+              "daughter_difference": 0.00010518001776214708
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.006820915203666838,
+              "P": 0.0022736384012222795,
+              "work": -1.4953359930326081e-18,
+              "momentum": -5.3299839782697327e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.19850966377398918,
+              "bath_energy": 5.931232926322642,
+              "daughter_plus": 3.7053139033397864,
+              "daughter_minus": 5.393707202385136,
+              "daughter_total": 4.347405858856202,
+              "daughter_difference": 1.023278831380337
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.006820915203666838,
+              "P": 0.0022736384012222795,
+              "work": 0.0001833943527468375
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.035275586427133e-08,
+            "momentum_error": 7.014384251025216e-16,
+            "reciprocal_quantum_work_error": 8.56402303065491e-09,
+            "integrated_scalar_to_quantum_work": 0.011887143271461564,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.007793657547904026,
+              "bath_energy": 0.010574217145124278,
+              "daughter_plus": 0.0013204879160096442,
+              "daughter_minus": 0.0011011310763616297,
+              "daughter_total": 0.002421618992371274,
+              "daughter_difference": 0.0002193568396480145
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.00040880137892129585,
+              "P": 0.0001362671263070561,
+              "work": 1.4953359930326081e-18,
+              "momentum": 2.6649919891348663e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.021814250115235585,
+              "bath_energy": 0.3356604457550871,
+              "daughter_plus": 0.24873471958029061,
+              "daughter_minus": 0.2113015082936168,
+              "daughter_total": 0.23449895836878276,
+              "daughter_difference": 0.3081978704845817
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.00040880137892129585,
+              "P": 0.0001362671263070561,
+              "work": 1.98343201025085e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.130224057734665e-08,
+            "momentum_error": 5.327805963845088e-16,
+            "reciprocal_quantum_work_error": 8.623268876175857e-09,
+            "integrated_scalar_to_quantum_work": 0.012386050164762541,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.006644644247497915,
+              "bath_energy": 0.0020376697386594706,
+              "daughter_plus": 0.00035044189216304234,
+              "daughter_minus": 0.00020861163819454364,
+              "daughter_total": 0.000559053530357586,
+              "daughter_difference": 0.0001418302539684987
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 4.0230252828675164e-05,
+              "P": 1.3410084276267589e-05,
+              "work": 9.968906620217388e-19,
+              "momentum": -6.662479972837166e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.006340510942848352,
+              "bath_energy": 0.006579383400733919,
+              "daughter_plus": 0.012341009348922741,
+              "daughter_minus": 0.05392704945534889,
+              "daughter_total": 0.012860575785281648,
+              "daughter_difference": 0.1176086966610091
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.0230252828675164e-05,
+              "P": 1.443540623522353e-05,
+              "work": 1.0726550045851579e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.162454675909032e-08,
+            "momentum_error": 3.1312396166720223e-16,
+            "reciprocal_quantum_work_error": 8.667011739143842e-09,
+            "integrated_scalar_to_quantum_work": 0.012439648383353936,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.006544021759636261,
+              "bath_energy": 0.0015356270791972524,
+              "daughter_plus": 0.00028410093294252317,
+              "daughter_minus": 0.00016293369298507062,
+              "daughter_total": 0.0004470346259275938,
+              "daughter_difference": 0.00012116723995745255
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 1.2633911396790712e-06,
+              "P": 4.2113037993555775e-07,
+              "work": 0.0,
+              "momentum": 1.3324959945674331e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0004720004914324854,
+              "bath_energy": 0.007299000189955758,
+              "daughter_plus": 0.00831697971785064,
+              "daughter_minus": 0.005251967067339685,
+              "daughter_total": 0.007151362697478736,
+              "daughter_difference": 0.013185792825150814
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.2633911396790712e-06,
+              "P": 8.816030071231637e-07,
+              "work": 2.7247449151555694e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 3.1495680730131426e-08,
+            "momentum_error": 9.260835462186191e-16,
+            "reciprocal_quantum_work_error": 8.619984728781833e-09,
+            "integrated_scalar_to_quantum_work": 0.01241347624944751,
+            "pauli_roundoff_clip": 1.8141044222375058e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006499721423339617,
+              "bath_energy": 0.0015367249191156904,
+              "daughter_plus": 0.0002829716389972831,
+              "daughter_minus": 0.0001731255663535198,
+              "daughter_total": 0.0004560972053508029,
+              "daughter_difference": 0.00010984607264376332
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 1.2988888276363083e-08,
+              "P": 4.3296294254543615e-09,
+              "work": -4.984453310108694e-19,
+              "momentum": 2.7982415885916096e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.553964870287157e-05,
+              "bath_energy": 0.0005907528793378523,
+              "daughter_plus": 0.0006393640912114783,
+              "daughter_minus": 0.00031880289565382387,
+              "daughter_total": 0.0005174554310464122,
+              "daughter_difference": 0.0011485797873890243
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.2988888276363083e-08,
+              "P": 4.75802715285535e-08,
+              "work": 3.766511687178479e-08
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 3.1521289800551244e-08,
+            "momentum_error": 7.795101466969782e-16,
+            "reciprocal_quantum_work_error": 8.617674732298811e-09,
+            "integrated_scalar_to_quantum_work": 0.012417211268530584,
+            "pauli_roundoff_clip": 2.3936408410918375e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.006502559636867735,
+              "bath_energy": 0.001526490886515764,
+              "daughter_plus": 0.00028081701151290894,
+              "daughter_minus": 0.00017227597155627749,
+              "daughter_total": 0.00045309298306918643,
+              "daughter_difference": 0.00010854103995663146
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 3.8816440520134337e-10,
+              "P": 1.2938817760111603e-10,
+              "work": -4.984453310108694e-19,
+              "momentum": 1.1992463951106898e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 1.2967266894142863e-06,
+              "bath_energy": 5.113286580092679e-05,
+              "daughter_plus": 3.5391826738352e-05,
+              "daughter_minus": 3.298435887133817e-05,
+              "daughter_total": 3.447627243506978e-05,
+              "daughter_difference": 3.921612126593474e-05
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 3.8816440520134337e-10,
+              "P": 1.4895990541802021e-09,
+              "work": 3.43630142696428e-09
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 3.152195771072286e-08,
+            "momentum_error": 7.728476765491193e-16,
+            "reciprocal_quantum_work_error": 8.61755173574691e-09,
+            "integrated_scalar_to_quantum_work": 0.012417244087971365,
+            "pauli_roundoff_clip": 2.540190280342358e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.00650279917610867,
+              "bath_energy": 0.0015255116322728888,
+              "daughter_plus": 0.00028062764964370903,
+              "daughter_minus": 0.0001722153863799527,
+              "daughter_total": 0.00045284303602366173,
+              "daughter_difference": 0.00010841226326375634
+            }
+          }
+        },
+        "2.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.005957975018645497,
+              "P": 0.0018949336271210718,
+              "work": -0.003137423905394993,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.10175797626536698,
+              "bath_energy": 5.579128824868601,
+              "daughter_plus": 3.0741039273415,
+              "daughter_minus": 4.891477091789018,
+              "daughter_total": 3.7652466188713487,
+              "daughter_difference": 0.18718263439265112
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005957975018645497,
+              "P": 0.0021757309238898863,
+              "work": 0.003137423905394993
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 7.088443609859496e-09,
+            "momentum_error": 7.191190025512089e-16,
+            "reciprocal_quantum_work_error": 7.92309022443017e-09,
+            "integrated_scalar_to_quantum_work": 0.002872218900825647,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.005841079917603532,
+              "bath_energy": 0.010037050775729264,
+              "daughter_plus": 0.001143346674661461,
+              "daughter_minus": 0.001014636470844564,
+              "daughter_total": 0.0021579831455060252,
+              "daughter_difference": 0.00012871020381689693
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": -3.895579120215279e-16,
+              "P": 0.00015389616799308436,
+              "work": -0.0030115509930623203,
+              "momentum": 0.0007762228623632095
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.4538017085604578,
+              "bath_energy": 1.5743270214453877,
+              "daughter_plus": 1.827410847014979,
+              "daughter_minus": 3.1373890863003853,
+              "daughter_total": 2.325592455424765,
+              "daughter_difference": 0.25350690079514193
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 5.6554795551395297e-05,
+              "P": 0.0013364315919213244,
+              "work": 0.0030115509930623203
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 9.328694372534585e-09,
+            "momentum_error": 5.822515940226049e-16,
+            "reciprocal_quantum_work_error": 9.520578522686177e-09,
+            "integrated_scalar_to_quantum_work": 0.0034116433355883,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.003551813193834054,
+              "bath_energy": 0.003927366634000405,
+              "daughter_plus": 0.0007934777432017503,
+              "daughter_minus": 0.0007125455629599811,
+              "daughter_total": 0.0015060233061617314,
+              "daughter_difference": 8.093218024176913e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.005741613175877807,
+              "P": 0.0019138710586259354,
+              "work": 0.0,
+              "momentum": 3.881677293484032e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.1746318587698577,
+              "bath_energy": 5.778771393343835,
+              "daughter_plus": 3.128311829304729,
+              "daughter_minus": 5.17582042160425,
+              "daughter_total": 3.906974476633176,
+              "daughter_difference": 0.12418263261396942
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005741613175877807,
+              "P": 0.0019138710586259354,
+              "work": 0.00015272313974670236
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.645469316358117e-08,
+            "momentum_error": 4.268860195816361e-16,
+            "reciprocal_quantum_work_error": 1.0065253017959362e-08,
+            "integrated_scalar_to_quantum_work": 0.008448252832774707,
+            "pauli_roundoff_clip": 2.871036741680655e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.0076383851785417015,
+              "bath_energy": 0.0103416234099067,
+              "daughter_plus": 0.0011585594491893988,
+              "daughter_minus": 0.0010636063824943963,
+              "daughter_total": 0.002222165831683795,
+              "daughter_difference": 9.495306669500244e-05
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 1.0128505712559725e-14,
+              "P": -3.8368174048737055e-07,
+              "work": -1.1629203163122334e-06,
+              "momentum": 6.432329603362243e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0005410977702651395,
+              "bath_energy": 0.0032032598054634377,
+              "daughter_plus": 0.0036192579018551815,
+              "daughter_minus": 0.002104817606072197,
+              "daughter_total": 0.0030433198597047094,
+              "daughter_difference": 0.0060249663288995305
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.3284178562824265e-07,
+              "P": 2.26064535587577e-06,
+              "work": 2.2242200237056828e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": true,
+            "energy_pressure_error": 1.6123593349348653e-08,
+            "momentum_error": 3.2935443702288416e-16,
+            "reciprocal_quantum_work_error": 1.041601362635985e-08,
+            "integrated_scalar_to_quantum_work": 0.008802092716738302,
+            "pauli_roundoff_clip": 1.496580637194711e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.00650630938933831,
+              "bath_energy": 0.0015207027800696385,
+              "daughter_plus": 0.00027962188213446175,
+              "daughter_minus": 0.00017185857304751216,
+              "daughter_total": 0.0004514804551819739,
+              "daughter_difference": 0.00010776330908694959
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.005741613175723152,
+              "P": 0.001913871058574384,
+              "work": 0.0,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.17701456020251907,
+              "bath_energy": 5.738092420773888,
+              "daughter_plus": 3.131638042654845,
+              "daughter_minus": 5.168974935670528,
+              "daughter_total": 3.9064324169406444,
+              "daughter_difference": 0.10469854050651384
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005741613175723152,
+              "P": 0.001913871058574384,
+              "work": 0.00015373996363008514
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.6458705953681374e-08,
+            "momentum_error": 3.450174678811014e-16,
+            "reciprocal_quantum_work_error": 1.0073743332806263e-08,
+            "integrated_scalar_to_quantum_work": 0.00844663510798722,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.007653879387363171,
+              "bath_energy": 0.010279563990786387,
+              "daughter_plus": 0.0011594929096609267,
+              "daughter_minus": 0.0010624274456028844,
+              "daughter_total": 0.002221920355263811,
+              "daughter_difference": 9.706546405804234e-05
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.00037996931121804176,
+              "P": 0.00012665643707276714,
+              "work": 1.014473729222729e-18,
+              "momentum": 0.0
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.017742350738279268,
+              "bath_energy": 0.292352331977879,
+              "daughter_plus": 0.05103780153192546,
+              "daughter_minus": 0.08393228900248598,
+              "daughter_total": 0.0002910028506013765,
+              "daughter_difference": 0.26543957432000304
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.00037996931121804176,
+              "P": 0.00012665643707276714,
+              "work": 1.9940502084839567e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.604226995688407e-08,
+            "momentum_error": 3.9389938890146466e-16,
+            "reciprocal_quantum_work_error": 1.037983002628766e-08,
+            "integrated_scalar_to_quantum_work": 0.008792168859837664,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.006618165537919896,
+              "bath_energy": 0.001971599328951149,
+              "daughter_plus": 0.00026631445671193257,
+              "daughter_minus": 0.0001866759753476332,
+              "daughter_total": 0.00045299043205956576,
+              "daughter_difference": 7.963848136429937e-05
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 5.4999928391248386e-05,
+              "P": 1.8333309463792745e-05,
+              "work": 1.014473729222729e-18,
+              "momentum": -1.1762658465103126e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.004255234753685214,
+              "bath_energy": 0.11111142473721987,
+              "daughter_plus": 0.11015126152659742,
+              "daughter_minus": 0.12110652401891331,
+              "daughter_total": 0.11431752179360041,
+              "daughter_difference": 0.092748682255804
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 5.4999928391248386e-05,
+              "P": 1.88259979985969e-05,
+              "work": 1.761931904436633e-05
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.6070612507412818e-08,
+            "momentum_error": 5.998625893208022e-16,
+            "reciprocal_quantum_work_error": 1.0353058334369668e-08,
+            "integrated_scalar_to_quantum_work": 0.008815816410688211,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.006530461644935174,
+              "bath_energy": 0.0013560792015736758,
+              "daughter_plus": 0.00024972499824008044,
+              "daughter_minus": 0.00015136397219648164,
+              "daughter_total": 0.0004010889704365621,
+              "daughter_difference": 9.83610260435988e-05
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 7.141833703550974e-06,
+              "P": 2.3806112345602755e-06,
+              "work": -3.550658052279551e-18,
+              "momentum": 3.528797539530938e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0002973810874938414,
+              "bath_energy": 0.00756633782528382,
+              "daughter_plus": 0.0017419906658891768,
+              "daughter_minus": 0.012568903295161337,
+              "daughter_total": 0.0037004082667733583,
+              "daughter_difference": 0.024475034878000356
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 7.141833703550974e-06,
+              "P": 2.3806112345602755e-06,
+              "work": 2.6607716744779967e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 1.607375499368402e-08,
+            "momentum_error": 6.116538718551256e-16,
+            "reciprocal_quantum_work_error": 1.0381720799730902e-08,
+            "integrated_scalar_to_quantum_work": 0.00879566460374914,
+            "pauli_roundoff_clip": 1.7386092565629951e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006504724550749483,
+              "bath_energy": 0.0015140465134439003,
+              "daughter_plus": 0.00028112644996858765,
+              "daughter_minus": 0.0001700564370451521,
+              "daughter_total": 0.00045118288701373975,
+              "daughter_difference": 0.00011107001292343555
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 3.9288881850784656e-07,
+              "P": 1.3096293958918394e-07,
+              "work": -5.579605510725009e-18,
+              "momentum": 3.881677293484032e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 2.515454528696584e-05,
+              "bath_energy": 0.0005682096164157273,
+              "daughter_plus": 0.000536370989577446,
+              "daughter_minus": 0.00029032071091380775,
+              "daughter_total": 0.00022198210229759747,
+              "daughter_difference": 0.0018495816826481883
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 3.9288881850784656e-07,
+              "P": 1.3096293958918394e-07,
+              "work": 4.801509929526755e-08
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 1.607385013979723e-08,
+            "momentum_error": 5.234380960441139e-16,
+            "reciprocal_quantum_work_error": 1.0380508113410413e-08,
+            "integrated_scalar_to_quantum_work": 0.008797490765919624,
+            "pauli_roundoff_clip": 2.2737367544323206e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.006502627169022101,
+              "bath_energy": 0.0015264564947473972,
+              "daughter_plus": 0.0002807881077779119,
+              "daughter_minus": 0.00017217106763883083,
+              "daughter_total": 0.0004529591754167427,
+              "daughter_difference": 0.00010861704013908106
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 2.8547780414623003e-08,
+              "P": 9.515926675021697e-09,
+              "work": -6.594079239947738e-18,
+              "momentum": 2.705411446973719e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 1.4972254891895635e-06,
+              "bath_energy": 3.83493513832147e-05,
+              "daughter_plus": 2.3845890562337738e-05,
+              "daughter_minus": 1.0121022786667163e-05,
+              "daughter_total": 1.0928354211387442e-05,
+              "daughter_difference": 7.780278137666918e-05
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.8547780414623003e-08,
+              "P": 9.515926675021697e-09,
+              "work": 1.1341265723587834e-09
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 1.6073865793941877e-08,
+            "momentum_error": 2.293718335214542e-16,
+            "reciprocal_quantum_work_error": 1.0380412087095681e-08,
+            "integrated_scalar_to_quantum_work": 0.008797537177327045,
+            "pauli_roundoff_clip": 2.902122986370159e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.00650280047991041,
+              "bath_energy": 0.001525648145416393,
+              "daughter_plus": 0.0002806308898673185,
+              "daughter_minus": 0.00017222281003477448,
+              "daughter_total": 0.00045285369990209296,
+              "daughter_difference": 0.000108408079832544
+            }
+          }
+        },
+        "3.25": {
+          "bare": {
+            "jump_over_reference_density": {
+              "rho": 0.005342976245684754,
+              "P": 0.0015595184702058302,
+              "work": -0.0023617255587886437,
+              "momentum": 1.0379565760836808e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.01035682449799203,
+              "bath_energy": 4.815036839087241,
+              "daughter_plus": 2.9255920388294885,
+              "daughter_minus": 5.855371780267383,
+              "daughter_total": 4.039780305553774,
+              "daughter_difference": 1.728401804960144
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.005342976245684754,
+              "P": 0.0019510182572099481,
+              "work": 0.0025609843443006306
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 4.362342709285372e-09,
+            "momentum_error": 3.097320816702138e-16,
+            "reciprocal_quantum_work_error": 3.2176114086375027e-09,
+            "integrated_scalar_to_quantum_work": 0.0006025660071716378,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.006570139006246712,
+              "bath_energy": 0.00887135995818117,
+              "daughter_plus": 0.0011016686573830203,
+              "daughter_minus": 0.0011806394425520424,
+              "daughter_total": 0.0022823080999350626,
+              "daughter_difference": -7.897078516902207e-05
+            }
+          },
+          "dressed": {
+            "jump_over_reference_density": {
+              "rho": -1.3192241497291943e-15,
+              "P": 8.041237100209333e-05,
+              "work": -0.002107171527619545,
+              "momentum": 0.0010091650543756377
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.4902890189801301,
+              "bath_energy": 2.771382699658744,
+              "daughter_plus": 3.0444564544992962,
+              "daughter_minus": 5.281651606043705,
+              "daughter_total": 3.8952564491090884,
+              "daughter_difference": 0.5093576139718315
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.0907538127255794e-05,
+              "P": 0.0008025051249840458,
+              "work": 0.0022352311208722014
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 5.282241755111272e-09,
+            "momentum_error": 2.1797088097757328e-16,
+            "reciprocal_quantum_work_error": 4.763970493995192e-09,
+            "integrated_scalar_to_quantum_work": 0.0011490230037563937,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.004901960784313725,
+            "terminal": {
+              "sterile_count": 0.0033145438493720793,
+              "bath_energy": 0.005753582375237612,
+              "daughter_plus": 0.0011350264795729746,
+              "daughter_minus": 0.001081832741998468,
+              "daughter_total": 0.0022168592215714425,
+              "daughter_difference": 5.319373757450667e-05
+            }
+          },
+          "separated": {
+            "jump_over_reference_density": {
+              "rho": 0.004830929209946541,
+              "P": 0.001610309736648759,
+              "work": 0.0,
+              "momentum": 3.840439331509619e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.19749767116316289,
+              "bath_energy": 4.918043552141108,
+              "daughter_plus": 3.1389612159375497,
+              "daughter_minus": 5.538177595500969,
+              "daughter_total": 4.0513774981698525,
+              "daughter_difference": 0.6722257147657525
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.004830929209946541,
+              "P": 0.001610309736648759,
+              "work": 0.00010682177040327443
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.1109859971168987e-08,
+            "momentum_error": 2.1175810965975621e-16,
+            "reciprocal_quantum_work_error": 1.060542929374227e-08,
+            "integrated_scalar_to_quantum_work": 0.0050008825477971895,
+            "pauli_roundoff_clip": 2.9398705692074145e-13,
+            "stored_covariance_fraction": 0.889273356401384,
+            "terminal": {
+              "sterile_count": 0.007787076771721585,
+              "bath_energy": 0.009028505932471054,
+              "daughter_plus": 0.0011615480673029688,
+              "daughter_minus": 0.0011260119216112653,
+              "daughter_total": 0.002287559988914234,
+              "daughter_difference": 3.553614569170357e-05
+            }
+          },
+          "dressed_half": {
+            "jump_over_reference_density": {
+              "rho": 5.936508673781375e-15,
+              "P": 7.562512864065561e-07,
+              "work": -1.36849279981249e-06,
+              "momentum": 7.570990420044667e-07
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 5.624010846729091e-05,
+              "bath_energy": 0.011824482764148384,
+              "daughter_plus": 0.004084722772375557,
+              "daughter_minus": 0.03208632420598975,
+              "daughter_total": 0.009671040354940015,
+              "daughter_difference": 0.06154290899019646
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.818876274637193e-08,
+              "P": 1.406416026660323e-06,
+              "work": 1.6719406684617924e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.0871612660400274e-08,
+            "momentum_error": 2.0240153233631655e-16,
+            "reciprocal_quantum_work_error": 1.0475032305248175e-08,
+            "integrated_scalar_to_quantum_work": 0.005126817994608014,
+            "pauli_roundoff_clip": 1.0680345496894006e-13,
+            "stored_covariance_fraction": 0.25245098039215685,
+            "terminal": {
+              "sterile_count": 0.006503156461423127,
+              "bath_energy": 0.001507550331639366,
+              "daughter_plus": 0.00028178390864203924,
+              "daughter_minus": 0.00016669512599116354,
+              "daughter_total": 0.00044847903463320277,
+              "daughter_difference": 0.0001150887826508757
+            }
+          },
+          "r0": {
+            "jump_over_reference_density": {
+              "rho": 0.004830929209811057,
+              "P": 0.0016103097366036417,
+              "work": 0.0,
+              "momentum": 1.0379565760836808e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.20076609582380867,
+              "bath_energy": 4.889798625092748,
+              "daughter_plus": 3.152014219538206,
+              "daughter_minus": 5.5759089087661415,
+              "daughter_total": 4.073815604234661,
+              "daughter_difference": 0.6983745322540162
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.004830929209811057,
+              "P": 0.0016103097366036417,
+              "work": 0.00010657838404760815
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.1118039539302913e-08,
+            "momentum_error": 4.596700429200205e-16,
+            "reciprocal_quantum_work_error": 1.060257352403823e-08,
+            "integrated_scalar_to_quantum_work": 0.005001548140574494,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.008073817762399077,
+            "terminal": {
+              "sterile_count": 0.00780833065335153,
+              "bath_energy": 0.0089854157643823,
+              "daughter_plus": 0.0011652112306702552,
+              "daughter_minus": 0.001132510048640404,
+              "daughter_total": 0.002297721279310659,
+              "daughter_difference": 3.270118202985126e-05
+            }
+          },
+          "r1": {
+            "jump_over_reference_density": {
+              "rho": 0.0003539050723360325,
+              "P": 0.00011796835744530021,
+              "work": 3.091931600927799e-18,
+              "momentum": 1.0379565760836808e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0665120403134446,
+              "bath_energy": 0.8057985653679407,
+              "daughter_plus": 0.3765887963782284,
+              "daughter_minus": 0.6675731440285857,
+              "daughter_total": 0.4872494516373608,
+              "daughter_difference": 0.08564368596505623
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 0.0003539050723360325,
+              "P": 0.00011796835744530021,
+              "work": 9.98272999176525e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.087156336649798e-08,
+            "momentum_error": 3.2165270406244277e-16,
+            "reciprocal_quantum_work_error": 1.0415696699488632e-08,
+            "integrated_scalar_to_quantum_work": 0.005138893126861094,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.03517877739331027,
+            "terminal": {
+              "sterile_count": 0.0069353046238656395,
+              "bath_energy": 0.0027549075833302405,
+              "daughter_plus": 0.00038632255111427876,
+              "daughter_minus": 0.0002871912261341829,
+              "daughter_total": 0.0006735137772484617,
+              "daughter_difference": 9.913132498009586e-05
+            }
+          },
+          "r2": {
+            "jump_over_reference_density": {
+              "rho": 7.300075754688132e-05,
+              "P": 2.4333585848916463e-05,
+              "work": 1.030643866975933e-18,
+              "momentum": 1.0379565760836808e-17
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0017172423393226716,
+              "bath_energy": 0.18713732673526823,
+              "daughter_plus": 0.03769817550279769,
+              "daughter_minus": 0.07175764836713398,
+              "daughter_total": 0.05065091201726107,
+              "daughter_difference": 0.01640574732504785
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 7.300075754688132e-05,
+              "P": 2.4333585848916463e-05,
+              "work": 4.688683841222101e-06
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.083885020098819e-08,
+            "momentum_error": 2.0238675794966998e-16,
+            "reciprocal_quantum_work_error": 1.0461310576814149e-08,
+            "integrated_scalar_to_quantum_work": 0.005126418518684789,
+            "pauli_roundoff_clip": 0.0,
+            "stored_covariance_fraction": 0.08996539792387544,
+            "terminal": {
+              "sterile_count": 0.006513957611355308,
+              "bath_energy": 0.0018110844069759288,
+              "daughter_plus": 0.00029121710673630006,
+              "daughter_minus": 0.00018457924574729739,
+              "daughter_total": 0.00047579635248359744,
+              "daughter_difference": 0.00010663786098900267
+            }
+          },
+          "r4": {
+            "jump_over_reference_density": {
+              "rho": 1.767135177331117e-05,
+              "P": 5.890450591015776e-06,
+              "work": 2.061287733951866e-18,
+              "momentum": 1.245547891300417e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 0.0001121417068295043,
+              "bath_energy": 0.0255412612973384,
+              "daughter_plus": 0.002237402074805265,
+              "daughter_minus": 0.0033168535446923444,
+              "daughter_total": 0.0026479149011572533,
+              "daughter_difference": 0.0005226791471839061
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 1.767135177331117e-05,
+              "P": 5.890450591015776e-06,
+              "work": 1.3007843899073098e-07
+            },
+            "jump_pass": false,
+            "terminal_pass": false,
+            "energy_pressure_error": 2.0848866855160963e-08,
+            "momentum_error": 3.373299261514076e-16,
+            "reciprocal_quantum_work_error": 1.0458009446038146e-08,
+            "integrated_scalar_to_quantum_work": 0.005124585261227595,
+            "pauli_roundoff_clip": 1.7053025658242404e-13,
+            "stored_covariance_fraction": 0.2825836216839677,
+            "terminal": {
+              "sterile_count": 0.006503519977819518,
+              "bath_energy": 0.0015645551236720767,
+              "daughter_plus": 0.00028000968281232763,
+              "daughter_minus": 0.00017164983492494316,
+              "daughter_total": 0.0004516595177372708,
+              "daughter_difference": 0.00010835984788738447
+            }
+          },
+          "r6": {
+            "jump_over_reference_density": {
+              "rho": 2.755049967431575e-06,
+              "P": 9.183499889239877e-07,
+              "work": 2.3189487006958496e-18,
+              "momentum": 4.8783959075933e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.639985780045626e-07,
+              "bath_energy": 0.004492459981157296,
+              "daughter_plus": 2.7926880512530076e-05,
+              "daughter_minus": 4.3037742561369966e-05,
+              "daughter_total": 9.39203158107016e-07,
+              "daughter_difference": 0.00014065512224400274
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 2.755049967431575e-06,
+              "P": 9.183499889239877e-07,
+              "work": 5.502683846426028e-09
+            },
+            "jump_pass": false,
+            "terminal_pass": true,
+            "energy_pressure_error": 2.0849043158577274e-08,
+            "momentum_error": 1.9721120612917235e-16,
+            "reciprocal_quantum_work_error": 1.0458300433450319e-08,
+            "integrated_scalar_to_quantum_work": 0.00512459123253593,
+            "pauli_roundoff_clip": 2.3159252293680765e-13,
+            "stored_covariance_fraction": 0.5859284890426759,
+            "terminal": {
+              "sterile_count": 0.006502788376759773,
+              "bath_energy": 0.0015324432904487827,
+              "daughter_plus": 0.00028064541925260225,
+              "daughter_minus": 0.00017221365497548682,
+              "daughter_total": 0.00045285907422808907,
+              "daughter_difference": 0.00010843176427711542
+            }
+          },
+          "r7": {
+            "jump_over_reference_density": {
+              "rho": 4.014098487891957e-07,
+              "P": 1.3380328270986122e-07,
+              "work": 4.122575467903732e-18,
+              "momentum": 2.5948914402092023e-16
+            },
+            "terminal_relative_errors": {
+              "sterile_count": 3.599210674297771e-08,
+              "bath_energy": 0.0006654948908322272,
+              "daughter_plus": 1.1056842156365165e-06,
+              "daughter_minus": 1.2393987232438698e-06,
+              "daughter_total": 2.1385475213101978e-07,
+              "daughter_difference": 4.8308794603032634e-06
+            },
+            "terminal_scales": {
+              "sterile_count": 0.006502790743766357,
+              "bath_energy": 0.0015255896400432204,
+              "daughter_plus": 0.00028063758192038463,
+              "daughter_minus": 0.00017222106698143121,
+              "daughter_total": 0.00045285864890181585,
+              "daughter_difference": 0.00010841651493895342
+            },
+            "downstream_normalized_stress_error": {
+              "rho": 4.014098487891957e-07,
+              "P": 1.3380328270986122e-07,
+              "work": 3.456095706064335e-11
+            },
+            "jump_pass": true,
+            "terminal_pass": true,
+            "energy_pressure_error": 2.084908756749826e-08,
+            "momentum_error": 1.4531386232129982e-16,
+            "reciprocal_quantum_work_error": 1.0458328810620447e-08,
+            "integrated_scalar_to_quantum_work": 0.00512459381785373,
+            "pauli_roundoff_clip": 2.9953817204386723e-13,
+            "stored_covariance_fraction": 0.779123414071511,
+            "terminal": {
+              "sterile_count": 0.006502790977815496,
+              "bath_energy": 0.0015266049121541757,
+              "daughter_plus": 0.00028063727162384,
+              "daughter_minus": 0.00017222128043200175,
+              "daughter_total": 0.00045285855205584173,
+              "daughter_difference": 0.00010841599119183824
+            }
+          }
+        }
+      },
+      "static_projection": {
+        "bare": {
+          "rho_change": 0.015296546407081557,
+          "count_change": -1.6263032587282567e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "dressed": {
+          "rho_change": 0.0,
+          "count_change": -5.963111948670274e-19,
+          "pauli_roundoff_clip": 3.1086244689504383e-15
+        },
+        "separated": {
+          "rho_change": 0.015270243740078016,
+          "count_change": 1.8892222855559915e-16,
+          "pauli_roundoff_clip": 2.6645352591003757e-15
+        },
+        "dressed_half": {
+          "rho_change": 2.6645352591003757e-15,
+          "count_change": 1.1118493278838848e-16,
+          "pauli_roundoff_clip": 3.1086244689504383e-15
+        },
+        "r0": {
+          "rho_change": 0.015270243740074463,
+          "count_change": -1.0842021724855044e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r1": {
+          "rho_change": 0.0008574312133040607,
+          "count_change": -1.0462550964485118e-17,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r2": {
+          "rho_change": 5.946693436786887e-05,
+          "count_change": -2.168404344971009e-19,
+          "pauli_roundoff_clip": 0.0
+        },
+        "r4": {
+          "rho_change": 5.283431887548318e-07,
+          "count_change": 7.106945240642482e-17,
+          "pauli_roundoff_clip": 1.7763568394002505e-15
+        },
+        "r6": {
+          "rho_change": 3.064414499931445e-09,
+          "count_change": 1.183406671267928e-16,
+          "pauli_roundoff_clip": 2.4424906541753444e-15
+        },
+        "r7": {
+          "rho_change": 9.734879569123223e-11,
+          "count_change": 2.2659825404947043e-16,
+          "pauli_roundoff_clip": 2.6645352591003757e-15
+        }
+      },
+      "boundary_spreads": {
+        "bare": {
+          "sterile_count": 0.112114800763359,
+          "bath_energy": 0.9053113212506736,
+          "daughter_plus": 0.4196651055661759,
+          "daughter_minus": 0.9638946884783652,
+          "daughter_total": 0.38655965930057956,
+          "daughter_difference": 1.915584439352795
+        },
+        "dressed": {
+          "sterile_count": 0.1149239121838902,
+          "bath_energy": 2.0836759239141833,
+          "daughter_plus": 2.166491397588618,
+          "daughter_minus": 3.7802045524093044,
+          "daughter_total": 2.78018267189493,
+          "daughter_difference": 0.3969132781812787
+        },
+        "separated": {
+          "sterile_count": 0.022865812393305197,
+          "bath_energy": 1.0500944030469999,
+          "daughter_plus": 0.5745872615545389,
+          "daughter_minus": 0.36235717389671895,
+          "daughter_total": 0.435866822321511,
+          "daughter_difference": 1.702069285471868
+        },
+        "dressed_half": {
+          "sterile_count": 0.00048485766179784856,
+          "bath_energy": 0.010488957626112051,
+          "daughter_plus": 0.0108451373819073,
+          "daughter_minus": 0.039862787280350497,
+          "daughter_total": 0.008438965750329578,
+          "daughter_difference": 0.09139534594252542
+        },
+        "r0": {
+          "sterile_count": 0.023751535621289586,
+          "bath_energy": 1.041434301229894,
+          "daughter_plus": 0.5736758606849417,
+          "daughter_minus": 0.4069339730956137,
+          "daughter_total": 0.44097344191555815,
+          "daughter_difference": 1.7216533636343532
+        },
+        "r1": {
+          "sterile_count": 0.04876968957516533,
+          "bath_energy": 0.5134462333900617,
+          "daughter_plus": 0.4276265979101539,
+          "daughter_minus": 0.5836408550260996,
+          "daughter_total": 0.48695844878675937,
+          "daughter_difference": 0.5736374448045848
+        },
+        "r2": {
+          "sterile_count": 0.004623268603525681,
+          "bath_energy": 0.2982487514724881,
+          "daughter_plus": 0.1478494370293951,
+          "daughter_minus": 0.1928641723860473,
+          "daughter_total": 0.1649684338108615,
+          "daughter_difference": 0.21035737891681308
+        },
+        "r4": {
+          "sterile_count": 0.0007693815789263269,
+          "bath_energy": 0.03310759912262222,
+          "daughter_plus": 0.010554381792655906,
+          "daughter_minus": 0.01782087036250102,
+          "daughter_total": 0.010851770964252093,
+          "daughter_difference": 0.02499771402518426
+        },
+        "r6": {
+          "sterile_count": 3.517565012486701e-05,
+          "bath_energy": 0.003924250364741568,
+          "daughter_plus": 0.0006114372106989482,
+          "daughter_minus": 0.0006091236065676317,
+          "daughter_total": 0.0005165162278883052,
+          "daughter_difference": 0.0017089265604041854
+        },
+        "r7": {
+          "sterile_count": 1.4612333824465857e-06,
+          "bath_energy": 0.000716627756633154,
+          "daughter_plus": 3.428614252271548e-05,
+          "daughter_minus": 4.310538165800534e-05,
+          "daughter_total": 3.426241768293876e-05,
+          "daughter_difference": 7.297190191636591e-05
+        }
+      },
+      "passes_all_boundaries": {
+        "bare": false,
+        "dressed": false,
+        "separated": false,
+        "dressed_half": false,
+        "r0": false,
+        "r1": false,
+        "r2": false,
+        "r4": false,
+        "r6": false,
+        "r7": true
+      }
+    },
+    "bath_spacing": {
+      "parameters": {
+        "longitudinal": 1,
+        "transverse": 2,
+        "cutoff": 5.5,
+        "bath_bins": 12,
+        "dt": 0.01
+      },
+      "dimension": 300,
+      "recurrence": 14.741976027193337,
+      "ledger": {
+        "energy_pressure_error": 1.0057122334927726e-07,
+        "momentum_error": 1.2003555477143959e-15,
+        "reciprocal_quantum_work_error": 8.639839792377821e-08,
+        "integrated_scalar_to_quantum_work": 0.017027721099382182
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.792016635660227,
+        "P": -1.2926991006788973,
+        "H": 0.04830476836077284,
+        "rho_q": 0.0018531420545198074,
+        "P_q": 0.00025064544229636,
+        "rho_scalar": 1.7901634936057071,
+        "gradient": 0.005603077635682382,
+        "bath_energy": 4.214437744209931e-05,
+        "interaction_energy": 5.106005791307919e-06,
+        "daughter_plus": 1.6595084064182535e-05,
+        "daughter_minus": -9.254462044749781e-06,
+        "bath_holes": 7.3406219740501655e-06,
+        "sterile_count": 0.0006745525376890345,
+        "momentum": -0.06743717677393986,
+        "work": 0.005077738757119691,
+        "daughter_total": 7.340622019432754e-06,
+        "daughter_difference": 2.5849546108932316e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.333148358570119,
+        "a": 1.2367894972833404,
+        "rho": 1.6519070245166074,
+        "P": -1.4257314469470586,
+        "H": 0.046377988403416275,
+        "rho_q": 0.009192146424696861,
+        "P_q": 0.002252826876336074,
+        "rho_scalar": 1.6427148780919105,
+        "gradient": 0.0020641708918688437,
+        "bath_energy": 0.0015145739272783973,
+        "interaction_energy": -0.00022401088349970988,
+        "daughter_plus": 0.00027767910469197587,
+        "daughter_minus": 0.00017002100996099223,
+        "bath_holes": 0.00044770011461126025,
+        "sterile_count": 0.006508440353020512,
+        "momentum": -0.0674371767739413,
+        "work": 0.003330522908097124,
+        "daughter_total": 0.0004477001146529681,
+        "daughter_difference": 0.00010765809473098364
+      },
+      "max_abs_work": 0.005939481551163652
+    },
+    "bath_cutoff": {
+      "parameters": {
+        "longitudinal": 1,
+        "transverse": 2,
+        "cutoff": 7.2,
+        "bath_bins": 11,
+        "dt": 0.01
+      },
+      "dimension": 276,
+      "recurrence": 10.147408273798325,
+      "ledger": {
+        "energy_pressure_error": 1.0054780141821595e-07,
+        "momentum_error": 3.794674613264999e-16,
+        "reciprocal_quantum_work_error": 8.652516486545365e-08,
+        "integrated_scalar_to_quantum_work": 0.017017963153536174
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.792015579427548,
+        "P": -1.2926982634356965,
+        "H": 0.048304754103922404,
+        "rho_q": 0.001852251941501848,
+        "P_q": 0.00025143174985705247,
+        "rho_scalar": 1.7901633274860462,
+        "gradient": 0.005603073944134365,
+        "bath_energy": 5.445927408764817e-05,
+        "interaction_energy": 9.180068201372626e-07,
+        "daughter_plus": 1.656305894312494e-05,
+        "daughter_minus": -8.116549129446736e-06,
+        "bath_holes": 8.44650984821449e-06,
+        "sterile_count": 0.0006686766027085074,
+        "momentum": -0.06743706031851482,
+        "work": 0.005071558328462022,
+        "daughter_total": 8.446509813678205e-06,
+        "daughter_difference": 2.4679608072571677e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.333148408824174,
+        "a": 1.236789447208995,
+        "rho": 1.6519066935001716,
+        "P": -1.425727798100839,
+        "H": 0.046377983732157665,
+        "rho_q": 0.00918688199123727,
+        "P_q": 0.002252215345282184,
+        "rho_scalar": 1.6427198115089343,
+        "gradient": 0.0020641919314503994,
+        "bath_energy": 0.0016390836282291635,
+        "interaction_energy": -0.00025852325478458317,
+        "daughter_plus": 0.0002918565584025777,
+        "daughter_minus": 0.00017155994395491917,
+        "bath_holes": 0.0004634165023922332,
+        "sterile_count": 0.00645640976000394,
+        "momentum": -0.06743706031851467,
+        "work": 0.003327853786492256,
+        "daughter_total": 0.0004634165023574969,
+        "daughter_difference": 0.00012029661444765854
+      },
+      "max_abs_work": 0.005936396835674296
+    },
+    "longitudinal": {
+      "parameters": {
+        "longitudinal": 2,
+        "transverse": 2,
+        "cutoff": 5.5,
+        "bath_bins": 8,
+        "dt": 0.01
+      },
+      "dimension": 340,
+      "recurrence": 9.827984018128891,
+      "ledger": {
+        "energy_pressure_error": 1.4707943885028385e-07,
+        "momentum_error": 1.6175478915862808e-15,
+        "reciprocal_quantum_work_error": 9.215593161129197e-08,
+        "integrated_scalar_to_quantum_work": 0.01872554725684225
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.7931201090984883,
+        "P": -1.2925549979007527,
+        "H": 0.048319629798072035,
+        "rho_q": 0.003078489666602735,
+        "P_q": 0.0005003053510848806,
+        "rho_scalar": 1.7900416194318856,
+        "gradient": 0.005600369320708571,
+        "bath_energy": 5.662649543758391e-05,
+        "interaction_energy": 1.5819915876954388e-05,
+        "daughter_plus": 1.4199201221327907e-05,
+        "daughter_minus": -5.018892641980486e-06,
+        "bath_holes": 9.18030855667773e-06,
+        "sterile_count": 0.0010014793971430474,
+        "momentum": -0.06756537951753327,
+        "work": 0.007189540081269395,
+        "daughter_total": 9.180308579347421e-06,
+        "daughter_difference": 1.9218093863308393e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.3333346664663794,
+        "a": 1.236844343870232,
+        "rho": 1.65236896490361,
+        "P": -1.4263862272207741,
+        "H": 0.04638446524281114,
+        "rho_q": 0.01051168567682072,
+        "P_q": 0.002681003903859124,
+        "rho_scalar": 1.6418572792267891,
+        "gradient": 0.002068921167531094,
+        "bath_energy": 0.0016323261206747978,
+        "interaction_energy": -0.0001856299484427434,
+        "daughter_plus": 0.0002898791737405721,
+        "daughter_minus": 0.00019243067093858372,
+        "bath_holes": 0.00048230984466623994,
+        "sterile_count": 0.007393668633215863,
+        "momentum": -0.06756537951753487,
+        "work": 0.0039860717891878955,
+        "daughter_total": 0.0004823098446791558,
+        "daughter_difference": 9.744850280198839e-05
+      },
+      "max_abs_work": 0.007189540081269395
+    },
+    "transverse": {
+      "parameters": {
+        "longitudinal": 1,
+        "transverse": 3,
+        "cutoff": 5.5,
+        "bath_bins": 8,
+        "dt": 0.01
+      },
+      "dimension": 204,
+      "recurrence": 9.593026115640368,
+      "ledger": {
+        "energy_pressure_error": 8.590551869858132e-08,
+        "momentum_error": 6.65992096205786e-16,
+        "reciprocal_quantum_work_error": 7.84634741692007e-08,
+        "integrated_scalar_to_quantum_work": 0.014969996880505631
+      },
+      "initial": {
+        "t": 0.0,
+        "pressure_work": 0.0,
+        "a": 1.0,
+        "rho": 1.792047921096146,
+        "P": -1.292682753234299,
+        "H": 0.04830519129027875,
+        "rho_q": 0.0018319713528418546,
+        "P_q": 0.0002516011692659248,
+        "rho_scalar": 1.7902159497433041,
+        "gradient": 0.005604243327628986,
+        "bath_energy": 4.0695590849182395e-05,
+        "interaction_energy": 5.775162976173753e-06,
+        "daughter_plus": 1.5481232321623117e-05,
+        "daughter_minus": -8.461402179077123e-06,
+        "bath_holes": 7.01983014161911e-06,
+        "sterile_count": 0.0006598624039346106,
+        "momentum": -0.06744921889119715,
+        "work": 0.004959720657862629,
+        "daughter_total": 7.0198301425459944e-06,
+        "daughter_difference": 2.394263450070024e-05
+      },
+      "terminal": {
+        "t": 4.5,
+        "pressure_work": -1.3332648302241854,
+        "a": 1.2367924760295552,
+        "rho": 1.6519731835399016,
+        "P": -1.425147564738747,
+        "H": 0.04637891754468719,
+        "rho_q": 0.008156240906677105,
+        "P_q": 0.0019318815492140543,
+        "rho_scalar": 1.6438169426332245,
+        "gradient": 0.0020674543346732664,
+        "bath_energy": 0.0014816315122566392,
+        "interaction_energy": -0.0002518309035083109,
+        "daughter_plus": 0.0002644907795843415,
+        "daughter_minus": 0.00018051049944242193,
+        "bath_holes": 0.0004450012790278013,
+        "sterile_count": 0.005791310986444975,
+        "momentum": -0.06744921889119791,
+        "work": 0.0021118905925371864,
+        "daughter_total": 0.00044500127902676344,
+        "daughter_difference": 8.398028014191958e-05
+      },
+      "max_abs_work": 0.005649568637182088
+    }
+  },
+  "terminal_resolution_differences": {
+    "half_step": {
+      "rho_q": -1.5162336485685657e-05,
+      "bath_energy": -1.192658265936064e-05,
+      "daughter_plus": -8.232387949336228e-06,
+      "daughter_minus": -5.465615935618118e-06,
+      "daughter_total": -7.1801929377723894e-06,
+      "daughter_difference": -1.2627410386434335e-05
+    },
+    "bath_spacing": {
+      "rho_q": 0.00015808349394297316,
+      "bath_energy": -0.007232466822236661,
+      "daughter_plus": -0.01055013077815059,
+      "daughter_minus": -0.012780006119795573,
+      "daughter_total": -0.011398145612469768,
+      "daughter_difference": -0.0070079696930046564
+    },
+    "bath_cutoff": {
+      "rho_q": -0.00041471696379113965,
+      "bath_energy": 0.07438070929503082,
+      "daughter_plus": 0.039968181485261045,
+      "daughter_minus": -0.0038442492482467783,
+      "daughter_total": 0.023306446860136942,
+      "daughter_difference": 0.1095643083590625
+    },
+    "longitudinal": {
+      "rho_q": 0.1437314980724378,
+      "bath_energy": 0.06995132226786027,
+      "daughter_plus": 0.032922195805520804,
+      "daughter_minus": 0.11734076764946422,
+      "daughter_total": 0.06502632282945298,
+      "daughter_difference": -0.10117686097342227
+    },
+    "transverse": {
+      "rho_q": -0.11255435924954893,
+      "bath_energy": -0.02882544390248809,
+      "daughter_plus": -0.05754389564021778,
+      "daughter_minus": 0.04812678265906967,
+      "daughter_total": -0.017357656940317434,
+      "daughter_difference": -0.2254019626461483
+    }
+  },
+  "scientific_acceptance": false
+}

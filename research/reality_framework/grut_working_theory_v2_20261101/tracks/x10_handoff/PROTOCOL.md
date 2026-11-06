@@ -52,3 +52,76 @@ any stricter or weaker observational agreement separately.
 This is a sufficiency test for the carried state. A Markov
 transport equation and a spatially resolved H55 relic yield
 have separate tests.
+
+For the channel-resolving control add a homogeneous release
+speed of 0.30 through the same ramp, while keeping the stated
+spatial harmonic. Track the sum and signed difference of the
+two daughter counts in addition to the separate channels.
+For bath energy use a floor of 1e-3 of its own peak. Test the
+bare projections on the interacting static vacuum to expose
+any energy change caused by discarding vacuum dressing.
+
+## Bath directions and the physical H55 input check
+
+The fixed-order hierarchy identifies a small omitted boundary
+energy even when downstream counts agree. On the same three
+handoff times choose each signed bath leg's order using its
+measured omitted energy, with an equal share of half the jump
+budget for every leg and a minimum order of one. Compare that
+choice with one additional Krylov direction per leg, capped
+at its full dimension. Keep every carried entry from the true
+covariance. No occupation is retuned. Test at the reference,
+half timestep, and independent bath spacing. Separately
+check the exact instantaneous derivative hierarchy at the
+middle boundary using the frozen Hamiltonian.
+
+Use the reconstructed H55 seed to define the first axial mode
+of the actual initial scalar data. Drive an N1 sterile–bath
+probe with that mode along the early X9 homogeneous trajectory
+from -0.02 to 0.10. The axial perturbation evolves by the
+linear scalar Hessian on that prescribed metric. Use three
+neighboring longitudinal modes, one transverse shell at
+\(M_1/2\), the archived N1 mass, phase scale and width,
+and a bath cutoff \(3M_1\). Use the whole coupled negative
+spectral projector with its first adiabatic graph correction
+as an explicit initial prescription. Compare the seed with
+its homogeneous projection and halve the time step. This
+is a preproduction probe with a prescribed background and
+one physical momentum shell. It does not determine the
+interacting three-dimensional H55 source.
+
+After the state-retention test, also evolve an explicit hybrid
+closure. Keep the selected sterile and bath block coherent.
+Keep the remaining signed channel populations in their projected
+bath eigenmodes and drop the Hamiltonian matrix elements crossing
+the retained–discarded boundary. Use the same physical mass,
+pressure and vacuum matching table. The omitted coupling has
+zero expectation at the pinched handoff state. Compare both
+adaptive choices at all three boundaries against the fully
+coupled reference on the same grids. Distinguish a successful
+state splice from a successful dynamical closure.
+
+The physical preproduction probe also tests reciprocal work on
+its single axial mode. Keep the archived homogeneous fields and
+metric prescribed. Evolve the three scalar Fourier coefficients
+with the linear Hessian and add the exact N1 mass impulse to the
+sigma coefficient. Subtract a simultaneously evolved homogeneous
+quantum reference in the energy ledger. Compare timestep, bath
+spacing and a zero-bath control. This adds live feedback for one
+mode and one momentum shell, with the other spatial modes and
+the background still external.
+
+Apply the same hybrid rule, with no refitting, at the independent
+bath cutoff, longitudinal cutoff and transverse quadrature.
+Compare each handoff to its own coupled reference and report
+the change between the coupled references separately. Record the
+largest direct endpoint change when moving the boundary and the
+maximum energy and pressure error along each overlap. Keep the
+original 1% and 1e-6 handoff criteria.
+
+One additional direction misses the earliest hybrid boundary
+when the bath cutoff is widened. Preserve that miss. Test
+two additional directions with the same energy rule, without
+changing any thresholds, and use a further cutoff 8.5 with
+thirteen bins per sign as a holdout. Evaluate the direct
+boundary-shift spread with the same downstream scales.
