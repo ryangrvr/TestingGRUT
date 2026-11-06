@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/alp_conversion/ | Codex | Frozen ALP conversion, nonlinear benchmark and inference | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6136,3 +6135,21 @@ blocks on the miss. The independent-observable screen gives
 cogenesis benchmark and identifies the transfer yield required for
 an independent test. Claims released.
 [Report](research/reality_framework/grut_research_reset_20261106/feedback_source/REPORT.md)
+
+### 2026-11-06 · Codex · Frozen ALP cogenesis conversion test
+
+Qualified the homogeneous action and rotating/librating Lamé bands.
+The weak 3D mode matches independent monodromy to 2.92e-5 relative.
+Eight full 3D reduced-hierarchy runs fragment and miss the late
+particle gate. The spacing shift is 6.72% in the quadratic proxy.
+The qualification and base histories replayed bit for bit and common
+Gaussian modes match across the grid changes. At physical m/H =
+3.60e5, linear onset is at a = 0.448 or 0.523 for the two specified
+seed classes, before the 3D ladder starts. A direct resonance sweep
+checks the large gain. Physical C and the coupling band remain unset.
+After the conversion decision, interpolated the public ORGAN Phase 1b
+curve at the frozen mass. The nominal C crossing is 1.794. The
+retrospective physical interpretation remains unresolved and the
+prospective interval stays unopened. H55 feedback stays paused.
+Claims released.
+[Report](research/reality_framework/grut_research_reset_20261106/alp_conversion/REPORT.md)
