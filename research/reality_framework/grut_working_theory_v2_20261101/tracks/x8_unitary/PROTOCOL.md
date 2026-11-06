@@ -54,3 +54,53 @@ as a sensitivity wherever its assumptions fail.
 
 The physical source, spatial H55 initial data and the transport
 overlap must all qualify before updating a relic abundance.
+
+## Follow-up after the first source run
+
+The original unitary vertex cancels the growing contact edge, while
+the residual paired bubble and the all-mode kinetic subtraction
+have different supports. The original run misses instantaneous
+work convergence between the two largest cylinders and has a
+pressure-work budget miss at the original wide timestep. Keep
+these results. Subtract the average of the two zero-external
+kinetic integrands on each momentum pair, using the same Fourier
+coefficient in the scalar kinetic and gradient action. The
+additional cutoff term is determined by the finite support and
+goes to zero at fixed scalar momentum as the cutoff increases.
+
+Repeat the static ladder and independent variations of cutoff,
+radial integration, scalar bandwidth and quadrature. Run the
+paired-action comparison through time 3 at timestep 0.00125
+with a further half-step control. Use (9,12), (12,16) and
+(16,22) and independent cutoff-axis changes. Preserve both
+subtraction schemes in the evidence and apply the same
+convergence and budget criteria.
+
+## Two-time vacuum follow-up
+
+The locally constant transport run misses the bath-threshold
+timescale diagnostic on most of its predicted power. For a direct
+comparison, evaluate the order-Yukawa-squared two-time vacuum
+emission functional on selected exact archived H55 projectors.
+Use the fine collisionless X7 scalar trace, two smooth windows of
+duration 0.04 starting at offsets 0.02 and 0.065, and the 25th and
+75th percentiles of each species' free energy distribution with
+both helicities. Evolve those spinors on the prescribed history.
+Compare the vacuum functional with the same window's local
+frequency-branch prediction and refine the conformal timestep,
+frequency quadrature and spectral cutoff. Include a stationary
+positive branch and a stationary negative branch control. The
+switching envelope defines this perturbative diagnostic. Coupled
+memory backreaction and inverse or medium processes are separate.
+
+## Startup follow-up
+
+The paired-action run passes its energy and momentum budgets and
+reduces the static tail, while its instantaneous cutoff comparison
+still misses at early times. Repeat (12,16) and (16,22) with the
+next term of the adiabatic projector in the ultraviolet. Apply
+the third-order term with a smooth gap window from 3 to 5 scalar
+masses and vary it to 4 to 6 scalar masses. Keep the low-gap
+initial state, scalar data, and paired action fixed. Repeat the
+widest comparison at half step if needed. This is a separate
+preparation check. Preserve the order-two failures.
