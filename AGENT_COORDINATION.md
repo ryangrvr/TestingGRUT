@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_research_reset_20261106/vector_audit/ and bounded_route/REPORT.md title | Codex | Fixed-mass vector robustness audit and precise ALP status | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 

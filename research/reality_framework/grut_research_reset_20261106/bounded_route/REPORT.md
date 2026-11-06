@@ -1,4 +1,4 @@
-# Physical ALP route closed and an independent vector benchmark retained
+# Bounded ALP conversion route closed as unresolved and a vector benchmark retained
 
 The bounded ALP test produced a converged linear covariance at
 the physical hierarchy, then reached its cap without a stable
