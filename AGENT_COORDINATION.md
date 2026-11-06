@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x8_unitary/ | Codex | Test unitary spatial matching and coherent Yukawa transport | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6038,3 +6037,16 @@ Replayed static and signed helicity controls, all four H55 overlaps, and
 three radial slab cases. X7 passed 58/58 evidence checks. The inherited
 X6 verifier passed 48/48. The X7 source and transport decisions retain
 their failures. See [X7 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x7_regulator/HANDOFF.md).
+
+### 2026-11-06 · Codex · X8 unitary source and driven Yukawa overlap
+
+The physical-mass vertex cancels the unmatched contact term. The paired
+third-order preparation passes the independent slab refinements at a
+fixed state, with 0.273% cutoff sensitivity in instantaneous work.
+Changing the ultraviolet gap window shifts that work by 4.73%.
+The stationary vacuum width and a two-time finite-exposure calculation
+both have independent controls. The local-width H55 overlap fails its
+transport windows. Frozen backgrounds reproduce the large finite-window
+ratio to the local rate. The fresh X8 spot replay passes 63/63 evidence
+checks, and the X7 and X6 archive verifiers pass 52/52 and 48/48.
+See [X8 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x8_unitary/HANDOFF.md).

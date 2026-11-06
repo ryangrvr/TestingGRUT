@@ -68,7 +68,10 @@ def static():
                 checks.append(dict(a=a,harmonic=r,frequency_squared=freq2,
                                    paired_kernel=float(want),matrix_kernel=direct,
                                    old_contact_excess=float(edge),absolute_error=float(abs(direct-want))))
-                exact=continuum_periodic(cfg,mass,coefficient,a,r,modes=3000,nodes=80,frequency_squared=freq2)
+                reference=continuum_periodic(cfg,mass,coefficient,a,r,modes=12000,nodes=80,
+                                             frequency_squared=freq2)
+                exact=continuum_periodic(cfg,mass,coefficient,a,r,modes=24000,nodes=96,
+                                         frequency_squared=freq2)
                 ladder=[]
                 for n in (12,24,48,96,192,384,768,1536):
                     finite=continuum_cylinder(cfg,n,4*n/3,a,r,freq2)
@@ -79,6 +82,7 @@ def static():
                 error0,error1=(x['relative_error'] for x in ladder[-2:])
                 paired0,paired1=(x['paired_relative_error'] for x in ladder[-2:])
                 response.append(dict(a=a,harmonic=r,frequency_squared=freq2,unbounded=exact,
+                                     reference_refinement_error=abs(reference/exact-1),
                                      ladder=ladder,asymptotic_order=math.log2(error0/error1),
                                      paired_asymptotic_order=math.log2(paired0/paired1)))
     nonlinear=[]

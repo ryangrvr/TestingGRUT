@@ -45,6 +45,11 @@ PREPARATION_CASES={
     'uv_later':(12,16,12,65,3,2400,(4,6)),
     'uv_wide_later':(16,22,12,81,3,2400,(4,6)),
     'uv_wide_half':(16,22,12,81,3,4800,(3,5)),
+    'uv_longitudinal':(16,16,12,81,3,2400,(3,5)),
+    'uv_transverse':(12,22,12,65,3,2400,(3,5)),
+    'uv_radial':(12,16,8,65,3,2400,(3,5)),
+    'uv_collocation':(12,16,12,129,3,2400,(3,5)),
+    'uv_bandwidth':(12,16,12,65,5,2400,(3,5)),
 }
 
 
@@ -123,6 +128,8 @@ def gather(work,names):
         pairs={'wide':('uv_reference','uv_wide'),'later':('uv_reference','uv_later'),
                'wide_later':('uv_wide','uv_wide_later'),'wide_half':('uv_wide','uv_wide_half'),
                'cutoff_later':('uv_later','uv_wide_later')}
+        pairs.update({name.removeprefix('uv_'):('uv_reference',name) for name in
+                      ('uv_longitudinal','uv_transverse','uv_radial','uv_collocation','uv_bandwidth')})
     else:
         reference='paired_reference' if 'paired_reference' in names else 'reference'
         pairs={name:(reference,name) for name in series if name!=reference}

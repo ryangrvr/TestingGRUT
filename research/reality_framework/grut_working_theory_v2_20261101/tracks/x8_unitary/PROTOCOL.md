@@ -104,3 +104,10 @@ masses and vary it to 4 to 6 scalar masses. Keep the low-gap
 initial state, scalar data, and paired action fixed. Repeat the
 widest comparison at half step if needed. This is a separate
 preparation check. Preserve the order-two failures.
+
+The first startup comparisons pass at each fixed gap window
+and show sensitivity to changing the window. Complete the
+independent longitudinal cutoff, transverse cutoff, radial rule,
+collocation and scalar bandwidth checks with the original
+3-to-5-scalar-mass window. Test preparation sensitivity separately
+from the discretization gate.

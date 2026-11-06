@@ -20,6 +20,29 @@ Everything here is same-session AI work (Claude and Codex) on one supplied model
 Nothing here is observational evidence, a validation, an exclusion or a confirmed GRUT prediction. Labels: [D]
 derived, [C] computed, [E] estimate, [A] argued, [R] recalled. All data comparisons are retrospective.
 
+## 6 November 2026 · H55 evidence update
+
+The low-scale H55 history has an explicitly evolved homogeneous sterile
+fermion sector. The reported 50.96% fermion energy fraction is measured
+while the scalar still does coherent work. The source and particle
+transport criteria govern whether this candidate can feed a new relic
+calculation. The inherited strict test accepted zero of 135 points.
+[X5 coupled history](tracks/x5_coupled/REPORT.md) · [X7 overlap](tracks/x7_regulator/REPORT.md)
+
+X8 removes the growing spatial cutoff term with a unitary physical
+mass operator. A paired subtraction and a specified ultraviolet state
+give a convergent one-axis source control. Changing that state changes
+the phase-sensitive work. The physical spatial H55 state is an open
+input. The driven vacuum width has a helicity-dependent threshold,
+and the archived trajectory fails the tested particle handoff windows.
+A physical transport prediction requires the sterile–bath memory and
+interacting initial state. [X8 model](tracks/x8_unitary/MODEL.md) ·
+[X8 results](tracks/x8_unitary/REPORT.md)
+
+These calculations refine the conditional matter model. A
+GRUT-specific prediction requires a derived state or coupling
+relation and a discriminating observable.
+
 ## 0. In one paragraph
 
 GRUT currently has two layers.
