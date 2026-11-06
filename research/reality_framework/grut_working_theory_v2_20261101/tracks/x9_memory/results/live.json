@@ -1,0 +1,294 @@
+{
+  "scope": "finite conserving scalar feedback and stationary controls for the quadratic vacuum bath",
+  "microscopic": {
+    "split": [
+      {
+        "steps": 300,
+        "error": 7.3570029123979755e-06,
+        "norm_error": 2.3314683517128287e-14,
+        "energy_work_error": 2.784188765786455e-06
+      },
+      {
+        "steps": 600,
+        "error": 1.839095690932524e-06,
+        "norm_error": 7.116529587847253e-14,
+        "energy_work_error": 6.959218075905382e-07
+      },
+      {
+        "steps": 1200,
+        "error": 4.597642333613325e-07,
+        "norm_error": 9.85878045867139e-14,
+        "energy_work_error": 1.7397284294423665e-07
+      }
+    ],
+    "leading_born_relative_error": 4.902529048984519e-06,
+    "first_order_bath_probability": 7.492653491704233e-06,
+    "projector": {
+      "positive_projection_error": 6.723876024559231e-16,
+      "orthogonality": 1.1589771167290138e-17,
+      "bath_packet_sterile_leakage": 7.61469301194004e-16,
+      "sterile_covariance_difference": 7.598745415060863e-16
+    }
+  },
+  "stationary": {
+    "runs": [
+      {
+        "frequency_spacing": 0.024984859424800398,
+        "recurrence_time": 251.47971418813705,
+        "max_early_sterile_count_difference": 0.613783950285151,
+        "max_late_sterile_count_difference": 1.0911052422993255e-06,
+        "max_late_total_positive_bath_count_difference": 1.105415254332165e-06,
+        "mean_late_chiral_bath_count_difference": 0.10872520614090218,
+        "max_static_energy_error": 4.0081470799702146e-05,
+        "max_norm_error": 3.822497873784414e-13,
+        "positive_projection_error": 2.706014563040917e-16,
+        "orthogonality": 2.909939711040861e-18,
+        "bath_packet_sterile_leakage": 3.3305827129204614e-16,
+        "sterile_covariance_difference": 3.307659668116171e-16
+      },
+      {
+        "frequency_spacing": 0.012492429712400199,
+        "recurrence_time": 502.9594283762741,
+        "max_early_sterile_count_difference": 0.613783952040383,
+        "max_late_sterile_count_difference": 1.1078897605156425e-06,
+        "max_late_total_positive_bath_count_difference": 1.1225198357500688e-06,
+        "mean_late_chiral_bath_count_difference": 0.10872522042741249,
+        "max_static_energy_error": 4.0081470547015385e-05,
+        "max_norm_error": 2.1405099914773018e-13,
+        "positive_projection_error": 4.1284766993295157e-16,
+        "orthogonality": 2.1516660027526368e-17,
+        "bath_packet_sterile_leakage": 5.697051369965929e-16,
+        "sterile_covariance_difference": 5.653445336608586e-16
+      }
+    ],
+    "exact_stationary_spectral_weight_difference": 0.0
+  },
+  "live": {
+    "regulator": 10.0,
+    "frequency_spacing": 0.3584127234569007,
+    "dimension": 102,
+    "vacuum_width": 0.08,
+    "initial_preparation": {
+      "positive_projection_error": 3.3306690738754696e-16,
+      "orthogonality": 2.5272334723489093e-18,
+      "bath_packet_sterile_leakage": 2.912597758794301e-16,
+      "sterile_covariance_difference": 2.8988406984072706e-16,
+      "dense_positive_error": 8.887360321722774e-16
+    },
+    "runs": {
+      "base": {
+        "cases": [
+          {
+            "dt": 0.04,
+            "initial": {
+              "t": 0.0,
+              "phi": 0.36,
+              "velocity": 2.4,
+              "scalar_energy": 17.322119999999998,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": 0.0,
+              "fermion_energy": -0.8839872445789274,
+              "bath_energy": -277.6927749448622,
+              "interaction": -0.166419558805526,
+              "charge": -0.4611569178822208,
+              "sterile_count": 1.4955331488445753,
+              "bath_positive_count": 0.5090010223180494,
+              "bath_negative_count": 49.99546582883738
+            },
+            "terminal": {
+              "t": 8.0,
+              "phi": 3.238644443233728,
+              "velocity": -2.1538578584238235,
+              "scalar_energy": 17.326176817531003,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": -1.0658141036401503e-14,
+              "fermion_energy": -0.9961728776941394,
+              "bath_energy": -277.4988708620241,
+              "interaction": -0.2521948260593735,
+              "charge": -0.41684529915524404,
+              "sterile_count": 1.419211810413309,
+              "bath_positive_count": 0.5872169146552344,
+              "bath_negative_count": 49.99357127493143
+            },
+            "max_energy_error": 1.0872004436189859e-15,
+            "max_charge_error": 1.2434497875801753e-14,
+            "max_pauli_projector_error": 1.021405182655144e-14,
+            "iterations": 4
+          },
+          {
+            "dt": 0.04,
+            "initial": {
+              "t": 0.0,
+              "phi": 0.36,
+              "velocity": 2.4,
+              "scalar_energy": 17.322119999999998,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": 0.0,
+              "fermion_energy": -0.8839872445789274,
+              "bath_energy": -277.6927749448622,
+              "interaction": -0.166419558805526,
+              "charge": -0.4611569178822208,
+              "sterile_count": 1.4955331488445753,
+              "bath_positive_count": 0.5090010223180494,
+              "bath_negative_count": 49.99546582883738
+            },
+            "terminal": {
+              "t": 8.0,
+              "phi": 3.2359024726819006,
+              "velocity": -2.1468249661639582,
+              "scalar_energy": 17.229668370165015,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": 3.552713678800501e-15,
+              "fermion_energy": -1.370886092309995,
+              "bath_energy": -277.0430515732323,
+              "interaction": -0.23679245286939105,
+              "charge": -0.47956755620569547,
+              "sterile_count": 1.210740200027251,
+              "bath_positive_count": 0.7975851326572644,
+              "bath_negative_count": 49.991674667315486
+            },
+            "max_energy_error": 6.523202661713916e-16,
+            "max_charge_error": 1.0658141036401503e-14,
+            "max_pauli_projector_error": 9.103828801926284e-15,
+            "iterations": 4
+          }
+        ],
+        "differences": {
+          "initial": {
+            "scalar_energy": 0.0,
+            "fermion_energy": 0.0,
+            "bath_energy": 0.0,
+            "interaction": 0.0,
+            "sterile_count": 0.0,
+            "bath_positive_count": 0.0,
+            "bath_negative_count": 0.0,
+            "phi": 0.0,
+            "velocity": 0.0
+          },
+          "terminal": {
+            "scalar_energy": 0.09650844736598785,
+            "fermion_energy": 0.3747132146158556,
+            "bath_energy": -0.4558192887918153,
+            "interaction": -0.015402373189982443,
+            "sterile_count": 0.208471610386058,
+            "bath_positive_count": -0.21036821800202998,
+            "bath_negative_count": 0.0018966076159472323,
+            "phi": 0.002741970551827233,
+            "velocity": -0.007032892259865253
+          }
+        }
+      },
+      "half": {
+        "cases": [
+          {
+            "dt": 0.02,
+            "initial": {
+              "t": 0.0,
+              "phi": 0.36,
+              "velocity": 2.4,
+              "scalar_energy": 17.322119999999998,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": 0.0,
+              "fermion_energy": -0.8839872445789274,
+              "bath_energy": -277.6927749448622,
+              "interaction": -0.166419558805526,
+              "charge": -0.4611569178822208,
+              "sterile_count": 1.4955331488445753,
+              "bath_positive_count": 0.5090010223180494,
+              "bath_negative_count": 49.99546582883738
+            },
+            "terminal": {
+              "t": 8.0,
+              "phi": 3.2384398719188705,
+              "velocity": -2.1538716299597964,
+              "scalar_energy": 17.32592415634803,
+              "energy": -261.42106174824596,
+              "residual": 2.6092810646855662e-15,
+              "charge_residual": 2.4868995751603507e-14,
+              "fermion_energy": -0.9963723236699302,
+              "bath_energy": -277.4985159674701,
+              "interaction": -0.2520976134539564,
+              "charge": -0.41649354266133987,
+              "sterile_count": 1.4190042664881757,
+              "bath_positive_count": 0.5874255014995196,
+              "bath_negative_count": 49.99357023201246
+            },
+            "max_energy_error": 2.8267211534093634e-15,
+            "max_charge_error": 2.6645352591003757e-14,
+            "max_pauli_projector_error": 3.952393967665557e-14,
+            "iterations": 4
+          },
+          {
+            "dt": 0.02,
+            "initial": {
+              "t": 0.0,
+              "phi": 0.36,
+              "velocity": 2.4,
+              "scalar_energy": 17.322119999999998,
+              "energy": -261.42106174824664,
+              "residual": 0.0,
+              "charge_residual": 0.0,
+              "fermion_energy": -0.8839872445789274,
+              "bath_energy": -277.6927749448622,
+              "interaction": -0.166419558805526,
+              "charge": -0.4611569178822208,
+              "sterile_count": 1.4955331488445753,
+              "bath_positive_count": 0.5090010223180494,
+              "bath_negative_count": 49.99546582883738
+            },
+            "terminal": {
+              "t": 8.0,
+              "phi": 3.235716162899606,
+              "velocity": -2.1468333984737398,
+              "scalar_energy": 17.229385125633094,
+              "energy": -261.42106174824636,
+              "residual": 1.0872004436189859e-15,
+              "charge_residual": 0.0,
+              "fermion_energy": -1.3708067408367661,
+              "bath_energy": -277.04288146488307,
+              "interaction": -0.23675866815960273,
+              "charge": -0.478991499580424,
+              "sterile_count": 1.210649104201333,
+              "bath_positive_count": 0.7976757216095507,
+              "bath_negative_count": 49.991675174189254
+            },
+            "max_energy_error": 3.0441612421331607e-15,
+            "max_charge_error": 1.0658141036401503e-14,
+            "max_pauli_projector_error": 4.6629367034256575e-14,
+            "iterations": 4
+          }
+        ],
+        "differences": {
+          "initial": {
+            "scalar_energy": 0.0,
+            "fermion_energy": 0.0,
+            "bath_energy": 0.0,
+            "interaction": 0.0,
+            "sterile_count": 0.0,
+            "bath_positive_count": 0.0,
+            "bath_negative_count": 0.0,
+            "phi": 0.0,
+            "velocity": 0.0
+          },
+          "terminal": {
+            "scalar_energy": 0.0965390307149363,
+            "fermion_energy": 0.3744344171668359,
+            "bath_energy": -0.4556345025870314,
+            "interaction": -0.0153389452943537,
+            "sterile_count": 0.2083551622868427,
+            "bath_positive_count": -0.21025022011003114,
+            "bath_negative_count": 0.001895057823205093,
+            "phi": 0.002723709019264664,
+            "velocity": -0.007038231486056645
+          }
+        }
+      }
+    }
+  },
+  "scientific_acceptance": false
+}
