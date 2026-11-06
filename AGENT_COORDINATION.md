@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x7_regulator/ | Codex | Test the spatial cutoff completion and H55 coherent overlap | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -6027,3 +6026,14 @@ and the strict relic result remains 0/135.
 Verified all 48 archived checks, five fresh replay comparisons, all 42
 X5 checks, Python syntax and 13 local links. Same-author calculations
 with independent numerical ODE controls. Claim released.
+
+### 2026-11-06 · Codex · X7 signed response and coherent H55 overlap
+
+The X7 one-axis slab passes fixed-auxiliary resolution controls. The wider
+Gaussian cylinder still shows 11.53% instantaneous work sensitivity to
+the auxiliary masses. The archived H55 state stays coherent through the
+additional 0.12 interval and fails every tested transport window.
+Replayed static and signed helicity controls, all four H55 overlaps, and
+three radial slab cases. X7 passed 58/58 evidence checks. The inherited
+X6 verifier passed 48/48. The X7 source and transport decisions retain
+their failures. See [X7 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x7_regulator/HANDOFF.md).
