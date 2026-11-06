@@ -9,13 +9,15 @@ spectrum after the CMB pivot give \(r_{0.05}\gtrsim0.01345\). The two
 calibrated histories with radiation in place before the relevant modes evolve
 give \(r_{0.05}=0.01473\) and \(0.01486\).
 
-A post-inflationary fluid with \(w=3/5\) that reheats at 200 GeV invalidates
-the radiation floor. Even the resolved \(0.25\le k/k_\ast\le 4\) band produces
-the full required density at \(r=0.006074\) in the specified E-model family.
-The late-stiff calculation tests a distinct reheating history at the same
-mass. The tensor relation is a conditional prediction of the published
-gravitational-production mechanism. No entry in the GRUT theory tuple
-selects the vector mass, inflation potential, or reheating history.
+A prescribed post-inflationary \(w=3/5\) expansion history with a
+200 GeV radiation normalization gives a smaller tensor requirement
+in the transfer calculation. Even the resolved
+\(0.25\le k/k_\ast\le 4\) band produces the required density at
+\(r=0.006074\) in the specified E-model family. The matched-spectrum
+replication finds a 4.95-fold abundance enhancement. The subsequent
+seed audit closes the ordinary causal-gas realization. The archived
+\(r_{0.05}=0.002765\) is a numerical fit on the prescribed background
+with assumed adiabatic scalar calibration. [Current claim ledger](CLAIM_LEDGER.md).
 
 ## Normalization and abundance
 
@@ -253,7 +255,7 @@ factor of about 5.3 relative to the prompt E-model fit.
 
 A future tensor upper limit sufficiently below \(0.0134\) would
 exclude the all-dark-matter benchmark within the stated radiation
-transfer and decreasing-power class. The stiff counterexample
+transfer and decreasing-power class. The prescribed stiff comparison
 shows that this test depends on reheating. A tensor detection
 at the calculated values would remain compatible with many mechanisms.
 
