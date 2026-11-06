@@ -1,6 +1,7 @@
 """Background, vacuum modes, and vector abundance for the frozen histories."""
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass
+import argparse
 import json
 
 import numpy as np
@@ -223,7 +224,7 @@ class Calibrated:
         return result
 
 
-def calibrate(history, precision, band_only=False):
+def calibrate(history, precision, band_only=False, bracket=(1., 40.)):
     cache = {}
     key = "finite_band_density_ratio" if band_only else "density_ratio"
 
@@ -236,17 +237,18 @@ def calibrate(history, precision, band_only=False):
     def residual(alpha):
         return get(alpha)[1][key]-1
 
-    edge = [residual(1.)+1, residual(40.)+1]
+    edge = [residual(alpha)+1 for alpha in bracket]
     if (edge[0]-1)*(edge[1]-1) > 0:
         return dict(root_bracketed=False, calibration_key=key, bracket_densities=edge)
-    alpha = brentq(residual, 1., 40., xtol=2e-5)
+    alpha = brentq(residual, *bracket, xtol=2e-5)
     model, abundance = get(alpha)
     return dict(root_bracketed=True, calibration_key=key, bracket_densities=edge,
                 **model.summary(abundance, full=True))
 
 
-def fitted(history):
-    coarse, fine = calibrate(history, COARSE), calibrate(history, FINE)
+def fitted(history, bracket=(1., 40.)):
+    coarse = calibrate(history, COARSE, bracket=bracket)
+    fine = calibrate(history, FINE, bracket=bracket)
     row = dict(coarse=coarse, fine=fine)
     if fine["root_bracketed"] and coarse["root_bracketed"]:
         row["r_refinement"] = abs(fine["tensor_ratio"]/coarse["tensor_ratio"]-1)
@@ -261,7 +263,16 @@ def fixed_shape(alpha):
     return model.summary(model.abundance(), full=True)
 
 
+def meets_refinement(row):
+    return (row.get("r_refinement", 1.) < .002
+            and row.get("tilt_refinement", 1.) < 2e-4
+            and abs(row["fine"]["density_ratio"]-1) < .001)
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--late-extension", action="store_true")
+    args = parser.parse_args()
     qualification = json.loads((RESULTS / "transfer.json").read_text())
     if not qualification["passed"]:
         raise SystemExit("Qualify the independent transfer first.")
@@ -270,6 +281,12 @@ def main():
            for row in controls) > 2e-5:
         raise SystemExit("The constant-epsilon mode control missed.")
     print("Vacuum mode controls", controls, flush=True)
+    if args.late_extension:
+        bracket = (.5, 1.)
+        row = fitted(HISTORIES["late_stiff"], bracket)
+        write(RESULTS / "late_stiff_extension.json",
+              dict(bracket=bracket, result=row, passed=meets_refinement(row)))
+        return
     with ProcessPoolExecutor(max_workers=3) as executor:
         fitted_jobs = {name: executor.submit(fitted, history)
                        for name, history in HISTORIES.items()}
@@ -278,10 +295,7 @@ def main():
         results = {name: job.result() for name, job in fitted_jobs.items()}
         fixed = {name: job.result() for name, job in fixed_jobs.items()}
         finite = finite_job.result()
-    convergence = all(row.get("r_refinement", 1.) < .002
-                      and row.get("tilt_refinement", 1.) < 2e-4
-                      and abs(row["fine"]["density_ratio"]-1) < .001
-                      for row in results.values())
+    convergence = all(meets_refinement(row) for row in results.values())
     result = dict(fixed_mass_eV=M*1e9, scalar_power_input=A_S,
                   density_per_entropy_input_eV=DM_PER_ENTROPY*1e9,
                   controls=controls, fitted_histories=results,
