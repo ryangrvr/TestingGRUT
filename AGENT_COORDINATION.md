@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_research_reset_20261106/vector_audit/replication/ | Codex | Fixed-input replication and reviewer package | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
