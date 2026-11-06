@@ -62,3 +62,17 @@ Separate the numerical transfer error, inflation history, reheating,
 and observational inputs. Freeze the calculations before comparing
 the reserved observables with published measurements. Do not scan
 the vector mass.
+
+## Bounded extension before observational comparison
+
+The registered $[1,40]$ late-stiff full-spectrum solve returned no
+bracket. Its endpoint densities were 1.063 and 11.97 times the
+calibration density. Preserve that run in `results/inflation.json`.
+The separate registered finite-band fit bracketed the required
+contribution. To test an all-dark-matter example including the whole
+calculated spectrum, extend **only** the late-stiff full-spectrum
+bracket to $[0.5,1]$. Leave the other histories, action, matching,
+transfer, and all acceptance tolerances fixed. Apply the original
+refinement criteria and preserve the new result separately. A miss
+here ends this bounded extension. Use no tilt or tensor measurement
+to make this choice.
