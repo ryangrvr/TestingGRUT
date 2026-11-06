@@ -75,6 +75,33 @@ timestep variation. The spatial production history and
 physical transport boundary remain open.
 [X10 results](tracks/x10_handoff/REPORT.md)
 
+**X11 production and matching.** Three-axis scalar gradients and
+site-local coherent evolution of all four H55 sterile species give
+a coupled history through the waterfall and to the old diagnostic
+slice. The long run gives a 53.33% sterile energy fraction at
+$tH_i=2.9981$, with ongoing scalar work. The refined homogeneous
+result is 51.08%. The live spatial grids retain a small fraction
+of the original seed's gradient power and the radial test changes
+the reference fraction by 3.86% at $tH_i=0.55$.
+
+Native occupations preserve number and energy in the conditional
+kinetic run. The pressure and work jumps still fail the physical
+handoff. With the H55 scale and M2-X holder product fixed, the
+conditional release and relic calculation gives $\Omega_X h^2=0.0647$
+at the reference boundary, compared with the Planck cold-dark-matter
+benchmark of 0.120. The late boundary lowers the conditional relic
+by 6.57%, while the halved kinetic step changes it by 0.0053%.
+The strict ledger is 0/135.
+
+An axial CP matching postulate makes the sterile Yukawas real in the
+inflaton interaction basis and derives the relative decay phases
+from the scalar-dependent masses. For positive Majorana parities
+and the H55 widths it gives a tree-level light-neutrino mass-sum
+bound of 0.19888 eV. Preserving the inherited N2 parity and its
+later width gives 0.05881 eV at tree level on the fixed texture,
+but the conditional baryon calculation gives 30.6 times the
+observed benchmark. [X11 results](tracks/x11_h55/REPORT.md)
+
 These calculations refine the conditional matter model. A
 GRUT-specific prediction requires a derived state or coupling
 relation and a discriminating observable.

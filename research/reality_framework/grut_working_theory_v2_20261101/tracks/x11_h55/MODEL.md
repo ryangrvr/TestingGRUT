@@ -61,8 +61,10 @@ background trace input is the cycle-averaged production stress and
 the pressure trace of the conditional kinetic model. The spectator
 mass uses the evolved $g_s^2\langle\chi^2\rangle$ before the
 handoff and the inherited harmonic form afterward. The conditional
-release uses the M2-X holder $c_0=1.55$, zero holder offset and
-hidden coupling $e=10^{-6}$. The H55 scale stays fixed.
+release uses the M2-X holder product $c_0=1.55$, zero holder offset
+and hidden coupling $e=10^{-6}$. The product is implemented in the
+holder coupling with the spectator amplitude fixed at the archived
+H55 value. The H55 scale stays fixed.
 
 The visible entropy is inferred from the final visible radiation,
 with the stated SM degrees of freedom and no later visible injection.

@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x11_h55/ | Codex | Evolve three-axis H55 production, test the abundance interface and axial CP matching | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6078,3 +6077,19 @@ early live axial probe reproduce their digest and resolved correlations.
 The X9 and X8 archive verifiers passed 56/56 and 58/58. The H55 handoff is
 open and the strict candidate ledger is 0/135. Claims released.
 See [X10 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x10_handoff/HANDOFF.md).
+
+### 2026-11-06 · Codex · X11 H55 through production and conditional relic
+
+The three-axis site-local sterile calculation reaches the archived
+slice with a 53.33% sterile energy fraction and residual coherent work.
+The radial source refinement misses the bulk target. Native spectra
+match number and energy in the conditional kinetics, with pressure
+and work misses at the boundaries. The fixed-scale reference relic is
+0.06468 and the late boundary changes it by 6.57%. The literal axial
+matching postulate fails the mass-sum benchmark and the inherited-parity
+texture overproduces baryons in the conditional network.
+
+The X11 verifier passed 108/108 evidence checks with fresh axial
+matching and direct X5 homogeneous replay. The X10 and X5 archive
+checks passed 97/97 and 42/42. The strict candidate ledger is 0/135.
+Claims released. See [X11 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x11_h55/HANDOFF.md).

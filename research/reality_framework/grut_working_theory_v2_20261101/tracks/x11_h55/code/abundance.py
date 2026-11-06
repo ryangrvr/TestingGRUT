@@ -31,6 +31,17 @@ def match_release_clock(module, work):
     module.SRC.write_text(source.replace(old,new))
 
 
+def vector_readout(assemble, momenta, modes, e, background):
+    row=assemble(momenta,modes,e,background)
+    scale=momenta**3/(2*np.pi**2)
+    first=scale*np.array([r['n1'] for r in modes])
+    last=scale*np.array([r['n2'] for r in modes])
+    log_q=np.log(momenta)
+    row['integrated_readout_change']=float(abs(np.trapezoid(last-first,log_q))/row['N_A'])
+    row['absolute_weighted_readout_change']=float(np.trapezoid(abs(last-first),log_q)/row['N_A'])
+    return row
+
+
 def cycle_mean(t,y,width=.025):
     area=cumulative_trapezoid(y,t,initial=0)
     lower=np.maximum(t-width/2,t[0])
@@ -127,12 +138,24 @@ def run(work, source, kinetic):
     E.rm.spec_env=env
     K=kin['K_total']/a_slice**2
     tag='x11_h55'
+    # Match the same holder product at the archived spectator amplitude.
+    # Varying the initial spectator value would change the H55 source.
+    holder=E.mc.U_PREP
+    E.mc.U_PREP=E.mc.MU+c0*(holder-E.mc.MU)
     try:
-        release=E.rm.release(tag,K,3.,0.,gs=Gamma_s,sstar=sstar,c0=c0,
+        release=E.rm.release(tag,K,3.,0.,gs=Gamma_s,sstar=sstar,c0=1.,
                              bg='table:'+str(tab),Tl=1e4,bcap=max(4.,bcap))
     finally:
         E.rm.spec_env=original
-    E.vm.main(tag)
+        E.mc.U_PREP=holder
+    assemble=E.vm.assemble
+    E.vm.assemble=lambda *args: vector_readout(assemble,*args)
+    try:
+        E.vm.main(tag)
+    finally:
+        E.vm.assemble=assemble
+    vectors=E.load(E.ENG/'vectors'/f'vectors_{tag}.json')
+    vector=next(r for r in vectors['by_e'] if r['e']==E_HIDDEN)
     E.dump(E.ENG/'chain'/f'chain_{tag}.json',E.cm.analyse(tag))
     gas=chain.full(tag,bench,c0,delta)['by_e']['cL0_vanish_at_MY']['e1e-6']
     charge=abs(release['result']['N_X'])
@@ -145,10 +168,13 @@ def run(work, source, kinetic):
     Yreq=OMEGA_TARGET*CRIT_OVER_H2/(relic.MX*S0)
     out=dict(scope='conditional relic from dephased production and inherited hidden release and population models',
              H55_scale_GeV=Hi,holder_c0=c0,holder_offset_degrees=delta,e_hidden=E_HIDDEN,
+             holder_strength_implementation='scaled coupling at fixed archived spectator amplitude',
              source_time=kin['source_time'],K_total=K,K_visible=kin['K_visible']/a_slice**2,
              s_comoving_visible_Hi3=entropy,release=release['result'],
              ecrit_used_for_certification=False,hidden_S_per_Q=gas['S_per_Q'],
              hidden_heat_terms={k:gas[k] for k in ('R_total','R_vec','R_Y','R_casc','R_leak','dR_grav')},
+             vector_readout={k:vector[k] for k in ('max_readout_change','integrated_readout_change',
+                                                  'absolute_weighted_readout_change')},
              X_mass_GeV=relic.MX,Y_charge=YQ,population=population,
              total_relic_mass_per_visible_entropy_GeV=float(M*relic.MX*YQ),
              conditional_Omega_h2=float(M*relic.MX*YQ*S0/CRIT_OVER_H2),
