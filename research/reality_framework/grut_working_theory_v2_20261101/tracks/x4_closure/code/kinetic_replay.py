@@ -14,7 +14,7 @@ import sys
 import numpy as np
 from scipy.integrate import solve_ivp
 
-from kinetic_engine import compile_engine
+from kinetic_engine import compile_engine, source as engine_source
 from trace import ARCHIVE, COLUMNS, TRACKS
 
 X3 = TRACKS / 'x3_actual'
@@ -117,6 +117,8 @@ def main():
     parser.add_argument('output', type=Path)
     parser.add_argument('--cases', nargs='+', choices=CASES, default=list(CASES))
     parser.add_argument('--workers', type=int, default=4)
+    parser.add_argument('--collect', action='store_true',
+                        help='validate and collect already completed runs from this work directory')
     args = parser.parse_args()
     work = args.work.resolve()
     work.mkdir(parents=True, exist_ok=True)
@@ -131,7 +133,15 @@ def main():
     spec, mpar = common.species('HFa', scale, 0.05e-9)
     sm = common.sm_coeffs()
     tables = input_tables()
-    binaries = {f: compile_engine(work, f) for f in sorted({CASES[c][2] for c in args.cases})}
+    binaries = {}
+    for factor in sorted({CASES[c][2] for c in args.cases}):
+        if args.collect:
+            binary = work / f'engine_dt{factor:g}'
+            if Path(f'{binary}.c').read_text() != engine_source(factor):
+                raise ValueError(f'Unexpected saved engine source for {binary}')
+            binaries[factor] = binary
+        else:
+            binaries[factor] = compile_engine(work, factor)
     spectator_control = check_spectator(binaries[next(iter(binaries))])
     gamma = 1.3e-6 * scale / common.H_REF
 
@@ -151,14 +161,20 @@ def main():
                 represented_count.append(moments['N'])
         prefix = work / name
         infile = prefix.with_suffix('.in')
-        common.write_input(infile, st, spec, mpar, sm, dict(coherent=0), [(q, w)] * 4, occ,
+        generated = prefix.with_suffix('.collect.in') if args.collect else infile
+        common.write_input(generated, st, spec, mpar, sm, dict(coherent=0), [(q, w)] * 4, occ,
                            tables=tables, dshell=-1e5)
-        with infile.open('a') as f:
+        with generated.open('a') as f:
             f.write(f'{spectator:.17g} 0 {gamma:.17g}\n')
-        proc = subprocess.run([str(binaries[dt_factor]), 'run', str(infile), str(prefix)],
-                              text=True, capture_output=True, timeout=2400)
-        if proc.returncode:
-            raise RuntimeError(f'{name}: {proc.stderr}')
+        if args.collect:
+            if generated.read_bytes() != infile.read_bytes() or not Path(f'{prefix}_state.txt').is_file():
+                raise ValueError(f'Missing or mismatched completed run for {name}')
+            generated.unlink()
+        else:
+            proc = subprocess.run([str(binaries[dt_factor]), 'run', str(infile), str(prefix)],
+                                  text=True, capture_output=True, timeout=2400)
+            if proc.returncode:
+                raise RuntimeError(f'{name}: {proc.stderr}')
         rec = common.read_rec(prefix)
         ledger = dict(zip(LEDGER_COLS, np.loadtxt(f'{prefix}_ledger.txt').T, strict=True))
         assert len(rec['t']) == len(ledger['t'])
@@ -196,7 +212,7 @@ def main():
                           f_N=float(rec['f_N'][i]), f_SM=float(ledger['rho_sm'][i]/ledger['rho'][i]),
                           f_s=float(ledger['rho_s'][i]/ledger['rho'][i]),
                           f_DR=float(ledger['rho_dr'][i]/ledger['rho'][i])) for i in idx],
-            engine_sha256=hashlib.sha256(binaries[dt_factor].with_suffix('.c').read_bytes()).hexdigest(),
+            engine_sha256=hashlib.sha256(Path(f'{binaries[dt_factor]}.c').read_bytes()).hexdigest(),
             input_sha256=hashlib.sha256(infile.read_bytes()).hexdigest(),
             accepted_cosmological_point=False,
         )

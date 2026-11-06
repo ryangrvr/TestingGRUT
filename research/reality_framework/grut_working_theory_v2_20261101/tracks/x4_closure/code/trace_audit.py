@@ -58,6 +58,20 @@ def cohorts(t, a, de, dn, mass, width, requested):
     return history
 
 
+def propagation_bound(t, a, de, dn, mass, width, index):
+    """Necessary moment bound for any injection shape with the given moments."""
+    fraction = a[1:index+1] / a[index]
+    survival_minimum = np.exp(-width * (t[index] - t[1:index+1]))
+    number_minimum = float((fraction**3) @ (dn[:index] * survival_minimum))
+    # E(r*p) <= r*E(p) + (1-r)*M by convexity, even without decays.
+    energy_maximum = float((fraction**3) @ (
+        fraction * de[:index] + (1 - fraction) * mass * dn[:index]))
+    ratio = energy_maximum / minimum_energy(number_minimum, mass)
+    return dict(number_minimum=number_minimum, energy_maximum=energy_maximum,
+                energy_maximum_over_Pauli_minimum=float(ratio),
+                excludes_all_free_streaming_injection_shapes=bool(ratio < 1))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('tape', type=Path)
@@ -158,6 +172,10 @@ def main():
             'recurrence_error_over_peak': errors,
             'archive_difference_over_peak': replay_errors,
             'perturbative_budget': pert, 'samples': check_times,
+            'shape_independent_propagation_bound': propagation_bound(
+                t, a, de, dn, mass, width, i_last),
+            'shape_independent_bound_without_floor': propagation_bound(
+                t, a, de - de_pert, dn - dn_pert, mass, width, i_last),
         })
     result = {
         'scope': 'same-time legacy source replay and counterfactual free propagation of its requested injections',

@@ -64,3 +64,37 @@ For a conditional dark-radiation estimate after decay and thermalization,
 use the late density ratio and standard visible entropy conservation.
 This estimate assumes a decoupled, relativistic daughter sector and a
 high-temperature visible bath with g* = g*s = 106.75.
+
+## Direct mode probe on the H55 mean waveform
+
+The source tape stores the box-mean inflaton fields and their velocities
+at every scalar step. In flat FLRW, rescale the Majorana field by
+$a^{3/2}$ and use the phase $\theta=\bar\phi/f$ of its parent. After a
+chiral rotation the homogeneous helicity block is
+
+$$
+\mathsf H_h=M\sigma_x+(h q/a+\dot\theta/2)\sigma_z.
+$$
+
+The helicity sign labels follow the chosen chiral rotation. Use cubic
+Hermite interpolation through the stored values and slopes. Propagate
+all four species and both helicities with a fourth-order product of two
+unitary rotations per substep. The evolved state starts at the supplied
+first-order adiabatic vacuum. Project it at each recorded output onto
+both the instantaneous and first-order dressed vacuum axes. In Bloch
+variables the latter is the normalized direction
+$-\hat b+(\hat b\times\dot{\hat b})/(2|b|)$ for
+$b=(M,0,hq/a+\dot\theta/2)$.
+
+These finite-time projections define particle diagnostics. The calculation
+uses free-particle moments of the projected occupation. It omits collisions,
+spatial gradients and backreaction, and fixes the scalar waveform even
+when the new production differs from its original drain. The projector
+comparison measures basis dependence on this waveform. The renormalized
+stress tensor requires a separate calculation.
+
+Use a static zero-production control and compare a time-varying control
+with a direct integrator in the unrotated basis. Check momentum spacing,
+cutoff and timestep separately on the H55 waveform. Numerical refinements
+test the solver on this supplied source. The lattice and homogeneous
+projection remain distinct physical approximations.

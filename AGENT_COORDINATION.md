@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x4_closure/ | Codex | Audit H55 fermion moments and test a conservative spectral closure with a spectator ledger | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -5933,3 +5932,32 @@ root, or a cosmological core population. The common inherited 0.05 eV seesaw
 rate input is explicit; the later card's N2 rate is not silently substituted.
 The old zero-of-135 strict result remains. No outside or independent-agent
 review is claimed. Claim released.
+
+
+### 2026-11-05 · Codex · completed the X4 H55 fermion source audit and kinetic closure controls
+
+Started from 2b031623 on codex/grut-h55-microscopic-closure-20261105.
+The protocol and audit checkpoint were published before the full kinetic suite.
+All changes to the physics package are in the new tracks/x4_closure directory.
+
+The passive 64-cubed replay recorded 9,204 steps. Its sampled a, H and density
+agree with the archived history within 5e-10 relative. Aligned N1 energy/minimum
+is 0.43642, and massive cohort propagation gives 0.44457. A bound independent
+of the injection spectrum limits the ratio to 0.83074 at the original birth
+moments with free streaming and vacuum decay. The floor-removed cohort test
+still fails at 0.53692. Five direct Majorana mode controls on the fixed H55
+mean waveform give N1 0.5130–0.5204 of the legacy energy at the interface.
+
+Eight conditional kinetic cases completed with explicit occupation moments,
+spectator decay and separate visible and dark energy. With energy-matched
+spectra on the actual end slice, the full initial gap is 2.1e-15 and late
+total K is 11.03207. The harmonic reduction gives 12.86983 and its
+occupation-preserving restart changes K by 0.0082%. All 39 X4 evidence
+checks pass, the X3 manifest verifies, and code syntax and local links pass.
+The first kinetic result collector had a half-step filename bug. The
+corrected collector reused the completed runs after byte-checking the inputs.
+
+The actual H55 source still needs a coupled spectral production and
+backreaction calculation. Both new kinetic preparations are conditional.
+No new root, physical relic population, independent review or accepted
+cosmological point. The strict result remains 0/135. Claim released.

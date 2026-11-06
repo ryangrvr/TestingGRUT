@@ -101,6 +101,7 @@ def main():
     assert np.max(np.abs(np.diff(data[:, 0]) / cfg['dt'] - 1)) < 1e-10
     record = {
         'engine_sha256': hashlib.sha256(generated.read_bytes()).hexdigest(),
+        'tape_sha256': hashlib.sha256((run / 'moments.txt').read_bytes()).hexdigest(),
         'rows': len(data),
         'threads': args.threads,
         'first_t': float(data[0, 0]),
