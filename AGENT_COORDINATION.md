@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/vector_audit/seed_audit/ | Codex | Fixed-background radiation-seed audit and standalone validation | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6217,3 +6216,24 @@ the final uniform-density e-fold count. Physical seed and transfer
 perturbations remain model dependent. Preserved both original brackets
 and kept the published fit fixed. Claims released.
 [Standalone replication report](research/reality_framework/grut_research_reset_20261106/vector_audit/replication/README.md)
+
+### 2026-11-06 · Codex · Radiation seed of the frozen smooth stiff history
+
+Computed the physical seed density and the causal inventory at both
+frozen blend edges. The upper counts of horizon-energy seed quanta
+inside the initial causal spheres of nominal conversion are 2.78e-203
+and 8.55e-73. The ordinary local gas realization fails. Computed a
+separate gravitational injection estimate for one Maxwell field
+using the fixed hard occupations. The mean injection exceeds the
+frozen visible seed while the events are extremely sparse per Hubble
+sphere. Checked the independent logit perturbation response against
+the analytic derivative. Kept the two expansion histories and 4.95
+common-spectrum transfer fixed.
+
+Materialized the distributed ZIP. Its stored README uses the correct
+history variable. Ran the extracted command block verbatim in a fresh
+Python environment, including the pinned dependency installation.
+All eight mode runs and both ledgers reproduced byte for byte. The
+seed audit also replayed byte for byte from the extracted inputs.
+Claims released.
+[Seed audit](research/reality_framework/grut_research_reset_20261106/vector_audit/seed_audit/README.md)

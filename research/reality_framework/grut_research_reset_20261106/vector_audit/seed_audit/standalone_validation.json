@@ -1,0 +1,36 @@
+{
+  "checked_zip_name": "GRUT_Vector_Replication.zip",
+  "checked_zip_sha256": "85bb8aa945f99c1f4a8390c369e00e3b949fb03f0e8f3ea9f04754b6d444ffdc",
+  "readme_command_block": "python -m pip install -r requirements.txt\nexport OPENBLAS_NUM_THREADS=1\nfor history in prompt early_matter narrow wide; do\n  python replicate.py \"$history\"\n  python replicate.py \"$history\" --fine\ndone\npython check.py\n",
+  "pip_install_from_readme_passed": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "clean_virtual_environment": true,
+  "extracted_packet_without_original_repository": true,
+  "archived_command_was_correct": true,
+  "matching_mode_files": [
+    "early_matter_coarse.json",
+    "early_matter_coarse.npz",
+    "early_matter_fine.json",
+    "early_matter_fine.npz",
+    "narrow_coarse.json",
+    "narrow_coarse.npz",
+    "narrow_fine.json",
+    "narrow_fine.npz",
+    "prompt_coarse.json",
+    "prompt_coarse.npz",
+    "prompt_fine.json",
+    "prompt_fine.npz",
+    "wide_coarse.json",
+    "wide_coarse.npz",
+    "wide_fine.json",
+    "wide_fine.npz"
+  ],
+  "matching_ledgers": [
+    "comparison.json",
+    "independent_checks.json"
+  ],
+  "comparison_passed": true,
+  "seed_audit_replayed_byte_identically_using_extracted_mode_outputs": true
+}
