@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/strong_drive/ | Codex | Frozen propagation comparison, verification and independent observable screen | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6105,3 +6104,17 @@ The independent weak vacuum quadratures resolve the spatial threshold
 and reject the local comparator there. The saved raw-slice replay
 reproduced the audit JSON byte for byte. No new production history.
 Claims released. See [the research reset](research/reality_framework/grut_research_reset_20261106/AUDIT.md).
+
+### 2026-11-06 · Codex · Frozen strong pulse and independent observable screen
+
+The initial local weak quadrature missed by 0.61%. The refined weak test
+passed before running the reserved pulse. Replayed qualification and the
+base case byte for byte. The separate unsplit sector matched number and
+energy within 1.50e-5 relative. Seven matched grid pairs passed the
+registered large-difference rule. Propagation lowers number by 25.95%
+and net work by 20.26% relative to the local arm. Fine net work agrees
+with outgoing energy within 1.45e-5 relative. The boundary prescription
+still shifts transient signed work. The observable screen compares the
+H55 perturbation, M1 multi-target recoil, Higgs-decay freeze-in and DFSZ
+axion tests. No H55 cosmology run. Claims released.
+[Report](research/reality_framework/grut_research_reset_20261106/strong_drive/REPORT.md)
