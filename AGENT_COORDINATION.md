@@ -25,7 +25,8 @@ caught by re-running something. Neither of us caught it by being told.
 ## CLAIMS (live — empty means the tree is free)
 
 | file / area | agent | intent | since |
-|---|---|---|---|
+|---|---|---|
+| research/reality_framework/grut_research_reset_20261106/vector_audit/ claim ledger and reheating screen | Codex | Close the causal-gas interpretation and screen a separate microscopic model | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
