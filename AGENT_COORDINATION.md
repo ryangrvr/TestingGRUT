@@ -26,8 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/ | Codex | Audit GRUT claims and run the bounded evaluator checks | 2026-11-06 |
-| research/reality_framework/grut_working_theory_v2_20261101/WORKING_THEORY.md | Codex | Link the research reset and clarify the old scan scope | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6095,3 +6093,14 @@ The X11 verifier passed 108/108 evidence checks with fresh axial
 matching and direct X5 homogeneous replay. The X10 and X5 archive
 checks passed 97/97 and 42/42. The strict candidate ledger is 0/135.
 Claims released. See [X11 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x11_h55/HANDOFF.md).
+
+### 2026-11-06 · Codex · Research reset and matched evaluator controls
+
+Read the X11 pin and the older M2-X rules. The latter's 0/135 ledger
+lies above H55. Rechecked the full raw source and spectrum hashes at
+three X11 boundaries. Reconstructed native moments and confirmed the
+pressure misses and the 6.57% moved-boundary abundance change.
+The independent weak vacuum quadratures resolve the spatial threshold
+and reject the local comparator there. The saved raw-slice replay
+reproduced the audit JSON byte for byte. No new production history.
+Claims released. See [the research reset](research/reality_framework/grut_research_reset_20261106/AUDIT.md).

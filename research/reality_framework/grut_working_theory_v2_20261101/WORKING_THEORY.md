@@ -20,13 +20,24 @@ Everything here is same-session AI work (Claude and Codex) on one supplied model
 Nothing here is observational evidence, a validation, an exclusion or a confirmed GRUT prediction. Labels: [D]
 derived, [C] computed, [E] estimate, [A] argued, [R] recalled. All data comparisons are retrospective.
 
+## 6 November 2026 · Research reset
+
+The program compares candidate mechanisms with established baselines
+and asks which effects survive independent tests. H55 is a candidate
+in that comparison. Its abundance claim is suspended at the source and
+handoff gates. The raw-file audit reproduces the native energy match
+and the pressure jumps. A separate vacuum pair-production control
+shows that the cell-local approximation misses the spatial threshold.
+[Research reset and bounded tests](../grut_research_reset_20261106/AUDIT.md)
+
 ## 6 November 2026 · H55 evidence update
 
 The low-scale H55 history has an explicitly evolved homogeneous sterile
 fermion sector. The reported 50.96% fermion energy fraction is measured
 while the scalar still does coherent work. The source and particle
 transport criteria govern whether this candidate can feed a new relic
-calculation. The inherited strict test accepted zero of 135 points.
+calculation. The older M2-X scan accepted zero of 135 keys inside its
+higher-scale bracket. H55 lies below that bracket.
 [X5 coupled history](tracks/x5_coupled/REPORT.md) · [X7 overlap](tracks/x7_regulator/REPORT.md)
 
 X8 removes the growing spatial cutoff term with a unitary physical
@@ -91,7 +102,7 @@ conditional release and relic calculation gives $\Omega_X h^2=0.0647$
 at the reference boundary, compared with the Planck cold-dark-matter
 benchmark of 0.120. The late boundary lowers the conditional relic
 by 6.57%, while the halved kinetic step changes it by 0.0053%.
-The strict ledger is 0/135.
+The separate older M2-X ledger is 0/135.
 
 An axial CP matching postulate makes the sterile Yukawas real in the
 inflaton interaction basis and derives the relative decay phases
