@@ -26,6 +26,8 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
+| research/reality_framework/grut_research_reset_20261106/ | Codex | Audit GRUT claims and run the bounded evaluator checks | 2026-11-06 |
+| research/reality_framework/grut_working_theory_v2_20261101/WORKING_THEORY.md | Codex | Link the research reset and clarify the old scan scope | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
