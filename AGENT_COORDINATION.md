@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/vector_audit/ and bounded_route/REPORT.md title | Codex | Fixed-mass vector robustness audit and precise ALP status | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6176,3 +6175,28 @@ Recovered both transfer limits and replayed the fine transfer and
 spectrum byte for byte. BK18 allows the flat-H value. This is a
 conditional benchmark test. Claims released.
 [Report](research/reality_framework/grut_research_reset_20261106/bounded_route/REPORT.md)
+
+### 2026-11-06 · Codex · Fixed 1 meV vector and stiff-history consistency audit
+
+Replayed the independent radiation transfer and all three spectra
+byte for byte. The integral is 1.18142414 with relative grid and
+late readout shifts of 6.74e-5 and 1.23e-4. The canonical inflation
+and reheating histories give r = 0.0147266 and 0.0148640 with early
+radiation. Preserved the original stiff density bracket miss.
+The separate bracket extension gives r = 0.00276479 at the same mass.
+
+The sharp background fails the ultraviolet stress test. Evolved two
+matched smooth histories with separate hard tensor and soft vector
+calculations. Grid and vacuum-start refinement shifts the hard
+energy integrals by at most 4.9e-7 relative. Preserved the loose
+initial narrow UV bound and replaced the numerical derivatives
+with the background equations in the tail estimate. The resulting
+hard tail bounds are 1.49% and 0.00681%. Both effective histories
+remain inside the stress gates. The larger additional radiation
+bound is Delta N_eff = 0.001092, and at least 99.88% of the vector
+rest density satisfies the cold criteria. Replayed the derived
+consistency ledger byte for byte. The reheating conversion is
+prescribed and there is no new CMB tensor or tilt holdout. The
+bounded ALP result remains computationally unresolved. Claims released.
+[Vector audit](research/reality_framework/grut_research_reset_20261106/vector_audit/REPORT.md)
+[Stiff-history checks](research/reality_framework/grut_research_reset_20261106/vector_audit/CONSISTENCY.md)
