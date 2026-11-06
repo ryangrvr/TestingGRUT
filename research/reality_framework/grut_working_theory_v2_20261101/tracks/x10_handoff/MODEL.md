@@ -123,9 +123,10 @@ in energy density units. The pressure jump is one
 third of that value. The adaptive rule carries the
 smallest number of actual directions that gives each
 leg an equal share of half the permitted energy jump.
-The plus-one rule keeps a further direction per leg.
-Both use the measured covariance, without adjusting
-any particle population.
+The two extended rules keep one or two further
+directions per leg, capped by its dimension. The
+energy bound is checked again at the new order.
+All three rules use the measured covariance.
 
 There is a local derivative guarantee. If each leg
 retains at least $r$ directions, $h^jS$ lies inside
@@ -152,7 +153,9 @@ the retained block, of the form
 $D_{A Q}e^{-iD_{Q Q}(\eta-\eta')}D_{Q A}$ in conformal
 time. Moving the boundary tests whether the chosen
 active space captures enough of this response for
-the recorded observables.
+the recorded observables. The implementation still
+uses full-size frames for the control. The number of
+carried covariance entries measures state size.
 [Reaction-coordinate transformations](https://doi.org/10.1103/PhysRevB.97.205405)
 
 ## Physical H55 axial preparation and feedback

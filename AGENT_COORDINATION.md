@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x10_handoff/ | Codex | Build the coupled spatial bath and test handoff information | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6066,3 +6065,15 @@ high-frequency cutoff sensitivity. A fresh coarse production pair,
 dense bath and live control replay passed 59/59 X9 evidence checks.
 The X8 and X7 archive verifiers passed 58/58 and 52/52.
 See [X9 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x9_memory/HANDOFF.md).
+
+### 2026-11-06 · Codex · X10 reciprocal spatial bath and movable handoff
+
+Fresh simulations reproduced all seven X10 archives. The verifier passed
+104/104 full replay checks. The finite hybrid rule with two extra directions
+passes all 21 boundaries. The one-extra-direction rule preserves its two
+wider-cutoff misses. The full reference retains cutoff-dependent daughter
+counts and underresolved spatial work. The reconstructed H55 seed and
+early live axial probe reproduce their digest and resolved correlations.
+The X9 and X8 archive verifiers passed 56/56 and 58/58. The H55 handoff is
+open and the strict candidate ledger is 0/135. Claims released.
+See [X10 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x10_handoff/HANDOFF.md).

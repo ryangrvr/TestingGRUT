@@ -53,6 +53,28 @@ the energy transferred to the bath. A new cosmological
 prediction needs the physical interacting spatial history and
 the transport gate. [X9 results](tracks/x9_memory/REPORT.md)
 
+**X10 transport test.** An interacting vacuum driven by
+the scalar supplies the joint preparation in a finite
+one-axis slab. Energy-eigenmode occupations keep the
+boundary energy but change pressure, work and daughter
+yields. A coherent sterile block and bath directions
+selected by their measured boundary energy can restart
+the full slab. Making the other bath modes passive also
+requires retaining enough of their delayed response.
+Two extra directions per signed bath leg passed all
+21 tested splices, with at most 0.75% spread when moving
+the boundary. The full coupled production still shifts
+with bath cutoff and spatial resolution.
+
+The physical H55 initial scalar slice was reconstructed.
+Planar averages preserve less than 0.09% of its scalar
+gradient power. One early axial mode with reciprocal N1
+feedback resolves spatial sterile–bath correlations.
+The bath effect on the scalar amplitude is below the
+timestep variation. The spatial production history and
+physical transport boundary remain open.
+[X10 results](tracks/x10_handoff/REPORT.md)
+
 These calculations refine the conditional matter model. A
 GRUT-specific prediction requires a derived state or coupling
 relation and a discriminating observable.

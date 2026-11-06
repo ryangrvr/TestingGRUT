@@ -251,8 +251,17 @@ def main():
     comparison_keys=('rho_q','bath_energy','daughter_plus','daughter_minus','daughter_total','daughter_difference')
     refinements={name:{k:float(case['terminal'][k]/ref[k]-1) if abs(ref[k])>1e-15 else None
                        for k in comparison_keys} for name,case in cases.items() if name!='reference'}
+    with np.load(args.work/'reference.npz') as trace:
+        time,work=trace['t'],trace['work']
+    work_scale=max(abs(work))
+    work_differences={}
+    for name in refinements:
+        with np.load(args.work/f'{name}.npz') as trace:
+            other=np.interp(time,trace['t'],trace['work'])
+        work_differences[name]=float(max(abs(other-work))/work_scale)
     summary=dict(scope='finite one-axis Gaussian vacuum bath and scalar, averaged FRW stress',
                  boundaries=BOUNDARIES,cases=cases,terminal_resolution_differences=refinements,
+                 instantaneous_work_resolution_differences=work_differences,
                  scientific_acceptance=False)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n')

@@ -32,6 +32,7 @@ principle would have to act.
 | hidden entropy per charge S/Q | emergent | before φ onset | release, vector heat ∝ K², mediators | computed | — |
 | dark-matter branch (free X vs Q-matter) | **selected** | φ crossover and spinodal; for M1r, T_h ≈ 10 → 0.8 m_X (T_vis ≈ 120 → 7.5 GeV) [C, M1r] | the dynamics' own criterion S/Q ≷ 3.47 | selected, but from supplied (e, c0, δ, s_*) | a principle for the holder |
 | "free X particle", "Q-ball object" | apparent (effective excitations and composites) | below their onsets | — | categories exist only in their regime | — |
+| sterile and daughter transport state | apparent (observable-dependent description) | when a movable boundary preserves the intended downstream quantities | scalar work, joint covariance and bath response [C, X9–X10] | matched early H55 bulk count, resolved channel memory and a finite hybrid closure | coupled spatial H55 production and a physical transport replay |
 | electroweak symmetry breaking | emergent (crossover) | T ≈ 160 GeV [R] | SM dynamics | standard | — |
 | Higgs vacuum metastability | selected by survival | inflation and reheating | ξ_H = 0.1 (supplied), medium masses | survives to M_t ≥ 174.6 GeV with media | — |
 | QCD confinement | emergent | T ≈ 150–160 MeV [R] | SM dynamics | standard | — |
@@ -40,6 +41,13 @@ principle would have to act.
 
 ## What the ledger shows
 
+- **Sufficiency depends on the observable and its future dynamics.** In X9 the late total
+  daughter count is nearly preparation independent in the stationary control while a
+  chirality count retains a measurable dependence. In X10 a finite spatial bath can be
+  carried through a moving boundary using its occupations and selected coherent directions.
+  The energy-selected state alone can miss downstream when the rest of the bath is made
+  passive. These entries concern the tested quadratic bath and explicit preparations.
+  [X9](tracks/x9_memory/REPORT.md) · [X10](tracks/x10_handoff/REPORT.md)
 - **Every "selected" feature in M2 is selected by standard dynamics from supplied inputs.** Every primitive or supplied
   entry is a place a GRUT principle would have to act, and at present it acts on none.
 - **Features fixed at the same epoch from the same kind of input are candidates for a common origin.** That is a

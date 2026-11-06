@@ -93,12 +93,14 @@ def main():
     p.add_argument('work',type=Path)
     p.add_argument('output',type=Path)
     p.add_argument('--workers',type=int,default=4)
+    p.add_argument('--only',nargs='+',choices=HYBRID_CASES)
     args=p.parse_args()
     args.work.mkdir(parents=True,exist_ok=True)
+    names=args.only or HYBRID_CASES
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
-        list(pool.map(run,[(name,args.work) for name in HYBRID_CASES]))
+        list(pool.map(run,[(name,args.work) for name in names]))
     result=dict(scope='coherent retained bath directions with their boundary response to passive occupations removed',
-                cases={k:json.loads((args.work/f'{k}.json').read_text()) for k in HYBRID_CASES},
+                cases={k:json.loads((args.work/f'{k}.json').read_text()) for k in names},
                 scientific_acceptance=False)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
