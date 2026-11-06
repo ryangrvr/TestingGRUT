@@ -153,19 +153,19 @@ def stationary_control(work):
     cutoff=15.
     m=mass_matched(M,gamma,cutoff)
     outcome=[]
-    for spacing in (0.025,0.0125):
+    for spacing,steps in ((0.025,12000),(0.0125,12000),(0.0125,24000)):
         star,actual=build(k,gamma,cutoff,spacing)
         pair,prep=prepare(star,m,M,width=0.4)
-        eta=np.linspace(0,120,12001)
+        eta=np.linspace(0,120,steps+1)
         path=np.tile([m,0.,0.,M],(len(eta),1))
-        keep,d,_,_=evolve(lib,star,path,eta,pair,25)
+        keep,d,_,_=evolve(lib,star,path,eta,pair,steps//480)
         late=eta[keep]>=100
         early=eta[keep]<=30
         ster=abs(d['sterile_free_count'][:,0]-d['sterile_free_count'][:,1])
         daughter=abs(d['bath_chiral_count'][:,0]-d['bath_chiral_count'][:,1])
         total=abs(d['bath_positive'][:,0]-d['bath_positive'][:,1])
         outcome.append(dict(
-            frequency_spacing=actual,recurrence_time=2*np.pi/actual,
+            frequency_spacing=actual,dt=120/steps,recurrence_time=2*np.pi/actual,
             max_early_sterile_count_difference=float(max(ster[early])),
             max_late_sterile_count_difference=float(max(ster[late])),
             max_late_total_positive_bath_count_difference=float(max(total[late])),

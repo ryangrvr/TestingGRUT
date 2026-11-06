@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x9_memory/ | Codex | Test early H55 preparation memory and a continuously coupled vacuum bath | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6051,3 +6050,18 @@ transport windows. Frozen backgrounds reproduce the large finite-window
 ratio to the local rate. The fresh X8 spot replay passes 63/63 evidence
 checks, and the X7 and X6 archive verifiers pass 52/52 and 48/48.
 See [X8 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x8_unitary/HANDOFF.md).
+
+### 2026-11-06 · Codex · X9 early H55 phase memory and continuous bath
+
+The matched early phase reflection changes the final-window total
+comoving count by at most 0.0111% across three homogeneous runs.
+A separate exact fixed-trajectory phase envelope gives 0.0381%
+for the window-averaged total number. In the stationary vacuum
+bath the total daughter count agrees to about one part in a
+million per excitation while the chirality contrast is 0.1087.
+The finite live scalar control conserves total energy and retains
+different bath energies. The driven H55 bath control retains
+high-frequency cutoff sensitivity. A fresh coarse production pair,
+dense bath and live control replay passed 59/59 X9 evidence checks.
+The X8 and X7 archive verifiers passed 58/58 and 52/52.
+See [X9 handoff](research/reality_framework/grut_working_theory_v2_20261101/tracks/x9_memory/HANDOFF.md).

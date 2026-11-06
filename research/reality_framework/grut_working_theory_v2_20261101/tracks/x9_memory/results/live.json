@@ -21,6 +21,11 @@
         "energy_work_error": 1.7397284294423665e-07
       }
     ],
+    "pade": {
+      "steps": 120,
+      "error": 2.0948812336437117e-10,
+      "max_energy_work_error": 1.050652620460113e-13
+    },
     "leading_born_relative_error": 4.902529048984519e-06,
     "first_order_bath_probability": 7.492653491704233e-06,
     "projector": {
@@ -34,6 +39,7 @@
     "runs": [
       {
         "frequency_spacing": 0.024984859424800398,
+        "dt": 0.01,
         "recurrence_time": 251.47971418813705,
         "max_early_sterile_count_difference": 0.613783950285151,
         "max_late_sterile_count_difference": 1.0911052422993255e-06,
@@ -48,6 +54,7 @@
       },
       {
         "frequency_spacing": 0.012492429712400199,
+        "dt": 0.01,
         "recurrence_time": 502.9594283762741,
         "max_early_sterile_count_difference": 0.613783952040383,
         "max_late_sterile_count_difference": 1.1078897605156425e-06,
@@ -55,6 +62,21 @@
         "mean_late_chiral_bath_count_difference": 0.10872522042741249,
         "max_static_energy_error": 4.0081470547015385e-05,
         "max_norm_error": 2.1405099914773018e-13,
+        "positive_projection_error": 4.1284766993295157e-16,
+        "orthogonality": 2.1516660027526368e-17,
+        "bath_packet_sterile_leakage": 5.697051369965929e-16,
+        "sterile_covariance_difference": 5.653445336608586e-16
+      },
+      {
+        "frequency_spacing": 0.012492429712400199,
+        "dt": 0.005,
+        "recurrence_time": 502.9594283762741,
+        "max_early_sterile_count_difference": 0.6137949425366466,
+        "max_late_sterile_count_difference": 1.10783599637987e-06,
+        "max_late_total_positive_bath_count_difference": 1.1224562758149759e-06,
+        "mean_late_chiral_bath_count_difference": 0.108729919482548,
+        "max_static_energy_error": 1.0026899769144393e-05,
+        "max_norm_error": 3.2085445411667024e-13,
         "positive_projection_error": 4.1284766993295157e-16,
         "orthogonality": 2.1516660027526368e-17,
         "bath_packet_sterile_leakage": 5.697051369965929e-16,

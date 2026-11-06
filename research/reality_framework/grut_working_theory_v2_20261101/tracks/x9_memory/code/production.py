@@ -18,7 +18,8 @@ from run import DT, digest, read_columns, write_input
 
 X5=TRACKS/'x5_coupled'
 SETTINGS={'coarse':(2880,DT,2),'radial':(5760,DT,2),'half':(2880,DT/2,4)}
-OBSERVABLES=('fermion_fraction','fermion_energy','fermion_number','n_1','n_2','n_3','n_4')
+OBSERVABLES=('fermion_fraction','fermion_energy','fermion_number','comoving_fermion_number',
+             'n_1','n_2','n_3','n_4','a3_n_1','a3_n_2','a3_n_3','a3_n_4')
 
 
 def diagnostics(d):
@@ -28,8 +29,10 @@ def diagnostics(d):
     number=sum(d[f'n_{j}'] for j in range(1,5))
     power=sum(d[f'J_{j}']*d['dsigma' if j==1 else 'dchi'] for j in range(1,5))
     return dict(t=t,rho=rho,fermion_fraction=energy/rho,fermion_energy=energy,
-                fermion_number=number,normalized_work=power/rho,
-                **{f'n_{j}':d[f'n_{j}'] for j in range(1,5)})
+                fermion_number=number,comoving_fermion_number=d['a']**3*number,
+                normalized_work=power/rho,
+                **{f'n_{j}':d[f'n_{j}'] for j in range(1,5)},
+                **{f'a3_n_{j}':d['a']**3*d[f'n_{j}'] for j in range(1,5)})
 
 
 def average(t,y,begin,end):
@@ -77,15 +80,19 @@ def main():
     p.add_argument('work',type=Path)
     p.add_argument('output',type=Path)
     p.add_argument('--workers',type=int,default=6)
+    p.add_argument('--only',choices=SETTINGS)
+    p.add_argument('--gather',action='store_true')
     args=p.parse_args()
     work=args.work.resolve()
     work.mkdir(parents=True,exist_ok=True)
     cases=json.loads((X5/'results/h55_refined.json').read_text())['cases']
     base=next(row['model'] for row in cases if row['case']=='eight_bins')
     engine=work/'production'
-    subprocess.run(['gcc','-std=c11','-O3','-march=native','-fopenmp','-Wall','-Wextra','-Werror',
-                    str(Path(__file__).with_name('production.c')),'-lm','-o',str(engine)],check=True)
-    tasks=[(name,reflect) for name in SETTINGS for reflect in (False,True)]
+    if not args.gather:
+        subprocess.run(['gcc','-std=c11','-O3','-march=native','-fopenmp','-Wall','-Wextra','-Werror',
+                        str(Path(__file__).with_name('production.c')),'-lm','-o',str(engine)],check=True)
+    names=(args.only,) if args.only else SETTINGS
+    tasks=[(name,reflect) for name in names for reflect in (False,True)]
 
     def run(task):
         name,reflect=task
@@ -93,9 +100,10 @@ def main():
         label=name+('_reflect' if reflect else '_base')
         model=dict(base,nq=nq,nsteps=math.ceil((base['t1']-base['t0'])/target),stride=64 if target==DT else 128)
         input_path,history,match=(work/f'{label}.{ext}' for ext in ('input','history','match'))
-        write_input(input_path,model)
-        subprocess.run([str(engine),str(input_path),str(history),str(match),str(int(reflect)),str(fine_stride)],
-                       check=True,env=dict(os.environ,OMP_NUM_THREADS='1'))
+        if not args.gather:
+            write_input(input_path,model)
+            subprocess.run([str(engine),str(input_path),str(history),str(match),str(int(reflect)),str(fine_stride)],
+                           check=True,env=dict(os.environ,OMP_NUM_THREADS='1'))
         d=read_columns(history)
         if abs(d['t'][-1]-model['t1'])>1e-12:
             raise ValueError(f'Truncated production: {label}')
@@ -106,12 +114,18 @@ def main():
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         results=dict(pool.map(run,tasks))
-    comparisons={name:compare(results[name,False],results[name,True]) for name in SETTINGS}
+    comparisons={name:compare(results[name,False],results[name,True]) for name in names}
+    resolutions={}
+    if 'coarse' in names:
+        coarse=results['coarse',False][0]['final_window']
+        resolutions={name:{key:results[name,False][0]['final_window'][key]/coarse[key]-1
+                           for key in OBSERVABLES} for name in names if name!='coarse'}
     report=dict(scope='homogeneous H55 scalar and sterile feedback with collisionless sterile fields',
                 copy_time=0.16,radial_reflection_endpoints=[3000.,6000.],final_window=0.10,
                 cases={name+('_reflect' if reflect else '_base'):value[0]
                        for (name,reflect),value in results.items()},
-                comparisons=comparisons,scientific_acceptance=False)
+                comparisons=comparisons,base_final_window_resolution_differences=resolutions,
+                scientific_acceptance=False)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
 

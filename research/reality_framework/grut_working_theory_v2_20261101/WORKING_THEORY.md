@@ -39,6 +39,20 @@ A physical transport prediction requires the sterile–bath memory and
 interacting initial state. [X8 model](tracks/x8_unitary/MODEL.md) ·
 [X8 results](tracks/x8_unitary/REPORT.md)
 
+**X9 preparation test.** The early H55 reflection reverses the
+scalar work at matched energy, pressure and free occupations.
+Across three coevolved homogeneous resolutions the final-window
+total comoving count changes by at most 0.0111%. With the scalar
+history held fixed, all allowed signs in that compact momentum
+window have a 0.0381% envelope for the averaged total count.
+A continuously coupled vacuum bath shows a distinct result.
+Stationary total daughter counts lose their dependence on the
+tested phase while the channel-resolved counts retain it.
+The driven and live-scalar controls also retain differences in
+the energy transferred to the bath. A new cosmological
+prediction needs the physical interacting spatial history and
+the transport gate. [X9 results](tracks/x9_memory/REPORT.md)
+
 These calculations refine the conditional matter model. A
 GRUT-specific prediction requires a derived state or coupling
 relation and a discriminating observable.
