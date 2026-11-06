@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_research_reset_20261106/vector_audit/replication/ | Codex | Fixed-input replication and reviewer package | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6201,3 +6200,19 @@ prescribed and there is no new CMB tensor or tilt holdout. The
 bounded ALP result remains computationally unresolved. Claims released.
 [Vector audit](research/reality_framework/grut_research_reset_20261106/vector_audit/REPORT.md)
 [Stiff-history checks](research/reality_framework/grut_research_reset_20261106/vector_audit/CONSISTENCY.md)
+
+### 2026-11-06 · Codex · Fixed-input replication of the smooth stiff counterexample
+
+Froze the input and comparison files from the pinned audit before
+running the separate cosmic-time background and second-order
+longitudinal solver. Recorded both grids before comparing to the
+archive. The fitted ratios agree to 0.01% and the matched-spectrum
+stiff-to-early-radiation ratio is 4.94985. The independently integrated
+hard energy agrees to 9e-7 relative. A distinct instantaneous-frequency
+estimate gives hard UV fractions below 2.86% and 0.0831% and a combined
+Delta N_eff upper estimate of 0.00111. The effective fluid closure
+admits the long-wave adiabatic mode and the seed displacement changes
+the final uniform-density e-fold count. Physical seed and transfer
+perturbations remain model dependent. Preserved both original brackets
+and kept the published fit fixed. Claims released.
+[Standalone replication report](research/reality_framework/grut_research_reset_20261106/vector_audit/replication/README.md)
