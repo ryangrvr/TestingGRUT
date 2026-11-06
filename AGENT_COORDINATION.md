@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| `research/reality_framework/grut_working_theory_v2_20261101/tracks/x3_actual/**` | Codex | Evolved H55 kinetic splice, resolution controls, fermion-closure tests and population conservation; existing tracks read-only | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -5893,3 +5892,43 @@ Added research/reality_framework/grut_emergence_synthesis_20261105/ as an eviden
 Verification actually run: four finite illustrations pass all 48 checks (correlation-dependent local futures, an eight-reading constrained record history, the product/Gibbs entropy identity, and a supplied controller intervention). Fourteen pinned source files match exact Git blob and SHA-256 identities. All 37 archive/source/package checks pass; saved roots reaggregate to zero strict M2-X passes, 37 bracketed free-X roots, two isolated Q roots and 15 excluded extrapolation diagnostics. The first self-link audit failure is preserved and corrected. The standalone HTML has 83 MathML expressions, an embedded map and 25 resolving internal anchors; Python sources parse and the final diagram was visually inspected.
 
 Interpretive checks distinguish unitary charge-flipping symmetry from antiunitary time reversal, fixed-background energy shifts from gravitational vacuum stress, physical records from consciousness, and a failed registered grid from a field-content exclusion. No legacy result or register is changed. No cosmological solver, kinetic splice, full 3D fermion run, vacuum-density mechanism or empirical test ran. New calculations and review are same-author only; no independent Claude/Argon review is claimed. Claim released.
+
+### 2026-11-05 · Codex · closed X3 faithful splice; retained actual-H55 conditional kinetic result
+
+Continued from 9f71d34 on codex/grut-x3-closure-20261105 under the existing X3 claim.
+The execution protocol was committed at d845c6d before new kinetic runs. Added
+the X3 report, replay scripts, lossless raw inputs/time series/final states,
+source manifest, and a self-contained restart record. Earlier tracks are unchanged.
+
+Actual H55 gives late conditional reheating-network K = 11.03123521 against
+7.01655683 for the matched old proxy, +57.2172%. All seven runs completed.
+Momentum doubling changes K by +0.000216%, timestep halving by -0.12892%;
+native species shares change it by -0.000884%, and the dilute supplied
+spectrum by -2.00189%. Four original transition tables replay exactly.
+
+The native N1 energy/number pair violates the two-helicity free-Fermi bound:
+energy is 0.436485 of the minimum at the recorded number. At fixed energy the
+number must decrease at least 46.34% for physical occupation cap one, or
+54.85% for the additional cap one-half. This is a failed native-moment splice,
+not a physical depletion prescription or a field-content exclusion. The new
+network runs supply different, energy-matched spectra and record their numbers.
+The full-source energy gap is 3.33907e-5 because the inherited network omits the
+spectator and has a printed-column residual; it fails the registered 1e-6
+criterion. The source's maximum 1.33043% scalar budget diagnostic is retained.
+
+Verification actually run: exact moment bound at seven saved times, numerical
+quadrature, independent finite linear program, nine homogeneous line controls,
+nine full-3D single-mode controls with spatial/time/vacuum/norm and independent
+ODE comparisons, 23 reaction charge vectors and 11 synthetic event-energy
+balances. All 64 internal evidence checks pass; scientific_acceptance is false.
+Eleven inherited input files match the base Git blobs and SHA-256 identities;
+47 package files are sealed, and all seven recorded engine source hashes match.
+Python sources parse; local document links and math delimiters were checked.
+A broken handoff relative link was found and corrected before publication.
+
+Not run: new scalar evolution, H55 microscopic drain calibration, a filled 3D
+Dirac sea, vacuum-stress backreaction, spectator continuation, a new release
+root, or a cosmological core population. The common inherited 0.05 eV seesaw
+rate input is explicit; the later card's N2 rate is not silently substituted.
+The old zero-of-135 strict result remains. No outside or independent-agent
+review is claimed. Claim released.
