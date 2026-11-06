@@ -69,3 +69,18 @@ unless the physical source and its collision overlap qualify.
 
 [Derivative-coupling regularization context](https://arxiv.org/abs/2112.07645) ·
 [Quantum coherence in transport](https://arxiv.org/abs/0811.0936)
+
+## Radial follow-up after the first ten runs
+
+The original uniform 0.5 to 0.25 transverse-bin comparison
+missed the instantaneous-work target, and the heavier mass
+pair changed the matched work history. Preserve both misses.
+Hold the original fields, couplings, timestep and criteria
+fixed. At cylinder (12,16), halve the transverse width again
+to 0.125. Independently integrate the radial measure with
+positive Gauss–Legendre weights in panels with edges
+0, 1, 2, 4, 8, 12, 16 and the wider cutoff at 22. Compare
+8 and 12 nodes per panel, test the wider cylinder at each
+order, compare fine uniform and Gaussian rules, and repeat
+the heavier-pair test at (16,22) with the 8-node rule.
+Record the parameter sensitivity separately from discretization.
