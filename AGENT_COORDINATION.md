@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x6_slab/ | Codex | Build and test the slab source and coherent transport gates | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -5996,3 +5995,34 @@ The initial spatial split vacuum artifact and UV quadrature miss are
 documented with their corrections. Same-author numerical evidence.
 The strict relic scan is 0/135 and scientific acceptance is false.
 Claim released.
+
+
+### 2026-11-05 · Codex · X6 spatial source and transport gate decisions
+
+Continued from the published X5 checkpoint 7a4c5aa on
+codex/grut-h55-slab-transport-20261105. All research changes live in
+tracks/x6_slab. The protocol and first slab benchmark were published
+before the matching and transport controls.
+
+The four-component slab recovers the homogeneous helicity benchmark
+to 4.14e-8 in occupation and the spatial ODE to 7.63e-8 in state
+components. The pressure-work and momentum ledgers pass. Matched
+integrated work changes by 0.148% on the first wide cutoff and 0.021%
+on the next. Instantaneous work still changes by 6.41% and 3.91%.
+A second-order preparation and independent timestep controls preserve
+the cutoff miss. The static Galerkin edge identity exposes a leading
+absolute-momentum response that one local gradient term cannot
+remove across harmonics.
+
+The controlled free tail with explicit elastic dephasing first passes
+the averaged transport gate at 18.65 after the pulse with 92.02% of the
+parent energy present. Two later boundaries give the same downstream
+moments. Decay alone fails the pressure envelope through the half-energy
+time. The H55 archived boundary fails and its derivative jump is
+-0.10831 in initial Hubble units after normalization. The specified
+control channels were not applied to H55. Scientific acceptance is false
+and the strict relic result remains 0/135.
+
+Verified all 48 archived checks, five fresh replay comparisons, all 42
+X5 checks, Python syntax and 13 local links. Same-author calculations
+with independent numerical ODE controls. Claim released.

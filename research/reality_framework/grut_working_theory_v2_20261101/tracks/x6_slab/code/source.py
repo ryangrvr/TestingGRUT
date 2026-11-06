@@ -19,6 +19,9 @@ CASES = {
     'transverse_bins': ({'transverse_bins':32}, 600),
     'wide_cutoff': ({'longitudinal':9, 'transverse_cut':12.0, 'transverse_bins':24}, 600),
     'half_step': ({}, 1200),
+    'longitudinal_cutoff': ({'longitudinal':9}, 600),
+    'transverse_cutoff': ({'transverse_cut':12.0, 'transverse_bins':24}, 600),
+    'wide_half_step': ({'longitudinal':9, 'transverse_cut':12.0, 'transverse_bins':24}, 1200),
 }
 DURATION = 3.0
 
@@ -26,11 +29,11 @@ DURATION = 3.0
 def evolve(box, initial, duration, steps):
     state = initial
     values = []
-    pressure_work = np.zeros(2)
+    pressure_work = np.zeros(3)
     for i in range(steps+1):
         measure = box.measure(state,work=True)
         values.append(dict(t=i*duration/steps,a=state.a,work_P=float(pressure_work[0]),
-                           work_P_F=float(pressure_work[1]),**measure))
+                           work_P_F=float(pressure_work[1]),work_P_F_matched=float(pressure_work[2]),**measure))
         if i<steps:
             state, step_work = box.step(state,duration/steps)
             pressure_work += step_work
@@ -38,48 +41,62 @@ def evolve(box, initial, duration, steps):
     return d, state
 
 
-def evaluate(cfg, steps):
+def evaluate(cfg, steps, preparation_order=1):
     box = Slab(cfg)
     x = 2*np.pi*box.x/cfg.length
-    initial = box.initial(0.15*np.sin(x),0.9*np.cos(x),adiabatic=True)
+    initial = box.initial(0.15*np.sin(x),0.9*np.cos(x),adiabatic=preparation_order)
     d, final = evolve(box,initial,DURATION,steps)
     measure, scale = d['a']**3, d['rho'][0]*d['a'][0]**3
     q = cumulative_trapezoid(measure*d['Jv'],d['t'],initial=0)
     absolute_q = cumulative_trapezoid(abs(measure*d['Jv']),d['t'],initial=0)
+    matched_q = cumulative_trapezoid(measure*d['Jv_matched'],d['t'],initial=0)
+    matched_absolute_q = cumulative_trapezoid(abs(measure*d['Jv_matched']),d['t'],initial=0)
     energy = (measure*d['rho']+d['work_P'])/scale-1
     fermion_energy = (measure*d['rho_F']-measure[0]*d['rho_F'][0]+d['work_P_F'])
+    matched_energy = (measure*d['rho_F_matched']-measure[0]*d['rho_F_matched'][0]+d['work_P_F_matched'])
     momentum = d['a']**4*d['momentum']
     amplitudes = final.occupied.reshape(len(box.perp),2*box.d,box.d)
     gram = adjoint(amplitudes) @ amplitudes
     n_error = np.max(abs(gram-np.eye(box.d)))
     summary = dict(
-        parameters=asdict(cfg), steps=steps, elapsed=DURATION, final={k:float(v[-1]) for k,v in d.items()},
+        parameters=asdict(cfg), steps=steps, preparation_order=preparation_order,
+        elapsed=DURATION, final={k:float(v[-1]) for k,v in d.items()},
         integrated_transfer=float(q[-1]), integrated_absolute_transfer=float(absolute_q[-1]),
         transfer_from_stress=float(fermion_energy[-1]),
+        integrated_transfer_matched=float(matched_q[-1]),
+        integrated_absolute_transfer_matched=float(matched_absolute_q[-1]),
+        transfer_from_stress_matched=float(matched_energy[-1]),
         max_pressure_work_error=float(max(abs(energy))),
         max_separate_fermion_work_error=float(max(abs(q-fermion_energy))/scale),
+        max_matched_fermion_work_error=float(max(abs(matched_q-matched_energy))/scale),
         max_comoving_momentum_error=float(max(abs(momentum-momentum[0]))/scale),
         orthonormality_error=float(n_error),
         maximum_anisotropic_fermion_stress=float(max(abs(d['P_F_x']-d['P_F_perp']))),
         maximum_gradient_fraction=float(max(d['scalar_gradient']/d['rho'])),
         peak_instantaneous_work=float(max(abs(measure*d['Jv']))),
+        peak_instantaneous_work_matched=float(max(abs(measure*d['Jv_matched']))),
         pressure_tensor_verified_in_isotropic_average=True,
     )
     d['integrated_transfer']=q
     d['comoving_work']=measure*d['Jv']
+    d['integrated_transfer_matched']=matched_q
+    d['comoving_work_matched']=measure*d['Jv_matched']
     return summary,d
 
 
-def compare(reference, control):
+def compare(reference, control, suffix=''):
     r,d=reference
     s,q=control
-    work_peak=r['peak_instantaneous_work']
-    candidate=np.interp(d['t'],q['t'],q['comoving_work'])
-    instantaneous=float(max(abs(candidate-d['comoving_work']))/work_peak)
-    integrated=float(abs(s['integrated_transfer']/r['integrated_transfer']-1))
-    integrated_history=float(max(abs(np.interp(d['t'],q['t'],q['integrated_transfer'])-d['integrated_transfer']))
-                             / max(abs(d['integrated_transfer'])))
-    absolute=float(abs(s['integrated_absolute_transfer']/r['integrated_absolute_transfer']-1))
+    work_key='comoving_work'+suffix
+    transfer_key='integrated_transfer'+suffix
+    absolute_key='integrated_absolute_transfer'+suffix
+    work_peak=r['peak_instantaneous_work'+suffix]
+    candidate=np.interp(d['t'],q['t'],q[work_key])
+    instantaneous=float(max(abs(candidate-d[work_key]))/work_peak)
+    integrated=float(abs(s[transfer_key]/r[transfer_key]-1))
+    integrated_history=float(max(abs(np.interp(d['t'],q['t'],q[transfer_key])-d[transfer_key]))
+                             / max(abs(d[transfer_key])))
+    absolute=float(abs(s[absolute_key]/r[absolute_key]-1))
     return dict(instantaneous_peak_scaled_error=instantaneous, integrated_transfer_error=integrated,
                 integrated_history_error=integrated_history, integrated_absolute_transfer_error=absolute,
                 gate_pass=max(instantaneous,integrated,integrated_history,absolute)<0.01)
@@ -103,12 +120,17 @@ def main():
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         histories=dict(pool.map(run,CASES))
-    differences={key:compare(histories['reference'],pair) for key,pair in histories.items() if key!='reference'}
+    pairs={key:('reference',key) for key in histories if key not in ('reference','wide_half_step')}
+    pairs['wide_half_step']=('wide_cutoff','wide_half_step')
+    differences={key:compare(histories[a],histories[b]) for key,(a,b) in pairs.items()}
+    matched={key:compare(histories[a],histories[b],'_matched') for key,(a,b) in pairs.items()}
     result=dict(
         scope='expanding homogeneous-metric slab with full transverse momentum',
         cases={key:value[0] for key,value in histories.items()},
         refinement_comparisons=differences,
+        matched_refinement_comparisons=matched,
         finite_slab_convergence_pass=all(row['gate_pass'] for row in differences.values()),
+        matched_finite_slab_convergence_pass=all(row['gate_pass'] for row in matched.values()),
         scientific_acceptance=False,
     )
     args.output.parent.mkdir(parents=True,exist_ok=True)

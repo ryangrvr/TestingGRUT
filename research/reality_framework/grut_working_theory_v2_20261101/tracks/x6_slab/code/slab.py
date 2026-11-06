@@ -145,6 +145,21 @@ class Slab:
             raise ValueError(f'Nonpositive matched kinetic coefficient at a={a}: {zt}, {zx}')
         return 1-zt, 1-zx, at, bx, zg
 
+    def first_graph(self, a, phi, speed, hubble, energy, basis):
+        cfg=self.cfg
+        angle=phi/cfg.phase_scale
+        vertex=self.mass_matrix(1j*cfg.mass*np.exp(1j*angle)*speed/cfg.phase_scale)
+        derivative=np.kron(vertex,np.eye(2))-hubble*self.full_hamiltonian(a,angle,kinetic_only=True)
+        gap=energy[:,self.d:,None]-energy[:,None,:self.d]
+        mix=-1j*(adjoint(basis[:,:,self.d:]) @ derivative @ basis[:,:,:self.d])/gap**2
+        return gap,mix
+
+    def graph_orbitals(self, basis, mix):
+        vals,axes=np.linalg.eigh(np.eye(self.d)+adjoint(mix) @ mix)
+        inverse_root=(axes*vals[:,None,:]**-0.5) @ adjoint(axes)
+        occupied=(basis[:,:,:self.d]+basis[:,:,self.d:] @ mix) @ inverse_root
+        return occupied.reshape(len(self.perp),self.d,2,self.d)
+
     def initial(self, phi, speed, a=1.0, adiabatic=True):
         phi, speed = self.project_scalar(phi), self.project_scalar(speed)
         cfg = self.cfg
@@ -153,21 +168,45 @@ class Slab:
         energy, basis = np.linalg.eigh(h)
         if np.any(energy[:,self.d-1]>=0) or np.any(energy[:,self.d]<=0):
             raise ValueError('Prepared state has no occupied/unoccupied gap')
-        occupied = basis[:,:,:self.d]
+        A,B,At,_,zg = self.matching(a)
+        shape=(len(self.perp),self.d,2,self.d)
+        pi=a**3*A*speed
+        occupied=basis[:,:,:self.d].reshape(shape)
         if adiabatic:
-            positive = basis[:,:,self.d:]
             vclass = cfg.vacuum_density+0.5*np.mean(speed**2+cfg.scalar_mass**2*phi**2
                                                    +(self.derivative(phi)/a)**2)
             hubble = math.sqrt(vclass/(3*cfg.planck**2)) if cfg.expand else 0.0
-            hd = np.kron(self.mass_matrix(1j*cfg.mass*np.exp(1j*angle)*speed/cfg.phase_scale),np.eye(2))
-            hd = hd-hubble*self.full_hamiltonian(a,angle,kinetic_only=True)
-            gap = energy[:,self.d:,None]-energy[:,None,:self.d]
-            mix = -1j*(adjoint(positive) @ hd @ occupied)/gap**2
-            vals, axes = np.linalg.eigh(np.eye(self.d)+adjoint(mix) @ mix)
-            inverse_root = (axes*vals[:,None,:]**-0.5) @ adjoint(axes)
-            occupied = (occupied+positive @ mix) @ inverse_root
-        A = self.matching(a,slopes=False)[0]
-        return State(a,phi,a**3*A*speed,occupied.reshape(len(self.perp),self.d,2,self.d))
+            gap,mix=self.first_graph(a,phi,speed,hubble,energy,basis)
+            occupied=self.graph_orbitals(basis,mix)
+            if adiabatic==2:
+                state=State(a,phi,pi,occupied)
+                measures=self.measure(state)
+                hubble=measures['H']
+                force=self.project_scalar(self.mass_derivative(angle,self.cov(occupied)))/a**3
+                laplace=self.derivative(self.derivative(phi))/a**2
+                acceleration=(B*laplace-cfg.scalar_mass**2*phi-force-hubble*(3*A+At)*speed)/A
+                zg_slope=-5*cfg.mass**4*(self.weight @ (self.q2/a**2*self.energy(a)**-7).sum(axis=1))/(4*a**3)
+                if not cfg.subtract:
+                    zg_slope=0.0
+                hdot=-(3*(measures['rho']+measures['P'])+zg_slope*hubble**2/2)/(6*cfg.planck**2+zg)
+                if not cfg.expand:
+                    hdot=0.0
+                gap,mix=self.first_graph(a,phi,speed,hubble,energy,basis)
+
+                def correction(t):
+                    scale=a*math.exp(hubble*t+hdot*t*t/2)
+                    field=phi+speed*t+acceleration*t*t/2
+                    vel=speed+acceleration*t
+                    e,b=np.linalg.eigh(self.full_hamiltonian(scale,field/cfg.phase_scale))
+                    _,x=self.first_graph(scale,field,vel,hubble+hdot*t,e,b)
+                    block=b[:,:,self.d:] @ x @ adjoint(b[:,:,:self.d])
+                    return block+adjoint(block)
+
+                dt=2e-5
+                derivative=(correction(dt)-correction(-dt))/(2*dt)
+                mix+=1j*(adjoint(basis[:,:,self.d:]) @ derivative @ basis[:,:,:self.d])/gap
+                occupied=self.graph_orbitals(basis,mix)
+        return State(a,phi,pi,occupied)
 
     def measure(self, state, work=False):
         cfg, a, phi, pi = self.cfg, state.a, state.phi, state.pi
@@ -204,10 +243,24 @@ class Slab:
         if rho<=0:
             raise ValueError('Nonpositive total density in Friedmann equation')
         hubble = math.sqrt(rho/(3*cfg.planck**2+zg/2)) if cfg.expand else 0.0
-        power = np.mean(v*self.mass_derivative(phase,cov)) if work else 0.0
+        zt,zx=1-A,1-B
+        speed2=np.mean(v**2)
+        grad2=np.mean(gradient**2)/a**2
+        rho_ct=(zt*speed2+zx*grad2)/2
+        p_ct=(zt/2-At/6)*speed2-(zx-Bt)*grad2/6
+        power=power_matched=0.0
+        if work:
+            force=self.project_scalar(self.mass_derivative(phase,cov))/a**3
+            laplace=self.derivative(gradient)/a**2
+            acceleration=(B*laplace-cfg.scalar_mass**2*phi-force-hubble*(3*A+At)*v)/A
+            matched_force=force-zt*acceleration-hubble*(3*zt-At)*v+zx*laplace
+            power=np.mean(v*force)
+            power_matched=np.mean(v*matched_force)
         # Directional scalar terms treat coefficients as functions of the volume scale.
         return dict(rho=float(rho), H=float(hubble), P=float(pressure), rho_F=float(fermion_energy),
-                    P_F=float(fermion_p), P_F_x=float(px), P_F_perp=float(pt), Jv=float(power/a**3),
+                    P_F=float(fermion_p), P_F_x=float(px), P_F_perp=float(pt), Jv=float(power),
+                    rho_F_matched=float(fermion_energy-rho_ct), P_F_matched=float(fermion_p-p_ct),
+                    Jv_matched=float(power_matched),
                     P_x=float(scalar_p+4*grad_energy/3+px), P_perp=float(scalar_p-2*grad_energy/3+pt),
                     momentum=float(scalar_momentum+fermion_momentum), fermion_momentum=float(fermion_momentum),
                     rho_scalar=float(scalar_energy), scalar_gradient=float(grad_energy),
@@ -253,14 +306,14 @@ class Slab:
 
     def expand(self, state, dt):
         if not self.cfg.expand:
-            return state, np.zeros(2)
+            return state, np.zeros(3)
         a0 = state.a
         start = self.measure(state)
         mid = replace(state,a=a0*math.exp(start['H']*dt/2))
         middle = self.measure(mid)
         a1 = a0*math.exp(middle['H']*dt)
         volume_change = a0**3*math.expm1(3*middle['H']*dt)
-        return replace(state,a=a1), volume_change*np.array([middle['P'],middle['P_F']])
+        return replace(state,a=a1), volume_change*np.array([middle['P'],middle['P_F'],middle['P_F_matched']])
 
     def step(self, state, dt):
         before, first = self.expand(state,dt/2)

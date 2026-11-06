@@ -14,3 +14,23 @@ preserves the combined budget and that its own fermion pressure
 work agrees with the independent time integral of the matched
 force. Apply the same numerical comparison to that work.
 The original raw-work verdict is recorded alongside it.
+
+## Initial-state and edge tests
+
+The matched ledger reduces the wide-cutoff instantaneous-work
+difference from 7.62% to 6.41%. A separate half-step on the wide
+cylinder moves the matched work by 0.376%. Test the sources of
+the remaining cutoff difference by extending the first-order
+case to longitudinal integer 12 and transverse cutoff 16 at the
+fine timestep, and by doubling the reference transverse resolution
+again. Evaluate the exact decomposition of the spatial matching
+coefficient into interior pairs and missing states at the
+longitudinal edge.
+
+As a distinct preparation control, add the second-order adiabatic
+graph term using the initial scalar acceleration and metric rate.
+Compare its reference and wide cylinders at the fine timestep.
+Check that it improves the approximation to the exact stationary
+rotating vacuum in a uniform flat control. Keep the original
+first-order production protocol and verdict separate from this
+preparation test.
