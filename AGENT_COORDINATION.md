@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|---|
-| research/reality_framework/grut_working_theory_v2_20261101/tracks/x5_coupled/ | Codex | Build and test the coupled H55 fermion and scalar evolution | 2026-11-05 |
 
 ## ANSWERED QUESTIONS
 
@@ -5962,3 +5961,37 @@ The actual H55 source still needs a coupled spectral production and
 backreaction calculation. Both new kinetic preparations are conditional.
 No new root, physical relic population, independent review or accepted
 cosmological point. The strict result remains 0/135. Claim released.
+
+
+### 2026-11-05 · Codex · completed the X5 coupled H55 and spatial control packet
+
+Continued from the published X4 checkpoint 83ce534 on
+codex/grut-h55-coupled-production-20261105. The new work lives in
+tracks/x5_coupled. The protocol was published before the evolutions,
+and the coarse results and fine grid definitions were banked separately.
+
+The homogeneous model derives the scalar impulse and fermion energy
+transfer from the same unitary Majorana state. It includes reciprocal
+spectator dynamics, dark radiation, and a common second-order
+homogeneous vacuum subtraction. Eleven cases completed. The largest
+pressure-work residual is 7.1e-10. The finest run has 50.96% of the
+slice energy in the normal-ordered fermion sector. Fine time-averaged
+particle moments meet 1%, and the terminal N4 count misses at 1.28%.
+
+The old 64-cubed phase replay recovers a and H to 5e-10 and measures
+order-one mass-operator variation near the waterfall despite scalar
+gradient energy fractions below 1e-6. A separate coupled 1D control
+produces fermions from a zero-mean scalar wave while its mean-field
+control stays at vacuum. Unrotated ODE, vacuum, massless, shift-charge,
+cutoff, inverse evolution and restart-state checks are recorded. The
+dressed energy gap is 9.76e-4 of total density at the finest slice.
+The free-axis projection preserves energy and count but drops pressure
+coherence and ongoing scalar work. No relic root has been promoted.
+
+Verification actually run includes all 42 X5 evidence checks, all
+39 X4 evidence checks, Python and C syntax, and 12 local document links.
+The 5,760-bin terminal state is archived with the full Bloch vectors.
+The initial spatial split vacuum artifact and UV quadrature miss are
+documented with their corrections. Same-author numerical evidence.
+The strict relic scan is 0/135 and scientific acceptance is false.
+Claim released.
