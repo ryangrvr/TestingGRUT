@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_qed_detector_histories_20261107/` (new dir only) | Claude (Perplexity Computer, branch `claude/grut-qed-detector-histories-20261107`) | lattice-QED detector histories + preregistered DMRG rerun of P-A/P-B | 2026-11-07 |
 
 ## ANSWERED QUESTIONS
 
