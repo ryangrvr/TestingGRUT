@@ -1,0 +1,751 @@
+{
+  "stage": "holdout",
+  "status": "passed",
+  "specification_sha256": "fab80087f32dff8873be9ab19b6f0bcbfc6c781ca2ecf309c7a2b70a4d2801f3",
+  "parameter_card_sha256": "a409bf2134d610d6fd156b7045a4b549559ac7f9d3a53270259c207640aa7d13",
+  "calibration_sha256": "9497bfe6311becaa37f7de12e374803723557e6b82e708bd75455c73bcac61b7",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "checks": {
+    "frozen_coherent_prediction": true,
+    "frozen_population_prediction": true,
+    "coherence_decision_margin": true,
+    "pinched_full_state_matches_population_only": true,
+    "pinching_matches_immediate_readout_and_energy_at_tick_3": true,
+    "backward_rank": true,
+    "reduced_matches_reference": true,
+    "withheld_total_energy_distribution": true
+  },
+  "program": {
+    "program": [
+      1,
+      1
+    ],
+    "energy_probabilities": [
+      0.007812499999999991,
+      0.05468749999999996,
+      0.16406249999999997,
+      0.27343750000000017,
+      0.27343749999999983,
+      0.16406249999999997,
+      0.05468749999999994,
+      0.007812499999999965
+    ],
+    "exact": [
+      {
+        "tick": 0,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999987,
+              9.835245150911938e-29
+            ],
+            [
+              4.697605542315388e-29,
+              3.843378574781873e-29
+            ]
+          ],
+          [
+            [
+              0.5000000000000013,
+              3.1796700140251135e-29
+            ],
+            [
+              7.275518143363603e-29,
+              8.93229937802272e-29
+            ]
+          ]
+        ],
+        "record_agreement": 0.4999999999999987,
+        "action_agreement": 0.4999999999999987,
+        "signal_parity_mutual_information_bits": 0.0
+      },
+      {
+        "tick": 1,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.5000000000000009,
+              7.944213401033066e-30
+            ],
+            [
+              7.910496730153981e-30,
+              7.428463118568624e-30
+            ]
+          ],
+          [
+            [
+              7.56183376721744e-30,
+              1.1008921647412168e-29
+            ],
+            [
+              0.4999999999999989,
+              9.185901706106898e-30
+            ]
+          ]
+        ],
+        "record_agreement": 0.9999999999999998,
+        "action_agreement": 0.5000000000000009,
+        "signal_parity_mutual_information_bits": 1.0
+      },
+      {
+        "tick": 2,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.5000000000000002,
+              1.278590498472537e-30
+            ],
+            [
+              2.9433405548732782e-30,
+              7.327602425318118e-31
+            ]
+          ],
+          [
+            [
+              2.4434975366399775e-30,
+              1.2023514725564402e-30
+            ],
+            [
+              0.4999999999999999,
+              1.3137206643643754e-30
+            ]
+          ]
+        ],
+        "record_agreement": 1.0,
+        "action_agreement": 0.5000000000000002,
+        "signal_parity_mutual_information_bits": 0.9999999999999999
+      },
+      {
+        "tick": 3,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3750000000000001,
+              1.152614775967552e-30
+            ],
+            [
+              0.12500000000000014,
+              5.363426005626795e-31
+            ]
+          ],
+          [
+            [
+              0.12499999999999992,
+              8.228757513254136e-31
+            ],
+            [
+              0.375,
+              1.1420869464615072e-30
+            ]
+          ]
+        ],
+        "record_agreement": 0.7500000000000001,
+        "action_agreement": 0.5000000000000002,
+        "signal_parity_mutual_information_bits": 0.18872187554086708
+      },
+      {
+        "tick": 4,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3749999999999998,
+              4.713369622826266e-31
+            ],
+            [
+              0.1250000000000003,
+              7.394877995583074e-31
+            ]
+          ],
+          [
+            [
+              0.125,
+              9.36967669272883e-31
+            ],
+            [
+              0.3750000000000001,
+              9.587397914200886e-31
+            ]
+          ]
+        ],
+        "record_agreement": 0.7499999999999999,
+        "action_agreement": 0.5000000000000001,
+        "signal_parity_mutual_information_bits": 0.1887218755408664
+      },
+      {
+        "tick": 5,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.40624999999999967,
+              7.09329169612792e-31
+            ],
+            [
+              0.09375000000000017,
+              1.3709594742695933e-30
+            ]
+          ],
+          [
+            [
+              0.09374999999999978,
+              2.0057517158739846e-30
+            ],
+            [
+              0.40625000000000044,
+              2.144461088184117e-30
+            ]
+          ]
+        ],
+        "record_agreement": 0.8125000000000001,
+        "action_agreement": 0.49999999999999983,
+        "signal_parity_mutual_information_bits": 0.3037877398748542
+      },
+      {
+        "tick": 6,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4062500000000004,
+              5.809148959439222e-30
+            ],
+            [
+              5.2091452604389144e-30,
+              0.09374999999999976
+            ]
+          ],
+          [
+            [
+              0.09375000000000022,
+              9.768495514284035e-30
+            ],
+            [
+              7.42331813428862e-30,
+              0.40624999999999944
+            ]
+          ]
+        ],
+        "record_agreement": 0.8124999999999998,
+        "action_agreement": 0.8124999999999998,
+        "signal_parity_mutual_information_bits": 0.3037877398748543
+      },
+      {
+        "tick": 7,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4062499999999999,
+              5.644017146637001e-29
+            ],
+            [
+              4.8187080172184604e-29,
+              0.09374999999999978
+            ]
+          ],
+          [
+            [
+              0.09374999999999876,
+              6.60430266879549e-29
+            ],
+            [
+              8.858798669107621e-29,
+              0.4062500000000014
+            ]
+          ]
+        ],
+        "record_agreement": 0.8125000000000013,
+        "action_agreement": 0.8125000000000013,
+        "signal_parity_mutual_information_bits": 0.3037877398748574
+      }
+    ],
+    "reduced": [
+      {
+        "tick": 0,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.4999999999999998,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 6.406853007629831e-16
+      },
+      {
+        "tick": 1,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.4999999999999998,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.9999999999999996,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 1.0000000000000002
+      },
+      {
+        "tick": 2,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.4999999999999998,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.9999999999999996,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 1.0000000000000002
+      },
+      {
+        "tick": 3,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3749999999999999,
+              0.0
+            ],
+            [
+              0.12499999999999992,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.12499999999999992,
+              0.0
+            ],
+            [
+              0.3749999999999999,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.7499999999999998,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.18872187554086792
+      },
+      {
+        "tick": 4,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3749999999999999,
+              0.0
+            ],
+            [
+              0.12499999999999992,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.12499999999999992,
+              0.0
+            ],
+            [
+              0.3749999999999999,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.7499999999999998,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.18872187554086792
+      },
+      {
+        "tick": 5,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4062499999999998,
+              0.0
+            ],
+            [
+              0.09374999999999997,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.09374999999999997,
+              0.0
+            ],
+            [
+              0.4062499999999998,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.8124999999999996,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.3037877398748545
+      },
+      {
+        "tick": 6,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4062499999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.09374999999999997
+            ]
+          ],
+          [
+            [
+              0.09374999999999997,
+              0.0
+            ],
+            [
+              0.0,
+              0.4062499999999998
+            ]
+          ]
+        ],
+        "record_agreement": 0.8124999999999996,
+        "action_agreement": 0.8124999999999996,
+        "signal_parity_mutual_information_bits": 0.3037877398748545
+      },
+      {
+        "tick": 7,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4062499999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.09374999999999997
+            ]
+          ],
+          [
+            [
+              0.09374999999999997,
+              0.0
+            ],
+            [
+              0.0,
+              0.4062499999999998
+            ]
+          ]
+        ],
+        "record_agreement": 0.8124999999999996,
+        "action_agreement": 0.8124999999999996,
+        "signal_parity_mutual_information_bits": 0.3037877398748545
+      }
+    ],
+    "population_only": [
+      {
+        "tick": 0,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.4999999999999998,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 6.406853007629831e-16
+      },
+      {
+        "tick": 1,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.4999999999999998,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.9999999999999996,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 1.0000000000000002
+      },
+      {
+        "tick": 2,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.4999999999999998,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.4999999999999998,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.9999999999999996,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 1.0000000000000002
+      },
+      {
+        "tick": 3,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.37499999999999983,
+              0.0
+            ],
+            [
+              0.12499999999999992,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.12499999999999992,
+              0.0
+            ],
+            [
+              0.37499999999999983,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.7499999999999997,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.1887218755408677
+      },
+      {
+        "tick": 4,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.37499999999999983,
+              0.0
+            ],
+            [
+              0.12499999999999992,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.12499999999999992,
+              0.0
+            ],
+            [
+              0.37499999999999983,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.7499999999999997,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.1887218755408677
+      },
+      {
+        "tick": 5,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3124999999999999,
+              0.0
+            ],
+            [
+              0.1874999999999999,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.1874999999999999,
+              0.0
+            ],
+            [
+              0.3124999999999999,
+              0.0
+            ]
+          ]
+        ],
+        "record_agreement": 0.6249999999999998,
+        "action_agreement": 0.4999999999999998,
+        "signal_parity_mutual_information_bits": 0.045565997075035725
+      },
+      {
+        "tick": 6,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3124999999999999,
+              0.0
+            ],
+            [
+              0.0,
+              0.1874999999999999
+            ]
+          ],
+          [
+            [
+              0.1874999999999999,
+              0.0
+            ],
+            [
+              0.0,
+              0.3124999999999999
+            ]
+          ]
+        ],
+        "record_agreement": 0.6249999999999998,
+        "action_agreement": 0.6249999999999998,
+        "signal_parity_mutual_information_bits": 0.045565997075035725
+      },
+      {
+        "tick": 7,
+        "joint_probabilities_s_parity_a": [
+          [
+            [
+              0.3124999999999999,
+              0.0
+            ],
+            [
+              0.0,
+              0.1874999999999999
+            ]
+          ],
+          [
+            [
+              0.1874999999999999,
+              0.0
+            ],
+            [
+              0.0,
+              0.3124999999999999
+            ]
+          ]
+        ],
+        "record_agreement": 0.6249999999999998,
+        "action_agreement": 0.6249999999999998,
+        "signal_parity_mutual_information_bits": 0.045565997075035725
+      }
+    ],
+    "pure_reduced_max_tv": 1.561251128379256e-15,
+    "mixed_reduced_max_tv": 4.704570066849101e-15,
+    "population_only_max_tv": 0.18750000000000136,
+    "backward_span": {
+      "rank_including_identity": 16,
+      "smallest_retained_singular_value": 1.4999999999999996,
+      "largest_discarded_singular_value": 8.508332712553894e-16
+    }
+  },
+  "coherent_minus_population_agreement": 0.18750000000000155,
+  "pinched_full_state_final_agreement": 0.6249999999999999,
+  "pinched_final_distribution": [
+    [
+      [
+        0.3125,
+        2.0448437674631127e-30
+      ],
+      [
+        1.7101054197037585e-30,
+        0.1875
+      ]
+    ],
+    [
+      [
+        0.18750000000000025,
+        2.4383748574483364e-30
+      ],
+      [
+        2.528057793003155e-30,
+        0.3124999999999999
+      ]
+    ]
+  ],
+  "pinched_tick_7_probability": 0.2734375,
+  "pinching_immediate_readout_tv": 0.0,
+  "pinching_energy_distribution_max_difference": 1.1102230246251565e-16
+}

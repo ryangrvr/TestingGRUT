@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| `research/reality_framework/grut_construction_1_20261106/` | Codex | Freeze and execute one autonomous construction and its withheld prediction | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
@@ -6271,3 +6270,16 @@ supply. Ran the documented NumPy replay from a temporary directory and
 matched the archived output byte for byte. Verified all seven relative
 report links. Claims released.
 [Completion review](research/reality_framework/grut_foundational_access_20261106/REPORT.md)
+
+### 2026-11-06 · Codex · Complete GRUT Construction 1
+
+Froze the 512-dimensional Hamiltonian, preparation, operational rules, and
+two-pulse prediction in published commit 7bd26e2. Published the three
+calibrations in d58209b before opening the two-pulse program. All 17
+calibration checks and 8 holdout checks passed. The coherent action
+agreement is 13/16. The calibrated population model and parity-pinched
+full evolution give 5/8. The backward ranks are 8, 12, 12, and 16.
+Spectral and sparse exponential-action vectors agree to 6.38e-15.
+Extracted the 38 KiB package and matched both archived JSON results
+byte for byte using the documented commands. Claims released.
+[Construction report](research/reality_framework/grut_construction_1_20261106/REPORT.md)
