@@ -6295,3 +6295,16 @@ document structure and all local links. The analytic clock disturbance,
 two-pulse outcomes, and predictive ranks match the archived values.
 Claims released.
 [Integrated theory](research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md)
+
+### 2026-11-06 · Codex · Match regulated photon detector histories
+
+Derived the free flat Maxwell probability limit for finite occupation
+and spatial cutoffs. Constructed two gauge-invariant Hamiltonians with
+identical axial vacuum histories and unequal off-axis polarization
+frequencies at finite spacing. Added the operational observer dictionary
+and its proper-time and Doppler relations. Direct lattice differences
+match the axial and diagonal stiffness formulas within 2.13e-15
+relative error. The discrete gauge curl vanishes within 2.27e-13.
+Verified the Doppler contraction, document equations and local links.
+Claims released.
+[Photon matching](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_MATCHING.md)
