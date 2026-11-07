@@ -6,7 +6,7 @@ Owner-authorized: work through the repository by branch and PR, and hand off to 
 
 ## What this packet adds
 
-The packet extends the photon bridge (`PHOTON_MATCHING.md`, `PHOTON_BRIDGE_REVIEW.md`) from free photons to interacting charged matter. The model is the lattice Schwinger model (1+1D QED) with Kogut–Susskind fermions and the Gauss law solved exactly. It tests the integrated paper's matching condition (14) outside free fields. Everything here is written independently of the GRUT codebase and imports nothing from it.
+The packet extends the photon bridge (`PHOTON_MATCHING.md`, `PHOTON_BRIDGE_REVIEW.md`) from free photons to interacting charged matter. The model is the lattice Schwinger model (1+1D QED) with Kogut–Susskind fermions and the Gauss law solved exactly. It supplies finite interacting histories and continuum spectrum benchmarks; it does not establish the full matching condition (14). Everything here is written independently of the GRUT codebase and imports nothing from it.
 
 | File | Content |
 |---|---|
@@ -26,12 +26,12 @@ The packet extends the photon bridge (`PHOTON_MATCHING.md`, `PHOTON_BRIDGE_REVIE
 
 - **P-C, P-D, P-E pass (ED).** GRUT histories of the smeared electric field approach the two-point prediction at m=0 (deviation 0.0076 → 0.0041 as the lattice is refined). They stay away from it at m/g=0.5 (about 0.009, not shrinking). The first instrument measurably disturbs the second.
 - **P-A and P-B miss under ED** (+3.3% and +9.9%). These remain on record and are not overwritten.
-- **P-A and P-B pass under the sealed DMRG rerun.** P-A gives 0.5641906 against 0.5641896 exact. P-B (holdout) gives 0.519232 against 0.51918. All 12 fit variants lie within 0.25% of their targets, and the chi 160/120 change is below 5e-8. See `RESULTS.md`.
-- **Light cone.** Wilson electrons are faster than plaquette photons in every direction sampled. Crab electrons at ≥ 2.3 PeV then give \(a \lesssim 3\times10^{-32}\) m.
+- **P-A and P-B pass under the sealed DMRG rerun.** P-A gives 0.5641906 against 0.5641896 exact. P-B (registered rerun of the previously examined benchmark) gives 0.519232 against 0.51918. All 12 fit variants lie within 0.25% of their targets, and the chi 160/120 change is below 5e-8. See `RESULTS.md`.
+- **Propagation.** The massless finite-spacing dispersions differ while sharing their limiting speed. The archived spacing estimate is conditional on a physical lattice, orientation, emission model, inferred electron energy and removal of the leading mass-dependent speed term; it is not a universal GRUT bound.
 
 ## Suggested bounded review (for Codex)
 
-1. Rerun `mps/validate_vs_ed.py`, then at least one production point. Report what you reran, not what you read.
+1. Rerun `mps/validate_vs_ed.py --output /new/external/path/validation.json`, then at least one production point. The script resolves its own repository paths and preserves archived outputs. Report what you reran, not what you read.
 2. Check the MPO channel algebra in `schwinger_mps.py` against `ed/schwinger.py` by hand. The convention is sz = 2Sz, q_n = Sz_n + (−1)^n/2, and the hopping sign is +x.
 3. Check that `analyse.py` implements the amendment's recipe exactly. Any deviation voids the verdict and must be logged as such.
 4. Check the P-C/P-D caveat. Var(cF) differs between masses (0.24 vs 0.12). A matched-variance rerun is the clean follow-up.

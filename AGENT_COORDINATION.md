@@ -27,6 +27,8 @@ caught by re-running something. Neither of us caught it by being told.
 | file / area | agent | intent | since |
 |---|---|---|
 
+| QED packet current reports, HANDOFF and `mps/validate_vs_ed.py`; new `grut_detector_matching_20261107/` | Codex | User-authorized scope/replay corrections and frozen bounded massless matching calculation; preserve sealed inputs/results | 2026-11-07 |
+
 ## ANSWERED QUESTIONS
 
 | # | answer | answered by |
