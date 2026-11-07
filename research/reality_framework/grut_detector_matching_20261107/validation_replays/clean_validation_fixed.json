@@ -1,0 +1,64 @@
+{
+  "gate": "rel<1e-5 vs exact diagonalization",
+  "pass": true,
+  "full_four_case_replay": true,
+  "reference_dir": "/workspace/scratch/d18fc90906ba/grut_validation_clean/research/reality_framework/grut_qed_detector_histories_20261107/ed",
+  "reference_sha256": {
+    "spectrum_cache.json": "492fefb67ec0c053baa7c22a7f8383566d3a27053fe5e17d73e2e734aa7ac025",
+    "spectrum_cache_m025.json": "e5fa02ad95730b5adc517436a0f03f927787e00e8878ff425d3da2e3bdb17b40"
+  },
+  "cases": [
+    {
+      "case_index": 0,
+      "m": 0.0,
+      "x": 4.0,
+      "N": 16,
+      "dmrg": 0.760330913123406,
+      "ed": 0.760330913123358,
+      "E0_per_N_dmrg": -2.2094552139421477,
+      "E0_per_N_ed": -2.2094552139421455,
+      "rel": 6.307994826461219e-14,
+      "pass": true,
+      "sec": 5.64
+    },
+    {
+      "case_index": 1,
+      "m": 0.0,
+      "x": 16.0,
+      "N": 20,
+      "dmrg": 0.8524291772366368,
+      "ed": 0.852429177236548,
+      "E0_per_N_dmrg": -9.608618953630748,
+      "E0_per_N_ed": -9.608618953630735,
+      "rel": 1.0419380793363633e-13,
+      "pass": true,
+      "sec": 8.72
+    },
+    {
+      "case_index": 2,
+      "m": 0.25,
+      "x": 8.0,
+      "N": 18,
+      "dmrg": 1.1816631249751095,
+      "ed": 1.1816631249750542,
+      "E0_per_N_dmrg": -4.109404920619136,
+      "E0_per_N_ed": -4.1094049206191325,
+      "rel": 4.6789229060101194e-14,
+      "pass": true,
+      "sec": 8.28
+    },
+    {
+      "case_index": 3,
+      "m": 0.25,
+      "x": 32.0,
+      "N": 24,
+      "dmrg": 1.243142106843205,
+      "ed": 1.2431421068430393,
+      "E0_per_N_dmrg": -18.324801185320318,
+      "E0_per_N_ed": -18.324801185320354,
+      "rel": 1.3324725657851757e-13,
+      "pass": true,
+      "sec": 13.37
+    }
+  ]
+}

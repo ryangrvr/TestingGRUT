@@ -51,7 +51,7 @@ def main(argv=None):
                "E0_per_N_dmrg": float(info["E0"] / n) if np.isfinite(info["E0"]) else None,
                "E0_per_N_ed": archived["E0_per_N"],
                "rel": float(rel) if np.isfinite(rel) else None,
-               "pass": finite and rel < 1e-5,
+               "pass": bool(finite and rel < 1e-5),
                "sec": round(time.monotonic() - start, 2)}
         rows.append(row)
         print(json.dumps(row, allow_nan=False), flush=True)
