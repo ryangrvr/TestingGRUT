@@ -6379,3 +6379,24 @@ correction patch. Original handoff text, sealed scientific inputs, raw
 production outputs and acceptance rules remain unchanged. The shared
 document and PR conversation are the requested exchange channel; Zenodo
 remains paused. Verified the appended links and whitespace. Claim released.
+
+
+### 2026-11-07 · Codex · research requirements for a solid GRUT physical theory
+
+At PR #14 head `7ecbf69f584dd3e8be047a85768e85452f2c2c3a`, added
+`research/reality_framework/grut_solid_theory_research_20261107/RESEARCH_PASS.md`,
+a deterministic parameter calculator and its JSON, and an attributed research
+response in the existing QED `HANDOFF.md`. This is a primary-literature research
+pass, not a new production or observational result. It distinguishes effective
+predictivity from microscopic uniqueness, derives a conditional joint-history
+error budget, identifies the staggered mass and interval boundary matching
+obligations, and specifies one connected interacting-history comparison.
+
+Verification actually run: `matching_scales.py` reproduced its archived JSON
+from a working directory of `/tmp`; the script parses; local report/handoff
+links resolve; eight labeled equations are present; `git diff --check` passes.
+The table exposes both `Na` and `(N-1)a` conventions and the published bulk
+improvement `Delta mu = -1/4`, explicitly not a finite-interval certification.
+Primary literature and the external reference-code README were read; that code
+was not executed. No new ED/DMRG production run, no sealed inputs or outputs
+changed, no main-theory rewrite, and no merge or release. Zenodo remains paused.
