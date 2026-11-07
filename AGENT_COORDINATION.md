@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_construction_1_20261106/` | Codex | Freeze and execute one autonomous construction and its withheld prediction | 2026-11-06 |
 
 ## ANSWERED QUESTIONS
 
