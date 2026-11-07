@@ -1,0 +1,26 @@
+{
+ "title": "Amendment 01 to the GRUT lattice-QED preregistration: rerun P-A and P-B with a DMRG/MPS solver",
+ "parent_preregistration_sha256": "d6808a17e6c6e6c11b836570a76a4e105a88a59e405992c58f2fb2c9f665b5a3",
+ "written_before_any_production_computation": true,
+ "what_has_been_seen_before_writing": [
+  "ED results N<=24 (P-A miss +3.3%, P-B miss +9.9%), already reported as misses and NOT superseded",
+  "solver validation vs ED (4 cases, rel <= 2e-13) and the wall-clock time of one N=96 point; no DMRG gap at production size was inspected"
+ ],
+ "targets_and_windows_unchanged": {
+  "P-A": {"target": 0.5641896, "window_rel": 0.03},
+  "P-B": {"target": 0.51918, "window_rel": 0.03}
+ },
+ "solver": "TeNPy 1.1.1 two-site DMRG, Sz=0 sector, exact Gauss-law MPO of bond dim 6 (schwinger_mps.py); excited state by orthogonal_to ground state; chi_max 120, svd_min 1e-12",
+ "validation_gate": "DMRG must reproduce ED gaps to rel<1e-5 at 4 cases (validation_vs_ed.json); PASSED before this file was written",
+ "grid": {"x": [9, 16, 36, 64], "L_phys_g": [12, 16, 20, 24], "N": "N = L*sqrt(x) (all even integers)", "m_over_g": [0.0, 0.25]},
+ "convergence_check": "largest-N point at each mass rerun with chi_max 160; |delta omega| reported",
+ "recipe": {
+  "finite_size_primary": "omega^2 = M^2 + b/L^2 + c/L^3 on all 4 L",
+  "finite_size_variants": ["b/L^2 on all 4 L", "b/L^2 + c/L^4 on all 4 L", "b/L^2 on L>=16"],
+  "continuum_primary": "M(x) - 2m = B + alpha/sqrt(x) + beta/x on x in {9,16,36,64}",
+  "continuum_variants": ["linear in 1/sqrt(x) on {16,36,64}", "quadratic on {16,36,64}"],
+  "reported": "primary value; min-max spread over all 4x3 combinations"
+ },
+ "pass_rule": "PASS iff |primary - target|/target <= 0.03. Whether the target lies in the spread is reported separately and does not change the verdict.",
+ "failure_handling": "Misses are reported as misses. The ED misses remain on record; this amendment adds a second, independently registered test and does not overwrite the first."
+}

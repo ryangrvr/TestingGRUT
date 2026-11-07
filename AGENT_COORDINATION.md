@@ -6331,3 +6331,72 @@ All local document links and git diff whitespace checks pass. This is
 same-author verification. No new microscopic selection law was adopted.
 Retained both Hamiltonians as nonselection witnesses. Claims released.
 [Bridge clarification](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_BRIDGE_REVIEW.md)
+
+### 2026-11-07 · Claude (Perplexity Computer) · lattice QED in GRUT detector histories; sealed DMRG rerun passes
+
+New directory only: `research/reality_framework/grut_qed_detector_histories_20261107/`, on branch
+`claude/grut-qed-detector-histories-20261107`. No existing file was edited except this log; the claim row was added and is now removed.
+
+**Ran, not read:** `mps/validate_vs_ed.py` -> GATE PASS (4/4, rel <= 2e-13 vs ED). Production grid
+x in {9,16,36,64} x L in {12,16,20,24}/g, N up to 192, both masses. `mps/analyse.py` (committed in c4e1ddf before
+results were read) -> P-A 0.5641906 vs 0.5641896 (PASS), P-B holdout 0.519232 vs 0.51918 (PASS). chi 160 vs 120 at
+N=192: |d omega| < 5e-8. The ED misses (+3.3%, +9.9%) stay on record; the amendment sealed in dd1e107 is a second test.
+
+**Check that decides it:** rerun `mps/validate_vs_ed.py` and any one production point, then `mps/analyse.py`.
+
+**Did NOT touch:** the photon bridge files, any sealed ledger, any preregistration under `provenance/`.
+
+
+### 2026-11-07 · Codex · Reviewed Perplexity PR #14 at 8dceba0
+
+Reviewed both supplied reports, registrations, source and raw outputs. All 35
+ZIP files match the PR after directory mapping. The repository validation
+command fails on the stale ../qed path; the unchanged ZIP version passes all
+four cases with maximum relative gap difference 1.34e-13. Fresh ED at N=12
+and one unchanged massive production point at N=36 also agree with DMRG
+and the archive respectively. Dense MPO/ED matrices agree in three small
+neutral sectors. The frozen spectrum analysis reproduces both PASS verdicts.
+
+Four small history cases reproduce; two exploratory controls matching Var(cF)
+preserve the larger massive non-Gaussian residual. Gravity, particles and
+light-cone scripts reproduce their archived JSON values. These are bounded
+replays and operator checks, not an independent DMRG implementation or a
+full production rerun.
+
+The review requires narrowing equation (14), the physical lattice bound and
+the blanket massive-gravity/chirality statements. It quantifies the omitted
+ma/2 velocity correction and distinguishes rerun registration from an untouched
+holdout. No sealed Perplexity file, result or acceptance rule was edited.
+Zenodo remains paused. Review source compiles, local links resolve, and git
+diff whitespace checks pass. Claim released.
+[Review](research/reality_framework/grut_qed_review_20261107/REVIEW.md)
+
+### 2026-11-07 · Codex · Established direct PR #14 handoff at Ryan's request
+
+Appended a clearly attributed Codex response to Perplexity's HANDOFF.md,
+linking the completed review and raw replays and requesting a bounded
+correction patch. Original handoff text, sealed scientific inputs, raw
+production outputs and acceptance rules remain unchanged. The shared
+document and PR conversation are the requested exchange channel; Zenodo
+remains paused. Verified the appended links and whitespace. Claim released.
+
+
+### 2026-11-07 · Codex · research requirements for a solid GRUT physical theory
+
+At PR #14 head `7ecbf69f584dd3e8be047a85768e85452f2c2c3a`, added
+`research/reality_framework/grut_solid_theory_research_20261107/RESEARCH_PASS.md`,
+a deterministic parameter calculator and its JSON, and an attributed research
+response in the existing QED `HANDOFF.md`. This is a primary-literature research
+pass, not a new production or observational result. It distinguishes effective
+predictivity from microscopic uniqueness, derives a conditional joint-history
+error budget, identifies the staggered mass and interval boundary matching
+obligations, and specifies one connected interacting-history comparison.
+
+Verification actually run: `matching_scales.py` reproduced its archived JSON
+from a working directory of `/tmp`; the script parses; local report/handoff
+links resolve; eight labeled equations are present; `git diff --check` passes.
+The table exposes both `Na` and `(N-1)a` conventions and the published bulk
+improvement `Delta mu = -1/4`, explicitly not a finite-interval certification.
+Primary literature and the external reference-code README were read; that code
+was not executed. No new ED/DMRG production run, no sealed inputs or outputs
+changed, no main-theory rewrite, and no merge or release. Zenodo remains paused.

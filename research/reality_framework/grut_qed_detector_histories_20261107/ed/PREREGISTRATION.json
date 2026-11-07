@@ -1,0 +1,13 @@
+{
+  "title": "GRUT probe step 1: interacting charged matter (lattice Schwinger model) in GRUT's detector-history framework",
+  "written_before_any_computation": true,
+  "model": "Kogut-Susskind staggered fermions + U(1) links, open boundary, Gauss law solved exactly, theta=0, continuous time. W = 2H/(a g^2) = x sum(s+s- + h.c.) + (mu/2) sum(1+(-1)^n sz) + sum L_n^2, x=1/(ag)^2, mu=2 sqrt(x) m/g.",
+  "predictions": {
+    "P-A_massless_vector_mass": {"target": 0.5641896, "source": "exact, M/g = 1/sqrt(pi)", "pass_window_rel": 0.03},
+    "P-B_holdout_m_over_g_0.25_vector_binding": {"target": 0.51918, "source": "Byrnes et al. 2002 DMRG", "pass_window_rel": 0.03, "note": "same code and extrapolation recipe as P-A, nothing retuned"},
+    "P-C_gaussian_sufficiency_m0": "At m=0 the continuum E-field is a free massive boson, so GRUT two-time detector histories of a smeared E-field Weyl instrument must be predicted by the two-point function alone. The max deviation of exact lattice history probabilities from the two-point (quasi-free) prediction should DECREASE as x increases at fixed physical volume and smearing.",
+    "P-D_interaction_detected_m_positive": "At fixed lattice parameters, the same deviation should be LARGER at m/g=0.5 than at m/g=0, i.e. the two-point summary is insufficient once the fermion mass makes the boson interact.",
+    "P-E_backaction": "Inserting the first instrument changes the second instrument's outcome distribution (nonzero disturbance) at generic T."
+  },
+  "failure_handling": "Any miss is reported as a miss; windows are not widened after the run."
+}
