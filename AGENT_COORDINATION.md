@@ -6256,3 +6256,17 @@ control recovers the source's 2.18e7 GeV scale. The results replayed
 byte for byte. Stopped at analytic preflight. External review pending.
 Claims released.
 [Vector claim ledger](research/reality_framework/grut_research_reset_20261106/vector_audit/CLAIM_LEDGER.md)
+
+### 2026-11-06 · Codex · Foundational access and completion review
+
+Separated the adopted theory from the remaining physical selection problems.
+Proved the finite stationary-data obstruction to an equivariant concrete
+factor. Recovered the five scrambled control algebras and the four chain
+bonds to 8.2e-16 in normalized weight. A direct interaction, a three-site
+interaction, and alternative access at fixed H and stationary state each
+shift the endpoint response from fourth to first order. The two-qubit
+predictive span requires ten expectations rather than the six marginals
+supply. Ran the documented NumPy replay from a temporary directory and
+matched the archived output byte for byte. Verified all seven relative
+report links. Claims released.
+[Completion review](research/reality_framework/grut_foundational_access_20261106/REPORT.md)
