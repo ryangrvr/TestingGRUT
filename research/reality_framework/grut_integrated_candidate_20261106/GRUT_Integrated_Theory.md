@@ -1,7 +1,7 @@
 # Grand Responsive Universe Theory
 ## An integrated operational candidate
 
-6 November 2026 · Finite quantum domain
+6 November 2026 · Photon-bridge status clarified 7 November 2026 · Finite quantum domain
 
 ### 1. Definitions
 
@@ -430,7 +430,7 @@ $$
 \tag{14}
 $$
 
-The error must be controlled over the relevant regime, including interventions, clock support and the physical constraints. Equations (12)–(13) specify the adopted target. Construction 1 supplies no such family, metric, or detector map, and (14) is an explicit unmatched bridge.
+The error must be controlled over the relevant regime, including interventions, clock support and the physical constraints. Equations (12)–(13) specify the adopted target. Construction 1 supplies no such family, metric, or detector map. The separate [photon construction](PHOTON_MATCHING.md) now supplies an ordered-cutoff match for fixed smooth detector protocols in the free Maxwell vacuum on a fixed flat torus. Its [clarification](PHOTON_BRIDGE_REVIEW.md) proves completed axial-history matching with a fixed mode-basis convention, exposes the error constants, and gives restricted commutator and causal-response convergence. This partial match does not establish the interacting matter and dynamical geometry target, exact finite-cutoff spatial locality, or a physical selection of its microscopic Hamiltonian.
 
 ### 8. Limits
 
@@ -443,7 +443,7 @@ The error must be controlled over the relevant regime, including interventions, 
 | Named gap | Unresolved connection |
 |---|---|
 | **Access and state selection** | The physical access primitive, boundary state, and oriented low-entropy resources are inputs. Closure and the stationary data do not select them. |
-| **Continuum and constraints** | There is no derived limit matching the finite candidate to the metric, matter fields, physical constraints, and detector algebra of (12)–(14). GR and the Standard Model enter as adopted content. |
+| **Continuum and constraints** | The separate free flat photon family matches its declared smooth vacuum detector histories in ordered limits. The metric, interacting matter, physical constraints, and detector algebra of the full target (12)–(14) remain unmatched. GR and the Standard Model enter as adopted content. |
 | **Physical identification** | The observed cosmic state, vacuum density, couplings, and contents beyond the target truncation require empirical input or further derivation. The finite withheld result discriminates model descriptions of a specified protocol. It has no established counterpart as a distinctive prediction about our universe. |
 
 **Mathematical completion.** Yes, within the declared finite domain. The candidate has specified observables, a state, dynamics, admissible instruments, and a joint probability law. Construction 1 supplies a concrete instance with derived conditional clocks, a persistent record, a record-dependent action, and an exact effective description for its declared readouts.

@@ -6308,3 +6308,26 @@ relative error. The discrete gauge curl vanishes within 2.27e-13.
 Verified the Doppler contraction, document equations and local links.
 Claims released.
 [Photon matching](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_MATCHING.md)
+
+### 2026-11-07 · Codex · Clarify photon cutoffs and close the selection inference
+
+Specified the shared axial normal-mode basis and proved full completed
+history equality, including overflow. The three-read finite comparisons
+agree within 1.75e-15. A deliberately rotated degenerate cutoff changes
+the first overflow probability by 0.04598493, so a generic independent
+diagonalization would not support the original finite equality.
+
+Exposed the P4 constants and ordered-limit quantifiers. Derived a vacuum
+commutator bound and an unconditioned causal-response bound while retaining
+the failure of exact finite-cutoff locality. The bounded Weyl control at
+K=12 has vacuum commutator norm 4.10e-9 but operator norm 0.5919. The
+three-probe history differs from an exact uncut coherent-state reference
+by 1.90e-11 in total variation at K=24. The conservative analytic cutoff
+bound remains noninformative on that numerical ladder.
+
+The documented single-thread replay matches the archived JSON byte for
+byte. A default-thread replay changes three entries by at most 3.34e-16.
+All local document links and git diff whitespace checks pass. This is
+same-author verification. No new microscopic selection law was adopted.
+Retained both Hamiltonians as nonselection witnesses. Claims released.
+[Bridge clarification](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_BRIDGE_REVIEW.md)
