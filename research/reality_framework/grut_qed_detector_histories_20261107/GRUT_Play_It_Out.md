@@ -43,6 +43,10 @@ The instrument is GRUT's two-outcome Weyl instrument, \(K_\pm=(1\pm e^{i\varphi}
 
 The infinite-length values decrease steadily with x but are still far from the continuum at x=32. Examples: \(m=0\) runs 0.785 → 0.613; \(m/g=0.25\) runs 0.737 → 0.582. At large x, the bound state spans more lattice sites than a 24-site chain can hold. The qualitative trend is right, since binding drops when mass is added, but the size is not. The published values were reached with DMRG/MPS on chains hundreds of sites long. Matching them would take that tooling, which TestingGRUT does not yet have.
 
+### Update: sealed DMRG rerun passes both
+
+A DMRG/MPS solver was validated against ED (rel ≤ 2e-13), and its recipe was sealed before any production run (`mps/PREREGISTRATION_AMENDMENT_01.json`, commit `dd1e107`). It then reached chains of up to N=192 (physical length 24/g). P-A gives 0.5641906 against 0.5641896, and P-B (holdout) gives 0.519232 against 0.51918. Both are inside ±3%, with every fit variant within 0.25%. The ED misses above stay on record as the first test. See `RESULTS.md`.
+
 ## Step 2: the chiral obligation
 
 The earlier probe showed that every local, Hermitian, translation-invariant lattice fermion in GRUT's style produces equal numbers of left- and right-handed species ([Nielsen–Ninomiya](https://en.wikipedia.org/wiki/Nielsen%E2%80%93Ninomiya_theorem)). Step 1 avoids the issue on purpose because QED is vector-like. The Standard Model is not, so GRUT has to name an escape route, in the same way the photon review named the plaquette-only choice:

@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| `research/reality_framework/grut_qed_detector_histories_20261107/` (new dir only) | Claude (Perplexity Computer, branch `claude/grut-qed-detector-histories-20261107`) | lattice-QED detector histories + preregistered DMRG rerun of P-A/P-B | 2026-11-07 |
 
 ## ANSWERED QUESTIONS
 
@@ -6332,3 +6331,18 @@ All local document links and git diff whitespace checks pass. This is
 same-author verification. No new microscopic selection law was adopted.
 Retained both Hamiltonians as nonselection witnesses. Claims released.
 [Bridge clarification](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_BRIDGE_REVIEW.md)
+
+### 2026-11-07 · Claude (Perplexity Computer) · lattice QED in GRUT detector histories; sealed DMRG rerun passes
+
+New directory only: `research/reality_framework/grut_qed_detector_histories_20261107/`, on branch
+`claude/grut-qed-detector-histories-20261107`. No existing file was edited except this log; the claim row was added and is now removed.
+
+**Ran, not read:** `mps/validate_vs_ed.py` -> GATE PASS (4/4, rel <= 2e-13 vs ED). Production grid
+x in {9,16,36,64} x L in {12,16,20,24}/g, N up to 192, both masses. `mps/analyse.py` (committed in c4e1ddf before
+results were read) -> P-A 0.5641906 vs 0.5641896 (PASS), P-B holdout 0.519232 vs 0.51918 (PASS). chi 160 vs 120 at
+N=192: |d omega| < 5e-8. The ED misses (+3.3%, +9.9%) stay on record; the amendment sealed in dd1e107 is a second test.
+
+**Check that decides it:** rerun `mps/validate_vs_ed.py` and any one production point, then `mps/analyse.py`.
+
+**Did NOT touch:** the photon bridge files, any sealed ledger, any preregistration under `provenance/`.
+
