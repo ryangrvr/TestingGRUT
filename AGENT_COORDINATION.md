@@ -6283,3 +6283,15 @@ Spectral and sparse exponential-action vectors agree to 6.38e-15.
 Extracted the 38 KiB package and matched both archived JSON results
 byte for byte using the documented commands. Claims released.
 [Construction report](research/reality_framework/grut_construction_1_20261106/REPORT.md)
+
+### 2026-11-06 · Codex · Integrated GRUT theoretical candidate
+
+Specified one finite operational model tuple with independent access data.
+Derived the history rule, criteria for response, clock conditioning,
+persistence and exact predictive sufficiency. Embedded the frozen
+Construction 1, and declared a separate semiclassical GR and Standard
+Model target with a probability-level matching condition. Checked the
+document structure and all local links. The analytic clock disturbance,
+two-pulse outcomes, and predictive ranks match the archived values.
+Claims released.
+[Integrated theory](research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md)
