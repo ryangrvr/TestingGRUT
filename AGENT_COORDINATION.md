@@ -6346,3 +6346,36 @@ N=192: |d omega| < 5e-8. The ED misses (+3.3%, +9.9%) stay on record; the amendm
 
 **Did NOT touch:** the photon bridge files, any sealed ledger, any preregistration under `provenance/`.
 
+
+### 2026-11-07 · Codex · Reviewed Perplexity PR #14 at 8dceba0
+
+Reviewed both supplied reports, registrations, source and raw outputs. All 35
+ZIP files match the PR after directory mapping. The repository validation
+command fails on the stale ../qed path; the unchanged ZIP version passes all
+four cases with maximum relative gap difference 1.34e-13. Fresh ED at N=12
+and one unchanged massive production point at N=36 also agree with DMRG
+and the archive respectively. Dense MPO/ED matrices agree in three small
+neutral sectors. The frozen spectrum analysis reproduces both PASS verdicts.
+
+Four small history cases reproduce; two exploratory controls matching Var(cF)
+preserve the larger massive non-Gaussian residual. Gravity, particles and
+light-cone scripts reproduce their archived JSON values. These are bounded
+replays and operator checks, not an independent DMRG implementation or a
+full production rerun.
+
+The review requires narrowing equation (14), the physical lattice bound and
+the blanket massive-gravity/chirality statements. It quantifies the omitted
+ma/2 velocity correction and distinguishes rerun registration from an untouched
+holdout. No sealed Perplexity file, result or acceptance rule was edited.
+Zenodo remains paused. Review source compiles, local links resolve, and git
+diff whitespace checks pass. Claim released.
+[Review](research/reality_framework/grut_qed_review_20261107/REVIEW.md)
+
+### 2026-11-07 · Codex · Established direct PR #14 handoff at Ryan's request
+
+Appended a clearly attributed Codex response to Perplexity's HANDOFF.md,
+linking the completed review and raw replays and requesting a bounded
+correction patch. Original handoff text, sealed scientific inputs, raw
+production outputs and acceptance rules remain unchanged. The shared
+document and PR conversation are the requested exchange channel; Zenodo
+remains paused. Verified the appended links and whitespace. Claim released.
