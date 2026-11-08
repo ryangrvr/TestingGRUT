@@ -6435,3 +6435,8 @@ precision, with failed scientific gates unchanged; extracted tree stays clean.
 See PACKET_VALIDATION.md for commands and provenance. No full DMRG grid rerun,
 new GRUT law, causal detector certificate, merge or release. Zenodo remains
 paused. Claims released.
+
+
+### 2026-11-07 · Codex · stored verified portable artifact
+
+Built the final interacting-history ZIP from clean published source `df0eb8da55c1e4279fbd5ff309ac6fffa9a50d2f`. Verified all 156 manifest hashes and retained M1/D1 misses directly from the archive; copied it byte-for-byte into the packet. The source and results are unchanged. Standalone execution evidence remains PACKET_VALIDATION.md. No release, merge or Zenodo upload. Claim released.
