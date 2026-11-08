@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| New `grut_parent_dictionary_20261108/` and appended QED HANDOFF | Codex | Boundary/mass/detector derivation and bounded parent-cutoff comparison; preserve E1/E2 | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS

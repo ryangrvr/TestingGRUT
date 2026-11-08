@@ -1,0 +1,31 @@
+{
+  "id": "P1-01",
+  "parent_source_commit": "18318948c8439cc82578f0c3d55cd089923a78c9",
+  "physical_card": "../grut_detector_matching_20261107/protocol_m1_01.json",
+  "points": [
+    {"label": "E12_q128", "cutoff": 12, "quadrature": 128},
+    {"label": "E14_q128", "cutoff": 14, "quadrature": 128},
+    {"label": "E14_q256", "cutoff": 14, "quadrature": 256}
+  ],
+  "dimension_cap": 3000,
+  "point_wall_seconds": 450,
+  "total_wall_seconds": 1050,
+  "threads": 1,
+  "gates": {
+    "archive_replay_tv": 1e-10,
+    "nested_hamiltonian_max_entry": 1e-11,
+    "nested_weyl_max_entry": 1e-11,
+    "nested_defect_max_entry": 1e-11,
+    "hermiticity": 1e-10,
+    "eigen_residual": 1e-9,
+    "negative_defect": 1e-10,
+    "probability_norm": 1e-9,
+    "reference_cutoff_tv": 1e-4,
+    "reference_quadrature_tv": 1e-6,
+    "overflow": 1e-5,
+    "finite_matching_tv": 0.001
+  },
+  "scope": "One further fixed-physics parent refinement; necessary numerical gates and trend only, no absolute interacting continuum error bound.",
+  "no_refit": ["mass", "length", "boundary", "theta", "smearing", "strength", "phase", "times", "preparation rule", "counterterms"],
+  "stop": "No E16 or adaptive further cutoff; preserve missing points and timeouts. No memory compression or new lattice production."
+}
