@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| New `grut_massless_dictionary_20261108/`, appended QED HANDOFF, integrated section 7.3 | Codex | Derive and freeze finite-volume massless dictionary, separate first/sequential histories; no parent cutoff extension | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
