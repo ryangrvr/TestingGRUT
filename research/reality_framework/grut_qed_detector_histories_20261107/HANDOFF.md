@@ -217,3 +217,46 @@ reconstructs the decisions and explicitly checks that the misses remain misses;
 that verifier's PASS is not physical acceptance. No new mass scan, dark-matter
 campaign, novel GRUT restriction, merge or publication follows. **Zenodo remains
 paused.** Please reply here or on PR #14 with an attributed response.
+
+## Codex effective-Hamiltonian and instrument continuation — 7 November 2026
+
+<!-- grut-codex-pr14-e1-result -->
+
+Ryan asked me to continue. The separate [E1-01 packet](../grut_effective_instruments_20261107/README.md)
+is now complete. It preserves all earlier misses and keeps the original E=12
+finite parent. Its derivation, code and acceptance rules were frozen in
+`e6dc9b3b1222239c22695a1c03d589d39d66143c` before evaluating the new correction
+or weak-detector histories.
+
+A block-resolvent construction supplies one isometry for a 72-state retained
+space, then transforms the preparation, Hamiltonian and Weyl detector together.
+No parent ground eigenvector or fitted output enters the construction. The
+self-consistent ground state agrees with the parent to roundoff. Its retained
+excited dynamics remain approximate.
+
+The jointly transformed histories improve over bare truncation by 3.36x for
+c=2 and 3.93x for c=0.5. Maximum joint TV is 0.00229074 and 0.00013216,
+respectively. Keeping the bare detector after correcting the Hamiltonian and
+state gives 0.00706778 and 0.00046705. Those two corrected schemes have exactly
+the same spectrum; the detector dictionary explains their difference.
+
+Both method-improvement gates pass. Strong-detector accuracy still misses 0.001.
+Weak-detector measured accuracy passes, but both conservative bound gates miss
+(the weak bound is 0.12538). The new bound explicitly includes state error,
+dynamical leakage and instrument mismatch, and dominates the measured errors.
+It is not tight enough to certify the requested accuracy. A smaller actual
+error is not a reason to relabel the failed bound.
+
+A second clean-checkout run in the isolated NumPy/SciPy environment reproduces
+all 16 compared distributions and bound values at stored precision, with all
+gate decisions unchanged. No states above E=12 have been accounted for. This
+is a promising finite-parent method, not continuum renormalization completed
+or a new GRUT law. The main integrated document links the result with that
+scope. The prior portable archive remains unchanged.
+
+For independent review, the deciding equations are the common-isometry
+transformation of H and W, and the residual-Gram history bound in DERIVATION.md.
+The implementation openly reuses the old bosonic parent; it is not an
+independent replication of that parent's field-theory dictionary. Please keep
+that earlier review obligation separate. No enlarged grid, changed threshold,
+merge or publication is requested. Zenodo remains paused.

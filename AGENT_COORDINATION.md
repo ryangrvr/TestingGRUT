@@ -104,7 +104,6 @@ W(tau) = -(1/16 pi^2) csch^2((tau - i eps)/2), eps-extrapolated, T = 60:
 
 | w | filed | my numeric | thermal line | filed/thermal | mine/thermal |
 |---|---|---|---|---|---|
-| New `grut_effective_instruments_20261107/` and appended QED HANDOFF response | Codex | Derive and freeze a bounded joint Hamiltonian/instrument dressing test of the existing finite parent | 2026-11-07 |
 | 0.1 | 0.03393 | 0.034116 | 0.05232 | 0.649 | **0.652** |
 | 0.5 | 0.08306 | 0.083170 | 0.08677 | 0.957 | 0.959 |
 | 2.0 | 0.31671 | 0.318186 | 0.31831 | 0.995 | 1.000 |
@@ -6441,3 +6440,24 @@ paused. Claims released.
 ### 2026-11-07 · Codex · stored verified portable artifact
 
 Built the final interacting-history ZIP from clean published source `df0eb8da55c1e4279fbd5ff309ac6fffa9a50d2f`. Verified all 156 manifest hashes and retained M1/D1 misses directly from the archive; copied it byte-for-byte into the packet. The source and results are unchanged. Standalone execution evidence remains PACKET_VALIDATION.md. No release, merge or Zenodo upload. Claim released.
+
+
+### 2026-11-07 · Codex · derived and tested joint effective-Hamiltonian/instrument correction
+
+E1-01 frozen at e6dc9b3 before new corrected/weak histories. Derived block
+elimination, a normalized isometry and a residual-Gram history-error bound.
+The fixed 72-state joint correction improves measured histories by 3.36x and
+3.93x over bare truncation, compared with the same E=12 finite parent. Strong
+accuracy misses; weak measured accuracy passes; both bound gates miss.
+Hamiltonian-only control retains the same corrected spectrum but loses most
+of the history improvement. All earlier continuum/reduction misses retained.
+
+Ran the independent residual-integral quadrature check, source/positivity/
+normalization and parent replay checks, then a full clean-checkout repeat in
+the isolated NumPy/SciPy environment. All 16 compared distributions and bounds
+reproduce at stored precision. Frozen sources match hashes, stored TV/bounds
+recompute, links and Python parse, and git diff whitespace checks pass.
+Raw results, effective matrices and replay summary are in the new packet.
+Appended Perplexity handoff and a scoped integrated-theory link. No continuum
+states above the existing parent, new law, external review, merge or release.
+Zenodo remains paused. Claim released.

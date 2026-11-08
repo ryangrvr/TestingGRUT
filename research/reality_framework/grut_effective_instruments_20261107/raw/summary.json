@@ -1,0 +1,81 @@
+{
+  "protocol": "E1-01",
+  "results": {
+    "2": {
+      "gates": {
+        "construction": true,
+        "numerics": true,
+        "method_improvement": true,
+        "finite_parent_accuracy": false,
+        "finite_parent_certification": false,
+        "bounds_dominate": true
+      },
+      "max_tv": {
+        "bare": 0.007696984721177817,
+        "joint": 0.0022907373467223784,
+        "hamiltonian_only": 0.0070677819215861195
+      },
+      "max_bound": {
+        "bare": 1.0,
+        "joint": 1.0,
+        "hamiltonian_only": 1.0
+      }
+    },
+    "0.5": {
+      "gates": {
+        "construction": true,
+        "numerics": true,
+        "method_improvement": true,
+        "finite_parent_accuracy": true,
+        "finite_parent_certification": false,
+        "bounds_dominate": true
+      },
+      "max_tv": {
+        "bare": 0.0005190493728564609,
+        "joint": 0.00013216154070109322,
+        "hamiltonian_only": 0.00046705063520079186
+      },
+      "max_bound": {
+        "bare": 1.0,
+        "joint": 0.12537856441911235,
+        "hamiltonian_only": 0.14924671450671068
+      }
+    }
+  },
+  "construction": {
+    "iterations": [
+      {
+        "iteration": 0,
+        "anchor_in": -0.7438275671808652,
+        "anchor_out": -0.8785577420603197,
+        "resolvent_distance": 6.381347788875251
+      },
+      {
+        "iteration": 1,
+        "anchor_in": -0.8785577420603197,
+        "anchor_out": -0.878593253941679,
+        "resolvent_distance": 6.5160779637547055
+      },
+      {
+        "iteration": 2,
+        "anchor_in": -0.878593253941679,
+        "anchor_out": -0.878593253944061,
+        "resolvent_distance": 6.516113475636065
+      },
+      {
+        "iteration": 3,
+        "anchor_in": -0.878593253944061,
+        "anchor_out": -0.8785932539440595,
+        "resolvent_distance": 6.516113475638447
+      }
+    ],
+    "converged": true,
+    "T_operator_norm": 0.14665046303714127,
+    "isometry_error": 8.754961011168954e-14,
+    "retained_dimension": 72,
+    "eliminated_dimension": 1208,
+    "construction_inputs": "parent matrix blocks only; full-parent eigenvectors not used"
+  },
+  "seconds": 29.353930513000705,
+  "scope": "Only the finite E=12 parent; M1 continuum gate remains unresolved."
+}
