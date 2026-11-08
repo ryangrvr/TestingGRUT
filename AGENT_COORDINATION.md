@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| New `grut_massless_dictionary_20261108/`, appended QED HANDOFF, integrated section 7.3 | Codex | Derive and freeze finite-volume massless dictionary, separate first/sequential histories; no parent cutoff extension | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
@@ -6517,3 +6516,28 @@ Raw results, scoped report and reproduction commands archived in the new P1
 packet. Added an attributed Perplexity handoff and integrated-theory link.
 E1/E2 and M0/M1 verdicts unchanged. No merge, release or Zenodo upload. Claims
 released.
+
+### 2026-11-08 · Codex · derived and tested finite-volume massless detector dictionary
+
+B1-01 frozen at 871a14c4 before corrected physical histories. Derived integrated
+cell weights, exact Gauss-law offset and boundary completion; explicitly kept
+cell-average interpretation and interacting endpoint matching as additional
+assumptions. No fitted parameter or new parent cutoff.
+
+All five massless tasks completed in about 61 seconds. At N20 first-readout TV
+is 8.01e-6 and maximum sequential TV is 0.000420236, improving on old 0.001677718.
+But cell-to-smooth reference TV 0.001010753 misses its frozen 0.00025 allowance.
+Signed contributions partly cancel. Overall acceptance remains unresolved;
+the automatic barrier did not evaluate corrected massive histories.
+
+Actually checked: prefreeze quadrature/hopping/Gaussian-word algebra; clean
+frozen-checkout production; exact detector rewrite; baseline replay to 5.84e-15;
+refined solver; mode sums and reference tail bounds; 120 complete saved
+distributions, checkpoints, 16 frozen source/input hashes, signed decomposition,
+all registered decisions; rejected forged acceptance, forged massive status and
+bypassed transfer; source parsing, local links and whitespace. Same-code checks,
+not independent physical implementation or evaluator validation.
+
+Archived derivation, report, raw probabilities and ground states. Appended an
+attributed Perplexity handoff and integrated-theory result. All P1/E1/E2/M0/M1
+verdicts preserved. No merge, release or Zenodo upload. Claims released.

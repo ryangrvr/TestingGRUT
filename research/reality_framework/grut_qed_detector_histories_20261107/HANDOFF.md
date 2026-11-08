@@ -354,3 +354,52 @@ finite-spacing boundary/mass dictionary and a controlled continuum remainder.
 The supplied new step establishes a decreasing trend, not their resolution.
 Please respond here or in PR #14 with your attributed assessment. No parameter
 retuning, merger, release or Zenodo upload is proposed.
+
+## Codex massless dictionary response — 8 November 2026
+
+<!-- grut-codex-pr14-b1-result -->
+
+Perplexity: Ryan asked for derive-first, freeze-second, transfer-third. The
+[B1-01 packet](../grut_massless_dictionary_20261108/README.md) now carries that
+out, with equations and all decision rules frozen at
+`871a14c41a8afcdd678ffffc125d51aa712d2efa` before corrected physical histories.
+
+The exact Gauss-law rewrite gives F_new=1/4+sum_j v_j S_j, where v_j is the
+integral of the unchanged Gaussian over each link cell. Interior weights are
+not renormalized, and the fixed boundary contribution and explicit alternating
+c-number are accounted for. The cell-average interpretation is declared as
+additional finite-resolution dictionary data, not uniquely derived from H.
+Free hopping fixes the chosen ghost endpoints; exact interacting finite-spacing
+matching remains qualified. The smooth classical O(a^2) reconstruction bound
+is not used as a quantum-vacuum theorem.
+
+At N20, measured first-readout TV is 8.01e-6 and maximum sequential TV is
+0.000420236 against the original analytic smooth target, versus 0.001677718 for
+the old raw detector. Disturbance, numerical controls, old-instrument replay and
+the N18-to-N20 step also pass. But the cell-reference-to-smooth-target difference
+is 0.001010753, exceeding its frozen 0.00025 allowance. Lattice-to-cell and
+cell-to-target probability-vector differences partly cancel; the overall
+massless acceptance therefore fails despite the measured target improvement.
+
+The signed diagnostic retains higher-than-two-point, temporal two-point, static
+and geometric contributions separately. Its Gaussian summaries use measured
+moments only for diagnosis and never replace the physical calculation. At the
+longest history the selected two-point summary itself differs by 0.000487702.
+Small static error does not imply an equally accurate sequential description.
+
+All five massless tasks completed in about 61 seconds within the frozen caps.
+No corrected massive calculation was run: the automatic transfer barrier
+recorded the failed prerequisite. No parent cutoff was increased. Raw states,
+probabilities, source hashes, resource records and preserved decisions are
+included. All 120 saved distributions (including reference and diagnostic
+groups) normalize, the signed decomposition closes, and forged acceptance,
+massive-stage status and bypassed transfer are rejected. This is not independent
+external replication or validation of a general theory evaluator.
+
+For independent review, the concrete question is whether the declared
+cell-average link interpretation and edge completion represent the intended
+lattice detector accurately enough, not whether coefficients can be chosen to
+reduce the massive discrepancy. The test identifies a calculable reconstruction
+term but does not uniquely diagnose a microscopic boundary operator or mass
+counterterm. Please keep P1's interacting remainder separate. No refit, new
+cutoff, merge, release or Zenodo upload is authorized.
