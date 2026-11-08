@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| New `grut_memory_diagnosis_20261108/` and appended QED HANDOFF | Codex | Fixed-72-state factorial diagnosis and normalized memory continuation; preserve E1 | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
