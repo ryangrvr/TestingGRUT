@@ -1,0 +1,82 @@
+{
+  "verdict": "physical_matching_unresolved_prerequisite_or_comparison_miss",
+  "complete": true,
+  "gates": {
+    "archive_replay": true,
+    "numerical_diagnostics": true,
+    "nested_hamiltonian": true,
+    "nested_weyl": true,
+    "nested_defect_identity": true,
+    "reference_cutoff_stability": false,
+    "reference_quadrature_stability": true,
+    "parent_instrument_overflow": false,
+    "finite_lattice_matching": false,
+    "overflow_lower_bound_consistency": true
+  },
+  "archive_replay_tv": {
+    "0": 0.0,
+    "0,1": 0.0,
+    "0,2": 0.0,
+    "0,1,2": 0.0
+  },
+  "cutoff_previous_TV_E10_E12": {
+    "0": 0.00037803003704771874,
+    "0,1": 0.0009354859911199229,
+    "0,2": 0.0006815909227074102,
+    "0,1,2": 0.0014005562149764484
+  },
+  "cutoff_current_TV_E12_E14": {
+    "0": 0.00014748900540178037,
+    "0,1": 0.00022878368827096212,
+    "0,2": 0.0002929365046841878,
+    "0,1,2": 0.00033800110705416967
+  },
+  "cutoff_step_decreased_every_history": true,
+  "cutoff_max_step_ratio": 0.24133348125541212,
+  "quadrature_TV_E14": {
+    "0": 2.67841304690819e-15,
+    "0,1": 1.056489964956775e-14,
+    "0,2": 1.2471794430535255e-14,
+    "0,1,2": 2.7699197102659667e-14
+  },
+  "comparison_TV_N20_E12": {
+    "0": 0.0009161332943882321,
+    "0,1": 0.0020638289850355533,
+    "0,2": 0.001738591714493943,
+    "0,1,2": 0.0024721995882943278
+  },
+  "comparison_TV_N20_E14": {
+    "0": 0.0007686442889864517,
+    "0,1": 0.0019146308814290331,
+    "0,2": 0.0014622672538400338,
+    "0,1,2": 0.002428822442179848
+  },
+  "overflow_E14": {
+    "0": 0.00029905745527997185,
+    "0,1": 0.0006385470203789101,
+    "0,2": 0.0005982285986099178,
+    "0,1,2": 0.0009690996522816464
+  },
+  "comparison_above_overflow_floor": {
+    "0": 0.00046958683370647986,
+    "0,1": 0.001276083861050123,
+    "0,2": 0.000864038655230116,
+    "0,1,2": 0.0014597227898982016
+  },
+  "nested_E12_checks": {
+    "hamiltonian_max_entry": 3.552713678800501e-15,
+    "weyl_max_entry": 0.0,
+    "defect_decomposition_max_entry": 2.220446049250313e-16,
+    "ground_weight_outside_E12": 0.0023019294472481633,
+    "embedded_ground_overlap_squared": 0.9976936033078649,
+    "first_detector_loss_E12_state_into_E12_to_E14": 0.00040555271686420216,
+    "first_detector_loss_E12_state_still_outside_E14": 2.1751214038983845e-05,
+    "first_detector_loss_E12_state_total": 0.0004273039309030608
+  },
+  "cost_seconds": {
+    "E12_q128": 21.24823174999983,
+    "E14_q128": 173.3338546189998,
+    "E14_q256": 279.00392542900045
+  },
+  "scope": "Reused solver, fixed-physics cutoff trend and necessary gates; no absolute continuum, lattice-spacing, boundary-mass or causal-detector error bound; M0/M1/E1/E2 verdicts unchanged"
+}

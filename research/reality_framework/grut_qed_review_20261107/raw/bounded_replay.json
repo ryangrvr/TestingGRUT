@@ -1,0 +1,63 @@
+{
+  "source_commit": "8dceba0c5f10b1febc5cc130b7a63da74e2372cc",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "tenpy": "1.1.1"
+  },
+  "preregistration_sha256": {
+    "ed/PREREGISTRATION.json": "d6808a17e6c6e6c11b836570a76a4e105a88a59e405992c58f2fb2c9f665b5a3",
+    "mps/PREREGISTRATION_AMENDMENT_01.json": "0db11998d230036a0b8be27956ecc06ce65eee2451464cfca60a918c4fd8e18e"
+  },
+  "mpo_algebra": [
+    {
+      "N": 4,
+      "x": 2.0,
+      "m": 0.0,
+      "max_entry_error": 0.0
+    },
+    {
+      "N": 6,
+      "x": 9.0,
+      "m": 0.25,
+      "max_entry_error": 0.0
+    },
+    {
+      "N": 8,
+      "x": 16.0,
+      "m": 0.5,
+      "max_entry_error": 0.0
+    }
+  ],
+  "fresh_ed": {
+    "N": 12,
+    "x": 9.0,
+    "m": 0.25,
+    "ed_gap": 1.272977693499359,
+    "dmrg_gap": 1.2729776934993957,
+    "abs_gap_error": 3.6637359812630166e-14,
+    "abs_ground_energy_error": 1.1368683772161603e-13
+  },
+  "production_point": {
+    "N": 36,
+    "x": 9.0,
+    "m": 0.25,
+    "gap": 1.1205664352507085,
+    "archived_gap": 1.12056643525077,
+    "abs_gap_difference": 6.150635556423367e-14,
+    "E0": -171.60955126028145,
+    "E1": -164.8861526487772,
+    "chi0": 120.0,
+    "chi1": 120.0,
+    "maxS0": 0.6163144669465214
+  },
+  "lightcone_scope": {
+    "body_diagonal_tuned_soft_threshold_m": 2.952952265892605e-32,
+    "omitted_ma_half_at_that_spacing": 3.8234900879049833e-20,
+    "retained_mass_deficit": 2.4680522391408558e-20,
+    "ratio_omitted_to_retained": 1.5491933384829666,
+    "untuned_positive_mass_body_diagonal_soft_threshold_m": 1.447875003200809e-32,
+    "scope": "Leading expansion; illustrative body-diagonal soft threshold, not a full observational exclusion."
+  }
+}

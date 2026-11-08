@@ -1,0 +1,76 @@
+{
+  "card": {
+    "id": "P1-01",
+    "parent_source_commit": "18318948c8439cc82578f0c3d55cd089923a78c9",
+    "physical_card": "../grut_detector_matching_20261107/protocol_m1_01.json",
+    "points": [
+      {
+        "label": "E12_q128",
+        "cutoff": 12,
+        "quadrature": 128
+      },
+      {
+        "label": "E14_q128",
+        "cutoff": 14,
+        "quadrature": 128
+      },
+      {
+        "label": "E14_q256",
+        "cutoff": 14,
+        "quadrature": 256
+      }
+    ],
+    "dimension_cap": 3000,
+    "point_wall_seconds": 450,
+    "total_wall_seconds": 1050,
+    "threads": 1,
+    "gates": {
+      "archive_replay_tv": 1e-10,
+      "nested_hamiltonian_max_entry": 1e-11,
+      "nested_weyl_max_entry": 1e-11,
+      "nested_defect_max_entry": 1e-11,
+      "hermiticity": 1e-10,
+      "eigen_residual": 1e-09,
+      "negative_defect": 1e-10,
+      "probability_norm": 1e-09,
+      "reference_cutoff_tv": 0.0001,
+      "reference_quadrature_tv": 1e-06,
+      "overflow": 1e-05,
+      "finite_matching_tv": 0.001
+    },
+    "scope": "One further fixed-physics parent refinement; necessary numerical gates and trend only, no absolute interacting continuum error bound.",
+    "no_refit": [
+      "mass",
+      "length",
+      "boundary",
+      "theta",
+      "smearing",
+      "strength",
+      "phase",
+      "times",
+      "preparation rule",
+      "counterterms"
+    ],
+    "stop": "No E16 or adaptive further cutoff; preserve missing points and timeouts. No memory compression or new lattice production."
+  },
+  "source_commit": "18ec80f0c0a608ac4edad675cf5144f168d84edd",
+  "clean_source": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "source_and_input_sha256": {
+    "research/reality_framework/grut_parent_dictionary_20261108/analyze.py": "b365e3b3a83d01f12aec7c1a2ee109dc963cd5bf8bd4c21ea40600c2c0c8db33",
+    "research/reality_framework/grut_parent_dictionary_20261108/point.py": "7123b9261fb1a377a2653dc4e4c9c24ef4b8323340d277ca16496e4f8fe991d0",
+    "research/reality_framework/grut_parent_dictionary_20261108/run.py": "ca7e2364b84daeda7e2d5f896705ab707da48ae6f4c7cfd6ba779f4455550d33",
+    "research/reality_framework/grut_parent_dictionary_20261108/DICTIONARY.md": "52e2868a36f418c9cddd59cbf95af8501c14b3ecdd7c8506f341603be9dda99e",
+    "research/reality_framework/grut_parent_dictionary_20261108/PROTOCOL_P1_01.md": "0bf14b5272a5f3746759219e03b7f8e0fdfaefdf2a36834d90b4f5c95df1d73c",
+    "research/reality_framework/grut_parent_dictionary_20261108/protocol_p1_01.json": "0c522215ed0bc6112117513010711ce78089cb5c11d2d2c96f72e67d8e524424",
+    "research/reality_framework/grut_detector_matching_20261107/bosonized.py": "9dc5adebef7006d5771dd2637b3dd342f3e81c641e4ba494ce0b6e485e3485b1",
+    "research/reality_framework/grut_detector_matching_20261107/continuum.py": "fc323361805b4572a5ed5349c5801ce8d880b7c8d32f3587e7c841c5c15d1ee7",
+    "research/reality_framework/grut_detector_matching_20261107/protocol_m1_01.json": "6adbcf31c59c037d8d24608912ba2fde1b5eb813d4d56f29c3ac9b788686876f",
+    "research/reality_framework/grut_detector_matching_20261107/raw_m1_01/boson_m05_E10_q128.json": "506ada55b0a501283b0637c61cfc3af67e4e03b2c23d3935bb4bf078324042b9",
+    "research/reality_framework/grut_detector_matching_20261107/raw_m1_01/boson_m05_E12_q128.json": "310af43e8c6faa6492b82682b37fb25e1d090fd84fa9781d9e9767a48344fb97",
+    "research/reality_framework/grut_detector_matching_20261107/raw_m1_01/boson_m05_E12_q128.npz": "0955745ea547fc660e5de541518856c9ae298cb640e76f2cc312a8f27e02a8bd",
+    "research/reality_framework/grut_detector_matching_20261107/raw_m1_01/lattice_N20.json": "2a286c8e5db2a61e2e9454e431c9fa4aedbe48adb74b6212fd9143f032883edf"
+  }
+}

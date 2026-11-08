@@ -1,0 +1,114 @@
+{
+  "card": {
+    "length": 5.0,
+    "g": 1.0,
+    "theta": 0.0,
+    "boundary_phi_over_sqrt_pi": [
+      0.25,
+      0.25
+    ],
+    "sigma": 0.8,
+    "coupling": 2.0,
+    "phase": 0.0,
+    "protocols": [
+      [
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        1.0,
+        2.0
+      ]
+    ],
+    "quadrature_epsabs": 1e-12,
+    "eigensolver_tol": 1e-11,
+    "eigensolver_refined_tol": 1e-13,
+    "eigensolver_seed_base": 20261107,
+    "refined_substeps": 2,
+    "id": "M1-01",
+    "mass_R_over_g": 0.5,
+    "energy_cutoffs": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "quadrature_order": 128,
+    "quadrature_refinement": {
+      "cutoff": 10,
+      "order": 256
+    },
+    "free_checks": [
+      6,
+      10
+    ],
+    "normal_order_images": 16,
+    "reference_modes": 8192,
+    "lattice_N": [
+      10,
+      14,
+      18,
+      20
+    ],
+    "lattice_refined_N": 14,
+    "gates": {
+      "vertex_error": 1e-11,
+      "normal_factor_error": 1e-09,
+      "hermiticity": 1e-10,
+      "eigen_residual": 1e-09,
+      "negative_defect": 1e-10,
+      "probability_norm": 1e-09,
+      "free_reference_tv": 1e-06,
+      "reference_cutoff_tv": 0.0001,
+      "reference_quadrature_tv": 1e-06,
+      "overflow": 1e-05,
+      "matching_tv": 0.001,
+      "lattice_finest_step_tv": 0.00025,
+      "solver_refinement_tv": 1e-08
+    },
+    "resources": {
+      "dimension_cap": 1300,
+      "point_wall_seconds": 300,
+      "total_wall_seconds": 1800
+    },
+    "mass_prescription": "m_lat/g = 0.5 - ag/8; no fitted finite-interval mass correction",
+    "length_prescription": "L=(N+1)a; same M0-02 primary raw-link detector; M0-02 miss remains",
+    "scope": "Independent massive reference feasibility and finite history comparison; no uniform continuum certificate"
+  },
+  "source_commit": "479eaed2f906e323dac491f8f308c0c05718d63b",
+  "source_tree_clean": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "source_sha256": {
+    "PROTOCOL_M0_01.md": "652df922f10623917ebcbd1db8ab51c3969165670d39d1dbcb8aad2dae368cf6",
+    "PROTOCOL_M0_02.md": "4b799896fdab72ff0ebf89d9f56e896d95e0bfefa5384b7b223cbe25572a9495",
+    "PROTOCOL_M1_01.md": "e15441f260aefbb4d33bff2f255b62b45ae83a00ed7e771dfa75b4c49c858238",
+    "RESULT_M0_01.md": "1d6430693bed93368298dd99858205549bba683a5f16ac0f57e96dc333e145e4",
+    "RESULT_M0_02.md": "4bc5d0352ae1d0ef66380f82f848148c52583f8a6cf3462a89da46085ae5efa3",
+    "VALIDATION_REPAIR.md": "1830a3a64da0e172a9d7eb0b1de410f0c4810ee07e6ab38f6117c9ddf2480b46",
+    "analyze.py": "f06523ba53540ed7494f7e850da8cc9cd9859218f8e5815d45b3923cb9ac814d",
+    "analyze_m1.py": "319675d83bd7cbf4ffeb351e79f0f08a670bfe75cb51a667640bebb8e02006f2",
+    "bosonized.py": "9dc5adebef7006d5771dd2637b3dd342f3e81c641e4ba494ce0b6e485e3485b1",
+    "continuum.py": "fc323361805b4572a5ed5349c5801ce8d880b7c8d32f3587e7c841c5c15d1ee7",
+    "free_boundary_identity.json": "acf9c890cb52165b6716fea1b19224a578132c552d4cc07a4b30cd4c561d109e",
+    "lattice.py": "7a531de2e36602b23eb44f7b885d17218bc5940056a928b9ed77042091191838",
+    "lattice_boundary.py": "d7dd9c27960a9e28179c2745763eb06425722226fdc1b754b774741739031f49",
+    "lattice_massive.py": "69acd03b2afd148d204ced3e76063c062329cba94373c136a60e41e11a50f7ff",
+    "protocol_m0_01.json": "9412cd71da050f0f0cd3c2daacf02731ca03c4923eee24abb80c6ba85a0dafaf",
+    "protocol_m0_02.json": "23c3d41b5c0984bd9f13b426147db91333f6b3cd279ce8ca5068ba26e91df6b5",
+    "protocol_m1_01.json": "6adbcf31c59c037d8d24608912ba2fde1b5eb813d4d56f29c3ac9b788686876f",
+    "run_m0_01.py": "e6071ab38d6984f30abb71ff75ef48649e9e14e9105c92fb4697c0eae7fbbcad",
+    "run_m0_02.py": "ed731ffa8bd0796ee6226b6f1c83505b21e3bd79301bf759f2bd86646bd866d5",
+    "run_m1_01.py": "0c9c1e698c826af829fbfcaf5840219ecbcafa8509a1a65f1c05d4e5de87f8f7"
+  }
+}

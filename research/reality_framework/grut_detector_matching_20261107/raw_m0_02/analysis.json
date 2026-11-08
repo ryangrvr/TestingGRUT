@@ -1,0 +1,204 @@
+{
+  "protocol": "M0-02",
+  "verdict": "finite_resolution_matching_gate_missed",
+  "gates": {
+    "reference_implementation": true,
+    "continuum_reference_control": true,
+    "lattice_numerical_diagnostics": true,
+    "finite_resolution_matching": false,
+    "resolution_diagnostic": false
+  },
+  "solver_refinement_max_tv": 1.9376861226660935e-15,
+  "reference_mean": 0.12722989629066228,
+  "reference_variance": 0.06216348820633719,
+  "reference_gap": 0.8444489695815638,
+  "comparison": {
+    "0": {
+      "primary_tv": [
+        0.0014189214373884831,
+        0.0008133830303185055,
+        0.0005452240793936414,
+        0.00046282791970027326
+      ],
+      "finest_step_tv": 8.239615969336811e-05,
+      "fine_three_nonincreasing": true
+    },
+    "0,1": {
+      "primary_tv": [
+        0.002080793979546809,
+        0.0012706333123521443,
+        0.000899658843858224,
+        0.0007799491850639106
+      ],
+      "finest_step_tv": 0.00011970965879431333,
+      "fine_three_nonincreasing": true
+    },
+    "0,2": {
+      "primary_tv": [
+        0.004645752913807056,
+        0.0026263687033326365,
+        0.0017274999427858715,
+        0.0014556729075268296
+      ],
+      "finest_step_tv": 0.00027182703525904187,
+      "fine_three_nonincreasing": true
+    },
+    "0,1,2": {
+      "primary_tv": [
+        0.004643850284786478,
+        0.0028445233931255406,
+        0.0019574009903734076,
+        0.0016777184314407207
+      ],
+      "finest_step_tv": 0.0002796825589326869,
+      "fine_three_nonincreasing": true
+    }
+  },
+  "points": [
+    {
+      "file": "point_N10_primary.json",
+      "N": 10,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.12752638820911363,
+      "mean_difference": 0.0002964919184513526,
+      "gap": 0.8329400013223758,
+      "gap_difference": -0.011508968259188013,
+      "variance": 0.06376198936417467,
+      "variance_difference": 0.0015985011578374744,
+      "tv_by_protocol": {
+        "0": 0.0014189214373884831,
+        "0,1": 0.002080793979546809,
+        "0,2": 0.004645752913807056,
+        "0,1,2": 0.004643850284786478
+      },
+      "max_tv": 0.004645752913807056,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N10_smoothed.json",
+      "N": 10,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.12752638820911363,
+      "mean_difference": 0.0002964919184513526,
+      "gap": 0.8329400013223758,
+      "gap_difference": -0.011508968259188013,
+      "variance": 0.06376198936417467,
+      "variance_difference": 0.0015985011578374744,
+      "tv_by_protocol": {
+        "0": 0.0010398726023715388,
+        "0,1": 0.001206214138440253,
+        "0,2": 0.0036478541407260184,
+        "0,1,2": 0.0034528155810562918
+      },
+      "max_tv": 0.0036478541407260184,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N14_primary.json",
+      "N": 14,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.12746856434416445,
+      "mean_difference": 0.00023866805350217235,
+      "gap": 0.8384778633680767,
+      "gap_difference": -0.005971106213487065,
+      "variance": 0.06306131453716735,
+      "variance_difference": 0.0008978263308301523,
+      "tv_by_protocol": {
+        "0": 0.0008133830303185055,
+        "0,1": 0.0012706333123521443,
+        "0,2": 0.0026263687033326365,
+        "0,1,2": 0.0028445233931255406
+      },
+      "max_tv": 0.0028445233931255406,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N14_refined.json",
+      "N": 14,
+      "bare_zero_control": false,
+      "solver_refinement": true,
+      "mean": 0.12746856434416448,
+      "mean_difference": 0.0002386680535022001,
+      "gap": 0.8384778633680696,
+      "gap_difference": -0.005971106213494171,
+      "variance": 0.06306131453716736,
+      "variance_difference": 0.0008978263308301662,
+      "tv_by_protocol": {
+        "0": 0.000813383030318561,
+        "0,1": 0.0012706333123505293,
+        "0,2": 0.0026263687033342576,
+        "0,1,2": 0.002844523393125206
+      },
+      "max_tv": 0.002844523393125206,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N18_primary.json",
+      "N": 18,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.1274071069230822,
+      "mean_difference": 0.0001772106324199052,
+      "gap": 0.8408122287659587,
+      "gap_difference": -0.003636740815605055,
+      "variance": 0.06275995105809438,
+      "variance_difference": 0.0005964628517571915,
+      "tv_by_protocol": {
+        "0": 0.0005452240793936414,
+        "0,1": 0.000899658843858224,
+        "0,2": 0.0017274999427858715,
+        "0,1,2": 0.0019574009903734076
+      },
+      "max_tv": 0.0019574009903734076,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N20_primary.json",
+      "N": 20,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.1273833370551653,
+      "mean_difference": 0.00015344076450302113,
+      "gap": 0.8414977132144408,
+      "gap_difference": -0.002951256367123012,
+      "variance": 0.06266876397414564,
+      "variance_difference": 0.0005052757678084482,
+      "tv_by_protocol": {
+        "0": 0.00046282791970027326,
+        "0,1": 0.0007799491850639106,
+        "0,2": 0.0014556729075268296,
+        "0,1,2": 0.0016777184314407207
+      },
+      "max_tv": 0.0016777184314407207,
+      "numerical_diagnostics_pass": true
+    },
+    {
+      "file": "point_N20_smoothed.json",
+      "N": 20,
+      "bare_zero_control": false,
+      "solver_refinement": false,
+      "mean": 0.1273833370551653,
+      "mean_difference": 0.00015344076450302113,
+      "gap": 0.8414977132144408,
+      "gap_difference": -0.002951256367123012,
+      "variance": 0.06266876397414564,
+      "variance_difference": 0.0005052757678084482,
+      "tv_by_protocol": {
+        "0": 0.00035045025481111186,
+        "0,1": 0.0005209200747042352,
+        "0,2": 0.001161696821603696,
+        "0,1,2": 0.0012527271043444497
+      },
+      "max_tv": 0.0012527271043444497,
+      "numerical_diagnostics_pass": true
+    }
+  ],
+  "limits": [
+    "Finite-interval mass matching remains a specified prescription.",
+    "Instantaneous extended instruments are idealized; causal realization error is not bounded.",
+    "No massive-history error bound or evaluator-reliability certification follows."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "M0-01",
+  "g": 1.0,
+  "length": 5.0,
+  "theta": 0.0,
+  "renormalized_mass_over_g": 0.0,
+  "boundary_phi_over_sqrt_pi": [0.25, 0.25],
+  "primary_N": [10, 14, 18, 20],
+  "bare_zero_control_N": [10, 20],
+  "mass_prescription": "m_lat/g = -ag/8 for primary; bare zero for controls",
+  "length_prescription": "L=(N-1)a; midpoint links",
+  "sigma": 0.8,
+  "coupling": 2.0,
+  "phase": 0.0,
+  "protocols": [[0.0], [0.0, 1.0], [0.0, 2.0], [0.0, 1.0, 2.0]],
+  "modes": 8192,
+  "refined_modes": 16384,
+  "quadrature_epsabs": 1e-12,
+  "quadrature_refined_epsabs": 1e-13,
+  "eigensolver_tol": 1e-11,
+  "eigensolver_refined_tol": 1e-13,
+  "eigensolver_seed_base": 20261107,
+  "refined_N": 14,
+  "refined_substeps": 2,
+  "oscillator_verification": {
+    "omega": 0.8, "h": 0.3, "mean": 0.17,
+    "times": [0.0, 0.7, 1.9], "phases": [0.2, -0.3, 0.4],
+    "cutoffs": [32, 48]
+  },
+  "gates": {
+    "oscillator_tv": 1e-10,
+    "reference_tv": 1e-6,
+    "eigen_residual": 1e-9,
+    "probability_norm": 1e-9,
+    "solver_refinement_tv": 1e-8,
+    "matching_tv": 0.001,
+    "finest_step_tv": 0.00025
+  },
+  "resources": {"point_wall_seconds": 300, "total_lattice_wall_seconds": 1200}
+}

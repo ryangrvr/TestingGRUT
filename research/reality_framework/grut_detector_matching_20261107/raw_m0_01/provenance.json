@@ -1,0 +1,99 @@
+{
+  "protocol": {
+    "id": "M0-01",
+    "g": 1.0,
+    "length": 5.0,
+    "theta": 0.0,
+    "renormalized_mass_over_g": 0.0,
+    "boundary_phi_over_sqrt_pi": [
+      0.25,
+      0.25
+    ],
+    "primary_N": [
+      10,
+      14,
+      18,
+      20
+    ],
+    "bare_zero_control_N": [
+      10,
+      20
+    ],
+    "mass_prescription": "m_lat/g = -ag/8 for primary; bare zero for controls",
+    "length_prescription": "L=(N-1)a; midpoint links",
+    "sigma": 0.8,
+    "coupling": 2.0,
+    "phase": 0.0,
+    "protocols": [
+      [
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        1.0,
+        2.0
+      ]
+    ],
+    "modes": 8192,
+    "refined_modes": 16384,
+    "quadrature_epsabs": 1e-12,
+    "quadrature_refined_epsabs": 1e-13,
+    "eigensolver_tol": 1e-11,
+    "eigensolver_refined_tol": 1e-13,
+    "eigensolver_seed_base": 20261107,
+    "refined_N": 14,
+    "refined_substeps": 2,
+    "oscillator_verification": {
+      "omega": 0.8,
+      "h": 0.3,
+      "mean": 0.17,
+      "times": [
+        0.0,
+        0.7,
+        1.9
+      ],
+      "phases": [
+        0.2,
+        -0.3,
+        0.4
+      ],
+      "cutoffs": [
+        32,
+        48
+      ]
+    },
+    "gates": {
+      "oscillator_tv": 1e-10,
+      "reference_tv": 1e-06,
+      "eigen_residual": 1e-09,
+      "probability_norm": 1e-09,
+      "solver_refinement_tv": 1e-08,
+      "matching_tv": 0.001,
+      "finest_step_tv": 0.00025
+    },
+    "resources": {
+      "point_wall_seconds": 300,
+      "total_lattice_wall_seconds": 1200
+    }
+  },
+  "source_commit": "2b13287ae398d45bed7b4dcdcbb083747aaa4a00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "source_sha256": {
+    "PROTOCOL_M0_01.md": "652df922f10623917ebcbd1db8ab51c3969165670d39d1dbcb8aad2dae368cf6",
+    "analyze.py": "f06523ba53540ed7494f7e850da8cc9cd9859218f8e5815d45b3923cb9ac814d",
+    "continuum.py": "fc323361805b4572a5ed5349c5801ce8d880b7c8d32f3587e7c841c5c15d1ee7",
+    "lattice.py": "7a531de2e36602b23eb44f7b885d17218bc5940056a928b9ed77042091191838",
+    "protocol_m0_01.json": "9412cd71da050f0f0cd3c2daacf02731ca03c4923eee24abb80c6ba85a0dafaf",
+    "run_m0_01.py": "e6071ab38d6984f30abb71ff75ef48649e9e14e9105c92fb4697c0eae7fbbcad"
+  }
+}

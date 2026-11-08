@@ -27,6 +27,7 @@ caught by re-running something. Neither of us caught it by being told.
 | file / area | agent | intent | since |
 |---|---|---|
 
+
 ## ANSWERED QUESTIONS
 
 | # | answer | answered by |
@@ -6331,3 +6332,212 @@ All local document links and git diff whitespace checks pass. This is
 same-author verification. No new microscopic selection law was adopted.
 Retained both Hamiltonians as nonselection witnesses. Claims released.
 [Bridge clarification](research/reality_framework/grut_integrated_candidate_20261106/PHOTON_BRIDGE_REVIEW.md)
+
+### 2026-11-07 · Claude (Perplexity Computer) · lattice QED in GRUT detector histories; sealed DMRG rerun passes
+
+New directory only: `research/reality_framework/grut_qed_detector_histories_20261107/`, on branch
+`claude/grut-qed-detector-histories-20261107`. No existing file was edited except this log; the claim row was added and is now removed.
+
+**Ran, not read:** `mps/validate_vs_ed.py` -> GATE PASS (4/4, rel <= 2e-13 vs ED). Production grid
+x in {9,16,36,64} x L in {12,16,20,24}/g, N up to 192, both masses. `mps/analyse.py` (committed in c4e1ddf before
+results were read) -> P-A 0.5641906 vs 0.5641896 (PASS), P-B holdout 0.519232 vs 0.51918 (PASS). chi 160 vs 120 at
+N=192: |d omega| < 5e-8. The ED misses (+3.3%, +9.9%) stay on record; the amendment sealed in dd1e107 is a second test.
+
+**Check that decides it:** rerun `mps/validate_vs_ed.py` and any one production point, then `mps/analyse.py`.
+
+**Did NOT touch:** the photon bridge files, any sealed ledger, any preregistration under `provenance/`.
+
+
+### 2026-11-07 · Codex · Reviewed Perplexity PR #14 at 8dceba0
+
+Reviewed both supplied reports, registrations, source and raw outputs. All 35
+ZIP files match the PR after directory mapping. The repository validation
+command fails on the stale ../qed path; the unchanged ZIP version passes all
+four cases with maximum relative gap difference 1.34e-13. Fresh ED at N=12
+and one unchanged massive production point at N=36 also agree with DMRG
+and the archive respectively. Dense MPO/ED matrices agree in three small
+neutral sectors. The frozen spectrum analysis reproduces both PASS verdicts.
+
+Four small history cases reproduce; two exploratory controls matching Var(cF)
+preserve the larger massive non-Gaussian residual. Gravity, particles and
+light-cone scripts reproduce their archived JSON values. These are bounded
+replays and operator checks, not an independent DMRG implementation or a
+full production rerun.
+
+The review requires narrowing equation (14), the physical lattice bound and
+the blanket massive-gravity/chirality statements. It quantifies the omitted
+ma/2 velocity correction and distinguishes rerun registration from an untouched
+holdout. No sealed Perplexity file, result or acceptance rule was edited.
+Zenodo remains paused. Review source compiles, local links resolve, and git
+diff whitespace checks pass. Claim released.
+[Review](research/reality_framework/grut_qed_review_20261107/REVIEW.md)
+
+### 2026-11-07 · Codex · Established direct PR #14 handoff at Ryan's request
+
+Appended a clearly attributed Codex response to Perplexity's HANDOFF.md,
+linking the completed review and raw replays and requesting a bounded
+correction patch. Original handoff text, sealed scientific inputs, raw
+production outputs and acceptance rules remain unchanged. The shared
+document and PR conversation are the requested exchange channel; Zenodo
+remains paused. Verified the appended links and whitespace. Claim released.
+
+
+### 2026-11-07 · Codex · research requirements for a solid GRUT physical theory
+
+At PR #14 head `7ecbf69f584dd3e8be047a85768e85452f2c2c3a`, added
+`research/reality_framework/grut_solid_theory_research_20261107/RESEARCH_PASS.md`,
+a deterministic parameter calculator and its JSON, and an attributed research
+response in the existing QED `HANDOFF.md`. This is a primary-literature research
+pass, not a new production or observational result. It distinguishes effective
+predictivity from microscopic uniqueness, derives a conditional joint-history
+error budget, identifies the staggered mass and interval boundary matching
+obligations, and specifies one connected interacting-history comparison.
+
+Verification actually run: `matching_scales.py` reproduced its archived JSON
+from a working directory of `/tmp`; the script parses; local report/handoff
+links resolve; eight labeled equations are present; `git diff --check` passes.
+The table exposes both `Na` and `(N-1)a` conventions and the published bulk
+improvement `Delta mu = -1/4`, explicitly not a finite-interval certification.
+Primary literature and the external reference-code README were read; that code
+was not executed. No new ED/DMRG production run, no sealed inputs or outputs
+changed, no main-theory rewrite, and no merge or release. Zenodo remains paused.
+
+
+### 2026-11-07 · Codex · connected interacting-history pass and honest incorporation
+
+Implemented the user-authorized scope corrections and repaired the validation
+entry point without changing the sealed original physics. Corrected wrapper
+passes all four original cases and rejects a deliberately corrupted reference
+with exit status 1; the first NumPy-Boolean serialization exception is preserved.
+
+Frozen and executed M0-01, M0-02, M1-01 and D1-01 from clean committed trees.
+Independent interval normal ordering and Weyl matrix checks pass, as does the
+new reference's massless Gaussian limit. M0-01 and M0-02 miss the registered
+0.001 TV window (0.010011 and 0.001678). M1-01 reaches 0.002472 but its
+reference-cutoff and overflow prerequisites also miss. D1-01's energy-population
+comparator differs by 0.0221–0.0375 despite matched first-readout calibration;
+its coherent 32-level reduction also misses. The constructive finite-parent
+bound dominates the measured errors, but is too loose for the registered target.
+
+Raw points, source hashes, ground-state checkpoints, failure reports, analytical
+derivations and all verdicts are in grut_detector_matching_20261107. Updated the
+integrated theory with their scope and appended the direct Perplexity handoff.
+The clock/apparatus embedding is an analytic existence construction; the full
+enlarged matrix was not executed. An additional field-moment calculation is
+labeled exploratory and does not amend any frozen verdict.
+
+Actually verified: source parsing and local links; exact reconstruction of
+all three matching analyses; 128 normalized distributions; D1 probability
+distances and bounds; a portable archive extracted into a new Git tree and
+run with a newly installed NumPy/SciPy virtual environment. The E=4 massive
+point and complete D1 replay reproduce every compared probability at stored
+precision, with failed scientific gates unchanged; extracted tree stays clean.
+See PACKET_VALIDATION.md for commands and provenance. No full DMRG grid rerun,
+new GRUT law, causal detector certificate, merge or release. Zenodo remains
+paused. Claims released.
+
+
+### 2026-11-07 · Codex · stored verified portable artifact
+
+Built the final interacting-history ZIP from clean published source `df0eb8da55c1e4279fbd5ff309ac6fffa9a50d2f`. Verified all 156 manifest hashes and retained M1/D1 misses directly from the archive; copied it byte-for-byte into the packet. The source and results are unchanged. Standalone execution evidence remains PACKET_VALIDATION.md. No release, merge or Zenodo upload. Claim released.
+
+
+### 2026-11-07 · Codex · derived and tested joint effective-Hamiltonian/instrument correction
+
+E1-01 frozen at e6dc9b3 before new corrected/weak histories. Derived block
+elimination, a normalized isometry and a residual-Gram history-error bound.
+The fixed 72-state joint correction improves measured histories by 3.36x and
+3.93x over bare truncation, compared with the same E=12 finite parent. Strong
+accuracy misses; weak measured accuracy passes; both bound gates miss.
+Hamiltonian-only control retains the same corrected spectrum but loses most
+of the history improvement. All earlier continuum/reduction misses retained.
+
+Ran the independent residual-integral quadrature check, source/positivity/
+normalization and parent replay checks, then a full clean-checkout repeat in
+the isolated NumPy/SciPy environment. All 16 compared distributions and bounds
+reproduce at stored precision. Frozen sources match hashes, stored TV/bounds
+recompute, links and Python parse, and git diff whitespace checks pass.
+Raw results, effective matrices and replay summary are in the new packet.
+Appended Perplexity handoff and a scoped integrated-theory link. No continuum
+states above the existing parent, new law, external review, merge or release.
+Zenodo remains paused. Claim released.
+
+### 2026-11-08 · Codex · diagnosed detector-mediated memory at fixed retained image
+
+E2-01 source/protocol frozen publicly at 3dce73fb before its factorial controls,
+new bound, memory continuation or new timings. Reused E1's unchanged 72-column
+isometry and E=12 parent. Derived complete overflow instruments, the signed
+propagation/detector/interaction decomposition, a branch-relevant autonomous
+bound and a complete-history Strang bound for full auxiliary memory.
+
+The old maximum TV is 0.00229074 autonomous, 0.00239330 with propagation exchange
+only, and 0.00023014 with detector transfer only while keeping complementary
+memory. Contributions partly cancel. Full memory at the registered n=512 reaches
+new-timing maximum TV 5.71e-9 with analytic bound 9.25e-5. Both groups pass these
+new memory gates; the tighter autonomous bound still misses. All 1208 auxiliary
+amplitudes are retained: no state-space compression or continuum claim. E1 and
+all earlier misses remain unchanged.
+
+Actually checked: complex small-matrix exchange against direct exponentiation,
+commuting limit, complete instrument dilation and rejected expansive detector;
+clean frozen-checkout production (29.4 s, one BLAS thread); old parent/autonomous
+replay; matrix/isometry/normalization checks; exact signed reconstruction; all
+32 distributions, stored bounds and gate arithmetic; all frozen source hashes;
+rejected corrupted zero-bound output; Python parsing and local links. Full
+physical implementation not independently replicated. No additional grid run.
+
+Raw outputs, derivation, report, verifier and attributed Perplexity handoff saved.
+Independent boundary/mass-dictionary review remains open. No merge, release or
+Zenodo deposit. Claims released.
+
+### 2026-11-08 · Codex · physical dictionary and bounded parent refinement
+
+P1-01 derivation, parameters, code and analysis frozen publicly at 18ec80f0 before
+new E14 production. Derived the adopted boundary profile, explicit mass and
+instrument dictionary, nested parent-overflow identity and TV overflow floor.
+Finite-spacing endpoint/mass matching remains qualified; this is the same
+worker's theoretical review, not independent external certification.
+
+At unchanged M1 physics, E12 replay and E14 q128/q256 all complete in about
+475 seconds within their frozen caps. Dimension rises from 1280 to 2894.
+Maximum successive-cutoff TV decreases from 0.00140056 to 0.000338001, while
+N20-to-parent TV barely changes to 0.00242882. Parent overflow is 0.000969100.
+All three physical prerequisites/comparison gates still miss. Quadrature TV is
+2.77e-14. No E16, parameter fitting, new lattice grid or memory compression.
+
+Actually checked: clean public-checkout production; exact E12 probability
+replay; nested H/W and defect identity; all 12 complete distributions and saved
+checkpoints; 13 frozen source/input hashes; frozen analysis/gate recalculation;
+rejection of forged continuum success and removed overflow; source parsing,
+local report links and whitespace. These checks do not independently validate
+the interacting implementation or the continuum remainder.
+
+Raw results, scoped report and reproduction commands archived in the new P1
+packet. Added an attributed Perplexity handoff and integrated-theory link.
+E1/E2 and M0/M1 verdicts unchanged. No merge, release or Zenodo upload. Claims
+released.
+
+### 2026-11-08 · Codex · derived and tested finite-volume massless detector dictionary
+
+B1-01 frozen at 871a14c4 before corrected physical histories. Derived integrated
+cell weights, exact Gauss-law offset and boundary completion; explicitly kept
+cell-average interpretation and interacting endpoint matching as additional
+assumptions. No fitted parameter or new parent cutoff.
+
+All five massless tasks completed in about 61 seconds. At N20 first-readout TV
+is 8.01e-6 and maximum sequential TV is 0.000420236, improving on old 0.001677718.
+But cell-to-smooth reference TV 0.001010753 misses its frozen 0.00025 allowance.
+Signed contributions partly cancel. Overall acceptance remains unresolved;
+the automatic barrier did not evaluate corrected massive histories.
+
+Actually checked: prefreeze quadrature/hopping/Gaussian-word algebra; clean
+frozen-checkout production; exact detector rewrite; baseline replay to 5.84e-15;
+refined solver; mode sums and reference tail bounds; 120 complete saved
+distributions, checkpoints, 16 frozen source/input hashes, signed decomposition,
+all registered decisions; rejected forged acceptance, forged massive status and
+bypassed transfer; source parsing, local links and whitespace. Same-code checks,
+not independent physical implementation or evaluator validation.
+
+Archived derivation, report, raw probabilities and ground states. Appended an
+attributed Perplexity handoff and integrated-theory result. All P1/E1/E2/M0/M1
+verdicts preserved. No merge, release or Zenodo upload. Claims released.
