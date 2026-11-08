@@ -27,7 +27,6 @@ caught by re-running something. Neither of us caught it by being told.
 | file / area | agent | intent | since |
 |---|---|---|
 
-| QED packet current reports, HANDOFF and `mps/validate_vs_ed.py`; new `grut_detector_matching_20261107/` | Codex | User-authorized scope/replay corrections and frozen bounded massless matching calculation; preserve sealed inputs/results | 2026-11-07 |
 
 ## ANSWERED QUESTIONS
 
@@ -6402,3 +6401,37 @@ improvement `Delta mu = -1/4`, explicitly not a finite-interval certification.
 Primary literature and the external reference-code README were read; that code
 was not executed. No new ED/DMRG production run, no sealed inputs or outputs
 changed, no main-theory rewrite, and no merge or release. Zenodo remains paused.
+
+
+### 2026-11-07 · Codex · connected interacting-history pass and honest incorporation
+
+Implemented the user-authorized scope corrections and repaired the validation
+entry point without changing the sealed original physics. Corrected wrapper
+passes all four original cases and rejects a deliberately corrupted reference
+with exit status 1; the first NumPy-Boolean serialization exception is preserved.
+
+Frozen and executed M0-01, M0-02, M1-01 and D1-01 from clean committed trees.
+Independent interval normal ordering and Weyl matrix checks pass, as does the
+new reference's massless Gaussian limit. M0-01 and M0-02 miss the registered
+0.001 TV window (0.010011 and 0.001678). M1-01 reaches 0.002472 but its
+reference-cutoff and overflow prerequisites also miss. D1-01's energy-population
+comparator differs by 0.0221–0.0375 despite matched first-readout calibration;
+its coherent 32-level reduction also misses. The constructive finite-parent
+bound dominates the measured errors, but is too loose for the registered target.
+
+Raw points, source hashes, ground-state checkpoints, failure reports, analytical
+derivations and all verdicts are in grut_detector_matching_20261107. Updated the
+integrated theory with their scope and appended the direct Perplexity handoff.
+The clock/apparatus embedding is an analytic existence construction; the full
+enlarged matrix was not executed. An additional field-moment calculation is
+labeled exploratory and does not amend any frozen verdict.
+
+Actually verified: source parsing and local links; exact reconstruction of
+all three matching analyses; 128 normalized distributions; D1 probability
+distances and bounds; a portable archive extracted into a new Git tree and
+run with a newly installed NumPy/SciPy virtual environment. The E=4 massive
+point and complete D1 replay reproduce every compared probability at stored
+precision, with failed scientific gates unchanged; extracted tree stays clean.
+See PACKET_VALIDATION.md for commands and provenance. No full DMRG grid rerun,
+new GRUT law, causal detector certificate, merge or release. Zenodo remains
+paused. Claims released.

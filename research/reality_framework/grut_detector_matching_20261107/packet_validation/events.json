@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/d18fc90906ba/grut_packet_venv/bin/python",
+      "/workspace/scratch/d18fc90906ba/grut_packet_extracted/research/reality_framework/grut_detector_matching_20261107/verify_packet.py",
+      "--output",
+      "/workspace/scratch/d18fc90906ba/grut_packet_validation_output/verification.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"checks\": {\n    \"m0_01_analysis_exact\": true,\n    \"m0_01_frozen_sources\": true,\n    \"m0_01_miss_preserved\": true,\n    \"m0_02_analysis_exact\": true,\n    \"m0_02_frozen_sources\": true,\n    \"m0_02_miss_preserved\": true,\n    \"m1_01_analysis_exact\": true,\n    \"m1_01_frozen_sources\": true,\n    \"m1_01_miss_preserved\": true,\n    \"d1_frozen_sources\": true,\n    \"d1_distances_and_bounds\": true,\n    \"d1_miss_preserved\": true,\n    \"probabilities_normalized\": true\n  },\n  \"probability_distributions_checked\": 128,\n  \"verification_pass\": true,\n  \"scientific_status\": \"Matching and reduction misses remain; this verifies preservation and analysis, not physical acceptance.\"\n}\n",
+    "stderr": "",
+    "seconds": 0.7065547460001653
+  },
+  {
+    "command": [
+      "/workspace/scratch/d18fc90906ba/grut_packet_venv/bin/python",
+      "/workspace/scratch/d18fc90906ba/grut_packet_extracted/research/reality_framework/grut_detector_matching_20261107/bosonized.py",
+      "--verify",
+      "--output",
+      "/workspace/scratch/d18fc90906ba/grut_packet_validation_output/algebra.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"vertex_max_error\": 2.498001805406602e-16, \"normal_factor_images_vs_integral\": 1.3322676295501878e-15}\n",
+    "stderr": "",
+    "seconds": 0.6820186579998335
+  },
+  {
+    "command": [
+      "/workspace/scratch/d18fc90906ba/grut_packet_venv/bin/python",
+      "/workspace/scratch/d18fc90906ba/grut_packet_extracted/research/reality_framework/grut_detector_matching_20261107/bosonized.py",
+      "--mass",
+      "0.5",
+      "--cutoff",
+      "4",
+      "--output",
+      "/workspace/scratch/d18fc90906ba/grut_packet_validation_output/massive_E4.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"cutoff\": 4.0, \"mass_R_over_g\": 0.5, \"dimension\": 21, \"gap\": 1.6329625552625975, \"seconds\": 0.5775361189998875}\n",
+    "stderr": "",
+    "seconds": 1.219406281999909
+  },
+  {
+    "command": [
+      "/workspace/scratch/d18fc90906ba/grut_packet_venv/bin/python",
+      "/workspace/scratch/d18fc90906ba/grut_packet_extracted/research/reality_framework/grut_detector_matching_20261107/reduce_d1.py",
+      "--output-dir",
+      "/workspace/scratch/d18fc90906ba/grut_packet_validation_output/d1"
+    ],
+    "returncode": 0,
+    "stdout": "{\"verdict\": \"finite_parent_reduction_gate_miss\", \"gates\": {\"parent_replay\": true, \"dephased_calibration\": true, \"coherence_contrast\": true, \"K32_accuracy\": false, \"K32_bound\": false, \"all_bounds_dominate\": true, \"overflow_accounting\": true}, \"seconds\": 31.820019743999865}\n",
+    "stderr": "",
+    "seconds": 32.430094184999916
+  }
+]

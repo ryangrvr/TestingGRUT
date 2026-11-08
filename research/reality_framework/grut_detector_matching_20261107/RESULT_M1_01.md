@@ -31,6 +31,8 @@ The lattice comparator explicitly reuses the previously reviewed ED Hamiltonian.
 
 The gap improves with the cutoff, but that does not certify the histories. The absolute ground energies are cutoff-dependent and are not reported as renormalized vacuum energies. Normal ordering and subtracting a common free vacuum constant do not remove every Hamiltonian-truncation error.
 
+The `detector_reference_metadata.mean` field is the **free-vacuum displacement used to construct the operator**, not the interacting expectation of F. An explicitly post-result [moment diagnostic](exploratory_field_moments.json), computed from the archived ground-state checkpoints without new diagonalization, gives the E=12 interacting mean 0.01789928 and variance 0.03241625. The lattice N=20 mean is 0.01747139. The bosonic mean is not monotone across every cutoff. This is further preparation-truncation information, not a fitted correction or a new acceptance test; it leaves the registered verdict unchanged.
+
 ## Why the instrument convention matters
 
 The code uses the matrix elements of the uncut Weyl operator and completes its compression with an explicit overflow channel. It does not exponentiate a truncated field and call that the same measurement. The retained probabilities plus overflow sum to one. The 0.00126337 overflow is therefore visible rather than hidden by renormalizing the ordinary outcomes.

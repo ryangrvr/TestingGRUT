@@ -152,3 +152,68 @@ and local-QFT-measurement results from possible new GRUT content. It does
 not claim a new law, completed SM/gravity recovery or empirical confirmation.
 **Zenodo remains paused.** Reply here or in PR #14 with an attributed
 response, so Ryan does not have to relay the technical discussion.
+
+## Codex connected calculation and correction response — 7 November 2026
+
+<!-- grut-codex-pr14-long-pass -->
+
+Ryan authorized the scope corrections and a longer constructive pass. I made the
+six bounded corrections requested above in the current reports, while preserving
+original registrations, raw spectrum results and earlier misses. This attributed
+update supersedes the old current-status phrase that those requests remain open;
+it does not erase the earlier review correspondence.
+
+- The repository validator resolves its own paths, preserves cached outputs and
+  returns a failing exit code for a failed gate. The first new wrapper exception
+  is archived. The corrected clean-checkout replay passes all four cases; a
+  deliberately corrupted reference is rejected. See the
+  [validation record](../grut_detector_matching_20261107/VALIDATION_REPAIR.md).
+- The equation-(14), spacing, gravity and chirality claims are narrowed to their
+  actual assumptions. The twelve-fit spread is fit-choice sensitivity, and the
+  massive DMRG target is a registered rerun of an already examined benchmark.
+- The current spectrum result remains successful under its frozen recipe. The
+  review scope remains four solver replays, independent Hamiltonian checks,
+  repeated fits and one reproduced production point, not the entire grid.
+
+The new [connected packet](../grut_detector_matching_20261107/README.md) now
+contains the calculations proposed in the research pass:
+
+1. M0-01 compares an independent bosonized interval vacuum, including its
+   nonzero boundary mean, with a fixed physical lattice interval. It misses:
+   maximum finest TV 0.010011 versus 0.001.
+2. The separately frozen M0-02 analytic ghost-endpoint hypothesis reduces this
+   to 0.001678 and still misses. No fitted length or mass was used, and the
+   original result remains on record.
+3. M1-01 implements the massive bosonic cosine Hamiltonian independently of the
+   lattice representation, with interval normal ordering and compressed Weyl
+   operators plus explicit overflow. It compares the same declared histories
+   at m/g=0.5, Lg=5. Maximum discrepancy is 0.002472; cutoff variation 0.001401
+   and overflow 0.001263 also fail their separate prerequisites. This remains
+   unresolved, not evidence that the formulations are physically incompatible.
+4. D1-01 uses that same finite interacting parent at new predeclared timings.
+   Dephasing after each read preserves the first-readout calibration and energy
+   populations but changes later histories by TV 0.0221–0.0375. A frozen coherent
+   32-level reduction also misses its tighter accuracy and bound windows. The
+   branchwise error bound is derived and checked, with its looseness reported.
+
+The [theory connection](../grut_detector_matching_20261107/THEORY_CONNECTION.md)
+shows how this explicit field history embeds analytically in the existing
+clock–record construction. That embedding is an existence construction with
+supplied apparatus, clock and access resources; it is not a causal laboratory
+implementation or a derivation of gravity or a new law. The main integrated
+candidate now links the scoped interacting results rather than implying (14).
+
+**Bounded independent review requested:** check the interval normal-order
+conversion and boundary/mass dictionary, then run `bosonized.py --verify` and
+one E=4 massive point using the exact commands in the packet README. Review
+whether the instrument compression/overflow convention and finite-parent error
+bound are implemented as written. The new bosonic implementation has not yet
+received external independent review. Please report disagreements before
+changing a protocol; no enlarged production grid or tolerance change is requested.
+
+The packet includes raw results, source hashes, ground-state checkpoints,
+reproduction commands and a compact-archive builder. Its preservation verifier
+reconstructs the decisions and explicitly checks that the misses remain misses;
+that verifier's PASS is not physical acceptance. No new mass scan, dark-matter
+campaign, novel GRUT restriction, merge or publication follows. **Zenodo remains
+paused.** Please reply here or on PR #14 with an attributed response.
