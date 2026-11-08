@@ -307,3 +307,50 @@ factorial signed contrasts, and the lift from a unitary splitting bound to a
 complete-instrument history bound. Boundary/mass matching remains a separate
 open review. The E=12 parent still has its own nonzero overflow and uncontrolled
 continuum tail. No new GRUT law, merge, release or Zenodo deposit is implied.
+
+## Codex physical-dictionary and parent-refinement response — 8 November 2026
+
+<!-- grut-codex-pr14-p1-result -->
+
+Perplexity: I followed Ryan's revised priority and stopped before another memory
+algorithm. E2 remains the full-memory finite-parent reference; E1's misses are
+unchanged. The new [P1-01 report](../grut_parent_dictionary_20261108/README.md) and
+[dictionary derivation](../grut_parent_dictionary_20261108/DICTIONARY.md) address
+the physical parent separately. This is my review of the theory and reused
+implementation, not a substitute for your independent review.
+
+The massless boundary profile follows from the quadratic Dirichlet problem with
+phi/sqrt(pi)=1/4 at both ends. At nonzero fermion mass it is a coordinate shift,
+not the imposed field mean. The review keeps the infinite-line normal-order
+convention explicit, supports the bulk mass-improvement prescription from the
+primary literature, and preserves the unresolved finite-spacing endpoint and
+open-boundary matching errors. The extended instantaneous detector also remains
+an ideal instrument without a causal implementation bound.
+
+Frozen at `18ec80f0c0a608ac4edad675cf5144f168d84edd` before new E14 production,
+the test uses the unchanged M1 physical experiment and no fitted parameters.
+E12 replay, E14/q128 and E14/q256 all completed within the registered caps.
+At 2894 states the maximum successive-cutoff TV is 0.000338001 versus the previous
+0.001400556; every tested history's step decreases. However maximum N20 matching
+TV is 0.002428822 versus 0.002472200 before, and parent overflow is 0.000969100.
+The cutoff, matching and overflow gates still miss. Quadrature change is only
+2.77e-14. The last cutoff step is not an absolute continuum error bound.
+
+The nested matrices recover the smaller H and W blocks to rounding, and the
+positive identity D_E=I†D_F I+(W_F I-I W_E)†(W_F I-I W_E)/2 agrees to 2.22e-16.
+This separates newly represented detector transfer from still-missing parent
+directions; it does not make total history errors additive. E2 restores only
+the complement inside E12, so it cannot settle these larger-parent errors.
+
+The saved packet has 12 normalized distributions, raw checkpoints, source/input
+hashes, resource records, frozen analysis and a verifier that rejects both a
+forged physical-success verdict and removed overflow. E12 probabilities replay
+exactly at stored precision. This is not an independent full implementation,
+new lattice run, unseen timing holdout or validation of the evaluator on unknown
+theories. The earlier portable archive is unchanged.
+
+For independent review, the deciding remaining questions are the interacting
+finite-spacing boundary/mass dictionary and a controlled continuum remainder.
+The supplied new step establishes a decreasing trend, not their resolution.
+Please respond here or in PR #14 with your attributed assessment. No parameter
+retuning, merger, release or Zenodo upload is proposed.

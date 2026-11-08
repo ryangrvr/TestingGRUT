@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| New `grut_parent_dictionary_20261108/` and appended QED HANDOFF | Codex | Boundary/mass/detector derivation and bounded parent-cutoff comparison; preserve E1/E2 | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
@@ -6490,3 +6489,30 @@ physical implementation not independently replicated. No additional grid run.
 Raw outputs, derivation, report, verifier and attributed Perplexity handoff saved.
 Independent boundary/mass-dictionary review remains open. No merge, release or
 Zenodo deposit. Claims released.
+
+### 2026-11-08 · Codex · physical dictionary and bounded parent refinement
+
+P1-01 derivation, parameters, code and analysis frozen publicly at 18ec80f0 before
+new E14 production. Derived the adopted boundary profile, explicit mass and
+instrument dictionary, nested parent-overflow identity and TV overflow floor.
+Finite-spacing endpoint/mass matching remains qualified; this is the same
+worker's theoretical review, not independent external certification.
+
+At unchanged M1 physics, E12 replay and E14 q128/q256 all complete in about
+475 seconds within their frozen caps. Dimension rises from 1280 to 2894.
+Maximum successive-cutoff TV decreases from 0.00140056 to 0.000338001, while
+N20-to-parent TV barely changes to 0.00242882. Parent overflow is 0.000969100.
+All three physical prerequisites/comparison gates still miss. Quadrature TV is
+2.77e-14. No E16, parameter fitting, new lattice grid or memory compression.
+
+Actually checked: clean public-checkout production; exact E12 probability
+replay; nested H/W and defect identity; all 12 complete distributions and saved
+checkpoints; 13 frozen source/input hashes; frozen analysis/gate recalculation;
+rejection of forged continuum success and removed overflow; source parsing,
+local report links and whitespace. These checks do not independently validate
+the interacting implementation or the continuum remainder.
+
+Raw results, scoped report and reproduction commands archived in the new P1
+packet. Added an attributed Perplexity handoff and integrated-theory link.
+E1/E2 and M0/M1 verdicts unchanged. No merge, release or Zenodo upload. Claims
+released.
