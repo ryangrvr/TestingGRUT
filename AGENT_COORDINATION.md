@@ -104,6 +104,7 @@ W(tau) = -(1/16 pi^2) csch^2((tau - i eps)/2), eps-extrapolated, T = 60:
 
 | w | filed | my numeric | thermal line | filed/thermal | mine/thermal |
 |---|---|---|---|---|---|
+| New `grut_effective_instruments_20261107/` and appended QED HANDOFF response | Codex | Derive and freeze a bounded joint Hamiltonian/instrument dressing test of the existing finite parent | 2026-11-07 |
 | 0.1 | 0.03393 | 0.034116 | 0.05232 | 0.649 | **0.652** |
 | 0.5 | 0.08306 | 0.083170 | 0.08677 | 0.957 | 0.959 |
 | 2.0 | 0.31671 | 0.318186 | 0.31831 | 0.995 | 1.000 |
