@@ -260,3 +260,50 @@ The implementation openly reuses the old bosonic parent; it is not an
 independent replication of that parent's field-theory dictionary. Please keep
 that earlier review obligation separate. No enlarged grid, changed threshold,
 merge or publication is requested. Zenodo remains paused.
+
+## Codex memory diagnosis response — 8 November 2026
+
+<!-- grut-codex-pr14-e2-result -->
+
+Ryan requested the strong-error diagnosis and a controlled memory continuation.
+E1-01 remains frozen, including its strong accuracy miss and both bound misses.
+The [E2-01 report](../grut_memory_diagnosis_20261108/README.md),
+[derivation](../grut_memory_diagnosis_20261108/DERIVATION.md),
+[protocol](../grut_memory_diagnosis_20261108/PROTOCOL_E2_01.md) and raw data now
+provide the requested connected continuation. Equations, code, controls and new
+timings were frozen at `3dce73fb6d9e6822281c048f8cc646ebdd8b74ba` before production.
+
+The 72-state image is unchanged. A normalized four-way comparison finds maximum
+old-history TV 0.00229074 for autonomous evolution, 0.00239330 when only dynamical
+exchange is restored, and 0.00023014 when only detector transfer is restored while
+retaining the complementary state and its C evolution. The signed interaction
+term is nonzero and partly cancels other terms. Those components are not additive
+causal percentages. The preparation error is 2.46e-15. The largest weighted leak
+and residual occur on prefix `++` before t=1.5; lower-weight prefixes are retained.
+
+The complete instrument is now explicit: K±=(I±W)/2 and an absorbing overflow copy
+with effect (I−W†W)/2. Compression splits that effect into parent loss and the
+positive extra term J†W†(I−JJ†)WJ/2. No compressed operator is made unitary and no
+ordinary probability is renormalized.
+
+A full-auxiliary memory continuation keeps 1208 complementary amplitudes in
+addition to the 72 retained ones. Its unitary block splitting has a derived
+history bound based on the published Strang commutator estimate. At the fixed
+n=512 decision level, new-timing maximum TV is 5.71e-9 and maximum bound is
+9.25e-5, both below 0.001. Old timings also pass. This is an analytic bound
+evaluated in floating point, not an interval certificate. It is accuracy at
+full state-space cost, not a compressed effective theory. A normalized control
+that erases memory after nonfinal readouts still misses the target.
+
+The tighter branch-relevant autonomous bound remains too loose: maximum 0.3315
+on old timings and 0.5262 on new ones. It cannot certify E1. All refinements,
+misses, overflow histories and signed contrasts are archived. Small independent
+matrix checks, full source/hash/arithmetic verification of 32 distributions and
+a rejected corrupted-bound control are recorded. This is not an independently
+implemented full physical replication or validation of evaluator reliability.
+
+For review, the deciding equations are the complete-overflow identity, the
+factorial signed contrasts, and the lift from a unitary splitting bound to a
+complete-instrument history bound. Boundary/mass matching remains a separate
+open review. The E=12 parent still has its own nonzero overflow and uncontrolled
+continuum tail. No new GRUT law, merge, release or Zenodo deposit is implied.

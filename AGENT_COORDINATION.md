@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| New `grut_memory_diagnosis_20261108/` and appended QED HANDOFF | Codex | Fixed-72-state factorial diagnosis and normalized memory continuation; preserve E1 | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
@@ -6462,3 +6461,31 @@ Raw results, effective matrices and replay summary are in the new packet.
 Appended Perplexity handoff and a scoped integrated-theory link. No continuum
 states above the existing parent, new law, external review, merge or release.
 Zenodo remains paused. Claim released.
+
+### 2026-11-08 · Codex · diagnosed detector-mediated memory at fixed retained image
+
+E2-01 source/protocol frozen publicly at 3dce73fb before its factorial controls,
+new bound, memory continuation or new timings. Reused E1's unchanged 72-column
+isometry and E=12 parent. Derived complete overflow instruments, the signed
+propagation/detector/interaction decomposition, a branch-relevant autonomous
+bound and a complete-history Strang bound for full auxiliary memory.
+
+The old maximum TV is 0.00229074 autonomous, 0.00239330 with propagation exchange
+only, and 0.00023014 with detector transfer only while keeping complementary
+memory. Contributions partly cancel. Full memory at the registered n=512 reaches
+new-timing maximum TV 5.71e-9 with analytic bound 9.25e-5. Both groups pass these
+new memory gates; the tighter autonomous bound still misses. All 1208 auxiliary
+amplitudes are retained: no state-space compression or continuum claim. E1 and
+all earlier misses remain unchanged.
+
+Actually checked: complex small-matrix exchange against direct exponentiation,
+commuting limit, complete instrument dilation and rejected expansive detector;
+clean frozen-checkout production (29.4 s, one BLAS thread); old parent/autonomous
+replay; matrix/isometry/normalization checks; exact signed reconstruction; all
+32 distributions, stored bounds and gate arithmetic; all frozen source hashes;
+rejected corrupted zero-bound output; Python parsing and local links. Full
+physical implementation not independently replicated. No additional grid run.
+
+Raw outputs, derivation, report, verifier and attributed Perplexity handoff saved.
+Independent boundary/mass-dictionary review remains open. No merge, release or
+Zenodo deposit. Claims released.
