@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_detector_reconstruction_20261108 | Codex | B2 detector reconstruction and frozen massless tests | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS
@@ -6542,3 +6541,8 @@ not independent physical implementation or evaluator validation.
 Archived derivation, report, raw probabilities and ground states. Appended an
 attributed Perplexity handoff and integrated-theory result. All P1/E1/E2/M0/M1
 verdicts preserved. No merge, release or Zenodo upload. Claims released.
+
+
+## 2026-11-08 — Codex: B2-01r1 detector reconstruction completed
+
+Derived and froze one quadratic cell-average reconstruction before production (freeze d010ad185ac2fc99c42de5229b1a7653670905c0). A prior import-only startup failure and correction are preserved in REVISION_1.md. Ran N10/14/18/20, refined N14, seven timings, 8192/16384 modes, and fresh B1 replay in 111.42 seconds. Geometry passed (N20 max TV 9.18199e-6 across all timings); lattice-to-matched failed (8.75078e-4 versus 7.4e-4), including a miss on confirmation timings. Direct target and additive totals passed; all gates were required, so overall massless matching remains unresolved and corrected massive transfer was not evaluated. Independent small-system checks and post-run probability/checkpoint/hash audit passed, with negative controls. Archived source, derivation, protocol, raw JSON, decisions and checkpoint hashes in research/reality_framework/grut_detector_reconstruction_20261108; binary checkpoints are in the delivered ZIP. Finite results do not certify continuum physics. Prior verdicts unchanged. No merge, release or Zenodo deposit. Claim released.
