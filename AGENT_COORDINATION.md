@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_source_dictionary_20261109 | Codex | Source-derived detector dictionary and frozen independent observable tests | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6552,3 +6551,8 @@ Derived and froze one quadratic cell-average reconstruction before production (f
 ## 2026-11-09 — Codex: frozen N22-01 refinement completed
 
 At source freeze 0f2d2e4ef53f4bcc2613f5cb1373603c4551d9b4, ran one massless N22 point and one N22 refinement with unchanged B2 reconstruction/physical code. All 14 nominal gates passed; worst matched TV 0.000729406759042 < 0.000740. The additional full 0.000010 numerical guard leaves 5.93240958e-7 margin. Maximum additive measured budget 0.000740900161437 < 0.001. Same-size refinement TV <=1.28340914e-13. All outcome-resolved signed forecast checks passed (maximum relative change 0.0242921). Independent arithmetic, checkpoint and 21-input/source hash audit passed. Runtime 850.969 seconds; peak job-member memory 1.484 GiB within frozen limits. Archived source, raw results, telemetry, audit, report and binary-checkpoint hashes in research/reality_framework/grut_n22_refinement_20261109; binaries in the delivered ZIP. This is a finite N22 massless numerical result under the assumed operator dictionary, not a rigorous continuum or ground-state certificate. B2's combined measured budget remains passed, its separate N20 lattice component remains failed, and N20 massive transfer remains withheld. No massive calculation, N24 extension, merge, release or Zenodo deposit. Claim released.
+
+
+## 2026-11-09 — Codex: D1 source dictionary and independent backaction checks
+
+Derived the exact even-neutral-sector shifted-Hamiltonian identity with y_j=L_j-(-1)^j/4 in its electric-energy square, calibrated background-flux source derivatives, and controlled-ancilla realization of the historical impulsive detector. Kept finite-spacing source interpolation, endpoint placement and switching qualifications explicit. Frozen D1-01 at b6cdfda3196f75eea0fb2ab951b42a8093d7ac12 before new observable comparisons. Ran four source-native probes on ground, kicked, one- and two-measurement states at new times0,.43,1.31 for N14/18/20/22 plus refinedN22; runtime105.265seconds. Fourteen of16gates passed. Worst N22 second-moment discrepancy0.00397959128 (two -- outcomes,sine1) fails0.002 before reserve; finest-step0.00101064959 fails0.001. Insertion discrepancy also persists without conditioning. Guarded vacuum covariance and backaction-energy checks pass; same-size refinement8.83e-15. Independent source/oscillator prechecks and post-run arithmetic/hash/conditional-contraction audit pass. Verdict source_dictionary_matching_unresolved; exact operational source interpretation is established, uniform finite-state matching is not. Raw data, derivation, protocol and audit archived in research/reality_framework/grut_source_dictionary_20261109; delivered ZIP includes hashed historical binary inputs. N22 completion, B2 N20 component failure and P1 obligations unchanged. No massive transfer, further size, merge, release or Zenodo deposit. Claim released.

@@ -1,0 +1,128 @@
+{
+  "source": {
+    "scope": "Independent N6 full-operator algebra and synthetic probe checks; no production probabilities or detector histories.",
+    "parameters": {
+      "N": 6,
+      "a": 0.35,
+      "g": 1.3,
+      "mass_R": 0.27,
+      "mass_lat": 0.19606250000000003,
+      "central_step": 0.015625,
+      "synthetic_weights": [
+        0.0625,
+        0.125,
+        -0.0625,
+        0.1875,
+        0.125
+      ],
+      "synthetic_offset": 0.09375,
+      "finite_source": [
+        0.03,
+        0.01,
+        0.02,
+        0.04,
+        -0.02
+      ]
+    },
+    "checks": {
+      "neutral_sector": 0.0,
+      "independent_gauss_fields": 0.0,
+      "staggered_flux_identity": 0.0,
+      "independent_full_hamiltonian": 4.440892098500626e-16,
+      "full_zero_source_operator_identity": 4.440892098500626e-16,
+      "full_finite_source_operator_identity": 8.881784197001252e-16,
+      "central_source_derivative_vs_y": 1.942890293094024e-14,
+      "controlled_qubit_calibration_identity": 4.440892098500626e-16,
+      "hopping_commutator": 0.0,
+      "hopping_weyl_conjugation": 2.220446049250313e-16,
+      "mixed_double_commutator": 1.3877787807814457e-17
+    },
+    "threshold": 1e-11,
+    "negative_control_missing_source_calibration_rejected": true,
+    "negative_control_operator_error": 0.0029575000000008345,
+    "passed": true,
+    "archived_source_sha256": "debbbc142ac3eafaace7a8c84bb6bb772dd420648ea948efd96896368ccfd138",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "oscillator": {
+    "configuration": {
+      "mF": 0.17,
+      "mG": -0.08,
+      "hF": 0.21,
+      "hG": 0.13,
+      "omega": 0.83,
+      "coupling": 2.0,
+      "times": [
+        0.0,
+        0.43,
+        1.31
+      ],
+      "phases": [
+        0.0,
+        0.29
+      ],
+      "cutoffs": [
+        24,
+        32
+      ]
+    },
+    "checks": [
+      {
+        "cutoff": 24,
+        "time": 0.0,
+        "matrix_error": 1.3877787807814457e-17,
+        "state_moment_error": 2.7755575615628914e-17
+      },
+      {
+        "cutoff": 24,
+        "time": 0.43,
+        "matrix_error": 1.3877787807814457e-17,
+        "state_moment_error": 1.1102230246251565e-16
+      },
+      {
+        "cutoff": 24,
+        "time": 1.31,
+        "matrix_error": 2.1103821920200808e-17,
+        "state_moment_error": 1.1102230246251565e-16
+      },
+      {
+        "cutoff": 32,
+        "time": 0.0,
+        "matrix_error": 1.2412670766236366e-16,
+        "state_moment_error": 2.220446049250313e-16
+      },
+      {
+        "cutoff": 32,
+        "time": 0.43,
+        "matrix_error": 1.2412670766236366e-16,
+        "state_moment_error": 2.220446049250313e-16
+      },
+      {
+        "cutoff": 32,
+        "time": 1.31,
+        "matrix_error": 1.2412670766236366e-16,
+        "state_moment_error": 2.220446049250313e-16
+      }
+    ],
+    "two_backaction_checks": [
+      {
+        "cutoff": 24,
+        "matrix_error": 2.220446049250313e-16,
+        "conditional_moment_error": 1.942890293094024e-16
+      },
+      {
+        "cutoff": 32,
+        "matrix_error": 3.554447978966673e-16,
+        "conditional_moment_error": 2.220446049250313e-16
+      }
+    ],
+    "max_error": 3.554447978966673e-16,
+    "wrong_shift_sign_negative_control_error": 0.19336589426109596,
+    "wrong_shift_sign_rejected": true,
+    "passed": true,
+    "scope": "Synthetic single oscillator only; production source observables have not been evaluated."
+  },
+  "passed": true
+}
