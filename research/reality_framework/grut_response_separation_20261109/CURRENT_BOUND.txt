@@ -1,0 +1,139 @@
+R1 unconditional-current bound: a sufficient finite-matrix condition
+===================================================================
+
+Status and scope
+----------------
+This is an algebraic consequence of the already frozen source/current
+dictionary. It does not change any registered R1 threshold, evaluate a new
+physical trial, fit a coefficient, or confer a theory pass. No production
+data were read to derive this note. It concerns only the unconditioned
+instantaneous unitary source kick applied to the initial state. It makes no
+claim about selective detector outcomes, two conditional kicks, delayed
+states, response functions, Hamiltonian propagation, the continuum limit,
+massive transfer, or empirical validation.
+
+Definitions and necessary assumptions
+-------------------------------------
+For each lattice bond j, let v_j be the real column vector of the three
+registered primary source weights, and let h_j be the initial expectation
+of the Hermitian hopping term on that bond. Let w_j be the fixed detector
+weight on that bond. The frozen sum rule is
+
+  S_0 = -sum_j h_j v_j v_j^T.
+
+Require every h_j <= 0. Thus A_j = -h_j v_j v_j^T is positive semidefinite
+(PSD), and S_0 = sum_j A_j. Require S_0 and the continuum current matrix S_c
+to be positive definite on the registered three-source span. No eigenvalue
+clipping, source removal, or altered Gram conditioning rule is permitted.
+
+Also require the exact kicked-hopping identity
+
+  h_j(kappa) = cos(kappa w_j) h_j,
+  S_kappa = sum_j cos(kappa w_j) A_j.
+
+The identity holds for the real initial state and real Hamiltonian used by
+R1, where the initial imaginary bond-current expectation vanishes. For a
+general current-carrying state an additional sine term occurs, so the
+bound cannot be transferred to such a state merely by retaining its h_j.
+The independent cosine-identity checks already registered in R1 remain
+relevant numerical checks; this note introduces no replacement test.
+
+Proof valid for every real kappa
+-------------------------------
+Define alpha_j = 1-cos(kappa w_j), delta = max_j alpha_j, and
+
+  D_kappa = S_0-S_kappa = sum_j alpha_j A_j.
+
+Since 0 <= alpha_j <= delta and A_j is PSD,
+
+  0 <= D_kappa <= delta S_0                         (Loewner order).
+
+Congruence by S_0^(-1/2) preserves this order, hence
+
+  d_kappa := ||S_0^(-1/2)(S_kappa-S_0)S_0^(-1/2)||_2
+           <= delta
+           <= min(2, kappa^2 w_max^2/2),
+  w_max := max_j |w_j|.
+
+This does not require cos(kappa w_j) to be positive. The kicked current
+matrix itself can cease to be positive at large kicks, while the stated
+disturbance bound still holds. The quadratic upper bound uses the global
+inequality 1-cos x <= x^2/2, not a small-angle series truncation.
+
+For the reference-normalized mismatch define
+
+  E_0 = S_c^(-1/2)(S_0-S_c)S_c^(-1/2), e_0=||E_0||_2,
+  B_0 = S_c^(-1/2)S_0 S_c^(-1/2) = I+E_0.
+
+The same congruence gives 0 <= S_c^(-1/2)D_kappa S_c^(-1/2)
+<= delta B_0. Therefore
+
+  e_kappa := ||S_c^(-1/2)(S_kappa-S_c)S_c^(-1/2)||_2
+           <= e_0 + delta ||B_0||_2
+           <= e_0 + (1+e_0) delta.
+
+These are exact finite-dimensional matrix implications of the stated
+assumptions. They do not depend on a reconstruction fit or time evolution.
+
+Sufficient interval for both frozen current-only allowances
+-----------------------------------------------------------
+Let tau=0.01 and let epsilon=0.0001 be R1's unchanged numerical guard. The
+registered comparisons require d_kappa+epsilon <= tau and
+e_kappa+epsilon <= tau. If e_0+epsilon < tau, define
+
+  delta_allowed = min(tau-epsilon,
+                      (tau-epsilon-e_0)/(1+e_0)).
+
+Then every kick satisfying delta <= delta_allowed satisfies both guarded
+current-only comparisons. In particular, if w_max > 0, the connected
+interval
+
+  |kappa| <= sqrt(2 delta_allowed)/w_max
+
+is a sufficient interval. Because e_0 >= 0, the second argument of the
+minimum is never larger than the first; retaining both makes the two
+obligations explicit. At equality e_0+epsilon=tau, this sufficient rule
+certifies only kappa=0, unless all w_j vanish. If e_0+epsilon>tau, this
+triangle-inequality rule certifies no interval containing zero; it does
+not prove that every nonzero kick fails, since a kick could reduce an
+existing signed mismatch.
+
+An optional sharper connected interval follows directly from cosine:
+
+  |kappa| <= arccos(1-delta_allowed)/w_max,
+
+because delta_allowed <= 0.0099 < 2, the bound puts every |kappa w_j| in
+[0,pi], where 1-cos is increasing. This is still an algebraic sufficient
+condition; it is not a newly sampled physical experiment. The quadratic
+interval is simpler and slightly more conservative. If w_max=0, the
+kick leaves this current matrix unchanged for all kappa, so the sole
+remaining requirement is e_0+epsilon <= tau.
+
+When both N22 and N22_refined are required, compute the bound separately
+with each frozen point's e_0 and w_max, then take the smaller admissible
+radius. Do not average their radii or choose the more favorable run. The
+registered fixed-kappa outcomes remain the primary results, including all
+failures; any interval calculated from these data is explicitly a derived
+current-only sufficient condition, not a new prospectively tested window.
+
+Numerical meaning and limitations
+--------------------------------
+The algebraic theorem is rigorous for matrices satisfying its hypotheses.
+A radius obtained from floating-point archived matrices is a conditional
+numerical certificate under R1's adopted guard, not an interval-certified
+statement about the exact ground state. If an independently justified
+upper bound e_bar >= e_0 is available, substitute e_bar for e_0 throughout.
+If an upper bound w_bar >= w_max is available, substitute w_bar. Strict
+sign uncertainty in any h_j, a failed positivity/conditioning requirement,
+a nonzero initial bond current, or an unbounded numerical error prevents
+using the PSD proof without additional analysis. Passing other R1
+diagnostics does not automatically discharge those assumptions.
+
+Interpretation
+--------------
+When applicable, this identifies an explicit finite-strength regime in
+which this unconditioned source kick preserves the registered current
+algebra within the chosen one-percent allowance. It isolates a useful
+operational condition for that algebra; it neither repairs a failed
+conditional-state map nor establishes correct propagation or a working
+theory of reality.

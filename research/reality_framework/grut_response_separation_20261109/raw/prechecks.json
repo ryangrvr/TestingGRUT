@@ -1,0 +1,100 @@
+{
+  "source": {
+    "scope": "Independent N6 full-operator algebra and synthetic probe checks; no production probabilities or detector histories.",
+    "parameters": {
+      "N": 6,
+      "a": 0.35,
+      "g": 1.3,
+      "mass_R": 0.27,
+      "mass_lat": 0.19606250000000003,
+      "central_step": 0.015625,
+      "synthetic_weights": [
+        0.0625,
+        0.125,
+        -0.0625,
+        0.1875,
+        0.125
+      ],
+      "synthetic_offset": 0.09375,
+      "finite_source": [
+        0.03,
+        0.01,
+        0.02,
+        0.04,
+        -0.02
+      ]
+    },
+    "checks": {
+      "neutral_sector": 0.0,
+      "independent_gauss_fields": 0.0,
+      "staggered_flux_identity": 0.0,
+      "independent_full_hamiltonian": 4.440892098500626e-16,
+      "full_zero_source_operator_identity": 4.440892098500626e-16,
+      "full_finite_source_operator_identity": 8.881784197001252e-16,
+      "central_source_derivative_vs_y": 1.942890293094024e-14,
+      "controlled_qubit_calibration_identity": 4.440892098500626e-16,
+      "hopping_commutator": 0.0,
+      "hopping_weyl_conjugation": 2.220446049250313e-16,
+      "mixed_double_commutator": 1.3877787807814457e-17
+    },
+    "threshold": 1e-11,
+    "negative_control_missing_source_calibration_rejected": true,
+    "negative_control_operator_error": 0.0029575000000008345,
+    "passed": true,
+    "archived_source_sha256": "c1f30b78f2e5a23e6f2684bce4461c3515ebe882f99bcbc0d33cdcfaf640c62d",
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "synthetic": {
+    "scope": "Synthetic oscillator/matrix data only; no physical lattice or matched continuum observables evaluated.",
+    "frequencies": [
+      0.7,
+      1.3,
+      2.1
+    ],
+    "source_matrix": [
+      [
+        0.3,
+        0.08,
+        -0.03
+      ],
+      [
+        0.05,
+        0.27,
+        0.04
+      ],
+      [
+        -0.02,
+        0.06,
+        0.22
+      ]
+    ],
+    "times": [
+      0.0,
+      0.29,
+      0.83,
+      1.57
+    ],
+    "cutoff": 2,
+    "checks": {
+      "dense_vs_spectral_response": 1.4304896245381992e-17,
+      "static_gram": 6.938893903907228e-18,
+      "first_moment": 1.3877787807814457e-17,
+      "invariant_source_span_galerkin_exact": 6.2713327080107046e-15,
+      "centroid_eigenvalues": 3.1086244689504383e-15,
+      "basis_mix_centroid_invariance": 3.774758283725532e-15,
+      "basis_mix_cosine_spectrum_invariance": 1.9984014443252818e-15,
+      "independent_generalized_eigensolver": 4.440892098500626e-16,
+      "reweighted_source_same_variance": 1.3877787807814457e-17,
+      "reweighted_source_same_centroid": 1.3877787807814457e-17
+    },
+    "maximum_identity_error": 6.2713327080107046e-15,
+    "same_H_variance_centroid_source_change_response_difference": 0.05340074559686496,
+    "wrong_phase_error": 1.4831950805801153,
+    "noninvariant_span_galerkin_residual": 0.32820177597956424,
+    "singular_gram_rejected": true,
+    "passed": true
+  },
+  "passed": true
+}

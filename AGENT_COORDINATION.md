@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_response_separation_20261109 | Codex | Frozen static-source/current and evolution diagnostic; experimental protocol | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6562,3 +6561,8 @@ Derived the exact even-neutral-sector shifted-Hamiltonian identity with y_j=L_j-
 ### 2026-11-09 · Codex · freeze R1 source-response separation and EX1 protocol
 
 Frozen R1-01 before physical evaluation: static source matrices, new response times, coincident detector controls, reached-state current algebra and static-only Galerkin predictor. Five registered points through N22 with a refined N22 point; resource and hypothesis gates fixed. Synthetic reference identities, analysis controls and independent-audit smoke checks pass. EX1-01 is a separate hardware-agnostic protocol with 22 ideal and 12 synthetic scorer checks; no hardware, data or empirical pass. Historical N22, B2 and D1 verdicts unchanged; massive transfer withheld.
+
+
+### 2026-11-09 · Codex · complete R1 diagnostic and prepare EX1 physical protocol
+
+R1-01 freeze18fc45c: all five registered points completed in247.469s; all15 numerical quality gates and independent audit pass. Audit verifies21 source hashes and5 checkpoint hashes; maximum assessment discrepancy9.30e-16. The static-only lattice response predictor passes(error0.000292774); zero-delay moments pass(max0.000916443). Continuum normalized response and invariant spectra fail; reached-state current mismatch exists without free evolution. Registered unitary kicks kappa0.5 and1 pass both current criteria;2 and4 fail. Postrun algebraic supplement gives a guarded current-only sufficient interval |kappa|<=0.7057, with no additional physical trial or changed gate. The continuum three-source predictor fails; no continuum/theory pass asserted. EX1 protocol includes22 ideal and12 synthetic software checks, no hardware/data. N22 historical verdict preserved; B2/D1 misses and massive/P1 obligations unchanged. Deliverable ZIP62 payload files hash-verified, SHA2565f97fd4d137d42cb66d55be1bd16a79a34e8897fa132217fa461da28103dfc88. Claim released; no merge or release.
