@@ -1,0 +1,127 @@
+{
+  "configuration": {
+    "mF": 0.17,
+    "mG": -0.08,
+    "hF": 0.21,
+    "hG": 0.13,
+    "omega": 0.83,
+    "coupling": 2.0,
+    "times": [
+      0.0,
+      0.43,
+      1.31
+    ],
+    "phases": [
+      0.0,
+      0.29
+    ],
+    "cutoffs": [
+      24,
+      32
+    ]
+  },
+  "checks": [
+    {
+      "cutoff": 24,
+      "time": 0.0,
+      "matrix_error": 1.3877787807814457e-17,
+      "state_moment_error": 2.7755575615628914e-17
+    },
+    {
+      "cutoff": 24,
+      "time": 0.43,
+      "matrix_error": 1.3877787807814457e-17,
+      "state_moment_error": 1.1102230246251565e-16
+    },
+    {
+      "cutoff": 24,
+      "time": 1.31,
+      "matrix_error": 2.1103821920200808e-17,
+      "state_moment_error": 1.1102230246251565e-16
+    },
+    {
+      "cutoff": 32,
+      "time": 0.0,
+      "matrix_error": 1.2412670766236366e-16,
+      "state_moment_error": 2.220446049250313e-16
+    },
+    {
+      "cutoff": 32,
+      "time": 0.43,
+      "matrix_error": 1.2412670766236366e-16,
+      "state_moment_error": 2.220446049250313e-16
+    },
+    {
+      "cutoff": 32,
+      "time": 1.31,
+      "matrix_error": 1.2412670766236366e-16,
+      "state_moment_error": 2.220446049250313e-16
+    }
+  ],
+  "two_backaction_checks": [
+    {
+      "cutoff": 24,
+      "matrix_error": 2.220446049250313e-16,
+      "conditional_moment_error": 1.942890293094024e-16
+    },
+    {
+      "cutoff": 32,
+      "matrix_error": 3.554447978966673e-16,
+      "conditional_moment_error": 2.220446049250313e-16
+    }
+  ],
+  "max_error": 3.554447978966673e-16,
+  "wrong_shift_sign_negative_control_error": 0.19336589426109596,
+  "wrong_shift_sign_rejected": true,
+  "passed": true,
+  "scope": "Synthetic single oscillator only; production source observables have not been evaluated.",
+  "source_probe_partition_max": 1.7763568394002505e-15,
+  "unitary_path_order": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "synthetic_schema_smoke": {
+    "length": 2.7,
+    "N": 6,
+    "modes": 64,
+    "passed": true,
+    "single_keys": [
+      "0",
+      "0.43",
+      "1.31"
+    ],
+    "path_order": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "scope": "Arbitrary synthetic weights, not any production detector or lattice point"
+  }
+}

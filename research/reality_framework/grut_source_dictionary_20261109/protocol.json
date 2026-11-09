@@ -1,0 +1,21 @@
+{
+  "id":"D1-01","base_commit":"748c74ff65206aff27ac550e404b02fab0989f9a",
+  "length":5.0,"sigma":0.8,"coupling":2.0,"phase":0.0,"mass_R":0.0,
+  "N":[14,18,20,22],"refined_N":22,"probe_times":[0,0.43,1.31],"backaction_times":[0,0.43],"two_backaction_probe_time":1.31,
+  "probes":["sine1","sine2","sine3","beta_left"],"modes":8192,"refined_modes":16384,
+  "source_dictionary":"y_j=(g^2 a)^-1 derivative of calibrated H_y[q]; continuum conjugate is exact average on prescribed I_j. Fixed outer terms are apparatus identity calibration. No improvement term or coefficient fit.",
+  "detector":"Historical B2 weights recomputed by unchanged rule for W=exp(2iF). Ideal impulsive controlled-source instrument; no finite-pulse claim.",
+  "probe_definition":"sine_m(z)=pi/(2L)sin(m*pi*z/L), m1,2,3; beta_left=30/L*(z/L)*(1-z/L)^4. Each L1 norm1; signed integrals1,0,1/3,1. v_j=integral_Ij g, c_g=integral_outer g/4. No quadratic probe reconstruction.",
+  "states":"Vacuum, unitary kick, both K branches at t=0,.43,1.31, and all four branches from K at0,.43 observed at1.31. Complete signed insertion matrices retained; no new history-TV gate.",
+  "gates":{"source_algebra":1e-11,"numerical":1e-9,"refinement":1e-8,"reference_doubling":1e-7,
+    "reference_moment_tail":0.0001,"moment_reserve":0.0001,"moment_absolute":0.002,"covariance_absolute":0.001,
+    "finest_step":0.001,"energy_relative":0.02,"energy_absolute_reserve":0.000001,
+    "single_probability_floor":0.01,"double_probability_floor":0.001},
+  "decision":"All numerical gates plus N22 standard/refined first and second moments and complex insertion errors+reserve<=.002, covariance error+reserve<=.001, kick and conditional energy errors+1e-6<=.02*continuum energy; N20to22 observable step<=.001. Compare maximum across both N22 solves. Rare branches unresolved, not omitted.",
+  "threshold_basis":"Prospective operational tolerances for fixed dimensionless L1<=1 source probes; not universal physical bounds. No inspected D1 production result informed them.",
+  "resources":{"point_wall_seconds":300,"total_wall_seconds":900,"process_memory_bytes":4294967296,"threads":1,"poll_seconds":0.5,"heartbeat_seconds":30},
+  "inputs":"Immutable archived ground-state checkpoints identified by INPUTS.json. Refined N22 uses archived refined ground and splits each new propagation interval in two.",
+  "stop_rule":"One run per registered point. Preserve failures; no fit, alternate dictionary, parameter change, retry or automatic finer size.",
+  "massive_rule":"Withheld under every D1 verdict; N22 and B2 remain historical results, and P1 parent obligations remain separate.",
+  "scope":"Source realization plus independent finite matrix-element tests; no exact finite-a inter-Hilbert-space equality, uniform operator bound, continuum theorem, full multihistory closure or finite switching guarantee."
+}

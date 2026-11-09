@@ -1,0 +1,47 @@
+{
+  "scope": "Independent N6 full-operator algebra and synthetic probe checks; no production probabilities or detector histories.",
+  "parameters": {
+    "N": 6,
+    "a": 0.35,
+    "g": 1.3,
+    "mass_R": 0.27,
+    "mass_lat": 0.19606250000000003,
+    "central_step": 0.015625,
+    "synthetic_weights": [
+      0.0625,
+      0.125,
+      -0.0625,
+      0.1875,
+      0.125
+    ],
+    "synthetic_offset": 0.09375,
+    "finite_source": [
+      0.03,
+      0.01,
+      0.02,
+      0.04,
+      -0.02
+    ]
+  },
+  "checks": {
+    "neutral_sector": 0.0,
+    "independent_gauss_fields": 0.0,
+    "staggered_flux_identity": 0.0,
+    "independent_full_hamiltonian": 4.440892098500626e-16,
+    "full_zero_source_operator_identity": 4.440892098500626e-16,
+    "full_finite_source_operator_identity": 8.881784197001252e-16,
+    "central_source_derivative_vs_y": 1.942890293094024e-14,
+    "controlled_qubit_calibration_identity": 4.440892098500626e-16,
+    "hopping_commutator": 0.0,
+    "hopping_weyl_conjugation": 2.220446049250313e-16,
+    "mixed_double_commutator": 1.3877787807814457e-17
+  },
+  "threshold": 1e-11,
+  "negative_control_missing_source_calibration_rejected": true,
+  "negative_control_operator_error": 0.0029575000000008345,
+  "passed": true,
+  "archived_source_sha256": "debbbc142ac3eafaace7a8c84bb6bb772dd420648ea948efd96896368ccfd138",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0"
+}
