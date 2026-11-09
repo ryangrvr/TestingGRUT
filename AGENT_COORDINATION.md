@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_n22_refinement_20261109 | Codex | Frozen N22 same-rule test and N22 refinement | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
