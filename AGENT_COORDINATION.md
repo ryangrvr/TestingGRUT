@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_n22_refinement_20261109 | Codex | Frozen N22 same-rule test and N22 refinement | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6547,3 +6546,8 @@ verdicts preserved. No merge, release or Zenodo upload. Claims released.
 ## 2026-11-08 — Codex: B2-01r1 detector reconstruction completed
 
 Derived and froze one quadratic cell-average reconstruction before production (freeze d010ad185ac2fc99c42de5229b1a7653670905c0). A prior import-only startup failure and correction are preserved in REVISION_1.md. Ran N10/14/18/20, refined N14, seven timings, 8192/16384 modes, and fresh B1 replay in 111.42 seconds. Geometry passed (N20 max TV 9.18199e-6 across all timings); lattice-to-matched failed (8.75078e-4 versus 7.4e-4), including a miss on confirmation timings. Direct target and additive totals passed; all gates were required, so overall massless matching remains unresolved and corrected massive transfer was not evaluated. Independent small-system checks and post-run probability/checkpoint/hash audit passed, with negative controls. Archived source, derivation, protocol, raw JSON, decisions and checkpoint hashes in research/reality_framework/grut_detector_reconstruction_20261108; binary checkpoints are in the delivered ZIP. Finite results do not certify continuum physics. Prior verdicts unchanged. No merge, release or Zenodo deposit. Claim released.
+
+
+## 2026-11-09 — Codex: frozen N22-01 refinement completed
+
+At source freeze 0f2d2e4ef53f4bcc2613f5cb1373603c4551d9b4, ran one massless N22 point and one N22 refinement with unchanged B2 reconstruction/physical code. All 14 nominal gates passed; worst matched TV 0.000729406759042 < 0.000740. The additional full 0.000010 numerical guard leaves 5.93240958e-7 margin. Maximum additive measured budget 0.000740900161437 < 0.001. Same-size refinement TV <=1.28340914e-13. All outcome-resolved signed forecast checks passed (maximum relative change 0.0242921). Independent arithmetic, checkpoint and 21-input/source hash audit passed. Runtime 850.969 seconds; peak job-member memory 1.484 GiB within frozen limits. Archived source, raw results, telemetry, audit, report and binary-checkpoint hashes in research/reality_framework/grut_n22_refinement_20261109; binaries in the delivered ZIP. This is a finite N22 massless numerical result under the assumed operator dictionary, not a rigorous continuum or ground-state certificate. B2's combined measured budget remains passed, its separate N20 lattice component remains failed, and N20 massive transfer remains withheld. No massive calculation, N24 extension, merge, release or Zenodo deposit. Claim released.
