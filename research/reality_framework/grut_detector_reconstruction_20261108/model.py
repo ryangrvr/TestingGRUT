@@ -8,7 +8,7 @@ from scipy.special import ndtr
 HERE = Path(__file__).resolve().parent
 OLD = HERE.parent / 'grut_detector_matching_20261107'
 B1 = HERE.parent / 'grut_massless_dictionary_20261108'
-sys.path.insert(0, str(OLD))
+sys.path.insert(1, str(OLD))
 from continuum import all_histories, gaussian_histories, interval_spectrum, key, tv
 
 def smearing(card):
