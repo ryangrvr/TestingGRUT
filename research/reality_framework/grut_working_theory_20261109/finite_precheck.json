@@ -1,0 +1,4196 @@
+{
+  "status": "theoretical_internal_checks_passed",
+  "empirical_status": "not_run",
+  "scope": "Prespecified mathematical models and deterministic theoretical checks only. No real or simulated shots; no fit; no hardware realization claimed.",
+  "four_work_qubits": [
+    "S",
+    "M1",
+    "M2",
+    "A"
+  ],
+  "units": "time ns; Hamiltonian angular frequency rad/ns; hbar=1",
+  "finite_segment_durations_ns": {
+    "prepare_hadamards": 20.0,
+    "prepare_bell_cnot": 100.0,
+    "writer": 100.0,
+    "hold_phase": 20.0,
+    "first_pulse": 40.0,
+    "dephasing_slot": 60.0,
+    "parity_phase": 80.0,
+    "second_pulse": 40.0,
+    "actuator_first": 100.0,
+    "actuator_second": 100.0
+  },
+  "total_duration_ns": 660.0,
+  "grid": {
+    "theta1": [
+      -0.71,
+      0.0,
+      0.43,
+      1.0471975511965976,
+      2.27
+    ],
+    "theta2": [
+      -1.13,
+      0.0,
+      0.82,
+      1.0471975511965976,
+      2.91
+    ],
+    "beta": [
+      -2.3,
+      0.0,
+      0.37,
+      2.0943951023931953,
+      3.141592653589793
+    ],
+    "eta": [
+      0.0,
+      0.17,
+      0.63,
+      1.0
+    ]
+  },
+  "density_matrix_grid_points": 500,
+  "maximum_identity_errors": {
+    "agreement_formula": 3.3306690738754696e-16,
+    "final_population_formula": 3.0531133177191805e-16,
+    "immediate_population_invariance": 2.7755575615628914e-17,
+    "trace_error": 4.445597803496583e-16,
+    "hermiticity_error": 1.123091911154532e-16,
+    "negative_eigenvalue": 2.3010035902762433e-16,
+    "flip_comparator_at_eta_zero": 3.3306690738754696e-16,
+    "conditional_phase_calibration": 2.220446049250313e-16,
+    "hold_phase_does_not_change_registered_agreement": 1.1102230246251565e-16
+  },
+  "grid_records": [
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.661781266175832,
+      "analytic_agreement": 0.661781266175832
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.6951681874863413,
+      "analytic_agreement": 0.6951681874863413
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.7855092686794842,
+      "analytic_agreement": 0.7855092686794843
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8581749209435342,
+      "analytic_agreement": 0.8581749209435342
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.661781266175832,
+      "analytic_agreement": 0.661781266175832
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.6116715214991773,
+      "analytic_agreement": 0.6116715214991773
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.47608044766822905,
+      "analytic_agreement": 0.4760804476682291
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.3670180621955099,
+      "analytic_agreement": 0.3670180621955099
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6617812661758322,
+      "analytic_agreement": 0.661781266175832
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.6150625809324504,
+      "analytic_agreement": 0.6150625809324504
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.4886473149797707,
+      "analytic_agreement": 0.4886473149797706
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.3869654706265283,
+      "analytic_agreement": 0.3869654706265282
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.661781266175832,
+      "analytic_agreement": 0.661781266175832
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.6868361385141594,
+      "analytic_agreement": 0.6868361385141594
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.7546316754296334,
+      "analytic_agreement": 0.7546316754296334
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.809162868165993,
+      "analytic_agreement": 0.809162868165993
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.661781266175832,
+      "analytic_agreement": 0.661781266175832
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.7118910108524867,
+      "analytic_agreement": 0.7118910108524867
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8474820846834349,
+      "analytic_agreement": 0.8474820846834349
+    },
+    {
+      "theta1": -0.71,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9565444701561542,
+      "analytic_agreement": 0.9565444701561541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.879180937995254,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.879180937995254,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8791809379952541,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.8791809379952542,
+      "analytic_agreement": 0.8791809379952541
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.758685277299572,
+      "analytic_agreement": 0.758685277299572
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.7316945881312129,
+      "analytic_agreement": 0.731694588131213
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.6586609586168297,
+      "analytic_agreement": 0.6586609586168297
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.5999165174856953,
+      "analytic_agreement": 0.5999165174856954
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.758685277299572,
+      "analytic_agreement": 0.758685277299572
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7991950484849639,
+      "analytic_agreement": 0.799195048484964
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.9088097234572012,
+      "analytic_agreement": 0.9088097234572011
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.9969780489783485,
+      "analytic_agreement": 0.9969780489783484
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.7586852772995722,
+      "analytic_agreement": 0.758685277299572
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7964536447399564,
+      "analytic_agreement": 0.7964536447399564
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.8986504036962906,
+      "analytic_agreement": 0.8986504036962905
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.9808521445959506,
+      "analytic_agreement": 0.9808521445959504
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.758685277299572,
+      "analytic_agreement": 0.758685277299572
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.738430391706876,
+      "analytic_agreement": 0.7384303917068761
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.6836230542207575,
+      "analytic_agreement": 0.6836230542207575
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.6395388914601838,
+      "analytic_agreement": 0.6395388914601838
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.758685277299572,
+      "analytic_agreement": 0.758685277299572
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.7181755061141801,
+      "analytic_agreement": 0.71817550611418
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.6085608311419428,
+      "analytic_agreement": 0.6085608311419429
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.5203925056207956,
+      "analytic_agreement": 0.5203925056207956
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.6895904689976271,
+      "analytic_agreement": 0.6895904689976271
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.6576206190236766,
+      "analytic_agreement": 0.6576206190236766
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.571113966152987,
+      "analytic_agreement": 0.571113966152987
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.501532527974389,
+      "analytic_agreement": 0.501532527974389
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.6895904689976271,
+      "analytic_agreement": 0.6895904689976271
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7375733604013142,
+      "analytic_agreement": 0.7375733604013142
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.8674094194936438,
+      "analytic_agreement": 0.8674094194936439
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.971842771372257,
+      "analytic_agreement": 0.9718427713722568
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6895904689976273,
+      "analytic_agreement": 0.6895904689976271
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7343262307745293,
+      "analytic_agreement": 0.7343262307745293
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.8553759391120292,
+      "analytic_agreement": 0.8553759391120292
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.9527420088617577,
+      "analytic_agreement": 0.9527420088617575
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.6895904689976271,
+      "analytic_agreement": 0.6895904689976271
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.6655990232957836,
+      "analytic_agreement": 0.6655990232957836
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.6006809937496187,
+      "analytic_agreement": 0.6006809937496188
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.5484643178103124,
+      "analytic_agreement": 0.5484643178103122
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.6895904689976271,
+      "analytic_agreement": 0.6895904689976271
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.64160757759394,
+      "analytic_agreement": 0.64160757759394
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.5117715185016103,
+      "analytic_agreement": 0.5117715185016103
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.40733816662299743,
+      "analytic_agreement": 0.4073381666229973
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.13094240774147597,
+      "analytic_agreement": 0.13094240774147597
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.12246924517715338,
+      "analytic_agreement": 0.12246924517715337
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.09954186412075104,
+      "analytic_agreement": 0.09954186412075103
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.08110027501016655,
+      "analytic_agreement": 0.08110027501016653
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.130942407741476,
+      "analytic_agreement": 0.13094240774147597
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.14365960345872064,
+      "analytic_agreement": 0.14365960345872064
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.17807083892891218,
+      "analytic_agreement": 0.17807083892891215
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.2057494413723271,
+      "analytic_agreement": 0.20574944137232704
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.13094240774147603,
+      "analytic_agreement": 0.13094240774147597
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.14279899706808719,
+      "analytic_agreement": 0.14279899706808713
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.174881532893035,
+      "analytic_agreement": 0.17488153289303499
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.20068705083918875,
+      "analytic_agreement": 0.2006870508391887
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.130942407741476,
+      "analytic_agreement": 0.13094240774147597
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.12458380988285365,
+      "analytic_agreement": 0.12458380988285364
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.10737819214775793,
+      "analytic_agreement": 0.1073781921477579
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.09353889092605047,
+      "analytic_agreement": 0.09353889092605046
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.130942407741476,
+      "analytic_agreement": 0.13094240774147597
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.11822521202423132,
+      "analytic_agreement": 0.1182252120242313
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.08381397655403983,
+      "analytic_agreement": 0.0838139765540398
+    },
+    {
+      "theta1": -0.71,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.05613537411062493,
+      "analytic_agreement": 0.056135374110624914
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.7133299039650787,
+      "analytic_agreement": 0.7133299039650787
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.9999999999999999,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.9999999999999998,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.9999999999999999,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.9999999999999999,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.8411106036438066,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.8411106036438069,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.8411106036438069,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.8411106036438069,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.8411106036438067,
+      "analytic_agreement": 0.8411106036438067
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.7500000000000001,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.7500000000000001,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.7500000000000001,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.013348964468325692,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.013348964468325696,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.013348964468325696,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.013348964468325696,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.0,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.013348964468325694,
+      "analytic_agreement": 0.013348964468325675
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.6939095760856888,
+      "analytic_agreement": 0.693909576085689
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.6725574564255783,
+      "analytic_agreement": 0.6725574564255785
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.6147811326393967,
+      "analytic_agreement": 0.6147811326393969
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.5683088722026854,
+      "analytic_agreement": 0.5683088722026857
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.6939095760856889,
+      "analytic_agreement": 0.693909576085689
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7259565340703032,
+      "analytic_agreement": 0.7259565340703035
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.8126718321463187,
+      "analytic_agreement": 0.8126718321463189
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.8824210936422441,
+      "analytic_agreement": 0.8824210936422443
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6939095760856889,
+      "analytic_agreement": 0.693909576085689
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7237878313582325,
+      "analytic_agreement": 0.7237878313582327
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.8046348750368801,
+      "analytic_agreement": 0.8046348750368802
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.8696640188653575,
+      "analytic_agreement": 0.8696640188653575
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.6939095760856889,
+      "analytic_agreement": 0.693909576085689
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.6778860970933818,
+      "analytic_agreement": 0.6778860970933819
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.6345284480553739,
+      "analytic_agreement": 0.6345284480553741
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.5996538173074113,
+      "analytic_agreement": 0.5996538173074115
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.6939095760856889,
+      "analytic_agreement": 0.693909576085689
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.6618626181010745,
+      "analytic_agreement": 0.6618626181010746
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.5751473200250592,
+      "analytic_agreement": 0.5751473200250592
+    },
+    {
+      "theta1": 0.43,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.5053980585291337,
+      "analytic_agreement": 0.5053980585291338
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.9544828748374425,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.9544828748374425,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.9544828748374425,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.9544828748374425,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.9544828748374423,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9544828748374424,
+      "analytic_agreement": 0.9544828748374425
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.8100578555631452,
+      "analytic_agreement": 0.8100578555631455
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.8273193580380752,
+      "analytic_agreement": 0.8273193580380755
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.8740269529702389,
+      "analytic_agreement": 0.8740269529702391
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.9115961054156749,
+      "analytic_agreement": 0.9115961054156752
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.8100578555631454,
+      "analytic_agreement": 0.8100578555631455
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7841504209210084,
+      "analytic_agreement": 0.7841504209210086
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.7140479507128734,
+      "analytic_agreement": 0.7140479507128735
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.6576611811976343,
+      "analytic_agreement": 0.6576611811976344
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.8100578555631455,
+      "analytic_agreement": 0.8100578555631455
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7859036457917801,
+      "analytic_agreement": 0.7859036457917802
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.7205451958222033,
+      "analytic_agreement": 0.7205451958222034
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.6679742686727612,
+      "analytic_agreement": 0.6679742686727613
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.8100578555631455,
+      "analytic_agreement": 0.8100578555631455
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.8230115728842138,
+      "analytic_agreement": 0.8230115728842139
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.8580628079882813,
+      "analytic_agreement": 0.8580628079882815
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.886256192745901,
+      "analytic_agreement": 0.886256192745901
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.8100578555631454,
+      "analytic_agreement": 0.8100578555631455
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.8359652902052823,
+      "analytic_agreement": 0.8359652902052823
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.9060677604134173,
+      "analytic_agreement": 0.9060677604134174
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9624545299286565,
+      "analytic_agreement": 0.9624545299286565
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.7272414374187212,
+      "analytic_agreement": 0.7272414374187213
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.7476872897275023,
+      "analytic_agreement": 0.7476872897275024
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.8030113606806748,
+      "analytic_agreement": 0.803011360680675
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8475111568821397,
+      "analytic_agreement": 0.84751115688214
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.7272414374187213,
+      "analytic_agreement": 0.7272414374187213
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.6965546774937468,
+      "analytic_agreement": 0.6965546774937468
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.6135199153438158,
+      "analytic_agreement": 0.6135199153438157
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.5467310849188711,
+      "analytic_agreement": 0.5467310849188711
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.7272414374187213,
+      "analytic_agreement": 0.7272414374187213
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.6986313319926202,
+      "analytic_agreement": 0.6986313319926202
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.6212157526043465,
+      "analytic_agreement": 0.6212157526043465
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.5589466996181265,
+      "analytic_agreement": 0.5589466996181265
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.7272414374187213,
+      "analytic_agreement": 0.7272414374187213
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.7425848173812084,
+      "analytic_agreement": 0.7425848173812085
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.784102198456174,
+      "analytic_agreement": 0.784102198456174
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.8174966136686463,
+      "analytic_agreement": 0.8174966136686462
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.7272414374187213,
+      "analytic_agreement": 0.7272414374187213
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.7579281973436958,
+      "analytic_agreement": 0.7579281973436958
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8409629594936268,
+      "analytic_agreement": 0.8409629594936269
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9077517899185714,
+      "analytic_agreement": 0.9077517899185714
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.05765087665789249,
+      "analytic_agreement": 0.057650876657892536
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.06306976446999021,
+      "analytic_agreement": 0.06306976446999027
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.07773263737331351,
+      "analytic_agreement": 0.07773263737331357
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.08952668731729094,
+      "analytic_agreement": 0.08952668731729099
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.057650876657892494,
+      "analytic_agreement": 0.057650876657892536
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.04951777920424437,
+      "analytic_agreement": 0.04951777920424441
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.027510574329667102,
+      "analytic_agreement": 0.027510574329667144
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.009809126930550598,
+      "analytic_agreement": 0.009809126930550645
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.0576508766578925,
+      "analytic_agreement": 0.057650876657892536
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.05006816749737754,
+      "analytic_agreement": 0.05006816749737758
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.029550248592454736,
+      "analytic_agreement": 0.029550248592454774
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.01304670512545161,
+      "analytic_agreement": 0.013046705125451648
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.057650876657892494,
+      "analytic_agreement": 0.057650876657892536
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.06171742538471656,
+      "analytic_agreement": 0.0617174253847166
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.07272102782200518,
+      "analytic_agreement": 0.07272102782200522
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.08157175152156343,
+      "analytic_agreement": 0.08157175152156347
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.057650876657892494,
+      "analytic_agreement": 0.057650876657892536
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.0657839741115406,
+      "analytic_agreement": 0.06578397411154066
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.08779117898611788,
+      "analytic_agreement": 0.08779117898611793
+    },
+    {
+      "theta1": 0.43,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.10549262638523439,
+      "analytic_agreement": 0.10549262638523443
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.6066649519825393,
+      "analytic_agreement": 0.6066649519825393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.5623071367012905,
+      "analytic_agreement": 0.5623071367012905
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.4422801071167348,
+      "analytic_agreement": 0.44228010711673493
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.3457366267987228,
+      "analytic_agreement": 0.3457366267987228
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.6066649519825393,
+      "analytic_agreement": 0.6066649519825393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.6732406861595603,
+      "analytic_agreement": 0.6732406861595605
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.8533867904032644,
+      "analytic_agreement": 0.8533867904032646
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.9982869177297222,
+      "analytic_agreement": 0.9982869177297222
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6066649519825393,
+      "analytic_agreement": 0.6066649519825393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.6687353295095744,
+      "analytic_agreement": 0.6687353295095744
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.836690468700375,
+      "analytic_agreement": 0.836690468700375
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.9717848197886277,
+      "analytic_agreement": 0.9717848197886276
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.6066649519825393,
+      "analytic_agreement": 0.6066649519825393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.5733770848940287,
+      "analytic_agreement": 0.5733770848940288
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.4833040327721767,
+      "analytic_agreement": 0.48330403277217676
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.410853969108948,
+      "analytic_agreement": 0.410853969108948
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.6066649519825393,
+      "analytic_agreement": 0.6066649519825393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.5400892178055182,
+      "analytic_agreement": 0.5400892178055182
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.3599431135618141,
+      "analytic_agreement": 0.3599431135618141
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.21504298623535648,
+      "analytic_agreement": 0.21504298623535645
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.7499999999999998,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.7500000000000001,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.7500000000000001,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.75,
+      "analytic_agreement": 0.75
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.6705553018219033,
+      "analytic_agreement": 0.6705553018219035
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.7064150923461291,
+      "analytic_agreement": 0.7064150923461292
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.8034474667057985,
+      "analytic_agreement": 0.8034474667057987
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8814952460820547,
+      "analytic_agreement": 0.8814952460820547
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.6705553018219035,
+      "analytic_agreement": 0.6705553018219035
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.6167340785166671,
+      "analytic_agreement": 0.6167340785166673
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.47110018016132216,
+      "analytic_agreement": 0.4711001801613224
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.35395987061463174,
+      "analytic_agreement": 0.3539598706146318
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6705553018219035,
+      "analytic_agreement": 0.6705553018219035
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.620376303560463,
+      "analytic_agreement": 0.620376303560463
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.48459783767656506,
+      "analytic_agreement": 0.48459783767656517
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.37538472381342997,
+      "analytic_agreement": 0.37538472381342997
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.6705553018219035,
+      "analytic_agreement": 0.6705553018219035
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.6974659134745216,
+      "analytic_agreement": 0.6974659134745216
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.7702828626521938,
+      "analytic_agreement": 0.770282862652194
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.8288530174255393,
+      "analytic_agreement": 0.8288530174255393
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.6705553018219035,
+      "analytic_agreement": 0.6705553018219035
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.7243765251271397,
+      "analytic_agreement": 0.7243765251271397
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8700104234824846,
+      "analytic_agreement": 0.8700104234824846
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9871507330291751,
+      "analytic_agreement": 0.9871507330291751
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.625,
+      "analytic_agreement": 0.625
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.6674750963565887,
+      "analytic_agreement": 0.6674750963565887
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.7824077100273583,
+      "analytic_agreement": 0.7824077100273584
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.874853507979934,
+      "analytic_agreement": 0.874853507979934
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.6250000000000001,
+      "analytic_agreement": 0.625
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.56125,
+      "analytic_agreement": 0.56125
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.38875000000000004,
+      "analytic_agreement": 0.38875000000000004
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.2500000000000002,
+      "analytic_agreement": 0.25000000000000006
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.6250000000000001,
+      "analytic_agreement": 0.625
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.5655641317176154,
+      "analytic_agreement": 0.5655641317176153
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.4047376646005745,
+      "analytic_agreement": 0.40473766460057437
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.2753772453977372,
+      "analytic_agreement": 0.2753772453977371
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.6250000000000002,
+      "analytic_agreement": 0.625
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.6568750000000001,
+      "analytic_agreement": 0.656875
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.7431249999999998,
+      "analytic_agreement": 0.7431249999999999
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.8125,
+      "analytic_agreement": 0.8124999999999999
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.6250000000000001,
+      "analytic_agreement": 0.625
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.68875,
+      "analytic_agreement": 0.68875
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8612499999999998,
+      "analytic_agreement": 0.86125
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 1.0,
+      "analytic_agreement": 1.0
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.25667448223416267,
+      "analytic_agreement": 0.2566744822341628
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.26793191374096964,
+      "analytic_agreement": 0.2679319137409698
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.2983931989946827,
+      "analytic_agreement": 0.29839319899468286
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.3228946675683215,
+      "analytic_agreement": 0.32289466756832164
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.2566744822341627,
+      "analytic_agreement": 0.2566744822341628
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.2397784344292559,
+      "analytic_agreement": 0.23977843442925598
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.19405971683950807,
+      "analytic_agreement": 0.19405971683950818
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.15728596573471093,
+      "analytic_agreement": 0.157285965734711
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.2566744822341627,
+      "analytic_agreement": 0.2566744822341628
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.2409218348329813,
+      "analytic_agreement": 0.24092183483298135
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.19829702421801976,
+      "analytic_agreement": 0.19829702421801987
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.16401185046250727,
+      "analytic_agreement": 0.16401185046250732
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.2566744822341627,
+      "analytic_agreement": 0.2566744822341628
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.2651225061366161,
+      "analytic_agreement": 0.2651225061366162
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.28798186493149,
+      "analytic_agreement": 0.2879818649314901
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.30636874048388857,
+      "analytic_agreement": 0.3063687404838886
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.2566744822341627,
+      "analytic_agreement": 0.2566744822341628
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.2735705300390695,
+      "analytic_agreement": 0.2735705300390696
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.3192892476288173,
+      "analytic_agreement": 0.3192892476288174
+    },
+    {
+      "theta1": 1.0471975511965976,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.35606299873361447,
+      "analytic_agreement": 0.3560629987336146
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.3626990778447242,
+      "analytic_agreement": 0.3626990778447242
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.32349760239085645,
+      "analytic_agreement": 0.32349760239085645
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.217423021750979,
+      "analytic_agreement": 0.21742302175097902
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.132102163410208,
+      "analytic_agreement": 0.13210216341020803
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.3626990778447242,
+      "analytic_agreement": 0.3626990778447242
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.4215357674475815,
+      "analytic_agreement": 0.42153576744758153
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.5807409275494306,
+      "analytic_agreement": 0.5807409275494306
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.708797251979179,
+      "analytic_agreement": 0.708797251979179
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.3626990778447242,
+      "analytic_agreement": 0.3626990778447242
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.4175541324864023,
+      "analytic_agreement": 0.41755413248640233
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.5659854568109431,
+      "analytic_agreement": 0.5659854568109431
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.6853758698545954,
+      "analytic_agreement": 0.6853758698545955
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.3626990778447242,
+      "analytic_agreement": 0.3626990778447242
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.33328073304329553,
+      "analytic_agreement": 0.3332807330432956
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.253678152992371,
+      "analytic_agreement": 0.253678152992371
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.18964999077749695,
+      "analytic_agreement": 0.18964999077749695
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.3626990778447242,
+      "analytic_agreement": 0.3626990778447242
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.3038623882418669,
+      "analytic_agreement": 0.3038623882418669
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.14465722814001775,
+      "analytic_agreement": 0.14465722814001775
+    },
+    {
+      "theta1": 2.27,
+      "theta2": -1.13,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.016600903710269496,
+      "analytic_agreement": 0.01660090371026951
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.17819579064322966,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.17819579064322966,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.17819579064322966,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.17819579064322966,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.0,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.1781957906432297,
+      "analytic_agreement": 0.1781957906432297
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.2804583437823882,
+      "analytic_agreement": 0.2804583437823882
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.31214964077488283,
+      "analytic_agreement": 0.31214964077488283
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.3979025620486919,
+      "analytic_agreement": 0.3979025620486919
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.46687773785588615,
+      "analytic_agreement": 0.46687773785588604
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.28045834378238826,
+      "analytic_agreement": 0.2804583437823882
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.23289352682916808,
+      "analytic_agreement": 0.23289352682916806
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.10418872801457238,
+      "analytic_agreement": 0.10418872801457238
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.000665302881093205,
+      "analytic_agreement": 0.0006653028810932327
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.28045834378238826,
+      "analytic_agreement": 0.2804583437823882
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.23611236424815557,
+      "analytic_agreement": 0.23611236424815557
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.11611736080258488,
+      "analytic_agreement": 0.11611736080258486
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.01959964063984322,
+      "analytic_agreement": 0.019599640639843208
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.28045834378238826,
+      "analytic_agreement": 0.2804583437823882
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.3042407522589983,
+      "analytic_agreement": 0.30424075225899827
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.36859315166629614,
+      "analytic_agreement": 0.3685931516662961
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.4203548642330357,
+      "analytic_agreement": 0.42035486423303564
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.28045834378238826,
+      "analytic_agreement": 0.2804583437823882
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.3280231607356084,
+      "analytic_agreement": 0.32802316073560833
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.4567279595502041,
+      "analytic_agreement": 0.45672795955020407
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 0.82,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.5602513846836833,
+      "analytic_agreement": 0.5602513846836832
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.3390978953216147,
+      "analytic_agreement": 0.33909789532161483
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.3766355070517252,
+      "analytic_agreement": 0.3766355070517254
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.4782078682037891,
+      "analytic_agreement": 0.47820786820378924
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.5599073760869708,
+      "analytic_agreement": 0.559907376086971
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.3390978953216147,
+      "analytic_agreement": 0.33909789532161483
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.2827584646183966,
+      "analytic_agreement": 0.28275846461839665
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.1303105933038063,
+      "analytic_agreement": 0.13031059330380637
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.007689479420331524,
+      "analytic_agreement": 0.007689479420331546
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.3390978953216147,
+      "analytic_agreement": 0.33909789532161483
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.28657110344112824,
+      "analytic_agreement": 0.28657110344112835
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.14443978423510595,
+      "analytic_agreement": 0.14443978423510603
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.03011676661287066,
+      "analytic_agreement": 0.03011676661287066
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.3390978953216148,
+      "analytic_agreement": 0.33909789532161483
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.36726761067322383,
+      "analytic_agreement": 0.3672676106732239
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.44349154633051896,
+      "analytic_agreement": 0.443491546330519
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.5048021032722563,
+      "analytic_agreement": 0.5048021032722564
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.3390978953216147,
+      "analytic_agreement": 0.33909789532161483
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.3954373260248329,
+      "analytic_agreement": 0.395437326024833
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.5478851973394232,
+      "analytic_agreement": 0.5478851973394233
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 1.0471975511965976,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.6705063112228979,
+      "analytic_agreement": 0.6705063112228982
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.0,
+      "density_agreement": 0.8132127034438478,
+      "analytic_agreement": 0.8132127034438479
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.17,
+      "density_agreement": 0.8231615235579494,
+      "analytic_agreement": 0.8231615235579495
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 0.63,
+      "density_agreement": 0.8500818603372833,
+      "analytic_agreement": 0.8500818603372833
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": -2.3,
+      "eta": 1.0,
+      "density_agreement": 0.8717351747032691,
+      "analytic_agreement": 0.8717351747032692
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.0,
+      "density_agreement": 0.8132127034438479,
+      "analytic_agreement": 0.8132127034438479
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.17,
+      "density_agreement": 0.7982807236091369,
+      "analytic_agreement": 0.7982807236091372
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 0.63,
+      "density_agreement": 0.7578765428799198,
+      "analytic_agreement": 0.7578765428799199
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.0,
+      "eta": 1.0,
+      "density_agreement": 0.7253775279455495,
+      "analytic_agreement": 0.7253775279455495
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.0,
+      "density_agreement": 0.8132127034438479,
+      "analytic_agreement": 0.8132127034438479
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.17,
+      "density_agreement": 0.7992912103199091,
+      "analytic_agreement": 0.7992912103199092
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 0.63,
+      "density_agreement": 0.7616212877492515,
+      "analytic_agreement": 0.7616212877492516
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 0.37,
+      "eta": 1.0,
+      "density_agreement": 0.7313215674206791,
+      "analytic_agreement": 0.7313215674206792
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "density_agreement": 0.8132127034438479,
+      "analytic_agreement": 0.8132127034438479
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.17,
+      "density_agreement": 0.8206786933612031,
+      "analytic_agreement": 0.8206786933612032
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 0.63,
+      "density_agreement": 0.8408807837258118,
+      "analytic_agreement": 0.8408807837258119
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "density_agreement": 0.857130291192997,
+      "analytic_agreement": 0.857130291192997
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.0,
+      "density_agreement": 0.8132127034438479,
+      "analytic_agreement": 0.8132127034438479
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.17,
+      "density_agreement": 0.8281446832785585,
+      "analytic_agreement": 0.8281446832785586
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 0.63,
+      "density_agreement": 0.8685488640077756,
+      "analytic_agreement": 0.8685488640077759
+    },
+    {
+      "theta1": 2.27,
+      "theta2": 2.91,
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "density_agreement": 0.9010478789421462,
+      "analytic_agreement": 0.9010478789421462
+    }
+  ],
+  "calibration_indistinguishable_countermodels": [
+    {
+      "beta": 0.0,
+      "eta": 1.0,
+      "program_agreement": {
+        "00": 1.0,
+        "10": 0.75,
+        "01": 0.75,
+        "11": 0.2500000000000002
+      }
+    },
+    {
+      "beta": 1.5707963267948966,
+      "eta": 1.0,
+      "program_agreement": {
+        "00": 1.0,
+        "10": 0.7500000000000001,
+        "01": 0.7500000000000001,
+        "11": 0.6250000000000002
+      }
+    },
+    {
+      "beta": 2.0943951023931953,
+      "eta": 1.0,
+      "program_agreement": {
+        "00": 1.0,
+        "10": 0.75,
+        "01": 0.75,
+        "11": 0.8125
+      }
+    },
+    {
+      "beta": 3.141592653589793,
+      "eta": 1.0,
+      "program_agreement": {
+        "00": 1.0,
+        "10": 0.75,
+        "01": 0.75,
+        "11": 1.0
+      }
+    },
+    {
+      "beta": 2.0943951023931953,
+      "eta": 0.0,
+      "program_agreement": {
+        "00": 1.0,
+        "10": 0.75,
+        "01": 0.75,
+        "11": 0.6250000000000002
+      }
+    },
+    {
+      "beta": 2.0943951023931953,
+      "eta": 0.4,
+      "program_agreement": {
+        "00": 0.9999999999999999,
+        "10": 0.75,
+        "01": 0.75,
+        "11": 0.7
+      }
+    }
+  ],
+  "local_M2_channel_countermodels": [
+    {
+      "eta": 0.0,
+      "parity_agreement": 0.6250000000000002,
+      "local_M2_agreement": 0.6250000000000001,
+      "parity_Bell_XX": 0.9999999999999998,
+      "local_M2_Bell_XX": 0.0
+    },
+    {
+      "eta": 0.37,
+      "parity_agreement": 0.6943750000000001,
+      "local_M2_agreement": 0.6943750000000001,
+      "parity_Bell_XX": 0.9999999999999999,
+      "local_M2_Bell_XX": 0.37
+    },
+    {
+      "eta": 1.0,
+      "parity_agreement": 0.8125,
+      "local_M2_agreement": 0.8125,
+      "parity_Bell_XX": 0.9999999999999998,
+      "local_M2_Bell_XX": 0.9999999999999998
+    }
+  ],
+  "negative_control_local_M1_dephaser_agreement": 0.8125,
+  "negative_control_error": 0.1875,
+  "uncertainty_corner_test": {
+    "nominal": [
+      0.77,
+      1.31,
+      2.02,
+      0.68
+    ],
+    "radii": [
+      0.03,
+      0.02,
+      0.04,
+      0.05
+    ],
+    "corners": 16,
+    "preparation_mixture": 0.007,
+    "readout_flip": 0.009,
+    "maximum_actual_error": 0.025968264775027117,
+    "derived_upper_bound": 0.0581217286339282
+  },
+  "finite_pulse_detuning_test": {
+    "maximum_actual_error": 0.00011583853992347404,
+    "maximum_residual_channel_bound": 0.1
+  },
+  "illustrative_calibration_design_only": {
+    "shots_per_Pauli_mean": 80000,
+    "number_of_expectations": 12,
+    "structured_parameter_calibration_attempts": 960000,
+    "family_failure_probability": 0.005,
+    "Pauli_mean_radius": 0.014557104104951629,
+    "ideal_centered_angle_radius_radians": 0.020587217616887393,
+    "assumed_separately_certified_prep_readout_channel_budgets": [
+      0.002,
+      0.002,
+      0.004
+    ],
+    "probability_uncertainty_bound": 0.0390368812428986,
+    "shared_parameter_contrast_uncertainty_bound": 0.033542521403183374,
+    "contrast_parameter_corner_maximum_error": 0.016208955544510295,
+    "contrast_lower_before_validation_sampling": 0.15395747859681663,
+    "warning": "Not measured calibration. Residual channel certificates are assumptions, not consequences of these few Pauli probes; this count does not certify the full EX1 apparatus or fit within a separately justified qualification budget."
+  }
+}

@@ -1,0 +1,174 @@
+W1-01: a continuum predictor with actual modes and a uniform error bound
+======================================================================
+
+Prospective scope
+-----------------
+This derivation precedes any W1 physical-source evaluation. The primary
+level is fixed at1024 modes;16,64,256 are diagnostic levels only. N22,
+L5,g1, the D1 native three-sine probes plus beta witness, six new response
+times, and reference counts16384/32768 are fixed in the companion card.
+No lattice evolution, history comparison, fitted frequency or adaptive
+mode selection is part of W1. The result concerns the adopted massless
+continuum model, not the justification of the lattice/continuum dictionary.
+
+Exact spectral model
+--------------------
+On0<z<L, take Dirichlet modes e_n(z)=sqrt(2/L)sin(n pi z/L) and
+omega_n=sqrt((n pi/L)^2+1/pi), with g=1 and Phi=phi/sqrt(pi). For a real
+native cell source f_i, b_in=int f_i(z)e_n(z)dz. Its centered vacuum source
+response is
+
+  M_ij(t)=sum_{n>=1} b_in b_jn exp(-i omega_n t)/(2 pi omega_n).
+
+Set a_n=b_n/sqrt(2 pi omega_n). Each a_n a_n^T is PSD. For M retained modes,
+
+  M_M(t)=sum_{n<=M} a_n a_n^T exp(-i omega_n t), C_M=M_M(0),
+  R_M(t)=C_M^(-1/2)M_M(t)C_M^(-1/2).
+
+Thus R_M(0)=I and ||R_M(t)||<=1 for every real t. This uses the actual
+continuum frequencies and their physical positive source weights. Unlike
+the R1 three-source Galerkin predictor, it does not replace the spectral
+distribution by three first-moment centroid frequencies. Source dimension
+and retained dynamical mode count are different quantities.
+
+The identity-valued apparatus edge terms and static vacuum mean cancel in
+the centered response. They remain part of the physical source definition;
+this cancellation does not authorize changing their controlled detector
+phase in a nonlinear or interferometric experiment.
+
+Uniform raw tail
+----------------
+Let Delta_M=C_infinity-C_M=sum_{n>M} a_n a_n^T>=0. Cauchy-Schwarz in the
+discarded mode index gives, for arbitrary unit vectors x,y,
+
+  |x^dagger(M_infinity(t)-M_M(t))y|
+  <=sqrt(x^dagger Delta_M x)*sqrt(y^dagger Delta_M y)
+  <=||Delta_M||.
+
+Hence the raw operator error is bounded by ||Delta_M|| uniformly in t.
+No bound on a second spectral moment or a short-time Taylor expansion is
+used. For an individual entry the bound is sqrt(T_i T_j) if the omitted
+variance of source i is bounded by T_i.
+
+For a zero-extended real step source of total variation B_i, integration
+by parts as a Stieltjes integral gives |b_in|<=sqrt(2/L) B_i/(n pi/L).
+Using omega_n>=n pi/L and sum_{n>M}n^-3<=1/(2M^2),
+
+  T_i <= B_i^2 L^2/(2 pi^4 M^2),
+  E_M := sum_i T_i >=||Delta_M||.
+
+The sum is over the primary three probes for its matrix bound. Scalar beta
+tails are separately reported. Step sources can have divergent higher
+spectral moments, which is irrelevant to this finite-variance tail proof.
+
+Canonical normalization with a fixed positive covariance
+---------------------------------------------------------
+Assume C_M>0, m=lambda_min(C_M), q=lambda_max(C_M), and ||Delta_M||<=E.
+The exact full normalized response is R_infinity=C_infinity^(-1/2)
+M_infinity C_infinity^(-1/2). Since Delta_M>=0, both covariance lower bounds
+are at least m. The resolvent integral for inverse square roots implies
+
+  ||C_infinity^(-1/2)-C_M^(-1/2)|| <= E/(2 m^(3/2)).
+
+For completeness, X^(-1/2)=(1/pi)int_0^infinity s^(-1/2)(X+sI)^(-1)ds;
+the resolvent identity bounds the difference by
+(E/pi)int_0^infinity s^(-1/2)/(m+s)^2 ds=E/(2m^(3/2)).
+
+Since ||M_M(t)||<=q, add and subtract the two products with one changed
+inverse square root. This proves
+
+  ||R_infinity(t)-R_M(t)|| <= E/m + E q/m^2 =: B_M
+
+for every real t. The equality at t0 is exact even though the constant
+all-time envelope need not vanish there. Canonical whitening may rotate
+with covariance perturbations; the condition-dependent second term covers
+that change and is not silently replaced by an aligned-basis estimate.
+
+For each scalar response r_i=M_ii/C_ii, the parallel bound is
+|r_i,infinity-r_i,M|<=2T_i/C_ii,M. Every comparison to a finite reference
+uses the sum of the predictor and reference tail bounds. The fine reference
+is not identified with an exact infinite-mode response.
+
+An a priori rational primary certificate at N22 and M1024
+--------------------------------------------------------
+This section does not evaluate any physical source coefficients or response
+times. It bounds the entire primary family using analytic envelopes.
+
+Let q_cells=N+1=23, a=L/q_cells, and g_i(z)=pi/(2L)sin(i pi z/L), i1,2,3.
+The native step f_i equals the average of g_i on each interior cell and
+zero on the two outer cells. Therefore f_i=P g_i for the orthogonal L2
+projection onto interior-cell constants. The original g_i are orthogonal
+and have common squared norm b0^2=pi^2/(8L).
+
+The step total variation does not exceed the smooth zero-extended variation
+2i*pi/(2L)=i*pi/L. By the mean value theorem for integrals, every cell
+average is g_i(xi_j) for some point xi_j in that cell. These points are
+ordered. Appending g_i(0)=g_i(L)=0 makes the step variation a polygonal
+variation sum of the original function, bounded by its total variation.
+Thus the three-source raw tail obeys
+
+  E_M <= sum_{i=1}^3 (i*pi/L)^2 L^2/(2 pi^4 M^2)
+       =7/(pi^2 M^2) <=7/(9M^2).
+
+For the covariance upper bound, orthogonal projection is contractive:
+the L2 Gram of f_i is <=b0^2 I. Since omega_n>=pi/L,
+
+  C_infinity <= [b0^2/(2 pi*(pi/L))]I = (1/16)I.
+
+For a covariance lower bound, retain just continuum modes1,2,3. Before
+projection their coefficient matrix is b0 I. The interior-cell Poincare
+bound and sin(x)<=x at the two edges give
+
+  ||g_i-f_i||_2^2
+    <= b0^2 i^2 [q_cells^-2 +4 pi^2/(3 q_cells^3)].
+
+The first term uses the optimal interval zero-mean Poincare constant a/pi;
+it also follows by expanding the cell deviation into its Neumann cosine
+modes. The second follows from2 int_0^a[pi/(2L)]^2(i pi z/L)^2 dz.
+By Bessel's inequality the Frobenius norm of the first-three coefficient
+error is bounded by the combined L2 errors. Consequently its least
+singular value is at least b0(1-r), where
+
+  r^2=14[q_cells^-2+4pi^2/(3q_cells^3)].
+
+At q_cells23, using pi<22/7 gives r^2<1/16, so r<1/4. All fixed retained
+levels exceed3. For L5 and g1,
+
+  b0^2>=9/40,
+  omega_3=sqrt((3pi/5)^2+1/pi)
+          <=3pi/5+1/sqrt(pi)<=66/35+3/5=87/35,
+  2pi omega_3<=2*(22/7)*(87/35).
+
+Hence every fixed C_M has the rigorous lower bound
+
+  m_*=(9/40)*(9/16)/[2*(22/7)*(87/35)]>0,
+  q_*=1/16.
+
+The exact-rational envelope
+
+  B_*(M)=[7/(9M^2)]*[1/m_*+q_*/m_*^2]
+
+is therefore valid for the primary canonical response at every real time.
+The companion exact Fraction calculation verifies B_*(1024)<1/1000. It
+also verifies3<pi<22/7 with alternating rational bounds on Machin's formula
+pi=16 atan(1/5)-4 atan(1/239). That formula follows from the tangent
+addition formula and the principal-argument ranges, so no measured
+constant or empirical fit enters the certificate.
+
+What is proved, checked, and still missing
+-----------------------------------------
+The uniform bound proves an exact-arithmetic modal-truncation statement
+for this specified continuum source model. The synthetic precheck tests
+the spectrum, matrix normalization, discarded PSD-tail logic, and rational
+certificate independently of physical production. The held-out time
+comparisons and frozen R1 implementation comparison test the executable
+calculation; agreement alone is not the proof. Floating-point quadratures,
+matrix square roots and exponentials are not interval-certified by a
+small residual. Their validation remains distinct from the exact-rational
+analytic truncation theorem.
+
+Success would construct a working continuum response predictor under the
+adopted source dictionary. It would not improve or explain away any
+R1 lattice-continuum discrepancy, change conditional backaction, validate
+a Hamiltonian realization, prove the full physical dictionary or establish
+GRUT empirically. Those remain separate milestones.

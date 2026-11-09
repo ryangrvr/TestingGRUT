@@ -1,0 +1,73 @@
+{
+  "id": "W1-01",
+  "status": "frozen_by_commit_before_production",
+  "scope": "Mode-resolved massless continuum source-response predictor with a uniform modal-truncation theorem; no lattice evolution, detector-history comparison, or full dictionary validation.",
+  "length": 5.0,
+  "g": 1.0,
+  "mass_R": 0.0,
+  "N": 22,
+  "native_cell_count_plus_one": 23,
+  "probe_names": [
+    "sine1",
+    "sine2",
+    "sine3",
+    "beta_left"
+  ],
+  "primary_probe_indices": [
+    0,
+    1,
+    2
+  ],
+  "primary_modes": 1024,
+  "diagnostic_modes": [
+    16,
+    64,
+    256
+  ],
+  "all_predictor_modes": [
+    16,
+    64,
+    256,
+    1024
+  ],
+  "response_times": [
+    0.0,
+    0.17,
+    0.61,
+    1.09,
+    2.03,
+    3.17
+  ],
+  "reference_modes": 16384,
+  "refined_reference_modes": 32768,
+  "gram_minimum_eigenvalue": 1e-10,
+  "gram_condition_limit": 1000000,
+  "gates": {
+    "primary_uniform_canonical_error": 0.001,
+    "floating_comparison_slack": 1e-10,
+    "reference_doubling": 1e-07,
+    "independent_R1_agreement": 1e-10,
+    "t0_identity": 1e-10,
+    "contraction": 1e-10
+  },
+  "resources": {
+    "wall_seconds": 120,
+    "process_memory_bytes": 1073741824,
+    "threads": 1
+  },
+  "dictionary": "D1 native cell-source integrals on the N22 interior cells; the same affine apparatus boundary constants. Centering removes constants from the vacuum response; no new source smoothing or boundary convention.",
+  "model": "M_M(t)=sum_{n=1}^M b_n b_n^T exp(-i omega_n t)/(2 pi omega_n), omega_n=sqrt((n pi/L)^2+1/pi). Canonical R_M=C_M^(-1/2) M_M C_M^(-1/2), C_M=M_M(0). Scalar witnesses use their own retained variance.",
+  "primary_claim": "For the exact mathematical primary three-sine predictor at the fixed M=1024, an a priori rational envelope bounds canonical normalized error uniformly over every real time by less than0.001. Floating implementation validation and the mathematical truncation theorem are distinct claims.",
+  "a_priori_certificate": "Use3<pi<22/7, q23, source L2 projection, Poincare interior error and edge sin bound. cmin_lower=(9/40)*(9/16)/(2*(22/7)*(87/35)); cmax_upper=1/16; tail_E_upper=7/(9*M^2). Uniform canonical bound E*(1/cmin_lower+cmax_upper/cmin_lower^2). Verify the pi bracket by exact rational alternating Machin series and every certificate inequality by Fraction arithmetic.",
+  "comparison_rules": "Every fixed level is compared to the32768 reference at every fixed time. Raw, canonical and scalar errors must obey their two-sided reference-tail allowances plus1e-10 floating slack. Reference16384vs32768 canonical/auto response difference must be<=1e-7. Frozen R1 independent implementation is compared at16384, new times, only as an implementation check. No level is chosen after results.",
+  "quality_vs_operational": "Report numerical quality, bound compliance, exact-arithmetic primary truncation certificate, and measured held-out differences separately. Beta is a scalar witness outside primary whitening and the exact rational primary certificate.",
+  "stop_rule": "One bounded evaluation; no adaptive modes, new times, refitting frequencies or weights, lattice runs, cutoff escalation, or retrospective threshold change. A numerical implementation failure does not falsify the theorem and must remain reported.",
+  "limitations": [
+    "No full lattice-continuum dictionary proof",
+    "No repair of R1 lattice/continuum response mismatch",
+    "No selective or nonlinear detector-history claim",
+    "No H-squared or time-derivative assumption",
+    "No experimentally validated theory claim",
+    "No rigorous interval certification of floating matrix/exponential implementation"
+  ]
+}

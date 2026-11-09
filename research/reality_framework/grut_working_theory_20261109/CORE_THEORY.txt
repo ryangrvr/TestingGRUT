@@ -1,0 +1,327 @@
+W1: a closed, solvable operational core for GRUT
+Source audit at commit 4300c1836c4967a268fe3b028fa190e0f9886153
+Prepared 9 November 2026. No repository edits, new physical data or production run.
+
+The repository already contains enough structure for a working finite theory of
+writing a record, retaining its relevant coherence and using it to control an
+action. Its positive mathematical content can be presented as one explicit
+closed parent and an exact effective description, rather than another checklist.
+The theory is conditional quantum dynamics with specified operational access.
+It is not a new fundamental law selecting the dynamics or physical constants.
+
+1. THE PHYSICAL PRIMITIVE AND THE LAW
+
+The primitive is not 'information' alone. It is an operational quantum tuple
+
+  G = (A, omega, H, I_access),
+  I_access = ({A_i}, {K_R}, {M_R}).
+
+A is the observable algebra; omega is a positive normalized preparation; H is
+the Hamiltonian; A_i identify operational sites; K_R specify permitted couplings
+on regions R; M_R specify permitted instruments. A region or subsystem has
+physical meaning only with these specified operations and readouts. H and a
+stationary state do not themselves select the concrete operational factors.
+
+For the finite model, adopt the Born rule and unitary evolution
+
+  rho(t) = exp(-iHt) rho(0) exp(iHt),  hbar=1.
+
+An allowed instrument has Kraus operators K_xb satisfying
+sum_xb K_xb^dagger K_xb = I. Its state branch is
+I_x(rho)=sum_b K_xb rho K_xb^dagger. For specified successive times,
+
+  p(x_1,...,x_n)
+   = Tr[I_xn o U_dt_n o ... o I_x1 o U_t1(rho_0)].
+
+Conditioning divides a branch by its positive trace. Ignoring a measurement
+outcome retains the nonselective channel; it is different from omitting the
+operation. Thus state, dynamics, disturbance and readout form one probability
+law. This is operationally and mathematically closed once the tuple is given.
+
+2. ONE FULLY SPECIFIED AUTONOMOUS PARENT
+
+Space and observables:
+  H_total = C^8_C tensor C^2_S tensor C^2_M1 tensor C^2_M2
+            tensor C^2_A tensor C^2_D1 tensor C^2_D2;
+  A = B(H_total), dimension(H_total)=512.
+
+C is an eight-level clock, S the source/signal, M1,M2 the memory carriers,
+A the actuator, and D1,D2 conserved selector registers. Here 'source' means the
+physical signal register S and its writer coupling. It is not the continuum
+electric-field source of the separate Schwinger study.
+
+Use Z|b>=(-1)^b|b>, P=Z_M1 Z_M2 and Pi_F,+/-=(I+/-F)/2.
+Define Rx(theta)=exp(-i theta X_M2/2). The seven work links are
+
+  U0 = Pi_ZS,+ + Pi_ZS,- X_M2;                    writer
+  U1 = exp(-i lambda Z_M1/2);                     within-parity hold
+  U2 = Pi_ZD1,+ + Pi_ZD1,- Rx(theta);             first disturbance
+  U3 = exp(-i beta P/2);                          parity phase
+  U4 = Pi_ZD2,+ + Pi_ZD2,- Rx(theta);             second disturbance
+  U5 = Pi_P,+ + Pi_P,- X_A;                       actuator
+  U6 = I.                                       final clock link
+
+The time-independent Hamiltonian is
+
+  H = sum_{k=0}^6 g_k (|k+1><k| tensor U_k
+                       + |k><k+1| tensor U_k^dagger),
+  g_k = (Omega/2) sqrt((k+1)(7-k)).
+
+The instance fixes Omega=1 in replay units, lambda=pi/2, theta=pi/3,
+beta=2pi/3. All links are present throughout the unmeasured evolution. No
+externally switched pulse schedule is required in this specified parent.
+
+Preparation, for selector program d=(d1,d2):
+
+  |Psi_d(0)> = |0>_C |+>_S |Phi+>_M1M2 |0>_A |d1 d2>_D,
+  |Phi+>=(|00>+|11>)/sqrt(2),  rho_d=|Psi_d><Psi_d|.
+
+The state supplies clock localization, a coherent signal, the Bell blank and
+ready actuator/selectors. These resources and their orientation are inputs.
+The clean program is d=00; d=10,01,11 change only the initial selectors.
+
+Access is explicit: X,Z on each qubit, clock projectors Q_k and adjacent
+Hermitian clock units, and the specified link couplings on their supports.
+Elementary diagnostic instruments are the spectral Luders instruments for
+these operators, K=sum_k kQ_k, P, X_M1 X_M2 and Y_M1 X_M2. Include joint readout
+of the commuting K,Z_S,P,Z_A. The P instrument has only Pi_P,+ and Pi_P,-,
+not projectors onto separate M1,M2 outcomes.
+
+The registered work effect at a supported clock tick is
+
+  E_s,p,a = Pi_ZS,s Pi_P,p Pi_ZA,a,
+  p(s,p,a | k) = Tr[(Q_k tensor E_s,p,a)rho(t)]/Tr[Q_k rho(t)].
+
+The primary response is action agreement Pr(a=s). Memory agreement is Pr(p=s).
+The parity-dephasing diagnostic is D_P(rho)=(rho+P rho P)/2. This changes later
+predictions without changing the immediate Z_S,P,Z_A distribution.
+
+The writer and actuator are autonomous links of the 512-dimensional parent.
+The diagnostic measurements are explicitly inserted instruments, not additional
+terms silently included in that H. A completely unitary account of a diagnostic
+requires an enlarged parent with a ready detector and specified coupling. The
+finite instrument admits a unitary dilation mathematically; that does not make
+the detector a physically calibrated part of the existing 512-dimensional H.
+
+3. WHY THE PARENT CAN BE SOLVED, NOT JUST NAMED
+
+Set V0=I, V_{k+1}=U_k V_k, T=sum_k Q_k tensor V_k and H_C=Omega J_x for spin
+7/2. Direct block multiplication gives
+
+  H = T(H_C tensor I)T^dagger.
+
+For a tick-zero preparation with any work density rho_W,
+
+  rho_jk(t)=c_j(t)c_k(t)^* V_j rho_W V_k^dagger,
+  c_k(t)=<k|exp(-itH_C)|0>.
+
+Consequently the supported tick-k work state is exactly V_k rho_W V_k^dagger.
+There is no fitted clock-to-work dictionary in this finite identity.
+The clock probabilities are binomial:
+
+  Pr(k)=C(7,k) p^k(1-p)^(7-k),  p=sin^2(Omega t/2).
+
+At t=pi/Omega the final tick has probability one in the ideal model. A clock
+position measurement with its outcome ignored at the midpoint reduces the
+final-tick probability to C(14,7)/4^7 = 0.20947265625. This is an explicit
+backaction prediction, not an assumption that an internal clock is perfect.
+The clock is cyclic; rho returns after 2pi/Omega. No irreversible eternal
+record or universal arrow of time is derived.
+
+Unmeasured total evolution is unitary, so the total density spectrum, entropy
+and total energy distribution are conserved. Subsystem entropies and energies
+can change. The prescribed energy eigenvalues are Omega(m-7/2), m=0,...,7,
+with degeneracy from the work space. These consequences follow from the given
+H, rather than supplying an independently selected Hamiltonian.
+
+4. AN EXACT SMALL LOGICAL CORE
+
+This is an explicit simplification derived from the repository's own memory
+operators. Change the memory basis from (m1,m2) to (g,p)=(m1,m1 xor m2).
+Then
+
+  tau_x=X_M2, tau_y=Z_M1 Y_M2, tau_z=P
+
+act as a Pauli algebra on parity p, while Z_M1 and X_M1 X_M2 generate its
+commuting complement g. The Bell blank becomes |+>_g |0>_p. The writer and
+actuator are CNOT(S,p) and CNOT(p,A); disturbances are Rx on p; the parity phase
+is Rz on p; the lambda hold acts only on g.
+
+For a fixed selector program and a clock-conditioned work protocol, tracing g
+therefore yields an EXACT THREE-QUBIT WORK THEORY on S,p,A:
+
+  rho_logical,0 = |+><+|_S tensor |0><0|_p tensor |0><0|_A;
+  U_logical sequence = CNOT(S,p), I, Rx_p(d1*theta), Rz_p(beta),
+                       Rx_p(d2*theta), CNOT(p,A), I;
+  instruments = declared logical operations, including the parity Z instrument;
+  readouts = Z_S,Z_p,Z_A, with the ordinary Born rule.
+
+More generally rho_logical=Tr_g(rho_W) evolves by the same logical unitary
+sequence for arbitrary work preparations, because each work link factors into
+a logical operation and an operation on g. This is an exact closed prediction
+law for these logical operations; it has no approximation parameter. It is a
+direct algebraic reduction here, not a new numerical production result.
+
+Crucial scope: this three-qubit reduction does not reproduce arbitrary clock
+coherences or measurements of the discarded complementary phase. The full
+autonomous clock Hamiltonian contains the g-dependent hold link; tracing g out
+of its unconditioned clock state need not give autonomous reduced dynamics.
+The full 512-dimensional parent remains the closed model for that larger
+instrument family. Replacing the clock by scheduled laboratory gates implements
+the work theory and does not establish the autonomous clock claim.
+
+For ONLY the registered Z_S,P,Z_A readouts, an even smaller exact effective
+state before the actuator is the four blocks
+
+  w_sa=Tr(rho Pi_ZS,s Pi_ZA,a),
+  v_sa^j=Tr(rho Pi_ZS,s Pi_ZA,a tau_j), j=x,y,z.
+
+They obey w_sa>=0, |v_sa|<=w_sa, sum_sa w_sa=1. The writer rotates v by pi
+about x in the s=-1 blocks. Enabled disturbances rotate about x by theta,
+the parity phase about z by beta, and the hold leaves these variables unchanged.
+At any pre-actuator tick,
+
+  Pr(s,p,a) = (w_sa+p v_sa^z)/2.
+
+The actuator maps the action label a_old to a_new=p*a_old. This terminal rule
+gives every later registered probability, because the remaining link is I.
+Do not extrapolate this terminal classical relabeling to arbitrary subsequent
+quantum operations: new readouts/interventions can require additional retained
+operators. For the fixed two-disturbance readout family, 15 independent linear
+expectations after normalization suffice; the backward-effect rank is 16.
+
+This gives the most useful finite meaning of 'emergence': the memory relevant
+to the actuator is the logical parity and the coherence components that its
+future couplings can turn into observable differences, rather than every degree
+of freedom in the carriers.
+
+5. THE MODEL'S MAIN PREDICTION IN CLOSED FORM
+
+After writing, the sign-corrected parity Bloch vector points along +z. The
+successive x,z,x rotations give, allowing separate fixed pulse angles,
+
+  z_final = cos(theta1)cos(theta2)
+            - sin(theta1)sin(theta2)cos(beta),
+  Pr(a=s) = (1+z_final)/2.
+
+For theta1=theta2=pi/3 and beta=2pi/3,
+  z_final=5/8,  Pr(a=s)=13/16.
+
+Parity dephasing after the first disturbance removes the transverse vector:
+  z_final,dephased=cos(theta1)cos(theta2)=1/4,
+  Pr(a=s | dephased)=5/8.
+
+The coherent contribution to action probability is therefore 3/16. Zero-pulse
+and either single-pulse programs give 1 and 3/4, respectively. The independent
+population-flip comparator q=sin^2(theta/2)=1/4 reproduces those calibrations
+but predicts 5/8 with two pulses. It misses a particular sufficient-state
+requirement, not a new conservation law. The general difference is
+
+  a_coherent-a_dephased = -(1/2)sin(theta1)sin(theta2)cos(beta).
+
+The beta dependence is an additional family of calculable predictions, not a
+new parameter inferred from the one displayed two-pulse outcome. The archived
+numerical checks in the source are historical evidence for the implementation;
+this audit does not rerun them or turn them into laboratory observations.
+
+6. WHAT IS ADOPTED AND WHAT IS DERIVED
+
+Adopted physical/mathematical inputs:
+  finite quantum algebra; Born probabilities; unitary law and oriented parameter
+  t; access algebras and permitted couplings/instruments; clock architecture;
+  link choices/strengths/angles; prepared state and ready resources; physical
+  identification of those mathematical operations with an apparatus.
+
+Derived in the stated finite domain:
+  normalized joint histories and selective/nonselective updates;
+  clock-conditioned work sequence and finite clock disturbance;
+  writing of source-parity correlation and record persistence under specified
+  commuting disturbances; action response to that record;
+  conservation of total unmeasured entropy/energy distribution;
+  coherent/dephased quantitative differences;
+  sufficient effective variables and lower bounds on insufficient summaries.
+
+The common-parent principle prevents contradictory reductions once one parent,
+instrument family and approximation accuracy are specified. It does not select
+H, omega or the physical access structure. The source explicitly proves a
+stationary-data obstruction to one proposed inference of those factors. The
+state's readiness, time orientation and operational architecture remain physical
+inputs rather than consequences of 'closure'.
+
+7. PARAMETER MEANING AND MEASURABILITY
+
+Omega sets the physical time/energy unit. In the abstract replay Omega=1 is a
+unit choice, not a measurement of a cosmic constant. An implementation could
+calibrate its clock probabilities/spectrum against physical timing/energy units.
+
+theta is a rotation angle. A single-pulse parity population gives cos(theta),
+but not by itself the axis/sign or coherent error. Independent phase-sensitive
+operation characterization supplies those identifications.
+
+beta is a relative parity phase. It is invisible to the declared zero/single-
+pulse population calibration. Its value must be independently specified and
+calibrated if the two-pulse response is to be a prediction rather than a fit.
+
+lambda rotates the complementary memory phase. It is invisible to the logical
+parity/action readout family, but is observable through X_M1 X_M2 and
+Y_M1 X_M2. Do not claim its measurement from the action probabilities.
+
+The link strengths g_k and their sqrt((k+1)(7-k)) ratios specify a chosen clock
+implementation. Source/readout axes, qubit labels, preparation fidelity and
+instrument disturbance are apparatus identifications, not universal constants.
+Hamiltonians with different work links here are unitarily equivalent and have
+the same total spectrum; spectroscopy alone cannot identify all work gates.
+This shows why specifying only 'the Hamiltonian spectrum' would not close the
+physical theory.
+
+The values pi/2, pi/3 and 2pi/3 are designed, falsifiable experiment settings.
+They are not derived coupling constants of nature. All quantities appearing
+in the finite predictions have an operational meaning in the stipulated access
+model; whether a real apparatus realizes them is a separate empirical fact.
+
+8. THE HONEST WORKING-THEORY STATEMENT
+
+'GRUT has a closed finite operational candidate: a specified quantum parent
+supports a source, internal clock, parity record and actuator, and an exact
+coherence-aware effective state predicts its registered outcomes and intervention
+responses. In this domain the equations are executable and give nontrivial
+quantitative predictions, including 13/16 versus 5/8 in the two-disturbance test.'
+
+This is stronger than a slogan or an uninstantiated framework. It is weaker than
+a completed physical theory of the universe. The new empirical restriction
+needed to distinguish GRUT from standard quantum mechanics is absent: this
+candidate accepts the standard quantum law and supplies its model/access data.
+An additional rule selecting a restricted family of H, omega or I_access, or
+changing their dynamics/probabilities, would be a different candidate and must
+make its own independent quantitative predictions. No such rule is invented by
+this audit.
+
+The separately adopted semiclassical-GR/Standard-Model action is a target, not
+a derived extension of this finite clock/record model. The Schwinger source
+dictionary and boundary analysis address another stated approximation problem.
+Neither can be supplied merely by relabeling S or the parity memory as spacetime
+or a continuum field.
+
+9. IMMUTABLE EVIDENCE ANCHORS
+
+Integrated definitions/postulates and independent inputs (lines8-56):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L8-L56
+
+Joint history law and instrument/implementation distinction (lines74-91):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L74-L91
+
+Closed parent and access (lines187-217), clock solution (231-243):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L187-L243
+
+Logical basis, controls and prediction (247-280):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L247-L280
+
+Effective-state theorem and closure qualifications (286-346):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L286-L346
+
+Adopted physical target and explicit missing distinctive law (371-465):
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_integrated_candidate_20261106/GRUT_Integrated_Theory.md#L371-L465
+
+Frozen instance specification and parameter card:
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_construction_1_20261106/SPECIFICATION.md
+https://github.com/ryangrvr/TestingGRUT/blob/4300c1836c4967a268fe3b028fa190e0f9886153/research/reality_framework/grut_construction_1_20261106/parameters.json

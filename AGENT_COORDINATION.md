@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_working_theory_20261109 | Codex | W1 closed finite model and mode-resolved response predictor | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6566,3 +6567,8 @@ Frozen R1-01 before physical evaluation: static source matrices, new response ti
 ### 2026-11-09 · Codex · complete R1 diagnostic and prepare EX1 physical protocol
 
 R1-01 freeze18fc45c: all five registered points completed in247.469s; all15 numerical quality gates and independent audit pass. Audit verifies21 source hashes and5 checkpoint hashes; maximum assessment discrepancy9.30e-16. The static-only lattice response predictor passes(error0.000292774); zero-delay moments pass(max0.000916443). Continuum normalized response and invariant spectra fail; reached-state current mismatch exists without free evolution. Registered unitary kicks kappa0.5 and1 pass both current criteria;2 and4 fail. Postrun algebraic supplement gives a guarded current-only sufficient interval |kappa|<=0.7057, with no additional physical trial or changed gate. The continuum three-source predictor fails; no continuum/theory pass asserted. EX1 protocol includes22 ideal and12 synthetic software checks, no hardware/data. N22 historical verdict preserved; B2/D1 misses and massive/P1 obligations unchanged. Deliverable ZIP62 payload files hash-verified, SHA2565f97fd4d137d42cb66d55be1bd16a79a34e8897fa132217fa461da28103dfc88. Claim released; no merge or release.
+
+
+### 2026-11-09 · Codex · freeze W1 constructive working-theory pass
+
+W1 consolidates the finite operational core and explicitly parameterized record/action model. The 500-point theoretical finite-model regression grid was inspected before freeze. A new nine-tick/seven-qubit autonomous dilation and the fixed mode-resolved continuum response comparisons have not been evaluated before this freeze. The primary1024-mode analytic truncation envelope is proved by exact rational inequalities below0.001 for every real time; floating implementation and physical dictionary status remain separate. Primary/diagnostic mode counts, six new times, references, parent cases and bounded resources fixed. Historical N22/B2/D1/R1 outcomes preserved; no hardware/data, fundamental selection law or massive transfer.

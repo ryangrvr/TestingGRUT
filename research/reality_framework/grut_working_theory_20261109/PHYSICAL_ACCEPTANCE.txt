@@ -1,0 +1,291 @@
+M1 physical milestone: prospective acceptance contract and EX1 interval audit
+Prepared 9 November 2026. DRAFT SUCCESSOR CONTRACT; NOT A HARDWARE AUTHORIZATION.
+
+This note reviews work/R1-delivery/EXPERIMENT_PROTOCOL.md without modifying it.
+No device, apparatus calibration, experimental dataset or booking is supplied.
+The proposed rules must be versioned and frozen before any new calibration.
+They cannot be attributed retrospectively to EX1-01, R1, D1, B2 or N22.
+
+1. TWO REQUIRED DELIVERABLES, WITH SEPARATE VERDICTS
+
+M1-P: one calibrated physical realization of the four-qubit Construction 1
+work protocol, with prospective predictions for raw held-out outcomes and an
+explicit, supported uncertainty budget. The quantum and population comparator
+must use the same physical readout convention and independently calibrated
+nuisance information. Outcomes must include attempted-shot erasures.
+
+M1-C: a separately justified continuum dictionary/boundary statement for the
+Schwinger detector experiment. It must identify the source, normalization,
+offset, source interpolation, endpoint placement, prepared/reached state class,
+finite switching and regulator-dependent corrections, then delimit which are
+proved, numerically supported or still assumed. Four-qubit hardware cannot
+supply this field-theory result. Conversely, a continuum numerical match is not
+a laboratory observation. Joint milestone status is the conjunction of the
+two declared deliverables; report each independently.
+
+M1-P success supports a calibrated, finite, externally scheduled operational
+realization under standard quantum mechanics, on the named device/configuration
+and acquired schedule. It does not establish the autonomous 512-dimensional
+clock model, a novel GRUT law, microscopic access/state selection, a general
+continuum theorem or GR/Standard Model recovery. A successful event prediction
+does not identify every internal channel uniquely.
+
+2. WHAT MUST BE FROZEN BEFORE CALIBRATION
+
+Freeze hardware identity/configuration; four-qubit assignment; initialization;
+compiled gates including phase/sign conventions, routing, finite durations and
+matched idles; parity-dephasing implementation; all readout basis rotations;
+the complete attempt/erasure definition; circuit and shot allocation; schedule
+randomization; drift model/sentinels; stopping and failure rules; analysis code;
+admissible model class and constraints; all confidence constructions; numerical
+enclosure method; error-accounting ledger; comparator; calibration exclusions.
+Hash immutable artifacts and record timestamps. Empty template fields block this
+stage. A schema validator cannot certify the truth of an apparatus assumption.
+
+Retain the EX1 resource profile unless explicitly replaced before data:
+1,000,000 attempted calibration/characterization/sentinel shots maximum, followed
+by 20,000 C11, 20,000 P11, 50,000 I_C and 50,000 I_P held-out attempts. No optional
+stopping, unseen postselection, outcome-based rerouting or threshold rescue.
+
+Define the model class operationally: preparation(s), finite-duration gate/idle
+channels, dephaser and physical output POVM, including leakage/erasure. A 16x17
+classical response matrix is valid only with a justified diagonal-in-Z readout
+assumption or a separately bounded departure. It does not represent an arbitrary
+four-qubit POVM. State-preparation errors and SPAM identifiability must be carried
+through; computational-basis preparation labels are not certified input states.
+
+The four-qubit pulse and phase model needs phase-sensitive calibration independent
+of C11/P11. Zero/one-pulse event frequencies alone do not determine beta. Require
+independent parity-phase and Rx-axis/sign probes, within-parity coherence checks
+of the dephaser, leakage, crosstalk, composition and drift coverage. A fitted local
+depolarizing channel or one Rabi fringe is insufficient evidence for a universal
+channel-distance or pulse-error bound.
+
+3. A CONCRETE FINITE-SAMPLE CALIBRATION COVERAGE CONSTRUCTION
+
+Retain alpha_control=0.0025 for the five EX1 baseline control intervals,
+alpha_parameter=0.0025 for all other characterization/stability objects together,
+and alpha_validation=0.005. Total family failure allocation is at most 0.01.
+
+One conservative construction available now is calibration-probability inversion:
+predeclare J characterization circuits, n_j attempts for each, K_j exhaustive
+categories including erasure, and M=sum_j K_j. Under the frozen independent-shot
+observation model, let f_jb be each empirical frequency and define
+
+  h_j = sqrt(log(2*M/alpha_parameter)/(2*n_j)).
+
+Intersect the admissible physical model class Theta_0 with ALL constraints
+
+  |q_jb(theta)-f_jb| <= h_j + eta_jb_cal,
+
+where eta_jb_cal is an independently supported calibration-model remainder fixed
+before observations, zero only when justified. The same construction may include
+preallocated sentinel observations; otherwise reserve their alpha separately.
+Coverage follows by Hoeffding for each bounded category indicator and a union
+bound. Dependencies among category frequencies do not invalidate that union
+bound; dependence across shots would require a different predeclared argument.
+For time-dependent devices, define which scheduled-average probabilities each
+q_jb represents and justify transfer to the validation schedule using the frozen
+drift envelope. Interleaving alone is not such a justification.
+
+This gives a joint confidence set Theta(D) with declared frequentist coverage
+CONDITIONAL ON the observation and physical-model/remainder assumptions. It does
+not prove the physical model class from finite data. Its identifiability test is
+whether the desired prediction projections are narrow, not whether a local
+optimizer found a visually convincing best fit. Empty Theta rejects the model
+class/qualification. Unbounded or broad predictions leave it unresolved. No
+relaxation of constraints or model-class addition after looking at the holdout.
+
+Construct certified outer bounds on predictions over the entire Theta(D):
+L_a <= inf_theta p_a(theta), U_a >= sup_theta p_a(theta), for a=C11,P11.
+A local optimum, posterior percentile or sampling cloud is not automatically an
+outer bound. Use analytic inequalities, validated interval methods or another
+documented enclosure; include numerical slack explicitly. Compute the paired
+contrast and immediate-distribution TV over a COMMON theta rather than fitting
+each arm separately. If the declared calibration cap cannot bound these
+quantities tightly enough, qualification remains unresolved. This is an honest
+possible outcome; the protocol does not guarantee feasibility on an unknown
+device.
+
+An alternative inference method is allowed only if its joint coverage and
+assumptions are specified and justified before calibration. Confidence coverage,
+model adequacy and computational enclosure are three different obligations.
+
+4. EXACT DEFINITIONS PREVENT DOUBLE COUNTING
+
+For each primary arm a, define:
+  p0_C=13/16, p0_P=5/8: ideal reference values, not fitted to data.
+  J_a=[L_a,U_a]: outer projection of the calibrated forward model, including only
+                uncertainty represented inside Theta(D).
+  b_a: summed probability-error bounds for effects NOT represented in Theta(D).
+  B_a=[max(0,L_a-b_a), min(1,U_a+b_a)]: complete physical prediction band.
+  c_a=(L_a+U_a)/2: the fixed midpoint prediction, computed before validation.
+  u_a=(U_a-L_a)/2+b_a: its conservative physical uncertainty.
+
+For every effect (preparation, readout, pulse duration, crosstalk, leakage,
+dephaser imbalance, drift, approximation and numerical enclosure), the ledger
+must specify either 'inside Theta' OR 'external residual', its observable/state
+scope, units, evidence and statistical failure allocation. Do not add the same
+error twice. In particular, finite-duration pulse uncertainty represented by
+the forward channel is not also a full external switching allowance. A certified
+outer optimization already containing numerical slack must not acquire that
+same slack again. Shared physical effects can enter multiple predictions; the
+ban is on double-counting one effect within the same prediction budget.
+
+For immediate distributions, use Q_IC(theta), Q_IP(theta) and per-arm external
+TV bounds b_IC,b_IP. A sufficient comparison bound is
+
+  D_I = sup_theta TV(Q_IC(theta),Q_IP(theta)) + b_IC + b_IP.
+
+If a tighter direct joint bound is derived, record it instead of adding per-arm
+bounds again. Clarify that a total immediate residual budget 0.01 means
+b_IC+b_IP<=0.01, not an unspecified 0.01 independently added at each stage.
+
+Use the original EX1 qualification limits as explicit checks, not as power
+guarantees: width(J_a)<=0.04; b_a<=0.01; B_a inside p0_a+/-0.04; D_I<=0.02.
+The template records these for continuity. Any tightening, added gate or change
+of confidence method is a new prospective contract version.
+
+5. AUDIT OF THE OLD INTERVAL GATE
+
+EX1-01 states max(|phat-L|,|phat-U|)+r+b<=0.06. If L,U are the UNEXPANDED
+model interval and b has not been included, this is a sufficient condition for
+agreement within 0.06 with EVERY allowed expanded physical prediction. It is
+mathematically valid but stronger than ordinary point-prediction equivalence.
+If L,U already include b, adding b again is double counting. Clipping B to [0,1]
+can make the old expression additionally conservative near a boundary.
+
+The phrase 'model discrepancy is excluded' is too broad: one coarse event gate
+cannot validate all microscopic channels or even prove the calibrated prediction
+band contains the true event probability. Example: phat=0.750, r=0.001 and
+B=[0.770,0.780]. All values are within 0.06 of the observation, so uniform coarse
+equivalence passes; the observational CI [0.749,0.751] is nevertheless disjoint
+from B and contradicts that tighter predictive budget.
+
+Qualification also does not guarantee the old gate has uniform statistical
+headroom. A band of width 0.06 can pass qualification, but a true probability
+near its endpoint gives an old uniform metric near 0.06+r. Qualification leaves
+room near the center, not for every member of the band. This is a power issue,
+not failure of confidence coverage.
+
+6. RECOMMENDED SUCCESSOR DECISION, FROZEN BEFORE DATA
+
+Keep the four original RAW validation gates as separate ideal-realization tests:
+  |phat_C-13/16|+r<=0.06;
+  |phat_P-5/8|+r<=0.06;
+  phat_C-phat_P-2r>=0.10;
+  TV(f_IC,f_IP)+2r_TV<=0.05.
+
+Here r=0.013581015157406196 at n=20,000 and alpha_object=0.00125;
+r_TV=0.011667120310490607 at n=50,000, K=9 and the same alpha_object.
+The four confidence objects collectively use alpha_validation=0.005.
+Reuse of their confidence sets in additional gates adds no union penalty.
+All empirical frequencies use attempted shots; erasure never disappears through
+postselection or readout inversion.
+
+Clarify the model sentence in a SUCCESSOR VERSION by three explicit decisions,
+all mandatory for the claimed physical predictive milestone. Retain EX1's strong
+EVERY-admissible-prediction gate; there is no need to weaken it to a midpoint test.
+
+  (P1) Robust uniform event-prediction equivalence, for both arms:
+       |phat_a-c_a| + (U_a-L_a)/2 + r + b_a <= 0.06.
+       This is exactly the original endpoint formula for the UNEXPANDED model
+       interval. It certifies the actual scheduled event probability is within
+       0.06 of EVERY admitted expanded physical prediction on the validation
+       coverage event. SPAM/other parameter uncertainty already in [L,U] enters
+       only through its halfwidth; external residuals enter only once through b.
+       Numerical error must be either enclosed in [L,U] or included in b, not both.
+       Keeping the unclipped formula is a conservative prospective convention.
+
+  (P2) Calibrated-budget non-contradiction: the observational confidence interval
+       O_a=[max(0,phat_a-r),min(1,phat_a+r)] must intersect B_a, for both arms.
+       Disjointness rejects the registered prediction budget at joint declared
+       coverage. Overlap is non-contradiction, not proof of the model.
+
+  (P3) Common-model consistency: exhibit or certify existence of one admissible
+       theta whose external-residual-expanded predictions intersect ALL four
+       validation confidence objects simultaneously. Coordinatewise overlap can
+       mix incompatible theta values; it is necessary but not sufficient.
+       The immediate confidence objects are TV balls around f_IC,f_IP. If joint
+       feasibility cannot be established, verdict unresolved; a verified witness
+       is enough for feasibility, whereas exclusion requires a certified global
+       argument. This check is not a fit that updates predictions or Theta.
+
+For clarity only, |phat-c|+r<=0.06 would be a weaker MIDPOINT-ONLY variant: it
+certifies accuracy relative to one frozen point, not every admissible prediction.
+It is not recommended here and does not replace P1. Adopting it would require a
+separately labeled prospective change and a corresponding narrower claim.
+
+Before validation, publish a power/headroom calculation over the calibrated
+prediction set. Simple conservative sufficient conditions for acceptance whenever
+the validation confidence event holds are:
+  robust uniform gate: (U_a-L_a)+2*b_a+2r<=0.06;
+  ideal-reference gate: sup_{q in B_a}|q-p0_a|+2r<=0.06;
+  contrast gate: calibrated lower contrast -4r>=0.10;
+  immediate gate: D_I+4r_TV<=0.05.
+These are sufficient worst-case conditions, not necessary power criteria and not
+new empirical evidence. They show exactly where EX1's original qualification can
+be weak: .04+2r=.06716 exceeds .06, and .02+4r_TV=.06667 exceeds .05. A proper
+predata power calculation may instead use the frozen categorical prediction
+sets. Disclose inadequate power before acquisition; revise resources only in a
+new predata version. Do not label all calibration-qualified configurations likely
+to pass by construction.
+
+Population-only comparator rejection is a SEPARATE discrimination statement.
+Use its frozen physical prediction set, including the same nuisance conventions
+and one-counted residuals. Reject it only if it has no admissible member consistent
+with the validation confidence objects (a disjoint event interval suffices).
+Otherwise record 'comparator not discriminated'. A contrast alone is not a
+universal rejection of classical descriptions. If discriminator success is made
+part of the milestone, specify that conjunction now; it cannot be appended after
+seeing a favorable outcome.
+
+Overall M1-P requires valid adapter/coverage, independent calibration qualification,
+completed held-out collection, supported sampling assumptions, stable frozen
+drift envelope, four raw gates and P1-P3. An overall pass does not follow merely
+from a file validator, numerical solver, plausible best fit or statistical scorer.
+Distinguish empirical failure at the declared accuracy from incomplete collection,
+unsupported model adequacy, undecidable numerical feasibility and missing input.
+
+7. EVIDENCE AND ACCEPTANCE RECORD
+
+Pre-calibration record: adapter identity, circuit/schedule manifests, model class,
+coverage proof, calibration allocation, ledger, comparator and code hashes.
+Post-calibration/pre-validation record: immutable calibration data, model-confidence
+set, certified prediction projections, c/u/B values, joint prediction geometry,
+qualification decisions, power analysis, prediction-freeze hash and timestamp.
+Post-validation record: raw attempted-shot logs/settings/timestamps/erasures,
+confidence objects and all gates, model-feasibility witness or exclusion proof,
+sentinels, failures/aborts, unchanged freeze hashes, and an exact scoped claim.
+
+Suggested success wording:
+'On device [ID/configuration], the frozen calibrated four-qubit work protocol
+predicted the held-out raw event probabilities within [reported bounds]. All
+registered calibration, validation and model-consistency conditions passed under
+[explicit assumptions]. This supports this finite operational GRUT realization
+under standard quantum mechanics. The continuum dictionary verdict is [separate
+M1-C status].'
+
+8. SOURCE BASIS
+
+Historical EX1 document reviewed: work/R1-delivery/EXPERIMENT_PROTOCOL.md.
+Construction 1 gates and postulates are anchored there to repository commit
+7ba04fd35e47870cbdb41268b2d7ffd33f567f51. No original repository file was changed.
+
+Bounded-sum confidence construction: Hoeffding (1963),
+https://www.tandfonline.com/doi/abs/10.1080/01621459.1963.10500830
+Original paper copy:
+https://www.cs.rpi.edu/academics/courses/spring06/random/hoefding.pdf
+The confidence-set inversion, interval distinctions and power inequalities above
+are direct derivations for this contract; they are not reported experimental facts.
+
+Parity measurement rule: Luders (1951), English translation, Eq.(8),
+https://arxiv.org/html/quant-ph/0403007v2
+No current hardware performance or availability claim is made.
+
+Prepared companion files: milestone_device_adapter.template.json contains null
+blocking fields and distinct not_run/verified_feasible/verified_infeasible/
+unresolved states. milestone_contract_precheck.py and its JSON result exercise
+synthetic interval/decision examples and show the template is NOT_READY. They
+are not a complete adapter validator, a physical certificate engine or empirical
+data. No missing model adequacy or feasibility proof is replaced by a Boolean.

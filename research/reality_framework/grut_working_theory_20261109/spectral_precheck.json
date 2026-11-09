@@ -1,0 +1,110 @@
+{
+  "precheck": {
+    "scope": "Synthetic four-mode matrices and exact rational analytic envelopes only; no physical source evaluated.",
+    "checks": {
+      "dense_independent_evolution": true,
+      "discarded_covariance_PSD": true,
+      "raw_uniform_tail_example": true,
+      "canonical_tail_example": true,
+      "t0_preserved": true,
+      "contraction": true,
+      "rational_primary_certificate": true
+    },
+    "dense_error": 1.0783601417492104e-16,
+    "raw_error": 0.0014000000000000022,
+    "raw_bound": 0.001400000000000002,
+    "canonical_error": 0.07872758810729083,
+    "canonical_bound": 0.28915606318325066,
+    "passed": true
+  },
+  "rational_certificate": {
+    "scope": "Exact rational verification of analytic envelopes; no source response evaluated.",
+    "pi_lower": {
+      "numerator": 662885488445264068231600456375085328130013963102258180212,
+      "denominator": 211003004379978485262624923760480073663001011505126953125,
+      "decimal": 3.141592653588602
+    },
+    "pi_upper": {
+      "numerator": 58024674677047352594459555745850683441092592478456112,
+      "denominator": 18469827592302173041668118884515333560599517822265625,
+      "decimal": 3.1415926535898357
+    },
+    "coefficient_loss_squared_upper": {
+      "numerator": 10634,
+      "denominator": 255507,
+      "decimal": 0.041619211998105726
+    },
+    "covariance_lower_bound": {
+      "numerator": 1323,
+      "denominator": 163328,
+      "decimal": 0.008100264498432602
+    },
+    "covariance_upper_bound": {
+      "numerator": 1,
+      "denominator": 16,
+      "decimal": 0.0625
+    },
+    "mode_bounds": {
+      "16": {
+        "raw_primary_tail": {
+          "numerator": 7,
+          "denominator": 2304,
+          "decimal": 0.0030381944444444445
+        },
+        "uniform_canonical_error": {
+          "numerator": 7356778,
+          "denominator": 2250423,
+          "decimal": 3.269064526980039
+        },
+        "below_one_tenth_percent": false
+      },
+      "64": {
+        "raw_primary_tail": {
+          "numerator": 7,
+          "denominator": 36864,
+          "decimal": 0.00018988715277777778
+        },
+        "uniform_canonical_error": {
+          "numerator": 3678389,
+          "denominator": 18003384,
+          "decimal": 0.20431653293625243
+        },
+        "below_one_tenth_percent": false
+      },
+      "256": {
+        "raw_primary_tail": {
+          "numerator": 7,
+          "denominator": 589824,
+          "decimal": 1.1867947048611111e-05
+        },
+        "uniform_canonical_error": {
+          "numerator": 3678389,
+          "denominator": 288054144,
+          "decimal": 0.012769783308515777
+        },
+        "below_one_tenth_percent": false
+      },
+      "1024": {
+        "raw_primary_tail": {
+          "numerator": 7,
+          "denominator": 9437184,
+          "decimal": 7.417466905381945e-07
+        },
+        "uniform_canonical_error": {
+          "numerator": 3678389,
+          "denominator": 4608866304,
+          "decimal": 0.0007981114567822361
+        },
+        "below_one_tenth_percent": true
+      }
+    },
+    "proof_checks": {
+      "machin_lower_above_three": true,
+      "machin_upper_below_22_over_7": true,
+      "coefficient_loss_squared_below_one_sixteenth": true,
+      "positive_covariance_lower_bound": true,
+      "primary_1024_below_one_thousandth": true
+    },
+    "passed": true
+  }
+}

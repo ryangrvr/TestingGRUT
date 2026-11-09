@@ -1,0 +1,381 @@
+Finite-dimensional boundary of the source-current dictionary
+============================================================
+
+Scope: self-contained finite-matrix derivations, with no new physical
+simulation or production-data evaluation. This note constrains a current
+form (a double commutator). Agreement of that form is necessary for the
+adopted source response, but does not establish the full observable map,
+all detector probabilities, a continuum theorem, or empirical GRUT.
+
+1. An exact obstruction to an all-state finite-dimensional dictionary
+--------------------------------------------------------------------
+Let H and G be Hermitian matrices on a finite-dimensional Hilbert space of
+dimension d>0, and define
+
+  S(G) = [G,[H,G]] = 2GHG - G^2 H - H G^2.
+
+Cyclicity of the finite matrix trace gives Tr S(G)=0. S(G) is Hermitian,
+so its smallest eigenvalue is <=0. For every c>0,
+
+  ||S(G)-c I||_op >= c.
+
+Proof: on an eigenvector of S(G) with eigenvalue s_min<=0, the difference
+has absolute eigenvalue |s_min-c|>=c. Equivalently the maximally mixed state
+rho_*=I/d has Tr(rho_* S(G))=0, while the proposed positive continuum
+c-number current has expectation c. There is no finite-dimensional model
+with relative error strictly below 100% uniformly over every state for
+this positive c-number identity. This is independent of numerical accuracy.
+
+For commuting Hermitian sources G_i, Jacobi's identity gives a symmetric
+Hermitian source-current matrix of operators
+
+  S_ij=[G_i,[H,G_j]],  S_ij=S_ji.
+
+Let C>0 be the target continuum current matrix and let S(rho)_ij=Tr rho S_ij.
+For rho_*, S(rho_*)=0, hence
+
+  || C^(-1/2) [S(rho_*)-C] C^(-1/2) ||_op = 1.
+
+The worst-state normalized discrepancy is therefore at least one. A pure
+state witness also exists for each nonzero source direction by applying
+the scalar proof to G(u)=sum_i u_i G_i. Commutativity is used for the
+matrix-current symmetry; the scalar trace obstruction needs only H,G
+Hermitian.
+
+This does NOT exclude convergence on a physically specified set of states,
+a low-energy sector, selected matrix elements, or finite-resolution
+experiments. It excludes an unqualified uniform all-state identification
+at fixed finite Hilbert-space dimension. A continuum limit must explicitly
+specify its state domain, source test functions, topology of convergence,
+and error control. The trace argument by itself proves no such limit.
+
+2. The correct state-restricted current statement
+------------------------------------------------
+Fix the physical state family R BEFORE testing, including every actually
+reached conditional state for the proposed experiment. The operational
+current requirement is
+
+  sup_{rho in R} || C^(-1/2)[S(rho)-C]C^(-1/2) ||_op <= epsilon.
+
+A finite collection of tested states proves only those comparisons unless
+a separate argument covers the rest of R. Convex mixtures of a certified
+collection inherit the same bound by convexity. Postselection generally
+does not stay in that convex hull and is not covered automatically.
+
+If R is every density matrix supported on a specified orthogonal projector
+P, put G_u=sum_i (C^(-1/2)u)_i G_i for real unit source vectors u. Then the
+exact equivalent criterion is
+
+  sup_{||u||=1} || P([G_u,[H,G_u]]-I)P ||_op <= epsilon,
+
+where the norm is on the range of P. This follows by writing the symmetric
+source-matrix norm as sup_u |u^T(.)u| and then optimizing the scalar
+expectation over all states supported on P. The compressed current can
+be positive even though its full-space trace is zero: compression changes
+the state domain. A source-by-Hilbert-space block-operator bound is a
+sufficient stronger certificate, but should not be silently presented as
+equivalent; it can also test source/state-entangled vectors that the
+operational criterion never uses.
+
+Compression must keep the full intermediate transitions. In general
+P[G,[H,G]]P is NOT [PGP,[PHP,PGP]] evaluated as an operator on range(P).
+Replacing H and G by their compressed matrices before forming the double
+commutator can discard transitions through the complementary space and
+reintroduces the finite-trace obstruction in an inappropriate truncated
+model. The two-dimensional toy accompanying this note explicitly checks
+this distinction.
+
+3. Exact kick law, including initial currents
+--------------------------------------------
+On bond j write H_j=t_j(T_j+T_j^dagger), J_j=i t_j(T_j-T_j^dagger), and fix
+the orientation by [F,T_j]=w_j T_j for the real detector weights w_j.
+For U_kappa=exp(i kappa F), direct conjugation gives
+
+  U_kappa^dagger H_j U_kappa
+    = cos(kappa w_j) H_j - sin(kappa w_j) J_j.
+
+Let h_j=<H_j>, q_j=<J_j> in the initial state and let v_j be the real column
+of primary source weights. For B_j=v_j v_j^T>=0, the frozen lattice current
+is
+
+  S_0=-sum_j h_j B_j,
+  S_kappa=sum_j [-h_j cos(kappa w_j)+q_j sin(kappa w_j)] B_j.
+
+Thus an initial imaginary bond current contributes a sine term. Its sign
+depends on the declared hopping orientation; all bounds below use absolute
+values and are independent of that convention. Vanishing q_j is an
+additional state property, not a consequence of the numerical norm of h_j.
+
+4. PSD special case and its robust extension
+-------------------------------------------
+If every h_j<=0 and every q_j=0, define A_j=-h_j B_j>=0. Then
+
+  D_kappa=S_0-S_kappa=sum_j [1-cos(kappa w_j)]A_j,
+  0<=D_kappa<=delta S_0,
+  delta=max_j[1-cos(kappa w_j)]<=min(2,kappa^2 w_max^2/2).
+
+For S_0>0 and C>0, define
+
+  d_kappa=||S_0^(-1/2)(S_kappa-S_0)S_0^(-1/2)||_op,
+  e_kappa=||C^(-1/2)(S_kappa-C)C^(-1/2)||_op,
+  e_0=||C^(-1/2)(S_0-C)C^(-1/2)||_op.
+
+Then d_kappa<=delta and e_kappa<=e_0+(1+e_0)delta. These inequalities do not
+require positive cosines. They follow from PSD order and the triangle
+inequality, not a truncated Taylor expansion.
+
+For positive h_j or nonzero q_j, define the PSD defect matrices
+
+  A_-=sum_j max(h_j,0) B_j,
+  Q_abs=sum_j |q_j| B_j,
+  eta_M=||M^(-1/2) A_- M^(-1/2)||_op,
+  j_M=||M^(-1/2) Q_abs M^(-1/2)||_op,
+  sigma=max_j |sin(kappa w_j)|<=min(1,|kappa|w_max).
+
+Writing A_+=sum_j max(-h_j,0)B_j gives S_0=A_+-A_- and
+A_++A_-=S_0+2A_-. Each coefficient of D_kappa lies between its negative
+and positive absolute bound, so for any positive metric M,
+
+  ||M^(-1/2)D_kappa M^(-1/2)||_op
+    <= delta ||M^(-1/2)(A_++A_-)M^(-1/2)||_op + sigma j_M.
+
+Consequently
+
+  d_kappa <= delta(1+2 eta_S0) + sigma j_S0,
+  e_kappa <= e_0 + delta(1+e_0+2 eta_C) + sigma j_C.
+
+These bounds remain valid when some initial hoppings are positive. They
+make explicit the additional budget required to allow such bonds and
+initial currents. The q term is generally linear in |kappa| near zero;
+one cannot retain the purely quadratic kick budget unless that term is
+certified absent or small.
+
+5. Incorporating certified input uncertainty
+-------------------------------------------
+Suppose certified intervals, not merely central floating-point estimates,
+give |h_j-hhat_j|<=r_hj, |q_j-qhat_j|<=r_qj, and |w_j|<=wbar_j. With exact
+source vectors v_j and exact positive target C, form
+
+  Shat_0=-sum_j hhat_j B_j,
+  E_h=sum_j r_hj B_j,
+  eta_h=||C^(-1/2)E_h C^(-1/2)||_op,
+  ebar_0=||C^(-1/2)(Shat_0-C)C^(-1/2)||_op+eta_h,
+  Abar_-=sum_j max(hhat_j+r_hj,0) B_j,
+  Qbar_abs=sum_j (|qhat_j|+r_qj) B_j.
+
+Then e_0<=ebar_0, A_-<=Abar_- and Q_abs<=Qbar_abs. If ebar_0<1, it also
+certifies S_0>0. Define eta_bar and j_bar by whitening Abar_- and Qbar_abs
+with C. Since S_0>=(1-ebar_0)C, the robust simultaneous sufficient bounds
+are
+
+  d_kappa <= delta[1+2 eta_bar/(1-ebar_0)]
+                       +sigma j_bar/(1-ebar_0),
+  e_kappa <= ebar_0+delta(1+ebar_0+2 eta_bar)+sigma j_bar,
+
+where delta<=kappa^2 wbar_max^2/2 and sigma<=|kappa|wbar_max may be used
+globally, with optional caps 2 and 1 respectively. No sign certification
+is needed for this robust version; certifying hhat_j+r_hj<=0 removes the
+positive-hopping term. Certifying |qhat_j|+r_qj=0 removes the sine term.
+
+If source vectors are also calibrated with ||v_j-vhat_j||<=r_vj, work in a
+fixed metric C: qhatv_j=C^(-1/2)vhat_j and r_zj=||C^(-1/2)||r_vj. Then
+
+  ||zz^T-qhatv_j qhatv_j^T|| <= 2||qhatv_j||r_zj+r_zj^2.
+
+A conservative contribution to the baseline current error is
+
+  sum_j { |hhat_j|[2||qhatv_j||r_zj+r_zj^2]
+           +r_hj(||qhatv_j||+r_zj)^2 }.
+
+Similarly eta_bar and j_bar can be upper-bounded by replacing each
+whitened rank-one norm with (||qhatv_j||+r_zj)^2 and summing the positive
+coefficient bounds. These are conservative scalar bounds, not tight fits.
+
+If the target current C_true itself has certified relative uncertainty
+||Cbar^(-1/2)(C_true-Cbar)Cbar^(-1/2)||<=eta_C<1, a certified error ebar
+relative to Cbar implies
+
+  ||C_true^(-1/2)(S-C_true)C_true^(-1/2)||
+    <= (ebar+eta_C)/(1-eta_C).
+
+Use this conversion in the final physical allowance; do not absorb target
+calibration error into a fitted normalization. Independence of calibration
+data and held-out observations is an experimental obligation outside the
+finite-matrix proof.
+
+6. A closed sufficient radius with the uncertainty terms retained
+----------------------------------------------------------------
+For exact target C and ebar_0<1, let tau be the fixed allowance and epsilon
+any additional reserve not already counted in the certified uncertainties.
+Require tau>epsilon+ebar_0. Define
+
+  a_d=(wbar_max^2/2)[1+2 eta_bar/(1-ebar_0)],
+  b_d=wbar_max j_bar/(1-ebar_0),
+  a_e=(wbar_max^2/2)(1+ebar_0+2 eta_bar),
+  b_e=wbar_max j_bar,
+  m_d=tau-epsilon,  m_e=tau-epsilon-ebar_0.
+
+The two inequalities a_d r^2+b_d r<=m_d and a_e r^2+b_e r<=m_e certify
+both current requirements for every |kappa|<=r. For a>0, b>=0, m>0, the
+positive root can be evaluated stably as
+
+  R(a,b,m)=2m/[b+sqrt(b^2+4am)].
+
+Take r=min(R(a_d,b_d,m_d),R(a_e,b_e,m_e)). When a=0,b>0 use m/b; when
+a=b=0 the corresponding inequality imposes no finite radius. Negative
+m means this sufficient rule provides no interval around zero. This
+derivation is predictive only after all input bounds, state domain,
+allowances, and reserve allocations are fixed.
+
+7. Why a small ground-state residual does not certify these inputs
+----------------------------------------------------------------
+Let psi be normalized, Ehat=<psi,H psi>, r=||(H-Ehat)psi||. Even r=0 does
+not identify the ground state: an exact excited eigenvector is a direct
+counterexample. A gap value without an energy/branch identification does
+not fix that problem.
+
+For a unique ground state Omega, suppose an independent spectral
+certificate gives E_1>=L_1>Ehat, with L_1 a valid lower bound on every
+excited energy. Put d=L_1-Ehat>0. Expanding psi in exact eigenvectors,
+
+  r^2=sum_n |c_n|^2(E_n-Ehat)^2
+      >=d^2 sum_{n>=1}|c_n|^2.
+
+Therefore the excited norm is <=r/d and
+
+  || |psi><psi|-|Omega><Omega| ||_1 <=2 min(1,r/d).
+
+For any bounded Hermitian observable A this implies
+
+  |<A>_psi-<A>_Omega| <=2||A|| min(1,r/d),
+
+or the tighter spectral-range(A)*min(1,r/d) after centering A. Apply such
+bounds to each H_j and J_j to obtain the input intervals above. A certified
+ground-energy enclosure and excited-energy lower bound can supply the
+needed branch isolation. In a degenerate ground space, this certifies
+distance to that subspace, not a unique physical ground-state density
+matrix or its detector predictions.
+
+Hamiltonian calibration must also enter the spectral/state certificate.
+For H=Hhat+DeltaH, ||DeltaH||<=epsilon_H, and a directional source
+G=Ghat+DeltaG, ||DeltaG||<=epsilon_G, direct commutator norm inequalities
+give
+
+  ||[G,[H,G]]-[Ghat,[Hhat,Ghat]]||
+  <=4 epsilon_H(||Ghat||+epsilon_G)^2
+      +8||Hhat||||Ghat||epsilon_G+4||Hhat||epsilon_G^2.
+
+Scalar identity offsets can be removed before taking these norms because
+they do not affect commutators. A separate FULL trace-norm state error
+epsilon_rho=||rho-rhohat||_1 contributes at most
+epsilon_rho ||[Ghat,[Hhat,Ghat]]|| to the
+directional expectation error. The resulting directional error bounds
+must be uniform over the normalized source directions to certify the
+matrix criterion. An arbitrary reserve is not a substitute for these
+certified calibration and state-error bounds.
+
+8. What remains uncertified in the archived N22 result
+----------------------------------------------------
+The earlier |kappa|<=0.7057 result was a guarded algebraic consequence of
+the archived N22/N22_refined central matrices. It was not based on a
+rigorous ground-gap/branch certificate, interval arithmetic for those
+inputs, or a physical calibration error budget. This note does not
+retroactively upgrade it. The registered numerical comparisons and their
+failures remain unchanged. A certified continuum dictionary needs its
+specified state domain and continuum error proof in addition to this
+finite current-form bound. A calibrated physical realization needs
+independent parameter/state calibration, a frozen prediction with a
+complete error budget, and held-out experimental data. Current-form
+agreement alone supplies neither milestone.
+
+9. A finite-duration controlled source pulse has an explicit error budget
+------------------------------------------------------------------------
+For the finite chain's directed nearest-neighbor hop T_j, T_j^2=0 and
+T_j+T_j^dagger and T_j-T_j^dagger have operator norm at most one (one on
+an allowed two-state hopping block). With H_j=(T_j+T_j^dagger)/(2a),
+all other terms diagonal and commuting with F, and [F,T_j]=w_j T_j,
+
+  ||[H,F]|| <= sum_j |w_j|/(2a) =: B_F.
+
+This bound is valid also after restriction to a charge sector invariant
+under H and F. Additional hardware Hamiltonian terms must be separately
+bounded; they cannot be silently assumed to commute with the source.
+
+Center the pulse time interval on zero, t in [-tau/2,tau/2], and use
+H(t)=H-u(t)F with signed area kappa=int u(t)dt. In the interaction frame
+of H, F_I(t)=exp(iHt)F exp(-iHt), and integration of its derivative gives
+||F_I(t)-F||<=|t| B_F. The unitary Duhamel identity therefore yields
+
+  ||U_I-exp(i kappa F)|| <= B_F int |u(t)| |t|dt.
+
+For a centered flat pulse u(t)=kappa/tau, this is
+
+  delta_U <= |kappa| tau B_F/4.
+
+The factor 1/4 is the exact centered flat-profile first absolute time
+moment, not a series estimate. A pulse profile, area, or timing uncertainty
+requires a certified upper bound on the corresponding integral. For a
+flat pulse centered at a timing error t0, the simple bound
+int |u||t|dt <= |kappa|(tau/4+|t0|) is sufficient.
+
+The comparison is in the interaction frame. In the laboratory frame the
+instantaneous ideal comparator is
+
+  exp(-iH tau/2) exp(i kappa F) exp(-iH tau/2),
+
+which retains the free half-intervals. Comparing directly with exp(i kappa
+F) while ignoring free evolution would give a false zero error at kappa=0.
+For a controlled source unitary the same operator bound holds on the
+ancilla-controlled block. Affine offsets of F remain physical controlled
+phase calibrations; their commutator vanishes but they cannot be omitted
+from a prediction for interferometric detector probabilities.
+
+For the lattice current of a source direction u, write z_j=v_j^T u. Its
+operator is S_u=-sum_j z_j^2 H_j. Consequently
+
+  ||S_u|| <= sum_j z_j^2/(2a)
+           = (pi/2) u^T C u,
+  C=(1/(pi a)) sum_j v_j v_j^T.
+
+If D_tr(rho,sigma)=(1/2)||rho-sigma||_1, the expectation inequality gives
+
+  ||C^(-1/2)[S(rho)-S(sigma)]C^(-1/2)|| <= pi D_tr(rho,sigma).
+
+For unitary operators U,V on the same input state,
+D_tr(U rho U^dagger,V rho V^dagger)<=||U-V||. Therefore a finite-pulse
+implementation of the ideal instantaneous kick adds at most pi delta_U
+to its current discrepancy; a separately bounded preparation error
+D_prep adds at most pi D_prep. Use min(1,D_prep+delta_U) if desired. These
+terms are added to the ideal-kick budget without double-counting state or
+operator errors already included in the coefficient intervals. They do
+not automatically cover selected detector branches, whose normalization
+requires a separately certified probability floor and error propagation.
+
+The archived 0.7057 radius includes neither this finite-pulse term nor a
+certified exact-ground/preparation uncertainty. A physical current-only
+operating condition must instead satisfy, for example,
+
+  certified_ideal_current_error
+    +pi(delta_U+D_prep)+certified_operator_error+other_reserved_errors
+    <= fixed_allowance,
+
+with each term justified and fixed before evaluating held-out data. This
+is a bounded finite-duration condition; a physically zero-width pulse is
+not assumed. Coupling-area, source-shape, Hamiltonian and detector phase
+calibration uncertainties must likewise appear in the prediction budget.
+
+10. What a full observable/instrument dictionary would additionally need
+------------------------------------------------------------------------
+The current form controls only one aspect of response. A sufficient route
+to a full finite experiment comparison would separately specify a bounded
+energy/source/reached-state domain and a validated isometry relating the
+lattice and continuum state spaces on that domain. One then needs explicit
+Hamiltonian and source intertwining bounds, controlled propagation leakage
+outside the domain, detector-operation/channel approximation bounds,
+finite-pulse and calibration errors, and normalization floors for any
+conditional claims. Those bounds must be propagated through the actual
+finite sequence of preparation, evolution and measurement. This note
+does not supply that isometry, continuum leakage theorem, or full error
+budget. No current-only result should be represented as having supplied
+them. These are the precise outstanding mathematical obligations beside
+the independent calibrated, held-out experimental milestone.

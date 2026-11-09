@@ -1,0 +1,180 @@
+{
+  "contract_id": "M1-EX1-02-prospective-clarification-draft",
+  "historical_EX1_modified": false,
+  "status": "INCOMPLETE_TEMPLATE_NOT_READY",
+  "actual_hardware_or_experimental_data": false,
+  "device": {
+    "identifier": null,
+    "configuration": null,
+    "logical_mapping": null,
+    "initialization": null,
+    "finite_pulse_schedule": null,
+    "readout_model_and_SPAM_assumptions": null,
+    "parity_dephaser_implementation": null,
+    "leakage_handling": null
+  },
+  "precalibration_artifacts": {
+    "circuit_schedule_manifest": {
+      "path": null,
+      "sha256": null
+    },
+    "calibration_circuits_and_allocations": {
+      "path": null,
+      "sha256": null
+    },
+    "physical_model_and_constraints": {
+      "path": null,
+      "sha256": null
+    },
+    "joint_coverage_argument": {
+      "path": null,
+      "sha256": null
+    },
+    "certified_projection_method": {
+      "path": null,
+      "sha256": null
+    },
+    "sampling_and_drift_model": {
+      "path": null,
+      "sha256": null
+    },
+    "population_comparator": {
+      "path": null,
+      "sha256": null
+    },
+    "outcome_erasure_contract": {
+      "path": null,
+      "sha256": null
+    },
+    "analysis_code": {
+      "path": null,
+      "sha256": null
+    },
+    "prospective_power_analysis": {
+      "path": null,
+      "sha256": null
+    }
+  },
+  "fixed_profile": {
+    "calibration_shot_cap": 1000000,
+    "validation_shots": {
+      "C11": 20000,
+      "P11": 20000,
+      "I_C": 50000,
+      "I_P": 50000
+    },
+    "alpha_controls": 0.0025,
+    "alpha_parameter_and_stability": 0.0025,
+    "alpha_validation": 0.005,
+    "robust_probability_tolerance": 0.06,
+    "raw_ideal_probability_tolerance": 0.06,
+    "contrast_lower_required": 0.1,
+    "immediate_TV_upper_required": 0.05
+  },
+  "error_accounting": {
+    "interval_definition": "J=[L,U] includes parameter uncertainty only; b external residual; B=clip(J+[-b,b])",
+    "robust_gate": "abs(phat-mid(J)) + width(J)/2 + r + b <= 0.06",
+    "compatibility_gate": "observation_CI intersects B, plus common-theta feasibility over all four confidence objects",
+    "components": {
+      "preparation_SPAM": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "readout": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "finite_pulse": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "crosstalk": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "leakage": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "dephaser_imbalance": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "drift": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "model_approximation": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      },
+      "numerical_enclosure": {
+        "placement": null,
+        "external_bound": null,
+        "state_and_observable_scope": null,
+        "evidence_path": null,
+        "evidence_sha256": null
+      }
+    }
+  },
+  "calibration_result_and_prediction_freeze": null,
+  "continuum_dictionary_deliverable": {
+    "status": "SEPARATE_TASK",
+    "document_and_scope": null,
+    "experimental_evidence_does_not_prove_continuum_dictionary": true
+  },
+  "validator_limit": "Structure and file hashes only; never an apparatus qualification or empirical pass.",
+  "validation_decisions": {
+    "P1_robust_uniform": {
+      "status": "not_run",
+      "decision": null,
+      "metrics": null
+    },
+    "P2_coordinate_band_compatibility": {
+      "status": "not_run",
+      "decision": null,
+      "metrics": null
+    },
+    "P3_common_model_feasibility": {
+      "status": "not_run",
+      "decision": null,
+      "evidence_path": null,
+      "evidence_sha256": null,
+      "allowed_statuses": [
+        "not_run",
+        "verified_feasible",
+        "verified_infeasible",
+        "unresolved"
+      ]
+    },
+    "overall_physical_milestone": {
+      "status": "not_run",
+      "decision": null,
+      "statistical_checks_alone_are_insufficient": true
+    }
+  }
+}

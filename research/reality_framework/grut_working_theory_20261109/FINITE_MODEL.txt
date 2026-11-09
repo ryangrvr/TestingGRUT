@@ -1,0 +1,264 @@
+W1: a finite, parameterized Construction 1 realization
+
+Status: mathematical model and deterministic theoretical checks only. No hardware
+data, fitted parameters, simulated shots or empirical validation. The model uses
+ordinary finite-dimensional quantum mechanics; it is not an additional GRUT law.
+It supplies a complete finite operational realization conditional on its stated
+Hamiltonians, initial state, channels and readout. A real device must independently
+qualify those assumptions and then face held-out tests.
+
+1. Definitions and finite physical schedule
+
+Four work qubits are ordered (S,M1,M2,A), with Z|b>=(-1)^b|b>. Write
+P=Z_M1 Z_M2. The initial boundary state is |0000>. Initial reset is a preparation
+assumption with an explicit error allowance; it is not derived from the unitary
+model. Finite preparation pulses make |+>_S |Phi+>_M1M2 |0>_A.
+
+Use eta in [0,1] for coherence survival. This avoids confusing it with the original
+Construction 1 hold phase, historically denoted lambda and fixed to pi/2.
+
+Every pulse below has strictly positive duration. In hbar=1 units, Hamiltonians
+are angular frequencies (rad/ns). The illustrative durations are specifications
+of an exact finite model, not claims about an available device:
+
+  segment                       duration ns  Hamiltonian
+  simultaneous H on S,M1             20     pi/(2t) [(X_S+Z_S)+(X_M1+Z_M1)]/sqrt2
+  Bell CNOT(M1,M2)                   100     H_CNOT(M1,M2)
+  writer CNOT(S,M2)                  100     H_CNOT(S,M2)
+  historical hold                    20     phi Z_M1/(2t), phi=pi/2
+  first disturbance                  40     theta1 X_M2/(2t)
+  dephasing/identity slot             60     random finite I/P pulse, below
+  parity phase                       80     beta P/(2t)
+  second disturbance                 40     theta2 X_M2/(2t)
+  actuator CNOT(M1,A)                100     H_CNOT(M1,A)
+  actuator CNOT(M2,A)                100     H_CNOT(M2,A)
+
+Total duration is 660 ns. A disabled disturbance uses theta=0 for the same 40 ns
+slot. There is no instantaneous-pulse approximation. Hadamard phases are global
+and disappear from the density matrix. Exactly,
+
+  H_CNOT(c,targ)=pi/(2t) |1><1|_c (I-X_targ),
+  exp(-i t H_CNOT)=CNOT(c,targ).
+
+For a pulse with a known fixed axis, an arbitrary bounded envelope gives the same
+rotation with area theta=integral Omega(t)dt because its Hamiltonians commute at
+different times. The rectangular schedule above is one explicit choice. Unknown
+detuning, axis error, overlap, crosstalk or additional dissipation is not absorbed
+into theta or eta without derivation; it belongs in a separately bounded channel
+remainder or in an explicitly enlarged dynamical model.
+
+The dephasing slot is
+
+  Lambda_eta(rho)=(1+eta)rho/2+(1-eta)P rho P/2.
+
+It preserves both parity blocks and multiplies cross-parity blocks by eta. One
+finite realization chooses H=0 with probability (1+eta)/2 and H=pi P/(2t) with
+probability (1-eta)/2 for the same positive slot duration. The second unitary is
+-iP, which implements P conjugation exactly. The random choice is independent of
+the work state and is never used to select or correct primary outcomes. Thus even
+eta=0 requires no infinite rate and no zero-duration operation.
+
+Alternatively, a designated Markov dephasing slot obeying
+
+  d rho/dt = Gamma/2 (P rho P-rho)
+
+gives eta=exp(-Gamma t). Exact eta=0 is not attained by finite Gamma,t in that
+particular semigroup. It is attained by the finite random-unitary realization.
+Noise during the noncommuting X pulses is a different model.
+
+A closed dilation can replace the external random choice: prepare an environment
+qubit in sqrt((1+eta)/2)|0>+sqrt((1-eta)/2)|1>, apply controlled-P, and ignore E in
+the work readout. A finite generator is pi/(2t)|1><1|_E(I-P). The total evolution
+is unitary; only the reduced work state dephases. This adds an environment qubit
+and does not claim that four work qubits form an isolated closed whole.
+
+2. Exact observable prediction and reduced derivation
+
+The memory logical Pauli operators are tau_x=X_M2, tau_y=Z_M1 Y_M2, tau_z=P.
+For signal sign sigma=(-1)^s, the written memory has logical Bloch vector
+(0,0,sigma). After the first X rotation it is
+
+  (0,-sigma sin(theta1),sigma cos(theta1)).
+
+Lambda_eta multiplies the first two coordinates by eta. The parity phase is a
+logical Z rotation by beta. Its y component becomes
+-sigma eta sin(theta1)cos(beta). The second X rotation therefore gives
+
+  <P>_s = sigma [cos(theta1)cos(theta2)
+                 -eta sin(theta1)sin(theta2)cos(beta)].
+
+The two actuator CNOTs copy parity to the initially blank action bit. Hence
+
+  p_agree(theta1,theta2,beta,eta)
+    = [1+cos(theta1)cos(theta2)-eta sin(theta1)sin(theta2)cos(beta)]/2.
+
+The fixed hold phase commutes with every relevant logical operation and the final
+Z readout, so the formula is independent of it. The model retains its physical
+pulse; it does not silently remove it.
+
+For theta1=theta2=pi/3 and beta=2pi/3,
+
+  p_agree = 5/8 + 3 eta/16.
+
+Thus coherent eta=1 gives 13/16, complete parity dephasing gives 5/8, and the
+contrast is 3/16. This is a continuous parameter family, not a single fitted point.
+
+With the declared plus/Bell preparation, the full final computational distribution
+has A=M1 xor M2. Each allowed bitstring has probability p_agree/4 when A=S and
+(1-p_agree)/4 otherwise. The code checks this entire 16-outcome distribution.
+
+Immediately after the dephasing slot, A=0 and
+
+  Pr(S=s,parity=p,A=0) = (1/2)[1-q1 if p=s, q1 otherwise],
+  q1=sin(theta1/2)^2.
+
+All computational-basis populations are identical before and after Lambda_eta.
+Equality of that immediate distribution does not determine the channel.
+
+3. Restricted comparator and the identifiability counterexamples
+
+Independent parity flips with q_i=sin(theta_i/2)^2 predict
+
+  p_flip=(1-q1)(1-q2)+q1q2
+        =[1+cos(theta1)cos(theta2)]/2.
+
+This equals the eta=0 model for all beta. It is a memoryless population comparator,
+not every classical model or a device-independent classical bound.
+
+For all beta and eta, calibration programs 00,10,01 give
+
+  p00=1, p10=[1+cos(theta1)]/2, p01=[1+cos(theta2)]/2.
+
+They do not identify beta, eta or even the signed angle branch. At theta1=theta2
+=pi/3, they always give (1,3/4,3/4), while coherent held-out program11 gives
+
+  beta=0:1/4; beta=pi/2:5/8; beta=2pi/3:13/16; beta=pi:1.
+
+At beta=2pi/3, eta=0,0.4,1 instead gives 5/8,0.7,13/16. Every one of these is an
+explicit finite-pulse model with identical zero/one-program calibration and
+immediate registered populations. Those calibrations cannot select the desired
+held-out prediction. Independent phase/coherence calibration is necessary.
+
+There is a stronger channel counterexample. Replacing P conjugation by Z_M2
+conjugation gives the same final agreement formula and immediate populations in
+this protocol, for every eta. Yet the correct parity channel preserves |Phi+>
+within the even sector, while the local Z_M2 channel gives Bell XX expectation
+eta rather than 1. Agreement curves alone therefore do not certify parity-sector
+preservation. Local Z_M1 dephasing is another wrong channel: it leaves the target
+coherent contrast intact instead of implementing the declared eta dependence.
+
+4. Parameter calibration and confidence sets
+
+Use separate preparations/readouts, not the held-out program11 outcomes, to fix:
+
+  - theta_i: prepare the driven qubit in |0>; measure Z=cos(theta_i) and
+    Y=-sin(theta_i). The two quadratures fix the signed angle modulo2pi.
+  - beta: prepare M2 in |+>, fix M1=b; after the parity-phase pulse measure
+    X=cos(beta), Y=(-1)^b sin(beta). Check both b values, which tests the coupling
+    sign and conditional dependence rather than only one unconditional phase.
+  - eta: prepare a cross-parity superposition, e.g. M1=0,M2=+; the declared slot
+    gives X=eta,Y=0. Check Y and within-parity Bell coherence as well. These are
+    model checks, not a complete process certificate for arbitrary hidden errors.
+
+For K independently sampled +/-1 expectations, each with n trials, Hoeffding and
+a union bound give simultaneous radius
+
+  r=sqrt[2 log(2K/alpha)/n]
+
+with family failure probability at most alpha. Bounded independent samples are an
+assumption; undocumented drift or state-dependent selection is not repaired by
+this formula. Readout corrections must themselves have calibrated uncertainty.
+
+For angle quadratures with observed vector u=(xhat,yhat), confidence radii rx,ry,
+let R=|u| and d=sqrt(rx^2+ry^2). The enclosing disk intersects the unit circle only
+if |R-1|<=d. If compatible and R>0, an angular confidence radius is
+
+  epsilon_angle=acos(clamp[(1+R^2-d^2)/(2R),-1,1]).
+
+The central angle is atan2(yhat,xhat), with its branch fixed independently. If the
+disk is inconsistent, reject this parameter model; if R=0, it identifies no angle.
+The disk bound is conservative relative to the rectangular quadrature region.
+For eta=X under the qualified real-dephasing model, intersect [Xhat-r,Xhat+r]
+with [0,1]. A nonzero phase rotation or other channel changes the model rather
+than automatically becoming a real eta.
+
+For rectangular physical pulses theta=Omega t, independent interval bounds imply
+
+  epsilon_theta <= |t_hat|epsilon_Omega + |Omega_hat|epsilon_t
+                   +epsilon_Omega epsilon_t.
+
+For the random-unitary slot eta=1-2q, epsilon_eta=2epsilon_q. For a Markov slot,
+positive rate/time intervals map monotonically through eta=exp(-Gamma t).
+
+5. A rigorous finite-model probability allowance
+
+Let absolute parameter radii be e1,e2,eb,ee for theta1,theta2,beta,eta. Put
+eta_max=min(1,eta_hat+ee) and B=|sin(theta1_hat)sin(theta2_hat)|. A telescoping
+path, using |partial p/partial theta_i|<=1/2, gives
+
+  |p_actual_parameters-p_nominal|
+    <= (e1+e2+eta_max B eb+B|cos(beta_hat)|ee)/2.
+
+The theta derivative bound follows from Cauchy-Schwarz and eta<=1, not from adding
+two separately maximized sine terms. The beta step uses fixed nominal theta and
+the actual eta; the eta step then uses nominal theta,beta.
+
+Let preparation trace distance be <=epsilon_prep, final readout effect error in
+operator norm <=epsilon_ro, and each residual channel have half-diamond distance
+<=epsilon_j from the parameterized model. Contractivity and channel telescoping
+then add epsilon_prep+epsilon_ro+sum_j epsilon_j to the above probability bound.
+Do not count an angle error twice: epsilon_j describes only the unmodeled channel
+remainder after the explicit parameter uncertainties have been removed.
+
+For a residual Hamiltonian delta H(t), Duhamel gives the sufficient gate bound
+
+  (1/2)||U_actual(.)U_actual^dagger-U_model(.)U_model^dagger||_diamond
+       <= ||U_actual-U_model|| <= integral ||delta H(t)||dt.
+
+Known fixed-axis pulse areas are exact; arbitrary drift requires this residual
+budget or explicit evolution. The bound may be conservative. Preparation/readout
+and full-channel certificates are additional empirical work. The listed simple
+Pauli probes alone do not establish a diamond-norm certificate.
+
+When coherent and pinched arms share calibrated theta1,theta2,beta, their contrast
+is D=-(eta_C-eta_P)sin(theta1)sin(theta2)cos(beta)/2. A joint confidence box permits
+a tighter bound than adding two independent probability allowances. Maximize the
+absolute trigonometric factors over each angle interval and multiply them by the
+corresponding partial derivatives; the code implements this interval Lipschitz
+bound. Any differential drift goes in the sum of the two residual channel budgets.
+No independence between parameter errors is needed once the joint box is valid.
+
+An illustrative design in the output uses12 Pauli expectations with80000 trials
+each (960000 structured-parameter calibration attempts). This is NOT acquired
+data and is NOT a complete apparatus qualification within EX1's total cap. Its
+separate residual preparation/readout/channel certificates are hypothetical.
+No existing frozen hardware protocol or acquisition budget has been changed.
+
+6. Implemented checks and honest scope
+
+work/W1_finite_model.py evolves full16x16 density matrices via scipy matrix
+exponentials of the finite Hamiltonians. The logical formula is evaluated only
+afterward. The latest output is work/W1_finite_model_results_v2.json.
+
+The prespecified product grid has500 cases, with theta1 in
+{-0.71,0,0.43,pi/3,2.27}, theta2 in {-1.13,0,0.82,pi/3,2.91}, beta in
+{-2.3,0,0.37,2pi/3,pi}, eta in {0,0.17,0.63,1}. Checks include complete final
+populations, trace, positivity, Hermiticity, immediate-population invariance,
+conditional phase calibration, and eta=0 agreement with the flip comparator.
+Additional checks vary the historical hold phase; construct the indistinguishable
+countermodels; reject the wrong local M1 dephaser; test16 uncertainty corners with
+explicit preparation/readout noise; test32 shared-contrast parameter corners;
+and evolve noncommuting pulse detunings under their residual-channel allowance.
+
+Maximum agreement error was3.33e-16 and maximum full-population error3.05e-16.
+The finite uncertainty-corner example had maximum probability shift0.0259683
+inside its derived allowance0.0581217. These test the code and the specified model;
+they are not physical observations or an empirical pass.
+
+What now works mathematically is a finite-duration, bounded, predictive quantum
+operational model with an explicit parameter dictionary and quantified allowance.
+It is falsifiable after independent calibration because program11 was not used
+to infer theta1,theta2,beta,eta. What remains open is an actual apparatus realizing
+the qualified model and any new empirical law distinctive of GRUT. Neither the
+finite construction nor its clock embedding establishes the Schwinger continuum
+dictionary, a massive transfer, P1 closure, gravity or a universal theory.
