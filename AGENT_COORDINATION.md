@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_response_separation_20261109 | Codex | Frozen static-source/current and evolution diagnostic; experimental protocol | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6556,3 +6557,8 @@ At source freeze 0f2d2e4ef53f4bcc2613f5cb1373603c4551d9b4, ran one massless N22 
 ## 2026-11-09 — Codex: D1 source dictionary and independent backaction checks
 
 Derived the exact even-neutral-sector shifted-Hamiltonian identity with y_j=L_j-(-1)^j/4 in its electric-energy square, calibrated background-flux source derivatives, and controlled-ancilla realization of the historical impulsive detector. Kept finite-spacing source interpolation, endpoint placement and switching qualifications explicit. Frozen D1-01 at b6cdfda3196f75eea0fb2ab951b42a8093d7ac12 before new observable comparisons. Ran four source-native probes on ground, kicked, one- and two-measurement states at new times0,.43,1.31 for N14/18/20/22 plus refinedN22; runtime105.265seconds. Fourteen of16gates passed. Worst N22 second-moment discrepancy0.00397959128 (two -- outcomes,sine1) fails0.002 before reserve; finest-step0.00101064959 fails0.001. Insertion discrepancy also persists without conditioning. Guarded vacuum covariance and backaction-energy checks pass; same-size refinement8.83e-15. Independent source/oscillator prechecks and post-run arithmetic/hash/conditional-contraction audit pass. Verdict source_dictionary_matching_unresolved; exact operational source interpretation is established, uniform finite-state matching is not. Raw data, derivation, protocol and audit archived in research/reality_framework/grut_source_dictionary_20261109; delivered ZIP includes hashed historical binary inputs. N22 completion, B2 N20 component failure and P1 obligations unchanged. No massive transfer, further size, merge, release or Zenodo deposit. Claim released.
+
+
+### 2026-11-09 · Codex · freeze R1 source-response separation and EX1 protocol
+
+Frozen R1-01 before physical evaluation: static source matrices, new response times, coincident detector controls, reached-state current algebra and static-only Galerkin predictor. Five registered points through N22 with a refined N22 point; resource and hypothesis gates fixed. Synthetic reference identities, analysis controls and independent-audit smoke checks pass. EX1-01 is a separate hardware-agnostic protocol with 22 ideal and 12 synthetic scorer checks; no hardware, data or empirical pass. Historical N22, B2 and D1 verdicts unchanged; massive transfer withheld.

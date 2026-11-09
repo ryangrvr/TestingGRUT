@@ -1,0 +1,193 @@
+{
+  "status": "ideal_reference_checks_passed",
+  "empirical_status": "not_run",
+  "checks": {
+    "program_00": true,
+    "normalization_00": true,
+    "independent_logical_rotation_00": true,
+    "program_10": true,
+    "normalization_10": true,
+    "independent_logical_rotation_10": true,
+    "program_01": true,
+    "normalization_01": true,
+    "independent_logical_rotation_01": true,
+    "program_11": true,
+    "normalization_11": true,
+    "independent_logical_rotation_11": true,
+    "pinched_prediction": true,
+    "immediate_distribution_unchanged": true,
+    "random_parity_channel_equals_luders": true,
+    "parity_channel_preserves_within_sector_Bell_coherence": true,
+    "individual_Z_measurement_is_stronger_than_parity_channel": true,
+    "RZZ_decomposition": true,
+    "writer_removed_control": true,
+    "actuator_removed_control": true,
+    "negative_control_missing_phase_rejected": true,
+    "negative_control_wrong_dephaser_rejected": true
+  },
+  "programs": {
+    "00": {
+      "action_agreement": 0.9999999999999998,
+      "target": 1.0,
+      "raw_bits_S_M1_M2_A": [
+        0.24999999999999994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.24999999999999994,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.24999999999999994,
+        0.0,
+        0.24999999999999994,
+        0.0,
+        0.0
+      ],
+      "joint_S_parity_A_plus_erasure": [
+        0.4999999999999999,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.4999999999999999,
+        0.0
+      ]
+    },
+    "10": {
+      "action_agreement": 0.7499999999999999,
+      "target": 0.75,
+      "raw_bits_S_M1_M2_A": [
+        0.18749999999999997,
+        0.0,
+        0.0,
+        0.06249999999999997,
+        0.0,
+        0.06249999999999997,
+        0.18749999999999997,
+        0.0,
+        0.06249999999999997,
+        0.0,
+        0.0,
+        0.18749999999999997,
+        0.0,
+        0.18749999999999997,
+        0.06249999999999997,
+        0.0
+      ],
+      "joint_S_parity_A_plus_erasure": [
+        0.37499999999999994,
+        0.0,
+        0.0,
+        0.12499999999999994,
+        0.12499999999999994,
+        0.0,
+        0.0,
+        0.37499999999999994,
+        0.0
+      ]
+    },
+    "01": {
+      "action_agreement": 0.7499999999999999,
+      "target": 0.75,
+      "raw_bits_S_M1_M2_A": [
+        0.18749999999999997,
+        0.0,
+        0.0,
+        0.06249999999999997,
+        0.0,
+        0.06249999999999997,
+        0.18749999999999997,
+        0.0,
+        0.06249999999999997,
+        0.0,
+        0.0,
+        0.18749999999999997,
+        0.0,
+        0.18749999999999997,
+        0.06249999999999997,
+        0.0
+      ],
+      "joint_S_parity_A_plus_erasure": [
+        0.37499999999999994,
+        0.0,
+        0.0,
+        0.12499999999999994,
+        0.12499999999999994,
+        0.0,
+        0.0,
+        0.37499999999999994,
+        0.0
+      ]
+    },
+    "11": {
+      "action_agreement": 0.8124999999999998,
+      "target": 0.8125,
+      "raw_bits_S_M1_M2_A": [
+        0.20312499999999994,
+        0.0,
+        0.0,
+        0.04687499999999999,
+        0.0,
+        0.04687499999999999,
+        0.20312499999999994,
+        0.0,
+        0.04687499999999999,
+        0.0,
+        0.0,
+        0.20312499999999994,
+        0.0,
+        0.20312499999999994,
+        0.04687499999999999,
+        0.0
+      ],
+      "joint_S_parity_A_plus_erasure": [
+        0.4062499999999999,
+        0.0,
+        0.0,
+        0.09374999999999999,
+        0.09374999999999999,
+        0.0,
+        0.0,
+        0.4062499999999999,
+        0.0
+      ]
+    }
+  },
+  "pinched_action_agreement": 0.6249999999999998,
+  "coherent_minus_pinched": 0.1875,
+  "immediate_registered_tv": 0.0,
+  "dephasing_channel_identity_residual": 0.0,
+  "RZZ_decomposition_residual": 0.0,
+  "negative_controls": {
+    "missing_beta_phase_action": 0.25,
+    "wrong_local_M1_dephaser_action": 0.8124999999999998
+  },
+  "prospective_statistics": {
+    "validation_family_failure_probability": 0.005,
+    "calibration_family_failure_probability_reserved": 0.005,
+    "alpha_each_of_four_confidence_objects": 0.00125,
+    "validation_shots": {
+      "C11": 20000,
+      "P11": 20000,
+      "I_C": 50000,
+      "I_P": 50000
+    },
+    "validation_total_shots": 140000,
+    "calibration_total_cap": 1000000,
+    "primary_scalar_radius": 0.013581015157406196,
+    "contrast_radius": 0.02716203031481239,
+    "each_immediate_tv_radius": 0.011667120310490607,
+    "immediate_comparison_tv_radius": 0.023334240620981214,
+    "ideal_primary_equivalence_tolerance": 0.06,
+    "contrast_lower_bound_required": 0.1,
+    "immediate_tv_upper_bound_required": 0.05,
+    "scope": "independent bounded outcomes; time-averaged probabilities if nonidentical"
+  },
+  "verifier_sha256": "348e16f329f7dbb698cd70f7ea496b6f9fb6476647096cd1d7ce6074bb3b3e95"
+}

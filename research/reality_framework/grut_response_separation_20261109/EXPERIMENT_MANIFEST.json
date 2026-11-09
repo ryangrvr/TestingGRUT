@@ -1,0 +1,42 @@
+{
+  "protocol": "EX1-01",
+  "status": "apparatus_independent_protocol_prepared",
+  "actual_experimental_data": false,
+  "actual_experimental_shots": 0,
+  "hardware_selected": false,
+  "device_adapter_status": "pending",
+  "device_adapter_freeze_status": "pending_before_calibration",
+  "physical_calibration_status": "not_run",
+  "experimental_validation_status": "not_run",
+  "numerical_artifacts": "deterministic_ideal_calculation_and_synthetic_software_prechecks_only",
+  "ideal_checks_passed": 22,
+  "synthetic_scorer_prechecks_passed": 12,
+  "prospective_shot_cap": {
+    "calibration": 1000000,
+    "validation": 140000,
+    "total": 1140000
+  },
+  "claim_scope": "prospective finite externally scheduled work-protocol realization under standard quantum mechanics; no autonomous-clock or novel-law claim",
+  "repository_source_commit": "7ba04fd35e47870cbdb41268b2d7ffd33f567f51",
+  "primary_external_sources_checked": [
+    {
+      "topic": "bounded independent-sum concentration",
+      "title": "Hoeffding (1963), Probability inequalities for sums of bounded random variables",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1963.10500830",
+      "original_paper_copy": "https://www.cs.rpi.edu/academics/courses/spring06/random/hoefding.pdf"
+    },
+    {
+      "topic": "nonselective projector measurement channel",
+      "title": "Luders (1951), English translation, Eq. (8)",
+      "url": "https://arxiv.org/html/quant-ph/0403007v2"
+    }
+  ],
+  "sha256": {
+    "EXPERIMENT_PROTOCOL.md": "db53e19b33e405bb3935be45fb0f49ecc73e235b6cb622ee6488fd1cc17c9ada",
+    "experiment_verify.py": "348e16f329f7dbb698cd70f7ea496b6f9fb6476647096cd1d7ce6074bb3b3e95",
+    "experiment_ideal.json": "b4260edf133868f4a2ef3cc862bd511c527723fe7648980fddc697c77456133c",
+    "experiment_precheck.py": "3491d1a593eafd8cf44db54a5aa1f5eef2571b61d87625ba315179663b13e89f",
+    "experiment_precheck.json": "b6415b8b10c3ce49e514fa95e7cf6f501cd63f1113e6332e81d807deba3541ba"
+  },
+  "manifest_hash_omitted": true
+}

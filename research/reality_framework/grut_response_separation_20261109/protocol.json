@@ -1,0 +1,22 @@
+{
+  "id":"R1-01","base_commit":"7ba04fd35e47870cbdb41268b2d7ffd33f567f51",
+  "length":5.0,"sigma":0.8,"coupling":2.0,"phase":0.0,"mass_R":0.0,
+  "N":[14,18,20,22],"refined_N":22,"modes":8192,"refined_modes":16384,
+  "probe_names":["sine1","sine2","sine3","beta_left"],"primary_probe_indices":[0,1,2],
+  "response_times":[0,0.29,0.83,1.57],"backaction_times":[0,0.43],"backaction_probe_time":1.31,
+  "instant_kick_scan":[0.5,1.0,2.0,4.0],
+  "gram_minimum_eigenvalue":1e-10,"gram_eigenvalue_floor":1e-10,"gram_condition_limit":1000000,
+  "gates":{"numerical":1e-9,"refinement":1e-8,"reference_doubling":1e-7,"reference_tail":0.0001,
+    "static_relative":0.01,"normalized_response_absolute":0.005,"centroid_relative":0.005,"cosine_eigen_absolute":0.005,
+    "current_relative":0.01,"galerkin_residual":0.01,"numerical_guard":0.0001,
+    "instant_moment_absolute":0.002,"instant_moment_reserve":0.0001,"single_probability_floor":0.01,"double_probability_floor":0.001},
+  "resources":{"point_wall_seconds":300,"total_wall_seconds":1200,"process_memory_bytes":4294967296,"threads":1,"poll_seconds":0.5,"heartbeat_seconds":30},
+  "dictionary":"D1 source-normalized y, unchanged B2 reconstruction, unchanged native cell-integral probes and apparatus identity edge terms; no fitted operator or Hamiltonian coefficient.",
+  "hypotheses":"Separate numerical validity, static source moments, scalar response, basis-invariant centroid/cosine spectra, state-current algebra, zero-delay moments, and static-only Galerkin prediction. There is no aggregate theory-pass gate.",
+  "kick_window":"Both 3x3 current disturbance relative to vacuum AND mismatch relative to continuum, each plus numerical guard, <=1% at a registered strength; no selective or delayed-state guarantee follows.",
+  "predictor":"The three-sine source-span Galerkin generator is determined solely by static C,K. Compare its own-system response at held-out times; no adjustment from time data.",
+  "prior_inspection":"D1 results including static covariance and postmeasurement moments were inspected before R1. R1 current matrices, K, new-time responses and coincident-two-K controls have not been evaluated before this freeze. Thresholds are prospective R1 operational targets, not universal physical bounds.",
+  "stop_rule":"One production attempt per registered point; no larger N, fit, tolerance change, retry or automatic extension. Every failure remains reported.",
+  "massive_rule":"Withheld under every R1 outcome. Preserve N22 completed result, B2 N20 component failure, D1 failed moments, and P1 parent obligations.",
+  "scope":"Finite source/evolution diagnostics and a separate experimental protocol. Invariants remove invertible mixing inside a fixed probe span, not a change of span, boundary condition or ground state. Neither a continuum theorem nor empirical GRUT validation is inferred."
+}
