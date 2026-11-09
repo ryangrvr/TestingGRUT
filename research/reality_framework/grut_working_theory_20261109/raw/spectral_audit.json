@@ -1,0 +1,453 @@
+{
+  "scope": "Independent postrun audit of archived matrices and exact rational arithmetic only. No production module imported; no source coefficients, continuum evolution, or lattice evolution rerun.",
+  "freeze_commit": "6461c320b87bea70c97916b625e2b14511a3a1a5",
+  "spectral_sha256": "8e362ec258eea01596c88ecb1d07bc3c03355ca332175d6f0c296ab5071a9eb6",
+  "registered_configuration": true,
+  "source_hash_checks": {
+    "research/reality_framework/grut_working_theory_20261109/spectral_model.py": true,
+    "research/reality_framework/grut_working_theory_20261109/spectral_precheck.json": true,
+    "research/reality_framework/grut_working_theory_20261109/spectral_protocol.json": true,
+    "research/reality_framework/grut_working_theory_20261109/spectral_run.py": true,
+    "research/reality_framework/grut_response_separation_20261109/r1_reference.py": true
+  },
+  "exact_fraction_checks": {
+    "strict_pi_enclosure": true,
+    "coefficient_loss": true,
+    "covariance_lower": true,
+    "covariance_upper": true,
+    "mode_16_exact_tail": true,
+    "mode_16_exact_bound": true,
+    "mode_16_classification": true,
+    "mode_64_exact_tail": true,
+    "mode_64_exact_bound": true,
+    "mode_64_classification": true,
+    "mode_256_exact_tail": true,
+    "mode_256_exact_bound": true,
+    "mode_256_classification": true,
+    "mode_1024_exact_tail": true,
+    "mode_1024_exact_bound": true,
+    "mode_1024_classification": true,
+    "primary_exact_claim": true
+  },
+  "case_audits": {
+    "16": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 3.510833468576701e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 0.4848092810101945,
+      "recomputed_raw_primary_tail_bound": 0.002715094151309141,
+      "passed": true
+    },
+    "64": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 1.1102230246251565e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 0.030242615921859888,
+      "recomputed_raw_primary_tail_bound": 0.0001696933844568213,
+      "passed": true
+    },
+    "256": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 1.1102230246251565e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 0.001889746245895657,
+      "recomputed_raw_primary_tail_bound": 1.0605836528551332e-05,
+      "passed": true
+    },
+    "1024": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 3.3306690738754696e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 0.0001181071579238062,
+      "recomputed_raw_primary_tail_bound": 6.628647830344582e-07,
+      "passed": true
+    },
+    "reference": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 1.1102230246251565e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 4.6135558619542276e-07,
+      "recomputed_raw_primary_tail_bound": 2.5893155587283525e-09,
+      "passed": true
+    },
+    "refined_reference": {
+      "checks": {
+        "positive_primary_Gram": true,
+        "condition_limit": true,
+        "raw_t0_equals_covariance": true,
+        "covariance_symmetric": true,
+        "canonical_t0_identity": true,
+        "contraction": true,
+        "apriori_Gram_envelopes": true,
+        "apriori_variation_envelopes": true,
+        "source_partition": true,
+        "archived_R1_source_dictionary_unchanged": true,
+        "saved_whitening_and_tail_metrics_reproduce": true
+      },
+      "saved_metric_max_error": 1.1102230246251565e-16,
+      "R1_weight_error": 5.440092820663267e-15,
+      "R1_boundary_error": 0.0,
+      "R1_constant_error": 0.0,
+      "recomputed_canonical_tail_bound": 1.1533889617603484e-07,
+      "recomputed_raw_primary_tail_bound": 6.473288896820881e-10,
+      "passed": true
+    }
+  },
+  "comparison_audits": {
+    "16": {
+      "times": {
+        "0": {
+          "raw_operator_error": 2.5192202182990682e-05,
+          "canonical_operator_error": 1.4468742190474323e-15,
+          "max_scalar_error": 1.5543122344752192e-15,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.17": {
+          "raw_operator_error": 8.035067142625083e-06,
+          "canonical_operator_error": 0.0016599921821279745,
+          "max_scalar_error": 0.0016349445261601443,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.61": {
+          "raw_operator_error": 2.5128437647632998e-06,
+          "canonical_operator_error": 0.001367175657395632,
+          "max_scalar_error": 0.0013612518754510766,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "1.09": {
+          "raw_operator_error": 5.098381963203673e-06,
+          "canonical_operator_error": 0.0013358501578235814,
+          "max_scalar_error": 0.0013265543668073791,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "2.03": {
+          "raw_operator_error": 7.784778092542593e-06,
+          "canonical_operator_error": 0.001139090172039757,
+          "max_scalar_error": 0.0011363006768582995,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "3.17": {
+          "raw_operator_error": 9.937706291142095e-06,
+          "canonical_operator_error": 0.0017615887179589032,
+          "max_scalar_error": 0.0017603496136495405,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        }
+      },
+      "maximum_saved_metric_error": 3.510833468576701e-16,
+      "maximum_canonical_error": 0.0017615887179589032,
+      "maximum_scalar_error": 0.0017603496136495405,
+      "canonical_predictor_plus_reference_allowance": 0.48480939634909065,
+      "bound_classification_matches": true,
+      "passed": true
+    },
+    "64": {
+      "times": {
+        "0": {
+          "raw_operator_error": 2.7409838507292557e-06,
+          "canonical_operator_error": 1.5770313371066642e-15,
+          "max_scalar_error": 1.5543122344752192e-15,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.17": {
+          "raw_operator_error": 1.1706694571538364e-06,
+          "canonical_operator_error": 0.0001993227818458848,
+          "max_scalar_error": 0.00019921942036782263,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.61": {
+          "raw_operator_error": 5.644539954804407e-07,
+          "canonical_operator_error": 0.00015745808356619343,
+          "max_scalar_error": 0.00015730110501713205,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "1.09": {
+          "raw_operator_error": 1.0222764942336888e-06,
+          "canonical_operator_error": 0.00014201579520979767,
+          "max_scalar_error": 0.00014186416102251938,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "2.03": {
+          "raw_operator_error": 9.372343945737485e-07,
+          "canonical_operator_error": 0.00018867593174895977,
+          "max_scalar_error": 0.00018860089420876506,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "3.17": {
+          "raw_operator_error": 1.0448512539069667e-06,
+          "canonical_operator_error": 0.00012373468076032598,
+          "max_scalar_error": 0.0001236735513161032,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        }
+      },
+      "maximum_saved_metric_error": 2.168404344971009e-19,
+      "maximum_canonical_error": 0.0001993227818458848,
+      "maximum_scalar_error": 0.00019921942036782263,
+      "canonical_predictor_plus_reference_allowance": 0.030242731260756064,
+      "bound_classification_matches": true,
+      "passed": true
+    },
+    "256": {
+      "times": {
+        "0": {
+          "raw_operator_error": 2.0488157913519758e-07,
+          "canonical_operator_error": 1.1917894522221187e-15,
+          "max_scalar_error": 1.5543122344752192e-15,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.17": {
+          "raw_operator_error": 4.319746527698954e-08,
+          "canonical_operator_error": 1.2846230598176486e-05,
+          "max_scalar_error": 1.2839800376983496e-05,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.61": {
+          "raw_operator_error": 2.2242014193754144e-08,
+          "canonical_operator_error": 1.1784981773035403e-05,
+          "max_scalar_error": 1.1777454740515057e-05,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "1.09": {
+          "raw_operator_error": 7.439713433408116e-08,
+          "canonical_operator_error": 1.232339129758067e-05,
+          "max_scalar_error": 1.2318067266345854e-05,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "2.03": {
+          "raw_operator_error": 2.745932879465319e-08,
+          "canonical_operator_error": 9.321747975972275e-06,
+          "max_scalar_error": 9.318086402660237e-06,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "3.17": {
+          "raw_operator_error": 3.1704800606916697e-08,
+          "canonical_operator_error": 1.2278907644185835e-05,
+          "max_scalar_error": 1.227625263007086e-05,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        }
+      },
+      "maximum_saved_metric_error": 1.3552527156068805e-20,
+      "maximum_canonical_error": 1.2846230598176486e-05,
+      "maximum_scalar_error": 1.2839800376983496e-05,
+      "canonical_predictor_plus_reference_allowance": 0.001889861584791833,
+      "bound_classification_matches": true,
+      "passed": true
+    },
+    "1024": {
+      "times": {
+        "0": {
+          "raw_operator_error": 1.2450981244402608e-08,
+          "canonical_operator_error": 1.9056591885868776e-15,
+          "max_scalar_error": 1.1102230246251565e-15,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.17": {
+          "raw_operator_error": 6.668798069994498e-10,
+          "canonical_operator_error": 6.398456604296465e-07,
+          "max_scalar_error": 6.391970394787502e-07,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "0.61": {
+          "raw_operator_error": 3.3830282574696093e-10,
+          "canonical_operator_error": 6.429533600981238e-07,
+          "max_scalar_error": 6.424077073333475e-07,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "1.09": {
+          "raw_operator_error": 2.9958301391967077e-09,
+          "canonical_operator_error": 7.809262989308749e-07,
+          "max_scalar_error": 7.805292501279816e-07,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "2.03": {
+          "raw_operator_error": 4.2999779180373696e-10,
+          "canonical_operator_error": 6.532201548704021e-07,
+          "max_scalar_error": 6.529848001290401e-07,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        },
+        "3.17": {
+          "raw_operator_error": 4.753037807764758e-10,
+          "canonical_operator_error": 6.626243697492929e-07,
+          "max_scalar_error": 6.624454269437523e-07,
+          "bound_compliance": true,
+          "stored_classification_matches": true
+        }
+      },
+      "maximum_saved_metric_error": 3.3306690738754696e-16,
+      "maximum_canonical_error": 7.809262989308749e-07,
+      "maximum_scalar_error": 7.805292501279816e-07,
+      "canonical_predictor_plus_reference_allowance": 0.00011822249681998224,
+      "bound_classification_matches": true,
+      "passed": true
+    }
+  },
+  "reference_doubling_audit": {
+    "times": {
+      "0": {
+        "raw_operator_error": 3.706302049172962e-11,
+        "canonical_operator_error": 1.1150991588267904e-15,
+        "max_scalar_error": 1.1102230246251565e-15,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      },
+      "0.17": {
+        "raw_operator_error": 1.8628114675622344e-13,
+        "canonical_operator_error": 1.919303105431503e-09,
+        "max_scalar_error": 1.917629622691894e-09,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      },
+      "0.61": {
+        "raw_operator_error": 7.750699962957686e-14,
+        "canonical_operator_error": 1.9308973341922873e-09,
+        "max_scalar_error": 1.929378362840077e-09,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      },
+      "1.09": {
+        "raw_operator_error": 1.1220532999950332e-12,
+        "canonical_operator_error": 1.9724283321487755e-09,
+        "max_scalar_error": 1.9711886747485347e-09,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      },
+      "2.03": {
+        "raw_operator_error": 1.154417131085964e-13,
+        "canonical_operator_error": 1.932555898917201e-09,
+        "max_scalar_error": 1.931884733984779e-09,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      },
+      "3.17": {
+        "raw_operator_error": 1.1579612322708733e-13,
+        "canonical_operator_error": 1.9273625070872945e-09,
+        "max_scalar_error": 1.926847773115607e-09,
+        "bound_compliance": true,
+        "stored_classification_matches": true
+      }
+    },
+    "maximum_saved_metric_error": 3.308722450212111e-24,
+    "maximum_canonical_error": 1.9724283321487755e-09,
+    "maximum_scalar_error": 1.9711886747485347e-09,
+    "canonical_predictor_plus_reference_allowance": 5.766944823714576e-07,
+    "bound_classification_matches": true,
+    "passed": true
+  },
+  "reconstructed_quality_gates": {
+    "synthetic_checks": true,
+    "exact_rational_inequalities": true,
+    "source_partition": true,
+    "t0_normalization": true,
+    "response_contraction": true,
+    "analytic_Gram_envelopes": true,
+    "analytic_source_variation_envelopes": true,
+    "reference_doubling": true,
+    "independent_R1_implementation": true,
+    "tail_bound_compliance": true
+  },
+  "all_ten_quality_classifications_match": true,
+  "maximum_recomputed_metric_difference": 3.510833468576701e-16,
+  "primary_measured_error_at_six_times": 7.809262989308749e-07,
+  "primary_exact_all_time_truncation_bound": {
+    "numerator": 3678389,
+    "denominator": 4608866304,
+    "decimal": 0.0007981114567822361
+  },
+  "resource_record_within_limits": true,
+  "limitations_preserved": true,
+  "time_and_precision_limit": "The analytic modal-truncation theorem covers all real times for exact mathematical phases and canonical roots. Executable results were checked only at six fixed times0,.17,.61,1.09,2.03,3.17. Their floating error is not interval-certified uniformly in time; phase multiplication/argument reduction can accumulate finite-precision error at very large times. No uniform all-time machine-arithmetic certificate is claimed.",
+  "independence_limit": "The frozen R1 raw-response agreement and synthetic precheck are archived cross-checks inspected here; this audit independently reconstructs all W1 whitening, comparison, and tail metrics but does not rerun either source implementation.",
+  "passed": true
+}

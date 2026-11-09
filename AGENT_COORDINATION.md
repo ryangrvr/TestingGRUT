@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_working_theory_20261109 | Codex | W1 closed finite model and mode-resolved response predictor | 2026-11-09 |
 
 
 ## ANSWERED QUESTIONS
@@ -6572,3 +6571,8 @@ R1-01 freeze18fc45c: all five registered points completed in247.469s; all15 nume
 ### 2026-11-09 · Codex · freeze W1 constructive working-theory pass
 
 W1 consolidates the finite operational core and explicitly parameterized record/action model. The 500-point theoretical finite-model regression grid was inspected before freeze. A new nine-tick/seven-qubit autonomous dilation and the fixed mode-resolved continuum response comparisons have not been evaluated before this freeze. The primary1024-mode analytic truncation envelope is proved by exact rational inequalities below0.001 for every real time; floating implementation and physical dictionary status remain separate. Primary/diagnostic mode counts, six new times, references, parent cases and bounded resources fixed. Historical N22/B2/D1/R1 outcomes preserved; no hardware/data, fundamental selection law or massive transfer.
+
+
+### 2026-11-09 · Codex · complete W1 working finite formulation and controlled response predictor
+
+W1 freeze6461c320: one registered bounded suite completed in3.656s. Parametric finite record/action model passes500 theoretical cases (formula error3.33e-16); new1152-dimensional autonomous dilation passes64 records/432 supported clock ticks (maximum conditionalTV3.44e-15). Fixed1024-mode continuum predictor passes six new-time implementation comparisons (maximum normalized error7.809263e-7). Exact rational proof bounds primary three-source modal truncation uniformly at all real times by3678389/4608866304<0.001; arbitrary-time floating error and physical dictionary are not certified. Three independent archived-data/provenance audits pass, with20 frozen source hashes verified; no audit claims a second full evolution. WORKING_THEORY.md consolidates postulates, exact formula, operational sufficiency, calibration rules, mathematical bounds and scope. Portable42-payload archive hash-verified; ZIP SHA256bd7758776bb1849fe8cc32ff423429ad1ebf6ec730698225352ceac70329a9f4. This repairs the continuum predictor compression, not R1 lattice/continuum discrepancies or the full detector map. Finite-model regression was known before freeze; parent/spectral production comparisons were not. No device data, new fundamental selection law, massive transfer, merge or release. Historical verdicts preserved. W1 claim released.

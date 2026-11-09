@@ -1,0 +1,20 @@
+Offline audit reproduction from the packet root
+
+These are postproduction arithmetic and provenance audits. They do not rerun
+the full physical model or establish empirical validation. Use Python with the
+versions in requirements.txt. All output paths must be new.
+
+  python parent_audit.py --source-root source --raw raw --output NEW_PARENT_AUDIT.json
+
+  python spectral_audit.py --source-root source --raw raw --r1-point audit_inputs/R1_N22.json --output NEW_SPECTRAL_AUDIT.json
+
+For the finite audit, preserve raw, create a separate RAW_COPY without its
+existing finite_audit.json, then run:
+
+  python finite_audit.py --root source --production RAW_COPY --known-regression source/research/reality_framework/grut_working_theory_20261109/finite_precheck.json
+
+The spectral audit was adapted only to accept portable input/output paths;
+its archived arithmetic and conclusions are unchanged. The included R1 point
+is the existing historical record used to check source weights and constants.
+It is not a new lattice evaluation. The source freeze for this study remains
+6461c320b87bea70c97916b625e2b14511a3a1a5.
