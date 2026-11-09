@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_detector_reconstruction_20261108 | Codex | B2 detector reconstruction and frozen massless tests | 2026-11-08 |
 
 
 ## ANSWERED QUESTIONS

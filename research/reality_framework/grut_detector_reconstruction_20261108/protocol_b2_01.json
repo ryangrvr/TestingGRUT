@@ -1,0 +1,19 @@
+{
+  "id":"B2-01",
+  "base_commit":"7d57fc7c8a36c8f349165afc946d9323f174e630",
+  "length":5.0,"sigma":0.8,"coupling":2.0,"phase":0.0,
+  "protocols":[[0],[0,1],[0,2],[0,1,2],[0,0.6],[0,1.7],[0,0.6,1.7]],
+  "calibration_keys":["0","0,1","0,2","0,1,2"],
+  "confirmation_keys":["0,0.6","0,1.7","0,0.6,1.7"],
+  "N":[10,14,18,20],"refined_N":14,
+  "modes":8192,"refined_modes":16384,"quadrature_epsabs":1e-12,
+  "eigensolver_tol":1e-11,"eigensolver_refined_tol":1e-13,"eigensolver_seed_base":20261107,
+  "resources":{"point_wall_seconds":600,"total_wall_seconds":2400,"threads":1,"maximum_N":20},
+  "gates":{"algebra":1e-11,"eigen_residual":1e-9,"normalization":1e-9,"solver_refinement":1e-8,
+    "baseline_replay":1e-9,"reference_doubling":1e-7,"reference_tail":1e-6,
+    "geometry":0.00025,"lattice_to_matched":0.00074,"numerical_reserve":0.00001,
+    "total":0.001,"finest_step":0.00025,"disturbance":0.001},
+  "candidate":"One conservative local quadratic reconstruction from cell averages and fixed boundary values; no outcome-fitting or alternate stencil.",
+  "massive_rule":"Only if all massless gates pass, apply unchanged N20 rule at m_R=0.5 and compare to existing P1 E14/q128. No continuum certificate regardless of finite comparison.",
+  "scope":"Finite protocol list; numerical checks and analytic Gaussian tails are not interval-certified full physical error bounds. No parent extension, merge, release or Zenodo deposit."
+}
