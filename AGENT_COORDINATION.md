@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| `research/reality_framework/grut_d2_development_20261123/` | Codex construction and separate AI critic | New D2 ordering/record packet; preserve Candidate 1 | 2026-11-23 |
 
 ## ANSWERED QUESTIONS
 
@@ -6284,3 +6283,27 @@ Spectral and sparse exponential-action vectors agree to 6.38e-15.
 Extracted the 38 KiB package and matched both archived JSON results
 byte for byte using the documented commands. Claims released.
 [Construction report](research/reality_framework/grut_construction_1_20261106/REPORT.md)
+
+### 2026-11-23 · Codex · GRUT-D2 bounded autonomous ordering and reservoir records
+
+Published the model and design protocol at 8e3a077 before the five registered
+finite-reservoir production cases. Exact local domain-wall/XX duality gives
+unconditional order and initial-defect-count decoding above 0.9968 throughout
+finite windows for n=2,3,4,5,8. A specified endpoint flip has a conservative
+recovery bound above 0.9922, without resetting the internal reservoir. These
+are single-read marginal bounds; repeated/continuous observations are not
+certified. Alignment, a conserved orientation seed, vacuum reservoir, external
+Schrodinger time and readout remain supplied. Active developmental feedback,
+strict target-free emergence and new GRUT/cosmological physics are unestablished.
+
+Separate internal AI review constructed nine full physical Pauli matrices;
+maximum discrepancy 4.09e-14. Preserved a falsified frozen control forecast:
+a maximally mixed active marginal can redistribute initially tagged reference
+information into its reservoir. A bath phase control leaves current system
+and count readouts fixed but changes future organization. Replayed 325 time
+rows and 10,200 numerical fields exactly, rejected three hostile edits, and
+reproduced both checks from a copied standalone folder with the installed
+pinned dependencies. This is internal AI review, not external RAI execution
+or human peer review. Candidate 1 and all prior verdicts unchanged. Claims
+released. No merge or release.
+[Report](research/reality_framework/grut_d2_development_20261123/REPORT.md)
