@@ -1,0 +1,46 @@
+{
+  "id": "GRUT-D2-01",
+  "date": "2026-11-23",
+  "status": "frozen_before_production",
+  "base_commit": "78e30dbb369f7a21c49e288779a8d24830d2e537",
+  "purpose": "Exact autonomous finite-window domain-wall removal and a record of initial defect count; test limits of developmental interpretation.",
+  "design_disclosure": "Equations and bounds derived first. A half-line Bessel reconnaissance grid at dimensionless times [4,8], [8,16], [16,32] was inspected before freezing. No finite D2 production run preceded this card. This is not a blind discovery or an empirical holdout.",
+  "units": {"hbar": 1, "g": 1, "Delta": 4},
+  "initial_wall_probability": 0.5,
+  "system_spin_sizes": [2, 3, 4, 5, 8],
+  "family": {
+    "m": "n-1",
+    "S2": "m*(m+1)*(2*m+1)/6",
+    "bath_spin_count": "64*S2",
+    "window_start_gt": "8*S2",
+    "window_end_gt": "16*S2",
+    "time_samples": 65,
+    "initial_state": "system I/2^n; bath vacuum; inert reference R labels initial defect count K",
+    "orientation": "first physical spin is a fair conserved orientation; no chosen absolute direction",
+    "postselection": "none"
+  },
+  "mathematical_gates": {
+    "uniform_order_probability_lower": 0.9968,
+    "uniform_initial_count_record_success_lower": 0.9968,
+    "source_disconnected_order_probability": "2^(1-n)",
+    "single_endpoint_flip_recovery_probability_lower_at_window_end": 0.9922,
+    "finite_boundary_amplitude_bound": "2*(3/4)^(2*(L+1)); use exact rational arithmetic",
+    "small_physical_matrix_error_max": 1e-11,
+    "spectral_vs_independent_propagation_error_max": 1e-10,
+    "probability_normalization_error_max": 1e-10
+  },
+  "controls": [
+    "Remove only system-bath edge: same dimension, preparation, onsite energies, bath and system hopping; compare means AND energy variances, no memory-only attribution.",
+    "Bath maximally mixed, system maximally mixed: stationary global state, no new order or count record. This changes preparation energy and entropy and is not energy matched.",
+    "Apply a diagonal staggered bath phase at window start: same current system state and count record, different future organization; report coherent intervention, mean work, and variance change. This is a bath-memory witness, not memory-dependent regulation.",
+    "Flip physical final spin once at window start and continue without resetting bath; report injected work and exact expected-wall union bound, not Gaussian determinant after a non-number-conserving kick.",
+    "Small bath L=1: retain recurrence rather than selecting only the best Rabi-transfer instant.",
+    "Global-flip symmetry and physical-to-wall basis equivalence checked independently on small full Hilbert spaces."
+  ],
+  "record": "For initial K, Q=K is conserved; N_B=K-N_wall. Guess K from N_B. Record error equals failure to have all system walls absent. This is a collective reservoir readout, not an emergent observer.",
+  "verification": "Analytic uniform bounds plus small full physical-spin matrices and a separately tasked AI critic. Review within this Work run is not external RAI execution or human peer review.",
+  "time": "Fixed total H for each undisturbed run; external Schrodinger parameter supplied. No physical internal clock is claimed. Diagnostic kicks are explicitly timed interventions.",
+  "physical_acceptance": "Requires an independently specified extra GRUT restriction and prediction beyond standard quantum spin transport/cooling. No such restriction is currently supplied.",
+  "strict_target_free_gate": "Not met by symmetry alone. Preferred alignment class, bath vacuum, interface, scales and readout are supplied inputs; report a bounded partial construction if these remain.",
+  "termination": "Run only the listed family and controls. Publish all outcomes including failed interpretations. No Candidate 1 changes, larger cosmology run, merge, release, or observer/consciousness claim."
+}

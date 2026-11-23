@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_d2_development_20261123/` | Codex construction and separate AI critic | New D2 ordering/record packet; preserve Candidate 1 | 2026-11-23 |
 
 ## ANSWERED QUESTIONS
 
