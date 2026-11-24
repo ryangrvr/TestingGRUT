@@ -1,0 +1,442 @@
+{
+  "all_independent_physical_checks_pass": true,
+  "d_ary_bounds": [
+    {
+      "alphabet_size": 2,
+      "minimum_environment_entropy_capacity_bits": 2.0,
+      "minimum_pure_environment_dimension_exact": 4,
+      "single_fault_and_no_fault_histories_per_logical_label": 4,
+      "three_copy_dimension": 8,
+      "three_copy_two_fault_ambiguity_max_labels": 2,
+      "three_copy_two_fault_minimax_upper": 0.5,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    },
+    {
+      "alphabet_size": 3,
+      "minimum_environment_entropy_capacity_bits": 2.807354922057604,
+      "minimum_pure_environment_dimension_exact": 7,
+      "single_fault_and_no_fault_histories_per_logical_label": 7,
+      "three_copy_dimension": 27,
+      "three_copy_two_fault_ambiguity_max_labels": 3,
+      "three_copy_two_fault_minimax_upper": 0.3333333333333333,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    },
+    {
+      "alphabet_size": 4,
+      "minimum_environment_entropy_capacity_bits": 3.321928094887362,
+      "minimum_pure_environment_dimension_exact": 10,
+      "single_fault_and_no_fault_histories_per_logical_label": 10,
+      "three_copy_dimension": 64,
+      "three_copy_two_fault_ambiguity_max_labels": 3,
+      "three_copy_two_fault_minimax_upper": 0.3333333333333333,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    },
+    {
+      "alphabet_size": 8,
+      "minimum_environment_entropy_capacity_bits": 4.459431618637297,
+      "minimum_pure_environment_dimension_exact": 22,
+      "single_fault_and_no_fault_histories_per_logical_label": 22,
+      "three_copy_dimension": 512,
+      "three_copy_two_fault_ambiguity_max_labels": 3,
+      "three_copy_two_fault_minimax_upper": 0.3333333333333333,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    },
+    {
+      "alphabet_size": 16,
+      "minimum_environment_entropy_capacity_bits": 5.523561956057013,
+      "minimum_pure_environment_dimension_exact": 46,
+      "single_fault_and_no_fault_histories_per_logical_label": 46,
+      "three_copy_dimension": 4096,
+      "three_copy_two_fault_ambiguity_max_labels": 3,
+      "three_copy_two_fault_minimax_upper": 0.3333333333333333,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    },
+    {
+      "alphabet_size": 64,
+      "minimum_environment_entropy_capacity_bits": 7.569855608330948,
+      "minimum_pure_environment_dimension_exact": 190,
+      "single_fault_and_no_fault_histories_per_logical_label": 190,
+      "three_copy_dimension": 262144,
+      "three_copy_two_fault_ambiguity_max_labels": 3,
+      "three_copy_two_fault_minimax_upper": 0.3333333333333333,
+      "two_copy_one_unflagged_fault_minimax_upper": 0.5
+    }
+  ],
+  "loaded_bath_counterexample": {
+    "loaded_bath_fault_probability": 0.9999999997671696,
+    "read_time": 1.5707963266120317,
+    "scope": "different energy and preparation; resource counterexample, not an energy-matched causal control",
+    "vacuum_bath_fault_probability": 5.5732998531014905e-31
+  },
+  "physical_cases": [
+    {
+      "full_active_dimension": 144,
+      "lengths": [
+        1,
+        1
+      ]
+    },
+    {
+      "full_active_dimension": 288,
+      "lengths": [
+        1,
+        2
+      ]
+    },
+    {
+      "full_active_dimension": 288,
+      "lengths": [
+        2,
+        1
+      ]
+    },
+    {
+      "full_active_dimension": 576,
+      "lengths": [
+        2,
+        2
+      ]
+    }
+  ],
+  "ready_gram_comparisons": [
+    {
+      "absolute_joint_error": 1.9984014443252818e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "S_four_times"
+    },
+    {
+      "absolute_joint_error": 2.581268532253489e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "M1_four_times"
+    },
+    {
+      "absolute_joint_error": 8.465450562766819e-16,
+      "api_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "alternating_all_sites"
+    },
+    {
+      "absolute_joint_error": 1.27675647831893e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "alternating_memories"
+    },
+    {
+      "absolute_joint_error": 2.3037127760972e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "single_S"
+    },
+    {
+      "absolute_joint_error": 2.4424906541753444e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "single_M1"
+    },
+    {
+      "absolute_joint_error": 5.551115123125783e-16,
+      "api_shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "single_M2"
+    },
+    {
+      "absolute_joint_error": 4.218847493575595e-15,
+      "api_shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "simultaneous_pair"
+    },
+    {
+      "absolute_joint_error": 8.881784197001252e-16,
+      "api_shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "oracle_shape": [
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scenario": "simultaneous_triple"
+    }
+  ],
+  "ready_gram_oracle_dimension": 512,
+  "reviewer": "separate internal AI implementation; not external RAI or human peer review",
+  "scope": "small dense reference validates the actual H and ready comparator; large uniform writer-on claim requires the separate analytic proof",
+  "short_chain_recurrence": {
+    "period": 6.283185306448127,
+    "return_to_fault_probability": 1.0000000000000004
+  },
+  "single_fault_mean_work_from_codeword": {
+    "M1": 4.0,
+    "M2": 4.0,
+    "S": 8.0
+  },
+  "worst_absolute_errors": {
+    "charge_commutators": 0.0,
+    "collision_energy_distribution": 0.0,
+    "collision_state": 0.0,
+    "global_color_symmetry": 0.0,
+    "logical_conservation_between_faults": 0.0,
+    "physical_fault_maps": 0.0,
+    "ready_coordinate_bijection": 0.0,
+    "ready_embedding": 0.0,
+    "ready_joint_versus_gram": 4.218847493575595e-15,
+    "ready_normalization": 1.3322676295501878e-15,
+    "three_state_recurrence_matrix": 0.0,
+    "three_state_recurrence_return": 4.440892098500626e-16,
+    "triple_fault_repair_activity": 1.1528592543446825e-14,
+    "undamaged_repair_activity": 7.670655559421559e-15,
+    "writer_matrix": 0.0,
+    "writer_subspace_invariance": 0.0,
+    "wrong_majority_historical_codeword": 1.1672023728928412e-30
+  },
+  "writer_perturbation_tests": [
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        1
+      ],
+      "scenario": "S_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.7172596206929225e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        1
+      ],
+      "scenario": "M1_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.61632483280374e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        1
+      ],
+      "scenario": "alternating_all_sites",
+      "vector_distance_writer_on_vs_omitted": 1.8886845300793732e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        1
+      ],
+      "scenario": "alternating_memories",
+      "vector_distance_writer_on_vs_omitted": 1.8343616840405926e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        2
+      ],
+      "scenario": "S_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.0298212305965555e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        2
+      ],
+      "scenario": "M1_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.6163248328431224e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        2
+      ],
+      "scenario": "alternating_all_sites",
+      "vector_distance_writer_on_vs_omitted": 1.7028382080821944e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        1,
+        2
+      ],
+      "scenario": "alternating_memories",
+      "vector_distance_writer_on_vs_omitted": 1.4381804451601035e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        1
+      ],
+      "scenario": "S_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.0298212305181638e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        1
+      ],
+      "scenario": "M1_four_times",
+      "vector_distance_writer_on_vs_omitted": 2.334229106360567e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        1
+      ],
+      "scenario": "alternating_all_sites",
+      "vector_distance_writer_on_vs_omitted": 1.5101427029778563e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        1
+      ],
+      "scenario": "alternating_memories",
+      "vector_distance_writer_on_vs_omitted": 1.631915495039859e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        2
+      ],
+      "scenario": "S_four_times",
+      "vector_distance_writer_on_vs_omitted": 1.1376458495231496e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        2
+      ],
+      "scenario": "M1_four_times",
+      "vector_distance_writer_on_vs_omitted": 2.334229106326437e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        2
+      ],
+      "scenario": "alternating_all_sites",
+      "vector_distance_writer_on_vs_omitted": 1.5068272348292546e-05
+    },
+    {
+      "kappa_elapsed_time_upper": 6.8817138671875e-05,
+      "lengths": [
+        2,
+        2
+      ],
+      "scenario": "alternating_memories",
+      "vector_distance_writer_on_vs_omitted": 1.335938110899154e-05
+    }
+  ]
+}

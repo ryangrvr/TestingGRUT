@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| `research/reality_framework/grut_d4_internal_recognition_20261124/` | Codex with separate construction and critique | Test unflagged discrepancy detection and repeated historical repair | 2026-11-24 |
 
 ## ANSWERED QUESTIONS
 
@@ -6330,3 +6329,24 @@ to repair an unflagged flip. The result concerns one specified fault in
 standard quantum mechanics. Candidate 1 is outside the D3 edits.
 Claims released.
 [Report](research/reality_framework/grut_d3_record_repair_20261124/REPORT.md)
+
+### 2026-11-24 · Codex · GRUT-D4 unflagged diagnosis and repeated historical repair
+
+Froze the model and tests at 5c59a2d. A fixed writer acquires two classical
+replicas and parity exchanges route mismatch excitations to two finite
+spin chains. Proved joint historical recovery above 0.99518 and recovery
+with both expected bath counts above 0.99194 after up to four separated
+single-site faults. The proof includes the always-present writer and no
+bath reset. Same-time double and triple errors fail historically. The
+identical-state collision proves a one-half ceiling for the ambiguous
+histories, and the d-label analysis prices memory and syndrome capacity.
+
+All 243 ready-comparator rows and 4,648 stored numbers replayed exactly.
+The separate internal reviewer built four full physical matrices and
+tested the ready solver against a dense reference in nine scenarios,
+with maximum joint error 4.22e-15. Preserved the short-chain recurrence,
+occupied-bath fault and the exact zero vacuum false-activation control.
+Timing of the diagnostic pulses and their work remain supplied. The model
+uses a prescribed repetition-code repair rule in standard quantum mechanics.
+Claims released. Prior D3 and Candidate 1 files are outside the change set.
+[Report](research/reality_framework/grut_d4_internal_recognition_20261124/REPORT.md)
