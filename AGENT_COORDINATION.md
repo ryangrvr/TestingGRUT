@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_d3_record_repair_20261124/` | Codex with separate construction and critique | Test whether a written record selects which historical configuration is repaired | 2026-11-24 |
 
 ## ANSWERED QUESTIONS
 
