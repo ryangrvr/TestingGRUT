@@ -1,0 +1,41 @@
+{
+  "id": "GRUT-D3-01",
+  "date": "2026-11-24",
+  "parent": "675d991927edd520daa4b000680a15e8a5200fa7",
+  "question": "Does an acquired local record select historical repair after a common disturbance, at fixed Hamiltonian, present active state and complete energy law?",
+  "design_disclosure": "The two color-symmetric Hamiltonian, exact sector reduction and analytic bounds were worked out before production. This freezes the model and design. Numerical code and physical-matrix adjudication follow. The forecast relies on standard unitary quantum mechanics.",
+  "units": {"hbar": 1, "g": 1, "Delta_over_g": 4},
+  "writer": {"L": 2688, "window_gw": [640, 656], "sample_gw": [640, 648, 656]},
+  "repair": {"L": 64, "window_gu": [8, 16], "sample_gu": [8, 9, 10, 11, 12, 13, 14, 15, 16]},
+  "preparation": "S fair diagonal bit, M blank, W and B each vacuum, D=e, C fair independent. No postselection.",
+  "fault": "At w swap S with D. Same reversible erasure in all conditions. D inert during evolution.",
+  "arms": {
+    "intact": "No memory flip, retain unused fair coin.",
+    "scrambled": "Apply F_M controlled on C=1. Trace C only for accessible-record definition, keep it in full state.",
+    "wrong": "Apply F_M regardless of C. Inverts the association and preserves the bit of information."
+  },
+  "analytic_gates": {
+    "window_write_accuracy_strict_lower": 0.99999,
+    "window_intact_restore_and_retain_strict_lower": 0.99,
+    "window_intact_minus_scrambled_joint_strict_lower": 0.495,
+    "scrambled_joint_and_restoration": "Exactly one half of intact scores for every w,u.",
+    "wrong_joint_and_restoration": "Exactly zero at all w,u.",
+    "ordinary_configuration_probability": "Exactly the same in all three arms.",
+    "resource_match": "Same H, dimensions, preparation and common fault. After intervention identical unconditional full active-plus-coin state. Conditional on the actual historical label and the coin, every energy measurement probability is equal. Mean common fault work Delta. The memory controls preserve the energy distribution on this state."
+  },
+  "short_chain_negative_control": {
+    "L_W": 1,
+    "L_B": 1,
+    "gw": "pi/2",
+    "gu": "pi/sqrt(2)",
+    "forecast": "S restored with probability one, M blank with probability one. The joint repair and retention gate fails."
+  },
+  "verification": {
+    "production": "Exact sector sparse exponential action, with a distinct polynomial propagation check at gu=8,12,16 for each registered write time.",
+    "oracle": "Separate internal critic constructs the physical tensor Hamiltonian for L_W,L_B in {1,2}, independently up to an extension at L=3 on one chain. Explicit two histories and coin masks, sector checks, energy-law equality and short-chain negative control.",
+    "absolute_match_tolerance": 1e-10,
+    "replay_tolerance": 1e-10,
+    "uniform_certificate": "Use analytic bounds and exact rational comparisons on all times in the windows. Floating-point samples only cross-check the finite dynamics."
+  },
+  "scope": "Classical historical-bit restoration with a retained pointer after one declared fault. All dynamical phases use the same H. The symmetry neutral local rule, reservoirs, timing, reversible fault and readout are supplied. The calculation does not assume a free clock, a particular future label, a repeated-repair lifetime or novel physical dynamics."
+}

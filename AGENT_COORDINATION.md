@@ -6307,3 +6307,25 @@ pinned dependencies. This is internal AI review, not external RAI execution
 or human peer review. Candidate 1 and all prior verdicts unchanged. Claims
 released. No merge or release.
 [Report](research/reality_framework/grut_d2_development_20261123/REPORT.md)
+
+### 2026-11-24 · Codex · GRUT-D3 causal use of a written record
+
+Recorded the fixed local Hamiltonian and control design at 53fd7c9 before
+production. The two conditional exchanges reduce exactly to two finite
+paths with the joint origin isolated after the common fault. Proved joint
+historical restoration and pointer retention above 0.9915 for every
+declared write/repair time pair. The scrambled arm has exactly half the
+success and the wrong-label arm has zero historical success. All three
+arms have identical active-plus-coin states and conditional energy laws.
+The explicit pulse injects mean work Delta. The type of defect, ready
+memory, local response and finite vacuum reservoirs are supplied.
+
+The 27 sampled timings have joint success at least 0.999563676984.
+Separate propagation agrees to 1.62e-14. The internal critic built six
+full physical models and checked 54 timing pairs. The largest discrepancy
+is 4.69e-14. Replayed 435 fields exactly, and tested the packet outside
+the checkout. Preserved the short-chain loss of the pointer and failure
+to repair an unflagged flip. The result concerns one specified fault in
+standard quantum mechanics. Candidate 1 is outside the D3 edits.
+Claims released.
+[Report](research/reality_framework/grut_d3_record_repair_20261124/REPORT.md)
