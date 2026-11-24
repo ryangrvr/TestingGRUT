@@ -1,0 +1,39 @@
+{
+  "id": "GRUT-D4-01",
+  "date": "2026-11-24",
+  "parent_d3": "0f18c546ab0b0ad2f0f5968c52bc02349f2c01e4",
+  "question": "Can a dynamically written historical record detect unflagged disagreement and enable repeated repair by a fixed Hamiltonian with finite internal resources?",
+  "design_disclosure": "Physical model, exact reduction, conservative bounds and predicted negative controls were chosen analytically before numerical production. Code and numerical outputs follow this design freeze.",
+  "units": {"g": 1, "hbar": 1, "Delta_over_g": 4, "kappa_over_g": "1/65536"},
+  "writer": {"spins": 1, "nominal_kappa_w": "pi/2", "certified_phase_radius": "1/512"},
+  "correction_chain_spins": [2304, 2304],
+  "fault_sites": ["S", "M1", "M2"],
+  "fault_masks": {"S": [1, 1], "M1": [1, 0], "M2": [0, 1]},
+  "repeated": {
+    "max_faults": 4,
+    "gaps_and_terminal_wait_range": [128, 144],
+    "sample_equal_gaps": [128, 136, 144],
+    "ordered_sequences_at_each_sample": "All 3^4 length-four sequences, including consecutive reuse of a chain or replica.",
+    "numerical_scope": "Exact ready-sector XX dynamics with true fault maps. The writer remains in the physical system and is controlled by the uniform analytical error bound. No intermediate reads or bath resets."
+  },
+  "strict_uniform_gates": {
+    "write_two_records": 0.99999,
+    "historical_codeword_after_each_of_up_to_four_separated_faults": 0.995,
+    "historical_codeword_and_exact_expected_bath_counts": 0.99
+  },
+  "controls": {
+    "undamaged": "Vacuum baths, no replica flips. Zero repair-chain activity and zero historical color change; finite writer reversion is reported.",
+    "single_faults": "Each individual site flip after nominal writing. Distinct parity masks and work, score repair and both memories.",
+    "simultaneous": "All three pairs and all three sites at once after nominal writing, terminal wait 136. Predict zero joint historical restoration for each. A pair leaves a discrepancy but wrong majority. All three produce an undetected alternate codeword.",
+    "identical_present_state": "After nominal writing, history 0 with X_S and history 1 with X_M1 X_M2 land in the same full physical state, with the same ready writer and vacuum reservoirs.",
+    "short_reservoir": "With L1=L2=1, one M1 fault follows a three-state path with couplings g and kappa. Recurrence at duration 2*pi/sqrt(g^2+kappa^2). A bath excitation at the same interface can create a discrepancy in an otherwise intact triple.",
+    "scaling": "Verify the general discrimination and storage bounds and evaluate d in {2,3,4,8,16,64}. Distinguish the three-replica single-fault guarantee from two-fault ambiguity."
+  },
+  "verification": {
+    "physical_oracle": "Separate AI builds small full physical tensor Hamiltonians including writer and actual pulses, verifies encoding, symmetry, exact acquisition, state collision, repeated-pulse reduction and recurrence. Small reservoir sizes with L1,L2 in {1,2}, plus scaled checks where tractable.",
+    "large_solver": "Finite Gram matrices of endpoint fermion modes, exact Fock evaluation in their span for the ready comparator with actual physical X maps. Compare to small dense physical dynamics and report the residual writer error explicitly.",
+    "tolerance": 1e-10,
+    "proof": "Uniform rational probabilities for the actual writer-on Hamiltonian, independent of numerical sampling."
+  },
+  "scope": "Standard quantum mechanics for classical historical configurations. The fault tests use label-blind timed unitaries. The recognition and correction interactions have no fault flag or historical reference input. They are a supplied majority rule, applied only to the declared correctable class. Autonomous pulse generation, an internal clock and a novel law are separate verdicts."
+}
