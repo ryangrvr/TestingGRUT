@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_d6_adaptive_20261125/` | Codex | Freeze and test D6 acquisition and adaptive development | 2026-11-25 |
 
 ## ANSWERED QUESTIONS
 
