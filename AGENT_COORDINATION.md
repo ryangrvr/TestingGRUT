@@ -6387,3 +6387,22 @@ for 36 conditional rows. All 686 comparisons agree within 4.35e-14.
 The apparatus learns one calibrated parameter with a supplied clock
 and rules. External RAI review remains open. Claims released.
 [Report](research/reality_framework/grut_d6_adaptive_20261125/REPORT.md)
+
+### 2026-11-25 · Codex · GRUT-D7 physical recovery from acquired information
+
+Froze the local phase-transfer model and comparisons at 55217a7.
+The weak record sets a compensator before the separate payload
+arrives. Proved the programme trace-norm optimum and obtained
+0.895284707521 for shallow calibrated recovery, 0.853553390593
+for optimal blind recovery, and 0.875 for full compensation.
+Deep recovery gives 0.75 against the blind Bell ceiling of 0.50.
+The registered symmetric programme has the same optimum with
+coherent probe access and the classical pointer.
+
+Replayed 648 reduced rows and 80 direct physical rows in 320
+coin blocks outside the checkout. The 800 comparisons agree within
+3.56e-15. Preserved the short-clock miss, reversed-record and passive
+controls, and exact finite recurrence. The phase response is a
+calibrated standard-quantum-mechanical benchmark with no hardware
+run or new physical law established. Claims released.
+[Report](research/reality_framework/grut_d7_functional_recovery_20261125/REPORT.md)

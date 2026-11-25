@@ -1,0 +1,82 @@
+{
+  "study": "GRUT-D7",
+  "date": "2026-11-25",
+  "parent_pr": 19,
+  "parent_sha": "4f7694c20eca51b2c94fb7cc696c6ccd7ff7cf06",
+  "production_grid": {
+    "length": [8, 16, 32],
+    "assay": ["none", "weak", "strong"],
+    "severity": ["shallow", "deep"],
+    "arm": [
+      ["main", "intact"],
+      ["main", "scrambled"],
+      ["main", "inverted"],
+      ["main", "disabled"],
+      ["passive", "intact"],
+      ["direct", "disabled"]
+    ],
+    "policy": ["blind", "full", "calibrated"],
+    "source": [0, 1],
+    "two_independent_fair_coins": true
+  },
+  "timing": {
+    "endpoint_omega_t": "pi",
+    "window_offsets_from_pi": [-0.2, 0.2],
+    "first_ready_site": 8,
+    "recurrence_omega_t": "2pi"
+  },
+  "observable": "Unconditional probability of the same Phi+ projector on receiver and isolated reference in every arm. Sum fair-coin blocks and record each source separately.",
+  "gates": {
+    "analytic_residual_max": 1e-12,
+    "physical_oracle_residual_max": 1e-10,
+    "weak_shallow_calibrated_vs_optimal_blind_gain_min": 0.04,
+    "weak_shallow_calibrated_vs_full_gain_min": 0.02,
+    "weak_shallow_late_gain_min_for_length_at_least_16": 0.04,
+    "weak_shallow_same_angle_scramble_upper": 0.82,
+    "weak_shallow_same_angle_inversion_upper": 0.74,
+    "padded_incompletion_bound_max": 7e-14,
+    "ready_diagnostic_threshold": 0.95,
+    "expected_ready_diagnostic_fail_length": [8],
+    "expected_ready_diagnostic_pass_length": [16, 32],
+    "full_recurrence_fidelity": 1.0
+  },
+  "exact_targets": {
+    "weak_shallow_calibrated": "(1+sqrt(5/8))/2",
+    "weak_shallow_blind": "(1+1/sqrt(2))/2",
+    "weak_shallow_full": 0.875,
+    "weak_deep_calibrated": 0.75,
+    "weak_deep_blind": 0.5,
+    "strong_calibrated": 1.0,
+    "direct_full": 1.0,
+    "blind_replacement": 0.25,
+    "coherent_programme_advantage_in_registered_family": 0.0
+  },
+  "oracle": {
+    "length": [8, 16],
+    "source": [0, 1],
+    "severity": ["shallow", "deep"],
+    "rows": [
+      ["weak", "main", "intact", "calibrated"],
+      ["weak", "main", "intact", "blind"],
+      ["weak", "main", "intact", "full"],
+      ["weak", "main", "scrambled", "calibrated"],
+      ["weak", "main", "inverted", "calibrated"],
+      ["weak", "main", "disabled", "calibrated"],
+      ["weak", "passive", "intact", "calibrated"],
+      ["none", "main", "intact", "calibrated"],
+      ["strong", "main", "intact", "calibrated"],
+      ["weak", "direct", "disabled", "full"]
+    ],
+    "times": ["endpoint", "both_window_flanks", "recurrence"]
+  },
+  "negative_controls": [
+    "An optimal blind recovery avoids the cost of guessing a compensator setting",
+    "Scramble, inversion, disabled record and passive selector at the same angle",
+    "Direct bypass and true no-assay before commitment",
+    "A fixed replacement output gives Bell fidelity 1/4",
+    "A full sign-sized correction can underperform calibrated compensation",
+    "Coherent probe access has no higher optimum for the registered symmetric pair",
+    "The unpadded clock can miss the ready threshold near the endpoint",
+    "The receiver does not retain the result across full recurrence"
+  ]
+}
