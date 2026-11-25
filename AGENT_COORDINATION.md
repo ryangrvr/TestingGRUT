@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_i1_integrated_20261125/` | Codex | Freeze and test the I1 integrated physical and information framework | 2026-11-25 |
 
 ## ANSWERED QUESTIONS
 
