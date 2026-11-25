@@ -6369,3 +6369,21 @@ and 18 internal cases. The supplied clock and prepared blank storage
 are inputs. No autonomous goal selection or new law is claimed.
 Claims released. D1–D4 and Candidate 1 files remain outside the change set.
 [Report](research/reality_framework/grut_d5_prospective_20261124/REPORT.md)
+
+### 2026-11-25 · Codex · GRUT-D6 acquired internal phase and adaptive development
+
+Froze the Hamiltonian, control grid and gates at 64c7a3c before
+production. A localized head probes an unknown internal sign, leaves
+the source behind, and uses the acquired bit to build two layouts.
+A separate precessing witness tests the forecast. The weak joint
+score is 0.75, compared with 0.50 for passive, scrambled and disabled
+controls. The open direct port retains perfect scores with memory
+disabled. A sealed source has an exact 0.50 structural ceiling.
+
+Preserved the n=2, 4 and 8 stage-localization misses and the return
+to blank tape at 2T. Replayed all 864 rows outside the checkout.
+The independent internal reviewer propagated 144 physical blocks
+for 36 conditional rows. All 686 comparisons agree within 4.35e-14.
+The apparatus learns one calibrated parameter with a supplied clock
+and rules. External RAI review remains open. Claims released.
+[Report](research/reality_framework/grut_d6_adaptive_20261125/REPORT.md)

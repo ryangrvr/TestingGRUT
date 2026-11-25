@@ -1,0 +1,91 @@
+{
+  "study": "GRUT-D6",
+  "date": "2026-11-25",
+  "parent_draft_pr": 18,
+  "parent_sha": "1c8f6588211f2bcc4a3681b448e0c4656b21c320",
+  "model": "MODEL.md",
+  "production_grid": {
+    "n": [2, 4, 8, 16, 32, 64],
+    "strength": ["sealed", "weak", "strong"],
+    "port": ["main", "passive", "direct"],
+    "intervention": ["intact", "scrambled", "inverted", "disabled"],
+    "source": [0, 1],
+    "stage_challenge": [0, 1],
+    "two_independent_fair_coins": true
+  },
+  "fault_classes": {
+    "memory_port": ["scrambled", "inverted", "disabled"],
+    "missing_internal_signal": "sealed",
+    "unused_record": "passive",
+    "alternative_information_channel": "direct",
+    "short_clock": "n=2 at the A-only stage diagnostic",
+    "recurrence": "first tape reset at 2T, full state return at 4T",
+    "external_pulses": false
+  },
+  "timings": {
+    "endpoint_omega_t": "pi",
+    "late_omega_t_offsets_from_pi": [-0.2, 0, 0.2],
+    "a_only_omega_t": "2 asin sqrt((3n+7)/(2L))",
+    "recurrence_omega_t": ["2pi", "4pi"]
+  },
+  "numerical_gates": {
+    "endpoint_distribution_abs_error": 1e-12,
+    "oracle_abs_error": 1e-10,
+    "weak_main_intact_joint_structural_min": 0.74,
+    "weak_main_intact_joint_with_forecast_min": 0.74,
+    "weak_causal_advantage_over_each_of_passive_intact_scrambled_disabled_min": 0.24,
+    "late_weak_main_intact_joint_with_forecast_min": 0.747,
+    "strong_main_intact_joint_structural_min": 0.999999999999,
+    "sealed_balanced_structural_score": 0.5,
+    "direct_open_joint_structural_min_in_all_interventions": 0.999999999999,
+    "a_only_probability_diagnostic_threshold": 0.9,
+    "a_only_expected_below_threshold_n": [2],
+    "a_only_required_above_threshold_n": [64],
+    "late_incomplete_bound_max": 2e-16,
+    "record_during_response": "identical Z-basis memory distribution at cut and later completed coordinates",
+    "reset": "blank banks and initial readout distributions at 2T; complete joint density operator recurs at 4T"
+  },
+  "endpoint_forecasts": {
+    "preintervention_record_correct_for_either_b": {"sealed": 0.5, "weak": 0.75, "strong": 1.0},
+    "main_balanced_joint_structural_in_intervention_order": {
+      "sealed": [0.5, 0.5, 0.5, 0.5],
+      "weak": [0.75, 0.5, 0.25, 0.5],
+      "strong": [1.0, 0.5, 0.0, 0.5]
+    },
+    "passive_balanced_joint_structural_all": 0.5,
+    "direct_balanced_joint_structural_sealed": 0.5,
+    "direct_balanced_joint_structural_open": 1.0,
+    "silent_disabled_main_forecast_W_balanced": 1.0,
+    "memory_cut_trace_distance_in_intervention_order_weak_main": [0.5, 0.0, 0.5, 0.0],
+    "memory_cut_trace_distance_in_intervention_order_strong_main": [1.0, 0.0, 1.0, 0.0],
+    "sealed_complete_accessible_state_trace_distance": 0.0,
+    "all_arms_energy_law": "binomial L,1/2 plus independent witness energy with equal +/- kappa weight"
+  },
+  "readouts": [
+    "clock endpoint, A-only sector probability and late completion failure",
+    "preintervention bit in probe dump and postintervention memory",
+    "separate A and B target scores and joint whole-structure score",
+    "W outcome forecast score and joint complete structure/forecast score",
+    "trace distance at complete response cut and between memory marginals",
+    "probability distribution within every conditional b,z row, over both physical coins",
+    "preparation, energy spectrum, memory and storage budgets, finite recurrence"
+  ],
+  "independent_oracle_required_cases": {
+    "n": 2,
+    "stage_challenge": [0, 1],
+    "source": [0, 1],
+    "arms_order": [
+      ["weak", "main", "intact"],
+      ["weak", "main", "scrambled"],
+      ["weak", "main", "inverted"],
+      ["weak", "main", "disabled"],
+      ["weak", "passive", "intact"],
+      ["weak", "direct", "disabled"],
+      ["sealed", "main", "intact"],
+      ["sealed", "direct", "disabled"],
+      ["strong", "main", "intact"]
+    ],
+    "include_a_only_time_and_endpoint": true
+  },
+  "negative_results": "Keep every registered production row, including wrong or inactive controls, the short-clock miss, and the first recurrence. Never redefine a gate after seeing data."
+}
