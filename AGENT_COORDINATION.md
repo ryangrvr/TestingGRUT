@@ -6406,3 +6406,23 @@ controls, and exact finite recurrence. The phase response is a
 calibrated standard-quantum-mechanical benchmark with no hardware
 run or new physical law established. Claims released.
 [Report](research/reality_framework/grut_d7_functional_recovery_20261125/REPORT.md)
+
+### 2026-11-25 · Codex · GRUT-I1 integrated mesoscopic reality test
+
+Froze the finite reservoirs, D7 anchors, comparisons and stop rules
+at cee2d21. Derived causal finite contact evolution, its controlled
+continuous-time approximation, and the ordinary optimal recovery
+with an accessible aging record. The noisy weak deep gain with
+full cold stock is .007504 at fine resolution and vanishes at
+registered angular jitter .40. No excess over conventional recovery.
+
+All 108 bridge rows and the registered thermal, reuse, pair and
+network controls replayed outside the checkout. The separate internal
+reviewer propagated 36 density cases. All 1,080 joint comparisons
+agree within 1.93e-14. Finite reservoir reuse, the dark collective
+mode and the binomial identity cutoff retain their failures.
+
+I1 verdict B applies to the explicit mesoscopic integration.
+The database-wide source survey preserves every prior path, and
+hardware and external RAI review remain open. Claims released.
+[Verdict](research/reality_framework/grut_i1_integrated_20261125/VERDICT.md)

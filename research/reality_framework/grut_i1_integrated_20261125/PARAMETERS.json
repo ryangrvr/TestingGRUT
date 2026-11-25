@@ -1,0 +1,49 @@
+{
+  "study": "GRUT-I1",
+  "parent": "cecc5f99202f77c55255b528372bf3d53e12a149",
+  "episode_time": 1.0,
+  "payload_gap": 1.0,
+  "slices": [16, 64, 256],
+  "assays": {"none": 0.0, "weak": 0.5, "strong": 1.0},
+  "phase_over_pi": {"shallow": 0.125, "deep": 0.25},
+  "hot_excited_fraction": 0.35,
+  "cold_excited_fraction": 0.04,
+  "phase_error_radians": [0.0, 0.2, 0.4],
+  "regimes": {
+    "anchor": {"source_rate": 0.0, "memory_rate": 0.0, "hot_rate": 0.0, "cold_rate": 0.0, "cold_fraction": 0.0},
+    "age": {"source_rate": 0.0, "memory_rate": 0.35, "hot_rate": 0.0, "cold_rate": 0.0, "cold_fraction": 0.0},
+    "telegraph": {"source_rate": 0.4, "memory_rate": 0.35, "hot_rate": 0.0, "cold_rate": 0.0, "cold_fraction": 0.0},
+    "hot": {"source_rate": 0.4, "memory_rate": 0.35, "hot_rate": 1.2, "cold_rate": 1.6, "cold_fraction": 0.0},
+    "finite_cold": {"source_rate": 0.4, "memory_rate": 0.35, "hot_rate": 1.2, "cold_rate": 1.6, "cold_fraction": 0.5},
+    "full_cold": {"source_rate": 0.4, "memory_rate": 0.35, "hot_rate": 1.2, "cold_rate": 1.6, "cold_fraction": 1.0}
+  },
+  "payload_population_initial": {"bell": 0.5, "organization": 0.0},
+  "organization_damage_fraction_threshold": 0.2,
+  "organization_sizes": [8, 32, 128, 512, 2048],
+  "organization_slices": 256,
+  "organization_regimes": ["hot", "finite_cold", "full_cold"],
+  "reuse_regime": "full_cold",
+  "collective_individual_rate": 1.6,
+  "networks": {
+    "sizes": [8, 16, 32, 64, 128],
+    "times": [1.0, 4.0, 8.0, 16.0, 32.0],
+    "classes": ["ring", "ring_antipodal", "dyadic", "complete"],
+    "incident_coupling": 1.0,
+    "bare_gap": 2.0,
+    "eigenvalue_group_tolerance": 1e-10
+  },
+  "direct_density_slices": 16,
+  "thresholds": {
+    "algebra_abs": 1e-11,
+    "density_crosscheck_abs": 1e-10,
+    "energy_abs": 1e-11,
+    "entropy_floor": -1e-11,
+    "fine_continuum_abs": 0.004,
+    "reuse_min_max_population_gap": 0.01,
+    "laboratory_systematic_contrast": 0.010,
+    "laboratory_familywise_alpha": 0.05,
+    "laboratory_confirmatory_contrasts": 2,
+    "laboratory_shots_per_setting_and_arm": 20000,
+    "cpu_seconds_per_replay": 300
+  }
+}
