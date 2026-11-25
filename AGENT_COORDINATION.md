@@ -6350,3 +6350,22 @@ Timing of the diagnostic pulses and their work remain supplied. The model
 uses a prescribed repetition-code repair rule in standard quantum mechanics.
 Claims released. Prior D3 and Candidate 1 files are outside the change set.
 [Report](research/reality_framework/grut_d4_internal_recognition_20261124/REPORT.md)
+
+### 2026-11-25 · Codex · GRUT-D5 prospective developmental identity
+
+Froze the model and controls at 9767724. A local moving head acquires
+the seed color, grows a prefix, regenerates the damaged portion and
+fills the unbuilt suffix. The reverse pass maintains a completed word.
+The internal arms obey one fixed Hamiltonian and the same energy law.
+Either input scramble halves the original whole-word score. Inversion
+or disabling gives zero. A pilot null acquires the same record and
+matches the intact observations without using that record.
+
+Preserved the failed short-clock stage and recovery diagnostics. The
+proof bounds the full joint failure after an unflagged tape probe by
+7.32e-17 or less at the registered sizes. Replayed 4,656 numeric fields
+and separately compared direct physical propagation for 27 external
+and 18 internal cases. The supplied clock and prepared blank storage
+are inputs. No autonomous goal selection or new law is claimed.
+Claims released. D1–D4 and Candidate 1 files remain outside the change set.
+[Report](research/reality_framework/grut_d5_prospective_20261124/REPORT.md)
