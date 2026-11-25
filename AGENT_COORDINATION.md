@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_d7_functional_recovery_20261125/` | Codex | Freeze and test D7 learned phase compensation against optimal recovery | 2026-11-25 |
 
 ## ANSWERED QUESTIONS
 
