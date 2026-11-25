@@ -1,0 +1,37 @@
+{
+  "id": "GRUT-D5-01",
+  "date": "2026-11-25",
+  "parent_d4": "aa6ef7c1cfdc58ad941d8f37c413168cbd6acc02",
+  "design_disclosure": "Model, matched null, cases, scores and thresholds specified analytically before numerical production.",
+  "sizes": [8, 16, 32, 64],
+  "head_edges_per_cell": 256,
+  "local_norm_scale_J": 1,
+  "histories": "All four equal-weight initial (h,G) in {0,1}^2 and both fair coin values. No postselection.",
+  "internal_trials": {
+    "intact": "At every size and history test F=0,1,2,3 with intact K. Fault scores include the flipped archived color.",
+    "controls": "F=2, all seven K values, every history and size. Scrambled arms score both coin values.",
+    "snapshots": "Check number of filled cells at first and second diagnostic edges, first full write and end. Before last rebuild write a blank still exists on the ordered path.",
+    "record": "Check initial M=e and M=h at the first two fault edges before K acts."
+  },
+  "external_trials": {
+    "selectors": {"F": 0, "K": "intact"},
+    "probabilities_p": ["1/8", "3/8", "5/8"],
+    "pulse_sites_zero_based": [0, 1, 0],
+    "scope": "One unflagged laboratory flip per trial, without a clock measurement. Include both early construction and postcompletion.",
+    "endpoint_solver": "Group exact endpoint amplitudes by complete final basis state with binomial weights. Include correct archive and head L in unconditional success."
+  },
+  "null": "Same preparations, assay, route, clock and perturbations. Deposits read h instead of M. Check intact observational identity and invariance of target under M interventions.",
+  "thresholds": {
+    "internal_intact_and_archive_success": 1,
+    "internal_inverted_or_disabled_target_success": 0,
+    "internal_scrambled_target_success": 0.5,
+    "minimum_external_joint_success": 0.99999,
+    "minimum_external_correct_stage_probability": 0.99999,
+    "precontrol_record_accuracy_at_declared_stages": 1,
+    "null_intact_observational_match": 1,
+    "null_memory_intervention_target_success": 1,
+    "independent_oracle_absolute_tolerance": 1e-10
+  },
+  "verification": "Exact path and finite clock bounds. Separate small reachable physical Hamiltonian construction and propagation with a lab pulse, including clock tails. Verify acquisition, resource ledger and exact energy law.",
+  "scope": "Supplied bounded local reversible program with a finite internal route. Externally timed pulses are tests. Distinguish generated structure, acquired causal memory, target programming, collective emergence and physical novelty."
+}

@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_d5_prospective_20261124/` | Codex with separate construction and critique | Generative development, memory controls and repair | 2026-11-24 |
 
 ## ANSWERED QUESTIONS
 
