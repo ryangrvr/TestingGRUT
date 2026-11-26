@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| `research/reality_framework/grut_i2_persistence_20261125/` | Codex | Freeze and test finite-fuel organization and persistence | 2026-11-25 |
 
 ## ANSWERED QUESTIONS
 
