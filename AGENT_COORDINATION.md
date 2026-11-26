@@ -6460,3 +6460,24 @@ observed control and stochastic thermodynamics explanation. Verdict
 B recommends consolidation as conventional effective physics.
 External review and device calibration are pending. Claim released.
 [Report](research/reality_framework/grut_i3_predictive_memory_20261126/REPORT.md)
+
+### 2026-11-26 · Codex · GRUT-F1 operational reconstruction obstruction
+
+Audited the PR #23 tree and indexed 7,954 tracked paths, with 46
+linked primary records. Consolidated D1–D7 and I1–I3 as the
+developmental effective-theory pillar in a new packet.
+
+Froze the calibrated spring response and conformal scope check at
+5ffdc3c8. Exact replays recover both archives byte-for-byte. The
+independent solver verifies 56 shifts and 470 port entries. Both
+four-site graphs have full visibility and equal pinning, spectra
+and spring budget. Their topology differs, and a calibrated
+added site gives a response difference greater than 29/50000
+at the frozen time. The two-hidden-site uniqueness result
+requires the connected common-pinning class and full visibility.
+The equal-leaf dark-mode control retains rank five of six.
+
+Verdict C is an exact access obstruction within established inverse
+theory. External review is pending. Earlier adjudications were used
+as evidence at their pinned scope. Claims released.
+[Report](research/reality_framework/grut_f1_operational_reconstruction_20261126/REPORT.md)

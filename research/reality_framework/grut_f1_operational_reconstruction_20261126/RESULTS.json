@@ -1,0 +1,254 @@
+{
+  "protocol": "GRUT-F1",
+  "freeze": "5ffdc3c8717d2a8331643780e98c14fd031566be",
+  "cases": [
+    {
+      "name": "one_port",
+      "sites": 4,
+      "observed": [
+        0
+      ],
+      "moment_count": 8,
+      "topology": {
+        "cycle": {
+          "connected": true,
+          "triangles": 0,
+          "edge_count": 4,
+          "total_spring": 55
+        },
+        "pendant_triangle": {
+          "connected": true,
+          "triangles": 1,
+          "edge_count": 4,
+          "total_spring": 55
+        }
+      },
+      "rank": {
+        "cycle": 4,
+        "pendant_triangle": 4
+      },
+      "all_modes_visible": true,
+      "checks": {
+        "orthogonal": true,
+        "fixes_measured_vectors": true,
+        "fixes_constant_vector": true,
+        "conjugate_stiffness": true,
+        "common_pinning": true,
+        "port_moments_equal": true,
+        "rank_as_registered": true,
+        "both_connected": true,
+        "different_triangle_counts": true,
+        "resource_counts_match": true
+      }
+    },
+    {
+      "name": "two_ports",
+      "sites": 5,
+      "observed": [
+        0,
+        4
+      ],
+      "moment_count": 10,
+      "topology": {
+        "cycle": {
+          "connected": true,
+          "triangles": 0,
+          "edge_count": 5,
+          "total_spring": 56
+        },
+        "pendant_triangle": {
+          "connected": true,
+          "triangles": 1,
+          "edge_count": 5,
+          "total_spring": 56
+        }
+      },
+      "rank": {
+        "cycle": 5,
+        "pendant_triangle": 5
+      },
+      "all_modes_visible": true,
+      "checks": {
+        "orthogonal": true,
+        "fixes_measured_vectors": true,
+        "fixes_constant_vector": true,
+        "conjugate_stiffness": true,
+        "common_pinning": true,
+        "port_moments_equal": true,
+        "rank_as_registered": true,
+        "both_connected": true,
+        "different_triangle_counts": true,
+        "resource_counts_match": true
+      }
+    },
+    {
+      "name": "five_ports",
+      "sites": 8,
+      "observed": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      "moment_count": 16,
+      "topology": {
+        "cycle": {
+          "connected": true,
+          "triangles": 0,
+          "edge_count": 8,
+          "total_spring": 59
+        },
+        "pendant_triangle": {
+          "connected": true,
+          "triangles": 1,
+          "edge_count": 8,
+          "total_spring": 59
+        }
+      },
+      "rank": {
+        "cycle": 8,
+        "pendant_triangle": 8
+      },
+      "all_modes_visible": true,
+      "checks": {
+        "orthogonal": true,
+        "fixes_measured_vectors": true,
+        "fixes_constant_vector": true,
+        "conjugate_stiffness": true,
+        "common_pinning": true,
+        "port_moments_equal": true,
+        "rank_as_registered": true,
+        "both_connected": true,
+        "different_triangle_counts": true,
+        "resource_counts_match": true
+      }
+    },
+    {
+      "name": "extra_hidden_leaf",
+      "sites": 5,
+      "observed": [
+        0
+      ],
+      "moment_count": 10,
+      "topology": {
+        "cycle": {
+          "connected": true,
+          "triangles": 0,
+          "edge_count": 5,
+          "total_spring": 155
+        },
+        "pendant_triangle": {
+          "connected": true,
+          "triangles": 1,
+          "edge_count": 5,
+          "total_spring": 155
+        }
+      },
+      "rank": {
+        "cycle": 5,
+        "pendant_triangle": 5
+      },
+      "all_modes_visible": true,
+      "checks": {
+        "orthogonal": true,
+        "fixes_measured_vectors": true,
+        "fixes_constant_vector": true,
+        "conjugate_stiffness": true,
+        "common_pinning": true,
+        "port_moments_equal": true,
+        "rank_as_registered": true,
+        "both_connected": true,
+        "different_triangle_counts": true,
+        "resource_counts_match": true
+      }
+    },
+    {
+      "name": "connected_dark_mode_control",
+      "sites": 6,
+      "observed": [
+        0
+      ],
+      "moment_count": 12,
+      "topology": {
+        "cycle": {
+          "connected": true,
+          "triangles": 0,
+          "edge_count": 6,
+          "total_spring": 57
+        },
+        "pendant_triangle": {
+          "connected": true,
+          "triangles": 1,
+          "edge_count": 6,
+          "total_spring": 57
+        }
+      },
+      "rank": {
+        "cycle": 5,
+        "pendant_triangle": 5
+      },
+      "all_modes_visible": false,
+      "checks": {
+        "orthogonal": true,
+        "fixes_measured_vectors": true,
+        "fixes_constant_vector": true,
+        "conjugate_stiffness": true,
+        "common_pinning": true,
+        "port_moments_equal": true,
+        "rank_as_registered": true,
+        "both_connected": true,
+        "different_triangle_counts": true,
+        "resource_counts_match": true
+      }
+    }
+  ],
+  "primary": {
+    "port_moments": [
+      1,
+      46,
+      3169,
+      224830,
+      16019065,
+      1142173126,
+      81447985513,
+      5808154575718
+    ],
+    "krylov_determinants": {
+      "cycle": -1807920,
+      "pendant_triangle": 1807920
+    },
+    "checks": {
+      "determinants_as_registered": true,
+      "registered_edge_count_and_spring_sum": true,
+      "relabel_is_nontrivial_and_fixes_port": true,
+      "relabel_port_moments_equal": true
+    }
+  },
+  "calibrated_extra_probe": {
+    "observed_added": [
+      0,
+      3
+    ],
+    "third_derivative": {
+      "cycle": 0,
+      "pendant_triangle": 30
+    },
+    "third_derivative_gap": 30,
+    "row_norms": {
+      "cycle": 91,
+      "pendant_triangle": 91
+    },
+    "time": "1/20",
+    "response_gap_interval": [
+      "15867/27280000",
+      "18233/27280000"
+    ],
+    "checks": {
+      "third_derivatives_as_registered": true,
+      "valid_tail_bound": true,
+      "gap_above_registered_floor": true
+    }
+  },
+  "passed": true
+}
