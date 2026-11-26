@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_f1_operational_reconstruction_20261126/ | Codex | Audit foundational evidence and verify the exact operational reconstruction obstruction | 2026-11-26 |
 
 ## ANSWERED QUESTIONS
 

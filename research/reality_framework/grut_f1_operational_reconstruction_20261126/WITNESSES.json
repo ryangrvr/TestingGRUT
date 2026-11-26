@@ -1,0 +1,198 @@
+{
+  "parent_commit": "14cf11c7fed1413d63f9139f25be9e1569a97f8c",
+  "units": {
+    "mass": 1,
+    "common_pinning_frequency_squared": 1,
+    "hbar": 1
+  },
+  "networks": {
+    "cycle": [
+      [
+        0,
+        1,
+        27
+      ],
+      [
+        0,
+        2,
+        18
+      ],
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        8
+      ]
+    ],
+    "pendant_triangle": [
+      [
+        0,
+        1,
+        12
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        30
+      ],
+      [
+        1,
+        2,
+        10
+      ]
+    ]
+  },
+  "hidden_mixing": {
+    "numerator": [
+      [
+        2,
+        -1,
+        2
+      ],
+      [
+        -1,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        -1
+      ]
+    ],
+    "denominator": 3
+  },
+  "primary_krylov_determinant_magnitude": 1807920,
+  "primary_edge_count": 4,
+  "primary_spring_sum": 55,
+  "cases": [
+    {
+      "name": "one_port",
+      "sites": 4,
+      "observe": [
+        0
+      ],
+      "append_edges": [],
+      "rank": 4
+    },
+    {
+      "name": "two_ports",
+      "sites": 5,
+      "observe": [
+        0,
+        4
+      ],
+      "append_edges": [
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "rank": 5
+    },
+    {
+      "name": "five_ports",
+      "sites": 8,
+      "observe": [
+        0,
+        4,
+        5,
+        6,
+        7
+      ],
+      "append_edges": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          1
+        ],
+        [
+          5,
+          6,
+          1
+        ],
+        [
+          6,
+          7,
+          1
+        ]
+      ],
+      "rank": 8
+    },
+    {
+      "name": "extra_hidden_leaf",
+      "sites": 5,
+      "observe": [
+        0
+      ],
+      "append_edges": [
+        [
+          0,
+          4,
+          100
+        ]
+      ],
+      "rank": 5
+    },
+    {
+      "name": "connected_dark_mode_control",
+      "sites": 6,
+      "observe": [
+        0
+      ],
+      "append_edges": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          5,
+          1
+        ]
+      ],
+      "rank": 5
+    }
+  ],
+  "calibrated_extra_probe": {
+    "observe": [
+      0,
+      3
+    ],
+    "derivative_order": 3,
+    "derivatives": {
+      "cycle": 0,
+      "pendant_triangle": 30
+    },
+    "time": "1/20",
+    "stiffness_operator_norm_upper": 91,
+    "required_response_gap_lower": "29/50000"
+  },
+  "hidden_relabel_of_cycle": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "exact_compute": {
+    "wall_seconds_per_program": 30,
+    "maximum_sites": 8,
+    "seed": null
+  }
+}
