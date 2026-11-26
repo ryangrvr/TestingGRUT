@@ -1,0 +1,32 @@
+# Novelty and correspondence audit
+
+The analytical gate asks whether response selects more physics than
+the established inverse problem permits. It leaves a precise
+obstruction for the specified physical access. The proofs require
+standard causal dynamics and an observable dictionary. Existing
+theory accounts for both the equivalence and the ways to separate
+the candidate networks.
+
+| Conventional result | Its data and scope | Relation to F1 |
+| --- | --- | --- |
+| Kubo linear response and fluctuation–dissipation | A specified dynamics, perturbation, observables and state give retarded kernels. Gibbs detailed balance relates dissipative and unsymmetrized spectra on nonzero frequencies. | F1 inverts one class of these kernels. Analyticity and passivity are standard and shared by both witnesses. [Kubo](https://doi.org/10.1143/JPSJ.12.570) |
+| Linear and quantum identification | Minimal linear realizations of input-output data are equivalent up to similarity. Quantum linear network realizations and controllable quantum identification have their own assumptions on dynamics and access. | Symmetric collocated displacement response determines the real stiffness up to orthogonal equivalence. This follows by real Gram factorization. The rank test is mode visibility in a linear oscillator, with no assumption of arbitrary global quantum control. [Ho–Kalman](https://ntrs.nasa.gov/citations/19670049337) · [Gough–Zhang](https://doi.org/10.1016/j.automatica.2015.06.023) · [Burgarth–Yuasa](https://doi.org/10.1103/PhysRevLett.108.080502) |
+| Inverse graph spectral problems | Boundary adjacency and geometric extreme-point conditions can make graph structure and weights identifiable; no dark eigenfunctions can connect different formulations of spectral and heat data. Hamiltonian identification through a gateway also benefits from prior graph structure. | F1's condition is only full mode visibility. The pair shows this is weaker than structural uniqueness. Its port spectral measure contains more than the global list of eigenvalues. [Blåsten et al., discrete Gelfand](https://doi.org/10.4171/jst/455) · [Blåsten et al., heat](https://doi.org/10.1137/21M1439936) · [Burgarth–Maruyama](https://doi.org/10.1088/1367-2630/11/10/103019) |
+| Isospectrality and inverse boundary geometry | Orthogonal switching constructs nonisomorphic graphs with matching spectra. Isospectral plane domains limit reconstruction from eigenvalues alone. Boundary control reconstructs richer geometry under specified hyperbolic, boundary and regularity conditions. | The matched witnesses fix the measured vectors as well as the frequencies. The conformal check compares calibrated scalar kernels on a region. Neither supplies the geometric or observational hypotheses of the positive boundary results. [Godsil–McKay](https://users.cecs.anu.edu.au/~bdm/papers/GodsilMcKayCospectral.pdf) · [Gordon–Webb–Wolpert](https://doi.org/10.1090/S0273-0979-1992-00289-6) · [Belishev–Kurylev](https://doi.org/10.1080/03605309208820863) |
+| Algebraic QFT and modular geometry | A local net has inclusions and commutation structure. Geometric modular action can recover spacetime symmetries given an appropriate family of algebras, a state and modular hypotheses. Locally covariant QFT explicitly organizes the dependence on spacetime and causal embeddings. | The port experiment supplies a much smaller accessible algebra. Its dynamics and commutators are compatible with several geometric embeddings. The modular reconstruction hypotheses would be additional data. [Haag–Kastler](https://doi.org/10.1063/1.1704187) · [Brunetti–Fredenhagen–Verch](https://arxiv.org/abs/math-ph/0112041) · [Buchholz et al.](https://doi.org/10.1142/S0129055X00000174) |
+| Lorentzian causal and conformal reconstruction | An appropriate complete causal order determines a Lorentz manifold's conformal structure. A massless conformally coupled free scalar has conformally related causal propagators. | A restricted expected commutator matrix may fail to give the full causal order. Even the calibrated continuum scalar example has distinct curvature with identical accessible data. Additional scale-sensitive observations or dynamics carry further information. [Hawking–King–McCarthy](https://authors.library.caltech.edu/records/6apqj-ep466) · [Malament](https://doi.org/10.1063/1.523436) · [Pinamonti](https://doi.org/10.1007/s00220-009-0780-x) |
+| Quantum information geometry and holographic reconstruction | Statistical distinguishability defines a state-space metric. Some holographic formulas connect boundary data to bulk geometric quantities given a duality and semiclassical domain. | Equal port experiments give zero statistical distinguishability even when the physical interaction graph differs. A quantum Fisher metric is about a model of states or experiments. It does not supply the holographic dictionary or an embedding as spacetime. [Braunstein–Caves](https://doi.org/10.1103/PhysRevLett.72.3439) · [Ryu–Takayanagi](https://doi.org/10.1103/PhysRevLett.96.181602) · [Bilson](https://arxiv.org/abs/0807.3695) |
+| Emergent locality and gravity tests | Generic spectral uniqueness is conditional on existence of a prescribed local description. Lieb–Robinson cones use local interactions. Relativistic soft-graviton or gravitational energy-law arguments require additional kinematics and constraints. | There is room for more conditional reconstruction. The full general claim is blocked already in the exact oscillator class. No universal cone, gravity or new force follows. [Cotler–Penington–Ranard](https://doi.org/10.1007/s00220-019-03376-w) · [Lieb–Robinson](https://doi.org/10.1007/BF01645779) · [Weinberg](https://doi.org/10.1103/PhysRev.135.B1049) · [Marolf](https://doi.org/10.1103/PhysRevLett.114.031104) |
+
+The exact two-versus-three hidden-site boundary sharpens the
+older GRUT single-site and hidden-rotation examples within a
+common-pinning class. Its algebra is orthogonal equivalence with
+an invariant constant vector. A literature check found the
+standard mechanism, an established general account of partial
+access, and stronger-assumption positive reconstructions.
+Priority for the specific four-site witness or its reformulation
+as a research theorem is not asserted. Its value here is a scoped,
+falsifiable obstruction and a constructive description of which
+additional probe resolves it. [Feasibility](FEASIBILITY.md)
+· [Earlier G-2](../../../G2_SPECTRAL_VERDICT_01.md)
+· [Earlier GS-1](../../../GS1_GEOMETRY_SELECTION_VERDICT_01.md)
