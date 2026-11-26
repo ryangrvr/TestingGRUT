@@ -1,0 +1,91 @@
+{
+  "protocol": "GRUT-I3",
+  "base_commit": "3cf5dd7c835b5e35597bf2ad40112fa5e6a6deae",
+  "units": {
+    "energy": "k_B T_b",
+    "time": "nominal catalytic residence time"
+  },
+  "primary": {
+    "q": 0.04,
+    "mu": 0.01,
+    "nu": 0.01,
+    "eta": 0.02,
+    "t_s": 1,
+    "tau": 1,
+    "delta": 0.02,
+    "T_r": 1,
+    "a_s": 3,
+    "a_r": 3,
+    "J": 1.2,
+    "s": 1,
+    "c_h": 2,
+    "c_l": 0.1
+  },
+  "stress": {
+    "moderate": {
+      "q": 0.06,
+      "mu": 0.02,
+      "nu": 0.02,
+      "eta": 0.03,
+      "tau": 1.05,
+      "c_h": 1.95,
+      "c_l": 0.11
+    },
+    "severe": {
+      "q": 0.18,
+      "mu": 0.08,
+      "nu": 0.06,
+      "eta": 0.12,
+      "tau": 1.5,
+      "c_h": 1.7,
+      "c_l": 0.15
+    }
+  },
+  "sweep": {
+    "q": [
+      0,
+      0.04,
+      0.08,
+      0.16,
+      0.32,
+      1
+    ],
+    "tau": [
+      0.02,
+      0.25,
+      1,
+      2,
+      4
+    ]
+  },
+  "arms": [
+    "predictive",
+    "disabled",
+    "passive",
+    "inverted",
+    "shuffled"
+  ],
+  "scaling_sites": [
+    1,
+    16,
+    64,
+    256
+  ],
+  "gates": {
+    "reliability": 0.7,
+    "leakage_tv": 0.025,
+    "worst_preparation_limit": 9,
+    "common_work_allowance": 1,
+    "work_cap": 10,
+    "probability_tol": 1e-12,
+    "solver_agreement_tol": 1e-10,
+    "uniformization_tail": 1e-14,
+    "wall_seconds_per_solver": 120
+  },
+  "production": {
+    "parameter_rows": 32,
+    "finite_state_arms_per_row": 5,
+    "independent_implementation": "labelled-state forward uniformization",
+    "random_seed": null
+  }
+}

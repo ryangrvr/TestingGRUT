@@ -6444,3 +6444,19 @@ counting distinguishes coarse shape from a large connected aggregate.
 All effects obey the ordinary stochastic thermodynamic comparator.
 External review and lab work remain open. Claims released.
 [Report](research/reality_framework/grut_i2_persistence_20261125/REPORT.md)
+
+### 2026-11-26 · Codex · GRUT-I3 environmental prediction and bounded reliability
+
+Froze the screened single-port assembly test at b78f6199. The
+predictive arm reaches .759906 against a screened feedback ceiling
+of .644591, or .669591 with the registered weak cue. The conservative
+preparation and common work allowance total 9.946752 k_B T_b. The
+moderate row passes at .720035 and severe noise misses at .557014.
+
+Standalone replays reproduced both archived outputs exactly. The
+separate labelled-state implementation agrees on all 2,624 scalar
+comparisons within 6.28e-13. The effect has a standard partially
+observed control and stochastic thermodynamics explanation. Verdict
+B recommends consolidation as conventional effective physics.
+External review and device calibration are pending. Claim released.
+[Report](research/reality_framework/grut_i3_predictive_memory_20261126/REPORT.md)
