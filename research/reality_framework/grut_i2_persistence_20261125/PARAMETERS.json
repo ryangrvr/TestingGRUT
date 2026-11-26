@@ -1,0 +1,56 @@
+{
+  "study": "GRUT-I2",
+  "parent_commit": "ca33f29f75e2f2d83e0a984b67af23a8adf35598",
+  "primary_length": 8,
+  "primary_fuel": 8,
+  "duration": 4.0,
+  "record_tag_time": 2.0,
+  "J": 1.2,
+  "A": 3.0,
+  "background_rate": 0.12,
+  "patch_rates": [0.1, 1.0],
+  "condition_flip_rate": 0.45,
+  "record_thermal_flip_rate": 0.10,
+  "response_levels": [0.0, 0.125, 0.5, 1.0],
+  "sensor_levels": [0.2, 0.6],
+  "reliabilities": [0.5, 0.6, 0.7, 0.75, 0.8, 0.9, 0.95],
+  "reset_budgets": [0.0, 0.15, 0.3, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0],
+  "formation_modes": [
+    {"name": "flat_diffusion", "J": 0.0, "a": [0, 0], "s": 0.0},
+    {"name": "cohesion", "J": 1.2, "a": [0, 0], "s": 0.0},
+    {"name": "constant_fuel", "J": 1.2, "a": [0.5, 0.5], "s": 0.0},
+    {"name": "record_gate", "J": 1.2, "a": [0.0, 0.5], "s": 0.6}
+  ],
+  "flat_persistence_control": true,
+  "dynamic_scaling_lengths": [8, 10, 12],
+  "scaling_modes": [
+    {"name": "passive", "a": [0, 0], "s": 0.0},
+    {"name": "constant_fuel", "a": [0.5, 0.5], "s": 0.0},
+    {"name": "record_gate", "a": [0, 0.5], "s": 0.6}
+  ],
+  "fuel_controls": [0, 2, 8],
+  "equilibrium_lengths": [8, 16, 32, 64, 128, 256, 512],
+  "equilibrium_attractions": [0.0, 1.2, 2.4],
+  "thresholds": {
+    "survival_advantage_passive_vs_flat": 0.01,
+    "passive_formation_bond_gain": 0.02,
+    "driven_formation_bond_gain": 0.01,
+    "memory_budget_survival_gain": 0.002,
+    "memory_conditional_past_information_nats": 0.0001,
+    "numerical_abs": 1e-10,
+    "uniformization_tail": 1e-14,
+    "seconds_per_replay": 240
+  },
+  "independent_grid": {
+    "L": 6,
+    "K": 2,
+    "runs": [
+      {"name": "passive", "start": "organized", "actor": "record", "a": [0, 0], "s": 0},
+      {"name": "constant_fuel", "start": "organized", "actor": "record", "a": [0.5, 0.5], "s": 0},
+      {"name": "record_gate", "start": "organized", "actor": "record", "a": [0, 0.5], "s": 0.6},
+      {"name": "inverse_gate", "start": "organized", "actor": "record", "a": [0.5, 0], "s": 0.2},
+      {"name": "direct_cue", "start": "organized", "actor": "condition", "a": [0, 0.5], "s": 0},
+      {"name": "formation", "start": "uniform", "actor": "record", "a": [0, 0.5], "s": 0.6}
+    ]
+  }
+}

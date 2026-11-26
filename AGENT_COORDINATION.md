@@ -6426,3 +6426,21 @@ I1 verdict B applies to the explicit mesoscopic integration.
 The database-wide source survey preserves every prior path, and
 hardware and external RAI review remain open. Claims released.
 [Verdict](research/reality_framework/grut_i1_integrated_20261125/VERDICT.md)
+
+### 2026-11-25 · Codex · GRUT-I2 finite-fuel organization and persistence
+
+Froze the local attractive lattice gas, fuel and receptor at 4dcc33c.
+Cohesion and finite active rebinding raise the bond fraction with no
+chosen layout. Real receptor information about an earlier conformation
+gives no advantage on the matched work frontier. One sensor-off mode
+dominates all 32 sensing modes under both ideal reset conventions.
+At .75 first-exit reliability the minimum menu work is 1.010066 joint
+or 1.121588 separate, in units of k_B T_b.
+
+Standalone replay covers every registered row and all retained
+failures. The independently constructed labelled-fuel calculation
+agrees on 89 scalar comparisons within 9.77e-15. Exact equilibrium
+counting distinguishes coarse shape from a large connected aggregate.
+All effects obey the ordinary stochastic thermodynamic comparator.
+External review and lab work remain open. Claims released.
+[Report](research/reality_framework/grut_i2_persistence_20261125/REPORT.md)
