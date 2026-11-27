@@ -26,7 +26,6 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
-| research/reality_framework/grut_f2_complementary_interactions_20261126/ | Codex | Freeze and prove complementary-interaction identifiability and residual controls | 2026-11-26 |
 
 ## ANSWERED QUESTIONS
 
@@ -6482,3 +6481,24 @@ Verdict C is an exact access obstruction within established inverse
 theory. External review is pending. Earlier adjudications were used
 as evidence at their pinned scope. Claims released.
 [Report](research/reality_framework/grut_f1_operational_reconstruction_20261126/REPORT.md)
+
+### 2026-11-26 · Codex · GRUT-F2 complementary calibrated interactions
+
+Froze the original F1 spring witnesses, independent load settings and
+finite-time scalar probes at 2db0de4. One hidden load separates the known
+pair at the same original readout. In the connected positive spring
+class, static pair settings identify the stiffness even with dark modes.
+The rooted rook and Shrikhande graphs agree under all singleton static
+loads and separate under a simultaneous pair.
+
+The calibrated massive and minimal fields give rigorous late separation
+for the same weak F1-type conformal bump. The massive strong case is
+certified and the minimal strong bound remains inconclusive. The exact
+massless conformal and early causal nulls, and the joint inverse limits,
+are recorded at their appropriate scope. Verdict B uses established
+structural modification and curved-spacetime propagation.
+
+The primary and independent rational output archives reproduced
+byte-for-byte outside the checkout, with 275 exact cross-comparisons.
+External RAI review remains open. Claims released.
+[Report](research/reality_framework/grut_f2_complementary_interactions_20261126/REPORT.md)
