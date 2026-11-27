@@ -1,0 +1,9 @@
+# Retained negative results and limitations
+
+- The small difference between large absolute energies required a paired calculation and a separate derivative check. Adding separate numerical allowances also leaves the emission interval negative. These empirical and conditional allowances leave the exact-continuum error and omitted higher-loop terms open.
+- The phase and translation factors must survive the relative normalization. Deleting all four logarithms changes the one-loop value by two units of $g_Xv$ on an absolute background. The archived fixed-charge toy provides the hostile test of the unreduced negative curvature. [Archived derivation](../grut_candidate_1_energy_20261019/ENERGY_DERIVATION.md)
+- The radial stability calculations use finite boxes and grids. The near-zero phase and translation levels are preserved in the output. Exact continuum saddle existence and linear stability require a separate calculation. [Raw results](RESULTS.json)
+- The curvature allowance is a diagnostic target. The retained verifier has no separate gate for the diagnostic. The measured values and actual gates are reported. [Independent critique](INTERNAL_CRITICAL_REVIEW.md)
+- The recovered replay completed without a failed determinant point or a failed production gate. The interrupted original session ended during packaging. The present archive identifies the recovered same-freeze replay as its evidence. Earlier archived failures, including the original determinant convergence discrepancy and pole-calculation correction, remain in their dossiers. [Original energy report](../grut_candidate_1_energy_20261019/REPORT.md) · [Original pole dossier](../grut_candidate_1_fluctuations_20261019/POLE_THRESHOLDS.md)
+
+The specified comparisons leave asymmetric fission, alternative daughter branches, lifetime, formation and observational viability open.

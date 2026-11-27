@@ -1,0 +1,16 @@
+# Separate internal scientific critique
+
+The internal critic inspected the freeze-pinned code, original determinant and pole derivations, and the recovered replay. The arithmetic reconstruction and analytic normalization checks were performed separately from the production run. External replication remains pending.
+
+| Challenge | Finding |
+| --- | --- |
+| Correlated subtraction | Decimal reconstruction from absolute energies gave $\Delta_1=-0.2000692023340532$, allowance $0.053379325933025144$ and upper end $-0.146689876401028056$. Reconstructing pointwise paired contributions gave $-0.20006920232658162234$. Replacing only the paired tail with the sum of absolute tails leaves the upper end at $-0.1671298764$ within the empirical allocations. |
+| Equal fission | Decimal reconstruction gives $-3067.92033522810$ with allowance $0.08006910237128636$. The interpretation depends on the specified daughter branch passing the physical saddle checks. |
+| Chemical potential | Integrating the degree-four frequency stencil by independent Lagrange endpoint weights, using the logged tangent quadrature and pole subtraction, gives about $-0.20006920230747$, within $2\times10^{-11}$ of the paired result. The routes share the profile and determinant machinery. |
+| Curvature | The retained and classical parent-endpoint corrections are $-1.22174635\times10^{-6}$ and $-1.22159292\times10^{-6}$. The protocol lists a $0.001$ curvature target, while the executable checks use integrated-stencil refinements and lack a separate gate for this diagnostic. The retained magnitudes meet the target. |
+| Fixed charge, translations and normalization | A normalized null coordinate has pencil entry $\zeta^2$ and skew coupling proportional to $\zeta$. The Schur complement adds the positive momentum constraint term and leaves a unit-coefficient $\zeta^2$ factor. Angular orthogonality separates the phase and translation null coordinates. The finite-cutoff quadrature restores the four infrared logarithms against the original complete vacuum. |
+| Perturbative order | Classical stationarity cancels the term linear in the frequency displacement in the Legendre transform. The independently reconstructed charged pole was $1.00012326940405307$ in $g_Xv$ units, with reporter contributions included. |
+| Reporter and renormalization | The reporter form is at least the identity. Its relative block is $0.01(S^2-1)$ and enters both restored Born orders. The laboratory harmonics in the charged and mixed scalar blocks match the archived graphs. |
+| Tail estimates and saddle premise | The absolute high-frequency estimate bounds the propagators by a massive free kernel, uses two $L^2$ potential insertions and bounds the others by the sup norm. The paired estimates use a potential difference and the change of the free resolvent with rotating frequency. The evaluated envelopes use floating-point padding on truncated splines. The exact-background and reduced continuum stability premises require a separate certificate. |
+
+The reported signs pass the frozen numerical criteria. The critic found no change in the action or matching and no controlling algebraic error in the comparisons. [Reproduction](REPRODUCTION.md) · [External review](RAI_REVIEW_PACKET.md)
