@@ -6502,3 +6502,25 @@ The primary and independent rational output archives reproduced
 byte-for-byte outside the checkout, with 275 exact cross-comparisons.
 External RAI review remains open. Claims released.
 [Report](research/reality_framework/grut_f2_complementary_interactions_20261126/REPORT.md)
+
+### 2026-11-26 · Codex · GRUT-F3 coupled constraints and effective propagation
+
+Froze universal coupling and the common-cone test at 0452465.
+The canonical and derivative scalar theories match the full
+homogeneous Einstein metric and stress history. They have the same
+classical ADM structure functions, positive linear modes and
+common causal slices. The benchmark scalar has c_s^2=17/19 and
+the matched canonical comparator is luminal.
+
+The two-field full-polarization metric-null hypothesis forces an
+affine kinetic function on the declared rank-two branch. The
+homogeneous determinant-squared control retains its failure of
+identification. Standard finite-density matter accounts for the
+acoustic cone while its canonical principal front is metric-null.
+F1 and F2 are consolidated as conditional operational results.
+
+Both exact archives replay byte-for-byte, with 107 common values
+in exact agreement. Verdict C is a scoped obstruction to the
+common-effective-cone inference. External review and measurements
+are pending. Claims released.
+[Report](research/reality_framework/grut_f3_coupled_consistency_20261126/REPORT.md)

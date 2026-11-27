@@ -1,0 +1,94 @@
+{
+  "protocol": "GRUT-F3",
+  "parent": "55f509e2da8e874e578063e338702c743e3f48e6",
+  "selected_route": "universal matter coupling and the metric characteristic cone",
+  "class": {
+    "spacetime_dimension": 4,
+    "signature": "-+++",
+    "gravity": "Einstein-Hilbert",
+    "cosmological_term": 0,
+    "scalar_fields": 2,
+    "dependence": "P(phi^I,X^IJ) with symmetric X"
+  },
+  "representative": {
+    "kinetic_correction_coefficient": 1,
+    "benchmark_x": "1/32",
+    "x_fixtures": [
+      "0",
+      "1/64",
+      "1/32",
+      "1/16"
+    ],
+    "upper_x": "1/16",
+    "a_at_benchmark": 1,
+    "spatial_boundary": "periodic",
+    "spectator_background": "constant"
+  },
+  "rank_check": {
+    "vectors": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "expected_rank": 6,
+    "determinant_control_coefficient": 1,
+    "rank_one_gradients": [
+      [
+        "1/4",
+        0,
+        0,
+        0
+      ],
+      [
+        "1/4",
+        0,
+        0,
+        0
+      ]
+    ],
+    "independent_gradients": [
+      [
+        "1/4",
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        "1/4",
+        0,
+        0
+      ]
+    ],
+    "metric_null_covector": [
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  "reality_test": {
+    "max_H_over_k_physical": "1/1000",
+    "max_k_over_matter_gap": "1/10",
+    "expansion_pump_caps_active": 12,
+    "expansion_pump_caps_canonical": 6,
+    "expansion_pump_caps_metric": 1,
+    "minimum_squared_speed_gap": "1/10",
+    "illustrative_error_allowance": "1/100"
+  },
+  "compute": {
+    "wall_seconds_per_implementation": 30,
+    "arithmetic": "integer and rational",
+    "random_seed": null,
+    "production_cosmological_simulations": 0
+  }
+}

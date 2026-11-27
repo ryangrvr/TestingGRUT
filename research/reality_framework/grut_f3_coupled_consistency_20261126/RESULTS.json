@@ -1,0 +1,206 @@
+{
+  "protocol": "GRUT-F3",
+  "freeze": "0452465ea9a3ba9b29b2543395f66549331d295c",
+  "background_rows": [
+    {
+      "x": "0",
+      "rho": "0",
+      "pressure": "0",
+      "px": "1",
+      "rho_x": "1",
+      "epsilon_h": "3",
+      "sound_speed_sq": "1",
+      "flow": "0",
+      "rho_loga": "0",
+      "matched_kinetic": "0",
+      "matched_potential": "0",
+      "matched_rho": "0",
+      "matched_pressure": "0",
+      "w_active": "1",
+      "w_canonical": "1",
+      "pump_active": "-1",
+      "pump_canonical": "-1",
+      "pump_metric": "-1",
+      "clock_running": false
+    },
+    {
+      "x": "1/64",
+      "rho": "67/4096",
+      "pressure": "65/4096",
+      "px": "33/32",
+      "rho_x": "35/32",
+      "epsilon_h": "198/67",
+      "sound_speed_sq": "33/35",
+      "flow": "-99/1120",
+      "rho_loga": "-99/1024",
+      "matched_kinetic": "33/2048",
+      "matched_potential": "1/4096",
+      "matched_rho": "67/4096",
+      "matched_pressure": "65/4096",
+      "w_active": "72571/82075",
+      "w_canonical": "2441/2345",
+      "pump_active": "-2786826208/6736305625",
+      "pump_canonical": "-221929952/192465875",
+      "pump_metric": "-64/67",
+      "clock_running": true
+    },
+    {
+      "x": "1/32",
+      "rho": "35/1024",
+      "pressure": "33/1024",
+      "px": "17/16",
+      "rho_x": "19/16",
+      "epsilon_h": "102/35",
+      "sound_speed_sq": "17/19",
+      "flow": "-51/304",
+      "rho_loga": "-51/256",
+      "matched_kinetic": "17/512",
+      "matched_potential": "1/1024",
+      "matched_rho": "35/1024",
+      "matched_pressure": "33/1024",
+      "w_active": "10187/12635",
+      "w_canonical": "713/665",
+      "pump_active": "-33471472/159643225",
+      "pump_canonical": "-10049008/8402275",
+      "pump_metric": "-32/35",
+      "clock_running": true
+    },
+    {
+      "x": "1/16",
+      "rho": "19/256",
+      "pressure": "17/256",
+      "px": "9/8",
+      "rho_x": "11/8",
+      "epsilon_h": "54/19",
+      "sound_speed_sq": "9/11",
+      "flow": "-27/88",
+      "rho_loga": "-27/64",
+      "matched_kinetic": "9/128",
+      "matched_potential": "1/256",
+      "matched_rho": "19/256",
+      "matched_pressure": "17/256",
+      "w_active": "1651/2299",
+      "w_canonical": "233/209",
+      "pump_active": "-1284088/5285401",
+      "pump_canonical": "-543800/480491",
+      "pump_metric": "-16/19",
+      "clock_running": true
+    }
+  ],
+  "bench_x": "1/32",
+  "uniform_flrw_pump_caps": {
+    "active_w_lower": "47/128",
+    "active_cap": "11037/1024",
+    "canonical_cap": "1419/256",
+    "metric_cap": "1"
+  },
+  "hessian_rank": {
+    "linear_map_rank": 6,
+    "variables": 6,
+    "tested_rows": 9
+  },
+  "rank_one_control": {
+    "x_entries": [
+      "1/32",
+      "1/32",
+      "1/32"
+    ],
+    "determinant": "0",
+    "coordinate_hessian": [
+      [
+        "1/512",
+        "-1/256",
+        "1/512"
+      ],
+      [
+        "-1/256",
+        "1/128",
+        "-1/256"
+      ],
+      [
+        "1/512",
+        "-1/256",
+        "1/512"
+      ]
+    ],
+    "projected_null_covector": [
+      "-1/4",
+      "-1/4"
+    ],
+    "principal_delta": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "rank_two_control": {
+    "x_entries": [
+      "1/32",
+      "0",
+      "-1/32"
+    ],
+    "determinant": "-1/1024",
+    "coordinate_hessian": [
+      [
+        "1/512",
+        "0",
+        "-1/256"
+      ],
+      [
+        "0",
+        "1/256",
+        "0"
+      ],
+      [
+        "-1/256",
+        "0",
+        "1/512"
+      ]
+    ],
+    "projected_null_covector": [
+      "-1/4",
+      "0"
+    ],
+    "principal_delta": [
+      [
+        "-1/8192",
+        "0"
+      ],
+      [
+        "0",
+        "-1/16384"
+      ]
+    ]
+  },
+  "reality_bounds": {
+    "cone_gap": "2/19",
+    "max_finite_k_flrw_error_vs_metric": "13/1000000",
+    "max_finite_k_flrw_error_vs_matched": "9/500000",
+    "flat_matter_dispersion_error": "1/9025",
+    "flrw_gap_lower_vs_matched": "999829/9500000",
+    "flat_completion_gap_lower": "949/9025",
+    "positive_flrw_frequency_bound": "4249943/4750000",
+    "h_gap_squared_over_v_planck_squared": "35/7296",
+    "illustrative_observational_error": "1/100",
+    "sqrt_interval_verified": true
+  },
+  "checks": {
+    "matching_entire_stress_at_fixtures": true,
+    "stress_conservation": true,
+    "positive_kinetic_and_nested_cones": true,
+    "whole_band_pump_bounds": true,
+    "null_hessian_rank": true,
+    "homogeneous_control_blind": true,
+    "independent_gradient_control_distinguishes": true,
+    "metric_null_covector": true,
+    "effect_floor_in_both_comparisons": true,
+    "positive_physical_frequencies": true,
+    "flat_matching_bound": true
+  },
+  "passed": true
+}
