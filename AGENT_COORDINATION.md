@@ -26,6 +26,7 @@ caught by re-running something. Neither of us caught it by being told.
 
 | file / area | agent | intent | since |
 |---|---|---|
+| research/reality_framework/grut_f3_coupled_consistency_20261126/ | Codex | Freeze and test whether coupled gravitational consistency forces a common characteristic cone | 2026-11-26 |
 
 ## ANSWERED QUESTIONS
 
