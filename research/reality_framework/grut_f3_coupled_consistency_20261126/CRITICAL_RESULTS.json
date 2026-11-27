@@ -1,0 +1,404 @@
+{
+  "method": "independent Fraction log derivatives, null-symbol coefficient elimination, and interval check",
+  "fixtures": [
+    {
+      "x": "0",
+      "rho_over_lambda4": "0",
+      "p_over_lambda4": "0",
+      "p_x": "1",
+      "rho_x": "1",
+      "cs_squared": "1",
+      "epsilon_H": "3",
+      "F": "0",
+      "F_prime": "-6",
+      "canonical_kinetic_over_lambda4": "0",
+      "canonical_potential_over_lambda4": "0",
+      "formal_limit_only": true,
+      "pump": {
+        "active": {
+          "W": "1",
+          "W_x": "-9",
+          "A": "-1"
+        },
+        "canonical": {
+          "W": "1",
+          "W_x": "3",
+          "A": "-1"
+        },
+        "metric": {
+          "W": "1",
+          "W_x": "0",
+          "A": "-1"
+        }
+      }
+    },
+    {
+      "x": "1/64",
+      "rho_over_lambda4": "67/4096",
+      "p_over_lambda4": "65/4096",
+      "p_x": "33/32",
+      "rho_x": "35/32",
+      "cs_squared": "33/35",
+      "epsilon_H": "198/67",
+      "F": "-99/1120",
+      "F_prime": "-6546/1225",
+      "canonical_kinetic_over_lambda4": "33/2048",
+      "canonical_potential_over_lambda4": "1/4096",
+      "formal_limit_only": false,
+      "pump": {
+        "active": {
+          "W": "72571/82075",
+          "W_x": "-1161197568/192465875",
+          "A": "-2786826208/6736305625"
+        },
+        "canonical": {
+          "W": "2441/2345",
+          "W_x": "12527616/5499025",
+          "A": "-221929952/192465875"
+        },
+        "metric": {
+          "W": "1",
+          "W_x": "0",
+          "A": "-64/67"
+        }
+      }
+    },
+    {
+      "x": "1/32",
+      "rho_over_lambda4": "35/1024",
+      "p_over_lambda4": "33/1024",
+      "p_x": "17/16",
+      "rho_x": "19/16",
+      "cs_squared": "17/19",
+      "epsilon_H": "102/35",
+      "F": "-51/304",
+      "F_prime": "-1746/361",
+      "canonical_kinetic_over_lambda4": "17/512",
+      "canonical_potential_over_lambda4": "1/1024",
+      "formal_limit_only": false,
+      "pump": {
+        "active": {
+          "W": "10187/12635",
+          "W_x": "-34242048/8402275",
+          "A": "-33471472/159643225"
+        },
+        "canonical": {
+          "W": "713/665",
+          "W_x": "772608/442225",
+          "A": "-10049008/8402275"
+        },
+        "metric": {
+          "W": "1",
+          "W_x": "0",
+          "A": "-32/35"
+        }
+      }
+    },
+    {
+      "x": "1/16",
+      "rho_over_lambda4": "19/256",
+      "p_over_lambda4": "17/256",
+      "p_x": "9/8",
+      "rho_x": "11/8",
+      "cs_squared": "9/11",
+      "epsilon_H": "54/19",
+      "F": "-27/88",
+      "F_prime": "-498/121",
+      "canonical_kinetic_over_lambda4": "9/128",
+      "canonical_potential_over_lambda4": "1/256",
+      "formal_limit_only": false,
+      "pump": {
+        "active": {
+          "W": "1651/2299",
+          "W_x": "-883584/480491",
+          "A": "-1284088/5285401"
+        },
+        "canonical": {
+          "W": "233/209",
+          "W_x": "45696/43681",
+          "A": "-543800/480491"
+        },
+        "metric": {
+          "W": "1",
+          "W_x": "0",
+          "A": "-16/19"
+        }
+      }
+    }
+  ],
+  "pump_bounds": {
+    "flow_abs_upper": "3/8",
+    "flow_prime_abs_upper": 6,
+    "active_W_floor": "7/16",
+    "canonical_W_upper": "19/16",
+    "active": "1059/128",
+    "canonical": "1347/256",
+    "metric": 1
+  },
+  "band_benchmark": {
+    "principal_gap": "2/19",
+    "flat_completion_error_upper": "1/9025",
+    "canonical": {
+      "pump_difference": "4498848/4561235",
+      "lower_at_any_H_over_k": "2/19",
+      "conservative_lower_from_caps": "999829/9500000",
+      "curvature_error_upper_from_caps": "9/500000"
+    },
+    "metric": {
+      "pump_difference": "112488048/159643225",
+      "lower_at_any_H_over_k": "2/19",
+      "conservative_lower_from_caps": "1999753/19000000",
+      "curvature_error_upper_from_caps": "13/1000000"
+    },
+    "flat_dispersion": {
+      "scaled_wavenumber_squared": "1/100",
+      "frequency_polynomial_coefficients_descending": [
+        1,
+        "-51/50",
+        "1719/190000"
+      ],
+      "light_speed_squared_interval": [
+        "1063748686973/1188748686973",
+        "6807991596631/7607991596631"
+      ],
+      "metric_front": "limit of each canonical branch at large k"
+    }
+  },
+  "hessian_rank": {
+    "rank": 6,
+    "pivot_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "rref": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "matrix": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "1/4"
+      ],
+      [
+        "0",
+        "1",
+        "1/2",
+        "0",
+        "1/2",
+        "1/4"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1/4"
+      ]
+    ]
+  },
+  "rank_one": {
+    "X_coordinates_11_22_12": [
+      "1/32",
+      "1/32",
+      "1/32"
+    ],
+    "determinant": "0",
+    "det_squared_hessian": [
+      [
+        "1/512",
+        "1/512",
+        "-1/256"
+      ],
+      [
+        "1/512",
+        "1/512",
+        "-1/256"
+      ],
+      [
+        "-1/256",
+        "-1/256",
+        "1/128"
+      ]
+    ],
+    "null_gradient_contractions": [
+      "-1/4",
+      "-1/4"
+    ],
+    "null_principal_correction": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "independent": {
+    "X_coordinates_11_22_12": [
+      "1/32",
+      "-1/32",
+      "0"
+    ],
+    "determinant": "-1/1024",
+    "det_squared_hessian": [
+      [
+        "1/512",
+        "-1/256",
+        "0"
+      ],
+      [
+        "-1/256",
+        "1/512",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/256"
+      ]
+    ],
+    "null_gradient_contractions": [
+      "-1/4",
+      "0"
+    ],
+    "null_principal_correction": [
+      [
+        "-1/8192",
+        "0"
+      ],
+      [
+        "0",
+        "-1/16384"
+      ]
+    ]
+  }
+}
