@@ -1,0 +1,41 @@
+# GRUT-F5 frozen analytical test
+
+Frozen 2026-11-27 (America/Chicago) on [draft PR #27](https://github.com/ryangrvr/TestingGRUT/pull/27) at 0e31979eb33a917d24e426378a9f527b12102866. Acceptance of F4 Verdict C and all inherited limitations is part of the scope. The freeze covers this protocol and [PARAMETERS.json](PARAMETERS.json).
+
+## Proposition
+
+If two internal clock descriptions predict the same physical event in one constrained quantum theory, their probabilities must agree. This requirement is motivated by identifying a single operational event accessible in different descriptions of a closed whole. Test whether it restricts finite-sampled unitary matter dynamics or selects a physical state in a class with two finite physical clocks, clock–matter backreaction, and calibrated records. The proposed obstruction is that every finite list of matter propagators can be embedded in this class with exact matched-event consistency and freely specified physical states in the corresponding reference sector.
+
+Test equality by transporting the full event and state, including conditioning effects. Test inequivalence and access loss separately. Do not require equal predictions at equal numerical clock labels, after discarding different references, or across separately quantized theories.
+
+## Model
+
+Use ordinary quantum states and probabilities, with a single first-class cyclic gauge constraint and no physically external time, pointer or observer during the operations. The clock labels are in $\mathbb Z_N$, with $N$ an odd prime, and $S$ is a matter qubit with labels $s=0,1$. Define clock strides $\nu_0=1,\nu_1=2$ and the relative label $r=b-\nu_s a\bmod N$. The remaining matter and memory space is $\mathcal K$. All of these degrees of freedom and the access model are supplied.
+
+Choose unitaries $V_{s,r,a}$ on $\mathcal K$ for each relative sector and each clock reading, with $V_{s,r,0}=I$. The single, fixed microscopic shift is
+\[
+T|a,b,s,\psi\rangle=|a+1,b+\nu_s,s,V_{s,r,a+1}V_{s,r,a}^\dagger\psi\rangle .
+\]
+Every label including $a+1$ is cyclic. Obtain the Hermitian constraint from the spectral decomposition of $T$, assigning integer eigenvalue $j$ to the eigenphase $\exp(-2\pi i j/N)$, $0\le j<N$. Use the zero sector with the induced inner product. This is a single gauge generator and makes no statement about the energy of a real universe. The wrap is a supplied boundary condition. For the freedom theorem place arbitrary finite matter histories in $r=0$, enlarge $N$ if needed, and use $r=1$ and the other spare sectors for a nonseparable clock coupling. No spatial locality, thermodynamic budget, external physical elapsed time, or cosmological measure is imposed.
+
+In the fixture $\mathcal K$ has two qubits $D,R$. For $r=0$ start from the identity prefix, apply $X_D$ on entry to $a=1$, write with $\mathrm{CNOT}_{D\to R}$ on entry to $a=2$, apply $X_D$ on entry to $a=3$, and keep the prefix unchanged at $a=4$. Use the inverse prefix on wrapping. This sequence is encoded in $T$, with no externally timed gate applications. For $r\ne0$ the matter unitary is the identity, with one clock phase $-1$ in the $(r,a)=(1,1)$ prefix, independent of $s$. The same clock phase and clock structure are held in the no-write comparison. The internal record $R$ starts blank in the registered preparations. Use the logical seed $|+\rangle_S|r=0\rangle|00\rangle_{DR}$ for the main test and compare with $|-\rangle_S$ for the access-loss control. Use the same plus seed with $r=1$ for the off-diagonal probe. The physical phase-probe effect is the rank-one projector onto that seed in the logical representation. Compare its transported effects in the two ideal charts. The wrong-sign control in B erases the relative sign in the two nonzero components of the probe vector and keeps the true B-chart state fixed. The zero-stride control uses the selected B anchor and the same size and prefixes.
+
+## Physical tests
+
+Define the physical relational effects by compressing products of kinematic effects into the zero sector, equivalently by twirling over the cyclic gauge group and restricting. The ideal reference reductions retain all other subsystems. On reading $x$ of either clock with error $e$, the reported value is $x+1\bmod N$ with probability $e$ and $x$ otherwise. This reports a label imperfectly and does not change $T$. These POVMs can be realized with retained internal pointers. The joint readout has product error effects, a supplied conditional independence. Derive conditional probabilities from the complete POVM with explicit nonzero denominators. Compare the same joint outcome unconditionally and conditioned on both clock reports, via A and B reference descriptions. Include an off-diagonal physical effect in the phase sector and compare both frames without imposing clock diagonality. Use the same registered coordinate anchors in both instrument comparisons.
+
+| Gate | Frozen criterion |
+| --- | --- |
+| Closure and clock reductions | Prove the full physical state space and exact unitary reference maps at both ideal slices. On the finite fixture check $T^5=I$, zero-sector rank 40, normalization of both readings, and the registered direct clock-phase minor. |
+| Matched event | The noisy joint filter and joint record probability match exactly in A and B with the values in the parameter file. The phase-sensitive matched effect is reproduced in both frames after transporting the effect. |
+| Clock physics and record | Establish matter-dependent $B$ response and coherence loss under a declared restriction of access. Verify the registered ideal and noisy single-clock mismatch, which compares different effects. Verify the writer and retained record, and that omitting the writer changes the associated probability while preserving same-event consistency. Verify the maximally mixed physical-state null. |
+| Negative calibration controls | Prove loss of injectivity when the stride is zero on one branch, the result of the sign-flipped wrap at fixed gauge sector, and that the two specified orthogonal seed states cannot be distinguished after removing the remaining clock from the declared A observation. |
+| Fundamental freedom | Prove that arbitrary finite matter propagators and states are allowed in the selected relative sector and the same-event condition survives. Give the conditioning stability inequality in terms of errors of the pulled-back effects and the minimum filter probability. Distinguish the supplied cycle and reference regularity conditions from restrictions implied by closure. |
+| Reproduction | Use exact standard-library arithmetic. Require production and separate review calculations to agree on the registered outputs and the committed data to replay byte-for-byte. |
+| Verdict | A requires a distinctive physical restriction that survives the conventional comparator. B would require a useful restriction selecting some admissible matter dynamics under the tested condition. C applies if the constructive freedom result and calibrated checks survive. D applies if neither a restriction nor a defensible obstruction survives. |
+
+The strongest conventional comparator is Dirac group averaging with Page–Wootters conditioning, including full quantum reference changes and realistic clock POVMs. Laboratory reproduction of the registered correlations tests the supplied circuits and instruments. Distinctive cosmological content would require an extra derived restriction with an observable; neither the Born rule nor universal closure is inferred from an analog clock experiment.
+
+## Budget and stopping rules
+
+One proof for the cyclic class and one $N=5$ analytical fixture with its five declared controls: no write, maximally mixed physical state, missing remaining clock, zero stride in the second branch, and opposite wrap sign. The phase sector is a registered calibration within the same constraint. Use exact arithmetic and one independent internal cross-check. No parameter sweeps, freely retuned clocks, continuum extrapolation, lab experiment, or extra physical axioms. Stop after the proof, matched controls, external review handoff, and verdict. If the obstruction passes and the standard comparator agrees, close this route to a new physical restriction under its tested assumptions.
