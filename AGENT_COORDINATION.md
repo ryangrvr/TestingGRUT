@@ -6524,3 +6524,21 @@ in exact agreement. Verdict C is a scoped obstruction to the
 common-effective-cone inference. External review and measurements
 are pending. Claims released.
 [Report](research/reality_framework/grut_f3_coupled_consistency_20261126/REPORT.md)
+
+### 2026-11-26 · Codex Work · GRUT-F4 charge selection obstruction
+
+Continued from draft PR #26 at 95ad5c0f158b128d337da8fe862894015b5d8f8c.
+Froze the proposition and all five fixtures at 2f6a734a456c23272b8a413afa880eb4234f83f5
+before production. Added the F4 packet at
+[grut_f4_charge_selection_20261126](research/reality_framework/grut_f4_charge_selection_20261126/REPORT.md).
+Verdict C concerns the unselected compact charge direction in the declared spin
+Wilsonian EFT. Explicit terms remove connected ordinary matter phases for
+every integer member. The neutron benchmark distinguishes the noncanonical
+assignments, and standard gauge EFT accounts for the result.
+
+The first 64/69 check run missed the three-family multiplier in the numerical
+one-loop check and is retained. The corrected production run passes 69/69.
+The separate internal implementation agrees on 101 exact values and both
+archives replay byte-for-byte. The protocol and inputs are unchanged since the
+freeze. External RAI review has a packet and remains pending. The only files
+changed relative to F3 are the new F4 packet and this log.
