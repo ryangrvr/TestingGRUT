@@ -6559,3 +6559,21 @@ The production orbit method and separate internal implementation agree
 exactly on 31 registered quantities. The output archives replay byte-for-byte.
 The freeze inputs and prior scientific files have no changes, including F4
 and earlier records. The external RAI packet is ready for independent review.
+
+### 2026-11-27 · Codex Work · GRUT-S1 integrated synthesis and final verdict
+
+Continued from draft PR #28 at d3dd471a0ad69a95cd6f0dc1eba23fc0695a39cd.
+Added the [S1 synthesis packet](research/reality_framework/grut_s1_integrated_synthesis_20261127/GRUT_WORKING_THEORY.md).
+It inventories 8,053 tracked parent paths and screens all 1,685 Markdown paths.
+Pivotal records, corrected rulings and the separately pinned QED side archive
+are tied to the claim-level evidence report. Verdict B/C preserves the
+effective framework and the scoped underdetermination of fundamental physics.
+Candidate 1 remains a separate EFT with its same-action next calculation open.
+
+The separate reviewer inspected the manuscript and replayed the archived
+F1–F5 checkers byte-for-byte. S1 also re-ran D7's reduced and physical checkers
+and I3's fixed 2,624-value comparison. The archive index replays byte-for-byte,
+the relative links and table widths pass their check, and the parent diff
+adds only S1 files and this log. External review materials are prepared and
+independent external replication remains pending. No new scientific campaign
+was commissioned or executed as part of S1.
