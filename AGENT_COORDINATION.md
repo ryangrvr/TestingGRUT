@@ -27,6 +27,8 @@ caught by re-running something. Neither of us caught it by being told.
 | file / area | agent | intent | since |
 |---|---|---|
 
+| `research/reality_framework/grut_c1_quantum_channels_20261127/` | Work, separate internal C1 critic | Same-action quantum channels and critical review | 2026-11-27 |
+
 ## ANSWERED QUESTIONS
 
 | # | answer | answered by |
@@ -6577,3 +6579,18 @@ the relative links and table widths pass their check, and the parent diff
 adds only S1 files and this log. External review materials are prepared and
 independent external replication remains pending. No new scientific campaign
 was commissioned or executed as part of S1.
+
+### 2026-11-27 · Codex Work · GRUT-C1 publication
+
+Continued the frozen C1 branch from a3ff9f40a1588501a24afc87de996668ef237374,
+stacked on S1 PR #29. Recovered the completed freeze-pinned replay, verified
+its raw bytes and regenerated the six stationary splines with the frozen
+solver. The [C1 packet](research/reality_framework/grut_c1_quantum_channels_20261127/REPORT.md)
+reports Verdict A at strict scalar one-loop order under the registered
+numerical allowances. The emission interval remains negative with the
+separate energy allowances added. The internal critic independently
+reconstructed the thresholds and checked the fixed-charge normalization.
+The phase and translation factors, reporter and original matching were
+retained. The curvature diagnostic and scope of the analytical tails and
+empirical estimates are recorded. External replication and the exact
+continuum saddle certification are separate.
