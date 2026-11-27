@@ -6542,3 +6542,20 @@ The separate internal implementation agrees on 101 exact values and both
 archives replay byte-for-byte. The protocol and inputs are unchanged since the
 freeze. External RAI review has a packet and remains pending. The only files
 changed relative to F3 are the new F4 packet and this log.
+
+### 2026-11-27 · Codex Work · GRUT-F5 universal closure obstruction
+
+Continued from PR #27 at 0e31979eb33a917d24e426378a9f527b12102866.
+Froze the proposition, controls and budget at 1177b1690d6118f81c4f95706ef0ce3a9bda4ec2
+before production. Added the F5 packet at
+[grut_f5_closure_consistency_20261127](research/reality_framework/grut_f5_closure_consistency_20261127/REPORT.md).
+Verdict C concerns the freedom of finite matter histories and physical seed
+states under matched internal-clock probabilities. The ideal descriptions
+agree on a noisy joint record event with probability 2/3. The separately
+conditioned ideal clock readings select different events, and removing
+the write changes the joint conditional probability to zero.
+
+The production orbit method and separate internal implementation agree
+exactly on 31 registered quantities. The output archives replay byte-for-byte.
+The freeze inputs and prior scientific files have no changes, including F4
+and earlier records. The external RAI packet is ready for independent review.
