@@ -6594,3 +6594,16 @@ The phase and translation factors, reporter and original matching were
 retained. The curvature diagnostic and scope of the analytical tails and
 empirical estimates are recorded. External replication and the exact
 continuum saddle certification are separate.
+
+### 2026-11-27 · Codex Work · GRUT-C2 continuum certificate
+
+Continued from C1 draft PR #30. The [C2 report](research/reality_framework/grut_c2_continuum_stability_20261127/REPORT.md)
+gives Verdict A for the three original flat scalar fixed-charge saddles.
+The first interval-pivot widening failure and the bounded amendment are
+archived. The amended run encloses the exact stationary profiles, the
+single unconstrained negative radial direction, the negative charge
+slopes, the fixed-charge correction and all angular sectors, modulo phase
+and translations. The result and log replay byte-for-byte. A separate
+internal critic verified the inequalities and tested hostile pivots.
+External replication, nonlinear stability and higher-loop bounds remain
+open. The C2 result permits the bounded empirical-feasibility lane.
