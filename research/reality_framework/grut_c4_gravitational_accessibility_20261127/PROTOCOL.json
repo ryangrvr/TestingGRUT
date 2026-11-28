@@ -1,0 +1,18 @@
+{
+  "parent_pr": 32,
+  "parent_sha": "0d1ff1e428fe49ffbdb55e5083da5f9e1df0d13c",
+  "target_charge": 39944,
+  "action": "Original Candidate 1 Einstein and matched scalar action, asymptotically flat benchmark. Use the certified leading flat scalar saddle as the classical O(G) source.",
+  "couplings": {"g_X": "1/10", "lambda_phi": "1/100", "lambda_X": "1/1000", "v_over_M_P": "1/100000"},
+  "profile": {"source": "C1 fine archived splines, reconstructed as exact C2 Hermite interpolation data", "c2_taper_rho": 60.125, "tail_decay_minimum": "1/3", "tube_F_cap": 3, "tube_S_cap": 2, "tube_omega_cap": 1},
+  "gravitation_checks": {"radial_subdivisions": [12025, 24050], "stress_samples_rho": [0, 2, 4, 5, 6, 8, 10, 12, 20], "tail_samples_rho": [8, 10, 12, 20, 30], "energy_reference_absolute_tolerance_in_g_X_v": 3e-5, "integrated_stress_trace_relative_tolerance": 5e-7, "stress_conservation_absolute_tolerance": 1e-6, "two_lapse_routes_absolute_tolerance": 1e-15},
+  "single_response": {"observable": "Static scalar rearrangement contribution to the quadrupole conjugate to a normalized real harmonic external tide", "profile_radius_reference_rho": 5, "potential_norm_cap": 36, "exterior_floor": "1/8", "example_tide_s_minus_2": 100000000, "example_readout_m": 0.000001},
+  "budget": {"maximum_flat_profile_cells": 8000, "wall_seconds": 45, "new_background_solves": 0, "new_eigenproblem_solves": 0, "new_response_inversions": 0, "cosmological_runs": 0},
+  "gates": [
+    "verify stress, same-action normalization, compactness, classical energy and the virial monopole",
+    "use the C2 analytical tail to bound the areal lapse discrepancy at fixed asymptotic mass",
+    "bound the sole static matter response using the C2 angular operators without solving a new tidal system",
+    "require independently supported preparation, ordinary source and readout, exposure and a nondegenerate matched comparator for accessibility",
+    "archive the bounded outcome after independent critique and stop if no distinctive accessible response survives"
+  ]
+}
