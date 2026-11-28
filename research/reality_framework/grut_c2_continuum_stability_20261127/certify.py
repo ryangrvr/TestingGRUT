@@ -142,7 +142,8 @@ def prove_charge(archive, q, settings, result, pi):
         if upper_trial.hi >= 0:
             continue
         try:
-            attempt["positive_shift_upper_count"] = spectrum.count(nodes, h, amplitude, 0, test_gap, ext)
+            count, residual = spectrum.count(nodes, h, amplitude, 0, test_gap, ext)
+            attempt.update(positive_shift_upper_count=count, factorization_neumann_product_upper=residual)
         except ArithmeticError as err:
             attempt["enclosure_failure"] = str(err)
             continue
@@ -218,8 +219,9 @@ def prove_charge(archive, q, settings, result, pi):
     if gap_symmetry.lo <= 0:
         raise ArithmeticError("Certified profile error reaches symmetry-complement gap")
     for key, potential, ell in [("phase_ell0", phase, 0), ("amplitude_ell1", amplitude, 1)]:
-        n = spectrum.count(nodes, h, potential, ell, symmetry, ext)
-        result[key] = {"upper_count_below_shift": n, "complement_gap_lower": gap_symmetry.display()[0]}
+        n, residual = spectrum.count(nodes, h, potential, ell, symmetry, ext)
+        result[key] = {"upper_count_below_shift": n, "complement_gap_lower": gap_symmetry.display()[0],
+                       "factorization_neumann_product_upper": residual}
         if n != 1:
             raise ArithmeticError(f"Exact zero mode plus one-mode upper count unresolved in {key}")
 
