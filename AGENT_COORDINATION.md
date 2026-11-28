@@ -6643,3 +6643,22 @@ The freeze precedes the calculation. The setup-only sparse-input
 failures are archived. The result and log replay byte-for-byte, with
 separate internal critique and an external RAI packet. The C1–C3 verdicts
 remain A/A/C, and S1's foundational verdict is B/C.
+
+### 2026-11-28 · Codex Work · GRUT-S2 synthesis and research closure
+
+Continued from C4 draft PR #33 at 6c96cd26b223097fb93f15408da1590b47acd63d.
+The [final manuscript](research/reality_framework/grut_s2_final_synthesis_20261128/GRUT_WORKING_THEORY_FINAL.md)
+and its companion documents reconcile S1 with C1–C4 and record the
+mathematical, operational and empirical scope of the full program.
+The foundational verdict is B/C. The Candidate 1 verdicts are A/A/C/C.
+The unchanged Candidate 1 investigation is closed. Its physical
+existence is unresolved. No new fundamental physical law was demonstrated.
+
+S2 checked the pinned archive and C-series input hashes and ran the
+existing C1 archive verifier. Production results, failed attempts and
+prior internal critiques remain in the governing packets. The focused
+literature comparison includes the 2026 inhomogeneous Hartree FLS study.
+The [external RAI packet](research/reality_framework/grut_s2_final_synthesis_20261128/EXTERNAL_RAI_REVIEW_PACKET.md)
+records independent review priorities and commit-pinned replay
+instructions. External replication is pending. The synthesis documents
+the conditions for separately authorized reopening.

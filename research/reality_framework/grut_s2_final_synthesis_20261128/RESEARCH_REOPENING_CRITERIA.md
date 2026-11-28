@@ -1,0 +1,16 @@
+# Research reopening criteria
+
+S2 closes the unchanged Candidate 1 investigation at A/A/C/C and keeps foundational law-selection research suspended under Verdict B/C. The following are conditions for considering a separately authorized proposal. External review and archival verification can assess the closed record at its declared scope. [Final verdict](FINAL_PROGRAM_VERDICT.md)
+
+| Independent trigger | Evidence needed to assess it |
+| --- | --- |
+| A physically motivated principle constraining presently undetermined laws | Its precise proposition, independent motivation, admissible model class and assumptions. Identify which archived counterexample it removes and whether the conclusion survives coordinate choice, field representation, matching and the appropriate quantum corrections. |
+| A reproducible empirical observation inadequately accounted for by established physics | The actual measurement, uncertainties and provenance, the strongest conventional fit and its independent failure test, and a well-defined competing forward prediction. |
+| A mathematical relationship with a distinctive testable consequence | A derivation without inserting the target measurement, a calibratable observable and physical preparation, and a predeclared comparison and rejection criterion. |
+| Independent support for an organization-to-fundamental bridge | Physical identification of the operators, preconditions and regime. Show how the proposed relationship between organizational variables and dynamics constrains a quantity left independent by the compatible conventional model. |
+
+The relevant [open-question entry](OPEN_PHYSICAL_QUESTIONS.md) identifies premises specific to each foundational ambiguity. A proposed discriminator should compare the same states, external controls and physical access, passing the matched-event and matched-observable checks recorded by F1–F5. A repetition of a test on the same evidential fiber retains its original inference. A more accurate numerical estimate for an already degenerate observable does not resolve a missing physical access pathway.
+
+An unchanged Candidate 1 reopening would require new independent evidence for a prepared or formed target with the original charge and matching, plus a credible structure-sensitive measurement whose prediction separates a declared conventional comparison. Shared gravity supplies a coupling. It supplies neither the population nor identifiability of composition from a matched vacuum monopole. A successor action needs a separately justified hypothesis and empirical objective, with its new matching and predictions clearly identified. The archived collider, cosmology and portal variants keep their prior statuses. [Final Candidate 1 report](CANDIDATE_1_FINAL_REPORT.md)
+
+If evidenced grounds for reopening are later found, a proposed protocol should record the fixed inputs, mathematical claim, observable, competing models, acceptance thresholds, computational budget and independent criticism procedure before any new campaign. A demonstration of a specific archival error can be handled by a traceable correction at the original scope. No C5 or F1–F5 campaign starts from this synthesis. [Negative results](NEGATIVE_RESULTS_INDEX.md) · [External audit packet](EXTERNAL_RAI_REVIEW_PACKET.md)
