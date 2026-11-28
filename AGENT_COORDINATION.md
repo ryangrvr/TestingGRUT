@@ -6625,3 +6625,21 @@ The fixed action gives a theoretical scattering observable and a
 degeneracy with the matched conventional scalar well. The inhomogeneous
 one-loop reporter amplitude and external replication remain open. The
 S1 program verdict B/C is preserved.
+
+### 2026-11-27 · Codex Work · GRUT-C4 gravitational feasibility and closure
+
+Continued from C3 draft PR #32. The [C4 report](research/reality_framework/grut_c4_gravitational_accessibility_20261127/REPORT.md)
+gives Verdict C and concludes the unchanged Candidate 1 investigation as
+a mathematically supported, empirically unestablished matter EFT.
+
+The weak-field stress agrees with C1. The C2 tail enclosure bounds the
+nonvacuum lapse deviation from a matched Schwarzschild field. The sole
+static scalar rearrangement bound uses the C2 angular positivity and a
+specified weak external tide. Matched conventional scalar gravity
+reproduces the theoretical response. Target preparation, a population
+and a calibrated structure-sensitive measurement remain unsupported.
+
+The freeze precedes the calculation. The setup-only sparse-input
+failures are archived. The result and log replay byte-for-byte, with
+separate internal critique and an external RAI packet. The C1–C3 verdicts
+remain A/A/C, and S1's foundational verdict is B/C.
