@@ -6607,3 +6607,21 @@ and translations. The result and log replay byte-for-byte. A separate
 internal critic verified the inequalities and tested hostile pivots.
 External replication, nonlinear stability and higher-loop bounds remain
 open. The C2 result permits the bounded empirical-feasibility lane.
+
+### 2026-11-27 · Codex Work · GRUT-C3 empirical feasibility
+
+Continued from C2 draft PR #31 using its certified Q=39,944 target. The
+[C3 report](research/reality_framework/grut_c3_empirical_feasibility_20261127/REPORT.md)
+gives Verdict C. The original reporter phase at k=5 was independently
+reproduced. The new calculation retains momentum and angular results,
+classical profile sensitivity, kinematic estimates and physical scales.
+The independent angular integral agrees with the partial-wave sum. The
+result and log replay byte-for-byte. The first invocation's archived
+JSON reader failure preceded the corrected run and changed no input.
+
+Target preparation with compensating charge and energy disposal, a
+calibrated reporter source, and a characterized detector remain open.
+The fixed action gives a theoretical scattering observable and a
+degeneracy with the matched conventional scalar well. The inhomogeneous
+one-loop reporter amplitude and external replication remain open. The
+S1 program verdict B/C is preserved.
